@@ -1,4 +1,5 @@
 ---
+
 title: "acpi_available(1)"
 name: "acpi_available"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-acpi_available/"
 description: "acpi_available – test whether ACPI subsystem is available"
 ---
 
-<h2 class="name">NAME</h2>
 <p> acpi_available &#8211; test whether ACPI subsystem is available</p>
 <h2>SYNOPSIS</h2>
 <p> <code>acpi_available</code> </p>

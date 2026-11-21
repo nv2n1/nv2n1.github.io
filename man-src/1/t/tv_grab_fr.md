@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_fr(1)"
 name: "tv_grab_fr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_fr/"
 description: "tv_grab_fr – Grab TV listings for France."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_fr &#8211; Grab TV listings for France. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

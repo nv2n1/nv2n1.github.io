@@ -1,4 +1,5 @@
 ---
+
 title: "mozo(1)"
 name: "mozo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mozo/"
 description: "Mozo – MATE Menu Editor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Mozo &#8211; MATE Menu Editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mozo</code></p>

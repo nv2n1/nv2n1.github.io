@@ -1,4 +1,5 @@
 ---
+
 title: "gearing_(3)"
 name: "gearing_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gearing_/"
 description: "QuantLib::HaganPricer – CMS-coupon pricer."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::HaganPricer &#8211; CMS-coupon pricer. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/conundrumpricer.hpp&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "livemedia-creator(1)"
 name: "livemedia-creator"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-livemedia-creator/"
 description: "livemedia-creator – Create live install media"
 ---
 
-<h2>NAME</h2>
 <p> livemedia-creator &#8211; Create live install media </p>
 <h2>SYNOPSIS</h2>
 <p> livemedia-creator [-h]<br />

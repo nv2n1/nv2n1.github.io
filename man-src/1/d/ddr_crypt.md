@@ -1,4 +1,5 @@
 ---
+
 title: "ddr_crypt(1)"
 name: "ddr_crypt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ddr_crypt/"
 description: "ddr_crypt – Data de/encryption plugin for dd_rescue"
 ---
 
-<h2>NAME</h2>
 <p> ddr_crypt &#8211; Data de/encryption plugin for dd_rescue</p>
 <h2>SYNOPSIS</h2>
 <p> <code>-L crypt[=option[:option[:&#8230;]]]</code><br />

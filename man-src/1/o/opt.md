@@ -1,4 +1,5 @@
 ---
+
 title: "opt(1)"
 name: "opt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opt/"
 description: "opt – LLVM optimizer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> opt &#8211; LLVM optimizer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>opt</code> [<i>options</i>] [<i>filename</i>]</p>

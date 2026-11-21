@@ -1,4 +1,5 @@
 ---
+
 title: "semop(2)"
 name: "semop"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-semop/"
 description: "semop, semtimedop – System V semaphore operations"
 ---
 
-<h2 class="name">NAME</h2>
 <p> semop, semtimedop &#8211; System V semaphore operations </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

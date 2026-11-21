@@ -1,4 +1,5 @@
 ---
+
 title: "reprepro(1)"
 name: "reprepro"
 section: "1"
@@ -6,7 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-reprepro/"
 description: "reprepro – produce, manage and sync a local repository of Debian packages"
 ---
-<h2>NAME</h2>
+
 <p> reprepro - produce, manage and sync a local repository of Debian packages  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>reprepro --help</code> </p>

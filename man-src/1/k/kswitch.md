@@ -1,4 +1,5 @@
 ---
+
 title: "kswitch(1)"
 name: "kswitch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kswitch/"
 description: "kswitch – switch primary ticket cache"
 ---
 
-<h2>NAME</h2>
 <p> kswitch &#8211; switch primary ticket cache</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kswitch</code> {<code>-c</code> <i>cachename</i>|<code>-p</code> <i>principal</i>}</p>

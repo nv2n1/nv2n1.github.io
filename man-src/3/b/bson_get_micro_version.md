@@ -1,4 +1,5 @@
 ---
+
 title: "bson_get_micro_version(3)"
 name: "bson_get_micro_version"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_get_micro_version/"
 description: "bson_get_micro_version() – Get the third number in libbson’s MAJOR.MINOR.MICRO release version."
 ---
 
-<h2>NAME</h2>
 <p> bson_get_micro_version() &#8211; Get the third number in libbson&#8217;s MAJOR.MINOR.MICRO release version.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

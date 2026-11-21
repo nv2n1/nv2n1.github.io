@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-list(1)"
 name: "nvme-list"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-list/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-list - List all recognized NVMe devices 
+nvme-list - List all recognized NVMe devices 
 
 <h2>SYNOPSIS</h2>
 

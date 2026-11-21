@@ -1,4 +1,5 @@
 ---
+
 title: "scaladoc(1)"
 name: "scaladoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scaladoc/"
 description: "scaladoc – Documentation generator for the Scala 2 language"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>scaladoc</code> &#8211; Documentation generator for the Scala 2 language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>scaladoc</code> [ &lt;<i>options</i>&gt; ] &lt;<i>source files</i>&gt;</p>

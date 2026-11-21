@@ -1,4 +1,5 @@
 ---
+
 title: "podofouncompress(1)"
 name: "podofouncompress"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-podofouncompress/"
 description: "podofouncompress – Uncompress PDF files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> podofouncompress &#8211; Uncompress PDF files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofouncompress</code> [inputfile] [outputfile] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-revoke(1)"
 name: "euca-revoke"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-revoke/"
 description: "euca-revoke – Remove a rule from a security group"
 ---
 
-<h2>NAME</h2>
 <p> euca-revoke &#8211; Remove a rule from a security group</p>
 <h2>SYNOPSIS</h2>
 <p> euca-revoke [&#8211;egress] [-P PROTOCOL] [-p RANGE] [-t TYPE:CODE] [-s CIDR | <code>-o</code> GROUP] [-u ACCOUNT] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] GROUP</p>

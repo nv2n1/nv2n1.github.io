@@ -1,4 +1,5 @@
 ---
+
 title: "teredo-mire(1)"
 name: "teredo-mire"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-teredo-mire/"
 description: "teredo-mire – Stateless Teredo IPv6 responder"
 ---
 
-<h2>NAME</h2>
 <p> teredo-mire &#8211; Stateless Teredo IPv6 responder</p>
 <h2>SYNOPSIS</h2>
 <p> <code>teredo-mire</code> </p>

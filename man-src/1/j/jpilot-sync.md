@@ -1,4 +1,5 @@
 ---
+
 title: "jpilot-sync(1)"
 name: "jpilot-sync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jpilot-sync/"
 description: "jpilot-sync – A command line tool for syncing jpilot databases to a Palm OS device."
 ---
 
-<h2>NAME</h2>
 <p> jpilot-sync &#8211; A command line tool for syncing jpilot databases to a Palm OS device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jpilot-sync [-v] [-h] [-d] [-P] [-b] [-l] [-p port] </code></p>

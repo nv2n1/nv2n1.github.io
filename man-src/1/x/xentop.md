@@ -1,4 +1,5 @@
 ---
+
 title: "xentop(1)"
 name: "xentop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xentop/"
 description: "xentop – displays real-time information about a Xen system and domains"
 ---
 
-<h2>NAME</h2>
 <p> <code>xentop</code> &#8211; displays real-time information about a Xen system and domains </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xentop</code> [<code>-h</code>] [<code>-V</code>] [<code>-d</code>SECONDS] [<code>-n</code>] [<code>-r</code>] [<code>-v</code>] [<code>-b</code>] [<code>-i</code>ITERATIONS] </p>

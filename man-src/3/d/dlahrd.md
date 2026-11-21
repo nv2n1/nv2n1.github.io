@@ -1,4 +1,5 @@
 ---
+
 title: "dlahrd(3)"
 name: "dlahrd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlahrd/"
 description: "dlahrd.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlahrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "ppmdim(1)"
 name: "ppmdim"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-ppmdim/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- ppmdim - dim a portable pixmap down to total blackness 
+ppmdim - dim a portable pixmap down to total blackness 
 
 <h2>SYNOPSIS</h2>
 

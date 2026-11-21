@@ -1,4 +1,5 @@
 ---
+
 title: "bson_json_reader_new_from_fd(3)"
 name: "bson_json_reader_new_from_fd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_json_reader_new_from_fd/"
 description: "bson_json_reader_new_from_fd() – Creates a new JSON to BSON converter that will be reading from the file-descriptor fd."
 ---
 
-<h2>NAME</h2>
 <p> bson_json_reader_new_from_fd() &#8211; Creates a new JSON to BSON converter that will be reading from the file-descriptor fd.</p>
 <h2>SYNOPSIS</h2>
 <pre>

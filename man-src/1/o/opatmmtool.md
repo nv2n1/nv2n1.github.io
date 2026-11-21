@@ -1,4 +1,5 @@
 ---
+
 title: "opatmmtool(1)"
 name: "opatmmtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opatmmtool/"
 description: "opatmmtool"
 ---
 
-<h2>NAME</h2>
 <p> opatmmtool </p>
 <p> <code>(Host)</code> Manages and updates the firmware on the Thermal Management Microchip (TMM).</p>
 <h2>Syntax</h2>

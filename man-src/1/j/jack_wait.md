@@ -1,4 +1,5 @@
 ---
+
 title: "jack_wait(1)"
 name: "jack_wait"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jack_wait/"
 description: "jack_wait – JACK toolkit client to check and wait for existence/exit of jackd."
 ---
 
-<h2>NAME</h2>
 <p> jack_wait &#8211; JACK toolkit client to check and wait for existence/exit of jackd.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jack_wait</code> [ <i>-s</i> | <i>&#8211;server</i> servername ] [ <i>-t</i> | <i>&#8211;timeout</i> timeout_seconds [ <i>-cqwhv</i> ]</p>

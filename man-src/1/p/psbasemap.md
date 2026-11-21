@@ -1,4 +1,5 @@
 ---
+
 title: "psbasemap(1)"
 name: "psbasemap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psbasemap/"
 description: "psbasemap – Plot PostScript base maps"
 ---
 
-<h2>NAME</h2>
 <p> psbasemap &#8211; Plot PostScript base maps</p>
 <h2>SYNOPSIS</h2>
 <p> <code>psbasemap</code> <i>parameters</i> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ [<i>file</i>] ] [ <i>insert box</i> ] [ <i>box</i> ] [ ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ <i>ruler</i> ] [ ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ <i>rose</i> ] [ <i>mag_rose</i> ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>

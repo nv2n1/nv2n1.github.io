@@ -1,4 +1,5 @@
 ---
+
 title: "openbox-gnome-session(1)"
 name: "openbox-gnome-session"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-openbox-gnome-session/"
 description: "openbox-gnome-session — Run a GNOME session with Openbox as the window manager"
 ---
 
-<h2>NAME</h2>
 <p> openbox-gnome-session &#8212; Run a GNOME session with Openbox as the window manager<br />
 &nbsp;<wbr></p>
 <h2>DESCRIPTION</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "rawtopgm(1)"
 name: "rawtopgm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rawtopgm/"
 description: "rawtopgm – convert raw grayscale bytes into a portable graymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rawtopgm &#8211; convert raw grayscale bytes into a portable graymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rawtopgm</code> [<code>-bpp </code>[<code>1</code>|<code>2</code>]] [<code>-littleendian</code>] [<code>-maxval</code> <i>N</i>] [<code>-headerskip</code> <i>N</i>] [<code>-rowskip</code> <i>N</i>] [<code>-tb</code>|<code>-topbottom</code>] [<i>width</i> <i>height</i>] [<i>imagefile</i>] </p>

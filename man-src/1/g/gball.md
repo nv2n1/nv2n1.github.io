@@ -1,4 +1,5 @@
 ---
+
 title: "gball(1)"
 name: "gball"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gball/"
 description: "GBall – The Console Ball and Racket Game"
 ---
 
-<h2>NAME</h2>
 <p> GBall &#8211; The Console Ball and Racket Game</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gball [OPTIONS]</code></p>

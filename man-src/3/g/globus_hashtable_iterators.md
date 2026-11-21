@@ -1,4 +1,5 @@
 ---
+
 title: "globus_hashtable_iterators(3)"
 name: "globus_hashtable_iterators"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_hashtable_iterators/"
 description: "Iterators –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Iterators &#8211; </p>
 <h3>Functions</h3>
 <p> void * <code>globus_hashtable_first</code> (globus_hashtable_t *table)<br />

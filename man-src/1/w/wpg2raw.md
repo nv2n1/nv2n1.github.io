@@ -1,4 +1,5 @@
 ---
+
 title: "wpg2raw(1)"
 name: "wpg2raw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wpg2raw/"
 description: "Usage: – debug the conversion library"
 ---
 
-<h2>NAME</h2>
 <p> Usage: &#8211; debug the conversion library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wpg2raw</code> [<i>OPTION</i>] <i>&lt;WordPerfect Graphics File&gt;</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "skopeo(1)"
 name: "skopeo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-skopeo/"
 description: "skopeo — Various operations with container images images and container image registries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> skopeo &#8212; Various operations with container images images and container image registries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>skopeo</code> [<i>global options</i>] <i>command</i> [<i>command options</i>] </p>

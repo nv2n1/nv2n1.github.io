@@ -1,4 +1,5 @@
 ---
+
 title: "npm-stop(1)"
 name: "npm-stop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-stop/"
 description: "npm-stop – Stop a package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-stop</code> &#8211; Stop a package </p>
 <h3>Synopsis</h3>
 <dl>

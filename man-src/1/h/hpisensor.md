@@ -1,4 +1,5 @@
 ---
+
 title: "hpisensor(1)"
 name: "hpisensor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpisensor/"
 description: "hpisensor - This sample openhpi application displays sensor info for all resources with Sensor Capability SYNOPSIS hpisensor[-D nn][-N host[:port]][-C<cfgfile>][-t - r - s - X - h][-E epath] hpisen..."
 ---
 
-<h2 class="name">NAME</h2>
 <pre>
  hpisensor -  This sample openhpi application displays sensor info for all resources with Sensor Capability
 </pre>

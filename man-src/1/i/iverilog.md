@@ -1,4 +1,5 @@
 ---
+
 title: "iverilog(1)"
 name: "iverilog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-iverilog/"
 description: "iverilog – Icarus Verilog compiler"
 ---
 
-<h2>NAME</h2>
 <p> iverilog &#8211; Icarus Verilog compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>iverilog</code> [-ESVv] [-Bpath] [-ccmdfile|-fcmdfile] [-Dmacro[=defn]] [-pflag=value] [-dname] [-g1995|-g2001|-g2005|-g&lt;feature&gt;] [-Iincludedir] [-mmodule] [-Mfile] [-Nfile] [-ooutputfilename] [-stopmodule] [-ttype] [-Tmin/typ/max] [-Wclass] [-ypath] sourcefile </p>

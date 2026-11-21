@@ -1,4 +1,5 @@
 ---
+
 title: "context_user_set(3)"
 name: "context_user_set"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-context_user_set/"
 description: "context_new, context_str, context_free, context_type_get, context_type_set, context_range_get, context_range_set,context_role_get, context_role_set, context_user_get, context_user_set – Routines to..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> context_new, context_str, context_free, context_type_get, context_type_set, context_range_get, context_range_set,context_role_get, context_role_set, context_user_get, context_user_set &#8211; Routines to manipulate SELinux security contexts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/context.h&gt;</code> </p>

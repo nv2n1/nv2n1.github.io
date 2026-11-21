@@ -1,4 +1,5 @@
 ---
+
 title: "xnightview(1)"
 name: "xnightview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xnightview/"
 description: "xnightview – interactive control center for camera."
 ---
 
-<h2>NAME</h2>
 <p> xnightview &#8211; interactive control center for camera.</p>
 <h2>SYNOPSIS</h2>
 <p> xnightview [-] [-i fits]</p>

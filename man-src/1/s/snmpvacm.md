@@ -1,4 +1,5 @@
 ---
+
 title: "snmpvacm(1)"
 name: "snmpvacm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpvacm/"
 description: "snmpvacm – creates and maintains SNMPv3 View-based Access Control entries on a network entity"
 ---
 
-<h2>NAME</h2>
 <p> snmpvacm &#8211; creates and maintains SNMPv3 View-based Access Control entries on a network entity</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>createSec2Group</code> MODEL SECURITYNAME GROUPNAME<br />

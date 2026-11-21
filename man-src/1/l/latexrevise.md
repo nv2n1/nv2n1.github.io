@@ -1,4 +1,5 @@
 ---
+
 title: "latexrevise(1)"
 name: "latexrevise"
 section: "1"
@@ -6,7 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-latexrevise/"
 description: "latexrevise – selectively remove markup and text from latexdiff output"
 ---
-<h2 class="name">NAME</h2>
+
 <p> latexrevise - selectively remove markup and text from latexdiff output </p>
 <h2>SYNOPSIS</h2>
 <p> <code>latexrevise</code> [ <font SIZE="-1"><code>OPTIONS</code></font> ] [ <i>diff.tex</i> ] &gt; <i>revised.tex</i>  </p>

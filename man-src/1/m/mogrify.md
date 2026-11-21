@@ -1,4 +1,5 @@
 ---
+
 title: "mogrify(1)"
 name: "mogrify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mogrify/"
 description: "mogrify – resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. Mogrify overwrites the original image file, whereas,"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mogrify &#8211; resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. Mogrify overwrites the original image file, whereas, </p>
 <p> <a href="/docs/linux/man/1-convert-im6-q16/">convert-im6.q16</a>(1) writes to a different image file.</p>
 <h2>SYNOPSIS</h2>

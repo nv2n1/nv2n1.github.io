@@ -1,4 +1,5 @@
 ---
+
 title: "bpython(1)"
 name: "bpython"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bpython/"
 description: "bpython – a fancy {curses, GTK+, urwid} interface to the Python interactive interpreter"
 ---
 
-<h2>NAME</h2>
 <p> bpython &#8211; a fancy {curses, GTK+, urwid} interface to the Python interactive interpreter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bpython</code> [<i>options</i>] [<i>file</i> [<i>args</i>]] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-ignore(1)"
 name: "git-ignore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-ignore/"
 description: "git-ignore – Add .gitignore patterns"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-ignore</code> &#8211; Add .gitignore patterns</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-ignore</code> [&lt;context&gt;] [&lt;pattern&gt; [&lt;pattern&gt;]&#8230;]</p>

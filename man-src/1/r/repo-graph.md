@@ -1,4 +1,5 @@
 ---
+
 title: "repo-graph(1)"
 name: "repo-graph"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-repo-graph/"
 description: "repo-graph – output a full package dependency graph in dot format"
 ---
 
-<h2>NAME</h2>
 <p> repo-graph &#8211; output a full package dependency graph in dot format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>repo-graph</code> [options]</p>

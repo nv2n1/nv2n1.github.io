@@ -1,4 +1,5 @@
 ---
+
 title: "dh_makeshlibs(1)"
 name: "dh_makeshlibs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_makeshlibs/"
 description: "dh_makeshlibs – automatically create shlibs file and call dpkg-gensymbols"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_makeshlibs &#8211; automatically create shlibs file and call dpkg-gensymbols </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_makeshlibs</code> [<i>debhelper options</i>] [<code>-m</code><i>major</i>] [<code>-V</code><i>[dependencies]</i>] [<code>-n</code>] [<code>-X</code><i>item</i>] [<code>&#8212;</code> <i>params</i>]</p>

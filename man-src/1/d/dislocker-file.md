@@ -1,4 +1,5 @@
 ---
+
 title: "dislocker-file(1)"
 name: "dislocker-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dislocker-file/"
 description: "Dislocker file – Read BitLocker encrypted volumes under Linux, OSX and FreeBSD."
 ---
 
-<h2>NAME</h2>
 <p> Dislocker file &#8211; Read BitLocker encrypted volumes under Linux, OSX and FreeBSD.</p>
 <h2>SYNOPSIS</h2>
 <p> dislocker-file [-hqrsv] [-l <i>LOG_FILE</i>] [-O <i>OFFSET</i>] [-V <i>VOLUME</i> <i>DECRYPTMETHOD</i> -F[<i>N</i>]] [&#8211;] <i>NTFS_FILE</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rmkdepend(1)"
 name: "rmkdepend"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rmkdepend/"
 description: "rmkdepend – create dependencies in makefiles (ROOT Version)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rmkdepend &#8211; create dependencies in makefiles (ROOT Version) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rmkdepend</code> [ <code>-D</code><i>name</i><code>=</code>def ] [ <code>-D</code><i>name</i> ] [ <code>-I</code><i>includedir</i> ] [ <code>-Y</code><i>includedir</i> ] [ <code>-a</code> ] [ <code>-f</code><i>makefile</i> ] [ <code>-o</code><i>objsuffix</i> ] [ <code>-p</code><i>objprefix</i> ] [ <code>-s</code><i>string</i> ] [ <code>-w</code><i>width</i> ] [ <code>-v</code> ] [ <code>-m</code> ] [ &#8212; <i>otheroptions</i> &#8212; ] <i>sourcefile</i> [ <code>-t</code><i>targetfilename</i> ] &#8230; </p>

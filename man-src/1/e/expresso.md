@@ -1,4 +1,5 @@
 ---
+
 title: "expresso(1)"
 name: "expresso"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-expresso/"
 description: "expresso – A JavaScript TDD framework written for Node.js"
 ---
 
-<h2>NAME</h2>
 <p> expresso &#8211; A JavaScript TDD framework written for Node.js</p>
 <h2>SYNOPSIS</h2>
 <p> Usage: expresso [options] &lt;file &#8230;&gt;</p>

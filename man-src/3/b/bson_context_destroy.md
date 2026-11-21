@@ -1,4 +1,5 @@
 ---
+
 title: "bson_context_destroy(3)"
 name: "bson_context_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_context_destroy/"
 description: "bson_context_destroy() – The bson_context_destroy() function shall release all resources associated with context."
 ---
 
-<h2>NAME</h2>
 <p> bson_context_destroy() &#8211; The bson_context_destroy() function shall release all resources associated with context.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "zipcmp(1)"
 name: "zipcmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zipcmp/"
 description: "zipcmp – compare contents of zip archives"
 ---
 
-<h2>NAME</h2>
 <p> zipcmp &#8211; compare contents of zip archives</p>
 <h2>SYNOPSIS</h2>
 <p> <code>zipcmp</code> [<code>-hiqVv</code>] <code>zip1 zip2</code></p>

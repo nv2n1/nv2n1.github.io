@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-pop(1)"
 name: "guilt-pop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guilt-pop/"
 description: "guilt-pop – Pop patches from the tree"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guilt-pop &#8211; Pop patches from the tree </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-pop</i> [-f] [-a | &#8211;all | -n &lt;num&gt; | &lt;patchname&gt;]</p>

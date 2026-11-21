@@ -1,4 +1,5 @@
 ---
+
 title: "ccache(1)"
 name: "ccache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ccache/"
 description: "ccache – a fast C/C++ compiler cache"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ccache &#8211; a fast C/C++ compiler cache </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

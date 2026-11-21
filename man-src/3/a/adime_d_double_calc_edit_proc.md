@@ -1,4 +1,5 @@
 ---
+
 title: "adime_d_double_calc_edit_proc(3)"
 name: "adime_d_double_calc_edit_proc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-adime_d_double_calc_edit_proc/"
 description: "adime_d_double_calc_edit_proc"
 ---
 
-<h2>NAME</h2>
 <p> adime_d_double_calc_edit_proc</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/adime.h">adime.h</a>&gt;</code> </p>

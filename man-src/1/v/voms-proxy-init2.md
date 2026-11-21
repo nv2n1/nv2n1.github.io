@@ -1,4 +1,5 @@
 ---
+
 title: "voms-proxy-init2(1)"
 name: "voms-proxy-init2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-voms-proxy-init2/"
 description: "voms-proxy-init – create a proxy with VOMS extensions"
 ---
 
-<h2>NAME</h2>
 <p> voms-proxy-init &#8211; create a proxy with VOMS extensions</p>
 <h2>SYNOPSIS</h2>
 <dl>

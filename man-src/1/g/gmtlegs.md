@@ -1,4 +1,5 @@
 ---
+
 title: "gmtlegs(1)"
 name: "gmtlegs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtlegs/"
 description: "gmtlegs – Find cruises in a given region"
 ---
 
-<h2>NAME</h2>
 <p> gmtlegs &#8211; Find cruises in a given region</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtlegs</code> <code>-R</code><i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[<code>r</code>] [ <code>-G</code> ] [ <code>-M</code> ] [ <code>-T</code> ] [ <code>-L</code> ] [ <code>-V</code> ]</p>

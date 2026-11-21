@@ -1,4 +1,5 @@
 ---
+
 title: "portrelease(1)"
 name: "portrelease"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-portrelease/"
 description: "portrelease – release previously-reserved ports"
 ---
 
-<h2 class="name">NAME</h2>
 <p> portrelease &#8211; release previously-reserved ports </p>
 <h2>SYNOPSIS</h2>
 <dl>

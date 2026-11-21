@@ -1,4 +1,5 @@
 ---
+
 title: "wn(1)"
 name: "wn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wn/"
 description: "wn – command line interface to WordNet lexical database"
 ---
 
-<h2>NAME</h2>
 <p> wn &#8211; command line interface to WordNet lexical database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wn</code> [ <i>searchstr</i> ] [ <code>-h</code>] [ <code>-g</code> ] [ <code>-a</code> ] [ <code>-l</code> ] [ <code>-o</code> ] [ <code>-s</code> ] [ <code>-n</code><i>#</i> ] [ <i>search_option</i>&#8230; ]</p>

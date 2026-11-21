@@ -1,4 +1,5 @@
 ---
+
 title: "check_updates(1)"
 name: "check_updates"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-check_updates/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- &quot;check_updates&quot; - a Nagios plugin to check if Red Hat or Fedora system is up-to-date 
+&quot;check_updates&quot; - a Nagios plugin to check if Red Hat or Fedora system is up-to-date 
 
 <h2>DESCRIPTION</h2>
 

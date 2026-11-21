@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-mkstandalone(1)"
 name: "grub2-mkstandalone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub2-mkstandalone/"
 description: "grub-mkstandalone — Generate a standalone image in the selected format."
 ---
 
-<h2>NAME</h2>
 <p> <code>grub-mkstandalone</code> &#8212; Generate a standalone image in the selected format. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-mkstandalone</code> [-o | &#8211;output=<i>FILE</i>] [-O | &#8211;format=<i>FORMAT</i>]</p>

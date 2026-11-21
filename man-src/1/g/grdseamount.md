@@ -1,4 +1,5 @@
 ---
+
 title: "grdseamount(1)"
 name: "grdseamount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdseamount/"
 description: "grdseamount – Compute synthetic seamount (Gaussian or cone, circular or elliptical) bathymetry"
 ---
 
-<h2>NAME</h2>
 <p> grdseamount &#8211; Compute synthetic seamount (Gaussian or cone, circular or elliptical) bathymetry</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdseamount</code> [ <i>intable</i> ] <i>increment</i> <i>region</i> [ [<i>out</i>/<i>in</i>] ] [ <code>c</code>|<code>d</code>|<code>g</code>|<code>p</code> ] [ [<i>unit</i>] ] [ ] [ [<i>flattening</i>] ] [ <i>grdfile</i> ] [ [<i>cut</i>] ] [ <i>list</i> ] [ <i>norm</i> ] [ <i>bmode</i>/<i>qmode</i> ] [ <i>scale</i> ] [ <i>t0</i>[<code>u</code>][/<i>t1</i>[<code>u</code>]/<i>dt</i>[<code>u</code>]|<i>n</i>][<code>+l</code>] ] [ <i>level</i> ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-fg</code> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] </p>

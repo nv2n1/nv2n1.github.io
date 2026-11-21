@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-tli-checker-14(1)"
 name: "llvm-tli-checker-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-tli-checker-14/"
 description: "llvm-tli-checker – TargetLibraryInfo vs library checker"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-tli-checker &#8211; TargetLibraryInfo vs library checker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-tli-checker</code> [<i>options</i>] [<i>library-file…</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libquvi(3)"
 name: "libquvi"
 section: "3"
@@ -6,10 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libquvi/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- libquvi - Overview of query media library 
+libquvi - Overview of query media library 
 
 <h2>DESCRIPTION</h2>
 

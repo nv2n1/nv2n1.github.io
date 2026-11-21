@@ -1,4 +1,5 @@
 ---
+
 title: "exaccel(3)"
 name: "exaccel"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exaccel/"
 description: "exaccel – Using offscreen video memory to store source graphics for VBE/AF. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exaccel &#8211; Using offscreen video memory to store source graphics for VBE/AF. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

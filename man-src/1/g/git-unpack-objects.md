@@ -1,4 +1,5 @@
 ---
+
 title: "git-unpack-objects(1)"
 name: "git-unpack-objects"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-unpack-objects/"
 description: "git-unpack-objects – Unpack objects from a packed archive"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-unpack-objects &#8211; Unpack objects from a packed archive </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

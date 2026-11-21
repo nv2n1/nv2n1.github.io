@@ -1,4 +1,5 @@
 ---
+
 title: "aa_gotoxy(3)"
 name: "aa_gotoxy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_gotoxy/"
 description: "aa_gotoxy – move the hardware cursor (if any) to specified position."
 ---
 
-<h2>NAME</h2>
 <p> aa_gotoxy &#8211; move the hardware cursor (if any) to specified position.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

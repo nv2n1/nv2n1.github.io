@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_key_list_free(3)"
 name: "ldns_key_list_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_key_list_free/"
 description: "ldns_key_free, ldns_key_deep_free, ldns_key_list_free"
 ---
 
-<h2>NAME</h2>
 <p> ldns_key_free, ldns_key_deep_free, ldns_key_list_free </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

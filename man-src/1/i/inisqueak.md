@@ -1,4 +1,5 @@
 ---
+
 title: "inisqueak(1)"
 name: "inisqueak"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-inisqueak/"
 description: "squeak, inisqueak – Unix Squeak virtual machine and installer"
 ---
 
-<h2>NAME</h2>
 <p> squeak, inisqueak &#8211; Unix Squeak virtual machine and installer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>inisqueak</code><br />

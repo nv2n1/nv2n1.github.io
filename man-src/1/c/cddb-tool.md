@@ -1,4 +1,5 @@
 ---
+
 title: "cddb-tool(1)"
 name: "cddb-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cddb-tool/"
 description: "cddb-tool – Get CDDB information"
 ---
 
-<h2>NAME</h2>
 <p> cddb-tool &#8211; Get CDDB information</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cddb-tool parse </code> <i>file [-i|-d|-a|-t] [num|-c|-p]</i> </p>

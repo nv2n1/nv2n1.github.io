@@ -1,4 +1,5 @@
 ---
+
 title: "aa_fonts(3)"
 name: "aa_fonts"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_fonts/"
 description: "aa_fonts – Null-terminated array of available fonts."
 ---
 
-<h2>NAME</h2>
 <p> aa_fonts &#8211; Null-terminated array of available fonts.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

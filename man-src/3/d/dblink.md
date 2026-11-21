@@ -1,4 +1,5 @@
 ---
+
 title: "dblink(3)"
 name: "dblink"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dblink/"
 description: "dblink – executes a query in a remote database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dblink &#8211; executes a query in a remote database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

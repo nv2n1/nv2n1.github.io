@@ -1,4 +1,5 @@
 ---
+
 title: "nitrogen(1)"
 name: "nitrogen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nitrogen/"
 description: "nitrogen – X11 background previewer and setter"
 ---
 
-<h2>NAME</h2>
 <p> nitrogen &#8211; X11 background previewer and setter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nitrogen [</code> <i>OPTIONS</i> <code>]</code> <i>DIRECTORY?</i></p>

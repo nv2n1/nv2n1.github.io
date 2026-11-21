@@ -1,4 +1,5 @@
 ---
+
 title: "batesprocess(3)"
 name: "batesprocess"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-batesprocess/"
 description: "ql/processes/batesprocess.hpp – Bates stochastic process, Heston process plus compound Poisson process plus log-normal jump diffusion size."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/processes/batesprocess.hpp &#8211; Bates stochastic process, Heston process plus compound Poisson process plus log-normal jump diffusion size. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/processes/hestonprocess.hpp&gt;<br />

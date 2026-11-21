@@ -1,4 +1,5 @@
 ---
+
 title: "psdriver(1)"
 name: "psdriver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psdriver/"
 description: "PS driver – driver to create PostScript files (drivers)"
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code> PS driver</code> &#8211; driver to create PostScript files<br />
  <i>(drivers)</i></p>
 <h2>DESCRIPTION</h2>

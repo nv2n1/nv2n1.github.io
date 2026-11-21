@@ -1,4 +1,5 @@
 ---
+
 title: "url_handler(1)"
 name: "url_handler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-url_handler/"
 description: "urlview – URL extractor/launcher"
 ---
 
-<h2>NAME</h2>
 <p> urlview &#8211; URL extractor/launcher</p>
 <h2>SYNOPSIS</h2>
 <p> <code>urlview </code> <i>filename</i> [ <i>filename</i> &#8230; ]</p>

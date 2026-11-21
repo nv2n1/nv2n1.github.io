@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_endhostent_r(3)"
 name: "lwres_endhostent_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lwres_endhostent_r/"
 description: "lwres_gethostbyname, lwres_gethostbyname2, lwres_gethostbyaddr, lwres_gethostent, lwres_sethostent, lwres_endhostent, lwres_gethostbyname_r, lwres_gethostbyaddr_r, lwres_gethostent_r, lwres_sethost..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> lwres_gethostbyname, lwres_gethostbyname2, lwres_gethostbyaddr, lwres_gethostent, lwres_sethostent, lwres_endhostent, lwres_gethostbyname_r, lwres_gethostbyaddr_r, lwres_gethostent_r, lwres_sethostent_r, lwres_endhostent_r &#8211; lightweight resolver get network host entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

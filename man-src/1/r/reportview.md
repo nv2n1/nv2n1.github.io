@@ -1,4 +1,5 @@
 ---
+
 title: "reportview(1)"
 name: "reportview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-reportview/"
 description: "reportview – ask KWeatherService to display a weather report"
 ---
 
-<h2 class="name">NAME</h2>
 <p> reportview &#8211; ask KWeatherService to display a weather report </p>
 <h2>SYNOPSIS</h2>
 <dl>

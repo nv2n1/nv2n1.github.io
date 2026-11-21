@@ -1,4 +1,5 @@
 ---
+
 title: "htproxyunixtime(1)"
 name: "htproxyunixtime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htproxyunixtime/"
 description: "htproxyput, htproxydestroy, htproxytime, htproxyunixtime, htproxyrenew – GSI proxy delegations and querying, using GridSite/gLite delegation API"
 ---
 
-<h2>NAME</h2>
 <p> <code>htproxyput, htproxydestroy, htproxytime, htproxyunixtime, htproxyrenew</code> &#8211; GSI proxy delegations and querying, using GridSite/gLite delegation API</p>
 <h2>SYNOPSIS</h2>
 <p> <code>htproxyput, htproxydestroy, htproxytime, htproxyunixtime, htproxyrenew</code> [options] Service-URL </p>

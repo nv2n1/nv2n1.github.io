@@ -1,4 +1,5 @@
 ---
+
 title: "razor-revoke(1)"
 name: "razor-revoke"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-razor-revoke/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- &quot;razor-revoke&quot; - Razor Revoking Agent 
+&quot;razor-revoke&quot; - Razor Revoking Agent 
 
 <h2>SYNOPSIS</h2>
 

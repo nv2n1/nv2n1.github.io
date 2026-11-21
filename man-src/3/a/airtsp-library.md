@@ -1,4 +1,5 @@
 ---
+
 title: "airtsp-library(3)"
 name: "airtsp-library"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-airtsp-library/"
 description: "airtsp-library –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> airtsp-library &#8211; </p>
 <pre>
       C++ Simulated Airline Schedule Manager Library

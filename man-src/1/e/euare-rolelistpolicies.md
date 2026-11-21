@@ -1,4 +1,5 @@
 ---
+
 title: "euare-rolelistpolicies(1)"
 name: "euare-rolelistpolicies"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-rolelistpolicies/"
 description: "euare-rolelistpolicies – List one or all policies attached to a role"
 ---
 
-<h2>NAME</h2>
 <p> euare-rolelistpolicies &#8211; List one or all policies attached to a role</p>
 <h2>SYNOPSIS</h2>
 <p> euare-rolelistpolicies [-p POLICY] [-v] [&#8211;pretty-print]</p>

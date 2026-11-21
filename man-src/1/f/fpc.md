@@ -1,4 +1,5 @@
 ---
+
 title: "fpc(1)"
 name: "fpc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fpc/"
 description: "fpc – Free Pascal Compiler (FPC) binary"
 ---
 
-<h2>NAME</h2>
 <p> fpc &#8211; Free Pascal Compiler (FPC) binary </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fpc [options] [sourcefile]</code></p>

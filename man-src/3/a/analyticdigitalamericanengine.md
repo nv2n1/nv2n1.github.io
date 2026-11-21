@@ -1,4 +1,5 @@
 ---
+
 title: "analyticdigitalamericanengine(3)"
 name: "analyticdigitalamericanengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-analyticdigitalamericanengine/"
 description: "ql/pricingengines/vanilla/analyticdigitalamericanengine.hpp – analytic digital American option engine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/pricingengines/vanilla/analyticdigitalamericanengine.hpp &#8211; analytic digital American option engine </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/vanillaoption.hpp&gt;<br />

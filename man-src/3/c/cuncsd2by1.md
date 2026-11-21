@@ -1,4 +1,5 @@
 ---
+
 title: "cuncsd2by1(3)"
 name: "cuncsd2by1"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cuncsd2by1/"
 description: "cuncsd2by1.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cuncsd2by1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

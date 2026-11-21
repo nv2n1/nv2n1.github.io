@@ -1,4 +1,5 @@
 ---
+
 title: "atril-thumbnailer(1)"
 name: "atril-thumbnailer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atril-thumbnailer/"
 description: "atril-thumbnailer – create png thumbnails from atril supported documents"
 ---
 
-<h2>NAME</h2>
 <p> atril-thumbnailer &#8211; create png thumbnails from atril supported documents</p>
 <h2>SYNOPSIS</h2>
 <p> <code>atril-thumbnailer</code> [-s <code>size</code>] <code>input</code> <code>output</code></p>

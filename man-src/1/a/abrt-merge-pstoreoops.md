@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-merge-pstoreoops(1)"
 name: "abrt-merge-pstoreoops"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-merge-pstoreoops/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-merge-pstoreoops - Scans files for split oops message. Can print and/or delete them. 
+abrt-merge-pstoreoops - Scans files for split oops message. Can print and/or delete them. 
 
 <h2>SYNOPSIS</h2>
 

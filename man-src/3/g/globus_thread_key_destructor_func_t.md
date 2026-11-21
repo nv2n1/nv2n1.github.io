@@ -1,4 +1,5 @@
 ---
+
 title: "globus_thread_key_destructor_func_t(3)"
 name: "globus_thread_key_destructor_func_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_thread_key_destructor_func_t/"
 description: "globus_thread.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_thread.h &#8211; </p>
 <p> Globus Threading Abstraction.</p>
 <h2>SYNOPSIS</h2>

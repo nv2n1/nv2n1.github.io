@@ -1,4 +1,5 @@
 ---
+
 title: "proxy(1)"
 name: "proxy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-proxy/"
 description: "proxy – Display the proxy server that should be used to reach a given a network resource"
 ---
 
-<h2 class="name">NAME</h2>
 <p> proxy &#8211; Display the proxy server that should be used to reach a given a network resource </p>
 <h2>SYNOPSIS</h2>
 <p> proxy</p>

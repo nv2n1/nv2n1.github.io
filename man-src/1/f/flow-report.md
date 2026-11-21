@@ -1,4 +1,5 @@
 ---
+
 title: "flow-report(1)"
 name: "flow-report"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-report/"
 description: "flow-report – Generate reports from flow data."
 ---
 
-<h2>NAME</h2>
 <p> flow-report &#8211; Generate reports from flow data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-report</code> [ <code>-h</code> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-s</code><i> stat_fname</i> ] [ <code>-S</code><i> stat_definition</i> ] [ <code>-v</code><i> variable binding</i> ]</p>

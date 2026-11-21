@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_privkey_verify_data(3)"
 name: "gnutls_x509_privkey_verify_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_x509_privkey_verify_data/"
 description: "gnutls_x509_privkey_verify_data – Verify the signed data using private key"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_x509_privkey_verify_data &#8211; Verify the signed data using private key</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/x509.h">gnutls/x509.h</a>&gt;</code> </p>

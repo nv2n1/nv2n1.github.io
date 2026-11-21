@@ -1,4 +1,5 @@
 ---
+
 title: "modify_ldt(2)"
 name: "modify_ldt"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-modify_ldt/"
 description: "modify_ldt – get or set a per-process LDT entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> modify_ldt &#8211; get or set a per-process LDT entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

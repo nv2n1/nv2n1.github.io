@@ -1,4 +1,5 @@
 ---
+
 title: "imsettings-switch(1)"
 name: "imsettings-switch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imsettings-switch/"
 description: "imsettings-switch – Switch Input Method"
 ---
 
-<h2>NAME</h2>
 <p> imsettings-switch &#8211; Switch Input Method</p>
 <h2>SYNOPSIS</h2>
 <p> <code>imsettings-switch</code> [ <code>-hnqrx</code> ] [ <code>&#8211;no-update</code> ] [ <code>&#8211;quiet</code> ] [ <code>&#8211;restart</code> ] [ <code>&#8211;read-xinputrc</code> ] [ <code>&#8211;help</code> ] [Input Method name | configuration filename]</p>

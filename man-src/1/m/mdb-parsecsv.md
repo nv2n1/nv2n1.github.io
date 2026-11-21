@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-parsecsv(1)"
 name: "mdb-parsecsv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdb-parsecsv/"
 description: "mdb-parsecsv – Convert CSV table dump into C file."
 ---
 
-<h2>NAME</h2>
 <p> <code>mdb-parsecsv </code>&#8211; Convert CSV table dump into C file.</p>
 <h2>SYNOPSIS</h2>
 <pre>

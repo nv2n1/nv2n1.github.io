@@ -1,4 +1,5 @@
 ---
+
 title: "curl_free(3)"
 name: "curl_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_free/"
 description: "curl_free – reclaim memory that has been obtained through a libcurl call"
 ---
 
-<h2>NAME</h2>
 <p> curl_free &#8211; reclaim memory that has been obtained through a libcurl call</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

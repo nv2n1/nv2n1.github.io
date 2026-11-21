@@ -1,4 +1,5 @@
 ---
+
 title: "hpifan(1)"
 name: "hpifan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpifan/"
 description: "hpifan – An openhpi sample application that shows \"Fan Control\" management instruments"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpifan &#8211; An openhpi sample application that shows &quot;Fan Control&quot; management instruments </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

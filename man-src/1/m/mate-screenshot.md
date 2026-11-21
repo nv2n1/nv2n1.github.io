@@ -1,4 +1,5 @@
 ---
+
 title: "mate-screenshot(1)"
 name: "mate-screenshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-screenshot/"
 description: "mate-screenshot – capture the screen, a window, or an user-defined area and save the snapshot image to a file."
 ---
 
-<h2>NAME</h2>
 <p> mate-screenshot &#8211; capture the screen, a window, or an user-defined area and save the snapshot image to a file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-screenshot</code> [ <code>-w</code> ] [ <code>-a</code> ] [ <code>-b</code> ] [ <code>-B</code> ] [ <code>-d </code><i>SECONDS</i> ] [ <code>-e </code><i>EFFECT</i> ] [ <code>-i</code> ] [ <code>&#8211;display </code><i>DISPLAY</i> ]</p>

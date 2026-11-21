@@ -1,4 +1,5 @@
 ---
+
 title: "lhapdf-getdata(1)"
 name: "lhapdf-getdata"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lhapdf-getdata/"
 description: "lhapdf-getdata – Get PDF sets from the LHAPDF repository"
 ---
 
-<h2>NAME</h2>
 <p> lhapdf-getdata &#8211; Get PDF sets from the LHAPDF repository</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lhapdf-getdata</code> [<i>&#8211;main</i>] [<i>&#8211;all</i>] [<i>&#8211;repo=URL</i>] [<i>&#8211;dest=DEST</i>] [<i>&#8211;dryrun</i>] &lt;name|number&gt; [&lt;name|number&gt; &#8230;]</p>

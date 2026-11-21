@@ -1,4 +1,5 @@
 ---
+
 title: "serialver(1)"
 name: "serialver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-serialver/"
 description: "serialver – Returns the serial version UID for specified classes."
 ---
 
-<h2>NAME</h2>
 <p> serialver &#8211; Returns the serial version UID for specified classes.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

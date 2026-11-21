@@ -1,4 +1,5 @@
 ---
+
 title: "collectdmon(1)"
 name: "collectdmon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-collectdmon/"
 description: "collectdmon – Monitoring daemon for collectd"
 ---
 
-<h2 class="name">NAME</h2>
 <p> collectdmon &#8211; Monitoring daemon for collectd </p>
 <h2>SYNOPSIS</h2>
 <p> collectdmon <i>[options]</i> [&#8211; <i>collectd options</i>]</p>

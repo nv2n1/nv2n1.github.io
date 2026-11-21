@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-winsync-migrate(1)"
 name: "ipa-winsync-migrate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-winsync-migrate/"
 description: "ipa-winsync-migrate – Seamless migration of AD users created by winsync to native AD users."
 ---
 
-<h2>NAME</h2>
 <p> ipa-winsync-migrate &#8211; Seamless migration of AD users created by winsync to native AD users.</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-winsync-migrate</p>

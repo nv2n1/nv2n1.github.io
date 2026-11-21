@@ -1,4 +1,5 @@
 ---
+
 title: "gif2webp(1)"
 name: "gif2webp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gif2webp/"
 description: "gif2webp – Convert a GIF image to WebP"
 ---
 
-<h2>NAME</h2>
 <p> gif2webp &#8211; Convert a GIF image to WebP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gif2webp</code> [<i>options</i>]<i> input_file.gif -o output_file.webp</i> </p>

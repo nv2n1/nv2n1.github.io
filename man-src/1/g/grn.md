@@ -1,4 +1,5 @@
 ---
+
 title: "grn(1)"
 name: "grn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grn/"
 description: "grn – groff preprocessor for gremlin files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grn &#8211; groff preprocessor for gremlin files </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-Cv</code> ] [ <code>-T </code><i>dev</i> ] [ <code>-M </code><i>dir</i> ] [ <code>-F </code><i>dir</i> ] [<i>file</i> &#8230;]</p>

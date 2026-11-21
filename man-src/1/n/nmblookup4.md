@@ -1,4 +1,5 @@
 ---
+
 title: "nmblookup4(1)"
 name: "nmblookup4"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nmblookup4/"
 description: "nmblookup4 – NetBIOS over TCP/IP client used to lookup NetBIOS names"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nmblookup4 &#8211; NetBIOS over TCP/IP client used to lookup NetBIOS names </p>
 <h2>SYNOPSIS</h2>
 <dl>

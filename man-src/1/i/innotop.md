@@ -1,4 +1,5 @@
 ---
+
 title: "innotop(1)"
 name: "innotop"
 section: "1"
@@ -6,10 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-innotop/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- innotop - MySQL and InnoDB transaction/status monitor. 
+innotop - MySQL and InnoDB transaction/status monitor. 
 
 <h2>SYNOPSIS</h2>
 

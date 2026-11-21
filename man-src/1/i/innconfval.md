@@ -1,4 +1,5 @@
 ---
+
 title: "innconfval(1)"
 name: "innconfval"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-innconfval/"
 description: "innconfval – Get configuration parameters from inn.conf"
 ---
 
-<h2 class="name">NAME</h2>
 <p> innconfval &#8211; Get configuration parameters from inn.conf </p>
 <h2>SYNOPSIS</h2>
 <p> <code>innconfval</code> [<code>-pstv</code>] [<code>-i</code> <i>file</i>] [<i>parameter</i> &#8230;] </p>

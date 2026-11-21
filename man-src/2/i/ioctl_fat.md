@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl_fat(2)"
 name: "ioctl_fat"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-ioctl_fat/"
 description: "ioctl_fat – manipulating the FAT filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ioctl_fat &#8211; manipulating the FAT filesystem </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

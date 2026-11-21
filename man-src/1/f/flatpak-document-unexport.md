@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-document-unexport(1)"
 name: "flatpak-document-unexport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-document-unexport/"
 description: "flatpak-document-unexport – Stop exporting a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-document-unexport &#8211; Stop exporting a file </p>
 <h2>SYNOPSIS</h2>
 <dl>

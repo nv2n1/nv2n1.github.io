@@ -1,4 +1,5 @@
 ---
+
 title: "jpeginfo(1)"
 name: "jpeginfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jpeginfo/"
 description: "jpeginfo – prints information and tests integrity of JPEG/JFIF files."
 ---
 
-<h2>NAME</h2>
 <p> jpeginfo &#8211; prints information and tests integrity of JPEG/JFIF files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jpeginfo </code> [ <code>options </code> ] [ <code>filenames </code> ] </p>

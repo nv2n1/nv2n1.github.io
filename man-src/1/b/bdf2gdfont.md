@@ -1,4 +1,5 @@
 ---
+
 title: "bdf2gdfont(1)"
 name: "bdf2gdfont"
 section: "1"
@@ -6,10 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-bdf2gdfont/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- bdf2gdfont.pl - Convert X11 &quot;BDF&quot; fonts into a loadable font format for GD. 
+bdf2gdfont.pl - Convert X11 &quot;BDF&quot; fonts into a loadable font format for GD. 
 
 <h2>SYNOPSIS</h2>
 

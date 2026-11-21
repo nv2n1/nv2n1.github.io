@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-list-metrics(1)"
 name: "euwatch-list-metrics"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euwatch-list-metrics/"
 description: "euwatch-list-metrics – Show a list of monitoring metrics"
 ---
 
-<h2>NAME</h2>
 <p> euwatch-list-metrics &#8211; Show a list of monitoring metrics</p>
 <h2>SYNOPSIS</h2>
 <p> euwatch-list-metrics [-d KEY1=VALUE1,KEY2=VALUE2,&#8230;] [-m METRIC]</p>

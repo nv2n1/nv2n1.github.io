@@ -1,4 +1,5 @@
 ---
+
 title: "ck_array_commit(3)"
 name: "ck_array_commit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_array_commit/"
 description: "ck_array_commit – linearization point for mutations before commit call"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_array_commit</code> &#8211; linearization point for mutations before commit call</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

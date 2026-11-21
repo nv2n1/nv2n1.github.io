@@ -1,4 +1,5 @@
 ---
+
 title: "callability_(3)"
 name: "callability_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-callability_/"
 description: "QuantLib::ConvertibleBond – base class for convertible bonds"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::ConvertibleBond &#8211; base class for convertible bonds </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/bonds/convertiblebond.hpp&gt; </p>

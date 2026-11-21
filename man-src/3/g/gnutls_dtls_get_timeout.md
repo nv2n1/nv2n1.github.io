@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_dtls_get_timeout(3)"
 name: "gnutls_dtls_get_timeout"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_dtls_get_timeout/"
 description: "gnutls_dtls_get_timeout – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_dtls_get_timeout &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/dtls.h&gt;</code> </p>

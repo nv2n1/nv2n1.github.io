@@ -1,4 +1,5 @@
 ---
+
 title: "ssh-keyscan(1)"
 name: "ssh-keyscan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ssh-keyscan/"
 description: "ssh-keyscan – gather SSH public keys from servers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ssh-keyscan</code> &#8211; gather SSH public keys from servers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssh-keyscan</code> [-<code>46cDHv </code>[-<code>f </code><i>file</i> ] ] [-<code>p </code><i>port</i> ] [-<code>T </code><i>timeout</i> ] [-<code>t </code><i>type</i> ] [<i>host | addrlist namelist</i> ]</p>

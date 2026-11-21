@@ -1,4 +1,5 @@
 ---
+
 title: "flow-send(1)"
 name: "flow-send"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-send/"
 description: "flow-send – Transmit flow data with the NetFlow protocol."
 ---
 
-<h2>NAME</h2>
 <p> flow-send &#8211; Transmit flow data with the NetFlow protocol.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-send</code> [ <code>-h</code> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-m</code><i> privacy_mask</i> ] [ <code>-s</code> ] [ <code>-x</code><i> xmit_delay</i> ] [ <code>-V</code><i> pdu_version</i> ] <i>localip/remoteip/port</i></p>

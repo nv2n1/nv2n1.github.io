@@ -1,4 +1,5 @@
 ---
+
 title: "cp(1)"
 name: "cp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cp/"
 description: "cp – copy files and directories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cp &#8211; copy files and directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cp</code> [<i>,OPTION/</i>]&#8230; [<i>,-T/</i>] <i>,SOURCE DEST/</i><br />

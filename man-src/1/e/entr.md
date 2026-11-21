@@ -1,4 +1,5 @@
 ---
+
 title: "entr(1)"
 name: "entr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-entr/"
 description: "entr – run arbitrary commands when files change"
 ---
 
-<h2>NAME</h2>
 <p> <code>entr</code> &#8211; run arbitrary commands when files change</p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>cdpr</code> ] <i>utility</i> [<i>argument &#8230;</i> ] [<i>/_</i> ]</p>

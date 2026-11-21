@@ -1,4 +1,5 @@
 ---
+
 title: "obconformer(1)"
 name: "obconformer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obconformer/"
 description: "obconformer – generate conformer coordinates"
 ---
 
-<h2>NAME</h2>
 <p> <code>obconformer</code> &#8211; generate conformer coordinates</p>
 <h2>SYNOPSIS</h2>
 <p> <i># of conformers</i> <i># of optimization steps</i> <i>filename</i></p>

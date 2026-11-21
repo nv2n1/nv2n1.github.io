@@ -1,4 +1,5 @@
 ---
+
 title: "git-info(1)"
 name: "git-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-info/"
 description: "git-info – Returns information on current repository"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-info</code> &#8211; Returns information on current repository</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-info</code></p>

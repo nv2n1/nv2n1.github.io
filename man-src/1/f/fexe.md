@@ -1,4 +1,5 @@
 ---
+
 title: "fexe(1)"
 name: "fexe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fexe/"
 description: "fexe – print a process or corefile’s executable path"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fexe &#8211; print a process or corefile&#8217;s executable path </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-w64-mingw32-ld(1)"
 name: "x86_64-w64-mingw32-ld"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x86_64-w64-mingw32-ld/"
 description: "ld – The GNU linker"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ld &#8211; The GNU linker </p>
 <h2>SYNOPSIS</h2>
 <p> ld [<code>options</code>] <i>objfile</i> &#8230;</p>

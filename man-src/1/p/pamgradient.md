@@ -1,4 +1,5 @@
 ---
+
 title: "pamgradient(1)"
 name: "pamgradient"
 section: "1"
@@ -8,7 +9,7 @@ description: "pamgradient – create a four-corner gradient PAM image"
 ---
 
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
-<h2 class="name">NAME</h2>
+
 <p> pamgradient &#8211; create a four-corner gradient PAM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamgradient</code> [<code>-maxval=</code><i>maxval</i>] <i>color-tl</i> <i>color-tr</i> <i>color-bl</i> <i>color-br</i> <i>width</i> <i>height</i> </p>

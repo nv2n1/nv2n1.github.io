@@ -1,4 +1,5 @@
 ---
+
 title: "mktemp(1)"
 name: "mktemp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mktemp/"
 description: "mktemp – create a temporary file or directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mktemp &#8211; create a temporary file or directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mktemp</code> [<i>,OPTION/</i>]&#8230; [<i>,TEMPLATE/</i>]</p>

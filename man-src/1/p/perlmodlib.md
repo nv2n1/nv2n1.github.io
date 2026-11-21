@@ -1,4 +1,5 @@
 ---
+
 title: "perlmodlib(1)"
 name: "perlmodlib"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlmodlib/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlmodlib - constructing new Perl modules and finding existing ones 
+perlmodlib - constructing new Perl modules and finding existing ones 
 
 <h2>THE PERL MODULE LIBRARY</h2>
 

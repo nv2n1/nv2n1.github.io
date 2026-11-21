@@ -1,4 +1,5 @@
 ---
+
 title: "varnishlog(1)"
 name: "varnishlog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-varnishlog/"
 description: "varnishlog – Display Varnish logs"
 ---
 
-<h2>NAME</h2>
 <p> varnishlog &#8211; Display Varnish logs</p>
 <h2>SYNOPSIS</h2>
 <p> varnishlog [-a] [-b] [-B] [-c] [-C] [-d] [-D] [-g &lt;session|request|vxid|raw&gt;] [-h] [-i taglist] [-I &lt;[taglist:]regex&gt;] [-k num] [-L limit] [-n name] [-N filename] [-P file] [-q query] [-r filename] [-T seconds] [-v] [-V] [-w filename] [-x taglist] [-X &lt;[taglist:]regex&gt;]</p>

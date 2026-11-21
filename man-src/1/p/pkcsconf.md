@@ -1,4 +1,5 @@
 ---
+
 title: "pkcsconf(1)"
 name: "pkcsconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkcsconf/"
 description: "pkcsconf – configuration utility for the pkcsslotd daemon"
 ---
 
-<h2>NAME</h2>
 <p> pkcsconf &#8211; configuration utility for the pkcsslotd daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pkcsconf</code> [<code>-itsmlIupPh</code>] [<code>-c</code> <i>slotnumber</i> <code>-U</code> <i>userPIN</i> <code>-S</code> <i>SOPin</i> <code>-n</code> <i>newpin</i>] </p>

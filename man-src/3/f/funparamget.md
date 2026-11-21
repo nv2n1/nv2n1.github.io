@@ -1,4 +1,5 @@
 ---
+
 title: "funparamget(3)"
 name: "funparamget"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funparamget/"
 description: "FunParamGet – get a Funtools param value"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunParamGet &#8211; get a Funtools param value</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

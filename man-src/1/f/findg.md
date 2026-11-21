@@ -1,4 +1,5 @@
 ---
+
 title: "findg(1)"
 name: "findg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-findg/"
 description: "findg – locates calls to all entries in pre-GKS NCAR Graphics"
 ---
 
-<h2>NAME</h2>
 <p> findg &#8211; locates calls to all entries in pre-GKS NCAR Graphics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>findg &lt;fortran-file</code> </p>

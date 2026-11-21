@@ -1,4 +1,5 @@
 ---
+
 title: "ocamlbuild(1)"
 name: "ocamlbuild"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ocamlbuild/"
 description: "ocamlbuild – The OCaml project compilation tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ocamlbuild &#8211; The OCaml project compilation tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamlbuild</code> [ <code>-Is &nbsp;<wbr>dir1,&#8230;</code> ] [ <code>-libs</code><i>&nbsp;<wbr>lib1,&#8230;</i> ] [ <code>-lflags</code><i>&nbsp;<wbr>flag1,&#8230;</i> ] [ <code>-pp</code><i>&nbsp;<wbr>flags</i> ] [ <code>-tags</code><i>&nbsp;<wbr>tag1,&#8230;</i> ] [ <code>-j &nbsp;<wbr>parallel-jobs</code> ] <i>target.native</i> [ <code>&#8212; arg1 arg2 &#8230;</code> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "setfacl(1)"
 name: "setfacl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setfacl/"
 description: "setfacl – set file access control lists"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setfacl &#8211; set file access control lists </p>
 <h2>SYNOPSIS</h2>
 <p> <code>setfacl</code> [-bkndRLPvh] [{-m|-x} acl_spec] [{-M|-X} acl_file] file &#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lxt2miner(1)"
 name: "lxt2miner"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxt2miner/"
 description: "lxt2miner – Data mining of LXT2 files"
 ---
 
-<h2>NAME</h2>
 <p> lxt2miner &#8211; Data mining of LXT2 files</p>
 <h2>SYNTAX</h2>
 <p> lxt2miner [<i>option</i>]&#8230; [<i>LXT2FILE</i>]</p>

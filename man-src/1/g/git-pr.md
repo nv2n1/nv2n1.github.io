@@ -1,4 +1,5 @@
 ---
+
 title: "git-pr(1)"
 name: "git-pr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-pr/"
 description: "git-pr – Checks out a pull request locally"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-pr</code> &#8211; Checks out a pull request locally</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-pr</code> &lt;number&gt; [&lt;remote&gt;]<br />

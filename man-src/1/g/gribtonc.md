@@ -1,4 +1,5 @@
 ---
+
 title: "gribtonc(1)"
 name: "gribtonc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gribtonc/"
 description: "gribtonc – GRIB to netCDF decoder"
 ---
 
-<h2>NAME</h2>
 <p> gribtonc &#8211; GRIB to netCDF decoder</p>
 <h2>SYNOPSIS</h2>
 <dl>

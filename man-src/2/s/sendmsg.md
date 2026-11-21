@@ -1,4 +1,5 @@
 ---
+
 title: "sendmsg(2)"
 name: "sendmsg"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sendmsg/"
 description: "send, sendto, sendmsg – send a message on a socket"
 ---
 
-<h2 class="name">NAME</h2>
 <p> send, sendto, sendmsg &#8211; send a message on a socket </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

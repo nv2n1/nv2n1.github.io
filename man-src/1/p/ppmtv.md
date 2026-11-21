@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtv(1)"
 name: "ppmtv"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-ppmtv/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- ppmtv - make a portable pixmap look like taken from an American TV 
+ppmtv - make a portable pixmap look like taken from an American TV 
 
 <h2>SYNOPSIS</h2>
 

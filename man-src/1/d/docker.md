@@ -1,4 +1,5 @@
 ---
+
 title: "docker(1)"
 name: "docker"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker/"
 description: "docker – Docker image and container command line interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker &#8211; Docker image and container command line interface </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker</code> [OPTIONS] COMMAND [ARG&#8230;] </p>

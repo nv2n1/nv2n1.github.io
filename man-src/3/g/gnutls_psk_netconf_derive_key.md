@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_psk_netconf_derive_key(3)"
 name: "gnutls_psk_netconf_derive_key"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_psk_netconf_derive_key/"
 description: "gnutls_psk_netconf_derive_key – derive PSK Netconf key from password"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_psk_netconf_derive_key &#8211; derive PSK Netconf key from password</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>

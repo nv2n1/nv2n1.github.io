@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtopict(1)"
 name: "ppmtopict"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtopict/"
 description: "ppmtopict – convert a portable pixmap into a Macintosh PICT file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtopict &#8211; convert a portable pixmap into a Macintosh PICT file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtopict</code> [<i>ppmfile</i>]</p>

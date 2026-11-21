@@ -1,4 +1,5 @@
 ---
+
 title: "blueproximity(1)"
 name: "blueproximity"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-blueproximity/"
 description: "blueproximity – locks/unlocks your desktop tracking a bluetooth device"
 ---
 
-<h2>NAME</h2>
 <p> blueproximity &#8211; locks/unlocks your desktop tracking a bluetooth device</p>
 <h2>SYNOPSIS</h2>
 <p> <code>blueproximity</code></p>

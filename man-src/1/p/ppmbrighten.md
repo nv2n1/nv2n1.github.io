@@ -1,4 +1,5 @@
 ---
+
 title: "ppmbrighten(1)"
 name: "ppmbrighten"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-ppmbrighten/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- ppmbrighten - change an images Saturation and Value from an HSV map 
+ppmbrighten - change an images Saturation and Value from an HSV map 
 
 <h2>SYNOPSIS</h2>
 

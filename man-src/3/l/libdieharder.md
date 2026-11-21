@@ -1,4 +1,5 @@
 ---
+
 title: "libdieharder(3)"
 name: "libdieharder"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libdieharder/"
 description: "libdieharder – A testing and benchmarking library for random number generators"
 ---
 
-<h2>NAME</h2>
 <p> libdieharder &#8211; A testing and benchmarking library for random number generators </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include dieharder.h</code> </p>

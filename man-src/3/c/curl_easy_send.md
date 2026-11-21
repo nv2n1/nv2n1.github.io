@@ -1,4 +1,5 @@
 ---
+
 title: "curl_easy_send(3)"
 name: "curl_easy_send"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_easy_send/"
 description: "curl_easy_send – sends raw data over an \"easy\" connection"
 ---
 
-<h2>NAME</h2>
 <p> curl_easy_send &#8211; sends raw data over an &quot;easy&quot; connection</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/easy.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cvtsudoers(1)"
 name: "cvtsudoers"
 section: "1"
@@ -8,7 +9,7 @@ description: "cvtsudoers – convert between sudoers file formats"
 ---
 
 <p>Sudo 1.9.9</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>cvtsudoers</code> &#8211; convert between sudoers file formats </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cvtsudoers</code> [-<code>ehMpV</code> ] [-<code>b </code><i>dn</i> ] [-<code>c </code><i>conf_file</i> ] [-<code>d </code><i>deftypes</i> ] [-<code>f </code><i>output_format</i> ] [-<code>i </code><i>input_format</i> ] [-<code>I </code><i>increment</i> ] [-<code>l </code><i>log_file</i> ] [-<code>m </code><i>filter</i> ] [-<code>o </code><i>output_file</i> ] [-<code>O </code><i>start_point</i> ] [-<code>P </code><i>padding</i> ] [-<code>s </code><i>sections</i> ] [<i>input_file &#8230;</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_anyaddr(3)"
 name: "ipsec_anyaddr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_anyaddr/"
 description: "ipsec_anyaddr, ipsec_isanyaddr, ipsec_unspecaddr, ipsec_isunspecaddr, ipsec_loopbackaddr, ipsec_isloopbackaddr – get and test for addresses of type \"any\", \"unspecified\" and loopback get \"any\" address"
 ---
 
-<h2>NAME</h2>
 <p> ipsec_anyaddr, ipsec_isanyaddr, ipsec_unspecaddr, ipsec_isunspecaddr, ipsec_loopbackaddr, ipsec_isloopbackaddr &#8211; get and test for addresses of type &quot;any&quot;, &quot;unspecified&quot; and loopback get &quot;any&quot; address</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>

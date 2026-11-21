@@ -1,4 +1,5 @@
 ---
+
 title: "bson_string_append(3)"
 name: "bson_string_append"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_string_append/"
 description: "bson_string_append() – Appends the ASCII or UTF-8 encoded string str to string. This is not suitable for embedding NULLs in strings."
 ---
 
-<h2>NAME</h2>
 <p> bson_string_append() &#8211; Appends the ASCII or UTF-8 encoded string str to string. This is not suitable for embedding NULLs in strings.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

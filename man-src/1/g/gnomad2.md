@@ -1,4 +1,5 @@
 ---
+
 title: "gnomad2(1)"
 name: "gnomad2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnomad2/"
 description: "gnomad2 – transfer files between a host and a Creative Labs Nomad Jukebox, Zen jukebox or Dell Digital Jukebox (DJ)."
 ---
 
-<h2>NAME</h2>
 <p> gnomad2 &#8211; transfer files between a host and a Creative Labs Nomad Jukebox, Zen jukebox or Dell Digital Jukebox (DJ).</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnomad2</code> [<i>OPTION</i>]&#8230;</p>

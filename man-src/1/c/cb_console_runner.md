@@ -1,4 +1,5 @@
 ---
+
 title: "cb_console_runner(1)"
 name: "cb_console_runner"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cb_console_runner/"
 description: "cb_console_runner – The Code::Blocks IDE console programs launcher"
 ---
 
-<h2>NAME</h2>
 <p> cb_console_runner &#8211; The Code::Blocks IDE console programs launcher</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cb_console_runner</code> <i>args</i></p>

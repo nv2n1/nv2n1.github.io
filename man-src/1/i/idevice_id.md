@@ -1,4 +1,5 @@
 ---
+
 title: "idevice_id(1)"
 name: "idevice_id"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idevice_id/"
 description: "idevice_id – Prints device name or a list of attached devices."
 ---
 
-<h2>NAME</h2>
 <p> idevice_id &#8211; Prints device name or a list of attached devices.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idevice_id</code> [OPTIONS] [UDID] </p>

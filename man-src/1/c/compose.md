@@ -1,4 +1,5 @@
 ---
+
 title: "compose(1)"
 name: "compose"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-compose/"
 description: "run-mailcap, view, see, edit, compose, print – execute programs via entries in the mailcap file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> run-mailcap, view, see, edit, compose, print &#8211; execute programs via entries in the <i>mailcap</i> file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>run-mailcap</code> &#8211;action=ACTION [&#8211;option[=value]] [MIME-TYPE:[ENCODING:]]FILE [&#8230;] </p>

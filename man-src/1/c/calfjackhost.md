@@ -1,4 +1,5 @@
 ---
+
 title: "calfjackhost(1)"
 name: "calfjackhost"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-calfjackhost/"
 description: "calfjackhost – JACK wrapper for Calf plugins"
 ---
 
-<h2>NAME</h2>
 <p> calfjackhost &#8211; JACK wrapper for Calf plugins</p>
 <h2>SYNOPSIS</h2>
 <p> <code>calfjackhost [</code><i>options</i>] <i>plugin[:preset]</i> [<code>!</code>] &#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmdamounts(1)"
 name: "pmdamounts"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdamounts/"
 description: "pmdamounts – filesystem mounts performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdamounts</code> &#8211; filesystem mounts performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/mounts/pmdamounts</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>

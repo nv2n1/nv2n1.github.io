@@ -1,4 +1,5 @@
 ---
+
 title: "create(3)"
 name: "create"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-create/"
 description: "QuantLib::MarketModelFactory – base class for market-model factories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::MarketModelFactory &#8211; base class for market-model factories </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/marketmodels/marketmodel.hpp&gt; </p>

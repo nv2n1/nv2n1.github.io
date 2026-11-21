@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_get_srq_num(3)"
 name: "ibv_get_srq_num"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_get_srq_num/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_get_srq_num - return srq number associated with the given shared receive queue (SRQ) 
+ibv_get_srq_num - return srq number associated with the given shared receive queue (SRQ) 
 
 <h2>SYNOPSIS</h2>
 

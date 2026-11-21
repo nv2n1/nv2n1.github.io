@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-validate(1)"
 name: "oggz-validate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz-validate/"
 description: "oggz-validate — Validate the Ogg framing of one or more files"
 ---
 
-<h2>NAME</h2>
 <p> oggz-validate &#8212; Validate the Ogg framing of one or more files<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

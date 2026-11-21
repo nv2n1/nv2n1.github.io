@@ -1,4 +1,5 @@
 ---
+
 title: "perllocale(1)"
 name: "perllocale"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perllocale/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perllocale - Perl locale handling (internationalization and localization) 
+perllocale - Perl locale handling (internationalization and localization) 
 
 <h2>DESCRIPTION</h2>
 

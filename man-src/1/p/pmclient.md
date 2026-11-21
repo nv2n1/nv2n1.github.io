@@ -1,4 +1,5 @@
 ---
+
 title: "pmclient(1)"
 name: "pmclient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmclient/"
 description: "pmclient, pmclient_fg – a simple performance metrics client"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmclient</code>, <code>pmclient_fg</code> &#8211; a simple performance metrics client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmclient</code> [<code>-a</code> <i>archive</i>] [<code>-h</code> <i>host</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-P</code>] [<code>-S</code> <i>numsec</i>] [<code>-s</code> <i>samples</i>] [<code>-t</code> <i>interval</i>] [<code>-Z</code> <i>timezone</i>] [<code>-z</code>]</p>

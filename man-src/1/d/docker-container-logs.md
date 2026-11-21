@@ -1,4 +1,5 @@
 ---
+
 title: "docker-container-logs(1)"
 name: "docker-container-logs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-container-logs/"
 description: "docker-container-logs – Fetch the logs of a container"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-container-logs &#8211; Fetch the logs of a container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container logs [OPTIONS] CONTAINER</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mtkbabel(1)"
 name: "mtkbabel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtkbabel/"
 description: "mtkbabel – Tool for managing GPS data loggers based on the MTK chip"
 ---
 
-<h2>NAME</h2>
 <p> mtkbabel &#8211; Tool for managing GPS data loggers based on the MTK chip</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtkbabel </code>[<code>-abcdEfhilmopRrstvwx</code>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perf-script-perl(1)"
 name: "perf-script-perl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-script-perl/"
 description: "perf-script-perl – Process trace data with a Perl script"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-script-perl &#8211; Process trace data with a Perl script </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

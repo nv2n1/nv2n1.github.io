@@ -1,4 +1,5 @@
 ---
+
 title: "dund(1)"
 name: "dund"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dund/"
 description: "dund – BlueZ Bluetooth dial-up networking daemon"
 ---
 
-<h2>NAME</h2>
 <p> dund &#8211; BlueZ Bluetooth dial-up networking daemon</p>
 <h2>DESCRIPTION</h2>
 <p> DUN daemon</p>

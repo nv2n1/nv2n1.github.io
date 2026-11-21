@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pubkey_import_x509_crq(3)"
 name: "gnutls_pubkey_import_x509_crq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_pubkey_import_x509_crq/"
 description: "gnutls_pubkey_import_x509_crq – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_pubkey_import_x509_crq &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>

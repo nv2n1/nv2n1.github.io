@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_poll(3)"
 name: "libssh2_poll"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_poll/"
 description: "libssh2_poll – poll for activity on a socket, channel or listener"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_poll &#8211; poll for activity on a socket, channel or listener</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

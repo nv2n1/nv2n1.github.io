@@ -1,4 +1,5 @@
 ---
+
 title: "gpsflash(1)"
 name: "gpsflash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpsflash/"
 description: "gpsflash – 2-stage firmware loader for GPS chipsets"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpsflash &#8211; 2-stage firmware loader for GPS chipsets </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "mispipe(1)"
 name: "mispipe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mispipe/"
 description: "mispipe – pipe two commands, returning the exit status of the first"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mispipe &#8211; pipe two commands, returning the exit status of the first </p>
 <h2>SYNOPSIS</h2>
 <dl>

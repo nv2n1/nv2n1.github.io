@@ -1,4 +1,5 @@
 ---
+
 title: "nwipe(1)"
 name: "nwipe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwipe/"
 description: "nwipe – securely erase disks"
 ---
 
-<h2>NAME</h2>
 <p> nwipe &#8211; securely erase disks</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwipe</code> [<i>options</i>] [<i>device1</i>] [<i>device2</i>] &#8230;</p>

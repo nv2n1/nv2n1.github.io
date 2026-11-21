@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs11_copy_secret_key(3)"
 name: "gnutls_pkcs11_copy_secret_key"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_pkcs11_copy_secret_key/"
 description: "gnutls_pkcs11_copy_secret_key – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_pkcs11_copy_secret_key &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>

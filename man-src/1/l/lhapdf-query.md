@@ -1,4 +1,5 @@
 ---
+
 title: "lhapdf-query(1)"
 name: "lhapdf-query"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lhapdf-query/"
 description: "lhapdf-query – Query PDF values from LHAPDF"
 ---
 
-<h2>NAME</h2>
 <p> lhapdf-query &#8211; Query PDF values from LHAPDF</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lhapdf-query</code> [cmd] [setname|num] [memnum] x Q [flavourID]</p>

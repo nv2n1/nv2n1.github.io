@@ -1,4 +1,5 @@
 ---
+
 title: "tapeconv(1)"
 name: "tapeconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tapeconv/"
 description: "tapeconv – Sinclair ZX Spectrum tape file converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tapeconv &#8211; Sinclair ZX Spectrum tape file converter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tapeconv</code> [ -a <i>archive info TZX</i> ] [ -b ] [ -s <i>SCR loading screen</i> ] [ -i <i>JPG or GIF inlay image</i> ] <i>infile outfile</i></p>

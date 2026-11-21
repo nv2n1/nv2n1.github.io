@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-vpcs(1)"
 name: "euca-describe-vpcs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-vpcs/"
 description: "euca-describe-vpcs – Show information about VPCs"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-vpcs &#8211; Show information about VPCs</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-vpcs [&#8211;show-empty-fields] [-U URL]</p>

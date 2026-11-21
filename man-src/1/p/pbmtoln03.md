@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtoln03(1)"
 name: "pbmtoln03"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmtoln03/"
 description: "pbmtoln03 – convert PBM image to DEC LN03+ Sixel output"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmtoln03 &#8211; convert PBM image to DEC LN03+ Sixel output</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtoln03</code> [<code>-rltbf</code>] <i>pbmfile</i> </p>

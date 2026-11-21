@@ -1,4 +1,5 @@
 ---
+
 title: "amulegui(1)"
 name: "amulegui"
 section: "1"
@@ -8,7 +9,7 @@ description: "amulegui – aMule control program with GUI"
 ---
 
 <p>amulegui &#8211; aMule control program with GUI</p>
-<h2>SYNOPSIS</h2>
+
 <p> [<code>-c</code> <i>&lt;path&gt;</i>] [<code>-geometry</code> <i>&lt;geom&gt;</i>] _untranslated<code>[</code>-o<code>]</code> _untranslated<code>[</code>-r<code>]</code> _untranslated<code>[</code>-s<code>]</code> [<code>-t</code> <i>&lt;num&gt;</i>] </p>
 <p> _untranslated<code>[</code>-v<code>]</code> </p>
 <p> _untranslated<code>[</code>-h<code>]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_eof(3)"
 name: "libssh2_channel_eof"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_eof/"
 description: "libssh2_channel_eof – check a channel’s EOF status"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_eof &#8211; check a channel&#8217;s EOF status</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

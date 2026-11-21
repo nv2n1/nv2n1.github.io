@@ -1,4 +1,5 @@
 ---
+
 title: "hpitop(1)"
 name: "hpitop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpitop/"
 description: "hpitop – A openhpi sample application that displays highlevel topology for a managed openHPI complex."
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpitop &#8211; A openhpi sample application that displays highlevel topology for a managed openHPI complex. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

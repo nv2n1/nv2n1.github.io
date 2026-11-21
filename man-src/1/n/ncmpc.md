@@ -1,4 +1,5 @@
 ---
+
 title: "ncmpc(1)"
 name: "ncmpc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncmpc/"
 description: "ncmpc – curses Music Player Daemon (MPD) client."
 ---
 
-<h2>NAME</h2>
 <p> ncmpc &#8211; curses Music Player Daemon (MPD) client.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncmpc</code> [options]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "avr-size(1)"
 name: "avr-size"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avr-size/"
 description: "size – list section sizes and total size."
 ---
 
-<h2 class="name">NAME</h2>
 <p> size &#8211; list section sizes and total size. </p>
 <h2>SYNOPSIS</h2>
 <p> size [<code>-A</code>|<code>-B</code>|<code>&#8211;format=</code><i>compatibility</i>]<br />

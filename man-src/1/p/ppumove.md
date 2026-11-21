@@ -1,4 +1,5 @@
 ---
+
 title: "ppumove(1)"
 name: "ppumove"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppumove/"
 description: "ppdep – The FPC Pascal unit mover."
 ---
 
-<h2>NAME</h2>
 <p> ppdep &#8211; The FPC Pascal unit mover. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppumove</code> [-sqbhw] [-o File] [-d path] [-e extension] files&#8230; </p>

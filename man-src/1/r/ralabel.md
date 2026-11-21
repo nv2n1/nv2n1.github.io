@@ -1,4 +1,5 @@
 ---
+
 title: "ralabel(1)"
 name: "ralabel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ralabel/"
 description: "ralabel – inserts fixed form or free form metadata labels into argus(8). ralabel supports a number of strategies for labeling including 1) address based, providing free form metadata, country code,..."
 ---
 
-<h2>NAME</h2>
 <p> <code>ralabel</code> &#8211; inserts fixed form or free form metadata labels into <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code>. <code>ralabel</code> supports a number of strategies for labeling including 1) address based, providing free form metadata, country code, geo data and fully qualified domain name (FQDN) labeling; 2)port based, providing free form labels using IANA port definitions, and 3) flow filter, providing free form labels based on argus filter specicfications. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ralabel</code> <code>-f</code> <i>address.file</i> [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

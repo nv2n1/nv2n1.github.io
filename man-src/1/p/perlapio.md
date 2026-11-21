@@ -1,4 +1,5 @@
 ---
+
 title: "perlapio(1)"
 name: "perlapio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlapio/"
 description: "perlapio – perl’s IO abstraction interface."
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlapio &#8211; perl&#8217;s IO abstraction interface. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "mate-dictionary(1)"
 name: "mate-dictionary"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-dictionary/"
 description: "mate-dictionary – Look up words on dictionaries"
 ---
 
-<h2>NAME</h2>
 <p> mate-dictionary &#8211; Look up words on dictionaries</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "mysqluc(1)"
 name: "mysqluc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqluc/"
 description: "mysqluc – Command line client for running MySQL Utilities"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqluc &#8211; Command line client for running MySQL Utilities </p>
 <h2>SYNOPSIS</h2>
 <dl>

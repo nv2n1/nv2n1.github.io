@@ -1,4 +1,5 @@
 ---
+
 title: "mysqldumpslow(1)"
 name: "mysqldumpslow"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqldumpslow/"
 description: "mysqldumpslow – Summarize slow query log files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqldumpslow &#8211; Summarize slow query log files </p>
 <h2>SYNOPSIS</h2>
 <dl>

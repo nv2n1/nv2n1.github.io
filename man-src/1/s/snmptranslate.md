@@ -1,4 +1,5 @@
 ---
+
 title: "snmptranslate(1)"
 name: "snmptranslate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmptranslate/"
 description: "snmptranslate – translate MIB OID names between numeric and textual forms"
 ---
 
-<h2>NAME</h2>
 <p> snmptranslate &#8211; translate MIB OID names between numeric and textual forms</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmptranslate</code> [OPTIONS] OID [OID]&#8230;</p>

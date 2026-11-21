@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-history(1)"
 name: "flatpak-history"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-history/"
 description: "flatpak-history – Show history"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-history &#8211; Show history </p>
 <h2>SYNOPSIS</h2>
 <dl>

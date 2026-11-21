@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogger_check(1)"
 name: "pmlogger_check"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmlogger_check/"
 description: "pmlogger_check, pmlogger_daily, pmlogger_merge – administration of Performance Co-Pilot archive log files"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmlogger_check</code>, <code>pmlogger_daily</code>, <code>pmlogger_merge</code> &#8211; administration of Performance Co-Pilot archive log files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmlogger_check</code> [<code>-CNsTV</code>] [<code>-c</code> <i>control</i>] [<code>-l</code> <i>logfile</i>]<br />

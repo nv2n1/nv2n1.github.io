@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_range_split(3)"
 name: "gnutls_range_split"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_range_split/"
 description: "gnutls_range_split – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_range_split &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

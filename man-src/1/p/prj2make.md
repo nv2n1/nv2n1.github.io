@@ -1,4 +1,5 @@
 ---
+
 title: "prj2make(1)"
 name: "prj2make"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prj2make/"
 description: "prj2make – Makefile generator from Visual Studio and Sharp Develop solution files."
 ---
 
-<h2>NAME</h2>
 <p> prj2make &#8211; Makefile generator from Visual Studio and Sharp Develop solution files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>prj2make options file</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "satyr(1)"
 name: "satyr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-satyr/"
 description: "satyr – create and manipulate problem reports"
 ---
 
-<h2>NAME</h2>
 <p> satyr &#8211; create and manipulate problem reports</p>
 <h2>SYNOPSIS</h2>
 <p> <code>satyr</code> &lt;command&gt; [option&#8230;]</p>

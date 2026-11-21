@@ -1,4 +1,5 @@
 ---
+
 title: "repotrack(1)"
 name: "repotrack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-repotrack/"
 description: "repotrack – track a package and its dependencies and download them"
 ---
 
-<h2>NAME</h2>
 <p> repotrack &#8211; track a package and its dependencies and download them</p>
 <h2>SYNOPSIS</h2>
 <p> <code>repotrack</code> [options] package1 [package2&#8230;]</p>

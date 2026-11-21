@@ -1,4 +1,5 @@
 ---
+
 title: "varnishhist(1)"
 name: "varnishhist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-varnishhist/"
 description: "varnishhist – Varnish request histogram"
 ---
 
-<h2>NAME</h2>
 <p> varnishhist &#8211; Varnish request histogram</p>
 <h2>SYNOPSIS</h2>
 <p> varnishhist [-C] [-d] [-g &lt;request|vxid&gt;] [-h] [-L limit] [-n name] [-N filename] [-p period] [-P &lt;size|responsetime|tag:field_num:min:max&gt;] [-q query] [-r filename] [-T seconds] [-V]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gt(1)"
 name: "gt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gt/"
 description: "gt – version of TiMidity MIDI to WAVE converter and player"
 ---
 
-<h2>NAME</h2>
 <p> gt &#8211; version of TiMidity MIDI to WAVE converter and player </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gt</code> [-options] [directoryname | filenames &#8230;] [-options] </p>

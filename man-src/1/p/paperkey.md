@@ -1,4 +1,5 @@
 ---
+
 title: "paperkey(1)"
 name: "paperkey"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-paperkey/"
 description: "paperkey – extract secret information out of OpenPGP secret keys"
 ---
 
-<h2>NAME</h2>
 <p> paperkey &#8211; extract secret information out of OpenPGP secret keys</p>
 <h2>SYNOPSIS</h2>
 <p> <code>paperkey</code> [<code>&#8211;secret-key=</code><i>FILE</i>] [<code>&#8211;output=</code><i>FILE</i>] [<code>&#8211;output-type=</code><code>base16</code>|<code>raw</code>] [<code>&#8211;output-width=</code><i>WIDTH</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xrdadler32(1)"
 name: "xrdadler32"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xrdadler32/"
 description: "xrdadler32 – compute and display an adler32 checksum"
 ---
 
-<h2>NAME</h2>
 <p> xrdadler32 &#8211; compute and display an adler32 checksum</p>
 <h2>SYNOPSIS</h2>
 <pre>

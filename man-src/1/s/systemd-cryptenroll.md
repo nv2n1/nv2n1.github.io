@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-cryptenroll(1)"
 name: "systemd-cryptenroll"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-cryptenroll/"
 description: "systemd-cryptenroll – Enroll PKCS#11, FIDO2, TPM2 token/devices to LUKS2 encrypted volumes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-cryptenroll &#8211; Enroll PKCS#11, FIDO2, TPM2 token/devices to LUKS2 encrypted volumes </p>
 <h2>SYNOPSIS</h2>
 <dl>

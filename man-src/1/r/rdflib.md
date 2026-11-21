@@ -1,4 +1,5 @@
 ---
+
 title: "rdflib(1)"
 name: "rdflib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdflib/"
 description: "rdflib – manage a library file for use with ldrdf(1)"
 ---
 
-<h2>NAME</h2>
 <p> rdflib &#8211; manage a library file for use with <a href="/docs/linux/man/1-ldrdf/">ldrdf</a>(1)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdflib</code> <i>command</i> <i>arguments</i></p>

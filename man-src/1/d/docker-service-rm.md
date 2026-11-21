@@ -1,4 +1,5 @@
 ---
+
 title: "docker-service-rm(1)"
 name: "docker-service-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-service-rm/"
 description: "docker-service-rm – Remove one or more services"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-service-rm &#8211; Remove one or more services </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker service rm SERVICE [SERVICE&#8230;]</code> </p>

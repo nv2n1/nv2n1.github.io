@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-availability-zones(1)"
 name: "euca-describe-availability-zones"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-availability-zones/"
 description: "euca-describe-availability-zones – Display availability zones within the current region"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-availability-zones &#8211; Display availability zones within the current region</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-availability-zones [&#8211;show-empty-fields] [-U URL]</p>

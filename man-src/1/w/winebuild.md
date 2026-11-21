@@ -1,4 +1,5 @@
 ---
+
 title: "winebuild(1)"
 name: "winebuild"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-winebuild/"
 description: "winebuild – Wine dll builder"
 ---
 
-<h2>NAME</h2>
 <p> winebuild &#8211; Wine dll builder</p>
 <h2>SYNOPSIS</h2>
 <p> <code>winebuild</code> [<i>options</i>]&nbsp;<wbr>[<i>inputfile</i>&#8230;]</p>

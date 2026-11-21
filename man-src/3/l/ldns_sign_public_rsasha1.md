@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_sign_public_rsasha1(3)"
 name: "ldns_sign_public_rsasha1"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_sign_public_rsasha1/"
 description: "ldns_sign_public_dsa, ldns_sign_public_rsamd5, ldns_sign_public_rsasha1"
 ---
 
-<h2>NAME</h2>
 <p> ldns_sign_public_dsa, ldns_sign_public_rsamd5, ldns_sign_public_rsasha1 </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

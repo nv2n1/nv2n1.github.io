@@ -1,4 +1,5 @@
 ---
+
 title: "git-ls-remote(1)"
 name: "git-ls-remote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-ls-remote/"
 description: "git-ls-remote – List references in a remote repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-ls-remote &#8211; List references in a remote repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

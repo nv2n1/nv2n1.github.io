@@ -1,4 +1,5 @@
 ---
+
 title: "combine_tessdata(1)"
 name: "combine_tessdata"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-combine_tessdata/"
 description: "combine_tessdata – combine/extract/overwrite Tesseract data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> combine_tessdata &#8211; combine/extract/overwrite Tesseract data </p>
 <h2>SYNOPSIS</h2>
 <p> <code>combine_tessdata</code> [<i>OPTION</i>] <i>FILE</i>&#8230;</p>

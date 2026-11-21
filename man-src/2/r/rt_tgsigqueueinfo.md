@@ -1,4 +1,5 @@
 ---
+
 title: "rt_tgsigqueueinfo(2)"
 name: "rt_tgsigqueueinfo"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-rt_tgsigqueueinfo/"
 description: "rt_sigqueueinfo, rt_tgsigqueueinfo – queue a signal and data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rt_sigqueueinfo, rt_tgsigqueueinfo &#8211; queue a signal and data </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

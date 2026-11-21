@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtopgm(1)"
 name: "ppmtopgm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtopgm/"
 description: "ppmtopgm – convert a portable pixmap into a portable graymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtopgm &#8211; convert a portable pixmap into a portable graymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtopgm</code> [<i>ppmfile</i>]</p>

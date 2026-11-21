@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_alter_entry(3)"
 name: "dirfile_alter_entry"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_alter_entry/"
 description: "dirfile_alter_entry — modify the metadata of a dirfile field"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_alter_entry &#8212; modify the metadata of a dirfile field</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

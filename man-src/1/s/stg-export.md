@@ -1,4 +1,5 @@
 ---
+
 title: "stg-export(1)"
 name: "stg-export"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-export/"
 description: "stg-export – Export patches to a directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-export &#8211; Export patches to a directory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

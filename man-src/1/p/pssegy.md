@@ -1,4 +1,5 @@
 ---
+
 title: "pssegy(1)"
 name: "pssegy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pssegy/"
 description: "pssegy – Plot a SEGY file on a map"
 ---
 
-<h2>NAME</h2>
 <p> pssegy &#8211; Plot a SEGY file on a map</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pssegy</code> <i>SEGYfile</i> <i>parameters</i> <i>region</i> <i>deviation</i> [<i>color</i>] [ <i>clip</i> ] [ <i>error</i> ] [ ] [ ] [ <i>nsamp</i> ] [ <i>ntrace</i> ] [ ] [ ] [ ] [ <i>&lt;mode&gt;&lt;value&gt;</i> ] [ <i>header</i> ] [ <i>filename</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "chkhelp(1)"
 name: "chkhelp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chkhelp/"
 description: "chkhelp – check performance metrics help text files"
 ---
 
-<h2>NAME</h2>
 <p> <code>chkhelp</code> &#8211; check performance metrics help text files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/chkhelp</code> [<code>-eHiOp</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-v</code> <i>version</i>] <i>helpfile</i> [<i>metricname</i> &#8230;]</p>

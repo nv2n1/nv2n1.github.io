@@ -1,4 +1,5 @@
 ---
+
 title: "ftruncate(2)"
 name: "ftruncate"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-ftruncate/"
 description: "truncate, ftruncate – truncate a file to a specified length"
 ---
 
-<h2 class="name">NAME</h2>
 <p> truncate, ftruncate &#8211; truncate a file to a specified length </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code><br />

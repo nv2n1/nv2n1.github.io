@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dname_new(3)"
 name: "ldns_dname_new"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dname_new/"
 description: "ldns_dname_new, ldns_dname_new_frm_str, ldns_dname_new_frm_data"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dname_new, ldns_dname_new_frm_str, ldns_dname_new_frm_data </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

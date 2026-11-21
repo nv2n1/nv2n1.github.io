@@ -1,4 +1,5 @@
 ---
+
 title: "zim(1)"
 name: "zim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zim/"
 description: "zim – A Desktop Wiki Editor"
 ---
 
-<h2>NAME</h2>
 <p> zim &#8211; A Desktop Wiki Editor </p>
 <h2>SYNOPSIS</h2>
 <p> usage: zim [OPTIONS] [NOTEBOOK [PAGE]]<br />

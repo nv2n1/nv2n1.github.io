@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-color-chooser(1)"
 name: "gnome-color-chooser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-color-chooser/"
 description: "gnome-color-chooser – GTK+/GNOME desktop appearance customization tool"
 ---
 
-<h2>NAME</h2>
 <p> gnome-color-chooser &#8211; GTK+/GNOME desktop appearance customization tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-color-chooser</code> [<i>options</i>] [<i>filename</i>] </p>

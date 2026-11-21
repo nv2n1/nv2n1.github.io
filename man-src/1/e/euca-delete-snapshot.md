@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-snapshot(1)"
 name: "euca-delete-snapshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-snapshot/"
 description: "euca-delete-snapshot – Delete a snapshot"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-snapshot &#8211; Delete a snapshot</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-snapshot [&#8211;show-empty-fields] [-U URL]</p>

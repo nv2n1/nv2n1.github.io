@@ -1,4 +1,5 @@
 ---
+
 title: "yum-utils(1)"
 name: "yum-utils"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-utils/"
 description: "yum-utils – tools for manipulating repositories and extended package management"
 ---
 
-<h2>NAME</h2>
 <p> yum-utils &#8211; tools for manipulating repositories and extended package management</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "clamdtop(1)"
 name: "clamdtop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clamdtop/"
 description: "clamdtop – monitor the Clam AntiVirus Daemon"
 ---
 
-<h2>NAME</h2>
 <p> clamdtop &#8211; monitor the Clam AntiVirus Daemon</p>
 <h2>SYNOPSIS</h2>
 <p> clamdtop [options] [clamdspec &#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rscryutil(1)"
 name: "rscryutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rscryutil/"
 description: "rscryutil – Manage Encrypted Log Files"
 ---
 
-<h2>NAME</h2>
 <p> rscryutil &#8211; Manage Encrypted Log Files</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

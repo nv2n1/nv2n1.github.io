@@ -1,4 +1,5 @@
 ---
+
 title: "avisplit(1)"
 name: "avisplit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avisplit/"
 description: "avisplit – split AVI-files into chunks of a maximum size"
 ---
 
-<h2>NAME</h2>
 <p> avisplit &#8211; split AVI-files into chunks of a maximum size</p>
 <h2>SYNOPSIS</h2>
 <p> <code>avisplit</code> [ <code>-i</code> <i>file</i> <code>-o</code> <i>base</i> [ <code>-s</code> <i>size</i> ] [ <code>-H</code> <i>num</i> ] [ <code>-t</code> <i>s1-s2[,s3-s4,..]</i> <code>-c</code> <code>-m</code> <code>-b</code> <i>num</i> <code>-f</code> <i>commentfile</i> ] ] [ <code>-v</code> ]</p>

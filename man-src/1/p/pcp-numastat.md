@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-numastat(1)"
 name: "pcp-numastat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp-numastat/"
 description: "pcp-numastat – report on NUMA memory allocation"
 ---
 
-<h2>NAME</h2>
 <p> <code>pcp-numastat</code> &#8211; report on NUMA memory allocation</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>numastat</code> [<code>-V</code>]</p>

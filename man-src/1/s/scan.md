@@ -1,4 +1,5 @@
 ---
+
 title: "scan(1)"
 name: "scan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scan/"
 description: "scan – produce a one line per message scan listing"
 ---
 
-<h2 class="name">NAME</h2>
 <p> scan &#8211; produce a one line per message scan listing </p>
 <h2>SYNOPSIS</h2>
 <dl>

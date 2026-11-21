@@ -1,4 +1,5 @@
 ---
+
 title: "txt2po(1)"
 name: "txt2po"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-txt2po/"
 description: "txt2po – Convert plain text (.txt) files to Gettext PO localization files."
 ---
 
-<h2>NAME</h2>
 <p> txt2po &#8211; Convert plain text (.txt) files to Gettext PO localization files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>txt2po </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-S|&#8211;timestamp] [-P|&#8211;pot] [&#8211;encoding] [&#8211;flavour <i>FLAVOUR</i>] [&#8211;duplicates <i>DUPLICATESTYLE</i>]</p>

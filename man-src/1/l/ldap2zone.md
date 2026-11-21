@@ -1,4 +1,5 @@
 ---
+
 title: "ldap2zone(1)"
 name: "ldap2zone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldap2zone/"
 description: "ldap2zone – Creates zone file from LDAP dnszone information"
 ---
 
-<h2>NAME</h2>
 <p> ldap2zone &#8211; Creates zone file from LDAP dnszone information</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldap2zone zone-name LDAP-URL default-ttl [serial]</code></p>

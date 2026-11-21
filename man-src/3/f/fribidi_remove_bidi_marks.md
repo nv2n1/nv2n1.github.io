@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_remove_bidi_marks(3)"
 name: "fribidi_remove_bidi_marks"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_remove_bidi_marks/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_remove_bidi_marks - remove bidi marks out of an string 
+fribidi_remove_bidi_marks - remove bidi marks out of an string 
 
 <h2>SYNOPSIS</h2>
 

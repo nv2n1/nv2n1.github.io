@@ -1,4 +1,5 @@
 ---
+
 title: "insync(1)"
 name: "insync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-insync/"
 description: "insync – command line interface for the Insync process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> insync &#8211; command line interface for the Insync process </p>
 <h2>SYNOPSIS</h2>
 <p> <code>insync [COMMAND] [ARGUMENT]&#8230;</code></p>

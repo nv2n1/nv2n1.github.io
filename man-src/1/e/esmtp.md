@@ -1,4 +1,5 @@
 ---
+
 title: "esmtp(1)"
 name: "esmtp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-esmtp/"
 description: "esmtp – libESMTP to Sendmail compatibility interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> esmtp &#8211; libESMTP to Sendmail compatibility interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>esmtp</code> [<i>flags</i>] [<i>address &#8230;</i>]<br />

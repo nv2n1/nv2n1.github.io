@@ -1,4 +1,5 @@
 ---
+
 title: "pnmcat(1)"
 name: "pnmcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmcat/"
 description: "pnmcat – concatenate portable anymaps"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmcat &#8211; concatenate portable anymaps </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmcat</code> [<code>-white</code>|<code>-black</code>] <code>-leftright</code>|<code>-lr</code> [<code>-jtop</code>|<code>-jbottom</code>] <i>pnmfile pnmfile</i> &#8230;<br />

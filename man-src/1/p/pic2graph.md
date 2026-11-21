@@ -1,4 +1,5 @@
 ---
+
 title: "pic2graph(1)"
 name: "pic2graph"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pic2graph/"
 description: "pic2graph – convert a PIC diagram into a cropped image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pic2graph &#8211; convert a PIC diagram into a cropped image </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-unsafe</code> ] [ <code>-format </code><i>output-format</i> ] [ <code>-eqn </code><i>delimiters</i> ] [<i>convert-arguments</i>] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>

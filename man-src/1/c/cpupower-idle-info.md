@@ -1,4 +1,5 @@
 ---
+
 title: "cpupower-idle-info(1)"
 name: "cpupower-idle-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpupower-idle-info/"
 description: "cpupower idle-info – Utility to retrieve cpu idle kernel information"
 ---
 
-<h2>NAME</h2>
 <p> cpupower idle-info &#8211; Utility to retrieve cpu idle kernel information</p>
 <h2>SYNTAX</h2>
 <p> cpupower [ -c cpulist ] idle-info [<i>options</i>]</p>

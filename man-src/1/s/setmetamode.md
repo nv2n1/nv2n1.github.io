@@ -1,4 +1,5 @@
 ---
+
 title: "setmetamode(1)"
 name: "setmetamode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setmetamode/"
 description: "setmetamode – define the keyboard meta key handling"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setmetamode &#8211; define the keyboard meta key handling </p>
 <h2>SYNOPSIS</h2>
 <p> <code>setmetamode</code> [ <i>options</i> ] [ <i>argument</i> ]</p>

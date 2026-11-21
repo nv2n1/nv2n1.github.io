@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-repair(1)"
 name: "flatpak-repair"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-repair/"
 description: "flatpak-repair – Repair a flatpak installation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-repair &#8211; Repair a flatpak installation </p>
 <h2>SYNOPSIS</h2>
 <dl>

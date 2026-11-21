@@ -1,4 +1,5 @@
 ---
+
 title: "ffado-dice-firmware(1)"
 name: "ffado-dice-firmware"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffado-dice-firmware/"
 description: "ffado-dice-firmware – firmware download application for DICE-based devices"
 ---
 
-<h2>NAME</h2>
 <p> ffado-dice-firmware &#8211; firmware download application for DICE-based devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ffado-dice-firmware [OPTION&#8230;]</code> </p>

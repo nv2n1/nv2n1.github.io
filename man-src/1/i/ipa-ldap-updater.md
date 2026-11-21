@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-ldap-updater(1)"
 name: "ipa-ldap-updater"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-ldap-updater/"
 description: "ipa-ldap-updater – Update the IPA LDAP configuration"
 ---
 
-<h2>NAME</h2>
 <p> ipa-ldap-updater &#8211; Update the IPA LDAP configuration</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-ldap-updater [options] input_file(s)</p>

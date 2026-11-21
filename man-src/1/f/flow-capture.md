@@ -1,4 +1,5 @@
 ---
+
 title: "flow-capture(1)"
 name: "flow-capture"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-capture/"
 description: "flow-capture – Manage storage of flow file archives by expiring old data."
 ---
 
-<h2>NAME</h2>
 <p> flow-capture &#8211; Manage storage of flow file archives by expiring old data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-capture</code> [ <code>-hu</code> ] [ <code>-b</code><i> big|little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-c</code><i> flow_clients</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-D</code><i> daemonize</i> ] [ <code>-e</code><i> expire_count</i> ] [ <code>-f</code><i> filter_fname</i> ] [ <code>-F</code><i> filter_definition</i> ] [ <code>-E</code><i> expire_size</i> ] [ <code>-n</code><i> rotations</i> ] [ <code>-N</code><i> nesting_level</i> ] [ <code>-p</code><i> pidfile</i> ] [ <code>-R</code><i> rotate_program</i> ] [ <code>-S</code><i> stat_interval</i> ] [ <code>-t</code><i> tag_fname</i> ] [ <code>-T</code><i> active_def</i><code>|</code><i>active_def,active_def</i><i>&#8230;</i> ] [ <code>-V</code><i> pdu_version</i> ] [ <code>-z</code><i> z_level</i> ] <code>-w</code><i> workdir</i> [ <code>-x</code><i> xlate_fname</i> ] [ <code>-X</code><i> xlate_definition</i> ] <i>localip/remoteip/port</i></p>

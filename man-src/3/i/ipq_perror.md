@@ -1,4 +1,5 @@
 ---
+
 title: "ipq_perror(3)"
 name: "ipq_perror"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipq_perror/"
 description: "ipq_errstr, ipq_perror — libipq error handling routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipq_errstr, ipq_perror &#8212; libipq error handling routines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />

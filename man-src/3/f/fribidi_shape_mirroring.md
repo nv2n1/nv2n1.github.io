@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_shape_mirroring(3)"
 name: "fribidi_shape_mirroring"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_shape_mirroring/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_shape_mirroring - do mirroring shaping 
+fribidi_shape_mirroring - do mirroring shaping 
 
 <h2>SYNOPSIS</h2>
 

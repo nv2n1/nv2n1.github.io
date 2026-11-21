@@ -1,4 +1,5 @@
 ---
+
 title: "go-run(1)"
 name: "go-run"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-go-run/"
 description: "go-run – compile and run Go program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> go-run &#8211; compile and run Go program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>go run</code> [<i>build flags</i>] [<code>-exec</code> <i>xprog</i>] <i>package</i> [<i>arguments&#8230;</i>]</p>

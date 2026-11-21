@@ -1,4 +1,5 @@
 ---
+
 title: "setterm(1)"
 name: "setterm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setterm/"
 description: "setterm – set terminal attributes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setterm &#8211; set terminal attributes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>setterm</code> [options]</p>

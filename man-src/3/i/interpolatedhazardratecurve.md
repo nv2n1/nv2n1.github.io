@@ -1,4 +1,5 @@
 ---
+
 title: "interpolatedhazardratecurve(3)"
 name: "interpolatedhazardratecurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-interpolatedhazardratecurve/"
 description: "ql/termstructures/credit/interpolatedhazardratecurve.hpp – interpolated hazard-rate term structure"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/termstructures/credit/interpolatedhazardratecurve.hpp &#8211; interpolated hazard-rate term structure </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/credit/hazardratestructure.hpp&gt;<br />

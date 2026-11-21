@@ -1,4 +1,5 @@
 ---
+
 title: "gitremote-helpers(1)"
 name: "gitremote-helpers"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gitremote-helpers/"
 description: "gitremote-helpers – Helper programs to interact with remote repositories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gitremote-helpers &#8211; Helper programs to interact with remote repositories </p>
 <h2>SYNOPSIS</h2>
 <pre>

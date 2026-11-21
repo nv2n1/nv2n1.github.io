@@ -1,4 +1,5 @@
 ---
+
 title: "fishpolld(1)"
 name: "fishpolld"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fishpolld/"
 description: "fishpolld – daemon that allows remote script’s execution when triggered from the network"
 ---
 
-<h2>NAME</h2>
 <p> fishpolld &#8211; daemon that allows remote script&#8217;s execution when triggered from the network</p>
 <h2>SYNOPSIS</h2>
 <pre>

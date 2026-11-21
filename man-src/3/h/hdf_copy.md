@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_copy(3)"
 name: "hdf_copy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_copy/"
 description: "hdf_copy – copy part of an HDF dataset to another"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_copy &#8211; copy part of an HDF dataset to another </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "prtstat(1)"
 name: "prtstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prtstat/"
 description: "prtstat – print statistics of a process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> prtstat &#8211; print statistics of a process </p>
 <h2>SYNOPSIS</h2>
 <p> <code>prtstat</code> [<code>-r</code>|<code>&#8211;raw</code>] <i>pid</i><br />

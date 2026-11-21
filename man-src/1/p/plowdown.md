@@ -1,4 +1,5 @@
 ---
+
 title: "plowdown(1)"
 name: "plowdown"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-plowdown/"
 description: "plowdown – Simple download manager for file sharing websites"
 ---
 
-<h2 class="name">NAME</h2>
 <p> plowdown &#8211; Simple download manager for file sharing websites</p>
 <h2>SYNOPSIS</h2>
 <p> <code>plowdown</code> [<i>OPTIONS</i>]&#8230; [<i>MODULE_OPTIONS</i>]&#8230; <i>URL</i>|<i>FILE</i>&#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "audit_add_rule_data(3)"
 name: "audit_add_rule_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_add_rule_data/"
 description: "audit_add_rule_data – Add new audit rule"
 ---
 
-<h2>NAME</h2>
 <p> audit_add_rule_data &#8211; Add new audit rule</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

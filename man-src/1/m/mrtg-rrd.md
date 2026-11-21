@@ -1,4 +1,5 @@
 ---
+
 title: "mrtg-rrd(1)"
 name: "mrtg-rrd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrtg-rrd/"
 description: "mrtg-rrd – How to use RRDtool with MRTG"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mrtg-rrd &#8211; How to use RRDtool with MRTG </p>
 <h2>SYNOPSIS</h2>
 <p> After using <font SIZE="-1">MRTG</font> for some time you may find some limitations, mostly in the areas of performance and graphing flexibility. These are exactly the areas addressed by RRDtool. To learn more about RRDtool check out its website on </p>

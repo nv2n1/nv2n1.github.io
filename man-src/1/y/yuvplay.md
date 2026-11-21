@@ -1,4 +1,5 @@
 ---
+
 title: "yuvplay(1)"
 name: "yuvplay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yuvplay/"
 description: "yuvplay – Display YUV4MPEG2 streams (using SDL)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> yuvplay &#8211; Display YUV4MPEG2 streams (using SDL)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yuvplay</code> [<code>options</code>] </p>

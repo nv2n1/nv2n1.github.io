@@ -1,4 +1,5 @@
 ---
+
 title: "acl_get_file(3)"
 name: "acl_get_file"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_get_file/"
 description: "acl_get_file – get an ACL by filename"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_get_file</code> &#8211; get an ACL by filename </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

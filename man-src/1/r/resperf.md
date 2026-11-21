@@ -1,4 +1,5 @@
 ---
+
 title: "resperf(1)"
 name: "resperf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-resperf/"
 description: "resperf – test the resolution performance of a caching DNS server"
 ---
 
-<h2>NAME</h2>
 <p> resperf &#8211; test the resolution performance of a caching DNS server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>resperf-report</code>&nbsp;<wbr>[<code>-a&nbsp;<wbr></code><i>local_addr</i>] [<code>-d&nbsp;<wbr></code><i>datafile</i>] [<code>-s&nbsp;<wbr></code><i>server_addr</i>] [<code>-p&nbsp;<wbr></code><i>port</i>] [<code>-x&nbsp;<wbr></code><i>local_port</i>] [<code>-t&nbsp;<wbr></code><i>timeout</i>] [<code>-b&nbsp;<wbr></code><i>bufsize</i>] [<code>-f&nbsp;<wbr></code><i>family</i>] [<code>-e</code>] [<code>-D</code>] [<code>-y&nbsp;<wbr></code><i>[alg:]name:secret</i>] [<code>-h</code>] [<code>-i&nbsp;<wbr></code><i>interval</i>] [<code>-m&nbsp;<wbr></code><i>max_qps</i>] [<code>-r&nbsp;<wbr></code><i>rampup_time</i>] [<code>-c&nbsp;<wbr></code><i>constant_traffic_time</i>] [<code>-L&nbsp;<wbr></code><i>max_loss</i>] [<code>-C&nbsp;<wbr></code><i>clients</i>] [<code>-q&nbsp;<wbr></code><i>max_outstanding</i>] </p>

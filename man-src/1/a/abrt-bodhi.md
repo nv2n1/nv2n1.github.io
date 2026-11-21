@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-bodhi(1)"
 name: "abrt-bodhi"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-bodhi/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-bodhi - The ABRT bodhi client. 
+abrt-bodhi - The ABRT bodhi client. 
 
 <h2>SYNOPSIS</h2>
 

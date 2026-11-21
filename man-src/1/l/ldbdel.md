@@ -1,4 +1,5 @@
 ---
+
 title: "ldbdel(1)"
 name: "ldbdel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldbdel/"
 description: "ldbdel – Command-line program for deleting LDB records"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldbdel &#8211; Command-line program for deleting LDB records </p>
 <h2>SYNOPSIS</h2>
 <dl>

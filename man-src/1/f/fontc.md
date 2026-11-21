@@ -1,4 +1,5 @@
 ---
+
 title: "fontc(1)"
 name: "fontc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fontc/"
 description: "fontc – Fontcap preprocessor for NCAR Graphics"
 ---
 
-<h2>NAME</h2>
 <p> fontc &#8211; Fontcap preprocessor for NCAR Graphics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fontc</code> <i>ascii-fontcap-name</i> <i>binary-fontcap-name</i> </p>

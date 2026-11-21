@@ -1,4 +1,5 @@
 ---
+
 title: "rpkg(1)"
 name: "rpkg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpkg/"
 description: "rpkg – RPM Packaging utility"
 ---
 
-<h2>NAME</h2>
 <p> rpkg &#8211; RPM Packaging utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rpkg</code> [ <i>global_options</i> ] <i>command</i> [ <i>command_options</i> ] [ <i>command_arguments</i> ]<br />

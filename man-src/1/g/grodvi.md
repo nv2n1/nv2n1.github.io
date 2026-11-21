@@ -1,4 +1,5 @@
 ---
+
 title: "grodvi(1)"
 name: "grodvi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grodvi/"
 description: "grodvi – convert groff output to TeX DVI format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grodvi &#8211; convert groff output to TeX DVI format </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-dl</code> ] [ <code>-F </code><i>dir</i> ] [ <code>-p </code><i>papersize</i> ] [ <code>-w </code><i>n</i> ] [<i>file</i> &#8230;] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>

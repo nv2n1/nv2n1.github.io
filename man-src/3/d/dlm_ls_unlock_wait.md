@@ -1,4 +1,5 @@
 ---
+
 title: "dlm_ls_unlock_wait(3)"
 name: "dlm_ls_unlock_wait"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlm_ls_unlock_wait/"
 description: "dlm_unlock – unlock a DLM lock"
 ---
 
-<h2>NAME</h2>
 <p> dlm_unlock &#8211; unlock a DLM lock</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

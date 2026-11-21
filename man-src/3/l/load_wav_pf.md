@@ -1,4 +1,5 @@
 ---
+
 title: "load_wav_pf(3)"
 name: "load_wav_pf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_wav_pf/"
 description: "load_wav_pf – Packfile version of load_wav. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> load_wav_pf &#8211; Packfile version of load_wav. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

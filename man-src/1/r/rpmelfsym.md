@@ -1,4 +1,5 @@
 ---
+
 title: "rpmelfsym(1)"
 name: "rpmelfsym"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpmelfsym/"
 description: "rpmelfsym – list symbols from object files in RPM packages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rpmelfsym &#8211; list symbols from object files in RPM packages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rpmelfsym</code> [<code>-h</code>] [<code>-a</code>] [<code>-p</code>] [<i></i><font SIZE="-1"><i>FILE</i></font><i></i>&#8230;] [<i></i><font SIZE="-1"><i>DIR</i></font><i></i>&#8230;]</p>

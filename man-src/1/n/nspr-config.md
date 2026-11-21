@@ -1,4 +1,5 @@
 ---
+
 title: "nspr-config(1)"
 name: "nspr-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nspr-config/"
 description: "nspr-config – Return meta information about nspr libraries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nspr-config &#8211; Return meta information about nspr libraries </p>
 <h2>SYNOPSIS</h2>
 <dl>

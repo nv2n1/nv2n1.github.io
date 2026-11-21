@@ -1,4 +1,5 @@
 ---
+
 title: "load_midi_patches(3)"
 name: "load_midi_patches"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_midi_patches/"
 description: "load_midi_patches – Forces the MIDI driver to load a set of patches. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> load_midi_patches &#8211; Forces the MIDI driver to load a set of patches. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

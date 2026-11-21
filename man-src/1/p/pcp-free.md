@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-free(1)"
 name: "pcp-free"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp-free/"
 description: "pcp-free – report on free and used memory in the system"
 ---
 
-<h2>NAME</h2>
 <p> <code>pcp-free</code> &#8211; report on free and used memory in the system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>free</code> [<code>-bkmgoltV</code>] [<code>-c</code> <i>count</i>] [<code>-s</code> <i>interval</i>]</p>

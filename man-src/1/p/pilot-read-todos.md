@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-read-todos(1)"
 name: "pilot-read-todos"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-read-todos/"
 description: "pilot-read-todos – Syncronize your Palm ToDo application’s database with your desktop machine."
 ---
 
-<h2>NAME</h2>
 <p> pilot-read-todos &#8211; Syncronize your Palm ToDo application&#8217;s database with your desktop machine.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

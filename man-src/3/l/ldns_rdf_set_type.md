@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rdf_set_type(3)"
 name: "ldns_rdf_set_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rdf_set_type/"
 description: "ldns_rdf_set_size, ldns_rdf_set_type, ldns_rdf_set_data"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rdf_set_size, ldns_rdf_set_type, ldns_rdf_set_data </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

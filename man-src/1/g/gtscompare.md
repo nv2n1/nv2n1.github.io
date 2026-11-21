@@ -1,4 +1,5 @@
 ---
+
 title: "gtscompare(1)"
 name: "gtscompare"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtscompare/"
 description: "gtscompare – compare two GTS files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gtscompare &#8211; compare two GTS files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtscompare</code> [<i>OPTIONS</i>] <i>FILE1 FILE2 DELTA</i> </p>

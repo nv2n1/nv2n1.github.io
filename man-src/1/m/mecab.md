@@ -1,4 +1,5 @@
 ---
+
 title: "mecab(1)"
 name: "mecab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mecab/"
 description: "mecab – manual page for mecab of 0.98pre1"
 ---
 
-<h2>NAME</h2>
 <p> mecab &#8211; manual page for mecab of 0.98pre1</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mecab</code> [<i>options</i>] <i>files</i></p>

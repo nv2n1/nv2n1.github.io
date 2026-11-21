@@ -1,4 +1,5 @@
 ---
+
 title: "ck_array_put_unique(3)"
 name: "ck_array_put_unique"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_array_put_unique/"
 description: "ck_array_put_unique – attempt immediate or deferred insertion of a unique pointer into array"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_array_put_unique</code> &#8211; attempt immediate or deferred insertion of a unique pointer into array</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

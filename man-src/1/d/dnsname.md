@@ -1,4 +1,5 @@
 ---
+
 title: "dnsname(1)"
 name: "dnsname"
 section: "1"
@@ -6,7 +7,6 @@ letter: "d"
 url: "/docs/linux/man/1-dnsname/"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>dnsname</code> [OPTIONS] &lt;address&gt; [&lt;address&gt; &#8230;]</dt>
 <dd>

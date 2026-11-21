@@ -1,4 +1,5 @@
 ---
+
 title: "ietf2datebook(1)"
 name: "ietf2datebook"
 section: "1"
@@ -6,9 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-ietf2datebook/"
 ---
 
-<h2>NAME</h2>
-
- ietf2datebook - Converts IETF agenda format to install-datebook format
+ietf2datebook - Converts IETF agenda format to install-datebook format
 
 <h2>SECTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "g_density_d(1)"
 name: "g_density_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_density_d/"
 description: "g_density – calculates the density of the system"
 ---
 
-<h2>NAME</h2>
 <p> g_density &#8211; calculates the density of the system </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

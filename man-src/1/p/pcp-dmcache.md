@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-dmcache(1)"
 name: "pcp-dmcache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp-dmcache/"
 description: "pcp-dmcache, pcp-lvmcache – report on logical storage device caches"
 ---
 
-<h2>NAME</h2>
 <p> <code>pcp-dmcache</code>, <code>pcp-lvmcache</code> &#8211; report on logical storage device caches</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>dmcache</code> [<code>-i</code>/<code>&#8211;iops</code>] [<code>-R</code>/<code>&#8211;repeat</code> <i>N</i>] [<i>device</i> &#8230;]</p>

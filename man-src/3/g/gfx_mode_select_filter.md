@@ -1,4 +1,5 @@
 ---
+
 title: "gfx_mode_select_filter(3)"
 name: "gfx_mode_select_filter"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gfx_mode_select_filter/"
 description: "gfx_mode_select_filter – Even more extended version of the graphics mode selection dialog. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> gfx_mode_select_filter &#8211; Even more extended version of the graphics mode selection dialog. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "chbevx(3)"
 name: "chbevx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chbevx/"
 description: "chbevx.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chbevx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_context_set_follow_redirects(3)"
 name: "getdns_context_set_follow_redirects"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_context_set_follow_redirects/"
 description: "getdns_context_set_append_name, getdns_context_set_context_update_callback, getdns_context_set_dns_root_servers, getdns_context_set_dns_transport, getdns_context_set_dnssec_trust_anchors, getdns_co..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>getdns_context_set_append_name, </code> <code>getdns_context_set_context_update_callback, </code> <code>getdns_context_set_dns_root_servers, </code> <code>getdns_context_set_dns_transport, </code> <code>getdns_context_set_dnssec_trust_anchors, </code> <code>getdns_context_set_dnssec_allowed_skew,</code> <code>getdns_context_set_follow_redirects, </code> <code>getdns_context_set_limit_outstanding_queries, </code> <code>getdns_context_set_namespaces, </code> <code>getdns_context_set_resolution_type, </code> <code>getdns_context_set_suffix, </code> <code>getdns_context_set_timeout, </code> &#8212; getdns context manipulation routines</p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

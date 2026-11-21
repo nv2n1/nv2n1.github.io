@@ -1,4 +1,5 @@
 ---
+
 title: "labplot(1)"
 name: "labplot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-labplot/"
 description: "LabPlot – data plotting and function analysis tool for KDE"
 ---
 
-<h2>NAME</h2>
 <p> LabPlot &#8211; data plotting and function analysis tool for KDE</p>
 <h2>SYNOPSIS</h2>
 <p> <code>LabPlot</code> [ <i>generic-options</i> ] [ <i>file</i> &#8230; ]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "dubdv(1)"
 name: "dubdv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dubdv/"
 description: "dubdv – insert audio into a digital video stream"
 ---
 
-<h2>NAME</h2>
 <p> dubdv &#8211; insert audio into a digital video stream</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dubdv</code> [ <code>options</code> ] <i>audio_inputfR [ filename or &#8211; for stdin ]</i></p>

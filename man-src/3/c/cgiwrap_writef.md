@@ -1,4 +1,5 @@
 ---
+
 title: "cgiwrap_writef(3)"
 name: "cgiwrap_writef"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgiwrap_writef/"
 description: "cgiwrap_writef – a wrapper for printf"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgiwrap_writef &#8211; a wrapper for printf </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

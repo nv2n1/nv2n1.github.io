@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_update(3)"
 name: "keyctl_update"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyctl_update/"
 description: "keyctl_update – Update a key"
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_update &#8211; Update a key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

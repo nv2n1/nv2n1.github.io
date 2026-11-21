@@ -1,4 +1,5 @@
 ---
+
 title: "statgrab(1)"
 name: "statgrab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-statgrab/"
 description: "statgrab – sysctl-style interface to system statistics"
 ---
 
-<h2>NAME</h2>
 <p> statgrab &#8211; sysctl-style interface to system statistics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>statgrab</code> [OPTION]&#8230; [STAT]&#8230;</p>

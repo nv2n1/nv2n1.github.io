@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gridmap_callout_error_t(3)"
 name: "globus_gridmap_callout_error_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gridmap_callout_error_t/"
 description: "Datatypes –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Datatypes &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_gridmap_callout_error_t</code> { <code>GLOBUS_GRIDMAP_CALLOUT_LOOKUP_FAILED</code> = 0, <code>GLOBUS_GRIDMAP_CALLOUT_GSSAPI_ERROR</code> = 1, <code>GLOBUS_GRIDMAP_CALLOUT_BUFFER_TOO_SMALL</code> = 2, <code>GLOBUS_GRIDMAP_CALLOUT_ERROR_LAST</code> = 3 } </p>

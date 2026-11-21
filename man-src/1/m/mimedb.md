@@ -1,4 +1,5 @@
 ---
+
 title: "mimedb(1)"
 name: "mimedb"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mimedb/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- mimedb - lookup file information via the mime database
+mimedb - lookup file information via the mime database
 
 <h3>Synopsis</h3>
 

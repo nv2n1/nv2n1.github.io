@@ -1,4 +1,5 @@
 ---
+
 title: "grid-cert-info(1)"
 name: "grid-cert-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grid-cert-info/"
 description: "grid-cert-info – Display information about a certificate"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grid-cert-info &#8211; Display information about a certificate </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grid-cert-info</code> <i>-help</i> | <i>-usage</i> | <i>-version</i> | <i>-versions</i> </p>

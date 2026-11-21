@@ -1,4 +1,5 @@
 ---
+
 title: "xcf2pnm(1)"
 name: "xcf2pnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xcf2pnm/"
 description: "xcf2pnm – convert from GIMP xcf files to ppm/pgm/pbm format"
 ---
 
-<h2>NAME</h2>
 <p> xcf2pnm &#8211; convert from GIMP xcf files to ppm/pgm/pbm format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xcf2pnm</code> [ <i>options</i> ] <i>filename</i> [ <i>layer names</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "beagle-config(1)"
 name: "beagle-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beagle-config/"
 description: "beagle-config – command-line interface to Beagle configuration"
 ---
 
-<h2>NAME</h2>
 <p> beagle-config &#8211; command-line interface to Beagle configuration</p>
 <h2>SYNOPSIS</h2>
 <p> <code>beagle-config</code> <i>options</i><br />

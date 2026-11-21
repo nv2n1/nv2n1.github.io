@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_copy_handleattr_s(3)"
 name: "globus_gass_copy_handleattr_s"
 section: "3"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-globus_gass_copy_handleattr_s/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- globus_gass_copy_handleattr_s - 
+globus_gass_copy_handleattr_s - 
 
  Handle Attributes.
 

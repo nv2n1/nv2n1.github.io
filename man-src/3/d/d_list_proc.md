@@ -1,4 +1,5 @@
 ---
+
 title: "d_list_proc(3)"
 name: "d_list_proc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-d_list_proc/"
 description: "d_list_proc – Dialog procedure implementing a list box object. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> d_list_proc &#8211; Dialog procedure implementing a list box object. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rasview(1)"
 name: "rasview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rasview/"
 description: "rasview – Raster file previewer for the X Window System."
 ---
 
-<h2>NAME</h2>
 <p> rasview &#8211; Raster file previewer for the X Window System.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rasview</code> [ <code>-toolkitoption</code><i> &#8230;</i> ] [ <code>-ifmt</code><i> format</i> ] [ <code>-movie</code> ] [ <code>-pal</code><i> palette_file</i> ] [ <code>-quiet</code> ] [ <code>-Version</code> ] [ <i>file.ext</i> | <code>&#8211;</code> ] </p>

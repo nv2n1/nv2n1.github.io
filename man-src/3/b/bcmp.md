@@ -1,4 +1,5 @@
 ---
+
 title: "bcmp(3)"
 name: "bcmp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bcmp/"
 description: "bcmp – compare byte sequences"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bcmp &#8211; compare byte sequences </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

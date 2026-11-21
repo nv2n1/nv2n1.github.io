@@ -1,4 +1,5 @@
 ---
+
 title: "endusershell(3)"
 name: "endusershell"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-endusershell/"
 description: "getusershell, setusershell, endusershell – get permitted user shells"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getusershell, setusershell, endusershell &#8211; get permitted user shells </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "cmx2xhtml(1)"
 name: "cmx2xhtml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmx2xhtml/"
 description: "Usage: – convert Corel Presentation Exchange file into HTML"
 ---
 
-<h2>NAME</h2>
 <p> Usage: &#8211; convert Corel Presentation Exchange file into HTML</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cmx2xhtml</code> [<i>OPTION</i>] <i>&lt;Corel Binary Metafile&gt;</i></p>

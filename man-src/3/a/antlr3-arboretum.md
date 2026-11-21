@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-arboretum(3)"
 name: "antlr3-arboretum"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-arboretum/"
 description: "ANTLR3_COMMON_TREE_ADAPTOR_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_COMMON_TREE_ADAPTOR_struct &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontreeadaptor.h">antlr3commontreeadaptor.h</a>&gt;</p>

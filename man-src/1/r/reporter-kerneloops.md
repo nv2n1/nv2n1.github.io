@@ -1,4 +1,5 @@
 ---
+
 title: "reporter-kerneloops(1)"
 name: "reporter-kerneloops"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-reporter-kerneloops/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- reporter-kerneloops - Reports kernel oops to kerneloops.org (or similar) site. 
+reporter-kerneloops - Reports kernel oops to kerneloops.org (or similar) site. 
 
 <h2>SYNOPSIS</h2>
 

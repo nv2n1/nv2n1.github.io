@@ -1,4 +1,5 @@
 ---
+
 title: "rosversion(1)"
 name: "rosversion"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rosversion/"
 description: "rosversion – rosverion command"
 ---
 
-<h2>NAME</h2>
 <p> rosversion &#8211; rosverion command</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rosversion</code> &lt;<i>stack</i>&gt; | <i>-d</i></p>

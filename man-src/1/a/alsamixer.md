@@ -1,4 +1,5 @@
 ---
+
 title: "alsamixer(1)"
 name: "alsamixer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alsamixer/"
 description: "alsamixer – soundcard mixer for ALSA soundcard driver, with ncurses interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> alsamixer &#8211; soundcard mixer for ALSA soundcard driver, with ncurses interface </p>
 <h2>SYNOPSIS</h2>
 <p> <code>alsamixer</code> [<i>options</i>] </p>

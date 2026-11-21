@@ -1,4 +1,5 @@
 ---
+
 title: "htmlmapdriver(1)"
 name: "htmlmapdriver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htmlmapdriver/"
 description: "htmlmapdriver"
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>htmlmapdriver</code></p>
 <h2 class="name">NAME</h2>
 <p> <i></i><code>HTMLMAP driver</code> &#8211; driver to create HTML image maps<br />

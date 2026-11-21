@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-network-rm(1)"
 name: "docker-latest-network-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-network-rm/"
 description: "docker-network-rm – remove one or more networks"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-network-rm &#8211; remove one or more networks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker network rm</code> [<code>&#8211;help</code>] NETWORK [NETWORK&#8230;] </p>

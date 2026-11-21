@@ -1,4 +1,5 @@
 ---
+
 title: "uuname(1)"
 name: "uuname"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uuname/"
 description: "uuname – List the names of the known remote UUCP sites."
 ---
 
-<h2>NAME</h2>
 <p> uuname &#8211; List the names of the known remote UUCP sites.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>uuname</code> [<i>-a</i>] [<i>-l</i>] [<i>-I file</i>]</p>

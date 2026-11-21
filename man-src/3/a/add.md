@@ -1,4 +1,5 @@
 ---
+
 title: "add(3)"
 name: "add"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-add/"
 description: "QuantLib::ExchangeRateManager – exchange-rate repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::ExchangeRateManager &#8211; exchange-rate repository </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/currencies/exchangeratemanager.hpp&gt; </p>

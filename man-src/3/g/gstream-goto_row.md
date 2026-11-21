@@ -1,4 +1,5 @@
 ---
+
 title: "gstream-goto_row(3)"
 name: "gstream-goto_row"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gstream-goto_row/"
 description: "goto_row"
 ---
 
-<h2>NAME</h2>
 <p> goto_row</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>

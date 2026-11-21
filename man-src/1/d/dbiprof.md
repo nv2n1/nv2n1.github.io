@@ -1,4 +1,5 @@
 ---
+
 title: "dbiprof(1)"
 name: "dbiprof"
 section: "1"
@@ -6,10 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-dbiprof/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- dbiprof - command-line client for DBI::ProfileData 
+dbiprof - command-line client for DBI::ProfileData 
 
 <h2>SYNOPSIS</h2>
 

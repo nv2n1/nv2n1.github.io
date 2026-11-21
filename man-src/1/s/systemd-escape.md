@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-escape(1)"
 name: "systemd-escape"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-escape/"
 description: "systemd-escape – Escape strings for usage in systemd unit names"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-escape &#8211; Escape strings for usage in systemd unit names </p>
 <h2>SYNOPSIS</h2>
 <dl>

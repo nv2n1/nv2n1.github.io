@@ -1,4 +1,5 @@
 ---
+
 title: "ares_inet_ntop(3)"
 name: "ares_inet_ntop"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_inet_ntop/"
 description: "ares_inet_ntop – convert a network format address to presentation format"
 ---
 
-<h2>NAME</h2>
 <p> ares_inet_ntop &#8211; convert a network format address to presentation format</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

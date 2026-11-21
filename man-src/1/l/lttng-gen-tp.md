@@ -1,4 +1,5 @@
 ---
+
 title: "lttng-gen-tp(1)"
 name: "lttng-gen-tp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lttng-gen-tp/"
 description: "lttng-gen-tp — LTTng UST 2.x tracepoint code generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lttng-gen-tp &#8212; LTTng UST 2.x tracepoint code generator</p>
 <h2>SYNOPSIS</h2>
 <pre>

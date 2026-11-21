@@ -1,4 +1,5 @@
 ---
+
 title: "pmhostname(1)"
 name: "pmhostname"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmhostname/"
 description: "pmhostname – report hostname"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmhostname</code> &#8211; report hostname</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmhostname</code> [<i>hostname</i>]</p>

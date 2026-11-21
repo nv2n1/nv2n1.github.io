@@ -1,4 +1,5 @@
 ---
+
 title: "pamfixtrunc(1)"
 name: "pamfixtrunc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamfixtrunc/"
 description: "pamfixtrunc – repair a Netpbm image whose file is truncated"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamfixtrunc &#8211; repair a Netpbm image whose file is truncated</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamfixtrunc</code> </p>

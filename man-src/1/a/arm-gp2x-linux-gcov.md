@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-gcov(1)"
 name: "arm-gp2x-linux-gcov"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm-gp2x-linux-gcov/"
 description: "gcov – coverage testing tool"
 ---
 
-<h2>NAME</h2>
 <p> gcov &#8211; coverage testing tool</p>
 <h2>SYNOPSIS</h2>
 <p> gcov [<code>-v</code>|<code>&#8211;version</code>] [<code>-h</code>|<code>&#8211;help</code>]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-screensaver(1)"
 name: "gnome-screensaver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-screensaver/"
 description: "gnome-screensaver – screen saver and locker"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-screensaver &#8211; screen saver and locker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-screensaver</code> [<i>OPTIONS&#8230;</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-route-tables(1)"
 name: "euca-describe-route-tables"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-route-tables/"
 description: "euca-describe-route-tables – Describe one or more VPC route tables"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-route-tables &#8211; Describe one or more VPC route tables</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-route-tables [&#8211;show-empty-fields] [-U URL]</p>

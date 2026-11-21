@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-mount(1)"
 name: "systemd-mount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-mount/"
 description: "systemd-mount, systemd-umount – Establish and destroy transient mount or auto-mount points"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-mount, systemd-umount &#8211; Establish and destroy transient mount or auto-mount points </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "get_nvectors(3)"
 name: "get_nvectors"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_nvectors/"
 description: "get_nvectors — report the number of vector fields in a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> get_nvectors &#8212; report the number of vector fields in a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

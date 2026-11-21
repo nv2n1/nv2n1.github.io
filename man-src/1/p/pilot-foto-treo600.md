@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-foto-treo600(1)"
 name: "pilot-foto-treo600"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-foto-treo600/"
 description: "pilot-foto-treo600 – Copies Treo \"foto\" databases to current directory and extracts image files from within them."
 ---
 
-<h2>NAME</h2>
 <p> pilot-foto-treo600 &#8211; Copies Treo &quot;foto&quot; databases to current directory and extracts image files from within them.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

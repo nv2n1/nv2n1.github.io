@@ -1,4 +1,5 @@
 ---
+
 title: "ares_library_cleanup(3)"
 name: "ares_library_cleanup"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_library_cleanup/"
 description: "ares_library_cleanup – c-ares library deinitialization"
 ---
 
-<h2>NAME</h2>
 <p> ares_library_cleanup &#8211; c-ares library deinitialization</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

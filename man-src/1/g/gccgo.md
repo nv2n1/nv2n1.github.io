@@ -1,4 +1,5 @@
 ---
+
 title: "gccgo(1)"
 name: "gccgo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gccgo/"
 description: "gccgo – A GCC-based compiler for the Go language"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gccgo &#8211; A GCC-based compiler for the Go language </p>
 <h2>SYNOPSIS</h2>
 <p> gccgo [<code>-c</code>|<code>-S</code>]<br />

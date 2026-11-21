@@ -1,4 +1,5 @@
 ---
+
 title: "memkind_gbtlb(3)"
 name: "memkind_gbtlb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memkind_gbtlb/"
 description: "memkind_gbtlb.h – gigabyte TLB memkind operations. Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove."
 ---
 
-<h2>NAME</h2>
 <p> memkind_gbtlb.h &#8211; gigabyte TLB memkind operations.<br />
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
 <h2>SYNOPSIS</h2>

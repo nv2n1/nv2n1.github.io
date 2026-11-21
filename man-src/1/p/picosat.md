@@ -1,4 +1,5 @@
 ---
+
 title: "picosat(1)"
 name: "picosat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-picosat/"
 description: "picosat – Satisfiability (SAT) solver with proof and core support"
 ---
 
-<h2>NAME</h2>
 <p> picosat &#8211; Satisfiability (SAT) solver with proof and core support</p>
 <h2>SYNOPSIS</h2>
 <p> <code>picosat</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]</p>

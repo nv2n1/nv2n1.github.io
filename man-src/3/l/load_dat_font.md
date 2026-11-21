@@ -1,4 +1,5 @@
 ---
+
 title: "load_dat_font(3)"
 name: "load_dat_font"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_dat_font/"
 description: "load_dat_font – Loads a FONT from an Allegro datafile."
 ---
 
-<h2>NAME</h2>
 <p> load_dat_font &#8211; Loads a FONT from an Allegro datafile.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

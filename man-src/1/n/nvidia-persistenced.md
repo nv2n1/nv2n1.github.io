@@ -1,4 +1,5 @@
 ---
+
 title: "nvidia-persistenced(1)"
 name: "nvidia-persistenced"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nvidia-persistenced/"
 description: "nvidia-persistenced – A daemon to maintain persistent software state in the NVIDIA driver."
 ---
 
-<h2 class="name">NAME</h2>
 <p> nvidia-persistenced &#8211; A daemon to maintain persistent software state in the NVIDIA driver.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nvidia-persistenced</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_net_manager_types(3)"
 name: "globus_net_manager_types"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_net_manager_types/"
 description: "Net Manager Data Types –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Net Manager Data Types &#8211; </p>
 <p> Net Manager Data Types.</p>
 <h3>Data Structures</h3>

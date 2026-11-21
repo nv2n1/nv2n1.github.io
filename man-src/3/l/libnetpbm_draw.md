@@ -1,4 +1,5 @@
 ---
+
 title: "libnetpbm_draw(3)"
 name: "libnetpbm_draw"
 section: "3"
@@ -8,7 +9,7 @@ description: "libnetpbm_draw \\- Libnetpbm PPM Drawing Function Manual"
 ---
 
 <p>Table Of Contents</p>
-<h2 class="name">NAME</h2>
+
 <p> libnetpbm_draw \- Libnetpbm PPM Drawing Function Manual </p>
 <h2>DESCRIPTION</h2>
 <p> This reference manual covers functions in the <code>libnetpbm</code> library for drawing images, using the PPM image format and the <code>libnetpbm</code> in-memory image formats. </p>

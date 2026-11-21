@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_free(3)"
 name: "libssh2_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_free/"
 description: "libssh2_free – deallocate libssh2 memory"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_free &#8211; deallocate libssh2 memory</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

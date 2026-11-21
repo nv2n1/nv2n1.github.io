@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaxfs(1)"
 name: "pmdaxfs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaxfs/"
 description: "pmdaxfs – XFS filesystem performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaxfs</code> &#8211; XFS filesystem performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/xfs/pmdaxfs</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>]</p>

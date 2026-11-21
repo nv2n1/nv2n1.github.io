@@ -1,4 +1,5 @@
 ---
+
 title: "cgraph(3)"
 name: "cgraph"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgraph/"
 description: "libcgraph – abstract graph library"
 ---
 
-<h2>NAME</h2>
 <p> <code>libcgraph</code> &#8211; abstract graph library</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

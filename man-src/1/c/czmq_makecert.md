@@ -1,4 +1,5 @@
 ---
+
 title: "czmq_makecert(1)"
 name: "czmq_makecert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-czmq_makecert/"
 description: "makecert – no title found"
 ---
 
-<h2 class="name">NAME</h2>
 <p> makecert &#8211; no title found </p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "grub-kbdcomp(1)"
 name: "grub-kbdcomp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub-kbdcomp/"
 description: "grub-kbdcomp – generate a GRUB keyboard layout file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grub-kbdcomp &#8211; generate a GRUB keyboard layout file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-kbdcomp</code> <i>,-o OUTPUT CKBMAP_ARGUMENTS/</i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "java-java-1(1)"
 name: "java-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-java-java-1/"
 description: "java – Launches a Java application."
 ---
 
-<h2 class="name">NAME</h2>
 <p> java &#8211; Launches a Java application. </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "podspell(1)"
 name: "podspell"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-podspell/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- podspell - pod spell checking command line interface 
+podspell - pod spell checking command line interface 
 
 <h2>VERSION</h2>
 

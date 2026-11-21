@@ -1,4 +1,5 @@
 ---
+
 title: "asl(1)"
 name: "asl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-asl/"
 description: "asl – cross assembler for microprocessors and -controllers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>asl &#8211; cross assembler for microprocessors and -controllers</code></p>
 <h2>SYNTAX</h2>
 <p> <code>asl </code> [ option(s) ] file(s) [ option(s) ] file(s) &#8230; </p>

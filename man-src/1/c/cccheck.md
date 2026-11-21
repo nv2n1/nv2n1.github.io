@@ -1,4 +1,5 @@
 ---
+
 title: "cccheck(1)"
 name: "cccheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cccheck/"
 description: "cccheck – Perform static code contracts verification for CLR assemblies."
 ---
 
-<h2>NAME</h2>
 <p> cccheck &#8211; Perform static code contracts verification for CLR assemblies.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cccheck &#8211;assembly=&lt;assembly&gt; [options]</code></p>

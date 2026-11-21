@@ -1,4 +1,5 @@
 ---
+
 title: "tar(1)"
 name: "tar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tar/"
 description: "tar – an archiving utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tar &#8211; an archiving utility </p>
 <h2>SYNOPSIS</h2>
 <h3>Traditional usage</h3>

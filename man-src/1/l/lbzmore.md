@@ -1,4 +1,5 @@
 ---
+
 title: "lbzmore(1)"
 name: "lbzmore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lbzmore/"
 description: "lbzmore – file perusal filter for crt viewing of compressed text"
 ---
 
-<h2>NAME</h2>
 <p> lbzmore &#8211; file perusal filter for crt viewing of compressed text</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lbzmore</code> [ name &#8230; ]</p>

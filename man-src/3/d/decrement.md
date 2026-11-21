@@ -1,4 +1,5 @@
 ---
+
 title: "decrement(3)"
 name: "decrement"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-decrement/"
 description: "QuantLib::step_iterator – Iterator advancing in constant steps."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::step_iterator &#8211; Iterator advancing in constant steps. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/utilities/steppingiterator.hpp&gt; </p>

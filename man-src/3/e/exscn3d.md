@@ -1,4 +1,5 @@
 ---
+
 title: "exscn3d(3)"
 name: "exscn3d"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exscn3d/"
 description: "exscn3d – Using the 3d scene functions. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exscn3d &#8211; Using the 3d scene functions. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

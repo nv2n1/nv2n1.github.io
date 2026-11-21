@@ -1,4 +1,5 @@
 ---
+
 title: "locale(1)"
 name: "locale"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-locale/"
 description: "locale – get locale-specific information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> locale &#8211; get locale-specific information </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

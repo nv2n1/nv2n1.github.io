@@ -1,4 +1,5 @@
 ---
+
 title: "myproxy-destroy(1)"
 name: "myproxy-destroy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-myproxy-destroy/"
 description: "myproxy-destroy – remove a credential from the repository"
 ---
 
-<h2>NAME</h2>
 <p> myproxy-destroy &#8211; remove a credential from the repository</p>
 <h2>SYNOPSIS</h2>
 <p> <code>myproxy-destroy</code> [ <i>options</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-associate-route-table(1)"
 name: "euca-associate-route-table"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-associate-route-table/"
 description: "euca-associate-route-table – Associate a VPC route table with a subnet"
 ---
 
-<h2>NAME</h2>
 <p> euca-associate-route-table &#8211; Associate a VPC route table with a subnet</p>
 <h2>SYNOPSIS</h2>
 <p> euca-associate-route-table <code>-s</code> SUBNET [&#8211;show-empty-fields] [-U URL]</p>

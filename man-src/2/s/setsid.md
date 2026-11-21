@@ -1,4 +1,5 @@
 ---
+
 title: "setsid(2)"
 name: "setsid"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-setsid/"
 description: "setsid – creates a session and sets the process group ID"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setsid &#8211; creates a session and sets the process group ID </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />

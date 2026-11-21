@@ -1,4 +1,5 @@
 ---
+
 title: "magic(5)"
 name: "magic"
 section: "5"
@@ -6,8 +7,9 @@ letter: "m"
 url: "/docs/linux/man/5-magic/"
 description: "magic – file command’s magic pattern file"
 ---
+
 <p> <code>magic</code> - file command&#8217;s magic pattern file </p>
-<h2>DESCRIPTION</h2>
+
 <p> This manual page documents the format of magic files as used by the <a href="/docs/linux/man/1-file/">file</a>(1) command, version 5.41. The <a href="/docs/linux/man/1-file/">file</a>(1) command identifies the type of a file using, among other tests, a test for whether the file contains certain ``magic patterns&#8217;&#8216; The database of these ``magic patterns&#8217;&#8216; is usually located in a binary file in /usr/share/misc/magic.mgc or a directory of source text magic pattern fragment files in /usr/share/misc/magic The database specifies what patterns are to be tested for, what message or MIME type to print if a particular pattern is found, and additional information to extract from the file. </p>
 <p>The format of the source fragment files that are used to build this database is as follows: Each line of a fragment file specifies a test to be performed. A test compares the data starting at a particular offset in the file with a byte value, a string or a numeric value. If the test succeeds, a message is printed. The line consists of the following fields: </p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "marco(1)"
 name: "marco"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-marco/"
 description: "Marco – The MATE Window Manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Marco &#8211; The MATE Window Manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>marco [OPTIONS]</code></p>

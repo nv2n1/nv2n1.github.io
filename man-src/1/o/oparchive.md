@@ -1,4 +1,5 @@
 ---
+
 title: "oparchive(1)"
 name: "oparchive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oparchive/"
 description: "oparchive – produce archive of oprofile data for offline analysis"
 ---
 
-<h2 class="name">NAME</h2>
 <p> oparchive &#8211; produce archive of oprofile data for offline analysis </p>
 <h2>SYNOPSIS</h2>
 <p> <code>oparchive</code> [ <i>options</i> ] [profile specification] <code>-o</code> [directory]</p>

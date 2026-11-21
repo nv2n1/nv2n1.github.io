@@ -1,4 +1,5 @@
 ---
+
 title: "queryparse(1)"
 name: "queryparse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-queryparse/"
 description: "queryparse – extract DNS queries from pcap capture files."
 ---
 
-<h2>NAME</h2>
 <p> queryparse &#8211; extract DNS queries from pcap capture files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>queryparse [-i </code> <i>input file</i> <code>] [-o</code> <i>output file</i> <code>] [-r</code> <i>recursion only</i> <code>] [-R</code> <i>parse responses</i> <code>]</code></p>

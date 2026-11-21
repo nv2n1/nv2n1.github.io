@@ -1,4 +1,5 @@
 ---
+
 title: "xrootdfs(1)"
 name: "xrootdfs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xrootdfs/"
 description: "xrootdfs – xrootd FUSE file system daemon"
 ---
 
-<h2>NAME</h2>
 <p> xrootdfs &#8211; xrootd FUSE file system daemon</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "glabels(1)"
 name: "glabels"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glabels/"
 description: "glabels – Label and business card creation program for GNOME"
 ---
 
-<h2>NAME</h2>
 <p> glabels &#8211; Label and business card creation program for GNOME</p>
 <h2>SYNOPSIS</h2>
 <p> <code>glabels</code> [OPTIONS] [label-filename&#8230;] </p>

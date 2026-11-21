@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-uptime(1)"
 name: "pcp-uptime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp-uptime/"
 description: "pcp-uptime – tell how long the system has been running"
 ---
 
-<h2>NAME</h2>
 <p> <code>pcp-uptime</code> &#8211; tell how long the system has been running</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>uptime</code> [<code>-V</code>/[<code>&#8211;version</code>]</p>

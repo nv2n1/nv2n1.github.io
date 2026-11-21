@@ -1,4 +1,5 @@
 ---
+
 title: "qpidd(1)"
 name: "qpidd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qpidd/"
 description: "qpidd – the Qpid AMQP Message Broker Daemon"
 ---
 
-<h2>NAME</h2>
 <p> qpidd &#8211; the Qpid AMQP Message Broker Daemon</p>
 <h2>SYNOPSIS</h2>
 <p> qpidd [-p port] [&#8211;config config_file] [&#8211;data-dir directory]</p>

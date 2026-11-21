@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-sub(1)"
 name: "mlmmj-sub"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mlmmj-sub/"
 description: "mlmmj-sub – subscribe address to a mailinglist run by mlmmj"
 ---
 
-<h2>NAME</h2>
 <p> mlmmj-sub &#8211; subscribe address to a mailinglist run by mlmmj</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-sub</code> <i>-L /path/to/list</i> [<i>-a john [at] doe.org</i> | <i>-m str</i>] [<i>-c</i>] [<i>-C</i>] [<i>-d</i> | <i>-n</i>] [<i>-f</i>] [<i>-h</i>] [<i>-q</i>] [<i>-r</i> | <i>-R</i>] [<i>-s</i>] [<i>-U</i>] [<i>-V</i>]</p>

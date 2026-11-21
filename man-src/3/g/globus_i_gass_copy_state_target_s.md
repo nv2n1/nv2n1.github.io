@@ -1,4 +1,5 @@
 ---
+
 title: "globus_i_gass_copy_state_target_s(3)"
 name: "globus_i_gass_copy_state_target_s"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_i_gass_copy_state_target_s/"
 description: "globus_i_gass_copy_state_target_s –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_i_gass_copy_state_target_s &#8211; </p>
 <p> GASS copy target (e.g.</p>
 <h2>SYNOPSIS</h2>

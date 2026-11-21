@@ -1,4 +1,5 @@
 ---
+
 title: "rping(1)"
 name: "rping"
 section: "1"
@@ -6,9 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rping/"
 ---
 
-<h2>NAME</h2>
-
- rping - RDMA CM connection and RDMA ping-pong test.
+rping - RDMA CM connection and RDMA ping-pong test.
 
 <h2>SYNOPSIS</h2>
 

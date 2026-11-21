@@ -1,4 +1,5 @@
 ---
+
 title: "euare-groupcreate(1)"
 name: "euare-groupcreate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-groupcreate/"
 description: "euare-groupcreate – Create a new group"
 ---
 
-<h2>NAME</h2>
 <p> euare-groupcreate &#8211; Create a new group</p>
 <h2>SYNOPSIS</h2>
 <p> euare-groupcreate [-p PATH] [-v] [&#8211;as-account ACCOUNT] [-U URL]</p>

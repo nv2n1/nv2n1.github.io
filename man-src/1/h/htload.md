@@ -1,4 +1,5 @@
 ---
+
 title: "htload(1)"
 name: "htload"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htload/"
 description: "htload – reads in an ASCII-text version of the document database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> htload &#8211; reads in an ASCII-text version of the document database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>htload</code> <i>[options]</i></p>

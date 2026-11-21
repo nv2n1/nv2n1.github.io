@@ -1,4 +1,5 @@
 ---
+
 title: "excolmap(3)"
 name: "excolmap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-excolmap/"
 description: "excolmap – Creating graphical effects with color mapping tables. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> excolmap &#8211; Creating graphical effects with color mapping tables. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

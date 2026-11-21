@@ -1,4 +1,5 @@
 ---
+
 title: "xkbprint(1)"
 name: "xkbprint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xkbprint/"
 description: "xkbprint – print an XKB keyboard description"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xkbprint &#8211; print an XKB keyboard description </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xkbprint</code> [options] source [ output_file ]</p>

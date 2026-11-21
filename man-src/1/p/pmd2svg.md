@@ -1,4 +1,5 @@
 ---
+
 title: "pmd2svg(1)"
 name: "pmd2svg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmd2svg/"
 description: "pmd2svg – manual page for pmd2svg 0.0.3"
 ---
 
-<h2>NAME</h2>
 <p> pmd2svg &#8211; manual page for pmd2svg 0.0.3</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmd2svg</code> [<i>OPTION</i>] <i>INPUT</i></p>

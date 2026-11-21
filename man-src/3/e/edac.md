@@ -1,4 +1,5 @@
 ---
+
 title: "edac(3)"
 name: "edac"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-edac/"
 description: "libedac – EDAC error reporting library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libedac &#8211; EDAC error reporting library</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

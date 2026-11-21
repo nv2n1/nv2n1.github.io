@@ -1,4 +1,5 @@
 ---
+
 title: "dnstxt(1)"
 name: "dnstxt"
 section: "1"
@@ -6,7 +7,6 @@ letter: "d"
 url: "/docs/linux/man/1-dnstxt/"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>dnstxt</code> [<code>OPTIONS</code>] &lt;domain-name&gt; [&lt;domain-name&gt; &#8230;]</dt>
 <dd>

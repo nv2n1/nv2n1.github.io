@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-software-editor(1)"
 name: "gnome-software-editor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-software-editor/"
 description: "gnome-software-editor – Design the featured banners for GNOME Software"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-software-editor &#8211; Design the featured banners for GNOME Software </p>
 <h2>SYNOPSIS</h2>
 <dl>

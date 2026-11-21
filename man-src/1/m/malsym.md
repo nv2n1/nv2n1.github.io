@@ -1,4 +1,5 @@
 ---
+
 title: "malsym(1)"
 name: "malsym"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-malsym/"
 description: "malsym – compile a Malaga symbol file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> malsym &#8211; compile a Malaga symbol file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>malsym</code> <i>symbol-file</i> </p>

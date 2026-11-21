@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_set_copy(3)"
 name: "hdf_set_copy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_set_copy/"
 description: "hdf_set_copy -> Copy a value from one location in the dataset to another"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_set_copy -&gt; Copy a value from one location in the dataset to another </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

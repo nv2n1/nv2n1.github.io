@@ -1,4 +1,5 @@
 ---
+
 title: "rasplit(1)"
 name: "rasplit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rasplit/"
 description: "rasplit – split argus(8) data."
 ---
 
-<h2>NAME</h2>
 <p> <code>rasplit</code> &#8211; split <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rasplit</code> [[<code>-M</code> <i>splitmode</i>] [<i>splitmode options</i>]] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

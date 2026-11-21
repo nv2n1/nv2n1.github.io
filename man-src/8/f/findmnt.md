@@ -1,4 +1,5 @@
 ---
+
 title: "findmnt(8)"
 name: "findmnt"
 section: "8"
@@ -6,8 +7,9 @@ letter: "f"
 url: "/docs/linux/man/8-findmnt/"
 description: "findmnt – find a filesystem"
 ---
+
 <p>findmnt &#8211; find a filesystem </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>findmnt</code> [options] </p>
 <p> <code>findmnt</code> [options] <i>device</i>|<i>mountpoint</i> </p>
 <p> <code>findmnt</code> [options] [<code>--source</code>] <i>device</i> [<code>--target</code> <i>path</i>|<code>--mountpoint</code> <i>mountpoint</i>]  </p>

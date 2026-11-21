@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_end(3)"
 name: "ck_epoch_end"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_epoch_end/"
 description: "ck_epoch_end – end epoch-protected segment of execution"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_epoch_end</code> &#8211; end epoch-protected segment of execution</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

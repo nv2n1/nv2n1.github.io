@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-assembler(1)"
 name: "hwloc-assembler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-assembler/"
 description: "hwloc-assembler – Assemble multiple XML topologies"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-assembler &#8211; Assemble multiple XML topologies</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-assembler</code> [<i>options</i>] output.xml [&#8211;name &lt;name1&gt;] input1.xml [&#8211;name &lt;name2&gt;] input2.xml &#8230;</p>

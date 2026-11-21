@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userdel(1)"
 name: "euare-userdel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userdel/"
 description: "euare-userdel – Delete a user"
 ---
 
-<h2>NAME</h2>
 <p> euare-userdel &#8211; Delete a user</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userdel [-r] [-p] [&#8211;as-account ACCOUNT] [-U URL]</p>

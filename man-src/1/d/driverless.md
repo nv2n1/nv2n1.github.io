@@ -1,4 +1,5 @@
 ---
+
 title: "driverless(1)"
 name: "driverless"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-driverless/"
 description: "driverless – PPD generator utility for driverless printing"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>driverless </code>&#8211; PPD generator utility for driverless printing </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

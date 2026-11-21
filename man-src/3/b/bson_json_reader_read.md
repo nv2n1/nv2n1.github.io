@@ -1,4 +1,5 @@
 ---
+
 title: "bson_json_reader_read(3)"
 name: "bson_json_reader_read"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_json_reader_read/"
 description: "bson_json_reader_read() – Reads the next BSON document from the underlying JSON source."
 ---
 
-<h2>NAME</h2>
 <p> bson_json_reader_read() &#8211; Reads the next BSON document from the underlying JSON source.</p>
 <h2>SYNOPSIS</h2>
 <pre>

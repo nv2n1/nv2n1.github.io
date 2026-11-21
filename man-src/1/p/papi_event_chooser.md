@@ -1,4 +1,5 @@
 ---
+
 title: "papi_event_chooser(1)"
 name: "papi_event_chooser"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-papi_event_chooser/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- papi_event_chooser - papi_event_chooser utility. 
+papi_event_chooser - papi_event_chooser utility. 
 
  file event_chooser.c 
 

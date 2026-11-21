@@ -1,4 +1,5 @@
 ---
+
 title: "git-diff(1)"
 name: "git-diff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-diff/"
 description: "git-diff – Show changes between commits, commit and working tree, etc"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-diff &#8211; Show changes between commits, commit and working tree, etc </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

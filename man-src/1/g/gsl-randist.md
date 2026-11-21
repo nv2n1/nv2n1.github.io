@@ -1,4 +1,5 @@
 ---
+
 title: "gsl-randist(1)"
 name: "gsl-randist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsl-randist/"
 description: "gsl-randist – generate random samples from various distributions"
 ---
 
-<h2>NAME</h2>
 <p> gsl-randist &#8211; generate random samples from various distributions</p>
 <h2>SYNOPSYS</h2>
 <p> <code>gsl-randist seed n DIST param1 param2 [..]</code></p>

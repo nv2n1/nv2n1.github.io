@@ -1,4 +1,5 @@
 ---
+
 title: "getnetent(3)"
 name: "getnetent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getnetent/"
 description: "getnetent, getnetbyname, getnetbyaddr, setnetent, endnetent – get network entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getnetent, getnetbyname, getnetbyaddr, setnetent, endnetent &#8211; get network entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

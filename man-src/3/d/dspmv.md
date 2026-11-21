@@ -1,4 +1,5 @@
 ---
+
 title: "dspmv(3)"
 name: "dspmv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dspmv/"
 description: "dspmv.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dspmv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

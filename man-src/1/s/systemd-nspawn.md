@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-nspawn(1)"
 name: "systemd-nspawn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-nspawn/"
 description: "systemd-nspawn – Spawn a namespace container for debugging, testing and building"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-nspawn &#8211; Spawn a namespace container for debugging, testing and building </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-diff(1)"
 name: "docker-diff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-diff/"
 description: "docker-diff – Inspect changes to files or directories on a container’s filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-diff &#8211; Inspect changes to files or directories on a container&#8217;s filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker diff CONTAINER</code> </p>

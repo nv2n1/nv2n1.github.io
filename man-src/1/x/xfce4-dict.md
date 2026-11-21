@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-dict(1)"
 name: "xfce4-dict"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-dict/"
 description: "xfce4-dict — a client program to query different dictionaries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfce4-dict &#8212; a client program to query different dictionaries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfce4-dict</code> [<code>option</code>] [<code>text &#8230;</code>]</p>

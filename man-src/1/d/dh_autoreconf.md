@@ -1,4 +1,5 @@
 ---
+
 title: "dh_autoreconf(1)"
 name: "dh_autoreconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_autoreconf/"
 description: "dh_autoreconf – Call autoreconf -f -i and keep track of the changed files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_autoreconf &#8211; Call autoreconf -f -i and keep track of the changed files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_autoreconf</code> [<i>debhelper options</i>] [<code>-X</code><i>item</i>] [<code>&#8211;mode=</code><i>mode</i>] [<i>program</i>&nbsp;<code>&#8212;</code>&nbsp;<i>params</i>]</p>

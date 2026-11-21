@@ -1,4 +1,5 @@
 ---
+
 title: "pamtopnm(1)"
 name: "pamtopnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtopnm/"
 description: "pamtopnm – convert PAM image to PBM, PGM, or PPM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamtopnm &#8211; convert PAM image to PBM, PGM, or PPM</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtopnm</code> </p>

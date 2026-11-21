@@ -1,4 +1,5 @@
 ---
+
 title: "http_driver(3)"
 name: "http_driver"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-http_driver/"
 description: "Globus XIO HTTP Driver –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus XIO HTTP Driver &#8211; </p>
 <p> This driver implements the HTTP/1.0 and HTTP/1.1 protocols within the Globus XIO framework.</p>
 <h3>Data Structures</h3>

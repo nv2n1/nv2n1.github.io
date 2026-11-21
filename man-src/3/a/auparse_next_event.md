@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_next_event(3)"
 name: "auparse_next_event"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_next_event/"
 description: "auparse_next_event – get the next event"
 ---
 
-<h2>NAME</h2>
 <p> auparse_next_event &#8211; get the next event</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

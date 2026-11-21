@@ -1,4 +1,5 @@
 ---
+
 title: "npm-team(1)"
 name: "npm-team"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-team/"
 description: "npm-team – Manage organization teams and team memberships"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-team</code> &#8211; Manage organization teams and team memberships </p>
 <h3>Synopsis</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "install_param_int_ex(3)"
 name: "install_param_int_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-install_param_int_ex/"
 description: "install_param_int_ex – Adds or modifies a timer with a customizable parameter. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> install_param_int_ex &#8211; Adds or modifies a timer with a customizable parameter. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

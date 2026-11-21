@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-console(1)"
 name: "lxc-console"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-console/"
 description: "lxc-console – Launch a console for the specified container"
 ---
 
-<h2>NAME</h2>
 <p> lxc-console &#8211; Launch a console for the specified container</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-console</code> {-n <i>name</i>} [-e <i>escape character</i>] [-t <i>ttynum</i>]</p>

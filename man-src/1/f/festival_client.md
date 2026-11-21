@@ -1,4 +1,5 @@
 ---
+
 title: "festival_client(1)"
 name: "festival_client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-festival_client/"
 description: "festival_client – client access to festiva; text-to-speech server mode"
 ---
 
-<h2>NAME</h2>
 <p> festival_client &#8211; client access to festiva; text-to-speech server mode</p>
 <h2>SYNOPSIS</h2>
 <p> <code>festival_client</code> <i>[options]</i> <i>[file0]</i> <i>[file1]</i> <i>&#8230;</i> </p>

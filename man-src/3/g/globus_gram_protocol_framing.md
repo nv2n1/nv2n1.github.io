@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_protocol_framing(3)"
 name: "globus_gram_protocol_framing"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_framing/"
 description: "Message Framing –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Message Framing &#8211; </p>
 <p> Message Framing.</p>
 <h3>Functions</h3>

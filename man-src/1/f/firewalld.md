@@ -1,4 +1,5 @@
 ---
+
 title: "firewalld(1)"
 name: "firewalld"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-firewalld/"
 description: "firewalld – Dynamic Firewall Manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> firewalld &#8211; Dynamic Firewall Manager </p>
 <h2>SYNOPSIS</h2>
 <dl>

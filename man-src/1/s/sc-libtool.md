@@ -1,4 +1,5 @@
 ---
+
 title: "sc-libtool(1)"
 name: "sc-libtool"
 section: "1"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-sc-libtool/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- sc-libtool - The sc-libtool program is used to link and build MPQC executables and libraries.
+sc-libtool - The sc-libtool program is used to link and build MPQC executables and libraries.
 
 <h2>Synopsis</h2>
 

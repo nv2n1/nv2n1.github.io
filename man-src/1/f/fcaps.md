@@ -1,4 +1,5 @@
 ---
+
 title: "fcaps(1)"
 name: "fcaps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fcaps/"
 description: "fcaps – report available fontcaps"
 ---
 
-<h2>NAME</h2>
 <p> fcaps &#8211; report available fontcaps</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fcaps</code> [ <code>-V</code> ]</p>

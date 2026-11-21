@@ -1,4 +1,5 @@
 ---
+
 title: "tv_to_text(1)"
 name: "tv_to_text"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_to_text/"
 description: "tv_to_text – Convert XMLTV listings to text."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_to_text &#8211; Convert XMLTV listings to text. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_to_text [&#8211;help] [&#8211;with-desc] [&#8211;output <font SIZE="-1">FILE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>

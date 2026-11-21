@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_inc_rkey(3)"
 name: "ibv_inc_rkey"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_inc_rkey/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_inc_rkey - creates a new rkey from the given one 
+ibv_inc_rkey - creates a new rkey from the given one 
 
 <h2>SYNOPSIS</h2>
 

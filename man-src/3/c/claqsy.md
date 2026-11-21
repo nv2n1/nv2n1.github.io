@@ -1,4 +1,5 @@
 ---
+
 title: "claqsy(3)"
 name: "claqsy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claqsy/"
 description: "claqsy.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> claqsy.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

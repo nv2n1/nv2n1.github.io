@@ -1,4 +1,5 @@
 ---
+
 title: "kernelshark(1)"
 name: "kernelshark"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kernelshark/"
 description: "kernelshark – graphical reader for"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kernelshark &#8211; graphical reader for </p>
 <p><a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) output</p>
 <h2>SYNOPSIS</h2>

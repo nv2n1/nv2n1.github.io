@@ -1,4 +1,5 @@
 ---
+
 title: "ctest3(1)"
 name: "ctest3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ctest3/"
 description: "ctest – CTest Command-Line Reference"
 ---
 
-<h2>NAME</h2>
 <p> ctest &#8211; CTest Command-Line Reference</p>
 <h2>SYNOPSIS</h2>
 <pre>

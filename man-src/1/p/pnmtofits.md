@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtofits(1)"
 name: "pnmtofits"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmtofits/"
 description: "pnmtofits – convert a portable anymap into FITS format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmtofits &#8211; convert a portable anymap into FITS format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtofits</code> [<code>-max</code> <i>f</i>] [<code>-min</code> <i>f</i>] [<i>pnmfile</i>]</p>

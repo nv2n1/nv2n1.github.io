@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_portof(3)"
 name: "ipsec_portof"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_portof/"
 description: "ipsec_portof, ipsec_setportof, ipsec_sockaddrof, ipsec_sockaddrlenof – get port field of an ip_address, set port field of an ip_address, get pointer to internal sockaddr of an ip_address, get lengt..."
 ---
 
-<h2>NAME</h2>
 <p> ipsec_portof, ipsec_setportof, ipsec_sockaddrof, ipsec_sockaddrlenof &#8211; get port field of an ip_address, set port field of an ip_address, get pointer to internal sockaddr of an ip_address, get length of internal sockaddr of an ip_address</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>

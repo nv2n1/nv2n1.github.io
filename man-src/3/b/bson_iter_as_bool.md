@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_as_bool(3)"
 name: "bson_iter_as_bool"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_as_bool/"
 description: "bson_iter_as_bool() – Fetches the current field as if it were a boolean."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_as_bool() &#8211; Fetches the current field as if it were a boolean.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

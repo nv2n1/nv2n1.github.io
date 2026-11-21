@@ -1,4 +1,5 @@
 ---
+
 title: "rcsintro(1)"
 name: "rcsintro"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rcsintro/"
 description: "rcsintro – introduction to RCS commands"
 ---
 
-<h2>NAME</h2>
 <p> rcsintro &#8211; introduction to RCS commands</p>
 <h2>DESCRIPTION</h2>
 <p> The Revision Control System (<font SIZE="-1">RCS</font>) manages multiple revisions of files. <font SIZE="-1">RCS</font> automates the storing, retrieval, logging, identification, and merging of revisions. <font SIZE="-1">RCS</font> is useful for text that is revised frequently, for example programs, documentation, graphics, papers, and form letters. </p>

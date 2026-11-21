@@ -1,4 +1,5 @@
 ---
+
 title: "dnsipq(1)"
 name: "dnsipq"
 section: "1"
@@ -6,7 +7,6 @@ letter: "d"
 url: "/docs/linux/man/1-dnsipq/"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>dnsipq</code> [<code>OPTIONS</code>] &lt;domain-name&gt; [&lt;domain-name&gt; &#8230;]</dt>
 <dd>

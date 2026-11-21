@@ -1,4 +1,5 @@
 ---
+
 title: "perlopentut(1)"
 name: "perlopentut"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlopentut/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlopentut - simple recipes for opening files and pipes in Perl 
+perlopentut - simple recipes for opening files and pipes in Perl 
 
 <h2>DESCRIPTION</h2>
 

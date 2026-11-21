@@ -1,4 +1,5 @@
 ---
+
 title: "nosetests(1)"
 name: "nosetests"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nosetests/"
 description: "nosetests – Nicer testing for Python"
 ---
 
-<h2>NAME</h2>
 <p> nosetests &#8211; Nicer testing for Python</p>
 <h2>NICER TESTING FOR PYTHON</h2>
 <h3>SYNOPSIS</h3>

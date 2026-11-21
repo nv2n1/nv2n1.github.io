@@ -1,4 +1,5 @@
 ---
+
 title: "feathers(1)"
 name: "feathers"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-feathers/"
 description: "feathers – a simple source-level debugger for CHICKEN Scheme"
 ---
 
-<h2 class="name">NAME</h2>
 <p> feathers &#8211; a simple source-level debugger for CHICKEN Scheme</p>
 <h2>SYNOPSIS</h2>
 <p> feathers [OPTION &#8230;] [PROGRAM ARGUMENTS &#8230;] </p>

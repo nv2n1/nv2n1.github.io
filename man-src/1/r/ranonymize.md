@@ -1,4 +1,5 @@
 ---
+
 title: "ranonymize(1)"
 name: "ranonymize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ranonymize/"
 description: "ranonymize – anonymize argus(8) data fields."
 ---
 
-<h2>NAME</h2>
 <p> <code>ranonymize</code> &#8211; anonymize <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data fields.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ranonymize [-f anonymize.conf</code>] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

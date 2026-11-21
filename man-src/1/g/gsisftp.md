@@ -1,4 +1,5 @@
 ---
+
 title: "gsisftp(1)"
 name: "gsisftp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsisftp/"
 description: "sftp – secure file transfer program"
 ---
 
-<h2>NAME</h2>
 <p> <code>sftp</code> &#8211; secure file transfer program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sftp</code> -words [-<code>1246aCfpqrv</code> ] [-<code>B </code><i>buffer_size</i> ] [-<code>b </code><i>batchfile</i> ] [-<code>c </code><i>cipher</i> ] [-<code>D </code><i>sftp_server_path</i> ] [-<code>F </code><i>ssh_config</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>l </code><i>limit</i> ] [-<code>o </code><i>ssh_option</i> ] [-<code>P </code><i>port</i> ] [-<code>R </code><i>num_requests</i> ] [-<code>S </code><i>program</i> ] [-<code>s </code><i>subsystem | sftp_server</i> ] <i>host</i><br />

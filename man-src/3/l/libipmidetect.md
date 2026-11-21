@@ -1,4 +1,5 @@
 ---
+
 title: "libipmidetect(3)"
 name: "libipmidetect"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libipmidetect/"
 description: "libipmidetect – a library of functions to determine if a node is detected or undetected"
 ---
 
-<h2>NAME</h2>
 <p> libipmidetect &#8211; a library of functions to determine if a node is detected or undetected</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;ipmidetect.h&gt;</code> </p>

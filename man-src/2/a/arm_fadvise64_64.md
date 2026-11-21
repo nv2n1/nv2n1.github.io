@@ -1,4 +1,5 @@
 ---
+
 title: "arm_fadvise64_64(2)"
 name: "arm_fadvise64_64"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-arm_fadvise64_64/"
 description: "posix_fadvise – predeclare an access pattern for file data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> posix_fadvise &#8211; predeclare an access pattern for file data </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

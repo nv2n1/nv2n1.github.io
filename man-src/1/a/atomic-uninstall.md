@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-uninstall(1)"
 name: "atomic-uninstall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-uninstall/"
 description: "atomic-uninstall – Remove/Uninstall container/container image from system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atomic-uninstall &#8211; Remove/Uninstall container/container image from system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic uninstall</code> [<code>-f</code>][<code>&#8211;force</code>] [<code>-h</code>|<code>&#8211;help</code>] [<code>-n</code>][<code>&#8211;name</code>[=<i>NAME</i>]] IMAGE [ARG&#8230;] </p>

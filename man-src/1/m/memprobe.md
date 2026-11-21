@@ -1,4 +1,5 @@
 ---
+
 title: "memprobe(1)"
 name: "memprobe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memprobe/"
 description: "memprobe – ROOT utility to examine memory usage"
 ---
 
-<h2 class="name">NAME</h2>
 <p> memprobe &#8211; ROOT utility to examine memory usage </p>
 <h2>SYNOPSIS</h2>
 <p> <code>memprobe</code> <i>[options]</i></p>

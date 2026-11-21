@@ -1,4 +1,5 @@
 ---
+
 title: "aa_recommendlowkbd(3)"
 name: "aa_recommendlowkbd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_recommendlowkbd/"
 description: "aa_recommendlowkbd – Add the given driver to the end of list of keyboard recommended drivers."
 ---
 
-<h2>NAME</h2>
 <p> aa_recommendlowkbd &#8211; Add the given driver to the end of list of keyboard recommended drivers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

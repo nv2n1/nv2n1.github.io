@@ -1,4 +1,5 @@
 ---
+
 title: "find(3)"
 name: "find"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-find/"
 description: "QuantLib::TimeSeries – Container for historical data."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::TimeSeries &#8211; Container for historical data. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/timeseries.hpp&gt; </p>

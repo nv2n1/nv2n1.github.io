@@ -1,4 +1,5 @@
 ---
+
 title: "pamtotga(1)"
 name: "pamtotga"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtotga/"
 description: "pamtotga – convert a Netpbm image to a TrueVision Targa file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamtotga &#8211; convert a Netpbm image to a TrueVision Targa file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtotga</code> [<code>-mono|-cmap|-rgb</code>] [<code>-norle</code>] [<code>-name=</code><i>name</i> [<i>pamfile</i>] </p>

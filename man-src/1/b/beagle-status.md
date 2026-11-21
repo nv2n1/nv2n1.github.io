@@ -1,4 +1,5 @@
 ---
+
 title: "beagle-status(1)"
 name: "beagle-status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beagle-status/"
 description: "beagle-status – repeatedly display Beagle status"
 ---
 
-<h2>NAME</h2>
 <p> beagle-status &#8211; repeatedly display Beagle status</p>
 <h2>SYNOPSIS</h2>
 <p> <code>beagle-status</code></p>

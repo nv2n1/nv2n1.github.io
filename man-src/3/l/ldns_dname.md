@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dname(3)"
 name: "ldns_dname"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dname/"
 description: "ldns_dname"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dname </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

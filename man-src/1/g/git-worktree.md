@@ -1,4 +1,5 @@
 ---
+
 title: "git-worktree(1)"
 name: "git-worktree"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-worktree/"
 description: "git-worktree – Manage multiple working trees"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-worktree &#8211; Manage multiple working trees </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

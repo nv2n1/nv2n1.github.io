@@ -1,4 +1,5 @@
 ---
+
 title: "rasqltimeindex(1)"
 name: "rasqltimeindex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rasqltimeindex/"
 description: "rasqltimeindex – read argus(8) data from mysql database."
 ---
 
-<h2>NAME</h2>
 <p> <code>rasqltimeindex</code> &#8211; read <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from mysql database.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rasqltimeindex -r argus.data.file -w <a href="mysql://user@host/db">mysql://user@host/db</a></code></p>

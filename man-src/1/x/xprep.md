@@ -1,4 +1,5 @@
 ---
+
 title: "xprep(1)"
 name: "xprep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xprep/"
 description: "xprep – prepare one or more files for access"
 ---
 
-<h2>NAME</h2>
 <p> xprep &#8211; prepare one or more files for access</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

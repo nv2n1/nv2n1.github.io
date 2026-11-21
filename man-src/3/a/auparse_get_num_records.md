@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_num_records(3)"
 name: "auparse_get_num_records"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_num_records/"
 description: "auparse_get_num_records – get the number of records"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_num_records &#8211; get the number of records</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

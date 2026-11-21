@@ -1,4 +1,5 @@
 ---
+
 title: "zipdetails(1)"
 name: "zipdetails"
 section: "1"
@@ -6,10 +7,7 @@ letter: "z"
 url: "/docs/linux/man/1-zipdetails/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- zipdetails - display the internal structure of zip files 
+zipdetails - display the internal structure of zip files 
 
 <h2>SYNOPSIS</h2>
 

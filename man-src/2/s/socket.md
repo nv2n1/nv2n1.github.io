@@ -1,4 +1,5 @@
 ---
+
 title: "socket(2)"
 name: "socket"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-socket/"
 description: "socket – create an endpoint for communication"
 ---
 
-<h2 class="name">NAME</h2>
 <p> socket &#8211; create an endpoint for communication </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code> /* See NOTES */<br />

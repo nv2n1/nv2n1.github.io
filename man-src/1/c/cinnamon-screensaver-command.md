@@ -1,4 +1,5 @@
 ---
+
 title: "cinnamon-screensaver-command(1)"
 name: "cinnamon-screensaver-command"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cinnamon-screensaver-command/"
 description: "cinnamon-screensaver-command – controls Cinnamon screensaver"
 ---
 
-<h2>NAME</h2>
 <p> cinnamon-screensaver-command &#8211; controls Cinnamon screensaver</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cinnamon-screensaver-command</code> [<i>OPTION&#8230;</i>]</p>

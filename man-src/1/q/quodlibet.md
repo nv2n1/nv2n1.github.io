@@ -1,4 +1,5 @@
 ---
+
 title: "quodlibet(1)"
 name: "quodlibet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-quodlibet/"
 description: "quodlibet – audio library manager and player"
 ---
 
-<h2>NAME</h2>
 <p> quodlibet &#8211; audio library manager and player</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

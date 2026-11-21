@@ -1,4 +1,5 @@
 ---
+
 title: "claim_(3)"
 name: "claim_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claim_/"
 description: "QuantLib::CreditDefaultSwap – Credit default swap."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::CreditDefaultSwap &#8211; Credit default swap. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/creditdefaultswap.hpp&gt; </p>

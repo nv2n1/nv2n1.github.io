@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_iter_init(3)"
 name: "cmap_iter_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmap_iter_init/"
 description: "cmap_iter_init – Initialize iterator for keys stored in CMAP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cmap_iter_init &#8211; Initialize iterator for keys stored in CMAP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>

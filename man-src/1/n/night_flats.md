@@ -1,4 +1,5 @@
 ---
+
 title: "night_flats(1)"
 name: "night_flats"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-night_flats/"
 description: "night_flats – non-iteractive flat snapshoting with CCD camera"
 ---
 
-<h2>NAME</h2>
 <p> night_flats &#8211; non-iteractive flat snapshoting with CCD camera</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>night_flats&nbsp;<wbr>[options]&nbsp;<wbr>exptime1,filter1&nbsp;<wbr>[exptime2,filter2]&nbsp;<wbr>&#8230;</p>

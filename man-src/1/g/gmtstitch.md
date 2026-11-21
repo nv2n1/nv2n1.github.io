@@ -1,4 +1,5 @@
 ---
+
 title: "gmtstitch(1)"
 name: "gmtstitch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtstitch/"
 description: "gmtstitch – Join line segments whose end points match within tolerance"
 ---
 
-<h2>NAME</h2>
 <p> gmtstitch &#8211; Join line segments whose end points match within tolerance</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtstitch</code> [ <i>infiles</i> ] [ <code>-C</code>[<i>closed</i>] ] [ <code>-D</code>[<i>template</i>] ] [ <code>-H</code>[<code>i</code>][<i>nrec</i>] ] [ <code>-L</code>[<i>linkfile</i>] ] [ <code>-Q</code>[<i>template</i>] ] [ <code>-T</code><i>cutoff</i>[<code>m</code>|<code>c</code>|<code>e</code>|<code>E</code>|<code>k</code>|<code>K</code>][/<i>nn_dist</i>] ] [ <code>-V</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] [ <code>-b</code>[<code>i</code>|<code>o</code>][<code>s</code>|<code>S</code>|<code>d</code>|<code>D</code>[<i>ncol</i>]|<code>c</code>[<i>var1</i><code>/</code><i>&#8230;</i>]] ] [ <code>-bo</code>[<code>s</code>|<code>S</code>|<code>d</code>|<code>D</code>[<i>ncol</i>]|<code>c</code>[<i>var1</i><code>/</code><i>&#8230;</i>]] ] [ <code>-m</code>[<code>i</code>|<code>o</code>][<i>flag</i>] ]</p>

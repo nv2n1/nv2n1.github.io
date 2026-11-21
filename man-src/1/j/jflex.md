@@ -1,4 +1,5 @@
 ---
+
 title: "jflex(1)"
 name: "jflex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jflex/"
 description: "jflex – a lexical analyzer generator (also known as scanner generator) for Java"
 ---
 
-<h2>NAME</h2>
 <p> jflex &#8211; a lexical analyzer generator (also known as scanner generator) for Java</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jflex</code> <i>&lt;options&gt; &lt;input-files&gt;</i></p>

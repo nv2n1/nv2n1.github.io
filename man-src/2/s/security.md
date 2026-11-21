@@ -1,4 +1,5 @@
 ---
+
 title: "security(2)"
 name: "security"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-security/"
 description: "afs_syscall, break, fattach, fdetach, ftime, getmsg, getpmsg, gtty, isastream, lock, madvise1, mpx, prof, profil, putmsg, putpmsg, security, stty, tuxcall, ulimit, vserver – unimplemented system calls"
 ---
 
-<h2 class="name">NAME</h2>
 <p> afs_syscall, break, fattach, fdetach, ftime, getmsg, getpmsg, gtty, isastream, lock, madvise1, mpx, prof, profil, putmsg, putpmsg, security, stty, tuxcall, ulimit, vserver &#8211; unimplemented system calls </p>
 <h2>SYNOPSIS</h2>
 <p> Unimplemented system calls.</p>

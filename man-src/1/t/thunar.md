@@ -1,4 +1,5 @@
 ---
+
 title: "thunar(1)"
 name: "thunar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-thunar/"
 description: "Thunar – File Manager for the Xfce Desktop Environment"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Thunar &#8211; File Manager for the Xfce Desktop Environment </p>
 <h2>SYNOPSIS</h2>
 <dl>

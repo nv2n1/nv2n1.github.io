@@ -1,4 +1,5 @@
 ---
+
 title: "soldumper(1)"
 name: "soldumper"
 section: "1"
@@ -6,9 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-soldumper/"
 ---
 
-<h2>NAME</h2>
-
- soldumper - Gnash Local Shared Object (LSO) File Dumper
+soldumper - Gnash Local Shared Object (LSO) File Dumper
 
 <h2>Synopsis</h2>
 

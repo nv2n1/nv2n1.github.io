@@ -1,4 +1,5 @@
 ---
+
 title: "xrdcp-old(1)"
 name: "xrdcp-old"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xrdcp-old/"
 description: "xrdcp-old – copy files"
 ---
 
-<h2>NAME</h2>
 <p> xrdcp-old &#8211; copy files</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

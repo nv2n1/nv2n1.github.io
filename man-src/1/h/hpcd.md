@@ -1,4 +1,5 @@
 ---
+
 title: "hpcd(1)"
 name: "hpcd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpcd/"
 description: "hpcd — change directory on an HFS+ volume"
 ---
 
-<h2>NAME</h2>
 <p> hpcd &#8212; change directory on an HFS+ volume</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hpcd</code> <i>hfs-path</i></p>

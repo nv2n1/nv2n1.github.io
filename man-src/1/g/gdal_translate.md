@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_translate(1)"
 name: "gdal_translate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdal_translate/"
 description: "gdal_translate – gdal_translate converts raster data between different formats"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdal_translate &#8211; gdal_translate converts raster data between different formats </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

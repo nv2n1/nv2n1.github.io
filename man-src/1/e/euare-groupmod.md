@@ -1,4 +1,5 @@
 ---
+
 title: "euare-groupmod(1)"
 name: "euare-groupmod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-groupmod/"
 description: "euare-groupmod – Change the name and/or path of a group"
 ---
 
-<h2>NAME</h2>
 <p> euare-groupmod &#8211; Change the name and/or path of a group</p>
 <h2>SYNOPSIS</h2>
 <p> euare-groupmod [-n GROUP] [-p PATH] [&#8211;as-account ACCOUNT] [-U URL]</p>

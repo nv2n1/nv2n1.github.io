@@ -1,4 +1,5 @@
 ---
+
 title: "plex(1)"
 name: "plex"
 section: "1"
@@ -6,9 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-plex/"
 ---
 
-<h2>NAME</h2>
-
- plex - The Pascal Lex lexical analyzer generator. 
+plex - The Pascal Lex lexical analyzer generator. 
 
  
 

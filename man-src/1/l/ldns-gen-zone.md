@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-gen-zone(1)"
 name: "ldns-gen-zone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-gen-zone/"
 description: "ldns-gen-zone – read a zonefile and print it while adding DS records and extra RR’s"
 ---
 
-<h2>NAME</h2>
 <p> ldns-gen-zone &#8211; read a zonefile and print it while adding DS records and extra RR&#8217;s</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-gen-zone </code> <i>ZONEFILE</i> </p>

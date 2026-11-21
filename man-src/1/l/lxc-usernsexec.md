@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-usernsexec(1)"
 name: "lxc-usernsexec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-usernsexec/"
 description: "lxc-usernsexec – Run a task as root in a new user namespace."
 ---
 
-<h2>NAME</h2>
 <p> lxc-usernsexec &#8211; Run a task as root in a new user namespace.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-usernsexec</code> [-m <i>uid-map</i>] {&#8211; command}</p>

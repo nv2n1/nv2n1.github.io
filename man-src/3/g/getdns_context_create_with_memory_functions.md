@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_context_create_with_memory_functions(3)"
 name: "getdns_context_create_with_memory_functions"
 section: "3"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-getdns_context_create_with_memory_functions/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <b>getdns_context, </b> <b>getdns_context_create, </b> <b>getdns_context_create_with_memory_functions, </b> <b>getdns_context_create_with_extended_memory_functions, </b> <b>getdns_context_destroy, </b> <b>getdns_context_get_api_information </b> -- getdns context create and destroy routines
+<b>getdns_context, </b> <b>getdns_context_create, </b> <b>getdns_context_create_with_memory_functions, </b> <b>getdns_context_create_with_extended_memory_functions, </b> <b>getdns_context_destroy, </b> <b>getdns_context_get_api_information </b> -- getdns context create and destroy routines
 
 <h2>LIBRARY</h2>
 

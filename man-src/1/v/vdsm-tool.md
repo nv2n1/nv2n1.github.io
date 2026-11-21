@@ -1,4 +1,5 @@
 ---
+
 title: "vdsm-tool(1)"
 name: "vdsm-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vdsm-tool/"
 description: "vdsm-tool – Virtual Desktops and Servers Manager Tool"
 ---
 
-<h2>NAME</h2>
 <p> vdsm-tool &#8211; Virtual Desktops and Servers Manager Tool</p>
 <h2>SYNOPSIS</h2>
 <p> vdsm-tool [options] &lt;action&gt; [arguments]</p>

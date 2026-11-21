@@ -1,4 +1,5 @@
 ---
+
 title: "xcf2png(1)"
 name: "xcf2png"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xcf2png/"
 description: "xcf2png – convert from GIMP xcf files to png format"
 ---
 
-<h2>NAME</h2>
 <p> xcf2png &#8211; convert from GIMP xcf files to png format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xcf2png</code> [ <i>options</i> ] <i>filename</i> [ <i>layer names</i> ]</p>

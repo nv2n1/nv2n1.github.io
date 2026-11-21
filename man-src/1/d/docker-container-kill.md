@@ -1,4 +1,5 @@
 ---
+
 title: "docker-container-kill(1)"
 name: "docker-container-kill"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-container-kill/"
 description: "docker-container-kill – Kill one or more running containers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-container-kill &#8211; Kill one or more running containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container kill [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>

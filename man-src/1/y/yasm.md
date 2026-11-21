@@ -1,4 +1,5 @@
 ---
+
 title: "yasm(1)"
 name: "yasm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yasm/"
 description: "yasm – The Yasm Modular Assembler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> yasm &#8211; The Yasm Modular Assembler </p>
 <h2>SYNOPSIS</h2>
 <dl>

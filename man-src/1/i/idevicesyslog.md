@@ -1,4 +1,5 @@
 ---
+
 title: "idevicesyslog(1)"
 name: "idevicesyslog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idevicesyslog/"
 description: "idevicesyslog – Relay syslog of a connected device."
 ---
 
-<h2>NAME</h2>
 <p> idevicesyslog &#8211; Relay syslog of a connected device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idevicesyslog</code> [OPTIONS] </p>

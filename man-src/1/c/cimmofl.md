@@ -1,4 +1,5 @@
 ---
+
 title: "cimmofl(1)"
 name: "cimmofl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cimmofl/"
 description: "cimmofl – compile MOF files into the CIM Repository"
 ---
 
-<h2>NAME</h2>
 <p> cimmofl &#8211; compile MOF files into the CIM Repository</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cimmofl</code> <code>-h</code> | <code>&#8211;help</code> </p>

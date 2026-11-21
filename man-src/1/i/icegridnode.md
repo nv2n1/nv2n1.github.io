@@ -1,4 +1,5 @@
 ---
+
 title: "icegridnode(1)"
 name: "icegridnode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icegridnode/"
 description: "icegridnode – The IceGrid node server."
 ---
 
-<h2 class="name">NAME</h2>
 <p> icegridnode &#8211; The IceGrid node server.</p>
 <h2>SYNOPSIS</h2>
 <p> icegridnode [options] </p>

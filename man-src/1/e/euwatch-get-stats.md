@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-get-stats(1)"
 name: "euwatch-get-stats"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euwatch-get-stats/"
 description: "euwatch-get-stats – Show a metric’s statistics"
 ---
 
-<h2>NAME</h2>
 <p> euwatch-get-stats &#8211; Show a metric&#8217;s statistics</p>
 <h2>SYNOPSIS</h2>
 <p> euwatch-get-stats <code>-n</code> NAMESPACE <code>-s</code> STAT1,STAT2,&#8230;</p>

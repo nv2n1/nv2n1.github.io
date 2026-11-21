@@ -1,4 +1,5 @@
 ---
+
 title: "sgbmv(3)"
 name: "sgbmv"
 section: "3"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/3-sgbmv/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- sgbmv.f - 
+sgbmv.f - 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "flamerobin(1)"
 name: "flamerobin"
 section: "1"
@@ -8,7 +9,7 @@ description: "flamerobin – management and data manipulation tool for the Fireb
 ---
 
 <p>FlameRobin 0.7</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>flamerobin</code> &#8211; management and data manipulation tool for the Firebird DBMS </p>
 <h2>SYNOPSIS</h2>
 <p> <code>flamerobin</code> [ &#8211;<code>h </code><i>directory </i> &#8211;<code>-home = </code><i>directory </i>] [ &#8211;<code>uh </code><i>directory </i> &#8211;<code>-user-home = </code><i>directory </i>]</p>

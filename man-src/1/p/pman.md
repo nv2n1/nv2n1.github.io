@@ -1,4 +1,5 @@
 ---
+
 title: "pman(1)"
 name: "pman"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pman/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pman - show a module's man page 
+pman - show a module's man page 
 
 <h2>DESCRIPTION</h2>
 

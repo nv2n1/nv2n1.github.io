@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-cat(1)"
 name: "systemd-cat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-cat/"
 description: "systemd-cat – Connect a pipeline or program’s output with the journal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-cat &#8211; Connect a pipeline or program&#8217;s output with the journal </p>
 <h2>SYNOPSIS</h2>
 <dl>

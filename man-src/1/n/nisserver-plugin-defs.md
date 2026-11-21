@@ -1,4 +1,5 @@
 ---
+
 title: "nisserver-plugin-defs(1)"
 name: "nisserver-plugin-defs"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nisserver-plugin-defs/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nisserver-plugin-defs - print default settings for the NIS server plugin
+nisserver-plugin-defs - print default settings for the NIS server plugin
 
 <h2>SYNOPSIS</h2>
 

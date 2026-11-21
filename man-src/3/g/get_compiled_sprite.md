@@ -1,4 +1,5 @@
 ---
+
 title: "get_compiled_sprite(3)"
 name: "get_compiled_sprite"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_compiled_sprite/"
 description: "get_compiled_sprite – Creates a compiled sprite using a bitmap as source. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_compiled_sprite &#8211; Creates a compiled sprite using a bitmap as source. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

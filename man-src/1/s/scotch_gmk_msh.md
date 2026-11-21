@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_gmk_msh(1)"
 name: "scotch_gmk_msh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_gmk_msh/"
 description: "gmk_msh – create source graph from source mesh"
 ---
 
-<h2>NAME</h2>
 <p> <code>gmk_msh </code>&#8211; create source graph from source mesh</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

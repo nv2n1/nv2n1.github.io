@@ -1,4 +1,5 @@
 ---
+
 title: "mono-api-info(1)"
 name: "mono-api-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mono-api-info/"
 description: "mono-api-info – Expose IL structure of CLR assemblies as XML."
 ---
 
-<h2>NAME</h2>
 <p> mono-api-info &#8211; Expose IL structure of CLR assemblies as XML.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mono-api-info [&#8211;abi] assembly1.dll assembly2.exe &#8230;</code></p>

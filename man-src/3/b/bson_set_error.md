@@ -1,4 +1,5 @@
 ---
+
 title: "bson_set_error(3)"
 name: "bson_set_error"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_set_error/"
 description: "bson_set_error() – This is a helper function to set the parameters of a bson_error_t. It handles the case where error is NULL by doing nothing."
 ---
 
-<h2>NAME</h2>
 <p> bson_set_error() &#8211; This is a helper function to set the parameters of a bson_error_t. It handles the case where error is NULL by doing nothing.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

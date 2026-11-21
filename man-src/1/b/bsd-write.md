@@ -1,4 +1,5 @@
 ---
+
 title: "bsd-write(1)"
 name: "bsd-write"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bsd-write/"
 description: "write – send a message to another user"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>write</code> &#8211; send a message to another user </p>
 <h2>SYNOPSIS</h2>
 <p> <i>user</i> [<i>tty</i> ]</p>

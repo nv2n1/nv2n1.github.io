@@ -1,4 +1,5 @@
 ---
+
 title: "userinfo(1)"
 name: "userinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-userinfo/"
 description: "userinfo – A graphical equivilient to chfn."
 ---
 
-<h2>NAME</h2>
 <p> userinfo &#8211; A graphical equivilient to chfn.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>userinfo</code> [ <i>options</i> ]</p>

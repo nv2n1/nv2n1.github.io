@@ -1,4 +1,5 @@
 ---
+
 title: "dbrow(1)"
 name: "dbrow"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbrow/"
 description: "dbrow – select rows from an Fsdb file based on arbitrary conditions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbrow &#8211; select rows from an Fsdb file based on arbitrary conditions </p>
 <h2>SYNOPSIS</h2>
 <p> dbrow [-vw] <font SIZE="-1">CONDITION</font> [<font SIZE="-1">CONDITION&#8230;</font>]</p>

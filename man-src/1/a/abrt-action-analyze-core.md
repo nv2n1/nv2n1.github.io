@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-analyze-core(1)"
 name: "abrt-action-analyze-core"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-core/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-analyze-core - Extracts builds from a core dump 
+abrt-action-analyze-core - Extracts builds from a core dump 
 
 <h2>SYNOPSIS</h2>
 

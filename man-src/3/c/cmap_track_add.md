@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_track_add(3)"
 name: "cmap_track_add"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmap_track_add/"
 description: "cmap_track_add – Set tracking function for values in CMAP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cmap_track_add &#8211; Set tracking function for values in CMAP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>

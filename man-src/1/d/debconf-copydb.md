@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-copydb(1)"
 name: "debconf-copydb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-debconf-copydb/"
 description: "debconf-copydb – copy a debconf database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> debconf-copydb &#8211; copy a debconf database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

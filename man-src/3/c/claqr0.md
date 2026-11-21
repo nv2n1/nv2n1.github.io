@@ -1,4 +1,5 @@
 ---
+
 title: "claqr0(3)"
 name: "claqr0"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claqr0/"
 description: "claqr0.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> claqr0.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

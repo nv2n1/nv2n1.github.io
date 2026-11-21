@@ -1,4 +1,5 @@
 ---
+
 title: "euare-useraddcert(1)"
 name: "euare-useraddcert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-useraddcert/"
 description: "euare-useraddcert – Upload a signing certificate"
 ---
 
-<h2>NAME</h2>
 <p> euare-useraddcert &#8211; Upload a signing certificate</p>
 <h2>SYNOPSIS</h2>
 <p> euare-useraddcert (<code>-c</code> CERT_CONTENT | <code>-f</code> FILE) [&#8211;as-account ACCOUNT]</p>

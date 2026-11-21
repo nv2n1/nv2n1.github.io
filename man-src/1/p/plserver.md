@@ -1,4 +1,5 @@
 ---
+
 title: "plserver(1)"
 name: "plserver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-plserver/"
 description: "plserver – PLplot graphics server"
 ---
 
-<h2>NAME</h2>
 <p> plserver &#8211; PLplot graphics server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>plserver </code> <i>[args]</i></p>

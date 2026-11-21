@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaaix(1)"
 name: "pmdaaix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaaix/"
 description: "pmdaaix, pmdadarwin, pmdafreebsd, pmdalinux, pmdanetbsd, pmdasolaris, pmdawindows – operating system kernel performance metrics domain agents"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaaix</code>, <code>pmdadarwin</code>, <code>pmdafreebsd</code>, <code>pmdalinux</code>, <code>pmdanetbsd</code>, <code>pmdasolaris</code>, <code>pmdawindows</code> &#8211; operating system kernel performance metrics domain agents</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/aix/pmdaaix</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br />

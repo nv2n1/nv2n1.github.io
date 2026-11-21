@@ -1,4 +1,5 @@
 ---
+
 title: "git-release(1)"
 name: "git-release"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-release/"
 description: "git-release – Commit, tag and push changes to the repository"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-release</code> &#8211; Commit, tag and push changes to the repository</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-release</code> &lt;tagname&gt; [-r &lt;remote&gt;] [-m &lt;commit info%gt;] [-c]</p>

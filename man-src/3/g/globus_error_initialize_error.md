@@ -1,4 +1,5 @@
 ---
+
 title: "globus_error_initialize_error(3)"
 name: "globus_error_initialize_error"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_error_initialize_error/"
 description: "Error Construction –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Error Construction &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_ERROR_TYPE_GLOBUS</code> </p>

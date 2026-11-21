@@ -1,4 +1,5 @@
 ---
+
 title: "curl_getenv(3)"
 name: "curl_getenv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_getenv/"
 description: "curl_getenv – return value for environment name"
 ---
 
-<h2>NAME</h2>
 <p> curl_getenv &#8211; return value for environment name</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

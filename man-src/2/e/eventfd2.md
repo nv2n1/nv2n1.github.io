@@ -1,4 +1,5 @@
 ---
+
 title: "eventfd2(2)"
 name: "eventfd2"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-eventfd2/"
 description: "eventfd – create a file descriptor for event notification"
 ---
 
-<h2 class="name">NAME</h2>
 <p> eventfd &#8211; create a file descriptor for event notification </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/eventfd.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "makecontext(3)"
 name: "makecontext"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-makecontext/"
 description: "makecontext, swapcontext – manipulate user context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> makecontext, swapcontext &#8211; manipulate user context </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;ucontext.h&gt;</code> </p>

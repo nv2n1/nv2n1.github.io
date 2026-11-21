@@ -1,4 +1,5 @@
 ---
+
 title: "jarsigner-java-1(1)"
 name: "jarsigner-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jarsigner-java-1/"
 description: "jarsigner – Signs and verifies Java Archive (JAR) files."
 ---
 
-<h2>NAME</h2>
 <p> jarsigner &#8211; Signs and verifies Java Archive (JAR) files.</p>
 <h2>SYNOPSIS</h2>
 <pre>

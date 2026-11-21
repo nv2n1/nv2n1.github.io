@@ -1,4 +1,5 @@
 ---
+
 title: "funparamput(3)"
 name: "funparamput"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funparamput/"
 description: "FunParamPut – put a Funtools param value"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunParamPut &#8211; put a Funtools param value</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

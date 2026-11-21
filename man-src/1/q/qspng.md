@@ -1,4 +1,5 @@
 ---
+
 title: "qspng(1)"
 name: "qspng"
 section: "1"
@@ -6,10 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qspng/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- qspng - an utility to draw a png graph from 
+qspng - an utility to draw a png graph from 
 
 <a HREF="/docs/linux/man/1-qslog/">qslog</a>(1) output data.
 

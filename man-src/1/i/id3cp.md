@@ -1,4 +1,5 @@
 ---
+
 title: "id3cp(1)"
 name: "id3cp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-id3cp/"
 description: "id3cp – Copies tags from one file to another."
 ---
 
-<h2>NAME</h2>
 <p> id3cp &#8211; Copies tags from one file to another.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>id3cp</code> [ <i>OPTION</i> ]<code>&#8230;</code> [ <i>SOURCE</i> ] [ <i>DEST</i> ] </p>

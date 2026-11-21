@@ -1,4 +1,5 @@
 ---
+
 title: "pammosaicknit(1)"
 name: "pammosaicknit"
 section: "1"
@@ -9,7 +10,7 @@ description: "pammosaicknit – validate a mosaic knitting pattern"
 
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;<a rel="nofollow" href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd</a>&quot;&gt; </p>
 <p> Table Of Contents </p>
-<h2 class="name">NAME</h2>
+
 <p> pammosaicknit &#8211; validate a mosaic knitting pattern </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pammosaicknit</code> [<i>in_netpbmfile</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "iv_inotify_register(3)"
 name: "iv_inotify_register"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_inotify_register/"
 description: "IV_INOTIFY_INIT, iv_inotify_register, iv_inotify_unregister, IV_INOTIFY_WATCH_INIT, iv_inotify_watch_register, iv_inotify_watch_unregister – ivykis inotify(7) wrapper"
 ---
 
-<h2>NAME</h2>
 <p> IV_INOTIFY_INIT, iv_inotify_register, iv_inotify_unregister, IV_INOTIFY_WATCH_INIT, iv_inotify_watch_register, iv_inotify_watch_unregister &#8211; ivykis <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7) wrapper</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

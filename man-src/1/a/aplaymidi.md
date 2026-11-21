@@ -1,4 +1,5 @@
 ---
+
 title: "aplaymidi(1)"
 name: "aplaymidi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aplaymidi/"
 description: "aplaymidi – play Standard MIDI Files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aplaymidi &#8211; play Standard MIDI Files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aplaymidi</code> -p client:port[,&#8230;] [-d delay] midifile &#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fbstat(1)"
 name: "fbstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fbstat/"
 description: "fbstat – analyze firebird database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fbstat &#8211; analyze firebird database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

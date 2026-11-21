@@ -1,4 +1,5 @@
 ---
+
 title: "agentxtrap(1)"
 name: "agentxtrap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-agentxtrap/"
 description: "agentxtrap – send an AgentX NotifyPDU to an AgentX master agent"
 ---
 
-<h2>NAME</h2>
 <p> agentxtrap &#8211; send an AgentX NotifyPDU to an AgentX master agent</p>
 <h2>SYNOPSIS</h2>
 <p> <code>agentxtrap</code> [<i>OPTIONS</i>]<i> trap-oid </i>[<i>OID TYPE VALUE</i>&#8230;]</p>

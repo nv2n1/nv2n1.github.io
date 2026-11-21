@@ -1,4 +1,5 @@
 ---
+
 title: "bubblemon-gnome2(1)"
 name: "bubblemon-gnome2"
 section: "1"
@@ -6,9 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-bubblemon-gnome2/"
 ---
 
-<h2>NAME</h2>
-
- bubblemon-gnome2 - Displays the system load as a bubbling liquid
+bubblemon-gnome2 - Displays the system load as a bubbling liquid
 
 <h2>SYNTAX</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_alloc_var(3)"
 name: "mlx5dv_alloc_var"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_alloc_var/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_alloc_var - Allocates a VAR 
+mlx5dv_alloc_var - Allocates a VAR 
 
  mlx5dv_free_var - Frees a VAR 
 

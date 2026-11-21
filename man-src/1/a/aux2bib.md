@@ -1,4 +1,5 @@
 ---
+
 title: "aux2bib(1)"
 name: "aux2bib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aux2bib/"
 description: "AUX2BIB – Extracts a BibTeX database according to an aux file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> AUX2BIB &#8211; Extracts a BibTeX database according to an aux file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aux2bib &lt;auxfile&gt;</code> </p>

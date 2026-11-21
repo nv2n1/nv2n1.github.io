@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-hexdump(1)"
 name: "mdb-hexdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdb-hexdump/"
 description: "mdb-hexdump – Hexdump utility from MDB Tools"
 ---
 
-<h2>NAME</h2>
 <p> <code>mdb-hexdump </code>&#8211; Hexdump utility from MDB Tools</p>
 <h2>SYNOPSIS</h2>
 <pre>

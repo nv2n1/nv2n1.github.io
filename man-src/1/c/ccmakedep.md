@@ -1,4 +1,5 @@
 ---
+
 title: "ccmakedep(1)"
 name: "ccmakedep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ccmakedep/"
 description: "ccmakedep – create dependencies in makefiles using a C compiler"
 ---
 
-<h2>NAME</h2>
 <p> ccmakedep &#8211; create dependencies in makefiles using a C compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ccmakedep</code> [ <code>cpp-flags</code> ] [ <code>-w</code><i>width</i> ] [ <code>-s</code><i>magic-string</i> ] [ <code>-f</code><i>makefile</i> ] [ <code>-o</code><i>object-suffix</i> ] [ <code>-v</code> ] [ <code>-a</code> ] [ <code>-cc</code><i>compiler</i> ] [ &#8212; <i>options</i> &#8212; ] <i>sourcefile</i> &#8230;</p>

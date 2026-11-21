@@ -1,4 +1,5 @@
 ---
+
 title: "ck_hs_set(3)"
 name: "ck_hs_set"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_hs_set/"
 description: "ck_hs_set – store key into a hash set"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_hs_set</code> &#8211; store key into a hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

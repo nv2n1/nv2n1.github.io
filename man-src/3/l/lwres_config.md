@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_config(3)"
 name: "lwres_config"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lwres_config/"
 description: "lwres_conf_init, lwres_conf_clear, lwres_conf_parse, lwres_conf_print, lwres_conf_get – lightweight resolver configuration"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lwres_conf_init, lwres_conf_clear, lwres_conf_parse, lwres_conf_print, lwres_conf_get &#8211; lightweight resolver configuration </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

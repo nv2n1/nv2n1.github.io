@@ -1,4 +1,5 @@
 ---
+
 title: "git-whatchanged(1)"
 name: "git-whatchanged"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-whatchanged/"
 description: "git-whatchanged – Show logs with difference each commit introduces"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-whatchanged &#8211; Show logs with difference each commit introduces </p>
 <h2>SYNOPSIS</h2>
 <pre>

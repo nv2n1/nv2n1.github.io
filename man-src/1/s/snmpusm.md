@@ -1,4 +1,5 @@
 ---
+
 title: "snmpusm(1)"
 name: "snmpusm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpusm/"
 description: "snmpusm – creates and maintains SNMPv3 users on a network entity"
 ---
 
-<h2>NAME</h2>
 <p> snmpusm &#8211; creates and maintains SNMPv3 users on a network entity</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpusm</code> [COMMON OPTIONS] [-Cw] AGENT <code>create</code> USER [CLONEFROM-USER]<br />

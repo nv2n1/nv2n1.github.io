@@ -1,4 +1,5 @@
 ---
+
 title: "pcre2_substitute(3)"
 name: "pcre2_substitute"
 section: "3"
@@ -6,8 +7,9 @@ letter: "p"
 url: "/docs/linux/man/3-pcre2_substitute/"
 description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 ---
+
 <p>PCRE2 &#8211; Perl-compatible regular expressions (revised API) </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;pcre2.h&gt;</code> </p>
 <pre><code>
  int pcre2_substitute(const pcre2_code *  code , PCRE2_SPTR subject ,

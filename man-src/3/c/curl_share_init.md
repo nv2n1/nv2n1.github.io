@@ -1,4 +1,5 @@
 ---
+
 title: "curl_share_init(3)"
 name: "curl_share_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_share_init/"
 description: "curl_share_init – Create a shared object"
 ---
 
-<h2>NAME</h2>
 <p> curl_share_init &#8211; Create a shared object</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

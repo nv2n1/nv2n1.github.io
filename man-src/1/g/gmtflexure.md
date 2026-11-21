@@ -1,4 +1,5 @@
 ---
+
 title: "gmtflexure(1)"
 name: "gmtflexure"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtflexure/"
 description: "gmtflexure – Compute flexural deformation of 2-D loads, forces, bending and moments"
 ---
 
-<h2>NAME</h2>
 <p> gmtflexure &#8211; Compute flexural deformation of 2-D loads, forces, bending and moments</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtflexure</code> <i>rm</i>/<i>rl</i>[/<i>ri</i>]/<i>rw</i> <code>-E</code><i>Te</i>[<code>u</code>]|<i>D</i>|<i>file</i> [ [<code>l</code>|<code>r</code>][/<i>args</i>] ] [ <code>p</code><i>Poisson</i> ] [ <code>y</code><i>Young</i> ] [ <i>force</i> ] [ <i>args</i>] [ ] [ <i>wfile</i>] [ [<i>level</i>] ] [ <i>wd</i>] [ <i>zm</i>] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-security-recv(1)"
 name: "nvme-security-recv"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-security-recv/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-security-recv - Security Recv command 
+nvme-security-recv - Security Recv command 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "fopencookie(3)"
 name: "fopencookie"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fopencookie/"
 description: "fopencookie – opening a custom stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fopencookie &#8211; opening a custom stream </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

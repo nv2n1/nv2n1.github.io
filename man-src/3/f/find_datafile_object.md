@@ -1,4 +1,5 @@
 ---
+
 title: "find_datafile_object(3)"
 name: "find_datafile_object"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-find_datafile_object/"
 description: "find_datafile_object – Searches a datafile for an object with a name. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> find_datafile_object &#8211; Searches a datafile for an object with a name. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

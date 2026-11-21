@@ -1,4 +1,5 @@
 ---
+
 title: "kwalletcli(1)"
 name: "kwalletcli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kwalletcli/"
 description: "kwalletcli – command line interface to the KDE Wallet"
 ---
 
-<h2>NAME</h2>
 <p> <code>kwalletcli</code> &#8211; command line interface to the KDE Wallet</p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>q</code> ] &#8211;<code>hV</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-power-manager(1)"
 name: "gnome-power-manager"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-power-manager/"
 description: "gnome-power-manager – gnome power manager userspace daemon"
 ---
 
-<h2>NAME</h2>
 <p> gnome-power-manager &#8211; gnome power manager userspace daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-power-manager</code> [ <code>&#8211;verbose</code> ] [ <code>&#8211;debug</code> ] [ <code>&#8211;help</code> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libtalloc_pools(3)"
 name: "libtalloc_pools"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libtalloc_pools/"
 description: "libtalloc_pools – Chapter 5: Memory pools"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libtalloc_pools &#8211; Chapter 5: Memory pools</p>
 <h2>Memory pools</h2>
 <p> Allocation of a new memory is an expensive operation and large programs can contain thousands of calls of malloc() for a single computation, where every call allocates only a very small amount of the memory. This can result in an undesirable slowdown of the application. We can avoid this slowdown by decreasing the number of malloc() calls by using a memory pool. </p>

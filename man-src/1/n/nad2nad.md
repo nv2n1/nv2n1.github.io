@@ -1,4 +1,5 @@
 ---
+
 title: "nad2nad(1)"
 name: "nad2nad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nad2nad/"
 description: "nad2nad – North American Datum conversion filter"
 ---
 
-<h2>NAME</h2>
 <p> nad2nad &#8211; North American Datum conversion filter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nad2nad</code> [ <code>-eEfihortwW</code> [ <i>args</i> ] ] [ <code>+args</code> ] file[s]</p>

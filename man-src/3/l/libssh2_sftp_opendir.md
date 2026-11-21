@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_opendir(3)"
 name: "libssh2_sftp_opendir"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_opendir/"
 description: "libssh2_sftp_opendir – convenience macro for libssh2_sftp_open_ex(3) calls"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_opendir &#8211; convenience macro for <i><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3)</i> calls</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

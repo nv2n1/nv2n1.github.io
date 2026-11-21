@@ -1,4 +1,5 @@
 ---
+
 title: "xfreerdp(1)"
 name: "xfreerdp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfreerdp/"
 description: "xfreerdp – FreeRDP X11 client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfreerdp &#8211; FreeRDP X11 client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfreerdp</code> [options] server[:port]</p>

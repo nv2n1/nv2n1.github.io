@@ -1,4 +1,5 @@
 ---
+
 title: "dir(1)"
 name: "dir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dir/"
 description: "dir – list directory contents"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dir &#8211; list directory contents </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dir</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

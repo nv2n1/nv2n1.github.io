@@ -1,4 +1,5 @@
 ---
+
 title: "bsearch(3)"
 name: "bsearch"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bsearch/"
 description: "bsearch – binary search of a sorted array"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bsearch &#8211; binary search of a sorted array </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "gets(3)"
 name: "gets"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gets/"
 description: "gets – get a string from standard input (DEPRECATED)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gets &#8211; get a string from standard input (DEPRECATED) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

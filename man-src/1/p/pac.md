@@ -1,4 +1,5 @@
 ---
+
 title: "pac(1)"
 name: "pac"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pac/"
 description: "pac – Perl Auto Connector"
 ---
 
-<h2>NAME</h2>
 <p> pac &#8211; Perl Auto Connector</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pac [-start_tray]</code></p>

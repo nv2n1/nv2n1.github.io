@@ -1,4 +1,5 @@
 ---
+
 title: "pump(1)"
 name: "pump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pump/"
 description: "pump – accelerate remote compilation with distcc"
 ---
 
-<h2>NAME</h2>
 <p> pump &#8211; accelerate remote compilation with distcc</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pump</code> <i>BUILD-COMMAND [ARGS]</i> &#8230; </p>

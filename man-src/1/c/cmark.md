@@ -1,4 +1,5 @@
 ---
+
 title: "cmark(1)"
 name: "cmark"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmark/"
 description: "cmark – convert CommonMark formatted text to HTML"
 ---
 
-<h2>NAME</h2>
 <p> <code>cmark</code> &#8211; convert CommonMark formatted text to HTML</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "transmission-create(1)"
 name: "transmission-create"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transmission-create/"
 description: "transmission-create – command-line utility to create .torrent files"
 ---
 
-<h2>NAME</h2>
 <p> <code>transmission-create</code> &#8211; command-line utility to create .torrent files</p>
 <h2>SYNOPSIS</h2>
 <p> -words [-<code>h </code> ] [-<code>p </code> ] [-<code>o </code><i>file</i> ] [-<code>c </code><i>comment</i> ] [-<code>t </code><i>tracker</i> ] [-<code>s </code><i>piece-size-KiB</i> ] [<i>source file or directory</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cinder(1)"
 name: "cinder"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cinder/"
 description: "cinder – Client for OpenStack Block Storage API"
 ---
 
-<h2>NAME</h2>
 <p> cinder &#8211; Client for OpenStack Block Storage API</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cinder</code> [options] &lt;command&gt; [command-options] </p>

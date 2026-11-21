@@ -1,4 +1,5 @@
 ---
+
 title: "dh_compress(1)"
 name: "dh_compress"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_compress/"
 description: "dh_compress – compress files and fix symlinks in package build directories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_compress &#8211; compress files and fix symlinks in package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_compress</code> [<i>debhelper options</i>] [<code>-X</code><i>item</i>] [<code>-A</code>] [<i>file</i> &#8230;]</p>

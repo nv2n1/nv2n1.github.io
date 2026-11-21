@@ -1,4 +1,5 @@
 ---
+
 title: "rsnapshot(1)"
 name: "rsnapshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rsnapshot/"
 description: "rsnapshot – remote filesystem snapshot utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rsnapshot &#8211; remote filesystem snapshot utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rsnapshot</code> [<code>-vtxqVD</code>] [<code>-c</code> cfgfile] [command] [args]</p>

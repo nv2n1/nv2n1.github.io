@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userlistkeys(1)"
 name: "euare-userlistkeys"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userlistkeys/"
 description: "euare-userlistkeys – List a user’s access keys"
 ---
 
-<h2>NAME</h2>
 <p> euare-userlistkeys &#8211; List a user&#8217;s access keys</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userlistkeys [&#8211;as-account ACCOUNT] [-U URL]</p>

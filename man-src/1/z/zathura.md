@@ -1,4 +1,5 @@
 ---
+
 title: "zathura(1)"
 name: "zathura"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zathura/"
 description: "zathura – a document viewer"
 ---
 
-<h2>NAME</h2>
 <p> zathura &#8211; a document viewer</p>
 <h2>SYNOPOSIS</h2>
 <pre><code>

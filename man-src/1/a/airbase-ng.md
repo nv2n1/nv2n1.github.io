@@ -1,4 +1,5 @@
 ---
+
 title: "airbase-ng(1)"
 name: "airbase-ng"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-airbase-ng/"
 description: "airbase-ng – multi-purpose tool aimed at attacking clients as opposed to the Access Point (AP) itself"
 ---
 
-<h2 class="name">NAME</h2>
 <p> airbase-ng &#8211; multi-purpose tool aimed at attacking clients as opposed to the Access Point (AP) itself </p>
 <h2>SYNOPSIS</h2>
 <p> <code>airbase-ng</code> [options] &lt;interface name&gt;</p>

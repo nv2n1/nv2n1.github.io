@@ -1,4 +1,5 @@
 ---
+
 title: "load_joystick_data(3)"
 name: "load_joystick_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_joystick_data/"
 description: "load_joystick_data – Loads joystick calibration data. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> load_joystick_data &#8211; Loads joystick calibration data. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

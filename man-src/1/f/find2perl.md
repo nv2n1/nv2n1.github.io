@@ -1,4 +1,5 @@
 ---
+
 title: "find2perl(1)"
 name: "find2perl"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-find2perl/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- find2perl - translate find command lines to Perl code 
+find2perl - translate find command lines to Perl code 
 
 <h2>SYNOPSIS</h2>
 

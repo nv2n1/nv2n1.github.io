@@ -1,4 +1,5 @@
 ---
+
 title: "dmail(1)"
 name: "dmail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dmail/"
 description: "dmail – procmail Mail Delivery Module"
 ---
 
-<h2>NAME</h2>
 <p> dmail &#8211; procmail Mail Delivery Module</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dmail</code> <i>[-D] [-f from_name] [-s] [-k keyword_list] [user][+folder]</i></p>

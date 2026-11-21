@@ -1,4 +1,5 @@
 ---
+
 title: "getfattr(1)"
 name: "getfattr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getfattr/"
 description: "getfattr – get extended attributes of filesystem objects"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getfattr &#8211; get extended attributes of filesystem objects </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "destroy_bitmap(3)"
 name: "destroy_bitmap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-destroy_bitmap/"
 description: "destroy_bitmap – Destroys any type of created bitmap. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> destroy_bitmap &#8211; Destroys any type of created bitmap. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

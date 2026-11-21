@@ -1,4 +1,5 @@
 ---
+
 title: "json_pp(1)"
 name: "json_pp"
 section: "1"
@@ -6,10 +7,7 @@ letter: "j"
 url: "/docs/linux/man/1-json_pp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- json_pp - JSON::PP command utility 
+json_pp - JSON::PP command utility 
 
 <h2>SYNOPSIS</h2>
 

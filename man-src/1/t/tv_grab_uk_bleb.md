@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_uk_bleb(1)"
 name: "tv_grab_uk_bleb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_uk_bleb/"
 description: "tv_grab_uk_bleb – Grab TV listings for the United Kingdom, from bleb.org"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_uk_bleb &#8211; Grab TV listings for the United Kingdom, from bleb.org </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_uk_bleb &#8211;help </p>

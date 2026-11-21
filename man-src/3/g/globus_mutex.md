@@ -1,4 +1,5 @@
 ---
+
 title: "globus_mutex(3)"
 name: "globus_mutex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_mutex/"
 description: "Mutual Exclusion –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Mutual Exclusion &#8211; </p>
 <h3>Data Structures</h3>
 <p> union <code>globus_mutex_t</code><br />

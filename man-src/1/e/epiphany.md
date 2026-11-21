@@ -1,4 +1,5 @@
 ---
+
 title: "epiphany(1)"
 name: "epiphany"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-epiphany/"
 description: "epiphany – simple to use web browser for GNOME"
 ---
 
-<h2>NAME</h2>
 <p> epiphany &#8211; simple to use web browser for GNOME</p>
 <h2>SYNOPSIS</h2>
 <p> <code>epiphany</code> [<i>OPTION</i>&#8230;] [url]</p>

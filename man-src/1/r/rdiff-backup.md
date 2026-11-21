@@ -1,4 +1,5 @@
 ---
+
 title: "rdiff-backup(1)"
 name: "rdiff-backup"
 section: "1"
@@ -6,7 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rdiff-backup/"
 description: "rdiff-backup – local/remote mirror and incremental backup"
 ---
-<h2>NAME</h2>
+
 <p> rdiff-backup - local/remote mirror and incremental backup  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdiff-backup</code> <code>[</code><i>options</i><code>]</code> <code>[[[</code><i>user@</i><code>]</code><i>host1.foo</i><code>]::</code><i>source_directory</i><code>]</code> <code>[[[</code><i>user@</i><code>]</code><i>host2.foo</i><code>]::</code><i>destination_directory</i><code>]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-ld(1)"
 name: "arm-gp2x-linux-ld"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm-gp2x-linux-ld/"
 description: "ld – Using LD, the GNU linker"
 ---
 
-<h2>NAME</h2>
 <p> ld &#8211; Using LD, the GNU linker</p>
 <h2>SYNOPSIS</h2>
 <p> ld [<code>options</code>] <i>objfile</i> &#8230;</p>

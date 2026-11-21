@@ -1,4 +1,5 @@
 ---
+
 title: "sec(1)"
 name: "sec"
 section: "1"
@@ -6,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-sec/"
 description: "sec – simple event correlator"
 ---
-<h2>NAME</h2>
+
 <p> sec - simple event correlator  </p>
 <h2>SYNOPSIS</h2>
 <dl>

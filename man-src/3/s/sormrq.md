@@ -1,4 +1,5 @@
 ---
+
 title: "sormrq(3)"
 name: "sormrq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sormrq/"
 description: "sormrq.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sormrq.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

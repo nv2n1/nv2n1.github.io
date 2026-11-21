@@ -1,4 +1,5 @@
 ---
+
 title: "zshparam(1)"
 name: "zshparam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zshparam/"
 description: "zshparam – zsh parameters"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zshparam &#8211; zsh parameters </p>
 <h2>DESCRIPTION</h2>
 <p> A parameter has a name, a value, and a number of attributes. A name may be any sequence of alphanumeric characters and underscores, or the single characters `<code>*</code>&#8216;, `<code>@</code>&#8216;, `<code>#</code>&#8216;, `<code>?</code>&#8216;, `<code>&#8211;</code>&#8216;, `<code>$</code>&#8216;, or `<code>!</code>&#8216;. A parameter whose name begins with an alphanumeric or underscore is also referred to as a <i>variable</i>. </p>

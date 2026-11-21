@@ -1,4 +1,5 @@
 ---
+
 title: "getcert-list(1)"
 name: "getcert-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getcert-list/"
 description: "getcert"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getcert</p>
 <h2>SYNOPSIS</h2>
 <p> getcert list [options] </p>

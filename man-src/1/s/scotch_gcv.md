@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_gcv(1)"
 name: "scotch_gcv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_gcv/"
 description: "gcv – graph file converter"
 ---
 
-<h2>NAME</h2>
 <p> <code>gcv </code>&#8211; graph file converter</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

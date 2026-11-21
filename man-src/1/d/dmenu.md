@@ -1,4 +1,5 @@
 ---
+
 title: "dmenu(1)"
 name: "dmenu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dmenu/"
 description: "dmenu – dynamic menu"
 ---
 
-<h2>NAME</h2>
 <p> dmenu &#8211; dynamic menu</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dmenu</code> [<code>-bfiv</code>] [<code>-l</code> <i>lines</i>] [<code>-m</code> <i>monitor</i>] [<code>-p</code> <i>prompt</i>] [<code>-fn</code> <i>font</i>] [<code>-nb</code> <i>color</i>] [<code>-nf</code> <i>color</i>] [<code>-sb</code> <i>color</i>] [<code>-sf</code> <i>color</i>] [<code>-w</code> <i>windowid</i>] </p>

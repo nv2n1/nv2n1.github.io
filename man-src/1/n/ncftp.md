@@ -1,4 +1,5 @@
 ---
+
 title: "ncftp(1)"
 name: "ncftp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncftp/"
 description: "ncftp – Browser program for the File Transfer Protocol"
 ---
 
-<h2>NAME</h2>
 <p> ncftp &#8211; Browser program for the File Transfer Protocol</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncftp</code> [<i>host</i>] </p>

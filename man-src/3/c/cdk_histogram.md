@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_histogram(3)"
 name: "cdk_histogram"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_histogram/"
 description: "cdk_histogram – curses histogram widget"
 ---
 
-<h2>NAME</h2>
 <p> cdk_histogram &#8211; curses histogram widget</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

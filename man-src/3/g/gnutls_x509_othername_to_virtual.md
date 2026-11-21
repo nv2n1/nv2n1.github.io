@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_othername_to_virtual(3)"
 name: "gnutls_x509_othername_to_virtual"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_x509_othername_to_virtual/"
 description: "gnutls_x509_othername_to_virtual – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_x509_othername_to_virtual &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>

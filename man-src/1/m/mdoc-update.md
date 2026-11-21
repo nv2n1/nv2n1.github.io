@@ -1,4 +1,5 @@
 ---
+
 title: "mdoc-update(1)"
 name: "mdoc-update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdoc-update/"
 description: "mdoc update – mdoc(5) documentation format support"
 ---
 
-<h2>NAME</h2>
 <p> mdoc update &#8211; <code><a href="/docs/linux/man/5-mdoc/">mdoc</a></code>(5) documentation format support</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdoc update</code> [OPTIONS]* ASSEMBLIES</p>

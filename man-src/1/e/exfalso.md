@@ -1,4 +1,5 @@
 ---
+
 title: "exfalso(1)"
 name: "exfalso"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-exfalso/"
 description: "exfalso – audio tag editor"
 ---
 
-<h2>NAME</h2>
 <p> exfalso &#8211; audio tag editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>exfalso</code> [ <i>directory</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libexslt(3)"
 name: "libexslt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libexslt/"
 description: "libexslt – extension library for XSLT"
 ---
 
-<h2>NAME</h2>
 <p> libexslt &#8211; extension library for XSLT</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libexslt/exslt.h&gt;</code> </p>

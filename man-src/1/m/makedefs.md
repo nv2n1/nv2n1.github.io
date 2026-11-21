@@ -1,4 +1,5 @@
 ---
+
 title: "makedefs(1)"
 name: "makedefs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makedefs/"
 description: "makedefs – Postfix makefile configuration utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> makedefs &#8211; Postfix makefile configuration utility </p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "museekd(1)"
 name: "museekd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-museekd/"
 description: "Museekd – C++ Daemon/Client for Soulseek"
 ---
 
-<h2>NAME</h2>
 <p> <code>Museekd</code> &#8211; C++ Daemon/Client for Soulseek</p>
 <h2>SYNOPSIS</h2>
 <p> <code>museek</code> [-c &lt;<i>filename</i>&gt;] [&#8211;config &lt;<i>filename</i>&gt;] [-V] [&#8211;version] [-h] [&#8211;help]</p>

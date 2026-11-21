@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_decrement(3)"
 name: "memcached_decrement"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_decrement/"
 description: "memcached_decrement – Incrementing and Decrementing Values"
 ---
 
-<h2>NAME</h2>
 <p> memcached_decrement &#8211; Incrementing and Decrementing Values</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>

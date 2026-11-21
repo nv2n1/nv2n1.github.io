@@ -1,4 +1,5 @@
 ---
+
 title: "cpan2dist(1)"
 name: "cpan2dist"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-cpan2dist/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- cpan2dist - The CPANPLUS distribution creator 
+cpan2dist - The CPANPLUS distribution creator 
 
 <h2>DESCRIPTION</h2>
 

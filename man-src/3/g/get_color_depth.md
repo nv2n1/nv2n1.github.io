@@ -1,4 +1,5 @@
 ---
+
 title: "get_color_depth(3)"
 name: "get_color_depth"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_color_depth/"
 description: "get_color_depth – Returns the current pixel color depth. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_color_depth &#8211; Returns the current pixel color depth. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ncrename(1)"
 name: "ncrename"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncrename/"
 description: "ncrename – netCDF Renamer"
 ---
 
-<h2>NAME</h2>
 <p> ncrename &#8211; netCDF Renamer</p>
 <h2>SYNTAX</h2>
 <p> ncrename [-a <i>old_name,new_name</i>] [-a &nbsp;<wbr>&#8230;&nbsp;<wbr>] [-D] [-d <i>old_name,new_name</i>] [-d &nbsp;<wbr>&#8230;&nbsp;<wbr>] [-g <i>old_name,new_name</i>] [-g &nbsp;<wbr>&#8230;&nbsp;<wbr>] [-h] [&#8211;hdr_pad <i>sz</i>] [-l path] [-O] [-p path] [-R] [-r] [&#8211;ram_all] [-v <i>old_name,new_name</i>] [-v &nbsp;<wbr>&#8230;&nbsp;<wbr>] <i>input-file</i> [ <i>output-file</i>]</p>

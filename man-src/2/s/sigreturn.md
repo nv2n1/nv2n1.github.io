@@ -1,4 +1,5 @@
 ---
+
 title: "sigreturn(2)"
 name: "sigreturn"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sigreturn/"
 description: "sigreturn, rt_sigreturn – return from signal handler and cleanup stack frame"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sigreturn, rt_sigreturn &#8211; return from signal handler and cleanup stack frame </p>
 <h2>SYNOPSIS</h2>
 <p> <code>int sigreturn(&#8230;);</code></p>

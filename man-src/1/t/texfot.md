@@ -1,4 +1,5 @@
 ---
+
 title: "texfot(1)"
 name: "texfot"
 section: "1"
@@ -6,10 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-texfot/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- texfot - run TeX, filtering online transcript for interesting messages 
+texfot - run TeX, filtering online transcript for interesting messages 
 
 <h2>SYNOPSIS</h2>
 

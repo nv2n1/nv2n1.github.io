@@ -1,4 +1,5 @@
 ---
+
 title: "carbon-relay(1)"
 name: "carbon-relay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-carbon-relay/"
 description: "carbon-relay – replication and sharding data"
 ---
 
-<h2>NAME</h2>
 <p> carbon-relay &#8211; replication and sharding data</p>
 <h2>SYNOPSYS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "fddividendeuropeanengine(3)"
 name: "fddividendeuropeanengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fddividendeuropeanengine/"
 description: "ql/pricingengines/vanilla/fddividendeuropeanengine.hpp – finite-differences engine for European option with dividends"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/pricingengines/vanilla/fddividendeuropeanengine.hpp &#8211; finite-differences engine for European option with dividends </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/dividendvanillaoption.hpp&gt;<br />

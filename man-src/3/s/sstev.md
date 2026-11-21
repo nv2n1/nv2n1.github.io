@@ -1,4 +1,5 @@
 ---
+
 title: "sstev(3)"
 name: "sstev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sstev/"
 description: "sstev.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sstev.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

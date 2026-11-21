@@ -1,4 +1,5 @@
 ---
+
 title: "motv(1)"
 name: "motv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-motv/"
 description: "motv – a Motif program for watching TV"
 ---
 
-<h2>NAME</h2>
 <p> motv &#8211; a Motif program for watching TV</p>
 <h2>SYNOPSIS</h2>
 <p> <code>motv [ options ] [ station name ]</code></p>

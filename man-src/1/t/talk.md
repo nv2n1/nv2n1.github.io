@@ -1,4 +1,5 @@
 ---
+
 title: "talk(1)"
 name: "talk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-talk/"
 description: "talk – talk to another user"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>talk</code> &#8211; talk to another user </p>
 <h2>SYNOPSIS</h2>
 <p> <code>talk</code> <i>person</i> [<i>-x</i> ] [<i>ttyname</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "get_config_int(3)"
 name: "get_config_int"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_config_int/"
 description: "get_config_int – Retrieves an integer from the configuration file. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_config_int &#8211; Retrieves an integer from the configuration file. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

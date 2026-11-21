@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtompeg(1)"
 name: "ppmtompeg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtompeg/"
 description: "ppmtompeg – encodes MPEG-1 bitstreams"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtompeg &#8211; encodes MPEG-1 bitstreams </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtompeg</code> [ <i>options</i> ] <i>parameter-file</i></p>

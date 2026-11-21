@@ -1,4 +1,5 @@
 ---
+
 title: "grok-dumb-pull(1)"
 name: "grok-dumb-pull"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grok-dumb-pull/"
 description: "GROK-DUMB-PULL – Update git repositories not managed by grokmirror"
 ---
 
-<h2>NAME</h2>
 <p> GROK-DUMB-PULL &#8211; Update git repositories not managed by grokmirror</p>
 <h2>SYNOPSIS</h2>
 <p> grok-dumb-pull [options] /path/to/repos</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ftnchek(1)"
 name: "ftnchek"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ftnchek/"
 description: "ftnchek – Fortran 77 program checker"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ftnchek &#8211; Fortran 77 program checker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ftnchek</code> [ <code>-arguments</code>[=<i>list</i>] ] [ <code>-array</code>[=<i>list</i>] ]<br />

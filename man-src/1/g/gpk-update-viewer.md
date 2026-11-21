@@ -1,4 +1,5 @@
 ---
+
 title: "gpk-update-viewer(1)"
 name: "gpk-update-viewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpk-update-viewer/"
 description: "gpk-update-viewer – GNOME PackageKit Update Viewer"
 ---
 
-<h2>NAME</h2>
 <p> gpk-update-viewer &#8211; GNOME PackageKit Update Viewer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpk-update-viewer</code> [ <code>&#8211;verbose</code> ]</p>

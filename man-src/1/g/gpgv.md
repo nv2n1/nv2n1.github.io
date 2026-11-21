@@ -1,4 +1,5 @@
 ---
+
 title: "gpgv(1)"
 name: "gpgv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpgv/"
 description: "gpgv – Verify OpenPGP signatures"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpgv</code> &#8211; Verify OpenPGP signatures </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpgv</code> [<i>options</i>] <i>signed_files</i> </p>

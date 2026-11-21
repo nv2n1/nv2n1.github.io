@@ -1,4 +1,5 @@
 ---
+
 title: "kjscmd(1)"
 name: "kjscmd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kjscmd/"
 description: "kjscmd – KDE KJSEmbed interpreter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kjscmd &#8211; KDE KJSEmbed interpreter </p>
 <h2>SYNOPSIS</h2>
 <dl>

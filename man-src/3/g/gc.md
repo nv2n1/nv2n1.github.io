@@ -1,4 +1,5 @@
 ---
+
 title: "gc(3)"
 name: "gc"
 section: "3"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-gc/"
 ---
 
-<h2>NAME</h2>
-
- GC_malloc, GC_malloc_atomic, GC_free, GC_realloc, GC_enable_incremental, GC_register_finalizer, GC_malloc_ignore_off_page, GC_malloc_atomic_ignore_off_page, GC_set_warn_proc - Garbage collecting malloc replacement
+GC_malloc, GC_malloc_atomic, GC_free, GC_realloc, GC_enable_incremental, GC_register_finalizer, GC_malloc_ignore_off_page, GC_malloc_atomic_ignore_off_page, GC_set_warn_proc - Garbage collecting malloc replacement
 
 <h2>SYNOPSIS</h2>
 

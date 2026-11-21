@@ -1,4 +1,5 @@
 ---
+
 title: "ibdiagui(1)"
 name: "ibdiagui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibdiagui/"
 description: "ibdiagui – IB Diagnostic GUI"
 ---
 
-<h2>NAME</h2>
 <p> <code>ibdiagui &#8211; IB Diagnostic GUI</code></p>
 <h2>SYNOPSYS</h2>
 <p> ibdiagui [-c &lt;count&gt;] [-v] [-r] [-o &lt;out-dir&gt;]<br />

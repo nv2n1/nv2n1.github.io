@@ -1,4 +1,5 @@
 ---
+
 title: "git-receive-pack(1)"
 name: "git-receive-pack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-receive-pack/"
 description: "git-receive-pack – Receive what is pushed into the repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-receive-pack &#8211; Receive what is pushed into the repository </p>
 <h2>SYNOPSIS</h2>
 <pre>

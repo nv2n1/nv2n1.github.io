@@ -1,4 +1,5 @@
 ---
+
 title: "cjb2(1)"
 name: "cjb2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cjb2/"
 description: "cjb2 – Simple DjVuBitonal encoder."
 ---
 
-<h2>NAME</h2>
 <p> cjb2 &#8211; Simple DjVuBitonal encoder. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cjb2 [</code><i>options</i><code>] </code><i>inputfile</i><i>outputdjvufile</i> </p>

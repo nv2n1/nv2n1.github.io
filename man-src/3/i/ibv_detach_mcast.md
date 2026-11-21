@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_detach_mcast(3)"
 name: "ibv_detach_mcast"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_detach_mcast/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_attach_mcast, ibv_detach_mcast - attach and detach a queue pair (QPs) to/from a multicast group 
+ibv_attach_mcast, ibv_detach_mcast - attach and detach a queue pair (QPs) to/from a multicast group 
 
 <h2>SYNOPSIS</h2>
 

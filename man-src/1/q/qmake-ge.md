@@ -1,4 +1,5 @@
 ---
+
 title: "qmake-ge(1)"
 name: "qmake-ge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qmake-ge/"
 description: "qmake – distributed parallel make, scheduling by Grid Engine."
 ---
 
-<h2>NAME</h2>
 <p> qmake &#8211; distributed parallel make, scheduling by Grid Engine. </p>
 <h2>SYNTAX</h2>
 <p> <code>qmake</code> [ <code>options</code> ] &#8212; [ <code>gmake options</code> ] </p>

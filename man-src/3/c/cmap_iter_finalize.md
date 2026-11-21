@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_iter_finalize(3)"
 name: "cmap_iter_finalize"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmap_iter_finalize/"
 description: "cmap_iter_finalize – Finalize iterator for keys stored in CMAP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cmap_iter_finalize &#8211; Finalize iterator for keys stored in CMAP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>

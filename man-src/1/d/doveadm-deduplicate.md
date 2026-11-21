@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-deduplicate(1)"
 name: "doveadm-deduplicate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-deduplicate/"
 description: "doveadm-deduplicate – expunge duplicate messages"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-deduplicate &#8211; expunge duplicate messages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>deduplicate</code> [<code>-u</code> <i>user</i>|<code>-A</code>] [<code>-S</code> <i>socket_path</i>] [<code>-m</code>] <i>search_query</i></p>

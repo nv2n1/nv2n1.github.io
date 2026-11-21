@@ -1,4 +1,5 @@
 ---
+
 title: "dspam_stats(1)"
 name: "dspam_stats"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dspam_stats/"
 description: "dspam_stats – display spam statistics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dspam_stats &#8211; display spam statistics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dspam_stats</code> [<code>&#8211;profile</code>=PROFILE][<code>-HhrSst</code>] [<i>username</i>] </p>

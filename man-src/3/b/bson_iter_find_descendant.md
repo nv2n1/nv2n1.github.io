@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_find_descendant(3)"
 name: "bson_iter_find_descendant"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_find_descendant/"
 description: "bson_iter_find_descendant() – The bson_iter_find_descendant() function shall follow standard MongoDB dot notation to recurse into subdocuments. descendant will be initialized and advanced to the de..."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_find_descendant() &#8211; The bson_iter_find_descendant() function shall follow standard MongoDB dot notation to recurse into subdocuments. descendant will be initialized and advanced to the descendant. If false is returned, both iter and descendant should be considered invalid.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

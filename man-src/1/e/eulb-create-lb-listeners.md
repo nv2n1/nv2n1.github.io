@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-create-lb-listeners(1)"
 name: "eulb-create-lb-listeners"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-create-lb-listeners/"
 description: "eulb-create-lb-listeners – Add one or more listeners to a load balancer"
 ---
 
-<h2>NAME</h2>
 <p> eulb-create-lb-listeners &#8211; Add one or more listeners to a load balancer</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-create-lb-listeners <code>-l</code> &quot;lb-port=PORT,</p>

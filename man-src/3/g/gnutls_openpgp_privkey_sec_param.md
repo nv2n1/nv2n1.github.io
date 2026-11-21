@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_privkey_sec_param(3)"
 name: "gnutls_openpgp_privkey_sec_param"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_openpgp_privkey_sec_param/"
 description: "gnutls_openpgp_privkey_sec_param – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_openpgp_privkey_sec_param &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>

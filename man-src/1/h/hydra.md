@@ -1,4 +1,5 @@
 ---
+
 title: "hydra(1)"
 name: "hydra"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hydra/"
 description: "hydra – a very fast network logon cracker which support many different services"
 ---
 
-<h2>NAME</h2>
 <p> hydra &#8211; a very fast network logon cracker which support many different services</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hydra</code><br />

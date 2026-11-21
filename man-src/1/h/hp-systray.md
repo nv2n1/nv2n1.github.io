@@ -1,4 +1,5 @@
 ---
+
 title: "hp-systray(1)"
 name: "hp-systray"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hp-systray/"
 description: "hp-systray – System Tray Status Service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hp-systray &#8211; System Tray Status Service </p>
 <h2>DESCRIPTION</h2>
 <p> System Tray monitors the HP device status and Displays</p>

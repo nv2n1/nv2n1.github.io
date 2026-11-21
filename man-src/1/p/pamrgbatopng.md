@@ -1,4 +1,5 @@
 ---
+
 title: "pamrgbatopng(1)"
 name: "pamrgbatopng"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamrgbatopng/"
 description: "pamrgbatopng – convert PAM color/transparency image to PNG"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamrgbatopng &#8211; convert PAM color/transparency image to PNG</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamrgbatopng</code> [<i>pamfile</i>] </p>

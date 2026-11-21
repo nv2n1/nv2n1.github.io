@@ -1,4 +1,5 @@
 ---
+
 title: "pmpost(1)"
 name: "pmpost"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmpost/"
 description: "pmpost – append messages to the Performance Co-Pilot notice board"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmpost</code> &#8211; append messages to the Performance Co-Pilot notice board</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmpost</code> <i>message</i></p>

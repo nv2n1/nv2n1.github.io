@@ -1,4 +1,5 @@
 ---
+
 title: "evemu-device(1)"
 name: "evemu-device"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-evemu-device/"
 description: "evemu-device, evemu-play, evemu-event – create a virtual input device and replay an event sequence"
 ---
 
-<h2 class="name">NAME</h2>
 <p> evemu-device, evemu-play, evemu-event &#8211; create a virtual input device and replay an event sequence </p>
 <h2>SYNOPSIS</h2>
 <pre>

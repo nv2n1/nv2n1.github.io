@@ -1,4 +1,5 @@
 ---
+
 title: "ncftpls(1)"
 name: "ncftpls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncftpls/"
 description: "ncftpls – Internet file transfer program for scripts"
 ---
 
-<h2>NAME</h2>
 <p> ncftpls &#8211; Internet file transfer program for scripts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncftpls</code> [<i>options</i>] <i><a href="ftp://url.style/host/path/name/">ftp://url.style/host/path/name/</a></i></p>

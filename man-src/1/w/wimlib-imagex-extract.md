@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-extract(1)"
 name: "wimlib-imagex-extract"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex-extract/"
 description: "wimlib-imagex-extract – Extract files or directories from a WIM image"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex-extract &#8211; Extract files or directories from a WIM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex extract</code> <i>WIMFILE</i> <i>IMAGE</i> [(<i>PATH</i> | @<i>LISTFILE</i>)&#8230;] [<i>OPTION</i>&#8230;]</p>

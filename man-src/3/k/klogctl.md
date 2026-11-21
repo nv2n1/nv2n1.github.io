@@ -1,4 +1,5 @@
 ---
+
 title: "klogctl(3)"
 name: "klogctl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-klogctl/"
 description: "syslog, klogctl – read and/or clear kernel message ring buffer; set console_loglevel"
 ---
 
-<h2 class="name">NAME</h2>
 <p> syslog, klogctl &#8211; read and/or clear kernel message ring buffer; set console_loglevel </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

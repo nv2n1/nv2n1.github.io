@@ -1,4 +1,5 @@
 ---
+
 title: "mkoctfile(1)"
 name: "mkoctfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkoctfile/"
 description: "mkoctfile – Compile dynamic-load modules for GNU Octave"
 ---
 
-<h2>NAME</h2>
 <p> mkoctfile &#8211; Compile dynamic-load modules for GNU Octave</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkoctfile</code> [<i>OPTION</i>]&#8230; file&#8230;</p>

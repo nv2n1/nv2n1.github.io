@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-server-upgrade(1)"
 name: "ipa-server-upgrade"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-server-upgrade/"
 description: "ipa-server-upgrade – upgrade IPA server"
 ---
 
-<h2>NAME</h2>
 <p> ipa-server-upgrade &#8211; upgrade IPA server</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-server-upgrade [options]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cbrtl(3)"
 name: "cbrtl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cbrtl/"
 description: "cbrt, cbrtf, cbrtl – cube root function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cbrt, cbrtf, cbrtl &#8211; cube root function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "inetutils-logger(1)"
 name: "inetutils-logger"
 section: "1"
@@ -8,7 +9,7 @@ description: "logger – make entries in the system log"
 ---
 
 <p>GNU Network Utilities</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>logger</code> &#8211; make entries in the system log </p>
 <h2>SYNOPSIS</h2>
 <p> <code>logger</code> [<i>options &#8230;</i> ] [<i>message &#8230;</i> ]</p>

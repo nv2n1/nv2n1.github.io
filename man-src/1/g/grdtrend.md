@@ -1,4 +1,5 @@
 ---
+
 title: "grdtrend(1)"
 name: "grdtrend"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdtrend/"
 description: "grdtrend – Fit trend surface to grids and compute residuals"
 ---
 
-<h2>NAME</h2>
 <p> grdtrend &#8211; Fit trend surface to grids and compute residuals</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdtrend</code> <i>grdfile</i> <i>n_model</i>[<code>r</code>] [ <i>diff.nc</i> ] [ <i>region</i> ] [ <i>trend.nc</i> ] [ <i>weight.nc</i> ] </p>

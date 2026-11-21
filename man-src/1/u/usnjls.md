@@ -1,4 +1,5 @@
 ---
+
 title: "usnjls(1)"
 name: "usnjls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-usnjls/"
 description: "usnjls – List the contents of a NTFS Update Sequence Number journal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> usnjls &#8211; List the contents of a NTFS Update Sequence Number journal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>usnjls [-f</code> <i>fstype</i> <code>] [-vV] [-i imgtype] [-o imgoffset] [-b dev_sector_size]</code> <i>image [images] [inode]</i> </p>

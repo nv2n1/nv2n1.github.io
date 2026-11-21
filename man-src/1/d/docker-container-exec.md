@@ -1,4 +1,5 @@
 ---
+
 title: "docker-container-exec(1)"
 name: "docker-container-exec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-container-exec/"
 description: "docker-container-exec – Run a command in a running container"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-container-exec &#8211; Run a command in a running container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container exec [OPTIONS] CONTAINER COMMAND [ARG&#8230;]</code> </p>

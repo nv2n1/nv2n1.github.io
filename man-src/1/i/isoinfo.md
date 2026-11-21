@@ -1,4 +1,5 @@
 ---
+
 title: "isoinfo(1)"
 name: "isoinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-isoinfo/"
 description: "devdump, isoinfo, isovfy, isodump – Utility programs for dumping and verifying iso9660 images."
 ---
 
-<h2 class="name">NAME</h2>
 <p> devdump, isoinfo, isovfy, isodump &#8211; Utility programs for dumping and verifying iso9660 images. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>devdump </code> <i>isoimage</i> </p>

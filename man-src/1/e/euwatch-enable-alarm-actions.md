@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-enable-alarm-actions(1)"
 name: "euwatch-enable-alarm-actions"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euwatch-enable-alarm-actions/"
 description: "euwatch-enable-alarm-actions – Enable all actions for one or more alarms"
 ---
 
-<h2>NAME</h2>
 <p> euwatch-enable-alarm-actions &#8211; Enable all actions for one or more alarms</p>
 <h2>SYNOPSIS</h2>
 <p> euwatch-enable-alarm-actions [&#8211;show-empty-fields] [-U URL]</p>

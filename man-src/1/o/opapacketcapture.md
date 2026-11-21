@@ -1,4 +1,5 @@
 ---
+
 title: "opapacketcapture(1)"
 name: "opapacketcapture"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opapacketcapture/"
 description: "opapacketcapture"
 ---
 
-<h2>NAME</h2>
 <p> opapacketcapture </p>
 <p> Starts capturing packet data. </p>
 <p> To stop capture and trigger dump, use SIGINT or SIGUSR1. Program dumps packets to file and exits. </p>

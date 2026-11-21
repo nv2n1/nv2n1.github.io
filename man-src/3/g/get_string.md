@@ -1,4 +1,5 @@
 ---
+
 title: "get_string(3)"
 name: "get_string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_string/"
 description: "get_string — retrieve a string from a dirfile database"
 ---
 
-<h2>NAME</h2>
 <p> get_string &#8212; retrieve a string from a dirfile database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

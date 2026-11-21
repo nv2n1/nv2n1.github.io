@@ -1,4 +1,5 @@
 ---
+
 title: "tilestache-render(1)"
 name: "tilestache-render"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tilestache-render/"
 description: "tilestache-render – render tiles from tilestache"
 ---
 
-<h2>NAME</h2>
 <p> tilestache-render &#8211; render tiles from tilestache</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tilestache-render</code> [<i>options</i>]<i> coordinates</i>&#8230;</p>

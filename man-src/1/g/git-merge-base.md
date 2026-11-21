@@ -1,4 +1,5 @@
 ---
+
 title: "git-merge-base(1)"
 name: "git-merge-base"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-merge-base/"
 description: "git-merge-base – Find as good common ancestors as possible for a merge"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-merge-base &#8211; Find as good common ancestors as possible for a merge </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

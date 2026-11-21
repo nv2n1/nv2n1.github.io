@@ -1,4 +1,5 @@
 ---
+
 title: "free_config_entries(3)"
 name: "free_config_entries"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-free_config_entries/"
 description: "free_config_entries – Frees memory allocated for config entry lists. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> free_config_entries &#8211; Frees memory allocated for config entry lists. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

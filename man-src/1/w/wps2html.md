@@ -1,4 +1,5 @@
 ---
+
 title: "wps2html(1)"
 name: "wps2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wps2html/"
 description: "wps2html – convert Works document into HTML"
 ---
 
-<h2>NAME</h2>
 <p> wps2html &#8211; convert Works document into HTML</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wps2html</code> [<i>OPTION</i>] <i>&lt;Works Document&gt;</i></p>

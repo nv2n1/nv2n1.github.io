@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-fix-xml(1)"
 name: "foomatic-fix-xml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-foomatic-fix-xml/"
 description: "foomatic-fix-xml – Remove leading blank lines from Foomatic database"
 ---
 
-<h2>NAME</h2>
 <p> foomatic-fix-xml &#8211; Remove leading blank lines from Foomatic database</p>
 <h2>SYNOPSIS</h2>
 <dl>

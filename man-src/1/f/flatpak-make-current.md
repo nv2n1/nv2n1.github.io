@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-make-current(1)"
 name: "flatpak-make-current"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-make-current/"
 description: "flatpak-make-current – Make a specific version of an app current"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-make-current &#8211; Make a specific version of an app current </p>
 <h2>SYNOPSIS</h2>
 <dl>

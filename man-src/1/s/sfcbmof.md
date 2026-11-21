@@ -1,4 +1,5 @@
 ---
+
 title: "sfcbmof(1)"
 name: "sfcbmof"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sfcbmof/"
 description: "sfcbmof – MOF compile for the Small-Footprint CIM Broker (sfcb)"
 ---
 
-<h2>NAME</h2>
 <p> sfcbmof &#8211; MOF compile for the Small-Footprint CIM Broker (sfcb)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sfcbmof</code> [<i>options</i>] <i>infile</i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "idevicepair(1)"
 name: "idevicepair"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idevicepair/"
 description: "idevicepair – Manage pairings with devices and this host."
 ---
 
-<h2>NAME</h2>
 <p> idevicepair &#8211; Manage pairings with devices and this host.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idevicepair</code> [OPTIONS] COMMAND </p>

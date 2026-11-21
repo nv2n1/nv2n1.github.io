@@ -1,4 +1,5 @@
 ---
+
 title: "akmodsbuild(1)"
 name: "akmodsbuild"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-akmodsbuild/"
 description: "akmodsbuild – Rebuilds kmod SRPM(s)"
 ---
 
-<h2>NAME</h2>
 <p> <code>akmodsbuild </code>&#8211; Rebuilds kmod SRPM(s)</p>
 <h2>SYNOPSIS</h2>
 <pre>

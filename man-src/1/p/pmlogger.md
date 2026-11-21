@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogger(1)"
 name: "pmlogger"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmlogger/"
 description: "pmlogger – create archive log for performance metrics"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmlogger</code> &#8211; create archive log for performance metrics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmlogger</code> [<code>-c</code> <i>configfile</i>] [<code>-h</code> <i>host</i>] [<code>-K</code> <i>spec</i>] [<code>-l</code> <i>logfile</i>] [<code>-L</code>] [<code>-m</code> <i>note</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-o</code>] [<code>-p</code> <i>pid</i>] [<code>-P</code>] [<code>-r</code>] [<code>-s</code> <i>endsize</i>] [<code>-t</code> <i>interval</i>] [<code>-T</code> <i>endtime</i>] [<code>-u</code>] [<code>-U</code> <i>username</i>] [<code>-v</code> <i>volsize</i>] [<code>-V</code> <i>version</i>] [<code>-x</code> <i>fd</i>] [<code>-y</code>] <i>archive</i></p>

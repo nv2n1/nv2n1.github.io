@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_alpn_get_selected_protocol(3)"
 name: "gnutls_alpn_get_selected_protocol"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_alpn_get_selected_protocol/"
 description: "gnutls_alpn_get_selected_protocol – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_alpn_get_selected_protocol &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

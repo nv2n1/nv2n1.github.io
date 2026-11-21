@@ -1,4 +1,5 @@
 ---
+
 title: "index(3)"
 name: "index"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-index/"
 description: "index, rindex – locate character in string"
 ---
 
-<h2 class="name">NAME</h2>
 <p> index, rindex &#8211; locate character in string </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

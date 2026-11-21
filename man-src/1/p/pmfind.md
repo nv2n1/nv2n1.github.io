@@ -1,4 +1,5 @@
 ---
+
 title: "pmfind(1)"
 name: "pmfind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmfind/"
 description: "pmfind – find PCP services on the network"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmfind</code> &#8211; find PCP services on the network</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmfind</code> [<code>-q</code>] [<code>-m</code> <i>mechanism</i>] [<code>-s</code> <i>service</i>] [<code>-r</code>] [<code>-t</code> <i>timeout</i>]</p>

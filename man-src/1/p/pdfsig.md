@@ -1,4 +1,5 @@
 ---
+
 title: "pdfsig(1)"
 name: "pdfsig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdfsig/"
 description: "pdfsig – Portable Document Format (PDF) digital signatures tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdfsig &#8211; Portable Document Format (PDF) digital signatures tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfsig</code> [options] [<i>PDF-file</i>] [<i>Output-file</i>]</p>

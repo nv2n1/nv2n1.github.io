@@ -1,4 +1,5 @@
 ---
+
 title: "qstat-ge(1)"
 name: "qstat-ge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qstat-ge/"
 description: "qstat – show the status of Grid Engine jobs and queues"
 ---
 
-<h2>NAME</h2>
 <p> qstat &#8211; show the status of Grid Engine jobs and queues</p>
 <h2>SYNTAX</h2>
 <p> <code>qstat</code> [ <code>-ext</code> ] [ <code>-f</code> ] [ <code>-F</code> [<code>resource_name,&#8230;</code>] ] [ <code>-g {c|d|t}[+]</code> ] [ <code>-help</code> ] [ <code>-j [job_list]</code> ] [ <code>-l resource=val,&#8230;</code> ] [ <code>-ne</code> ] [ <code>-pe pe_name,&#8230;</code> ] [ <code>-pri </code> ] [ <code>-q wc_queue_list</code> ] [ <code>-qs {a|c|d|o|s|u|A|C|D|E|S}</code> ] [ <code>-r</code> ] [ <code>-s {r|p|s|z|hu|ho|hs|hd|hj|ha|h|a}[+]</code> ] [ <code>-t</code> ] [ <code>-U user,&#8230;</code> ] [ <code>-u user,&#8230;</code> ] [ <code>-urg</code> ] [ <code>-xml</code> ]</p>

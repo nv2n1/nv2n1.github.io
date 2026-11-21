@@ -1,4 +1,5 @@
 ---
+
 title: "luac(1)"
 name: "luac"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-luac/"
 description: "luac – Lua compiler"
 ---
 
-<h2>NAME</h2>
 <p> luac &#8211; Lua compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>luac</code> [ <i>options</i> ] [ <i>filenames</i> ]</p>

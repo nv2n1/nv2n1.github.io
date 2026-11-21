@@ -1,4 +1,5 @@
 ---
+
 title: "procmail(1)"
 name: "procmail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-procmail/"
 description: "procmail – autonomous mail processor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> procmail &#8211; autonomous mail processor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>procmail</code> [<code>-ptoY</code>] [<code>-f </code><i>fromwhom</i>]<br />

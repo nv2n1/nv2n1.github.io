@@ -1,4 +1,5 @@
 ---
+
 title: "globus-job-submit(1)"
 name: "globus-job-submit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-globus-job-submit/"
 description: "globus-job-submit – Submit a batch job using GRAM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus-job-submit &#8211; Submit a batch job using GRAM </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globus-job-submit</code> [-dumprsl|-dryrun|-verify] [-file ARGUMENT_FILE] <i>SERVICE-CONTACT</i> [OPTIONS] <i>EXECUTABLE</i> <i>ARGUMENT&#8230;</i> </p>

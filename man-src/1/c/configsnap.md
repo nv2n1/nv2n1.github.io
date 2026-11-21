@@ -1,4 +1,5 @@
 ---
+
 title: "configsnap(1)"
 name: "configsnap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-configsnap/"
 description: "configsnap – manual page for configsnap 0.11"
 ---
 
-<h2>NAME</h2>
 <p> configsnap &#8211; manual page for configsnap 0.11</p>
 <h2>SYNOPSIS</h2>
 <p> <code>configsnap</code> [<i>options</i>]</p>

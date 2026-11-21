@@ -1,4 +1,5 @@
 ---
+
 title: "pwsafe(1)"
 name: "pwsafe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pwsafe/"
 description: "pwsafe – commandline password database utility compatible with Counterpane’s Passwordsafe"
 ---
 
-<h2>NAME</h2>
 <p> pwsafe &#8211; commandline password database utility compatible with Counterpane&#8217;s Passwordsafe</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pwsafe</code> [options] command [arg]</p>

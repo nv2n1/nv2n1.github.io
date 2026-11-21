@@ -1,4 +1,5 @@
 ---
+
 title: "encrypt(3)"
 name: "encrypt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-encrypt/"
 description: "encrypt, setkey, encrypt_r, setkey_r – encrypt 64-bit messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> encrypt, setkey, encrypt_r, setkey_r &#8211; encrypt 64-bit messages </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

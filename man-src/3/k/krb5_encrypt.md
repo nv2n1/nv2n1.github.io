@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_encrypt(3)"
 name: "krb5_encrypt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_encrypt/"
 description: "krb5_crypto_getblocksize krb5_crypto_getconfoundersize krb5_crypto_getenctype krb5_crypto_getpadsize krb5_crypto_overhead krb5_decrypt krb5_decrypt_EncryptedData krb5_decrypt_ivec krb5_decrypt_tick..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_crypto_getblocksize</code> <code>krb5_crypto_getconfoundersize</code> <code>krb5_crypto_getenctype</code> <code>krb5_crypto_getpadsize</code> <code>krb5_crypto_overhead</code> <code>krb5_decrypt</code> <code>krb5_decrypt_EncryptedData</code> <code>krb5_decrypt_ivec</code> <code>krb5_decrypt_ticket</code> <code>krb5_encrypt</code> <code>krb5_encrypt_EncryptedData</code> <code>krb5_encrypt_ivec</code> <code>krb5_enctype_disable</code> <code>krb5_enctype_keysize</code> <code>krb5_enctype_to_string</code> <code>krb5_enctype_valid</code> <code>krb5_get_wrapped_length</code> <code>krb5_string_to_enctype</code> &#8211; encrypt and decrypt data, set and get encryption type parameters </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

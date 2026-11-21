@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_document_begin(3)"
 name: "bson_append_document_begin"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_document_begin/"
 description: "bson_append_document_begin() – The bson_append_document_begin() function shall begin appending a sub-document to bson. Use child to add fields to the sub-document. When completed, call bson_append_..."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_document_begin() &#8211; The bson_append_document_begin() function shall begin appending a sub-document to bson. Use child to add fields to the sub-document. When completed, call bson_append_document_end() to complete the element.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

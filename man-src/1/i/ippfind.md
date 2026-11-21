@@ -1,4 +1,5 @@
 ---
+
 title: "ippfind(1)"
 name: "ippfind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ippfind/"
 description: "ippfind – find internet printing protocol printers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ippfind &#8211; find internet printing protocol printers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ippfind</code> [ <i>options</i> ] <i>regtype</i>[<code>,</code><i>subtype</i>][<code>.</code><i>domain</i><code>.</code>] &#8230; [ <i>expression</i><br />

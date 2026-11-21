@@ -1,4 +1,5 @@
 ---
+
 title: "printerbanner(1)"
 name: "printerbanner"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-printerbanner/"
 description: "printerbanner – print large banner on printer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>printerbanner</code> &#8211; print large banner on printer </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>d</code> ] [-<code>t</code> ] [-<code>w </code><i>width</i> ] <i>message &#8230;</i></p>

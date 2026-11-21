@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_find_field_next(3)"
 name: "auparse_find_field_next"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_find_field_next/"
 description: "auparse_find_field_next – find next occurrence of field name"
 ---
 
-<h2>NAME</h2>
 <p> auparse_find_field_next &#8211; find next occurrence of field name</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

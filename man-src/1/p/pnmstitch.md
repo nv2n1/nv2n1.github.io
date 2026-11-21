@@ -1,4 +1,5 @@
 ---
+
 title: "pnmstitch(1)"
 name: "pnmstitch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmstitch/"
 description: "pnmstitch – stitch together two panoramic (side-by-side) photographs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmstitch &#8211; stitch together two panoramic (side-by-side) photographs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmstitch</code> [ [<i>left_filespec</i>] <i>right_filespec</i> | <i>left_filespec</i> <i>right_filespec</i> <i>output_filespec</i> ] [<code>-width=</code><i>width</i>] [<code>-height=</code><i>height</i>] [<code>-xrightpos=</code><i>column</i>] [<code>-yrightpos=</code><i>row</i>] [<code>-stitcher=</code>{<code>RotateSliver</code>, <code>BiLinearSliver</code>,<code>LinearSliver</code>}] [<code>-filter=</code>{<code>LineAtATime</code>,<code>HorizontalCrop</code>}] [<code>-output=</code><i>output_filespec</i>] [<code>-verbose</code>] </p>

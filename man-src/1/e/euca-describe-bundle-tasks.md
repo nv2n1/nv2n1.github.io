@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-bundle-tasks(1)"
 name: "euca-describe-bundle-tasks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-bundle-tasks/"
 description: "euca-describe-bundle-tasks – Describe current instance-bundling tasks"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-bundle-tasks &#8211; Describe current instance-bundling tasks</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-bundle-tasks [&#8211;show-empty-fields] [-U URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountaliaslist(1)"
 name: "euare-accountaliaslist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-accountaliaslist/"
 description: "euare-accountaliaslist – List your account’s aliases"
 ---
 
-<h2>NAME</h2>
 <p> euare-accountaliaslist &#8211; List your account&#8217;s aliases</p>
 <h2>SYNOPSIS</h2>
 <p> euare-accountaliaslist [&#8211;as-account ACCOUNT] [-U URL]</p>

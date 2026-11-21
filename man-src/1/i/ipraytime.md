@@ -1,4 +1,5 @@
 ---
+
 title: "ipraytime(1)"
 name: "ipraytime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipraytime/"
 description: "ipraytime – An Islamic Prayer Times Calculator"
 ---
 
-<h2>NAME</h2>
 <p> ipraytime &#8211; An Islamic Prayer Times Calculator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipraytime</code> [<code>&#8211;date</code> yyyymmdd<i>]</i> [<code>&#8211;latitude</code> real_num<i>]</i> [<code>&#8211;longitude</code> real_num<i>]</i> [<code>&#8211;utcdiff</code> real_num<i>]</i> [<code>&#8211;method</code> int_num<i>]</i> [<code>&#8211;ishaangle</code> real_num<i>]</i> [<code>&#8211;fajrangle</code> real_num<i>]</i> [<code>&#8211;dst</code> int_num<i>]</i> [<code>&#8211;dst-start</code> yyyymmdd<i>]</i> [<code>&#8211;dst-end</code> yyyymmdd<i>]</i> [<code>&#8211;round</code> int_num<i>]</i> [<code>&#8211;extreme</code> int_num<i>]</i> [<code>&#8211;sea-level</code> int_num<i>]</i> [<code>&#8211;month</code> [int_num]<i>]</i> [<code>&#8211;year</code> [int_num]<i>]</i> [<code>&#8211;file</code> pref_file<i>]</i> [<code>&#8211;end</code>] [<code>&#8211;brief</code>] [<code>&#8211;help</code>]</p>

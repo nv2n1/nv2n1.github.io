@@ -1,4 +1,5 @@
 ---
+
 title: "ulockmgr_server(1)"
 name: "ulockmgr_server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ulockmgr_server/"
 description: "ulockmgr_server – Lock Manager Server for FUSE filesystems"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ulockmgr_server</code> &#8211; Lock Manager Server for FUSE filesystems</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ulockmgr_server</code> </p>

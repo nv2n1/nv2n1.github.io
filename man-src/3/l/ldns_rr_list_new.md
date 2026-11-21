@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_list_new(3)"
 name: "ldns_rr_list_new"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr_list_new/"
 description: "ldns_rr_list_new, ldns_rr_list_free"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr_list_new, ldns_rr_list_free </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "gstream-set_line_spacing(3)"
 name: "gstream-set_line_spacing"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gstream-set_line_spacing/"
 description: "set_line_spacing"
 ---
 
-<h2>NAME</h2>
 <p> set_line_spacing</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>

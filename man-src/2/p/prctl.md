@@ -1,4 +1,5 @@
 ---
+
 title: "prctl(2)"
 name: "prctl"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-prctl/"
 description: "prctl – operations on a process or thread"
 ---
 
-<h2 class="name">NAME</h2>
 <p> prctl &#8211; operations on a process or thread </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "winicontoppm(1)"
 name: "winicontoppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-winicontoppm/"
 description: "winicontoppm – convert a Windows .ico file into 1 or more portable pixmap files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> winicontoppm &#8211; convert a Windows .ico file into 1 or more portable pixmap files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>winicontoppm</code> [<i>-writeands</i>] [<i>-allicons|-bestqual</i>] [<i>-multippm</i>] [<i>-verbose</i>] [<i>iconfile</i>] [<i>ppmdestfile</i>]</p>

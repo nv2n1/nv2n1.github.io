@@ -1,4 +1,5 @@
 ---
+
 title: "pngdriver(1)"
 name: "pngdriver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pngdriver/"
 description: "PNG driver – driver to create PNG and PPM images (drivers)"
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code> PNG driver</code> &#8211; driver to create PNG and PPM images<br />
  <i>(drivers)</i></p>
 <h2>DESCRIPTION</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "gfmkdir(1)"
 name: "gfmkdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfmkdir/"
 description: "gfmkdir – manual page for gfmkdir (glusterfs-coreutils) 0.2.0"
 ---
 
-<h2>NAME</h2>
 <p> gfmkdir &#8211; manual page for gfmkdir (glusterfs-coreutils) 0.2.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfmkdir</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>

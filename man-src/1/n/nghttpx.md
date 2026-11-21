@@ -1,4 +1,5 @@
 ---
+
 title: "nghttpx(1)"
 name: "nghttpx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nghttpx/"
 description: "nghttpx – HTTP/2 proxy"
 ---
 
-<h2>NAME</h2>
 <p> nghttpx &#8211; HTTP/2 proxy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nghttpx</code> [OPTIONS]&#8230; [&lt;PRIVATE_KEY&gt; &lt;CERT&gt;]</p>

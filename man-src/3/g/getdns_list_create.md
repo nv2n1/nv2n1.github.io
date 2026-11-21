@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_list_create(3)"
 name: "getdns_list_create"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_list_create/"
 description: "getdns_list, getdns_list_create, getdns_list_create_with_extended_memory_functions, getdns_list_create_with_memory_functions, getdns_list_destroy — getdns list create and destroy routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>getdns_list, </code> <code>getdns_list_create, </code> <code>getdns_list_create_with_extended_memory_functions, </code> <code>getdns_list_create_with_memory_functions, </code> <code>getdns_list_destroy </code> &#8212; getdns list create and destroy routines</p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

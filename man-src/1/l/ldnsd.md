@@ -1,4 +1,5 @@
 ---
+
 title: "ldnsd(1)"
 name: "ldnsd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldnsd/"
 description: "ldnsd – simple daemon example code"
 ---
 
-<h2>NAME</h2>
 <p> ldnsd &#8211; simple daemon example code</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldnsd</code> <i>port</i> <i>zone</i> <i>zonefile</i> </p>

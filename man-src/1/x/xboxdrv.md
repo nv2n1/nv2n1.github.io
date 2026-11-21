@@ -1,4 +1,5 @@
 ---
+
 title: "xboxdrv(1)"
 name: "xboxdrv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xboxdrv/"
 description: "xboxdrv – A Xbox/Xbox360 gamepad driver that works in userspace"
 ---
 
-<h2>NAME</h2>
 <p> xboxdrv &#8211; A Xbox/Xbox360 gamepad driver that works in userspace</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xboxdrv</code> [OPTION]&#8230; [&#8211;] [COMMAND] [ARGUMENTS]</p>

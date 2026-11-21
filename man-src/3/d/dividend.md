@@ -1,4 +1,5 @@
 ---
+
 title: "dividend(3)"
 name: "dividend"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dividend/"
 description: "ql/cashflows/dividend.hpp – A stock dividend."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/cashflows/dividend.hpp &#8211; A stock dividend. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflow.hpp&gt;<br />

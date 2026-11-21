@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-csreplica-manage(1)"
 name: "ipa-csreplica-manage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-csreplica-manage/"
 description: "ipa-csreplica-manage – Manage an IPA CS replica"
 ---
 
-<h2>NAME</h2>
 <p> ipa-csreplica-manage &#8211; Manage an IPA CS replica</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-csreplica-manage [<i>OPTION</i>]&#8230; [connect|disconnect|del|list|re-initialize|force-sync]</p>

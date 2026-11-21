@@ -1,4 +1,5 @@
 ---
+
 title: "hx509_crl_sign(3)"
 name: "hx509_crl_sign"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hx509_crl_sign/"
 description: "hx509 verification functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hx509 verification functions &#8211; </p>
 <h3>Functions</h3>
 <p> void <code>hx509_context_set_missing_revoke</code> (hx509_context context, int flag) </p>

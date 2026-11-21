@@ -1,4 +1,5 @@
 ---
+
 title: "euca-assign-private-ip-addresses(1)"
 name: "euca-assign-private-ip-addresses"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-assign-private-ip-addresses/"
 description: "euca-assign-private-ip-addresses – Assign one or more private IP addresses to a network interface"
 ---
 
-<h2>NAME</h2>
 <p> euca-assign-private-ip-addresses &#8211; Assign one or more private IP addresses to a network interface</p>
 <h2>SYNOPSIS</h2>
 <p> euca-assign-private-ip-addresses [-n INTERFACE]</p>

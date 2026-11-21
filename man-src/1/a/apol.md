@@ -1,4 +1,5 @@
 ---
+
 title: "apol(1)"
 name: "apol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apol/"
 description: "apol – SELinux policy analysis tool"
 ---
 
-<h2>NAME</h2>
 <p> apol &#8211; SELinux policy analysis tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>apol</code> [OPTIONS] [POLICY &#8230;]</p>

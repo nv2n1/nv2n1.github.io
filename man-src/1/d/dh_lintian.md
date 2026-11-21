@@ -1,4 +1,5 @@
 ---
+
 title: "dh_lintian(1)"
 name: "dh_lintian"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_lintian/"
 description: "dh_lintian – install lintian override files into package build directories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_lintian &#8211; install lintian override files into package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_lintian</code> [<i>debhelper options</i>]</p>

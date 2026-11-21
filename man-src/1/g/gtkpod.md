@@ -1,4 +1,5 @@
 ---
+
 title: "gtkpod(1)"
 name: "gtkpod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtkpod/"
 description: "gtkpod – GTK2 based software for managing songs and playlists on an Apple iPod"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gtkpod &#8211; GTK2 based software for managing songs and playlists on an Apple iPod </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtkpod</code> [<code>-h</code>] [<code>-m</code> <i>path</i>] [<code>-p</code> <i>filename</i>] [<code>&#8211;hash</code> <i>filename</i>]</p>

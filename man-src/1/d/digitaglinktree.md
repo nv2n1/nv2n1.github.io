@@ -1,4 +1,5 @@
 ---
+
 title: "digitaglinktree(1)"
 name: "digitaglinktree"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-digitaglinktree/"
 description: "digitaglinktree – Export tag structure of photos in digikam to the filesystem."
 ---
 
-<h2>NAME</h2>
 <p> digitaglinktree &#8211; Export tag structure of photos in digikam to the filesystem.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>digitaglinktree </code> </p>

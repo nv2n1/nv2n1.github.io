@@ -1,4 +1,5 @@
 ---
+
 title: "qselect-ge(1)"
 name: "qselect-ge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qselect-ge/"
 description: "qselect – select queues."
 ---
 
-<h2>NAME</h2>
 <p> qselect &#8211; select queues.</p>
 <h2>SYNTAX</h2>
 <p> <code>qselect</code> [ <code>-help</code> ] [ <code>-l resource=val,&#8230;</code> ] [ <code>-pe pe_name,&#8230;</code> ] [ <code>-q wc_queue,&#8230;</code> ] [ <code>-s {r|p|s|z|hu|ho|hs|hj|ha|h}[+]</code> ] [ <code>-U user,&#8230;</code> ]</p>

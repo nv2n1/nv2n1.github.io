@@ -1,4 +1,5 @@
 ---
+
 title: "sstedc(3)"
 name: "sstedc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sstedc/"
 description: "sstedc.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sstedc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

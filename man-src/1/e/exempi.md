@@ -1,4 +1,5 @@
 ---
+
 title: "exempi(1)"
 name: "exempi"
 section: "1"
@@ -6,12 +7,7 @@ letter: "e"
 url: "/docs/linux/man/1-exempi/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- exempi - command line tool to manipulate XMP metadata
+exempi - command line tool to manipulate XMP metadata
 
 <h2>SYNTAX</h2>
 

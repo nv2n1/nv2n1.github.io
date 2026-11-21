@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_assign(3)"
 name: "curl_multi_assign"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_multi_assign/"
 description: "curl_multi_assign – set data to association with an internal socket"
 ---
 
-<h2>NAME</h2>
 <p> curl_multi_assign &#8211; set data to association with an internal socket</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>

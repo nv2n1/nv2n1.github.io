@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-who(1)"
 name: "doveadm-who"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-who/"
 description: "doveadm-who – Show who is logged in to the Dovecot server"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-who &#8211; Show who is logged in to the Dovecot server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>who&nbsp;<wbr></code>[<code>-1</code>] [<code>-a</code> <i>anvil_socket_path</i>] [<i>user</i>] [<i>ip</i>[<code>/</code><i>mask</i>]]</p>

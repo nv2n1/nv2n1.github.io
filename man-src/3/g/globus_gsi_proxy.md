@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_proxy(3)"
 name: "globus_gsi_proxy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_proxy/"
 description: "Globus GSI Proxy API –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus GSI Proxy API &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Activation</code> </p>

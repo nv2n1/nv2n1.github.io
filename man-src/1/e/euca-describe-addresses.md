@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-addresses(1)"
 name: "euca-describe-addresses"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-addresses/"
 description: "euca-describe-addresses – Show information about elastic IP addresses"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-addresses &#8211; Show information about elastic IP addresses</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-addresses [&#8211;show-empty-fields] [-U URL]</p>

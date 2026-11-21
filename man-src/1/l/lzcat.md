@@ -1,4 +1,5 @@
 ---
+
 title: "lzcat(1)"
 name: "lzcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lzcat/"
 description: "xz, unxz, xzcat, lzma, unlzma, lzcat – Compress or decompress .xz and .lzma files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xz, unxz, xzcat, lzma, unlzma, lzcat &#8211; Compress or decompress .xz and .lzma files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xz</code> [<i>option&#8230;</i>] [<i>file&#8230;</i>]</p>

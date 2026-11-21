@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs12_import(3)"
 name: "gnutls_pkcs12_import"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_pkcs12_import/"
 description: "gnutls_pkcs12_import – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_pkcs12_import &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>

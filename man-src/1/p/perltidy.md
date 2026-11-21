@@ -1,4 +1,5 @@
 ---
+
 title: "perltidy(1)"
 name: "perltidy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perltidy/"
 description: "perltidy – a perl script indenter and reformatter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perltidy &#8211; a perl script indenter and reformatter </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

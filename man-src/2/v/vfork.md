@@ -1,4 +1,5 @@
 ---
+
 title: "vfork(2)"
 name: "vfork"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-vfork/"
 description: "vfork – create a child process and block parent"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vfork &#8211; create a child process and block parent </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />

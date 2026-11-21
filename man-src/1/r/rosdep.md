@@ -1,4 +1,5 @@
 ---
+
 title: "rosdep(1)"
 name: "rosdep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rosdep/"
 description: "rosdep – rosdep command"
 ---
 
-<h2>NAME</h2>
 <p> rosdep &#8211; rosdep command</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rosdep</code> &lt;<i>command</i>&gt; [<i>options</i>] [<i>args</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_uuid(3)"
 name: "globus_uuid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_uuid/"
 description: "Globus UUID Generator –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus UUID Generator &#8211; </p>
 <p> UUIDs.</p>
 <h3>Functions</h3>

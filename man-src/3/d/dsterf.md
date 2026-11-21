@@ -1,4 +1,5 @@
 ---
+
 title: "dsterf(3)"
 name: "dsterf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsterf/"
 description: "dsterf.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dsterf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

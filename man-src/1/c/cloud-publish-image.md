@@ -1,4 +1,5 @@
 ---
+
 title: "cloud-publish-image(1)"
 name: "cloud-publish-image"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cloud-publish-image/"
 description: "cloud-publish-image – publish a cloud image"
 ---
 
-<h2>NAME</h2>
 <p> cloud-publish-image &#8211; publish a cloud image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cloud-publish-image [OPTIONS] ARCH IMAGE BUCKET</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_clone(3)"
 name: "memcached_clone"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_clone/"
 description: "memcached_clone – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_clone &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>

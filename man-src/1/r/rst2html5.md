@@ -1,4 +1,5 @@
 ---
+
 title: "rst2html5(1)"
 name: "rst2html5"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rst2html5/"
 description: "rst2html5 – convert reST documents to HTML 5"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rst2html5 &#8211; convert reST documents to HTML 5 </p>
 <h2>SYNOPSIS</h2>
 <p> rst2html5 [options] [&lt;source&gt; [&lt;destination&gt;]]</p>

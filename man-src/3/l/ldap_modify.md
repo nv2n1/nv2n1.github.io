@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_modify(3)"
 name: "ldap_modify"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_modify/"
 description: "ldap_modify_ext, ldap_modify_ext_s – Perform an LDAP modify operation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_modify_ext, ldap_modify_ext_s &#8211; Perform an LDAP modify operation </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

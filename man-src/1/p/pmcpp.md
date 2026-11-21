@@ -1,4 +1,5 @@
 ---
+
 title: "pmcpp(1)"
 name: "pmcpp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmcpp/"
 description: "pmcpp – simple preprocessor for the Performance Co-Pilot"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmcpp</code> &#8211; simple preprocessor for the Performance Co-Pilot</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmcpp</code> [<code>-Prs</code>] [<code>-D</code> <i>name</i>[=<i>value</i>] &#8230;] [<code>-I</code> <i>dir</i> &#8230;] [<i>infile</i>]</p>

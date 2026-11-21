@@ -1,4 +1,5 @@
 ---
+
 title: "geta_depth(3)"
 name: "geta_depth"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-geta_depth/"
 description: "getr_depth, getg_depth, getb_depth, geta_depth – Extract a color component from a color in a specified pixel format. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> getr_depth, getg_depth, getb_depth, geta_depth &#8211; Extract a color component from a color in a specified pixel format. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dc_client(1)"
 name: "dc_client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dc_client/"
 description: "dc_client – Distributed session cache client proxy"
 ---
 
-<h2>NAME</h2>
 <p> dc_client &#8211; Distributed session cache client proxy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dc_client</code> -server &lt;address&gt; [options]</p>

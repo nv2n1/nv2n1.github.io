@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_zone_soa(3)"
 name: "ldns_zone_soa"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_zone_soa/"
 description: "ldns_zone_rrs, ldns_zone_soa"
 ---
 
-<h2>NAME</h2>
 <p> ldns_zone_rrs, ldns_zone_soa </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

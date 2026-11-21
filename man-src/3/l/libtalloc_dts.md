@@ -1,4 +1,5 @@
 ---
+
 title: "libtalloc_dts(3)"
 name: "libtalloc_dts"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libtalloc_dts/"
 description: "libtalloc_dts – Chapter 3: Dynamic type system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libtalloc_dts &#8211; Chapter 3: Dynamic type system</p>
 <h2>Dynamic type system</h2>
 <p> Generic programming in the C language is very difficult. There is no inheritance nor templates known from object oriented languages. There is no dynamic type system. Therefore, generic programming in this language is usually done by type-casting a variable to void* and transferring it through a generic function to a specialized callback as illustrated on the next listing. </p>

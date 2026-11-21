@@ -1,4 +1,5 @@
 ---
+
 title: "db_replicate(1)"
 name: "db_replicate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db_replicate/"
 description: "db_replicate – Provide replication services"
 ---
 
-<h2>NAME</h2>
 <p> db_replicate &#8211; Provide replication services</p>
 <h2>SYNOPSIS</h2>
 <p> <code>db_replicate</code> [-MVv] [-h <i>home</i>] [-L <i>file</i>] [-P <i>password</i>] [-T <i>num-threads</i>] [-t <i>secs</i>]</p>

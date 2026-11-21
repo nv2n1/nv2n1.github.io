@@ -1,4 +1,5 @@
 ---
+
 title: "pgmtofs(1)"
 name: "pgmtofs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmtofs/"
 description: "pgmtofs – convert portable graymap to Usenix FaceSaver(tm) format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pgmtofs &#8211; convert portable graymap to Usenix FaceSaver(tm) format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmtofs</code> [<i>pgmfile</i>]</p>

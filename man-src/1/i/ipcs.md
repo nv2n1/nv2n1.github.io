@@ -1,4 +1,5 @@
 ---
+
 title: "ipcs(1)"
 name: "ipcs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipcs/"
 description: "ipcs – show information on IPC facilities"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipcs &#8211; show information on IPC facilities </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipcs</code> [options]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-maintd(1)"
 name: "mlmmj-maintd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mlmmj-maintd/"
 description: "mlmmj-maintd – maintenance for mlmmj maintained lists"
 ---
 
-<h2>NAME</h2>
 <p> mlmmj-maintd &#8211; maintenance for mlmmj maintained lists</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-maintd</code> [<i>-F</i>] <i>[-d</i> | <i>-L</i>] /path/to/dir</p>

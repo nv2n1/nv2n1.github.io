@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_prf(3)"
 name: "gnutls_prf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_prf/"
 description: "gnutls_prf – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_prf &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

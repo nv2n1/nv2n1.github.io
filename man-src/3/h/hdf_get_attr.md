@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_get_attr(3)"
 name: "hdf_get_attr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_get_attr/"
 description: "hdf_get_attr – Description: Input: Output: Returns:"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_get_attr &#8211; Description: Input: Output: Returns: </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

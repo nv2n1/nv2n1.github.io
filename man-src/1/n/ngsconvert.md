@@ -1,4 +1,5 @@
 ---
+
 title: "ngsconvert(1)"
 name: "ngsconvert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ngsconvert/"
 description: "sconvert – convert spice formats"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sconvert &#8211; convert spice formats </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sconvert fromtype fromfile totype tofile</code><br />

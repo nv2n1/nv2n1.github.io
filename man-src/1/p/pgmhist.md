@@ -1,4 +1,5 @@
 ---
+
 title: "pgmhist(1)"
 name: "pgmhist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmhist/"
 description: "pgmhist – print a histogram of the values in a portable graymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pgmhist &#8211; print a histogram of the values in a portable graymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmhist</code> [<i>pgmfile</i>]</p>

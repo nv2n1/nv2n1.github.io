@@ -1,4 +1,5 @@
 ---
+
 title: "git-show-branch(1)"
 name: "git-show-branch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-show-branch/"
 description: "git-show-branch – Show branches and their commits"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-show-branch &#8211; Show branches and their commits </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

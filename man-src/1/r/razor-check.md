@@ -1,4 +1,5 @@
 ---
+
 title: "razor-check(1)"
 name: "razor-check"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-razor-check/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- &quot;razor-check&quot; - Razor Filtering Agent 
+&quot;razor-check&quot; - Razor Filtering Agent 
 
 <h2>SYNOPSIS</h2>
 

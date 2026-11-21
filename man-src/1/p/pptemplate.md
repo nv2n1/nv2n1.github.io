@@ -1,4 +1,5 @@
 ---
+
 title: "pptemplate(1)"
 name: "pptemplate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pptemplate/"
 description: "pptemplate – script to generate Makefile.PL and PP file skeleton"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pptemplate &#8211; script to generate Makefile.PL and PP file skeleton </p>
 <h2>SYNOPSIS</h2>
 <pre>

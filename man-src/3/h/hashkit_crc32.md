@@ -1,4 +1,5 @@
 ---
+
 title: "hashkit_crc32(3)"
 name: "hashkit_crc32"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hashkit_crc32/"
 description: "hashkit_crc32 – libhashkit Documentation"
 ---
 
-<h2>NAME</h2>
 <p> hashkit_crc32 &#8211; libhashkit Documentation </p>
 <p> Various hash functions to use for calculating values for keys</p>
 <h2>SYNOPSIS</h2>

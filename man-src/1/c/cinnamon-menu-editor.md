@@ -1,4 +1,5 @@
 ---
+
 title: "cinnamon-menu-editor(1)"
 name: "cinnamon-menu-editor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cinnamon-menu-editor/"
 description: "cinnamon-menu-editor – Editor for the panel menu"
 ---
 
-<h2>NAME</h2>
 <p> cinnamon-menu-editor &#8211; Editor for the panel menu</p>
 <h2>SYNOPSIS</h2>
 <h2>DESCRIPTION</h2>

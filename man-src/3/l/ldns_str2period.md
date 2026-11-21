@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_str2period(3)"
 name: "ldns_str2period"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_str2period/"
 description: "ldns_str2period"
 ---
 
-<h2>NAME</h2>
 <p> ldns_str2period </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

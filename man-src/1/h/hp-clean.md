@@ -1,4 +1,5 @@
 ---
+
 title: "hp-clean(1)"
 name: "hp-clean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hp-clean/"
 description: "hp-clean – Printer Printhead Cleaning Utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hp-clean &#8211; Printer Printhead Cleaning Utility </p>
 <h2>DESCRIPTION</h2>
 <p> Printhead cleaning utility for HPLIP supported inkjet printers.</p>

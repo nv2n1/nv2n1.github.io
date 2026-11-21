@@ -1,4 +1,5 @@
 ---
+
 title: "gmtwhich(1)"
 name: "gmtwhich"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtwhich/"
 description: "gmtwhich – Find full path to specified files"
 ---
 
-<h2>NAME</h2>
 <p> gmtwhich &#8211; Find full path to specified files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtwhich</code> <i>files</i> [ ] [ ] [ ] [ [<i>level</i>] ] </p>

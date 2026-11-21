@@ -1,4 +1,5 @@
 ---
+
 title: "icc2ps(1)"
 name: "icc2ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icc2ps/"
 description: "icc2ps – little cms PostScript converter."
 ---
 
-<h2>NAME</h2>
 <p> icc2ps &#8211; little cms PostScript converter.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>icc2ps</code> [<i>options</i>]</p>

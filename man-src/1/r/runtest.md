@@ -1,4 +1,5 @@
 ---
+
 title: "runtest(1)"
 name: "runtest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-runtest/"
 description: "runtest – DejaGnu test driver"
 ---
 
-<h2>NAME</h2>
 <p> runtest &#8211; DejaGnu test driver</p>
 <h2>SYNOPSIS</h2>
 <p> <code>runtest</code> [OPTION]&#8230;</p>

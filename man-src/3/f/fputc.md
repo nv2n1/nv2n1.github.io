@@ -1,4 +1,5 @@
 ---
+
 title: "fputc(3)"
 name: "fputc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fputc/"
 description: "fputc, fputs, putc, putchar, puts – output of characters and strings"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fputc, fputs, putc, putchar, puts &#8211; output of characters and strings </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

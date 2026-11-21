@@ -1,4 +1,5 @@
 ---
+
 title: "gdbus-codegen(1)"
 name: "gdbus-codegen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdbus-codegen/"
 description: "gdbus-codegen – D-Bus code and documentation generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdbus-codegen &#8211; D-Bus code and documentation generator </p>
 <h2>SYNOPSIS</h2>
 <dl>

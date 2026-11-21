@@ -1,4 +1,5 @@
 ---
+
 title: "load_ibk(3)"
 name: "load_ibk"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_ibk/"
 description: "load_ibk – Reads in a .IBK patch definition file for the Adlib driver. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> load_ibk &#8211; Reads in a .IBK patch definition file for the Adlib driver. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

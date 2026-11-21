@@ -1,4 +1,5 @@
 ---
+
 title: "nsgmls(1)"
 name: "nsgmls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nsgmls/"
 description: "onsgmls – An SGML/XML parser and validator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> onsgmls &#8211; An SGML/XML parser and validator </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "pnmcut(1)"
 name: "pnmcut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmcut/"
 description: "pnmcut – cut a rectangle out of a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmcut &#8211; cut a rectangle out of a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmcut</code> [<code>-left </code><i>leftcol</i>] [<code>-right </code><i>rightcol</i>] [<code>-top </code><i>toprow</i>] [<code>-bottom </code><i>bottomrow</i>] [<code>-width </code><i>width</i>] [<code>-height </code><i>height</i>] [<code>-pad</code>] [<code>-verbose</code>] [ <i>left top width height</i> ] [<i>pnmfile</i>] </p>

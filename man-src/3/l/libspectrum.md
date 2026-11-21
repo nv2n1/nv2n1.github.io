@@ -1,4 +1,5 @@
 ---
+
 title: "libspectrum(3)"
 name: "libspectrum"
 section: "3"
@@ -6,10 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libspectrum/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- libspectrum - Sinclair ZX Spectrum support library 
+libspectrum - Sinclair ZX Spectrum support library 
 
 <h2>DESCRIPTION</h2>
 

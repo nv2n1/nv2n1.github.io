@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-dhcp-options(1)"
 name: "euca-describe-dhcp-options"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-dhcp-options/"
 description: "euca-describe-dhcp-options – Show information about VPC DHCP option sets"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-dhcp-options &#8211; Show information about VPC DHCP option sets</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-dhcp-options [&#8211;show-empty-fields] [-U URL]</p>

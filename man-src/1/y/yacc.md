@@ -1,4 +1,5 @@
 ---
+
 title: "yacc(1)"
 name: "yacc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yacc/"
 description: "Yacc – an LALR(1) parser generator"
 ---
 
-<h2>NAME</h2>
 <p> Yacc &#8211; an LALR(1) parser generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yacc [ -dgilrtv ] [ -b</code> <i>file_prefix</i> <code>] [ -p</code> <i>symbol_prefix</i> <code>]</code> <i>filename</i></p>

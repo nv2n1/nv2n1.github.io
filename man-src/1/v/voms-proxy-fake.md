@@ -1,4 +1,5 @@
 ---
+
 title: "voms-proxy-fake(1)"
 name: "voms-proxy-fake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-voms-proxy-fake/"
 description: "voms-proxy-fake – create a proxy with VOMS extensions"
 ---
 
-<h2>NAME</h2>
 <p> voms-proxy-fake &#8211; create a proxy with VOMS extensions</p>
 <h2>SYNOPSIS</h2>
 <dl>

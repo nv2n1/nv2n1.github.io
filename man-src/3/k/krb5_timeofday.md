@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_timeofday(3)"
 name: "krb5_timeofday"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_timeofday/"
 description: "krb5_timeofday krb5_set_real_time krb5_us_timeofday krb5_format_time krb5_string_to_deltat – Kerberos 5 time handling functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_timeofday</code> <code>krb5_set_real_time</code> <code>krb5_us_timeofday</code> <code>krb5_format_time</code> <code>krb5_string_to_deltat</code> &#8211; Kerberos 5 time handling functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

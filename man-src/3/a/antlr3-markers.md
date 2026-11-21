@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-markers(3)"
 name: "antlr3-markers"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-markers/"
 description: "ANTLR3_COMMON_TREE_NODE_STREAM_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_COMMON_TREE_NODE_STREAM_struct &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontreenodestream.h">antlr3commontreenodestream.h</a>&gt;</p>

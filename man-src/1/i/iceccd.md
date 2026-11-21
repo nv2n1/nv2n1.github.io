@@ -1,4 +1,5 @@
 ---
+
 title: "iceccd(1)"
 name: "iceccd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-iceccd/"
 description: "iceccd – Icecream daemon"
 ---
 
-<h2>NAME</h2>
 <p> iceccd &#8211; Icecream daemon</p>
 <h2>SYNOPSIS</h2>
 <dl>

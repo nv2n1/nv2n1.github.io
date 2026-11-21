@@ -1,4 +1,5 @@
 ---
+
 title: "docker-trust-key(1)"
 name: "docker-trust-key"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-trust-key/"
 description: "docker-trust-key – Manage keys for signing Docker images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-trust-key &#8211; Manage keys for signing Docker images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker trust key</code> </p>

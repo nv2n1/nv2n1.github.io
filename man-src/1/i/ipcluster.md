@@ -1,4 +1,5 @@
 ---
+
 title: "ipcluster(1)"
 name: "ipcluster"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipcluster/"
 description: "ipcluster – start a cluster for IPython parallel computing"
 ---
 
-<h2>NAME</h2>
 <p> <code>ipcluster &#8211; start a cluster for IPython parallel computing </code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipcluster subcommand</code> [<i>options</i>] </p>

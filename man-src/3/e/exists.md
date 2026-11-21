@@ -1,4 +1,5 @@
 ---
+
 title: "exists(3)"
 name: "exists"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exists/"
 description: "exists – Shortcut version of file_exists() for normal files. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exists &#8211; Shortcut version of file_exists() for normal files. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

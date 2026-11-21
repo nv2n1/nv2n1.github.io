@@ -1,4 +1,5 @@
 ---
+
 title: "riparrange(1)"
 name: "riparrange"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-riparrange/"
 description: "riparrange – FLAC file organiser"
 ---
 
-<h2>NAME</h2>
 <p> riparrange &#8211; FLAC file organiser</p>
 <h2>SYNOPSIS</h2>
 <p> <code>riparrange [-m|-c|-h] [-f] [-v] [-w] [-o format] &lt;file.flac&gt;</code> </p>

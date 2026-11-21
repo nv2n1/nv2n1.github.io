@@ -1,4 +1,5 @@
 ---
+
 title: "openbox(1)"
 name: "openbox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-openbox/"
 description: "openbox — A minimalistic, highly configurable, next generation window manager with extensive standards support."
 ---
 
-<h2>NAME</h2>
 <p> openbox &#8212; A minimalistic, highly configurable, next generation window manager with extensive standards support.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>openbox</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<code>&#8211;replace</code>] [<code>&#8211;reconfigure</code>] [<code>&#8211;restart</code>] [<code>&#8211;sm-disable</code>] [<code>&#8211;sync</code>] [<code>&#8211;debug</code>] [<code>&#8211;debug-focus</code>] [<code>&#8211;debug-xinerama</code>]</p>

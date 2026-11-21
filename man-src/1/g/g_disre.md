@@ -1,4 +1,5 @@
 ---
+
 title: "g_disre(1)"
 name: "g_disre"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_disre/"
 description: "g_disre – analyzes distance restraints"
 ---
 
-<h2>NAME</h2>
 <p> g_disre &#8211; analyzes distance restraints </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

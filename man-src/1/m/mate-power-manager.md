@@ -1,4 +1,5 @@
 ---
+
 title: "mate-power-manager(1)"
 name: "mate-power-manager"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-power-manager/"
 description: "mate-power-manager – mate power manager userspace daemon"
 ---
 
-<h2>NAME</h2>
 <p> mate-power-manager &#8211; mate power manager userspace daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-power-manager</code> [ <code>&#8211;verbose</code> ] [ <code>&#8211;debug</code> ] [ <code>&#8211;help</code> ]</p>

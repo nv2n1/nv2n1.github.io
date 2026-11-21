@@ -1,4 +1,5 @@
 ---
+
 title: "cdxa2mpeg(1)"
 name: "cdxa2mpeg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cdxa2mpeg/"
 description: "cdxa2mpeg – manual page for cdxa2mpeg 0.7.24"
 ---
 
-<h2>NAME</h2>
 <p> cdxa2mpeg &#8211; manual page for cdxa2mpeg 0.7.24</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cdxa2mpeg</code> [<i>OPTION</i>&#8230;] <i>&lt;input-cdxa-file&gt; </i>[<i>&lt;output-mpeg-file&gt;</i>]</p>

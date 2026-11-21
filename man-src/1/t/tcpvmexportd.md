@@ -1,4 +1,5 @@
 ---
+
 title: "tcpvmexportd(1)"
 name: "tcpvmexportd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcpvmexportd/"
 description: "tcpvmexportd – transcode PVM3 export interface"
 ---
 
-<h2>NAME</h2>
 <p> tcpvmexportd &#8211; transcode PVM3 export interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tcpvmexportd</code> <code>-s|-m</code> [ <code>options</code> ]</p>

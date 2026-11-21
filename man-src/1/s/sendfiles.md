@@ -1,4 +1,5 @@
 ---
+
 title: "sendfiles(1)"
 name: "sendfiles"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sendfiles/"
 description: "sendfiles – send multiple files via a MIME message"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sendfiles &#8211; send multiple files via a MIME message </p>
 <h2>SYNOPSIS</h2>
 <dl>

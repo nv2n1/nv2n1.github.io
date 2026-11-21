@@ -1,4 +1,5 @@
 ---
+
 title: "dgtsvx(3)"
 name: "dgtsvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgtsvx/"
 description: "dgtsvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dgtsvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-container-prune(1)"
 name: "docker-container-prune"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-container-prune/"
 description: "docker-container-prune – Remove all stopped containers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-container-prune &#8211; Remove all stopped containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container prune [OPTIONS]</code> </p>

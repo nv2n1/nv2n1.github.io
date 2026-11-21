@@ -1,4 +1,5 @@
 ---
+
 title: "elektra-kdb(3)"
 name: "elektra-kdb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-elektra-kdb/"
 description: "KDB :: Low Level Methods –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> KDB :: Low Level Methods &#8211; </p>
 <p> General methods to access the Key database.</p>
 <h3>Functions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_ecp_fwd_to_rev(3)"
 name: "ieee1284_ecp_fwd_to_rev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ieee1284_ecp_fwd_to_rev/"
 description: "ieee1284_ecp_fwd_to_rev, ieee1284_ecp_rev_to_fwd – ECP direction switching"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ieee1284_ecp_fwd_to_rev, ieee1284_ecp_rev_to_fwd &#8211; ECP direction switching </p>
 <h2>SYNOPSIS</h2>
 <dl>

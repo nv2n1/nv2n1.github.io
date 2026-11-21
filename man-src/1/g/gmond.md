@@ -1,4 +1,5 @@
 ---
+
 title: "gmond(1)"
 name: "gmond"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmond/"
 description: "gmond – manual page for Ganglia Monitor Daemon"
 ---
 
-<h2>NAME</h2>
 <p> gmond &#8211; manual page for Ganglia Monitor Daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmond</code> [<i>OPTIONS</i>]&#8230;</p>

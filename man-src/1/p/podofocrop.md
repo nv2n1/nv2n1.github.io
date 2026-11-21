@@ -1,4 +1,5 @@
 ---
+
 title: "podofocrop(1)"
 name: "podofocrop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-podofocrop/"
 description: "podofocrop – crop all pages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> podofocrop &#8211; crop all pages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofocrop</code> input.pdf output.pdf </p>

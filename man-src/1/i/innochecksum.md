@@ -1,4 +1,5 @@
 ---
+
 title: "innochecksum(1)"
 name: "innochecksum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-innochecksum/"
 description: "innochecksum – offline InnoDB file checksum utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> innochecksum &#8211; offline InnoDB file checksum utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "twinwave(1)"
 name: "twinwave"
 section: "1"
@@ -6,11 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-twinwave/"
 ---
 
-<h2>NAME</h2>
-
- 
-
- twinwave - Wraps multiple GTKWave sessions in one window or two synchronized windows
+twinwave - Wraps multiple GTKWave sessions in one window or two synchronized windows
 
 <h2>SYNTAX</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "swig(1)"
 name: "swig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-swig/"
 description: "swig – Simplified Wrapper and Interface Generator"
 ---
 
-<h2>NAME</h2>
 <p> swig &#8211; Simplified Wrapper and Interface Generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>swig</code> [<i>options</i>]<i> file</i> </p>

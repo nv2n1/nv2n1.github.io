@@ -1,4 +1,5 @@
 ---
+
 title: "perlvmesa(1)"
 name: "perlvmesa"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlvmesa/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlvmesa - building and installing Perl for VM/ESA. 
+perlvmesa - building and installing Perl for VM/ESA. 
 
 <h2>SYNOPSIS</h2>
 

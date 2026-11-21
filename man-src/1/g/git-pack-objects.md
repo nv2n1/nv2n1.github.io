@@ -1,4 +1,5 @@
 ---
+
 title: "git-pack-objects(1)"
 name: "git-pack-objects"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-pack-objects/"
 description: "git-pack-objects – Create a packed archive of objects"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-pack-objects &#8211; Create a packed archive of objects </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

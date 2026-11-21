@@ -1,4 +1,5 @@
 ---
+
 title: "smokeping(1)"
 name: "smokeping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smokeping/"
 description: "smokeping – Commandline tool for SmokePing"
 ---
 
-<h2 class="name">NAME</h2>
 <p> smokeping &#8211; Commandline tool for SmokePing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>smokeping</code> [ <code>&#8211;email</code> | <code>&#8211;makepod</code> | <code>&#8211;version</code> | <code>&#8211;restart</code> ] </p>

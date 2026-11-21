@@ -1,4 +1,5 @@
 ---
+
 title: "pod2usage(1)"
 name: "pod2usage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pod2usage/"
 description: "pod2usage – print usage messages from embedded pod docs in files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pod2usage &#8211; print usage messages from embedded pod docs in files </p>
 <h2>SYNOPSIS</h2>
 <dl>

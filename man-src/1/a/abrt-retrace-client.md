@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-retrace-client(1)"
 name: "abrt-retrace-client"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-retrace-client/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-retrace-client - Handles the communication with Retrace server. 
+abrt-retrace-client - Handles the communication with Retrace server. 
 
 <h2>SYNOPSIS</h2>
 

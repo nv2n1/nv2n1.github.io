@@ -1,4 +1,5 @@
 ---
+
 title: "freehdl-gennodes(1)"
 name: "freehdl-gennodes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freehdl-gennodes/"
 description: "FreeHDL-GENNODES – Abstract syntax tree generator used by the VHDL compiler/simulator FreeHDL."
 ---
 
-<h2>NAME</h2>
 <p> FreeHDL-GENNODES &#8211; Abstract syntax tree generator used by the VHDL compiler/simulator FreeHDL.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>freehdl-gennodes</code> CMD CHUNK IN-FILE OUT-FILE</p>

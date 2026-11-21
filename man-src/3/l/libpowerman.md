@@ -1,4 +1,5 @@
 ---
+
 title: "libpowerman(3)"
 name: "libpowerman"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libpowerman/"
 description: "libpowerman – PowerMan Client API"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libpowerman &#8211; PowerMan Client API</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

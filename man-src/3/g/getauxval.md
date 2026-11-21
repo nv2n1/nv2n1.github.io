@@ -1,4 +1,5 @@
 ---
+
 title: "getauxval(3)"
 name: "getauxval"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getauxval/"
 description: "getauxval – retrieve a value from the auxiliary vector"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getauxval &#8211; retrieve a value from the auxiliary vector </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

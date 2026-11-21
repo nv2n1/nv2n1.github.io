@@ -1,4 +1,5 @@
 ---
+
 title: "gvfs-monitor-file(1)"
 name: "gvfs-monitor-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvfs-monitor-file/"
 description: "gvfs-monitor-file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gvfs-monitor-file </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-monitor-file</code> has been deprecated and it is redirected to <code>gio monitor</code>.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "report-gtk(1)"
 name: "report-gtk"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-report-gtk/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- report-gtk - GUI tool to analyze and report ABRT problems 
+report-gtk - GUI tool to analyze and report ABRT problems 
 
 <h2>SYNOPSIS</h2>
 

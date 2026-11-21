@@ -1,4 +1,5 @@
 ---
+
 title: "euca-disable-vgw-route-propagation(1)"
 name: "euca-disable-vgw-route-propagation"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-disable-vgw-route-propagation/"
 description: "euca-disable-vgw-route-propagation – Make a VPC route table stop obtaining routes from a virtual private gateway"
 ---
 
-<h2>NAME</h2>
 <p> euca-disable-vgw-route-propagation &#8211; Make a VPC route table stop obtaining routes from a virtual private gateway</p>
 <h2>SYNOPSIS</h2>
 <p> euca-disable-vgw-route-propagation <code>&#8211;route-table</code> RTABLE <code>&#8211;vgw</code> VGATEWAY</p>

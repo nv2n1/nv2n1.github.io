@@ -1,4 +1,5 @@
 ---
+
 title: "youtube-dl(1)"
 name: "youtube-dl"
 section: "1"
@@ -6,12 +7,7 @@ letter: "y"
 url: "/docs/linux/man/1-youtube-dl/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- youtube-dl - download videos from youtube.com or other video platforms 
+youtube-dl - download videos from youtube.com or other video platforms 
 
 <h2>SYNOPSIS</h2>
 

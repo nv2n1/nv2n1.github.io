@@ -1,4 +1,5 @@
 ---
+
 title: "get_config_float(3)"
 name: "get_config_float"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_config_float/"
 description: "get_config_float – Retrieves a float from the configuration file. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_config_float &#8211; Retrieves a float from the configuration file. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

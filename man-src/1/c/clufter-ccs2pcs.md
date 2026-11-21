@@ -1,4 +1,5 @@
 ---
+
 title: "clufter-ccs2pcs(1)"
 name: "clufter-ccs2pcs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clufter-ccs2pcs/"
 description: "clufter – ccs2pcs"
 ---
 
-<h2>NAME</h2>
 <p> clufter &#8211; ccs2pcs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs2pcs </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]<br />

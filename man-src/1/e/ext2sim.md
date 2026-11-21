@@ -1,4 +1,5 @@
 ---
+
 title: "ext2sim(1)"
 name: "ext2sim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ext2sim/"
 description: "ext2sim – convert hierarchical"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ext2sim &#8211; convert hierarchical <i></p>
 <p><a href="/docs/linux/man/5-ext/">ext</a></i>(5) extracted-circuit files to flat <i><a href="/docs/linux/man/5-sim/">sim</a></i>(5) files</p>
 <h2>SYNOPSIS</h2>

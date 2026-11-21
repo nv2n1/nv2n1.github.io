@@ -1,4 +1,5 @@
 ---
+
 title: "ogrtindex(1)"
 name: "ogrtindex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ogrtindex/"
 description: "ogrtindex – ogrtindex creates a tileindex"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ogrtindex &#8211; ogrtindex creates a tileindex </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

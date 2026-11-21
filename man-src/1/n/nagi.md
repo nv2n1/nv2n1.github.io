@@ -1,4 +1,5 @@
 ---
+
 title: "nagi(1)"
 name: "nagi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nagi/"
 description: "nagi – Sierra Online ™ AGI game interpreter"
 ---
 
-<h2>NAME</h2>
 <p> nagi &#8211; Sierra Online &#8482; AGI game interpreter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nagi</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "genhtml(1)"
 name: "genhtml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-genhtml/"
 description: "genhtml – Generate HTML view from LCOV coverage data files"
 ---
 
-<h2>NAME</h2>
 <p> genhtml &#8211; Generate HTML view from LCOV coverage data files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>genhtml</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;version</code>]</p>

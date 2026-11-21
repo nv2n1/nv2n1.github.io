@@ -1,4 +1,5 @@
 ---
+
 title: "bluetooth-properties(1)"
 name: "bluetooth-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bluetooth-properties/"
 description: "bluetooth-properties – GTK dialog for managing properties of the Linux Bluetooth stack"
 ---
 
-<h2>NAME</h2>
 <p> bluetooth-properties &#8211; GTK dialog for managing properties of the Linux Bluetooth stack</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bluetooth-properties</code></p>

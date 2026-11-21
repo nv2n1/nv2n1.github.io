@@ -1,4 +1,5 @@
 ---
+
 title: "mrftopbm(1)"
 name: "mrftopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrftopbm/"
 description: "mrftopbm – convert an MRF image to PBM format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mrftopbm &#8211; convert an MRF image to PBM format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mrftopbm</code> [ <code>-a</code> ] [ <i>input.mrf</i> ] </p>

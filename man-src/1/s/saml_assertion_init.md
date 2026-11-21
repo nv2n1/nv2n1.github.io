@@ -1,4 +1,5 @@
 ---
+
 title: "saml_assertion_init(1)"
 name: "saml_assertion_init"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-saml_assertion_init/"
 description: "saml_assertion_init – ARC client to voms saml service, or arc aa service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> saml_assertion_init &#8211; ARC client to voms saml service, or arc aa service</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>saml_assertion_init</code> command is a prototype client which is used for sending an attribute query request to a voms saml service or arc aa service. </p>

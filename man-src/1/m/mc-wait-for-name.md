@@ -1,4 +1,5 @@
 ---
+
 title: "mc-wait-for-name(1)"
 name: "mc-wait-for-name"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mc-wait-for-name/"
 description: "mc-wait-for-name – run until a D-Bus name appears on the session bus"
 ---
 
-<h2>NAME</h2>
 <p> mc-wait-for-name &#8211; run until a D-Bus name appears on the session bus</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mc-wait-for-name</code> <i>WELL-KNOWN-NAME</i> </p>

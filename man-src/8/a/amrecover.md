@@ -1,4 +1,5 @@
 ---
+
 title: "amrecover(8)"
 name: "amrecover"
 section: "8"
@@ -6,8 +7,9 @@ letter: "a"
 url: "/docs/linux/man/8-amrecover/"
 description: "amrecover – Amanda index database browser"
 ---
+
 <p>amrecover &#8211; Amanda index database browser </p>
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dt><code>amrecover</code> [-s&nbsp;<wbr><i>index-server</i>] [-t&nbsp;<wbr><i>tape-server</i>] [-d&nbsp;<wbr><i>tape-device</i>] [-h&nbsp;<wbr><i>hostname</i>] [<code>-o</code>&nbsp;<wbr><i>configoption</i>...] [-C&nbsp;<wbr><i>config</i>] </dt>
 </dl>

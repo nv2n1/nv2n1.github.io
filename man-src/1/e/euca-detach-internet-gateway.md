@@ -1,4 +1,5 @@
 ---
+
 title: "euca-detach-internet-gateway(1)"
 name: "euca-detach-internet-gateway"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-detach-internet-gateway/"
 description: "euca-detach-internet-gateway – Detach an Internet gateway from a VPC"
 ---
 
-<h2>NAME</h2>
 <p> euca-detach-internet-gateway &#8211; Detach an Internet gateway from a VPC</p>
 <h2>SYNOPSIS</h2>
 <p> euca-detach-internet-gateway <code>-c</code> VPC [&#8211;show-empty-fields] [-U URL]</p>

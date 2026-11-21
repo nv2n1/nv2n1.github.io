@@ -1,4 +1,5 @@
 ---
+
 title: "ha_logger(1)"
 name: "ha_logger"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ha_logger/"
 description: "ha_logger – Log a message to files/syslog through the HA Logging Daemon"
 ---
 
-<h2>NAME</h2>
 <p> <code>ha_logger </code> &#8211; Log a message to files/syslog through the HA Logging Daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ha_logger</code> [-D ha-log/ha-debug] [-t tag] [message &#8230;]</p>

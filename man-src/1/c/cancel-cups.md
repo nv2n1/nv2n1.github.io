@@ -1,4 +1,5 @@
 ---
+
 title: "cancel-cups(1)"
 name: "cancel-cups"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cancel-cups/"
 description: "cancel – cancel jobs"
 ---
 
-<h2>NAME</h2>
 <p> cancel &#8211; cancel jobs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cancel</code> [ -E ] [ -U <i>username</i> ] [ -a ] [ -h <i>hostname[:port]</i> ] [ -u <i>username</i> ] [ <i>id</i> ] [ <i>destination</i> ] [ <i>destination-id</i> ]</p>

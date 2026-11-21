@@ -1,4 +1,5 @@
 ---
+
 title: "djvudigital(1)"
 name: "djvudigital"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-djvudigital/"
 description: "djvudigital – creates DjVu files from PS or PDF files."
 ---
 
-<h2>NAME</h2>
 <p> djvudigital &#8211; creates DjVu files from PS or PDF files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>djvudigital [</code><i>options</i><code>] </code><i>inputfile</i><code> [</code><i>outputfile</i><code>]</code> </p>

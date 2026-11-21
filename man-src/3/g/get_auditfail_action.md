@@ -1,4 +1,5 @@
 ---
+
 title: "get_auditfail_action(3)"
 name: "get_auditfail_action"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_auditfail_action/"
 description: "get_auditfail_action – Get failure_action tunable value"
 ---
 
-<h2>NAME</h2>
 <p> get_auditfail_action &#8211; Get failure_action tunable value</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libaudit.h&gt; </p>

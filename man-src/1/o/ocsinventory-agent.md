@@ -1,4 +1,5 @@
 ---
+
 title: "ocsinventory-agent(1)"
 name: "ocsinventory-agent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ocsinventory-agent/"
 description: "ocsinventory-agent – Unified client for OCS-Inventory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ocsinventory-agent &#8211; Unified client for OCS-Inventory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocsinventory-agent</code> [&nbsp;<wbr><code>-fhilpruw</code>&nbsp;<wbr>] [&nbsp;<wbr><i>&#8211;server server</i>&nbsp;<wbr>|&nbsp;<wbr><i>&#8211;local&nbsp;<wbr>/tmp</i>&nbsp;<wbr>]&#8230;</p>

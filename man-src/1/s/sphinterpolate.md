@@ -1,4 +1,5 @@
 ---
+
 title: "sphinterpolate(1)"
 name: "sphinterpolate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sphinterpolate/"
 description: "sphinterpolate – Spherical gridding in tension of data on a sphere"
 ---
 
-<h2>NAME</h2>
 <p> sphinterpolate &#8211; Spherical gridding in tension of data on a sphere</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sphinterpolate</code> [ <i>table</i> ] <i>grdfile</i> [ <i>increment</i> ] [ <i>mode</i>[/<i>options</i>] ] [ <i>region</i> ] [ [<i>level</i>] ] [ ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

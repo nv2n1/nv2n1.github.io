@@ -1,4 +1,5 @@
 ---
+
 title: "kalzium(1)"
 name: "kalzium"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kalzium/"
 description: "kalzium – A KDE based chemistry teaching tool"
 ---
 
-<h2>NAME</h2>
 <p> kalzium &#8211; A KDE based chemistry teaching tool</p>
 <h2>SYNOPSIS</h2>
 <dl>

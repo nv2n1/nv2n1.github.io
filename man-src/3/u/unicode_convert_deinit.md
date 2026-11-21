@@ -1,4 +1,5 @@
 ---
+
 title: "unicode_convert_deinit(3)"
 name: "unicode_convert_deinit"
 section: "3"
@@ -6,8 +7,9 @@ letter: "u"
 url: "/docs/linux/man/3-unicode_convert_deinit/"
 description: "unicode_u_ucs4_native, unicode_u_ucs2_native, unicode_convert_init, unicode_convert, unicode_convert_deinit, unicode_convert_tocbuf_init, unicode_convert_tou_init, unicode_convert_fromu_init, unico..."
 ---
+
 <p>unicode_u_ucs4_native, unicode_u_ucs2_native, unicode_convert_init, unicode_convert, unicode_convert_deinit, unicode_convert_tocbuf_init, unicode_convert_tou_init, unicode_convert_fromu_init, unicode_convert_uc, unicode_convert_tocbuf_toutf8_init, unicode_convert_tocbuf_fromutf8_init, unicode_convert_toutf8, unicode_convert_fromutf8, unicode_convert_tobuf, unicode_convert_tou_tobuf, unicode_convert_fromu_tobuf &#8211; unicode character set conversion </p>
-<h2>SYNOPSIS</h2>
+
 <pre><code>#include &lt;courier-unicode.h&gt;
             extern const char unicode_u_ucs4_native[];
             extern const char unicode_u_ucs2_native[];

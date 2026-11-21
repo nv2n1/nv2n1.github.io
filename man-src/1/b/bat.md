@@ -1,4 +1,5 @@
 ---
+
 title: "bat(1)"
 name: "bat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bat/"
 description: "bat – Bacula Administration Tool Console"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;<wbr>bat &#8211; Bacula Administration Tool Console </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bat</code> [options] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rascat(1)"
 name: "rascat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rascat/"
 description: "Rascat – concatenate, convert raster files"
 ---
 
-<h2>NAME</h2>
 <p> Rascat &#8211; concatenate, convert raster files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rascat</code> [ <code>-help </code> ] [ <code>-ifmt</code><i> format</i> ] [ <code>-ira</code><i> algorithm</i> ] [ <code>-ofmt</code><i> format</i> ] [ <code>-output</code><i> file</i> ] [ <code>-resolution</code><i> resolution</i> ] [ <code>-rgbscale</code><i> scale-factor</i> ] [ <code>-scale</code><i> scale-factor</i> ] [ <code>-verbose</code> ] [ <code>-Version</code> ] [ <code>-window</code><i> nx ny x y</i> ] [ <code>-pal</code><i> palette_file</i> ] [ <code>&#8211;</code><i>|</i><code>file&#8230;</code> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "zbarimg(1)"
 name: "zbarimg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zbarimg/"
 description: "zbarimg – scan and decode bar codes from image file(s)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zbarimg &#8211; scan and decode bar codes from image file(s) </p>
 <h2>SYNOPSIS</h2>
 <dl>

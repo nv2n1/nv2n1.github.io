@@ -1,4 +1,5 @@
 ---
+
 title: "radzap(1)"
 name: "radzap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-radzap/"
 description: "radzap – remove rogue entries from the active sessions database"
 ---
 
-<h2>NAME</h2>
 <p> radzap &#8211; remove rogue entries from the active sessions database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>radzap</code> [<code>-d</code> <i>raddb_directory</i>] [<code>-h</code>] [<code>-N</code> <i>nas_ip_address</i>] [<code>-P</code> <i>nas_port</i>] [<code>-u</code> <i>user</i>] [<code>-U</code> <i>user</i>] [<code>-x</code>] <i>server[:port] secret</i></p>

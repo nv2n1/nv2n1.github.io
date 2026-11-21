@@ -1,4 +1,5 @@
 ---
+
 title: "krb524_convert_creds_kdc_ccache(3)"
 name: "krb524_convert_creds_kdc_ccache"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb524_convert_creds_kdc_ccache/"
 description: "Heimdal Kerberos 4 compatiblity functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Heimdal Kerberos 4 compatiblity functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />

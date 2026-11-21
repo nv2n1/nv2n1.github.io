@@ -1,4 +1,5 @@
 ---
+
 title: "autoscan(1)"
 name: "autoscan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-autoscan/"
 description: "autoscan – Generate a preliminary configure.ac"
 ---
 
-<h2 class="name">NAME</h2>
 <p> autoscan &#8211; Generate a preliminary configure.ac </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autoscan</code> [<i>,OPTION/</i>]&#8230; [<i>,SRCDIR/</i>]</p>

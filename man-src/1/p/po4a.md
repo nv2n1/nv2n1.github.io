@@ -1,4 +1,5 @@
 ---
+
 title: "po4a(1)"
 name: "po4a"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-po4a/"
 description: "po4a – update both the po files and translated documents in one shot"
 ---
 
-<h2 class="name">NAME</h2>
 <p> po4a &#8211; update both the po files and translated documents in one shot </p>
 <h2>SYNOPSIS</h2>
 <p> po4a [options] &lt;config_file&gt;</p>

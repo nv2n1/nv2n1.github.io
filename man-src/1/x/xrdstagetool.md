@@ -1,4 +1,5 @@
 ---
+
 title: "xrdstagetool(1)"
 name: "xrdstagetool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xrdstagetool/"
 description: "xrdstagetool – stage one or more files"
 ---
 
-<h2>NAME</h2>
 <p> xrdstagetool &#8211; stage one or more files</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

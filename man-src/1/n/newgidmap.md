@@ -1,4 +1,5 @@
 ---
+
 title: "newgidmap(1)"
 name: "newgidmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-newgidmap/"
 description: "newgidmap – set the gid mapping of a user namespace"
 ---
 
-<h2 class="name">NAME</h2>
 <p> newgidmap &#8211; set the gid mapping of a user namespace </p>
 <h2>SYNOPSIS</h2>
 <dl>

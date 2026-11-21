@@ -1,4 +1,5 @@
 ---
+
 title: "vsscanf(3)"
 name: "vsscanf"
 section: "3"
@@ -6,8 +7,9 @@ letter: "v"
 url: "/docs/linux/man/3-vsscanf/"
 description: "scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf – input format conversion"
 ---
+
 <p>scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf &#8211; input format conversion </p>
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  #include &lt;stdio.h&gt; 
  int scanf(const char *  format  , ...); 

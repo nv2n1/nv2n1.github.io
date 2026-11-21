@@ -1,4 +1,5 @@
 ---
+
 title: "usrp_n2xx_simple_net_burner(1)"
 name: "usrp_n2xx_simple_net_burner"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-usrp_n2xx_simple_net_burner/"
 description: "usrp_n2xx_simple_net_burner – USRP N-Series FPGA/Firmware Burner"
 ---
 
-<h2>NAME</h2>
 <p> usrp_n2xx_simple_net_burner &#8211; USRP N-Series FPGA/Firmware Burner</p>
 <h2>DESCRIPTION</h2>
 <p> Burn firmware and FPGA images onto connected USRP N-Series devices. The program takes an IP address as an argument, queries the USRP device to identify which model and revision it is, and burns the appropriate images over Ethernet.</p>

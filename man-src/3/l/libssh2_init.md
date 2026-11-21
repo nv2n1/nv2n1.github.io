@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_init(3)"
 name: "libssh2_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_init/"
 description: "libssh2_init – global library initialization"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_init &#8211; global library initialization</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "select-editor(1)"
 name: "select-editor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-select-editor/"
 description: "select-editor – select your default sensible-editor from all installed editors"
 ---
 
-<h2 class="name">NAME</h2>
 <p> select-editor &#8211; select your default sensible-editor from all installed editors </p>
 <h2>SYNOPSIS</h2>
 <p> <code>select-editor</code> </p>

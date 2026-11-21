@@ -1,4 +1,5 @@
 ---
+
 title: "ewrite(3)"
 name: "ewrite"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ewrite/"
 description: "ecalloc emalloc eread erealloc esetenv estrdup ewrite – exit-on-failure wrapper functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ecalloc</code> <code>emalloc</code> <code>eread</code> <code>erealloc</code> <code>esetenv</code> <code>estrdup</code> <code>ewrite</code> &#8211; exit-on-failure wrapper functions </p>
 <h2>LIBRARY</h2>
 <p> The roken library (libroken, -lroken)</p>

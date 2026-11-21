@@ -1,4 +1,5 @@
 ---
+
 title: "euare-groupgetpolicy(1)"
 name: "euare-groupgetpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-groupgetpolicy/"
 description: "euare-groupgetpolicy – Display a group’s policy"
 ---
 
-<h2>NAME</h2>
 <p> euare-groupgetpolicy &#8211; Display a group&#8217;s policy</p>
 <h2>SYNOPSIS</h2>
 <p> euare-groupgetpolicy <code>-p</code> POLICY [&#8211;pretty-print] [&#8211;as-account ACCOUNT]</p>

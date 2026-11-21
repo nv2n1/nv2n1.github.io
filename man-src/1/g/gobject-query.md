@@ -1,4 +1,5 @@
 ---
+
 title: "gobject-query(1)"
 name: "gobject-query"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gobject-query/"
 description: "gobject-query – display a tree of types"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gobject-query &#8211; display a tree of types </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmlc(1)"
 name: "pmlc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmlc/"
 description: "pmlc – configure active Performance Co-Pilot pmlogger(s) interactively"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmlc</code> &#8211; configure active Performance Co-Pilot pmlogger(s) interactively</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmlc</code> [<code>-e</code>] [<code>-h</code> <i>host</i>] [<code>-i</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-P</code>] [<code>-p</code> <i>port</i>] [<code>-Z</code> <i>timezone</i>] [<code>-z</code>] [<code>pid</code>]</p>

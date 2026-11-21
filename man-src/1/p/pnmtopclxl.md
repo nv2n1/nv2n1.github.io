@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtopclxl(1)"
 name: "pnmtopclxl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmtopclxl/"
 description: "pnmtopclxl – convert a PNM image to an HP LaserJet PCL XL printer stream"
 ---
 
-<h2>NAME</h2>
 <p> pnmtopclxl &#8211; convert a PNM image to an HP LaserJet PCL XL printer stream </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtopclxl</code> &lt;br&gt;{ [<code>-dpi=</code><i>N</i>] [<code>-xoffs=</code><i>N</i>] [<code>-yoffs=</code><i>N</i>] [<code>-center</code>] [<code>-duplex=</code>{<code>vertical</code>|<code>horizontal</code>}] [<code>-format=</code><i>paperformat</i>] [<code>-feeder=</code><i>N</i>] [<code>-copies=</code><i>N</i>] [<code>-rendergray</code>] [<code>-jobsetup=</code><i>filename</i>] &lt;br&gt;| <code>-embedded</code> &lt;br&gt;} [<code>-colorok</code>] <i>pnmfile1</i> <i>pnmfile2</i> &#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "soapcpp2(1)"
 name: "soapcpp2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-soapcpp2/"
 description: "soapcpp2 – the gSOAP Stub and Skeleton Compiler for C and C++"
 ---
 
-<h2 class="name">NAME</h2>
 <p> soapcpp2 &#8211; the gSOAP Stub and Skeleton Compiler for C and C++ </p>
 <h2>SYNOPSIS</h2>
 <p> <code>soapcpp2</code> [<i>OPTIONS</i>] <i>INPUT</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlrplcheck(1)"
 name: "mysqlrplcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlrplcheck/"
 description: "mysqlrplcheck – Check Replication Prerequisitiess"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlrplcheck &#8211; Check Replication Prerequisitiess </p>
 <h2>SYNOPSIS</h2>
 <dl>

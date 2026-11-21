@@ -1,4 +1,5 @@
 ---
+
 title: "update-alternatives(1)"
 name: "update-alternatives"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-update-alternatives/"
 description: "update-alternatives – maintain symbolic links determining default commands"
 ---
 
-<h2 class="name">NAME</h2>
 <p> update-alternatives &#8211; maintain symbolic links determining default commands </p>
 <h2>SYNOPSIS</h2>
 <p> <code>update-alternatives</code> [<i>option</i>&#8230;] <i>command</i></p>

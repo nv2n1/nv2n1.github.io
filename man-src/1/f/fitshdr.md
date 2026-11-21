@@ -1,4 +1,5 @@
 ---
+
 title: "fitshdr(1)"
 name: "fitshdr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fitshdr/"
 description: "fitshdr – List headers from a FITS file"
 ---
 
-<h2>NAME</h2>
 <p> fitshdr &#8211; List headers from a FITS file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fitshdr</code> [<i>-q N</i>] [<i>&lt;infile&gt;</i>]</p>

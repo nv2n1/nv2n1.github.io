@@ -1,4 +1,5 @@
 ---
+
 title: "munimatch(1)"
 name: "munimatch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-munimatch/"
 description: "munimatch – Matching of CCD photometry files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> munimatch &#8211; Matching of CCD photometry files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>munimatch </code><i>[options] </i><code>ref=</code><i>file source_file &#8230;</i> </p>

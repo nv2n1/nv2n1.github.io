@@ -1,4 +1,5 @@
 ---
+
 title: "qhost(1)"
 name: "qhost"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qhost/"
 description: "qhost – show the status of xxQS_NAMExx hosts, queues, jobs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qhost &#8211; show the status of xxQS_NAMExx hosts, queues, jobs </p>
 <h2>SYNTAX</h2>
 <p> <code>qhost</code> [<code>-F</code> [<i>resource_name</i><code>,</code>&#8230;]] [<code>-help</code>] [<code>-h</code> <i>host_list</i>] [<code>-j</code>] [<code>-l</code> <i>resource</i>[<code>=</code><i>val</i>]<code>,</code>&#8230;] [<code>-ncb</code>] [<code>-u</code> <i>user</i><code>,</code>&#8230;] [<code>-xml</code>]</p>

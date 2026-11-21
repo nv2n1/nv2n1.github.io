@@ -1,4 +1,5 @@
 ---
+
 title: "dirname(1)"
 name: "dirname"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dirname/"
 description: "dirname – strip last component from file name"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dirname &#8211; strip last component from file name </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dirname</code> [<i>,OPTION/</i>] <i>,NAME/</i>&#8230;</p>

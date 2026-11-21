@@ -1,4 +1,5 @@
 ---
+
 title: "kbruch(1)"
 name: "kbruch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kbruch/"
 description: "kbruch – Learn calculating with fractions"
 ---
 
-<h2>NAME</h2>
 <p> kbruch &#8211; Learn calculating with fractions</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "genpng(1)"
 name: "genpng"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-genpng/"
 description: "genpng – Generate an overview image from a source file"
 ---
 
-<h2>NAME</h2>
 <p> genpng &#8211; Generate an overview image from a source file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>genpng</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;version</code>]</p>

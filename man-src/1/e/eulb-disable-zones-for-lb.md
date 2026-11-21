@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-disable-zones-for-lb(1)"
 name: "eulb-disable-zones-for-lb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-disable-zones-for-lb/"
 description: "eulb-disable-zones-for-lb – Remove a load balancer from one or more availability zones"
 ---
 
-<h2>NAME</h2>
 <p> eulb-disable-zones-for-lb &#8211; Remove a load balancer from one or more availability zones</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-disable-zones-for-lb <code>-z</code> ZONE1,ZONE2,&#8230; [&#8211;show-empty-fields]</p>

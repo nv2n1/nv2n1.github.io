@@ -1,4 +1,5 @@
 ---
+
 title: "stg-pop(1)"
 name: "stg-pop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-pop/"
 description: "stg-pop – Pop one or more patches from the stack"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-pop &#8211; Pop one or more patches from the stack </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

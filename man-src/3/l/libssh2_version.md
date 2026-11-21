@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_version(3)"
 name: "libssh2_version"
 section: "3"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libssh2_version/"
 ---
 
-<h2>NAME</h2>
-
- libssh2_version - return the libssh2 version number
+libssh2_version - return the libssh2 version number
 
 <h2>SYNOPSIS</h2>
 

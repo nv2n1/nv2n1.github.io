@@ -1,4 +1,5 @@
 ---
+
 title: "zone2ldap(1)"
 name: "zone2ldap"
 section: "1"
@@ -6,9 +7,7 @@ letter: "z"
 url: "/docs/linux/man/1-zone2ldap/"
 ---
 
-<h2>NAME</h2>
-
- zone2ldap /- Load BIND 9 Zone files into LDAP Directory
+zone2ldap /- Load BIND 9 Zone files into LDAP Directory
 
 <h2>SYNOPSIS</h2>
 

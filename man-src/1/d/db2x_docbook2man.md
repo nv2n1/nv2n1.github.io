@@ -1,4 +1,5 @@
 ---
+
 title: "db2x_docbook2man(1)"
 name: "db2x_docbook2man"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db2x_docbook2man/"
 description: "docbook2man – Convert DocBook to man pages"
 ---
 
-<h2>NAME</h2>
 <p> docbook2man &#8211; Convert DocBook to man pages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>docbook2man</code> [<i>options</i>] <i>xml-document</i></p>

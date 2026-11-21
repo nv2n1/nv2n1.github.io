@@ -1,4 +1,5 @@
 ---
+
 title: "rcvstore(1)"
 name: "rcvstore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rcvstore/"
 description: "rcvstore – asynchronously incorporate mail into a folder"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rcvstore &#8211; asynchronously incorporate mail into a folder </p>
 <h2>SYNOPSIS</h2>
 <dl>

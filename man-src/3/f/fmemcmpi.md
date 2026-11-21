@@ -1,4 +1,5 @@
 ---
+
 title: "fmemcmpi(3)"
 name: "fmemcmpi"
 section: "3"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fmemcmpi/"
 ---
 
-<h2>NAME</h2>
-
- fmemcmpi - fuzzy comparison of two memory areas
+fmemcmpi - fuzzy comparison of two memory areas
 
 <h2>SYNOPSIS</h2>
 

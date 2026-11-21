@@ -1,4 +1,5 @@
 ---
+
 title: "if_indextoname(3)"
 name: "if_indextoname"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-if_indextoname/"
 description: "if_nametoindex, if_indextoname – mappings between network interface names and indexes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> if_nametoindex, if_indextoname &#8211; mappings between network interface names and indexes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

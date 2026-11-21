@@ -1,4 +1,5 @@
 ---
+
 title: "jpeg2ktopam(1)"
 name: "jpeg2ktopam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jpeg2ktopam/"
 description: "jpeg2ktopam – convert JPEG-2000 code stream to PAM/PNM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> jpeg2ktopam &#8211; convert JPEG-2000 code stream to PAM/PNM</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jpeg2ktopam</code> [<code>-verbose</code>] [<code>-debuglevel=</code><i>number</i>] <i>filename</i> </p>

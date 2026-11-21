@@ -1,4 +1,5 @@
 ---
+
 title: "ras2tiff(1)"
 name: "ras2tiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ras2tiff/"
 description: "ras2tiff – create a TIFF file from a Sun rasterfile"
 ---
 
-<h2>NAME</h2>
 <p> ras2tiff &#8211; create a <font SIZE="-1">TIFF</font> file from a Sun rasterfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ras2tiff</code> [ <i>options</i> ] <i>input.ras</i> <i>output.tif</i></p>

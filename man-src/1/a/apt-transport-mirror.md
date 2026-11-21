@@ -1,4 +1,5 @@
 ---
+
 title: "apt-transport-mirror(1)"
 name: "apt-transport-mirror"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apt-transport-mirror/"
 description: "apt-transport-mirror – APT transport for more automated mirror selection"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apt-transport-mirror &#8211; APT transport for more automated mirror selection </p>
 <h2>DESCRIPTION</h2>
 <p> This APT transport isn&#8217;t implementing a protocol to access local or remote repositories on its own, but acquires a mirrorlist and redirects all requests to the mirror(s) picked from this list, accessing them via other transports like <code><a href="/docs/linux/man/1-apt-transport-http/">apt-transport-http</a></code>(1). The basic functionality has been available since apt 0.7.24, but was undocumented until apt 1.6 which contained a complete rework of the transport and its supported features. Note that a transport is never called directly by a user but used by APT tools based on user configuration. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "conch(1)"
 name: "conch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-conch/"
 description: "conch – Conch SSH client"
 ---
 
-<h2>NAME</h2>
 <p> <code>conch</code> &#8211; Conch SSH client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>conch</code> [-<code>AaCfINnrsTtVvx</code> ] [-<code>c </code><i>cipher_spec</i> ] [-<code>e </code><i>escape_char</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>K </code><i>connection_spec</i> ] -words [-<code>L </code> <i>port</i> <i>host</i> <i>hostport</i> ] [-<code>l </code><i>user</i> ] [-<code>m </code><i>mac_spec</i> ] [-<code>o </code><i>openssh_option</i> ] [-<code>p </code><i>port</i> ] -words [-<code>R </code> <i>port</i> <i>host</i> <i>hostport</i> ] [<i>user </i><code>@ </code><i>hostname</i> ] [<i>command</i> ]</p>

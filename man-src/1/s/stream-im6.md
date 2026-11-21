@@ -1,4 +1,5 @@
 ---
+
 title: "stream-im6(1)"
 name: "stream-im6"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stream-im6/"
 description: "stream – a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats."
 ---
 
-<h2 class="name">NAME</h2>
 <p> stream &#8211; a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats. </p>
 <h2>SYNOPSIS</h2>
 <dl>

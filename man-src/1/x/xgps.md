@@ -1,4 +1,5 @@
 ---
+
 title: "xgps(1)"
 name: "xgps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xgps/"
 description: "gps, xgps, xgpsspeed, cgps, lcdgps, gegps – test clients for gpsd"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gps, xgps, xgpsspeed, cgps, lcdgps, gegps &#8211; test clients for gpsd </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ecryptfs-insert-wrapped-passphrase-into-keyring(1)"
 name: "ecryptfs-insert-wrapped-passphrase-into-keyring"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ecryptfs-insert-wrapped-passphrase-into-keyring/"
 description: "ecryptfs-insert-wrapped-passphrase-into-keyring – unwrap a wrapped passphrase from file and insert into the kernel keyring."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ecryptfs-insert-wrapped-passphrase-into-keyring &#8211; unwrap a wrapped passphrase from file and insert into the kernel keyring.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-insert-wrapped-passphrase-into-keyring [file]</code> </p>

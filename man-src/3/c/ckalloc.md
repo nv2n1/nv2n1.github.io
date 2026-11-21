@@ -1,4 +1,5 @@
 ---
+
 title: "ckalloc(3)"
 name: "ckalloc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ckalloc/"
 description: "Tcl_Alloc, Tcl_Free, Tcl_Realloc, Tcl_AttemptAlloc, Tcl_AttemptRealloc, ckalloc, ckfree, ckrealloc, attemptckalloc, attemptckrealloc – allocate or free heap memory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Tcl_Alloc, Tcl_Free, Tcl_Realloc, Tcl_AttemptAlloc, Tcl_AttemptRealloc, ckalloc, ckfree, ckrealloc, attemptckalloc, attemptckrealloc &#8211; allocate or free heap memory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

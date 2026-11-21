@@ -1,4 +1,5 @@
 ---
+
 title: "gtranslator(1)"
 name: "gtranslator"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtranslator/"
 description: "gtranslator — a comfortable gettext po file editor with many bells and whistles."
 ---
 
-<h2>NAME</h2>
 <p> gtranslator &#8212; a comfortable gettext po file editor with many bells and whistles. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtranslator [ &#8211;help ] [ &#8211;version ] [ -a filename ] [ -e po-file ] [ -g geometry-string ] [ -l po-file-to-learn ] [ -b ] [ -s ]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "casper-snapshot(1)"
 name: "casper-snapshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-casper-snapshot/"
 description: "casper-snapshot – a simple script to ease persistence usage."
 ---
 
-<h2 class="name">NAME</h2>
 <p> casper-snapshot &#8211; a simple script to ease persistence usage.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>casper-snapshot</code> [<code>-c</code>|<code>&#8211;cow</code> <i>DIRECTORY</i>] [<code>-d</code>|<code>&#8211;device</code> <i>DEVICE</i>] [<code>-e</code>|<code>&#8211;exclude-list</code> <i>FILE</i>] [<code>-o</code>|<code>&#8211;output</code> <i>FILE</i>] [<code>-t</code>|<code>&#8211;type</code> <i>TYPE</i>] </p>

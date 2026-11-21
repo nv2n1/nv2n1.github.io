@@ -1,4 +1,5 @@
 ---
+
 title: "db_archive(1)"
 name: "db_archive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db_archive/"
 description: "db5.3_archive – Find unused log files for archiving purposes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> db5.3_archive &#8211; Find unused log files for archiving purposes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>db5.3_archive</code> [-adlsVv] [-h home] [-P password]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "inet_ntop(3)"
 name: "inet_ntop"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-inet_ntop/"
 description: "inet_ntop – convert IPv4 and IPv6 addresses from binary to text form"
 ---
 
-<h2 class="name">NAME</h2>
 <p> inet_ntop &#8211; convert IPv4 and IPv6 addresses from binary to text form </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

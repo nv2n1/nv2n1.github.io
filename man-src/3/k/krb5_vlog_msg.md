@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_vlog_msg(3)"
 name: "krb5_vlog_msg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_vlog_msg/"
 description: "krb5_initlog krb5_openlog krb5_closelog krb5_addlog_dest krb5_addlog_func krb5_log krb5_vlog krb5_log_msg krb5_vlog_msg – Heimdal logging functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_initlog</code> <code>krb5_openlog</code> <code>krb5_closelog</code> <code>krb5_addlog_dest</code> <code>krb5_addlog_func</code> <code>krb5_log</code> <code>krb5_vlog</code> <code>krb5_log_msg</code> <code>krb5_vlog_msg</code> &#8211; Heimdal logging functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

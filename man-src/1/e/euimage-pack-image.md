@@ -1,4 +1,5 @@
 ---
+
 title: "euimage-pack-image(1)"
 name: "euimage-pack-image"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euimage-pack-image/"
 description: "euimage-pack-image – ***TECH PREVIEW***"
 ---
 
-<h2>NAME</h2>
 <p> euimage-pack-image &#8211; ***TECH PREVIEW***</p>
 <h2>SYNOPSIS</h2>
 <p> euimage-pack-image [&#8211;progress | <code>&#8211;no-progress]</code> [&#8211;debug] [&#8211;debugger]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "conspy(1)"
 name: "conspy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-conspy/"
 description: "conspy – virtual console spy tool"
 ---
 
-<h2>NAME</h2>
 <p> conspy &#8211; virtual console spy tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>conspy</code> [ options ] [ <i>console</i> ]</p>

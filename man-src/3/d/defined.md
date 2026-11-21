@@ -1,4 +1,5 @@
 ---
+
 title: "defined(3)"
 name: "defined"
 section: "3"
@@ -6,12 +7,7 @@ letter: "d"
 url: "/docs/linux/man/3-defined/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- libmaxminddb - a library for working with MaxMind DB files 
+libmaxminddb - a library for working with MaxMind DB files 
 
 <h2>SYNOPSIS</h2>
 

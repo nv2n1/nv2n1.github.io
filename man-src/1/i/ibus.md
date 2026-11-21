@@ -1,4 +1,5 @@
 ---
+
 title: "ibus(1)"
 name: "ibus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibus/"
 description: "ibus – command line utility for ibus"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ibus</code> &#8211; command line utility for ibus</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ibus</code> <i>COMMAND</i> [<i>OPTION</i>]&#8230; </p>

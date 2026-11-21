@@ -1,4 +1,5 @@
 ---
+
 title: "bson_utf8_get_char(3)"
 name: "bson_utf8_get_char"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_utf8_get_char/"
 description: "bson_utf8_get_char() – Converts the current character in a UTF-8 sequence to a bson_unichar_t, the 32-bit representation of the multi-byte character."
 ---
 
-<h2>NAME</h2>
 <p> bson_utf8_get_char() &#8211; Converts the current character in a UTF-8 sequence to a bson_unichar_t, the 32-bit representation of the multi-byte character.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

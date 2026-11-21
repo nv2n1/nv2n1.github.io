@@ -1,4 +1,5 @@
 ---
+
 title: "nwpjmv(1)"
 name: "nwpjmv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwpjmv/"
 description: "nwpjvm – Move print job to Unix queue"
 ---
 
-<h2>NAME</h2>
 <p> nwpjvm &#8211; Move print job to Unix queue</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwpjmv</code> [ <code>-S</code> <i>server</i> ] [ <code>-h</code> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-q</code> <i>queue name</i> ] [ <code>-c</code> <i>command</i> ] [ <code>-j</code> <i>job number</i> ] [ <code>-d</code> ] </p>

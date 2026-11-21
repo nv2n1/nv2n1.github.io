@@ -1,4 +1,5 @@
 ---
+
 title: "vm86old(2)"
 name: "vm86old"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-vm86old/"
 description: "vm86old, vm86 – enter virtual 8086 mode"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vm86old, vm86 &#8211; enter virtual 8086 mode </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/vm86.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_wait_status(3)"
 name: "ieee1284_wait_status"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ieee1284_wait_status/"
 description: "ieee1284_read_status, ieee1284_wait_status – analyse status lines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ieee1284_read_status, ieee1284_wait_status &#8211; analyse status lines </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

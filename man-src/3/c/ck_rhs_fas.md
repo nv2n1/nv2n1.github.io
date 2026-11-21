@@ -1,4 +1,5 @@
 ---
+
 title: "ck_rhs_fas(3)"
 name: "ck_rhs_fas"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_rhs_fas/"
 description: "ck_rhs_fas – fetch and store key in hash set"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_rhs_fas</code> &#8211; fetch and store key in hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "balsa(1)"
 name: "balsa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-balsa/"
 description: "Balsa – the GNOME email client."
 ---
 
-<h2>NAME</h2>
 <p>&nbsp;<wbr>Balsa &#8211; the GNOME email client. </p>
 <h2>DESCRIPTION</h2>
 <p> You can use Balsa to fetch, read, write and send e-mails. </p>

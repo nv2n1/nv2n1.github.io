@@ -1,4 +1,5 @@
 ---
+
 title: "euare-getldapsyncstatus(1)"
 name: "euare-getldapsyncstatus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-getldapsyncstatus/"
 description: "euare-getldapsyncstatus – [Eucalyptus cloud admin only] Show the status of the cloud’s LDAP synchronization"
 ---
 
-<h2>NAME</h2>
 <p> euare-getldapsyncstatus &#8211; [Eucalyptus cloud admin only] Show the status of the cloud&#8217;s LDAP synchronization</p>
 <h2>SYNOPSIS</h2>
 <p> euare-getldapsyncstatus [&#8211;show-empty-fields] [-U URL]</p>

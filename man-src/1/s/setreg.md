@@ -1,4 +1,5 @@
 ---
+
 title: "setreg(1)"
 name: "setreg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setreg/"
 description: "setreg – Change settings for public key cryptography"
 ---
 
-<h2>NAME</h2>
 <p> setreg &#8211; Change settings for public key cryptography</p>
 <h2>SYNOPSIS</h2>
 <p> <code>setreg [options] [feature] [true|false]</code></p>

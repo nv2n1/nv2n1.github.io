@@ -1,4 +1,5 @@
 ---
+
 title: "bson_writer_new(3)"
 name: "bson_writer_new"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_writer_new/"
 description: "bson_writer_new() – Creates a new instance of bson_writer_t using the buffer, length, offset, and _realloc()_ function supplied."
 ---
 
-<h2>NAME</h2>
 <p> bson_writer_new() &#8211; Creates a new instance of bson_writer_t using the buffer, length, offset, and _realloc()_ function supplied.</p>
 <h2>SYNOPSIS</h2>
 <pre>

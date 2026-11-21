@@ -1,4 +1,5 @@
 ---
+
 title: "hivexget(1)"
 name: "hivexget"
 section: "1"
@@ -6,10 +7,7 @@ letter: "h"
 url: "/docs/linux/man/1-hivexget/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- hivexget - Get subkey from a Windows Registry binary &quot;hive&quot; file 
+hivexget - Get subkey from a Windows Registry binary &quot;hive&quot; file 
 
 <h2>SYNOPSIS</h2>
 

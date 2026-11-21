@@ -1,4 +1,5 @@
 ---
+
 title: "avstopam(1)"
 name: "avstopam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avstopam/"
 description: "avstopam – convert an AVS X image to a Netpbm image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> avstopam &#8211; convert an AVS X image to a Netpbm image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>avstopam</code> [<i>avsfile</i>] </p>

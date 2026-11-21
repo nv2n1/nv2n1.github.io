@@ -1,4 +1,5 @@
 ---
+
 title: "gyp(1)"
 name: "gyp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gyp/"
 description: "gyp – cross-platform makefile generator for Chromium"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gyp &#8211; cross-platform makefile generator for Chromium </p>
 <h2>SYNOPSIS</h2>
 <p> <i>gyp</i> [options] [build_file&#8230;]</p>

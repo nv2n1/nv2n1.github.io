@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rsl_parse(3)"
 name: "globus_rsl_parse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rsl_parse/"
 description: "globus_rsl.h – Globus RSL Parsing."
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_rsl.h &#8211; Globus RSL Parsing.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_module.h&#8217;<br />

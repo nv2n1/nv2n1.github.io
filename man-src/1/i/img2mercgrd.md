@@ -1,4 +1,5 @@
 ---
+
 title: "img2mercgrd(1)"
 name: "img2mercgrd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-img2mercgrd/"
 description: "img2mercgrd – Extract region of img, preserving Mercator, save as grd"
 ---
 
-<h2>NAME</h2>
 <p> img2mercgrd &#8211; Extract region of img, preserving Mercator, save as grd</p>
 <h2>SYNOPSIS</h2>
 <p> <code>img2mercgrd</code> <i>imgfile</i> <code>-G</code><i>grdfile</i> <code>-R</code><i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[<code>r</code>] <code>-T</code><i>type</i> [ <code>-C</code> ] [ <code>-D</code><i>minlat/maxlat</i> ] [ <code>-N</code><i>navg</i> ] [ <code>-S</code><i>scale</i> ] [ <code>-V</code> ] [ <code>-W</code><i>maxlon</i> ] [ <code>-m</code><i>minutes</i> ]</p>

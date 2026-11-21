@@ -1,4 +1,5 @@
 ---
+
 title: "getunwind(2)"
 name: "getunwind"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getunwind/"
 description: "getunwind – copy the unwind data to caller’s buffer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getunwind &#8211; copy the unwind data to caller&#8217;s buffer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

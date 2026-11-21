@@ -1,4 +1,5 @@
 ---
+
 title: "git-delete-submodule(1)"
 name: "git-delete-submodule"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-delete-submodule/"
 description: "git-delete-submodule – Delete submodules"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-delete-submodule</code> &#8211; Delete submodules</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-delete-submodule</code> &lt;path&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fuse(1)"
 name: "fuse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fuse/"
 description: "fuse – Sinclair ZX Spectrum emulator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fuse &#8211; Sinclair ZX Spectrum emulator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fuse</code> [<i>options</i>]</p>

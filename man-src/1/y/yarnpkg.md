@@ -1,4 +1,5 @@
 ---
+
 title: "yarnpkg(1)"
 name: "yarnpkg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yarnpkg/"
 description: "yarnpkg – Fast, reliable and secure npm alternative"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>yarnpkg</code> &#8211; Fast, reliable and secure npm alternative </p>
 <h2>SYNOPSIS</h2>
 <p> yarnpkg command [package]@[version]</p>

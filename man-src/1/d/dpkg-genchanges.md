@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-genchanges(1)"
 name: "dpkg-genchanges"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dpkg-genchanges/"
 description: "dpkg-genchanges – generate Debian .changes files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dpkg-genchanges &#8211; generate Debian .changes files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-genchanges</code> [<i>option</i>&#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_value(3)"
 name: "bson_append_value"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_value/"
 description: "bson_append_value() – Appends a new field to bson by determining the boxed type in value. This is useful if you want to copy fields between documents but do not know the field type until runtime."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_value() &#8211; Appends a new field to bson by determining the boxed type in value. This is useful if you want to copy fields between documents but do not know the field type until runtime.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

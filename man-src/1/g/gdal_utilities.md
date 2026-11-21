@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_utilities(1)"
 name: "gdal_utilities"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdal_utilities/"
 description: "gdal_utilities – GDAL Utilities The following utility programs are distributed with GDAL."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdal_utilities &#8211; GDAL Utilities The following utility programs are distributed with GDAL. </p>
 <dl>
 <dt>&bull;</dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "lxsession-logout(1)"
 name: "lxsession-logout"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxsession-logout/"
 description: "lxsession-logout — program to logout from LXSession"
 ---
 
-<h2>NAME</h2>
 <p> lxsession-logout &#8212; program to logout from LXSession</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxsession-logout</code> [<code>options</code> &#8230;]</p>

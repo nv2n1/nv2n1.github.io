@@ -1,4 +1,5 @@
 ---
+
 title: "jack_transport(1)"
 name: "jack_transport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jack_transport/"
 description: "jack_transport – JACK toolkit client for transport control"
 ---
 
-<h2>NAME</h2>
 <p> jack_transport &#8211; JACK toolkit client for transport control</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jack_transport</code></p>

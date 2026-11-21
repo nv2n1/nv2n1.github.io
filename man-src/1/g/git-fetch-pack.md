@@ -1,4 +1,5 @@
 ---
+
 title: "git-fetch-pack(1)"
 name: "git-fetch-pack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-fetch-pack/"
 description: "git-fetch-pack – Receive missing objects from another repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-fetch-pack &#8211; Receive missing objects from another repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

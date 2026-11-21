@@ -1,4 +1,5 @@
 ---
+
 title: "grdsample(1)"
 name: "grdsample"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdsample/"
 description: "grdsample – Resample a grid onto a new lattice"
 ---
 
-<h2>NAME</h2>
 <p> grdsample &#8211; Resample a grid onto a new lattice</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdsample</code> <i>in_grdfile</i> <i>out_grdfile</i> [ <i>increment</i> ] [ <i>region</i> ] [ ] [ [<i>level</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-x</code>[[-]<i>n</i>] ] </p>

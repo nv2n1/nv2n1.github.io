@@ -1,4 +1,5 @@
 ---
+
 title: "gtester-report(1)"
 name: "gtester-report"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtester-report/"
 description: "gtester-report – test report formatting utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gtester-report &#8211; test report formatting utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

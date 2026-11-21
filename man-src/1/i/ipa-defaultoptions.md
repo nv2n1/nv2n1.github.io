@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-defaultoptions(1)"
 name: "ipa-defaultoptions"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-defaultoptions/"
 description: "ipa-defaultoptions – Display or modify the IPA Search and User Policies"
 ---
 
-<h2>NAME</h2>
 <p> ipa-defaultoptions &#8211; Display or modify the IPA Search and User Policies</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-defaultoptions [&#8211;maxusername number] [&#8211;homedir directory] [&#8211;defaultshell shell] [&#8211;defaultgroup group] [&#8211;emaildomain domain] [&#8211;searchtimelimit number] [&#8211;searchrecordslimit number] [&#8211;usersearch fields] [&#8211;groupsearch fields] [-v|&#8211;verbose] ipa-defaultoptions &#8211;show</p>

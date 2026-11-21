@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-nonumericalids(1)"
 name: "foomatic-nonumericalids"
 section: "1"
@@ -6,9 +7,6 @@ letter: "f"
 url: "/docs/linux/man/1-foomatic-nonumericalids/"
 ---
 
-
- </p>
-<h2>NAME</h2>
 <p> foomatic-nonumericalids &#8211; Convert numerical printer IDS to clear-text IDs  </p>
 <h2>SYNOPSIS</h2>
 <dl>

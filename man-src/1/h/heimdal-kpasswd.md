@@ -1,4 +1,5 @@
 ---
+
 title: "heimdal-kpasswd(1)"
 name: "heimdal-kpasswd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-heimdal-kpasswd/"
 description: "kpasswd – Kerberos 5 password changing program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>kpasswd</code> &#8211; Kerberos 5 password changing program </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>-admin-principal= </code><i>principal</i> ] [-<code>c </code><i>cache | </i> &#8211;<code>-cache= </code><i>cache</i> ] [<i>principal &#8230;</i> ]</p>

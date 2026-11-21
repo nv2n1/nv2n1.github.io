@@ -1,4 +1,5 @@
 ---
+
 title: "rahosts(1)"
 name: "rahosts"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rahosts/"
 description: "rahosts – report network addresses in argus(8) data."
 ---
 
-<h2>NAME</h2>
 <p> <code>rahosts</code> &#8211; report network addresses in <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2003 QoSient. All rights reserved.</p>

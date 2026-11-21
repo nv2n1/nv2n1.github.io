@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-as(1)"
 name: "llvm-as"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-as/"
 description: "llvm-as – LLVM assembler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-as &#8211; LLVM assembler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-as</code> [<i>options</i>] [<i>filename</i>]</p>

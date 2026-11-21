@@ -1,4 +1,5 @@
 ---
+
 title: "cg_merge(1)"
 name: "cg_merge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cg_merge/"
 description: "cg_merge – merges multiple Cachegrind output files into one"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cg_merge &#8211; merges multiple Cachegrind output files into one </p>
 <h2>SYNOPSIS</h2>
 <dl>

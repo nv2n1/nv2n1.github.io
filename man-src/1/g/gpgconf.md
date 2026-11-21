@@ -1,4 +1,5 @@
 ---
+
 title: "gpgconf(1)"
 name: "gpgconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpgconf/"
 description: "gpgconf – Modify .gnupg home directories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpgconf</code> &#8211; Modify .gnupg home directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpgconf</code> [<i>options</i>] <code>&#8211;list-components</code><br />

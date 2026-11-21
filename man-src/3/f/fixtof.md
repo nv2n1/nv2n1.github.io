@@ -1,4 +1,5 @@
 ---
+
 title: "fixtof(3)"
 name: "fixtof"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fixtof/"
 description: "fixtof – Converts a fixed point to floating point. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fixtof &#8211; Converts a fixed point to floating point. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

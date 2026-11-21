@@ -1,4 +1,5 @@
 ---
+
 title: "duplicity(1)"
 name: "duplicity"
 section: "1"
@@ -6,7 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-duplicity/"
 description: "duplicity – Encrypted incremental backup to local or remote storage."
 ---
-<h2 class="name">NAME</h2>
+
 <p> duplicity - Encrypted incremental backup to local or remote storage.  </p>
 <h2>SYNOPSIS</h2>
 <p> For detailed descriptions for each command see chapter <code>ACTIONS</code>. </p>

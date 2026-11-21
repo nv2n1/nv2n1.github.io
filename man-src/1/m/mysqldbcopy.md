@@ -1,4 +1,5 @@
 ---
+
 title: "mysqldbcopy(1)"
 name: "mysqldbcopy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqldbcopy/"
 description: "mysqldbcopy – Copy Database Objects Between Servers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqldbcopy &#8211; Copy Database Objects Between Servers </p>
 <h2>SYNOPSIS</h2>
 <dl>

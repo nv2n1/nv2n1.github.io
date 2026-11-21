@@ -1,4 +1,5 @@
 ---
+
 title: "euare-grouplistusers(1)"
 name: "euare-grouplistusers"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-grouplistusers/"
 description: "euare-grouplistusers – List all the users in a group"
 ---
 
-<h2>NAME</h2>
 <p> euare-grouplistusers &#8211; List all the users in a group</p>
 <h2>SYNOPSIS</h2>
 <p> euare-grouplistusers [&#8211;as-account ACCOUNT] [-U URL]</p>

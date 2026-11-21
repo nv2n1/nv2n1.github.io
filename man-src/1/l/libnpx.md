@@ -1,4 +1,5 @@
 ---
+
 title: "libnpx(1)"
 name: "libnpx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libnpx/"
 description: "npx – execute npm package binaries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npx</code> &#8211; execute npm package binaries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>npx [options] &lt;command&gt;[@version] [command-arg]&#8230;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perfalloc(1)"
 name: "perfalloc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perfalloc/"
 description: "perfalloc – notify pmdaperfevent(1) to disable hardware counter allocation."
 ---
 
-<h2>NAME</h2>
 <p> <code>perfalloc</code> &#8211; notify <code><a href="/docs/linux/man/1-pmdaperfevent/">pmdaperfevent</a></code>(1) to disable hardware counter allocation.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/perfevent/perfalloc</code> [<code>-D</code>] [<code>-d</code>] [<code>-f</code> <i>lockfile</i>] [<code>-h</code>] [<code>-v</code>] [<code>COMMAND</code>]</p>

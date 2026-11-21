@@ -1,4 +1,5 @@
 ---
+
 title: "startxfce4(1)"
 name: "startxfce4"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-startxfce4/"
 description: "startxfce4 – initialize an Xfce session"
 ---
 
-<h2 class="name">NAME</h2>
 <p> startxfce4 &#8211; initialize an Xfce session </p>
 <h2>SYNOPSIS</h2>
 <p> <code>startxfce4</code></p>

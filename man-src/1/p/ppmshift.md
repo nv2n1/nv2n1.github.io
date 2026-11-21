@@ -1,4 +1,5 @@
 ---
+
 title: "ppmshift(1)"
 name: "ppmshift"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-ppmshift/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- ppmshift - shift lines of a portable pixmap left or right by a random amount 
+ppmshift - shift lines of a portable pixmap left or right by a random amount 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_devx_get_event(3)"
 name: "mlx5dv_devx_get_event"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_get_event/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_devx_get_event - Get an asynchronous event. 
+mlx5dv_devx_get_event - Get an asynchronous event. 
 
 <h2>SYNOPSIS</h2>
 

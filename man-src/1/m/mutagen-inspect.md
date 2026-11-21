@@ -1,4 +1,5 @@
 ---
+
 title: "mutagen-inspect(1)"
 name: "mutagen-inspect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mutagen-inspect/"
 description: "mutagen-inspect – view Mutagen-supported audio tags"
 ---
 
-<h2>NAME</h2>
 <p> mutagen-inspect &#8211; view Mutagen-supported audio tags</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mutagen-inspect</code> <i>filename</i> &#8230;</p>

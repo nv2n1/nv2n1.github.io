@@ -1,4 +1,5 @@
 ---
+
 title: "r(1)"
 name: "r"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-r/"
 description: "r.what.color – Queries colors for a raster map layer."
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>r.what.color</code> &#8211; Queries colors for a raster map layer.</p>
 <h2>KEYWORDS</h2>
 <p> raster</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dorbdb3(3)"
 name: "dorbdb3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dorbdb3/"
 description: "dorbdb3.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dorbdb3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "pminfo(1)"
 name: "pminfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pminfo/"
 description: "pminfo – display information about performance metrics"
 ---
 
-<h2>NAME</h2>
 <p> <code>pminfo</code> &#8211; display information about performance metrics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pminfo</code> [<code>-dfFLmMtTvxz</code>] [<code>-a</code> <i>archive</i>] [<code>-b</code> <i>batchsize</i>] [<code>-c</code> <i>dmfile</i>] [<code>-h</code> <i>hostname</i>] [<code>-K</code> <i>spec</i>] [<code>&#8211;</code>[<code>n</code>|<code>N</code>] <i>pmnsfile</i>] [<code>-O</code> <i>time</i>] [<code>-Z</code> <i>timezone</i>] [<i>metricname</i> &#8230;]</p>

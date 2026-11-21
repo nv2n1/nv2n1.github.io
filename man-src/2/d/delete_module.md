@@ -1,4 +1,5 @@
 ---
+
 title: "delete_module(2)"
 name: "delete_module"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-delete_module/"
 description: "delete_module – unload a kernel module"
 ---
 
-<h2 class="name">NAME</h2>
 <p> delete_module &#8211; unload a kernel module </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

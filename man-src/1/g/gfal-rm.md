@@ -1,4 +1,5 @@
 ---
+
 title: "gfal-rm(1)"
 name: "gfal-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfal-rm/"
 description: "gfal-rm – Remove files or directories"
 ---
 
-<h2>NAME</h2>
 <p> gfal-rm &#8211; Remove files or directories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfal-rm</code> [ <code>-h</code> ] [ <code>-V</code> ] [ <code>-v</code> ] [ <code>-D</code> <i>DEFINITION</i> ] [ <code>-C</code> <i>CLIENT-INFO</i> ] [ <code>-t</code> <i>TIMEOUT</i> ] [ <code>-r</code> ] <i>FILE</i>&#8230; </p>

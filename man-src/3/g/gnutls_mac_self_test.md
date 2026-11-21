@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_mac_self_test(3)"
 name: "gnutls_mac_self_test"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_mac_self_test/"
 description: "gnutls_mac_self_test – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_mac_self_test &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

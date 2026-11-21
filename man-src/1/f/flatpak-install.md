@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-install(1)"
 name: "flatpak-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-install/"
 description: "flatpak-install – Install an application or runtime"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-install &#8211; Install an application or runtime </p>
 <h2>SYNOPSIS</h2>
 <dl>

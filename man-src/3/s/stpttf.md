@@ -1,4 +1,5 @@
 ---
+
 title: "stpttf(3)"
 name: "stpttf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stpttf/"
 description: "stpttf.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stpttf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

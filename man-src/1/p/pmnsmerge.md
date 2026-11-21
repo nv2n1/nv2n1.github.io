@@ -1,4 +1,5 @@
 ---
+
 title: "pmnsmerge(1)"
 name: "pmnsmerge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmnsmerge/"
 description: "pmnsmerge – merge multiple versions of a Performance Co-Pilot PMNS"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmnsmerge</code> &#8211; merge multiple versions of a Performance Co-Pilot PMNS</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmnsmerge</code> [<code>-adfxv</code>] <i>infile</i> [&#8230;] <i>outfile</i></p>

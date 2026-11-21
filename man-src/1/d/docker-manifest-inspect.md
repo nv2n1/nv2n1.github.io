@@ -1,4 +1,5 @@
 ---
+
 title: "docker-manifest-inspect(1)"
 name: "docker-manifest-inspect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-manifest-inspect/"
 description: "docker-manifest-inspect – Display an image manifest, or manifest list"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-manifest-inspect &#8211; Display an image manifest, or manifest list </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker manifest inspect [OPTIONS] [MANIFEST_LIST] MANIFEST</code> </p>

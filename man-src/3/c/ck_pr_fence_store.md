@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_fence_store(3)"
 name: "ck_pr_fence_store"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_fence_store/"
 description: "ck_pr_fence_store – enforce partial ordering of store operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_fence_store</code> &#8211; enforce partial ordering of store operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

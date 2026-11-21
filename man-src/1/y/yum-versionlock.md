@@ -1,4 +1,5 @@
 ---
+
 title: "yum-versionlock(1)"
 name: "yum-versionlock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-versionlock/"
 description: "yum-versionlock – Version lock rpm packages"
 ---
 
-<h2>NAME</h2>
 <p> yum-versionlock &#8211; Version lock rpm packages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yum-versionlock</code> [ package-name [ package-name]] &#8230;</p>

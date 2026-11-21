@@ -1,4 +1,5 @@
 ---
+
 title: "stg-id(1)"
 name: "stg-id"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-id/"
 description: "stg-id – Print the git hash value of a StGit reference"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-id &#8211; Print the git hash value of a StGit reference </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "folders(1)"
 name: "folders"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-folders/"
 description: "folder, folders – set/list current folder/message"
 ---
 
-<h2 class="name">NAME</h2>
 <p> folder, folders &#8211; set/list current folder/message </p>
 <h2>SYNOPSIS</h2>
 <dl>

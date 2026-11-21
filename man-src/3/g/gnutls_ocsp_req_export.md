@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_req_export(3)"
 name: "gnutls_ocsp_req_export"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_ocsp_req_export/"
 description: "gnutls_ocsp_req_export – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_ocsp_req_export &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "remote-viewer(1)"
 name: "remote-viewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-remote-viewer/"
 description: "remote-viewer – a simple remote desktop client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> remote-viewer &#8211; a simple remote desktop client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>remote-viewer</code> [<font SIZE="-1">OPTIONS</font>] &#8212; [<font SIZE="-1">URI</font>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_pretty_print_dict(3)"
 name: "getdns_pretty_print_dict"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_pretty_print_dict/"
 description: "getdns_pretty_print_dict — return a string representation of a getdns dict"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_pretty_print_dict</code> &#8212; return a string representation of a getdns dict </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

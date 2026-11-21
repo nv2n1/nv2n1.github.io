@@ -1,4 +1,5 @@
 ---
+
 title: "mhstore(1)"
 name: "mhstore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mhstore/"
 description: "mhstore – store contents of MIME messages into files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mhstore &#8211; store contents of MIME messages into files </p>
 <h2>SYNOPSIS</h2>
 <dl>

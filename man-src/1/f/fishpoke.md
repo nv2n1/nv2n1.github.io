@@ -1,4 +1,5 @@
 ---
+
 title: "fishpoke(1)"
 name: "fishpoke"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fishpoke/"
 description: "fishpoke – trigger a poll immediately instead of waiting for the configured polling interval."
 ---
 
-<h2>NAME</h2>
 <p> fishpoke &#8211; trigger a poll immediately instead of waiting for the configured polling interval.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

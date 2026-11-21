@@ -1,4 +1,5 @@
 ---
+
 title: "cexpf(3)"
 name: "cexpf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cexpf/"
 description: "cexp, cexpf, cexpl – complex exponential function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cexp, cexpf, cexpl &#8211; complex exponential function </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

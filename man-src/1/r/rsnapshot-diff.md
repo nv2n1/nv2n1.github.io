@@ -1,4 +1,5 @@
 ---
+
 title: "rsnapshot-diff(1)"
 name: "rsnapshot-diff"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rsnapshot-diff/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- rsnapshot-diff - a utility for comparing the disk usage of two snapshots taken by rsnapshot 
+rsnapshot-diff - a utility for comparing the disk usage of two snapshots taken by rsnapshot 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "gsm_option(3)"
 name: "gsm_option"
 section: "3"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-gsm_option/"
 ---
 
-<h2>NAME</h2>
-
- gsm_option --- customizing the GSM 06.10 implementation
+gsm_option --- customizing the GSM 06.10 implementation
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "dlarrv(3)"
 name: "dlarrv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlarrv/"
 description: "dlarrv.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlarrv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

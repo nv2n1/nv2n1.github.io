@@ -1,4 +1,5 @@
 ---
+
 title: "rigsmtr(1)"
 name: "rigsmtr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rigsmtr/"
 description: "rigsmtr – measure S-Meter vs azimuth using Hamlib"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rigsmtr &#8211; measure S-Meter vs azimuth using Hamlib </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rigsmtr</code> [<i>OPTION</i>]&#8230; [time_step]</p>

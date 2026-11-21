@@ -1,4 +1,5 @@
 ---
+
 title: "portreserve(1)"
 name: "portreserve"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-portreserve/"
 description: "portreserve – reserve ports to prevent portmap mapping them"
 ---
 
-<h2 class="name">NAME</h2>
 <p> portreserve &#8211; reserve ports to prevent portmap mapping them </p>
 <h2>SYNOPSIS</h2>
 <dl>

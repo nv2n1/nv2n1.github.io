@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_status(3)"
 name: "ldns_status"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_status/"
 description: "ldns_status"
 ---
 
-<h2>NAME</h2>
 <p> ldns_status </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

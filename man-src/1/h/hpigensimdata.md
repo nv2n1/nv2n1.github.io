@@ -1,4 +1,5 @@
 ---
+
 title: "hpigensimdata(1)"
 name: "hpigensimdata"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpigensimdata/"
 description: "hpigensimdata – A openhpi client application supplementing the dynamic simulator plugin."
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpigensimdata &#8211; A openhpi client application supplementing the dynamic simulator plugin. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

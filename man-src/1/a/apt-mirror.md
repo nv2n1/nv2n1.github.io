@@ -1,4 +1,5 @@
 ---
+
 title: "apt-mirror(1)"
 name: "apt-mirror"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-apt-mirror/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- apt-mirror - apt sources mirroring tool 
+apt-mirror - apt sources mirroring tool 
 
 <h2>SYNOPSIS</h2>
 

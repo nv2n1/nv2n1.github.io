@@ -1,4 +1,5 @@
 ---
+
 title: "acl_calc_mask(3)"
 name: "acl_calc_mask"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_calc_mask/"
 description: "acl_calc_mask – calculate the file group class mask"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_calc_mask</code> &#8211; calculate the file group class mask </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

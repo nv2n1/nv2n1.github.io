@@ -1,4 +1,5 @@
 ---
+
 title: "nytprofcsv(1)"
 name: "nytprofcsv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nytprofcsv/"
 description: "nytprofcsv – (DEPRECATED) Devel::NYTProf::Reader CSV format implementation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nytprofcsv &#8211; (DEPRECATED) Devel::NYTProf::Reader CSV format implementation </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

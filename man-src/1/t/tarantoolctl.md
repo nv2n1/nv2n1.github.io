@@ -1,4 +1,5 @@
 ---
+
 title: "tarantoolctl(1)"
 name: "tarantoolctl"
 section: "1"
@@ -6,10 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tarantoolctl/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- tarantoolctl - an utility to control tarantool instances 
+tarantoolctl - an utility to control tarantool instances 
 
 <h2>SYNOPSIS</h2>
 

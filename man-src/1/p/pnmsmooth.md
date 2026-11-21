@@ -1,4 +1,5 @@
 ---
+
 title: "pnmsmooth(1)"
 name: "pnmsmooth"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmsmooth/"
 description: "pnmsmooth – smooth out an image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmsmooth &#8211; smooth out an image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmsmooth</code> [<code>-size</code> <i>width</i> <i>height</i>] [<code>-dump</code> <i>dumpfile</i>] [<i>pnmfile</i>]</p>

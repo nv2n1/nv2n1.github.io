@@ -1,4 +1,5 @@
 ---
+
 title: "rrdtutorial(1)"
 name: "rrdtutorial"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rrdtutorial/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- rrdtutorial - Alex van den Bogaerdt's RRDtool tutorial 
+rrdtutorial - Alex van den Bogaerdt's RRDtool tutorial 
 
 <h2>DESCRIPTION</h2>
 

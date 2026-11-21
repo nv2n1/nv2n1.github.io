@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_disconnect(3)"
 name: "dblink_disconnect"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dblink_disconnect/"
 description: "dblink_disconnect – closes a persistent connection to a remote database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dblink_disconnect &#8211; closes a persistent connection to a remote database </p>
 <h2>SYNOPSIS</h2>
 <pre>

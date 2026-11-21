@@ -1,4 +1,5 @@
 ---
+
 title: "gather_profile_stats(1)"
 name: "gather_profile_stats"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gather_profile_stats/"
 description: "gather_profile_stats.py – Performance analysis tool for the Django Web framework"
 ---
 
-<h2>NAME</h2>
 <p> gather_profile_stats.py &#8211; Performance analysis tool for the Django Web framework</p>
 <h2>SYNOPSIS</h2>
 <p> <code>python gather_profile_stats.py</code> <i>&lt;path&gt;</i> </p>

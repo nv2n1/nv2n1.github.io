@@ -1,4 +1,5 @@
 ---
+
 title: "eboard-addtheme(1)"
 name: "eboard-addtheme"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eboard-addtheme/"
 description: "eboard-addtheme – a program to easily install new eboard board and sound themes."
 ---
 
-<h2>NAME</h2>
 <p> eboard-addtheme &#8211; a program to easily install new eboard board and sound themes.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>eboard-addtheme</code> <i>P graphics-file description</i> </p>

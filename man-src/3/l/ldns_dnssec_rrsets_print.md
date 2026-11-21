@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_rrsets_print(3)"
 name: "ldns_dnssec_rrsets_print"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dnssec_rrsets_print/"
 description: "ldns_dnssec_rrsets_new, ldns_dnssec_rrsets_free, ldns_dnssec_rrsets_type, ldns_dnssec_rrsets_set_type, ldns_dnssec_rrsets_add_rr, ldns_dnssec_rrsets_print"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dnssec_rrsets_new, ldns_dnssec_rrsets_free, ldns_dnssec_rrsets_type, ldns_dnssec_rrsets_set_type, ldns_dnssec_rrsets_add_rr, ldns_dnssec_rrsets_print </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

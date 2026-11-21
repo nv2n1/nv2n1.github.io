@@ -1,4 +1,5 @@
 ---
+
 title: "grepdiff(1)"
 name: "grepdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grepdiff/"
 description: "grepdiff – show files modified by a diff containing a regex"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grepdiff &#8211; show files modified by a diff containing a regex </p>
 <h2>SYNOPSIS</h2>
 <dl>

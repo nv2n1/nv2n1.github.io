@@ -1,4 +1,5 @@
 ---
+
 title: "uim-xim(1)"
 name: "uim-xim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uim-xim/"
 description: "uim-xim – XIM interface to UIM"
 ---
 
-<h2>NAME</h2>
 <p> <code>uim-xim </code>&#8211; XIM interface to UIM</p>
 <h2>SYNOPSIS</h2>
 <pre>

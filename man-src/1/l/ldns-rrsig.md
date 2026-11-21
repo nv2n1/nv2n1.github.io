@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-rrsig(1)"
 name: "ldns-rrsig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-rrsig/"
 description: "ldns-rrsig – print out the inception and expiration dates in human readable form"
 ---
 
-<h2>NAME</h2>
 <p> ldns-rrsig &#8211; print out the inception and expiration dates in human readable form</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-rrsig </code> <i>domain</i> [ <i>type</i> ] </p>

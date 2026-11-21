@@ -1,4 +1,5 @@
 ---
+
 title: "ksshaskpass(1)"
 name: "ksshaskpass"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ksshaskpass/"
 description: "ksshaskpass – prompts a user for a passphrase using KDE"
 ---
 
-<h2>NAME</h2>
 <p> ksshaskpass &#8211; prompts a user for a passphrase using KDE</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kdesshaskpass</code></p>

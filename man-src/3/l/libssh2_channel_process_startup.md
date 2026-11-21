@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_process_startup(3)"
 name: "libssh2_channel_process_startup"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_process_startup/"
 description: "libssh2_channel_process_startup – request a shell on a channel"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_process_startup &#8211; request a shell on a channel</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

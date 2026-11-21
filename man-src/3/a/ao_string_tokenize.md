@@ -1,4 +1,5 @@
 ---
+
 title: "ao_string_tokenize(3)"
 name: "ao_string_tokenize"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ao_string_tokenize/"
 description: "ao_string_tokenize – tokenize an input string"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ao_string_tokenize &#8211; tokenize an input string</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<i>your-opts.h</i>&gt;<br />

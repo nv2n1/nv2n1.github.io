@@ -1,4 +1,5 @@
 ---
+
 title: "gnu_dev_makedev(3)"
 name: "gnu_dev_makedev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnu_dev_makedev/"
 description: "makedev, major, minor – manage a device number"
 ---
 
-<h2 class="name">NAME</h2>
 <p> makedev, major, minor &#8211; manage a device number </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

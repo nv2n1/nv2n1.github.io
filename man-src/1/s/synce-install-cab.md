@@ -1,4 +1,5 @@
 ---
+
 title: "synce-install-cab(1)"
 name: "synce-install-cab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-synce-install-cab/"
 description: "synce-install-cab – install .cab file"
 ---
 
-<h2>NAME</h2>
 <p> synce-install-cab &#8211; install .cab file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>synce-install-cab</code> [-d <i>LEVEL</i>] [-p <i>device_path</i>] [-o <i>WCE_OPT</i>] [-n] <i>FILENAME</i> &#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "smtpping(1)"
 name: "smtpping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smtpping/"
 description: "smtpping – SMTP benchmarking and measurement tool"
 ---
 
-<h2>NAME</h2>
 <p> <code>smtpping</code> &#8211; SMTP benchmarking and measurement tool</p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>dqrJ46</code> ] [-<code>p </code><i>port</i> ] [-<code>w </code><i>wait</i> ] [-<code>c </code><i>count</i> ] [-<code>P </code><i>parallell</i> ] [-<code>s </code><i>size</i> ] [-<code>f </code><i>file</i> ] [-<code>H </code><i>hello</i> ] [-<code>S </code><i>sender</i> ] <i>recipient</i> [<i>@server</i> ]</p>

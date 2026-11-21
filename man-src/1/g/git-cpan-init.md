@@ -1,4 +1,5 @@
 ---
+
 title: "git-cpan-init(1)"
 name: "git-cpan-init"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-git-cpan-init/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- git-cpan-init - Create a git repository for a CPAN module 
+git-cpan-init - Create a git repository for a CPAN module 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "monodis(1)"
 name: "monodis"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-monodis/"
 description: "monodis – CIL image content dumper and disassembler."
 ---
 
-<h2>NAME</h2>
 <p> monodis &#8211; CIL image content dumper and disassembler.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>monodis</code> [-h] [&#8211;help] [&#8211;output=FILENAME] [&#8211;mscorlib] [&#8211;assembly] [&#8211;assemblyref] [&#8211;classlayout] [&#8211;constant] [&#8211;customattr] [&#8211;declsec] [&#8211;event] [&#8211;exported] [&#8211;fields] [&#8211;file] [&#8211;forward-decls] [&#8211;genericpar] [&#8211;implmap] [&#8211;interface] [&#8211;manifest] [&#8211;marshal] [&#8211;memberref] [&#8211;method] [&#8211;methodimpl] [&#8211;methodsem] [&#8211;methodspec] [&#8211;module] [&#8211;moduleref] [&#8211;mresources] [&#8211;presources] [&#8211;nested] [&#8211;param] [&#8211;parconst] [&#8211;property] [&#8211;propertymap] [&#8211;standalonesig] [&#8211;typedef] [&#8211;typeref] [&#8211;typespec] [&#8211;blob] [&#8211;strings] [&#8211;userstrings] [FILES&#8230;]</p>

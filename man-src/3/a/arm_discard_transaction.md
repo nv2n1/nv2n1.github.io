@@ -1,4 +1,5 @@
 ---
+
 title: "arm_discard_transaction(3)"
 name: "arm_discard_transaction"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arm_discard_transaction/"
 description: "arm_discard_transaction – discard transaction"
 ---
 
-<h2>NAME</h2>
 <p> arm_discard_transaction &#8211; discard transaction</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>

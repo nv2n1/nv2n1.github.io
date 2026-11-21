@@ -1,4 +1,5 @@
 ---
+
 title: "mathspic(1)"
 name: "mathspic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mathspic/"
 description: "mathsPIC"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>mathsPIC</code> </p>
 <h2>AUTHORS</h2>
 <p> A. Syropoulos and R.W.D. Nickalls (April 26, 2010) </p>

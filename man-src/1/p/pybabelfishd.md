@@ -1,4 +1,5 @@
 ---
+
 title: "pybabelfishd(1)"
 name: "pybabelfishd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pybabelfishd/"
 description: "pybabelfishd – convert Python objects into human-readable strings"
 ---
 
-<h2>NAME</h2>
 <p> pybabelfishd &#8211; convert Python objects into human-readable strings</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pybabelfishd</code> [options]</p>

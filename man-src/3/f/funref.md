@@ -1,4 +1,5 @@
 ---
+
 title: "funref(3)"
 name: "funref"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funref/"
 description: "FunRef: the Funtools Reference Handle"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunRef: the Funtools Reference Handle</code></p>
 <h2>SYNOPSIS</h2>
 <p> A description of how to use a Funtools reference handle to connect a Funtools input file to an output file.</p>

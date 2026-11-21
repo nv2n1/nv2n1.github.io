@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_write(3)"
 name: "libssh2_sftp_write"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_write/"
 description: "libssh2_sftp_write – write SFTP data"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_write &#8211; write SFTP data</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

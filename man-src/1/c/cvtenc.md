@@ -1,4 +1,5 @@
 ---
+
 title: "cvtenc(1)"
 name: "cvtenc"
 section: "1"
@@ -6,7 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-cvtenc/"
 description: "cvtenc – file encoding converter"
 ---
-<h2>NAME</h2>
+
 <p> cvtenc - file encoding converter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cvtenc</code> [<code>-Encoding</code> <i>encoding</i>] [<code>-EscapeIn</code> <i>yes|NO</i>] [<code>-EscapeOut</code> <i>yes|NO</i>] <br />

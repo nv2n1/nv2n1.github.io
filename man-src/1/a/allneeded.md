@@ -1,4 +1,5 @@
 ---
+
 title: "allneeded(1)"
 name: "allneeded"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-allneeded/"
 description: "allneeded – force the calculation of all fonts now needed"
 ---
 
-<h2 class="name">NAME</h2>
 <p> allneeded &#8211; force the calculation of all fonts now needed </p>
 <h2>SYNOPSIS</h2>
 <p> <code>allneeded [-r] files &#8230;</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "scriptlive(1)"
 name: "scriptlive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scriptlive/"
 description: "scriptlive – re-run session typescripts, using timing information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> scriptlive &#8211; re-run session typescripts, using timing information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>scriptlive</code> [options] [<code>-t</code>] <i>timingfile</i> [<code>-I</code>|<code>-B</code>] <i>typescript</i></p>

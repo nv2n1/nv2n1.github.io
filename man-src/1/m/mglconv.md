@@ -1,4 +1,5 @@
 ---
+
 title: "mglconv(1)"
 name: "mglconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mglconv/"
 description: "mglconv – Execute MathGL scripts to generate graphical output."
 ---
 
-<h2>NAME</h2>
 <p> mglconv &#8211; Execute MathGL scripts to generate graphical output.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mglconv</code> [parameters] scriptfile</p>

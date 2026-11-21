@@ -1,4 +1,5 @@
 ---
+
 title: "findhyph(1)"
 name: "findhyph"
 section: "1"
@@ -6,7 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-findhyph/"
 description: "findhyph – find words hyphenated by TeX in a document"
 ---
-<h2 class="name">NAME</h2>
+
 <p> findhyph – find words hyphenated by TeX in a document </p>
 <h2>INSTALLATION</h2>
 <p> Copy <code>findhyph</code> or <code>findhyph.bat</code> (depending on <font SIZE="-1">OS</font> used) to a directory included in system <font SIZE="-1">PATH.</font> Perl interpreter is required to be in <code>&quot;/usr/bin/&quot;</code> for Unix-like systems or in <font SIZE="-1">PATH</font> when using <code>findhyph.bat</code>.  </p>

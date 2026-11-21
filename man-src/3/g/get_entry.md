@@ -1,4 +1,5 @@
 ---
+
 title: "get_entry(3)"
 name: "get_entry"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_entry/"
 description: "get_entry — retrieve a dirfile field’s metadata"
 ---
 
-<h2>NAME</h2>
 <p> get_entry &#8212; retrieve a dirfile field&#8217;s metadata</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

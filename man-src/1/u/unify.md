@@ -1,4 +1,5 @@
 ---
+
 title: "unify(1)"
 name: "unify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unify/"
 description: "unify – manual page for unify 1.2.2"
 ---
 
-<h2>NAME</h2>
 <p> unify &#8211; manual page for unify 1.2.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>unify</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]</p>

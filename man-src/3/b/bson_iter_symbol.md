@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_symbol(3)"
 name: "bson_iter_symbol"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_symbol/"
 description: "bson_iter_symbol() – The symbol element type is DEPRECATED in the bson specification at http://bsonspec.org."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_symbol() &#8211; The symbol element type is DEPRECATED in the bson specification at <a rel="nofollow" href="http://bsonspec.org.">http://bsonspec.org.</a></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

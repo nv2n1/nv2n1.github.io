@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_query_port(3)"
 name: "ibv_query_port"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_query_port/"
 description: "ibv_query_port – query an RDMA port’s attributes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_query_port &#8211; query an RDMA port&#8217;s attributes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

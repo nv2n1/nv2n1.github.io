@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-attach-ns(1)"
 name: "nvme-attach-ns"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-attach-ns/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-attach-ns - Send NVMe attach namespace, return result. 
+nvme-attach-ns - Send NVMe attach namespace, return result. 
 
 <h2>SYNOPSIS</h2>
 

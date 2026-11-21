@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installinit(1)"
 name: "dh_installinit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installinit/"
 description: "dh_installinit – install service init files into package build directories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installinit &#8211; install service init files into package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installinit</code> [<i>debhelper options</i>] [<code>&#8211;name=</code><i>name</i>] [<code>-n</code>] [<code>-R</code>] [<code>-r</code>] [<code>-d</code>] [<code>&#8212;</code> <i>params</i>]</p>

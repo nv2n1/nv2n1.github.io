@@ -1,4 +1,5 @@
 ---
+
 title: "gpasm(1)"
 name: "gpasm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpasm/"
 description: "gpasm – GNU PIC assembler"
 ---
 
-<h2>NAME</h2>
 <p> gpasm &#8211; GNU PIC assembler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpasm [options] file</code></p>

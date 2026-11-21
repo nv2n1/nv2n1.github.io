@@ -1,4 +1,5 @@
 ---
+
 title: "dlasd3(3)"
 name: "dlasd3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlasd3/"
 description: "dlasd3.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlasd3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

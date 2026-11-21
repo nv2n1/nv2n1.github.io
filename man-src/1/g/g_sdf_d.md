@@ -1,4 +1,5 @@
 ---
+
 title: "g_sdf_d(1)"
 name: "g_sdf_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_sdf_d/"
 description: "g_sdf – calculates the spatial distribution function (faster than g_spatial)"
 ---
 
-<h2>NAME</h2>
 <p> g_sdf &#8211; calculates the spatial distribution function (faster than g_spatial) </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "kodi-send(1)"
 name: "kodi-send"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kodi-send/"
 description: "xbmc-send – program to send some action to Kodi"
 ---
 
-<h2>NAME</h2>
 <p> xbmc-send &#8211; program to send some action to Kodi</p>
 <h2>SYNOPSIS</h2>
 <p> xbmc-send [OPTION] <code>&#8211;action</code>=<i>ACTION</i></p>

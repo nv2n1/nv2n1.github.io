@@ -1,4 +1,5 @@
 ---
+
 title: "prrt-navigator-demo(1)"
 name: "prrt-navigator-demo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prrt-navigator-demo/"
 description: "prrt-navigator-demo – Mobile robot navigation simulator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> prrt-navigator-demo &#8211; Mobile robot navigation simulator </p>
 <h2>SYNOPSIS</h2>
 <p> prrt-navigator-demo</p>

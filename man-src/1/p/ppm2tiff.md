@@ -1,4 +1,5 @@
 ---
+
 title: "ppm2tiff(1)"
 name: "ppm2tiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppm2tiff/"
 description: "ppm2tiff – create a TIFF file from PPM, PGM and PBM image files"
 ---
 
-<h2>NAME</h2>
 <p> ppm2tiff &#8211; create a <font SIZE="-1">TIFF</font> file from <font SIZE="-1">PPM, PGM</font> and <font SIZE="-1">PBM</font> image files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppm2tiff</code> [ <i>options</i> ] [ <i>input.ppm</i> ] <i>output.tif</i></p>

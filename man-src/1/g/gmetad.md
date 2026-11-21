@@ -1,4 +1,5 @@
 ---
+
 title: "gmetad(1)"
 name: "gmetad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmetad/"
 description: "gmetad – manual page for Ganglia Meta Daemon"
 ---
 
-<h2>NAME</h2>
 <p> gmetad &#8211; manual page for Ganglia Meta Daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmetad</code> [<i>OPTIONS</i>]&#8230;</p>

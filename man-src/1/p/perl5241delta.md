@@ -1,4 +1,5 @@
 ---
+
 title: "perl5241delta(1)"
 name: "perl5241delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5241delta/"
 description: "perl5241delta – what is new for perl v5.24.1"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perl5241delta &#8211; what is new for perl v5.24.1 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.24.0 release and the 5.24.1 release. </p>

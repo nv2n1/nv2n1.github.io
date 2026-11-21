@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_rate_to_mbps(3)"
 name: "ibv_rate_to_mbps"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_rate_to_mbps/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_rate_to_mbps - convert IB rate enumeration to Mbit/sec 
+ibv_rate_to_mbps - convert IB rate enumeration to Mbit/sec 
 
  mbps_to_ibv_rate - convert Mbit/sec to an IB rate enumeration 
 

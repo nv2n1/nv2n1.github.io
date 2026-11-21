@@ -1,4 +1,5 @@
 ---
+
 title: "gmt2rgb(1)"
 name: "gmt2rgb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmt2rgb/"
 description: "gmt2rgb – Converting a grid file, a raw, or a Sun raster file to r/g/b grids"
 ---
 
-<h2>NAME</h2>
 <p> gmt2rgb &#8211; Converting a grid file, a raw, or a Sun raster file to r/g/b grids</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmt2rgb</code> <i>infile</i> <code>-G</code><i>template</i> [ <code>-C</code><i>cptfile</i> ] [ <code>-F</code> ] [ <code>-I</code><i>xinc</i>[<code>m</code>|<code>c</code>][/<i>yinc</i>[<code>m</code>|<code>c</code>]] ] [ <code>-L</code><i>layer</i> ] [ <code>-R</code><i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] ] [ <code>-V</code> ] [ <code>-W</code><i>width</i>/<i>height</i>[/<i>n_bytes</i>]</p>

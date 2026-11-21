@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-instance(1)"
 name: "doveadm-instance"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-instance/"
 description: "doveadm-instance – Manage the list of running Dovecot instances"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-instance &#8211; Manage the list of running Dovecot instances</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>instance list</code><br />

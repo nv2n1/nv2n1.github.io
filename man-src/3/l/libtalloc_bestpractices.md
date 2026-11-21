@@ -1,4 +1,5 @@
 ---
+
 title: "libtalloc_bestpractices(3)"
 name: "libtalloc_bestpractices"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libtalloc_bestpractices/"
 description: "libtalloc_bestpractices – Chapter 7: Best practises The following sections contain several best practices and good manners that were found by the Samba and SSSD developers over the years."
 ---
 
-<h2 class="name">NAME</h2>
 <p> libtalloc_bestpractices &#8211; Chapter 7: Best practises The following sections contain several best practices and good manners that were found by the Samba and SSSD developers over the years. </p>
 <p> These will help you to write code which is better, easier to debug and with as few (hopefully none) memory leaks as possible. </p>
 <h2>Keep the context hierarchy steady</h2>

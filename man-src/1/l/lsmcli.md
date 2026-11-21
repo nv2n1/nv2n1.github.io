@@ -1,4 +1,5 @@
 ---
+
 title: "lsmcli(1)"
 name: "lsmcli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lsmcli/"
 description: "lsmcli – libStorageMgmt command line interface"
 ---
 
-<h2>NAME</h2>
 <p> lsmcli &#8211; libStorageMgmt command line interface </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lsmcli </code><i>command</i> [<i>GLOBAL OPTIONS</i>]&#8230;[<i>COMMAND OPTIONS</i>]&#8230; </p>

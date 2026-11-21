@@ -1,4 +1,5 @@
 ---
+
 title: "apport-collect(1)"
 name: "apport-collect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apport-collect/"
 description: "apport-bug, apport-collect – file a bug report using Apport, or update an existing report"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apport-bug, apport-collect &#8211; file a bug report using Apport, or update an existing report</p>
 <h2>SYNOPSIS</h2>
 <p> <code>apport-bug</code> </p>

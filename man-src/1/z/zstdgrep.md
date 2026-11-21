@@ -1,4 +1,5 @@
 ---
+
 title: "zstdgrep(1)"
 name: "zstdgrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zstdgrep/"
 description: "zstdgrep – print lines matching a pattern in zstandard-compressed files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>zstdgrep</code> &#8211; print lines matching a pattern in zstandard-compressed files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zstdgrep</code> [<i>grep-flags</i>] [&#8211;] <i>pattern</i> [<i>files</i> &#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-cvsserver(1)"
 name: "git-cvsserver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-cvsserver/"
 description: "git-cvsserver – A CVS server emulator for Git"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-cvsserver &#8211; A CVS server emulator for Git </p>
 <h2>SYNOPSIS</h2>
 <p> SSH: </p>

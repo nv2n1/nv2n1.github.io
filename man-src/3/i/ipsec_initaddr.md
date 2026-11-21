@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_initaddr(3)"
 name: "ipsec_initaddr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_initaddr/"
 description: "ipsec_initaddr, ipsec_addrtypeof, ipsec_addrlenof, ipsec_addrbytesof, ipsec_addrbytesptr – initialize an ip_address, get address type of an ip_address, get length of address within an ip_address, g..."
 ---
 
-<h2>NAME</h2>
 <p> ipsec_initaddr, ipsec_addrtypeof, ipsec_addrlenof, ipsec_addrbytesof, ipsec_addrbytesptr &#8211; initialize an ip_address, get address type of an ip_address, get length of address within an ip_address, get copy of address within an ip_address, get pointer to address within an ip_address</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>

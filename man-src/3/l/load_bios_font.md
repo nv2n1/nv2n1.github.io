@@ -1,4 +1,5 @@
 ---
+
 title: "load_bios_font(3)"
 name: "load_bios_font"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_bios_font/"
 description: "load_bios_font – Loads a 8×8 or 8×16 BIOS format font. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> load_bios_font &#8211; Loads a 8&#215;8 or 8&#215;16 BIOS format font. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

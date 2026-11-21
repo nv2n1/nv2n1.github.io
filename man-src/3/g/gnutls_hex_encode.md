@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_hex_encode(3)"
 name: "gnutls_hex_encode"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_hex_encode/"
 description: "gnutls_hex_encode – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_hex_encode &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

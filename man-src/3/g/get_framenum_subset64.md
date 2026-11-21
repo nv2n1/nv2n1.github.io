@@ -1,4 +1,5 @@
 ---
+
 title: "get_framenum_subset64(3)"
 name: "get_framenum_subset64"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_framenum_subset64/"
 description: "get_framenum_subset64 — perform a reverse look-up on a monotonic dirfile field"
 ---
 
-<h2>NAME</h2>
 <p> get_framenum_subset64 &#8212; perform a reverse look-up on a monotonic dirfile field</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#define _LARGEFILE64_SOURCE</code> </p>

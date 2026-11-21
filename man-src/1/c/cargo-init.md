@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-init(1)"
 name: "cargo-init"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-init/"
 description: "cargo-init – Create a new cargo package in the current directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cargo-init &#8211; Create a new cargo package in the current directory </p>
 <h2>SYNOPSIS</h2>
 <p> cargo init [OPTIONS]</p>

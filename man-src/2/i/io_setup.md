@@ -1,4 +1,5 @@
 ---
+
 title: "io_setup(2)"
 name: "io_setup"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-io_setup/"
 description: "io_setup – create an asynchronous I/O context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> io_setup &#8211; create an asynchronous I/O context </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

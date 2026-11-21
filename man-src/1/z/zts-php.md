@@ -1,4 +1,5 @@
 ---
+
 title: "zts-php(1)"
 name: "zts-php"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zts-php/"
 description: "zts-php – PHP Command Line Interface ‘CLI’"
 ---
 
-<h2>NAME</h2>
 <p> zts-php &#8211; PHP Command Line Interface &#8216;CLI&#8217; </p>
 <p> zts-php-cgi &#8211; PHP Common Gateway Interface &#8216;CGI&#8217; command</p>
 <h2>SYNOPSIS</h2>

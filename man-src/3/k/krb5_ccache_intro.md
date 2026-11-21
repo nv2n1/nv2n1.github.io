@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_ccache_intro(3)"
 name: "krb5_ccache_intro"
 section: "3"
@@ -6,10 +7,7 @@ letter: "k"
 url: "/docs/linux/man/3-krb5_ccache_intro/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- krb5_ccache_intro - The credential cache functions
+krb5_ccache_intro - The credential cache functions
 
 <h2>Kerberos credential caches</h2>
 

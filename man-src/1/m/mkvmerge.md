@@ -1,4 +1,5 @@
 ---
+
 title: "mkvmerge(1)"
 name: "mkvmerge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkvmerge/"
 description: "mkvmerge – Merge multimedia streams into a Matroska(TM) file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mkvmerge &#8211; Merge multimedia streams into a Matroska(TM) file </p>
 <h2>SYNOPSIS</h2>
 <dl>

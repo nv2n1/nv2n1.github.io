@@ -1,4 +1,5 @@
 ---
+
 title: "icontopbm(1)"
 name: "icontopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icontopbm/"
 description: "icontopbm – convert a Sun icon into a portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> icontopbm &#8211; convert a Sun icon into a portable bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>icontopbm</code> [<i>iconfile</i>]</p>

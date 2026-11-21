@@ -1,4 +1,5 @@
 ---
+
 title: "reposdump(1)"
 name: "reposdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-reposdump/"
 description: "reposdump – utility for dumping SBLIM Data Gatherer online metric repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> reposdump &#8211; utility for dumping SBLIM Data Gatherer online metric repository </p>
 <h2>SYNOPSIS</h2>
 <dl>

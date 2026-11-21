@@ -1,4 +1,5 @@
 ---
+
 title: "cerff(3)"
 name: "cerff"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cerff/"
 description: "cerf, cerff, cerfl, cerfc, cerfcf, cerfcl – complex error function"
 ---
 
-<h2>NAME</h2>
 <p> cerf, cerff, cerfl, cerfc, cerfcf, cerfcl &#8211; complex error function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

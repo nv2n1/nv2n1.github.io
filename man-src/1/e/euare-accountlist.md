@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountlist(1)"
 name: "euare-accountlist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-accountlist/"
 description: "euare-accountlist – [Eucalyptus cloud admin only] List all of the cloud’s accounts"
 ---
 
-<h2>NAME</h2>
 <p> euare-accountlist &#8211; [Eucalyptus cloud admin only] List all of the cloud&#8217;s accounts</p>
 <h2>SYNOPSIS</h2>
 <p> euare-accountlist [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION]</p>

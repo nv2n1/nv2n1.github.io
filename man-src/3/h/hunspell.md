@@ -1,4 +1,5 @@
 ---
+
 title: "hunspell(3)"
 name: "hunspell"
 section: "3"
@@ -6,10 +7,7 @@ letter: "h"
 url: "/docs/linux/man/3-hunspell/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <b>hunspell</b> - spell checking, stemming, morphological generation and analysis 
+<b>hunspell</b> - spell checking, stemming, morphological generation and analysis 
 
 <h2>SYNOPSIS</h2>
 

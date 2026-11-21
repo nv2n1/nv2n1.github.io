@@ -1,4 +1,5 @@
 ---
+
 title: "audit_getloginuid(3)"
 name: "audit_getloginuid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_getloginuid/"
 description: "audit_getloginuid – Get a program’s loginuid value"
 ---
 
-<h2>NAME</h2>
 <p> audit_getloginuid &#8211; Get a program&#8217;s loginuid value</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

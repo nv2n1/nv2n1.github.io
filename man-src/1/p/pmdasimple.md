@@ -1,4 +1,5 @@
 ---
+
 title: "pmdasimple(1)"
 name: "pmdasimple"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdasimple/"
 description: "pmdasimple – simple performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdasimple</code> &#8211; simple performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/simple/pmdasimple</code> [<code>-d</code> <i>domain</i>] [<code>-i</code> <i>port</i>] [<code>-l</code> <i>logfile</i>] [<code>-p</code>] [<code>-u</code> <i>socket</i>] [<code>-U</code> <i>username</i>]</p>

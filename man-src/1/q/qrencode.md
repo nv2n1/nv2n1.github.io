@@ -1,4 +1,5 @@
 ---
+
 title: "qrencode(1)"
 name: "qrencode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qrencode/"
 description: "qrencode – Encode input data in a QR Code and save as a PNG or EPS image."
 ---
 
-<h2>NAME</h2>
 <p> qrencode &#8211; Encode input data in a QR Code and save as a PNG or EPS image.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>qrencode</code> [OPTION]&#8230; [STRING] </p>

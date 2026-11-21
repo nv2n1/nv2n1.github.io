@@ -1,4 +1,5 @@
 ---
+
 title: "arcresub(1)"
 name: "arcresub"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arcresub/"
 description: "arcresub – ARC Resubmission"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arcresub &#8211; ARC Resubmission</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcresub</code> command is used for resubmitting jobs to grid enabled computing resources. </p>

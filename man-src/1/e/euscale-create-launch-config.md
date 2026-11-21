@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-create-launch-config(1)"
 name: "euscale-create-launch-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-create-launch-config/"
 description: "euscale-create-launch-config – Create a new auto-scaling instance launch configuration"
 ---
 
-<h2>NAME</h2>
 <p> euscale-create-launch-config &#8211; Create a new auto-scaling instance launch configuration</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-create-launch-config <code>-i</code> IMAGE <code>-t</code> TYPE</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tilestache-server(1)"
 name: "tilestache-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tilestache-server/"
 description: "tilestache-server – seed a single layer in your TileStache configuration"
 ---
 
-<h2>NAME</h2>
 <p> tilestache-server &#8211; seed a single layer in your TileStache configuration</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tilestache-server</code> [<i>options</i>]</p>

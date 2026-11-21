@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_max_sockaddr_size(3)"
 name: "krb5_max_sockaddr_size"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_max_sockaddr_size/"
 description: "Heimdal Kerberos 5 address functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Heimdal Kerberos 5 address functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />

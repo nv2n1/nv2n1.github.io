@@ -1,4 +1,5 @@
 ---
+
 title: "hp-fab(1)"
 name: "hp-fab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hp-fab/"
 description: "hp-fab – Fax Address Book"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hp-fab &#8211; Fax Address Book </p>
 <h2>DESCRIPTION</h2>
 <p> A simple fax address book for HPLIP.</p>

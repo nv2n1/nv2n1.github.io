@@ -1,4 +1,5 @@
 ---
+
 title: "dshbak(1)"
 name: "dshbak"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dshbak/"
 description: "dshbak – format output from pdsh command"
 ---
 
-<h2>NAME</h2>
 <p> dshbak &#8211; format output from pdsh command </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dshbak </code> [<i>OPTION</i>].. </p>

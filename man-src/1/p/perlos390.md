@@ -1,4 +1,5 @@
 ---
+
 title: "perlos390(1)"
 name: "perlos390"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlos390/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlos390 - building and installing Perl for OS/390 and z/OS 
+perlos390 - building and installing Perl for OS/390 and z/OS 
 
 <h2>SYNOPSIS</h2>
 

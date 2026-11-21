@@ -1,4 +1,5 @@
 ---
+
 title: "libipmimonitoring(3)"
 name: "libipmimonitoring"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libipmimonitoring/"
 description: "libipmimonitoring – a library for IPMI system event and sensor monitoring"
 ---
 
-<h2>NAME</h2>
 <p> libipmimonitoring &#8211; a library for IPMI system event and sensor monitoring</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;ipmi_monitoring.h&gt;</code> </p>

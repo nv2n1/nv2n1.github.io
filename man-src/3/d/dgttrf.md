@@ -1,4 +1,5 @@
 ---
+
 title: "dgttrf(3)"
 name: "dgttrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgttrf/"
 description: "dgttrf.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dgttrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

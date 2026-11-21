@@ -1,4 +1,5 @@
 ---
+
 title: "perlaix(1)"
 name: "perlaix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlaix/"
 description: "perlaix – Perl version 5 on IBM AIX (UNIX) systems"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlaix &#8211; Perl version 5 on IBM AIX (UNIX) systems </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes various features of <font SIZE="-1">IBM</font>&#8216;s <font SIZE="-1">UNIX</font> operating system <font SIZE="-1">AIX</font> that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.</p>

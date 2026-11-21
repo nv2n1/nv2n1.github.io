@@ -1,4 +1,5 @@
 ---
+
 title: "bdii-update(1)"
 name: "bdii-update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bdii-update/"
 description: "bdii-update – the bdii update process"
 ---
 
-<h2>NAME</h2>
 <p> bdii-update &#8211; the bdii update process</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bdii-update [-d ] -c </code> <i>config-file</i></p>

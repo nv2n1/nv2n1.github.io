@@ -1,4 +1,5 @@
 ---
+
 title: "fedora-review(1)"
 name: "fedora-review"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fedora-review/"
 description: "fedora-review – Customized review template for Fedora packages"
 ---
 
-<h2>NAME</h2>
 <p> fedora-review &#8211; Customized review template for Fedora packages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fedora-review</code> [options] -b &lt;bug&gt;<br />

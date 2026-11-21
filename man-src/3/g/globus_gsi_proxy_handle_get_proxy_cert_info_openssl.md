@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_proxy_handle_get_proxy_cert_info_openssl(3)"
 name: "globus_gsi_proxy_handle_get_proxy_cert_info_openssl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_proxy_handle_get_proxy_cert_info_openssl/"
 description: "Handle Management –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Handle Management &#8211; </p>
 <p> Create/Destroy/Modify a GSI Proxy Handle.</p>
 <h3>Typedefs</h3>

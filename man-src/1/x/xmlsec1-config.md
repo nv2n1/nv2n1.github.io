@@ -1,4 +1,5 @@
 ---
+
 title: "xmlsec1-config(1)"
 name: "xmlsec1-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmlsec1-config/"
 description: "xmlsec1-config – detail installed version of xmlsec library"
 ---
 
-<h2>NAME</h2>
 <p> xmlsec1-config &#8211; detail installed version of xmlsec library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmlsec1-config</code> [<i>OPTION</i>]&#8230;</p>

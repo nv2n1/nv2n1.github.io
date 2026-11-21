@@ -1,4 +1,5 @@
 ---
+
 title: "par(1)"
 name: "par"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-par/"
 description: "par – parallel command processing"
 ---
 
-<h2>NAME</h2>
 <p> par &#8211; parallel command processing</p>
 <h2>SYNOPSIS</h2>
 <p> <code>par</code> [<code>-defiqx</code>] [<code>-c&nbsp;<wbr></code> command] [<code>-l&nbsp;<wbr></code> logfile] [<code>-n</code><br />

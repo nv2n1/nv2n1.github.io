@@ -1,4 +1,5 @@
 ---
+
 title: "iostat(1)"
 name: "iostat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-iostat/"
 description: "iostat – Report Central Processing Unit (CPU) statistics and input/output statistics for devices and partitions."
 ---
 
-<h2 class="name">NAME</h2>
 <p> iostat &#8211; Report Central Processing Unit (CPU) statistics and input/output statistics for devices and partitions.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>iostat [ -c ] [ -d ] [ -h ] [ -k | -m ] [ -N ] [ -s ] [ -t ] [ -V ] [ -x ] [ -y ] [ -z ]</code> <code>[ &#8211;dec={ 0 | 1 | 2 } ] [ { -f | +f } </code><i>directory</i><code> ] [ -j { ID | LABEL | PATH | UUID | &#8230; } ] </code> <code>[ -o JSON ] [ [ -H ] -g </code><i>group_name </i><code>] [ &#8211;human ] [ &#8211;pretty ] [ -p [ </code><i>device</i><code>[,&#8230;] | ALL ] ] [</code> <i>device </i><code>[&#8230;] | ALL ] [ </code><i>interval </i><code>[ </code><i>count </i><code>] ]</code> </p>

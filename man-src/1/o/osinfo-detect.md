@@ -1,4 +1,5 @@
 ---
+
 title: "osinfo-detect(1)"
 name: "osinfo-detect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-osinfo-detect/"
 description: "osinfo-detect – Detect the operating system on installable media or trees"
 ---
 
-<h2 class="name">NAME</h2>
 <p> osinfo-detect &#8211; Detect the operating system on installable media or trees </p>
 <h2>SYNOPSIS</h2>
 <p> osinfo-detect [<font SIZE="-1">OPTIONS&#8230;</font>] PATH|URI</p>

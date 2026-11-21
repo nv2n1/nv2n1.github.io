@@ -1,4 +1,5 @@
 ---
+
 title: "globus-sh-exec(1)"
 name: "globus-sh-exec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-globus-sh-exec/"
 description: "globus-sh-exec – Run a shell script"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus-sh-exec &#8211; Run a shell script </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globus-sh-exec</code> [ -help | -usage | -version ] </p>

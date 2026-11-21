@@ -1,4 +1,5 @@
 ---
+
 title: "mathomatic(1)"
 name: "mathomatic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mathomatic/"
 description: "mathomatic – a computer algebra system rmath – a computer algebra system with functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mathomatic &#8211; a computer algebra system<br />
  rmath &#8211; a computer algebra system with functions</p>
 <h2>SYNOPSIS</h2>

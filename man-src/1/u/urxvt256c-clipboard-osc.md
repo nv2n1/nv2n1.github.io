@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-clipboard-osc(1)"
 name: "urxvt256c-clipboard-osc"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-clipboard-osc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- clipboard-osc - implement the clipboard operating system command sequence 
+clipboard-osc - implement the clipboard operating system command sequence 
 
 <h2>SYNOPSIS</h2>
 

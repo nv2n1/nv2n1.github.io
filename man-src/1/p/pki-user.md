@@ -1,4 +1,5 @@
 ---
+
 title: "pki-user(1)"
 name: "pki-user"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pki-user/"
 description: "pki-user – Command-Line Interface for managing Certificate System users."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pki-user &#8211; Command-Line Interface for managing Certificate System users.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

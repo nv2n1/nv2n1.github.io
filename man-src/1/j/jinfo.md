@@ -1,4 +1,5 @@
 ---
+
 title: "jinfo(1)"
 name: "jinfo"
 section: "1"
@@ -6,7 +7,7 @@ letter: "j"
 url: "/docs/linux/man/1-jinfo/"
 description: "jinfo – Generates configuration information. This command is experimental and unsupported."
 ---
-<h2>NAME</h2>
+
 <p> jinfo - Generates configuration information. This command is experimental and unsupported.  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

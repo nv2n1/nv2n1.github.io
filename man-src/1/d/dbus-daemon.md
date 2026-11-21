@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-daemon(1)"
 name: "dbus-daemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbus-daemon/"
 description: "dbus-daemon – Message bus daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbus-daemon &#8211; Message bus daemon </p>
 <h2>SYNOPSIS</h2>
 <dl>

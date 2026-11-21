@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa2_dict(3)"
 name: "drmaa2_dict"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drmaa2_dict/"
 description: "drmaa2_dict_create, drmaa2_dict_free, drmaa2_dict_list, drmaa2_dict_has, drmaa2_dict_get, drmaa2_dict_del, drmaa2_dict_set – DRMAA2 dictionary routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> drmaa2_dict_create, drmaa2_dict_free, drmaa2_dict_list, drmaa2_dict_has, drmaa2_dict_get, drmaa2_dict_del, drmaa2_dict_set &#8211; DRMAA2 dictionary routines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>

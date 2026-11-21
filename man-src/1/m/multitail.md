@@ -1,4 +1,5 @@
 ---
+
 title: "multitail(1)"
 name: "multitail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-multitail/"
 description: "MultiTail – browse through several files at once"
 ---
 
-<h2>NAME</h2>
 <p> MultiTail &#8211; browse through several files at once</p>
 <h2>SYNOPSIS</h2>
 <p> <code>MultiTail [</code><i>options</i><code>]</code> </p>

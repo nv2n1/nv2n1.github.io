@@ -1,4 +1,5 @@
 ---
+
 title: "svnsync(1)"
 name: "svnsync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-svnsync/"
 description: "svnsync – Subversion repository synchronization tool"
 ---
 
-<h2>NAME</h2>
 <p> svnsync &#8211; Subversion repository synchronization tool</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "jpilot(1)"
 name: "jpilot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jpilot/"
 description: "jpilot – A palm pilot desktop for Linux/Unix"
 ---
 
-<h2>NAME</h2>
 <p> jpilot &#8211; A palm pilot desktop for Linux/Unix</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jpilot [-v] [-h] [-d] [-a] [-A] [-i] [-s]</code></p>

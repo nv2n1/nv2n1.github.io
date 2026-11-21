@@ -1,4 +1,5 @@
 ---
+
 title: "acpinames(1)"
 name: "acpinames"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-acpinames/"
 description: "acpinames – ACPI name space dump utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> acpinames &#8211; ACPI name space dump utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>acpinames</code> &lt;option&gt;<i>&#8230;</i> &lt;aml-file&gt; </p>

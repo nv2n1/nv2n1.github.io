@@ -1,4 +1,5 @@
 ---
+
 title: "plackup(1)"
 name: "plackup"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-plackup/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- plackup - Run PSGI application with Plack servers 
+plackup - Run PSGI application with Plack servers 
 
 <h2>SYNOPSIS</h2>
 

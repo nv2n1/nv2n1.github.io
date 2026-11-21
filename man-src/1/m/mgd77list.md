@@ -1,4 +1,5 @@
 ---
+
 title: "mgd77list(1)"
 name: "mgd77list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mgd77list/"
 description: "mgd77list – Extract data from MGD77 files"
 ---
 
-<h2>NAME</h2>
 <p> mgd77list &#8211; Extract data from MGD77 files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mgd77list</code> <i>NGDC-ids</i> <i>columns</i>[,<i>logic</i>][:<i>bittests</i>] [ [<code>+</code>]<code>c</code>|<code>d</code>|<code>f</code>|<code>m</code>|<code>t</code><i>code</i> ] [ <code>f</code>|<code>g</code>|<code>e</code> ] [ <code>A</code>|<code>a</code><i>startdate</i> ] [ <code>B</code>|<code>b</code><i>stopdate</i> ] [ ] [ <code>a</code><i>startrec</i> ] [ <code>b</code><i>stoprec</i> ] [ <i>ignore</i> ] [ [<i>corrtable</i>] ] [ <code>d</code>|<code>s</code><i>unit</i> ] [ <code>a</code>|<code>c</code>|<code>v</code><i>min</i>/<i>max</i> ] [ <i>region</i> ] [ <code>a</code><i>startdist</i>[unit] ] [ <code>b</code><i>stopdist</i>[unit] ] [ [<code>m</code>|<code>e</code>] ] [ [<i>level</i>] ] [ <i>weight</i> ] [ <i>+</i>|<code>&#8211;</code> ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] </p>

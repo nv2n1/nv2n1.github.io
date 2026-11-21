@@ -1,4 +1,5 @@
 ---
+
 title: "dmtxquery(1)"
 name: "dmtxquery"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dmtxquery/"
 description: "dmtxquery – extract information from dmtxread output"
 ---
 
-<h2>NAME</h2>
 <p> dmtxquery &#8211; extract information from dmtxread output</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dmtxquery</code> <i>PROPERTY</i> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>

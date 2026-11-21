@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-delete-notification-configuration(1)"
 name: "euscale-delete-notification-configuration"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-delete-notification-configuration/"
 description: "euscale-delete-notification-configuration – Delete an auto-scaling group’s notification configuration"
 ---
 
-<h2>NAME</h2>
 <p> euscale-delete-notification-configuration &#8211; Delete an auto-scaling group&#8217;s notification configuration</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-delete-notification-configuration <code>-t</code> TOPIC [-U URL]</p>

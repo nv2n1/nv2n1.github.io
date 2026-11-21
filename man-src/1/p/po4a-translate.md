@@ -1,4 +1,5 @@
 ---
+
 title: "po4a-translate(1)"
 name: "po4a-translate"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-po4a-translate/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- po4a-translate - convert a po file back to documentation format 
+po4a-translate - convert a po file back to documentation format 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "wmweather(1)"
 name: "wmweather"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wmweather/"
 description: "wmweather – dockable weather monitor"
 ---
 
-<h2>NAME</h2>
 <p> wmweather &#8211; dockable weather monitor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wmweather</code> -s&nbsp;<wbr><i>&lt;4-char ICAO location indicator&gt;&nbsp;<wbr></i>[<i>options</i>]</p>

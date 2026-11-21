@@ -1,4 +1,5 @@
 ---
+
 title: "tuxpaint-import(1)"
 name: "tuxpaint-import"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tuxpaint-import/"
 description: "tuxpaint-import — Import image files into Tux Paint(1)"
 ---
 
-<h2>NAME</h2>
 <p> tuxpaint-import &#8212; Import image files into Tux Paint(1) </p>
 <h2>SYNOPSYS</h2>
 <dl>

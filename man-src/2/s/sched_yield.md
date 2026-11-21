@@ -1,4 +1,5 @@
 ---
+
 title: "sched_yield(2)"
 name: "sched_yield"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sched_yield/"
 description: "sched_yield – yield the processor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sched_yield &#8211; yield the processor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sched.h&gt;</code> </p>

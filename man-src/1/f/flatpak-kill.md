@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-kill(1)"
 name: "flatpak-kill"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-kill/"
 description: "flatpak-kill – Stop a running application"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-kill &#8211; Stop a running application </p>
 <h2>SYNOPSIS</h2>
 <dl>

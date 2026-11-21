@@ -1,4 +1,5 @@
 ---
+
 title: "pmdumptext(1)"
 name: "pmdumptext"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdumptext/"
 description: "pmdumptext – dump performance metrics to an ASCII table"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdumptext</code> &#8211; dump performance metrics to an ASCII table</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmdumptext</code> [<code>-CFGHilmMNoruXz</code>] [<code>-A</code> <i>align</i>] [<code>-a</code> <i>archive</i>[<code>,</code><i>archive</i><code>,</code>&#8230;]] [<code>-c</code> <i>config</i>] [<code>-d</code> <i>delimiter</i>] [<code>-f</code> <i>format</i>] [<code>-h</code> <i>host</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-O</code> <i>offset</i>] [<code>-P</code> <i>precision</i>] [<code>-R</code> <i>lines</i>] [<code>-s</code> <i>sample</i>] [<code>-S</code> <i>starttime</i>] [<code>-t</code> <i>interval</i>] [<code>-T</code> <i>endtime</i>] [<code>-U</code> <i>string</i>] [<code>-w</code> <i>width</i>] [<code>-Z</code> <i>timezone</i>] [<i>metric </i>&#8230;]</p>

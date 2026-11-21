@@ -1,4 +1,5 @@
 ---
+
 title: "aa_autoinitmouse(3)"
 name: "aa_autoinitmouse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_autoinitmouse/"
 description: "aa_autoinitmouse – easy to use AA-lib mouse initialization function."
 ---
 
-<h2>NAME</h2>
 <p> aa_autoinitmouse &#8211; easy to use AA-lib mouse initialization function.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

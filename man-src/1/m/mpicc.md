@@ -1,4 +1,5 @@
 ---
+
 title: "mpicc(1)"
 name: "mpicc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpicc/"
 description: "mpicc — Open MPI C wrapper compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mpicc &#8212; Open MPI C wrapper compiler </p>
 <h2>SYNTAX</h2>
 <p> mpicc [-showme|-showme:compile|-showme:link] &#8230;</p>

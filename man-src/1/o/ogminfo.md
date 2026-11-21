@@ -1,4 +1,5 @@
 ---
+
 title: "ogminfo(1)"
 name: "ogminfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ogminfo/"
 description: "ogminfo – Print information about streams in OGG/OGM files"
 ---
 
-<h2>NAME</h2>
 <p> ogminfo &#8211; Print information about streams in OGG/OGM files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ogminfo</code> [<i>options</i>] <i>inname</i></p>

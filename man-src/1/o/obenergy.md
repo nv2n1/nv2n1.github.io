@@ -1,4 +1,5 @@
 ---
+
 title: "obenergy(1)"
 name: "obenergy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obenergy/"
 description: "obenergy – calculate the energy for a molecule"
 ---
 
-<h2>NAME</h2>
 <p> <code>obenergy</code> &#8211; calculate the energy for a molecule</p>
 <h2>SYNOPSIS</h2>
 <p> [<i>OPTIONS</i> ] <i>filename</i></p>

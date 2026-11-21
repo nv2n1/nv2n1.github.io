@@ -1,4 +1,5 @@
 ---
+
 title: "cpupower-frequency-info(1)"
 name: "cpupower-frequency-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpupower-frequency-info/"
 description: "cpupower frequency-info – Utility to retrieve cpufreq kernel information"
 ---
 
-<h2>NAME</h2>
 <p> cpupower frequency-info &#8211; Utility to retrieve cpufreq kernel information</p>
 <h2>SYNTAX</h2>
 <p> cpupower [ -c cpulist ] frequency-info [<i>options</i>]</p>

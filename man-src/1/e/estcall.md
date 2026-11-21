@@ -1,4 +1,5 @@
 ---
+
 title: "estcall(1)"
 name: "estcall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-estcall/"
 description: "estcall – command line interface of the node API"
 ---
 
-<h2 class="name">NAME</h2>
 <p> estcall &#8211; command line interface of the node API</p>
 <h2>SYNOPSIS</h2>
 <p> <code>estcall put [-proxy host port] [-tout num] [-auth user pass] nurl [file]</code> </p>

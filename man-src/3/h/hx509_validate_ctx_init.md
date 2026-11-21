@@ -1,4 +1,5 @@
 ---
+
 title: "hx509_validate_ctx_init(3)"
 name: "hx509_validate_ctx_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hx509_validate_ctx_init/"
 description: "hx509 printing functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hx509 printing functions &#8211; </p>
 <h3>Functions</h3>
 <p> void <code>hx509_bitstring_print</code> (const heim_bit_string *, hx509_vprint_func, void *) </p>

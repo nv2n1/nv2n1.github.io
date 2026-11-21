@@ -1,4 +1,5 @@
 ---
+
 title: "lou_debug(1)"
 name: "lou_debug"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lou_debug/"
 description: "lou_debug – A debugger for liblouis Braille translation tables"
 ---
 
-<h2>NAME</h2>
 <p> lou_debug &#8211; A debugger for liblouis Braille translation tables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lou_debug</code> [<i>OPTION</i>] <i>TABLE</i></p>

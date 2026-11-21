@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-enable-metrics-collection(1)"
 name: "euscale-enable-metrics-collection"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-enable-metrics-collection/"
 description: "euscale-enable-metrics-collection – Enable monitoring of an auto-scaling group’s group metrics"
 ---
 
-<h2>NAME</h2>
 <p> euscale-enable-metrics-collection &#8211; Enable monitoring of an auto-scaling group&#8217;s group metrics</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-enable-metrics-collection <code>-g</code> GRANULARITY</p>

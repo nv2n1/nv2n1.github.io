@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-launch-configs(1)"
 name: "euscale-describe-launch-configs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-launch-configs/"
 description: "euscale-describe-launch-configs – Describe auto-scaling instance launch configurations"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-launch-configs &#8211; Describe auto-scaling instance launch configurations</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-launch-configs [&#8211;show-long] [&#8211;show-empty-fields]</p>

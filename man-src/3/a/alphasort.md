@@ -1,4 +1,5 @@
 ---
+
 title: "alphasort(3)"
 name: "alphasort"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-alphasort/"
 description: "scandir, scandirat, alphasort, versionsort – scan a directory for matching entries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> scandir, scandirat, alphasort, versionsort &#8211; scan a directory for matching entries </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

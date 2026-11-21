@@ -1,4 +1,5 @@
 ---
+
 title: "pure(1)"
 name: "pure"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pure/"
 description: "pure – the Pure interpreter"
 ---
 
-<h2>NAME</h2>
 <p> pure &#8211; the Pure interpreter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pure</code> [<i>options</i> &#8230;] [<i>script</i> &#8230;] [&#8211; <i>args</i> &#8230;]<br />

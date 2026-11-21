@@ -1,4 +1,5 @@
 ---
+
 title: "wmf2fig(1)"
 name: "wmf2fig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wmf2fig/"
 description: "wmf2fig – Convert metafile image to XFig format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wmf2fig &#8211; Convert metafile image to XFig format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wmf2fig</code> [<i>OPTION</i>] &#8230; [<code>-o</code><i> &lt;file.eps</i>&gt;] &lt;<i>file.wmf</i>&gt; </p>

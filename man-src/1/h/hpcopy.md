@@ -1,4 +1,5 @@
 ---
+
 title: "hpcopy(1)"
 name: "hpcopy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpcopy/"
 description: "hpcopy — copy files from an HFS+ volume"
 ---
 
-<h2>NAME</h2>
 <p> hpcopy &#8212; copy files from an HFS+ volume</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hpcopy</code> [<code>-m</code> | <code>-b</code> | <code>-t</code> | <code>-r</code> | <code>-a</code> ] <i>source-path</i> &#8230; <i>target-path</i></p>

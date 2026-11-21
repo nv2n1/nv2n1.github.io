@@ -1,4 +1,5 @@
 ---
+
 title: "pipe(2)"
 name: "pipe"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-pipe/"
 description: "pipe, pipe2 – create pipe"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pipe, pipe2 &#8211; create pipe </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

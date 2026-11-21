@@ -1,4 +1,5 @@
 ---
+
 title: "ppcsparc(1)"
 name: "ppcsparc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppcsparc/"
 description: "ppcsparc – Free Pascal Compiler (FPC) binary, name derived from Portable Pascal Compiler"
 ---
 
-<h2>NAME</h2>
 <p> ppcsparc &#8211; Free Pascal Compiler (FPC) binary, name derived from Portable Pascal Compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppcsparc [options] [sourcefile]</code></p>

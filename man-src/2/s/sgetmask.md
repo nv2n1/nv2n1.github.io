@@ -1,4 +1,5 @@
 ---
+
 title: "sgetmask(2)"
 name: "sgetmask"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sgetmask/"
 description: "sgetmask, ssetmask – manipulation of signal mask (obsolete)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sgetmask, ssetmask &#8211; manipulation of signal mask (obsolete) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>long sgetmask(void);</code> </p>

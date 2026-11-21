@@ -1,4 +1,5 @@
 ---
+
 title: "setup-nsssysinit(1)"
 name: "setup-nsssysinit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setup-nsssysinit/"
 description: "setup-nsssysinit – Query or enable the nss-sysinit module"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setup-nsssysinit &#8211; Query or enable the nss-sysinit module </p>
 <h2>SYNOPSIS</h2>
 <dl>

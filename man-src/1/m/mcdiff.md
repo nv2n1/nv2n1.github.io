@@ -1,4 +1,5 @@
 ---
+
 title: "mcdiff(1)"
 name: "mcdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mcdiff/"
 description: "mcdiff – Internal diff viewer of GNU Midnight Commander."
 ---
 
-<h2>NAME</h2>
 <p> mcdiff &#8211; Internal diff viewer of GNU Midnight Commander.</p>
 <h2>USAGE</h2>
 <p> <code>mcdiff</code> [-bcCdfhstVx?] file1 file2</p>

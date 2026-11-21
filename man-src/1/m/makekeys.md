@@ -1,4 +1,5 @@
 ---
+
 title: "makekeys(1)"
 name: "makekeys"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makekeys/"
 description: "makekeys — write cjdns keys generated via libnacl to stdout"
 ---
 
-<h2>NAME</h2>
 <p> <code>makekeys</code> &#8212; write cjdns keys generated via libnacl to stdout</p>
 <h2>SYNOPSIS</h2>
 <p> <code>makekeys</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bt-agent(1)"
 name: "bt-agent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bt-agent/"
 description: "bt-adapter – a bluetooth agent"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bt-adapter &#8211; a bluetooth agent </p>
 <h2>SYNOPSIS</h2>
 <p> bt-agent [<font SIZE="-1">OPTION&#8230;</font>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gst-inspect-0(1)"
 name: "gst-inspect-0"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gst-inspect-0/"
 description: "gst-inspect – print info about a GStreamer plugin or element"
 ---
 
-<h2>NAME</h2>
 <p> gst-inspect &#8211; print info about a GStreamer plugin or element</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gst-inspect [OPTION&#8230;] [PLUGIN|ELEMENT]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "msgsnd(2)"
 name: "msgsnd"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-msgsnd/"
 description: "msgrcv, msgsnd – System V message queue operations"
 ---
 
-<h2 class="name">NAME</h2>
 <p> msgrcv, msgsnd &#8211; System V message queue operations </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

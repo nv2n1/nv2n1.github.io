@@ -1,4 +1,5 @@
 ---
+
 title: "rmf(1)"
 name: "rmf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rmf/"
 description: "rmf – remove an nmh folder"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rmf &#8211; remove an nmh folder </p>
 <h2>SYNOPSIS</h2>
 <dl>

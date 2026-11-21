@@ -1,4 +1,5 @@
 ---
+
 title: "vm-dump-metrics(1)"
 name: "vm-dump-metrics"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vm-dump-metrics/"
 description: "vm-dump-metrics – Dump VM metrics."
 ---
 
-<h2>NAME</h2>
 <p> vm-dump-metrics &#8211; Dump VM metrics.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vm-dump-metrics</code> [ <i>OPTION</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gmtdefaults(1)"
 name: "gmtdefaults"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtdefaults/"
 description: "gmtdefaults – List current GMT default parameters"
 ---
 
-<h2>NAME</h2>
 <p> gmtdefaults &#8211; List current GMT default parameters</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtdefaults</code> [ [<code>u</code>|<code>s</code>] ] </p>

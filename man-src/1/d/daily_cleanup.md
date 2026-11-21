@@ -1,4 +1,5 @@
 ---
+
 title: "daily_cleanup(1)"
 name: "daily_cleanup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-daily_cleanup/"
 description: "daily_cleanup.py – Database clean-up for the Django Web framework"
 ---
 
-<h2>NAME</h2>
 <p> daily_cleanup.py &#8211; Database clean-up for the Django Web framework</p>
 <h2>SYNOPSIS</h2>
 <p> <code>daily_cleanup.py</code> </p>

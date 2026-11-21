@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-export(1)"
 name: "byobu-export"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-export/"
 description: "byobu-export – DEPRECATED"
 ---
 
-<h2>NAME</h2>
 <p> byobu-export &#8211; DEPRECATED </p>
 <h2>SYNOPSIS</h2>
 <p> <code>byobu-export</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installcatalogs(1)"
 name: "dh_installcatalogs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installcatalogs/"
 description: "dh_installcatalogs – install and register SGML Catalogs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installcatalogs &#8211; install and register SGML Catalogs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installcatalogs</code> [<i>debhelper options</i>] [<code>-n</code>]</p>

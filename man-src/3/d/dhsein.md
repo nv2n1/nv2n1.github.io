@@ -1,4 +1,5 @@
 ---
+
 title: "dhsein(3)"
 name: "dhsein"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dhsein/"
 description: "dhsein.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dhsein.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

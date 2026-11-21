@@ -1,4 +1,5 @@
 ---
+
 title: "freight(1)"
 name: "freight"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freight/"
 description: "freight – a modern take on the Debian archive"
 ---
 
-<h2>NAME</h2>
 <p> <code>freight</code> &#8211; a modern take on the Debian archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>freight</code> <i>command</i> [<i>&#8230;</i>]</p>

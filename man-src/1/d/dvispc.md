@@ -1,4 +1,5 @@
 ---
+
 title: "dvispc(1)"
 name: "dvispc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvispc/"
 description: "dvispc – Modify a DVI file to be page-independent in specials"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dvispc &#8211; Modify a DVI file to be page-independent in specials </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvispc</code> [<code>-c</code>] [<code>-bvz</code>] <i>input_dvi_file</i> [<i>output_dvi_file</i>] </p>

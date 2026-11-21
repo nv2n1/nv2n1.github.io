@@ -1,4 +1,5 @@
 ---
+
 title: "sediff(1)"
 name: "sediff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sediff/"
 description: "sediff – SELinux policy difference tool"
 ---
 
-<h2>NAME</h2>
 <p> sediff &#8211; SELinux policy difference tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sediff</code> [OPTIONS] [EXPRESSION] ORIGINAL_POLICY ; MODIFIED_POLICY</p>

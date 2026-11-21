@@ -1,4 +1,5 @@
 ---
+
 title: "xapian-compact(1)"
 name: "xapian-compact"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xapian-compact/"
 description: "xapian-compact – Compact a database, or merge and compact several"
 ---
 
-<h2>NAME</h2>
 <p> xapian-compact &#8211; Compact a database, or merge and compact several</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xapian-compact</code> [<i>OPTIONS</i>] <i>SOURCE_DATABASE</i>&#8230; <i>DESTINATION_DATABASE</i></p>

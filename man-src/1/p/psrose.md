@@ -1,4 +1,5 @@
 ---
+
 title: "psrose(1)"
 name: "psrose"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psrose/"
 description: "psrose – Plot a polar histogram (rose, sector, windrose diagrams)"
 ---
 
-<h2>NAME</h2>
 <p> psrose &#8211; Plot a polar histogram (rose, sector, windrose diagrams)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>psrose</code> [ <i>table</i> ] [ [<code>r</code>]<i>sector_width</i> ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ [<i>mode_file</i>] ] [ ] [ <i>fill</i> ] [ ] [ ] [ [<i>wlabel</i>/<i>elabel</i>/<i>slabel</i>/<i>nlabel</i>] ] [ <i>parameters</i> ] [ ] [ ] [ <i>r0</i>/<i>r1</i>/<i>az_0</i>/<i>az_1</i> ] [ [<code>n</code>]*radial_scale* ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ [<code>v</code>]<i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>u</code>|<i>scale</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ayttm(1)"
 name: "ayttm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ayttm/"
 description: "Ayttm – Universal Instant Messaging client"
 ---
 
-<h2>NAME</h2>
 <p> Ayttm &#8211; Universal Instant Messaging client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ayttm</code> [<i>options</i>]&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ffi(3)"
 name: "ffi"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ffi/"
 description: "FFI – Foreign Function Interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>FFI</code> &#8211; Foreign Function Interface </p>
 <h2>LIBRARY</h2>
 <p> libffi, -lffi</p>

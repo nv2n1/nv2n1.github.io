@@ -1,4 +1,5 @@
 ---
+
 title: "fusioninventory-injector(1)"
 name: "fusioninventory-injector"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fusioninventory-injector/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fusioninventory-injector - A tool to push inventory in an OCS Inventory or compatible server. 
+fusioninventory-injector - A tool to push inventory in an OCS Inventory or compatible server. 
 
 <h2>SYNOPSIS</h2>
 

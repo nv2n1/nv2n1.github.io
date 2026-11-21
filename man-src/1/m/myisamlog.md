@@ -1,4 +1,5 @@
 ---
+
 title: "myisamlog(1)"
 name: "myisamlog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-myisamlog/"
 description: "myisamlog – display MyISAM log file contents"
 ---
 
-<h2 class="name">NAME</h2>
 <p> myisamlog &#8211; display MyISAM log file contents </p>
 <h2>SYNOPSIS</h2>
 <dl>

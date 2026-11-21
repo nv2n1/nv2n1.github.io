@@ -1,4 +1,5 @@
 ---
+
 title: "glib-gettextize(1)"
 name: "glib-gettextize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glib-gettextize/"
 description: "glib-gettextize – gettext internationalization utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> glib-gettextize &#8211; gettext internationalization utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

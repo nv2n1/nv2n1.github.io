@@ -1,4 +1,5 @@
 ---
+
 title: "pidfd_open(2)"
 name: "pidfd_open"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-pidfd_open/"
 description: "pidfd_open – obtain a file descriptor that refers to a process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pidfd_open &#8211; obtain a file descriptor that refers to a process </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

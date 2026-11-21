@@ -1,4 +1,5 @@
 ---
+
 title: "aa_displayrecommended(3)"
 name: "aa_displayrecommended"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_displayrecommended/"
 description: "aa_displayrecommended – List of recommended drivers."
 ---
 
-<h2>NAME</h2>
 <p> aa_displayrecommended &#8211; List of recommended drivers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

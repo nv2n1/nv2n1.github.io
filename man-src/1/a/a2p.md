@@ -1,4 +1,5 @@
 ---
+
 title: "a2p(1)"
 name: "a2p"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-a2p/"
 description: "a2p – Awk to Perl translator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> a2p &#8211; Awk to Perl translator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>a2p</code> [<i>options</i>] [<i>filename</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "host(1)"
 name: "host"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-host/"
 description: "host – DNS lookup utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> host &#8211; DNS lookup utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>host</code> [<code>-aACdlnrsTUwv</code>] [<code>-c</code> class] [<code>-N</code> ndots] [<code>-p</code> port] [<code>-R</code> number] [<code>-t</code> type] [<code>-W</code> wait] [<code>-m</code> flag] [ [<code>-4</code>] | [<code>-6</code>] ] [<code>-v</code>] [<code>-V</code>] {name} [server]</p>

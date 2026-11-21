@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_log2vis_get_embedding_levels(3)"
 name: "fribidi_log2vis_get_embedding_levels"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_log2vis_get_embedding_levels/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_log2vis_get_embedding_levels - get embedding levels 
+fribidi_log2vis_get_embedding_levels - get embedding levels 
 
 <h2>SYNOPSIS</h2>
 

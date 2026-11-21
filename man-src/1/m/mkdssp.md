@@ -1,4 +1,5 @@
 ---
+
 title: "mkdssp(1)"
 name: "mkdssp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkdssp/"
 description: "mkdssp – Calculate secondary structure for proteins in a PDB file"
 ---
 
-<h2>NAME</h2>
 <p> mkdssp &#8211; Calculate secondary structure for proteins in a PDB file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkdssp</code> [OPTION] pdbfile [dsspfile]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "spice-client(1)"
 name: "spice-client"
 section: "1"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-spice-client/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- Spice-GTK - a client-side library to access remote SPICE displays 
+Spice-GTK - a client-side library to access remote SPICE displays 
 
 <h2>DESCRIPTION</h2>
 

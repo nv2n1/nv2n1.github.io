@@ -1,4 +1,5 @@
 ---
+
 title: "pmxchords(1)"
 name: "pmxchords"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmxchords/"
 description: "pmxchords – This script processes pmx files with chord symbols, allowing for key transpositions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pmxchords &#8211; This script processes pmx files with chord symbols, allowing for key transpositions </p>
 <h2>SYNOPSIS</h2>
 <p> [ texlua ] <code>pmxchords</code> { <i>option</i> | <i>jobname</i> [ .pmx ] } &#8230;</p>

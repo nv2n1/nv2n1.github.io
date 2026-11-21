@@ -1,4 +1,5 @@
 ---
+
 title: "g_clustsize(1)"
 name: "g_clustsize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_clustsize/"
 description: "g_clustsize – calculate size distributions of atomic clusters"
 ---
 
-<h2>NAME</h2>
 <p> g_clustsize &#8211; calculate size distributions of atomic clusters </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-passwd(1)"
 name: "zarafa-passwd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zarafa-passwd/"
 description: "zarafa-passwd – Change Zarafa user password."
 ---
 
-<h2 class="name">NAME</h2>
 <p> zarafa-passwd &#8211; Change Zarafa user password. </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-process-types(1)"
 name: "euscale-describe-process-types"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-process-types/"
 description: "euscale-describe-process-types – List all types of scaling processes"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-process-types &#8211; List all types of scaling processes</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-process-types [&#8211;show-empty-fields] [-U URL]</p>

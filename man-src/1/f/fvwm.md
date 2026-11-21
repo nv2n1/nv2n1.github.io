@@ -1,4 +1,5 @@
 ---
+
 title: "fvwm(1)"
 name: "fvwm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fvwm/"
 description: "Fvwm – F? Virtual Window Manager for X11"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Fvwm &#8211; F? Virtual Window Manager for X11 </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "cannastat(1)"
 name: "cannastat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cannastat/"
 description: "cannastat – Display information about the Kana-Kanji conversion server"
 ---
 
-<h2>NAME</h2>
 <p> cannastat &#8211; Display information about the Kana-Kanji conversion server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cannastat [{-cs|-cannaserver} </code><i>canna-server</i>] [-p] [-t] [-a]</p>

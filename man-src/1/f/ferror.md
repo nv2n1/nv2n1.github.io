@@ -1,4 +1,5 @@
 ---
+
 title: "ferror(1)"
 name: "ferror"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ferror/"
 description: "ferror – print a stack trace when the given message is printed by the traced program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ferror &#8211; print a stack trace when the given message is printed by the traced program </p>
 <h2>SYNOPSIS</h2>
 <dl>

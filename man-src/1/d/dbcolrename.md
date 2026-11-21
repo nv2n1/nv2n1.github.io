@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolrename(1)"
 name: "dbcolrename"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbcolrename/"
 description: "dbcolrename – change the names of columns in a fsdb schema"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbcolrename &#8211; change the names of columns in a fsdb schema </p>
 <h2>SYNOPSIS</h2>
 <p> dbcolrename OldName1 NewName1 [OldName2 NewName2] &#8230;</p>

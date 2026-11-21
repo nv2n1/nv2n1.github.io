@@ -1,4 +1,5 @@
 ---
+
 title: "udaddy(1)"
 name: "udaddy"
 section: "1"
@@ -6,9 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-udaddy/"
 ---
 
-<h2>NAME</h2>
-
- udaddy - RDMA CM datagram setup and simple ping-pong test.
+udaddy - RDMA CM datagram setup and simple ping-pong test.
 
 <h2>SYNOPSIS</h2>
 

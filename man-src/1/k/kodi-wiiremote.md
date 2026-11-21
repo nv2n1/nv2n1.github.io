@@ -1,4 +1,5 @@
 ---
+
 title: "kodi-wiiremote(1)"
 name: "kodi-wiiremote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kodi-wiiremote/"
 description: "kodi-wiiremote – Wiimote Remote Control Client for Kodi"
 ---
 
-<h2>NAME</h2>
 <p> kodi-wiiremote &#8211; Wiimote Remote Control Client for Kodi</p>
 <h2>DESCRIPTION</h2>
 <p> This script is the Kodi remote control client that will allow Kodi to be controlled by a Wiimote.</p>

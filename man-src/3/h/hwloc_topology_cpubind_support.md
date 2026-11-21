@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_topology_cpubind_support(3)"
 name: "hwloc_topology_cpubind_support"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_topology_cpubind_support/"
 description: "hwloc_topology_cpubind_support –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwloc_topology_cpubind_support &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;hwloc.h&gt;</p>

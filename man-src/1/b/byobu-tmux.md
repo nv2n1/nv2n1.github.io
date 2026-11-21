@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-tmux(1)"
 name: "byobu-tmux"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-tmux/"
 description: "byobu-tmux – Launch byobu with tmux as the backend"
 ---
 
-<h2>NAME</h2>
 <p> byobu-tmux &#8211; Launch byobu with tmux as the backend </p>
 <h2>DESCRIPTION</h2>
 <p> <code>byobu-tmux</code> launches <code><a href="/docs/linux/man/1-byobu/">byobu</a></code>(1) with <code><a href="/docs/linux/man/1-tmux/">tmux</a></code>(1) as the backend window manager. </p>

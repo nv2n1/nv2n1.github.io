@@ -1,4 +1,5 @@
 ---
+
 title: "exspline(3)"
 name: "exspline"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exspline/"
 description: "exspline – Constructing smooth movement paths from spline curves. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exspline &#8211; Constructing smooth movement paths from spline curves. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

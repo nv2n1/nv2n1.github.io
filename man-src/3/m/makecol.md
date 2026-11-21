@@ -1,4 +1,5 @@
 ---
+
 title: "makecol(3)"
 name: "makecol"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-makecol/"
 description: "makecol – Converts an RGB value into the current pixel format. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> makecol &#8211; Converts an RGB value into the current pixel format. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

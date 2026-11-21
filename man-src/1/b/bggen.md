@@ -1,4 +1,5 @@
 ---
+
 title: "bggen(1)"
 name: "bggen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bggen/"
 description: "bggen – generates colored backgrounds on X11 displays"
 ---
 
-<h2>NAME</h2>
 <p> bggen &#8211; generates colored backgrounds on X11 displays</p>
 <h2>SYNTAX</h2>
 <p> <code>bggen</code> [-d display] [-g geometry] [-G rptgeom] [-r rot] [-a] [-w width] [-h height] [-b bits] &lt;color-spec&gt; [&lt;color-spec&gt; &#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "unix(7)"
 name: "unix"
 section: "7"
@@ -6,8 +7,9 @@ letter: "u"
 url: "/docs/linux/man/7-unix/"
 description: "unix – sockets for local interprocess communication"
 ---
+
 <p>unix &#8211; sockets for local interprocess communication </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;sys/socket.h&gt;</code> <br />
  <code>#include &lt;sys/un.h&gt;</code> </p>
 <p> <i>unix_socket</i><code> = socket(AF_UNIX, type, 0);</code> <br />

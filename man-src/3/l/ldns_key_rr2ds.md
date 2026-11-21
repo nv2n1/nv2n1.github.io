@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_key_rr2ds(3)"
 name: "ldns_key_rr2ds"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_key_rr2ds/"
 description: "ldns_key_rr2ds"
 ---
 
-<h2>NAME</h2>
 <p> ldns_key_rr2ds </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

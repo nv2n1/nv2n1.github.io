@@ -1,4 +1,5 @@
 ---
+
 title: "get_midi_length(3)"
 name: "get_midi_length"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_midi_length/"
 description: "get_midi_length – Determines the total playing time of a midi, in seconds. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_midi_length &#8211; Determines the total playing time of a midi, in seconds. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

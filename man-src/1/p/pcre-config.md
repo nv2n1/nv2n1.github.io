@@ -1,4 +1,5 @@
 ---
+
 title: "pcre-config(1)"
 name: "pcre-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcre-config/"
 description: "pcre-config – program to return PCRE configuration"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pcre-config &#8211; program to return PCRE configuration </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcre-config</code> [<code>&#8211;prefix</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;version</code>] [<code>&#8211;libs</code>] [<code>&#8211;libs-posix</code>] [<code>&#8211;cflags</code>] [<code>&#8211;cflags-posix</code>] </p>

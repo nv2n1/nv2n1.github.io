@@ -1,4 +1,5 @@
 ---
+
 title: "pg_archivecleanup(1)"
 name: "pg_archivecleanup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg_archivecleanup/"
 description: "pg_archivecleanup – clean up PostgreSQL WAL archive files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg_archivecleanup &#8211; clean up PostgreSQL WAL archive files </p>
 <h2>SYNOPSIS</h2>
 <dl>

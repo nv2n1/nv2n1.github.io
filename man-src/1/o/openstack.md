@@ -1,4 +1,5 @@
 ---
+
 title: "openstack(1)"
 name: "openstack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-openstack/"
 description: "openstack – OpenStack Command Line Client"
 ---
 
-<h2>NAME</h2>
 <p> openstack &#8211; OpenStack Command Line Client </p>
 <p> OpenStack Command Line</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "alsa_out(1)"
 name: "alsa_out"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alsa_out/"
 description: "alsa_in, alsa_out – Jack clients that perform I/O with an alternate audio interface"
 ---
 
-<h2>NAME</h2>
 <p> <code>alsa_in</code>, <code>alsa_out</code> &#8211; Jack clients that perform I/O with an alternate audio interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>alsa_in</code> [<i>options</i>]<br />

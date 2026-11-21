@@ -1,4 +1,5 @@
 ---
+
 title: "pmpython(1)"
 name: "pmpython"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmpython/"
 description: "pmpython – run a python script using a preferred python variant"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmpython</code> &#8211; run a python script using a preferred python variant</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmpython</code> [<i>python-args-and-script</i>]</p>

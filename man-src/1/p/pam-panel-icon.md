@@ -1,4 +1,5 @@
 ---
+
 title: "pam-panel-icon(1)"
 name: "pam-panel-icon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pam-panel-icon/"
 description: "pam-panel-icon – A notification area indicator of pam_timestamp status"
 ---
 
-<h2>NAME</h2>
 <p> pam-panel-icon &#8211; A notification area indicator of pam_timestamp status</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pam-panel-icon</code></p>

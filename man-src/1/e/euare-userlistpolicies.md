@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userlistpolicies(1)"
 name: "euare-userlistpolicies"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userlistpolicies/"
 description: "euare-userlistpolicies – List one or all policies attached to a user"
 ---
 
-<h2>NAME</h2>
 <p> euare-userlistpolicies &#8211; List one or all policies attached to a user</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userlistpolicies [-p POLICY] [-v] [&#8211;pretty-print]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "localedef(1)"
 name: "localedef"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-localedef/"
 description: "localedef – compile locale definition files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> localedef &#8211; compile locale definition files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>localedef</code> [<i>options</i>] <i>outputpath</i><br />

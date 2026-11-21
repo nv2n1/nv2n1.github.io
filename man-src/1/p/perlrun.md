@@ -1,4 +1,5 @@
 ---
+
 title: "perlrun(1)"
 name: "perlrun"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlrun/"
 description: "perlrun – how to execute the Perl interpreter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlrun &#8211; how to execute the Perl interpreter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>perl</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-sTtuUWX</code> ]<br />

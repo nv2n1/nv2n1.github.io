@@ -1,4 +1,5 @@
 ---
+
 title: "unbound-streamtcp(1)"
 name: "unbound-streamtcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unbound-streamtcp/"
 description: "unbound-streamtcp – unbound DNS lookup utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>unbound-streamtcp</code> &#8211; unbound DNS lookup utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unbound-streamtcp</code> [<code>-unsh</code>] [<code>-f</code> <i>ipaddr[@port]</i>] <i>name</i> <i>type</i> <i>class</i></p>

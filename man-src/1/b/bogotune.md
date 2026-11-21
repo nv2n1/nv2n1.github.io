@@ -1,4 +1,5 @@
 ---
+
 title: "bogotune(1)"
 name: "bogotune"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bogotune/"
 description: "bogotune – find optimum parameter settings for bogofilter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bogotune &#8211; find optimum parameter settings for bogofilter </p>
 <h2>SYNOPSIS</h2>
 <dl>

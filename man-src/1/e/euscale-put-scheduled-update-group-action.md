@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-put-scheduled-update-group-action(1)"
 name: "euscale-put-scheduled-update-group-action"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-put-scheduled-update-group-action/"
 description: "euscale-put-scheduled-update-group-action – Schedule a scaling action for an auto-scaling group"
 ---
 
-<h2>NAME</h2>
 <p> euscale-put-scheduled-update-group-action &#8211; Schedule a scaling action for an auto-scaling group</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-put-scheduled-update-group-action <code>-g</code> ASGROUP</p>

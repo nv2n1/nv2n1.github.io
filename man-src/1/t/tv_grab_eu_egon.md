@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_eu_egon(1)"
 name: "tv_grab_eu_egon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_eu_egon/"
 description: "tv_grab_eu_egon – Grab TV listings for German speaking area."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_eu_egon &#8211; Grab TV listings for German speaking area. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_eu_egon &#8211;help </p>

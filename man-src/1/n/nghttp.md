@@ -1,4 +1,5 @@
 ---
+
 title: "nghttp(1)"
 name: "nghttp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nghttp/"
 description: "nghttp – HTTP/2 client"
 ---
 
-<h2>NAME</h2>
 <p> nghttp &#8211; HTTP/2 client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nghttp</code> [OPTIONS]&#8230; &lt;URI&gt;&#8230;</p>

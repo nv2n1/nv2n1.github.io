@@ -1,4 +1,5 @@
 ---
+
 title: "perlop(1)"
 name: "perlop"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlop/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlop - Perl operators and precedence 
+perlop - Perl operators and precedence 
 
 <h2>DESCRIPTION</h2>
 

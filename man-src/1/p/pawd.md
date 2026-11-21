@@ -1,4 +1,5 @@
 ---
+
 title: "pawd(1)"
 name: "pawd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pawd/"
 description: "pawd – print automounter working directory"
 ---
 
-<h2>NAME</h2>
 <p> pawd &#8211; print automounter working directory</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pawd</code> [ <i>path &#8230;</i> ]</p>

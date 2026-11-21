@@ -1,4 +1,5 @@
 ---
+
 title: "capget(2)"
 name: "capget"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-capget/"
 description: "capget, capset – set/get capabilities of thread(s)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> capget, capset &#8211; set/get capabilities of thread(s) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/capability.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "allegro_message(3)"
 name: "allegro_message"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-allegro_message/"
 description: "allegro_message – Used mainly to show error messages to users. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> allegro_message &#8211; Used mainly to show error messages to users. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_iterator_init(3)"
 name: "ck_ht_iterator_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ht_iterator_init/"
 description: "ck_ht_iterator_init – initialize hash table iterator"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ht_iterator_init</code> &#8211; initialize hash table iterator</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

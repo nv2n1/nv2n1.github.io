@@ -1,4 +1,5 @@
 ---
+
 title: "dcmpssnd(1)"
 name: "dcmpssnd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmpssnd/"
 description: "dcmpssnd – Network send for presentation state viewer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmpssnd &#8211; Network send for presentation state viewer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

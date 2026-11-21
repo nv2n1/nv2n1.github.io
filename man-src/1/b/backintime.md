@@ -1,4 +1,5 @@
 ---
+
 title: "backintime(1)"
 name: "backintime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-backintime/"
 description: "backintime – a simple backup tool for Linux."
 ---
 
-<h2>NAME</h2>
 <p> backintime &#8211; a simple backup tool for Linux. </p>
 <p> This is command line tool. The graphical tools are: backintime-gnome and backintime-kde4.</p>
 <h2>SYNOPSIS</h2>

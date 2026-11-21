@@ -1,4 +1,5 @@
 ---
+
 title: "flow-expire(1)"
 name: "flow-expire"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-expire/"
 description: "flow-expire – Manage storage of flow file archives by expiring old data."
 ---
 
-<h2>NAME</h2>
 <p> flow-expire &#8211; Manage storage of flow file archives by expiring old data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-expire</code> [ <code>-h</code> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-e</code><i> expire_count</i> ] [ <code>-E</code><i> expire_size</i> ] <code>-w</code><i> workdir</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "curl_version(3)"
 name: "curl_version"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_version/"
 description: "curl_version – returns the libcurl version string"
 ---
 
-<h2>NAME</h2>
 <p> curl_version &#8211; returns the libcurl version string</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

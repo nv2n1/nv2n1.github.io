@@ -1,4 +1,5 @@
 ---
+
 title: "git-cola(1)"
 name: "git-cola"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-cola/"
 description: "git-cola – A highly caffeinated Git GUI"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-cola &#8211; A highly caffeinated Git GUI </p>
 <h2>SYNOPSIS</h2>
 <p> <i>git cola</i> [options]</p>

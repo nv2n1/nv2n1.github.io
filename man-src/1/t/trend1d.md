@@ -1,4 +1,5 @@
 ---
+
 title: "trend1d(1)"
 name: "trend1d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trend1d/"
 description: "trend1d – Fit a [weighted] [robust] polynomial [and/or Fourier] model for y = f(x) to xy[w] data"
 ---
 
-<h2>NAME</h2>
 <p> trend1d &#8211; Fit a [weighted] [robust] polynomial [and/or Fourier] model for y = f(x) to xy[w] data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>trend1d</code> [ <i>table</i> ] <code>xymrw|p</code> [<code>p</code>|<code>P</code>|<code>f</code>|<code>F</code>|<code>c</code>|<code>C</code>|<code>s</code>|<code>S</code>|<code>x</code>]<i>n</i>[,&#8230;][<code>+l</code><i>length</i>][<code>+o</code><i>origin</i>][<code>+r</code>] [ <i>xy[w]file</i> ] [ <i>condition_number</i> ] [ [<i>confidence_level</i>] ] [ [<i>level</i>] ] [ ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

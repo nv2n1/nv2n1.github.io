@@ -1,4 +1,5 @@
 ---
+
 title: "psconvert(1)"
 name: "psconvert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psconvert/"
 description: "psconvert – Convert [E]PS file(s) to other formats using GhostScript"
 ---
 
-<h2>NAME</h2>
 <p> psconvert &#8211; Convert [E]PS file(s) to other formats using GhostScript</p>
 <h2>SYNOPSIS</h2>
 <p> <code>psconvert</code> <i>psfile(s)</i> [ [<code>u</code>][<i>margins</i>][<code>&#8211;</code>][<code>+g</code><i>paint</i>][<code>+p</code>[<i>pen</i>]][<code>+r</code>][<code>+s</code>[<code>m</code>]|<code>S</code><i>width</i>[<code>u</code>]/<i>height</i>[<code>u</code>]] ] [ <i>gs_option</i> ] [ <code>-D</code><i>outdir</i> ] [ <code>-E</code><i>resolution</i> ] [ <code>-F</code><i>&lt;out_name&gt;</i> ] [ <i>ghost_path</i> ] [ ] [ <i>listfile</i> ] [ ] [ [<code>g</code>|<code>t</code>][1|2|4] ] [ <code>-S</code> ] [ <code>b</code>|<code>e</code>|<code>E</code>|<code>f</code>|<code>F</code>|<code>j</code>|<code>g</code>|<code>G</code>|<code>m</code>|<code>s</code> |<code>t</code> ] [ [<i>level</i>] ] [ [<code>+g</code>][<code>+k</code>][<code>+t</code><i>docname</i>][<code>+n</code><i>layername</i>][<code>+o</code><i>foldername</i>][<code>+a</code><i>altmode</i>[<i>alt</i>]][<code>+l</code><i>minLOD/maxLOD</i>][<code>+f</code><i>minfade/maxfade</i>][<code>+u</code><i>URL</i>] ] </p>

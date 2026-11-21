@@ -1,4 +1,5 @@
 ---
+
 title: "csinhl(3)"
 name: "csinhl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csinhl/"
 description: "csinh, csinhf, csinhl – complex hyperbolic sine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> csinh, csinhf, csinhl &#8211; complex hyperbolic sine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

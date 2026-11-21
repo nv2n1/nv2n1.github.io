@@ -1,4 +1,5 @@
 ---
+
 title: "podlint(1)"
 name: "podlint"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-podlint/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- podlint - check POD for correctness using Pod::POM 
+podlint - check POD for correctness using Pod::POM 
 
 <h2>SYNOPSIS</h2>
 

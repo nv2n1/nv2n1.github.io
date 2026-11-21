@@ -1,4 +1,5 @@
 ---
+
 title: "nwrights(1)"
 name: "nwrights"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwrights/"
 description: "nwrights – Show effective rights for file or directory"
 ---
 
-<h2>NAME</h2>
 <p> nwrights &#8211; Show effective rights for file or directory</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwrights</code> [ <code>-h</code> ] <code>file/directory</code> </p>

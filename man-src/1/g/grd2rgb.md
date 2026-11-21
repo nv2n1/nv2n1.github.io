@@ -1,4 +1,5 @@
 ---
+
 title: "grd2rgb(1)"
 name: "grd2rgb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grd2rgb/"
 description: "grd2rgb – Write r/g/b grid files from a grid file, a raw RGB file, or SUN rasterfile"
 ---
 
-<h2>NAME</h2>
 <p> grd2rgb &#8211; Write r/g/b grid files from a grid file, a raw RGB file, or SUN rasterfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grd2rgb</code> <i>infile</i> <i>template</i> [ <i>cpt</i> ] [ <i>xinc</i>[<code>m</code>|<code>s</code>][/<i>yinc</i>[<code>m</code>|<code>s</code>]] ] [ <i>layer</i> ] <i>region</i> [<i>level</i>] [ <i>width</i>/<i>height</i>[/<i>n_bytes</i>] ] [ <code>-r</code> ] </p>

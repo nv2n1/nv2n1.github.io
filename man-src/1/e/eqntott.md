@@ -1,4 +1,5 @@
 ---
+
 title: "eqntott(1)"
 name: "eqntott"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eqntott/"
 description: "eqntott – generate truth table from Boolean equations"
 ---
 
-<h2>NAME</h2>
 <p> eqntott &#8211; generate truth table from Boolean equations</p>
 <h2>SYNOPSIS</h2>
 <p> <code>eqntott</code> [ <code>-l</code> ] [ <code>-f</code> ] [ <code>-s</code> ] [ <code>-r</code> ] [ <code>-R</code> ] ] [ -.key ] [ cc options ] [ files ]</p>

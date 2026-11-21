@@ -1,4 +1,5 @@
 ---
+
 title: "pselect(2)"
 name: "pselect"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-pselect/"
 description: "select, pselect, FD_CLR, FD_ISSET, FD_SET, FD_ZERO – synchronous I/O multiplexing"
 ---
 
-<h2 class="name">NAME</h2>
 <p> select, pselect, FD_CLR, FD_ISSET, FD_SET, FD_ZERO &#8211; synchronous I/O multiplexing </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "afm2pl(1)"
 name: "afm2pl"
 section: "1"
@@ -6,7 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-afm2pl/"
 description: "afm2pl – convert AFM font metrics to TeX pl font metrics"
 ---
-<h2 class="name">NAME</h2>
+
 <p> afm2pl - convert AFM font metrics to TeX pl font metrics </p>
 <h2>SYNOPSIS</h2>
 <dl>

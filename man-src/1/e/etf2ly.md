@@ -1,4 +1,5 @@
 ---
+
 title: "etf2ly(1)"
 name: "etf2ly"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-etf2ly/"
 description: "etf2ly – manual page for etf2ly (LilyPond) 2.12.2"
 ---
 
-<h2>NAME</h2>
 <p> etf2ly &#8211; manual page for etf2ly (LilyPond) 2.12.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>etf2ly</code> [<i>OPTION</i>]&#8230; <i>ETF-FILE</i></p>

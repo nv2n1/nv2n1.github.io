@@ -1,4 +1,5 @@
 ---
+
 title: "iconv(3)"
 name: "iconv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iconv/"
 description: "iconv – perform character set conversion"
 ---
 
-<h2 class="name">NAME</h2>
 <p> iconv &#8211; perform character set conversion </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "ex12bit(3)"
 name: "ex12bit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ex12bit/"
 description: "ex12bit – How to fake a 12-bit truecolor mode on an 8-bit card. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> ex12bit &#8211; How to fake a 12-bit truecolor mode on an 8-bit card. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

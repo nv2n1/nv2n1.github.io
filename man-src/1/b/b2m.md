@@ -1,4 +1,5 @@
 ---
+
 title: "b2m(1)"
 name: "b2m"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-b2m/"
 description: "b2m – convert old Emacs Rmail Babyl format to mbox format"
 ---
 
-<h2>NAME</h2>
 <p> b2m &#8211; convert old Emacs Rmail Babyl format to mbox format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>b2m</code> &lt; <i>babyl-file</i> &gt; <i>mbox-file</i></p>

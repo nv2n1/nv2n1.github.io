@@ -1,4 +1,5 @@
 ---
+
 title: "defncopy(1)"
 name: "defncopy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-defncopy/"
 description: "defncopy – extract procedures and views from a Microsoft server."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>defncopy</code> &#8211; extract procedures and views from a Microsoft server. </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>v</code> ] [-<code>U </code><i>username</i> ] [-<code>P </code><i>password</i> ] [-<code>S </code><i>server</i> ] [-<code>D </code><i>database</i> ] [-<code>i </code><i>input_file</i> ] [-<code>o </code><i>output_file</i> ] Bo <i>owner.object_name</i> [<i>owner.object_name &#8230;</i> ] Bc</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fontforge(1)"
 name: "fontforge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fontforge/"
 description: "fontforge – create and modify PostScript, TrueType and SVG fonts"
 ---
 
-<h2>NAME</h2>
 <p> <code>fontforge &#8211; create and modify PostScript, TrueType and SVG fonts</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>fontforge</code> [<code>-c</code> <i>string</i>] [<code>-cmap</code> <i>maptype</i>] [<code>-depth</code> <i>pixeld</i>] [<code>-display</code> <i>str</i>] [<code>-lang=ff</code>] [<code>-lang=py</code>] [<code>-last</code>] [<code>-library-status</code>] [<code>-help</code>] [<code>-keyboard</code> <i>ktype</i>] [<code>-new</code>] [<code>-nosplash</code>] [<code>-recover</code> <i>mode</i>] [<code>-script</code> <i>file</i>] [<code>-sync</code>] [<code>-usage</code>] [<code>-vc</code> <i>vclass</i>] [<code>-version</code>] <i>fontfile &#8230;</i></p>

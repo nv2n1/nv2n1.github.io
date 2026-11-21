@@ -1,4 +1,5 @@
 ---
+
 title: "seteuid(2)"
 name: "seteuid"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-seteuid/"
 description: "seteuid, setegid – set effective user or group ID"
 ---
 
-<h2 class="name">NAME</h2>
 <p> seteuid, setegid &#8211; set effective user or group ID </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_t(3)"
 name: "bson_iter_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_t/"
 description: "bson_iter_t – BSON Document Iterator"
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_t &#8211; BSON Document Iterator</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

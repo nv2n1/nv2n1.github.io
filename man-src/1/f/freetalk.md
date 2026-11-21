@@ -1,4 +1,5 @@
 ---
+
 title: "freetalk(1)"
 name: "freetalk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freetalk/"
 description: "freetalk – A console based Jabber client"
 ---
 
-<h2>NAME</h2>
 <p> freetalk &#8211; A console based Jabber client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>freetalk</code> [<i>OPTION</i>&#8230;]</p>

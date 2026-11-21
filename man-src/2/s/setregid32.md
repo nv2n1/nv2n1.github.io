@@ -1,4 +1,5 @@
 ---
+
 title: "setregid32(2)"
 name: "setregid32"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-setregid32/"
 description: "setreuid, setregid – set real and/or effective user or group ID"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setreuid, setregid &#8211; set real and/or effective user or group ID </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />

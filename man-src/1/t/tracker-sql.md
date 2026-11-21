@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-sql(1)"
 name: "tracker-sql"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker-sql/"
 description: "tracker-sql – Use SQL to query the Tracker databases."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tracker-sql &#8211; Use SQL to query the Tracker databases.</p>
 <h2>SYNOPSIS</h2>
 <pre>

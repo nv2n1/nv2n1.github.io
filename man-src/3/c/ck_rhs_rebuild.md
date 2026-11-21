@@ -1,4 +1,5 @@
 ---
+
 title: "ck_rhs_rebuild(3)"
 name: "ck_rhs_rebuild"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_rhs_rebuild/"
 description: "ck_rhs_rebuild – rebuild a hash set"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_rhs_rebuild</code> &#8211; rebuild a hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

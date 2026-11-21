@@ -1,4 +1,5 @@
 ---
+
 title: "curl_easy_duphandle(3)"
 name: "curl_easy_duphandle"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_easy_duphandle/"
 description: "curl_easy_duphandle – Clone a libcurl session handle"
 ---
 
-<h2>NAME</h2>
 <p> curl_easy_duphandle &#8211; Clone a libcurl session handle</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

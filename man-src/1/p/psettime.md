@@ -1,4 +1,5 @@
 ---
+
 title: "psettime(1)"
 name: "psettime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psettime/"
 description: "psettime – synchronize the time on a PDA with the local computer"
 ---
 
-<h2>NAME</h2>
 <p> psettime &#8211; synchronize the time on a PDA with the local computer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psettime</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] </p>

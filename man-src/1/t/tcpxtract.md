@@ -1,4 +1,5 @@
 ---
+
 title: "tcpxtract(1)"
 name: "tcpxtract"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcpxtract/"
 description: "tcpxtract – manual page for tcpxtract v1.0.1"
 ---
 
-<h2>NAME</h2>
 <p> tcpxtract &#8211; manual page for tcpxtract v1.0.1</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tcpxtract</code> [<i>OPTIONS</i>] [[<i>-d &lt;DEVICE&gt;</i>] [<i>-f &lt;FILE&gt;</i>]]</p>

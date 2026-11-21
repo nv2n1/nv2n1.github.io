@@ -1,4 +1,5 @@
 ---
+
 title: "fd2pascal(1)"
 name: "fd2pascal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fd2pascal/"
 description: "fd2pascal – Free Pascal forms description to pascal program converter"
 ---
 
-<h2>NAME</h2>
 <p> fd2pascal &#8211; Free Pascal forms description to pascal program converter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fd2pascal [-compensate] [-altformat] [-main] [-callback] filename</code> </p>

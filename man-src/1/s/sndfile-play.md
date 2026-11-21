@@ -1,4 +1,5 @@
 ---
+
 title: "sndfile-play(1)"
 name: "sndfile-play"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sndfile-play/"
 description: "sndfile-play – play a sound file"
 ---
 
-<h2>NAME</h2>
 <p> sndfile-play &#8211; play a sound file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sndfile-play</code> file</p>

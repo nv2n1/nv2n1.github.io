@@ -1,4 +1,5 @@
 ---
+
 title: "cache-list(1)"
 name: "cache-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cache-list/"
 description: "cache-list – List contents of the A-REX cache."
 ---
 
-<h2>NAME</h2>
 <p> cache-list &#8211; List contents of the A-REX cache. </p>
 <h2>SYNOPSIS</h2>
 <p> cache-list [-h] [-c config_file] [url1 [url2 [&#8230;]]] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_error_openssl_error_get_function(3)"
 name: "globus_error_openssl_error_get_function"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_error_openssl_error_get_function/"
 description: "globus_error_openssl.h – Globus Generic Error."
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_error_openssl.h &#8211; Globus Generic Error.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common.h&#8217;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "git-commit(1)"
 name: "git-commit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-commit/"
 description: "git-commit – Record changes to the repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-commit &#8211; Record changes to the repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

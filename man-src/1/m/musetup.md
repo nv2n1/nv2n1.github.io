@@ -1,4 +1,5 @@
 ---
+
 title: "musetup(1)"
 name: "musetup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-musetup/"
 description: "Musetup – Configuration script for Museekd"
 ---
 
-<h2>NAME</h2>
 <p> <code>Musetup</code> &#8211; Configuration script for Museekd</p>
 <h2>SYNOPSIS</h2>
 <p> <code>musetup</code> &lt;<i>config-filename</i>&gt; [-h] [&#8211;help]</p>

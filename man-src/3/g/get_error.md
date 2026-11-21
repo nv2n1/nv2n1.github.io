@@ -1,4 +1,5 @@
 ---
+
 title: "get_error(3)"
 name: "get_error"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_error/"
 description: "get_error — report a getdata library error"
 ---
 
-<h2>NAME</h2>
 <p> get_error &#8212; report a getdata library error</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

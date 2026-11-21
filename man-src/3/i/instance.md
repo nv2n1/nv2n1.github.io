@@ -1,4 +1,5 @@
 ---
+
 title: "instance(3)"
 name: "instance"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-instance/"
 description: "QuantLib::Singleton – Basic support for the singleton pattern."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::Singleton &#8211; Basic support for the singleton pattern. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/patterns/singleton.hpp&gt; </p>

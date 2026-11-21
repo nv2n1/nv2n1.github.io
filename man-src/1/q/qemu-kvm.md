@@ -1,4 +1,5 @@
 ---
+
 title: "qemu-kvm(1)"
 name: "qemu-kvm"
 section: "1"
@@ -6,10 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qemu-kvm/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- qemu-doc - QEMU Emulator User Documentation 
+qemu-doc - QEMU Emulator User Documentation 
 
 <h2>SYNOPSIS</h2>
 

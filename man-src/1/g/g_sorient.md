@@ -1,4 +1,5 @@
 ---
+
 title: "g_sorient(1)"
 name: "g_sorient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_sorient/"
 description: "g_sorient – analyzes solvent orientation around solutes"
 ---
 
-<h2>NAME</h2>
 <p> g_sorient &#8211; analyzes solvent orientation around solutes </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

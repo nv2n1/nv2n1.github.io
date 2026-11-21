@@ -1,4 +1,5 @@
 ---
+
 title: "sgbrfsx(3)"
 name: "sgbrfsx"
 section: "3"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/3-sgbrfsx/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- sgbrfsx.f - 
+sgbrfsx.f - 
 
 <h2>SYNOPSIS</h2>
 

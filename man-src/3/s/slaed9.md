@@ -1,4 +1,5 @@
 ---
+
 title: "slaed9(3)"
 name: "slaed9"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaed9/"
 description: "slaed9.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> slaed9.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

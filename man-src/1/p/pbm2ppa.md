@@ -1,4 +1,5 @@
 ---
+
 title: "pbm2ppa(1)"
 name: "pbm2ppa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbm2ppa/"
 description: "pbm2ppa – convert portable bitmap (PBM) to HP’s Printing Performance Architecture (PPA) file format"
 ---
 
-<h2>NAME</h2>
 <p> pbm2ppa &#8211; convert portable bitmap (PBM) to HP&#8217;s Printing Performance Architecture (PPA) file format</p>
 <h2>SYNOPSIS</h2>
 <p> pbm2ppa [options] [ &lt;<i>infile</i>] &gt; [ &lt;<i>outfile</i>]&gt; ] ] </p>

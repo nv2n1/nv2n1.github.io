@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_error_from_rd_error(3)"
 name: "krb5_error_from_rd_error"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_error_from_rd_error/"
 description: "krb5_rd_error krb5_free_error krb5_free_error_contents krb5_error_from_rd_error – parse, free and read error from KRB-ERROR message"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_rd_error</code> <code>krb5_free_error</code> <code>krb5_free_error_contents</code> <code>krb5_error_from_rd_error</code> &#8211; parse, free and read error from KRB-ERROR message </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

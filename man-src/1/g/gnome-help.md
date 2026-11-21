@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-help(1)"
 name: "gnome-help"
 section: "1"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gnome-help/"
 ---
 
-<h2>NAME</h2>
-
- yelp --- browse system documentation
+yelp --- browse system documentation
 
 <h2>USAGE</h2>
 

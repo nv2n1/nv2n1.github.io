@@ -1,4 +1,5 @@
 ---
+
 title: "fixacos(3)"
 name: "fixacos"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fixacos/"
 description: "fixacos – Fixed point inverse cosine lookup table. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fixacos &#8211; Fixed point inverse cosine lookup table. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

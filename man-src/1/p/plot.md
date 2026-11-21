@@ -1,4 +1,5 @@
 ---
+
 title: "plot(1)"
 name: "plot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-plot/"
 description: "plot – translate GNU metafiles to other graphics formats"
 ---
 
-<h2>NAME</h2>
 <p> plot &#8211; translate GNU metafiles to other graphics formats</p>
 <h2>SYNOPSIS</h2>
 <p> <code>plot </code> [ <i>options </i> ] [ <i>files </i> ]</p>

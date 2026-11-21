@@ -1,4 +1,5 @@
 ---
+
 title: "pamseq(1)"
 name: "pamseq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamseq/"
 description: "pamseq – generate PAM image of all possible tuple values, in sequence"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamseq &#8211; generate PAM image of all possible tuple values, in sequence</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamseq</code> [<code>-tupletype=</code><i>tupletype</i>] <i>depth</i> <i>maxval</i> </p>

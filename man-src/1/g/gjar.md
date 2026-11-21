@@ -1,4 +1,5 @@
 ---
+
 title: "gjar(1)"
 name: "gjar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gjar/"
 description: "gjar – – Archive tool for Java archives"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gjar &#8211; &#8211; Archive tool for Java archives </p>
 <h2>SYNOPSIS</h2>
 <p> gjar <code>-ctxui</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] <i>jar-file</i> [<code>-C</code> <i></i><font SIZE="-1"><i>DIR</i></font><i></i> <i></i><font SIZE="-1"><i>FILE</i></font><i></i>] <i></i><font SIZE="-1"><i>FILE</i></font><i></i>&#8230;</p>

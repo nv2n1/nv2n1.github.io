@@ -1,4 +1,5 @@
 ---
+
 title: "defaults(1)"
 name: "defaults"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-defaults/"
 description: "defaults – read or modify GNUstep user defaults"
 ---
 
-<h2>NAME</h2>
 <p> defaults &#8211; read or modify GNUstep user defaults </p>
 <h2>SYNOPSIS</h2>
 <p> <code>defaults [ action ]</code> </p>

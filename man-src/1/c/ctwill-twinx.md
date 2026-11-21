@@ -1,4 +1,5 @@
 ---
+
 title: "ctwill-twinx(1)"
 name: "ctwill-twinx"
 section: "1"
@@ -6,12 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-ctwill-twinx/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ctwill, ctwill-refsort, ctwill-twinx - translate CWEB to TeX with mini-indexes 
+ctwill, ctwill-refsort, ctwill-twinx - translate CWEB to TeX with mini-indexes 
 
 <h2>SYNOPSIS</h2>
 

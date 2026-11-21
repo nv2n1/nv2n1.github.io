@@ -1,4 +1,5 @@
 ---
+
 title: "atasm(1)"
 name: "atasm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atasm/"
 description: "atasm – assembler targeted for the 6502 CPU with Atari-specific features"
 ---
 
-<h2>NAME</h2>
 <p> atasm &#8211; assembler targeted for the 6502 CPU with Atari-specific features</p>
 <h2>SYNOPSIS</h2>
 <p> <code>atasm [</code><i>options</i><code>] </code><i>filename</i></p>

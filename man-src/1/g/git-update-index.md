@@ -1,4 +1,5 @@
 ---
+
 title: "git-update-index(1)"
 name: "git-update-index"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-update-index/"
 description: "git-update-index – Register file contents in the working tree to the index"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-update-index &#8211; Register file contents in the working tree to the index </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

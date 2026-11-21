@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_atoul(3)"
 name: "ipsec_atoul"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_atoul/"
 description: "ipsec_atoul, ipsec_ultoa – convert unsigned-long numbers to and from ASCII"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipsec_atoul, ipsec_ultoa &#8211; convert unsigned-long numbers to and from ASCII </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

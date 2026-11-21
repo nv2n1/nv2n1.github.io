@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-objcopy(1)"
 name: "arm-gp2x-linux-objcopy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm-gp2x-linux-objcopy/"
 description: "objcopy – copy and translate object files"
 ---
 
-<h2>NAME</h2>
 <p> objcopy &#8211; copy and translate object files</p>
 <h2>SYNOPSIS</h2>
 <p> objcopy [<code>-F</code> <i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />

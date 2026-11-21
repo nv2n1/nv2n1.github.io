@@ -1,4 +1,5 @@
 ---
+
 title: "cross-gprof(1)"
 name: "cross-gprof"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cross-gprof/"
 description: "gprof – display call graph profile data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gprof &#8211; display call graph profile data </p>
 <h2>SYNOPSIS</h2>
 <p> gprof [ -[abcDhilLrsTvwxyz] ] [ -[ACeEfFJnNOpPqQZ][<i>name</i>] ]<br />

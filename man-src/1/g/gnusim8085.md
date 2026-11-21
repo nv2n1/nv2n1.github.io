@@ -1,4 +1,5 @@
 ---
+
 title: "gnusim8085(1)"
 name: "gnusim8085"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnusim8085/"
 description: "gnusim8085 – graphical Intel 8085 simulator, assembler and debugger"
 ---
 
-<h2>NAME</h2>
 <p> gnusim8085 &#8211; graphical Intel 8085 simulator, assembler and debugger</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnusim8085</code> [<i>OPTION</i>]&#8230;</p>

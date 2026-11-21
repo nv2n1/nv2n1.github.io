@@ -1,4 +1,5 @@
 ---
+
 title: "pgmminkowski(1)"
 name: "pgmminkowski"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmminkowski/"
 description: "pgmminkowski – compute Minkowski integral"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pgmminkowski &#8211; compute Minkowski integral</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmminkowski</code> <i>pgmfile</i> </p>

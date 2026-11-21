@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_matrix(3)"
 name: "cdk_matrix"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_matrix/"
 description: "cdk_matrix – curses matrix widget."
 ---
 
-<h2>NAME</h2>
 <p> cdk_matrix &#8211; curses matrix widget.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

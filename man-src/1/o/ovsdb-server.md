@@ -1,4 +1,5 @@
 ---
+
 title: "ovsdb-server(1)"
 name: "ovsdb-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ovsdb-server/"
 description: "ovsdb-server – Open vSwitch database server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ovsdb-server &#8211; Open vSwitch database server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ovsdb-server</code> [<i>database</i>]&#8230; [<code>&#8211;remote=</code><i>remote</i>]&#8230; [<code>&#8211;run=</code><i>command</i>]</p>

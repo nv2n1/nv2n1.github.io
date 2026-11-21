@@ -1,4 +1,5 @@
 ---
+
 title: "snmpget(1)"
 name: "snmpget"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpget/"
 description: "snmpget – communicates with a network entity using SNMP GET requests"
 ---
 
-<h2>NAME</h2>
 <p> snmpget &#8211; communicates with a network entity using SNMP GET requests</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpget</code> [COMMON OPTIONS] [-Cf] AGENT OID [OID]&#8230;</p>

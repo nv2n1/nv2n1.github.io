@@ -1,4 +1,5 @@
 ---
+
 title: "plm2gif(1)"
 name: "plm2gif"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-plm2gif/"
 description: "plm2gif – converts PLplot metafiles to GIF files"
 ---
 
-<h2>NAME</h2>
 <p> plm2gif &#8211; converts PLplot metafiles to GIF files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>plm2gif</code> <i>[files]</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-install(1)"
 name: "cargo-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-install/"
 description: "cargo-install – Install a Rust binary"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cargo-install &#8211; Install a Rust binary </p>
 <h2>SYNOPSIS</h2>
 <p> cargo install [OPTIONS] &lt;CRATE&gt; </p>

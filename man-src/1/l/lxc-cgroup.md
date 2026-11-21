@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-cgroup(1)"
 name: "lxc-cgroup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-cgroup/"
 description: "lxc-cgroup – manage the control group associated with a container"
 ---
 
-<h2>NAME</h2>
 <p> lxc-cgroup &#8211; manage the control group associated with a container</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-cgroup</code> {-n <i>name</i>} {<i>state-object</i>} [value]</p>

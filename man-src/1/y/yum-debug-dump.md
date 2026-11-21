@@ -1,4 +1,5 @@
 ---
+
 title: "yum-debug-dump(1)"
 name: "yum-debug-dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-debug-dump/"
 description: "yum-debug-dump – write system RPM configuration to a debug-dump file"
 ---
 
-<h2>NAME</h2>
 <p> yum-debug-dump &#8211; write system RPM configuration to a debug-dump file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yum-debug-dump</code></p>

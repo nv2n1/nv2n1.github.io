@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_position(3)"
 name: "cdk_position"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_position/"
 description: "cdk_position – curses widget positioning key-bindings"
 ---
 
-<h2>NAME</h2>
 <p> cdk_position &#8211; curses widget positioning key-bindings</p>
 <h2>SYNOPSIS</h2>
 <p> Position methods for the Cdk widgets allow the user to move the widget around the screen via the cursor/keypad keys.</p>

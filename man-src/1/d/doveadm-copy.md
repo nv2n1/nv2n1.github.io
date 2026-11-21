@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-copy(1)"
 name: "doveadm-copy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-copy/"
 description: "doveadm-move – Move messages matching the given search query into another mailbox doveadm-copy – Copy messages matching the given search query into another mailbox"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-move &#8211; Move messages matching the given search query into another mailbox<br />
  doveadm-copy &#8211; Copy messages matching the given search query into another mailbox</p>
 <h2>SYNOPSIS</h2>

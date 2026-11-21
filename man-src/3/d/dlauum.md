@@ -1,4 +1,5 @@
 ---
+
 title: "dlauum(3)"
 name: "dlauum"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlauum/"
 description: "dlauum.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlauum.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

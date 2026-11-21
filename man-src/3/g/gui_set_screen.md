@@ -1,4 +1,5 @@
 ---
+
 title: "gui_set_screen(3)"
 name: "gui_set_screen"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gui_set_screen/"
 description: "gui_set_screen – Changes the bitmap surface GUI routines draw to. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> gui_set_screen &#8211; Changes the bitmap surface GUI routines draw to. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

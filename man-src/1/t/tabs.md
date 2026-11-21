@@ -1,4 +1,5 @@
 ---
+
 title: "tabs(1)"
 name: "tabs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tabs/"
 description: "tabs – set tabs on a terminal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>tabs</code> &#8211; set tabs on a terminal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tabs</code> [<i>options</i>]] <i>[tabstop-list]</i></p>

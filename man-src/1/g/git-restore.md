@@ -1,4 +1,5 @@
 ---
+
 title: "git-restore(1)"
 name: "git-restore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-restore/"
 description: "git-restore – Restore working tree files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-restore &#8211; Restore working tree files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

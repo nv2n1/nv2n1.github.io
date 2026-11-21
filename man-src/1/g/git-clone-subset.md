@@ -1,4 +1,5 @@
 ---
+
 title: "git-clone-subset(1)"
 name: "git-clone-subset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-clone-subset/"
 description: "git-clone-subset – Clones a subset of a git repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-clone-subset &#8211; Clones a subset of a git repository </p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-clone-subset</code> [<i>options</i>] <i>repository destination-dir pattern</i></p>

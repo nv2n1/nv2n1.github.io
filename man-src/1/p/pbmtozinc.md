@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtozinc(1)"
 name: "pbmtozinc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmtozinc/"
 description: "pbmtozinc – convert a portable bitmap into a Zinc bitmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmtozinc &#8211; convert a portable bitmap into a Zinc bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtozinc</code> [<i>pbmfile</i>]</p>

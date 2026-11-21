@@ -1,4 +1,5 @@
 ---
+
 title: "aa_recommendhi(3)"
 name: "aa_recommendhi"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_recommendhi/"
 description: "aa_recommendhi – insert the given driver on beggining of the list of recommended drivers."
 ---
 
-<h2>NAME</h2>
 <p> aa_recommendhi &#8211; insert the given driver on beggining of the list of recommended drivers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

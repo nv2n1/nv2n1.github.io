@@ -1,4 +1,5 @@
 ---
+
 title: "git-touch(1)"
 name: "git-touch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-touch/"
 description: "git-touch – Touch and add file to the index"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-touch</code> &#8211; Touch and add file to the index</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-touch</code> &lt;filename&gt;</p>

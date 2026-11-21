@@ -1,4 +1,5 @@
 ---
+
 title: "gle(1)"
 name: "gle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gle/"
 description: "gle – Graphics Layout Engine"
 ---
 
-<h2>NAME</h2>
 <p> gle &#8211; Graphics Layout Engine</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gle</code> [options] <i>file.gle</i> <code>&#8230;</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sgfilter(1)"
 name: "sgfilter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sgfilter/"
 description: "sgfilter – scan something for viruses/spams over sagator’s filterd() service"
 ---
 
-<h2>NAME</h2>
 <p> sgfilter &#8211; scan something for viruses/spams over sagator&#8217;s filterd() service</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sgfilter</code> [&#8211;help] [&#8211;host hostname] [&#8211;port number] [&#8211;codes|-c] [&#8211;non-safe|-x] [filename]</p>

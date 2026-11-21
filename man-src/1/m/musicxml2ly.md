@@ -1,4 +1,5 @@
 ---
+
 title: "musicxml2ly(1)"
 name: "musicxml2ly"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-musicxml2ly/"
 description: "musicxml2ly – manual page for musicxml2ly (LilyPond) 2.12.2"
 ---
 
-<h2>NAME</h2>
 <p> musicxml2ly &#8211; manual page for musicxml2ly (LilyPond) 2.12.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>musicxml2ly</code> [<i>OPTION</i>]&#8230; <i>FILE.xml</i></p>

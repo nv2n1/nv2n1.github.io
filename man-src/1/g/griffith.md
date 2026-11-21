@@ -1,4 +1,5 @@
 ---
+
 title: "griffith(1)"
 name: "griffith"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-griffith/"
 description: "griffith – film collection manager"
 ---
 
-<h2>NAME</h2>
 <p> griffith &#8211; film collection manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>griffith</code></p>

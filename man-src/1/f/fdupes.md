@@ -1,4 +1,5 @@
 ---
+
 title: "fdupes(1)"
 name: "fdupes"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fdupes/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fdupes - finds duplicate files in a given set of directories 
+fdupes - finds duplicate files in a given set of directories 
 
 <h2>SYNOPSIS</h2>
 

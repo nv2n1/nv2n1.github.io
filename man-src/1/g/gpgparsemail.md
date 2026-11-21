@@ -1,4 +1,5 @@
 ---
+
 title: "gpgparsemail(1)"
 name: "gpgparsemail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpgparsemail/"
 description: "gpgparsemail – Parse a mail message into an annotated format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpgparsemail</code> &#8211; Parse a mail message into an annotated format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpgparsemail</code> [<i>options</i>] [<i>file</i>] </p>

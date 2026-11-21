@@ -1,4 +1,5 @@
 ---
+
 title: "yum-aliases(1)"
 name: "yum-aliases"
 section: "1"
@@ -6,7 +7,7 @@ letter: "y"
 url: "/docs/linux/man/1-yum-aliases/"
 description: "yum aliases plugin"
 ---
-<h2>NAME</h2>
+
 <p> yum aliases plugin  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>yum</code> [options] alias  </p>

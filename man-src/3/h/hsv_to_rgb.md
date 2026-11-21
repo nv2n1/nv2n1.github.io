@@ -1,4 +1,5 @@
 ---
+
 title: "hsv_to_rgb(3)"
 name: "hsv_to_rgb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hsv_to_rgb/"
 description: "hsv_to_rgb, rgb_to_hsv – Converts color values between the HSV and RGB color spaces. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> hsv_to_rgb, rgb_to_hsv &#8211; Converts color values between the HSV and RGB color spaces. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

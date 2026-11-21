@@ -1,4 +1,5 @@
 ---
+
 title: "metalink_chunk_checksum_t(3)"
 name: "metalink_chunk_checksum_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-metalink_chunk_checksum_t/"
 description: "metalink_chunk_checksum_t – The structure that holds piece hashes for a resource."
 ---
 
-<h2>NAME</h2>
 <p> metalink_chunk_checksum_t &#8211; The structure that holds piece hashes for a resource. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/metalink/metalink_types.h">metalink/metalink_types.h</a>&gt;</code> </p>

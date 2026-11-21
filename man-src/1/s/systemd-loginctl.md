@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-loginctl(1)"
 name: "systemd-loginctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-loginctl/"
 description: "loginctl, systemd-loginctl – Control the systemd login manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> loginctl, systemd-loginctl &#8211; Control the systemd login manager </p>
 <h2>SYNOPSIS</h2>
 <dl>

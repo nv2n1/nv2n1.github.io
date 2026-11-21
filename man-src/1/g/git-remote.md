@@ -1,4 +1,5 @@
 ---
+
 title: "git-remote(1)"
 name: "git-remote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-remote/"
 description: "git-remote – Manage set of tracked repositories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-remote &#8211; Manage set of tracked repositories </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

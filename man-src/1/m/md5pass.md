@@ -1,4 +1,5 @@
 ---
+
 title: "md5pass(1)"
 name: "md5pass"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-md5pass/"
 description: "md5pass – Create an MD5 password hash"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>md5pass</code> &#8211; Create an MD5 password hash</p>
 <h2>SYNOPSIS</h2>
 <p> <code>md5pass</code> [<i>PASSWORD</i>] [<i>SALT</i>] </p>

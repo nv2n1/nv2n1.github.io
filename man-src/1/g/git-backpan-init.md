@@ -1,4 +1,5 @@
 ---
+
 title: "git-backpan-init(1)"
 name: "git-backpan-init"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-git-backpan-init/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- git-backpan-init - Initialize a repository for a CPAN module with full history from the backpan. 
+git-backpan-init - Initialize a repository for a CPAN module with full history from the backpan. 
 
 <h2>SYNOPSIS</h2>
 

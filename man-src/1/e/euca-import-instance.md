@@ -1,4 +1,5 @@
 ---
+
 title: "euca-import-instance(1)"
 name: "euca-import-instance"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-import-instance/"
 description: "euca-import-instance – Import an instance into the cloud"
 ---
 
-<h2>NAME</h2>
 <p> euca-import-instance &#8211; Import an instance into the cloud</p>
 <h2>SYNOPSIS</h2>
 <p> euca-import-instance <code>-t</code> INSTANCETYPE <code>-f</code> FORMAT <code>-a</code> ARCH <code>-p</code></p>

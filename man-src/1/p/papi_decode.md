@@ -1,4 +1,5 @@
 ---
+
 title: "papi_decode(1)"
 name: "papi_decode"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-papi_decode/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- papi_decode - papi_decode utility. 
+papi_decode - papi_decode utility. 
 
  file decode.c 
 

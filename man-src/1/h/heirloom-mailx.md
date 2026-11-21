@@ -1,4 +1,5 @@
 ---
+
 title: "heirloom-mailx(1)"
 name: "heirloom-mailx"
 section: "1"
@@ -6,7 +7,7 @@ letter: "h"
 url: "/docs/linux/man/1-heirloom-mailx/"
 description: "mailx – send and receive Internet mail"
 ---
-<h2 class="name">NAME</h2>
+
 <p> mailx - send and receive Internet mail </p>
 <h2>SYNOPSIS</h2>
 <dl>

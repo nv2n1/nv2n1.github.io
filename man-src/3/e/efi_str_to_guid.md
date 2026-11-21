@@ -1,4 +1,5 @@
 ---
+
 title: "efi_str_to_guid(3)"
 name: "efi_str_to_guid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-efi_str_to_guid/"
 description: "efi_variables_supported, efi_del_variable, efi_get_variable, efi_get_variable_attributes, efi_get_variable_size, efi_set_variable – manipulate UEFI variables"
 ---
 
-<h2>NAME</h2>
 <p> efi_variables_supported, efi_del_variable, efi_get_variable, efi_get_variable_attributes, efi_get_variable_size, efi_set_variable &#8211; manipulate UEFI variables</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

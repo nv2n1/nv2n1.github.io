@@ -1,4 +1,5 @@
 ---
+
 title: "submit(1)"
 name: "submit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-submit/"
 description: "qsub, qsh, qlogin, qrsh, qalter, qresub – submit jobs to xxQS_NAMExx"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qsub, qsh, qlogin, qrsh, qalter, qresub &#8211; submit jobs to xxQS_NAMExx</p>
 <h2>SYNTAX</h2>
 <p> <code>qsub</code> [<i>options</i>] [<i>command</i> [<i>command_args</i>] | <code>&#8212;</code> [<i>command_args</i>]] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "airscan-discover(1)"
 name: "airscan-discover"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-airscan-discover/"
 description: "airscan-discover – Discover sane-airscan compatible scanners"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>airscan-discover</code> &#8211; Discover sane-airscan compatible scanners </p>
 <h2>SYNOPSIS</h2>
 <p> <code>airscan-discover [-h] [-d] [-t]</code></p>

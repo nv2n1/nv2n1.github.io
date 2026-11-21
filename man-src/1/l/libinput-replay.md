@@ -1,4 +1,5 @@
 ---
+
 title: "libinput-replay(1)"
 name: "libinput-replay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libinput-replay/"
 description: "libinput-replay – replay kernel events from a recording"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libinput-replay &#8211; replay kernel events from a recording </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput replay [options] </code><i>recording</i></p>

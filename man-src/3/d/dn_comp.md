@@ -1,4 +1,5 @@
 ---
+
 title: "dn_comp(3)"
 name: "dn_comp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dn_comp/"
 description: "res_ninit, res_nclose, res_nquery, res_nsearch, res_nquerydomain, res_nmkquery, res_nsend, res_init, res_query, res_search, res_querydomain, res_mkquery, res_send, dn_comp, dn_expand – resolver rou..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> res_ninit, res_nclose, res_nquery, res_nsearch, res_nquerydomain, res_nmkquery, res_nsend, res_init, res_query, res_search, res_querydomain, res_mkquery, res_send, dn_comp, dn_expand &#8211; resolver routines </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

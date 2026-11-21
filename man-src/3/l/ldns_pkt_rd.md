@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_pkt_rd(3)"
 name: "ldns_pkt_rd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_pkt_rd/"
 description: "ldns_pkt_id, ldns_pkt_qr, ldns_pkt_aa, ldns_pkt_tc, ldns_pkt_rd, ldns_pkt_cd, ldns_pkt_ra, ldns_pkt_ad, ldns_pkt_get_opcode, ldns_pkt_get_rcode, ldns_pkt_qdcount, ldns_pkt_ancount, ldns_pkt_nscount..."
 ---
 
-<h2>NAME</h2>
 <p> ldns_pkt_id, ldns_pkt_qr, ldns_pkt_aa, ldns_pkt_tc, ldns_pkt_rd, ldns_pkt_cd, ldns_pkt_ra, ldns_pkt_ad, ldns_pkt_get_opcode, ldns_pkt_get_rcode, ldns_pkt_qdcount, ldns_pkt_ancount, ldns_pkt_nscount, ldns_pkt_arcount, ldns_pkt_answerfrom, ldns_pkt_querytime, ldns_pkt_size, ldns_pkt_tsig, ldns_pkt_question, ldns_pkt_answer, ldns_pkt_authority, ldns_pkt_additional, ldns_pkt_get_section_clone, ldns_pkt_rr_list_by_name, ldns_pkt_rr_list_by_type, ldns_pkt_rr_list_by_name_and_type </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

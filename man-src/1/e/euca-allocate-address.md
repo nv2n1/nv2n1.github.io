@@ -1,4 +1,5 @@
 ---
+
 title: "euca-allocate-address(1)"
 name: "euca-allocate-address"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-allocate-address/"
 description: "euca-allocate-address – Allocate a public IP address"
 ---
 
-<h2>NAME</h2>
 <p> euca-allocate-address &#8211; Allocate a public IP address</p>
 <h2>SYNOPSIS</h2>
 <p> euca-allocate-address [-d vpc] [&#8211;show-empty-fields] [-U URL]</p>

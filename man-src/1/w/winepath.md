@@ -1,4 +1,5 @@
 ---
+
 title: "winepath(1)"
 name: "winepath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-winepath/"
 description: "winepath – Tool to convert Unix paths to/from Win32 paths"
 ---
 
-<h2 class="name">NAME</h2>
 <p> winepath &#8211; Tool to convert Unix paths to/from Win32 paths </p>
 <h2>SYNOPSIS</h2>
 <p> <code>winepath</code> <i>option </i>{<i>path</i>}</p>

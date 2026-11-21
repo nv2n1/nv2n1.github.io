@@ -1,4 +1,5 @@
 ---
+
 title: "setuid32(2)"
 name: "setuid32"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-setuid32/"
 description: "setuid – set user identity"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setuid &#8211; set user identity </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />

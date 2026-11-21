@@ -1,4 +1,5 @@
 ---
+
 title: "xml2po(1)"
 name: "xml2po"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xml2po/"
 description: "xml2po – program to create a PO-template file from a DocBook XML file and merge it back into a (translated) XML file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xml2po &#8211; program to create a PO-template file from a DocBook XML file and merge it back into a (translated) XML file </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "mongos(1)"
 name: "mongos"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mongos/"
 description: "mongos – MongoDB Sharded Cluster Query Router"
 ---
 
-<h2>NAME</h2>
 <p> mongos &#8211; MongoDB Sharded Cluster Query Router</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mongos</code> for &quot;MongoDB Shard,&quot; is a routing service for MongoDB shard configurations that processes queries from the application layer, and determines the location of this data in the <i>sharded cluster</i>, in order to complete these operations. From the perspective of the application, a <code>mongos</code> instance behaves identically to any other MongoDB instance.</p>

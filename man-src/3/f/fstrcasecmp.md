@@ -1,4 +1,5 @@
 ---
+
 title: "fstrcasecmp(3)"
 name: "fstrcasecmp"
 section: "3"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fstrcasecmp/"
 ---
 
-<h2>NAME</h2>
-
- fstrcasecmp - fuzzy comparison of two strings ignoring case
+fstrcasecmp - fuzzy comparison of two strings ignoring case
 
 <h2>SYNOPSIS</h2>
 

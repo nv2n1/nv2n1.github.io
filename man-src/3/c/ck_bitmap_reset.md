@@ -1,4 +1,5 @@
 ---
+
 title: "ck_bitmap_reset(3)"
 name: "ck_bitmap_reset"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_bitmap_reset/"
 description: "ck_bitmap_reset – resets the bit at the specified index"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_bitmap_reset</code> &#8211; resets the bit at the specified index</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

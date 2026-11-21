@@ -1,4 +1,5 @@
 ---
+
 title: "safecopy(1)"
 name: "safecopy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-safecopy/"
 description: "safecopy – rescue data from a source that causes IO errors"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>safecopy</code> &#8211; rescue data from a source that causes IO errors</p>
 <h2>SYNOPSIS</h2>
 <p> <code>safecopy</code> [<i>OPTION</i>]&#8230; <i>SOURCE DEST</i> </p>

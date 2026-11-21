@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_name_node_next_nonglue(3)"
 name: "ldns_dnssec_name_node_next_nonglue"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dnssec_name_node_next_nonglue/"
 description: "ldns_dnssec_zone_sign, ldns_dnssec_zone_sign_nsec3, ldns_dnssec_zone_mark_glue, ldns_dnssec_name_node_next_nonglue, ldns_dnssec_zone_create_nsecs, ldns_dnssec_remove_signatures, ldns_dnssec_zone_cr..."
 ---
 
-<h2>NAME</h2>
 <p> ldns_dnssec_zone_sign, ldns_dnssec_zone_sign_nsec3, ldns_dnssec_zone_mark_glue, ldns_dnssec_name_node_next_nonglue, ldns_dnssec_zone_create_nsecs, ldns_dnssec_remove_signatures, ldns_dnssec_zone_create_rrsigs </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

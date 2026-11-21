@@ -1,4 +1,5 @@
 ---
+
 title: "makecpt(1)"
 name: "makecpt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makecpt/"
 description: "makecpt – Make GMT color palette tables"
 ---
 
-<h2>NAME</h2>
 <p> makecpt &#8211; Make GMT color palette tables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>makecpt</code> [ [<code>+</code>]<i>transparency</i> ] [ <i>cpt</i> ] [ [<code>i</code>|<code>o</code>] ] [ [<i>nlevels</i>] ] [ [<code>R</code>|<code>r</code>|<code>h</code>|<code>c</code> ] [ <i>zlo</i>/<i>zhi</i> ] [ ] [ ] [ ] [ [<code>i</code>|<code>o</code>] ] [ <i>z_min</i>/<i>z_max</i>[/<i>z_inc</i>[+]] | <code>-T</code><i>ztable</i> ] [ [<i>level</i>] ] [ ] [ ] </p>

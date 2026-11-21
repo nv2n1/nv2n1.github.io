@@ -1,4 +1,5 @@
 ---
+
 title: "eboard-config(1)"
 name: "eboard-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eboard-config/"
 description: "eboard-config – program to get information about the installed eboard."
 ---
 
-<h2>NAME</h2>
 <p> eboard-config &#8211; program to get information about the installed eboard.</p>
 <h2>SYNOPSIS</h2>
 <p> eboard-config [<i>&#8211;prefix|&#8211;datadir|&#8211;bindir|&#8211;version</i>]</p>

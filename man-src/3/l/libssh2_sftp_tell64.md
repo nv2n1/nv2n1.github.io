@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_tell64(3)"
 name: "libssh2_sftp_tell64"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_tell64/"
 description: "libssh2_sftp_tell64 – get the current read/write position indicator for a file"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_tell64 &#8211; get the current read/write position indicator for a file</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; #include &lt;libssh2_s<a href="ftp://ftp.h">ftp.h</a>&gt; </p>

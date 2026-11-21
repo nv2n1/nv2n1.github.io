@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-analyze-backtrace(1)"
 name: "abrt-action-analyze-backtrace"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-backtrace/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-analyze-backtrace - Analyzes C/C++ backtrace, generates duplication hash, backtrace rating, and identifies crash function in problem directory DIR. 
+abrt-action-analyze-backtrace - Analyzes C/C++ backtrace, generates duplication hash, backtrace rating, and identifies crash function in problem directory DIR. 
 
 <h2>SYNOPSIS</h2>
 

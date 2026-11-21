@@ -1,4 +1,5 @@
 ---
+
 title: "yuvinactive(1)"
 name: "yuvinactive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yuvinactive/"
 description: "yuvinactive – Set a part of the video to a defined state"
 ---
 
-<h2>NAME</h2>
 <p> yuvinactive &#8211; Set a part of the video to a defined state </p>
 <h2>SYNOPSIS</h2>
 <p> <code>yuvinactive</code> [<i>options</i>] <i>&lt;/dev/stdin &gt;/dev/stdout</i> </p>

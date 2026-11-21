@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userlistmfadevices(1)"
 name: "euare-userlistmfadevices"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userlistmfadevices/"
 description: "euare-userlistmfadevices – List a user’s MFA devices"
 ---
 
-<h2>NAME</h2>
 <p> euare-userlistmfadevices &#8211; List a user&#8217;s MFA devices</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userlistmfadevices [&#8211;as-account ACCOUNT] [-U URL]</p>

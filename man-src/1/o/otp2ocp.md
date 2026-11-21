@@ -1,4 +1,5 @@
 ---
+
 title: "otp2ocp(1)"
 name: "otp2ocp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-otp2ocp/"
 description: "otp2ocp – convert Omega Translation Process files to Omega Compiled Process files"
 ---
 
-<h2>NAME</h2>
 <p> otp2ocp &#8211; convert Omega Translation Process files to Omega Compiled Process files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>otp2ocp</code> <i>OTPFILE</i>[<i></i><code>.otp</code>] [<i>OCPFILE</i>[<i></i><code>.ocp</code>]]</p>

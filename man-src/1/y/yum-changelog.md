@@ -1,4 +1,5 @@
 ---
+
 title: "yum-changelog(1)"
 name: "yum-changelog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-changelog/"
 description: "yum-changelog"
 ---
 
-<h2>NAME</h2>
 <p> <code>yum-changelog</code></p>
 <h2>SYNOPSIS</h2>
 <p> The <code>yum-changelog</code> package</p>

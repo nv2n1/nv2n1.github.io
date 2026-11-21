@@ -1,4 +1,5 @@
 ---
+
 title: "cloud-run-instances(1)"
 name: "cloud-run-instances"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cloud-run-instances/"
 description: "cloud-run-instances – wrapper for euca-run-instances that supports an option for injecting public ssh keys retrievable from Launchpad.net"
 ---
 
-<h2>NAME</h2>
 <p> <code>cloud-run-instances</code> &#8211; wrapper for euca-run-instances that supports an option for injecting public ssh keys retrievable from <i>Launchpad.net</i> </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cloud-run-instances [-l|&#8211;launchpad-id lp_id_1,lp_id_2,lp_id_3] [euca-run-instances options]</code> </p>

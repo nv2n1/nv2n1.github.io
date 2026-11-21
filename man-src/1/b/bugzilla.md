@@ -1,4 +1,5 @@
 ---
+
 title: "bugzilla(1)"
 name: "bugzilla"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bugzilla/"
 description: "bugzilla – command-line interface to Bugzilla over XML-RPC"
 ---
 
-<h2>NAME</h2>
 <p> bugzilla &#8211; command-line interface to Bugzilla over XML-RPC</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bugzilla</code> [<i>options</i>] [<i>command</i>] [<i>command-options</i>]</p>

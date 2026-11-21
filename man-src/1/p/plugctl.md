@@ -1,4 +1,5 @@
 ---
+
 title: "plugctl(1)"
 name: "plugctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-plugctl/"
 description: "plugctl – a program to get or set any MPR or PCR register value"
 ---
 
-<h2>NAME</h2>
 <p> plugctl &#8211; a program to get or set any MPR or PCR register value</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "fail2ban-server(1)"
 name: "fail2ban-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fail2ban-server/"
 description: "fail2ban-server – start the server"
 ---
 
-<h2>NAME</h2>
 <p> fail2ban-server &#8211; start the server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fail2ban-server</code> [<i>,OPTIONS/</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-state(3)"
 name: "antlr3-state"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-state/"
 description: "ANTLR3_BASE_RECOGNIZER_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_BASE_RECOGNIZER_struct &#8211; </p>
 <p> Base tracking context structure for all types of recognizers.</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "vftovp(1)"
 name: "vftovp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vftovp/"
 description: "vftovp – convert virtual font (vf) files to virtual property lists (vpl)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vftovp &#8211; convert virtual font (vf) files to virtual property lists (vpl) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vftovp</code> [<i>OPTIONS</i>] <i>vf_name</i>[<i></i><code>.vf</code>] [<i>tfm_name</i>[<i></i><code>.tfm</code>] [<i>vpl_name</i>[<i></i><code>.vpl</code>]]]</p>

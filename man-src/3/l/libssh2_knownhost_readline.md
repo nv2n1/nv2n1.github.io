@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_knownhost_readline(3)"
 name: "libssh2_knownhost_readline"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_knownhost_readline/"
 description: "libssh2_knownhost_readline – read a known host line"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_knownhost_readline &#8211; read a known host line</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

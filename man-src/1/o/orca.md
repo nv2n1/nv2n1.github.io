@@ -1,4 +1,5 @@
 ---
+
 title: "orca(1)"
 name: "orca"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-orca/"
 description: "orca – a scriptable screen reader"
 ---
 
-<h2 class="name">NAME</h2>
 <p> orca &#8211; a scriptable screen reader </p>
 <h2>SYNOPSIS</h2>
 <p> <code>orca</code> [<i>option&#8230;</i>]</p>

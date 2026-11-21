@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_gai_strerror(3)"
 name: "lwres_gai_strerror"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lwres_gai_strerror/"
 description: "lwres_gai_strerror – print suitable error string"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lwres_gai_strerror &#8211; print suitable error string </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

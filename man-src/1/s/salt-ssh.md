@@ -1,4 +1,5 @@
 ---
+
 title: "salt-ssh(1)"
 name: "salt-ssh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-salt-ssh/"
 description: "salt-ssh – salt-ssh Documentation"
 ---
 
-<h2>NAME</h2>
 <p> salt-ssh &#8211; salt-ssh Documentation</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

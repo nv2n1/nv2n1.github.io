@@ -1,4 +1,5 @@
 ---
+
 title: "macchanger(1)"
 name: "macchanger"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-macchanger/"
 description: "macchanger – MAC Changer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> macchanger &#8211; MAC Changer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>macchanger </code> [<i>options</i>] device</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_set_timeout(3)"
 name: "libssh2_session_set_timeout"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_set_timeout/"
 description: "libssh2_session_set_timeout – set timeout for blocking functions"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_set_timeout &#8211; set timeout for blocking functions</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

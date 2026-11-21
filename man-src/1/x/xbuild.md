@@ -1,4 +1,5 @@
 ---
+
 title: "xbuild(1)"
 name: "xbuild"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xbuild/"
 description: "xbuild – Mono’s tool to build MSBuild project files"
 ---
 
-<h2>NAME</h2>
 <p> xbuild &#8211; Mono&#8217;s tool to build MSBuild project files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xbuild</code> [option] [project-file]</p>

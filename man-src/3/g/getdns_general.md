@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_general(3)"
 name: "getdns_general"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_general/"
 description: "getdns_general, getdns_general_sync — do a getdns DNS lookup"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_general, </code> <code>getdns_general_sync</code> &#8212; do a getdns DNS lookup </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

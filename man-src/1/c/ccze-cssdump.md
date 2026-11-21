@@ -1,4 +1,5 @@
 ---
+
 title: "ccze-cssdump(1)"
 name: "ccze-cssdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ccze-cssdump/"
 description: "ccze-cssdump – Dump CCZE color setup into CSS format"
 ---
 
-<h2>NAME</h2>
 <p> ccze-cssdump &#8211; Dump CCZE color setup into CSS format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ccze-cssdump</code> [<i>options</i>]</p>

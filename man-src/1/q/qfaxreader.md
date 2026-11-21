@@ -1,4 +1,5 @@
 ---
+
 title: "qfaxreader(1)"
 name: "qfaxreader"
 section: "1"
@@ -6,9 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qfaxreader/"
 ---
 
-<h2>NAME</h2>
-
- qfaxreader - A multipage TIFF/FAX viewer
+qfaxreader - A multipage TIFF/FAX viewer
 
 <h2>SYNOPSIS</h2>
 

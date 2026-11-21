@@ -1,4 +1,5 @@
 ---
+
 title: "acl_error(3)"
 name: "acl_error"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_error/"
 description: "acl_error – convert an ACL error code to a text message"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_error</code> &#8211; convert an ACL error code to a text message </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_error_to_alert(3)"
 name: "gnutls_error_to_alert"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_error_to_alert/"
 description: "gnutls_error_to_alert – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_error_to_alert &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

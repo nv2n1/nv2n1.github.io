@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-gensymbols(1)"
 name: "dpkg-gensymbols"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dpkg-gensymbols/"
 description: "dpkg-gensymbols – generate symbols files (shared library dependency information)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dpkg-gensymbols &#8211; generate symbols files (shared library dependency information) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-gensymbols</code> [<i>option</i>&#8230;]</p>

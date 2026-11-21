@@ -1,4 +1,5 @@
 ---
+
 title: "git-checkout-index(1)"
 name: "git-checkout-index"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-checkout-index/"
 description: "git-checkout-index – Copy files from the index to the working tree"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-checkout-index &#8211; Copy files from the index to the working tree </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

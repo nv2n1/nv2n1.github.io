@@ -1,4 +1,5 @@
 ---
+
 title: "pod2html(1)"
 name: "pod2html"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pod2html/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pod2html - convert .pod files to .html files 
+pod2html - convert .pod files to .html files 
 
 <h2>SYNOPSIS</h2>
 

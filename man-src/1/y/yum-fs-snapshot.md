@@ -1,4 +1,5 @@
 ---
+
 title: "yum-fs-snapshot(1)"
 name: "yum-fs-snapshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-fs-snapshot/"
 description: "yum-fs-snapshot"
 ---
 
-<h2>NAME</h2>
 <p> <code>yum-fs-snapshot</code></p>
 <h2>SYNOPSIS</h2>
 <p> The <code>yum-fs-snapshot</code> package</p>

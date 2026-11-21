@@ -1,4 +1,5 @@
 ---
+
 title: "mkmapfile(1)"
 name: "mkmapfile"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mkmapfile/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- mkmapfile - create Unicode mapfiles 
+mkmapfile - create Unicode mapfiles 
 
  Very Alpha. 
 

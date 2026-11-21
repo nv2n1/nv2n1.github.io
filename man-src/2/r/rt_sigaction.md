@@ -1,4 +1,5 @@
 ---
+
 title: "rt_sigaction(2)"
 name: "rt_sigaction"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-rt_sigaction/"
 description: "sigaction, rt_sigaction – examine and change a signal action"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sigaction, rt_sigaction &#8211; examine and change a signal action </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

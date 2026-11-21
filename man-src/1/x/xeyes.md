@@ -1,4 +1,5 @@
 ---
+
 title: "xeyes(1)"
 name: "xeyes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xeyes/"
 description: "xeyes – a follow the mouse X demo"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xeyes &#8211; a follow the mouse X demo </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xeyes</code> [-option &#8230;]</p>

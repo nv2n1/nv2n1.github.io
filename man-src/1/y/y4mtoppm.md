@@ -1,4 +1,5 @@
 ---
+
 title: "y4mtoppm(1)"
 name: "y4mtoppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-y4mtoppm/"
 description: "y4mtoppm – Convert YUV4MPEG2 stream to PPM images"
 ---
 
-<h2>NAME</h2>
 <p> y4mtoppm &#8211; Convert YUV4MPEG2 stream to PPM images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>y4mtoppm</code> [<i>options</i>] </p>

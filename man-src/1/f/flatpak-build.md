@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-build(1)"
 name: "flatpak-build"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-build/"
 description: "flatpak-build – Build in a directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-build &#8211; Build in a directory </p>
 <h2>SYNOPSIS</h2>
 <dl>

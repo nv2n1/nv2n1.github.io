@@ -1,4 +1,5 @@
 ---
+
 title: "ypchsh(1)"
 name: "ypchsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ypchsh/"
 description: "yppasswd, ypchfn, ypchsh – change your password in the NIS database"
 ---
 
-<h2>NAME</h2>
 <p> yppasswd, ypchfn, ypchsh &#8211; change your password in the NIS database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yppasswd [-f] [-l] [-p] [user]</code><br />

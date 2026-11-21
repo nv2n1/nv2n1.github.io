@@ -1,4 +1,5 @@
 ---
+
 title: "grdview(1)"
 name: "grdview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdview/"
 description: "grdview – Create 3-D perspective image or surface mesh from a grid"
 ---
 
-<h2>NAME</h2>
 <p> grdview &#8211; Create 3-D perspective image or surface mesh from a grid</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdview</code> <i>relief_file</i> <i>parameters</i> [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ [<i>cpt</i>]] [ <i>drapefile</i> | <i>grd_r</i>,<i>grd_g</i>,<i>grd_b</i> ] [ <i>intensfile</i>|<i>intensity</i> ] [ <code>-Jz</code>|<code>Z</code><i>parameters</i> ] [ <code>-K</code> ] [ <i>level</i>[<code>+g</code><i>fill</i>] ] [ <code>-O</code> ] [ <code>-P</code> ] [ <i>args</i>[<code>+m</code>] ] [ <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] ] [ <i>smooth</i> ] [ [<code>s</code>][<code>o</code>[<i>pen</i>]] ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ <code>type</code><i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>

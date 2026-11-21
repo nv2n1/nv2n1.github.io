@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_dict_set_bindata(3)"
 name: "getdns_dict_set_bindata"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_dict_set_bindata/"
 description: "getdns_dict_set, getdns_dict_set_bindata, getdns_dict_set_dict, getdns_dict_set_int, getdns_dict_set_list, — set a value by name in a getdns dict"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_dict_set, </code> <code>getdns_dict_set_bindata, </code> <code>getdns_dict_set_dict, </code> <code>getdns_dict_set_int, </code> <code>getdns_dict_set_list, </code> &#8212; set a value by name in a getdns dict </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

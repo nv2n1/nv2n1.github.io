@@ -1,4 +1,5 @@
 ---
+
 title: "cowsay(1)"
 name: "cowsay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cowsay/"
 description: "cowsay/cowthink – configurable speaking/thinking cow (and a bit more)"
 ---
 
-<h2>NAME</h2>
 <p> cowsay/cowthink &#8211; configurable speaking/thinking cow (and a bit more)</p>
 <h2>SYNOPSIS</h2>
 <p> cowsay [<code>-e</code> <i>eye_string</i>] [<code>-f</code> <i>cowfile</i>] [<code>-h</code>] [<code>-l</code>] [<code>-n</code>] [<code>-T</code> <i>tongue_string</i>] [<code>-W</code> <i>column</i>] [<code>-bdgpstwy</code>]</p>

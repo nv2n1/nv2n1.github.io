@@ -1,4 +1,5 @@
 ---
+
 title: "funinfoget(3)"
 name: "funinfoget"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funinfoget/"
 description: "FunInfoGet – get information from Funtools struct"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunInfoGet &#8211; get information from Funtools struct</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

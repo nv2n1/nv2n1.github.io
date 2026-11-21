@@ -1,4 +1,5 @@
 ---
+
 title: "rstart(1)"
 name: "rstart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rstart/"
 description: "rstart – a sample implementation of a Remote Start client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rstart &#8211; a sample implementation of a Remote Start client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rstart</code> [-c <i>context</i>] [-g] [-l <i>username</i>] [-v] <i>hostname</i> <i>command args &#8230;</i></p>

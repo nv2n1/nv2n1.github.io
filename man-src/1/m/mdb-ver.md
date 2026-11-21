@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-ver(1)"
 name: "mdb-ver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdb-ver/"
 description: "mdb-ver – Return the format of a given MDB database."
 ---
 
-<h2>NAME</h2>
 <p> <code>mdb-ver </code>&#8211; Return the format of a given MDB database.</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "helcor(1)"
 name: "helcor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-helcor/"
 description: "helcor – Heliocentric correction of CCD output data file(s)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> helcor &#8211; Heliocentric correction of CCD output data file(s)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>helcor </code><i>[options] source_file &#8230;</i> &#8211; batch mode<br />

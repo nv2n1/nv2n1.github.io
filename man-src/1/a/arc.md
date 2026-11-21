@@ -1,4 +1,5 @@
 ---
+
 title: "arc(1)"
 name: "arc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arc/"
 description: "arc – pc archive utility"
 ---
 
-<h2>NAME</h2>
 <p> arc &#8211; pc archive utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arc</code> a|m|u|f|d|x|e|r|p|l|v|t|c [ biswnoq ] [ g<i>password</i> ] <i>archive </i> [ <i>filename</i> &#8230;]</p>

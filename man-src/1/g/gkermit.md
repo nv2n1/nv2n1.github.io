@@ -1,4 +1,5 @@
 ---
+
 title: "gkermit(1)"
 name: "gkermit"
 section: "1"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gkermit/"
 ---
 
-<h2>NAME</h2>
-
- gkermit - G-Kermit (GNU Kermit) 1.00 file transfer software.
+gkermit - G-Kermit (GNU Kermit) 1.00 file transfer software.
 
 <h2>SYNOPSIS</h2>
 

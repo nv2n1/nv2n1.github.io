@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-delete-auto-scaling-group(1)"
 name: "euscale-delete-auto-scaling-group"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-delete-auto-scaling-group/"
 description: "euscale-delete-auto-scaling-group – Delete an auto-scaling group"
 ---
 
-<h2>NAME</h2>
 <p> euscale-delete-auto-scaling-group &#8211; Delete an auto-scaling group</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-delete-auto-scaling-group [-d] [-U URL] [&#8211;region USER [at] REGION]</p>

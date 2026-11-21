@@ -1,4 +1,5 @@
 ---
+
 title: "a2ps-lpr-wrapper(1)"
 name: "a2ps-lpr-wrapper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-a2ps-lpr-wrapper/"
 description: "a2ps-lpr-wrapper — lp/lpr wrapper script for GNU a2ps on Debian"
 ---
 
-<h2>NAME</h2>
 <p> a2ps-lpr-wrapper &#8212; lp/lpr wrapper script for GNU a2ps on Debian</p>
 <h2>SYNOPSIS</h2>
 <p> <code>a2ps-lpr-wrapper</code> [<code>-d </code><i>printer</i>] [<i>files</i>]</p>

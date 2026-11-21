@@ -1,4 +1,5 @@
 ---
+
 title: "get_fragment_index(3)"
 name: "get_fragment_index"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_fragment_index/"
 description: "get_fragment_index — retrieve the fragment containing a dirfile field"
 ---
 
-<h2>NAME</h2>
 <p> get_fragment_index &#8212; retrieve the fragment containing a dirfile field</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

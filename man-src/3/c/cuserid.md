@@ -1,4 +1,5 @@
 ---
+
 title: "cuserid(3)"
 name: "cuserid"
 section: "3"
@@ -6,7 +7,7 @@ letter: "c"
 url: "/docs/linux/man/3-cuserid/"
 description: "getlogin, getlogin_r, cuserid – get username"
 ---
-<h2 class="name">NAME</h2>
+
 <p> getlogin, getlogin_r, cuserid - get username </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

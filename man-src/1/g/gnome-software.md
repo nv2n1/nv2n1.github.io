@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-software(1)"
 name: "gnome-software"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-software/"
 description: "gnome-software – Install applications"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-software &#8211; Install applications </p>
 <h2>SYNOPSIS</h2>
 <dl>

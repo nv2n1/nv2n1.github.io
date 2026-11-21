@@ -1,4 +1,5 @@
 ---
+
 title: "fasd(1)"
 name: "fasd"
 section: "1"
@@ -6,11 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fasd/"
 ---
 
-<h2>NAME</h2>
-
- 
-
- fasd - quick access to files and directories
+fasd - quick access to files and directories
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "mateconf-gsettings-data-convert(1)"
 name: "mateconf-gsettings-data-convert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mateconf-gsettings-data-convert/"
 description: "mateconf-gsettings-data-convert – MateConf to GSettings data migration"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mateconf-gsettings-data-convert &#8211; MateConf to GSettings data migration </p>
 <h2>SYNOPSIS</h2>
 <dl>

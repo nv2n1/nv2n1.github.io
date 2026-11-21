@@ -1,4 +1,5 @@
 ---
+
 title: "links2(1)"
 name: "links2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-links2/"
 description: "links – lynx-like alternative character mode WWW browser"
 ---
 
-<h2>NAME</h2>
 <p> links &#8211; lynx-like alternative character mode WWW browser</p>
 <h2>SYNOPSIS</h2>
 <p> <code>links</code> <i>[options] URL</i></p>

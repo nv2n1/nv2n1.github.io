@@ -1,4 +1,5 @@
 ---
+
 title: "dnsget(1)"
 name: "dnsget"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dnsget/"
 description: "dnsget – DNS lookup utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dnsget &#8211; DNS lookup utility</p>
 <h2>SYNOPSYS</h2>
 <p> <code>dnsget</code> [<code>-v</code>|<code>-q</code>] [<code>-c</code> <i>class</i>] [<code>-t</code> <i>type</i>] [<code>-o</code> <i>opt</i>,<i>opt</i>,&#8230;] <i>name</i>&#8230; </p>

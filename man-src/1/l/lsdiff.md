@@ -1,4 +1,5 @@
 ---
+
 title: "lsdiff(1)"
 name: "lsdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lsdiff/"
 description: "lsdiff – show which files are modified by a patch"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lsdiff &#8211; show which files are modified by a patch </p>
 <h2>SYNOPSIS</h2>
 <dl>

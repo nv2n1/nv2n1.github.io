@@ -1,4 +1,5 @@
 ---
+
 title: "texi2dvi(1)"
 name: "texi2dvi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-texi2dvi/"
 description: "texi2dvi – convert Texinfo documents to DVI or PDF"
 ---
 
-<h2 class="name">NAME</h2>
 <p> texi2dvi &#8211; convert Texinfo documents to DVI or PDF </p>
 <h2>SYNOPSIS</h2>
 <p> <code>texi2dvi</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;<br />

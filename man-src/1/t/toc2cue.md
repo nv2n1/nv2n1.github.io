@@ -1,4 +1,5 @@
 ---
+
 title: "toc2cue(1)"
 name: "toc2cue"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-toc2cue/"
 description: "toc2cue – converts a TOC files of"
 ---
 
-<h2 class="name">NAME</h2>
 <p> toc2cue &#8211; converts a TOC files of <i></p>
 <p> <a href="/docs/linux/man/1-cdrdao/">cdrdao</a>(1)</i> into a .cue file </p>
 <h2>SYNOPSIS</h2>

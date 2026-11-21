@@ -1,4 +1,5 @@
 ---
+
 title: "euare-servercertdel(1)"
 name: "euare-servercertdel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-servercertdel/"
 description: "euare-servercertdel – Delete a server certificate"
 ---
 
-<h2>NAME</h2>
 <p> euare-servercertdel &#8211; Delete a server certificate</p>
 <h2>SYNOPSIS</h2>
 <p> euare-servercertdel [&#8211;as-account ACCOUNT] [-U URL]</p>

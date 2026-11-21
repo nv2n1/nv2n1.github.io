@@ -1,4 +1,5 @@
 ---
+
 title: "chesvxx(3)"
 name: "chesvxx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chesvxx/"
 description: "chesvxx.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chesvxx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

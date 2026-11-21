@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_supported_algs(3)"
 name: "libssh2_session_supported_algs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_supported_algs/"
 description: "libssh2_session_supported_algs – get list of supported algorithms"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_supported_algs &#8211; get list of supported algorithms</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

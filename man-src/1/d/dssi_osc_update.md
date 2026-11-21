@@ -1,4 +1,5 @@
 ---
+
 title: "dssi_osc_update(1)"
 name: "dssi_osc_update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dssi_osc_update/"
 description: "dssi_osc_update – send a DSSI `update’ OSC request"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dssi_osc_update &#8211; send a DSSI `update&#8217; OSC request </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dssi_osc_update</code> <i>&lt;OSC URL&gt;</i></p>

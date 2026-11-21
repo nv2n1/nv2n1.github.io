@@ -1,4 +1,5 @@
 ---
+
 title: "curl_easy_pause(3)"
 name: "curl_easy_pause"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_easy_pause/"
 description: "curl_easy_pause – pause and unpause a connection"
 ---
 
-<h2>NAME</h2>
 <p> curl_easy_pause &#8211; pause and unpause a connection</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

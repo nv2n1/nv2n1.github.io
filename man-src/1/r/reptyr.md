@@ -1,4 +1,5 @@
 ---
+
 title: "reptyr(1)"
 name: "reptyr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-reptyr/"
 description: "reptyr – Reparent a running program to a new terminal"
 ---
 
-<h2>NAME</h2>
 <p> reptyr &#8211; Reparent a running program to a new terminal</p>
 <h2>SYNOPSIS</h2>
 <p> <code>reptyr</code> <i>PID</i> </p>

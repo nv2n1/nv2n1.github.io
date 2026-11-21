@@ -1,4 +1,5 @@
 ---
+
 title: "mblen(3)"
 name: "mblen"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mblen/"
 description: "mblen – determine number of bytes in next multibyte character"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mblen &#8211; determine number of bytes in next multibyte character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

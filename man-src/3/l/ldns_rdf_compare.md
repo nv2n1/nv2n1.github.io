@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rdf_compare(3)"
 name: "ldns_rdf_compare"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rdf_compare/"
 description: "ldns_rdf_size, ldns_rdf_get_type, ldns_rdf_data, ldns_rdf_compare"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rdf_size, ldns_rdf_get_type, ldns_rdf_data, ldns_rdf_compare </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "getgrgid_r(3)"
 name: "getgrgid_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getgrgid_r/"
 description: "getgrnam, getgrnam_r, getgrgid, getgrgid_r – get group file entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getgrnam, getgrnam_r, getgrgid, getgrgid_r &#8211; get group file entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

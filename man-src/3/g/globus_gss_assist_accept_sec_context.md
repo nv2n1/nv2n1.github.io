@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gss_assist_accept_sec_context(3)"
 name: "globus_gss_assist_accept_sec_context"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gss_assist_accept_sec_context/"
 description: "Security Context Management –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Security Context Management &#8211; </p>
 <p> Security Context Creation and Use.</p>
 <h3>Functions</h3>

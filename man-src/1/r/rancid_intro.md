@@ -1,4 +1,5 @@
 ---
+
 title: "rancid_intro(1)"
 name: "rancid_intro"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rancid_intro/"
 description: "rancid_intro – introduction to the Really Awesome New Cisco confIg Differ"
 ---
 
-<h2>NAME</h2>
 <p> rancid_intro &#8211; introduction to the Really Awesome New Cisco confIg Differ</p>
 <h2>INTRODUCTION</h2>
 <p> <code>rancid</code> is really more than just a Cisco configuration differ. It handles several different device&#8217;s configurations; currently including Alteon, Arista, Bay Networks (Nortel), Cisco, Extreme, F5 BigIP, Force10, Fortinet, Foundry, HP Procurve switches, Hitachi, Juniper Routers and edge (ERX) routers, MRTd daemon, Microtik routers, Netscalar load balancers, Netscreen firewalls, Procket, Redback, SMC switches, Xirrus arrays, Zebra routing software, and the ADC-Kentrox EZ-T3 mux. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmchart(1)"
 name: "pmchart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmchart/"
 description: "pmchart – strip chart tool for Performance Co-Pilot"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmchart</code> &#8211; strip chart tool for Performance Co-Pilot</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmchart</code> [<code>-CVWz</code>] [<code>-A</code> <i>align</i>] [<code>-a</code> <i>archive</i>] [<code>-c</code> <i>configfile</i>] [<code>-f</code> <i>fontfamily</i>] [<code>-F</code> <i>fontsize</i>] [<code>-g</code> <i>geometry</i>] [<code>-h</code> <i>host</i>] [<code>-o</code> <i>outfile</i>] [<code>-O</code> <i>offset</i>] [<code>-p</code> <i>port</i>] [<code>-s</code> <i>samples</i>] [<code>-S</code> <i>starttime</i>] [<code>-T</code> <i>endtime</i>] [<code>-t</code> <i>interval</i>] [<code>-v</code> <i>visible</i>] [<code>-Z</code> <i>timezone</i>] [<code>-geometry</code> <i>geometry</i>] [<i>sources</i>&#8230;]</p>

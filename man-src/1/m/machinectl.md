@@ -1,4 +1,5 @@
 ---
+
 title: "machinectl(1)"
 name: "machinectl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-machinectl/"
 description: "machinectl – Control the systemd machine manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> machinectl &#8211; Control the systemd machine manager </p>
 <h2>SYNOPSIS</h2>
 <dl>

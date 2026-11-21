@@ -1,4 +1,5 @@
 ---
+
 title: "httpry(1)"
 name: "httpry"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-httpry/"
 description: "httpry – HTTP logging and information retrieval tool"
 ---
 
-<h2>NAME</h2>
 <p> httpry &#8211; HTTP logging and information retrieval tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>httpry [ -dFpq ] [ -b file ] [ -f format ] [ -i device ] [ -m methods ] [ -n count ] [ -o file ] [ -P file ] [ -r file ] [ -S bytes ] [ -u user ] [ &#8216;expression&#8217; ]</code><br />

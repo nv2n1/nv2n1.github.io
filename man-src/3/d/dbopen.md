@@ -1,4 +1,5 @@
 ---
+
 title: "dbopen(3)"
 name: "dbopen"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dbopen/"
 description: "dbopen – database access methods"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbopen &#8211; database access methods </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

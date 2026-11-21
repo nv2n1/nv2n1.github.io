@@ -1,4 +1,5 @@
 ---
+
 title: "deluge(1)"
 name: "deluge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-deluge/"
 description: "deluge – a bittorrent client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> deluge &#8211; a bittorrent client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>deluge [options]</code> [<i>torrent-file</i>] </p>

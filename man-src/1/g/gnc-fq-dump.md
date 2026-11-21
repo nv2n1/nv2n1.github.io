@@ -1,4 +1,5 @@
 ---
+
 title: "gnc-fq-dump(1)"
 name: "gnc-fq-dump"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gnc-fq-dump/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- gnc-fq-dump<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>- Print out data from the F::Q module
+gnc-fq-dump<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>- Print out data from the F::Q module
  
 
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-modify-instance-attribute(1)"
 name: "euca-modify-instance-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-modify-instance-attribute/"
 description: "euca-modify-instance-attribute – Modify an attribute of an instance"
 ---
 
-<h2>NAME</h2>
 <p> euca-modify-instance-attribute &#8211; Modify an attribute of an instance</p>
 <h2>SYNOPSIS</h2>
 <p> euca-modify-instance-attribute (<code>-b</code> DEVICE=::(true|false) |</p>

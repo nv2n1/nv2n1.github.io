@@ -1,4 +1,5 @@
 ---
+
 title: "ncmpcpp(1)"
 name: "ncmpcpp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncmpcpp/"
 description: "ncmpcpp – An ncurses Music Player Daemon (MPD) client."
 ---
 
-<h2>NAME</h2>
 <p> ncmpcpp &#8211; An ncurses Music Player Daemon (MPD) client.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncmpcpp</code> [options]</p>

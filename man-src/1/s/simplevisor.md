@@ -1,4 +1,5 @@
 ---
+
 title: "simplevisor(1)"
 name: "simplevisor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-simplevisor/"
 description: "simplevisor 1.2 – simple daemons supervisor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> simplevisor 1.2 &#8211; simple daemons supervisor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>simplevisor</code> [&#8211;conf <font SIZE="-1">CONF</font>][&#8211;conftype <font SIZE="-1">CONFTYPE</font>][&#8211;daemon][&#8211;interval <font SIZE="-1">INTERVAL</font>][-h][&#8211;log <font SIZE="-1">LOG</font>][&#8211;logfile <font SIZE="-1">LOGFILE</font>][&#8211;loglevel <font SIZE="-1">LOGLEVEL</font>][&#8211;logname <font SIZE="-1">LOGNAME</font>][-p <font SIZE="-1">PIDFILE</font>][&#8211;store <font SIZE="-1">STORE</font>][&#8211;version] command [path]</p>

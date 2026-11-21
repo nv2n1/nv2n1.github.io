@@ -1,4 +1,5 @@
 ---
+
 title: "compface(3)"
 name: "compface"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-compface/"
 description: "compface, uncompface – compress and expand 48x48x1 face image files"
 ---
 
-<h2>NAME</h2>
 <p> compface, uncompface &#8211; compress and expand 48x48x1 face image files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>compface (buf)</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "texi2html(1)"
 name: "texi2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-texi2html/"
 description: "texi2html – a Texinfo to HTML converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> texi2html &#8211; a Texinfo to HTML converter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>texi2html [options] file</code></p>

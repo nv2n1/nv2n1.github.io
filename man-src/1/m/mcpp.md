@@ -1,4 +1,5 @@
 ---
+
 title: "mcpp(1)"
 name: "mcpp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mcpp/"
 description: "mcpp – Matsui CPP, an alternative C preprocessor"
 ---
 
-<h2>NAME</h2>
 <p> mcpp &#8211; Matsui CPP, an alternative C preprocessor</p>
 <h2>SYNOPSIS</h2>
 <p> mcpp [<i>options</i>] [<i>&lt;infile&gt;</i> [<i>&lt;outfile&gt;</i>]]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "podbeuter(1)"
 name: "podbeuter"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-podbeuter/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- podbeuter - a podcast download manage for text terminals 
+podbeuter - a podcast download manage for text terminals 
 
 <h2>SYNOPSIS</h2>
 

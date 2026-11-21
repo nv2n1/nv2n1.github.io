@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-replica-manage(1)"
 name: "ipa-replica-manage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-replica-manage/"
 description: "ipa-replica-manage – Manage an IPA replica"
 ---
 
-<h2>NAME</h2>
 <p> ipa-replica-manage &#8211; Manage an IPA replica</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-replica-manage [<i>OPTION</i>]&#8230; [COMMAND]</p>

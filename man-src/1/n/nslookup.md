@@ -1,4 +1,5 @@
 ---
+
 title: "nslookup(1)"
 name: "nslookup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nslookup/"
 description: "nslookup – query Internet name servers interactively"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nslookup &#8211; query Internet name servers interactively </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nslookup</code> [-option] [name | -] [server]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_protocol_job_state(3)"
 name: "globus_gram_protocol_job_state"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_job_state/"
 description: "GRAM Job States –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GRAM Job States &#8211; </p>
 <p> GRAM Job States.</p>
 <h3>Enumerations</h3>

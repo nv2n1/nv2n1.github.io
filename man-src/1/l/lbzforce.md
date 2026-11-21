@@ -1,4 +1,5 @@
 ---
+
 title: "lbzforce(1)"
 name: "lbzforce"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lbzforce/"
 description: "lbzforce – force a ‘.bz2’ extension on all lbzip2 files"
 ---
 
-<h2>NAME</h2>
 <p> lbzforce &#8211; force a &#8216;.bz2&#8217; extension on all lbzip2 files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lbzforce</code> [ name &#8230; ]</p>

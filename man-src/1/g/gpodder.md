@@ -1,4 +1,5 @@
 ---
+
 title: "gpodder(1)"
 name: "gpodder"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpodder/"
 description: "gpodder – A Media aggregator and Podcast catcher"
 ---
 
-<h2>NAME</h2>
 <p> gpodder &#8211; A Media aggregator and Podcast catcher</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpodder</code> [<i>options</i>]</p>

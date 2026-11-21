@@ -1,4 +1,5 @@
 ---
+
 title: "wsdl(1)"
 name: "wsdl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wsdl/"
 description: "wsdl – Mono’s Web Service Proxy Generator"
 ---
 
-<h2>NAME</h2>
 <p> wsdl &#8211; Mono&#8217;s Web Service Proxy Generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wsdl</code> [options] [path | url]</p>

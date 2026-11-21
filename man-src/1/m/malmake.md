@@ -1,4 +1,5 @@
 ---
+
 title: "malmake(1)"
 name: "malmake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-malmake/"
 description: "malmake – compile a Malaga project"
 ---
 
-<h2 class="name">NAME</h2>
 <p> malmake &#8211; compile a Malaga project</p>
 <h2>SYNOPSIS</h2>
 <p> <code>malmake</code> [<code>-new</code>] <i>project-file</i> </p>

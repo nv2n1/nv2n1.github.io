@@ -1,4 +1,5 @@
 ---
+
 title: "lpstat-cups(1)"
 name: "lpstat-cups"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lpstat-cups/"
 description: "lpstat – print cups status information"
 ---
 
-<h2>NAME</h2>
 <p> lpstat &#8211; print cups status information</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lpstat</code> [ -E ] [ -H ] [ -U <i>username</i> ] [ -h <i>hostname[:port]</i> ] [ -l ] [ -W <i>which-jobs</i> ] [ -a [ <i>destination(s)</i> ] ] [ -c [ <i>class(es)</i> ] ] [ -d ] [ -o [ <i>destination(s)</i> ] ] [ -p [ <i>printer(s)</i> ] ] [ -r ] [ -R ] [ -s ] [ -t ] [ -u [ <i>user(s)</i> ] ] [ -v [ <i>printer(s)</i> ] ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "chbevd(3)"
 name: "chbevd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chbevd/"
 description: "chbevd.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chbevd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

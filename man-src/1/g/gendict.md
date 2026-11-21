@@ -1,4 +1,5 @@
 ---
+
 title: "gendict(1)"
 name: "gendict"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gendict/"
 description: "gendict – Compiles word list into ICU string trie dictionary"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gendict</code> &#8211; Compiles word list into ICU string trie dictionary </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gendict</code> [ <code>&#8211;uchars</code> | <code>&#8211;bytes</code> <code>&#8211;transform</code><i> transform</i> ] [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-V</code>, <code>&#8211;version</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-i</code>, <code>&#8211;icudatadir</code><i> directory</i> ] <i> input-file</i> <i> output-file</i></p>

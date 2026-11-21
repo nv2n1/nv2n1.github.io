@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usermodloginprofile(1)"
 name: "euare-usermodloginprofile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-usermodloginprofile/"
 description: "euare-usermodloginprofile – Update a user’s password"
 ---
 
-<h2>NAME</h2>
 <p> euare-usermodloginprofile &#8211; Update a user&#8217;s password</p>
 <h2>SYNOPSIS</h2>
 <p> euare-usermodloginprofile [-p PASSWORD] [&#8211;as-account ACCOUNT] [-U URL]</p>

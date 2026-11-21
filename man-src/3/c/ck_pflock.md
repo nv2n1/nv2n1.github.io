@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pflock(3)"
 name: "ck_pflock"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pflock/"
 description: "ck_pflock_init ck_pflock_write_lock ck_pflock_write_unlock ck_pflock_read_lock ck_pflock_read_unlock – centralized phase-fair reader-writer locks"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pflock_init</code> <code>ck_pflock_write_lock</code> <code>ck_pflock_write_unlock</code> <code>ck_pflock_read_lock</code> <code>ck_pflock_read_unlock</code> &#8211; centralized phase-fair reader-writer locks</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

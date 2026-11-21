@@ -1,4 +1,5 @@
 ---
+
 title: "man-recode(1)"
 name: "man-recode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-man-recode/"
 description: "man-recode – convert manual pages to another encoding"
 ---
 
-<h2 class="name">NAME</h2>
 <p> man-recode &#8211; convert manual pages to another encoding </p>
 <h2>SYNOPSIS</h2>
 <p> <code>man-recode</code> <code>-t</code> <i>to-code</i> {<code>&#8211;suffix=</code><i>suffix/</i>|<code>&#8211;in-place</code>} [<code>-dqhV</code>] [<i>filename</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mod-mono-server(1)"
 name: "mod-mono-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mod-mono-server/"
 description: "XSP – Mono ASP.NET Web Server (xsp and xsp2)"
 ---
 
-<h2>NAME</h2>
 <p> XSP &#8211; Mono ASP.NET Web Server (xsp and xsp2)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xsp</code> [options] </p>

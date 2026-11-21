@@ -1,4 +1,5 @@
 ---
+
 title: "nitroshare(1)"
 name: "nitroshare"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nitroshare/"
 description: "nitroshare – launches the NitroShare application"
 ---
 
-<h2>NAME</h2>
 <p> nitroshare &#8211; launches the NitroShare application</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nitroshare</code> [options]</p>

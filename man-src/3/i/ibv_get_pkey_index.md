@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_get_pkey_index(3)"
 name: "ibv_get_pkey_index"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_get_pkey_index/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_get_pkey_index - obtain the index in the P_Key table of a P_Key 
+ibv_get_pkey_index - obtain the index in the P_Key table of a P_Key 
 
 <h2>SYNOPSIS</h2>
 

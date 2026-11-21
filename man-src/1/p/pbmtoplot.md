@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtoplot(1)"
 name: "pbmtoplot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmtoplot/"
 description: "pbmtoplot – convert a portable bitmap into a Unix"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmtoplot &#8211; convert a portable bitmap into a Unix </p>
 <p> plot(5) file</p>
 <h2>SYNOPSIS</h2>

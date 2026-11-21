@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-search(1)"
 name: "doveadm-search"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-search/"
 description: "doveadm-search – Show a list of mailbox GUIDs and message UIDs matching given search query."
 ---
 
-<h2>NAME</h2>
 <p> doveadm-search &#8211; Show a list of mailbox GUIDs and message UIDs matching given search query.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>search</code> [<code>-S</code> <i>socket_path</i>] <i>search_query</i><br />

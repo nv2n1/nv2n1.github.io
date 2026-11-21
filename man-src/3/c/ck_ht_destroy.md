@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_destroy(3)"
 name: "ck_ht_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ht_destroy/"
 description: "ck_ht_destroy – immediately destroy a hash table"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ht_destroy</code> &#8211; immediately destroy a hash table</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

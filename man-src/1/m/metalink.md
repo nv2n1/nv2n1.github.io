@@ -1,4 +1,5 @@
 ---
+
 title: "metalink(1)"
 name: "metalink"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-metalink/"
 description: "metalink — commandline metalink generator"
 ---
 
-<h2>NAME</h2>
 <p> metalink &#8212; commandline metalink generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>metalink</code> [<i>input files</i>] [ &lt; <i>mirror list</i>]</p>

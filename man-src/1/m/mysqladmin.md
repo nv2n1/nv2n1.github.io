@@ -1,4 +1,5 @@
 ---
+
 title: "mysqladmin(1)"
 name: "mysqladmin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqladmin/"
 description: "mysqladmin – client for administering a MySQL server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqladmin &#8211; client for administering a MySQL server </p>
 <h2>SYNOPSIS</h2>
 <dl>

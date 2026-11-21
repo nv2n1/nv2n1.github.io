@@ -1,4 +1,5 @@
 ---
+
 title: "newsbeuter(1)"
 name: "newsbeuter"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-newsbeuter/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- newsbeuter - an RSS feed reader for text terminals 
+newsbeuter - an RSS feed reader for text terminals 
 
 <h2>SYNOPSIS</h2>
 

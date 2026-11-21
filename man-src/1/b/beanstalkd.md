@@ -1,4 +1,5 @@
 ---
+
 title: "beanstalkd(1)"
 name: "beanstalkd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beanstalkd/"
 description: "beanstalkd – simple, fast work queue"
 ---
 
-<h2>NAME</h2>
 <p> <code>beanstalkd</code> &#8211; simple, fast work queue</p>
 <h2>SYNOPSIS</h2>
 <p> <code>beanstalkd</code> [<i>options</i>]</p>

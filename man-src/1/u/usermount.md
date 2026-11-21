@@ -1,4 +1,5 @@
 ---
+
 title: "usermount(1)"
 name: "usermount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-usermount/"
 description: "usermount – A graphical tool to mount, unmount and format filesystems."
 ---
 
-<h2>NAME</h2>
 <p> usermount &#8211; A graphical tool to mount, unmount and format filesystems.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>usermount</code> [ <i>options</i> ] </p>

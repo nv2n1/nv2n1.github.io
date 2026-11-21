@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_convert_table_format(1)"
 name: "mysql_convert_table_format"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysql_convert_table_format/"
 description: "mysql_convert_table_format – convert tables to use a given storage engine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysql_convert_table_format &#8211; convert tables to use a given storage engine </p>
 <h2>SYNOPSIS</h2>
 <dl>

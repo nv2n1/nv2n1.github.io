@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_acl_match_string(3)"
 name: "krb5_acl_match_string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_acl_match_string/"
 description: "Heimdal Kerberos 5 support functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Heimdal Kerberos 5 support functions &#8211; </p>
 <h3>Data Structures</h3>
 <p> struct <code>krb5plugin_an2ln_ftable_desc</code><br />

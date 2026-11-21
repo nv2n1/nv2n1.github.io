@@ -1,4 +1,5 @@
 ---
+
 title: "write-mime-multipart(1)"
 name: "write-mime-multipart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-write-mime-multipart/"
 description: "write-mime-multipart – utilty for creating mime-multipart files, likely for use via user data and cloud-init."
 ---
 
-<h2>NAME</h2>
 <p> <code>write-mime-multipart</code> &#8211; utilty for creating mime-multipart files, likely for use via user data and cloud-init. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>write-mime-multipart [options]</code> </p>

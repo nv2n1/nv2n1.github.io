@@ -1,4 +1,5 @@
 ---
+
 title: "libmicrohttpd(3)"
 name: "libmicrohttpd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libmicrohttpd/"
 description: "GNU libmicrohttpd – library for embedding HTTP servers"
 ---
 
-<h2>NAME</h2>
 <p> GNU libmicrohttpd &#8211; library for embedding HTTP servers</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><code>#include&nbsp;<wbr>&lt;microhttpd.h&gt; </p>

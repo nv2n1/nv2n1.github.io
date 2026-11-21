@@ -1,4 +1,5 @@
 ---
+
 title: "obex_push(1)"
 name: "obex_push"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obex_push/"
 description: "obex_push – Push and Receive Files over the Bluetooth OBEX Push Channel"
 ---
 
-<h2>NAME</h2>
 <p> obex_push &#8211; Push and Receive Files over the Bluetooth OBEX Push Channel</p>
 <h2>SYNOPSIS</h2>
 <p> obex_push <i>[</i><code>&lt;channel&gt;</code><i>] [</i><code>&lt;bdaddr&gt; &lt;filename&gt;</code><i>] </i></p>

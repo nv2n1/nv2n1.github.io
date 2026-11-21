@@ -1,4 +1,5 @@
 ---
+
 title: "sendxmpp(1)"
 name: "sendxmpp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sendxmpp/"
 description: "sendxmpp – send xmpp messages from the commandline."
 ---
 
-<h2 class="name">NAME</h2>
 <p> sendxmpp &#8211; send xmpp messages from the commandline. </p>
 <h2>SYNOPSIS</h2>
 <p> sendxmpp [options] &lt;recipient1&gt; [&lt;recipient2&gt; &#8230;] </p>

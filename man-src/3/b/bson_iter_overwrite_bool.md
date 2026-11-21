@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_overwrite_bool(3)"
 name: "bson_iter_overwrite_bool"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_overwrite_bool/"
 description: "bson_iter_overwrite_bool() – The bson_iter_overwrite_bool() function shall overwrite the contents of a BSON_TYPE_BOOL element in place."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_overwrite_bool() &#8211; The bson_iter_overwrite_bool() function shall overwrite the contents of a BSON_TYPE_BOOL element in place.</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "get_rle_sprite(3)"
 name: "get_rle_sprite"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_rle_sprite/"
 description: "get_rle_sprite – Creates an RLE sprite using a bitmap as source. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_rle_sprite &#8211; Creates an RLE sprite using a bitmap as source. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

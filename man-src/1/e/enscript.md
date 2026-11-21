@@ -1,4 +1,5 @@
 ---
+
 title: "enscript(1)"
 name: "enscript"
 section: "1"
@@ -6,7 +7,7 @@ letter: "e"
 url: "/docs/linux/man/1-enscript/"
 description: "enscript – convert text files to PostScript, HTML, RTF, ANSI, and overstrikes"
 ---
-<h2 class="name">NAME</h2>
+
 <p> enscript - convert text files to PostScript, HTML, RTF, ANSI, and overstrikes  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>enscript</code> [<code>-123456789BcgGhjkKlmOqrRvVzZ</code>] [<code>-# </code><i>copies</i>] [<code>-a </code><i>pages</i>] [<code>-A </code><i>align</i>] [<code>-b </code><i>header</i>] [<code>-C</code>[<i>start_line</i>]] [<code>-d </code><i>printer</i>] [<code>-D </code><i>key</i>[<code>:</code><i>value</i>]] [<code>-e</code>[<i>char</i>]] [<code>-E</code>[<i>lang</i>]] [<code>-f </code><i>font</i>] [<code>-F </code><i>header_font</i>] [<code>-H</code>[<i>num</i>]] [<code>-i </code><i>indent</i>] [<code>-I </code><i>filter</i>] [<code>-J </code><i>title</i>] [<code>-L </code><i>lines_per_page</i>] [<code>-M </code><i>media</i>] [<code>-n </code><i>copies</i>] [<code>-N </code><i>newline</i>] [<code>-o </code><i>outputfile</i>] [<code>-o -</code>] [<code>-p </code><i>outputfile</i>] [<code>-p -</code>] [<code>-P </code><i>printer</i>] [<code>-s </code><i>baselineskip</i>] [<code>-S </code><i>key</i>[<code>:</code><i>value</i>]] [<code>-t </code><i>title</i>] [<code>-T </code><i>tabsize</i>] [<code>-u</code>[<i>text</i>]] [<code>-U </code><i>num</i>] [<code>-w </code><i>language</i>] [<code>-X </code><i>encoding</i>] [<i>filename</i> ...] </p>

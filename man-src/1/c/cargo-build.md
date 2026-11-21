@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-build(1)"
 name: "cargo-build"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-build/"
 description: "cargo-build – Compile the current project"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cargo-build &#8211; Compile the current project </p>
 <h2>SYNOPSIS</h2>
 <p> cargo build [OPTIONS]</p>

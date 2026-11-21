@@ -1,4 +1,5 @@
 ---
+
 title: "colorize(1)"
 name: "colorize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-colorize/"
 description: "colorize – A robust log colorizer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> colorize &#8211; A robust log colorizer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>colorize</code> [<i>options</i>]<i>&lt;</i>logfile</p>

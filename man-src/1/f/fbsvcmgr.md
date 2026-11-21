@@ -1,4 +1,5 @@
 ---
+
 title: "fbsvcmgr(1)"
 name: "fbsvcmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fbsvcmgr/"
 description: "fbsvcmgr – access services API of Firebird"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fbsvcmgr &#8211; access services API of Firebird </p>
 <h2>SYNOPSYS</h2>
 <dl>

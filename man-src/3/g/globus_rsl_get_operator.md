@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rsl_get_operator(3)"
 name: "globus_rsl_get_operator"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rsl_get_operator/"
 description: "RSL Display –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> RSL Display &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>globus_rsl_value_print_recursive</code> (globus_rsl_value_t *globus_rsl_value_ptr)<br />

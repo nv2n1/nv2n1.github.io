@@ -1,4 +1,5 @@
 ---
+
 title: "autom4te(1)"
 name: "autom4te"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-autom4te/"
 description: "autom4te – Generate files and scripts thanks to M4"
 ---
 
-<h2 class="name">NAME</h2>
 <p> autom4te &#8211; Generate files and scripts thanks to M4 </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autom4te</code> [<i>,OPTION/</i>]&#8230; [<i>,FILES/</i>]</p>

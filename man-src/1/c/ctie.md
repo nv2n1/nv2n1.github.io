@@ -1,4 +1,5 @@
 ---
+
 title: "ctie(1)"
 name: "ctie"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ctie/"
 description: "ctie – merge or apply CWEB change files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ctie &#8211; merge or apply CWEB change files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ctie</code> <code>-c</code>|<code>-m</code> <i>outputfile masterfile</i> <i>changefile</i>&#8230;</p>

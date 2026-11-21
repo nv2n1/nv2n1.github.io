@@ -1,4 +1,5 @@
 ---
+
 title: "git-alias(1)"
 name: "git-alias"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-alias/"
 description: "git-alias – Define, search and show aliases"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-alias</code> &#8211; Define, search and show aliases</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-alias</code><br />

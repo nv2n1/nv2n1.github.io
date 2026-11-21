@@ -1,4 +1,5 @@
 ---
+
 title: "pswhite(1)"
 name: "pswhite"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pswhite/"
 description: "pswhite – PostScript filter."
 ---
 
-<h2>NAME</h2>
 <p> pswhite &#8211; PostScript filter.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pswhite</code> <i>&lt; input_PostScript_file</i> <i>&gt; output_PostScript_file</i> </p>

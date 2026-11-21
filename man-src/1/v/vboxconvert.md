@@ -1,4 +1,5 @@
 ---
+
 title: "vboxconvert(1)"
 name: "vboxconvert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vboxconvert/"
 description: "vboxcnvt – isdn voice box (converter backend)"
 ---
 
-<h2>NAME</h2>
 <p> vboxcnvt &#8211; isdn voice box (converter backend)</p>
 <h2>DESCRIPTION</h2>
 <p> This is the real converter, the backend. Don&#8217;t call it directly; call it by one of its other names: autovbox, rmdtovbox, vboxtoau or vboxmode.</p>

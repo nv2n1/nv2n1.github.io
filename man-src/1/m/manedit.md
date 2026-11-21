@@ -1,4 +1,5 @@
 ---
+
 title: "manedit(1)"
 name: "manedit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-manedit/"
 description: "manedit – UNIX Manual Page IDE"
 ---
 
-<h2>NAME</h2>
 <p> manedit &#8211; UNIX Manual Page IDE</p>
 <h2>SYNTAX</h2>
 <p> <code>manedit</code> [<i>section</i>] [<i>manual_page</i>] [<i>options</i>] [<i>GUI_options</i>]</p>

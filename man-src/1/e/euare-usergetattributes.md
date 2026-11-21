@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usergetattributes(1)"
 name: "euare-usergetattributes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-usergetattributes/"
 description: "euare-usergetattributes – Display a user’s ARN and GUID"
 ---
 
-<h2>NAME</h2>
 <p> euare-usergetattributes &#8211; Display a user&#8217;s ARN and GUID</p>
 <h2>SYNOPSIS</h2>
 <p> euare-usergetattributes [&#8211;show-extra] [&#8211;as-account ACCOUNT] [-U URL]</p>

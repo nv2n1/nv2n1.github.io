@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_dio(1)"
 name: "nfstest_dio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfstest_dio/"
 description: "nfstest_dio – Direct I/O tests"
 ---
 
-<h2>NAME</h2>
 <p> nfstest_dio &#8211; Direct I/O tests</p>
 <h2>SYNOPSIS</h2>
 <p> nfstest_dio &#8211;server &lt;server&gt; [options]</p>

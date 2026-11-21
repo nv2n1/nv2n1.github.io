@@ -1,4 +1,5 @@
 ---
+
 title: "cdparanoia(1)"
 name: "cdparanoia"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cdparanoia/"
 description: "cdparanoia 10.2 (Paranoia release III) – an audio CD reading utility which includes extra data verification features"
 ---
 
-<h2>NAME</h2>
 <p> cdparanoia 10.2 (Paranoia release III) &#8211; an audio CD reading utility which includes extra data verification features</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cdparanoia</code> [<code>options</code>] <code>span </code> [<code>outfile</code>]</p>

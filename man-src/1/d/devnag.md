@@ -1,4 +1,5 @@
 ---
+
 title: "devnag(1)"
 name: "devnag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-devnag/"
 description: "devnag – Devanagari for TeX preprocessor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> devnag &#8211; Devanagari for TeX preprocessor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>devnag in[.dn] [out[.tex]]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nsupdate(1)"
 name: "nsupdate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nsupdate/"
 description: "nsupdate – dynamic DNS update utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nsupdate &#8211; dynamic DNS update utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nsupdate</code> [<code>-d</code>] [<code>-D</code>] [<code>-i</code>] [<code>-L</code> level] [ [<code>-g</code>] | [<code>-o</code>] | [<code>-l</code>] | [<code>-y</code> [hmac:]keyname:secret] | [<code>-k</code> keyfile] ] [<code>-t</code> timeout] [<code>-u</code> udptimeout] [<code>-r</code> udpretries] [<code>-v</code>] [<code>-T</code>] [<code>-P</code>] [<code>-V</code>] [ [<code>-4</code>] | [<code>-6</code>] ] [filename]</p>

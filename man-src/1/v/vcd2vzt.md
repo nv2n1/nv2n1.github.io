@@ -1,4 +1,5 @@
 ---
+
 title: "vcd2vzt(1)"
 name: "vcd2vzt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vcd2vzt/"
 description: "vcd2vzt – Converts VCD files to VZT files"
 ---
 
-<h2>NAME</h2>
 <p> vcd2vzt &#8211; Converts VCD files to VZT files</p>
 <h2>SYNTAX</h2>
 <p> vcd2vzt [<i>option</i>]&#8230; [<i>VCDFILE</i>] [<i>VZTFILE</i>]</p>

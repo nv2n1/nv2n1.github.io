@@ -1,4 +1,5 @@
 ---
+
 title: "slacn2(3)"
 name: "slacn2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slacn2/"
 description: "slacn2.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> slacn2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

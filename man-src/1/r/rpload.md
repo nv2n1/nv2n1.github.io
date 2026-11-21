@@ -1,4 +1,5 @@
 ---
+
 title: "rpload(1)"
 name: "rpload"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpload/"
 description: "rpload – alpine remote data utility"
 ---
 
-<h2>NAME</h2>
 <p> rpload &#8211; alpine remote data utility</p>
 <h2>SYNTAX</h2>
 <p> <code>rpload</code> [ -f ] [ -s trimSize ] -t Type -l Local_file -r Remote_folder</p>

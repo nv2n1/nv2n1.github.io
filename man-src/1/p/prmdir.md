@@ -1,4 +1,5 @@
 ---
+
 title: "prmdir(1)"
 name: "prmdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prmdir/"
 description: "prmdir – remove an empty directory"
 ---
 
-<h2>NAME</h2>
 <p> prmdir &#8211; remove an empty directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>prmdir</code> [-h] [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] <i>DIRECTORY</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "supermin(1)"
 name: "supermin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-supermin/"
 description: "supermin – Tool for creating and building supermin appliances"
 ---
 
-<h2 class="name">NAME</h2>
 <p> supermin &#8211; Tool for creating and building supermin appliances </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

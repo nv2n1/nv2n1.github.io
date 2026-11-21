@@ -1,4 +1,5 @@
 ---
+
 title: "ttf2afm(1)"
 name: "ttf2afm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ttf2afm/"
 description: "ttf2afm – utility to generate AFM files for TrueType fonts"
 ---
 
-<h2>NAME</h2>
 <p> ttf2afm &#8211; utility to generate AFM files for TrueType fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ttf2afm</code> [<i>OPTIONS</i>] <i>FONTFILE</i> </p>

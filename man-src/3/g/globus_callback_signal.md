@@ -1,4 +1,5 @@
 ---
+
 title: "globus_callback_signal(3)"
 name: "globus_callback_signal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_callback_signal/"
 description: "Globus Callback Signal Handling –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus Callback Signal Handling &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_SIGNAL_INTERRUPT</code> </p>

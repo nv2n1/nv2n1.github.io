@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-install-todo(1)"
 name: "pilot-install-todo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-install-todo/"
 description: "pilot-install-todo – Updates the Palm ToDo list with one new entry."
 ---
 
-<h2>NAME</h2>
 <p> pilot-install-todo &#8211; Updates the Palm ToDo list with one new entry.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "navlog-viewer(1)"
 name: "navlog-viewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-navlog-viewer/"
 description: "navlog-viewer – GUI viewer of robot navigation logs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> navlog-viewer &#8211; GUI viewer of robot navigation logs </p>
 <h2>SYNOPSIS</h2>
 <p> navlog-viewer</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libpng16-config(1)"
 name: "libpng16-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libpng16-config/"
 description: "libpng16-config – get information about installed libpng library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libpng16-config &#8211; get information about installed libpng library </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libpng16-config</code> [<i>OPTION</i>] &#8230;</p>

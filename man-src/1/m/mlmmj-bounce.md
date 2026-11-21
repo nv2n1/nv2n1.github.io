@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-bounce(1)"
 name: "mlmmj-bounce"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mlmmj-bounce/"
 description: "mlmmj-bounce – bounce handling utility for mlmmj"
 ---
 
-<h2>NAME</h2>
 <p> mlmmj-bounce &#8211; bounce handling utility for mlmmj</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-bounce</code> <i>-L /path/to/list </i>[<i>-a john=doe.org | -d</i>]<i> </i>[<i>-n num | -p</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dh_usrlocal(1)"
 name: "dh_usrlocal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_usrlocal/"
 description: "dh_usrlocal – migrate usr/local directories to maintainer scripts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_usrlocal &#8211; migrate usr/local directories to maintainer scripts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_usrlocal</code> [<i>debhelper options</i>] [<code>-n</code>]</p>

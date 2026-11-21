@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-list(1)"
 name: "flatpak-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-list/"
 description: "flatpak-list – List installed applications and/or runtimes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-list &#8211; List installed applications and/or runtimes </p>
 <h2>SYNOPSIS</h2>
 <dl>

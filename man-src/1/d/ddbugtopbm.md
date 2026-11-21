@@ -1,4 +1,5 @@
 ---
+
 title: "ddbugtopbm(1)"
 name: "ddbugtopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ddbugtopbm/"
 description: "ddbugtopbm – convert Diddle or DiddleBug sketches to PBM files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ddbugtopbm &#8211; convert Diddle or DiddleBug sketches to PBM files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ddbugtopbm</code> </p>

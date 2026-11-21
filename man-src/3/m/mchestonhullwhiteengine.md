@@ -1,4 +1,5 @@
 ---
+
 title: "mchestonhullwhiteengine(3)"
 name: "mchestonhullwhiteengine"
 section: "3"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mchestonhullwhiteengine/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- ql/pricingengines/vanilla/mchestonhullwhiteengine.hpp - Monte Carlo vanilla option engine for stochastic interest rates. 
+ql/pricingengines/vanilla/mchestonhullwhiteengine.hpp - Monte Carlo vanilla option engine for stochastic interest rates. 
 
 <h2>SYNOPSIS</h2>
 

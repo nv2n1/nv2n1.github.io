@@ -1,4 +1,5 @@
 ---
+
 title: "nfsiostat-sysstat(1)"
 name: "nfsiostat-sysstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfsiostat-sysstat/"
 description: "nfsiostat-sysstat (the nfsiostat command from the sysstat package) – Report input/output statistics for network filesystems (NFS)."
 ---
 
-<h2>NAME</h2>
 <p> nfsiostat-sysstat (the nfsiostat command from the sysstat package) &#8211; Report input/output statistics for network filesystems (NFS).</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nfsiostat-sysstat [ -h ] [ -k | -m ] [ -t ] [ -V ] [</code> <i>interval</i> <code>[</code> <i>count</i> <code>] ]</code></p>

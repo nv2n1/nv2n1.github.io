@@ -1,4 +1,5 @@
 ---
+
 title: "miniupnpc(3)"
 name: "miniupnpc"
 section: "3"
@@ -6,9 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-miniupnpc/"
 ---
 
-<h2>NAME</h2>
-
- miniupnpc - UPnP client library
+miniupnpc - UPnP client library
 
 <h2>SYNOPSIS</h2>
 

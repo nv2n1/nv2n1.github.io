@@ -1,4 +1,5 @@
 ---
+
 title: "pmerr(1)"
 name: "pmerr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmerr/"
 description: "pmerr – translate Performance Co-Pilot error codes into error messages"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmerr</code> &#8211; translate Performance Co-Pilot error codes into error messages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmerr</code> <i>code</i> &#8230;<br />

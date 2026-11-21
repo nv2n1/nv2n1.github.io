@@ -1,4 +1,5 @@
 ---
+
 title: "euca-release-address(1)"
 name: "euca-release-address"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-release-address/"
 description: "euca-release-address – Release an elastic IP address"
 ---
 
-<h2>NAME</h2>
 <p> euca-release-address &#8211; Release an elastic IP address</p>
 <h2>SYNOPSIS</h2>
 <p> euca-release-address [-a ALLOC] [&#8211;show-empty-fields] [-U URL]</p>

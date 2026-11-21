@@ -1,4 +1,5 @@
 ---
+
 title: "xrdp-dis(1)"
 name: "xrdp-dis"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xrdp-dis/"
 description: "xrdp-dis – xrdp disconnect utility"
 ---
 
-<h2>NAME</h2>
 <p> xrdp-dis &#8211; xrdp disconnect utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xrdp-dis</code> </p>

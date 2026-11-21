@@ -1,4 +1,5 @@
 ---
+
 title: "mdoc-assemble(1)"
 name: "mdoc-assemble"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdoc-assemble/"
 description: "mdoc assemble – Compile documentation for use in monodoc(1)"
 ---
 
-<h2>NAME</h2>
 <p> mdoc assemble &#8211; Compile documentation for use in <code>monodoc</code>(1)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdoc assemble</code> [OPTIONS]+ PATHS+</p>

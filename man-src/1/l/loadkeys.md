@@ -1,4 +1,5 @@
 ---
+
 title: "loadkeys(1)"
 name: "loadkeys"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-loadkeys/"
 description: "loadkeys – load keyboard translation tables"
 ---
 
-<h2 class="name">NAME</h2>
 <p> loadkeys &#8211; load keyboard translation tables </p>
 <h2>SYNOPSIS</h2>
 <p> <code>loadkeys</code> [ <i>-a &#8211;ascii</i> ] [ <i>-b &#8211;bkeymap</i> ] [ <i>-c &#8211;clearcompose</i> ] [ <i>-C &#8216;&lt;FILE&gt;&#8217;</i> | <i>&#8211;console=&lt;FILE&gt;</i> ] [ <i>-d &#8211;default</i> ] [ <i>-h &#8211;help</i> ] [ <i>-m &#8211;mktable</i> ] [ <i>-p &#8211;parse</i> ] [ <i>-q &#8211;quiet</i> ] [ <i>-s &#8211;clearstrings</i> ] [ <i>-u &#8211;unicode</i> ] [ <i>-v &#8211;verbose</i> ] [ <i>-V &#8211;version</i> ] [ <i>filename&#8230;</i> ] </p>

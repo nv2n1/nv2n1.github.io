@@ -1,4 +1,5 @@
 ---
+
 title: "esdfilt(1)"
 name: "esdfilt"
 section: "1"
@@ -6,10 +7,7 @@ letter: "e"
 url: "/docs/linux/man/1-esdfilt/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- esdfilt - The Enlightened Sound Daemon 
+esdfilt - The Enlightened Sound Daemon 
 
 <h2>DESCRIPTION</h2>
 

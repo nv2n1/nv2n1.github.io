@@ -1,4 +1,5 @@
 ---
+
 title: "s390_sthyi(2)"
 name: "s390_sthyi"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-s390_sthyi/"
 description: "s390_sthyi – emulate STHYI instruction"
 ---
 
-<h2 class="name">NAME</h2>
 <p> s390_sthyi &#8211; emulate STHYI instruction </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

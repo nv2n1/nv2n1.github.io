@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_buffer_clear(3)"
 name: "ldns_buffer_clear"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_buffer_clear/"
 description: "ldns_buffer_new, ldns_buffer_new_frm_data, ldns_buffer_clear, ldns_buffer_printf, ldns_buffer_free, ldns_buffer_export"
 ---
 
-<h2>NAME</h2>
 <p> ldns_buffer_new, ldns_buffer_new_frm_data, ldns_buffer_clear, ldns_buffer_printf, ldns_buffer_free, ldns_buffer_export </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

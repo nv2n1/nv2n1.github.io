@@ -1,4 +1,5 @@
 ---
+
 title: "idle(2)"
 name: "idle"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-idle/"
 description: "idle – make process 0 idle"
 ---
 
-<h2 class="name">NAME</h2>
 <p> idle &#8211; make process 0 idle </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_timestamp(3)"
 name: "bson_append_timestamp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_timestamp/"
 description: "bson_append_timestamp() – This function is not similar in functionality to bson_append_date_time(). Timestamp elements are different in that they include only second precision and an increment field."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_timestamp() &#8211; This function is not similar in functionality to bson_append_date_time(). Timestamp elements are different in that they include only second precision and an increment field.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "mulk(1)"
 name: "mulk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mulk/"
 description: "mulk – Non-interactive multi-connection network downloader with image filtering and Metalink support."
 ---
 
-<h2>NAME</h2>
 <p> mulk &#8211; Non-interactive multi-connection network downloader with image filtering and Metalink support.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mulk [OPTION]&#8230; [URL]&#8230; </code></p>

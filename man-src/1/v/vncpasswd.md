@@ -1,4 +1,5 @@
 ---
+
 title: "vncpasswd(1)"
 name: "vncpasswd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vncpasswd/"
 description: "vncpasswd – change the VNC password"
 ---
 
-<h2>NAME</h2>
 <p> vncpasswd &#8211; change the VNC password</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vncpasswd</code> [<i>passwd-file</i>]<br />

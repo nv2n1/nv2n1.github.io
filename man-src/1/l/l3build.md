@@ -1,4 +1,5 @@
 ---
+
 title: "l3build(1)"
 name: "l3build"
 section: "1"
@@ -6,10 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-l3build/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- l3build - Checking and building packages 
+l3build - Checking and building packages 
 
 <h2>SYNOPSIS</h2>
 

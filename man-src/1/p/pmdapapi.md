@@ -1,4 +1,5 @@
 ---
+
 title: "pmdapapi(1)"
 name: "pmdapapi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdapapi/"
 description: "pmdapapi – papi performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdapapi</code> &#8211; papi performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/pmdapapi</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>]</p>

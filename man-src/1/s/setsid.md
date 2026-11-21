@@ -1,4 +1,5 @@
 ---
+
 title: "setsid(1)"
 name: "setsid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setsid/"
 description: "setsid – run a program in a new session"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setsid &#8211; run a program in a new session </p>
 <h2>SYNOPSIS</h2>
 <p> <code>setsid</code> [options] <i>program</i> [<i>arguments</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "texexpand(1)"
 name: "texexpand"
 section: "1"
@@ -6,7 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-texexpand/"
 description: "texexpand – expand \\input and \\include statements in a TeX file"
 ---
-<h2 class="name">NAME</h2>
+
 <p> texexpand - expand \input and \include statements in a TeX file </p>
 <h2>DESCRIPTION</h2>
 <p> General translation mechanism: </p>

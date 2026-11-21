@@ -1,4 +1,5 @@
 ---
+
 title: "infotocap(1)"
 name: "infotocap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-infotocap/"
 description: "infotocap – convert a terminfo description into a termcap description"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>infotocap</code> &#8211; convert a <i>terminfo</i> description into a <i>termcap</i> description </p>
 <h2>SYNOPSIS</h2>
 <p> <code>infotocap</code> [<code>-v</code><i>n</i> <i>width</i>] [<code>-V</code>] [<code>-1</code>] [<code>-w</code> <i>width</i>] <i>file</i> &#8230;</p>

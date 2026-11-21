@@ -1,4 +1,5 @@
 ---
+
 title: "create_video_bitmap(3)"
 name: "create_video_bitmap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-create_video_bitmap/"
 description: "create_video_bitmap – Creates a video memory bitmap. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> create_video_bitmap &#8211; Creates a video memory bitmap. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

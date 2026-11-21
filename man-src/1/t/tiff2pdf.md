@@ -1,4 +1,5 @@
 ---
+
 title: "tiff2pdf(1)"
 name: "tiff2pdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tiff2pdf/"
 description: "tiff2pdf – convert a TIFF image to a PDF document"
 ---
 
-<h2>NAME</h2>
 <p> tiff2pdf &#8211; convert a TIFF image to a PDF document</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiff2pdf</code> [ <i>options </i> ] <i>input.tiff</i></p>

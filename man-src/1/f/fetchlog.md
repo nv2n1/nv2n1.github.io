@@ -1,4 +1,5 @@
 ---
+
 title: "fetchlog(1)"
 name: "fetchlog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fetchlog/"
 description: "fetchlog – fetch and convert new messages of a logfile"
 ---
 
-<h2>NAME</h2>
 <p> fetchlog &#8211; fetch and convert new messages of a logfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fetchlog</code> -f <i>first:last:len:conv</i> <i>logfile</i> <i>bookmarkfile</i> [ <i>pattern ..</i> ] </p>

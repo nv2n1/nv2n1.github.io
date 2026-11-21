@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_read_string(3)"
 name: "hdf_read_string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_read_string/"
 description: "hdf_read_string – read an HDF string Description: Input: Output:"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_read_string &#8211; read an HDF string Description: Input: Output: </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

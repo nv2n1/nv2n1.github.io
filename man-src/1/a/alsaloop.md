@@ -1,4 +1,5 @@
 ---
+
 title: "alsaloop(1)"
 name: "alsaloop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alsaloop/"
 description: "alsaloop – command-line PCM loopback"
 ---
 
-<h2 class="name">NAME</h2>
 <p> alsaloop &#8211; command-line PCM loopback </p>
 <h2>SYNOPSIS</h2>
 <p> <code>alsaloop</code> [<i>-option</i>] [<i>cmd</i>]</p>

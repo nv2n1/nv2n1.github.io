@@ -1,4 +1,5 @@
 ---
+
 title: "sched_get_priority_max(2)"
 name: "sched_get_priority_max"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sched_get_priority_max/"
 description: "sched_get_priority_max, sched_get_priority_min – get static priority range"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sched_get_priority_max, sched_get_priority_min &#8211; get static priority range </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sched.h&gt;</code> </p>

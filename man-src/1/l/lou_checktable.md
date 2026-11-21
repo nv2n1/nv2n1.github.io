@@ -1,4 +1,5 @@
 ---
+
 title: "lou_checktable(1)"
 name: "lou_checktable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lou_checktable/"
 description: "lou_checktable – Test a liblouis Braille translation table"
 ---
 
-<h2>NAME</h2>
 <p> lou_checktable &#8211; Test a liblouis Braille translation table</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lou_checktable</code> [<i>OPTION</i>] <i>TABLE</i></p>

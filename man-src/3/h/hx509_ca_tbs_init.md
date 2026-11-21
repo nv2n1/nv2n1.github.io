@@ -1,4 +1,5 @@
 ---
+
 title: "hx509_ca_tbs_init(3)"
 name: "hx509_ca_tbs_init"
 section: "3"
@@ -6,9 +7,6 @@ letter: "h"
 url: "/docs/linux/man/3-hx509_ca_tbs_init/"
 ---
 
-
- </p>
-<h2 class="name">NAME</h2>
 <p> hx509 CA functions &#8211; </p>
 <h3>Functions</h3>
 <p> <br />

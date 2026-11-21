@@ -1,4 +1,5 @@
 ---
+
 title: "ipsilon-client-install(1)"
 name: "ipsilon-client-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipsilon-client-install/"
 description: "ipsilon-client-install – Configure an Ipsilon client"
 ---
 
-<h2>NAME</h2>
 <p> ipsilon-client-install &#8211; Configure an Ipsilon client</p>
 <h2>SYNOPSIS</h2>
 <p> ipsilon-client-install [OPTION]&#8230;</p>

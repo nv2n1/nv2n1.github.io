@@ -1,4 +1,5 @@
 ---
+
 title: "euare-oidcprovidergetattributes(1)"
 name: "euare-oidcprovidergetattributes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-oidcprovidergetattributes/"
 description: "euare-oidcprovidergetattributes – Describe an OpenID Connect provider"
 ---
 
-<h2>NAME</h2>
 <p> euare-oidcprovidergetattributes &#8211; Describe an OpenID Connect provider</p>
 <h2>SYNOPSIS</h2>
 <p> euare-oidcprovidergetattributes [&#8211;as-account ACCOUNT] [-U URL]</p>

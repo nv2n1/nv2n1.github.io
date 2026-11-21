@@ -1,4 +1,5 @@
 ---
+
 title: "deprecated(3)"
 name: "deprecated"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-deprecated/"
 description: "deprecated – Deprecated List"
 ---
 
-<h2 class="name">NAME</h2>
 <p> deprecated &#8211; Deprecated List </p>
 <dl>
 <dt><code>Global dmlite_any_new_long_array</code> (unsigned n, long *lv)</dt>

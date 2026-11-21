@@ -1,4 +1,5 @@
 ---
+
 title: "cpftri(3)"
 name: "cpftri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpftri/"
 description: "cpftri.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpftri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

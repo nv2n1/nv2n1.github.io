@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-socket-activate(1)"
 name: "systemd-socket-activate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-socket-activate/"
 description: "systemd-socket-activate – Test socket activation of daemons"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-socket-activate &#8211; Test socket activation of daemons </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ctio(3)"
 name: "ctio"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctio/"
 description: "ctio, ruint8, ruint16, ruint32, ruint64, wuint8, wuint16, wuint32, wuint64, rsint8, rsint16, rsint32, rsint64, wsint8, wsint16, wsint32, wsint64, rfloat, rdouble, wfloat, wdouble – integer and floa..."
 ---
 
-<h2>NAME</h2>
 <p> ctio, ruint8, ruint16, ruint32, ruint64, wuint8, wuint16, wuint32, wuint64, rsint8, rsint16, rsint32, rsint64, wsint8, wsint16, wsint32, wsint64, rfloat, rdouble, wfloat, wdouble &#8211; integer and float operations</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

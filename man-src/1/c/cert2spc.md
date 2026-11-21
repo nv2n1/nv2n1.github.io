@@ -1,4 +1,5 @@
 ---
+
 title: "cert2spc(1)"
 name: "cert2spc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cert2spc/"
 description: "cert2spc – Transform multiple X.509 certificates to a Software Publisher Certificate"
 ---
 
-<h2>NAME</h2>
 <p> cert2spc &#8211; Transform multiple X.509 certificates to a Software Publisher Certificate</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cert2spc certificate|crl [certificate|crl &#8230;] outputfile.spc</code></p>

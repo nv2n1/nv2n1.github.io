@@ -1,4 +1,5 @@
 ---
+
 title: "grdimage(1)"
 name: "grdimage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdimage/"
 description: "grdimage – Project grids or images and plot them on maps"
 ---
 
-<h2>NAME</h2>
 <p> grdimage &#8211; Project grids or images and plot them on maps</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdimage</code> <i>grd_z</i> | <i>grd_r grd_g grd_b</i> [ <i>out_img</i><code>=</code><i>driver</i> ] [ <i>cpt</i> ] [ [<code>r</code>] ] [ <code>i</code>[|<i>dpi</i>] ] <i>parameters</i> [ [<code>f</code>|<code>b</code>]<i>color</i> ] [ <i>intensfile</i>|<i>intensity</i> ] [ <code>z</code>|<code>-Z</code><i>parameters</i> ] [ ] [ ] [ ] [ ] [ ] [ ] [ <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-tr</code> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tee(2)"
 name: "tee"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-tee/"
 description: "tee – duplicating pipe content"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tee &#8211; duplicating pipe content </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

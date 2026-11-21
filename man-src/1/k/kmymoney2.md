@@ -1,4 +1,5 @@
 ---
+
 title: "kmymoney2(1)"
 name: "kmymoney2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kmymoney2/"
 description: "KMyMoney – the personal finances manager for KDE"
 ---
 
-<h2>NAME</h2>
 <p> KMyMoney &#8211; the personal finances manager for KDE</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kmymoney2</code> [<i>Qt-options</i>] [<i>KDE-options</i>] [<i>File</i>]</p>

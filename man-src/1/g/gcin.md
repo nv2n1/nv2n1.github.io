@@ -1,4 +1,5 @@
 ---
+
 title: "gcin(1)"
 name: "gcin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcin/"
 description: "gcin – an input method server"
 ---
 
-<h2>NAME</h2>
 <p> gcin &#8211; an input method server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcin</code> <code>[-h</code>|<code>-v</code>|<code>&#8211;version</code>] </p>

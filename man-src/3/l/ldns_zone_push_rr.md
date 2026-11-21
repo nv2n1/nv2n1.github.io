@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_zone_push_rr(3)"
 name: "ldns_zone_push_rr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_zone_push_rr/"
 description: "ldns_zone_push_rr, ldns_zone_push_rr_list"
 ---
 
-<h2>NAME</h2>
 <p> ldns_zone_push_rr, ldns_zone_push_rr_list </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

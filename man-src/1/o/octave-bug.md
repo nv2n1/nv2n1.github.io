@@ -1,4 +1,5 @@
 ---
+
 title: "octave-bug(1)"
 name: "octave-bug"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-octave-bug/"
 description: "octave-bug – report a bug in GNU Octave"
 ---
 
-<h2>NAME</h2>
 <p> octave-bug &#8211; report a bug in GNU Octave</p>
 <h2>SYNOPSIS</h2>
 <p> <code>octave-bug</code> [<code>-s</code> <i>subject</i>]</p>

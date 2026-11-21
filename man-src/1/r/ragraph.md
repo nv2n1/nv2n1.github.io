@@ -1,4 +1,5 @@
 ---
+
 title: "ragraph(1)"
 name: "ragraph"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ragraph/"
 description: "ragraph – graph argus(8) data."
 ---
 
-<h2>NAME</h2>
 <p> <code>ragraph</code> &#8211; graph <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ragraph metric [object]</code> [<code>-M</code> <i>mode</i>] [<code>options</code>] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

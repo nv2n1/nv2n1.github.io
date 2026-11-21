@@ -1,4 +1,5 @@
 ---
+
 title: "shmctl(2)"
 name: "shmctl"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-shmctl/"
 description: "shmctl – System V shared memory control"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shmctl &#8211; System V shared memory control </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ipc.h&gt;</code><br />

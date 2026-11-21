@@ -1,4 +1,5 @@
 ---
+
 title: "bombardment(1)"
 name: "bombardment"
 section: "1"
@@ -6,10 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-bombardment/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- bombardment - Run siege with an ever-increasing number of users 
+bombardment - Run siege with an ever-increasing number of users 
 
 <h3><font SIZE="-1">SYNOPSIS</font></h3>
 

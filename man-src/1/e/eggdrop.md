@@ -1,4 +1,5 @@
 ---
+
 title: "eggdrop(1)"
 name: "eggdrop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eggdrop/"
 description: "eggdrop – an IRC bot"
 ---
 
-<h2>NAME</h2>
 <p> eggdrop &#8211; an IRC bot</p>
 <h2>SYNOPSIS</h2>
 <p> <code>eggdrop</code> [<code>options</code>] [<code>config-file</code>]</p>

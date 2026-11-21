@@ -1,4 +1,5 @@
 ---
+
 title: "whiptail(1)"
 name: "whiptail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whiptail/"
 description: "whiptail – display dialog boxes from shell scripts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> whiptail &#8211; display dialog boxes from shell scripts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>whiptail</code> [ <code>&#8211;title</code> <i>title</i> ] [ <code>&#8211;backtitle</code> <i>backtitle</i> ] [ <code>&#8211;clear</code> ] [ <code>&#8211;default-item</code> <i>string</i> ] [ <code>&#8211;defaultno</code> ] [ <code>&#8211;fb</code> ] [ <code>&#8211;nocancel</code> ] [ <code>&#8211;yes-button</code> <i>text</i> ] [ <code>&#8211;no-button</code> <i>text</i> ] [ <code>&#8211;ok-button</code> <i>text</i> ] [ <code>&#8211;cancel-button</code> <i>text</i> ] [ <code>&#8211;noitem</code> [ ] <code>&#8211;output-fd</code> <i>fd</i> ] [ <code>&#8211;separate-output</code> ] [ <code>&#8211;scrolltext</code> ] [ <code>&#8211;topleft</code> ] <code>box-options</code></p>

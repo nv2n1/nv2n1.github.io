@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_transfer_listener_proto_s(3)"
 name: "globus_gass_transfer_listener_proto_s"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_listener_proto_s/"
 description: "globus_gass_transfer_listener_proto_s –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_gass_transfer_listener_proto_s &#8211; </p>
 <p> Protocol module listener handling structure.</p>
 <h2>SYNOPSIS</h2>

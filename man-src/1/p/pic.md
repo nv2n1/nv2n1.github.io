@@ -1,4 +1,5 @@
 ---
+
 title: "pic(1)"
 name: "pic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pic/"
 description: "pic – compile pictures for troff or TeX"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pic &#8211; compile pictures for troff or TeX </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-nvCSU</code> ] [<i>file</i> &#8230;] <code>-t</code> [ <code>-cvzCSU</code> ] [<i>file</i> &#8230;]</p>

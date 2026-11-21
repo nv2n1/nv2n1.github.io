@@ -1,4 +1,5 @@
 ---
+
 title: "img2txt(1)"
 name: "img2txt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-img2txt/"
 description: "img2txt – convert images to various text-based coloured files"
 ---
 
-<h2>NAME</h2>
 <p> img2txt &#8211; convert images to various text-based coloured files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>img2txt </code> [ <code>-W</code> <i>width</i> ] [ <code>-H</code> <i>height</i> ] [ <code>-x</code> <i>font-width</i> ] [ <code>-y</code> <i>font-height</i> ]</p>

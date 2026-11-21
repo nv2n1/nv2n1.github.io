@@ -1,4 +1,5 @@
 ---
+
 title: "lttng-ust-cyg-profile(3)"
 name: "lttng-ust-cyg-profile"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lttng-ust-cyg-profile/"
 description: "lttng-ust-cyg-profile — LTTng UST 2.x Function Tracing"
 ---
 
-<h2>NAME</h2>
 <p> lttng-ust-cyg-profile &#8212; LTTng UST 2.x Function Tracing</p>
 <h2>SYNOPSIS</h2>
 <p> Compile the application source code with option <code>-finstrument-functions</code> and launch your application either with:</p>

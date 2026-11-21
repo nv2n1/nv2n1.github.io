@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-create-lb-cookie-stickiness-policy(1)"
 name: "eulb-create-lb-cookie-stickiness-policy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-create-lb-cookie-stickiness-policy/"
 description: "eulb-create-lb-cookie-stickiness-policy – Create a new stickiness policy for a load balancer, whereby the load balancer automatically generates cookies that it uses to route requests from each user..."
 ---
 
-<h2>NAME</h2>
 <p> eulb-create-lb-cookie-stickiness-policy &#8211; Create a new stickiness policy for a load balancer, whereby the load balancer automatically generates cookies that it uses to route requests from each user to the same back end instance. This type of policy can only be associated with HTTP or HTTPS listeners.</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-create-lb-cookie-stickiness-policy <code>-e</code> SECONDS <code>-p</code> POLICY [-U URL]</p>

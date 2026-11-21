@@ -1,4 +1,5 @@
 ---
+
 title: "whom(1)"
 name: "whom"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whom/"
 description: "whom – report to whom a message would go"
 ---
 
-<h2 class="name">NAME</h2>
 <p> whom &#8211; report to whom a message would go </p>
 <h2>SYNOPSIS</h2>
 <dl>

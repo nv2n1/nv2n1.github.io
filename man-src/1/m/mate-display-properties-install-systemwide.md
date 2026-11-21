@@ -1,4 +1,5 @@
 ---
+
 title: "mate-display-properties-install-systemwide(1)"
 name: "mate-display-properties-install-systemwide"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-display-properties-install-systemwide/"
 description: "mate-display-properties-install-systemwide – customize MATE display behavor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mate-display-properties-install-systemwide &#8211; customize MATE display behavor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-display-properties-install-systemwide</code> <i>&lt;SOURCE_FILE&gt; &lt;DEST_NAME&gt;</i></p>

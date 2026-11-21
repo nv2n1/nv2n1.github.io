@@ -1,4 +1,5 @@
 ---
+
 title: "gpaste-applet(1)"
 name: "gpaste-applet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpaste-applet/"
 description: "GPaste-Applet – An applet for the GPaste clipboard manager"
 ---
 
-<h2>NAME</h2>
 <p> GPaste-Applet &#8211; An applet for the GPaste clipboard manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpaste applet</code> </p>

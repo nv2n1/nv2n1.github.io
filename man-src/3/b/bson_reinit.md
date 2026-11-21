@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reinit(3)"
 name: "bson_reinit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_reinit/"
 description: "bson_reinit() – The bson_reinit() function shall be equivalent to calling bson_destroy() and bson_init()."
 ---
 
-<h2>NAME</h2>
 <p> bson_reinit() &#8211; The bson_reinit() function shall be equivalent to calling bson_destroy() and bson_init().</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

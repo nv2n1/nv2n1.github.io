@@ -1,4 +1,5 @@
 ---
+
 title: "pcmanfm-qt(1)"
 name: "pcmanfm-qt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcmanfm-qt/"
 description: "PCManFM-Qt – A lightweight Qt-based file manager for X Window."
 ---
 
-<h2>NAME</h2>
 <p> PCManFM-Qt &#8211; A lightweight Qt-based file manager for X Window.</p>
 <h2>SYNOPSIS</h2>
 <p> pcmanfm-qt [OPTION&#8230;] [FILE1, FILE2,&#8230;]</p>

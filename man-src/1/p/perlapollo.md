@@ -1,4 +1,5 @@
 ---
+
 title: "perlapollo(1)"
 name: "perlapollo"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlapollo/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- README.apollo - Perl version 5 on Apollo DomainOS 
+README.apollo - Perl version 5 on Apollo DomainOS 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_bitmap_next(3)"
 name: "ck_bitmap_next"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_bitmap_next/"
 description: "ck_bitmap_next – iterate to the next set bit in bitmap"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_bitmap_next</code> &#8211; iterate to the next set bit in bitmap</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "kmousetool(1)"
 name: "kmousetool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kmousetool/"
 description: "kmousetool – Accessibility tool to help click the mouse"
 ---
 
-<h2>NAME</h2>
 <p> kmousetool &#8211; Accessibility tool to help click the mouse</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlbinlog(1)"
 name: "mysqlbinlog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlbinlog/"
 description: "mysqlbinlog – utility for processing binary log files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlbinlog &#8211; utility for processing binary log files </p>
 <h2>SYNOPSIS</h2>
 <dl>

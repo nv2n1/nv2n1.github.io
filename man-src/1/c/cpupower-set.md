@@ -1,4 +1,5 @@
 ---
+
 title: "cpupower-set(1)"
 name: "cpupower-set"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpupower-set/"
 description: "cpupower-set – Set processor power related kernel or hardware configurations"
 ---
 
-<h2>NAME</h2>
 <p> cpupower-set &#8211; Set processor power related kernel or hardware configurations</p>
 <h2>SYNOPSIS</h2>
 <p> <code> cpupower set [ -b VAL ]</code> </p>

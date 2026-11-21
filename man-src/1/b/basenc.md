@@ -1,4 +1,5 @@
 ---
+
 title: "basenc(1)"
 name: "basenc"
 section: "1"
@@ -6,7 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-basenc/"
 description: "basenc – Encode/decode data and print to standard output"
 ---
-<h2 class="name">NAME</h2>
+
 <p> basenc - Encode/decode data and print to standard output </p>
 <h2>SYNOPSIS</h2>
 <p> <code>basenc</code> [<i>,OPTION/</i>]... [<i>,FILE/</i>]  </p>

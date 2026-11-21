@@ -1,4 +1,5 @@
 ---
+
 title: "fcore(1)"
 name: "fcore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fcore/"
 description: "fcore – extract a core file from a process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fcore &#8211; extract a core file from a process </p>
 <h2>SYNOPSIS</h2>
 <dl>

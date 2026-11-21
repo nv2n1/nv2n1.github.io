@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-vpn-gateways(1)"
 name: "euca-describe-vpn-gateways"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-vpn-gateways/"
 description: "euca-describe-vpn-gateways – Show information about virtual private gateways"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-vpn-gateways &#8211; Show information about virtual private gateways</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-vpn-gateways [&#8211;show-empty-fields] [-U URL]</p>

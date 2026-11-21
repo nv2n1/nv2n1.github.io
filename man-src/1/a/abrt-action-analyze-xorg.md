@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-analyze-xorg(1)"
 name: "abrt-action-analyze-xorg"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-xorg/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-analyze-xorg - Calculate and save UUID and duplicate hash for a problem data directory DIR with Xorg backtrace. 
+abrt-action-analyze-xorg - Calculate and save UUID and duplicate hash for a problem data directory DIR with Xorg backtrace. 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "unicode_start(1)"
 name: "unicode_start"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unicode_start/"
 description: "unicode_start – put keyboard and console in unicode mode"
 ---
 
-<h2 class="name">NAME</h2>
 <p> unicode_start &#8211; put keyboard and console in unicode mode </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unicode_start</code> [<i>font</i> [<i>umap</i>]]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rename(1)"
 name: "rename"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rename/"
 description: "rename – rename files"
 ---
 
-<h2>NAME</h2>
 <p> rename &#8211; rename files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rename</code> [<i>options</i>]<i> expression replacement file</i>&#8230;</p>

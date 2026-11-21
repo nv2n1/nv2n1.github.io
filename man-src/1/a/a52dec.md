@@ -1,4 +1,5 @@
 ---
+
 title: "a52dec(1)"
 name: "a52dec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-a52dec/"
 description: "a52dec – decode ATSC A/52 audio streams"
 ---
 
-<h2>NAME</h2>
 <p> a52dec &#8211; decode ATSC A/52 audio streams</p>
 <h2>SYNOPSIS</h2>
 <p> <code>a52dec</code> [<i>-h</i>] [<i>-s [track]</i>] [<i>-t pid</i>] [<i>-c</i>] [<i>-r</i>] [<i>-o mode</i>] [<i>file</i>]</p>

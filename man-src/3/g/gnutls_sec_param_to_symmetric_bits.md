@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_sec_param_to_symmetric_bits(3)"
 name: "gnutls_sec_param_to_symmetric_bits"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_sec_param_to_symmetric_bits/"
 description: "gnutls_sec_param_to_symmetric_bits – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_sec_param_to_symmetric_bits &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

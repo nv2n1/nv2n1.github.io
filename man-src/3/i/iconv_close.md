@@ -1,4 +1,5 @@
 ---
+
 title: "iconv_close(3)"
 name: "iconv_close"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iconv_close/"
 description: "iconv_close – deallocate descriptor for character set conversion"
 ---
 
-<h2 class="name">NAME</h2>
 <p> iconv_close &#8211; deallocate descriptor for character set conversion </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

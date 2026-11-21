@@ -1,4 +1,5 @@
 ---
+
 title: "whatnow(1)"
 name: "whatnow"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whatnow/"
 description: "whatnow – prompting front-end for sending messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> whatnow &#8211; prompting front-end for sending messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

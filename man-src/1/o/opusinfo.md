@@ -1,4 +1,5 @@
 ---
+
 title: "opusinfo(1)"
 name: "opusinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opusinfo/"
 description: "opusinfo – gives information about Opus files and does extensive validity checking"
 ---
 
-<h2 class="name">NAME</h2>
 <p> opusinfo &#8211; gives information about Opus files and does extensive validity checking</p>
 <h2>SYNOPSIS</h2>
 <p> <code>opusinfo</code> [ <code>-q</code> | <code>-v</code> ] [ <code>-h</code> ] [ <code>-V</code> ] <i>file1.opus</i> <code>&#8230;</code> <i>fileN.opus</i> </p>

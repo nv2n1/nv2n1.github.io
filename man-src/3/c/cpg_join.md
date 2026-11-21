@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_join(3)"
 name: "cpg_join"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpg_join/"
 description: "cpg_join – Joins one or more groups in the CPG library"
 ---
 
-<h2>NAME</h2>
 <p> cpg_join &#8211; Joins one or more groups in the CPG library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>

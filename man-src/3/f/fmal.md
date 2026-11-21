@@ -1,4 +1,5 @@
 ---
+
 title: "fmal(3)"
 name: "fmal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fmal/"
 description: "fma, fmaf, fmal – floating-point multiply and add"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fma, fmaf, fmal &#8211; floating-point multiply and add </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

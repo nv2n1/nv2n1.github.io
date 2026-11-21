@@ -1,4 +1,5 @@
 ---
+
 title: "licensecheck(1)"
 name: "licensecheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-licensecheck/"
 description: "licensecheck – simple license checker for source files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> licensecheck &#8211; simple license checker for source files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>licensecheck</code> <code>&#8211;help</code>|<code>&#8211;version</code> </p>

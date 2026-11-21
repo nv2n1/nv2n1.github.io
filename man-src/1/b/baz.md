@@ -1,4 +1,5 @@
 ---
+
 title: "baz(1)"
 name: "baz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-baz/"
 description: "baz – arch command line client tool"
 ---
 
-<h2>NAME</h2>
 <p> baz &#8211; arch command line client tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>baz</code> <i>command</i> [ <i>command_options</i> ]<br />

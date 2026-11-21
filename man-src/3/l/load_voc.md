@@ -1,4 +1,5 @@
 ---
+
 title: "load_voc(3)"
 name: "load_voc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_voc/"
 description: "load_voc – Loads a sample from a Creative Labs VOC file. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> load_voc &#8211; Loads a sample from a Creative Labs VOC file. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

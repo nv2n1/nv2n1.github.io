@@ -1,4 +1,5 @@
 ---
+
 title: "qacct(1)"
 name: "qacct"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qacct/"
 description: "qacct – report and account for xxQS_NAMExx usage"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qacct &#8211; report and account for xxQS_NAMExx usage </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qacct</code> [<code>-ar</code> [<i>ar_id</i>]] [<code>-A</code> <i>Account</i>] [<code>-b</code> <i>BeginTime</i>] [<code>-d</code> <i>Days</i>] [<code>-e</code> <i>EndTime</i>] [<code>-g</code> [<i>GroupId</i>|<i>GroupName</i>]] [<code>-h</code> [<i>HostName</i>]] [<code>-help</code>] [<code>-j</code> [<i>job_id</i>|<i>job_name</i>|<i>pattern</i>]] [<code>-l</code> <i>attr</i>=<i>val</i>,&#8230;] [<code>-m</code>] [<code>-o</code> [<i>Owner</i>]] [<code>-u</code> [<i>Owner</i>]] [<code>-pe</code> [<i>PEname</i>]] [<code>-q</code> [<i>wc_queue</i>]] [<code>-slots</code> [<i>SlotNumber</i>]] [<code>-t</code> <i>task_id_range_list</i>] [<code>-P</code> [<i>Project</i>]] [<code>-D</code> [<i>Department</i>]] [<code>-f</code> <i>AcctFileName</i>] [<code>-E</code>]</p>

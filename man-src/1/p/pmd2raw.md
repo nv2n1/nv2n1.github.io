@@ -1,4 +1,5 @@
 ---
+
 title: "pmd2raw(1)"
 name: "pmd2raw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmd2raw/"
 description: "pmd2raw – manual page for pmd2raw 0.0.3"
 ---
 
-<h2>NAME</h2>
 <p> pmd2raw &#8211; manual page for pmd2raw 0.0.3</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmd2raw</code> [<i>OPTION</i>] <i>INPUT</i></p>

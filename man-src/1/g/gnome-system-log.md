@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-system-log(1)"
 name: "gnome-system-log"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-system-log/"
 description: "gnome-system-log – the GNOME System Log Viewer"
 ---
 
-<h2>NAME</h2>
 <p> gnome-system-log &#8211; the GNOME System Log Viewer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-system-log</code> </p>

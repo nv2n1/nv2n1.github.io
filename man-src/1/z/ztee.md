@@ -1,4 +1,5 @@
 ---
+
 title: "ztee(1)"
 name: "ztee"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ztee/"
 description: "ztee – output buffer and splitter"
 ---
 
-<h2>NAME</h2>
 <p> <code>ztee</code> &#8211; output buffer and splitter</p>
 <h2>SYNOPSIS</h2>
 <p> ztee [ OPTIONS&#8230; ] [ FILE&#8230; ]</p>

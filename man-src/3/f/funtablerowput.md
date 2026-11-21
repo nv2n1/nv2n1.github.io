@@ -1,4 +1,5 @@
 ---
+
 title: "funtablerowput(3)"
 name: "funtablerowput"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funtablerowput/"
 description: "FunTableRowPut – put Funtools rows"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunTableRowPut &#8211; put Funtools rows</code></p>
 <h2>SYNOPSIS</h2>
 <p> int FunTableRowPut(Fun fun, void *rows, int nev, int idx, char *plist)</p>

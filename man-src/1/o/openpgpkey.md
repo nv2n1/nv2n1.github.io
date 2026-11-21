@@ -1,4 +1,5 @@
 ---
+
 title: "openpgpkey(1)"
 name: "openpgpkey"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-openpgpkey/"
 description: "openpgpkey – Create and verify RFC-TBD OPENPGPKEY DNS records"
 ---
 
-<h2 class="name">NAME</h2>
 <p> openpgpkey &#8211; Create and verify RFC-TBD OPENPGPKEY DNS records </p>
 <h2>SYNTAX</h2>
 <p> openpgpkey [<code>&#8211;fetch</code> | <code>&#8211;verify</code>] [<code>&#8211;insecure</code>] [<code>&#8211;resolv.conf /PATH/TO/RESOLV.CONF</code>] <i>user [at] domain</i> </p>

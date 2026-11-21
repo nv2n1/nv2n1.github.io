@@ -1,4 +1,5 @@
 ---
+
 title: "find(1)"
 name: "find"
 section: "1"
@@ -6,7 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-find/"
 description: "find – search for files in a directory hierarchy"
 ---
-<h2 class="name">NAME</h2>
+
 <p> find - search for files in a directory hierarchy </p>
 <h2>SYNOPSIS</h2>
 <p> <code>find</code> [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [expression]  </p>

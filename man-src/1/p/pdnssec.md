@@ -1,4 +1,5 @@
 ---
+
 title: "pdnssec(1)"
 name: "pdnssec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdnssec/"
 description: "pdnssec – PowerDNSSEC command and control"
 ---
 
-<h2>NAME</h2>
 <p> pdnssec &#8211; PowerDNSSEC command and control</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdnssec </code><i>[options]</i> command</p>

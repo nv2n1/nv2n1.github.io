@@ -1,4 +1,5 @@
 ---
+
 title: "ncrack(1)"
 name: "ncrack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncrack/"
 description: "ncrack – Network authentication cracking tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ncrack &#8211; Network authentication cracking tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

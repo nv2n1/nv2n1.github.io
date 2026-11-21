@@ -1,4 +1,5 @@
 ---
+
 title: "gaussianquadratures(3)"
 name: "gaussianquadratures"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gaussianquadratures/"
 description: "ql/math/integrals/gaussianquadratures.hpp – Integral of a 1-dimensional function using the Gauss quadratures."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/math/integrals/gaussianquadratures.hpp &#8211; Integral of a 1-dimensional function using the Gauss quadratures. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/array.hpp&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "vcstools(1)"
 name: "vcstools"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vcstools/"
 description: "vcstools – vcstools Documentation"
 ---
 
-<h2>NAME</h2>
 <p> vcstools &#8211; vcstools Documentation </p>
 <p> The <code>vcstools</code> module provides a Python API for interacting with different version control systems (VCS/SCMs). The <code>VcsClient</code> class provides an API for seamless interacting with Git, Mercurial (Hg), Bzr and SVN. The focus of the API is manipulating on-disk checkouts of source-controlled trees. Its main use is to support the <i>rosinstall</i> tool.</p>
 <h2>GENERAL VCS/SCM API</h2>

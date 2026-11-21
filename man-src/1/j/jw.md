@@ -1,4 +1,5 @@
 ---
+
 title: "jw(1)"
 name: "jw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jw/"
 description: "jw, docbook2dvi, docbook2html, docbook2man, docbook2pdf, docbook2ps, docbook2rtf, docbook2tex, docbook2texi, docbook2txt – (Jade Wrapper) converts SGML files to other formats"
 ---
 
-<h2 class="name">NAME</h2>
 <p> jw, docbook2dvi, docbook2html, docbook2man, docbook2pdf, docbook2ps, docbook2rtf, docbook2tex, docbook2texi, docbook2txt &#8211; (Jade Wrapper) converts SGML files to other formats </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jw</code> [ <code>-f </code><i>frontend</i> | <code>&#8211;frontend </code><i>frontend</i> ]<br />

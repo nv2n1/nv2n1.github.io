@@ -1,4 +1,5 @@
 ---
+
 title: "freight-init(1)"
 name: "freight-init"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freight-init/"
 description: "freight-init – initialize a Freight directory"
 ---
 
-<h2>NAME</h2>
 <p> <code>freight-init</code> &#8211; initialize a Freight directory</p>
 <h2>SYNOPSIS</h2>
 <p> <code>freight init</code> [<code>&#8211;libdir</code> <i>varlib</i>] [<code>&#8211;cachedir</code> <i>varcache</i>] [<code>&#8211;archs</code> <i>archs</i>] [<code>&#8211;origin</code> <i>origin</i>] [<code>&#8211;label</code> <i>label</i>] [<code>-v</code>] [<code>-h</code>] <code>-g</code> <i>gpg</i> <i>dirname</i></p>

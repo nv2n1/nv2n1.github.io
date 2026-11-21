@@ -1,4 +1,5 @@
 ---
+
 title: "garmin_gpx(1)"
 name: "garmin_gpx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-garmin_gpx/"
 description: "garmin_gpx – convert .gmn files into xml data for use with OpenStreetMap"
 ---
 
-<h2>NAME</h2>
 <p> garmin_gpx &#8211; convert .gmn files into xml data for use with OpenStreetMap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>garmin_gpx</code> <i>file</i> </p>

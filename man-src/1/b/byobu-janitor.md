@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-janitor(1)"
 name: "byobu-janitor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-janitor/"
 description: "byobu-janitor – script for cleaning and upgrading environment after upgrades"
 ---
 
-<h2>NAME</h2>
 <p> byobu-janitor &#8211; script for cleaning and upgrading environment after upgrades </p>
 <h2>SYNOPSIS</h2>
 <p> <code>byobu-janitor</code> </p>

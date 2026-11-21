@@ -1,4 +1,5 @@
 ---
+
 title: "shellinaboxd(1)"
 name: "shellinaboxd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shellinaboxd/"
 description: "shellinaboxd – publish command line shell through AJAX interface"
 ---
 
-<h2>NAME</h2>
 <p> shellinaboxd &#8211; publish command line shell through AJAX interface</p>
 <h2>SYNOPSIS</h2>
 <dl>

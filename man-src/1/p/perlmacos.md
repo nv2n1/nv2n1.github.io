@@ -1,4 +1,5 @@
 ---
+
 title: "perlmacos(1)"
 name: "perlmacos"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlmacos/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlmacos - Perl under Mac OS (Classic) 
+perlmacos - Perl under Mac OS (Classic) 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "brlapi_handle_t(3)"
 name: "brlapi_handle_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-brlapi_handle_t/"
 description: "BrlAPI handles –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> BrlAPI handles &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef struct <code>brlapi_handle_t</code> <code>brlapi_handle_t</code> </p>

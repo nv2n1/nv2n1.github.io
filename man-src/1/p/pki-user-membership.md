@@ -1,4 +1,5 @@
 ---
+
 title: "pki-user-membership(1)"
 name: "pki-user-membership"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pki-user-membership/"
 description: "pki-user-membership – Command-Line Interface for managing Certificate System user memberships."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pki-user-membership &#8211; Command-Line Interface for managing Certificate System user memberships.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

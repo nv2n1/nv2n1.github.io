@@ -1,4 +1,5 @@
 ---
+
 title: "gvnccapture(1)"
 name: "gvnccapture"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gvnccapture/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- gvnccapture - VNC screenshot capture 
+gvnccapture - VNC screenshot capture 
 
 <h2>SYNOPSIS</h2>
 

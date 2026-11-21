@@ -1,4 +1,5 @@
 ---
+
 title: "keypressed(3)"
 name: "keypressed"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keypressed/"
 description: "keypressed – Tells if there are keypresses waiting in the input buffer. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> keypressed &#8211; Tells if there are keypresses waiting in the input buffer. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

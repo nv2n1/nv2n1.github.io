@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_obj_t(3)"
 name: "hwloc_obj_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_obj_t/"
 description: "hwlocality_objects – Object Structure and Attributes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_objects &#8211; Object Structure and Attributes </p>
 <h3>Data Structures</h3>
 <p> struct <code>hwloc_obj_memory_s</code> </p>

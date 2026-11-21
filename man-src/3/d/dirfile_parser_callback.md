@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_parser_callback(3)"
 name: "dirfile_parser_callback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_parser_callback/"
 description: "dirfile_parser_callback — set the syntax error callback handler for a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_parser_callback &#8212; set the syntax error callback handler for a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

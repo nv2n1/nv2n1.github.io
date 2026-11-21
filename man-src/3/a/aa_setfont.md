@@ -1,4 +1,5 @@
 ---
+
 title: "aa_setfont(3)"
 name: "aa_setfont"
 section: "3"
@@ -6,9 +7,7 @@ letter: "a"
 url: "/docs/linux/man/3-aa_setfont/"
 ---
 
-<h2>NAME</h2>
-
- aa_setfont - set font specification to be used by rendering functions.
+aa_setfont - set font specification to be used by rendering functions.
 
 <h2>SYNOPSIS</h2>
 

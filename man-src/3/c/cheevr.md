@@ -1,4 +1,5 @@
 ---
+
 title: "cheevr(3)"
 name: "cheevr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cheevr/"
 description: "cheevr.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cheevr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

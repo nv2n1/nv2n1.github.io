@@ -1,4 +1,5 @@
 ---
+
 title: "katedec(1)"
 name: "katedec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-katedec/"
 description: "katedec – decodes Kate streams to a textual description"
 ---
 
-<h2 class="name">NAME</h2>
 <p> katedec &#8211; decodes Kate streams to a textual description</p>
 <h2>SYNOPSIS</h2>
 <p> <code>katedec</code> <code>[-hVv]</code> <code>[-o </code><i>outfile</i><code>]</code> <code>[-t </code><i>type</i><code>]</code> [ infile ] </p>

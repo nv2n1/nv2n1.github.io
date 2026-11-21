@@ -1,4 +1,5 @@
 ---
+
 title: "lssu(1)"
 name: "lssu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lssu/"
 description: "lssu – list usage state of NILFS2 segments"
 ---
 
-<h2>NAME</h2>
 <p> lssu &#8211; list usage state of NILFS2 segments</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lssu</code> [<i>options</i>] [<i>device</i>]</p>

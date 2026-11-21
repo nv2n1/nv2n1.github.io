@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-send(1)"
 name: "mlmmj-send"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mlmmj-send/"
 description: "mlmmj-send – send mail to a mailinglist or similar"
 ---
 
-<h2>NAME</h2>
 <p> mlmmj-send &#8211; send mail to a mailinglist or similar</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-send</code> [<i>-L</i> /path/to/list | <i>-l</i> listctrl] <i>-m</i> /path/to/mail [<i>-a</i>] [<i>-D</i>] [<i>-F</i>] [<i>-h</i>] [<i>-o</i>] [<i>-r</i>] [<i>-R</i>] [<i>-s</i>] [<i>-T</i>] [<i>-V</i>]</p>

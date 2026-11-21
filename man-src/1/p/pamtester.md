@@ -1,4 +1,5 @@
 ---
+
 title: "pamtester(1)"
 name: "pamtester"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtester/"
 description: "pamtester – test pluggable authentication module (PAM) facility"
 ---
 
-<h2>NAME</h2>
 <p> pamtester &#8211; test pluggable authentication module (PAM) facility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtester</code> [-v] [-I <i>item</i>=<i>value</i>] [-E <i>var</i>=<i>value</i>] <i>service</i> <i>user</i> <i>operation</i> [<i>operation</i> &#8230;]</p>

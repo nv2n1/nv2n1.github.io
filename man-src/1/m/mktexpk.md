@@ -1,4 +1,5 @@
 ---
+
 title: "mktexpk(1)"
 name: "mktexpk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mktexpk/"
 description: "mktexpk – create a PK file for a font"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mktexpk &#8211; create a PK file for a font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mktexpk</code> [<i>options</i>] <i>font</i> [<i>redirect</i>]</p>

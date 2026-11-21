@@ -1,4 +1,5 @@
 ---
+
 title: "gnomecatalog(1)"
 name: "gnomecatalog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnomecatalog/"
 description: "gnomecatalog – Cd cataloguing"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnomecatalog &#8211; Cd cataloguing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnomecatalog</code></p>

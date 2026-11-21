@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_array(3)"
 name: "bson_append_array"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_array/"
 description: "bson_append_array() – The bson_append_array() function shall append child to bson using the specified key. The type of the field will be an array, but it is the responsibility of the caller to ensu..."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_array() &#8211; The bson_append_array() function shall append child to bson using the specified key. The type of the field will be an array, but it is the responsibility of the caller to ensure that the keys of child are properly formatted with string keys such as &quot;0&quot;, &quot;1&quot;, &quot;2&quot; and so forth.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

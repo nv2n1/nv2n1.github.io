@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_db_remove_session(3)"
 name: "gnutls_db_remove_session"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_db_remove_session/"
 description: "gnutls_db_remove_session – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_db_remove_session &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

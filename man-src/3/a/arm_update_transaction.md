@@ -1,4 +1,5 @@
 ---
+
 title: "arm_update_transaction(3)"
 name: "arm_update_transaction"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arm_update_transaction/"
 description: "arm_update_transaction – get transaction status"
 ---
 
-<h2>NAME</h2>
 <p> arm_update_transaction &#8211; get transaction status</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>

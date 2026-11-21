@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-info(1)"
 name: "wimlib-imagex-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex-info/"
 description: "wimlib-imagex-info – Display information about a WIM file, or change information about an image"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex-info &#8211; Display information about a WIM file, or change information about an image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex info</code> <i>WIMFILE</i> [<i>IMAGE</i> [<i>NEW_NAME</i> [<i>NEW_DESC</i>]]] [<i>OPTION</i>&#8230;]</p>

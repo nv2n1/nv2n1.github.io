@@ -1,4 +1,5 @@
 ---
+
 title: "gauche-config(1)"
 name: "gauche-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gauche-config/"
 description: "gauche-config – retrieve configuration parameters of Gauche"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gauche-config &#8211; retrieve configuration parameters of Gauche </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gauche-config</code> <i>option</i> </p>

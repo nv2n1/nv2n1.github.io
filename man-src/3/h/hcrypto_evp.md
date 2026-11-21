@@ -1,4 +1,5 @@
 ---
+
 title: "hcrypto_evp(3)"
 name: "hcrypto_evp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hcrypto_evp/"
 description: "EVP generic crypto functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> EVP generic crypto functions &#8211; </p>
 <h3>Functions</h3>
 <p> const EVP_CIPHER * <code>EVP_wincrypt_des_ede3_cbc</code> (void) </p>

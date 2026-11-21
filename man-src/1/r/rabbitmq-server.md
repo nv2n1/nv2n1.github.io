@@ -1,4 +1,5 @@
 ---
+
 title: "rabbitmq-server(1)"
 name: "rabbitmq-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rabbitmq-server/"
 description: "rabbitmq-server – start RabbitMQ AMQP server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rabbitmq-server &#8211; start RabbitMQ AMQP server </p>
 <h2>SYNOPSIS</h2>
 <dl>

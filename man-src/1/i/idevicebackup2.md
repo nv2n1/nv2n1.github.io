@@ -1,4 +1,5 @@
 ---
+
 title: "idevicebackup2(1)"
 name: "idevicebackup2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idevicebackup2/"
 description: "idevicebackup2 – Create or restore backups for devices running iOS 4 or later."
 ---
 
-<h2>NAME</h2>
 <p> idevicebackup2 &#8211; Create or restore backups for devices running iOS 4 or later.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idevicebackup2</code> [OPTIONS] CMD [CMDOPTIONS] DIRECTORY </p>

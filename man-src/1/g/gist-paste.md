@@ -1,4 +1,5 @@
 ---
+
 title: "gist-paste(1)"
 name: "gist-paste"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gist-paste/"
 description: "gist – upload code to"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gist</code> &#8211; upload code to </p>
 <p> <a rel="nofollow" href="https://gist.github.com">https://gist.github.com</a></p>
 <h2>Synopsis</h2>

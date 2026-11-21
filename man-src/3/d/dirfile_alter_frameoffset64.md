@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_alter_frameoffset64(3)"
 name: "dirfile_alter_frameoffset64"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_alter_frameoffset64/"
 description: "get_frameoffset64, dirfile_alter_frameoffset64 — report or change the frame offset of fields in a dirfile, with largefile support"
 ---
 
-<h2>NAME</h2>
 <p> get_frameoffset64, dirfile_alter_frameoffset64 &#8212; report or change the frame offset of fields in a dirfile, with largefile support</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#define _LARGEFILE64_SOURCE</code> </p>

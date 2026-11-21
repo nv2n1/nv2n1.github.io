@@ -1,4 +1,5 @@
 ---
+
 title: "tarantool(1)"
 name: "tarantool"
 section: "1"
@@ -6,10 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tarantool/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- tarantool- a Lua application server and a NoSQL database 
+tarantool- a Lua application server and a NoSQL database 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "e2mkdir(1)"
 name: "e2mkdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-e2mkdir/"
 description: "e2mkdir – creates a directory on an ext2 filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> e2mkdir &#8211; creates a directory on an ext2 filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>e2mkdir</code> [<i>options</i>]<i> directory&#8230;</i></p>

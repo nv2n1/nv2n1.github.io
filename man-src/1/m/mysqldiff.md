@@ -1,4 +1,5 @@
 ---
+
 title: "mysqldiff(1)"
 name: "mysqldiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqldiff/"
 description: "mysqldiff – Identify Differences Among Database Objects"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqldiff &#8211; Identify Differences Among Database Objects </p>
 <h2>SYNOPSIS</h2>
 <dl>

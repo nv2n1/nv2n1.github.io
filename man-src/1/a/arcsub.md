@@ -1,4 +1,5 @@
 ---
+
 title: "arcsub(1)"
 name: "arcsub"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arcsub/"
 description: "arcsub – ARC Submission"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arcsub &#8211; ARC Submission</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcsub</code> command is used for submitting jobs to Grid enabled computing resources. </p>

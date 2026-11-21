@@ -1,4 +1,5 @@
 ---
+
 title: "color_map(3)"
 name: "color_map"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-color_map/"
 description: "color_map – Global pointer to the color mapping table. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> color_map &#8211; Global pointer to the color mapping table. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

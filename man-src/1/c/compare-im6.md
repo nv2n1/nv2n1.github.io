@@ -1,4 +1,5 @@
 ---
+
 title: "compare-im6(1)"
 name: "compare-im6"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-compare-im6/"
 description: "compare – mathematically and visually annotate the difference between an image and its reconstruction."
 ---
 
-<h2 class="name">NAME</h2>
 <p> compare &#8211; mathematically and visually annotate the difference between an image and its reconstruction. </p>
 <h2>SYNOPSIS</h2>
 <dl>

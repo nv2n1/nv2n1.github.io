@@ -1,4 +1,5 @@
 ---
+
 title: "caja-autorun-software(1)"
 name: "caja-autorun-software"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-caja-autorun-software/"
 description: "caja-autorun-software – Autorun Software in Caja"
 ---
 
-<h2 class="name">NAME</h2>
 <p> caja-autorun-software &#8211; Autorun Software in Caja </p>
 <h2>DESCRIPTION</h2>
 <p> This executable is provided as a part of the Caja package for the MATE Desktop Environment.</p>

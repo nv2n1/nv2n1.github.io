@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_sub(3)"
 name: "ck_pr_sub"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_sub/"
 description: "ck_pr_sub_ptr ck_pr_sub_double ck_pr_sub_char ck_pr_sub_uint ck_pr_sub_int ck_pr_sub_64 ck_pr_sub_32 ck_pr_sub_16 ck_pr_sub_8 – atomic subtraction operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_sub_ptr</code> <code>ck_pr_sub_double</code> <code>ck_pr_sub_char</code> <code>ck_pr_sub_uint</code> <code>ck_pr_sub_int</code> <code>ck_pr_sub_64</code> <code>ck_pr_sub_32</code> <code>ck_pr_sub_16</code> <code>ck_pr_sub_8</code> &#8211; atomic subtraction operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

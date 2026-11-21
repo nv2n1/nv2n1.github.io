@@ -1,4 +1,5 @@
 ---
+
 title: "hal-lock(1)"
 name: "hal-lock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hal-lock/"
 description: "hal-lock – lock an interface"
 ---
 
-<h2>NAME</h2>
 <p> hal-lock &#8211; lock an interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hal-lock</code> [options] </p>

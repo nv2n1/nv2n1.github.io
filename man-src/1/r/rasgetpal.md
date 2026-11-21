@@ -1,4 +1,5 @@
 ---
+
 title: "rasgetpal(1)"
 name: "rasgetpal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rasgetpal/"
 description: "rasgetpal – extract the color palette of a rasterfile and write it to standard output"
 ---
 
-<h2>NAME</h2>
 <p> rasgetpal &#8211; extract the color palette of a rasterfile and write it to standard output</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rasgetpal</code> [<code>-Version</code>] <i>srcfile</i> [<i>dstfile</i>]</p>

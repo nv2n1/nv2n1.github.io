@@ -1,4 +1,5 @@
 ---
+
 title: "grdtrack(1)"
 name: "grdtrack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdtrack/"
 description: "grdtrack – Sample grids at specified (x,y) locations"
 ---
 
-<h2>NAME</h2>
 <p> grdtrack &#8211; Sample grids at specified (x,y) locations</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdtrack</code> [ <i>xyfile</i> ] <i>grd1</i> <i>grd2</i> &#8230; [ <code>f</code>|<code>p</code>|<code>m</code>|<code>r</code>|<code>R</code>[<code>+l</code>] ] [ <i>length</i>[<code>u</code>]/<i>ds</i>[<i>spacing</i>][<code>+a</code>] ] [<i>dfile</i> ] [ <i>line</i>[,<i>line</i>,&#8230;][<code>+a</code><i>az</i>][<code>+d</code>][<code>+i</code><i>inc</i>[<code>u</code>]][<code>+l</code><i>length</i>[<code>u</code>]][<code>+n</code><i>np</i>][<code>+o</code><i>az</i>][<code>+r</code><i>radius</i>[<code>u</code>] ] [ ] [ <i>region</i> ] [ <i>method</i>/<i>modifiers</i> ] [ [<i>radius</i>[<code>u</code>]][<code>+e</code>|<code>p</code>]] [ [<i>level</i>] ] [ ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-s</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

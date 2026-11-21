@@ -1,4 +1,5 @@
 ---
+
 title: "exbitmap(3)"
 name: "exbitmap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exbitmap/"
 description: "exbitmap – Loading and displaying PCX and BMP files. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exbitmap &#8211; Loading and displaying PCX and BMP files. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

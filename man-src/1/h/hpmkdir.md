@@ -1,4 +1,5 @@
 ---
+
 title: "hpmkdir(1)"
 name: "hpmkdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpmkdir/"
 description: "hpmkdir — create a directory on an HFS+ volume"
 ---
 
-<h2>NAME</h2>
 <p> hpmkdir &#8212; create a directory on an HFS+ volume</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hpmkdir</code> <i>hfs-path</i></p>

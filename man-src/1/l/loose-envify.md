@@ -1,4 +1,5 @@
 ---
+
 title: "loose-envify(1)"
 name: "loose-envify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-loose-envify/"
 description: "loose-envify – replace Node.js environment variables with plain strings"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>loose-envify</code> &#8211; replace Node.js environment variables with plain strings </p>
 <h2>SYNOPSIS</h2>
 <p> loose-envify &lt;javascript_source_file.js&gt;</p>

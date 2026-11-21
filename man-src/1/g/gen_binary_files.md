@@ -1,4 +1,5 @@
 ---
+
 title: "gen_binary_files(1)"
 name: "gen_binary_files"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gen_binary_files/"
 description: "libpinyin – Library to deal with pinyin"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libpinyin &#8211; Library to deal with pinyin</p>
 <h2>DESCRIPTION</h2>
 <p> The libpinyin project aims to provide the algorithms core for intelligent sentence-based Chinese pinyin input methods. </p>

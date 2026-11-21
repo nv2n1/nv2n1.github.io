@@ -1,4 +1,5 @@
 ---
+
 title: "cgget(1)"
 name: "cgget"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cgget/"
 description: "cgget – print parameter(s) of given group(s)"
 ---
 
-<h2>NAME</h2>
 <p> cgget &#8211; print parameter(s) of given group(s) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cgget</code> [<code>-n</code>] [<code>-v</code>] [<code>-r</code> &lt;<i>name</i>&gt;] [<code>-g</code> &lt;<i>controller</i>&gt;] [<code>-a</code>] &lt;<code>path</code>&gt; &#8230;<br />

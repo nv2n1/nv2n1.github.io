@@ -1,4 +1,5 @@
 ---
+
 title: "atop(1)"
 name: "atop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atop/"
 description: "atop – Advanced System & Process Monitor"
 ---
 
-<h2>NAME</h2>
 <p> <code>atop </code> &#8211; Advanced System &amp; Process Monitor</p>
 <h2>SYNOPSIS</h2>
 <p> Interactive Usage: </p>

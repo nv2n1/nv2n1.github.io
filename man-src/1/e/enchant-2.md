@@ -1,4 +1,5 @@
 ---
+
 title: "enchant-2(1)"
 name: "enchant-2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-enchant-2/"
 description: "Enchant – a spellchecker"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Enchant &#8211; a spellchecker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>enchant-2</code> <code>-a</code>|<code>-l</code>|<code>-h</code>|<code>-v</code> [<code>-L</code>] [<code>-d</code> <i>DICTIONARY</i>] [<i>FILE</i>] </p>

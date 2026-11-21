@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_undefined(3)"
 name: "bson_append_undefined"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_undefined/"
 description: "bson_append_undefined() – The bson_append_undefined() function shall append a new element to bson of type BSON_TYPE_UNDEFINED. Undefined is common in Javascript. However, this element type is depre..."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_undefined() &#8211; The bson_append_undefined() function shall append a new element to bson of type BSON_TYPE_UNDEFINED. Undefined is common in Javascript. However, this element type is deprecated and should not be used in new code.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

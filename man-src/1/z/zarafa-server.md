@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-server(1)"
 name: "zarafa-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zarafa-server/"
 description: "zarafa-server – Start the Zarafa storage server."
 ---
 
-<h2 class="name">NAME</h2>
 <p> zarafa-server &#8211; Start the Zarafa storage server. </p>
 <h2>SYNOPSIS</h2>
 <dl>

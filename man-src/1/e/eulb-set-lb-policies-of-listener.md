@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-set-lb-policies-of-listener(1)"
 name: "eulb-set-lb-policies-of-listener"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-set-lb-policies-of-listener/"
 description: "eulb-set-lb-policies-of-listener – Change the policy associated with a load balancer listener"
 ---
 
-<h2>NAME</h2>
 <p> eulb-set-lb-policies-of-listener &#8211; Change the policy associated with a load balancer listener</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-set-lb-policies-of-listener <code>-l</code> PORT <code>-p</code> POLICY1,POLICY2,&#8230;</p>

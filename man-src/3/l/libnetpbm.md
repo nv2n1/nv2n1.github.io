@@ -1,4 +1,5 @@
 ---
+
 title: "libnetpbm(3)"
 name: "libnetpbm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libnetpbm/"
 description: "libnetpbm – general introduction to the netpbm library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libnetpbm &#8211; general introduction to the netpbm library </p>
 <h2>DESCRIPTION</h2>
 <p> <code>libnetpbm</code> is a C programming library for reading, writing, and manipulating Netpbm images. It also contains a few general graphics manipulation tools, but it is not intended to be a graphics tools library. For graphics tools, Netpbm expects you to run the Netpbm programs. From a C program, the <code>libnetpbm</code> function <code>pm_system()</code> makes this easy. However, since it creates a process and execs a program, this may be too heavyweight for some applications. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_push_rdf(3)"
 name: "ldns_rr_push_rdf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr_push_rdf/"
 description: "ldns_rr_push_rdf, ldns_rr_pop_rdf"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr_push_rdf, ldns_rr_pop_rdf </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "fdebuginfo(1)"
 name: "fdebuginfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fdebuginfo/"
 description: "fdebuginfo – display the debug-info paths for a process and its shared modules"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fdebuginfo &#8211; display the debug-info paths for a process and its shared modules </p>
 <h2>SYNOPSIS</h2>
 <dl>

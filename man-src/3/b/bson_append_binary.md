@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_binary(3)"
 name: "bson_append_binary"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_binary/"
 description: "bson_append_binary() – The bson_append_binary() function shall append a new element to bson containing the binary data provided."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_binary() &#8211; The bson_append_binary() function shall append a new element to bson containing the binary data provided.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

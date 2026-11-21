@@ -1,4 +1,5 @@
 ---
+
 title: "getipnodebyaddr(3)"
 name: "getipnodebyaddr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getipnodebyaddr/"
 description: "getipnodebyname, getipnodebyaddr, freehostent – get network hostnames and addresses"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getipnodebyname, getipnodebyaddr, freehostent &#8211; get network hostnames and addresses </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

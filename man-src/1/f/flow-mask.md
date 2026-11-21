@@ -1,4 +1,5 @@
 ---
+
 title: "flow-mask(1)"
 name: "flow-mask"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-mask/"
 description: "flow-mask – Apply tags to flow files."
 ---
 
-<h2>NAME</h2>
 <p> flow-mask &#8211; Apply tags to flow files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-mask</code> [ <code>-hk</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-m</code><i> mask_fname</i> ] [ <code>-M</code><i> active_def</i><i>&#8230;</i> ]</p>

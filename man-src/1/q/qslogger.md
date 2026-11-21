@@ -1,4 +1,5 @@
 ---
+
 title: "qslogger(1)"
 name: "qslogger"
 section: "1"
@@ -6,10 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qslogger/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- qslogger - another shell command interface to the system log module (syslog). 
+qslogger - another shell command interface to the system log module (syslog). 
 
 <h2>SYNOPSIS</h2>
 

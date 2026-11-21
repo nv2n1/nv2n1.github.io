@@ -1,4 +1,5 @@
 ---
+
 title: "ssh-argv0(1)"
 name: "ssh-argv0"
 section: "1"
@@ -8,7 +9,7 @@ description: "ssh-argv0 – replaces the old ssh command-name as hostname handli
 ---
 
 <p>Debian Project</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>ssh-argv0</code> &#8211; replaces the old ssh command-name as hostname handling </p>
 <h2>SYNOPSIS</h2>
 <p> <i>hostname | user [at] hostname</i> [-<code>l </code><i>login_name</i> ] [<i>command</i> ] </p>

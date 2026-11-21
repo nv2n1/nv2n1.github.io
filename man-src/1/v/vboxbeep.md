@@ -1,4 +1,5 @@
 ---
+
 title: "vboxbeep(1)"
 name: "vboxbeep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vboxbeep/"
 description: "vboxbeep – isdn voice box (beeper)"
 ---
 
-<h2>NAME</h2>
 <p> vboxbeep &#8211; isdn voice box (beeper)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vboxbeep</code> <i>[OPTION] [OPTION] [&#8230;]</i></p>

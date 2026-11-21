@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_session_to_parent(3)"
 name: "keyctl_session_to_parent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyctl_session_to_parent/"
 description: "keyctl_session_to_parent – Set the parent process’s session keyring"
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_session_to_parent &#8211; Set the parent process&#8217;s session keyring </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "clambc(1)"
 name: "clambc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clambc/"
 description: "clambc – Bytecode Analysis and Testing Tool"
 ---
 
-<h2>NAME</h2>
 <p> clambc &#8211; Bytecode Analysis and Testing Tool</p>
 <h2>SYNOPSIS</h2>
 <p> clambc &lt;file&gt; [function] [param1 &#8230;]</p>

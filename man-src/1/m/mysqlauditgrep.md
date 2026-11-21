@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlauditgrep(1)"
 name: "mysqlauditgrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlauditgrep/"
 description: "mysqlauditgrep – Search an audit log"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlauditgrep &#8211; Search an audit log </p>
 <h2>SYNOPSIS</h2>
 <dl>

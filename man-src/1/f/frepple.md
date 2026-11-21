@@ -1,4 +1,5 @@
 ---
+
 title: "frepple(1)"
 name: "frepple"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-frepple/"
 description: "frepple – open source production planning and scheduling"
 ---
 
-<h2>NAME</h2>
 <p> frepple &#8211; open source production planning and scheduling </p>
 <h2>SYNOPSIS</h2>
 <p> <code>frepple [options]</code> <i>&lt;files&gt;</i><br />

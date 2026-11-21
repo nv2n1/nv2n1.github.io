@@ -1,4 +1,5 @@
 ---
+
 title: "exit(2)"
 name: "exit"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-exit/"
 description: "_exit, _Exit – terminate the calling process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> _exit, _Exit &#8211; terminate the calling process </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dormr3(3)"
 name: "dormr3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dormr3/"
 description: "dormr3.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dormr3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

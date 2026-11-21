@@ -1,4 +1,5 @@
 ---
+
 title: "myproxy-get-delegation(1)"
 name: "myproxy-get-delegation"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-myproxy-get-delegation/"
 description: "myproxy-logon – retrieve a credential"
 ---
 
-<h2>NAME</h2>
 <p> myproxy-logon &#8211; retrieve a credential</p>
 <h2>SYNOPSIS</h2>
 <p> <code>myproxy-logon</code> [ <i>options</i> ] </p>

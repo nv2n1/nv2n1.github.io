@@ -1,4 +1,5 @@
 ---
+
 title: "pdns-zone2ldap(1)"
 name: "pdns-zone2ldap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdns-zone2ldap/"
 description: "zone2ldap – convert zonefiles to ldif"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zone2ldap &#8211; convert zonefiles to ldif </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zone2ldap</code> [<i>options</i>] </p>

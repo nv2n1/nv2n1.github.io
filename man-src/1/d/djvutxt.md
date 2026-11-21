@@ -1,4 +1,5 @@
 ---
+
 title: "djvutxt(1)"
 name: "djvutxt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-djvutxt/"
 description: "djvutxt – Extract the hidden text from DjVu documents."
 ---
 
-<h2 class="name">NAME</h2>
 <p> djvutxt &#8211; Extract the hidden text from DjVu documents.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>djvutxt [</code><i>options</i><code>] </code><i>inputdjvufile</i><code> [</code><i>outputtxtfile</i><code>]</code> </p>

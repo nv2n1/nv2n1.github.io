@@ -1,4 +1,5 @@
 ---
+
 title: "mate-typing-monitor(1)"
 name: "mate-typing-monitor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-typing-monitor/"
 description: "mate-typing-monitor – configure MATE network proxy"
 ---
 
-<h2>NAME</h2>
 <p> mate-typing-monitor &#8211; configure MATE network proxy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-typing-monitor</code> [<i>OPTIONS&#8230;</i>]</p>

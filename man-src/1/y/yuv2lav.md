@@ -1,4 +1,5 @@
 ---
+
 title: "yuv2lav(1)"
 name: "yuv2lav"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yuv2lav/"
 description: "yuv2lav – encodes lavtool’s raw YUV frame streams into MJPEG files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> yuv2lav &#8211; encodes lavtool&#8217;s raw YUV frame streams into MJPEG files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yuv2lav</code> [<code>-f</code><code>&nbsp;<wbr>a</code>|<code>A</code>|<code>q</code>|<code>m</code>] [<code>-q</code> <i>num</i>] [<code>-b</code> <i>num</i>] [<code>-I</code> <i>num</i>] [<code>-m</code> <i>num</i>] [<code>-v</code> <i>num</i>] [<code>-w</code> <i>file</i>] <code>-o</code> <i>output-file</i> </p>

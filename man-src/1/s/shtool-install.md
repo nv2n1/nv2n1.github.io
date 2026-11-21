@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-install(1)"
 name: "shtool-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtool-install/"
 description: "shtool install – GNU shtool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shtool install &#8211; GNU shtool </p>
 <p><a href="/docs/linux/man/1-install/">install</a>(1) command</p>
 <h2>SYNOPSIS</h2>

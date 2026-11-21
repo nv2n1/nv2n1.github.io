@@ -1,4 +1,5 @@
 ---
+
 title: "gtk-update-icon-cache(1)"
 name: "gtk-update-icon-cache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtk-update-icon-cache/"
 description: "gtk-update-icon-cache – Icon theme caching utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gtk-update-icon-cache &#8211; Icon theme caching utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

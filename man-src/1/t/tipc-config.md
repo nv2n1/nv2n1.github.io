@@ -1,4 +1,5 @@
 ---
+
 title: "tipc-config(1)"
 name: "tipc-config"
 section: "1"
@@ -6,9 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tipc-config/"
 ---
 
-<h2>NAME</h2>
-
- tipc-config - tipc configuration
+tipc-config - tipc configuration
 
 <h2>SYNOPSIS</h2>
 

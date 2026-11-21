@@ -1,4 +1,5 @@
 ---
+
 title: "xcalc(1)"
 name: "xcalc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xcalc/"
 description: "xcalc – scientific calculator for X"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xcalc &#8211; scientific calculator for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xcalc</code> [-stipple] [-rpn] [-<i>toolkitoption&#8230;</i>]</p>

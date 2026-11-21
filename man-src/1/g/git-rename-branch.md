@@ -1,4 +1,5 @@
 ---
+
 title: "git-rename-branch(1)"
 name: "git-rename-branch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-rename-branch/"
 description: "git-rename-branch – rename local branch and push to remote"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-rename-branch</code> &#8211; rename local branch and push to remote</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-rename-branch</code> &lt;new-branch&gt; &lt;old-branch&gt;</p>

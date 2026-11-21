@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_trace_sethandler(3)"
 name: "libssh2_trace_sethandler"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_trace_sethandler/"
 description: "libssh2_trace_sethandler – set a trace output handler"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_trace_sethandler &#8211; set a trace output handler</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

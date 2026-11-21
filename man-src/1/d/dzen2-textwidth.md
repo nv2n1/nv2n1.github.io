@@ -1,4 +1,5 @@
 ---
+
 title: "dzen2-textwidth(1)"
 name: "dzen2-textwidth"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dzen2-textwidth/"
 description: "dzen2-textwidth – calculate the width in pixels of text for a given font."
 ---
 
-<h2>NAME</h2>
 <p> dzen2-textwidth &#8211; calculate the width in pixels of text for a given font.</p>
 <h2>SYNOPSIS</h2>
 <dl>

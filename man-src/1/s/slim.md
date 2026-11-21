@@ -1,4 +1,5 @@
 ---
+
 title: "slim(1)"
 name: "slim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-slim/"
 description: "slim – Simple LogIn Manager"
 ---
 
-<h2>NAME</h2>
 <p> <code>slim </code>&#8211; Simple LogIn Manager</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

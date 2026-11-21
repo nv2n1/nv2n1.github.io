@@ -1,4 +1,5 @@
 ---
+
 title: "rngtest(1)"
 name: "rngtest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rngtest/"
 description: "rngtest – Check the randomness of data using FIPS 140-2 tests"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rngtest &#8211; Check the randomness of data using FIPS 140-2 tests</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rngtest</code> [<code>-c</code> <i>n</i> | <code>&#8211;blockcount=</code><i>n</i>] [<code>-b</code> <i>n</i> | <code>&#8211;blockstats=</code><i>n</i>] [<code>-t</code> <i>n</i> | <code>&#8211;timedstats=</code><i>n</i>] [<code>-p</code> | <code>&#8211;pipe</code>] [<code>-?</code>] [<code>&#8211;help</code>] [<code>-V</code>] [<code>&#8211;version</code>] </p>

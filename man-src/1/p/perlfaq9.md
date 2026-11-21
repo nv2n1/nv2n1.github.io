@@ -1,4 +1,5 @@
 ---
+
 title: "perlfaq9(1)"
 name: "perlfaq9"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlfaq9/"
 description: "perlfaq9 – Web, Email and Networking"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlfaq9 &#8211; Web, Email and Networking </p>
 <h2>VERSION</h2>
 <p> version 5.20190126</p>

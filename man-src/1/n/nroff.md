@@ -1,4 +1,5 @@
 ---
+
 title: "nroff(1)"
 name: "nroff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nroff/"
 description: "nroff – use groff to format documents for TTY devices"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nroff &#8211; use groff to format documents for TTY devices </p>
 <h2>SYNOPSIS</h2>
 <p> [<code>-CchipStUv</code>] [<code>-d</code><i>cs</i>] [<code>-M</code><i>dir</i>] [<code>-m</code><i>name</i>] [<code>-n</code><i>num</i>] [<code>-o</code><i>list</i>] [<code>-r</code><i>cn</i>] [<code>-T</code><i>name</i>] [<code>-W</code><i>warning</i>] [<code>-w</code><i>warning</i>] [<i>file</i> &#8230;] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>

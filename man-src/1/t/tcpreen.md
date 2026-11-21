@@ -1,4 +1,5 @@
 ---
+
 title: "tcpreen(1)"
 name: "tcpreen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcpreen/"
 description: "tcpreen – TCP stream monitoring tool"
 ---
 
-<h2>NAME</h2>
 <p> tcpreen &#8211; TCP stream monitoring tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tcpreen</code> [<code>-cdflnqv</code>] [<code>-b maxbytes</code>] [ <code>-f format</code>] [<code>-F maxclients</code>] [<code>-m maxconnect</code>] [ <code>-o logfile</code>] [<code>-u user</code>] [<code>-a bindaddress</code>] [ <code>-s servername</code>] [<code>-p proto1/proto2</code>] serverport [localport] </p>

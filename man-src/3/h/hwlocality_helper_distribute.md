@@ -1,4 +1,5 @@
 ---
+
 title: "hwlocality_helper_distribute(3)"
 name: "hwlocality_helper_distribute"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwlocality_helper_distribute/"
 description: "hwlocality_helper_distribute – Distributing items over a topology"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_helper_distribute &#8211; Distributing items over a topology </p>
 <h3>Enumerations</h3>
 <p> enum <code>hwloc_distrib_flags_e</code> { <code>HWLOC_DISTRIB_FLAG_REVERSE</code> } </p>

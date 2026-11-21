@@ -1,4 +1,5 @@
 ---
+
 title: "nessus-mkrand(1)"
 name: "nessus-mkrand"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nessus-mkrand/"
 description: "nessus-mkrand – Creates a file with random bytes"
 ---
 
-<h2>NAME</h2>
 <p> nessus-mkrand &#8211; Creates a file with random bytes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nessus-mkrand&nbsp;<wbr>[</code><i>filename&nbsp;<wbr></i><code>[</code><i>entropy</i><code>]&nbsp;<wbr>]</code> </p>

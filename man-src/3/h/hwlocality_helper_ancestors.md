@@ -1,4 +1,5 @@
 ---
+
 title: "hwlocality_helper_ancestors(3)"
 name: "hwlocality_helper_ancestors"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwlocality_helper_ancestors/"
 description: "hwlocality_helper_ancestors – Looking at Ancestor and Child Objects"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_helper_ancestors &#8211; Looking at Ancestor and Child Objects </p>
 <h3>Functions</h3>
 <p> static <code>hwloc_obj_t</code> <code>hwloc_get_ancestor_obj_by_depth</code> (<code>hwloc_topology_t</code> topology, unsigned depth, <code>hwloc_obj_t</code> obj) </p>

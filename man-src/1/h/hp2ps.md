@@ -1,4 +1,5 @@
 ---
+
 title: "hp2ps(1)"
 name: "hp2ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hp2ps/"
 description: "hp2ps – convert a heap profile to a POSTSCRIPT graph"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hp2ps &#8211; convert a heap profile to a P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> graph </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hp2ps</code> [flags] [file][.hp]</p>

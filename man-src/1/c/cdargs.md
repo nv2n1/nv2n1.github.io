@@ -1,4 +1,5 @@
 ---
+
 title: "cdargs(1)"
 name: "cdargs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cdargs/"
 description: "cdargs – bookmarks and browser for cd shell built-in"
 ---
 
-<h2>NAME</h2>
 <p> cdargs &#8211; bookmarks and browser for cd shell built-in</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cdargs</code> [<i>OPTIONS</i>] </p>

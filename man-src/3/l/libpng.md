@@ -1,4 +1,5 @@
 ---
+
 title: "libpng(3)"
 name: "libpng"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libpng/"
 description: "libpng – Portable Network Graphics (PNG) Reference Library 1.5.13"
 ---
 
-<h2>NAME</h2>
 <p> libpng &#8211; Portable Network Graphics (PNG) Reference Library 1.5.13</p>
 <h2>SYNOPSIS</h2>
 <p> <i></i><code> </p>

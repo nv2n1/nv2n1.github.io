@@ -1,4 +1,5 @@
 ---
+
 title: "dvcont(1)"
 name: "dvcont"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvcont/"
 description: "dvcont – send control commands to DV cameras"
 ---
 
-<h2>NAME</h2>
 <p> dvcont &#8211; send control commands to DV cameras</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvcont</code> <i>&lt;command1&gt; </i><code>[ </code><i>&lt;command2&gt; </i>&#8230; <code>]</code></p>

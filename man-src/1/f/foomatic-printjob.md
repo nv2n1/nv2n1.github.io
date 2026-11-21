@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-printjob(1)"
 name: "foomatic-printjob"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-foomatic-printjob/"
 description: "foomatic-printjob – manage printer jobs in a spooler-independent fashion"
 ---
 
-<h2>NAME</h2>
 <p> foomatic-printjob &#8211; manage printer jobs in a spooler-independent fashion</p>
 <h2>SYNOPSIS</h2>
 <p> <code>foomatic-printjob [ -s spooler ] [ -P queuename ] </code> <code>[ -o option1=value1 -o option2 &#8230; ] [ -i ] </code> <code>[ file1 file2 &#8230; ]</code> </p>

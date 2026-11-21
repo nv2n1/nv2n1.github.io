@@ -1,4 +1,5 @@
 ---
+
 title: "cs_parse_string(3)"
 name: "cs_parse_string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cs_parse_string/"
 description: "cs_parse_string – parse a CS template string"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cs_parse_string &#8211; parse a CS template string </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

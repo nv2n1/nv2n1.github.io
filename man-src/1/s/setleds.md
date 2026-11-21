@@ -1,4 +1,5 @@
 ---
+
 title: "setleds(1)"
 name: "setleds"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setleds/"
 description: "setleds – set the keyboard leds"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setleds &#8211; set the keyboard leds </p>
 <h2>SYNOPSIS</h2>
 <p> <code>setleds</code> [<i>-v</i>] [<i>-L</i>] [<i>-D</i>] [<i>-F</i>] [<i>{+|-}num</i>] [<i>{+|-}caps</i>] [<i>{+|-}scroll</i>]</p>

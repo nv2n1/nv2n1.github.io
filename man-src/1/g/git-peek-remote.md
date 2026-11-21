@@ -1,4 +1,5 @@
 ---
+
 title: "git-peek-remote(1)"
 name: "git-peek-remote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-peek-remote/"
 description: "git-peek-remote – List the references in a remote repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-peek-remote &#8211; List the references in a remote repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

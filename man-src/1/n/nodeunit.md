@@ -1,4 +1,5 @@
 ---
+
 title: "nodeunit(1)"
 name: "nodeunit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nodeunit/"
 description: "nodeunit — simple node.js unit testing tool"
 ---
 
-<h2>NAME</h2>
 <p> <code>nodeunit</code> &#8212; simple node.js unit testing tool</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

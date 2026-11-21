@@ -1,4 +1,5 @@
 ---
+
 title: "docker-compose(1)"
 name: "docker-compose"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-compose/"
 description: "docker-compose – Define and run multi-container applications with Docker."
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-compose &#8211; Define and run multi-container applications with Docker. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker-compose </code> [<i>OPTIONS</i>] [<i>COMMAND</i>] [<i>ARGS</i>]&#8230;</p>

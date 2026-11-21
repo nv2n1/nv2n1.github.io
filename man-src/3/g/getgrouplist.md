@@ -1,4 +1,5 @@
 ---
+
 title: "getgrouplist(3)"
 name: "getgrouplist"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getgrouplist/"
 description: "getgrouplist – get list of groups to which a user belongs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getgrouplist &#8211; get list of groups to which a user belongs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;grp.h&gt;</code> </p>

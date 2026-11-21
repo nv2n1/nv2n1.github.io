@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_se_tvzon(1)"
 name: "tv_grab_se_tvzon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_se_tvzon/"
 description: "tv_grab_se_tvzon – Grab TV listings for Sweden."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_se_tvzon &#8211; Grab TV listings for Sweden. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_se_tvzon &#8211;help </p>

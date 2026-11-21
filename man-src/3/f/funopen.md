@@ -1,4 +1,5 @@
 ---
+
 title: "funopen(3)"
 name: "funopen"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funopen/"
 description: "FunOpen – open a Funtools data file"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunOpen &#8211; open a Funtools data file</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

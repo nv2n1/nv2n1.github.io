@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-get-feature(1)"
 name: "nvme-get-feature"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-get-feature/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-get-feature - Gets an NVMe feature, returns applicable results 
+nvme-get-feature - Gets an NVMe feature, returns applicable results 
 
 <h2>SYNOPSIS</h2>
 

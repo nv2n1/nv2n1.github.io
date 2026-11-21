@@ -1,4 +1,5 @@
 ---
+
 title: "nitrate-notes(1)"
 name: "nitrate-notes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nitrate-notes/"
 description: "Release Notes – python-nitrate release notes"
 ---
 
-<h2>NAME</h2>
 <p> Release Notes &#8211; python-nitrate release notes</p>
 <h2>PYTHON-NITRATE 1.0</h2>
 <p> There have been many substantial changes in the python-nitrate implementation and a bunch of new features have been added. Many thanks to Filip Holec for contributing substantial part of the new caching implementation. Here&#8217;s the summary of important changes: </p>

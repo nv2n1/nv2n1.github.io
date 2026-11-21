@@ -1,4 +1,5 @@
 ---
+
 title: "colrm(1)"
 name: "colrm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-colrm/"
 description: "colrm – remove columns from a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> colrm &#8211; remove columns from a file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>colrm</code> <i>[first [last]]</i></p>

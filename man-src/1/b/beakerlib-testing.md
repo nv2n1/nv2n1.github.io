@@ -1,4 +1,5 @@
 ---
+
 title: "beakerlib-testing(1)"
 name: "beakerlib-testing"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beakerlib-testing/"
 description: "BeakerLib – testing – asserting functions, watchdog and report"
 ---
 
-<h2 class="name">NAME</h2>
 <p> BeakerLib &#8211; testing &#8211; asserting functions, watchdog and report </p>
 <h2>DESCRIPTION</h2>
 <p> This file contains functions related directly to testing. These functions are various asserts affecting final result of the phase. Watchdog and the report result function is included as well.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pth-config(1)"
 name: "pth-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pth-config/"
 description: "pth-config – Pth library build utility"
 ---
 
-<h2>NAME</h2>
 <p> <code>pth-config</code> &#8211; Pth library build utility</p>
 <h2>VERSION</h2>
 <p> <font SIZE="-1">GNU</font> Pth <font SIZE="-1">2.0.7 (08-Jun-2006)</font></p>

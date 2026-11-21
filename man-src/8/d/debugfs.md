@@ -1,12 +1,14 @@
 ---
+
 title: "debugfs(8)"
 name: "debugfs"
 section: "8"
 letter: "d"
 url: "/docs/linux/man/8-debugfs/"
 ---
+
 <p>debugfs &#8211; ext2/ext3/ext4 file system debugger </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>debugfs</code> [ <code>-DVwcin</code> ] [ <code>-b</code> blocksize ] [ <code>-s</code> superblock ] [ <code>-f</code> cmd_file ] [ <code>-R</code> request ] [ <code>-d</code> data_source_device ] [ <code>-z</code> <i>undo_file</i> ] [ device ]  </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>debugfs</code> program is an interactive file system debugger. It can be used to examine and change the state of an ext2, ext3, or ext4 file system. </p>

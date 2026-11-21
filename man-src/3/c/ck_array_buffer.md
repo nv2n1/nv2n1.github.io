@@ -1,4 +1,5 @@
 ---
+
 title: "ck_array_buffer(3)"
 name: "ck_array_buffer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_array_buffer/"
 description: "ck_array_buffer – return length and pointer to array of reader-visible pointers"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_array_buffer</code> &#8211; return length and pointer to array of reader-visible pointers</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "iruserok(3)"
 name: "iruserok"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iruserok/"
 description: "rcmd, rresvport, iruserok, ruserok, rcmd_af, rresvport_af, iruserok_af, ruserok_af – routines for returning a stream to a remote command"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rcmd, rresvport, iruserok, ruserok, rcmd_af, rresvport_af, iruserok_af, ruserok_af &#8211; routines for returning a stream to a remote command </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

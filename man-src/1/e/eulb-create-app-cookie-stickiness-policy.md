@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-create-app-cookie-stickiness-policy(1)"
 name: "eulb-create-app-cookie-stickiness-policy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-create-app-cookie-stickiness-policy/"
 description: "eulb-create-app-cookie-stickiness-policy – Create a new stickiness policy for a load balancer, whereby the server application generates a cookie and adds it to its responses. The load balancer will..."
 ---
 
-<h2>NAME</h2>
 <p> eulb-create-app-cookie-stickiness-policy &#8211; Create a new stickiness policy for a load balancer, whereby the server application generates a cookie and adds it to its responses. The load balancer will then use this cookie to route requests from each user to the same back end instance. This type of policy can only be associated with HTTP or HTTPS listeners,</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-create-app-cookie-stickiness-policy <code>-c</code> COOKIENAME <code>-p</code> POLICY</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tf(1)"
 name: "tf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tf/"
 description: "tf – TinyFugue, a MUD client"
 ---
 
-<h2>NAME</h2>
 <p> tf &#8211; TinyFugue, a MUD client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tf [-f</code><i>file</i><code>] [-lnq] [</code><i>world</i><code>]</code><br />

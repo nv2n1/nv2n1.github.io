@@ -1,4 +1,5 @@
 ---
+
 title: "screendump(1)"
 name: "screendump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-screendump/"
 description: "screendump – dump the contents of a virtual console to stdout"
 ---
 
-<h2 class="name">NAME</h2>
 <p> screendump &#8211; dump the contents of a virtual console to stdout</p>
 <h2>SYNOPSIS</h2>
 <p> <code>screendump </code> [ <i>N</i> ] </p>

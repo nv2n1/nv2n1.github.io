@@ -1,4 +1,5 @@
 ---
+
 title: "aptdcon(1)"
 name: "aptdcon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aptdcon/"
 description: "aptdcon – command line client for aptdaemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aptdcon &#8211; command line client for aptdaemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aptdcon</code> [<i>OPTIONS</i>]</p>

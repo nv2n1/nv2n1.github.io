@@ -1,4 +1,5 @@
 ---
+
 title: "grid-proxy-init(1)"
 name: "grid-proxy-init"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grid-proxy-init/"
 description: "grid-proxy-init – Generate a new proxy certificate"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grid-proxy-init &#8211; Generate a new proxy certificate </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grid-proxy-init</code> -help | -usage | -version </p>

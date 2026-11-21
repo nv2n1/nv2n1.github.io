@@ -1,4 +1,5 @@
 ---
+
 title: "getgrent_r(3)"
 name: "getgrent_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getgrent_r/"
 description: "getgrent_r, fgetgrent_r – get group file entry reentrantly"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getgrent_r, fgetgrent_r &#8211; get group file entry reentrantly </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-nat-gateways(1)"
 name: "euca-describe-nat-gateways"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-nat-gateways/"
 description: "euca-describe-nat-gateways – Describe one or more VPC NAT gateways"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-nat-gateways &#8211; Describe one or more VPC NAT gateways</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-nat-gateways [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;filter NAME=VALUE] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [NGATEWAY [NGATEWAY &#8230;]]</p>

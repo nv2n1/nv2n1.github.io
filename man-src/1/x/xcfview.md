@@ -1,4 +1,5 @@
 ---
+
 title: "xcfview(1)"
 name: "xcfview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xcfview/"
 description: "xcfview – display GIMP xcf files"
 ---
 
-<h2>NAME</h2>
 <p> xcfview &#8211; display GIMP xcf files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xcfview</code> [ <i>options</i> ] <i>filename</i> [ <i>layer names</i> ]</p>

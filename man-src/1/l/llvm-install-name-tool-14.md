@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-install-name-tool-14(1)"
 name: "llvm-install-name-tool-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-install-name-tool-14/"
 description: "llvm-install-name-tool – LLVM tool for manipulating install-names and rpaths"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-install-name-tool &#8211; LLVM tool for manipulating install-names and rpaths </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-install-name-tool</code> [<i>options</i>] <i>input</i></p>

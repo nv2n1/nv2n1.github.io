@@ -1,4 +1,5 @@
 ---
+
 title: "getpagesize(2)"
 name: "getpagesize"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getpagesize/"
 description: "getpagesize – get memory page size"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getpagesize &#8211; get memory page size </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

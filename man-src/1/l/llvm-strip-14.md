@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-strip-14(1)"
 name: "llvm-strip-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-strip-14/"
 description: "llvm-strip – object stripping tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-strip &#8211; object stripping tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-strip</code> [<i>options</i>] <i>inputs…</i></p>

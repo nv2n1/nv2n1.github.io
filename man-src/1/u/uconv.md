@@ -1,4 +1,5 @@
 ---
+
 title: "uconv(1)"
 name: "uconv"
 section: "1"
@@ -6,7 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-uconv/"
 description: "uconv – convert data from one encoding to another"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>uconv</code> - convert data from one encoding to another </p>
 <h2>SYNOPSIS</h2>
 <p> <code>uconv</code> [ <code>-h</code>, <code>-?</code>, <code>--help</code> ] [ <code>-V</code>, <code>--version</code> ] [ <code>-s</code>, <code>--silent</code> ] [ <code>-v</code>, <code>--verbose</code> ] [ <code>-l</code>, <code>--list</code> | <code>-l</code>, <code>--list-code</code><i> code</i> | <code>--default-code</code> | <code>-L</code>, <code>--list-transliterators</code> ] [ <code>--canon</code> ] [ <code>-x</code><i> transliteration</i> ] [ <code>--to-callback</code><i> callback</i> | <code>-c</code> ] [ <code>--from-callback</code><i> callback</i> | <code>-i</code> ] [ <code>--callback</code><i> callback</i> ] [ <code>--fallback</code> | <code>--no-fallback</code> ] [ <code>-b</code>, <code>--block-size</code><i> size</i> ] [ <code>-f</code>, <code>--from-code</code><i> encoding</i> ] [ <code>-t</code>, <code>--to-code</code><i> encoding</i> ] [ <code>--add-signature</code> ] [ <code>--remove-signature</code> ] [ <code>-o</code>, <code>--output</code><i> file</i> ] [ <i>file</i>... ]  </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rubber-pipe(1)"
 name: "rubber-pipe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rubber-pipe/"
 description: "rubber – a building system for LaTeX documents"
 ---
 
-<h2>NAME</h2>
 <p> rubber &#8211; a building system for LaTeX documents </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rubber</code> [<i>options</i>] <i>sources &#8230;</i><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_grid(1)"
 name: "gdal_grid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdal_grid/"
 description: "gdal_grid – gdal_grid creates regular grid from the scattered data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdal_grid &#8211; gdal_grid creates regular grid from the scattered data </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

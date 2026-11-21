@@ -1,4 +1,5 @@
 ---
+
 title: "vcdxrip(1)"
 name: "vcdxrip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vcdxrip/"
 description: "vcdxrip – manual page for vcdxrip 0.7.24"
 ---
 
-<h2>NAME</h2>
 <p> vcdxrip &#8211; manual page for vcdxrip 0.7.24</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lt-vcdxrip</code> [<i>OPTION</i>&#8230;]</p>

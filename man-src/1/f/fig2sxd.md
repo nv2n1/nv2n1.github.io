@@ -1,4 +1,5 @@
 ---
+
 title: "fig2sxd(1)"
 name: "fig2sxd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fig2sxd/"
 description: "fig2sxd – utility to convert .fig to .sxd"
 ---
 
-<h2>NAME</h2>
 <p> fig2sxd &#8211; utility to convert .fig to .sxd</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fig2sxd</code> <i>[-w] [-l(ine)w(idth)1 l] figfile sxdfile</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "aa-features-abi(1)"
 name: "aa-features-abi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aa-features-abi/"
 description: "aa-features-abi – Extract, validate and manipulate AppArmor feature abis"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aa-features-abi &#8211; Extract, validate and manipulate AppArmor feature abis </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aa-features-abi</code> [<font SIZE="-1">OPTIONS</font>] &lt;<font SIZE="-1">SOURCE</font>&gt; [<font SIZE="-1">OUTPUT OPTIONS</font>]</p>

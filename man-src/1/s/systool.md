@@ -1,4 +1,5 @@
 ---
+
 title: "systool(1)"
 name: "systool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systool/"
 description: "systool – view system device information by bus, class, and topology"
 ---
 
-<h2>NAME</h2>
 <p> systool &#8211; view system device information by bus, class, and topology </p>
 <h2>SYNOPSIS</h2>
 <p> <code>systool</code> [<i>options </i>[<i>device</i>]] </p>

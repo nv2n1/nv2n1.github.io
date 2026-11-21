@@ -1,4 +1,5 @@
 ---
+
 title: "perf-top(1)"
 name: "perf-top"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-top/"
 description: "perf-top – System profiling tool."
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-top &#8211; System profiling tool. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

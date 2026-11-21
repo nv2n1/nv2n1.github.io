@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-dedupe(1)"
 name: "pilot-dedupe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-dedupe/"
 description: "pilot-dedupe – Removes duplicate records from any Palm database."
 ---
 
-<h2>NAME</h2>
 <p> pilot-dedupe &#8211; Removes duplicate records from any Palm database.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

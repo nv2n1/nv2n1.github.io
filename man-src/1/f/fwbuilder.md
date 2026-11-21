@@ -1,4 +1,5 @@
 ---
+
 title: "fwbuilder(1)"
 name: "fwbuilder"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fwbuilder/"
 description: "fwbuilder – Multiplatform firewall configuration tool"
 ---
 
-<h2>NAME</h2>
 <p> fwbuilder &#8211; Multiplatform firewall configuration tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>/usr/bin/fwbuilder</code> [-f<code>file.fwb]</code> [-d] [-h] [-o<code>file]</code> [-P<code>object_name]</code> [-r] [-v]<br />

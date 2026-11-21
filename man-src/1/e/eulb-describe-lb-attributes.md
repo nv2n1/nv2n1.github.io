@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-describe-lb-attributes(1)"
 name: "eulb-describe-lb-attributes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-describe-lb-attributes/"
 description: "eulb-describe-lb-attributes – Show a load balancer’s attributes"
 ---
 
-<h2>NAME</h2>
 <p> eulb-describe-lb-attributes &#8211; Show a load balancer&#8217;s attributes</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-describe-lb-attributes [&#8211;show-empty-fields] [-U URL]</p>

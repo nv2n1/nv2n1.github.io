@@ -1,4 +1,5 @@
 ---
+
 title: "flickcurl-config(1)"
 name: "flickcurl-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flickcurl-config/"
 description: "flickcurl-config – script to get information about the installed version of flickcurl"
 ---
 
-<h2>NAME</h2>
 <p> flickcurl-config &#8211; script to get information about the installed version of flickcurl</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flickcurl-config</code> [ <i>OPTION</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fnext(1)"
 name: "fnext"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fnext/"
 description: "new – report on folders with new messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> new &#8211; report on folders with new messages </p>
 <p> fnext &#8211; set current folder to next folder with new messages </p>
 <p> fprev &#8211; set current folder to previous folder with new messages </p>

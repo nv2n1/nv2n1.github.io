@@ -1,4 +1,5 @@
 ---
+
 title: "bson_realloc(3)"
 name: "bson_realloc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_realloc/"
 description: "bson_realloc() – This is a portable realloc() wrapper."
 ---
 
-<h2>NAME</h2>
 <p> bson_realloc() &#8211; This is a portable realloc() wrapper.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

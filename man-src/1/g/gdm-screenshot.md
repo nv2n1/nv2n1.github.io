@@ -1,4 +1,5 @@
 ---
+
 title: "gdm-screenshot(1)"
 name: "gdm-screenshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdm-screenshot/"
 description: "gdm-screenshot – take a picture of the screen"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdm-screenshot &#8211; take a picture of the screen </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gdm-screenshot</code> [<font SIZE="-1">OPTION&#8230;</font>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "oggdec(1)"
 name: "oggdec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggdec/"
 description: "oggdec – simple decoder, Ogg Vorbis file to PCM audio file (Wave or RAW)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> oggdec &#8211; simple decoder, Ogg Vorbis file to PCM audio file (Wave or RAW).</p>
 <h2>SYNOPSIS</h2>
 <p> <code>oggdec</code> [ <code>-QhV</code> ] [ <code>-b bits_per_sample</code> ] [ <code>-e endianness</code> ] [ <code>-R</code> ] [ <code>-s signedness</code> ] [ <code>-o outputfile</code> ] <code>file &#8230;</code> </p>

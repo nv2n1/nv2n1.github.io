@@ -1,4 +1,5 @@
 ---
+
 title: "repodiffer(1)"
 name: "repodiffer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-repodiffer/"
 description: "repodiffer – report differences between repository histories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> repodiffer &#8211; report differences between repository histories </p>
 <h2>SYNOPSIS</h2>
 <dl>

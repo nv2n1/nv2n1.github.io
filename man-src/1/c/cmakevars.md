@@ -1,4 +1,5 @@
 ---
+
 title: "cmakevars(1)"
 name: "cmakevars"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmakevars/"
 description: "cmakevars – Reference of CMake variables."
 ---
 
-<h2>NAME</h2>
 <p> cmakevars &#8211; Reference of CMake variables. </p>
 <h2>VARIABLES THAT PROVIDE INFORMATION</h2>
 <p> variables defined by cmake, that give information about the project, and cmake </p>

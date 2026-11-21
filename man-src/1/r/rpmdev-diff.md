@@ -1,4 +1,5 @@
 ---
+
 title: "rpmdev-diff(1)"
 name: "rpmdev-diff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpmdev-diff/"
 description: "rpmdev-diff – manual page for rpmdev-diff version 1.4"
 ---
 
-<h2>NAME</h2>
 <p> rpmdev-diff &#8211; manual page for rpmdev-diff version 1.4</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rpmdev-diff</code> [<i>OPTION</i>]&#8230; [<i>DIFF-OPTIONS</i>] <i>FROM-ARCHIVE TO-ARCHIVE</i></p>

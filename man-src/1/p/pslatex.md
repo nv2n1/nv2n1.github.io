@@ -1,4 +1,5 @@
 ---
+
 title: "pslatex(1)"
 name: "pslatex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pslatex/"
 description: "pslatex – utility to typeset LaTeX files using PostScript fonts"
 ---
 
-<h2>NAME</h2>
 <p> pslatex &#8211; utility to typeset LaTeX files using PostScript fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pslatex</code> [<i>LATEXARGS</i>] <i>LATEXFILE</i>[.tex] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-scan(1)"
 name: "oggz-scan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz-scan/"
 description: "oggz-scan — Scan an Ogg file and output characteristic landmarks"
 ---
 
-<h2>NAME</h2>
 <p> oggz-scan &#8212; Scan an Ogg file and output characteristic landmarks<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

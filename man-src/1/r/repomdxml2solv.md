@@ -1,4 +1,5 @@
 ---
+
 title: "repomdxml2solv(1)"
 name: "repomdxml2solv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-repomdxml2solv/"
 description: "repomdxml2solv – convert a repomd.xml file into a solv file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> repomdxml2solv &#8211; convert a repomd.xml file into a solv file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>repomdxml2solv</code> [<i>OPTIONS</i>]</p>

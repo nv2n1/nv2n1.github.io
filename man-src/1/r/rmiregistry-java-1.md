@@ -1,4 +1,5 @@
 ---
+
 title: "rmiregistry-java-1(1)"
 name: "rmiregistry-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rmiregistry-java-1/"
 description: "rmiregistry – Starts a remote object registry on the specified port on the current host."
 ---
 
-<h2>NAME</h2>
 <p> rmiregistry &#8211; Starts a remote object registry on the specified port on the current host.</p>
 <h2>SYNOPSIS</h2>
 <pre>

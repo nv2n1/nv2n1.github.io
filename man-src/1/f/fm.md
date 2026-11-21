@@ -1,4 +1,5 @@
 ---
+
 title: "fm(1)"
 name: "fm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fm/"
 description: "fm – control frequency, volume, mute/unmute of FM radio card"
 ---
 
-<h2>NAME</h2>
 <p> fm &#8211; control frequency, volume, mute/unmute of FM radio card</p>
 <h2>SYNOPSIS</h2>
 <dl>

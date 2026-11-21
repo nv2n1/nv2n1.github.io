@@ -1,4 +1,5 @@
 ---
+
 title: "xev(1)"
 name: "xev"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xev/"
 description: "xev – print contents of X events"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xev &#8211; print contents of X events </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xev</code> [-display <i>displayname</i>] [-geometry <i>geom</i>] [-bw <i>pixels</i>] [-bs <i>{NotUseful,WhenMapped,Always}</i>] [-id <i>windowid</i>] [-root] [-s] [-name <i>string</i>] [-rv] [-version] [-event <i>event_mask</i> [-event <i>event_mask</i> &#8230;]]</p>

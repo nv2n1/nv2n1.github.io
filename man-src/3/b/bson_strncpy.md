@@ -1,4 +1,5 @@
 ---
+
 title: "bson_strncpy(3)"
 name: "bson_strncpy"
 section: "3"
@@ -6,7 +7,7 @@ letter: "b"
 url: "/docs/linux/man/3-bson_strncpy/"
 description: "bson_strncpy() – Copies up to size bytes from src into dst. dst must be at least size bytes in size. A trailing will be set."
 ---
-<h2>NAME</h2>
+
 <p> bson_strncpy() - Copies up to size bytes from src into dst. dst must be at least size bytes in size. A trailing &nbsp;<wbr> will be set.  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>void

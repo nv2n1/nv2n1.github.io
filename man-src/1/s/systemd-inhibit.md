@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-inhibit(1)"
 name: "systemd-inhibit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-inhibit/"
 description: "systemd-inhibit – Execute a program with an inhibition lock taken"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-inhibit &#8211; Execute a program with an inhibition lock taken </p>
 <h2>SYNOPSIS</h2>
 <dl>

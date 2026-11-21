@@ -1,4 +1,5 @@
 ---
+
 title: "enchant-lsmod(1)"
 name: "enchant-lsmod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-enchant-lsmod/"
 description: "enchant-lsmod – Show information about available spell-checking modules and dictionaries."
 ---
 
-<h2 class="name">NAME</h2>
 <p> enchant-lsmod &#8211; Show information about available spell-checking modules and dictionaries. </p>
 <h2>SYNOPSIS</h2>
 <p> enchant-lsmod [-lang [language_tag]] [-list-dicts] [-h] [-v]</p>

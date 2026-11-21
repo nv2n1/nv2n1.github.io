@@ -1,4 +1,5 @@
 ---
+
 title: "funflush(3)"
 name: "funflush"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funflush/"
 description: "FunFlush – flush data to output file"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunFlush &#8211; flush data to output file</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_set_mirroring(3)"
 name: "fribidi_set_mirroring"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_set_mirroring/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_set_mirroring - set mirroring on or off 
+fribidi_set_mirroring - set mirroring on or off 
 
 <h2>SYNOPSIS</h2>
 

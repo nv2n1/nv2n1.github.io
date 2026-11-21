@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_ttoul(3)"
 name: "ipsec_ttoul"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_ttoul/"
 description: "ipsec_ttoul, ipsec_ultot – convert unsigned-long numbers to and from text"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipsec_ttoul, ipsec_ultot &#8211; convert unsigned-long numbers to and from text </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

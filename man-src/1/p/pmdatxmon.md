@@ -1,4 +1,5 @@
 ---
+
 title: "pmdatxmon(1)"
 name: "pmdatxmon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdatxmon/"
 description: "pmdatxmon – txmon performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdatxmon</code> &#8211; txmon performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/txmon/pmdatxmon</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>] <i>tx_type</i> &#8230;<br />

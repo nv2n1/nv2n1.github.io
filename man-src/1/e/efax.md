@@ -1,4 +1,5 @@
 ---
+
 title: "efax(1)"
 name: "efax"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-efax/"
 description: "efax – send/receive faxes with Class 1, 2 or 2.0 fax modem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> efax &#8211; send/receive faxes with Class 1, 2 or 2.0 fax modem </p>
 <p> <center> (Please read the <code>fax</code> man page first.)<br />
  </center> </p>

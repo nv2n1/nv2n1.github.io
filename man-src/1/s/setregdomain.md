@@ -1,4 +1,5 @@
 ---
+
 title: "setregdomain(1)"
 name: "setregdomain"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setregdomain/"
 description: "setregdomain – set regulatory domain based on country code"
 ---
 
-<h2>NAME</h2>
 <p> setregdomain &#8211; set regulatory domain based on country code</p>
 <h2>SYNOPSIS</h2>
 <p> <code>setregdomain </code></p>

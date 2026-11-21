@@ -1,4 +1,5 @@
 ---
+
 title: "ppmmix(1)"
 name: "ppmmix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmmix/"
 description: "ppmmix – blend together two portable pixmaps"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmmix &#8211; blend together two portable pixmaps </p>
 <h2>SYNOPSIS</h2>
 <p> ppmmix <i>fadefactor </i> <i>ppmfile1 ppmfile2</i></p>

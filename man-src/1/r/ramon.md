@@ -1,4 +1,5 @@
 ---
+
 title: "ramon(1)"
 name: "ramon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ramon/"
 description: "ramon – provide RMON2 style reports from argus(8) data."
 ---
 
-<h2>NAME</h2>
 <p> <code>ramon</code> &#8211; provide RMON2 style reports from <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2003 QoSient. All rights reserved.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_parser2array(3)"
 name: "asn1_parser2array"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-asn1_parser2array/"
 description: "asn1_parser2array – API function"
 ---
 
-<h2>NAME</h2>
 <p> asn1_parser2array &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>

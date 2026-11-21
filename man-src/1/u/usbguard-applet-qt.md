@@ -1,4 +1,5 @@
 ---
+
 title: "usbguard-applet-qt(1)"
 name: "usbguard-applet-qt"
 section: "1"
@@ -6,11 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-usbguard-applet-qt/"
 ---
 
-<h2>NAME</h2>
-
- 
-
- usbguard-applet-qt -- USBGuard Qt applet
+usbguard-applet-qt -- USBGuard Qt applet
 
 <h2>SYNOPSIS</h2>
 

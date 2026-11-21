@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_handle_extended_data2(3)"
 name: "libssh2_channel_handle_extended_data2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_handle_extended_data2/"
 description: "libssh2_channel_handle_extended_data2 – set extended data handling mode"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_handle_extended_data2 &#8211; set extended data handling mode</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

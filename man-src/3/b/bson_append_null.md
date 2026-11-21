@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_null(3)"
 name: "bson_append_null"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_null/"
 description: "bson_append_null() – The bson_append_null() function shall append a new element to bson of type BSON_TYPE_NULL."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_null() &#8211; The bson_append_null() function shall append a new element to bson of type BSON_TYPE_NULL.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

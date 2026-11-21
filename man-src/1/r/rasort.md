@@ -1,4 +1,5 @@
 ---
+
 title: "rasort(1)"
 name: "rasort"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rasort/"
 description: "rasort – sort argus(8) data file."
 ---
 
-<h2>NAME</h2>
 <p> <code>rasort</code> &#8211; sort <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rasort</code> [[<code>-M</code> <i>sortmode</i>] [<code>-m</code> <i>sort fields</i>] &#8230;] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

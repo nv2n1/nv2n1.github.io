@@ -1,4 +1,5 @@
 ---
+
 title: "svn(1)"
 name: "svn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-svn/"
 description: "svn – Subversion command line client tool"
 ---
 
-<h2>NAME</h2>
 <p> svn &#8211; Subversion command line client tool</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "euform-get-template(1)"
 name: "euform-get-template"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euform-get-template/"
 description: "euform-get-template – Show a stack’s template"
 ---
 
-<h2>NAME</h2>
 <p> euform-get-template &#8211; Show a stack&#8217;s template</p>
 <h2>SYNOPSIS</h2>
 <p> euform-get-template [&#8211;show-empty-fields] [-U URL]</p>

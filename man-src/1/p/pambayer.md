@@ -1,4 +1,5 @@
 ---
+
 title: "pambayer(1)"
 name: "pambayer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pambayer/"
 description: "pambayer – interpret Bayer patterns"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pambayer &#8211; interpret Bayer patterns</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pambayer</code> <code>-type=</code>{<code>1</code>|<code>2</code>|<code>3</code>|<code>4</code>} [<code>-nointerpolate</code>] [<i>pamfile</i>] </p>

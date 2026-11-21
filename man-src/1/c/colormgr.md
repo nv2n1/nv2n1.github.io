@@ -1,4 +1,5 @@
 ---
+
 title: "colormgr(1)"
 name: "colormgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-colormgr/"
 description: "colormgr – Color Manager Testing Tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> colormgr &#8211; Color Manager Testing Tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

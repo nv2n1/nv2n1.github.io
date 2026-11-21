@@ -1,4 +1,5 @@
 ---
+
 title: "rdate(1)"
 name: "rdate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdate/"
 description: "rdate – get the time via the network"
 ---
 
-<h2>NAME</h2>
 <p> rdate &#8211; get the time via the network</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdate</code> [-p] [-s] [-u] [-l] [-t sec] [host&#8230;]</p>

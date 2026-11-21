@@ -1,4 +1,5 @@
 ---
+
 title: "csscombine_py2(1)"
 name: "csscombine_py2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-csscombine_py2/"
 description: "csscombine – Utility to combine several stylesheets into one."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>csscombine</code> &#8211; Utility to combine several stylesheets into one. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>csscombine</code> [<i>options</i>&#8230;] <i>path</i>&#8230;</p>

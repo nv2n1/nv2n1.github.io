@@ -1,4 +1,5 @@
 ---
+
 title: "bibtex8(1)"
 name: "bibtex8"
 section: "1"
@@ -6,7 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-bibtex8/"
 description: "bibtex8 – 8-bit Big BibTeX"
 ---
-<h2 class="name">NAME</h2>
+
 <p> bibtex8 - 8-bit Big BibTeX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bibtex8</code> [<i>options</i>] <i>aux-file</i>  </p>

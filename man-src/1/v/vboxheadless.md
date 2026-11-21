@@ -1,4 +1,5 @@
 ---
+
 title: "vboxheadless(1)"
 name: "vboxheadless"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vboxheadless/"
 description: "VBoxHeadless – x86 virtualization solution"
 ---
 
-<h2 class="name">NAME</h2>
 <p> VBoxHeadless &#8211; x86 virtualization solution </p>
 <h2>DESCRIPTION</h2>
 <p> Oracle VM VirtualBox Headless Interface (C) 2008-2019 Oracle Corporation All rights reserved.</p>

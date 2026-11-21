@@ -1,4 +1,5 @@
 ---
+
 title: "pavucontrol(1)"
 name: "pavucontrol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pavucontrol/"
 description: "pavucontrol – A volume control for the PulseAudio sound server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pavucontrol &#8211; A volume control for the PulseAudio sound server </p>
 <h2>SYNOPSIS</h2>
 <p> <i>pavucontrol</i></p>

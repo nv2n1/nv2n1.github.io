@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_abandon_ext(3)"
 name: "ldap_abandon_ext"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_abandon_ext/"
 description: "ldap_abandon_ext – Abandon an LDAP operation in progress"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_abandon_ext &#8211; Abandon an LDAP operation in progress </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

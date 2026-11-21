@@ -1,4 +1,5 @@
 ---
+
 title: "aa_autoinitkbd(3)"
 name: "aa_autoinitkbd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_autoinitkbd/"
 description: "aa_autoinitkbd – easy to use AA-lib keyboard initialization function."
 ---
 
-<h2>NAME</h2>
 <p> aa_autoinitkbd &#8211; easy to use AA-lib keyboard initialization function.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

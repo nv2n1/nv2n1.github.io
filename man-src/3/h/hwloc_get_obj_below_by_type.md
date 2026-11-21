@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_get_obj_below_by_type(3)"
 name: "hwloc_get_obj_below_by_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_get_obj_below_by_type/"
 description: "hwlocality_helper_find_misc – Finding objects, miscellaneous helpers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_helper_find_misc &#8211; Finding objects, miscellaneous helpers </p>
 <h3>Functions</h3>
 <p> static <code>hwloc_obj_t</code> <code>hwloc_get_pu_obj_by_os_index</code> (<code>hwloc_topology_t</code> topology, unsigned os_index) </p>

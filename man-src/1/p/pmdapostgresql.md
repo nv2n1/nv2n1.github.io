@@ -1,4 +1,5 @@
 ---
+
 title: "pmdapostgresql(1)"
 name: "pmdapostgresql"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdapostgresql/"
 description: "pmdapostgresql – PostgreSQL database PMDA"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdapostgresql</code> &#8211; PostgreSQL database PMDA</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdapostgresql</code> is a Performance Co-Pilot <font SIZE="-1">PMDA</font> which extracts live performance data from a running PostgreSQL database.</p>

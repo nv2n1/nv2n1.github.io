@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-help(1)"
 name: "doveadm-help"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-help/"
 description: "doveadm-help – Show information about doveadm commands"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-help &#8211; Show information about doveadm commands</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>help</code> [<i>command</i>]</p>

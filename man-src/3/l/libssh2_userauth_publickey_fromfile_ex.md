@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_userauth_publickey_fromfile_ex(3)"
 name: "libssh2_userauth_publickey_fromfile_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_userauth_publickey_fromfile_ex/"
 description: "libssh2_userauth_publickey_fromfile – authenticate a session with a public key, read from a file"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_userauth_publickey_fromfile &#8211; authenticate a session with a public key, read from a file</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

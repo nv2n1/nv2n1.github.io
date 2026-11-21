@@ -1,4 +1,5 @@
 ---
+
 title: "d_textbox_proc(3)"
 name: "d_textbox_proc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-d_textbox_proc/"
 description: "d_textbox_proc – Dialog procedure implementing a text box object. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> d_textbox_proc &#8211; Dialog procedure implementing a text box object. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

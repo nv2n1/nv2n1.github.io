@@ -1,4 +1,5 @@
 ---
+
 title: "nemiver(1)"
 name: "nemiver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nemiver/"
 description: "nemiver – graphical debugger for GNOME"
 ---
 
-<h2>NAME</h2>
 <p> nemiver &#8211; graphical debugger for GNOME</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nemiver</code> [<i>options</i>]<i> [&lt;prog-to-debug&gt; [prog-args]]</i> </p>

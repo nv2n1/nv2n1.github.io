@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtoibm23xx(1)"
 name: "pbmtoibm23xx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmtoibm23xx/"
 description: "pbmtoibm23xx – convert a PBM image to IBM 23XX printer stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmtoibm23xx &#8211; convert a PBM image to IBM 23XX printer stream</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtoibm23xxx</code> [<code>-xres=</code><i>dpi</i>] [<code>-yres=</code><i>dpi</i>] [<i>pbmfile</i> &#8230;] </p>

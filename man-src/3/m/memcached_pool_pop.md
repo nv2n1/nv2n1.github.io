@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_pool_pop(3)"
 name: "memcached_pool_pop"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_pool_pop/"
 description: "memcached_pool_pop – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_pool_pop &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached_pool.h&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dtgsy2(3)"
 name: "dtgsy2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtgsy2/"
 description: "dtgsy2.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dtgsy2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "rapiconfig(1)"
 name: "rapiconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rapiconfig/"
 description: "rapiconfig – upload an XML config file to a SynCE connected device"
 ---
 
-<h2>NAME</h2>
 <p> rapiconfig &#8211; upload an XML config file to a SynCE connected device </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rapiconfig</code> [-d <i>LEVEL</i>] [-P DEVNAME] [-h] [-p] [-m] <i>FILENAME</i> </p>

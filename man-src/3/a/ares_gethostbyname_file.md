@@ -1,4 +1,5 @@
 ---
+
 title: "ares_gethostbyname_file(3)"
 name: "ares_gethostbyname_file"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_gethostbyname_file/"
 description: "ares_gethostbyname_file – Lookup a name in the system’s hosts file"
 ---
 
-<h2>NAME</h2>
 <p> ares_gethostbyname_file &#8211; Lookup a name in the system&#8217;s hosts file</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

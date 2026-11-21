@@ -1,4 +1,5 @@
 ---
+
 title: "ttmkfdir(1)"
 name: "ttmkfdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ttmkfdir/"
 description: "ttmkfdir – Utility to create fonts.scale files for truetype fonts"
 ---
 
-<h2>NAME</h2>
 <p> <code>ttmkfdir</code>&nbsp;<wbr>&#8211; Utility to create fonts.scale files for truetype fonts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ttmkfdir</code> [OPTION]</p>

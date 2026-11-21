@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-create-auto-scaling-group(1)"
 name: "euscale-create-auto-scaling-group"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-create-auto-scaling-group/"
 description: "euscale-create-auto-scaling-group – Create a new auto-scaling group"
 ---
 
-<h2>NAME</h2>
 <p> euscale-create-auto-scaling-group &#8211; Create a new auto-scaling group</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-create-auto-scaling-group <code>-l</code> LAUNCHCONFIG <code>-M</code> COUNT <code>-m</code> COUNT</p>

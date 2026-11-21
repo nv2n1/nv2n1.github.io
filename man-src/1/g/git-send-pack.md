@@ -1,4 +1,5 @@
 ---
+
 title: "git-send-pack(1)"
 name: "git-send-pack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-send-pack/"
 description: "git-send-pack – Push objects over Git protocol to another repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-send-pack &#8211; Push objects over Git protocol to another repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

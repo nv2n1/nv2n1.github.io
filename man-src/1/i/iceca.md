@@ -1,4 +1,5 @@
 ---
+
 title: "iceca(1)"
 name: "iceca"
 section: "1"
@@ -6,10 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-iceca/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- iceca - Ice helper script for SSL certificate creation.
+iceca - Ice helper script for SSL certificate creation.
 
 <h2>SYNOPSIS</h2>
 

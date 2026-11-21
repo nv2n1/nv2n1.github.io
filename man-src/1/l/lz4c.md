@@ -1,4 +1,5 @@
 ---
+
 title: "lz4c(1)"
 name: "lz4c"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lz4c/"
 description: "lz4 – lz4, unlz4, lz4cat – Compress or decompress .lz4 files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>lz4</code> &#8211; lz4, unlz4, lz4cat &#8211; Compress or decompress .lz4 files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lz4</code> [<i>OPTIONS</i>] [-|INPUT-FILE] <i>OUTPUT-FILE</i> </p>

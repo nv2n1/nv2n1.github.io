@@ -1,4 +1,5 @@
 ---
+
 title: "xine-config(1)"
 name: "xine-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xine-config/"
 description: "xine-config – script to get information about the installed version of libxine"
 ---
 
-<h2>NAME</h2>
 <p> xine-config &#8211; script to get information about the installed version of libxine</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xine-config</code> [&#8211;prefix<i>[=DIR]</i>] [&#8211;exec-prefix<i>[=DIR]</i>] [&#8211;version] [&#8211;libs] [&#8211;cflags] [&#8211;objcflags] [&#8211;plugindir] [&#8211;datadir] [&#8211;scriptdir] [&#8211;localedir]</p>

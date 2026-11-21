@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_seek64(3)"
 name: "libssh2_sftp_seek64"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_seek64/"
 description: "libssh2_sftp_seek64 – set the read/write position within a file"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_seek64 &#8211; set the read/write position within a file</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

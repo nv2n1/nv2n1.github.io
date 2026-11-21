@@ -1,4 +1,5 @@
 ---
+
 title: "docker-image-import(1)"
 name: "docker-image-import"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-image-import/"
 description: "docker-image-import – Import the contents from a tarball to create a filesystem image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-image-import &#8211; Import the contents from a tarball to create a filesystem image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker image import [OPTIONS] file|URL|- [REPOSITORY[:TAG]]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pnmpaste(1)"
 name: "pnmpaste"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmpaste/"
 description: "pnmpaste – paste a rectangle into a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmpaste &#8211; paste a rectangle into a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmpaste</code> [<code>-replace</code>|<code>-or</code>|<code>-and</code> |<code>-xor</code>] <i>frompnmfile x y</i> [<i>intopnmfile</i>]</p>

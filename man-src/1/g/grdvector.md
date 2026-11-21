@@ -1,4 +1,5 @@
 ---
+
 title: "grdvector(1)"
 name: "grdvector"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdvector/"
 description: "grdvector – Plot vector field from two component grids"
 ---
 
-<h2>NAME</h2>
 <p> grdvector &#8211; Plot vector field from two component grids</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdvector</code> <i>compx.nc</i> <i>compy.nc</i> <code>-J</code><i>parameters</i> [ ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>cpt</i> ] [ <i>fill</i> ] [ [<code>x</code>]<i>dx</i>[/<i>dy</i>] ] [ ] [ ] [ ] [ ] [ <i>parameters</i> ] [ <i>region</i> ] [ [<code>i</code>|<code>l</code>]<i>scale</i> ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ <i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ ] [ <code>-c</code><i>copies</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>

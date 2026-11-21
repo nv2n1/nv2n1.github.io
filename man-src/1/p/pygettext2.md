@@ -1,4 +1,5 @@
 ---
+
 title: "pygettext2(1)"
 name: "pygettext2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pygettext2/"
 description: "pygettext – Python equivalent of"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pygettext &#8211; Python equivalent of </p>
 <p> <a href="/docs/linux/man/1-xgettext/">xgettext</a>(1)</p>
 <h2>SYNOPSIS</h2>

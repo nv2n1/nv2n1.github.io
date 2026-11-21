@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtowbmp(1)"
 name: "pbmtowbmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmtowbmp/"
 description: "pbmtowbmp – convert a portable bitmap to a wireless bitmap (wbmp) file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmtowbmp &#8211; convert a portable bitmap to a wireless bitmap (wbmp) file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtowbmp</code> [<i>pbmfile</i>]</p>

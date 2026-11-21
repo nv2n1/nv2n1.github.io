@@ -1,4 +1,5 @@
 ---
+
 title: "csplain(1)"
 name: "csplain"
 section: "1"
@@ -6,7 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-csplain/"
 description: "pdftex – PDF output from TeX"
 ---
-<h2 class="name">NAME</h2>
+
 <p> pdftex - PDF output from TeX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdftex</code> [<i>options</i>] [<i></i><code>&amp;</code>format] [<i>file</i>|<i></i><code>\</code>commands]  </p>

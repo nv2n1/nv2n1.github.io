@@ -1,4 +1,5 @@
 ---
+
 title: "monodevelop(1)"
 name: "monodevelop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-monodevelop/"
 description: "monodevelop – Free GNOME Development Environment"
 ---
 
-<h2>NAME</h2>
 <p> monodevelop &#8211; Free GNOME Development Environment</p>
 <h2>SYNOPSIS</h2>
 <p> <code>monodevelop</code> [options] [projectfile]</p>

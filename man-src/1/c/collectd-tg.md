@@ -1,4 +1,5 @@
 ---
+
 title: "collectd-tg(1)"
 name: "collectd-tg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-collectd-tg/"
 description: "collectd-tg – Traffic generator for collectd."
 ---
 
-<h2 class="name">NAME</h2>
 <p> collectd-tg &#8211; Traffic generator for collectd. </p>
 <h2>SYNOPSIS</h2>
 <p> collectd-tg <code>-n</code> <i>num_vl</i> <code>-H</code> <i>num_hosts</i> <code>-p</code> <i>num_plugins</i> <code>-i</code> <i>interval</i> <code>-d</code> <i>dest</i> <code>-D</code> <i>dport</i></p>

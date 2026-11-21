@@ -1,4 +1,5 @@
 ---
+
 title: "xslate(1)"
 name: "xslate"
 section: "1"
@@ -6,10 +7,7 @@ letter: "x"
 url: "/docs/linux/man/1-xslate/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- xslate - Process Xslate Templates 
+xslate - Process Xslate Templates 
 
 <h2>USAGE</h2>
 

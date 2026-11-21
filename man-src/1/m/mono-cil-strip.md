@@ -1,4 +1,5 @@
 ---
+
 title: "mono-cil-strip(1)"
 name: "mono-cil-strip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mono-cil-strip/"
 description: "Mono CIL strip"
 ---
 
-<h2>NAME</h2>
 <p> Mono CIL strip</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mono-cil-strip assembly [output-assembly]</code></p>

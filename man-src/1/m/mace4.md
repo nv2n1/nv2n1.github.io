@@ -1,4 +1,5 @@
 ---
+
 title: "mace4(1)"
 name: "mace4"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mace4/"
 description: "mace4 – searches for finite countermodels of first-order statements"
 ---
 
-<h2>NAME</h2>
 <p> mace4 &#8211; searches for finite countermodels of first-order statements</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mace4</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i></p>

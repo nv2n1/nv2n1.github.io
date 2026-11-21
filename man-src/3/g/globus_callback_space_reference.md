@@ -1,4 +1,5 @@
 ---
+
 title: "globus_callback_space_reference(3)"
 name: "globus_callback_space_reference"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_callback_space_reference/"
 description: "Globus Callback Spaces –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus Callback Spaces &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_CALLBACK_GLOBAL_SPACE</code><br />

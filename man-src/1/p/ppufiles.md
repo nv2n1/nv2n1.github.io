@@ -1,4 +1,5 @@
 ---
+
 title: "ppufiles(1)"
 name: "ppufiles"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppufiles/"
 description: "ppufiles – The FPC Pascal unit object file lister."
 ---
 
-<h2>NAME</h2>
 <p> ppufiles &#8211; The FPC Pascal unit object file lister. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppufiles</code> [options] [file [file [file]]] </p>

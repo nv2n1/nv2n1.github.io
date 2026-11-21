@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_pac_get_buffer(3)"
 name: "krb5_pac_get_buffer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_pac_get_buffer/"
 description: "Heimdal Kerberos 5 PAC handling functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Heimdal Kerberos 5 PAC handling functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />

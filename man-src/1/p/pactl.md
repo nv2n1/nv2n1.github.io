@@ -1,4 +1,5 @@
 ---
+
 title: "pactl(1)"
 name: "pactl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pactl/"
 description: "pactl – Control a running PulseAudio sound server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pactl &#8211; Control a running PulseAudio sound server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pactl [</code><i>options</i><code>] </code><i>COMMAND</i><code> [</code><i>ARGS &#8230;</i><code>] </p>

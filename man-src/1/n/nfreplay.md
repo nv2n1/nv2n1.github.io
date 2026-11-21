@@ -1,4 +1,5 @@
 ---
+
 title: "nfreplay(1)"
 name: "nfreplay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfreplay/"
 description: "nfreplay – netflow replay program"
 ---
 
-<h2>NAME</h2>
 <p> nfreplay &#8211; netflow replay program</p>
 <h2>SYNOPSIS</h2>
 <dl>

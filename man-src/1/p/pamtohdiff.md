@@ -1,4 +1,5 @@
 ---
+
 title: "pamtohdiff(1)"
 name: "pamtohdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtohdiff/"
 description: "pamtohdiff – convert PAM image to horizontal difference image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamtohdiff &#8211; convert PAM image to horizontal difference image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtohdiff</code> [<i>pamfile</i>] [<code>-verbose</code>] </p>

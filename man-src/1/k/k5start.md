@@ -1,4 +1,5 @@
 ---
+
 title: "k5start(1)"
 name: "k5start"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-k5start/"
 description: "k5start – Obtain and optionally keep active a Kerberos ticket"
 ---
 
-<h2 class="name">NAME</h2>
 <p> k5start &#8211; Obtain and optionally keep active a Kerberos ticket </p>
 <h2>SYNOPSIS</h2>
 <p> <code>k5start</code> [<code>-bFhLnPqstvx</code>] [<code>-c</code> <i>child pid file</i>] [<code>-f</code> <i>keytab</i>]<br />

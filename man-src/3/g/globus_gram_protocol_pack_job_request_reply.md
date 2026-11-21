@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_protocol_pack_job_request_reply(3)"
 name: "globus_gram_protocol_pack_job_request_reply"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_pack_job_request_reply/"
 description: "Message Packing –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Message Packing &#8211; </p>
 <p> Message Packing.</p>
 <h3>Functions</h3>

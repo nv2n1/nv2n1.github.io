@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-build-init(1)"
 name: "flatpak-build-init"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-build-init/"
 description: "flatpak-build-init – Initialize a build directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-build-init &#8211; Initialize a build directory </p>
 <h2>SYNOPSIS</h2>
 <dl>

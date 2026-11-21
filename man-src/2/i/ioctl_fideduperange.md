@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl_fideduperange(2)"
 name: "ioctl_fideduperange"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-ioctl_fideduperange/"
 description: "ioctl_fideduperange – share some the data of one file with another file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ioctl_fideduperange &#8211; share some the data of one file with another file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ioctl.h&gt;</code><br />

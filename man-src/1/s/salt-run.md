@@ -1,4 +1,5 @@
 ---
+
 title: "salt-run(1)"
 name: "salt-run"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-salt-run/"
 description: "salt-run – salt-run Documentation"
 ---
 
-<h2>NAME</h2>
 <p> salt-run &#8211; salt-run Documentation </p>
 <p> Execute a Salt runner</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "rdfdump(1)"
 name: "rdfdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdfdump/"
 description: "rdfdump – dumps an RDOFF object in human-readable form"
 ---
 
-<h2>NAME</h2>
 <p> rdfdump &#8211; dumps an RDOFF object in human-readable form</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdfdump</code> [-v] &lt;<i>filename</i>&gt;</p>

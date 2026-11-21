@@ -1,4 +1,5 @@
 ---
+
 title: "fixtpps(1)"
 name: "fixtpps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fixtpps/"
 description: "fixtpps – filter to fix Tpscript documents to work with PSUtils"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fixtpps &#8211; filter to fix Tpscript documents to work with PSUtils </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fixtpps </code> &lt; <i>Tpscript.ps</i> &gt; <i>Fixed.ps</i></p>

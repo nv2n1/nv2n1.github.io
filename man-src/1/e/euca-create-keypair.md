@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-keypair(1)"
 name: "euca-create-keypair"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-keypair/"
 description: "euca-create-keypair – Create a new SSH key pair for use with instances"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-keypair &#8211; Create a new SSH key pair for use with instances</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-keypair [-f FILE] [&#8211;show-empty-fields] [-U URL]</p>

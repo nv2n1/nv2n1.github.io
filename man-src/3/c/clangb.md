@@ -1,4 +1,5 @@
 ---
+
 title: "clangb(3)"
 name: "clangb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clangb/"
 description: "clangb.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clangb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

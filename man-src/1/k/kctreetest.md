@@ -1,4 +1,5 @@
 ---
+
 title: "kctreetest(1)"
 name: "kctreetest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kctreetest/"
 description: "kctreetest – command line interface to test the file tree database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kctreetest &#8211; command line interface to test the file tree database</p>
 <h2>DESCRIPTION</h2>
 <p> The command `<code>kctreetest</code>&#8216; is a utility for facility test and performance test of the file tree database. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>rnum</i>&#8216; specifies the number of iterations. </p>

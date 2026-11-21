@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-diff(1)"
 name: "hwloc-diff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-diff/"
 description: "hwloc-diff – Compute differences between two XML topologies"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-diff &#8211; Compute differences between two XML topologies</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-diff</code> [<i>options</i>] <i>&lt;input1.xml&gt;</i> <i>&lt;input2.xml&gt;</i> </p>

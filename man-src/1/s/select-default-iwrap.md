@@ -1,4 +1,5 @@
 ---
+
 title: "select-default-iwrap(1)"
 name: "select-default-iwrap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-select-default-iwrap/"
 description: "select-default-iwrap – Selects the user default ispell dictionary for use with ispell-wrapper"
 ---
 
-<h2 class="name">NAME</h2>
 <p> select-default-iwrap &#8211; Selects the user default ispell dictionary for use with ispell-wrapper </p>
 <h2>SYNOPSIS</h2>
 <pre>

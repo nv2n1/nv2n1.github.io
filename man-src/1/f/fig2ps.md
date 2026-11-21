@@ -1,4 +1,5 @@
 ---
+
 title: "fig2ps(1)"
 name: "fig2ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fig2ps/"
 description: "fig2ps, fig2eps,fig2pdf – Convert xfig files in ps|pdf, processing all the text marked as special with LaTeX."
 ---
 
-<h2 class="name">NAME</h2>
 <p> fig2ps, fig2eps,fig2pdf &#8211; Convert xfig files in ps|pdf, processing all the text marked as special with LaTeX.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fig2ps </code>[<code>-h</code>|<code>&#8211;help</code>] </p>

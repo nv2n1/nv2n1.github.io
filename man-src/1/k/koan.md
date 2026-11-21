@@ -1,4 +1,5 @@
 ---
+
 title: "koan(1)"
 name: "koan"
 section: "1"
@@ -6,10 +7,7 @@ letter: "k"
 url: "/docs/linux/man/1-koan/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- koan - kickstart over a network, client side helper for cobbler 
+koan - kickstart over a network, client side helper for cobbler 
 
 <h2>SYNOPSIS</h2>
 

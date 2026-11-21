@@ -1,4 +1,5 @@
 ---
+
 title: "euca-disassociate-route-table(1)"
 name: "euca-disassociate-route-table"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-disassociate-route-table/"
 description: "euca-disassociate-route-table – Disassociate a VPC subnet from a route table"
 ---
 
-<h2>NAME</h2>
 <p> euca-disassociate-route-table &#8211; Disassociate a VPC subnet from a route table</p>
 <h2>SYNOPSIS</h2>
 <p> euca-disassociate-route-table [&#8211;show-empty-fields] [-U URL]</p>

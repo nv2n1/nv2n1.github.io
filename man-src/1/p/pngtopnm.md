@@ -1,4 +1,5 @@
 ---
+
 title: "pngtopnm(1)"
 name: "pngtopnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pngtopnm/"
 description: "pngtopnm – convert a Portable Network Graphics file into portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pngtopnm &#8211; convert a Portable Network Graphics file into portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pngtopnm</code> [-verbose] [-alpha | -mix] [-background color]<br />

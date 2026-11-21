@@ -1,4 +1,5 @@
 ---
+
 title: "mhbuild(1)"
 name: "mhbuild"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mhbuild/"
 description: "mhbuild – translate MIME composition draft"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mhbuild &#8211; translate MIME composition draft </p>
 <h2>SYNOPSIS</h2>
 <dl>

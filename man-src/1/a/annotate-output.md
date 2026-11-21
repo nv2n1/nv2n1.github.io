@@ -1,4 +1,5 @@
 ---
+
 title: "annotate-output(1)"
 name: "annotate-output"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-annotate-output/"
 description: "annotate-output – annotate program output with time and stream"
 ---
 
-<h2>NAME</h2>
 <p> annotate-output &#8211; annotate program output with time and stream</p>
 <h2>SYNOPSIS</h2>
 <p> <code>annotate-output</code> [<i>options</i>] <i>program</i> [<i>args</i> &#8230;]</p>

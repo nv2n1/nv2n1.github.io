@@ -1,4 +1,5 @@
 ---
+
 title: "powerman(1)"
 name: "powerman"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-powerman/"
 description: "powerman – power on/off nodes"
 ---
 
-<h2>NAME</h2>
 <p> powerman &#8211; power on/off nodes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pm</code> <i>[-options] -action [targets] [-action [targets] &#8230;]</i></p>

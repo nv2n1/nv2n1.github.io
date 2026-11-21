@@ -1,4 +1,5 @@
 ---
+
 title: "adjust(3)"
 name: "adjust"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-adjust/"
 description: "QuantLib::Calendar – calendar class"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::Calendar &#8211; calendar class </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/calendar.hpp&gt; </p>

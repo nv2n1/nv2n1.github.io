@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_inc(3)"
 name: "cmap_inc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmap_inc/"
 description: "cmap_inc – Increase already stored value in CMAP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cmap_inc &#8211; Increase already stored value in CMAP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>

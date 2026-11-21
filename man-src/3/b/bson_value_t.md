@@ -1,4 +1,5 @@
 ---
+
 title: "bson_value_t(3)"
 name: "bson_value_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_value_t/"
 description: "bson_value_t – BSON Boxed Container Type"
 ---
 
-<h2>NAME</h2>
 <p> bson_value_t &#8211; BSON Boxed Container Type</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

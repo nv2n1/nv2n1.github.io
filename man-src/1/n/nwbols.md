@@ -1,4 +1,5 @@
 ---
+
 title: "nwbols(1)"
 name: "nwbols"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwbols/"
 description: "nwbols – List NetWare Bindery Objects"
 ---
 
-<h2>NAME</h2>
 <p> nwbols &#8211; List NetWare Bindery Objects</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwbols</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-t</code> <i>type</i> ] [ <code>-o</code> <i>pattern</i> ] [ <code>-v</code> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_socket(3)"
 name: "curl_multi_socket"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_multi_socket/"
 description: "curl_multi_socket – reads/writes available data"
 ---
 
-<h2>NAME</h2>
 <p> curl_multi_socket &#8211; reads/writes available data</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

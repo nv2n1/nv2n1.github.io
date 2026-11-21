@@ -1,4 +1,5 @@
 ---
+
 title: "qshape(1)"
 name: "qshape"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qshape/"
 description: "qshape – Print Postfix queue domain and age distribution"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qshape &#8211; Print Postfix queue domain and age distribution </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qshape</code> [<code>-s</code>] [<code>-p</code>] [<code>-m </code><i>min_subdomains</i>]<br />

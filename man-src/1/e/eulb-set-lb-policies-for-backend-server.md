@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-set-lb-policies-for-backend-server(1)"
 name: "eulb-set-lb-policies-for-backend-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-set-lb-policies-for-backend-server/"
 description: "eulb-set-lb-policies-for-backend-server – Change the policies associated with a port on which load-balanced back end servers listen."
 ---
 
-<h2>NAME</h2>
 <p> eulb-set-lb-policies-for-backend-server &#8211; Change the policies associated with a port on which load-balanced back end servers listen.</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-set-lb-policies-for-backend-server <code>-i</code> PORT <code>-p</code> POLICY1,POLICY2,&#8230;</p>

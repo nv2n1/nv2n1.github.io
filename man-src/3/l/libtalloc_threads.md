@@ -1,4 +1,5 @@
 ---
+
 title: "libtalloc_threads(3)"
 name: "libtalloc_threads"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libtalloc_threads/"
 description: "libtalloc_threads – Chapter 8: Using threads with talloc"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libtalloc_threads &#8211; Chapter 8: Using threads with talloc</p>
 <h2>and thread safety</h2>
 <p> The talloc library is not internally thread-safe, in that accesses to variables on a talloc context are not controlled by mutexes or other thread-safe primitives. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usergetloginprofile(1)"
 name: "euare-usergetloginprofile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-usergetloginprofile/"
 description: "euare-usergetloginprofile – Verify that a user has a password"
 ---
 
-<h2>NAME</h2>
 <p> euare-usergetloginprofile &#8211; Verify that a user has a password</p>
 <h2>SYNOPSIS</h2>
 <p> euare-usergetloginprofile [&#8211;verbose] [&#8211;as-account ACCOUNT] [-U URL]</p>

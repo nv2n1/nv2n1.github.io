@@ -1,4 +1,5 @@
 ---
+
 title: "swapon(2)"
 name: "swapon"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-swapon/"
 description: "swapon, swapoff – start/stop swapping to file/device"
 ---
 
-<h2 class="name">NAME</h2>
 <p> swapon, swapoff &#8211; start/stop swapping to file/device </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code><br />

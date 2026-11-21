@@ -1,4 +1,5 @@
 ---
+
 title: "amqp-declare-queue(1)"
 name: "amqp-declare-queue"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-amqp-declare-queue/"
 description: "amqp-declare-queue – Declare (create or assert the existence of) a queue on an AMQP server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> amqp-declare-queue &#8211; Declare (create or assert the existence of) a queue on an AMQP server </p>
 <h2>SYNOPSIS</h2>
 <dl>

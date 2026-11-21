@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_write_value(3)"
 name: "asn1_write_value"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-asn1_write_value/"
 description: "asn1_write_value – API function"
 ---
 
-<h2>NAME</h2>
 <p> asn1_write_value &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>

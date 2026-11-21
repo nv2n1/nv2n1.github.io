@@ -1,4 +1,5 @@
 ---
+
 title: "docker-cp(1)"
 name: "docker-cp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-cp/"
 description: "docker-cp – Copy files/folders between a container and the local filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-cp &#8211; Copy files/folders between a container and the local filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH</code></p>

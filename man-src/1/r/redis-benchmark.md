@@ -1,4 +1,5 @@
 ---
+
 title: "redis-benchmark(1)"
 name: "redis-benchmark"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-redis-benchmark/"
 description: "redis-benchmark – Redis benchmark"
 ---
 
-<h2>NAME</h2>
 <p> redis-benchmark &#8211; Redis benchmark </p>
 <h2>SYNOPSIS</h2>
 <p> <code>redis-benchmark</code> [ options ] </p>

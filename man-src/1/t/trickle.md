@@ -1,4 +1,5 @@
 ---
+
 title: "trickle(1)"
 name: "trickle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trickle/"
 description: "trickle – a lightweight userspace bandwidth shaper"
 ---
 
-<h2>NAME</h2>
 <p> <code>trickle</code> &#8211; a lightweight userspace bandwidth shaper</p>
 <h2>SYNOPSIS</h2>
 <p> <code>trickle</code> [-<code>h </code> ] [-<code>v</code> ] [-<code>V</code> ] [-<code>s</code> ] [-<code>d </code><i>rate</i> ] [-<code>u </code><i>rate</i> ] [-<code>w </code><i>length</i> ] [-<code>t </code><i>time</i> ] [-<code>l </code><i>length</i> ] [-<code>n </code><i>path</i> ] <i>command &#8230;</i></p>

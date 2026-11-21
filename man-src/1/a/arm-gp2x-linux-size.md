@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-size(1)"
 name: "arm-gp2x-linux-size"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm-gp2x-linux-size/"
 description: "size – list section sizes and total size."
 ---
 
-<h2>NAME</h2>
 <p> size &#8211; list section sizes and total size.</p>
 <h2>SYNOPSIS</h2>
 <p> size [<code>-A</code>|<code>-B</code>|<code>&#8211;format=</code><i>compatibility</i>]<br />

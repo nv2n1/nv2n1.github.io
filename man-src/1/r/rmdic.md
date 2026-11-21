@@ -1,4 +1,5 @@
 ---
+
 title: "rmdic(1)"
 name: "rmdic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rmdic/"
 description: "rmdic – Tool for deleting a user dictionary"
 ---
 
-<h2>NAME</h2>
 <p> rmdic &#8211; Tool for deleting a user dictionary</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rmdic [{-cs|-cannaserver} </code><i>canna-server</i>] <i>dicname1</i> [<i>dicname2</i> &#8230;]</p>

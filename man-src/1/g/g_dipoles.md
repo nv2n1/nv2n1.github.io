@@ -1,4 +1,5 @@
 ---
+
 title: "g_dipoles(1)"
 name: "g_dipoles"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_dipoles/"
 description: "g_dipoles – computes the total dipole plus fluctuations"
 ---
 
-<h2>NAME</h2>
 <p> g_dipoles &#8211; computes the total dipole plus fluctuations </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

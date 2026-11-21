@@ -1,4 +1,5 @@
 ---
+
 title: "midi_time(3)"
 name: "midi_time"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-midi_time/"
 description: "midi_time – The current position in the MIDI file, in seconds. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> midi_time &#8211; The current position in the MIDI file, in seconds. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

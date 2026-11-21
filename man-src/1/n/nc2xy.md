@@ -1,4 +1,5 @@
 ---
+
 title: "nc2xy(1)"
 name: "nc2xy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nc2xy/"
 description: "nc2xy – Converting netCDF column file(s) to ASCII xy data"
 ---
 
-<h2>NAME</h2>
 <p> nc2xy &#8211; Converting netCDF column file(s) to ASCII xy data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nc2xy</code> <i>files</i> [ <code>-F</code><i>var1/var2/&#8230;</i> ] [ <code>-S</code>[<code>r</code>] ] [ <code>-V</code> ] [ <code>-f</code><i>colinfo</i> ] [ <code>-b</code><code>o</code> ]</p>

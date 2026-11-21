@@ -1,4 +1,5 @@
 ---
+
 title: "jamin(1)"
 name: "jamin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jamin/"
 description: "jamin – JACK Audio Mastering interface"
 ---
 
-<h2>NAME</h2>
 <p> jamin &#8211; JACK Audio Mastering interface </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jamin</code> [<i> options </i>] [<i> inport1 inport2</i> [<i> outport1 outport2</i> ]] </p>

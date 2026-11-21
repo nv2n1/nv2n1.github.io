@@ -1,4 +1,5 @@
 ---
+
 title: "globus_error_wrap_openssl_error(3)"
 name: "globus_error_wrap_openssl_error"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_error_wrap_openssl_error/"
 description: "Error Object Helper Functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Error Object Helper Functions &#8211; </p>
 <h3>Functions</h3>
 <p> globus_bool_t <code>globus_error_match_openssl_error</code> (globus_object_t *error, unsigned long library, unsigned long function, unsigned long reason) </p>

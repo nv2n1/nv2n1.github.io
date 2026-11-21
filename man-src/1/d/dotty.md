@@ -1,4 +1,5 @@
 ---
+
 title: "dotty(1)"
 name: "dotty"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dotty/"
 description: "dotty – A Customizable Graph Editor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dotty &#8211; A Customizable Graph Editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dotty</code> [ <code>-V</code> ] [ <code>-lm</code><i>mode</i> ] [ <code>-el</code><i>lev</i> ] [ <i>file</i> ]</p>

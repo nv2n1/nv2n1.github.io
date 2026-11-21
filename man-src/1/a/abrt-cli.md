@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-cli(1)"
 name: "abrt-cli"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-cli/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-cli - List, remove, print, analyze, report problems 
+abrt-cli - List, remove, print, analyze, report problems 
 
 <h2>SYNOPSIS</h2>
 

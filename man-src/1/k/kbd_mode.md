@@ -1,4 +1,5 @@
 ---
+
 title: "kbd_mode(1)"
 name: "kbd_mode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kbd_mode/"
 description: "kbd_mode – report or set the keyboard mode"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kbd_mode &#8211; report or set the keyboard mode </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kbd_mode</code> [ <i>-a | -u | -k | -s </i> ] [ <i>-f</i> ] [ <i>-C CONSOLE</i> ]</p>

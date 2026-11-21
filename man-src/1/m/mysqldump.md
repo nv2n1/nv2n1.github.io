@@ -1,4 +1,5 @@
 ---
+
 title: "mysqldump(1)"
 name: "mysqldump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqldump/"
 description: "mysqldump – a database backup program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqldump &#8211; a database backup program </p>
 <h2>SYNOPSIS</h2>
 <dl>

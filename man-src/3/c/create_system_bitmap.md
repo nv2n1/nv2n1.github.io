@@ -1,4 +1,5 @@
 ---
+
 title: "create_system_bitmap(3)"
 name: "create_system_bitmap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-create_system_bitmap/"
 description: "create_system_bitmap – Creates a system memory bitmap. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> create_system_bitmap &#8211; Creates a system memory bitmap. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

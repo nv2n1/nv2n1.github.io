@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_swindow(3)"
 name: "cdk_swindow"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_swindow/"
 description: "cdk_swindow – a curses scrolling window widget."
 ---
 
-<h2>NAME</h2>
 <p> cdk_swindow &#8211; a curses scrolling window widget.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

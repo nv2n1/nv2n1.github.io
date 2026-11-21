@@ -1,4 +1,5 @@
 ---
+
 title: "docker-trust-inspect(1)"
 name: "docker-trust-inspect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-trust-inspect/"
 description: "docker-trust-inspect – Return low-level information about keys and signatures"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-trust-inspect &#8211; Return low-level information about keys and signatures </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker trust inspect IMAGE[:TAG] [IMAGE[:TAG]&#8230;]</code> </p>

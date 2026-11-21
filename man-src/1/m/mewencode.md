@@ -1,4 +1,5 @@
 ---
+
 title: "mewencode(1)"
 name: "mewencode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mewencode/"
 description: "mewencode, mewdecode, mewcat – MIME encoder/decoder"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>mewencode</code>, <code>mewdecode</code>, <code>mewcat</code> &#8211; MIME encoder/decoder </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mewencode</code> [<code>-options</code>] [<i>infile</i> [<i>outfile</i>]] </p>

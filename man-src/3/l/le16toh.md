@@ -1,4 +1,5 @@
 ---
+
 title: "le16toh(3)"
 name: "le16toh"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-le16toh/"
 description: "htobe16, htole16, be16toh, le16toh, htobe32, htole32, be32toh, le32toh, htobe64, htole64, be64toh, le64toh – convert values between host and big-/little-endian byte order"
 ---
 
-<h2 class="name">NAME</h2>
 <p> htobe16, htole16, be16toh, le16toh, htobe32, htole32, be32toh, le32toh, htobe64, htole64, be64toh, le64toh &#8211; convert values between host and big-/little-endian byte order </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

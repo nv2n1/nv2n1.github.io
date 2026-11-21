@@ -1,4 +1,5 @@
 ---
+
 title: "sadf(1)"
 name: "sadf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sadf/"
 description: "sadf – Display data collected by sar in multiple formats."
 ---
 
-<h2 class="name">NAME</h2>
 <p> sadf &#8211; Display data collected by sar in multiple formats.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sadf [ -C ] [ -c | -d | -g | -j | -l | -p | -r | -x ] [ -H ] [ -h ] [ -T | -t | -U ] [ -V ] [ -O</code> <i>opts </i><code>[,&#8230;] ] [ -P { </code><i>cpu_list </i><code>| ALL } ] [ -s [</code> <i>hh</i><code>:</code><i>mm</i><code>[:</code><i>ss</i><code>] ] ] [ -e [</code><i>hh</i><code>:</code><i>mm</i><code>[:</code><i>ss</i><code>] ] ]</code> <code>[ &#8211;dev=</code><i>dev_list </i><code>] [ &#8211;fs=</code><i>fs_list </i><code>] [ &#8211;iface=</code><i>iface_list</i><code>] [ &#8212;</code> <i>sar_options </i><code>] [ </code><i>interval </i><code>[ </code><i>count </i><code>] ] [ </code><i>datafile </i><code>| </code><i>-[0-9]+ </i><code>]</code> </p>

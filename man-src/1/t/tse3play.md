@@ -1,4 +1,5 @@
 ---
+
 title: "tse3play(1)"
 name: "tse3play"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tse3play/"
 description: "tse3play – play/convert music files (MIDI or TSE3MDL) using the TSE3 sequencer engine library"
 ---
 
-<h2>NAME</h2>
 <p> tse3play &#8211; play/convert music files (MIDI or TSE3MDL) using the <font SIZE="-1">TSE3</font> sequencer engine library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tse3play [-h] [-ver] [-v] [-list] [-nv] [-np] [-l] [-omidi</code> <i>output-midi-file</i> <code>] [-omidi0] [-omidicomp] [-otse3mdl</code> <i>output-tse3mdl-file</i> <code>] [-map</code> <i>from-midi-channel to-midi-channel</i> <code>] [-m] [-r] [-gmr] [-gsr] [-xgr] [-unix] [-oss] [-alsa] [-arts] [-stream] [-s</code> <i>start-time</i> <code>] [-solo</code> <i>track</i> <code>] [-sl</code> <i>usecs</i> <code>] [ -stop ] [ -e ] [ -mute</code> <i>channel</i> <code>] [ -pd</code> <i>dir</i> <code>]</code> <i>file</i> <code>] [ -port</code> <i>port</i> <code>] [ -fast ]</code></p>

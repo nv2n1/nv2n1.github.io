@@ -1,4 +1,5 @@
 ---
+
 title: "reporter-ureport(1)"
 name: "reporter-ureport"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-reporter-ureport/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- reporter-ureport - Reports ABRT problems in format of micro report 
+reporter-ureport - Reports ABRT problems in format of micro report 
 
 <h2>SYNOPSIS</h2>
 

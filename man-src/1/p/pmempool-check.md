@@ -1,4 +1,5 @@
 ---
+
 title: "pmempool-check(1)"
 name: "pmempool-check"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmempool-check/"
 description: "pmempool-check – Check and repair Persistent Memory Pool"
 ---
 
-<h2>NAME</h2>
 <p> pmempool-check &#8211; Check and repair Persistent Memory Pool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmempool check</code> [&lt;options&gt;] &lt;file&gt;</p>

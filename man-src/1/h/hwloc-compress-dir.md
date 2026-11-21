@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-compress-dir(1)"
 name: "hwloc-compress-dir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-compress-dir/"
 description: "hwloc-compress-dir – Compress a directory of XML topologies"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-compress-dir &#8211; Compress a directory of XML topologies</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-compress-dir</code> [<i>options</i>] &lt;inputdir&gt; &lt;outputdir&gt;</p>

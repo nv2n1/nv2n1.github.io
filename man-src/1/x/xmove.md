@@ -1,4 +1,5 @@
 ---
+
 title: "xmove(1)"
 name: "xmove"
 section: "1"
@@ -6,9 +7,7 @@ letter: "x"
 url: "/docs/linux/man/1-xmove/"
 ---
 
-<h2>NAME</h2>
-
- xmove - interactive control panel for telescope
+xmove - interactive control panel for telescope
 
 <h2>SYNOPSIS</h2>
 

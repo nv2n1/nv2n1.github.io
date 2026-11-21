@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-document-list(1)"
 name: "flatpak-document-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-document-list/"
 description: "flatpak-document-list – List exported files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-document-list &#8211; List exported files </p>
 <h2>SYNOPSIS</h2>
 <dl>

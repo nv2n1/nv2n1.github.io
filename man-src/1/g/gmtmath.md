@@ -1,4 +1,5 @@
 ---
+
 title: "gmtmath(1)"
 name: "gmtmath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtmath/"
 description: "gmtmath – Reverse Polish Notation (RPN) calculator for data tables"
 ---
 
-<h2>NAME</h2>
 <p> gmtmath &#8211; Reverse Polish Notation (RPN) calculator for data tables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtmath</code> [ <i>t_f(t).d</i>[<code>+e</code>][<code>+s</code>|<code>w</code>] ] [ <i>cols</i> ] [ <i>eigen</i> ] [ ] [ <i>n_col</i>[/<i>t_col</i>] ] [ ] [ [<code>f</code>|<code>l</code>] ] [ <i>t_min</i>/<i>t_max</i>/<i>t_inc</i>[<code>+</code>]|<i>tfile</i> ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-s</code><i>&lt;flags&gt;</i> ] <i>operand</i> [ <i>operand</i> ] <code>OPERATOR</code> [ <i>operand</i> ] <code>OPERATOR</code> &#8230; <code>=</code> [ <i>outfile</i> ] </p>

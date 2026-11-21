@@ -1,4 +1,5 @@
 ---
+
 title: "ser2net(8)"
 name: "ser2net"
 section: "8"
@@ -6,8 +7,9 @@ letter: "s"
 url: "/docs/linux/man/8-ser2net/"
 description: "ser2net – Serial to network proxy"
 ---
+
 <p>ser2net &#8211; Serial to network proxy  </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>ser2net</code> [-c configfile] [-C configline] [-p controlport] [-n] [-d] [-b] [-v] [-P pidfile] </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>ser2net</code> daemon allows telnet and tcp sessions to be established with a unit&#8217;s serial ports. </p>

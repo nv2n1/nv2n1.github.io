@@ -1,4 +1,5 @@
 ---
+
 title: "pmnsdel(1)"
 name: "pmnsdel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmnsdel/"
 description: "pmnsdel – delete a subtree of names from the Performance Co-Pilot PMNS"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmnsdel</code> &#8211; delete a subtree of names from the Performance Co-Pilot PMNS</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmnsdel</code> [<code>-n</code> <i>namespace</i>] <i>metricpath</i> [ &#8230; ]</p>

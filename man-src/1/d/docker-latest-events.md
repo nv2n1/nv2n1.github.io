@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-events(1)"
 name: "docker-latest-events"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-events/"
 description: "docker-events – Get real time events from the server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-events &#8211; Get real time events from the server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker events</code> [<code>&#8211;help</code>] [<code>-f</code>|<code>&#8211;filter</code>[=<i>[]</i>]] [<code>&#8211;since</code>[=<i>SINCE</i>]] [<code>&#8211;until</code>[=<i>UNTIL</i>]] </p>

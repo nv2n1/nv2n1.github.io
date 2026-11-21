@@ -1,4 +1,5 @@
 ---
+
 title: "djpeg(1)"
 name: "djpeg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-djpeg/"
 description: "djpeg – decompress a JPEG file to an image file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> djpeg &#8211; decompress a JPEG file to an image file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>djpeg</code> [ <i>options</i> ] [ <i>filename</i> ] </p>

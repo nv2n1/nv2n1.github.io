@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_error_message(3)"
 name: "dblink_error_message"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dblink_error_message/"
 description: "dblink_error_message – gets last error message on the named connection"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dblink_error_message &#8211; gets last error message on the named connection </p>
 <h2>SYNOPSIS</h2>
 <pre>

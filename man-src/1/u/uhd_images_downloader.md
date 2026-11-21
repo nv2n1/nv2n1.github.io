@@ -1,4 +1,5 @@
 ---
+
 title: "uhd_images_downloader(1)"
 name: "uhd_images_downloader"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uhd_images_downloader/"
 description: "uhd_images_downloader – USRP Hardware Driver firmware/FPGA downloader"
 ---
 
-<h2>NAME</h2>
 <p> uhd_images_downloader &#8211; USRP Hardware Driver firmware/FPGA downloader</p>
 <h2>DESCRIPTION</h2>
 <p> The UHD package is the universal hardware driver for Ettus Research products. The goal of the UHD is to provide a host driver and API for current and future Ettus Research products. Users will be able to use the UHD driver standalone or with 3rd party applications. </p>

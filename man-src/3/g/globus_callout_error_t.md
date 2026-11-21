@@ -1,4 +1,5 @@
 ---
+
 title: "globus_callout_error_t(3)"
 name: "globus_callout_error_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_callout_error_t/"
 description: "Callout Constants –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Callout Constants &#8211; </p>
 <p> Constants.</p>
 <h3>Enumerations</h3>

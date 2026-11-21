@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-update(1)"
 name: "ldns-update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-update/"
 description: "ldns-update – send a dynamic update packet"
 ---
 
-<h2>NAME</h2>
 <p> ldns-update &#8211; send a dynamic update packet</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-update </code> [ <i>zone</i> ] <i>ip</i> [ <i>tsig_name</i> <i>tsig_als</i> <i>tsig_hmac</i> ] </p>

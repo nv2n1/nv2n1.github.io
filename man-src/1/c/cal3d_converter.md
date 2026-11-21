@@ -1,4 +1,5 @@
 ---
+
 title: "cal3d_converter(1)"
 name: "cal3d_converter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cal3d_converter/"
 description: "cal3d_converter – convert cal3d files from / to binary and XML (version 0.11.0)"
 ---
 
-<h2>NAME</h2>
 <p> cal3d_converter &#8211; convert cal3d files from / to binary and XML (version 0.11.0) </p>
 <h2>SYNOPSIS</h2>
 <p> cal3d_converter source destination </p>

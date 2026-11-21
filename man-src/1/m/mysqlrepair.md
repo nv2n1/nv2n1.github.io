@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlrepair(1)"
 name: "mysqlrepair"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlrepair/"
 description: "mysqlcheck – a table maintenance program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlcheck &#8211; a table maintenance program </p>
 <h2>SYNOPSIS</h2>
 <dl>

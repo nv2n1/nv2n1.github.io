@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-penalty(1)"
 name: "doveadm-penalty"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-penalty/"
 description: "doveadm-penalty – Show current penalties"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-penalty &#8211; Show current penalties</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>penalty</code> [<code>-a</code> <i>anvil_socket_path</i>] [<i>ip</i>[<code>/</code><i>mask</i>]]</p>

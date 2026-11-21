@@ -1,4 +1,5 @@
 ---
+
 title: "audit_open(3)"
 name: "audit_open"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_open/"
 description: "audit_open – Open a audit netlink socket connection"
 ---
 
-<h2>NAME</h2>
 <p> audit_open &#8211; Open a audit netlink socket connection</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

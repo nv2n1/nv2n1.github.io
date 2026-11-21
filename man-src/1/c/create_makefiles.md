@@ -1,4 +1,5 @@
 ---
+
 title: "create_makefiles(1)"
 name: "create_makefiles"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-create_makefiles/"
 description: "create_makefiles – Recreates all Makefiles beneath a directory"
 ---
 
-<h2>NAME</h2>
 <p> create_makefiles &#8211; Recreates all Makefiles beneath a directory</p>
 <h2>SYNOPSIS</h2>
 <dl>

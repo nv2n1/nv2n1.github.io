@@ -1,4 +1,5 @@
 ---
+
 title: "manpath(1)"
 name: "manpath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-manpath/"
 description: "manpath – determine search path for manual pages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> manpath &#8211; determine search path for manual pages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>manpath</code> [<code>-qgdc?V</code>] [<code>-m</code> <i>system</i>[,&#8230;]] [<code>-C</code> <i>file</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-bundle-image(1)"
 name: "euca-bundle-image"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-bundle-image/"
 description: "euca-bundle-image – Prepare an image for use in the cloud"
 ---
 
-<h2>NAME</h2>
 <p> euca-bundle-image &#8211; Prepare an image for use in the cloud</p>
 <h2>SYNOPSIS</h2>
 <p> euca-bundle-image [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] <code>-i</code> FILE</p>

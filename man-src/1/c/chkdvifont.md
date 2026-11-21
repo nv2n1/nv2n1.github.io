@@ -1,4 +1,5 @@
 ---
+
 title: "chkdvifont(1)"
 name: "chkdvifont"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chkdvifont/"
 description: "chkdvifont – CHecK DVI/tfm/font file and tell informations of FONTs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chkdvifont &#8211; CHecK DVI/tfm/font file and tell informations of FONTs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chkdvifont</code> [<code>-s</code>] [<code>-c</code>] [<code>-{f|F}</code><i>&lt;font_data_file&gt;</i>] [<code>-d</code>] <i>dvi_file_name</i> </p>

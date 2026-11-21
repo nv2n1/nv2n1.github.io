@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-gcov-12(1)"
 name: "x86_64-linux-gnu-gcov-12"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-gcov-12/"
 description: "gcov – coverage testing tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gcov &#8211; coverage testing tool </p>
 <h2>SYNOPSIS</h2>
 <p> gcov [<code>-v</code>|<code>&#8211;version</code>] [<code>-h</code>|<code>&#8211;help</code>]<br />

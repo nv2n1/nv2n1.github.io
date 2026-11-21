@@ -1,4 +1,5 @@
 ---
+
 title: "naim(1)"
 name: "naim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-naim/"
 description: "naim – console mode chat client"
 ---
 
-<h2>NAME</h2>
 <p> naim &#8211; console mode chat client</p>
 <h2>SYNOPSIS</h2>
 <p> naim<br />

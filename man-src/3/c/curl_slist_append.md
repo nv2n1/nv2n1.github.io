@@ -1,4 +1,5 @@
 ---
+
 title: "curl_slist_append(3)"
 name: "curl_slist_append"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_slist_append/"
 description: "curl_slist_append – add a string to an slist"
 ---
 
-<h2>NAME</h2>
 <p> curl_slist_append &#8211; add a string to an slist</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

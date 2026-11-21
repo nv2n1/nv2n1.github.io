@@ -1,4 +1,5 @@
 ---
+
 title: "lore(1)"
 name: "lore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lore/"
 description: "lore – convert documentations formats"
 ---
 
-<h2>NAME</h2>
 <p> lore &#8211; convert documentations formats</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lore [-l </code><i>linkrel</i>] [-d <i>docsdir</i>] [-i <i>input</i>] [-o <i>output</i>] [&#8211;config attribute[=value] [&#8230;]] [-p] [file [&#8230;]] </p>

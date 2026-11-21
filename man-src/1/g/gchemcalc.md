@@ -1,4 +1,5 @@
 ---
+
 title: "gchemcalc(1)"
 name: "gchemcalc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gchemcalc/"
 description: "gchemcalc – simple calculator for chemists"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gchemcalc &#8211; simple calculator for chemists </p>
 <h2>SYNOPSIS</h2>
 <dl>

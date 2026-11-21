@@ -1,4 +1,5 @@
 ---
+
 title: "gfstat(1)"
 name: "gfstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfstat/"
 description: "gfstat – manual page for gfstat (glusterfs-coreutils) 0.2.0"
 ---
 
-<h2>NAME</h2>
 <p> gfstat &#8211; manual page for gfstat (glusterfs-coreutils) 0.2.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfstat</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>

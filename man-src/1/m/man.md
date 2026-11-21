@@ -1,4 +1,5 @@
 ---
+
 title: "man(1)"
 name: "man"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-man/"
 description: "man – an interface to the system reference manuals"
 ---
 
-<h2 class="name">NAME</h2>
 <p> man &#8211; an interface to the system reference manuals </p>
 <h2>SYNOPSIS</h2>
 <p> <code>man</code> [<i>man options</i>] [[<i>section</i>] <i>page</i>&nbsp;&#8230;]&nbsp;&#8230;<br />

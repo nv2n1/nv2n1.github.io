@@ -1,4 +1,5 @@
 ---
+
 title: "dtrtrs(3)"
 name: "dtrtrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtrtrs/"
 description: "dtrtrs.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dtrtrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

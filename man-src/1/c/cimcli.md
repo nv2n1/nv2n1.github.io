@@ -1,4 +1,5 @@
 ---
+
 title: "cimcli(1)"
 name: "cimcli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cimcli/"
 description: "cimcli – command line WBEM Client"
 ---
 
-<h2>NAME</h2>
 <p> cimcli &#8211; command line WBEM Client</p>
 <h2>SYNOPSIS</h2>
 <p> <i>Operation</i> [<i>OperationTarget</i>] [<i>ValueParameter</i> <i>&#8230;</i>] [ <code>-hc</code> ] [ <code>-h </code><i>operationName</i> ] [ <code>-ho</code> ] [ <code>&#8211;help</code> ] [ <code>-n </code><i>namespace</i> ] [ <code>-l </code><i>location</i> ] [ <code>-u </code><i>user </i><code>name</code> ] [ <code>-p </code><i>password</i> ] [ <code>-s</code> ] [ <code>&#8211;cert </code><i>certFilePath</i> ] [ <code>&#8211;key </code><i>keyFilePath</i> ] [ <code>&#8211;truststore </code><i>clientTrustStorePath</i> ] [ <code>&#8211;sort</code> ] [ <code>&#8211;r </code><i>repeat </i><code>count</code> ] [ <code>-delay </code><i>seconds</i> ] [ <code>&#8211;sum</code> ] [ <code>&#8211;count </code><i>object </i><code>count</code> ] [ <code>&#8211;timeout </code><i>seconds</i> ] [ <code>-o </code><i>XML|MOF|TABLE</i> ] [ <code>&#8211;verbose</code> ] [ <code>-pl </code><i>propertyList</i> ] [ <code>-niq</code> ] [ <code>-di</code> ] [ <code>-ic</code> ] [ <code>-ac </code><i>associationClassName</i> ] [ <code>-rc </code><i>resultClassName</i> ] [ <code>-r </code><i>role</i> ] [ <code>-rr </code><i>resultRole</i> ] [ <code>-f </code><i>filter</i> ] [ <code>-ql </code><i>query </i><code>language</code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;expExit </code><i>exitCode</i> ] [ <code>&nbsp;<wbr>-pt </code><i>pullTimeout</i> ] [ <code>-mr </code><i>maxObjectsToReceive</i> ] [ <code>-pullDelay </code><i>pullDelayinSec</i> ] [ <code>-mo </code><i>maxObjectCount</i> ] </p>

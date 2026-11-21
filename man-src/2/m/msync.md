@@ -1,4 +1,5 @@
 ---
+
 title: "msync(2)"
 name: "msync"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-msync/"
 description: "msync – synchronize a file with a memory map"
 ---
 
-<h2 class="name">NAME</h2>
 <p> msync &#8211; synchronize a file with a memory map </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/mman.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-put-data(1)"
 name: "euwatch-put-data"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euwatch-put-data/"
 description: "euwatch-put-data – add data points to a CloudWatch metric"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>euwatch-put-data</code> &#8211; add data points to a CloudWatch metric </p>
 <h2>SYNOPSIS</h2>
 <p> &#8211;<code>n</code> <i>NAMESPACE</i> [-<code>v </code><i>FLOAT</i> ] <i>&#8230;</i><br />

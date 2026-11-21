@@ -1,4 +1,5 @@
 ---
+
 title: "ipcalc(1)"
 name: "ipcalc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipcalc/"
 description: "ipcalc – perform simple manipulation of IP addresses"
 ---
 
-<h2>NAME</h2>
 <p> ipcalc &#8211; perform simple manipulation of IP addresses</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipcalc</code> [<i>OPTION</i>]&#8230; &lt;<code>IP address</code>&gt;[<i>/prefix</i>] [<i>netmask</i>] </p>

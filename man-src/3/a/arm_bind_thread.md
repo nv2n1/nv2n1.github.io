@@ -1,4 +1,5 @@
 ---
+
 title: "arm_bind_thread(3)"
 name: "arm_bind_thread"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arm_bind_thread/"
 description: "arm_bind_thread – bind thread"
 ---
 
-<h2>NAME</h2>
 <p> arm_bind_thread &#8211; bind thread</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>

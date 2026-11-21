@@ -1,4 +1,5 @@
 ---
+
 title: "krazy2(1)"
 name: "krazy2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-krazy2/"
 description: "krazy2 – Sanity checks KDE source code."
 ---
 
-<h2 class="name">NAME</h2>
 <p> krazy2 &#8211; Sanity checks KDE source code. </p>
 <h2>SYNOPSIS</h2>
 <p> krazy2 [<font SIZE="-1">OPTIONS</font>] [<font SIZE="-1">FILES</font>]</p>

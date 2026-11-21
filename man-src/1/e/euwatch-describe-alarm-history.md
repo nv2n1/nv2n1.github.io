@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-describe-alarm-history(1)"
 name: "euwatch-describe-alarm-history"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euwatch-describe-alarm-history/"
 description: "euwatch-describe-alarm-history – Retrieve history for one alarm or all alarms"
 ---
 
-<h2>NAME</h2>
 <p> euwatch-describe-alarm-history &#8211; Retrieve history for one alarm or all alarms</p>
 <h2>SYNOPSIS</h2>
 <p> euwatch-describe-alarm-history [&#8211;end-date DATE]</p>

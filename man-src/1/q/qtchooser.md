@@ -1,4 +1,5 @@
 ---
+
 title: "qtchooser(1)"
 name: "qtchooser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qtchooser/"
 description: "qtchooser – a wrapper used to select between Qt development binary versions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qtchooser &#8211; a wrapper used to select between Qt development binary versions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qtchooser</code> <code>-list-versions</code><br />

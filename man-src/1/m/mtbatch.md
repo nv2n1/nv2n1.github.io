@@ -1,4 +1,5 @@
 ---
+
 title: "mtbatch(1)"
 name: "mtbatch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtbatch/"
 description: "mtbatch – Sends SMS in batch mode"
 ---
 
-<h2>NAME</h2>
 <p> mtbatch &#8211; Sends SMS in batch mode</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtbatch</code> <i></i>[options]<i>content-file</i>receivers-file<i>&#8230;</i></p>

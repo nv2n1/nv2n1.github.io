@@ -1,4 +1,5 @@
 ---
+
 title: "convert-ly(1)"
 name: "convert-ly"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-convert-ly/"
 description: "convert-ly – manual page for convert-ly 2.12.2"
 ---
 
-<h2>NAME</h2>
 <p> convert-ly &#8211; manual page for convert-ly 2.12.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>convert-ly</code> [<i>OPTION</i>]&#8230; <i>FILE</i></p>

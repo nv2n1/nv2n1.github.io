@@ -1,4 +1,5 @@
 ---
+
 title: "forwards(3)"
 name: "forwards"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-forwards/"
 description: "QuantLib::CapFloor::arguments – Arguments for cap/floor calculation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::CapFloor::arguments &#8211; Arguments for cap/floor calculation </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/capfloor.hpp&gt; </p>

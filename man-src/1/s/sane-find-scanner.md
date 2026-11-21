@@ -1,4 +1,5 @@
 ---
+
 title: "sane-find-scanner(1)"
 name: "sane-find-scanner"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sane-find-scanner/"
 description: "sane-find-scanner – find SCSI and USB scanners and their device files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sane-find-scanner &#8211; find SCSI and USB scanners and their device files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sane-find-scanner</code> [<code>-?</code>|<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>] [<code>-q</code>] [<code>-p</code>] [<code>-f</code>] [<code>-F</code> <i>filename</i>] [<i>devname</i>] </p>

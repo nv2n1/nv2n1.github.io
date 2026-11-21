@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-unmount(1)"
 name: "atomic-unmount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-unmount/"
 description: "atomic-unmount – Unmount Images/Containers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atomic-unmount &#8211; Unmount Images/Containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic unmount</code> [<code>-h</code>|<code>&#8211;help</code>] DIRECTORY </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gtklp(1)"
 name: "gtklp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtklp/"
 description: "gtklp – print files via CUPS"
 ---
 
-<h2>NAME</h2>
 <p> gtklp &#8211; print files via CUPS</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtklp</code> [-P|-d <i>printer</i>] [-c <i>configdir</i>] [-S|-h <i>server</i>] [-p <i>port</i>] [-l] [-D] [-V] [-b] [-i] [-H] [-C] [-U <i>user</i>] [-#|-n <i>n</i>] [-E] [-q <i>priority</i>] [-t|-J <i>jobname</i>] [-o <i>option=value</i> &#8230; ][<i>file(s)</i>] </p>

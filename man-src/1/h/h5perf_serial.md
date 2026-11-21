@@ -1,4 +1,5 @@
 ---
+
 title: "h5perf_serial(1)"
 name: "h5perf_serial"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5perf_serial/"
 description: "h5perf_serial: – Measures HDF5 serial performance."
 ---
 
-<h2>NAME</h2>
 <p> h5perf_serial: &#8211; Measures HDF5 serial performance.</p>
 <h2>DESCRIPTION</h2>
 <p> h5perf_serial: Version 1.8.7 usage: h5perf_serial [OPTIONS]</p>

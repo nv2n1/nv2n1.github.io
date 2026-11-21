@@ -1,4 +1,5 @@
 ---
+
 title: "git-count(1)"
 name: "git-count"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-count/"
 description: "git-count – Show commit count"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-count</code> &#8211; Show commit count</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-count</code> [&#8211;all]</p>

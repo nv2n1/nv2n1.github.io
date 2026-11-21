@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_open_ex(3)"
 name: "libssh2_sftp_open_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_open_ex/"
 description: "libssh2_sftp_open – open filehandle for file on SFTP."
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_open &#8211; open filehandle for file on SFTP.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

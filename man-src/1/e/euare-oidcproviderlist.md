@@ -1,4 +1,5 @@
 ---
+
 title: "euare-oidcproviderlist(1)"
 name: "euare-oidcproviderlist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-oidcproviderlist/"
 description: "euare-oidcproviderlist – List your account’s OpenID Connect providers"
 ---
 
-<h2>NAME</h2>
 <p> euare-oidcproviderlist &#8211; List your account&#8217;s OpenID Connect providers</p>
 <h2>SYNOPSIS</h2>
 <p> euare-oidcproviderlist [&#8211;as-account ACCOUNT] [-U URL]</p>

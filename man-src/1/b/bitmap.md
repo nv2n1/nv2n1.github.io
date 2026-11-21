@@ -1,4 +1,5 @@
 ---
+
 title: "bitmap(1)"
 name: "bitmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bitmap/"
 description: "bitmap, bmtoa, atobm – bitmap editor and converter utilities for the X Window System"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bitmap, bmtoa, atobm &#8211; bitmap editor and converter utilities for the X Window System </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bitmap</code> [ <i>-options</i> &#8230; ] [ <i>filename</i> ] [ <i>basename</i> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ring_trydequeue_spmc(3)"
 name: "ck_ring_trydequeue_spmc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ring_trydequeue_spmc/"
 description: "ck_ring_trydequeue_spmc – dequeue from bounded FIFO and allow for spurious failure"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ring_trydequeue_spmc</code> &#8211; dequeue from bounded FIFO and allow for spurious failure</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

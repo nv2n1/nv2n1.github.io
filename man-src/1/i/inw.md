@@ -1,4 +1,5 @@
 ---
+
 title: "inw(1)"
 name: "inw"
 section: "1"
@@ -6,10 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-inw/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- inb, outb, inw, outw, inl, outl - access I/O ports 
+inb, outb, inw, outw, inl, outl - access I/O ports 
 
 <h2>SYNOPSIS</h2>
 

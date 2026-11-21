@@ -1,4 +1,5 @@
 ---
+
 title: "gpg2(1)"
 name: "gpg2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpg2/"
 description: "gpg2 – OpenPGP encryption and signing tool"
 ---
 
-<h2>NAME</h2>
 <p> <code>gpg2</code> &#8211; OpenPGP encryption and signing tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpg2</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <i>command</i> [<i>args</i>] </p>

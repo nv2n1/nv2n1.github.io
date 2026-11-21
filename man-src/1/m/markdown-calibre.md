@@ -1,4 +1,5 @@
 ---
+
 title: "markdown-calibre(1)"
 name: "markdown-calibre"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-markdown-calibre/"
 description: "markdown-calibre – markdown tool for calibre"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code> markdown-calibre </code>&#8211; markdown tool for calibre </p>
 <h2>USAGE</h2>
 <p> markdown-calibre INPUTFILE [options]</p>

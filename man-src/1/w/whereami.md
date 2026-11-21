@@ -1,4 +1,5 @@
 ---
+
 title: "whereami(1)"
 name: "whereami"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whereami/"
 description: "whereami-1.0 – displays work location"
 ---
 
-<h2>NAME</h2>
 <p> whereami-1.0 &#8211; displays work location </p>
 <h2>SYNOPSIS</h2>
 <dl>

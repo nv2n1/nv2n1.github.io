@@ -1,4 +1,5 @@
 ---
+
 title: "gvfs-rm(1)"
 name: "gvfs-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvfs-rm/"
 description: "gvfs-rm"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gvfs-rm </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-rm</code> has been deprecated and it is redirected to <code>gio remove</code>.</p>

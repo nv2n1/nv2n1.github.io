@@ -1,4 +1,5 @@
 ---
+
 title: "sgmlnorm(1)"
 name: "sgmlnorm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sgmlnorm/"
 description: "osgmlnorm – An SGML/XML document normalizer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> osgmlnorm &#8211; An SGML/XML document normalizer </p>
 <h2>SYNOPSIS</h2>
 <dl>

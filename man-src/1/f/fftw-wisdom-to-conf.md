@@ -1,4 +1,5 @@
 ---
+
 title: "fftw-wisdom-to-conf(1)"
 name: "fftw-wisdom-to-conf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fftw-wisdom-to-conf/"
 description: "fftw-wisdom-to-conf – generate FFTW wisdom (pre-planned transforms)"
 ---
 
-<h2>NAME</h2>
 <p> fftw-wisdom-to-conf &#8211; generate FFTW wisdom (pre-planned transforms)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fftw-wisdom-to-conf</code> [&lt; <i>INPUT</i>] [&gt; <i>OUTPUT</i>]</p>

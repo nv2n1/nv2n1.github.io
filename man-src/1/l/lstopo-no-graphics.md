@@ -1,4 +1,5 @@
 ---
+
 title: "lstopo-no-graphics(1)"
 name: "lstopo-no-graphics"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lstopo-no-graphics/"
 description: "lstopo, lstopo-no-graphics, hwloc-ls – Show the topology of the system"
 ---
 
-<h2>NAME</h2>
 <p> lstopo, lstopo-no-graphics, hwloc-ls &#8211; Show the topology of the system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lstopo</code> [ <i>options </i>]&#8230; [ <i>filename </i>] </p>

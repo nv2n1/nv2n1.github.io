@@ -1,4 +1,5 @@
 ---
+
 title: "munin-node(1)"
 name: "munin-node"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-munin-node/"
 description: "munin-node – A daemon to gather information in cooperation with the main Munin program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> munin-node &#8211; A daemon to gather information in cooperation with the main Munin program </p>
 <h2>SYNOPSIS</h2>
 <p> munin-node [&#8211;options]</p>

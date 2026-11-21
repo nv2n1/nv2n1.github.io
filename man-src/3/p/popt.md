@@ -1,4 +1,5 @@
 ---
+
 title: "popt(3)"
 name: "popt"
 section: "3"
@@ -6,8 +7,9 @@ letter: "p"
 url: "/docs/linux/man/3-popt/"
 description: "popt – Parse command line options"
 ---
+
 <p> popt - Parse command line options  </p>
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  #include &lt;popt.h&gt; 
  poptContext poptGetContext(const char *  name  , int  argc  , 

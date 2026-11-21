@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_protocol_functions(3)"
 name: "globus_gram_protocol_functions"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_functions/"
 description: "Functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Functions &#8211; </p>
 <p> GRAM Functions.</p>
 <h3>Modules</h3>

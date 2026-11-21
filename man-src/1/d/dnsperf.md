@@ -1,4 +1,5 @@
 ---
+
 title: "dnsperf(1)"
 name: "dnsperf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dnsperf/"
 description: "dnsperf – test the performance of a DNS server"
 ---
 
-<h2>NAME</h2>
 <p> dnsperf &#8211; test the performance of a DNS server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dnsperf</code>&nbsp;<wbr>[<code>-a&nbsp;<wbr></code><i>local_addr</i>] [<code>-b&nbsp;<wbr></code><i>bufsize</i>] [<code>-c&nbsp;<wbr></code><i>clients</i>] [<code>-d&nbsp;<wbr></code><i>datafile</i>] [<code>-D</code>] [<code>-e</code>] [<code>-f&nbsp;<wbr></code><i>family</i>] [<code>-h</code>] [<code>-l&nbsp;<wbr></code><i>limit</i>] [<code>-n&nbsp;<wbr></code><i>runs_through_file</i>] [<code>-p&nbsp;<wbr></code><i>port</i>] [<code>-q&nbsp;<wbr></code><i>num_queries</i>] [<code>-Q&nbsp;<wbr></code><i>max_qps</i>] [<code>-s&nbsp;<wbr></code><i>server_addr</i>] [<code>-S&nbsp;<wbr></code><i>stats_interval</i>] [<code>-t&nbsp;<wbr></code><i>timeout</i>] [<code>-T&nbsp;<wbr></code><i>threads</i>] [<code>-u</code>] [<code>-v</code>] [<code>-x&nbsp;<wbr></code><i>local_port</i>] [<code>-y&nbsp;<wbr></code><i>[alg:]name:secret</i>]</p>

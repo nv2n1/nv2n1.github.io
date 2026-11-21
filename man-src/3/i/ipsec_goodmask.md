@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_goodmask(3)"
 name: "ipsec_goodmask"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_goodmask/"
 description: "ipsec_goodmask, ipsec_masktobits, ipsec_bitstomask – check if Internet subnet mask is valid, convert Internet subnet mask to bit count, convert bit count to Internet subnet mask"
 ---
 
-<h2>NAME</h2>
 <p> ipsec_goodmask, ipsec_masktobits, ipsec_bitstomask &#8211; check if Internet subnet mask is valid, convert Internet subnet mask to bit count, convert bit count to Internet subnet mask</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fmscan(1)"
 name: "fmscan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fmscan/"
 description: "fmscan – scan FM band for radio stations"
 ---
 
-<h2>NAME</h2>
 <p> fmscan &#8211; scan FM band for radio stations</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fm</code> [ <code>-h</code> ] [ <code>-d</code> <i>device</i> ] [ <code>-t</code> <i>tuner</i> ] [ <code>-s</code> <i>freq</i> ] [ <code>-e</code> <i>freq</i> ] [ <i>-i</i> <i>freq</i> ] [ <i>-q</i> ]</p>

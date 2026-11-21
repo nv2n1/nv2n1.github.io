@@ -1,4 +1,5 @@
 ---
+
 title: "lcov(1)"
 name: "lcov"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lcov/"
 description: "lcov – a graphical GCOV front-end"
 ---
 
-<h2>NAME</h2>
 <p> lcov &#8211; a graphical GCOV front-end</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lcov</code> <code>-c</code>|<code>&#8211;capture</code></p>

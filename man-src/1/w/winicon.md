@@ -1,4 +1,5 @@
 ---
+
 title: "winicon(1)"
 name: "winicon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-winicon/"
 description: "Microsoft Windows icon files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Microsoft Windows icon files</p>
 <h2>DESCRIPTION</h2>
 <p> A Microsoft Windows icon file contains one or more images, at resolutions up to 256 by 256 pixels and various bpp values. The images are encoded either as Portable Network Graphics file (PNG), or in a format similar to Microsoft&#8217;s BMP format. </p>

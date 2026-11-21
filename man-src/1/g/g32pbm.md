@@ -1,4 +1,5 @@
 ---
+
 title: "g32pbm(1)"
 name: "g32pbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g32pbm/"
 description: "g32pbm – convert a Group 3 fax file into a portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> g32pbm &#8211; convert a Group 3 fax file into a portable bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>g32pbm</code> [<code>-reversebits</code>] [<code>-stretch</code>] [<i>g3file</i>]</p>

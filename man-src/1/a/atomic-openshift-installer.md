@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-openshift-installer(1)"
 name: "atomic-openshift-installer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-openshift-installer/"
 description: "atomic-openshift-installer – Interactive OpenShift Container Platform (OCP) installer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atomic-openshift-installer &#8211; Interactive OpenShift Container Platform (OCP) installer </p>
 <h2>SYNOPSIS</h2>
 <p> atomic-openshift-installer [OPTIONS] COMMAND [OPTS]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "librasqal(3)"
 name: "librasqal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-librasqal/"
 description: "librasqal – Rasqal RDF query library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> librasqal &#8211; Rasqal RDF query library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "outb(1)"
 name: "outb"
 section: "1"
@@ -6,10 +7,7 @@ letter: "o"
 url: "/docs/linux/man/1-outb/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- inb, outb, inw, outw, inl, outl - access I/O ports 
+inb, outb, inw, outw, inl, outl - access I/O ports 
 
 <h2>SYNOPSIS</h2>
 

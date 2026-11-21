@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_set_escape_mode(3)"
 name: "auparse_set_escape_mode"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_set_escape_mode/"
 description: "auparse_set_escape_mode – choose escape method"
 ---
 
-<h2>NAME</h2>
 <p> auparse_set_escape_mode &#8211; choose escape method</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bwrap(1)"
 name: "bwrap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bwrap/"
 description: "bwrap – container setup utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bwrap &#8211; container setup utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

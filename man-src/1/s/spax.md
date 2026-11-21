@@ -1,4 +1,5 @@
 ---
+
 title: "spax(1)"
 name: "spax"
 section: "1"
@@ -6,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-spax/"
 description: "pax – portable archive interchange"
 ---
-<h2>NAME</h2>
+
 <p> pax - portable archive interchange  </p>
 <h2>SYNOPSIS</h2>
 <dl>

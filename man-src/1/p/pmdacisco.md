@@ -1,4 +1,5 @@
 ---
+
 title: "pmdacisco(1)"
 name: "pmdacisco"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdacisco/"
 description: "pmdacisco – Cisco router performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdacisco</code> &#8211; Cisco router performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/cisco/pmdacisco</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>] [<code>-P</code> <i>password</i>] [<code>-r</code> <i>refresh</i>] [<code>-s</code> <i>prompt</i>] [<code>-M</code> <i>username</i>] [<code>-x</code> <i>port</i>] <i>host:interface-spec</i> [&#8230;]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "aa_text(3)"
 name: "aa_text"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_text/"
 description: "aa_text – returns pointer to the text output buffer used by AA-lib."
 ---
 
-<h2>NAME</h2>
 <p> aa_text &#8211; returns pointer to the text output buffer used by AA-lib.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

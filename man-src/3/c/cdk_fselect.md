@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_fselect(3)"
 name: "cdk_fselect"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_fselect/"
 description: "cdk_fselect – curses file selector widget."
 ---
 
-<h2>NAME</h2>
 <p> cdk_fselect &#8211; curses file selector widget.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

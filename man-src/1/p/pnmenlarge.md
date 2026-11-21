@@ -1,4 +1,5 @@
 ---
+
 title: "pnmenlarge(1)"
 name: "pnmenlarge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmenlarge/"
 description: "pnmenlarge – read a portable anymap and enlarge it N times"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmenlarge &#8211; read a portable anymap and enlarge it N times </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmenlarge</code> <i>N</i> [<i>pnmfile</i>]</p>

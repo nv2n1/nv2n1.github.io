@@ -1,4 +1,5 @@
 ---
+
 title: "cross_product_f(3)"
 name: "cross_product_f"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cross_product_f/"
 description: "cross_product, cross_product_f – Calculates the cross product. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> cross_product, cross_product_f &#8211; Calculates the cross product. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

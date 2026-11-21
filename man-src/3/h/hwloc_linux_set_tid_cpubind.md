@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_linux_set_tid_cpubind(3)"
 name: "hwloc_linux_set_tid_cpubind"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_linux_set_tid_cpubind/"
 description: "hwlocality_linux – Linux-specific helpers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_linux &#8211; Linux-specific helpers </p>
 <h3>Functions</h3>
 <p> int <code>hwloc_linux_parse_cpumap_file</code> (FILE *file, <code>hwloc_cpuset_t</code> set) </p>

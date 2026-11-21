@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dname_cat_clone(3)"
 name: "ldns_dname_cat_clone"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dname_cat_clone/"
 description: "ldns_dname_cat_clone, ldns_dname_cat"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dname_cat_clone, ldns_dname_cat </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

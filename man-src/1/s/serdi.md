@@ -1,4 +1,5 @@
 ---
+
 title: "serdi(1)"
 name: "serdi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-serdi/"
 description: "serdi – Read and write RDF syntax"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>serdi &#8211; Read and write RDF syntax</code></p>
 <h2>SYNOPSIS</h2>
 <p> serdi [OPTION]&#8230; INPUT BASE_URI </p>

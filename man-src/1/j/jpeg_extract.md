@@ -1,4 +1,5 @@
 ---
+
 title: "jpeg_extract(1)"
 name: "jpeg_extract"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jpeg_extract/"
 description: "jpeg_extract – jpeg extractor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>jpeg_extract </code>&#8211; jpeg extractor </p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "skill(1)"
 name: "skill"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-skill/"
 description: "skill, snice – send a signal or report process status"
 ---
 
-<h2 class="name">NAME</h2>
 <p> skill, snice &#8211; send a signal or report process status </p>
 <h2>SYNOPSIS</h2>
 <p> <code>skill</code> [<i>signal</i>] [<i>options</i>] <i>expression</i><br />

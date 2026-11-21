@@ -1,4 +1,5 @@
 ---
+
 title: "open(2)"
 name: "open"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-open/"
 description: "open, openat, creat – open and possibly create a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> open, openat, creat &#8211; open and possibly create a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

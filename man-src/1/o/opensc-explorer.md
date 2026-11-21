@@ -1,4 +1,5 @@
 ---
+
 title: "opensc-explorer(1)"
 name: "opensc-explorer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opensc-explorer/"
 description: "opensc-explorer – generic interactive utility for accessing smart card and similar security token functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> opensc-explorer &#8211; generic interactive utility for accessing smart card and similar security token functions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>opensc-explorer</code> [OPTIONS]</p>

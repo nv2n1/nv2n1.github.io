@@ -1,4 +1,5 @@
 ---
+
 title: "euca-reset-network-interface-attribute(1)"
 name: "euca-reset-network-interface-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-reset-network-interface-attribute/"
 description: "euca-reset-network-interface-attribute – Reset an attribute of a VPC network interface"
 ---
 
-<h2>NAME</h2>
 <p> euca-reset-network-interface-attribute &#8211; Reset an attribute of a VPC network interface</p>
 <h2>SYNOPSIS</h2>
 <p> euca-reset-network-interface-attribute <code>&#8211;source-dest-check</code></p>

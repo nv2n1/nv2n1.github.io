@@ -1,4 +1,5 @@
 ---
+
 title: "antiword(1)"
 name: "antiword"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-antiword/"
 description: "antiword – show the text and images of MS Word documents"
 ---
 
-<h2>NAME</h2>
 <p> antiword &#8211; show the text and images of MS Word documents</p>
 <h2>SYNOPSIS</h2>
 <p> <code>antiword</code> [ <i>options</i> ] <i>wordfiles</i></p>

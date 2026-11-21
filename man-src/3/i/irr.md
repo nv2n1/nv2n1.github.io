@@ -1,4 +1,5 @@
 ---
+
 title: "irr(3)"
 name: "irr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-irr/"
 description: "QuantLib::CashFlows – cashflow-analysis functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::CashFlows &#8211; cashflow-analysis functions </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/cashflows.hpp&gt; </p>

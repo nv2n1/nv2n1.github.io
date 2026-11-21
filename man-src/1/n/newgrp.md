@@ -1,4 +1,5 @@
 ---
+
 title: "newgrp(1)"
 name: "newgrp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-newgrp/"
 description: "newgrp – log in to a new group"
 ---
 
-<h2 class="name">NAME</h2>
 <p> newgrp &#8211; log in to a new group </p>
 <h2>SYNOPSIS</h2>
 <dl>

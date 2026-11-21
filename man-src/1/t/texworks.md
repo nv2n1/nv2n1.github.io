@@ -1,4 +1,5 @@
 ---
+
 title: "texworks(1)"
 name: "texworks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-texworks/"
 description: "texworks – a simple TeX front-end program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>texworks</code> &#8211; a simple TeX front-end program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>texworks</code> [OPTIONS] [FILES] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mhshow(1)"
 name: "mhshow"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mhshow/"
 description: "mhshow – display MIME messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mhshow &#8211; display MIME messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

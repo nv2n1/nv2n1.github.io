@@ -1,4 +1,5 @@
 ---
+
 title: "exflip(3)"
 name: "exflip"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exflip/"
 description: "exflip – Comparison of double buffering and page flipping. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exflip &#8211; Comparison of double buffering and page flipping. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

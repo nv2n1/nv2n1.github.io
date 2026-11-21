@@ -1,4 +1,5 @@
 ---
+
 title: "pmeth(1)"
 name: "pmeth"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pmeth/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pmeth - show a Perl class's methods 
+pmeth - show a Perl class's methods 
 
 <h2>DESCRIPTION</h2>
 

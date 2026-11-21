@@ -1,4 +1,5 @@
 ---
+
 title: "hspell(1)"
 name: "hspell"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hspell/"
 description: "hspell – Hebrew spellchecker"
 ---
 
-<h2>NAME</h2>
 <p> hspell &#8211; Hebrew spellchecker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hspell</code> [ <code>-acDhHilnsvV</code> ] <code>[</code><i>file&#8230;</i><code>]</code></p>

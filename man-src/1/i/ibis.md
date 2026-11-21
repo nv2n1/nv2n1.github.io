@@ -1,4 +1,5 @@
 ---
+
 title: "ibis(1)"
 name: "ibis"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibis/"
 description: "ibis – IB management Inband Services – an extended TCL shell"
 ---
 
-<h2>NAME</h2>
 <p> <code>ibis</code> &#8211; IB management Inband Services &#8211; an extended TCL shell</p>
 <h2>SYNOPSYS</h2>
 <p> ibis [-port_num &lt;port number to attach to&gt;]</p>

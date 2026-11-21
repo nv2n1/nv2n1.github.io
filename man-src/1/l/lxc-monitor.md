@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-monitor(1)"
 name: "lxc-monitor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-monitor/"
 description: "lxc-monitor – monitor the container state"
 ---
 
-<h2>NAME</h2>
 <p> lxc-monitor &#8211; monitor the container state</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-monitor</code> [-n <i>name</i>] [-Q <i>name</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "chafa(1)"
 name: "chafa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chafa/"
 description: "chafa – Character art facsimile generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chafa &#8211; Character art facsimile generator </p>
 <h2>SYNOPSIS</h2>
 <dl>

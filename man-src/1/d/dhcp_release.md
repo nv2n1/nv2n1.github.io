@@ -1,4 +1,5 @@
 ---
+
 title: "dhcp_release(1)"
 name: "dhcp_release"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dhcp_release/"
 description: "dhcp_release – Release a DHCP lease on a the local dnsmasq DHCP server."
 ---
 
-<h2>NAME</h2>
 <p> dhcp_release &#8211; Release a DHCP lease on a the local dnsmasq DHCP server.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dhcp_release &lt;interface&gt; &lt;address&gt; &lt;MAC address&gt; &lt;client_id&gt;</code></p>

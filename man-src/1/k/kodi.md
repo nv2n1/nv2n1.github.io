@@ -1,4 +1,5 @@
 ---
+
 title: "kodi(1)"
 name: "kodi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kodi/"
 description: "kodi.bin – Kodi main executable"
 ---
 
-<h2>NAME</h2>
 <p> kodi.bin &#8211; Kodi main executable</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kodi.bin</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>

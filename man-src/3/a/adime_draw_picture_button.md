@@ -1,4 +1,5 @@
 ---
+
 title: "adime_draw_picture_button(3)"
 name: "adime_draw_picture_button"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-adime_draw_picture_button/"
 description: "adime_draw_picture_button"
 ---
 
-<h2>NAME</h2>
 <p> adime_draw_picture_button</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/adime.h">adime.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gmt2kml(1)"
 name: "gmt2kml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmt2kml/"
 description: "gmt2kml – Convert GMT data tables to KML files for Google Earth"
 ---
 
-<h2>NAME</h2>
 <p> gmt2kml &#8211; Convert GMT data tables to KML files for Google Earth</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmt2kml</code> [ <i>table</i> ] [ <code>a</code>|<code>g</code>|<code>s</code>[<i>alt</i>|<code>x</code><i>scale</i>] ] [ <i>cpt</i> ] [ <i>descriptfile</i> ] [ [<i>altitude</i>] ] [ <code>e</code>|<code>s</code>|<code>t</code>|<code>l</code>|<code>p</code> ] [ <code>f|n</code><code>&#8211;</code>|<i>fill</i> ] [ <i>icon</i> ] [ <code>-K</code>] [ <i>col1:name1</i>,<i>col2:name2</i>,&#8230; ] [ [+|*name_template*|<i>name</i>] ] [ <code>-O</code>] [ <code>a</code>|<i>w/e/s/n</i> ] [ <code>c</code>|<code>n</code><i>scale</i>] ] [ <i>title</i>[/<i>foldername</i>] ] [ [<i>level</i>] ] [ [<code>&#8211;</code>|<code>+</code>]<i>pen</i> ] [ <i>args</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] [ &gt; <i>output.kml</i> ] </p>

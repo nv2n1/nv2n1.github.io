@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-autostart(1)"
 name: "lxc-autostart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-autostart/"
 description: "lxc-autostart – start/stop/kill auto-started containers"
 ---
 
-<h2>NAME</h2>
 <p> lxc-autostart &#8211; start/stop/kill auto-started containers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-autostart</code> [-k] [-L] [-r] [-s] [-a] [-g <i>groups</i>] [-t <i>timeout</i>]</p>

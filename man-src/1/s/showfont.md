@@ -1,4 +1,5 @@
 ---
+
 title: "showfont(1)"
 name: "showfont"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-showfont/"
 description: "showfont – font dumper for X font server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> showfont &#8211; font dumper for X font server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>showfont</code> [ <i>-options</i> &#8230; ] <code>-fn</code> <i>pattern</i></p>

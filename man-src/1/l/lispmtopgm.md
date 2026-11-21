@@ -1,4 +1,5 @@
 ---
+
 title: "lispmtopgm(1)"
 name: "lispmtopgm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lispmtopgm/"
 description: "lispmtopgm – convert a Lisp Machine bitmap file into pgm format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lispmtopgm &#8211; convert a Lisp Machine bitmap file into pgm format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lispmtopgm</code> [<i>lispmfile</i>]</p>

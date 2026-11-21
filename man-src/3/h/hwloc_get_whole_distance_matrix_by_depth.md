@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_get_whole_distance_matrix_by_depth(3)"
 name: "hwloc_get_whole_distance_matrix_by_depth"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_get_whole_distance_matrix_by_depth/"
 description: "hwlocality_distances – Manipulating Distances"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_distances &#8211; Manipulating Distances </p>
 <h3>Functions</h3>
 <p> static const struct <code>hwloc_distances_s</code> * <code>hwloc_get_whole_distance_matrix_by_depth</code> (<code>hwloc_topology_t</code> topology, unsigned depth) </p>

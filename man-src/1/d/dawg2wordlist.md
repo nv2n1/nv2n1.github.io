@@ -1,4 +1,5 @@
 ---
+
 title: "dawg2wordlist(1)"
 name: "dawg2wordlist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dawg2wordlist/"
 description: "dawg2wordlist – convert a Tesseract DAWG to a wordlist"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dawg2wordlist &#8211; convert a Tesseract DAWG to a wordlist </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dawg2wordlist</code> <i>UNICHARSET</i> <i>DAWG</i> <i>WORDLIST</i></p>

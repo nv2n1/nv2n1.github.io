@@ -1,4 +1,5 @@
 ---
+
 title: "dh_gconf(1)"
 name: "dh_gconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_gconf/"
 description: "dh_gconf – install GConf defaults files and register schemas"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_gconf &#8211; install GConf defaults files and register schemas </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_gconf</code> [<i>debhelper options</i>] [<code>&#8211;priority=</code><i>priority</i>]</p>

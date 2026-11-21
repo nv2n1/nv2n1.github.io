@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-memos(1)"
 name: "pilot-memos"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-memos/"
 description: "pilot-memos – Manipulate Memo entries from a file or your Palm device."
 ---
 
-<h2>NAME</h2>
 <p> pilot-memos &#8211; Manipulate Memo entries from a file or your Palm device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

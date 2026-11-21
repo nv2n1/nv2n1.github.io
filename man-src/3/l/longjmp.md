@@ -1,4 +1,5 @@
 ---
+
 title: "longjmp(3)"
 name: "longjmp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-longjmp/"
 description: "setjmp, sigsetjmp, longjmp, siglongjmp – performing a nonlocal goto"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setjmp, sigsetjmp, longjmp, siglongjmp &#8211; performing a nonlocal goto </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

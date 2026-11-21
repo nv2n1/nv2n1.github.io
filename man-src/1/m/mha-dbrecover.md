@@ -1,4 +1,5 @@
 ---
+
 title: "mha-dbrecover(1)"
 name: "mha-dbrecover"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mha-dbrecover/"
 description: "mha-dbrecover – rebuild a MHonArc archive database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mha-dbrecover &#8211; rebuild a MHonArc archive database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mha-dbrecover</code>&nbsp;<wbr>[<i>options</i>]</p>

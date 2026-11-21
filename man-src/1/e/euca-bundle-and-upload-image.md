@@ -1,4 +1,5 @@
 ---
+
 title: "euca-bundle-and-upload-image(1)"
 name: "euca-bundle-and-upload-image"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-bundle-and-upload-image/"
 description: "euca-bundle-and-upload-image – Prepare and upload an image for use in the cloud"
 ---
 
-<h2>NAME</h2>
 <p> euca-bundle-and-upload-image &#8211; Prepare and upload an image for use in the cloud</p>
 <h2>SYNOPSIS</h2>
 <p> euca-bundle-and-upload-image [&#8211;preserve-bundle]</p>

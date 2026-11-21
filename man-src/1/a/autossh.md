@@ -1,4 +1,5 @@
 ---
+
 title: "autossh(1)"
 name: "autossh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-autossh/"
 description: "autossh – monitor and restart ssh sessions"
 ---
 
-<h2>NAME</h2>
 <p> <code>autossh</code> &#8211; monitor and restart ssh sessions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>autossh</code> [-<code>V</code> ] [-<code>M </code><i>port[:echo_port]</i> ] [-<code>f</code> ] <i>[SSH_OPTIONS]</i></p>

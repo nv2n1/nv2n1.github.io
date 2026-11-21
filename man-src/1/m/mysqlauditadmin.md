@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlauditadmin(1)"
 name: "mysqlauditadmin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlauditadmin/"
 description: "mysqlauditadmin – Maintain the audit log"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlauditadmin &#8211; Maintain the audit log </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_normalize(3)"
 name: "auparse_normalize"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_normalize/"
 description: "auparse_normalize – normalize the current event"
 ---
 
-<h2>NAME</h2>
 <p> auparse_normalize &#8211; normalize the current event</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "centerim5(1)"
 name: "centerim5"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-centerim5/"
 description: "centerim5 – a text-mode IM client for Linux, *BSD, Solaris and other Unices that uses libpurple as a communication backend."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>centerim5</code> &#8211; a text-mode IM client for Linux, *BSD, Solaris and other Unices that uses libpurple as a communication backend.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>centerim5 </code> [ <code>option</code> ] &#8230; </p>

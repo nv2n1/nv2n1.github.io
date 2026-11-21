@@ -1,4 +1,5 @@
 ---
+
 title: "ppmdither(1)"
 name: "ppmdither"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmdither/"
 description: "ppmdither – ordered dither for color images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmdither &#8211; ordered dither for color images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmdither</code> [<code>-dim</code> <i>power</i>] [<code>-red</code> <i>shades</i>] [<code>-green</code> <i>shades</i>] [<code>-blue</code> <i>shades</i>] [<i>ppmfile</i>]</p>

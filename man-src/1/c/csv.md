@@ -1,4 +1,5 @@
 ---
+
 title: "csv(1)"
 name: "csv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-csv/"
 description: "csv – process CSV files from the command line"
 ---
 
-<h2 class="name">NAME</h2>
 <p> csv &#8211; process CSV files from the command line </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

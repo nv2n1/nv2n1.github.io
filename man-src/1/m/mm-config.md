@@ -1,4 +1,5 @@
 ---
+
 title: "mm-config(1)"
 name: "mm-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mm-config/"
 description: "mm-config – OSSP mm library configuration/build utility"
 ---
 
-<h2>NAME</h2>
 <p> <code>mm-config</code> &#8211; OSSP mm library configuration/build utility</p>
 <h2>VERSION</h2>
 <p> <font SIZE="-1">OSSP</font> mm <font SIZE="-1">1.4.1 (10-Aug-2006)</font></p>

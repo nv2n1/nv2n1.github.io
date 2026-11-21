@@ -1,4 +1,5 @@
 ---
+
 title: "dpbindic(1)"
 name: "dpbindic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dpbindic/"
 description: "dpbindic – Convert a binary-form dictionary into a text-form dictionary"
 ---
 
-<h2>NAME</h2>
 <p> dpbindic &#8211; Convert a binary-form dictionary into a text-form dictionary</p>
 <h2>SYNOPSYS</h2>
 <p> <code>dpbindic</code> [ <code>-xiu</code> [ <i>frequency</i> ] ] <i>binary-file</i> [ <i>text-file</i> ]</p>

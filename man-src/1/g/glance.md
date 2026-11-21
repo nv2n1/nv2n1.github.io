@@ -1,4 +1,5 @@
 ---
+
 title: "glance(1)"
 name: "glance"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glance/"
 description: "glance – Client for OpenStack Images API"
 ---
 
-<h2>NAME</h2>
 <p> glance &#8211; Client for OpenStack Images API</p>
 <h2>SYNOPSIS</h2>
 <p> <code>glance</code> [options] &lt;command&gt; [command-options] </p>

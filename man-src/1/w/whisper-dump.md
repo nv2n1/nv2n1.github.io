@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-dump(1)"
 name: "whisper-dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whisper-dump/"
 description: "whisper-dump – dump whisper database files"
 ---
 
-<h2>NAME</h2>
 <p> whisper-dump &#8211; dump whisper database files</p>
 <h2>SYNOPSYS</h2>
 <pre>

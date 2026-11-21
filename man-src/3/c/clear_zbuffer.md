@@ -1,4 +1,5 @@
 ---
+
 title: "clear_zbuffer(3)"
 name: "clear_zbuffer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clear_zbuffer/"
 description: "clear_zbuffer – Writes a depth value into the given Z-buffer. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> clear_zbuffer &#8211; Writes a depth value into the given Z-buffer. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

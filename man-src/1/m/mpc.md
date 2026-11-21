@@ -1,4 +1,5 @@
 ---
+
 title: "mpc(1)"
 name: "mpc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpc/"
 description: "mpc – Program for controlling Music Player Daemon (MPD)"
 ---
 
-<h2>NAME</h2>
 <p> mpc &#8211; Program for controlling Music Player Daemon (MPD)</p>
 <h2>SYNOPSIS</h2>
 <p> mpc [&lt;command&gt; &lt;arguments&gt;]</p>

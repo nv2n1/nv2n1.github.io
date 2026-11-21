@@ -1,4 +1,5 @@
 ---
+
 title: "perlstyle(1)"
 name: "perlstyle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlstyle/"
 description: "perlstyle – Perl style guide"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlstyle &#8211; Perl style guide </p>
 <h2>DESCRIPTION</h2>
 <p> Each programmer will, of course, have his or her own preferences in regards to formatting, but there are some general guidelines that will make your programs easier to read, understand, and maintain. </p>

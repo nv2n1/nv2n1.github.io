@@ -1,4 +1,5 @@
 ---
+
 title: "fminl(3)"
 name: "fminl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fminl/"
 description: "fmin, fminf, fminl – determine minimum of two floating-point numbers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fmin, fminf, fminl &#8211; determine minimum of two floating-point numbers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>

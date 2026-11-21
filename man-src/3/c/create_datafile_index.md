@@ -1,4 +1,5 @@
 ---
+
 title: "create_datafile_index(3)"
 name: "create_datafile_index"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-create_datafile_index/"
 description: "create_datafile_index – Creates an index for a datafile. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> create_datafile_index &#8211; Creates an index for a datafile. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

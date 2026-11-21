@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_faa(3)"
 name: "ck_pr_faa"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_faa/"
 description: "ck_pr_faa_ptr ck_pr_faa_double ck_pr_faa_char ck_pr_faa_uint ck_pr_faa_int ck_pr_faa_64 ck_pr_faa_32 ck_pr_faa_16 ck_pr_faa_8 – atomic fetch-and-add operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_faa_ptr</code> <code>ck_pr_faa_double</code> <code>ck_pr_faa_char</code> <code>ck_pr_faa_uint</code> <code>ck_pr_faa_int</code> <code>ck_pr_faa_64</code> <code>ck_pr_faa_32</code> <code>ck_pr_faa_16</code> <code>ck_pr_faa_8</code> &#8211; atomic fetch-and-add operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

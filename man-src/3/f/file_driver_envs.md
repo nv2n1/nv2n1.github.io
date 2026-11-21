@@ -1,4 +1,5 @@
 ---
+
 title: "file_driver_envs(3)"
 name: "file_driver_envs"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-file_driver_envs/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- Env Variables - 
+Env Variables - 
 
  The file driver uses the following environment variables
 <dl>

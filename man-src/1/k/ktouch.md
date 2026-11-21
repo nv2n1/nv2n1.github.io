@@ -1,4 +1,5 @@
 ---
+
 title: "ktouch(1)"
 name: "ktouch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ktouch/"
 description: "ktouch – a typing tutor for KDE"
 ---
 
-<h2>NAME</h2>
 <p> ktouch &#8211; a typing tutor for KDE</p>
 <h2>SYNOPSIS</h2>
 <dl>

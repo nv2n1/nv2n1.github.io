@@ -1,4 +1,5 @@
 ---
+
 title: "memusagestat(1)"
 name: "memusagestat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memusagestat/"
 description: "memusagestat – generate graphic from memory profiling data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> memusagestat &#8211; generate graphic from memory profiling data </p>
 <h2>SYNOPSIS</h2>
 <p> <code>memusagestat</code> [<i>option</i>]&#8230; <i>datafile</i> [<i>outfile</i>]</p>

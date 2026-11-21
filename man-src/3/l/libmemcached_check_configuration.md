@@ -1,4 +1,5 @@
 ---
+
 title: "libmemcached_check_configuration(3)"
 name: "libmemcached_check_configuration"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libmemcached_check_configuration/"
 description: "libmemcached_check_configuration – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> libmemcached_check_configuration &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached-1.0/memcached.h&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_resize_cq(3)"
 name: "ibv_resize_cq"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_resize_cq/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_resize_cq - resize a completion queue (CQ) 
+ibv_resize_cq - resize a completion queue (CQ) 
 
 <h2>SYNOPSIS</h2>
 

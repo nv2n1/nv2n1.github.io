@@ -1,4 +1,5 @@
 ---
+
 title: "electric(1)"
 name: "electric"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-electric/"
 description: "electric – a VLSI design system"
 ---
 
-<h2>NAME</h2>
 <p> electric &#8211; a VLSI design system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>electric</code> [<i>-m</i>] [<i>-t technology</i>] [<i>library</i>] </p>

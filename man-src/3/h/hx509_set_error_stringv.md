@@ -1,4 +1,5 @@
 ---
+
 title: "hx509_set_error_stringv(3)"
 name: "hx509_set_error_stringv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hx509_set_error_stringv/"
 description: "hx509 error functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hx509 error functions &#8211; </p>
 <h3>Functions</h3>
 <p> void <code>hx509_clear_error_string</code> (hx509_context context) </p>

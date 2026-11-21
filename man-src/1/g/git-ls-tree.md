@@ -1,4 +1,5 @@
 ---
+
 title: "git-ls-tree(1)"
 name: "git-ls-tree"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-git-ls-tree/"
 description: "git-ls-tree – List the contents of a tree object"
 ---
-<h2 class="name">NAME</h2>
+
 <p> git-ls-tree - List the contents of a tree object </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

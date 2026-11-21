@@ -1,4 +1,5 @@
 ---
+
 title: "libmemcachedutil(3)"
 name: "libmemcachedutil"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libmemcachedutil/"
 description: "libmemcachedutil – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> libmemcachedutil &#8211; libmemcached Documentation </p>
 <p> Utility library for libmemcached</p>
 <h2>SYNOPSIS</h2>

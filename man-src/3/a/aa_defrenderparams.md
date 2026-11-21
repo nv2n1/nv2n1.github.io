@@ -1,4 +1,5 @@
 ---
+
 title: "aa_defrenderparams(3)"
 name: "aa_defrenderparams"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_defrenderparams/"
 description: "aa_defrenderparams – default rendering parameters."
 ---
 
-<h2>NAME</h2>
 <p> aa_defrenderparams &#8211; default rendering parameters.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

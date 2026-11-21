@@ -1,4 +1,5 @@
 ---
+
 title: "cg_annotate(1)"
 name: "cg_annotate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cg_annotate/"
 description: "cg_annotate – post-processing tool for Cachegrind"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cg_annotate &#8211; post-processing tool for Cachegrind </p>
 <h2>SYNOPSIS</h2>
 <dl>

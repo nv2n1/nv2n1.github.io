@@ -1,4 +1,5 @@
 ---
+
 title: "docker-export(1)"
 name: "docker-export"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-export/"
 description: "docker-export – Export a container’s filesystem as a tar archive"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-export &#8211; Export a container&#8217;s filesystem as a tar archive </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker export [OPTIONS] CONTAINER</code> </p>

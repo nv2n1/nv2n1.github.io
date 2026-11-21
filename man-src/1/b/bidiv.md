@@ -1,4 +1,5 @@
 ---
+
 title: "bidiv(1)"
 name: "bidiv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bidiv/"
 description: "bidiv – bidirectional text filter"
 ---
 
-<h2>NAME</h2>
 <p> bidiv &#8211; bidirectional text filter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bidiv</code> [ <code>-plj</code> ] [ <code>-w&nbsp;<wbr></code><i>width</i> ] <code>[</code><i>file&#8230;</i><code>]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gui_fg_color(3)"
 name: "gui_fg_color"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gui_fg_color/"
 description: "gui_fg_color, gui_bg_color – The foreground and background colors for the standard dialogs. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> gui_fg_color, gui_bg_color &#8211; The foreground and background colors for the standard dialogs. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

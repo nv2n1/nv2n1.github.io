@@ -1,4 +1,5 @@
 ---
+
 title: "stg-redo(1)"
 name: "stg-redo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-redo/"
 description: "stg-redo – Undo the last undo operation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-redo &#8211; Undo the last undo operation </p>
 <h2>SYNOPSIS</h2>
 <pre>

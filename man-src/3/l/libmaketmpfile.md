@@ -1,4 +1,5 @@
 ---
+
 title: "libmaketmpfile(3)"
 name: "libmaketmpfile"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libmaketmpfile/"
 description: "pm_make_tmpfile() – create a temporary named file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pm_make_tmpfile() &#8211; create a temporary named file</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

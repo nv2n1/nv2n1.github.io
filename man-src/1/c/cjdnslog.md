@@ -1,4 +1,5 @@
 ---
+
 title: "cjdnslog(1)"
 name: "cjdnslog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cjdnslog/"
 description: "cjdnslog — display cjdroute log messages"
 ---
 
-<h2>NAME</h2>
 <p> <code>cjdnslog</code> &#8212; display cjdroute log messages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>/usr/bin/cjdnslog</code> [&lt;options&gt;&#8230;]</p>

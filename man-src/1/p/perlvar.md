@@ -1,4 +1,5 @@
 ---
+
 title: "perlvar(1)"
 name: "perlvar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlvar/"
 description: "perlvar – Perl predefined variables"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlvar &#8211; Perl predefined variables </p>
 <h2>DESCRIPTION</h2>
 <h3>The Syntax of Variable Names</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "wrestool(1)"
 name: "wrestool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wrestool/"
 description: "wrestool – extract resources from Microsoft Windows(R) binaries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wrestool &#8211; extract resources from Microsoft Windows(R) binaries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wrestool</code> [<i>OPTIONS</i>]&#8230; [<i>FILE</i>]&#8230;</p>

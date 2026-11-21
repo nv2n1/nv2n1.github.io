@@ -1,4 +1,5 @@
 ---
+
 title: "mceuropeanengine(3)"
 name: "mceuropeanengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mceuropeanengine/"
 description: "ql/pricingengines/vanilla/mceuropeanengine.hpp – Monte Carlo European option engine."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/pricingengines/vanilla/mceuropeanengine.hpp &#8211; Monte Carlo European option engine. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/vanilla/mcvanillaengine.hpp&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_check_version(3)"
 name: "asn1_check_version"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-asn1_check_version/"
 description: "asn1_check_version – API function"
 ---
 
-<h2>NAME</h2>
 <p> asn1_check_version &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>

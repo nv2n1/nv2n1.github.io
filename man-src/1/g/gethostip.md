@@ -1,4 +1,5 @@
 ---
+
 title: "gethostip(1)"
 name: "gethostip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gethostip/"
 description: "gethostip — convert an IP address into various formats"
 ---
 
-<h2>NAME</h2>
 <p> gethostip &#8212; convert an IP address into various formats</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gethostip</code> [<code>-dxnf</code>] [<i>HOSTNAME|IP</i>]</p>

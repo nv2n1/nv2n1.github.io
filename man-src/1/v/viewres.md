@@ -1,4 +1,5 @@
 ---
+
 title: "viewres(1)"
 name: "viewres"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-viewres/"
 description: "viewres – graphical class browser for Xt"
 ---
 
-<h2 class="name">NAME</h2>
 <p> viewres &#8211; graphical class browser for Xt </p>
 <h2>SYNOPSIS</h2>
 <p> <code>viewres</code> [-option &#8230;]</p>

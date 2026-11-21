@@ -1,4 +1,5 @@
 ---
+
 title: "vipe(1)"
 name: "vipe"
 section: "1"
@@ -6,10 +7,7 @@ letter: "v"
 url: "/docs/linux/man/1-vipe/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- vipe - edit pipe 
+vipe - edit pipe 
 
 <h2>SYNOPSIS</h2>
 

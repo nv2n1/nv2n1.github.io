@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-sort(1)"
 name: "oggz-sort"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz-sort/"
 description: "oggz-sort — Sort the pages of an Ogg file in order of presentation time."
 ---
 
-<h2>NAME</h2>
 <p> oggz-sort &#8212; Sort the pages of an Ogg file in order of presentation time.<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

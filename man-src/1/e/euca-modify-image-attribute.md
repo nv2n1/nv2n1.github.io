@@ -1,4 +1,5 @@
 ---
+
 title: "euca-modify-image-attribute(1)"
 name: "euca-modify-image-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-modify-image-attribute/"
 description: "euca-modify-image-attribute – Modify an attribute of an image"
 ---
 
-<h2>NAME</h2>
 <p> euca-modify-image-attribute &#8211; Modify an attribute of an image</p>
 <h2>SYNOPSIS</h2>
 <p> euca-modify-image-attribute (<code>&#8211;description</code> DESC | <code>-p</code> CODE | <code>-l</code>)</p>

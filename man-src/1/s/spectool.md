@@ -1,4 +1,5 @@
 ---
+
 title: "spectool(1)"
 name: "spectool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spectool/"
 description: "spectool – manual page for spectool v1.0.10rpmdev1"
 ---
 
-<h2>NAME</h2>
 <p> spectool &#8211; manual page for spectool v1.0.10rpmdev1</p>
 <h2>SYNOPSIS</h2>
 <p> <code>spectool</code> [<i>&lt;options&gt;</i>] <i>&lt;specfile&gt;</i></p>

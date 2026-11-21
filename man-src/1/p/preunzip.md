@@ -1,4 +1,5 @@
 ---
+
 title: "preunzip(1)"
 name: "preunzip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-preunzip/"
 description: "prezip, preunzip, precat – prefix delta compressor for Aspell"
 ---
 
-<h2 class="name">NAME</h2>
 <p> prezip, preunzip, precat &#8211; prefix delta compressor for Aspell </p>
 <h2>SYNOPSIS</h2>
 <p> precat [-dzhLV] [-cfksSq] [file &#8230;]</p>

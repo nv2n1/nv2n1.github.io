@@ -1,4 +1,5 @@
 ---
+
 title: "mrtg-unix-guide(1)"
 name: "mrtg-unix-guide"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrtg-unix-guide/"
 description: "mrtg-unix-guide – The MRTG 2.17.4 Linux/Unix Installation Guide"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mrtg-unix-guide &#8211; The MRTG 2.17.4 Linux/Unix Installation Guide </p>
 <h2>DESCRIPTION</h2>
 <p> <font SIZE="-1">MRTG</font> comes to you in Source Code. This means that you have to compile parts of it before you can use it on a Unix machine. These instructions help you to do so.</p>

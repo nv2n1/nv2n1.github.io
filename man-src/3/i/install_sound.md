@@ -1,4 +1,5 @@
 ---
+
 title: "install_sound(3)"
 name: "install_sound"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-install_sound/"
 description: "install_sound – Initialises the sound module. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> install_sound &#8211; Initialises the sound module. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

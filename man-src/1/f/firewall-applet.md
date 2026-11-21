@@ -1,4 +1,5 @@
 ---
+
 title: "firewall-applet(1)"
 name: "firewall-applet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-firewall-applet/"
 description: "firewall-applet – firewalld applet"
 ---
 
-<h2 class="name">NAME</h2>
 <p> firewall-applet &#8211; firewalld applet </p>
 <h2>SYNOPSIS</h2>
 <dl>

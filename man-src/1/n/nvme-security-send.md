@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-security-send(1)"
 name: "nvme-security-send"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-security-send/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-security-send - Security Send command 
+nvme-security-send - Security Send command 
 
 <h2>SYNOPSIS</h2>
 

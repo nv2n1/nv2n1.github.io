@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_dup_utf8(3)"
 name: "bson_iter_dup_utf8"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_dup_utf8/"
 description: "bson_iter_dup_utf8() – This function is similar to bson_iter_utf8() except that it calls bson_strndup() on the result."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_dup_utf8() &#8211; This function is similar to bson_iter_utf8() except that it calls bson_strndup() on the result.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

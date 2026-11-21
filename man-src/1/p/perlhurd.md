@@ -1,4 +1,5 @@
 ---
+
 title: "perlhurd(1)"
 name: "perlhurd"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlhurd/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlhurd - Perl version 5 on Hurd 
+perlhurd - Perl version 5 on Hurd 
 
 <h2>DESCRIPTION</h2>
 

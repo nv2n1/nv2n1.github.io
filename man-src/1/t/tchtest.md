@@ -1,4 +1,5 @@
 ---
+
 title: "tchtest(1)"
 name: "tchtest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tchtest/"
 description: "tchtest – test cases of the hash database API"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tchtest &#8211; test cases of the hash database API</p>
 <h2>DESCRIPTION</h2>
 <p> To use the hash database API easily, the commands `<code>tchtest</code>&#8216;, `<code>tchmttest</code>&#8216;, and `<code>tchmgr</code>&#8216; are provided. </p>

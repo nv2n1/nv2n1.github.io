@@ -1,4 +1,5 @@
 ---
+
 title: "gpg-preset-passphrase(1)"
 name: "gpg-preset-passphrase"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpg-preset-passphrase/"
 description: "gpg-preset-passphrase – Put a passphrase into gpg-agent’s cache"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpg-preset-passphrase</code> &#8211; Put a passphrase into gpg-agent&#8217;s cache </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpg-preset-passphrase</code> [<i>options</i>] [<i>command</i>] <i>cache-id</i> </p>

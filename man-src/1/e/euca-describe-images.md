@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-images(1)"
 name: "euca-describe-images"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-images/"
 description: "euca-describe-images – Show information about images"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-images &#8211; Show information about images</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-images [-a] [-o ACCOUNT] [-x ACCOUNT]</p>

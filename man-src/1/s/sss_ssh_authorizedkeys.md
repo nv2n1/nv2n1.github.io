@@ -1,4 +1,5 @@
 ---
+
 title: "sss_ssh_authorizedkeys(1)"
 name: "sss_ssh_authorizedkeys"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sss_ssh_authorizedkeys/"
 description: "sss_ssh_authorizedkeys – get OpenSSH authorized keys"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sss_ssh_authorizedkeys &#8211; get OpenSSH authorized keys </p>
 <h2>SYNOPSIS</h2>
 <dl>

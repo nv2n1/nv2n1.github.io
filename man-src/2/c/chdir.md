@@ -1,4 +1,5 @@
 ---
+
 title: "chdir(2)"
 name: "chdir"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-chdir/"
 description: "chdir, fchdir – change working directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chdir, fchdir &#8211; change working directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

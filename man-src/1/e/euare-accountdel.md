@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountdel(1)"
 name: "euare-accountdel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-accountdel/"
 description: "euare-accountdel – [Eucalyptus cloud admin only] Delete an account"
 ---
 
-<h2>NAME</h2>
 <p> euare-accountdel &#8211; [Eucalyptus cloud admin only] Delete an account</p>
 <h2>SYNOPSIS</h2>
 <p> euare-accountdel [-r] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "jrunscript(1)"
 name: "jrunscript"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jrunscript/"
 description: "jrunscript – Runs a command-line script shell that supports interactive and batch modes. This command is experimental and unsupported."
 ---
 
-<h2>NAME</h2>
 <p> jrunscript &#8211; Runs a command-line script shell that supports interactive and batch modes. This command is experimental and unsupported.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

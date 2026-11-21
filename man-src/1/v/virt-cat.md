@@ -1,4 +1,5 @@
 ---
+
 title: "virt-cat(1)"
 name: "virt-cat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-cat/"
 description: "virt-cat – Display files in a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-cat &#8211; Display files in a virtual machine </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

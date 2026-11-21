@@ -1,4 +1,5 @@
 ---
+
 title: "simc_lsmplugin(1)"
 name: "simc_lsmplugin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-simc_lsmplugin/"
 description: "simc_lsmplugin — LibstorageMgmt Simulator C Plugin"
 ---
 
-<h2>NAME</h2>
 <p> simc_lsmplugin &#8212; LibstorageMgmt Simulator C Plugin </p>
 <h2>DESCRIPTION</h2>
 <p> LibStorageMgmt simulator C plugin is for development use. The plugin simulates an array which supports most features of the library. The simulator is memory based, state will be discarded once the plugin exits. The &#8216;simc_lsmplugin&#8217; executable file is for the libStorageMgmt daemon to execute when client user specifies simc plugin in the URI. </p>

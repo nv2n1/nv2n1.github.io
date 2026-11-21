@@ -1,4 +1,5 @@
 ---
+
 title: "git-stage(1)"
 name: "git-stage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-stage/"
 description: "git-stage – Add file contents to the staging area"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-stage &#8211; Add file contents to the staging area </p>
 <h2>SYNOPSIS</h2>
 <pre>

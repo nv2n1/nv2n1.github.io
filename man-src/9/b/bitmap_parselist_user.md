@@ -1,4 +1,5 @@
 ---
+
 title: "bitmap_parselist_user(9)"
 name: "bitmap_parselist_user"
 section: "9"
@@ -6,8 +7,9 @@ letter: "b"
 url: "/docs/linux/man/9-bitmap_parselist_user/"
 description: "bitmap_parselist_user –"
 ---
+
 <p>bitmap_parselist_user &#8211; </p>
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dt><code>int bitmap_parselist_user(const char&nbsp;<wbr>__user&nbsp;<wbr>*&nbsp;<wbr></code><i>ubuf</i><code>, unsigned int&nbsp;<wbr></code><i>ulen</i><code>, unsigned long&nbsp;<wbr>*&nbsp;<wbr></code><i>maskp</i><code>, int&nbsp;<wbr></code><i>nmaskbits</i><code>);</code></dt>
 </dl>

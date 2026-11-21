@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-update(1)"
 name: "docker-latest-update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-update/"
 description: "docker-update – Update configuration of one or more containers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-update &#8211; Update configuration of one or more containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker update</code> [<code>&#8211;blkio-weight</code>[=<i>[BLKIO-WEIGHT]</i>]] [<code>&#8211;cpu-shares</code>[=<i>0</i>]] [<code>&#8211;cpu-period</code>[=<i>0</i>]] [<code>&#8211;cpu-quota</code>[=<i>0</i>]] [<code>&#8211;cpuset-cpus</code>[=<i>CPUSET-CPUS</i>]] [<code>&#8211;cpuset-mems</code>[=<i>CPUSET-MEMS</i>]] [<code>&#8211;help</code>] [<code>&#8211;kernel-memory</code>[=<i>KERNEL-MEMORY</i>]] [<code>-m</code>|<code>&#8211;memory</code>[=<i>MEMORY</i>]] [<code>&#8211;memory-reservation</code>[=<i>MEMORY-RESERVATION</i>]] [<code>&#8211;memory-swap</code>[=<i>MEMORY-SWAP</i>]] [<code>&#8211;restart</code>[=<i>&quot;&quot;</i>]] CONTAINER [CONTAINER&#8230;] </p>

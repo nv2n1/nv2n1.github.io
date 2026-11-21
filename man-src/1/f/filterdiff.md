@@ -1,4 +1,5 @@
 ---
+
 title: "filterdiff(1)"
 name: "filterdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-filterdiff/"
 description: "filterdiff – extract or exclude diffs from a diff file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> filterdiff &#8211; extract or exclude diffs from a diff file </p>
 <h2>SYNOPSIS</h2>
 <dl>

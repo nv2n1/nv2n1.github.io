@@ -1,4 +1,5 @@
 ---
+
 title: "icotool(1)"
 name: "icotool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icotool/"
 description: "icotool – Convert and create Win32 icon and cursor files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> icotool &#8211; Convert and create Win32 icon and cursor files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>icotool</code> [<i>OPTION</i>]&#8230;<i> </i>[<i>FILE</i>]&#8230;</p>

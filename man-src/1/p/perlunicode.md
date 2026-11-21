@@ -1,4 +1,5 @@
 ---
+
 title: "perlunicode(1)"
 name: "perlunicode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlunicode/"
 description: "perlunicode – Unicode support in Perl"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlunicode &#8211; Unicode support in Perl </p>
 <h2>DESCRIPTION</h2>
 <p> If you haven&#8217;t already, before reading this document, you should become familiar with both perlunitut and perluniintro. </p>

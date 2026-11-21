@@ -1,4 +1,5 @@
 ---
+
 title: "xdt-csource(1)"
 name: "xdt-csource"
 section: "1"
@@ -6,10 +7,7 @@ letter: "x"
 url: "/docs/linux/man/1-xdt-csource/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- xdt-csource - C code generation utility for arbitrary data 
+xdt-csource - C code generation utility for arbitrary data 
 
 <h2>SYNOPSIS</h2>
 

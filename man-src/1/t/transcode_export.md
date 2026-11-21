@@ -1,4 +1,5 @@
 ---
+
 title: "transcode_export(1)"
 name: "transcode_export"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transcode_export/"
 description: "transcode – export modules collection"
 ---
 
-<h2>NAME</h2>
 <p> transcode &#8211; export modules collection</p>
 <h2>SYNOPSIS</h2>
 <p> <code>transcode -y module[,module[,module]] [other options]</code></p>

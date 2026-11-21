@@ -1,4 +1,5 @@
 ---
+
 title: "nm-connection-editor(1)"
 name: "nm-connection-editor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nm-connection-editor/"
 description: "nm-connection-editor – network connection editor for NetworkManager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nm-connection-editor &#8211; network connection editor for NetworkManager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nm-connection-editor</code> [ <i>OPTIONS</i> ] </p>

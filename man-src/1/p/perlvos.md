@@ -1,4 +1,5 @@
 ---
+
 title: "perlvos(1)"
 name: "perlvos"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlvos/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlvos - Perl for Stratus OpenVOS 
+perlvos - Perl for Stratus OpenVOS 
 
 <h2>SYNOPSIS</h2>
 

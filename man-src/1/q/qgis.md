@@ -1,4 +1,5 @@
 ---
+
 title: "qgis(1)"
 name: "qgis"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qgis/"
 description: "qgis – QGIS Geographic Information System"
 ---
 
-<h2>NAME</h2>
 <p> qgis &#8211; QGIS Geographic Information System</p>
 <h2>SYNOPSIS</h2>
 <p> <code>qgis [&#8211;snapshot</code> <i>filename]</i><br />

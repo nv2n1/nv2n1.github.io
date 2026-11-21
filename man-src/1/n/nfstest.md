@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest(1)"
 name: "nfstest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfstest/"
 description: "NFStest – NFS Test Suite"
 ---
 
-<h2>NAME</h2>
 <p> NFStest &#8211; NFS Test Suite</p>
 <h2>DESCRIPTION</h2>
 <p> Provides a set of tools for testing either the NFS client or the NFS server, included tests focused mainly on testing the client. These tools include the following:.SS Test utilities package (nfstest) Provides a set of tools for testing either the NFS client or the NFS server, most of the functionality is focused mainly on testing the client. These tools include the following: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mysqltest_embedded(1)"
 name: "mysqltest_embedded"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqltest_embedded/"
 description: "mysqltest – program to run test cases mysqltest_embedded – program to run embedded test cases"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqltest &#8211; program to run test cases<br />
  mysqltest_embedded &#8211; program to run embedded test cases </p>
 <h2>SYNOPSIS</h2>

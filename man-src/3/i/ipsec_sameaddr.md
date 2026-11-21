@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_sameaddr(3)"
 name: "ipsec_sameaddr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_sameaddr/"
 description: "ipsec_sameaddr, ipsec_addrcmp, ipsec_samesubnet, ipsec_addrinsubnet, ipsec_subnetinsubnet, ipsec_subnetishost, ipsec_samesaid, ipsec_sameaddrtype, ipsec_samesubnettype – do comparisons for addresse..."
 ---
 
-<h2>NAME</h2>
 <p> ipsec_sameaddr, ipsec_addrcmp, ipsec_samesubnet, ipsec_addrinsubnet, ipsec_subnetinsubnet, ipsec_subnetishost, ipsec_samesaid, ipsec_sameaddrtype, ipsec_samesubnettype &#8211; do comparisons for addresses, subnets, SA IDs and address families</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "setmclk(1)"
 name: "setmclk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setmclk/"
 description: "setmclk – adjust the memory timing of certain Cirrus cards."
 ---
 
-<h2>NAME</h2>
 <p> setmclk &#8211; adjust the memory timing of certain Cirrus cards.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>setmclk</code> </p>

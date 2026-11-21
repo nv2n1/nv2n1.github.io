@@ -1,4 +1,5 @@
 ---
+
 title: "certmgr(1)"
 name: "certmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-certmgr/"
 description: "certmgr – Mono Certificate Manager (CLI version)"
 ---
 
-<h2>NAME</h2>
 <p> certmgr &#8211; Mono Certificate Manager (CLI version)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>certmgr [action] [object type] [options] store [filename]</code> or <code>certmgr -ssl [options] url</code></p>

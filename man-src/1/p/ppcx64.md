@@ -1,4 +1,5 @@
 ---
+
 title: "ppcx64(1)"
 name: "ppcx64"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppcx64/"
 description: "ppcx64 – Free Pascal Compiler (FPC) binary, name derived from Portable Pascal Compiler"
 ---
 
-<h2>NAME</h2>
 <p> ppcx64 &#8211; Free Pascal Compiler (FPC) binary, name derived from Portable Pascal Compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppcx64 [options] [sourcefile]</code></p>

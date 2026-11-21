@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlslap(1)"
 name: "mysqlslap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlslap/"
 description: "mysqlslap – load emulation client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlslap &#8211; load emulation client </p>
 <h2>SYNOPSIS</h2>
 <dl>

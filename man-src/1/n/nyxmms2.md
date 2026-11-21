@@ -1,4 +1,5 @@
 ---
+
 title: "nyxmms2(1)"
 name: "nyxmms2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nyxmms2/"
 description: "nycli – New Korving CLI"
 ---
 
-<h2>NAME</h2>
 <p> nycli &#8211; New Korving CLI</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nyxmms2</code> [command] [arguments]</p>

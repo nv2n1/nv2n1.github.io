@@ -1,4 +1,5 @@
 ---
+
 title: "ekg(1)"
 name: "ekg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ekg/"
 description: "ekg – A Gadu-Gadu compatible client."
 ---
 
-<h2>NAME</h2>
 <p> ekg &#8211; A Gadu-Gadu compatible client.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ekg [</code> <code>options</code> <code>]</code> <code>[</code> <code>commands</code> <code>]</code> </p>

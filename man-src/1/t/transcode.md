@@ -1,4 +1,5 @@
 ---
+
 title: "transcode(1)"
 name: "transcode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transcode/"
 description: "transcode – LINUX video stream processing tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> transcode &#8211; LINUX video stream processing tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

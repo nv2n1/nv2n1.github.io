@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-scaling-activities(1)"
 name: "euscale-describe-scaling-activities"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-scaling-activities/"
 description: "euscale-describe-scaling-activities – Describe past and current auto-scaling activities"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-scaling-activities &#8211; Describe past and current auto-scaling activities</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-scaling-activities [-g ASGROUP] [&#8211;show-long]</p>

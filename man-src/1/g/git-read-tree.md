@@ -1,4 +1,5 @@
 ---
+
 title: "git-read-tree(1)"
 name: "git-read-tree"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-read-tree/"
 description: "git-read-tree – Reads tree information into the index"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-read-tree &#8211; Reads tree information into the index </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

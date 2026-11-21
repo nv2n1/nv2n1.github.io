@@ -1,4 +1,5 @@
 ---
+
 title: "copula_(3)"
 name: "copula_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-copula_/"
 description: "QuantLib::HomogeneousPoolCDOEngine – CDO engine, loss distribution convolution for finite homogeneous pool."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::HomogeneousPoolCDOEngine &#8211; <code>CDO</code> engine, loss distribution convolution for finite homogeneous pool. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/credit/syntheticcdoengines.hpp&gt; </p>

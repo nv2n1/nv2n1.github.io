@@ -1,4 +1,5 @@
 ---
+
 title: "rrdfetch(1)"
 name: "rrdfetch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rrdfetch/"
 description: "rrdfetch – Fetch data from an RRD."
 ---
 
-<h2 class="name">NAME</h2>
 <p> rrdfetch &#8211; Fetch data from an RRD. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>fetch</code> <i>filename</i> <i></i><font SIZE="-1"><i>CF</i></font><i></i> [<code>&#8211;resolution</code>|<code>-r</code>&nbsp;<wbr><i>resolution</i>] [<code>&#8211;start</code>|<code>-s</code>&nbsp;<wbr><i>start</i>] [<code>&#8211;end</code>|<code>-e</code>&nbsp;<wbr><i>end</i>] [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-describe(1)"
 name: "git-describe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-describe/"
 description: "git-describe – Give an object a human readable name based on an available ref"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-describe &#8211; Give an object a human readable name based on an available ref </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

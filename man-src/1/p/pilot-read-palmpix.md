@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-read-palmpix(1)"
 name: "pilot-read-palmpix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-read-palmpix/"
 description: "pilot-read-palmpix – Convert all pictures in the files given or found on a Palm handheld."
 ---
 
-<h2>NAME</h2>
 <p> pilot-read-palmpix &#8211; Convert all pictures in the files given or found on a Palm handheld.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

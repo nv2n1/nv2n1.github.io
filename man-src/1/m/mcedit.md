@@ -1,4 +1,5 @@
 ---
+
 title: "mcedit(1)"
 name: "mcedit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mcedit/"
 description: "mcedit – Internal file editor of GNU Midnight Commander."
 ---
 
-<h2>NAME</h2>
 <p> mcedit &#8211; Internal file editor of GNU Midnight Commander.</p>
 <h2>USAGE</h2>
 <p> <code>mcedit</code> [-bcCdfhstVx?] [+lineno] [file1] [file2] &#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_destroy_ah(3)"
 name: "ibv_destroy_ah"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_destroy_ah/"
 description: "ibv_create_ah, ibv_destroy_ah – create or destroy an address handle (AH)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_create_ah, ibv_destroy_ah &#8211; create or destroy an address handle (AH) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

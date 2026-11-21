@@ -1,4 +1,5 @@
 ---
+
 title: "i3status(1)"
 name: "i3status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i3status/"
 description: "i3status – Generates a status line for dzen2 or xmobar"
 ---
 
-<h2 class="name">NAME</h2>
 <p> i3status &#8211; Generates a status line for dzen2 or xmobar </p>
 <h2>SYNOPSIS</h2>
 <p> i3status [-c configfile]</p>

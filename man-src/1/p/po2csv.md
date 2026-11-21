@@ -1,4 +1,5 @@
 ---
+
 title: "po2csv(1)"
 name: "po2csv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-po2csv/"
 description: "po2csv – Convert Gettext PO localization files to Comma-Separated Value (.csv) files."
 ---
 
-<h2>NAME</h2>
 <p> po2csv &#8211; Convert Gettext PO localization files to Comma-Separated Value (.csv) files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>po2csv </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-S|&#8211;timestamp] [&#8211;columnorder]</p>

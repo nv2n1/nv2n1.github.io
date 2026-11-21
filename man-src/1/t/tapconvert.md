@@ -1,4 +1,5 @@
 ---
+
 title: "tapconvert(1)"
 name: "tapconvert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tapconvert/"
 description: "tapconvert – convert Twisted configurations from one format to another"
 ---
 
-<h2>NAME</h2>
 <p> tapconvert &#8211; convert Twisted configurations from one format to another</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tapconvert -i </code><i>input</i> -o <i>output</i> [-f <i>input-type</i>] [-t <i>output-type</i>] [-d] [-e] </p>

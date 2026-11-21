@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_free_entry_strings(3)"
 name: "dirfile_free_entry_strings"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_free_entry_strings/"
 description: "dirfile_free_entry_strings — free strings in a GetData gd_entry_t object"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_free_entry_strings &#8212; free strings in a GetData gd_entry_t object</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

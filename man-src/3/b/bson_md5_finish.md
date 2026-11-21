@@ -1,4 +1,5 @@
 ---
+
 title: "bson_md5_finish(3)"
 name: "bson_md5_finish"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_md5_finish/"
 description: "bson_md5_finish() – Completes the MD5 algorithm and stores the digest in digest."
 ---
 
-<h2>NAME</h2>
 <p> bson_md5_finish() &#8211; Completes the MD5 algorithm and stores the digest in digest.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

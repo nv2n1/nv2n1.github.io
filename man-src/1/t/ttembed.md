@@ -1,4 +1,5 @@
 ---
+
 title: "ttembed(1)"
 name: "ttembed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ttembed/"
 description: "ttembed – remove embedding restrictions from TrueType files"
 ---
 
-<h2>NAME</h2>
 <p> ttembed &#8211; remove embedding restrictions from TrueType files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ttembed</code> [<i>-n</i>] <i>fontfile</i></p>

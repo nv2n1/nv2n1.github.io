@@ -1,4 +1,5 @@
 ---
+
 title: "dvipdfmx(1)"
 name: "dvipdfmx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvipdfmx/"
 description: "dvipdfmx, xdvipdfmx, dvipdfm – produce PDF files directly from DVI files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dvipdfmx, xdvipdfmx, dvipdfm &#8211; produce PDF files directly from DVI files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvipdfmx</code> or <code>dvipdfm</code> [<i>options</i>] <i>file</i>[<code>.dvi</code>]</p>

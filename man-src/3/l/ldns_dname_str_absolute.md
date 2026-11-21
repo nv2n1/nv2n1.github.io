@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dname_str_absolute(3)"
 name: "ldns_dname_str_absolute"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dname_str_absolute/"
 description: "ldns_dname_is_subdomain, ldns_dname_str_absolute, ldns_dname_label"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dname_is_subdomain, ldns_dname_str_absolute, ldns_dname_label </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

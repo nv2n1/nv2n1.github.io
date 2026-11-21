@@ -1,4 +1,5 @@
 ---
+
 title: "libmng(3)"
 name: "libmng"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libmng/"
 description: "libmng – Multiple-image Network Graphics (MNG) Reference Library 1.0.9"
 ---
 
-<h2>NAME</h2>
 <p> libmng &#8211; Multiple-image Network Graphics (MNG) Reference Library 1.0.9</p>
 <h2>SYNOPSIS</h2>
 <p> <i></i><code> </p>

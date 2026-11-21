@@ -1,4 +1,5 @@
 ---
+
 title: "git-init-db(1)"
 name: "git-init-db"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-init-db/"
 description: "git-init-db – Creates an empty Git repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-init-db &#8211; Creates an empty Git repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "heimdal-rcp(1)"
 name: "heimdal-rcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-heimdal-rcp/"
 description: "rcp – copy file to and from remote machines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>rcp</code> &#8211; copy file to and from remote machines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rcp</code> [-<code>45FKpxz</code> ] [-<code>P </code><i>port</i> ] <i>file1 file2</i><br />

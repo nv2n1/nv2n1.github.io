@@ -1,4 +1,5 @@
 ---
+
 title: "euare-oidcproviderdelclientid(1)"
 name: "euare-oidcproviderdelclientid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-oidcproviderdelclientid/"
 description: "euare-oidcproviderdelclientid – Remove a client ID from an OpenID Connect provider"
 ---
 
-<h2>NAME</h2>
 <p> euare-oidcproviderdelclientid &#8211; Remove a client ID from an OpenID Connect provider</p>
 <h2>SYNOPSIS</h2>
 <p> euare-oidcproviderdelclientid <code>-c</code> CLIENT [&#8211;as-account ACCOUNT] [-U URL]</p>

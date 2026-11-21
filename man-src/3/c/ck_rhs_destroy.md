@@ -1,4 +1,5 @@
 ---
+
 title: "ck_rhs_destroy(3)"
 name: "ck_rhs_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_rhs_destroy/"
 description: "ck_rhs_destroy – destroy hash set"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_rhs_destroy</code> &#8211; destroy hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

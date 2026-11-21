@@ -1,4 +1,5 @@
 ---
+
 title: "mono-slam(1)"
 name: "mono-slam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mono-slam/"
 description: "mono-slam – Monocular Visual Simultaneous Localization and Mapping (SLAM)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mono-slam &#8211; Monocular Visual Simultaneous Localization and Mapping (SLAM) </p>
 <h2>SYNOPSIS</h2>
 <p> mono-slam</p>

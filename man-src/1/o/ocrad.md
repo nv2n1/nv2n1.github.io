@@ -1,4 +1,5 @@
 ---
+
 title: "ocrad(1)"
 name: "ocrad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ocrad/"
 description: "Ocrad – manual page for Ocrad 0.18"
 ---
 
-<h2>NAME</h2>
 <p> Ocrad &#8211; manual page for Ocrad 0.18</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocrad</code> [<i>options</i>] [<i>files</i>]</p>

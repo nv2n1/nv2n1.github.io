@@ -1,4 +1,5 @@
 ---
+
 title: "ssh-add(1)"
 name: "ssh-add"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ssh-add/"
 description: "ssh-add – adds private key identities to the OpenSSH authentication agent"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ssh-add</code> &#8211; adds private key identities to the OpenSSH authentication agent </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssh-add</code> [-<code>cDdKkLlqvXx </code>[-<code>E </code><i>fingerprint_hash</i> ] ] [-<code>H </code><i>hostkey_file</i> ] [-<code>h </code><i>destination_constraint</i> ] [-<code>S </code><i>provider</i> ] [-<code>t </code><i>life</i> ] [<i>file &#8230;</i> ]<br />

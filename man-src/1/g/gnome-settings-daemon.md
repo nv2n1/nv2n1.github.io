@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-settings-daemon(1)"
 name: "gnome-settings-daemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-settings-daemon/"
 description: "gnome-settings-daemon – GNOME settings daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-settings-daemon &#8211; GNOME settings daemon </p>
 <h2>SYNOPSIS</h2>
 <dl>

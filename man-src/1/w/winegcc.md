@@ -1,4 +1,5 @@
 ---
+
 title: "winegcc(1)"
 name: "winegcc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-winegcc/"
 description: "winegcc – Wine C and C++ MinGW Compatible Compiler"
 ---
 
-<h2>NAME</h2>
 <p> winegcc &#8211; Wine C and C++ MinGW Compatible Compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>winegcc</code> [<i>options</i>] <i>infile</i>&#8230;</p>

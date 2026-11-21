@@ -1,4 +1,5 @@
 ---
+
 title: "mcu8051ide(1)"
 name: "mcu8051ide"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mcu8051ide/"
 description: "MCU 8051 IDE – Itegrated development enviroment for MCS-51 based microcontrollers"
 ---
 
-<h2>NAME</h2>
 <p> MCU 8051 IDE &#8211; Itegrated development enviroment for MCS-51 based microcontrollers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mcu8051ide</code> [<code>&#8211;help</code>] [<code>-h</code>] [<code>&#8211;compile</code> <i>asm_file</i>] [<code>&#8211;iram-size</code> <i>size</i>] [<code>&#8211;code-size</code> <i>size</i>] [<code>&#8211;xram-size</code> <i>size</i>] [<code>&#8211;no-opt</code>] [<code>&#8211;quiet</code>] [<code>-q</code>] [<code>&#8211;nosplash</code>] [<code>&#8211;nocolor</code>] [<code>-n</code>] [<code>&#8211;version</code>] [<code>-V</code>] [<code>&#8211;defaults</code>] [<code>&#8211;disassemble</code>] [<code>&#8211;minimalized</code>] [<code>&#8211;config-file</code> <i>filename</i>] [<code>&#8211;check-libraries</code>] [<code>&#8211;ignore-last-session</code>] [<code>&#8211;open-project</code> <i>project</i>] [<code>&#8211;reset-user-settings</code>] [<code>&#8211;hex2bin</code> <i>input</i> <i>output</i>] [<code>&#8211;bin2hex</code> <i>input</i> <i>output</i>] [<code>&#8211;sim2hex</code> <i>input</i> <i>output</i>] [<code>&#8211;sim2bin</code> <i>input</i> <i>output</i>] [<code>&#8211;normalize-hex</code> <i>input</i>] [<code>&#8211;auto-indent</code> <i>input</i>] [<code>&#8211;comp-quiet</code>] [<code>&#8211;no-sim</code>] [<code>&#8211;no-bin</code>] [<code>&#8211;no-lst</code>] [<code>&#8211;no-hex</code>] [<code>&#8211;warning-level</code> <i>N</i>] </p>

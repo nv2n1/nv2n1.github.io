@@ -1,4 +1,5 @@
 ---
+
 title: "cs_render(3)"
 name: "cs_render"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cs_render/"
 description: "cs_render – render a CS parse tree"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cs_render &#8211; render a CS parse tree </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "gt5(1)"
 name: "gt5"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gt5/"
 description: "gt5 – a diff-capable ‘du-browser’"
 ---
 
-<h2>NAME</h2>
 <p> gt5 &#8211; a diff-capable &#8216;du-browser&#8217;</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gt5</code> [ dir | file | dir file | file file2 ] [options]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "findrule(1)"
 name: "findrule"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-findrule/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- findrule - command line wrapper to File::Find::Rule 
+findrule - command line wrapper to File::Find::Rule 
 
 <h2>USAGE</h2>
 

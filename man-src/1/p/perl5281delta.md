@@ -1,4 +1,5 @@
 ---
+
 title: "perl5281delta(1)"
 name: "perl5281delta"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perl5281delta/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perl5281delta - what is new for perl v5.28.1 
+perl5281delta - what is new for perl v5.28.1 
 
 <h2>DESCRIPTION</h2>
 

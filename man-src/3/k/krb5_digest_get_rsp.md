@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_digest_get_rsp(3)"
 name: "krb5_digest_get_rsp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_digest_get_rsp/"
 description: "krb5_digest krb5_digest_alloc krb5_digest_free krb5_digest_set_server_cb krb5_digest_set_type krb5_digest_set_hostname krb5_digest_get_server_nonce krb5_digest_set_server_nonce krb5_digest_get_opaq..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_digest</code> <code>krb5_digest_alloc</code> <code>krb5_digest_free</code> <code>krb5_digest_set_server_cb</code> <code>krb5_digest_set_type</code> <code>krb5_digest_set_hostname</code> <code>krb5_digest_get_server_nonce</code> <code>krb5_digest_set_server_nonce</code> <code>krb5_digest_get_opaque</code> <code>krb5_digest_set_opaque</code> <code>krb5_digest_get_identifier</code> <code>krb5_digest_set_identifier</code> <code>krb5_digest_init_request</code> <code>krb5_digest_set_client_nonce</code> <code>krb5_digest_set_digest</code> <code>krb5_digest_set_username</code> <code>krb5_digest_set_authid</code> <code>krb5_digest_set_authentication_user</code> <code>krb5_digest_set_realm</code> <code>krb5_digest_set_method</code> <code>krb5_digest_set_uri</code> <code>krb5_digest_set_nonceCount</code> <code>krb5_digest_set_qop</code> <code>krb5_digest_request</code> <code>krb5_digest_get_responseData</code> <code>krb5_digest_get_rsp</code> <code>krb5_digest_get_tickets</code> <code>krb5_digest_get_client_binding</code> <code>krb5_digest_get_a1_hash</code> &#8211; remote digest (HTTP-DIGEST, SASL, CHAP) suppport </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

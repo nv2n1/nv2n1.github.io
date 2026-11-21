@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_servers_parse(3)"
 name: "memcached_servers_parse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_servers_parse/"
 description: "memcached_servers_parse – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_servers_parse &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>

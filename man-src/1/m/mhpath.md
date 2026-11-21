@@ -1,4 +1,5 @@
 ---
+
 title: "mhpath(1)"
 name: "mhpath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mhpath/"
 description: "mhpath – print full pathnames of nmh messages and folders"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mhpath &#8211; print full pathnames of nmh messages and folders </p>
 <h2>SYNOPSIS</h2>
 <dl>

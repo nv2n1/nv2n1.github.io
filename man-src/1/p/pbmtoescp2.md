@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtoescp2(1)"
 name: "pbmtoescp2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmtoescp2/"
 description: "pbmtoescp2 – convert a PBM image to a ESC/P2 printer file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmtoescp2 &#8211; convert a PBM image to a ESC/P2 printer file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtoescp2</code> </p>

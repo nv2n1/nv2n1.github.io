@@ -1,4 +1,5 @@
 ---
+
 title: "crudini(1)"
 name: "crudini"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-crudini/"
 description: "crudini – manipulate ini files"
 ---
 
-<h2>NAME</h2>
 <p> crudini &#8211; manipulate ini files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>crudini</code> <i>,&#8211;set /</i>[<i>,OPTION/</i>]&#8230; <i>,config_file section /</i>[<i>,param/</i>] [<i>,value/</i>]<br />

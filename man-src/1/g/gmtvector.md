@@ -1,4 +1,5 @@
 ---
+
 title: "gmtvector(1)"
 name: "gmtvector"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtvector/"
 description: "gmtvector – Basic manipulation of Cartesian vectors"
 ---
 
-<h2>NAME</h2>
 <p> gmtvector &#8211; Basic manipulation of Cartesian vectors</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtvector</code> [ <i>tables</i> ] [ <code>m</code>[<i>conf</i>]|<i>vector</i> ] [ [<code>i</code>|<code>o</code>] ] [ ] [ ] [ <i>vector</i> ] [ <code>a</code>|<code>d</code>|<code>D</code>|<code>p</code><i>az</i>|<code>r</code>[<i>arg</i>|<code>R</code>|<code>s</code>|<code>x</code>] ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

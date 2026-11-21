@@ -1,4 +1,5 @@
 ---
+
 title: "arm_register_metric(3)"
 name: "arm_register_metric"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arm_register_metric/"
 description: "arm_register_metric – describe metrics"
 ---
 
-<h2>NAME</h2>
 <p> arm_register_metric &#8211; describe metrics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>

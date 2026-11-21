@@ -1,4 +1,5 @@
 ---
+
 title: "idn(1)"
 name: "idn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idn/"
 description: "idn – Internationalized Domain Names command line tool"
 ---
 
-<h2>NAME</h2>
 <p> idn &#8211; Internationalized Domain Names command line tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idn</code> [<i>OPTION</i>]&#8230; [<i>STRINGS</i>]&#8230;</p>

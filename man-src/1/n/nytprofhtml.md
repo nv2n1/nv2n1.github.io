@@ -1,4 +1,5 @@
 ---
+
 title: "nytprofhtml(1)"
 name: "nytprofhtml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nytprofhtml/"
 description: "nytprofhtml – Generate reports from Devel::NYTProf data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nytprofhtml &#8211; Generate reports from Devel::NYTProf data </p>
 <h2>SYNOPSIS</h2>
 <p> Typical usage: </p>

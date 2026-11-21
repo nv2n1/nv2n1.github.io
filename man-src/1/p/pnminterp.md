@@ -1,4 +1,5 @@
 ---
+
 title: "pnminterp(1)"
 name: "pnminterp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnminterp/"
 description: "pamstretch – scale up a PNM or PAM image by interpolating between pixels"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamstretch &#8211; scale up a PNM or PAM image by interpolating between pixels </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamstretch</code> [<code>-xscale=</code><i>X</i>] [<code>-yscale=</code><i>Y</i>]<br />

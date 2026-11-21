@@ -1,4 +1,5 @@
 ---
+
 title: "atopsar(1)"
 name: "atopsar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atopsar/"
 description: "atopsar – Advanced System Activity Report (atop related)"
 ---
 
-<h2>NAME</h2>
 <p> <code>atopsar</code> &#8211; Advanced System Activity Report (atop related)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>atopsar</code> [-flags&#8230;] [-r <i>file|date</i> ] [-R <i>cnt</i> ] [-b <i>hh:mm</i> ] [-e <i>hh:mm</i> ]<br />

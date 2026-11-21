@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_auth_con_getremotesubkey(3)"
 name: "krb5_auth_con_getremotesubkey"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_auth_con_getremotesubkey/"
 description: "krb5_auth_con_addflags krb5_auth_con_free krb5_auth_con_genaddrs krb5_auth_con_generatelocalsubkey krb5_auth_con_getaddrs krb5_auth_con_getauthenticator krb5_auth_con_getflags krb5_auth_con_getkey ..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_auth_con_addflags</code> <code>krb5_auth_con_free</code> <code>krb5_auth_con_genaddrs</code> <code>krb5_auth_con_generatelocalsubkey</code> <code>krb5_auth_con_getaddrs</code> <code>krb5_auth_con_getauthenticator</code> <code>krb5_auth_con_getflags</code> <code>krb5_auth_con_getkey</code> <code>krb5_auth_con_getlocalsubkey</code> <code>krb5_auth_con_getrcache</code> <code>krb5_auth_con_getremotesubkey</code> <code>krb5_auth_con_getuserkey</code> <code>krb5_auth_con_init</code> <code>krb5_auth_con_initivector</code> <code>krb5_auth_con_removeflags</code> <code>krb5_auth_con_setaddrs</code> <code>krb5_auth_con_setaddrs_from_fd</code> <code>krb5_auth_con_setflags</code> <code>krb5_auth_con_setivector</code> <code>krb5_auth_con_setkey</code> <code>krb5_auth_con_setlocalsubkey</code> <code>krb5_auth_con_setrcache</code> <code>krb5_auth_con_setremotesubkey</code> <code>krb5_auth_con_setuserkey</code> <code>krb5_auth_context</code> <code>krb5_auth_getcksumtype</code> <code>krb5_auth_getkeytype</code> <code>krb5_auth_getlocalseqnumber</code> <code>krb5_auth_getremoteseqnumber</code> <code>krb5_auth_setcksumtype</code> <code>krb5_auth_setkeytype</code> <code>krb5_auth_setlocalseqnumber</code> <code>krb5_auth_setremoteseqnumber</code> <code>krb5_free_authenticator</code> &#8211; manage authentication on connection level </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fwbedit(1)"
 name: "fwbedit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fwbedit/"
 description: "fwbedit – General purpose object tree editing tool"
 ---
 
-<h2>NAME</h2>
 <p> fwbedit &#8211; General purpose object tree editing tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fwbedit</code> command [options] </p>

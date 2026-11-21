@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_btr(3)"
 name: "ck_pr_btr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_btr/"
 description: "ck_pr_btr_ptr ck_pr_btr_uint ck_pr_btr_int ck_pr_btr_64 ck_pr_btr_32 ck_pr_btr_16 – atomic bit test-and-reset operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_btr_ptr</code> <code>ck_pr_btr_uint</code> <code>ck_pr_btr_int</code> <code>ck_pr_btr_64</code> <code>ck_pr_btr_32</code> <code>ck_pr_btr_16</code> &#8211; atomic bit test-and-reset operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

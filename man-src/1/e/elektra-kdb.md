@@ -1,4 +1,5 @@
 ---
+
 title: "elektra-kdb(1)"
 name: "elektra-kdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-elektra-kdb/"
 description: "kdb – Elektra key database command line administration tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kdb &#8211; Elektra key database command line administration tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dane_verify(3)"
 name: "ldns_dane_verify"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dane_verify/"
 description: "ldns_dane_verify, ldns_dane_verify_rr"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dane_verify, ldns_dane_verify_rr </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

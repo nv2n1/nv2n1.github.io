@@ -1,4 +1,5 @@
 ---
+
 title: "ncargpath(1)"
 name: "ncargpath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncargpath/"
 description: "ncargpath – Return the full pathname to a given NCAR Graphics directory or the default of a particular NCAR Graphics attribute."
 ---
 
-<h2>NAME</h2>
 <p> ncargpath &#8211; Return the full pathname to a given NCAR Graphics directory or the default of a particular NCAR Graphics attribute.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncargpath name</code> </p>

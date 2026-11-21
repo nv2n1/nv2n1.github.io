@@ -1,4 +1,5 @@
 ---
+
 title: "kpatch(1)"
 name: "kpatch"
 section: "1"
@@ -6,9 +7,7 @@ letter: "k"
 url: "/docs/linux/man/1-kpatch/"
 ---
 
-<h2>NAME</h2>
-
- kpatch - hot patch module management
+kpatch - hot patch module management
 
 <h2>SYNOPSIS</h2>
 

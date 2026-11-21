@@ -1,4 +1,5 @@
 ---
+
 title: "rstream(1)"
 name: "rstream"
 section: "1"
@@ -6,9 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rstream/"
 ---
 
-<h2>NAME</h2>
-
- rstream - streaming over RDMA ping-pong test.
+rstream - streaming over RDMA ping-pong test.
 
 <h2>SYNOPSIS</h2>
 

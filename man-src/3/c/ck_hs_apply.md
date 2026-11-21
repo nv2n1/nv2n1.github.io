@@ -1,4 +1,5 @@
 ---
+
 title: "ck_hs_apply(3)"
 name: "ck_hs_apply"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_hs_apply/"
 description: "ck_hs_apply – apply a function to hash set value"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_hs_apply</code> &#8211; apply a function to hash set value</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

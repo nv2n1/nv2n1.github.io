@@ -1,4 +1,5 @@
 ---
+
 title: "bson_writer_t(3)"
 name: "bson_writer_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_writer_t/"
 description: "bson_writer_t – Bulk BSON serialization Abstraction"
 ---
 
-<h2>NAME</h2>
 <p> bson_writer_t &#8211; Bulk BSON serialization Abstraction</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

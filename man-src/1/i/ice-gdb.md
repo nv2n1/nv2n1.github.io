@@ -1,4 +1,5 @@
 ---
+
 title: "ice-gdb(1)"
 name: "ice-gdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ice-gdb/"
 description: "ice-gdb – JTAG ICE frontend for avr-gdb ice-insight – JTAG ICE frontend for avr-insight"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ice-gdb &#8211; JTAG ICE frontend for avr-gdb<br />
  ice-insight &#8211; JTAG ICE frontend for avr-insight </p>
 <h2>SYNOPSIS</h2>

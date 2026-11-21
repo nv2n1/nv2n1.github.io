@@ -1,4 +1,5 @@
 ---
+
 title: "extendeddiscountcurve(3)"
 name: "extendeddiscountcurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-extendeddiscountcurve/"
 description: "ql/legacy/termstructures/extendeddiscountcurve.hpp – discount factor structure with detailed compound-forward calculation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/legacy/termstructures/extendeddiscountcurve.hpp &#8211; discount factor structure with detailed compound-forward calculation </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/yield/discountcurve.hpp&gt;<br />

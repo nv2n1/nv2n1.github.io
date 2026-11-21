@@ -1,4 +1,5 @@
 ---
+
 title: "bson_type_t(3)"
 name: "bson_type_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_type_t/"
 description: "bson_type_t – BSON Type Enumeration"
 ---
 
-<h2>NAME</h2>
 <p> bson_type_t &#8211; BSON Type Enumeration</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "spu_create(2)"
 name: "spu_create"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-spu_create/"
 description: "spu_create – create a new spu context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> spu_create &#8211; create a new spu context </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

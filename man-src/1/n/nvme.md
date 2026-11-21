@@ -1,4 +1,5 @@
 ---
+
 title: "nvme(1)"
 name: "nvme"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nvme/"
 description: "nvme – the dumb pci-e storage utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nvme &#8211; the dumb pci-e storage utility </p>
 <h2>SYNOPSIS</h2>
 <pre>

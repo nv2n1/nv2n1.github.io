@@ -1,4 +1,5 @@
 ---
+
 title: "khost(1)"
 name: "khost"
 section: "1"
@@ -6,7 +7,6 @@ letter: "k"
 url: "/docs/linux/man/1-khost/"
 ---
 
-<h2>NAME</h2>
 <dl>
 <dt><code>khost</code></dt>
 <dd> &#8211; Simple DNS lookup utility (libknot equivalent of ISC host)</dd></dl>

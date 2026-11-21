@@ -1,4 +1,5 @@
 ---
+
 title: "cggsvp(3)"
 name: "cggsvp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cggsvp/"
 description: "cggsvp.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cggsvp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

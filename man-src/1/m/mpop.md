@@ -1,4 +1,5 @@
 ---
+
 title: "mpop(1)"
 name: "mpop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpop/"
 description: "mpop – A POP3 client"
 ---
 
-<h2>NAME</h2>
 <p> mpop &#8211; A POP3 client</p>
 <h2>SYNOPSIS</h2>
 <dl>

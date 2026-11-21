@@ -1,4 +1,5 @@
 ---
+
 title: "pwmake(1)"
 name: "pwmake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pwmake/"
 description: "pwmake – simple tool for generating random relatively easily pronounceable passwords"
 ---
 
-<h2>NAME</h2>
 <p> pwmake &#8211; simple tool for generating random relatively easily pronounceable passwords</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pwmake</code> &lt;entropy-bits&gt;</p>

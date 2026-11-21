@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-getlang(1)"
 name: "debconf-getlang"
 section: "1"
@@ -6,10 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-debconf-getlang/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- debconf-getlang - extract a language from a templates file 
+debconf-getlang - extract a language from a templates file 
 
 <h2>SYNOPSIS</h2>
 

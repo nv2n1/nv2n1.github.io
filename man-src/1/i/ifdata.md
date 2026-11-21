@@ -1,4 +1,5 @@
 ---
+
 title: "ifdata(1)"
 name: "ifdata"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ifdata/"
 description: "ifdata – get network interface info without parsing ifconfig output"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ifdata &#8211; get network interface info without parsing ifconfig output </p>
 <h2>SYNOPSIS</h2>
 <dl>

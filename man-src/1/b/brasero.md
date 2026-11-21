@@ -1,4 +1,5 @@
 ---
+
 title: "brasero(1)"
 name: "brasero"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-brasero/"
 description: "brasero – Simple and easy to use CD/DVD burning application for the GNOME Desktop"
 ---
 
-<h2>NAME</h2>
 <p> brasero &#8211; Simple and easy to use CD/DVD burning application for the GNOME Desktop</p>
 <h2>SYNOPSIS</h2>
 <p> <code>brasero</code> [<i>options</i>] [<i>uri</i>] [<i>uri</i>] &#8230; </p>

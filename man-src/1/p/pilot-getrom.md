@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-getrom(1)"
 name: "pilot-getrom"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-getrom/"
 description: "pilot-getrom – Retrieves the ROM image from your Palm device for use in debugging."
 ---
 
-<h2>NAME</h2>
 <p> pilot-getrom &#8211; Retrieves the ROM image from your Palm device for use in debugging.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>

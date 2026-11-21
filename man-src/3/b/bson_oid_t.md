@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_t(3)"
 name: "bson_oid_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_oid_t/"
 description: "bson_oid_t – BSON ObjectID Abstraction"
 ---
 
-<h2>NAME</h2>
 <p> bson_oid_t &#8211; BSON ObjectID Abstraction</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "dahdi_scan(8)"
 name: "dahdi_scan"
 section: "8"
@@ -6,8 +7,9 @@ letter: "d"
 url: "/docs/linux/man/8-dahdi_scan/"
 description: "dahdi_scan — Print Configuration of DAHDI Spans"
 ---
+
 <p> dahdi_scan --- Print Configuration of DAHDI Spans  </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>dahdi_scan</code> <i>[spans]</i> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>dahdi_scan</code> prints information about DAHDI spans in the system. For analog spans it also provides a list of channels. </p>

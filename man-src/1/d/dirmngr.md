@@ -1,4 +1,5 @@
 ---
+
 title: "dirmngr(1)"
 name: "dirmngr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dirmngr/"
 description: "dirmngr – CRL and OCSP daemon"
 ---
 
-<h2>NAME</h2>
 <p> <code>dirmngr</code> &#8211; CRL and OCSP daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dirmngr</code> [<i>options</i>] <i>command</i> [<i>args</i>] </p>

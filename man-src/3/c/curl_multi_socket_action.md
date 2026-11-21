@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_socket_action(3)"
 name: "curl_multi_socket_action"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_multi_socket_action/"
 description: "curl_multi_socket_action – reads/writes available data given an action"
 ---
 
-<h2>NAME</h2>
 <p> curl_multi_socket_action &#8211; reads/writes available data given an action</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

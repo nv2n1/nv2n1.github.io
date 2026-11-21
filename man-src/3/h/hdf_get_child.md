@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_get_child(3)"
 name: "hdf_get_child"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_get_child/"
 description: "hdf_get_child – return the first child of the named node"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_get_child &#8211; return the first child of the named node </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

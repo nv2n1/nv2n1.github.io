@@ -1,4 +1,5 @@
 ---
+
 title: "parallel(1)"
 name: "parallel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-parallel/"
 description: "parallel – run programs in parallel"
 ---
 
-<h2 class="name">NAME</h2>
 <p> parallel &#8211; run programs in parallel </p>
 <h2>SYNOPSIS</h2>
 <dl>

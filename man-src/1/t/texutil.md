@@ -1,4 +1,5 @@
 ---
+
 title: "texutil(1)"
 name: "texutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-texutil/"
 description: "texutil – ConTeXt utility program"
 ---
 
-<h2>NAME</h2>
 <p> texutil &#8211; ConTeXt utility program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>texutil</code> [ <i>OPTION</i>&#8230; ] <i>FILENAME</i>[&#8230;] </p>

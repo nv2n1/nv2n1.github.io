@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_overwrite_int64(3)"
 name: "bson_iter_overwrite_int64"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_overwrite_int64/"
 description: "bson_iter_overwrite_int64() – The bson_iter_overwrite_int64() function shall overwite the contents of a BSON_TYPE_INT64 element in place."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_overwrite_int64() &#8211; The bson_iter_overwrite_int64() function shall overwite the contents of a BSON_TYPE_INT64 element in place.</p>
 <h2>SYNOPSIS</h2>
 <pre>

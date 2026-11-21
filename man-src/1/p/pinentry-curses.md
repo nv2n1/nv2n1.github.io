@@ -1,4 +1,5 @@
 ---
+
 title: "pinentry-curses(1)"
 name: "pinentry-curses"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pinentry-curses/"
 description: "pinentry-curses – PIN or pass-phrase entry dialog for GnuPG"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pinentry-curses &#8211; PIN or pass-phrase entry dialog for GnuPG</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pinentry-curses [</code><i>OPTION</i>&#8230;]</p>

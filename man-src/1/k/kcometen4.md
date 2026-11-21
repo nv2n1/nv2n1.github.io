@@ -1,4 +1,5 @@
 ---
+
 title: "kcometen4(1)"
 name: "kcometen4"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kcometen4/"
 description: "kcometen4.kss – An OpenGL screensaver with exploding comets."
 ---
 
-<h2>NAME</h2>
 <p> kcometen4.kss &#8211; An OpenGL screensaver with exploding comets.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kcometen4.kss</code> [<i>Qt options</i>] [<i>KDE options</i>] [<i>options</i>]</p>

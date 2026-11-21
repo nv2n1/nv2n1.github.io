@@ -1,4 +1,5 @@
 ---
+
 title: "vdr(1)"
 name: "vdr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vdr/"
 description: "vdr – the Video Disk Recorder"
 ---
 
-<h2>NAME</h2>
 <p> vdr &#8211; the Video Disk Recorder</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vdr</code> [options]</p>

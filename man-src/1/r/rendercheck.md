@@ -1,4 +1,5 @@
 ---
+
 title: "rendercheck(1)"
 name: "rendercheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rendercheck/"
 description: "rendercheck – simple tests of the X Render extension."
 ---
 
-<h2 class="name">NAME</h2>
 <p> rendercheck &#8211; simple tests of the X Render extension. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

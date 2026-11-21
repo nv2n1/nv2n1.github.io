@@ -1,4 +1,5 @@
 ---
+
 title: "lbzegrep(1)"
 name: "lbzegrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lbzegrep/"
 description: "lbzgrep – search possibly compressed files for a regular expression"
 ---
 
-<h2>NAME</h2>
 <p> lbzgrep &#8211; search possibly compressed files for a regular expression</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lbzgrep</code> [ grep_options ] <code>[&nbsp;<wbr>-e&nbsp;<wbr>]</code><i> pattern</i> <i>filename</i>&#8230;</p>

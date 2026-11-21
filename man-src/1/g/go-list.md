@@ -1,4 +1,5 @@
 ---
+
 title: "go-list(1)"
 name: "go-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-go-list/"
 description: "go-list – list packages or modules"
 ---
 
-<h2 class="name">NAME</h2>
 <p> go-list &#8211; list packages or modules </p>
 <h2>SYNOPSIS</h2>
 <p> <code>go list</code> [<code>-f</code> <i>format</i>] [<code>-json</code>] [<code>-m</code>] [<i>list flags</i>] [<i>build flags</i>] [<i>packages</i>]</p>

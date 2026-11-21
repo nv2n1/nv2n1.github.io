@@ -1,4 +1,5 @@
 ---
+
 title: "audacity(1)"
 name: "audacity"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-audacity/"
 description: "audacity – Graphical cross-platform audio editor"
 ---
 
-<h2>NAME</h2>
 <p> audacity &#8211; Graphical cross-platform audio editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>audacity</code> -help<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "cervisia(1)"
 name: "cervisia"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cervisia/"
 description: "Cervisia – Graphical CVS frontend"
 ---
 
-<h2>NAME</h2>
 <p> Cervisia &#8211; Graphical CVS frontend</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cervisia</code><br />

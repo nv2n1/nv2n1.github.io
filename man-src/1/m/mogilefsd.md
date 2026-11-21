@@ -1,4 +1,5 @@
 ---
+
 title: "mogilefsd(1)"
 name: "mogilefsd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mogilefsd/"
 description: "mogilefsd — MogileFS tracker daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mogilefsd &#8212; MogileFS tracker daemon </p>
 <h2>USAGE</h2>
 <p> This is the main MogileFS daemon, mogilefsd, also called the &#8220;tracker&#8221;. All interaction with a MogileFS installation begins by a client talking to a tracker (you should run several in parallel for redundancy). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "do_menu(3)"
 name: "do_menu"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-do_menu/"
 description: "do_menu – Displays an animates a popup menu. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> do_menu &#8211; Displays an animates a popup menu. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

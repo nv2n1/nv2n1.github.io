@@ -1,4 +1,5 @@
 ---
+
 title: "audit_log_user_semanage_message(3)"
 name: "audit_log_user_semanage_message"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_log_user_semanage_message/"
 description: "audit_log_user_semanage_message – log a semanage message"
 ---
 
-<h2>NAME</h2>
 <p> audit_log_user_semanage_message &#8211; log a semanage message</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/libaudit.h">libaudit.h</a>&gt;</code> </p>

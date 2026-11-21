@@ -1,4 +1,5 @@
 ---
+
 title: "qsgrep(1)"
 name: "qsgrep"
 section: "1"
@@ -6,10 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qsgrep/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- qsgrep - prints matching patterns within a file. 
+qsgrep - prints matching patterns within a file. 
 
 <h2>SYNOPSIS</h2>
 

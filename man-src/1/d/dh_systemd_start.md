@@ -1,4 +1,5 @@
 ---
+
 title: "dh_systemd_start(1)"
 name: "dh_systemd_start"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_systemd_start/"
 description: "dh_systemd_start – start/stop/restart systemd unit files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_systemd_start &#8211; start/stop/restart systemd unit files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_systemd_start</code> [<i>debhelper options</i>] [<code>&#8211;restart-after-upgrade</code>] [<code>&#8211;no-stop-on-upgrade</code>] [<i>unit file</i> &#8230;]</p>

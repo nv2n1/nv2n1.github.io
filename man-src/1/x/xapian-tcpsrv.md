@@ -1,4 +1,5 @@
 ---
+
 title: "xapian-tcpsrv(1)"
 name: "xapian-tcpsrv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xapian-tcpsrv/"
 description: "xapian-tcpsrv – TCP daemon for use with Xapian’s remote backend"
 ---
 
-<h2>NAME</h2>
 <p> xapian-tcpsrv &#8211; TCP daemon for use with Xapian&#8217;s remote backend</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xapian-tcpsrv</code> [<i>OPTIONS</i>] <i>DATABASE_DIRECTORY</i>&#8230;</p>

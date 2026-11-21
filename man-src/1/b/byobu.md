@@ -1,4 +1,5 @@
 ---
+
 title: "byobu(1)"
 name: "byobu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu/"
 description: "byobu – wrapper script for seeding a user’s byobu configuration and launching a text based window manager (either screen or tmux)"
 ---
 
-<h2>NAME</h2>
 <p> byobu &#8211; wrapper script for seeding a user&#8217;s byobu configuration and launching a text based window manager (either screen or tmux) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>byobu</code> [screen options] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_error_mutliple_add_chain(3)"
 name: "globus_error_mutliple_add_chain"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_error_mutliple_add_chain/"
 description: "globus_error_generic.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_error_generic.h &#8211; </p>
 <p> Globus Error API.</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "zshzftpsys(1)"
 name: "zshzftpsys"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zshzftpsys/"
 description: "zshzftpsys – zftp function front-end"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zshzftpsys &#8211; zftp function front-end </p>
 <h2>DESCRIPTION</h2>
 <p> This describes the set of shell functions supplied with the source distribution as an interface to the <code>zftp</code> builtin command, allowing you to perform FTP operations from the shell command line or within functions or scripts. The interface is similar to a traditional FTP client (e.g. the <code>ftp</code> command itself, see <i><a href="/docs/linux/man/1-ftp/">ftp</a></i>(1)), but as it is entirely done within the shell all the familiar completion, editing and globbing features, and so on, are present, and macros are particularly simple to write as they are just ordinary shell functions. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "jdeps(1)"
 name: "jdeps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jdeps/"
 description: "jdeps – Java class dependency analyzer."
 ---
 
-<h2>NAME</h2>
 <p> jdeps &#8211; Java class dependency analyzer.</p>
 <h2>SYNOPSIS</h2>
 <pre>

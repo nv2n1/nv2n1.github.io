@@ -1,4 +1,5 @@
 ---
+
 title: "rasql(1)"
 name: "rasql"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rasql/"
 description: "rasql – read argus(8) data from mysql database."
 ---
 
-<h2>NAME</h2>
 <p> <code>rasql</code> &#8211; read <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from mysql database.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rasql</code> [<code>-M</code> <i>sql=&#8217;where clause&#8217;</i>] -r <a href="mysql://user@host/db/table">mysql://user@host/db/table</a> [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

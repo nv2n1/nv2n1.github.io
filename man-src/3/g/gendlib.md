@@ -1,4 +1,5 @@
 ---
+
 title: "gendlib(3)"
 name: "gendlib"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gendlib/"
 description: "gendlib – perl library for querying genders file"
 ---
 
-<h2>NAME</h2>
 <p> gendlib &#8211; perl library for querying genders file</p>
 <h2>SYNOPSIS</h2>
 <p> require &#8220;/usr/lib/genders/gendlib.pl&#8221;;</p>

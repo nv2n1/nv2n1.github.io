@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-files(1)"
 name: "guilt-files"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guilt-files/"
 description: "guilt-files – Print the list of files that the topmost patch changes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guilt-files &#8211; Print the list of files that the topmost patch changes </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-files</i> [-v] [-a] [-l]</p>

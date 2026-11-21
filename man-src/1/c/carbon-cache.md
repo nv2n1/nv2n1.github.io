@@ -1,4 +1,5 @@
 ---
+
 title: "carbon-cache(1)"
 name: "carbon-cache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-carbon-cache/"
 description: "carbon-cache – accepts metrics over various protocols and writes them to disk"
 ---
 
-<h2>NAME</h2>
 <p> carbon-cache &#8211; accepts metrics over various protocols and writes them to disk</p>
 <h2>SYNOPSYS</h2>
 <pre>

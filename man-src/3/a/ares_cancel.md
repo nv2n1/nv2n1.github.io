@@ -1,4 +1,5 @@
 ---
+
 title: "ares_cancel(3)"
 name: "ares_cancel"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_cancel/"
 description: "ares_cancel – Cancel a resolve"
 ---
 
-<h2>NAME</h2>
 <p> ares_cancel &#8211; Cancel a resolve</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

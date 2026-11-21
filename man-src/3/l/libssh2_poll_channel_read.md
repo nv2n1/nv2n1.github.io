@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_poll_channel_read(3)"
 name: "libssh2_poll_channel_read"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_poll_channel_read/"
 description: "libssh2_poll_channel_read – check if data is available"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_poll_channel_read &#8211; check if data is available</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

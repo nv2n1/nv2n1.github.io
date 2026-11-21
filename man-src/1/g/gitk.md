@@ -1,4 +1,5 @@
 ---
+
 title: "gitk(1)"
 name: "gitk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gitk/"
 description: "gitk – The Git repository browser"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gitk &#8211; The Git repository browser </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

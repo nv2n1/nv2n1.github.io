@@ -1,4 +1,5 @@
 ---
+
 title: "record(1)"
 name: "record"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-record/"
 description: "record – records *.wav files"
 ---
 
-<h2>NAME</h2>
 <p> record &#8211; records *.wav files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>record [ options ]</code></p>

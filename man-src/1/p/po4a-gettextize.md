@@ -1,4 +1,5 @@
 ---
+
 title: "po4a-gettextize(1)"
 name: "po4a-gettextize"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-po4a-gettextize/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- po4a-gettextize - convert an original file (and its translation) to a po file 
+po4a-gettextize - convert an original file (and its translation) to a po file 
 
 <h2>SYNOPSIS</h2>
 

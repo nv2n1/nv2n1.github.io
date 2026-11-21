@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-resv-acquire(1)"
 name: "nvme-resv-acquire"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-resv-acquire/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-resv-acquire - Acquire an nvme reservation 
+nvme-resv-acquire - Acquire an nvme reservation 
 
 <h2>SYNOPSIS</h2>
 

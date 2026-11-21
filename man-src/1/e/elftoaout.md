@@ -1,4 +1,5 @@
 ---
+
 title: "elftoaout(1)"
 name: "elftoaout"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-elftoaout/"
 description: "elftoaout – ELF to a.out convertor"
 ---
 
-<h2>NAME</h2>
 <p> elftoaout &#8211; ELF to a.out convertor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>elftoaout</code> [ <code>-b</code> ] [ <code>-o</code> <i>outfile</i> ] [ <code>-V</code> ] <i>infile</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "encfssh(1)"
 name: "encfssh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-encfssh/"
 description: "encfssh – mount encrypted virtual filesystem and start shell"
 ---
 
-<h2 class="name">NAME</h2>
 <p> encfssh &#8211; mount encrypted virtual filesystem and start shell </p>
 <p> Write in progress&#8230; </p>
 <h2>DISCLAIMER</h2>

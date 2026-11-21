@@ -1,4 +1,5 @@
 ---
+
 title: "megafs(1)"
 name: "megafs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-megafs/"
 description: "megafs – Mount remote filesystem locally via FUSE"
 ---
 
-<h2 class="name">NAME</h2>
 <p> megafs &#8211; Mount remote filesystem locally via FUSE </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "acl_extended_file(3)"
 name: "acl_extended_file"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_extended_file/"
 description: "acl_extended_file, acl_extended_file_nofollow – test for information in ACLs by file name"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_extended_file, acl_extended_file_nofollow</code> &#8211; test for information in ACLs by file name </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

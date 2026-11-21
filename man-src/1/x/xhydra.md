@@ -1,4 +1,5 @@
 ---
+
 title: "xhydra(1)"
 name: "xhydra"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xhydra/"
 description: "xhydra – Gtk+2 frontend for thc-hydra"
 ---
 
-<h2>NAME</h2>
 <p> xhydra &#8211; Gtk+2 frontend for thc-hydra</p>
 <h2>SYNOPSIS</h2>
 <p> Execute xhydra in a terminal to start the application.</p>

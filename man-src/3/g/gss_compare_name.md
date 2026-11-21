@@ -1,4 +1,5 @@
 ---
+
 title: "gss_compare_name(3)"
 name: "gss_compare_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gss_compare_name/"
 description: "gss_accept_sec_context gss_acquire_cred gss_add_cred gss_add_oid_set_member gss_canonicalize_name gss_compare_name gss_context_time gss_create_empty_oid_set gss_delete_sec_context gss_display_name ..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gss_accept_sec_context</code> <code>gss_acquire_cred</code> <code>gss_add_cred</code> <code>gss_add_oid_set_member</code> <code>gss_canonicalize_name</code> <code>gss_compare_name</code> <code>gss_context_time</code> <code>gss_create_empty_oid_set</code> <code>gss_delete_sec_context</code> <code>gss_display_name</code> <code>gss_display_status</code> <code>gss_duplicate_name</code> <code>gss_export_name</code> <code>gss_export_sec_context</code> <code>gss_get_mic</code> <code>gss_import_name</code> <code>gss_import_sec_context</code> <code>gss_indicate_mechs</code> <code>gss_init_sec_context</code> <code>gss_inquire_context</code> <code>gss_inquire_cred</code> <code>gss_inquire_cred_by_mech</code> <code>gss_inquire_mechs_for_name</code> <code>gss_inquire_names_for_mech</code> <code>gss_krb5_ccache_name</code> <code>gss_krb5_compat_des3_mic</code> <code>gss_krb5_copy_ccache</code> <code>gss_krb5_import_cred</code> <code>gsskrb5_extract_authz_data_from_sec_context</code> <code>gsskrb5_register_acceptor_identity</code> <code>gss_krb5_import_ccache</code> <code>gss_krb5_get_tkt_flags</code> <code>gss_process_context_token</code> <code>gss_release_buffer</code> <code>gss_release_cred</code> <code>gss_release_name</code> <code>gss_release_oid_set</code> <code>gss_seal</code> <code>gss_sign</code> <code>gss_test_oid_set_member</code> <code>gss_unseal</code> <code>gss_unwrap</code> <code>gss_verify</code> <code>gss_verify_mic</code> <code>gss_wrap</code> <code>gss_wrap_size_limit</code> &#8211; Generic Security Service Application Program Interface library </p>
 <h2>LIBRARY</h2>
 <p> GSS-API library (libgssapi, -lgssapi)</p>

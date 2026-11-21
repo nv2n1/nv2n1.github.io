@@ -1,4 +1,5 @@
 ---
+
 title: "terminfo(5)"
 name: "terminfo"
 section: "5"
@@ -6,8 +7,9 @@ letter: "t"
 url: "/docs/linux/man/5-terminfo/"
 description: "terminfo – terminal capability database"
 ---
+
 <p>terminfo &#8211; terminal capability database </p>
-<h2>SYNOPSIS</h2>
+
 <p> /etc/terminfo/*/*  </p>
 <h2>DESCRIPTION</h2>
 <p> <i>Terminfo</i> is a database describing terminals, used by screen-oriented programs such as <code>nvi</code>(1), <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1), <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), and other curses applications, using high-level calls to libraries such as <code>ncurses</code>(3NCURSES). It is also used via low-level calls by non-curses applications which may be screen-oriented (such as <code><a href="/docs/linux/man/1-clear/">clear</a></code>(1)) or non-screen (such as <code><a href="/docs/linux/man/1-tabs/">tabs</a></code>(1)). </p>

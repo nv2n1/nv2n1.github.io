@@ -1,4 +1,5 @@
 ---
+
 title: "gvfs-copy(1)"
 name: "gvfs-copy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvfs-copy/"
 description: "gvfs-copy"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gvfs-copy </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-copy</code> has been deprecated and it is redirected to <code>gio copy</code>.</p>

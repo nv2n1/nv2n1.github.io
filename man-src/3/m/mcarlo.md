@@ -1,4 +1,5 @@
 ---
+
 title: "mcarlo(3)"
 name: "mcarlo"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mcarlo/"
 description: "Monte Carlo framework –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Monte Carlo framework &#8211; </p>
 <h3>Classes</h3>
 <p> class <code>BrownianBridge</code><br />

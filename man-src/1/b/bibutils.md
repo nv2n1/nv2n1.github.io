@@ -1,4 +1,5 @@
 ---
+
 title: "bibutils(1)"
 name: "bibutils"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bibutils/"
 description: "bibutils – bibliography conversion utilities"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bibutils &#8211; bibliography conversion utilities </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-writeback-3(1)"
 name: "tracker-writeback-3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker-writeback-3/"
 description: "tracker-writeback-3 – Used to write metadata set in Tracker back to physical files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tracker-writeback-3 &#8211; Used to write metadata set in Tracker back to physical files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker-writeback</code> [<i>OPTION</i>&#8230;]</p>

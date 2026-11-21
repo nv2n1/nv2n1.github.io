@@ -1,4 +1,5 @@
 ---
+
 title: "pydb(1)"
 name: "pydb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pydb/"
 description: "pydb — enhanced Python debugger"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pydb &#8212; enhanced Python debugger </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pydb </code> [debugger-options] python-script [script-options&#8230;]</p>

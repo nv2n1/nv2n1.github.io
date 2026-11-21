@@ -1,4 +1,5 @@
 ---
+
 title: "aio_return(3)"
 name: "aio_return"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aio_return/"
 description: "aio_return – get return status of asynchronous I/O operation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aio_return &#8211; get return status of asynchronous I/O operation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;aio.h&gt;</code> </p>

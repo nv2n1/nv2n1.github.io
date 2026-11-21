@@ -1,4 +1,5 @@
 ---
+
 title: "graphc(1)"
 name: "graphc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-graphc/"
 description: "graphc – Graphcap preprocessor for NCAR Graphics"
 ---
 
-<h2>NAME</h2>
 <p> graphc &#8211; Graphcap preprocessor for NCAR Graphics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>graphc</code> <i>ascii-graphcap-name</i> <i>binary-graphcap-name</i> </p>

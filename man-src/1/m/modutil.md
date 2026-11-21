@@ -1,4 +1,5 @@
 ---
+
 title: "modutil(1)"
 name: "modutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-modutil/"
 description: "modutil – Manage PKCS #11 module information within the security module database."
 ---
 
-<h2 class="name">NAME</h2>
 <p> modutil &#8211; Manage PKCS #11 module information within the security module database. </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "cgiwrap_iterenv(3)"
 name: "cgiwrap_iterenv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgiwrap_iterenv/"
 description: "cgiwrap_iterenv – iterater for env vars"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgiwrap_iterenv &#8211; iterater for env vars </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "cd-discid(1)"
 name: "cd-discid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cd-discid/"
 description: "cd-discid – read CD and get CDDB discid information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cd-discid &#8211; read CD and get CDDB discid information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cd-discid</code> [<i>option</i>&#8230;]</p>

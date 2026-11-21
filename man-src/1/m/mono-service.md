@@ -1,4 +1,5 @@
 ---
+
 title: "mono-service(1)"
 name: "mono-service"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mono-service/"
 description: "mono-service, mono-service2 – Mono ServiceProcess host"
 ---
 
-<h2>NAME</h2>
 <p> mono-service, mono-service2 &#8211; Mono ServiceProcess host</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mono-service [options] program.exe</code></p>

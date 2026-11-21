@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-logs(1)"
 name: "docker-latest-logs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-logs/"
 description: "docker-logs – Fetch the logs of a container"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-logs &#8211; Fetch the logs of a container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker logs</code> [<code>-f</code>|<code>&#8211;follow</code>] [<code>&#8211;help</code>] [<code>&#8211;since</code>[=<i>SINCE</i>]] [<code>-t</code>|<code>&#8211;timestamps</code>] [<code>&#8211;tail</code>[=<i>&quot;all&quot;</i>]] CONTAINER </p>

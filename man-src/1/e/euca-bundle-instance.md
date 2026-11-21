@@ -1,4 +1,5 @@
 ---
+
 title: "euca-bundle-instance(1)"
 name: "euca-bundle-instance"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-bundle-instance/"
 description: "euca-bundle-instance – Bundle an S3-backed Windows instance"
 ---
 
-<h2>NAME</h2>
 <p> euca-bundle-instance &#8211; Bundle an S3-backed Windows instance</p>
 <h2>SYNOPSIS</h2>
 <p> euca-bundle-instance <code>-b</code> BUCKET <code>-p</code> PREFIX [-o KEY-ID] [-c POLICY]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fixmul(3)"
 name: "fixmul"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fixmul/"
 description: "fixmul – Multiplies two fixed point values together. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fixmul &#8211; Multiplies two fixed point values together. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ncftpbatch(1)"
 name: "ncftpbatch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncftpbatch/"
 description: "ncftpbatch – Individual batch FTP job processor"
 ---
 
-<h2>NAME</h2>
 <p> ncftpbatch &#8211; Individual batch FTP job processor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncftpbatch</code> -d </p>

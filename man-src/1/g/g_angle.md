@@ -1,4 +1,5 @@
 ---
+
 title: "g_angle(1)"
 name: "g_angle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_angle/"
 description: "g_angle – calculates distributions and correlations for angles and dihedrals"
 ---
 
-<h2>NAME</h2>
 <p> g_angle &#8211; calculates distributions and correlations for angles and dihedrals </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

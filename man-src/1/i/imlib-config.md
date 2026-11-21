@@ -1,4 +1,5 @@
 ---
+
 title: "imlib-config(1)"
 name: "imlib-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imlib-config/"
 description: "imlib-config – Display Imlib and GDK-Imlib Library Configuration"
 ---
 
-<h2>NAME</h2>
 <p> imlib-config &#8211; Display Imlib and GDK-Imlib Library Configuration</p>
 <h2>SYNOPSIS</h2>
 <p> <code>imlib-config </code> <i>OPTION </i> <code>[</code> <i>OPTION</i> <code>&#8230; ]</code></p>

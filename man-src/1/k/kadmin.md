@@ -1,4 +1,5 @@
 ---
+
 title: "kadmin(1)"
 name: "kadmin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kadmin/"
 description: "kadmin – Kerberos V5 database administration program"
 ---
 
-<h2>NAME</h2>
 <p> kadmin &#8211; Kerberos V5 database administration program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kadmin</code> [<code>-O</code>|<code>-N</code>] [<code>-r</code> <i>realm</i>] [<code>-p</code> <i>principal</i>] [<code>-q</code> <i>query</i>] [[<code>-c</code> <i>cache_name</i>]|[<code>-k</code> [<code>-t</code> <i>keytab</i>]]|<code>-n</code>] [<code>-w</code> <i>password</i>] [<code>-s</code> <i>admin_server</i>[:<i>port</i>]] [command args&#8230;] </p>

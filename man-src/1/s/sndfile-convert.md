@@ -1,4 +1,5 @@
 ---
+
 title: "sndfile-convert(1)"
 name: "sndfile-convert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sndfile-convert/"
 description: "sndfile-convert – convert a sound files from one format to another"
 ---
 
-<h2>NAME</h2>
 <p> sndfile-convert &#8211; convert a sound files from one format to another</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sndfile-convert</code> [encoding] input_file output_file </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-objdump-9(1)"
 name: "llvm-objdump-9"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-objdump-9/"
 description: "llvm-objdump – manual page for llvm-objdump 9"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-objdump &#8211; manual page for llvm-objdump 9 </p>
 <h2>DESCRIPTION</h2>
 <p> OVERVIEW: llvm object file dumper </p>

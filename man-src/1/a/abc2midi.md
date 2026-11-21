@@ -1,4 +1,5 @@
 ---
+
 title: "abc2midi(1)"
 name: "abc2midi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abc2midi/"
 description: "abc2midi – converts abc file to MIDI file(s)"
 ---
 
-<h2>NAME</h2>
 <p> <code>abc2midi</code> &#8211; converts abc file to MIDI file(s)</p>
 <h2>SYNOPSIS</h2>
 <p> abc2midi <i>infile</i> [<i>refnum</i>] [-c] [-v] [-ver] [-t] [-n limit] [-RS] [-quiet] [-Q tempo] [-NFNP] [-OCC] [-NCOM] [-o outfile]</p>

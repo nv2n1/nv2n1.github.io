@@ -1,4 +1,5 @@
 ---
+
 title: "acl_entries(3)"
 name: "acl_entries"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_entries/"
 description: "acl_entries – return the number of entries in an ACL"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_entries</code> &#8211; return the number of entries in an ACL </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

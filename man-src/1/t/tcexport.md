@@ -1,4 +1,5 @@
 ---
+
 title: "tcexport(1)"
 name: "tcexport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcexport/"
 description: "tcexport – Simple frontend to transcode’s encoding subsystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tcexport &#8211; Simple frontend to transcode&#8217;s encoding subsystem</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tcexport</code> [ <code>-i</code> <i>video_file</i> ] [ <code>-p</code> <i>audio_file</i> ] [ <code>-o</code> <i>output_file</i> ] [ <code>-c</code> <i>f1-f2[,f3-f4[,&#8230;]]</i> ] [ <code>-N</code> <i>fmt,fmt</i> ] [ <code>-R</code> <i>n[,video_log[,audio_log]]</i> ] [ <code>-P</code> <i>profile[,profile]</i> ] [ <code>-y</code> <i>video_mod,audio_mod,mplex_mod</i> ] [ <code>-w</code> <i>bitrate[,keyint[,crisp]]</i> ] [ <code>-b</code> <i>bitrate[,vbr[,quality[,mode]]]</i> ] [ <code>-D</code> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-m</code> <i>path</i> ] [ <code>-v</code> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hb_addnode(1)"
 name: "hb_addnode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hb_addnode/"
 description: "hb_addnode – hb_addnode is a simple linux-ha shell script. It sends a message to the cluster to add new nodes."
 ---
 
-<h2>NAME</h2>
 <p> hb_addnode &#8211; hb_addnode is a simple linux-ha shell script. It sends a message to the cluster to add new nodes.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hb_addnode</code> <code>&lt;node1&gt;</code> <code>[node2]</code> <code>[node3]</code> <code>&#8230;</code></p>

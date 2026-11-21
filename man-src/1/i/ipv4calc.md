@@ -1,4 +1,5 @@
 ---
+
 title: "ipv4calc(1)"
 name: "ipv4calc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipv4calc/"
 description: "ipv4calc - Calculates IPv4 elements from an address. SYNOPSIS ipv4calc[--network | --broadcast | --netmask | --address | --cidr] addr DESCRIPTION If an option is specified ipv4calc calculates the r..."
 ---
 
-<h2 class="name">NAME</h2>
 <pre>
   ipv4calc - Calculates IPv4 elements from an address.
 </pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "pamcomp(1)"
 name: "pamcomp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamcomp/"
 description: "pamcomp – composite (overlay) two Netpbm images together"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamcomp &#8211; composite (overlay) two Netpbm images together</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamcomp</code> </p>

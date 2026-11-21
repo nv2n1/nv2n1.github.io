@@ -1,4 +1,5 @@
 ---
+
 title: "globus-version(1)"
 name: "globus-version"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-globus-version/"
 description: "globus-version – Display the Globus Toolkit version"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus-version &#8211; Display the Globus Toolkit version </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globus-version</code> [OPTIONS]</p>

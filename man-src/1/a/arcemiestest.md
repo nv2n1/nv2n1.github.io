@@ -1,4 +1,5 @@
 ---
+
 title: "arcemiestest(1)"
 name: "arcemiestest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arcemiestest/"
 description: "arcemiestest – perform simple operations on EMI ES service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arcemiestest &#8211; perform simple operations on EMI ES service</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcemiestest</code> command performs simple operations on server with EMI Execution Service (ES) interface and is meant for testing interoperability of ARC EMI ES client implementation and corresponding service. Please see description of EMI ES at <code><a rel="nofollow" href="http://twiki.cern.ch/twiki/bin/view/EMI/EmiExecutionService">http://twiki.cern.ch/twiki/bin/view/EMI/EmiExecutionService</a> </code> for detailed information about functionality of the service. </p>

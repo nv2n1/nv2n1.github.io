@@ -1,4 +1,5 @@
 ---
+
 title: "varnishtest(1)"
 name: "varnishtest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-varnishtest/"
 description: "varnishtest – Test program for Varnish"
 ---
 
-<h2>NAME</h2>
 <p> varnishtest &#8211; Test program for Varnish</p>
 <h2>SYNOPSIS</h2>
 <p> varnishtest [-iklLqv] [-n iter] [-D name=val] [-j jobs] [-t duration] file [file &#8230;]</p>

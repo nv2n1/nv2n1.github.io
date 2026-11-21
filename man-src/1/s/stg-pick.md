@@ -1,4 +1,5 @@
 ---
+
 title: "stg-pick(1)"
 name: "stg-pick"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-pick/"
 description: "stg-pick – Import a patch from a different branch or a commit object"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-pick &#8211; Import a patch from a different branch or a commit object </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

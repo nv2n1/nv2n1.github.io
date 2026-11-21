@@ -1,4 +1,5 @@
 ---
+
 title: "s390_pci_mmio_write(2)"
 name: "s390_pci_mmio_write"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-s390_pci_mmio_write/"
 description: "s390_pci_mmio_write, s390_pci_mmio_read – transfer data to/from PCI MMIO memory page"
 ---
 
-<h2 class="name">NAME</h2>
 <p> s390_pci_mmio_write, s390_pci_mmio_read &#8211; transfer data to/from PCI MMIO memory page </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

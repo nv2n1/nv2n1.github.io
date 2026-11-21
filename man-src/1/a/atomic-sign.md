@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-sign(1)"
 name: "atomic-sign"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-sign/"
 description: "atomic-sign- Create a signature for an image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atomic-sign- Create a signature for an image </p>
 <p> <code>WARNING</code> </p>
 <p> Only use <code>atomic sign</code> if you trust the remote registry which contains the image (preferably by being the only administrator of it). </p>

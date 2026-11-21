@@ -1,4 +1,5 @@
 ---
+
 title: "perlthrtut(1)"
 name: "perlthrtut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlthrtut/"
 description: "perlthrtut – Tutorial on threads in Perl"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlthrtut &#8211; Tutorial on threads in Perl </p>
 <h2>DESCRIPTION</h2>
 <p> This tutorial describes the use of Perl interpreter threads (sometimes referred to as <i>ithreads</i>). In this model, each thread runs in its own Perl interpreter, and any data sharing between threads must be explicit. The user-level interface for <i>ithreads</i> uses the threads class. </p>

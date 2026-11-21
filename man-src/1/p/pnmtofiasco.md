@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtofiasco(1)"
 name: "pnmtofiasco"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmtofiasco/"
 description: "pnmtofiasco – Convert a portable anymap to FIASCO compressed file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmtofiasco &#8211; Convert a portable anymap to FIASCO compressed file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtofiasco</code> [<i>option</i>]&#8230; [<i>filename</i>]&#8230; </p>

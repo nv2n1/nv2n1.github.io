@@ -1,4 +1,5 @@
 ---
+
 title: "buddy-ng(1)"
 name: "buddy-ng"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-buddy-ng/"
 description: "buddy-ng – a tool to work with easside-ng"
 ---
 
-<h2 class="name">NAME</h2>
 <p> buddy-ng &#8211; a tool to work with easside-ng </p>
 <h2>SYNOPSIS</h2>
 <p> <code>buddy-ng</code> &lt;options&gt;</p>

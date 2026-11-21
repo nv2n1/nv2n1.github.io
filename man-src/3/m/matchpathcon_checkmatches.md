@@ -1,4 +1,5 @@
 ---
+
 title: "matchpathcon_checkmatches(3)"
 name: "matchpathcon_checkmatches"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-matchpathcon_checkmatches/"
 description: "matchpathcon_checkmatches, matchpathcon_filespec_add, matchpathcon_filespec_destroy, matchpathcon_filespec_eval – check and report whether any specification index has no matches with any inode. Mai..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> matchpathcon_checkmatches, matchpathcon_filespec_add, matchpathcon_filespec_destroy, matchpathcon_filespec_eval &#8211; check and report whether any specification index has no matches with any inode. Maintenance and statistics on inode associations </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>

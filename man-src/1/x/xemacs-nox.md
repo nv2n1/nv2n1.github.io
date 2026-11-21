@@ -1,4 +1,5 @@
 ---
+
 title: "xemacs-nox(1)"
 name: "xemacs-nox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xemacs-nox/"
 description: "xemacs – Emacs: The Next Generation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xemacs &#8211; Emacs: The Next Generation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xemacs</code> [ <i>command-line switches</i> ] [ <i>files &#8230;</i> ] </p>

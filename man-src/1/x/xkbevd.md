@@ -1,4 +1,5 @@
 ---
+
 title: "xkbevd(1)"
 name: "xkbevd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xkbevd/"
 description: "xkbevd – XKB event daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xkbevd &#8211; XKB event daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xkbevd</code> [ options ]</p>

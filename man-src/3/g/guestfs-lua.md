@@ -1,4 +1,5 @@
 ---
+
 title: "guestfs-lua(3)"
 name: "guestfs-lua"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-guestfs-lua/"
 description: "guestfs-lua – How to use libguestfs from Lua"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guestfs-lua &#8211; How to use libguestfs from Lua </p>
 <h2>SYNOPSIS</h2>
 <pre>

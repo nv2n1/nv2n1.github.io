@@ -1,4 +1,5 @@
 ---
+
 title: "miau(1)"
 name: "miau"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-miau/"
 description: "miau.info – miau.info"
 ---
 
-<h2>NAME</h2>
 <p> miau.info &#8211; miau.info</p>
 <h2>miau Manual</h2>
 <p> This is edition 0.6.1 of the `<code>miau Manual</code>&#8216;, last updated 7 January 2006. </p>

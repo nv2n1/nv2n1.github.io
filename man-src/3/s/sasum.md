@@ -1,4 +1,5 @@
 ---
+
 title: "sasum(3)"
 name: "sasum"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sasum/"
 description: "sasum.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sasum.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "pamtoavs(1)"
 name: "pamtoavs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtoavs/"
 description: "pamtoavs – convert a Netpbm image to an AVS X image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamtoavs &#8211; convert a Netpbm image to an AVS X image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtoavs</code> [<i>netpbmfile</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "get_clip_state(3)"
 name: "get_clip_state"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_clip_state/"
 description: "get_clip_state – Tells if clipping is on for a bitmap. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_clip_state &#8211; Tells if clipping is on for a bitmap. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

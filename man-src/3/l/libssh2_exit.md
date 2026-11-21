@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_exit(3)"
 name: "libssh2_exit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_exit/"
 description: "libssh2_exit – global library deinitialization"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_exit &#8211; global library deinitialization</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

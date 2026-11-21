@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-delete-lb-policy(1)"
 name: "eulb-delete-lb-policy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-delete-lb-policy/"
 description: "eulb-delete-lb-policy – Delete a policy from a load balancer"
 ---
 
-<h2>NAME</h2>
 <p> eulb-delete-lb-policy &#8211; Delete a policy from a load balancer</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-delete-lb-policy <code>-p</code> POLICY [-U URL] [&#8211;region USER [at] REGION]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "obex-data-server(1)"
 name: "obex-data-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obex-data-server/"
 description: "obex-data-server – D-Bus service providing OBEX functionality"
 ---
 
-<h2 class="name">NAME</h2>
 <p> obex-data-server &#8211; D-Bus service providing OBEX functionality </p>
 <h2>SYNOPSIS</h2>
 <p> <code>obex-data-server </code> [OPTIONS]</p>

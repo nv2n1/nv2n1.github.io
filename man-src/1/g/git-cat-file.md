@@ -1,4 +1,5 @@
 ---
+
 title: "git-cat-file(1)"
 name: "git-cat-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-cat-file/"
 description: "git-cat-file – Provide content or type and size information for repository objects"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-cat-file &#8211; Provide content or type and size information for repository objects </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "monodocs2html(1)"
 name: "monodocs2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-monodocs2html/"
 description: "monodocs2html – Translate Monodoc XML to HTML"
 ---
 
-<h2>NAME</h2>
 <p> monodocs2html &#8211; Translate Monodoc XML to HTML</p>
 <h2>SYNOPSIS</h2>
 <p> <code>monodocs2html </code> -source:SOURCE_DIR -dest:DEST_DIR [OPTIONS]*</p>

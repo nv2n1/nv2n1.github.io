@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_type(3)"
 name: "bson_iter_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_type/"
 description: "bson_iter_type() – The bson_iter_type() function shall return the type of the observed element in a bson document."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_type() &#8211; The bson_iter_type() function shall return the type of the observed element in a bson document.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

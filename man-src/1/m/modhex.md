@@ -1,4 +1,5 @@
 ---
+
 title: "modhex(1)"
 name: "modhex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-modhex/"
 description: "modhex – convert data to/from modhex encoding"
 ---
 
-<h2 class="name">NAME</h2>
 <p> modhex &#8211; convert data to/from modhex encoding </p>
 <h2>SYNOPSIS</h2>
 <p> <code>modhex</code> [-d] [-h] <i>DATA</i></p>

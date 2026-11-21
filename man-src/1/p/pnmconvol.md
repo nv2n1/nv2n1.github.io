@@ -1,4 +1,5 @@
 ---
+
 title: "pnmconvol(1)"
 name: "pnmconvol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmconvol/"
 description: "pnmconvol – general MxN convolution on a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmconvol &#8211; general MxN convolution on a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmconvol</code> <i>convolutionfile</i> [<i>pnmfile</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "slice2freeze(1)"
 name: "slice2freeze"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-slice2freeze/"
 description: "slice2freeze – Generates Freeze map and index classes in C++."
 ---
 
-<h2 class="name">NAME</h2>
 <p> slice2freeze &#8211; Generates Freeze map and index classes in C++.</p>
 <h2>SYNOPSIS</h2>
 <p> slice2freeze [options] [files] </p>

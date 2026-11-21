@@ -1,4 +1,5 @@
 ---
+
 title: "gcm-inspect(1)"
 name: "gcm-inspect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcm-inspect/"
 description: "gcm-inspect – GNOME Color Manager Inspect Tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gcm-inspect &#8211; GNOME Color Manager Inspect Tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcm-inspect</code> [ <code>&#8211;verbose</code> ] </p>

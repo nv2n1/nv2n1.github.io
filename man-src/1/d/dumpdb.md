@@ -1,4 +1,5 @@
 ---
+
 title: "dumpdb(1)"
 name: "dumpdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dumpdb/"
 description: "dumpdb – The Freeze database inspector."
 ---
 
-<h2 class="name">NAME</h2>
 <p> dumpdb &#8211; The Freeze database inspector.</p>
 <h2>SYNOPSIS</h2>
 <p> dumpdb [options] dbenv db </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "isogmt(1)"
 name: "isogmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-isogmt/"
 description: "isogmt – Run GMT command or script in isolation mode"
 ---
 
-<h2>NAME</h2>
 <p> isogmt &#8211; Run GMT command or script in isolation mode</p>
 <h2>SYNOPSIS</h2>
 <p> <code>isogmt</code> <i>command</i></p>

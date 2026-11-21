@@ -1,4 +1,5 @@
 ---
+
 title: "pki-tps-profile(1)"
 name: "pki-tps-profile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pki-tps-profile/"
 description: "pki-tps-profile – Command-Line Interface for managing Certificate System TPS profiles."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pki-tps-profile &#8211; Command-Line Interface for managing Certificate System TPS profiles.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

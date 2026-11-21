@@ -1,4 +1,5 @@
 ---
+
 title: "jbgtopbm(1)"
 name: "jbgtopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jbgtopbm/"
 description: "jbgtopbm – JBIG1 to portable bitmap file converter"
 ---
 
-<h2>NAME</h2>
 <p> jbgtopbm &#8211; JBIG1 to portable bitmap file converter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jbgtopbm</code> [ <i>options</i> ] [ <i>input-file</i> | &#8211; [ <i>output-file</i> ]] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "memkind_hugetlb(3)"
 name: "memkind_hugetlb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memkind_hugetlb/"
 description: "memkind_hugetlb.h – hugetlb memory memkind operations. Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or re..."
 ---
 
-<h2>NAME</h2>
 <p> memkind_hugetlb.h &#8211; hugetlb memory memkind operations.<br />
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
 <h2>SYNOPSIS</h2>

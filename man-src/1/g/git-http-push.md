@@ -1,4 +1,5 @@
 ---
+
 title: "git-http-push(1)"
 name: "git-http-push"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-http-push/"
 description: "git-http-push – Push objects over HTTP/DAV to another repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-http-push &#8211; Push objects over HTTP/DAV to another repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

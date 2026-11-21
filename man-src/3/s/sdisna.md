@@ -1,4 +1,5 @@
 ---
+
 title: "sdisna(3)"
 name: "sdisna"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sdisna/"
 description: "sdisna.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sdisna.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

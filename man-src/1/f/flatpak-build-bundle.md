@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-build-bundle(1)"
 name: "flatpak-build-bundle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-build-bundle/"
 description: "flatpak-build-bundle – Create a single-file bundle from a local repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-build-bundle &#8211; Create a single-file bundle from a local repository </p>
 <h2>SYNOPSIS</h2>
 <dl>

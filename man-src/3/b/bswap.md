@@ -1,4 +1,5 @@
 ---
+
 title: "bswap(3)"
 name: "bswap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bswap/"
 description: "bswap_16, bswap_32, bswap_64 – reverse order of bytes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bswap_16, bswap_32, bswap_64 &#8211; reverse order of bytes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

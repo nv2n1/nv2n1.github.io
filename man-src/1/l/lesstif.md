@@ -1,4 +1,5 @@
 ---
+
 title: "lesstif(1)"
 name: "lesstif"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lesstif/"
 description: "LessTif – an open-source Motif replacement"
 ---
 
-<h2 class="name">NAME</h2>
 <p> LessTif &#8211; an open-source Motif replacement </p>
 <h2>SUMMARY</h2>
 <p> <code>LessTif</code> is a free replacement for OSF/Motif&#174;. </p>

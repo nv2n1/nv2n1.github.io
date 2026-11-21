@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3collections(3)"
 name: "antlr3collections"
 section: "3"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/3-antlr3collections/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- include/antlr3collections.h - 
+include/antlr3collections.h - 
 
 <h2>SYNOPSIS</h2>
 

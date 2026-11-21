@@ -1,4 +1,5 @@
 ---
+
 title: "sd-daemon(3)"
 name: "sd-daemon"
 section: "3"
@@ -6,8 +7,9 @@ letter: "s"
 url: "/docs/linux/man/3-sd-daemon/"
 description: "sd-daemon, SD_EMERG, SD_ALERT, SD_CRIT, SD_ERR, SD_WARNING, SD_NOTICE, SD_INFO, SD_DEBUG – APIs for new-style daemons"
 ---
+
 <p>sd-daemon, SD_EMERG, SD_ALERT, SD_CRIT, SD_ERR, SD_WARNING, SD_NOTICE, SD_INFO, SD_DEBUG &#8211; APIs for new-style daemons </p>
-<h2>SYNOPSIS</h2>
+
 <pre><code>#include &lt;systemd/sd-daemon.h&gt;
 </code></pre>
 <dl>

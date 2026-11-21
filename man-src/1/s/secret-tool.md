@@ -1,4 +1,5 @@
 ---
+
 title: "secret-tool(1)"
 name: "secret-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-secret-tool/"
 description: "secret-tool – Store and retrieve passwords"
 ---
 
-<h2 class="name">NAME</h2>
 <p> secret-tool &#8211; Store and retrieve passwords </p>
 <h2>SYNOPSIS</h2>
 <dl>

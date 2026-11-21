@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_get_krb524hst(3)"
 name: "krb5_get_krb524hst"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_get_krb524hst/"
 description: "krb5_get_krbhst krb5_get_krb_admin_hst krb5_get_krb_changepw_hst krb5_get_krb524hst krb5_free_krbhst – lookup Kerberos KDC hosts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_get_krbhst</code> <code>krb5_get_krb_admin_hst</code> <code>krb5_get_krb_changepw_hst</code> <code>krb5_get_krb524hst</code> <code>krb5_free_krbhst</code> &#8211; lookup Kerberos KDC hosts </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

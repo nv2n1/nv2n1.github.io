@@ -1,4 +1,5 @@
 ---
+
 title: "bson_concat(3)"
 name: "bson_concat"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_concat/"
 description: "bson_concat() – The bson_concat() function shall append the contents of src to dst."
 ---
 
-<h2>NAME</h2>
 <p> bson_concat() &#8211; The bson_concat() function shall append the contents of src to dst.</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_protocol_error_messages(3)"
 name: "globus_gram_protocol_error_messages"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_error_messages/"
 description: "Error Messages –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Error Messages &#8211; </p>
 <p> GRAM Error Messages Functions in this section handle converting GRAM error codes to strings which can help the user diagnose GRAM problems.</p>
 <h3>Functions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "ndb_waiter(1)"
 name: "ndb_waiter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ndb_waiter/"
 description: "ndb_waiter – wait for MySQL Cluster to reach a given status"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ndb_waiter &#8211; wait for MySQL Cluster to reach a given status </p>
 <h2>SYNOPSIS</h2>
 <dl>

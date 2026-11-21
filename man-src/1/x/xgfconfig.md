@@ -1,4 +1,5 @@
 ---
+
 title: "xgfconfig(1)"
 name: "xgfconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xgfconfig/"
 description: "xgfconfig – configuration program for Xgridfit"
 ---
 
-<h2>NAME</h2>
 <p> <code>xgfconfig</code> &#8211; configuration program for Xgridfit</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xgfconfig [options]</code></p>

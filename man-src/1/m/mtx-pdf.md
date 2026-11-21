@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-pdf(1)"
 name: "mtx-pdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtx-pdf/"
 description: "mtx-pdf – ConTeXt PDF Helpers"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;mtx-pdf &#8211; ConTeXt PDF Helpers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script pdf [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>

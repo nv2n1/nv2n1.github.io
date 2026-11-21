@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_subsystem(3)"
 name: "libssh2_channel_subsystem"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_subsystem/"
 description: "libssh2_channel_subsystem – convenience macro for libssh2_channel_process_startup(3) calls"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_subsystem &#8211; convenience macro for <i><a href="/docs/linux/man/3-libssh2_channel_process_startup/">libssh2_channel_process_startup</a>(3)</i> calls</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

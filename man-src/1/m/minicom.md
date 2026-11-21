@@ -1,4 +1,5 @@
 ---
+
 title: "minicom(1)"
 name: "minicom"
 section: "1"
@@ -6,7 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-minicom/"
 description: "minicom – friendly serial communication program"
 ---
-<h2>NAME</h2>
+
 <p> minicom - friendly serial communication program  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>minicom</code> [options] [<i>configuration</i>]  </p>

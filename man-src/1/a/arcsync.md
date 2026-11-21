@@ -1,4 +1,5 @@
 ---
+
 title: "arcsync(1)"
 name: "arcsync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arcsync/"
 description: "arcsync – ARC Synchronize"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arcsync &#8211; ARC Synchronize</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcsync</code> command synchronizes your local jobs list with the information at a given cluster or index server. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_verbosity(3)"
 name: "memcached_verbosity"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_verbosity/"
 description: "memcached_verbosity – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_verbosity &#8211; libmemcached Documentation </p>
 <p> Modifiy verbosity of servers</p>
 <h2>SYNOPSIS</h2>

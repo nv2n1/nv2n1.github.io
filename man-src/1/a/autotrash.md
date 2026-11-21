@@ -1,4 +1,5 @@
 ---
+
 title: "autotrash(1)"
 name: "autotrash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-autotrash/"
 description: "autotrash — program to automatically purge old files from the FreeDesktop.org trash"
 ---
 
-<h2>NAME</h2>
 <p> autotrash &#8212; program to automatically purge old files from the FreeDesktop.org trash</p>
 <h2>SYNOPSIS</h2>
 <p> <code>autotrash</code> [<code>-d </code><i>purge_n_days_old</i>] </p>

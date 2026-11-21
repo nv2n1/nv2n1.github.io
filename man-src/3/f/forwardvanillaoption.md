@@ -1,4 +1,5 @@
 ---
+
 title: "forwardvanillaoption(3)"
 name: "forwardvanillaoption"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-forwardvanillaoption/"
 description: "ql/instruments/forwardvanillaoption.hpp – Forward version of a vanilla option."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/instruments/forwardvanillaoption.hpp &#8211; Forward version of a vanilla option. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/oneassetoption.hpp&gt;<br />

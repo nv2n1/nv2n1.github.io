@@ -1,4 +1,5 @@
 ---
+
 title: "cistopbm(1)"
 name: "cistopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cistopbm/"
 description: "cistopbm – convert Compuserve RLE image to PBM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cistopbm &#8211; convert Compuserve RLE image to PBM</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cistopbm</code> [<code>-i</code>] [<i>cisfile</i>] </p>

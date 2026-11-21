@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ring_size(3)"
 name: "ck_ring_size"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ring_size/"
 description: "ck_ring_size – return number of pointers enqueued in bounded FIFO"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ring_size</code> &#8211; return number of pointers enqueued in bounded FIFO</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

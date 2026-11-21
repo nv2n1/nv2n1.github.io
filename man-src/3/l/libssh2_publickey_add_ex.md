@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_publickey_add_ex(3)"
 name: "libssh2_publickey_add_ex"
 section: "3"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libssh2_publickey_add_ex/"
 ---
 
-<h2>NAME</h2>
-
- libssh2_publickey_add_ex - Add a public key entry
+libssh2_publickey_add_ex - Add a public key entry
 
 <h2>SYNOPSIS</h2>
 

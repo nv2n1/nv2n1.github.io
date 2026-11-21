@@ -1,4 +1,5 @@
 ---
+
 title: "tcpdump_to_db(1)"
 name: "tcpdump_to_db"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcpdump_to_db/"
 description: "tcpdump_to_db – convert tcpdump textual output to fsdb"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tcpdump_to_db &#8211; convert tcpdump textual output to fsdb </p>
 <h2>SYNOPSIS</h2>
 <pre>

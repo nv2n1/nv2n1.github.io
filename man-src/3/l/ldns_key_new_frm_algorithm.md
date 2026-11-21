@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_key_new_frm_algorithm(3)"
 name: "ldns_key_new_frm_algorithm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_key_new_frm_algorithm/"
 description: "ldns_key_new_frm_algorithm, ldns_key_new_frm_fp, ldns_key_new_frm_fp_l"
 ---
 
-<h2>NAME</h2>
 <p> ldns_key_new_frm_algorithm, ldns_key_new_frm_fp, ldns_key_new_frm_fp_l </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

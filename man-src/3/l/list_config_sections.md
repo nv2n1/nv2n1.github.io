@@ -1,4 +1,5 @@
 ---
+
 title: "list_config_sections(3)"
 name: "list_config_sections"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-list_config_sections/"
 description: "list_config_sections – Lists the names of all sections available in the current configuration. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> list_config_sections &#8211; Lists the names of all sections available in the current configuration. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

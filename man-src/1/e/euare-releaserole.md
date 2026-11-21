@@ -1,4 +1,5 @@
 ---
+
 title: "euare-releaserole(1)"
 name: "euare-releaserole"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-releaserole/"
 description: "euare-releaserole – Release IAM role credentials"
 ---
 
-<h2>NAME</h2>
 <p> euare-releaserole &#8211; Release IAM role credentials</p>
 <h2>SYNOPSIS</h2>
 <p> euare-releaserole [-c | <code>-s]</code> [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</p>

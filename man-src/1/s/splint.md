@@ -1,4 +1,5 @@
 ---
+
 title: "splint(1)"
 name: "splint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-splint/"
 description: "splint – A tool for statically checking C programs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> splint &#8211; A tool for statically checking C programs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>splint</code> [options] </p>

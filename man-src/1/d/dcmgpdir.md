@@ -1,4 +1,5 @@
 ---
+
 title: "dcmgpdir(1)"
 name: "dcmgpdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmgpdir/"
 description: "dcmgpdir – Create a general purpose DICOMDIR"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmgpdir &#8211; Create a general purpose DICOMDIR </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

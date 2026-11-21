@@ -1,4 +1,5 @@
 ---
+
 title: "npm-init(1)"
 name: "npm-init"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-init/"
 description: "npm-init – create a package.json file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-init</code> &#8211; create a package.json file </p>
 <h3>Synopsis</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-bug(1)"
 name: "git-bug"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-bug/"
 description: "git-bug – Create bug branch"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-bug</code> &#8211; Create bug branch</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-bug</code> [finish] &lt;name&gt;</p>

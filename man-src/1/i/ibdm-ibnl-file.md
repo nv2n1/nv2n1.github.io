@@ -1,4 +1,5 @@
 ---
+
 title: "ibdm-ibnl-file(1)"
 name: "ibdm-ibnl-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibdm-ibnl-file/"
 description: "ibnl – a generic IB netlist format"
 ---
 
-<h2>NAME</h2>
 <p> <code>ibnl</code> &#8211; a generic IB netlist format</p>
 <h2>DESCRIPTION</h2>
 <p> <font SIZE="-1">IBDM</font> topology file <code>ibdm-topo-file</code> provide means to describe the <font SIZE="-1">IB</font> fabric using a set of predefined systems. A system definition is provided in a single file in <font SIZE="-1">IBNL</font> format that describes the internal InfiniBand connectivity of the system in terms of boards and devices. When <font SIZE="-1">IBDM</font> starts it parses all the available system definition files before it handles the topology file. The files are located in the following directory relative to the installation prefix: &lt;prefix&gt;/lib/ibdm1.0/ibnl. </p>

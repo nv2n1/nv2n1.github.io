@@ -1,4 +1,5 @@
 ---
+
 title: "psicc(1)"
 name: "psicc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psicc/"
 description: "psicc – little cms PostScript converter."
 ---
 
-<h2 class="name">NAME</h2>
 <p> psicc &#8211; little cms PostScript converter. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psicc</code> [<i>options</i>]</p>

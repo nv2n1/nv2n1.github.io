@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-elfedit(1)"
 name: "x86_64-linux-gnu-elfedit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-elfedit/"
 description: "elfedit – update ELF header and program property of ELF files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> elfedit &#8211; update ELF header and program property of ELF files </p>
 <h2>SYNOPSIS</h2>
 <p> elfedit [<code>&#8211;input-mach=</code><i>machine</i>]<br />

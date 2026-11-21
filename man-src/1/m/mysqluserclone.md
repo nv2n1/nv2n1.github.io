@@ -1,4 +1,5 @@
 ---
+
 title: "mysqluserclone(1)"
 name: "mysqluserclone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqluserclone/"
 description: "mysqluserclone – Clone Existing User to Create New User"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqluserclone &#8211; Clone Existing User to Create New User </p>
 <h2>SYNOPSIS</h2>
 <dl>

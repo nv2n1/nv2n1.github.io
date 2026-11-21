@@ -1,4 +1,5 @@
 ---
+
 title: "pmie(1)"
 name: "pmie"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmie/"
 description: "pmie – inference engine for performance metrics"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmie</code> &#8211; inference engine for performance metrics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmie</code> [<code>-bCdefHqVvWxz</code>] [<code>-A</code> <i>align</i>] [<code>-a</code> <i>archive</i>] [<code>-c</code> <i>filename</i>] [<code>-h</code> <i>host</i>] [<code>-l</code> <i>logfile</i>] [<code>-j</code> <i>stompfile</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-O</code> <i>offset</i>] [<code>-S</code> <i>starttime</i>] [<code>-T</code> <i>endtime</i>] [<code>-t</code> <i>interval</i>] [<code>-U</code> <i>username</i>] [<code>-Z</code> <i>timezone</i>] [<i>filename &#8230;</i>]</p>

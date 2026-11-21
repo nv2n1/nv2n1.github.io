@@ -1,4 +1,5 @@
 ---
+
 title: "clc-register-user-package(1)"
 name: "clc-register-user-package"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clc-register-user-package/"
 description: "clc-(un)register-user-package – registers a user asdf system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clc-(un)register-user-package &#8211; registers a user asdf system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>clc-register-user-package</code> <i>package-file</i> </p>

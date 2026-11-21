@@ -1,4 +1,5 @@
 ---
+
 title: "freelocale(3)"
 name: "freelocale"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-freelocale/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- newlocale, freelocale - create, modify, and free a locale object 
+newlocale, freelocale - create, modify, and free a locale object 
 
 <h2>SYNOPSIS</h2>
 

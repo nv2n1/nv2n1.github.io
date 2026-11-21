@@ -1,4 +1,5 @@
 ---
+
 title: "audit_request_rules_list_data(3)"
 name: "audit_request_rules_list_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_request_rules_list_data/"
 description: "audit_request_rules_list_data – Request list of current audit rules"
 ---
 
-<h2>NAME</h2>
 <p> audit_request_rules_list_data &#8211; Request list of current audit rules</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

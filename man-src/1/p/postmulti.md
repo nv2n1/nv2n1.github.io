@@ -1,4 +1,5 @@
 ---
+
 title: "postmulti(1)"
 name: "postmulti"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postmulti/"
 description: "postmulti – Postfix multi-instance manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> postmulti &#8211; Postfix multi-instance manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>Enabling multi-instance management:</code> </p>

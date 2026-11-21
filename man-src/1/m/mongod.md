@@ -1,4 +1,5 @@
 ---
+
 title: "mongod(1)"
 name: "mongod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mongod/"
 description: "mongod – MongoDB Server"
 ---
 
-<h2>NAME</h2>
 <p> mongod &#8211; MongoDB Server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mongod</code> is the primary daemon process for the MongoDB system. It handles data requests, manages data format, and performs background management operations. </p>

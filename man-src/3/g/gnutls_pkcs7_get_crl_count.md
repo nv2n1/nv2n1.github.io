@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs7_get_crl_count(3)"
 name: "gnutls_pkcs7_get_crl_count"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_pkcs7_get_crl_count/"
 description: "gnutls_pkcs7_get_crl_count – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_pkcs7_get_crl_count &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>

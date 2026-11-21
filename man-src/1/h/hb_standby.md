@@ -1,4 +1,5 @@
 ---
+
 title: "hb_standby(1)"
 name: "hb_standby"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hb_standby/"
 description: "hb_standby – hb_standby is a simple linux-ha shell script. It issues a failover from the node where it is running to the other node, if available."
 ---
 
-<h2>NAME</h2>
 <p> hb_standby &#8211; hb_standby is a simple linux-ha shell script. It issues a failover from the node where it is running to the other node, if available.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hb_standby</code> [all|foreign|local|failback]</p>

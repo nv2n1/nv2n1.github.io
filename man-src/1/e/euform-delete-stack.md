@@ -1,4 +1,5 @@
 ---
+
 title: "euform-delete-stack(1)"
 name: "euform-delete-stack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euform-delete-stack/"
 description: "euform-delete-stack – Delete a stack"
 ---
 
-<h2>NAME</h2>
 <p> euform-delete-stack &#8211; Delete a stack</p>
 <h2>SYNOPSIS</h2>
 <p> euform-delete-stack [&#8211;show-empty-fields] [-U URL]</p>

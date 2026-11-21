@@ -1,4 +1,5 @@
 ---
+
 title: "pkcsicsf(1)"
 name: "pkcsicsf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkcsicsf/"
 description: "pkcsicsf – configuration utility for the ICSF token"
 ---
 
-<h2>NAME</h2>
 <p> pkcsicsf &#8211; configuration utility for the ICSF token </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pkcsicsf</code> [<code>-h</code>] [<code>-l|-a</code> <i>token name</i>] [<code>-b</code> <i>BINDDN</i>] [<code>-c</code> <i>client-cert-file</i>] [<code>-C</code> <i>CA-cert-file</i>] [<code>-k</code> <i>privatekey</i>] [<code>-m</code> <i>mechanism</i>] [<code>-u</code> <i>URI</i>] </p>

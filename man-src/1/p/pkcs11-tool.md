@@ -1,4 +1,5 @@
 ---
+
 title: "pkcs11-tool(1)"
 name: "pkcs11-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkcs11-tool/"
 description: "pkcs11-tool – utility for managing and using PKCS #11 security tokens"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pkcs11-tool &#8211; utility for managing and using PKCS #11 security tokens </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pkcs11-tool</code> [OPTIONS]</p>

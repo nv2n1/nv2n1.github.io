@@ -1,4 +1,5 @@
 ---
+
 title: "smiucv(1)"
 name: "smiucv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smiucv/"
 description: "smiucv – helper utility that provides an IUCV interface to the z/VM System Management API (SMAPI)."
 ---
 
-<h2>NAME</h2>
 <p> smiucv &#8211; helper utility that provides an IUCV interface to the z/VM System Management API (SMAPI).</p>
 <h2>SYNOPSYS</h2>
 <p> <code>smiucv</code> [user] [name] &lt;request&gt;</p>

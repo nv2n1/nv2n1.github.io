@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-dlpsh(1)"
 name: "pilot-dlpsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-dlpsh/"
 description: "pilot-dlpsh – An interactive Desktop Link Protocol (DLP) Shell for your Palm device."
 ---
 
-<h2>NAME</h2>
 <p> pilot-dlpsh &#8211; An interactive Desktop Link Protocol (DLP) Shell for your Palm device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>

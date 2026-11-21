@@ -1,4 +1,5 @@
 ---
+
 title: "meshlab(1)"
 name: "meshlab"
 section: "1"
@@ -6,9 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-meshlab/"
 ---
 
-<h2>NAME</h2>
-
- MeshLab - a tool for mesh inspection, processing, and conversion
+MeshLab - a tool for mesh inspection, processing, and conversion
 
 <h2>SYNOPSYS</h2>
 

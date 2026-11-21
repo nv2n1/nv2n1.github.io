@@ -1,4 +1,5 @@
 ---
+
 title: "euare-groupuploadpolicy(1)"
 name: "euare-groupuploadpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-groupuploadpolicy/"
 description: "euare-groupuploadpolicy – Attach a policy to a group"
 ---
 
-<h2>NAME</h2>
 <p> euare-groupuploadpolicy &#8211; Attach a policy to a group</p>
 <h2>SYNOPSIS</h2>
 <p> euare-groupuploadpolicy <code>-p</code> POLICY (<code>-o</code> POLICY_CONTENT | <code>-f</code> FILE)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libiperf(3)"
 name: "libiperf"
 section: "3"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libiperf/"
 ---
 
-<h2>NAME</h2>
-
- libiperf - API for iperf3 network throughput tester 
+libiperf - API for iperf3 network throughput tester 
 
 <h2>SYNOPSIS</h2>
 

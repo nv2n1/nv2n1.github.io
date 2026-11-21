@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-delete-launch-config(1)"
 name: "euscale-delete-launch-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-delete-launch-config/"
 description: "euscale-delete-launch-config – Delete an auto-scaling instance launch configuration"
 ---
 
-<h2>NAME</h2>
 <p> euscale-delete-launch-config &#8211; Delete an auto-scaling instance launch configuration</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-delete-launch-config [-U URL] [&#8211;region USER [at] REGION]</p>

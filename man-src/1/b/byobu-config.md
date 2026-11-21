@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-config(1)"
 name: "byobu-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-config/"
 description: "byobu-config – Configuration utility for byobu"
 ---
 
-<h2>NAME</h2>
 <p> byobu-config &#8211; Configuration utility for byobu </p>
 <h2>DESCRIPTION</h2>
 <p> <code>byobu-config</code> is an application that can configure a number of options available in the byobu utility. </p>

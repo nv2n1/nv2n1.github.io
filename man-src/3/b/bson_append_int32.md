@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_int32(3)"
 name: "bson_append_int32"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_int32/"
 description: "bson_append_int32() – The bson_append_int32() function shall append a new element to bson containing a 32-bit signed integer."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_int32() &#8211; The bson_append_int32() function shall append a new element to bson containing a 32-bit signed integer.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

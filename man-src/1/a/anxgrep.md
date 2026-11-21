@@ -1,4 +1,5 @@
 ---
+
 title: "anxgrep(1)"
 name: "anxgrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-anxgrep/"
 description: "anxgrep — Search for PATTERN in each annodex FILE or standard input."
 ---
 
-<h2>NAME</h2>
 <p> anxgrep &#8212; Search for PATTERN in each annodex FILE or standard input.<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

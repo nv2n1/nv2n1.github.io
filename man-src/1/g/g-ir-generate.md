@@ -1,4 +1,5 @@
 ---
+
 title: "g-ir-generate(1)"
 name: "g-ir-generate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g-ir-generate/"
 description: "g-ir-generate – typelib generator"
 ---
 
-<h2>NAME</h2>
 <p> g-ir-generate &#8211; typelib generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>g-ir-generate</code> [OPTION&#8230;] FILES&#8230;</p>

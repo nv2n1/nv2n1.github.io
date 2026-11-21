@@ -1,4 +1,5 @@
 ---
+
 title: "postw32(1)"
 name: "postw32"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postw32/"
 description: "postw32 – Free Pascal Windows 32-bit executable post processor."
 ---
 
-<h2>NAME</h2>
 <p> postw32 &#8211; Free Pascal Windows 32-bit executable post processor. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>postw32 [-vh] [-m subsystem] [-i file] [-V version] [-s size]</code> </p>

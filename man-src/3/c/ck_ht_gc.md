@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_gc(3)"
 name: "ck_ht_gc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ht_gc/"
 description: "ck_ht_gc – perform maintenance on a hash table"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ht_gc</code> &#8211; perform maintenance on a hash table</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

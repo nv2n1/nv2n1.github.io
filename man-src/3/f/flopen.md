@@ -1,4 +1,5 @@
 ---
+
 title: "flopen(3)"
 name: "flopen"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-flopen/"
 description: "flopen – reliably open and lock a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>flopen</code> &#8211; reliably open and lock a file </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>

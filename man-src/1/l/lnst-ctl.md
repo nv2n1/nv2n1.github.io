@@ -1,4 +1,5 @@
 ---
+
 title: "lnst-ctl(1)"
 name: "lnst-ctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lnst-ctl/"
 description: "lnst-ctl – Linux Network Stack Test controller"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lnst-ctl &#8211; Linux Network Stack Test controller </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lnst-ctl</code> [<i>OPTION</i>]&#8230; <i>ACTION</i> <i>RECIPE</i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pscoupe(1)"
 name: "pscoupe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pscoupe/"
 description: "pscoupe – Plot cross-sections of focal mechanisms"
 ---
 
-<h2>NAME</h2>
 <p> pscoupe &#8211; Plot cross-sections of focal mechanisms</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pscoupe</code> [ <i>files</i> ] <i>parameters</i> <i>region</i> <i>parameters</i> [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>color</i> ] [ <i>mode</i>[<i>args</i>] ] [ <i>color</i> ] [ ] [ <i>[pen]</i> ] [ ] [ ] [ ] [ ] [ <i>&lt;symbol&gt;&lt;scale&gt;</i>[/<code>d</code>] ] [ <i>n</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <i>cpt</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

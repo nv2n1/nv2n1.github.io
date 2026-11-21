@@ -1,4 +1,5 @@
 ---
+
 title: "dbz(3)"
 name: "dbz"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dbz/"
 description: "dbzinit, dbzfresh, dbzagain, dbzclose, dbzexists, dbzfetch, dbzstore, dbzsync, dbzsize, dbzgetoptions, dbzsetoptions, dbzdebug – database routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbzinit, dbzfresh, dbzagain, dbzclose, dbzexists, dbzfetch, dbzstore, dbzsync, dbzsize, dbzgetoptions, dbzsetoptions, dbzdebug &#8211; database routines </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

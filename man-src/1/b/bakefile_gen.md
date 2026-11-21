@@ -1,4 +1,5 @@
 ---
+
 title: "bakefile_gen(1)"
 name: "bakefile_gen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bakefile_gen/"
 description: "bakefile_gen – batch bakefile generation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bakefile_gen &#8211; batch bakefile generation </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "rtmpsrv(1)"
 name: "rtmpsrv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rtmpsrv/"
 description: "rtmsrv – a stub server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rtmsrv &#8211; a stub server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rtmsrv</code> [<code>-z</code>] </p>

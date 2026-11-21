@@ -1,4 +1,5 @@
 ---
+
 title: "aa_mmheight(3)"
 name: "aa_mmheight"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_mmheight/"
 description: "aa_mmheight – returns height of the output screen in millimeters."
 ---
 
-<h2>NAME</h2>
 <p> aa_mmheight &#8211; returns height of the output screen in millimeters.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_get_par_embedding_levels(3)"
 name: "fribidi_get_par_embedding_levels"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_par_embedding_levels/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_get_par_embedding_levels - get bidi embedding levels of a paragraph 
+fribidi_get_par_embedding_levels - get bidi embedding levels of a paragraph 
 
 <h2>SYNOPSIS</h2>
 

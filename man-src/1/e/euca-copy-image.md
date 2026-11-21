@@ -1,4 +1,5 @@
 ---
+
 title: "euca-copy-image(1)"
 name: "euca-copy-image"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-copy-image/"
 description: "euca-copy-image – Copy an image from another region"
 ---
 
-<h2>NAME</h2>
 <p> euca-copy-image &#8211; Copy an image from another region</p>
 <h2>SYNOPSIS</h2>
 <p> euca-copy-image <code>-r</code> REGION <code>-s</code> IMAGE [-n NAME] [-d DESC] [-c TOKEN]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "madplay(1)"
 name: "madplay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-madplay/"
 description: "madplay – decode and play MPEG audio stream(s)"
 ---
 
-<h2>NAME</h2>
 <p> madplay &#8211; decode and play MPEG audio stream(s)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>madplay</code> [<i>options</i>] <i>file</i> &#8230;<br />

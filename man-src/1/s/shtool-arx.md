@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-arx(1)"
 name: "shtool-arx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtool-arx/"
 description: "shtool arx – GNU shtool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shtool arx &#8211; GNU shtool </p>
 <p><a href="/docs/linux/man/1-ar/">ar</a>(1) extensional command</p>
 <h2>SYNOPSIS</h2>

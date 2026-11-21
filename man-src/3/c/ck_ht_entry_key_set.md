@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_entry_key_set(3)"
 name: "ck_ht_entry_key_set"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ht_entry_key_set/"
 description: "ck_ht_entry_key_set – initialize pointer to key in hash table entry"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ht_entry_key_set</code> &#8211; initialize pointer to key in hash table entry</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

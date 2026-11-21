@@ -1,4 +1,5 @@
 ---
+
 title: "malloc(3)"
 name: "malloc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-malloc/"
 description: "malloc, free, calloc, realloc, reallocarray – allocate and free dynamic memory"
 ---
 
-<h2 id="name">NAME</h2>
 <p>malloc, free, calloc, realloc, reallocarray &#8211; allocate and free dynamic memory</p>
 <h2 id="synopsis">SYNOPSIS</h2>
 <pre><code>#include &lt;stdlib.h&gt;

@@ -1,4 +1,5 @@
 ---
+
 title: "flow-rptfmt(1)"
 name: "flow-rptfmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-rptfmt/"
 description: "flow-rptfmt – Format the output of flow-report in ASCII or HTML"
 ---
 
-<h2>NAME</h2>
 <p> flow-rptfmt &#8211; Format the output of flow-report in ASCII or HTML</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-rptfmt</code> [ <code>-hHnp</code> ] [ <code>-a</code><i> alarm_time</i> ] [ <code>-f</code><i> format</i> ] [ <code>-F</code><i> fields</i> ] [ <code>-m</code><i> max_lines</i> ] [ <code>-s</code><i> sort_field</i> ]</p>

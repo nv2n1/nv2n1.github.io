@@ -1,4 +1,5 @@
 ---
+
 title: "f2py(1)"
 name: "f2py"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-f2py/"
 description: "f2py – Fortran to Python interface generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> f2py &#8211; Fortran to Python interface generator </p>
 <h2>SYNOPSIS</h2>
 <p> (1) To construct extension module sources: </p>

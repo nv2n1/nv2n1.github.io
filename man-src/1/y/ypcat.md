@@ -1,4 +1,5 @@
 ---
+
 title: "ypcat(1)"
 name: "ypcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ypcat/"
 description: "ypcat – print values of all keys in a NIS database"
 ---
 
-<h2>NAME</h2>
 <p> ypcat &#8211; print values of all keys in a NIS database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ypcat</code> [ <code>-kt</code> ] [ <code>-d</code><i> domain</i> ] [ <code>-h</code><i> hostname</i> ] <i>mapname</i><br />

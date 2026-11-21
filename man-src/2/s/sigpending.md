@@ -1,4 +1,5 @@
 ---
+
 title: "sigpending(2)"
 name: "sigpending"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sigpending/"
 description: "sigpending, rt_sigpending – examine pending signals"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sigpending, rt_sigpending &#8211; examine pending signals </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>

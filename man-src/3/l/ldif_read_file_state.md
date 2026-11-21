@@ -1,4 +1,5 @@
 ---
+
 title: "ldif_read_file_state(3)"
 name: "ldif_read_file_state"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldif_read_file_state/"
 description: "ldif_read_file_state –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldif_read_file_state &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>

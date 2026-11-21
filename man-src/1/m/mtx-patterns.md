@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-patterns(1)"
 name: "mtx-patterns"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtx-patterns/"
 description: "mtx-patterns – ConTeXt Pattern File Management"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;mtx-patterns &#8211; ConTeXt Pattern File Management </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script patterns [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>

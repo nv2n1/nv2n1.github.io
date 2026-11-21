@@ -1,4 +1,5 @@
 ---
+
 title: "euare-rolegetpolicy(1)"
 name: "euare-rolegetpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-rolegetpolicy/"
 description: "euare-rolegetpolicy – Display a role’s policy"
 ---
 
-<h2>NAME</h2>
 <p> euare-rolegetpolicy &#8211; Display a role&#8217;s policy</p>
 <h2>SYNOPSIS</h2>
 <p> euare-rolegetpolicy <code>-p</code> POLICY [&#8211;pretty-print] [&#8211;as-account ACCOUNT]</p>

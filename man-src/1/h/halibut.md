@@ -1,4 +1,5 @@
 ---
+
 title: "halibut(1)"
 name: "halibut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-halibut/"
 description: "halibut – multi-format documentation formatting tool"
 ---
 
-<h2>NAME</h2>
 <p> <code>halibut</code> &#8211; multi-format documentation formatting tool</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-container-top(1)"
 name: "docker-container-top"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-container-top/"
 description: "docker-container-top – Display the running processes of a container"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-container-top &#8211; Display the running processes of a container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container top CONTAINER [ps OPTIONS]</code> </p>

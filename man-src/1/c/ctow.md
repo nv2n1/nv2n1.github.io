@@ -1,4 +1,5 @@
 ---
+
 title: "ctow(1)"
 name: "ctow"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ctow/"
 description: "ctow – Convert Canna text-form dictionary into Wnn text-form dictionary"
 ---
 
-<h2>NAME</h2>
 <p> ctow &#8211; Convert Canna text-form dictionary into Wnn text-form dictionary</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ctow [-f </code><i>hinshidata</i>] [<i>cannajisho</i>] [<i>wnnjisho</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "grdcut(1)"
 name: "grdcut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdcut/"
 description: "grdcut – Extract subregion from a grid"
 ---
 
-<h2>NAME</h2>
 <p> grdcut &#8211; Extract subregion from a grid</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdcut</code> <i>ingrid</i> <i>outgrid</i> <i>region</i> [ [<i>nodata</i>] ] [ [<code>n</code>]<i>lon/lat/radius</i>[<i>unit</i>] ] [ [<i>level</i>] ] [ [<code>n</code>|<code>r</code>]<i>min/max</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] </p>

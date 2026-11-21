@@ -1,4 +1,5 @@
 ---
+
 title: "libpnm(3)"
 name: "libpnm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libpnm/"
 description: "libpnm – libnetpbm functions to read and write PNM image files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libpnm &#8211; libnetpbm functions to read and write PNM image files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;netpbm/pnm.h&gt;</code> </p>

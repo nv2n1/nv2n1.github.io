@@ -1,4 +1,5 @@
 ---
+
 title: "docker-engine(1)"
 name: "docker-engine"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-engine/"
 description: "docker-engine – Manage the docker engine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-engine &#8211; Manage the docker engine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker engine COMMAND</code> </p>

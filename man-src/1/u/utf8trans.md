@@ -1,4 +1,5 @@
 ---
+
 title: "utf8trans(1)"
 name: "utf8trans"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-utf8trans/"
 description: "utf8trans – Transliterate UTF-8 characters according to a table"
 ---
 
-<h2>NAME</h2>
 <p> utf8trans &#8211; Transliterate UTF-8 characters according to a table</p>
 <h2>SYNOPSIS</h2>
 <p> <code>utf8trans</code> <i>charmap</i> [<i>file</i>]&#8230;</p>

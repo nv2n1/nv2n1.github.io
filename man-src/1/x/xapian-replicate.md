@@ -1,4 +1,5 @@
 ---
+
 title: "xapian-replicate(1)"
 name: "xapian-replicate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xapian-replicate/"
 description: "xapian-replicate – Replicate a database from a master server to a local copy"
 ---
 
-<h2>NAME</h2>
 <p> xapian-replicate &#8211; Replicate a database from a master server to a local copy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xapian-replicate</code> [<i>OPTIONS</i>] <i>DATABASE</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perldoc(1)"
 name: "perldoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perldoc/"
 description: "perldoc – Look up Perl documentation in Pod format."
 ---
 
-<h2 class="name">NAME</h2>
 <p> perldoc &#8211; Look up Perl documentation in Pod format. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

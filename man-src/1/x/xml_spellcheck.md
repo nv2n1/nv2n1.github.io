@@ -1,4 +1,5 @@
 ---
+
 title: "xml_spellcheck(1)"
 name: "xml_spellcheck"
 section: "1"
@@ -6,10 +7,7 @@ letter: "x"
 url: "/docs/linux/man/1-xml_spellcheck/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- xml_spellcheck - spellcheck XML files 
+xml_spellcheck - spellcheck XML files 
 
 <h2>SYNOPSIS</h2>
 

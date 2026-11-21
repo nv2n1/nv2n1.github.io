@@ -1,4 +1,5 @@
 ---
+
 title: "acl_cmp(3)"
 name: "acl_cmp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_cmp/"
 description: "acl_cmp – compare two ACLs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_cmp</code> &#8211; compare two ACLs </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

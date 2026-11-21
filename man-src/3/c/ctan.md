@@ -1,4 +1,5 @@
 ---
+
 title: "ctan(3)"
 name: "ctan"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctan/"
 description: "ctan, ctanf, ctanl – complex tangent function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ctan, ctanf, ctanl &#8211; complex tangent function </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

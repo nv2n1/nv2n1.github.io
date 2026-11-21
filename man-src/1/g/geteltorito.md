@@ -1,4 +1,5 @@
 ---
+
 title: "geteltorito(1)"
 name: "geteltorito"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-geteltorito/"
 description: "geteltorito – an El Torito boot image extractor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> geteltorito &#8211; an El Torito boot image extractor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>geteltorito</code> &lt;<i>image</i>|<i>device</i>&gt; [<code>-o</code> <i>outputfile</i>] </p>

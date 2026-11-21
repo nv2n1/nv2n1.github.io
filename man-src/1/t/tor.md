@@ -1,4 +1,5 @@
 ---
+
 title: "tor(1)"
 name: "tor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tor/"
 description: "tor – The second-generation onion router"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tor &#8211; The second-generation onion router </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tor</code> [<i>OPTION</i> <i>value</i>]&#8230;</p>

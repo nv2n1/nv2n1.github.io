@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-tag(1)"
 name: "tracker-tag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker-tag/"
 description: "tracker-tag – Add, remove and list tags."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tracker-tag &#8211; Add, remove and list tags.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

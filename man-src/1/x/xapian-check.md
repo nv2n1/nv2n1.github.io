@@ -1,4 +1,5 @@
 ---
+
 title: "xapian-check(1)"
 name: "xapian-check"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xapian-check/"
 description: "xapian-check – Check the consistency of a database or table"
 ---
 
-<h2>NAME</h2>
 <p> xapian-check &#8211; Check the consistency of a database or table</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xapian-check</code> <i>&lt;database directory&gt;|&lt;path to btree and prefix&gt; </i>[[<i>t</i>][<i>f</i>][<i>b</i>][<i>v</i>][<i>+</i>]]</p>

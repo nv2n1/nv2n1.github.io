@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_client_chgrp(3)"
 name: "globus_ftp_client_chgrp"
 section: "3"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-globus_ftp_client_chgrp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- FTP Operations - 
+FTP Operations - 
 
 <h3>Typedefs</h3>
 

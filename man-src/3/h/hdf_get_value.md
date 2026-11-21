@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_get_value(3)"
 name: "hdf_get_value"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_get_value/"
 description: "hdf_get_value – Return the value of a node in the data set"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_get_value &#8211; Return the value of a node in the data set </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

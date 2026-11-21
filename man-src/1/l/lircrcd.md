@@ -1,4 +1,5 @@
 ---
+
 title: "lircrcd(1)"
 name: "lircrcd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lircrcd/"
 description: "lircrcd – daemon to handle consistent .lircrc state among client applications"
 ---
 
-<h2>NAME</h2>
 <p> lircrcd &#8211; daemon to handle consistent .lircrc state among client applications</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lircrcd</code> [<i>options</i>] <i>config-file</i></p>

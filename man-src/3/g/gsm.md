@@ -1,4 +1,5 @@
 ---
+
 title: "gsm(3)"
 name: "gsm"
 section: "3"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-gsm/"
 ---
 
-<h2>NAME</h2>
-
- gsm_create, gsm_destroy, gsm_encode, gsm_decode --- GSM 06.10 lossy sound compression
+gsm_create, gsm_destroy, gsm_encode, gsm_decode --- GSM 06.10 lossy sound compression
 
 <h2>SYNOPSIS</h2>
 

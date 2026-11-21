@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_anon_free_client_credentials(3)"
 name: "gnutls_anon_free_client_credentials"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_anon_free_client_credentials/"
 description: "gnutls_anon_free_client_credentials – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_anon_free_client_credentials &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

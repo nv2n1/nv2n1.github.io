@@ -1,4 +1,5 @@
 ---
+
 title: "blaze-edit(1)"
 name: "blaze-edit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-blaze-edit/"
 description: "blaze-edit – edit a blog post or a page in the BlazeBlogger repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> blaze-edit &#8211; edit a blog post or a page in the BlazeBlogger repository </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blaze-edit</code> [<code>-fpqCPV</code>] [<code>-b</code> <i>directory</i>] <i>id</i> </p>

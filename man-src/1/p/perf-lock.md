@@ -1,4 +1,5 @@
 ---
+
 title: "perf-lock(1)"
 name: "perf-lock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-lock/"
 description: "perf-lock – Analyze lock events"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-lock &#8211; Analyze lock events </p>
 <h2>SYNOPSIS</h2>
 <pre>

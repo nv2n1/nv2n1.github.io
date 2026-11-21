@@ -1,4 +1,5 @@
 ---
+
 title: "cslinker(1)"
 name: "cslinker"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cslinker/"
 description: "cslinker – manual page for cslinker 1.3.2"
 ---
 
-<h2>NAME</h2>
 <p> cslinker &#8211; manual page for cslinker 1.3.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cslinker</code> [<i>options</i>] <i>proj.err </i>[&#8230;]<i>, where options are:</i></p>

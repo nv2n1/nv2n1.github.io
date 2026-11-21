@@ -1,4 +1,5 @@
 ---
+
 title: "git-bundle(1)"
 name: "git-bundle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-bundle/"
 description: "git-bundle – Move objects and refs by archive"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-bundle &#8211; Move objects and refs by archive </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

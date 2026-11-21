@@ -1,4 +1,5 @@
 ---
+
 title: "ncursesw6-config(1)"
 name: "ncursesw6-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncursesw6-config/"
 description: "ncursesw6-config – helper script for ncurses libraries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ncursesw6-config &#8211; helper script for ncurses libraries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncursesw6-config</code> [<i>options</i>]</p>

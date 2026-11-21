@@ -1,4 +1,5 @@
 ---
+
 title: "isc-config(1)"
 name: "isc-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-isc-config/"
 description: "isc-config.sh – Get information about the installed version of ISC BIND"
 ---
 
-<h2 class="name">NAME</h2>
 <p> isc-config.sh &#8211; Get information about the installed version of ISC BIND </p>
 <h2>SYNOPSIS</h2>
 <dl>

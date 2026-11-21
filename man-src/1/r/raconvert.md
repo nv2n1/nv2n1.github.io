@@ -1,4 +1,5 @@
 ---
+
 title: "raconvert(1)"
 name: "raconvert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-raconvert/"
 description: "raconvert – convert comma-separated ASCII argus(8) data, to binary argus(8) data."
 ---
 
-<h2>NAME</h2>
 <p> <code>raconvert</code> &#8211; convert comma-separated ASCII <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data, to binary <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>raconvert</code> <code>-r</code> <i>input</i> <code>-w</code> <i>output</i></p>

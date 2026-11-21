@@ -1,4 +1,5 @@
 ---
+
 title: "gtkwave(1)"
 name: "gtkwave"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtkwave/"
 description: "gtkwave – Visualization tool for VCD, LXT, LXT2, VZT, FST, and GHW files"
 ---
 
-<h2>NAME</h2>
 <p> gtkwave &#8211; Visualization tool for VCD, LXT, LXT2, VZT, FST, and GHW files</p>
 <h2>SYNTAX</h2>
 <p> gtkwave [<i>option</i>]&#8230; [<i>DUMPFILE</i>] [<i>SAVEFILE</i>] [<i>RCFILE</i>] </p>

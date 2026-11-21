@@ -1,4 +1,5 @@
 ---
+
 title: "esdrec(1)"
 name: "esdrec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-esdrec/"
 description: "esdrec – record a sound file"
 ---
 
-<h2>NAME</h2>
 <p> esdrec &#8211; record a sound file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>esdrec</code> [-<code>s </code><i>hostname</i>:<i>port</i>] [-<code>b</code>] [-<code>h</code>] [-<code>m</code>] [-<code>r </code><i>freq</i>]</p>

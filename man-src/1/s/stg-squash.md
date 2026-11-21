@@ -1,4 +1,5 @@
 ---
+
 title: "stg-squash(1)"
 name: "stg-squash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-squash/"
 description: "stg-squash – Squash two or more patches into one"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-squash &#8211; Squash two or more patches into one </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

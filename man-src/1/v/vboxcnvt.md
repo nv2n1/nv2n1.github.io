@@ -1,4 +1,5 @@
 ---
+
 title: "vboxcnvt(1)"
 name: "vboxcnvt"
 section: "1"
@@ -6,9 +7,7 @@ letter: "v"
 url: "/docs/linux/man/1-vboxcnvt/"
 ---
 
-<h2>NAME</h2>
-
- vboxcnvt - isdn voice box (converter backend)
+vboxcnvt - isdn voice box (converter backend)
 
 <h2>DESCRIPTION</h2>
 

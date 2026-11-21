@@ -1,4 +1,5 @@
 ---
+
 title: "get_translation_matrix_f(3)"
 name: "get_translation_matrix_f"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_translation_matrix_f/"
 description: "get_translation_matrix, get_translation_matrix_f – Constructs a translation matrix. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_translation_matrix, get_translation_matrix_f &#8211; Constructs a translation matrix. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

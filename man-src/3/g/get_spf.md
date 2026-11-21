@@ -1,4 +1,5 @@
 ---
+
 title: "get_spf(3)"
 name: "get_spf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_spf/"
 description: "get_spf — returns the samples per frame for a field in a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> get_spf &#8212; returns the samples per frame for a field in a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

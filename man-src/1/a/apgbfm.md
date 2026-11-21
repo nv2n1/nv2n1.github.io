@@ -1,4 +1,5 @@
 ---
+
 title: "apgbfm(1)"
 name: "apgbfm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apgbfm/"
 description: "apgbfm – APG Bloom filter management program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apgbfm &#8211; APG Bloom filter management program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-n</code> <code>numofwords</code> [<code>-q</code>] [<code>-s</code>]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "ypwhich(1)"
 name: "ypwhich"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ypwhich/"
 description: "ypwhich – return name of NIS server or map master"
 ---
 
-<h2>NAME</h2>
 <p> ypwhich &#8211; return name of NIS server or map master</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ypwhich</code> [ <code>-d</code><i> domain</i> ] [ <code>-V</code>n ] [ <i>hostname</i> ]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "getnetbyaddr_r(3)"
 name: "getnetbyaddr_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getnetbyaddr_r/"
 description: "getnetent_r, getnetbyname_r, getnetbyaddr_r – get network entry (reentrant)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getnetent_r, getnetbyname_r, getnetbyaddr_r &#8211; get network entry (reentrant) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

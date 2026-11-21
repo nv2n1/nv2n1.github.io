@@ -1,4 +1,5 @@
 ---
+
 title: "frexp(3)"
 name: "frexp"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-frexp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- frexp, frexpf, frexpl - convert floating-point number to fractional and integral components 
+frexp, frexpf, frexpl - convert floating-point number to fractional and integral components 
 
 <h2>SYNOPSIS</h2>
 

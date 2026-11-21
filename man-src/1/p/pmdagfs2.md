@@ -1,4 +1,5 @@
 ---
+
 title: "pmdagfs2(1)"
 name: "pmdagfs2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdagfs2/"
 description: "pmdagfs2 – Global Filesystem v2 (GFS2) PMDA"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdagfs2</code> &#8211; Global Filesystem v2 (GFS2) PMDA</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdagfs2</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values about mounted GFS2 filesystems from the debugfs filesystem. This PMDA requires debugfs along with at least one mounted GFS2 filesystem to be mounted in order to be able to provide metric data. </p>

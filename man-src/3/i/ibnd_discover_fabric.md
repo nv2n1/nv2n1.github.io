@@ -1,4 +1,5 @@
 ---
+
 title: "ibnd_discover_fabric(3)"
 name: "ibnd_discover_fabric"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibnd_discover_fabric/"
 description: "ibnd_discover_fabric, ibnd_destroy_fabric, ibnd_debug ibnd_show_progress – initialize ibnetdiscover library."
 ---
 
-<h2>NAME</h2>
 <p> ibnd_discover_fabric, ibnd_destroy_fabric, ibnd_debug ibnd_show_progress &#8211; initialize ibnetdiscover library.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

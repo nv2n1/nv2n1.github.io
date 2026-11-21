@@ -1,4 +1,5 @@
 ---
+
 title: "free_hugepages(2)"
 name: "free_hugepages"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-free_hugepages/"
 description: "alloc_hugepages, free_hugepages – allocate or free huge pages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> alloc_hugepages, free_hugepages &#8211; allocate or free huge pages </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

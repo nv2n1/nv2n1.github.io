@@ -1,4 +1,5 @@
 ---
+
 title: "fdim(3)"
 name: "fdim"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fdim/"
 description: "fdim, fdimf, fdiml – positive difference"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fdim, fdimf, fdiml &#8211; positive difference </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>

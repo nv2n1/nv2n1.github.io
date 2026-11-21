@@ -1,4 +1,5 @@
 ---
+
 title: "getspent(3)"
 name: "getspent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getspent/"
 description: "getspnam, getspnam_r, getspent, getspent_r, setspent, endspent, fgetspent, fgetspent_r, sgetspent, sgetspent_r, putspent, lckpwdf, ulckpwdf – get shadow password file entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getspnam, getspnam_r, getspent, getspent_r, setspent, endspent, fgetspent, fgetspent_r, sgetspent, sgetspent_r, putspent, lckpwdf, ulckpwdf &#8211; get shadow password file entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

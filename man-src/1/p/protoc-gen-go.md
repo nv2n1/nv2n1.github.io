@@ -1,4 +1,5 @@
 ---
+
 title: "protoc-gen-go(1)"
 name: "protoc-gen-go"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-protoc-gen-go/"
 description: "protoc-gen-go – Go compiler output filter for the protocol buffer compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> protoc-gen-go &#8211; Go compiler output filter for the protocol buffer compiler </p>
 <h2>SYNOPSIS</h2>
 <dl>

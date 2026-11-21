@@ -1,4 +1,5 @@
 ---
+
 title: "owncloud(1)"
 name: "owncloud"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-owncloud/"
 description: "owncloud – File synchronisation desktop utility."
 ---
 
-<h2>NAME</h2>
 <p> owncloud &#8211; File synchronisation desktop utility.</p>
 <h2>SYNOPSIS</h2>
 <p> <i>owncloud</i> [<i>OPTIONS</i>&#8230;]</p>

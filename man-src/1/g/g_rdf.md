@@ -1,4 +1,5 @@
 ---
+
 title: "g_rdf(1)"
 name: "g_rdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_rdf/"
 description: "g_rdf – calculates radial distribution functions"
 ---
 
-<h2>NAME</h2>
 <p> g_rdf &#8211; calculates radial distribution functions </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

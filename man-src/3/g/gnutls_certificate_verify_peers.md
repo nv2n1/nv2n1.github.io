@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_verify_peers(3)"
 name: "gnutls_certificate_verify_peers"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_certificate_verify_peers/"
 description: "gnutls_certificate_verify_peers – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_certificate_verify_peers &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pxelinux-options(1)"
 name: "pxelinux-options"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pxelinux-options/"
 description: "pxelinux-options – utility to set PXELINUX hard-coded options."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>pxelinux-options</code> &#8211; utility to set PXELINUX hard-coded options.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pxelinux-options </p>

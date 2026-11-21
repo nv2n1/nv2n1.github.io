@@ -1,4 +1,5 @@
 ---
+
 title: "system-tools-backends(1)"
 name: "system-tools-backends"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-system-tools-backends/"
 description: "system-tools-backends – message dispatcher for system-tools-backends"
 ---
 
-<h2 class="name">NAME</h2>
 <p> system-tools-backends &#8211; message dispatcher for system-tools-backends </p>
 <h2>SYNOPSIS</h2>
 <p> <code>system-tools-backends</code></p>

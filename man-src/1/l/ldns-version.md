@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-version(1)"
 name: "ldns-version"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-version/"
 description: "ldns-version – print out the version of the ldns-library and tools on this system"
 ---
 
-<h2>NAME</h2>
 <p> ldns-version &#8211; print out the version of the ldns-library and tools on this system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-version</code> </p>

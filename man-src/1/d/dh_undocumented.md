@@ -1,4 +1,5 @@
 ---
+
 title: "dh_undocumented(1)"
 name: "dh_undocumented"
 section: "1"
@@ -6,10 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-dh_undocumented/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- dh_undocumented - undocumented.7 symlink program (deprecated no-op) 
+dh_undocumented - undocumented.7 symlink program (deprecated no-op) 
 
 <h2>SYNOPSIS</h2>
 

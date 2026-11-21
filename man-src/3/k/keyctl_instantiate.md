@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_instantiate(3)"
 name: "keyctl_instantiate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyctl_instantiate/"
 description: "keyctl_assume_authority – Assume the authority to instantiate a key keyctl_instantiate – Instantiate a key from flat data keyctl_instantiate_iov – Instantiate a key from segmented data keyctl_rejec..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_assume_authority &#8211; Assume the authority to instantiate a key<br />
  keyctl_instantiate &#8211; Instantiate a key from flat data<br />
  keyctl_instantiate_iov &#8211; Instantiate a key from segmented data<br />

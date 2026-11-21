@@ -1,4 +1,5 @@
 ---
+
 title: "vnstat(1)"
 name: "vnstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vnstat/"
 description: "vnstat – a console-based network traffic monitor"
 ---
 
-<h2>NAME</h2>
 <p> vnstat &#8211; a console-based network traffic monitor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vnstat</code> [ <code>-Ddhlmqrstuvw?</code> ] [ <code>&#8211;cleartop</code> ] [ <code>&#8211;config</code> <i>file</i> ] [ <code>&#8211;create</code> ] [ <code>&#8211;days</code> ] [ <code>&#8211;delete</code> ] [ <code>&#8211;dbdir</code> <i>directory</i> ] [ <code>&#8211;debug</code> ] [ <code>&#8211;disable</code> ] [ <code>&#8211;enable</code> ] [ <code>&#8211;exportdb</code> ] [ <code>&#8211;help</code> ] [ <code>&#8211;hours</code> ] [ <code>&#8211;importdb</code> <i>file</i> ] [ <code>-i</code> <i>interface</i> ] [ <code>&#8211;iface</code> <i>interface</i> ] [ <code>&#8211;iflist</code> ] [ <code>&#8211;json</code> <i>mode</i> ] [ <code>&#8211;live</code> <i>mode</i> ] [ <code>&#8211;locale</code> <i>locale</i> ] [ <code>&#8211;longhelp</code> ] [ <code>&#8211;months</code> ] [ <code>&#8211;nick</code> <i>nickname</i> ] [ <code>&#8211;oneline</code> ] [ <code>&#8211;query</code> ] [ <code>&#8211;rateunit</code> ] [ <code>&#8211;rebuildtotal</code> ] [ <code>&#8211;reset</code> ] [ <code>-ru</code> ] [ <code>&#8211;savemerged</code> ] [ <code>&#8211;short</code> ] [ <code>&#8211;showconfig</code> ] [ <code>&#8211;style</code> <i>number</i> ] [ <code>&#8211;sync</code> ] [ <code>&#8211;testkernel</code> ] [ <code>&#8211;top10</code> ] [ <code>-tr</code> <i>time</i> ] [ <code>&#8211;traffic</code> <i>time</i> ] [ <code>&#8211;update</code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;weeks</code> ] [ <code>&#8211;xml</code> <i>mode</i> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dlm_pthread_init(3)"
 name: "dlm_pthread_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlm_pthread_init/"
 description: "libdlm – dlm_get_fd, dlm_dispatch, dlm_pthread_init, dlm_ls_pthread_init, dlm_cleanup"
 ---
 
-<h2>NAME</h2>
 <p> libdlm &#8211; dlm_get_fd, dlm_dispatch, dlm_pthread_init, dlm_ls_pthread_init, dlm_cleanup</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

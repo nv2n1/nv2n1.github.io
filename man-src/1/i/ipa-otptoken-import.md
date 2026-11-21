@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-otptoken-import(1)"
 name: "ipa-otptoken-import"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-otptoken-import/"
 description: "ipa-otptoken-import – Imports OTP tokens from RFC 6030 XML file"
 ---
 
-<h2>NAME</h2>
 <p> ipa-otptoken-import &#8211; Imports OTP tokens from RFC 6030 XML file</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-otptoken-import [options] &lt;infile&gt; &lt;outfile&gt;</p>

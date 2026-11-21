@@ -1,4 +1,5 @@
 ---
+
 title: "g_spatial_d(1)"
 name: "g_spatial_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_spatial_d/"
 description: "g_spatial – calculates the spatial distribution function (more control than g_sdf)"
 ---
 
-<h2>NAME</h2>
 <p> g_spatial &#8211; calculates the spatial distribution function (more control than g_sdf) </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

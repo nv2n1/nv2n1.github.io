@@ -1,4 +1,5 @@
 ---
+
 title: "texfind(1)"
 name: "texfind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-texfind/"
 description: "texfind – graphical tool to search for text in TeX input files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> texfind &#8211; graphical tool to search for text in TeX input files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>texfind</code> [ <i>OPTION</i> &#8230; ] </p>

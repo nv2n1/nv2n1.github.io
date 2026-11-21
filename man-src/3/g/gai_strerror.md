@@ -1,4 +1,5 @@
 ---
+
 title: "gai_strerror(3)"
 name: "gai_strerror"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gai_strerror/"
 description: "getaddrinfo, freeaddrinfo, gai_strerror – network address and service translation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getaddrinfo, freeaddrinfo, gai_strerror &#8211; network address and service translation </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

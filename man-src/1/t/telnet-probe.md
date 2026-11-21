@@ -1,4 +1,5 @@
 ---
+
 title: "telnet-probe(1)"
 name: "telnet-probe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-telnet-probe/"
 description: "telnet-probe – lightweight telnet-like port probe"
 ---
 
-<h2>NAME</h2>
 <p> <code>telnet-probe</code> &#8211; lightweight telnet-like port probe</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/telnet-probe</code> [<code>-c</code>] [<code>-v</code>] <i>host</i> <i>port</i></p>

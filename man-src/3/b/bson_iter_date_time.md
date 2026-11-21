@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_date_time(3)"
 name: "bson_iter_date_time"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_date_time/"
 description: "bson_iter_date_time() – The bson_iter_date_time() function shall return the number of miliseconds since the UNIX epoch, as contained in the BSON_TYPE_DATE_TIME element."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_date_time() &#8211; The bson_iter_date_time() function shall return the number of miliseconds since the UNIX epoch, as contained in the BSON_TYPE_DATE_TIME element.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

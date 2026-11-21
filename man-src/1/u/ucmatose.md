@@ -1,4 +1,5 @@
 ---
+
 title: "ucmatose(1)"
 name: "ucmatose"
 section: "1"
@@ -6,9 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-ucmatose/"
 ---
 
-<h2>NAME</h2>
-
- ucmatose - RDMA CM connection and simple ping-pong test.
+ucmatose - RDMA CM connection and simple ping-pong test.
 
 <h2>SYNOPSIS</h2>
 

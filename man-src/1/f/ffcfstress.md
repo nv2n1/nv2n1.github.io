@@ -1,4 +1,5 @@
 ---
+
 title: "ffcfstress(1)"
 name: "ffcfstress"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffcfstress/"
 description: "ffcfstress – constant force stress test for force-feedback devices"
 ---
 
-<h2>NAME</h2>
 <p> ffcfstress &#8211; constant force stress test for force-feedback devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ffcfstress</code> [<code>-d</code> &lt;<i>device</i>&gt;] [<code>-u</code> &lt;<i>update rate</i>&gt;] [<code>-f</code> &lt;<i>frequency</i>&gt;] [<code>-a</code> &lt;<i>amplitude</i>&gt;] [<code>-s</code> &lt;<i>strength</i>&gt;] [<code>-x</code> &lt;<i>axis</i>&gt;] [<code>-A</code>] [<code>-o</code>]</p>

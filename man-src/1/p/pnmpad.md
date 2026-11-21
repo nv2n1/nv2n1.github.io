@@ -1,4 +1,5 @@
 ---
+
 title: "pnmpad(1)"
 name: "pnmpad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmpad/"
 description: "pnmpad – add borders to portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmpad &#8211; add borders to portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmpad </code> [<code>-verbose</code>] [<code>-white</code>|<code>-black</code>]<br />

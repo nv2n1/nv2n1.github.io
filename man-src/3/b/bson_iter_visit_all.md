@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_visit_all(3)"
 name: "bson_iter_visit_all"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_visit_all/"
 description: "bson_iter_visit_all() – A convenience function to iterate all remaining fields of iter using the callback vtable provided by visitor."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_visit_all() &#8211; A convenience function to iterate all remaining fields of iter using the callback vtable provided by visitor.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

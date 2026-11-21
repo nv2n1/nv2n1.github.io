@@ -1,4 +1,5 @@
 ---
+
 title: "csv2yapet(1)"
 name: "csv2yapet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-csv2yapet/"
 description: "csv2yapet – convert CSV file to YAPET file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> csv2yapet &#8211; convert CSV file to YAPET file </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-instance-attribute(1)"
 name: "euca-describe-instance-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-instance-attribute/"
 description: "euca-describe-instance-attribute – Show one of an instance’s attributes."
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-instance-attribute &#8211; Show one of an instance&#8217;s attributes.</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-instance-attribute</p>

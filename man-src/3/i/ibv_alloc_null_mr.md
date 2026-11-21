@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_alloc_null_mr(3)"
 name: "ibv_alloc_null_mr"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_alloc_null_mr/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_alloc_null_mr - allocate a null memory region (MR) 
+ibv_alloc_null_mr - allocate a null memory region (MR) 
 
 <h2>SYNOPSIS</h2>
 

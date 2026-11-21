@@ -1,4 +1,5 @@
 ---
+
 title: "perlmroapi(1)"
 name: "perlmroapi"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlmroapi/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlmroapi - Perl method resolution plugin interface 
+perlmroapi - Perl method resolution plugin interface 
 
 <h2>DESCRIPTION</h2>
 

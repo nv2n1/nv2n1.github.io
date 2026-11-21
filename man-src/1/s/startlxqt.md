@@ -1,4 +1,5 @@
 ---
+
 title: "startlxqt(1)"
 name: "startlxqt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-startlxqt/"
 description: "startlxqt – script to initialize and launch LXQt sessions"
 ---
 
-<h2>NAME</h2>
 <p> startlxqt &#8211; script to initialize and launch LXQt sessions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>startlxqt</code></p>

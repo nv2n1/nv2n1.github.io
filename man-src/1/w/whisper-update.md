@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-update(1)"
 name: "whisper-update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whisper-update/"
 description: "whisper-update – update a whisper database"
 ---
 
-<h2>NAME</h2>
 <p> whisper-update &#8211; update a whisper database</p>
 <h2>SYNOPSYS</h2>
 <pre><code>

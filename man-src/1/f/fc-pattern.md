@@ -1,4 +1,5 @@
 ---
+
 title: "fc-pattern(1)"
 name: "fc-pattern"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fc-pattern/"
 description: "fc-pattern – parse and show pattern"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fc-pattern &#8211; parse and show pattern </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fc-pattern</code> [ <code>-cdVh</code> ] [ <code>&#8211;config</code> ] [ <code>&#8211;default</code> ] [ <code> [ -f </code><i>format</i><code> ] [ &#8211;format </code><i>format</i><code> ] </code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;help</code> ] </p>

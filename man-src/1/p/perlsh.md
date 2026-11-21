@@ -1,4 +1,5 @@
 ---
+
 title: "perlsh(1)"
 name: "perlsh"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlsh/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlsh - one-line perl evaluator with line editing function and <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> variable name completion function
+perlsh - one-line perl evaluator with line editing function and <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> variable name completion function
  
 
 <h2>SYNOPSIS</h2>

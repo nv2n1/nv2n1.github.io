@@ -1,4 +1,5 @@
 ---
+
 title: "g_ngmx_d(1)"
 name: "g_ngmx_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_ngmx_d/"
 description: "ngmx – displays a trajectory"
 ---
 
-<h2>NAME</h2>
 <p> ngmx &#8211; displays a trajectory </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

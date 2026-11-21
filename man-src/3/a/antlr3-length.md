@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-length(3)"
 name: "antlr3-length"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-length/"
 description: "ANTLR3_BITSET_LIST_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_BITSET_LIST_struct &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3bitset.h">antlr3bitset.h</a>&gt;</p>

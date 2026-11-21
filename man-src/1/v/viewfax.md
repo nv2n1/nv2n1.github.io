@@ -1,4 +1,5 @@
 ---
+
 title: "viewfax(1)"
 name: "viewfax"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-viewfax/"
 description: "viewfax – display fax files in an X11 window"
 ---
 
-<h2>NAME</h2>
 <p> viewfax &#8211; display fax files in an X11 window</p>
 <h2>SYNOPSIS</h2>
 <p> <code>viewfax</code> [<code>-fnluirvW24</code>] [<code>-h</code><i>height</i>] [<code>-w</code><i>width</i>] [<code>-z</code><i>zoom</i>] [<code>-d</code><i>display</i>] [<code>-g</code><i>wxh+x+y</i>] [<code>-b</code><i>bell</i>] [<code>-m</code><i>memory</i>] <i>filename&#8230;</i> </p>

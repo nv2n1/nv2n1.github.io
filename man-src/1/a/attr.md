@@ -1,4 +1,5 @@
 ---
+
 title: "attr(1)"
 name: "attr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-attr/"
 description: "attr – extended attributes on filesystem objects"
 ---
 
-<h2 class="name">NAME</h2>
 <p> attr &#8211; extended attributes on filesystem objects </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

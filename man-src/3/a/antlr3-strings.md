@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-strings(3)"
 name: "antlr3-strings"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-strings/"
 description: "ANTLR3_STRING_FACTORY_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_STRING_FACTORY_struct &#8211; </p>
 <p> Definition of the string factory interface, which creates and tracks strings for you of various shapes and sizes.</p>
 <h2>SYNOPSIS</h2>

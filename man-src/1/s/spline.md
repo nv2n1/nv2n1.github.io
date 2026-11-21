@@ -1,4 +1,5 @@
 ---
+
 title: "spline(1)"
 name: "spline"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spline/"
 description: "spline – interpolate datasets using splines under tension"
 ---
 
-<h2>NAME</h2>
 <p> spline &#8211; interpolate datasets using splines under tension</p>
 <h2>SYNOPSIS</h2>
 <p> <code>spline</code> [ <i>options </i> ] [ <i>files </i> ]</p>

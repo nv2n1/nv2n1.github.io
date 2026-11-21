@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rsl(3)"
 name: "globus_rsl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rsl/"
 description: "Globus RSL –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus RSL &#8211; </p>
 <p> Resource Specification Language.</p>
 <h3>Modules</h3>

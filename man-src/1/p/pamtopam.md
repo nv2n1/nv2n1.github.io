@@ -1,4 +1,5 @@
 ---
+
 title: "pamtopam(1)"
 name: "pamtopam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtopam/"
 description: "pamtopam – copy PAM image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamtopam &#8211; copy PAM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtopam</code> </p>

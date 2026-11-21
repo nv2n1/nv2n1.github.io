@@ -1,4 +1,5 @@
 ---
+
 title: "yum-verify(1)"
 name: "yum-verify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-verify/"
 description: "yum verify plugin"
 ---
 
-<h2>NAME</h2>
 <p> yum verify plugin</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yum</code> [options] verify [package &#8230;]</p>

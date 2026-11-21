@@ -1,4 +1,5 @@
 ---
+
 title: "git-mailsplit(1)"
 name: "git-mailsplit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-mailsplit/"
 description: "git-mailsplit – Simple UNIX mbox splitter program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-mailsplit &#8211; Simple UNIX mbox splitter program </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

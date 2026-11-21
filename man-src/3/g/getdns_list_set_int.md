@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_list_set_int(3)"
 name: "getdns_list_set_int"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_list_set_int/"
 description: "getdns_list_set, getdns_list_set_bindata, getdns_list_set_dict, getdns_list_set_int, getdns_list_set_list, — set a value by index from a getdns list"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_list_set, </code> <code>getdns_list_set_bindata, </code> <code>getdns_list_set_dict, </code> <code>getdns_list_set_int, </code> <code>getdns_list_set_list, </code> &#8212; set a value by index from a getdns list </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rdiff(1)"
 name: "rdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdiff/"
 description: "rdiff – compute and apply signature-based file differences"
 ---
 
-<h2>NAME</h2>
 <p> rdiff &#8211; compute and apply signature-based file differences</p>
 <h2>SYNOPSYS</h2>
 <pre><code>

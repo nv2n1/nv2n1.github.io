@@ -1,4 +1,5 @@
 ---
+
 title: "gpsfake(1)"
 name: "gpsfake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpsfake/"
 description: "gpsfake – test harness for gpsd, simulating a GPS"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpsfake &#8211; test harness for gpsd, simulating a GPS </p>
 <h2>SYNOPSIS</h2>
 <dl>

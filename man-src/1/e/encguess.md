@@ -1,4 +1,5 @@
 ---
+
 title: "encguess(1)"
 name: "encguess"
 section: "1"
@@ -6,10 +7,7 @@ letter: "e"
 url: "/docs/linux/man/1-encguess/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- encguess - guess character encodings of files 
+encguess - guess character encodings of files 
 
 <h2>VERSION</h2>
 

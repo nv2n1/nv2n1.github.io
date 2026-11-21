@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pem_base64_decode(3)"
 name: "gnutls_pem_base64_decode"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_pem_base64_decode/"
 description: "gnutls_pem_base64_decode – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_pem_base64_decode &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

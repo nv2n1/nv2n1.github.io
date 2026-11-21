@@ -1,4 +1,5 @@
 ---
+
 title: "qrdel(1)"
 name: "qrdel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qrdel/"
 description: "qrdel – delete xxQS_NAMExx Advance Reservations (AR)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qrdel &#8211; delete xxQS_NAMExx Advance Reservations (AR) </p>
 <h2>SYNTAX</h2>
 <p> <code>qrdel</code> [<code>-f</code>] [<code>-help</code>] [<code>-u</code> <i>wc_user_list</i>] <i>wc_ar_list</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "interpolated(3)"
 name: "interpolated"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-interpolated/"
 description: "QuantLib::InflationIndex – Base class for inflation-rate indexes,."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::InflationIndex &#8211; Base class for inflation-rate indexes,. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/inflationindex.hpp&gt; </p>

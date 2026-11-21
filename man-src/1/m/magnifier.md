@@ -1,4 +1,5 @@
 ---
+
 title: "magnifier(1)"
 name: "magnifier"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-magnifier/"
 description: "magnifier – GNOME Magnifier (gnome-mag)"
 ---
 
-<h2>NAME</h2>
 <p> magnifier &#8211; GNOME Magnifier (gnome-mag)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>magnifier</code> [-vhmif?] [-t|&#8211;target-display STRING] [-s|&#8211;source-display STRING] [&#8211;cursor-set=STRING] [&#8211;cursor-size=INT] [&#8211;cursor-scale-factor=FLOAT] [&#8211;cursor-color=LONG] [-v|&#8211;vertical] [-h|&#8211;horizontal] [-m|&#8211;mouse-follow] [-r|&#8211;refresh-time INT] [&#8211;mouse-latency=INT] [-z|&#8211;zoom-factor FLOAT] [-i|&#8211;invert-image] [&#8211;no-initial-region] [&#8211;timing-iterations=INT] [&#8211;timing-output] [&#8211;timing-pan-rate=INT] [&#8211;timing-delta-x=INT] [&#8211;timing-delta-y=INT] [&#8211;smoothing-type=STRING] [-f|&#8211;fullscreen] [&#8211;smooth-scrolling] [-b|&#8211;border-size INT] [-c|&#8211;border-color LONG] [&#8211;use-test-pattern] [&#8211;override-redirect] [&#8211;ignore-damage] [-?|&#8211;help] [&#8211;usage]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "d_slider_proc(3)"
 name: "d_slider_proc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-d_slider_proc/"
 description: "d_slider_proc – Dialog procedure implementing a slider control object. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> d_slider_proc &#8211; Dialog procedure implementing a slider control object. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

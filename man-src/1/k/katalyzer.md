@@ -1,4 +1,5 @@
 ---
+
 title: "katalyzer(1)"
 name: "katalyzer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-katalyzer/"
 description: "katalyzer – analyzes Kate streams and displays various information about them."
 ---
 
-<h2 class="name">NAME</h2>
 <p> katalyzer &#8211; analyzes Kate streams and displays various information about them.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>katalyzer</code> <code>[-hV]</code> <code>[-l </code><i>types</i><code>]</code> <code>[-l!]</code> [ infile ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nodeusers(1)"
 name: "nodeusers"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nodeusers/"
 description: "nodeusers – LinuxNode user information lookup program"
 ---
 
-<h2>NAME</h2>
 <p> nodeusers &#8211; LinuxNode user information lookup program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nodeusers [-a] [-i] [-l]</code></p>

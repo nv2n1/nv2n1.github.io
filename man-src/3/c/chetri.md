@@ -1,4 +1,5 @@
 ---
+
 title: "chetri(3)"
 name: "chetri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chetri/"
 description: "chetri.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chetri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

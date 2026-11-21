@@ -1,4 +1,5 @@
 ---
+
 title: "js(1)"
 name: "js"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-js/"
 description: "node – server-side JavaScript runtime"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>node</code> &#8211; server-side JavaScript runtime </p>
 <h2>SYNOPSIS</h2>
 <p> <code>node</code> [<i>options</i> ] [<i>v8-options</i> ] [-<code>e </code><i>string | script.js | &#8211; </i> ] [- ] [<i>arguments &#8230;</i> ]<br />

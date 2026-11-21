@@ -1,4 +1,5 @@
 ---
+
 title: "al(1)"
 name: "al"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-al/"
 description: "al, al2 – Mono Assembly Linker"
 ---
 
-<h2>NAME</h2>
 <p> al, al2 &#8211; Mono Assembly Linker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>al [option] [source-files]</code></p>

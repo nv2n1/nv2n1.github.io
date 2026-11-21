@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-groups(1)"
 name: "euca-describe-groups"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-groups/"
 description: "euca-describe-groups – Show information about security groups"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-groups &#8211; Show information about security groups</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-groups [&#8211;show-empty-fields] [-U URL]</p>

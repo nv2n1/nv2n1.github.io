@@ -1,4 +1,5 @@
 ---
+
 title: "memalign(3)"
 name: "memalign"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memalign/"
 description: "posix_memalign, aligned_alloc, memalign, valloc, pvalloc – allocate aligned memory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> posix_memalign, aligned_alloc, memalign, valloc, pvalloc &#8211; allocate aligned memory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

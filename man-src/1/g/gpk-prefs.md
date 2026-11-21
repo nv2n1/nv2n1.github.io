@@ -1,4 +1,5 @@
 ---
+
 title: "gpk-prefs(1)"
 name: "gpk-prefs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpk-prefs/"
 description: "gpk-log – GNOME PackageKit Update Preferences"
 ---
 
-<h2>NAME</h2>
 <p> gpk-log &#8211; GNOME PackageKit Update Preferences</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpk-log</code> [ <code>&#8211;verbose</code> ]</p>

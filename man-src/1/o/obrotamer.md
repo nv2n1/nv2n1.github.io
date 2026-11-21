@@ -1,4 +1,5 @@
 ---
+
 title: "obrotamer(1)"
 name: "obrotamer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obrotamer/"
 description: "obrotamer – generate conformer/rotamer coordinates"
 ---
 
-<h2>NAME</h2>
 <p> <code>obrotamer</code> &#8211; generate conformer/rotamer coordinates</p>
 <h2>SYNOPSIS</h2>
 <p> <i>filename</i></p>

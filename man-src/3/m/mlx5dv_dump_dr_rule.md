@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_dump_dr_rule(3)"
 name: "mlx5dv_dump_dr_rule"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_dump_dr_rule/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_dump_dr_domain - Dump DR Domain 
+mlx5dv_dump_dr_domain - Dump DR Domain 
 
  mlx5dv_dump_dr_table - Dump DR Table 
 

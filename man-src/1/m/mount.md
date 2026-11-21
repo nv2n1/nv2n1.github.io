@@ -1,4 +1,5 @@
 ---
+
 title: "mount(1)"
 name: "mount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mount/"
 description: "mount.ecryptfs_private – eCryptfs private mount helper."
 ---
 
-<h2 class="name">NAME</h2>
 <p> mount.ecryptfs_private &#8211; eCryptfs private mount helper.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mount.ecryptfs_private [ALIAS]</code> </p>

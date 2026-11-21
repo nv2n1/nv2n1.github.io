@@ -1,4 +1,5 @@
 ---
+
 title: "xzdec(1)"
 name: "xzdec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xzdec/"
 description: "xzdec, lzmadec – Small .xz and .lzma decompressors"
 ---
 
-<h2>NAME</h2>
 <p> xzdec, lzmadec &#8211; Small .xz and .lzma decompressors</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xzdec</code> [<i>option&#8230;</i>] [<i>file&#8230;</i>]<br />

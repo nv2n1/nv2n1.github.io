@@ -1,4 +1,5 @@
 ---
+
 title: "repoquery(1)"
 name: "repoquery"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-repoquery/"
 description: "repoquery – query information from Yum repositories"
 ---
 
-<h2>NAME</h2>
 <p> repoquery &#8211; query information from Yum repositories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>repoquery</code> [options] &lt;item &#8230;&gt;<br />

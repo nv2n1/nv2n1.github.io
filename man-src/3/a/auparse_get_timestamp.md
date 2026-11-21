@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_timestamp(3)"
 name: "auparse_get_timestamp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_timestamp/"
 description: "auparse_get_timestamp – access timestamp of the event"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_timestamp &#8211; access timestamp of the event</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

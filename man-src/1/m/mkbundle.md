@@ -1,4 +1,5 @@
 ---
+
 title: "mkbundle(1)"
 name: "mkbundle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkbundle/"
 description: "mkbundle, mkbundle2 – Creates a bundled executable."
 ---
 
-<h2>NAME</h2>
 <p> mkbundle, mkbundle2 &#8211; Creates a bundled executable.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkbundle [options] assembly1 [assembly2 &#8230;]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "jack-dssi-host(1)"
 name: "jack-dssi-host"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jack-dssi-host/"
 description: "jack-dssi-host – a simple JACK host for DSSI plugins"
 ---
 
-<h2 class="name">NAME</h2>
 <p> jack-dssi-host &#8211; a simple JACK host for DSSI plugins </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jack-dssi-host</code> <i>[-v] [-a] [-n] [-p &lt;projdir&gt;] [-c &lt;cname&gt;] [-&lt;i&gt;] &lt;libname&gt;[:&lt;label&gt;] [&#8230;]</i></p>

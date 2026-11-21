@@ -1,4 +1,5 @@
 ---
+
 title: "dfu-tool(1)"
 name: "dfu-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dfu-tool/"
 description: "dfu-tool – write firmware to DFU devices"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dfu-tool &#8211; write firmware to DFU devices </p>
 <h2>SYNOPSIS</h2>
 <p> dfu-tool [CMD]</p>

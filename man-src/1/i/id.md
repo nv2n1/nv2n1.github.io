@@ -1,4 +1,5 @@
 ---
+
 title: "id(1)"
 name: "id"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-id/"
 description: "id – print real and effective user and group IDs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> id &#8211; print real and effective user and group IDs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>id</code> [<i>,OPTION/</i>]&#8230; [<i>,USER/</i>]&#8230;</p>

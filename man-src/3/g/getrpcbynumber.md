@@ -1,4 +1,5 @@
 ---
+
 title: "getrpcbynumber(3)"
 name: "getrpcbynumber"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getrpcbynumber/"
 description: "getrpcent, getrpcbyname, getrpcbynumber, setrpcent, endrpcent – get RPC entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getrpcent, getrpcbyname, getrpcbynumber, setrpcent, endrpcent &#8211; get RPC entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

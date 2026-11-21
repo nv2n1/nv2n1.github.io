@@ -1,4 +1,5 @@
 ---
+
 title: "tilp(1)"
 name: "tilp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tilp/"
 description: "TiLP2 – a communication program for TI calculators (‘Tilp Is a Linking Program’)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> TiLP2 &#8211; a communication program for TI calculators (&#8216;Tilp Is a Linking Program&#8217;)</p>
 <h2>SYNOPSYS</h2>
 <p> <code>tilp</code> [-h / &#8211;help] [-v / &#8211;version] [&#8211;calc=] [&#8211;cable=] [&#8211;port=] [&#8211;timeout=] [&#8211;delay=] [&#8211;silent] [&#8211;no-gui] [filename] </p>

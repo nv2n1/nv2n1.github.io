@@ -1,4 +1,5 @@
 ---
+
 title: "std-codecvt-10(3)"
 name: "std-codecvt-10"
 section: "3"
@@ -6,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/3-std-codecvt-10/"
 description: "std::wstring_convert<Codecvt,Elem,Wide_alloc,Byte_alloc>::from_bytes – std::wstring_convert<Codecvt,Elem,Wide_alloc,Byte_alloc>::from_bytes"
 ---
-<h2 id="name">NAME</h2>
+
 <p>std::wstring_convert&lt;Codecvt,Elem,Wide_alloc,Byte_alloc&gt;::from_bytes &#8211; std::wstring_convert&lt;Codecvt,Elem,Wide_alloc,Byte_alloc&gt;::from_bytes</p>
 <h2 id="synopsis">SYNOPSIS</h2>
 <p>Defined in header <code>&lt;locale&gt;</code></p>

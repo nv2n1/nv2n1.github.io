@@ -1,4 +1,5 @@
 ---
+
 title: "e2mv(1)"
 name: "e2mv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-e2mv/"
 description: "e2mv – moves or renames files on an ext2fs filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> e2mv &#8211; moves or renames files on an ext2fs filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>e2mv</code> [<i>options</i>]<i> files&#8230; dest</i></p>

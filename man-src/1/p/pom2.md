@@ -1,4 +1,5 @@
 ---
+
 title: "pom2(1)"
 name: "pom2"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pom2/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pom2 - convert POD to Text, HTML, etc., with Pod::POM 
+pom2 - convert POD to Text, HTML, etc., with Pod::POM 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "qstardict(1)"
 name: "qstardict"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qstardict/"
 description: "qstardict – a Qt4 dictionary"
 ---
 
-<h2>NAME</h2>
 <p> <code>qstardict</code> &#8211; a Qt4 dictionary</p>
 <h2>DESCRIPTION</h2>
 <p> <code>QStarDict</code> is a StarDict clone written with Qt4. The user interface is similar to StarDict. You can start QStarDict from the menu or by running the <code>qstardict</code> command.</p>

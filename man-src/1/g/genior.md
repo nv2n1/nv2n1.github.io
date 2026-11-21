@@ -1,4 +1,5 @@
 ---
+
 title: "genior(1)"
 name: "genior"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-genior/"
 description: "genior – Utility for creating a stringified IOR"
 ---
 
-<h2 class="name">NAME</h2>
 <p> genior &#8211; Utility for creating a stringified IOR</p>
 <h2>SYNOPSIS</h2>
 <p> <code>genior</code> [-x] &lt;Type ID&gt; &lt;hostname&gt; &lt;port number&gt; [object key] </p>

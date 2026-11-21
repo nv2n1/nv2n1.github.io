@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-tags(1)"
 name: "euca-describe-tags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-tags/"
 description: "euca-describe-tags – List tags associated with your account’s resources"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-tags &#8211; List tags associated with your account&#8217;s resources</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-tags [&#8211;show-empty-fields] [-U URL]</p>

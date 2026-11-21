@@ -1,4 +1,5 @@
 ---
+
 title: "omega(1)"
 name: "omega"
 section: "1"
@@ -6,7 +7,7 @@ letter: "o"
 url: "/docs/linux/man/1-omega/"
 description: "omega, iniomega, viromega – extended unicode TeX"
 ---
-<h2 class="name">NAME</h2>
+
 <p> omega, iniomega, viromega - extended unicode TeX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>omega</code> [<i>options</i>] [<code>&amp;</code> <i>format</i> ] [ <i>file</i> | <code>\</code> <i>commands</i> ]  </p>

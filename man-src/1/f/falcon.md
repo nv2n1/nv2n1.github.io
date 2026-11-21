@@ -1,4 +1,5 @@
 ---
+
 title: "falcon(1)"
 name: "falcon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-falcon/"
 description: "falcon – The Falcon Programming Language command line interpreter"
 ---
 
-<h2>NAME</h2>
 <p> falcon &#8211; The Falcon Programming Language command line interpreter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>falcon [options] [main_script] [script_options]</code> </p>

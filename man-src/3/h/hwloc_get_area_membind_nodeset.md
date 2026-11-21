@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_get_area_membind_nodeset(3)"
 name: "hwloc_get_area_membind_nodeset"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_get_area_membind_nodeset/"
 description: "hwlocality_membinding – Memory binding"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_membinding &#8211; Memory binding </p>
 <h3>Enumerations</h3>
 <p> enum <code>hwloc_membind_policy_t</code> { <code>HWLOC_MEMBIND_DEFAULT</code>, <code>HWLOC_MEMBIND_FIRSTTOUCH</code>, <code>HWLOC_MEMBIND_BIND</code>, <code>HWLOC_MEMBIND_INTERLEAVE</code>, <code>HWLOC_MEMBIND_REPLICATE</code>, <code>HWLOC_MEMBIND_NEXTTOUCH</code>, <code>HWLOC_MEMBIND_MIXED</code> } </p>

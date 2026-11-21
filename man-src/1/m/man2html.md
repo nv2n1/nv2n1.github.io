@@ -1,4 +1,5 @@
 ---
+
 title: "man2html(1)"
 name: "man2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-man2html/"
 description: "man2html – format a manual page in html"
 ---
 
-<h2 class="name">NAME</h2>
 <p> man2html &#8211; format a manual page in html </p>
 <h2>SYNOPSIS</h2>
 <p> man2html [options] [file]</p>

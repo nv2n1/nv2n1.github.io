@@ -1,4 +1,5 @@
 ---
+
 title: "imapfilter(1)"
 name: "imapfilter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imapfilter/"
 description: "imapfilter – mail filter"
 ---
 
-<h2>NAME</h2>
 <p> <code>imapfilter</code> &#8211; mail filter</p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>iVv </code>[-<code>c </code><i>configfile</i> ] ] [-<code>d </code><i>debugfile</i> ] [-<code>e </code><i>&#8216;command&#8217;</i> ] [-<code>l </code><i>logfile</i> ]</p>

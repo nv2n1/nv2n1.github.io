@@ -1,4 +1,5 @@
 ---
+
 title: "proofd(1)"
 name: "proofd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-proofd/"
 description: "proofd – PROOF (The Parallel ROOT Facility)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> proofd &#8211; PROOF (The Parallel ROOT Facility)</p>
 <h2>DESCRIPTION</h2>
 <p> Using <code>PROOF</code><i> (The P</i>arallel <i>ROO</i>T <i>F</i>acility) one can analyze trees in parallel on a cluster of computers. The <code>PROOF</code> system consists of the <i><a href="/docs/linux/man/1-proofd/">proofd</a></i>(1) from-end program which is started via <i>inetd</i>(8). </p>

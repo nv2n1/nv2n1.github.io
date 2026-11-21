@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_oprfi_enable_server(3)"
 name: "gnutls_oprfi_enable_server"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_oprfi_enable_server/"
 description: "gnutls_oprfi_enable_server – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_oprfi_enable_server &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "getzone(1)"
 name: "getzone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getzone/"
 description: "getzone – get dns zone from server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getzone &#8211; get dns zone from server </p>
 <h2>DESCRIPTION</h2>
 <p> <code>getzone</code> transfers a user-specified dns zone from a zone server and displays it in csv1 format on the standard output. This program is here for compatibility with older setups that use getzone to get zone files; newer setups may wish to consider using the fetchzone tool to obtain csv2-compatible zone files.</p>

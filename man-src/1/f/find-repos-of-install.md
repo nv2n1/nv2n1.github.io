@@ -1,4 +1,5 @@
 ---
+
 title: "find-repos-of-install(1)"
 name: "find-repos-of-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-find-repos-of-install/"
 description: "find-repos-of-install – report which Yum repository a package was installed from"
 ---
 
-<h2>NAME</h2>
 <p> find-repos-of-install &#8211; report which Yum repository a package was installed from</p>
 <h2>SYNOPSIS</h2>
 <p> <code>find-repos-of-install</code> [options] package1 [package2&#8230;]</p>

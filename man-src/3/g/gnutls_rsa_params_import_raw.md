@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_rsa_params_import_raw(3)"
 name: "gnutls_rsa_params_import_raw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_rsa_params_import_raw/"
 description: "gnutls_rsa_params_import_raw – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_rsa_params_import_raw &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-annex-shell(1)"
 name: "git-annex-shell"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-annex-shell/"
 description: "git-annex-shell – Restricted login shell for git-annex only SSH access"
 ---
 
-<h2>NAME</h2>
 <p> git-annex-shell &#8211; Restricted login shell for git-annex only SSH access </p>
 <h2>SYNOPSIS</h2>
 <p> git-annex-shell [-c] command [params &#8230;] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rrdxport(1)"
 name: "rrdxport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rrdxport/"
 description: "rrdxport – Export data in XML format based on data from one or several RRD"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rrdxport &#8211; Export data in XML format based on data from one or several RRD </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>xport</code> [<code>-s</code>|<code>&#8211;start</code>&nbsp;<wbr><i>seconds</i>] [<code>-e</code>|<code>&#8211;end</code>&nbsp;<wbr><i>seconds</i>] [<code>-m</code>|<code>&#8211;maxrows</code>&nbsp;<wbr><i>rows</i>] [<code>&#8211;step</code>&nbsp;<wbr><i>value</i>] [<code>&#8211;json</code>] [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>] [<font SIZE="-1"><code>DEF:</code></font><i>vname</i><code>=</code><i>rrd</i><code>:</code><i>ds-name</i><code>:</code><i></i><font SIZE="-1"><i>CF</i></font><i></i>] [<font SIZE="-1"><code>CDEF:</code></font><i>vname</i><code>=</code><i>rpn-expression</i>] [<font SIZE="-1"><code>XPORT</code></font><code>:</code><i>vname</i>[<code>:</code><i>legend</i>]]</p>

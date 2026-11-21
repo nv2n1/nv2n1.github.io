@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_double(3)"
 name: "bson_iter_double"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_double/"
 description: "bson_iter_double() – Fetches the contents of a BSON_TYPE_DOUBLE field."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_double() &#8211; Fetches the contents of a BSON_TYPE_DOUBLE field.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

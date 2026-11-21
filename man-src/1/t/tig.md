@@ -1,4 +1,5 @@
 ---
+
 title: "tig(1)"
 name: "tig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tig/"
 description: "tig – text-mode interface for Git"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tig &#8211; text-mode interface for Git </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

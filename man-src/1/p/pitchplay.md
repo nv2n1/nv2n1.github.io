@@ -1,4 +1,5 @@
 ---
+
 title: "pitchplay(1)"
 name: "pitchplay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pitchplay/"
 description: "pitchplay – wrapper script to play audio tracks with cdda2wav with different pitches through a soundcard (cdda2wav must have soundcard support enabled)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pitchplay &#8211; wrapper script to play audio tracks with cdda2wav with different pitches through a soundcard (cdda2wav must have soundcard support enabled).</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pitchplay</code> &lt;track a&gt; &lt;pitch a&gt; &lt;track b&gt; &lt;pitch b&gt;&#8230; </p>

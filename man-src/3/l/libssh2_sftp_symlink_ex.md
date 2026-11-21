@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_symlink_ex(3)"
 name: "libssh2_sftp_symlink_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_symlink_ex/"
 description: "libssh2_sftp_symlink_ex – read or set a symbolic link"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_symlink_ex &#8211; read or set a symbolic link</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

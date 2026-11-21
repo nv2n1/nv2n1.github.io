@@ -1,4 +1,5 @@
 ---
+
 title: "perlnewmod(1)"
 name: "perlnewmod"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlnewmod/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlnewmod - preparing a new module for distribution 
+perlnewmod - preparing a new module for distribution 
 
 <h2>DESCRIPTION</h2>
 

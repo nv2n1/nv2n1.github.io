@@ -1,4 +1,5 @@
 ---
+
 title: "ndctl-list(1)"
 name: "ndctl-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ndctl-list/"
 description: "ndctl-list – dump the platform nvdimm device topology and attributes in json"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ndctl-list &#8211; dump the platform nvdimm device topology and attributes in json </p>
 <h2>SYNOPSIS</h2>
 <pre>

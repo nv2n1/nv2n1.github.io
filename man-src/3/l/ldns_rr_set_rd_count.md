@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_set_rd_count(3)"
 name: "ldns_rr_set_rd_count"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr_set_rd_count/"
 description: "ldns_rr_set_owner, ldns_rr_set_ttl, ldns_rr_set_type, ldns_rr_set_rd_count, ldns_rr_set_class, ldns_rr_set_rdf"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr_set_owner, ldns_rr_set_ttl, ldns_rr_set_type, ldns_rr_set_rd_count, ldns_rr_set_class, ldns_rr_set_rdf </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "libesedb(3)"
 name: "libesedb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libesedb/"
 description: "libesedb.h – Library to support the Extensible Storage Engine (ESE) Database File (EDB) format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>libesedb.h</code> &#8211; Library to support the Extensible Storage Engine (ESE) Database File (EDB) format </p>
 <h2>LIBRARY</h2>
 <p> Lb libesedb</p>

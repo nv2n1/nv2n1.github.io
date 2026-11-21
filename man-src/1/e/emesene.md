@@ -1,4 +1,5 @@
 ---
+
 title: "emesene(1)"
 name: "emesene"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-emesene/"
 description: "Emesene – MSN Messenger Client."
 ---
 
-<h2>NAME</h2>
 <p> Emesene &#8211; MSN Messenger Client. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>emesene</code> [<i>OPTIONS</i>] </p>

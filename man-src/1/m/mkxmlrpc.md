@@ -1,4 +1,5 @@
 ---
+
 title: "mkxmlrpc(1)"
 name: "mkxmlrpc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkxmlrpc/"
 description: "mkxmlrpc – The Free Pascal XML-RPC program."
 ---
 
-<h2>NAME</h2>
 <p> mkxmlrpc &#8211; The Free Pascal XML-RPC program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkxmlrpc [options]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fdebugrpm(1)"
 name: "fdebugrpm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fdebugrpm/"
 description: "fdebugrpm – install missing debuginfo packages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fdebugrpm &#8211; install missing debuginfo packages </p>
 <h2>SYNOPSIS</h2>
 <dl>

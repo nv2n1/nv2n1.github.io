@@ -1,4 +1,5 @@
 ---
+
 title: "clufter(1)"
 name: "clufter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clufter/"
 description: "clufter – CLUster FilTER"
 ---
 
-<h2>NAME</h2>
 <p> clufter &#8211; CLUster FilTER</p>
 <h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] [<i>&lt;cmd&gt; </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]]</p>

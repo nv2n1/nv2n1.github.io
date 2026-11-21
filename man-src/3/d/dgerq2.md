@@ -1,4 +1,5 @@
 ---
+
 title: "dgerq2(3)"
 name: "dgerq2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgerq2/"
 description: "dgerq2.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dgerq2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

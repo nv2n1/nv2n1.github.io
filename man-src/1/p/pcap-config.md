@@ -1,4 +1,5 @@
 ---
+
 title: "pcap-config(1)"
 name: "pcap-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcap-config/"
 description: "pcap-config – write libpcap compiler and linker flags to standard output"
 ---
 
-<h2>NAME</h2>
 <p> pcap-config &#8211; write libpcap compiler and linker flags to standard output</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcap-config</code> [ <code>&#8211;static</code> ] [ <code>&#8211;cflags | &#8211;libs | &#8211;additional-libs</code> ]</p>

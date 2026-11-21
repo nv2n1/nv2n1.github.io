@@ -1,4 +1,5 @@
 ---
+
 title: "git-reset-file(1)"
 name: "git-reset-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-reset-file/"
 description: "git-reset-file – Reset one file"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-reset-file</code> &#8211; Reset one file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-reset-file</code> [&lt;filename&gt;] commit-hash</p>

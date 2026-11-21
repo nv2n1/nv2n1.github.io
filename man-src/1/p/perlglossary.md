@@ -1,4 +1,5 @@
 ---
+
 title: "perlglossary(1)"
 name: "perlglossary"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlglossary/"
 description: "perlglossary – Perl Glossary"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlglossary &#8211; Perl Glossary </p>
 <h2>VERSION</h2>
 <p> version 5.20190126</p>

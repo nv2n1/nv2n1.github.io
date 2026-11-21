@@ -1,4 +1,5 @@
 ---
+
 title: "libdspam(3)"
 name: "libdspam"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libdspam/"
 description: "libdspam – Core message processing and classification library for DSPAM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libdspam &#8211; Core message processing and classification library for DSPAM </p>
 <p> <code>DSPAM</code> Core Analyis Engine Functions</p>
 <h2>SYNOPSIS</h2>

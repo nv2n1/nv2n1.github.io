@@ -1,4 +1,5 @@
 ---
+
 title: "go-clean(1)"
 name: "go-clean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-go-clean/"
 description: "go-clean – remove object files and cached files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> go-clean &#8211; remove object files and cached files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>go clean</code> [<code>-i</code>] [<code>-r</code>] [<code>-n</code>] [<code>-x</code>] [<i>packages</i>]</p>

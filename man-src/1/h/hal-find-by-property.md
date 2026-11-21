@@ -1,4 +1,5 @@
 ---
+
 title: "hal-find-by-property(1)"
 name: "hal-find-by-property"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hal-find-by-property/"
 description: "hal-find-by-property – find device objects by property matching"
 ---
 
-<h2>NAME</h2>
 <p> hal-find-by-property &#8211; find device objects by property matching</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hal-find-by-property</code> [options] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "if_freenameindex(3)"
 name: "if_freenameindex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-if_freenameindex/"
 description: "if_nameindex, if_freenameindex – get network interface names and indexes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> if_nameindex, if_freenameindex &#8211; get network interface names and indexes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

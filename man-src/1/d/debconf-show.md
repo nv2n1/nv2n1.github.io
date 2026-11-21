@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-show(1)"
 name: "debconf-show"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-debconf-show/"
 description: "debconf-show – query the debconf database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> debconf-show &#8211; query the debconf database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

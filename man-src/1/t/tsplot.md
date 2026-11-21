@@ -1,4 +1,5 @@
 ---
+
 title: "tsplot(1)"
 name: "tsplot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tsplot/"
 description: "tsplot – Plot several tsung logs on the same charts, for comparison purpose."
 ---
 
-<h2>NAME</h2>
 <p> tsplot &#8211; Plot several tsung logs on the same charts, for comparison purpose.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tsplot</code> [ <code>-c configuration file</code> ] [ <code>-d images output directory</code> ] [ <code>-v verbose</code> ] [ <code>legend logfile</code> ]</p>

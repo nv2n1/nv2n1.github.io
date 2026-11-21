@@ -1,4 +1,5 @@
 ---
+
 title: "f2c(1)"
 name: "f2c"
 section: "1"
@@ -6,7 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-f2c/"
 description: "f2c – Convert Fortran 77 to C or C++"
 ---
-<h2 class="name">NAME</h2>
+
 <p> f2c - Convert Fortran 77 to C or C++ </p>
 <h2>SYNOPSIS</h2>
 <p> <code>f2c</code> [ <i>option ...</i> ] <i>file ...</i>  </p>

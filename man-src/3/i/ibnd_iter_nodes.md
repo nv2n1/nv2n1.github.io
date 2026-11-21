@@ -1,4 +1,5 @@
 ---
+
 title: "ibnd_iter_nodes(3)"
 name: "ibnd_iter_nodes"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibnd_iter_nodes/"
 description: "ibnd_iter_nodes, ibnd_iter_nodes_type – given a fabric object and a function itterate over the nodes in the fabric."
 ---
 
-<h2>NAME</h2>
 <p> ibnd_iter_nodes, ibnd_iter_nodes_type &#8211; given a fabric object and a function itterate over the nodes in the fabric.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

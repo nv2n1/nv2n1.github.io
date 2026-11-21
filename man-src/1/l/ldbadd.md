@@ -1,4 +1,5 @@
 ---
+
 title: "ldbadd(1)"
 name: "ldbadd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldbadd/"
 description: "ldbadd – Command-line utility for adding records to an LDB"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldbadd &#8211; Command-line utility for adding records to an LDB </p>
 <h2>SYNOPSIS</h2>
 <dl>

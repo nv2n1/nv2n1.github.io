@@ -1,4 +1,5 @@
 ---
+
 title: "gstream-restore_input_approver(3)"
 name: "gstream-restore_input_approver"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gstream-restore_input_approver/"
 description: "restore_input_approver"
 ---
 
-<h2>NAME</h2>
 <p> restore_input_approver</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>

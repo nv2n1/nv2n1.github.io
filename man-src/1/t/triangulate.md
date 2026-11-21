@@ -1,4 +1,5 @@
 ---
+
 title: "triangulate(1)"
 name: "triangulate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-triangulate/"
 description: "triangulate – Do optimal (Delaunay) triangulation and gridding of Cartesian table data [method]"
 ---
 
-<h2>NAME</h2>
 <p> triangulate &#8211; Do optimal (Delaunay) triangulation and gridding of Cartesian table data [method]</p>
 <h2>SYNOPSIS</h2>
 <p> <code>triangulate</code> [ <i>table</i> ] [ <code>x</code>|<code>y</code> ] [ <i>empty</i> ] [ <i>grdfile</i> ] [ <i>increment</i> ] [ <i>parameters</i> ] [ ] [ ] [ ] [ <i>region</i> ] [ ] [ [<i>level</i>] ] [ ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

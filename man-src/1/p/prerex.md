@@ -1,4 +1,5 @@
 ---
+
 title: "prerex(1)"
 name: "prerex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prerex/"
 description: "prerex – interactive editor of prerequisite-chart descriptions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> prerex &#8211; interactive editor of prerequisite-chart descriptions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>prerex</code> [ <i>options</i> ] [ <i>basefile</i>[<i>.tex</i>] [ <i>chartfile</i>[<i>.tex</i>] ] ]</p>

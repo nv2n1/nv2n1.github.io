@@ -1,4 +1,5 @@
 ---
+
 title: "browse(3)"
 name: "browse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-browse/"
 description: "QuantLib::CmsMarket – set of CMS quotes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::CmsMarket &#8211; set of CMS quotes </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/swaption/cmsmarket.hpp&gt; </p>

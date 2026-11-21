@@ -1,4 +1,5 @@
 ---
+
 title: "hpfsck(1)"
 name: "hpfsck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpfsck/"
 description: "hpfsck — check integrity of an HFS+ volume"
 ---
 
-<h2>NAME</h2>
 <p> hpfsck &#8212; check integrity of an HFS+ volume</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hpfsck</code> [<code>-v</code>] <i>source-path</i></p>

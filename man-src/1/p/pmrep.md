@@ -1,4 +1,5 @@
 ---
+
 title: "pmrep(1)"
 name: "pmrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmrep/"
 description: "pmrep – performance metrics reporter"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmrep</code> &#8211; performance metrics reporter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmrep</code> [<code>-CdGHLpruUVxz?</code>] [<code>-a</code> <i>archive</i>] [<code>-A</code> <i>align</i>] [<code>-b</code> <i>space-scale</i>] [<code>-c</code> <i>config</i>] [<code>-e</code> <i>derived</i>] [<code>-E</code> <i>lines</i>] [<code>-f</code> <i>format</i>] [<code>-F</code> <i>outfile</i>] [<code>-h</code> <i>host</i>] [<code>-K</code> <i>spec</i>] [<code>-l</code> <i>delimiter</i>] [<code>-o</code> <i>output</i>] [<code>-O</code> <i>origin</i>] [<code>-P</code> <i>precision</i>] [<code>-q</code> <i>count-scale</i>] [<code>-s</code> <i>samples</i>] [<code>-S</code> <i>starttime</i>] [<code>-t</code> <i>interval</i>] [<code>-T</code> <i>endtime</i>] [<code>-w</code> <i>width</i>] [<code>-y</code> <i>time-scale</i>] [<code>-Z</code> <i>timezone</i>] <i>metricspec [&#8230;]</i></p>

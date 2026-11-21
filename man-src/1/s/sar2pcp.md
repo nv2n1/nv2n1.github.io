@@ -1,4 +1,5 @@
 ---
+
 title: "sar2pcp(1)"
 name: "sar2pcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sar2pcp/"
 description: "sar2pcp – import sar data and create a PCP archive"
 ---
 
-<h2>NAME</h2>
 <p> <code>sar2pcp</code> &#8211; import sar data and create a PCP archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sar2pcp</code> <i>infile</i> <i>outfile</i></p>

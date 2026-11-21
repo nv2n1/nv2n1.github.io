@@ -1,4 +1,5 @@
 ---
+
 title: "pybuild(1)"
 name: "pybuild"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pybuild/"
 description: "pybuild – invokes various build systems for requested Python versions in order to build modules and extensions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pybuild &#8211; invokes various build systems for requested Python versions in order to build modules and extensions </p>
 <h2>SYNOPSIS</h2>
 <p> pybuild [ACTION] [BUILD SYSTEM ARGUMENTS] [DIRECTORIES] [OPTIONS]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cmew(1)"
 name: "cmew"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmew/"
 description: "cmew – create Mew’s database file"
 ---
 
-<h2>NAME</h2>
 <p> cmew &#8211; create Mew&#8217;s database file</p>
 <h2>SYNOPSIS</h2>
 <p> cmew [<i>-f</i>] [<i>db_file</i> [<i>maildir</i> [<i>ignore_regex</i> [<i>target_folder</i>]]]]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "igawk(1)"
 name: "igawk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-igawk/"
 description: "igawk – gawk with include files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> igawk &#8211; gawk with include files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>igawk</code> [ all <i>gawk</i> options ] <code>-f</code> <i>program-file</i> [ <code>&#8212;</code> ] file &#8230;<br />

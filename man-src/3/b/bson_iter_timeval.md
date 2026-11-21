@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_timeval(3)"
 name: "bson_iter_timeval"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_timeval/"
 description: "bson_iter_timeval() – The bson_iter_timeval() function shall return the number of seconds and microseconds since the UNIX epoch, as contained in the BSON_TYPE_DATE_TIME element into tv."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_timeval() &#8211; The bson_iter_timeval() function shall return the number of seconds and microseconds since the UNIX epoch, as contained in the BSON_TYPE_DATE_TIME element into tv.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

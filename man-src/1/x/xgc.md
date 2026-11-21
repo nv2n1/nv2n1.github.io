@@ -1,4 +1,5 @@
 ---
+
 title: "xgc(1)"
 name: "xgc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xgc/"
 description: "xgc – X graphics demo"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xgc &#8211; X graphics demo </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xgc</code> [-<i>toolkitoption</i> &#8230;]</p>

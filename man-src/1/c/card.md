@@ -1,4 +1,5 @@
 ---
+
 title: "card(1)"
 name: "card"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-card/"
 description: "card – print reference card of program options"
 ---
 
-<h2 class="name">NAME</h2>
 <p> card &#8211; print reference card of program options </p>
 <h2>SYNOPSIS</h2>
 <p> <code>card</code> [<i>OPTION</i>]&#8230; <i>PROGRAM</i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "strings(1)"
 name: "strings"
 section: "1"
@@ -6,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-strings/"
 description: "strings – print the sequences of printable characters in files"
 ---
-<h2 class="name">NAME</h2>
+
 <p> strings - print the sequences of printable characters in files </p>
 <h2>SYNOPSIS</h2>
 <p> strings [<code>-afovV</code>] [<code>-</code><i>min-len</i>] <br />

@@ -1,4 +1,5 @@
 ---
+
 title: "padsp(1)"
 name: "padsp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-padsp/"
 description: "padsp – PulseAudio OSS Wrapper"
 ---
 
-<h2 class="name">NAME</h2>
 <p> padsp &#8211; PulseAudio OSS Wrapper </p>
 <h2>SYNOPSIS</h2>
 <p> <code>padsp [</code><i>options</i><code>] </code><i>PROGRAM</i><code> [</code><i>ARGUMENTS &#8230;</i><code>] </p>

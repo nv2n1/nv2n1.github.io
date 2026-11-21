@@ -1,4 +1,5 @@
 ---
+
 title: "fauxv(1)"
 name: "fauxv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fauxv/"
 description: "fauxv – print the auxiliary vector"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fauxv &#8211; print the auxiliary vector </p>
 <h2>SYNOPSIS</h2>
 <dl>

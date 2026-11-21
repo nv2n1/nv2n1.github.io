@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_close(3)"
 name: "dirfile_close"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_close/"
 description: "dirfile_close, dirfile_discard — close a dirfile and free associated memory."
 ---
 
-<h2>NAME</h2>
 <p> dirfile_close, dirfile_discard &#8212; close a dirfile and free associated memory.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

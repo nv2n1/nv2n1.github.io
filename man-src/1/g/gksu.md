@@ -1,4 +1,5 @@
 ---
+
 title: "gksu(1)"
 name: "gksu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gksu/"
 description: "gksu – GTK+ frontend for su and sudo"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gksu &#8211; GTK+ frontend for su and sudo </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gksu</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-authors(1)"
 name: "git-authors"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-authors/"
 description: "git-authors – Generate authors report"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-authors</code> &#8211; Generate authors report</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-authors</code> [-l, &#8211;list]</p>

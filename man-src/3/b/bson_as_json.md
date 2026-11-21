@@ -1,4 +1,5 @@
 ---
+
 title: "bson_as_json(3)"
 name: "bson_as_json"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_as_json/"
 description: "bson_as_json() – The bson_as_json() function shall encode bson as a JSON encoded UTF-8 string."
 ---
 
-<h2>NAME</h2>
 <p> bson_as_json() &#8211; The bson_as_json() function shall encode bson as a JSON encoded UTF-8 string.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

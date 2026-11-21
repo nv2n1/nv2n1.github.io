@@ -1,4 +1,5 @@
 ---
+
 title: "acl_valid(3)"
 name: "acl_valid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_valid/"
 description: "acl_valid – validate an ACL"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_valid</code> &#8211; validate an ACL </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

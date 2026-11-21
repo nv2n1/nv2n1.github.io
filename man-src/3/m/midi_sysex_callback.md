@@ -1,4 +1,5 @@
 ---
+
 title: "midi_sysex_callback(3)"
 name: "midi_sysex_callback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-midi_sysex_callback/"
 description: "midi_msg_callback, midi_meta_callback, midi_sysex_callback – Hook functions allowing you to intercept MIDI player events. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> midi_msg_callback, midi_meta_callback, midi_sysex_callback &#8211; Hook functions allowing you to intercept MIDI player events. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

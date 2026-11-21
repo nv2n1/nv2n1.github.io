@@ -1,4 +1,5 @@
 ---
+
 title: "avc_init(3)"
 name: "avc_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-avc_init/"
 description: "avc_init – legacy userspace SELinux AVC setup"
 ---
 
-<h2 class="name">NAME</h2>
 <p> avc_init &#8211; legacy userspace SELinux AVC setup </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />

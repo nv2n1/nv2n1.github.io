@@ -1,4 +1,5 @@
 ---
+
 title: "ex3buf(3)"
 name: "ex3buf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ex3buf/"
 description: "ex3buf – Mode-X triple buffering and retrace interrupt simulation. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> ex3buf &#8211; Mode-X triple buffering and retrace interrupt simulation. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

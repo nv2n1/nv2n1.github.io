@@ -1,4 +1,5 @@
 ---
+
 title: "dh_link(1)"
 name: "dh_link"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_link/"
 description: "dh_link – create symlinks in package build directories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_link &#8211; create symlinks in package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_link</code> [<i>debhelper options</i>] [<code>-A</code>] [<code>-X</code><i>item</i>] [<i>source destination</i> &#8230;]</p>

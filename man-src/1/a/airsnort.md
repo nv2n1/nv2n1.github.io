@@ -1,4 +1,5 @@
 ---
+
 title: "airsnort(1)"
 name: "airsnort"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-airsnort/"
 description: "airsnort – WEP key cracking tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>airsnort</code> &#8211; WEP key cracking tool </p>
 <h2>SYNOPSIS</h2>
 <h2>DESCRIPTION</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_client_test_embedded(1)"
 name: "mysql_client_test_embedded"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysql_client_test_embedded/"
 description: "mysql_client_test – test client API mysql_client_test_embedded – test client API for embedded server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysql_client_test &#8211; test client API<br />
  mysql_client_test_embedded &#8211; test client API for embedded server </p>
 <h2>SYNOPSIS</h2>

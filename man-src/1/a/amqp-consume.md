@@ -1,4 +1,5 @@
 ---
+
 title: "amqp-consume(1)"
 name: "amqp-consume"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-amqp-consume/"
 description: "amqp-consume – Consume messages from a queue on an AMQP server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> amqp-consume &#8211; Consume messages from a queue on an AMQP server </p>
 <h2>SYNOPSIS</h2>
 <dl>

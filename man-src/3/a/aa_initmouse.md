@@ -1,4 +1,5 @@
 ---
+
 title: "aa_initmouse(3)"
 name: "aa_initmouse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_initmouse/"
 description: "aa_initmouse – initialize the AA-lib mouse driver."
 ---
 
-<h2>NAME</h2>
 <p> aa_initmouse &#8211; initialize the AA-lib mouse driver.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

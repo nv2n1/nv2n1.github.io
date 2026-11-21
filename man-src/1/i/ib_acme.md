@@ -1,4 +1,5 @@
 ---
+
 title: "ib_acme(1)"
 name: "ib_acme"
 section: "1"
@@ -6,9 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-ib_acme/"
 ---
 
-<h2>NAME</h2>
-
- ib_acme - test and configuration utility for the IB ACM
+ib_acme - test and configuration utility for the IB ACM
 
 <h2>SYNOPSIS</h2>
 

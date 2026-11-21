@@ -1,4 +1,5 @@
 ---
+
 title: "ompi_info(1)"
 name: "ompi_info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ompi_info/"
 description: "ompi_info – Display information about the Open MPI installation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ompi_info &#8211; Display information about the Open MPI installation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ompi_info [options]</code></p>

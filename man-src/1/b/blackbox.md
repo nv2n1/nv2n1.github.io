@@ -1,4 +1,5 @@
 ---
+
 title: "blackbox(1)"
 name: "blackbox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-blackbox/"
 description: "blackbox – a window manager for X11"
 ---
 
-<h2 class="name">NAME</h2>
 <p> blackbox &#8211; a window manager for X11 </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blackbox</code> -help | -version<br />

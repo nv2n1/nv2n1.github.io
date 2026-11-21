@@ -1,4 +1,5 @@
 ---
+
 title: "mate-doc-common(1)"
 name: "mate-doc-common"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-doc-common/"
 description: "mate-doc-common – include the standard user documentation build files"
 ---
 
-<h2>NAME</h2>
 <p> <code>mate-doc-common </code>&#8211; include the standard user documentation build files</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "intel_stepping(1)"
 name: "intel_stepping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intel_stepping/"
 description: "intel_stepping – Display the stepping information for an Intel GPU"
 ---
 
-<h2>NAME</h2>
 <p> intel_stepping &#8211; Display the stepping information for an Intel GPU</p>
 <h2>SYNOPSIS</h2>
 <p> <code>intel_stepping</code></p>

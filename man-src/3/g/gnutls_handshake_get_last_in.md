@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_handshake_get_last_in(3)"
 name: "gnutls_handshake_get_last_in"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_handshake_get_last_in/"
 description: "gnutls_handshake_get_last_in – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_handshake_get_last_in &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

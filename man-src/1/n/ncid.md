@@ -1,4 +1,5 @@
 ---
+
 title: "ncid(1)"
 name: "ncid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncid/"
 description: "ncid – Network Caller ID Client"
 ---
 
-<h2>NAME</h2>
 <p> <code>ncid</code> &#8211; Network Caller ID Client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncid</code> [options] [arguments] </p>

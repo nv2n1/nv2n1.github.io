@@ -1,4 +1,5 @@
 ---
+
 title: "rumakeindex(1)"
 name: "rumakeindex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rumakeindex/"
 description: "rumakeindex – process a LaTeX index using Russian Cyrillic characters"
 ---
 
-<h2>NAME</h2>
 <p> rumakeindex &#8211; process a LaTeX index using Russian Cyrillic characters </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rumakeindex</code> <i>basename</i> </p>

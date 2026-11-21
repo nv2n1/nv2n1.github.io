@@ -1,4 +1,5 @@
 ---
+
 title: "git-delta(1)"
 name: "git-delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-delta/"
 description: "git-delta – Lists changed files"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-delta</code> &#8211; Lists changed files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-delta</code> [&lt;branch&gt;] [&lt;filter&gt;]</p>

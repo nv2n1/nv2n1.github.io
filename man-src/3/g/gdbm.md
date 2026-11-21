@@ -1,4 +1,5 @@
 ---
+
 title: "gdbm(3)"
 name: "gdbm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gdbm/"
 description: "GDBM – The GNU database manager. Includes dbm and ndbm compatability. (Version 1.9.)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GDBM &#8211; The GNU database manager. Includes <code>dbm</code> and <code>ndbm</code> compatability. (Version 1.9.) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "megaget(1)"
 name: "megaget"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-megaget/"
 description: "megaget – download files from your Mega.co.nz account"
 ---
 
-<h2 class="name">NAME</h2>
 <p> megaget &#8211; download files from your Mega.co.nz account </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

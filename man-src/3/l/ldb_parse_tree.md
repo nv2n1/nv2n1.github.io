@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_parse_tree(3)"
 name: "ldb_parse_tree"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldb_parse_tree/"
 description: "ldb_parse_tree –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldb_parse_tree &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>

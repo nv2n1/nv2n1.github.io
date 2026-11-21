@@ -1,4 +1,5 @@
 ---
+
 title: "clutter-scan-immodules(1)"
 name: "clutter-scan-immodules"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clutter-scan-immodules/"
 description: "clutter-scan-immodules — program to scan immodules and generate configuration files"
 ---
 
-<h2>NAME</h2>
 <p> clutter-scan-immodules &#8212; program to scan immodules and generate configuration files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>clutter-scan-immodules</code></p>

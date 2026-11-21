@@ -1,4 +1,5 @@
 ---
+
 title: "cargf(3)"
 name: "cargf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cargf/"
 description: "carg, cargf, cargl – calculate the complex argument"
 ---
 
-<h2 class="name">NAME</h2>
 <p> carg, cargf, cargl &#8211; calculate the complex argument </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lavtrans(1)"
 name: "lavtrans"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lavtrans/"
 description: "lavtrans – Convert MJPEG videos to other MJPEG video formats"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lavtrans &#8211; Convert MJPEG videos to other MJPEG video formats</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lavtrans -o</code> <i>outputfile</i> <code>-f a</code>|<code>q</code>|<code>i</code>|<code>w</code> [<code>-i</code> <i>num</i>] <i>lavfile1 </i>[<i>lavfile2 </i>&#8230;<i> lavfileN</i>] </p>

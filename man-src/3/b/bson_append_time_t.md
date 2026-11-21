@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_time_t(3)"
 name: "bson_append_time_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_time_t/"
 description: "bson_append_time_t() – The bson_append_time_t() function is a helper that takes a time_t instead of milliseconds since the UNIX epoch."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_time_t() &#8211; The bson_append_time_t() function is a helper that takes a time_t instead of milliseconds since the UNIX epoch.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

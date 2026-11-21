@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-rustdoc(1)"
 name: "cargo-rustdoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-rustdoc/"
 description: "cargo-rustdoc – Build a package’s documentation, using specified custom flags."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cargo-rustdoc &#8211; Build a package&#8217;s documentation, using specified custom flags.</p>
 <h2>SYNOPSIS</h2>
 <p> cargo rustdoc [OPTIONS] [&#8211;] [&lt;OPTS&gt;&#8230;]</p>

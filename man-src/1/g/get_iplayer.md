@@ -1,4 +1,5 @@
 ---
+
 title: "get_iplayer(1)"
 name: "get_iplayer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-get_iplayer/"
 description: "get_iplayer – Stream Recording tool and PVR for BBC iPlayer, BBC Podcasts and more"
 ---
 
-<h2>NAME</h2>
 <p> get_iplayer &#8211; Stream Recording tool and PVR for BBC iPlayer, BBC Podcasts and more</p>
 <h2>SYNOPSIS</h2>
 <p> <code>get_iplayer</code> [&lt;options&gt;] [&lt;regex|index&gt; &#8230;] </p>

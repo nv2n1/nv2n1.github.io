@@ -1,4 +1,5 @@
 ---
+
 title: "cdk(3)"
 name: "cdk"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk/"
 description: "cdk – Curses Development Kit"
 ---
 
-<h2>NAME</h2>
 <p> cdk &#8211; <code>Curses Development Kit</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

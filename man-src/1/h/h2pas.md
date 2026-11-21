@@ -1,4 +1,5 @@
 ---
+
 title: "h2pas(1)"
 name: "h2pas"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h2pas/"
 description: "h2pas – The C header to pascal unit conversion program."
 ---
 
-<h2>NAME</h2>
 <p> h2pas &#8211; The C header to pascal unit conversion program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>h2pas</code> <i>[options] filename</i> </p>

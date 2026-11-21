@@ -1,4 +1,5 @@
 ---
+
 title: "xrdb(1)"
 name: "xrdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xrdb/"
 description: "xrdb – X server resource database utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xrdb &#8211; X server resource database utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xrdb</code> [-option &#8230;] [<i>filename</i>]</p>

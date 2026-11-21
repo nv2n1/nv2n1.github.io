@@ -1,4 +1,5 @@
 ---
+
 title: "gajim(1)"
 name: "gajim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gajim/"
 description: "gajim – a Jabber/XMPP client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gajim</code> &#8211; a Jabber/XMPP client </p>
 <h2>SYNOPSIS</h2>
 <p> &#8211;<code>h</code><br />

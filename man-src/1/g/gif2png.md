@@ -1,4 +1,5 @@
 ---
+
 title: "gif2png(1)"
 name: "gif2png"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gif2png/"
 description: "gif2png – convert GIFs to PNGs"
 ---
 
-<h2>NAME</h2>
 <p> gif2png &#8211; convert GIFs to PNGs</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

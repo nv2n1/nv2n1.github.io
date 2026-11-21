@@ -1,4 +1,5 @@
 ---
+
 title: "fluxbox-remote(1)"
 name: "fluxbox-remote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fluxbox-remote/"
 description: "fluxbox-remote – command line access to key commands for"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fluxbox-remote &#8211; command line access to key commands for </p>
 <p><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1)</p>
 <h2>SYNOPSIS</h2>

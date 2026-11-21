@@ -1,4 +1,5 @@
 ---
+
 title: "ds-logpipe(1)"
 name: "ds-logpipe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ds-logpipe/"
 description: "ds-logpipe.py – Create and read from a named pipe instead of a log file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ds-logpipe.py &#8211; Create and read from a named pipe instead of a log file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ds-logpipe.py</code> /full/path/to/namedpipe<br />

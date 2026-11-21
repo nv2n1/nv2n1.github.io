@@ -1,4 +1,5 @@
 ---
+
 title: "imsettings-reload(1)"
 name: "imsettings-reload"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imsettings-reload/"
 description: "imsettings-reload – Reload imsettings-daemon"
 ---
 
-<h2>NAME</h2>
 <p> imsettings-reload &#8211; Reload imsettings-daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>imsettings-reload</code> [ <code>-h</code> ] [ <code>&#8211;help</code> ]</p>

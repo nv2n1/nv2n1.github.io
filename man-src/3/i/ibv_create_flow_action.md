@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_create_flow_action(3)"
 name: "ibv_create_flow_action"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_create_flow_action/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_flow_action_esp - Flow action esp for verbs 
+ibv_flow_action_esp - Flow action esp for verbs 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "preludedb-admin(1)"
 name: "preludedb-admin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-preludedb-admin/"
 description: "preludedb-admin – tool to copy, move, delete, save or restore a prelude database"
 ---
 
-<h2>NAME</h2>
 <p> preludedb-admin &#8211; tool to copy, move, delete, save or restore a prelude database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>preludedb-admin</code> <i>copy|move|delete|load|save</i> <i>arguments</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "virt-builder(1)"
 name: "virt-builder"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-builder/"
 description: "virt-builder – Build virtual machine images quickly"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-builder &#8211; Build virtual machine images quickly </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

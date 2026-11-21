@@ -1,4 +1,5 @@
 ---
+
 title: "pop3test(1)"
 name: "pop3test"
 section: "1"
@@ -8,7 +9,7 @@ description: "pop3test – interactive POP3 test program"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2 class="name">NAME</h2>
+
 <p> pop3test &#8211; interactive POP3 test program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pop3test</code> [ <code>-t</code> <i>keyfile</i> ] [ <code>-p</code> <i>port</i> ] [ <code>-m</code> <i>mechanism</i> ] </p>

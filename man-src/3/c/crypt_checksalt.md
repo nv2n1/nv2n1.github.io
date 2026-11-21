@@ -1,4 +1,5 @@
 ---
+
 title: "crypt_checksalt(3)"
 name: "crypt_checksalt"
 section: "3"
@@ -8,7 +9,7 @@ description: "crypt_checksalt – validate a crypt setting string"
 ---
 
 <p>libxcrypt</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>crypt_checksalt</code> &#8211; validate a crypt setting string </p>
 <h2>LIBRARY</h2>
 <p> Lb libcrypt</p>

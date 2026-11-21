@@ -1,4 +1,5 @@
 ---
+
 title: "funlib(3)"
 name: "funlib"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funlib/"
 description: "FunLib: the Funtools Programming Interface"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunLib: the Funtools Programming Interface</code></p>
 <h2>SYNOPSIS</h2>
 <p> A description of the Funtools library.</p>

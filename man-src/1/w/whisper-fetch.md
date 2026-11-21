@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-fetch(1)"
 name: "whisper-fetch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whisper-fetch/"
 description: "whisper-fetch – extract records from a whisper database"
 ---
 
-<h2>NAME</h2>
 <p> whisper-fetch &#8211; extract records from a whisper database</p>
 <h2>SYNOPSYS</h2>
 <pre>

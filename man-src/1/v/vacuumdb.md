@@ -1,4 +1,5 @@
 ---
+
 title: "vacuumdb(1)"
 name: "vacuumdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vacuumdb/"
 description: "vacuumdb – garbage-collect and analyze a PostgreSQL database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vacuumdb &#8211; garbage-collect and analyze a PostgreSQL database </p>
 <h2>SYNOPSIS</h2>
 <dl>

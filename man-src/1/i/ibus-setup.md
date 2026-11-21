@@ -1,4 +1,5 @@
 ---
+
 title: "ibus-setup(1)"
 name: "ibus-setup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibus-setup/"
 description: "ibus-setup – configuration program for ibus"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ibus-setup</code> &#8211; configuration program for ibus</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ibus-setup</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "snmpcmd(1)"
 name: "snmpcmd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpcmd/"
 description: "snmpcmd – options and behaviour common to most of the Net-SNMP command-line tools"
 ---
 
-<h2>NAME</h2>
 <p> snmpcmd &#8211; options and behaviour common to most of the Net-SNMP command-line tools</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpcmd</code> [OPTIONS] AGENT [PARAMETERS]</p>

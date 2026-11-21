@@ -1,4 +1,5 @@
 ---
+
 title: "arm_is_charset_supported(3)"
 name: "arm_is_charset_supported"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arm_is_charset_supported/"
 description: "arm_is_charset_supported – check character encoding"
 ---
 
-<h2>NAME</h2>
 <p> arm_is_charset_supported &#8211; check character encoding</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>

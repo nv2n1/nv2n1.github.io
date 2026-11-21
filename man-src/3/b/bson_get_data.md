@@ -1,4 +1,5 @@
 ---
+
 title: "bson_get_data(3)"
 name: "bson_get_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_get_data/"
 description: "bson_get_data() – The bson_get_data() function shall return the raw buffer of a bson document. This can be used in conjunction with the len property of a bson_t if you want to copy the raw buffer a..."
 ---
 
-<h2>NAME</h2>
 <p> bson_get_data() &#8211; The bson_get_data() function shall return the raw buffer of a bson document. This can be used in conjunction with the len property of a bson_t if you want to copy the raw buffer around.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

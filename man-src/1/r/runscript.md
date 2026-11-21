@@ -1,4 +1,5 @@
 ---
+
 title: "runscript(1)"
 name: "runscript"
 section: "1"
@@ -6,7 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-runscript/"
 description: "runscript – script interpreter for minicom"
 ---
-<h2>NAME</h2>
+
 <p> runscript - script interpreter for minicom  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>runscript</code> scriptname [logfile [homedir]]  </p>

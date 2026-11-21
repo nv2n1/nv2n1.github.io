@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-dns-install(1)"
 name: "ipa-dns-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-dns-install/"
 description: "ipa-dns-install – Add DNS as a service to an IPA server"
 ---
 
-<h2>NAME</h2>
 <p> ipa-dns-install &#8211; Add DNS as a service to an IPA server</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-dns-install [<i>OPTION</i>]&#8230;</p>

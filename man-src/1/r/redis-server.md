@@ -1,4 +1,5 @@
 ---
+
 title: "redis-server(1)"
 name: "redis-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-redis-server/"
 description: "redis-server, redis-sentinel – Redis server"
 ---
 
-<h2>NAME</h2>
 <p> redis-server, redis-sentinel &#8211; Redis server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>redis-server</code> [ <i>configuration_file</i> ] [ options ] [ &#8211;sentinel ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "x_init(1)"
 name: "x_init"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x_init/"
 description: "x_init – Initialization of Cross-Over Data Bases."
 ---
 
-<h2>NAME</h2>
 <p> <code>x_init</code> &#8211; Initialization of Cross-Over Data Bases.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x_init</code> <code>-I</code></p>

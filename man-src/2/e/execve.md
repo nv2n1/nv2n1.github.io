@@ -1,4 +1,5 @@
 ---
+
 title: "execve(2)"
 name: "execve"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-execve/"
 description: "execve – execute program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> execve &#8211; execute program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

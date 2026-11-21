@@ -1,4 +1,5 @@
 ---
+
 title: "p(1)"
 name: "p"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-p/"
 description: "r.out.vrml – Export a raster map to the Virtual Reality Modeling Language (VRML)"
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>r.out.vrml</code> &#8211; Export a raster map to the Virtual Reality Modeling Language (VRML)</p>
 <h2>KEYWORDS</h2>
 <p> raster, export, VRML</p>

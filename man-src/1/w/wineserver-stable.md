@@ -1,4 +1,5 @@
 ---
+
 title: "wineserver-stable(1)"
 name: "wineserver-stable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wineserver-stable/"
 description: "wineserver – the Wine server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wineserver &#8211; the Wine server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wineserver</code> [<i>options</i>]</p>

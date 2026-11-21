@@ -1,4 +1,5 @@
 ---
+
 title: "ftop(1)"
 name: "ftop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ftop/"
 description: "ftop – show progress of open files and file systems"
 ---
 
-<h2>NAME</h2>
 <p> ftop &#8211; show progress of open files and file systems</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ftop</code> [options]</p>

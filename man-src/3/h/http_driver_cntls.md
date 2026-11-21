@@ -1,4 +1,5 @@
 ---
+
 title: "http_driver_cntls(3)"
 name: "http_driver_cntls"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-http_driver_cntls/"
 description: "Attributes and Cntls –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Attributes and Cntls &#8211; </p>
 <p> HTTP driver specific attrs and cntls.</p>
 <h3>Enumerations</h3>

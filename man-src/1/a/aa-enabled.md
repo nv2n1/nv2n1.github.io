@@ -1,4 +1,5 @@
 ---
+
 title: "aa-enabled(1)"
 name: "aa-enabled"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aa-enabled/"
 description: "aa-enabled – test whether AppArmor is enabled"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aa-enabled &#8211; test whether AppArmor is enabled </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aa-enabled</code> [options]</p>

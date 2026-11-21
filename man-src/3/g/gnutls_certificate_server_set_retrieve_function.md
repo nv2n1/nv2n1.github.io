@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_server_set_retrieve_function(3)"
 name: "gnutls_certificate_server_set_retrieve_function"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_certificate_server_set_retrieve_function/"
 description: "gnutls_certificate_server_set_retrieve_function – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_certificate_server_set_retrieve_function &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perf-buildid-list(1)"
 name: "perf-buildid-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-buildid-list/"
 description: "perf-buildid-list – List the buildids in a perf.data file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-buildid-list &#8211; List the buildids in a perf.data file </p>
 <h2>SYNOPSIS</h2>
 <pre>

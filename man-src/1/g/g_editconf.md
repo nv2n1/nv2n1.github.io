@@ -1,4 +1,5 @@
 ---
+
 title: "g_editconf(1)"
 name: "g_editconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_editconf/"
 description: "editconf – edits the box and writes subgroups"
 ---
 
-<h2>NAME</h2>
 <p> editconf &#8211; edits the box and writes subgroups </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

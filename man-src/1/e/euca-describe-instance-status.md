@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-instance-status(1)"
 name: "euca-describe-instance-status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-instance-status/"
 description: "euca-describe-instance-status – Show information about instance status and scheduled events"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-instance-status &#8211; Show information about instance status and scheduled events</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-instance-status [&#8211;hide-healthy]</p>

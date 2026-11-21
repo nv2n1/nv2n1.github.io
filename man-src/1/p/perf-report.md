@@ -1,4 +1,5 @@
 ---
+
 title: "perf-report(1)"
 name: "perf-report"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-report/"
 description: "perf-report – Read perf.data (created by perf record) and display the profile"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-report &#8211; Read perf.data (created by perf record) and display the profile </p>
 <h2>SYNOPSIS</h2>
 <pre>

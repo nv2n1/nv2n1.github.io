@@ -1,4 +1,5 @@
 ---
+
 title: "pdffonts(1)"
 name: "pdffonts"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdffonts/"
 description: "pdffonts – Portable Document Format (PDF) font analyzer (version 3.03)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdffonts &#8211; Portable Document Format (PDF) font analyzer (version 3.03) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdffonts</code> [options] [<i>PDF-file</i>]</p>

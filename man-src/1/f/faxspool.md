@@ -1,4 +1,5 @@
 ---
+
 title: "faxspool(1)"
 name: "faxspool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-faxspool/"
 description: "faxspool – queue and convert files for faxing with"
 ---
 
-<h2 class="name">NAME</h2>
 <p> faxspool &#8211; queue and convert files for faxing with </p>
 <p><a href="/docs/linux/man/8-sendfax/">sendfax</a>(8)</p>
 <h2>SYNOPSIS</h2>

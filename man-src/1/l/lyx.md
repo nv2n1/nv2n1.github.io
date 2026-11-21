@@ -1,4 +1,5 @@
 ---
+
 title: "lyx(1)"
 name: "lyx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lyx/"
 description: "LyX – A Document Processor"
 ---
 
-<h2>NAME</h2>
 <p> LyX &#8211; A Document Processor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lyx</code> [ <i>command-line switches</i> ] [ <i>name[.lyx] &#8230;</i> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bc_set(3)"
 name: "bc_set"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bc_set/"
 description: "QuantLib::CrankNicolson – Crank-Nicolson scheme for finite difference methods."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::CrankNicolson &#8211; Crank-Nicolson scheme for finite difference methods. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/finitedifferences/cranknicolson.hpp&gt; </p>

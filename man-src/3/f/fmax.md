@@ -1,4 +1,5 @@
 ---
+
 title: "fmax(3)"
 name: "fmax"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fmax/"
 description: "fmax, fmaxf, fmaxl – determine maximum of two floating-point numbers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fmax, fmaxf, fmaxl &#8211; determine maximum of two floating-point numbers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>

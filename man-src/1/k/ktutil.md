@@ -1,4 +1,5 @@
 ---
+
 title: "ktutil(1)"
 name: "ktutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ktutil/"
 description: "ktutil – Kerberos keytab file maintenance utility"
 ---
 
-<h2>NAME</h2>
 <p> ktutil &#8211; Kerberos keytab file maintenance utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ktutil</code></p>

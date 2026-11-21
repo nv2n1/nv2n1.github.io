@@ -1,4 +1,5 @@
 ---
+
 title: "pdfjam(1)"
 name: "pdfjam"
 section: "1"
@@ -6,9 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pdfjam/"
 ---
 
-<h2>NAME</h2>
-
- pdfjam - A shell script for manipulating PDF files
+pdfjam - A shell script for manipulating PDF files
 
 <h2>SYNOPSIS</h2>
 

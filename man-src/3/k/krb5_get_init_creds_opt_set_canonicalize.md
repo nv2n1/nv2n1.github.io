@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_get_init_creds_opt_set_canonicalize(3)"
 name: "krb5_get_init_creds_opt_set_canonicalize"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_get_init_creds_opt_set_canonicalize/"
 description: "krb5_get_init_creds krb5_get_init_creds_keytab krb5_get_init_creds_opt krb5_get_init_creds_opt_alloc krb5_get_init_creds_opt_free krb5_get_init_creds_opt_init krb5_get_init_creds_opt_set_address_li..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_get_init_creds</code> <code>krb5_get_init_creds_keytab</code> <code>krb5_get_init_creds_opt</code> <code>krb5_get_init_creds_opt_alloc</code> <code>krb5_get_init_creds_opt_free</code> <code>krb5_get_init_creds_opt_init</code> <code>krb5_get_init_creds_opt_set_address_list</code> <code>krb5_get_init_creds_opt_set_addressless</code> <code>krb5_get_init_creds_opt_set_anonymous</code> <code>krb5_get_init_creds_opt_set_default_flags</code> <code>krb5_get_init_creds_opt_set_etype_list</code> <code>krb5_get_init_creds_opt_set_forwardable</code> <code>krb5_get_init_creds_opt_set_pa_password</code> <code>krb5_get_init_creds_opt_set_paq_request</code> <code>krb5_get_init_creds_opt_set_preauth_list</code> <code>krb5_get_init_creds_opt_set_proxiable</code> <code>krb5_get_init_creds_opt_set_renew_life</code> <code>krb5_get_init_creds_opt_set_salt</code> <code>krb5_get_init_creds_opt_set_tkt_life</code> <code>krb5_get_init_creds_opt_set_canonicalize</code> <code>krb5_get_init_creds_opt_set_win2k</code> <code>krb5_get_init_creds_password</code> <code>krb5_prompt</code> <code>krb5_prompter_posix</code> &#8211; Kerberos 5 initial authentication functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

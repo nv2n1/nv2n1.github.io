@@ -1,4 +1,5 @@
 ---
+
 title: "grdlandmask(1)"
 name: "grdlandmask"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdlandmask/"
 description: "grdlandmask – \"Create a \"\"wet-dry\"\" mask grid from shoreline data base\""
 ---
 
-<h2>NAME</h2>
 <p> grdlandmask &#8211; &quot;Create a &quot;&quot;wet-dry&quot;&quot; mask grid from shoreline data base&quot;</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdlandmask</code> <i>mask_grd_file</i> <i>xinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>][/<i>yinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>]] <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[<code>r</code>] [ <i>min_area</i>[/<i>min_level</i>/<i>max_level</i>][<code>+ag</code>|<code>i</code>|<code>s</code> |<code>S</code>][<code>+r</code>|<code>l</code>][<code>p</code><i>percent</i>] ] [ <i>resolution</i>[<code>+</code>] ] [ <i>maskvalues</i>[<code>o</code>] ] [ [<i>level</i>] ] [ <code>-r</code> ] </p>

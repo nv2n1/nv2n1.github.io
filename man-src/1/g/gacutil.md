@@ -1,4 +1,5 @@
 ---
+
 title: "gacutil(1)"
 name: "gacutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gacutil/"
 description: "gacutil – Global Assembly Cache management utility."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gacutil &#8211; Global Assembly Cache management utility. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gacutil [-user] [command] [options] </code></p>

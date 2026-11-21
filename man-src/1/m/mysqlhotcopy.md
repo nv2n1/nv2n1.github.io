@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlhotcopy(1)"
 name: "mysqlhotcopy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlhotcopy/"
 description: "mysqlhotcopy – a database backup program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlhotcopy &#8211; a database backup program </p>
 <h2>SYNOPSIS</h2>
 <dl>

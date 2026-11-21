@@ -1,4 +1,5 @@
 ---
+
 title: "gpk-log(1)"
 name: "gpk-log"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpk-log/"
 description: "gpk-install-catalog – GNOME PackageKit Software Log Viewer"
 ---
 
-<h2>NAME</h2>
 <p> gpk-install-catalog &#8211; GNOME PackageKit Software Log Viewer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpk-install-catalog</code> [ <code>&#8211;verbose</code> ]</p>

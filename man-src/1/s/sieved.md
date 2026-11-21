@@ -1,4 +1,5 @@
 ---
+
 title: "sieved(1)"
 name: "sieved"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sieved/"
 description: "sieve-dump – Pigeonhole’s Sieve script binary dump tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sieve-dump &#8211; Pigeonhole&#8217;s Sieve script binary dump tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sieve-dump</code> [<i>options</i>] <i>sieve-binary</i> [<i>out-file</i>]</p>

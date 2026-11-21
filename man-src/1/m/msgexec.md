@@ -1,4 +1,5 @@
 ---
+
 title: "msgexec(1)"
 name: "msgexec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msgexec/"
 description: "msgexec – process translations of message catalog"
 ---
 
-<h2 class="name">NAME</h2>
 <p> msgexec &#8211; process translations of message catalog </p>
 <h2>SYNOPSIS</h2>
 <p> <code>msgexec</code> [<i>OPTION</i>] <i>COMMAND </i>[<i>COMMAND-OPTION</i>]</p>

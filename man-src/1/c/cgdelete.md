@@ -1,4 +1,5 @@
 ---
+
 title: "cgdelete(1)"
 name: "cgdelete"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cgdelete/"
 description: "cgdelete – remove control group(s)"
 ---
 
-<h2>NAME</h2>
 <p> cgdelete &#8211; remove control group(s) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cgdelete</code> [<code>-h</code>] [<code>-r</code>] [[<code>-g</code>] &lt;<i>controllers</i>&gt;:<i>&lt;path</i>&gt;] &#8230; </p>

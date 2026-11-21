@@ -1,4 +1,5 @@
 ---
+
 title: "ansifilter(1)"
 name: "ansifilter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ansifilter/"
 description: "Ansifilter – ANSI escape code processor and converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Ansifilter &#8211; ANSI escape code processor and converter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ansifilter</code> [d:i:F:o:s:e:fhptvHRT] [-i input file] [-o output file] [&#8211;text] [&#8211;html] [&#8211;latex] [&#8211;tex] [&#8211;rtf] [input files] </p>

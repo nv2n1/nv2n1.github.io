@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-ml-selection-pastebin(1)"
 name: "urxvt256c-ml-selection-pastebin"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-ml-selection-pastebin/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- selection-pastebin - automatic pastebin upload 
+selection-pastebin - automatic pastebin upload 
 
 <h2>EXAMPLES</h2>
 

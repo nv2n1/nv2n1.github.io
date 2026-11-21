@@ -1,4 +1,5 @@
 ---
+
 title: "vfychain(1)"
 name: "vfychain"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vfychain/"
 description: "vfychain_ – vfychain [options] [revocation options] certfile [[options] certfile] …"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vfychain_ &#8211; vfychain [options] [revocation options] certfile [[options] certfile] &#8230; </p>
 <h2>SYNOPSIS</h2>
 <dl>

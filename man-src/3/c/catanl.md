@@ -1,4 +1,5 @@
 ---
+
 title: "catanl(3)"
 name: "catanl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-catanl/"
 description: "catan, catanf, catanl – complex arc tangents"
 ---
 
-<h2 class="name">NAME</h2>
 <p> catan, catanf, catanl &#8211; complex arc tangents </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "vboxtoau(1)"
 name: "vboxtoau"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vboxtoau/"
 description: "vboxtoau – isdn voice box (sound converter)"
 ---
 
-<h2>NAME</h2>
 <p> vboxtoau &#8211; isdn voice box (sound converter)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vboxtoau</code> <i>[OPTION] [OPTION] [&#8230;] &lt; INFILE &gt; OUTFILE</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "imgcmp(1)"
 name: "imgcmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imgcmp/"
 description: "imgcmp – Image comparison utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> imgcmp &#8211; Image comparison utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>imgcmp</code> [<i>options</i>] </p>

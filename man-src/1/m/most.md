@@ -1,4 +1,5 @@
 ---
+
 title: "most(1)"
 name: "most"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-most/"
 description: "most – browse or page through a text file"
 ---
 
-<h2>NAME</h2>
 <p> most &#8211; browse or page through a text file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>most</code> [<code>-1bCcdMstuvwz</code>] [<code>+</code><i>lineno</i>] [<code>+c</code>] [<code>+d</code>] [<code>+s</code>] [<code>+u</code>] [<code>+/</code><i>string</i>] [<i>filename</i>&#8230;]</p>

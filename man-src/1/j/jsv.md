@@ -1,4 +1,5 @@
 ---
+
 title: "jsv(1)"
 name: "jsv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jsv/"
 description: "JSV – xxQS_NAMExx Job Submission Verifier"
 ---
 
-<h2 class="name">NAME</h2>
 <p> JSV &#8211; xxQS_NAMExx Job Submission Verifier </p>
 <h2>DESCRIPTION</h2>
 <p> JSV is an abbreviation for Job Submission Verifier. A JSV is a script or binary that can be used to verify, modify or reject a job during job submission. </p>

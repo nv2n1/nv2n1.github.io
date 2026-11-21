@@ -1,4 +1,5 @@
 ---
+
 title: "h5repack(1)"
 name: "h5repack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5repack/"
 description: "h5repack – Copy an HDF5 file to a new file with or without compression/chunking"
 ---
 
-<h2>NAME</h2>
 <p> h5repack &#8211; Copy an HDF5 file to a new file with or without compression/chunking</p>
 <h2>SYNOPSIS</h2>
 <p> <code>h5repack</code> <code>-i</code> <i>file1</i> <code>-o</code> <i>file2 </i> [<code>-h</code>] [<code>-v</code>] [<code>-f</code> <i>&#8216;filter&#8217;</i>] [<code>-l</code> <i>&#8216;layout&#8217;</i>] [<code>-m</code> <i>number</i>] [<code>-e</code> <i>file</i>]</p>

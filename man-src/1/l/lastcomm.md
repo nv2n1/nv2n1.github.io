@@ -1,4 +1,5 @@
 ---
+
 title: "lastcomm(1)"
 name: "lastcomm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lastcomm/"
 description: "lastcomm – print out information about previously executed commands."
 ---
 
-<h2>NAME</h2>
 <p> lastcomm &#8211; print out information about previously executed commands.</p>
 <h2>SYNOPSIS</h2>
 <dl>

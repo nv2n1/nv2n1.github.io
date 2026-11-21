@@ -1,4 +1,5 @@
 ---
+
 title: "ping_pong(1)"
 name: "ping_pong"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ping_pong/"
 description: "ping_pong – measures the ping-pong byte range lock latency"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ping_pong &#8211; measures the ping-pong byte range lock latency </p>
 <h2>SYNOPSIS</h2>
 <dl>

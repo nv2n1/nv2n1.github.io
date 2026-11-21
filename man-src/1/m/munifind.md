@@ -1,4 +1,5 @@
 ---
+
 title: "munifind(1)"
 name: "munifind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-munifind/"
 description: "munifind – Finding variable stars on CCD photometry files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> munifind &#8211; Finding variable stars on CCD photometry files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>munifind </code><i>[options] source_file &#8230;</i> </p>

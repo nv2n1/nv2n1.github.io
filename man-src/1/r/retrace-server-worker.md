@@ -1,4 +1,5 @@
 ---
+
 title: "retrace-server-worker(1)"
 name: "retrace-server-worker"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-retrace-server-worker/"
 description: "retrace-server-worker – Executes the retrace job."
 ---
 
-<h2 class="name">NAME</h2>
 <p> retrace-server-worker &#8211; Executes the retrace job. </p>
 <h2>SYNOPSIS</h2>
 <p> <i>retrace-server-worker</i> task_id.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_json_reader_destroy(3)"
 name: "bson_json_reader_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_json_reader_destroy/"
 description: "bson_json_reader_destroy() – Frees a bson_json_reader_t."
 ---
 
-<h2>NAME</h2>
 <p> bson_json_reader_destroy() &#8211; Frees a bson_json_reader_t.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

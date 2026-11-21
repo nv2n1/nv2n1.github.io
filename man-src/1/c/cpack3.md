@@ -1,4 +1,5 @@
 ---
+
 title: "cpack3(1)"
 name: "cpack3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpack3/"
 description: "cpack – CPack Command-Line Reference"
 ---
 
-<h2>NAME</h2>
 <p> cpack &#8211; CPack Command-Line Reference</p>
 <h2>SYNOPSIS</h2>
 <pre>

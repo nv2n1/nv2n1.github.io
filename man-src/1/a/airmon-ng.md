@@ -1,4 +1,5 @@
 ---
+
 title: "airmon-ng(1)"
 name: "airmon-ng"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-airmon-ng/"
 description: "airmon-ng – bash script designed to turn wireless cards into monitor mode."
 ---
 
-<h2 class="name">NAME</h2>
 <p> airmon-ng &#8211; bash script designed to turn wireless cards into monitor mode. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>airmon-ng</code> &lt;start|stop&gt; &lt;interface&gt; [channel] <code>airmon-ng</code> &lt;check&gt; [kill]</p>

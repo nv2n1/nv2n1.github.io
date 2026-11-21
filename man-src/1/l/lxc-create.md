@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-create(1)"
 name: "lxc-create"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-create/"
 description: "lxc-create – creates a container"
 ---
 
-<h2>NAME</h2>
 <p> lxc-create &#8211; creates a container</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-create</code> {-n <i>name</i>} [-f <i>config_file</i>] {-t <i>template</i>} [-B <i>backingstore</i>] [&#8211; <i>template-options</i>]</p>

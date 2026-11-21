@@ -1,4 +1,5 @@
 ---
+
 title: "sfparse(1)"
 name: "sfparse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sfparse/"
 description: "sfparse – string file parse"
 ---
 
-<h2>NAME</h2>
 <p> sfparse &#8211; string file parse </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sfparse</code> [ <i>&#8211;utf8</i> | <i>&#8211;unicode</i> ] <i>filename</i> </p>

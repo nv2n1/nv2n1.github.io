@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtodjvurle(1)"
 name: "pbmtodjvurle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmtodjvurle/"
 description: "pbmtodjvurle – convert a PBM image to DjVu Bitonal RLE format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmtodjvurle &#8211; convert a PBM image to DjVu Bitonal RLE format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtodjvurle</code> </p>

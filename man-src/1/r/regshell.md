@@ -1,4 +1,5 @@
 ---
+
 title: "regshell(1)"
 name: "regshell"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-regshell/"
 description: "regshell – Windows registry file browser using readline"
 ---
 
-<h2 class="name">NAME</h2>
 <p> regshell &#8211; Windows registry file browser using readline </p>
 <h2>SYNOPSIS</h2>
 <dl>

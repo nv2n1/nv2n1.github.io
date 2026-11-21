@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-reset(1)"
 name: "nvme-reset"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-reset/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-reset - Reset the nvme controller. 
+nvme-reset - Reset the nvme controller. 
 
 <h2>SYNOPSIS</h2>
 

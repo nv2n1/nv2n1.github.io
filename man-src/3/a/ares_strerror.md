@@ -1,4 +1,5 @@
 ---
+
 title: "ares_strerror(3)"
 name: "ares_strerror"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_strerror/"
 description: "ares_strerror – Get the description of an ares library error code"
 ---
 
-<h2>NAME</h2>
 <p> ares_strerror &#8211; Get the description of an ares library error code</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

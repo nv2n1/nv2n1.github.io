@@ -1,4 +1,5 @@
 ---
+
 title: "perlhack(1)"
 name: "perlhack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlhack/"
 description: "perlhack – How to hack on Perl"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlhack &#8211; How to hack on Perl </p>
 <h2>DESCRIPTION</h2>
 <p> This document explains how Perl development works. It includes details about the Perl 5 Porters email list, the Perl repository, the Perlbug bug tracker, patch guidelines, and commentary on Perl development philosophy.</p>

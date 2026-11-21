@@ -1,4 +1,5 @@
 ---
+
 title: "mktap(1)"
 name: "mktap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mktap/"
 description: "mktap – create twisted.servers"
 ---
 
-<h2>NAME</h2>
 <p> mktap &#8211; create twisted.servers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mktap</code> [<i>options</i>] <i>apptype</i> [<i>application_option</i>]&#8230; </p>

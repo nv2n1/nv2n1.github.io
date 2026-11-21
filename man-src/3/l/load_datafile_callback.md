@@ -1,4 +1,5 @@
 ---
+
 title: "load_datafile_callback(3)"
 name: "load_datafile_callback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_datafile_callback/"
 description: "load_datafile_callback – Loads a datafile into memory, calling a hook per object. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> load_datafile_callback &#8211; Loads a datafile into memory, calling a hook per object. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

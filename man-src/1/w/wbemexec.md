@@ -1,4 +1,5 @@
 ---
+
 title: "wbemexec(1)"
 name: "wbemexec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wbemexec/"
 description: "wbemexec – submit a CIM operation request to a CIM Server"
 ---
 
-<h2>NAME</h2>
 <p> wbemexec &#8211; submit a CIM operation request to a CIM Server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wbemexec</code> [ <code>-h</code> hostname ] [ <code>-p</code> portnumber ] [ <code>-v</code> httpversion ]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-split(1)"
 name: "wimlib-imagex-split"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex-split/"
 description: "wimlib-imagex-split – Split a WIM into multiple parts"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex-split &#8211; Split a WIM into multiple parts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex split</code> <i>WIMFILE</i> <i>SPLIT_WIM_PART_1</i> <i>PART_SIZE</i> [<i>OPTION&#8230;</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-conversion-tasks(1)"
 name: "euca-describe-conversion-tasks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-conversion-tasks/"
 description: "euca-describe-conversion-tasks – Show information about import operations"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-conversion-tasks &#8211; Show information about import operations</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-conversion-tasks [&#8211;show-empty-fields] [-U URL]</p>

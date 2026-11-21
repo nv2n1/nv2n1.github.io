@@ -1,4 +1,5 @@
 ---
+
 title: "mimedump(1)"
 name: "mimedump"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mimedump/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- mimedump - dump out the contents of a parsed MIME message 
+mimedump - dump out the contents of a parsed MIME message 
 
 <h2>DESCRIPTION</h2>
 

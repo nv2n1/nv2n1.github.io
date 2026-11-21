@@ -1,4 +1,5 @@
 ---
+
 title: "indxbib(1)"
 name: "indxbib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-indxbib/"
 description: "indxbib – make inverted index for bibliographic databases"
 ---
 
-<h2 class="name">NAME</h2>
 <p> indxbib &#8211; make inverted index for bibliographic databases </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-w</code> ] [ <code>-c </code><i>file</i> ] [ <code>-d </code><i>dir</i> ] [ <code>-f </code><i>file</i> ] [ <code>-h </code><i>n</i> ] [ <code>-i </code><i>string</i> ] [ <code>-k </code><i>n</i> ] [ <code>-l </code><i>n</i> ] [ <code>-n </code><i>n</i> ] [ <code>-o </code><i>file</i> ] [ <code>-t </code><i>n</i> ] [<i>filename</i> &#8230;] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>

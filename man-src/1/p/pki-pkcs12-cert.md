@@ -1,4 +1,5 @@
 ---
+
 title: "pki-pkcs12-cert(1)"
 name: "pki-pkcs12-cert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pki-pkcs12-cert/"
 description: "pki-pkcs12-cert – Command-Line Interface for managing individual certificates in PKCS #12 file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pki-pkcs12-cert &#8211; Command-Line Interface for managing individual certificates in PKCS #12 file.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

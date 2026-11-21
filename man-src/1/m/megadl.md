@@ -1,4 +1,5 @@
 ---
+
 title: "megadl(1)"
 name: "megadl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-megadl/"
 description: "megadl – download exported files and directories from Mega.co.nz"
 ---
 
-<h2 class="name">NAME</h2>
 <p> megadl &#8211; download exported files and directories from Mega.co.nz </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_get(3)"
 name: "cmap_get"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmap_get/"
 description: "cmap_get – Retrieve value from CMAP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cmap_get &#8211; Retrieve value from CMAP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>

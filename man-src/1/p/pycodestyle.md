@@ -1,4 +1,5 @@
 ---
+
 title: "pycodestyle(1)"
 name: "pycodestyle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pycodestyle/"
 description: "pycodestyle – pycodestyle documentation"
 ---
 
-<h2>NAME</h2>
 <p> pycodestyle &#8211; pycodestyle documentation </p>
 <p> <i>Python style guide checker</i> </p>
 <p> pycodestyle (formerly pep8) is a tool to check your Python code against some of the style conventions in <i>PEP 8</i>. </p>

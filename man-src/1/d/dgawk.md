@@ -1,4 +1,5 @@
 ---
+
 title: "dgawk(1)"
 name: "dgawk"
 section: "1"
@@ -6,7 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-dgawk/"
 description: "gawk – pattern scanning and processing language"
 ---
-<h2>NAME</h2>
+
 <p> gawk - pattern scanning and processing language  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ... <br />

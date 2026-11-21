@@ -1,4 +1,5 @@
 ---
+
 title: "docker-engine-activate(1)"
 name: "docker-engine-activate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-engine-activate/"
 description: "docker-engine-activate – Activate Enterprise Edition"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-engine-activate &#8211; Activate Enterprise Edition </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker engine activate [OPTIONS]</code> </p>

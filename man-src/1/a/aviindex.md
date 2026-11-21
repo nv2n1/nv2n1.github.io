@@ -1,4 +1,5 @@
 ---
+
 title: "aviindex(1)"
 name: "aviindex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aviindex/"
 description: "aviindex – Write and read text files describing the index of an AVI file"
 ---
 
-<h2>NAME</h2>
 <p> aviindex &#8211; Write and read text files describing the index of an AVI file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aviindex</code> [ <code>-o</code> <i>ofile</i> <code>-i</code> <i>ifile</i> <code>-f</code> <code>-n</code> <code>-x</code> <code>-v</code> <code>-h</code> ]</p>

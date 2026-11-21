@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-set(3)"
 name: "antlr3-set"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-set/"
 description: "ANTLR3_STRING_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_STRING_struct &#8211; </p>
 <p> Base string class tracks the allocations and provides simple string tracking functions.</p>
 <h2>SYNOPSIS</h2>

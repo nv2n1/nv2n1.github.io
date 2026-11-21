@@ -1,4 +1,5 @@
 ---
+
 title: "euca-resume-import(1)"
 name: "euca-resume-import"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-resume-import/"
 description: "euca-resume-import – Perform the upload step of an import task"
 ---
 
-<h2>NAME</h2>
 <p> euca-resume-import &#8211; Perform the upload step of an import task</p>
 <h2>SYNOPSIS</h2>
 <p> euca-resume-import <code>-t</code> TASK [-x DAYS] [&#8211;show-empty-fields]</p>

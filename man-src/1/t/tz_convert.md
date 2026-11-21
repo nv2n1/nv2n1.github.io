@@ -1,4 +1,5 @@
 ---
+
 title: "tz_convert(1)"
 name: "tz_convert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tz_convert/"
 description: "tz_convert – Timezone converter from operating system tz format into libical format used by Orage and several other calander tools."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tz_convert &#8211; Timezone converter from operating system tz format into libical format used by Orage and several other calander tools. </p>
 <h2>SYNOPSIS</h2>
 <dl>

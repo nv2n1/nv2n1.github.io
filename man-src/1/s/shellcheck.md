@@ -1,4 +1,5 @@
 ---
+
 title: "shellcheck(1)"
 name: "shellcheck"
 section: "1"
@@ -6,12 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-shellcheck/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- shellcheck - Shell script analysis tool 
+shellcheck - Shell script analysis tool 
 
 <h2>SYNOPSIS</h2>
 

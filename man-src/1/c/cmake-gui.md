@@ -1,4 +1,5 @@
 ---
+
 title: "cmake-gui(1)"
 name: "cmake-gui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmake-gui/"
 description: "cmake-gui - CMake GUI. USAGE cmake - gui[options] cmake - gui[options]<path - to - source> cmake - gui[options]<path - to - existing - build> DESCRIPTION The \"cmake-gui\" executable is the CMake GUI..."
 ---
 
-<h2>NAME</h2>
 <pre>
   cmake-gui - CMake GUI.
 </pre>

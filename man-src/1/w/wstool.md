@@ -1,4 +1,5 @@
 ---
+
 title: "wstool(1)"
 name: "wstool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wstool/"
 description: "wstool – wstool Documentation"
 ---
 
-<h2>NAME</h2>
 <p> wstool &#8211; wstool Documentation </p>
 <p> Using wstool you can update several folders using a variety of SCMs (SVN, Mercurial, git, Bazaar) with just one command. </p>
 <p> That way you can more effectively manage source code workspaces. </p>

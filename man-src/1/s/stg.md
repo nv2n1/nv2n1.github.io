@@ -1,4 +1,5 @@
 ---
+
 title: "stg(1)"
 name: "stg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg/"
 description: "stg – Manage stacks of patches using the Git content tracker"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg &#8211; Manage stacks of patches using the Git content tracker </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

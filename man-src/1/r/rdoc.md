@@ -1,4 +1,5 @@
 ---
+
 title: "rdoc(1)"
 name: "rdoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdoc/"
 description: "rdoc3.0 – Generate documentation from Ruby script files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rdoc3.0 &#8211; Generate documentation from Ruby script files </p>
 <h2>SYNOPSIS</h2>
 <p> rdoc3.0 [options] [names&#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rls_client_activation(3)"
 name: "globus_rls_client_activation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rls_client_activation/"
 description: "Activation –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Activation &#8211; </p>
 <p> This module must be activated before any functions in this API may be used.</p>
 <h3>Defines</h3>

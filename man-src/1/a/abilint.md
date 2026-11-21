@@ -1,4 +1,5 @@
 ---
+
 title: "abilint(1)"
 name: "abilint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abilint/"
 description: "abilint – validate an abigail ABI representation"
 ---
 
-<h2>NAME</h2>
 <p> abilint &#8211; validate an abigail ABI representation </p>
 <p> abilint parses the native XML representation of an ABI as emitted by <code>abidw</code>. Once it has parsed the XML representation of the ABI, <code>abilint</code> builds and in-memory model from it. It then tries to save it back to an XML form, to standard output. If that read-write operation succeeds chances are the input XML ABI representation is meaningful. </p>
 <p> Note that the main intent of this tool to help debugging issues in the underlying Libabigail library. </p>

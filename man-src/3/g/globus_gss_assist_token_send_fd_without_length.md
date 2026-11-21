@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gss_assist_token_send_fd_without_length(3)"
 name: "globus_gss_assist_token_send_fd_without_length"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gss_assist_token_send_fd_without_length/"
 description: "Token Transport –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Token Transport &#8211; </p>
 <p> Send and Receive Security Tokens.</p>
 <h3>Functions</h3>

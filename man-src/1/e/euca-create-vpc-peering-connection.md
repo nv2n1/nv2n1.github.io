@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-vpc-peering-connection(1)"
 name: "euca-create-vpc-peering-connection"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-vpc-peering-connection/"
 description: "euca-create-vpc-peering-connection – Request a peering connection between two VPCs"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-vpc-peering-connection &#8211; Request a peering connection between two VPCs</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-vpc-peering-connection <code>-c</code> VPC <code>-p</code> VPC [-o ACCOUNT]</p>

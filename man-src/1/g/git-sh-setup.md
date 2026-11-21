@@ -1,4 +1,5 @@
 ---
+
 title: "git-sh-setup(1)"
 name: "git-sh-setup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-sh-setup/"
 description: "git-sh-setup – Common Git shell script setup code"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-sh-setup &#8211; Common Git shell script setup code </p>
 <h2>SYNOPSIS</h2>
 <pre>

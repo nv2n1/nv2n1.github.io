@@ -1,4 +1,5 @@
 ---
+
 title: "getpass(3)"
 name: "getpass"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getpass/"
 description: "getpass – get a password"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getpass &#8211; get a password </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

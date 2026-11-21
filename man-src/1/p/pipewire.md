@@ -1,4 +1,5 @@
 ---
+
 title: "pipewire(1)"
 name: "pipewire"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pipewire/"
 description: "pipewire – The PipeWire media server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pipewire &#8211; The PipeWire media server </p>
 <h2>SYNOPSIS</h2>
 <pre>

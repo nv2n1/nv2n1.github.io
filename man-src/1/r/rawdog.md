@@ -1,4 +1,5 @@
 ---
+
 title: "rawdog(1)"
 name: "rawdog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rawdog/"
 description: "rawdog – an RSS Aggregator Without Delusions Of Grandeur"
 ---
 
-<h2>NAME</h2>
 <p> rawdog &#8211; an RSS Aggregator Without Delusions Of Grandeur</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rawdog</code> [<i>options</i>]</p>

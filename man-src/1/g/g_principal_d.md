@@ -1,4 +1,5 @@
 ---
+
 title: "g_principal_d(1)"
 name: "g_principal_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_principal_d/"
 description: "g_principal – calculates axes of inertia for a group of atoms"
 ---
 
-<h2>NAME</h2>
 <p> g_principal &#8211; calculates axes of inertia for a group of atoms </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "xmkmf(1)"
 name: "xmkmf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmkmf/"
 description: "xmkmf – create a Makefile from an Imakefile"
 ---
 
-<h2>NAME</h2>
 <p> xmkmf &#8211; create a Makefile from an Imakefile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmkmf</code> [ -a ] [ <i>topdir</i> [ <i>curdir</i> ] ]</p>

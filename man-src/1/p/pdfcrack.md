@@ -1,4 +1,5 @@
 ---
+
 title: "pdfcrack(1)"
 name: "pdfcrack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdfcrack/"
 description: "pdfcrack – Password recovery tool for PDF-files"
 ---
 
-<h2>NAME</h2>
 <p> pdfcrack &#8211; Password recovery tool for PDF-files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfcrack </code> [ <code>-f</code> ] FILE [<i>OPTION</i>]&#8230;</p>

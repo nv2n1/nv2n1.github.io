@@ -1,4 +1,5 @@
 ---
+
 title: "dlarra(3)"
 name: "dlarra"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlarra/"
 description: "dlarra.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlarra.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

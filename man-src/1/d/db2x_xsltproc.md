@@ -1,4 +1,5 @@
 ---
+
 title: "db2x_xsltproc(1)"
 name: "db2x_xsltproc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db2x_xsltproc/"
 description: "db2x_xsltproc – XSLT processor invocation wrapper"
 ---
 
-<h2>NAME</h2>
 <p> db2x_xsltproc &#8211; XSLT processor invocation wrapper</p>
 <h2>SYNOPSIS</h2>
 <p> <code>db2x_xsltproc</code> [<i>options</i>] <i>xml-document</i></p>

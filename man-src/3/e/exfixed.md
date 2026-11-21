@@ -1,4 +1,5 @@
 ---
+
 title: "exfixed(3)"
 name: "exfixed"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exfixed/"
 description: "exfixed – Using fixed point maths. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exfixed &#8211; Using fixed point maths. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

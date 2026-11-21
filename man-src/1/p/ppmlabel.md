@@ -1,4 +1,5 @@
 ---
+
 title: "ppmlabel(1)"
 name: "ppmlabel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmlabel/"
 description: "ppmlabel – add text to a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmlabel &#8211; add text to a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmlabel</code> [<code>-angle</code> <i>angle</i>] [<code>-background</code> <code>transparent</code> | <i>colour</i>] [<code>-colour</code> <i>colour</i>] [<code>-file</code> <i>filename</i>] [<code>-size</code> <i>textsize</i>] [<code>-text</code> <i>&#8216;text </i> <i>string&#8217;</i>] [<code>-x</code> <i>column</i>] [<code>-y</code> <i>row</i>]<i> &#8230; </i> [<i>ppmfile</i>]</p>

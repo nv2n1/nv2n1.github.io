@@ -1,4 +1,5 @@
 ---
+
 title: "ufraw(1)"
 name: "ufraw"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-ufraw/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- UFRaw - Convert camera RAW images to standard image files. 
+UFRaw - Convert camera RAW images to standard image files. 
 
 <h2>SYNOPSIS</h2>
 

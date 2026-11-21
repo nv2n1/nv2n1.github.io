@@ -1,4 +1,5 @@
 ---
+
 title: "rstconv(1)"
 name: "rstconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rstconv/"
 description: "rstconv – The Free Pascal resource string converter tool."
 ---
 
-<h2>NAME</h2>
 <p> rstconv &#8211; The Free Pascal resource string converter tool. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rstconv [options] -o outfile</code> </p>

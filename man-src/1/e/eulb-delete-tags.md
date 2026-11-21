@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-delete-tags(1)"
 name: "eulb-delete-tags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-delete-tags/"
 description: "eulb-delete-tags – Remove one or more tags from a load balancer"
 ---
 
-<h2>NAME</h2>
 <p> eulb-delete-tags &#8211; Remove one or more tags from a load balancer</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-delete-tags <code>-t</code> KEY [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</p>

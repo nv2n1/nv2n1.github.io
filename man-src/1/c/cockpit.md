@@ -1,4 +1,5 @@
 ---
+
 title: "cockpit(1)"
 name: "cockpit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cockpit/"
 description: "cockpit – Cockpit"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cockpit &#8211; Cockpit </p>
 <h2>DESCRIPTION</h2>
 <p> Cockpit is a web accessible interactive admin interface for Linux machines. Cockpit can usually be accessed on port 9090 of the machine it&#8217;s installed on. Cockpit starts on demand. Use your system credentials to log in.</p>

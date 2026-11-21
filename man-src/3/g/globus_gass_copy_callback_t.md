@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_copy_callback_t(3)"
 name: "globus_gass_copy_callback_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gass_copy_callback_t/"
 description: "GASS Copy –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GASS Copy &#8211; </p>
 <p> Protocol-Independent File Transfer.</p>
 <h3>Data Structures</h3>

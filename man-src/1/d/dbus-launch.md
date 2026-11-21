@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-launch(1)"
 name: "dbus-launch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbus-launch/"
 description: "dbus-launch – Utility to start a message bus from a shell script"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbus-launch &#8211; Utility to start a message bus from a shell script </p>
 <h2>SYNOPSIS</h2>
 <dl>

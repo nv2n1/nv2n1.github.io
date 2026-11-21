@@ -1,4 +1,5 @@
 ---
+
 title: "interpolation_(3)"
 name: "interpolation_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-interpolation_/"
 description: "QuantLib::CommodityCurve – Commodity term structure."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::CommodityCurve &#8211; <code>Commodity</code> term structure. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/commodities/commoditycurve.hpp&gt; </p>

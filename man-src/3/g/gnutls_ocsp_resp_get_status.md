@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_resp_get_status(3)"
 name: "gnutls_ocsp_resp_get_status"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_ocsp_resp_get_status/"
 description: "gnutls_ocsp_resp_get_status – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_ocsp_resp_get_status &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>

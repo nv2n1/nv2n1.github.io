@@ -1,4 +1,5 @@
 ---
+
 title: "ffi_prep_cif(3)"
 name: "ffi_prep_cif"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ffi_prep_cif/"
 description: "ffi_prep_cif – Prepare a ffi_cif structure for use with ffi_call"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ffi_prep_cif</code> &#8211; Prepare a <code>ffi_cif</code> structure for use with <code>ffi_call </code> </p>
 <h2>SYNOPSIS</h2>
 <p> In ffi.h Ft ffi_status Fo ffi_prep_cif Fa ffi_cif *cif Fa ffi_abi abi Fa unsigned int nargs Fa ffi_type *rtype Fa ffi_type **atypes Fc</p>

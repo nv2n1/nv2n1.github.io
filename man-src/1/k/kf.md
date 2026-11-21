@@ -1,4 +1,5 @@
 ---
+
 title: "kf(1)"
 name: "kf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kf/"
 description: "kf – securely forward tickets"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>kf</code> &#8211; securely forward tickets </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>p </code><i>port</i> &#8211;<code>-port = </code><i>port</i> ] [-<code>l </code><i>login</i> &#8211;<code>-login = </code><i>login</i> ] [-<code>c </code><i>ccache</i> &#8211;<code>-ccache = </code><i>ccache</i> ] [-<code>F | -forwardable</code> ] [-<code>G | -no-forwardable</code> ] [-<code>h | -help</code> ] [-<code>-version</code> ] <i>host &#8230;</i></p>

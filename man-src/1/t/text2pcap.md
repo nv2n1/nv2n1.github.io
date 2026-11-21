@@ -1,4 +1,5 @@
 ---
+
 title: "text2pcap(1)"
 name: "text2pcap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-text2pcap/"
 description: "text2pcap – Generate a capture file from an ASCII hexdump of packets"
 ---
 
-<h2 class="name">NAME</h2>
 <p> text2pcap &#8211; Generate a capture file from an ASCII hexdump of packets </p>
 <h2>SYNOPSIS</h2>
 <p> <code>text2pcap</code> [&nbsp;<wbr><code>-a</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-d</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-D</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-e</code>&nbsp;<wbr>&lt;l3pid&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-h</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-i</code>&nbsp;<wbr>&lt;proto&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-l</code>&nbsp;<wbr>&lt;typenum&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-n</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-m</code>&nbsp;<wbr>&lt;max-packet&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-o</code>&nbsp;<wbr>hex|oct|dec&nbsp;<wbr>] [&nbsp;<wbr><code>-q</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-s</code>&nbsp;<wbr>&lt;srcport&gt;,&lt;destport&gt;,&lt;tag&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-S</code>&nbsp;<wbr>&lt;srcport&gt;,&lt;destport&gt;,&lt;ppi&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-t</code>&nbsp;<wbr>&lt;timefmt&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-T</code>&nbsp;<wbr>&lt;srcport&gt;,&lt;destport&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-u</code>&nbsp;<wbr>&lt;srcport&gt;,&lt;destport&gt;&nbsp;<wbr>] &lt;<i>infile</i>&gt;|- &lt;<i>outfile</i>&gt;|-</p>

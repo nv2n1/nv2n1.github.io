@@ -1,4 +1,5 @@
 ---
+
 title: "bson_writer_begin(3)"
 name: "bson_writer_begin"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_writer_begin/"
 description: "bson_writer_begin() – Begins writing a new document. The caller may use the bson structure to write out a new BSON document. When completed, the caller must call either bson_writer_end() or bson_wr..."
 ---
 
-<h2>NAME</h2>
 <p> bson_writer_begin() &#8211; Begins writing a new document. The caller may use the bson structure to write out a new BSON document. When completed, the caller must call either bson_writer_end() or bson_writer_rollback().</p>
 <h2>SYNOPSIS</h2>
 <pre>

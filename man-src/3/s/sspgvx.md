@@ -1,4 +1,5 @@
 ---
+
 title: "sspgvx(3)"
 name: "sspgvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sspgvx/"
 description: "sspgvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sspgvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

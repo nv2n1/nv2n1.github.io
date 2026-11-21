@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-install-user(1)"
 name: "pilot-install-user"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-install-user/"
 description: "pilot-install-user – Reads or sets a Palm User and UserID on a Palm Device."
 ---
 
-<h2>NAME</h2>
 <p> pilot-install-user &#8211; Reads or sets a Palm User and UserID on a Palm Device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

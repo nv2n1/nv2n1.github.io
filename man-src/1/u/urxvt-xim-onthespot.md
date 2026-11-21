@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-xim-onthespot(1)"
 name: "urxvt-xim-onthespot"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-xim-onthespot/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- xim-onthespot - implement XIM &quot;on-the-spot&quot; behaviour 
+xim-onthespot - implement XIM &quot;on-the-spot&quot; behaviour 
 
 <h2>DESCRIPTION</h2>
 

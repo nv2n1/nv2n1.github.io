@@ -1,4 +1,5 @@
 ---
+
 title: "sgeqp3(3)"
 name: "sgeqp3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgeqp3/"
 description: "sgeqp3.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sgeqp3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

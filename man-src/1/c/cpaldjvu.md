@@ -1,4 +1,5 @@
 ---
+
 title: "cpaldjvu(1)"
 name: "cpaldjvu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpaldjvu/"
 description: "cpaldjvu – DjVuDocument encoder for low-color images."
 ---
 
-<h2>NAME</h2>
 <p> cpaldjvu &#8211; DjVuDocument encoder for low-color images. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cpaldjvu [</code><i>options</i><code>] </code><i>inputppmfile</i><i>outputdjvufile</i> </p>

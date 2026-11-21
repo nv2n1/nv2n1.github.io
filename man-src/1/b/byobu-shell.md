@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-shell(1)"
 name: "byobu-shell"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-shell/"
 description: "byobu-shell – Print the message of the day and launch a shell"
 ---
 
-<h2>NAME</h2>
 <p> byobu-shell &#8211; Print the message of the day and launch a shell </p>
 <h2>DESCRIPTION</h2>
 <p> <code>byobu-shell</code> is a simple script that prints the message of the day (/etc/motd) and launches a shell. </p>

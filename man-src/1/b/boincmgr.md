@@ -1,4 +1,5 @@
 ---
+
 title: "boincmgr(1)"
 name: "boincmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-boincmgr/"
 description: "boincmgr – The graphical BOINC manager for the client."
 ---
 
-<h2>NAME</h2>
 <p> boincmgr &#8211; The graphical BOINC manager for the client.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>boincmgr</code> [<code>&#8211;verbose</code>] [<code>-a</code>] [<code>-e</code> <i>client_dir</i>] [<code>-d</code> <i>data_dir</i>] [<code>-n</code> <i>hostname</i>] [<code>-g</code> <i>port</i>] [<code>-p</code> <i>passwd</i>] [<code>-b</code> <i>BOINC_ARGS</i>] [<code>-i</code>] [<code>-c</code>] [<code>-m</code>] <code>boincmgr</code> [<code>-h</code> | <code>&#8211;help</code>]</p>

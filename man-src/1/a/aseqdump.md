@@ -1,4 +1,5 @@
 ---
+
 title: "aseqdump(1)"
 name: "aseqdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aseqdump/"
 description: "aseqdump – show the events received at an ALSA sequencer port"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aseqdump &#8211; show the events received at an ALSA sequencer port</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aseqdump</code> [<i>-p client:port,&#8230;</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "potrace(1)"
 name: "potrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-potrace/"
 description: "potrace – transform bitmaps into vector graphics."
 ---
 
-<h2>NAME</h2>
 <p> potrace &#8211; transform bitmaps into vector graphics.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "nicotine(1)"
 name: "nicotine"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nicotine/"
 description: "nicotine is a graphical client for the SoulSeek peer-to-peer network."
 ---
 
-<h2>NAME</h2>
 <p> <code>nicotine</code> is a graphical client for the SoulSeek peer-to-peer network.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nicotine</code> [options]</p>

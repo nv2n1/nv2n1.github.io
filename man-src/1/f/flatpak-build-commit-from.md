@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-build-commit-from(1)"
 name: "flatpak-build-commit-from"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-build-commit-from/"
 description: "flatpak-build-commit-from – Create new commits based on existing one (possibly from another repository)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-build-commit-from &#8211; Create new commits based on existing one (possibly from another repository) </p>
 <h2>SYNOPSIS</h2>
 <dl>

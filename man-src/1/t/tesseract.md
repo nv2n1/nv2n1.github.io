@@ -1,4 +1,5 @@
 ---
+
 title: "tesseract(1)"
 name: "tesseract"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tesseract/"
 description: "tesseract – command-line OCR engine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tesseract &#8211; command-line OCR engine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tesseract</code> <i>imagename</i>|<i>stdin</i> <i>outputbase</i>|<i>stdout</i> [options&#8230;] [configfile&#8230;]</p>

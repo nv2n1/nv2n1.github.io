@@ -1,4 +1,5 @@
 ---
+
 title: "bt-network(1)"
 name: "bt-network"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bt-network/"
 description: "bt-network – a bluetooth network manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bt-network &#8211; a bluetooth network manager </p>
 <h2>SYNOPSIS</h2>
 <p> bt-network [<font SIZE="-1">OPTION&#8230;</font>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mate-charpick-applet(1)"
 name: "mate-charpick-applet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-charpick-applet/"
 description: "mate-charpick-applet – Character Picker Applet for the MATE panel."
 ---
 
-<h2>NAME</h2>
 <p> mate-charpick-applet &#8211; Character Picker Applet for the MATE panel.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-charpick-applet</code> [ <code>&#8211;activate-goad-server </code><i>[=GOAD_ID] </i> ] </p>

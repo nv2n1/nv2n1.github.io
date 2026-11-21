@@ -1,4 +1,5 @@
 ---
+
 title: "pytrademgen(1)"
 name: "pytrademgen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pytrademgen/"
 description: "pytrademgen –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pytrademgen &#8211; </p>
 <pre>
   Python wrapper around the C++ Simulated Travel Demand Generation Library

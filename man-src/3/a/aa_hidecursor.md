@@ -1,4 +1,5 @@
 ---
+
 title: "aa_hidecursor(3)"
 name: "aa_hidecursor"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_hidecursor/"
 description: "aa_hidecursor – hide the hardware cursor."
 ---
 
-<h2>NAME</h2>
 <p> aa_hidecursor &#8211; hide the hardware cursor.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

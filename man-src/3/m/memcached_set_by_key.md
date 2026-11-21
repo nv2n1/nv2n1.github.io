@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_set_by_key(3)"
 name: "memcached_set_by_key"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_set_by_key/"
 description: "memcached_set_by_key – Storing and Replacing Data"
 ---
 
-<h2>NAME</h2>
 <p> memcached_set_by_key &#8211; Storing and Replacing Data</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>

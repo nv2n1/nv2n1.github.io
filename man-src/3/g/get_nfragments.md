@@ -1,4 +1,5 @@
 ---
+
 title: "get_nfragments(3)"
 name: "get_nfragments"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_nfragments/"
 description: "get_nfragments — retrieve the number of format file fragments in a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> get_nfragments &#8212; retrieve the number of format file fragments in a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

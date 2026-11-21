@@ -1,4 +1,5 @@
 ---
+
 title: "gcloseall(1)"
 name: "gcloseall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcloseall/"
 description: "gcloseall – This tool terminates all applications"
 ---
 
-<h2>NAME</h2>
 <p> gcloseall &#8211; This tool terminates all applications</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcloseall</code></p>

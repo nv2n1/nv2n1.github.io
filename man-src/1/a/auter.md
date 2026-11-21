@@ -1,4 +1,5 @@
 ---
+
 title: "auter(1)"
 name: "auter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-auter/"
 description: "auter – manual page for auter 0.8"
 ---
 
-<h2>NAME</h2>
 <p> auter &#8211; manual page for auter 0.8</p>
 <h2>SYNOPSIS</h2>
 <p> <code>auter</code> [<i>&#8211;enable|&#8211;disable|&#8211;status</i>] [<i>&#8211;prep</i>] [<i>&#8211;apply</i>] [<i>&#8211;reboot</i>] [<i>&#8211;postreboot</i>] [<i>&#8211;config=&lt;configfile&gt;</i>] [<i>OPTION</i>]</p>

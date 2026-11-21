@@ -1,4 +1,5 @@
 ---
+
 title: "pg(1)"
 name: "pg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg/"
 description: "pg – browse pagewise through text files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg &#8211; browse pagewise through text files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pg</code> [<code>&#8211;</code><i>number</i>] [<code>-p</code> <i>string</i>] [<code>-cefnrs</code>] [<code>+</code><i>line</i>] [<code>+/</code><i>pattern</i>/] [<i>file</i>&#8230;]</p>

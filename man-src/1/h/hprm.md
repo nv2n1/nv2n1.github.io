@@ -1,4 +1,5 @@
 ---
+
 title: "hprm(1)"
 name: "hprm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hprm/"
 description: "hprm — remove a file or directory on an HFS+ volume"
 ---
 
-<h2>NAME</h2>
 <p> hprm &#8212; remove a file or directory on an HFS+ volume</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hprm</code> [<code>-R</code>] [<code>-f</code>] <i>hfs-path</i></p>

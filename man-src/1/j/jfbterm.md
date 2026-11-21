@@ -1,4 +1,5 @@
 ---
+
 title: "jfbterm(1)"
 name: "jfbterm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jfbterm/"
 description: "jfbterm – program to print several character sets on framebuffer device."
 ---
 
-<h2 class="name">NAME</h2>
 <p> jfbterm &#8211; program to print several character sets on framebuffer device. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jfbterm</code> [<i>options</i>]</p>

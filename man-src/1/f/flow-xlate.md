@@ -1,4 +1,5 @@
 ---
+
 title: "flow-xlate(1)"
 name: "flow-xlate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-xlate/"
 description: "flow-xlate – Apply translations to selected fields of a flow."
 ---
 
-<h2>NAME</h2>
 <p> flow-xlate &#8211; Apply translations to selected fields of a flow.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-xlate</code> [ <code>-hkn</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-v</code><i> variable binding</i> ] [ <code>-V</code><i> flow_version</i> ] [ <code>-x</code><i> xlate_fname</i> ] [ <code>-X</code><i> xlate_definition</i> ] [ <code>-z</code><i> z_level</i> ]</p>

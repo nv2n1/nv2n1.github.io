@@ -1,4 +1,5 @@
 ---
+
 title: "nm-online(1)"
 name: "nm-online"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nm-online/"
 description: "nm-online – ask NetworkManager whether the network is connected"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nm-online &#8211; ask NetworkManager whether the network is connected </p>
 <h2>SYNOPSIS</h2>
 <dl>

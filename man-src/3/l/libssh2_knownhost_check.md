@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_knownhost_check(3)"
 name: "libssh2_knownhost_check"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_knownhost_check/"
 description: "libssh2_knownhost_check – check a host+key against the list of known hosts"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_knownhost_check &#8211; check a host+key against the list of known hosts</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

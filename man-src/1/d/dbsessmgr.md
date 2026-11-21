@@ -1,4 +1,5 @@
 ---
+
 title: "dbsessmgr(1)"
 name: "dbsessmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbsessmgr/"
 description: "dbsessmgr – session state database manager"
 ---
 
-<h2>NAME</h2>
 <p> dbsessmgr &#8211; session state database manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mono dbsessmgr.exe</code> [options]</p>

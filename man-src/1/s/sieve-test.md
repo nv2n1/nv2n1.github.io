@@ -1,4 +1,5 @@
 ---
+
 title: "sieve-test(1)"
 name: "sieve-test"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sieve-test/"
 description: "sieve-test – Pigeonhole’s Sieve script tester"
 ---
 
-<h2>NAME</h2>
 <p> sieve-test &#8211; Pigeonhole&#8217;s Sieve script tester</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sieve-test</code> [<i>options</i>] <i>script-file</i> <i>mail-file</i></p>

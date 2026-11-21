@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_buffer_set_position(3)"
 name: "ldns_buffer_set_position"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_buffer_set_position/"
 description: "ldns_buffer_flip, ldns_buffer_rewind, ldns_buffer_position, ldns_buffer_set_position, ldns_buffer_skip"
 ---
 
-<h2>NAME</h2>
 <p> ldns_buffer_flip, ldns_buffer_rewind, ldns_buffer_position, ldns_buffer_set_position, ldns_buffer_skip </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

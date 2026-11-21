@@ -1,4 +1,5 @@
 ---
+
 title: "npm-stars(1)"
 name: "npm-stars"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-stars/"
 description: "npm-stars – View packages marked as favorites"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-stars</code> &#8211; View packages marked as favorites </p>
 <h3>Synopsis</h3>
 <dl>

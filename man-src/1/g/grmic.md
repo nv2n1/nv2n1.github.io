@@ -1,4 +1,5 @@
 ---
+
 title: "grmic(1)"
 name: "grmic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grmic/"
 description: "grmic – Generate stubs for Remote Method Invocation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grmic &#8211; Generate stubs for Remote Method Invocation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grmic</code> [<font SIZE="-1"><code>OPTION</code></font>] &#8230; <i>class</i> &#8230;</p>

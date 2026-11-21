@@ -1,4 +1,5 @@
 ---
+
 title: "pq2-ls-files(1)"
 name: "pq2-ls-files"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pq2-ls-files/"
 description: "pq2-ls-files – List the file content of a dataset from a dataset meta-repository based on ROOT files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pq2-ls-files &#8211; List the file content of a dataset from a dataset meta-repository based on ROOT files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pq2-ls</code> [options] dataset</p>

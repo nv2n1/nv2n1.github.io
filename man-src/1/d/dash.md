@@ -1,4 +1,5 @@
 ---
+
 title: "dash(1)"
 name: "dash"
 section: "1"
@@ -6,7 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-dash/"
 description: "dash – command interpreter (shell)"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>dash</code> - command interpreter (shell) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dash</code> [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] [<i>command_file </i>[<i>argument ... </i>] ] <br />

@@ -1,4 +1,5 @@
 ---
+
 title: "scrub(1)"
 name: "scrub"
 section: "1"
@@ -6,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-scrub/"
 description: "scrub – write patterns on disk/file"
 ---
-<h2 class="name">NAME</h2>
+
 <p> scrub - write patterns on disk/file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>scrub</code> <i>[OPTIONS] special-file [special-file ...]</i> <br />

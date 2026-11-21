@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_load(3)"
 name: "ck_pr_load"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_load/"
 description: "ck_pr_load_ptr ck_pr_load_double ck_pr_load_uint ck_pr_load_int ck_pr_load_char ck_pr_load_64 ck_pr_load_32 ck_pr_load_16 ck_pr_load_8 – atomic volatile load operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_load_ptr</code> <code>ck_pr_load_double</code> <code>ck_pr_load_uint</code> <code>ck_pr_load_int</code> <code>ck_pr_load_char</code> <code>ck_pr_load_64</code> <code>ck_pr_load_32</code> <code>ck_pr_load_16</code> <code>ck_pr_load_8</code> &#8211; atomic volatile load operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_gss_assist(3)"
 name: "globus_gsi_gss_assist"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_gss_assist/"
 description: "Utility Functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Utility Functions &#8211; </p>
 <p> Utility functions for GSSAPI.</p>
 <h3>Defines</h3>

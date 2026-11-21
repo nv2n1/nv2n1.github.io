@@ -1,4 +1,5 @@
 ---
+
 title: "gs(1)"
 name: "gs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gs/"
 description: "gs – Ghostscript (PostScript and PDF language interpreter and previewer)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gs &#8211; Ghostscript (PostScript and PDF language interpreter and previewer) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gs</code> [ <i>options</i> ] [ <i>files</i> ] &#8230;</p>

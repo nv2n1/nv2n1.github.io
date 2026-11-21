@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_reg_dm_mr(3)"
 name: "ibv_reg_dm_mr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_reg_dm_mr/"
 description: "ibv_alloc_dm, ibv_free_dm, ibv_memcpy_to/from_dm – allocate or free a device memory buffer (DMs) and perform memory copy to or from it"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_alloc_dm, ibv_free_dm, ibv_memcpy_to/from_dm &#8211; allocate or free a device memory buffer (DMs) and perform memory copy to or from it </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

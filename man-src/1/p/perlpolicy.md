@@ -1,4 +1,5 @@
 ---
+
 title: "perlpolicy(1)"
 name: "perlpolicy"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlpolicy/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlpolicy - Various and sundry policies and commitments related to the Perl core 
+perlpolicy - Various and sundry policies and commitments related to the Perl core 
 
 <h2>DESCRIPTION</h2>
 

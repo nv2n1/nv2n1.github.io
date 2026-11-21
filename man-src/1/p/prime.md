@@ -1,4 +1,5 @@
 ---
+
 title: "prime(1)"
 name: "prime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prime/"
 description: "Prime – a file manager for GNU/Linux console/xterm"
 ---
 
-<h2>NAME</h2>
 <p> Prime &#8211; a file manager for GNU/Linux console/xterm</p>
 <h2>SYNOPSIS</h2>
 <p> <code>Prime [log-file-name] [OPTIONS]</code></p>

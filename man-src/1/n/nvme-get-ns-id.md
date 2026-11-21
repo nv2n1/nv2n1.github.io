@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-get-ns-id(1)"
 name: "nvme-get-ns-id"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-get-ns-id/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-get-ns-id - Retrieves the namespace ID for an NVMe block device 
+nvme-get-ns-id - Retrieves the namespace ID for an NVMe block device 
 
 <h2>SYNOPSIS</h2>
 

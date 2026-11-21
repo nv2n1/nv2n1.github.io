@@ -1,4 +1,5 @@
 ---
+
 title: "yacg(1)"
 name: "yacg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yacg/"
 description: "yacg – Yet Another Configuration Generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> yacg &#8211; Yet Another Configuration Generator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>yacg</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] <i></i><font SIZE="-1"><i>PATH</i></font><i></i> </p>

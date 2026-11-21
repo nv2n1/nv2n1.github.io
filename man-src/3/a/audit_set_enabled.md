@@ -1,4 +1,5 @@
 ---
+
 title: "audit_set_enabled(3)"
 name: "audit_set_enabled"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_set_enabled/"
 description: "audit_set_enabled – Enable or disable auditing"
 ---
 
-<h2>NAME</h2>
 <p> audit_set_enabled &#8211; Enable or disable auditing</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

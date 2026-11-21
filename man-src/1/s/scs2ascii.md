@@ -1,4 +1,5 @@
 ---
+
 title: "scs2ascii(1)"
 name: "scs2ascii"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scs2ascii/"
 description: "scs2ascii – convert IBM SCS printer data into ASCII"
 ---
 
-<h2>NAME</h2>
 <p> scs2ascii &#8211; convert IBM SCS printer data into ASCII</p>
 <h2>SYNOPSIS</h2>
 <p> <code>scs2ascii</code></p>

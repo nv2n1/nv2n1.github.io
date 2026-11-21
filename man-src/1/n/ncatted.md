@@ -1,4 +1,5 @@
 ---
+
 title: "ncatted(1)"
 name: "ncatted"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncatted/"
 description: "ncatted – netCDF Attribute Editor"
 ---
 
-<h2>NAME</h2>
 <p> ncatted &#8211; netCDF Attribute Editor</p>
 <h2>SYNTAX</h2>
 <p> ncatted [-a <i>att_dsc</i>] [-a &#8230;] [&#8211;bfr <i>sz</i>]<i>[-D</i> <i>dbg_lvl]</i> [-h] [&#8211;hdr_pad <i>sz</i>] [-l path] [-O] [-p path] [-R] [-r] [&#8211;ram_all] <i>input-file</i> [ <i>output-file</i>]</p>

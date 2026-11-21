@@ -1,4 +1,5 @@
 ---
+
 title: "fax2ps(1)"
 name: "fax2ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fax2ps/"
 description: "fax2ps – convert a TIFF facsimile to compressed PostScript™"
 ---
 
-<h2>NAME</h2>
 <p> fax2ps &#8211; convert a <font SIZE="-1">TIFF</font> facsimile to compressed PostScript&trade;</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fax2ps</code> [ <i>options</i> ] [ <i>file &#8230;</i> ]</p>

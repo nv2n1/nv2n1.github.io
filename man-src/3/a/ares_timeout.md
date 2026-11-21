@@ -1,4 +1,5 @@
 ---
+
 title: "ares_timeout(3)"
 name: "ares_timeout"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_timeout/"
 description: "ares_timeout – return maximum time to wait"
 ---
 
-<h2>NAME</h2>
 <p> ares_timeout &#8211; return maximum time to wait</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

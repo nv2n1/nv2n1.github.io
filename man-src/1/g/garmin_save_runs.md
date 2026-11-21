@@ -1,4 +1,5 @@
 ---
+
 title: "garmin_save_runs(1)"
 name: "garmin_save_runs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-garmin_save_runs/"
 description: "garmin_save_runs – retrieve track logs from a Forerunner device."
 ---
 
-<h2>NAME</h2>
 <p> garmin_save_runs &#8211; retrieve track logs from a Forerunner device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>garmin_save_runs</code> </p>

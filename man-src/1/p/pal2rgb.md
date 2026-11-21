@@ -1,4 +1,5 @@
 ---
+
 title: "pal2rgb(1)"
 name: "pal2rgb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pal2rgb/"
 description: "pal2rgb – convert a palette color TIFF image to a full color image"
 ---
 
-<h2>NAME</h2>
 <p> pal2rgb &#8211; convert a palette color <font SIZE="-1">TIFF</font> image to a full color image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pal2rgb</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-dump(1)"
 name: "glite-lb-dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glite-lb-dump/"
 description: "glite-lb-dump – utility for dumping job events from L&B database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> glite-lb-dump &#8211; utility for dumping job events from L&amp;B database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>glite-lb-dump</code> [<i>options</i>] </p>

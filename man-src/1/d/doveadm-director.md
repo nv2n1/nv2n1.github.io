@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-director(1)"
 name: "doveadm-director"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-director/"
 description: "doveadm-director – Manage Dovecot directors"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-director &#8211; Manage Dovecot directors</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>director add</code> [<code>-a</code> <i>director_socket_path</i>] <i>host</i> [<i>vhost_count</i>]<br />

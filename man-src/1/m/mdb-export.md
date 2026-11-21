@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-export(1)"
 name: "mdb-export"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdb-export/"
 description: "mdb-export – Export data in an MDB database table to CSV format."
 ---
 
-<h2>NAME</h2>
 <p> <code>mdb-export </code>&#8211; Export data in an MDB database table to CSV format.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

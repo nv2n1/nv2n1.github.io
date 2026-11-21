@@ -1,4 +1,5 @@
 ---
+
 title: "ifm(1)"
 name: "ifm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ifm/"
 description: "IFM – Interactive Fiction Mapper"
 ---
 
-<h2>NAME</h2>
 <p> IFM &#8211; Interactive Fiction Mapper</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ifm</code> [<i>options</i>] [<i>file</i>&#8230;]</p>

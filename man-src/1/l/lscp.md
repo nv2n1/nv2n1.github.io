@@ -1,4 +1,5 @@
 ---
+
 title: "lscp(1)"
 name: "lscp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lscp/"
 description: "lscp – list NILFS2 checkpoints"
 ---
 
-<h2>NAME</h2>
 <p> lscp &#8211; list NILFS2 checkpoints</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lscp</code> [<i>options</i>] [<i>device</i>]</p>

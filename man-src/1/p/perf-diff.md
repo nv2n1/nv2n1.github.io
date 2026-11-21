@@ -1,4 +1,5 @@
 ---
+
 title: "perf-diff(1)"
 name: "perf-diff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-diff/"
 description: "perf-diff – Read perf.data files and display the differential profile"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-diff &#8211; Read perf.data files and display the differential profile </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

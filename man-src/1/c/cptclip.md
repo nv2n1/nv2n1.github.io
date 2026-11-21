@@ -1,4 +1,5 @@
 ---
+
 title: "cptclip(1)"
 name: "cptclip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cptclip/"
 description: "cptclip – extract a sub-table from a GMT colour palette table (cpt)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cptclip &#8211; extract a sub-table from a GMT colour palette table (cpt). </p>
 <h2>SYNOPSIS</h2>
 <dl>

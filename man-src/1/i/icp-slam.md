@@ -1,4 +1,5 @@
 ---
+
 title: "icp-slam(1)"
 name: "icp-slam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icp-slam/"
 description: "icp-slam – SLAM method using scan matching"
 ---
 
-<h2 class="name">NAME</h2>
 <p> icp-slam &#8211; SLAM method using scan matching </p>
 <h2>SYNOPSIS</h2>
 <p> icp-slam <i>config_file.ini</i></p>

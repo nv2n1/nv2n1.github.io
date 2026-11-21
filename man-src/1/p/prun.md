@@ -1,4 +1,5 @@
 ---
+
 title: "prun(1)"
 name: "prun"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prun/"
 description: "prun – run program"
 ---
 
-<h2>NAME</h2>
 <p> prun &#8211; run program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>prun</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] <i>PROGRAM</i> [&#8211;] [<i>PARAMETERS</i>] </p>

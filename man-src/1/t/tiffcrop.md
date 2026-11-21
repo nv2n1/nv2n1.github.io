@@ -1,4 +1,5 @@
 ---
+
 title: "tiffcrop(1)"
 name: "tiffcrop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tiffcrop/"
 description: "tiffcrop – select, copy, crop, convert, extract, and/or process one or more TIFF files."
 ---
 
-<h2>NAME</h2>
 <p> tiffcrop &#8211; select, copy, crop, convert, extract, and/or process one or more <font SIZE="-1">TIFF</font> files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffcrop</code> [ <i>options</i> ] <i>src1.tif &#8230; srcN.tif dst.tif</i></p>

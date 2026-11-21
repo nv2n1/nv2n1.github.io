@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolcopylast(1)"
 name: "dbcolcopylast"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbcolcopylast/"
 description: "dbcolcopylast – create new columns that are copies of prior columns"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbcolcopylast &#8211; create new columns that are copies of prior columns </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

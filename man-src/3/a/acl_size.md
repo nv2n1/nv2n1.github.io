@@ -1,4 +1,5 @@
 ---
+
 title: "acl_size(3)"
 name: "acl_size"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_size/"
 description: "acl_size – get the size of the external representation of an ACL"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_size</code> &#8211; get the size of the external representation of an ACL </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

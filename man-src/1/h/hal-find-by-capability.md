@@ -1,4 +1,5 @@
 ---
+
 title: "hal-find-by-capability(1)"
 name: "hal-find-by-capability"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hal-find-by-capability/"
 description: "hal-find-by-capability – find device objects by capability matching"
 ---
 
-<h2>NAME</h2>
 <p> hal-find-by-capability &#8211; find device objects by capability matching</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hal-find-by-capability</code> [options] </p>

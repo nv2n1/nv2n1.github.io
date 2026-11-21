@@ -1,4 +1,5 @@
 ---
+
 title: "runghc(1)"
 name: "runghc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-runghc/"
 description: "runghc – program to run Haskell programs without first having to compile them."
 ---
 
-<h2 class="name">NAME</h2>
 <p> runghc &#8211; program to run Haskell programs without first having to compile them. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>runghc</code> [runghc|flags] [GHC|flags] module [program|flags]&#8230; </p>

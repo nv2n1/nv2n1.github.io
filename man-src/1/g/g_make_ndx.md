@@ -1,4 +1,5 @@
 ---
+
 title: "g_make_ndx(1)"
 name: "g_make_ndx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_make_ndx/"
 description: "make_ndx – makes index files"
 ---
 
-<h2>NAME</h2>
 <p> make_ndx &#8211; makes index files </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

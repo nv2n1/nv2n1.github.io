@@ -1,4 +1,5 @@
 ---
+
 title: "devassistant(1)"
 name: "devassistant"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-devassistant/"
 description: "devassistant – setup development environment and create basic projects in various languages"
 ---
 
-<h2>NAME</h2>
 <p> devassistant &#8211; setup development environment and create basic projects in various languages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>devassistant [&#8211;debug] [&#8211;no-cache] [ ASSISTANT_TYPE ] [ OPTIONS ] [[ SUBASSISTANT ] [OPTIONS] &#8230;] </p>

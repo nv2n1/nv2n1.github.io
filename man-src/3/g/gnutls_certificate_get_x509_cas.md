@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_get_x509_cas(3)"
 name: "gnutls_certificate_get_x509_cas"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_certificate_get_x509_cas/"
 description: "gnutls_certificate_get_x509_cas – Used to export all the CAs from a gnutls_certificate_credentials_t structure"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_certificate_get_x509_cas &#8211; Used to export all the CAs from a gnutls_certificate_credentials_t structure</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>

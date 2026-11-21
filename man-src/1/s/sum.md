@@ -1,4 +1,5 @@
 ---
+
 title: "sum(1)"
 name: "sum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sum/"
 description: "sum – checksum and count the blocks in a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sum &#8211; checksum and count the blocks in a file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

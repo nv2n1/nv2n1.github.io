@@ -1,4 +1,5 @@
 ---
+
 title: "gserialver(1)"
 name: "gserialver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gserialver/"
 description: "gserialver – version command"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gserialver &#8211; version command </p>
 <h2>SYNOPSIS</h2>
 <p> gserialver [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>CLASS</i></font><i></i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gammu-config(1)"
 name: "gammu-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gammu-config/"
 description: "gammu-config – Gammu configurator"
 ---
 
-<h2>NAME</h2>
 <p> gammu-config &#8211; Gammu configurator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gammu-config</code> [<i>-f|&#8211;force</i>] [<i>-c|&#8211;config config</i>]</p>

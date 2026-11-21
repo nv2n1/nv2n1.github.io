@@ -1,4 +1,5 @@
 ---
+
 title: "gosnake(1)"
 name: "gosnake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gosnake/"
 description: "GoSnake – The Console Snake Game"
 ---
 
-<h2>NAME</h2>
 <p> GoSnake &#8211; The Console Snake Game</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gosnake [OPTIONS]</code></p>

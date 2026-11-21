@@ -1,4 +1,5 @@
 ---
+
 title: "npm-audit(1)"
 name: "npm-audit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-audit/"
 description: "npm-audit – Run a security audit"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-audit</code> &#8211; Run a security audit </p>
 <h3>Synopsis</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "sqlsharp(1)"
 name: "sqlsharp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sqlsharp/"
 description: "sqlsharp – Mono SQL Query command-line tool"
 ---
 
-<h2>NAME</h2>
 <p> sqlsharp &#8211; Mono SQL Query command-line tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sqlsharp </code> [-f filename] [-o filename] [-s]</p>

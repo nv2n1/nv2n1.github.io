@@ -1,4 +1,5 @@
 ---
+
 title: "erfl(3)"
 name: "erfl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-erfl/"
 description: "erf, erff, erfl – error function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> erf, erff, erfl &#8211; error function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "tac(1)"
 name: "tac"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tac/"
 description: "tac – concatenate and print files in reverse"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tac &#8211; concatenate and print files in reverse </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tac</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

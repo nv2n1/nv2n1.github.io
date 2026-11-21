@@ -1,4 +1,5 @@
 ---
+
 title: "installcheck(1)"
 name: "installcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-installcheck/"
 description: "installcheck – find out which packages cannot be installed"
 ---
 
-<h2 class="name">NAME</h2>
 <p> installcheck &#8211; find out which packages cannot be installed </p>
 <h2>SYNOPSIS</h2>
 <p> <code>installcheck</code> <i>ARCH</i> <i>REPO1</i> <i>REPO2</i>&#8230; <code>&#8211;nocheck</code> <i>NREPO1</i> <i>NREPO2</i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "funtbl(1)"
 name: "funtbl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funtbl/"
 description: "funtbl – extract a table from Funtools ASCII output"
 ---
 
-<h2>NAME</h2>
 <p> <code>funtbl &#8211; extract a table from Funtools ASCII output</code></p>
 <h2>SYNOPSIS</h2>
 <p> funtable [-c cols] [-h] [-n table] [-p prog] [-s sep] &lt;iname&gt;</p>

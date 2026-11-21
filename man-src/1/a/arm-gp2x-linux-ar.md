@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-ar(1)"
 name: "arm-gp2x-linux-ar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm-gp2x-linux-ar/"
 description: "ar – create, modify, and extract from archives"
 ---
 
-<h2>NAME</h2>
 <p> ar &#8211; create, modify, and extract from archives</p>
 <h2>SYNOPSIS</h2>
 <p> ar [<code>-X32_64</code>] [<code>&#8211;</code>]<i>p</i>[<i>mod</i> [<i>relpos</i>] [<i>count</i>]] <i>archive</i> [<i>member</i>&#8230;]</p>

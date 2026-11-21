@@ -1,4 +1,5 @@
 ---
+
 title: "nntpget(1)"
 name: "nntpget"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nntpget/"
 description: "nntpget – get Usenet articles from a remote NNTP server"
 ---
 
-<h2>NAME</h2>
 <p> nntpget &#8211; get Usenet articles from a remote NNTP server</p>
 <h2>SYNOPSIS</h2>
 <p> <i>nntpget</i> [ <code>-d</code><i> dist</i> ] [ <code>-f</code><i> file</i> ] [ <code>-n</code><i> newsgroups</i> ] [ <code>-t</code><i> timestring</i> ] [ <code>-o</code> ] [ <code>-u</code><i> file</i> ] [ <code>-v</code> ] <i>host</i></p>

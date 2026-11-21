@@ -1,4 +1,5 @@
 ---
+
 title: "ppmglobe(1)"
 name: "ppmglobe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmglobe/"
 description: "ppmglobe – generate strips to glue onto a sphere"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmglobe &#8211; generate strips to glue onto a sphere</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmglobe</code> [<code>-background=</code><i>colorname</i>] [<code>-closeok</code>] <i>stripcount</i> [<i>filename</i>] </p>

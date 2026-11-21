@@ -1,4 +1,5 @@
 ---
+
 title: "aa_edit(3)"
 name: "aa_edit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_edit/"
 description: "aa_edit – Simple interactive line editor."
 ---
 
-<h2>NAME</h2>
 <p> aa_edit &#8211; Simple interactive line editor.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ip(7)"
 name: "ip"
 section: "7"
@@ -6,8 +7,9 @@ letter: "i"
 url: "/docs/linux/man/7-ip/"
 description: "ip – Linux IPv4 protocol implementation"
 ---
+
 <p>ip &#8211; Linux IPv4 protocol implementation </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;sys/socket.h&gt;</code> <br />
  <code>#include &lt;netinet/in.h&gt;</code> <br />
  <code>#include &lt;netinet/ip.h&gt; </code>/* superset of previous */ </p>

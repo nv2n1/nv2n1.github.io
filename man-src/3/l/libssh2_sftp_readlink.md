@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_readlink(3)"
 name: "libssh2_sftp_readlink"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_readlink/"
 description: "libssh2_sftp_readlink – convenience macro for libssh2_sftp_symlink_ex(3)"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_readlink &#8211; convenience macro for <i><a href="/docs/linux/man/3-libssh2_sftp_symlink_ex/">libssh2_sftp_symlink_ex</a>(3)</i></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

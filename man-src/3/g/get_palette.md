@@ -1,4 +1,5 @@
 ---
+
 title: "get_palette(3)"
 name: "get_palette"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_palette/"
 description: "get_palette – Retrieves the entire palette of 256 colors. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_palette &#8211; Retrieves the entire palette of 256 colors. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

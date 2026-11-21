@@ -1,4 +1,5 @@
 ---
+
 title: "scroll_screen(3)"
 name: "scroll_screen"
 section: "3"
@@ -6,9 +7,6 @@ letter: "s"
 url: "/docs/linux/man/3-scroll_screen/"
 ---
 
-
- </p>
-<h2>NAME</h2>
 <p> scroll_screen &#8211; Requests a hardware scroll request. Allegro game programming library.  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

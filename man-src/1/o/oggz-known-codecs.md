@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-known-codecs(1)"
 name: "oggz-known-codecs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz-known-codecs/"
 description: "oggz-known-codecs — List codecs known by this version of Oggz"
 ---
 
-<h2>NAME</h2>
 <p> oggz-known-codecs &#8212; List codecs known by this version of Oggz<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

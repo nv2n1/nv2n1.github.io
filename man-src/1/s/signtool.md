@@ -1,4 +1,5 @@
 ---
+
 title: "signtool(1)"
 name: "signtool"
 section: "1"
@@ -6,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-signtool/"
 description: "signtool – Digitally sign objects and files."
 ---
-<h2 class="name">NAME</h2>
+
 <p> signtool - Digitally sign objects and files. </p>
 <h2>SYNOPSIS</h2>
 <dl>

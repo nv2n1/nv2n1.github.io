@@ -1,4 +1,5 @@
 ---
+
 title: "faldisass(1)"
 name: "faldisass"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-faldisass/"
 description: "faldissass – The Falcon disassembler"
 ---
 
-<h2>NAME</h2>
 <p> faldissass &#8211; The Falcon disassembler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>faldissass [options]</code> <i>module_file.fam</i> </p>

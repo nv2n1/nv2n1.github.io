@@ -1,4 +1,5 @@
 ---
+
 title: "xcfinfo(1)"
 name: "xcfinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xcfinfo/"
 description: "xcfinfo – display information about GIMP xcf files"
 ---
 
-<h2>NAME</h2>
 <p> xcfinfo &#8211; display information about GIMP xcf files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xcfinfo</code> [ <i>options</i> ] <i>filename</i></p>

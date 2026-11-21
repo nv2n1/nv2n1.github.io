@@ -1,4 +1,5 @@
 ---
+
 title: "emelfm2(1)"
 name: "emelfm2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-emelfm2/"
 description: "emelFM2 – a GTK+2 file manager"
 ---
 
-<h2>NAME</h2>
 <p> emelFM2 &#8211; a GTK+2 file manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>emelfm2</code> [<i>OPTION</i>]&#8230;</p>

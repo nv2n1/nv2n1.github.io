@@ -1,4 +1,5 @@
 ---
+
 title: "ftok(3)"
 name: "ftok"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ftok/"
 description: "ftok – convert a pathname and a project identifier to a System V IPC key"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ftok &#8211; convert a pathname and a project identifier to a System V IPC key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

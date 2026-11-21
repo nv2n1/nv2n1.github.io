@@ -1,4 +1,5 @@
 ---
+
 title: "spctoppm(1)"
 name: "spctoppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spctoppm/"
 description: "spctoppm – convert an Atari compressed Spectrum file into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> spctoppm &#8211; convert an Atari compressed Spectrum file into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>spctoppm</code> [<i>spcfile</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_claim(3)"
 name: "ieee1284_claim"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ieee1284_claim/"
 description: "ieee1284_claim – claim access to the port"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ieee1284_claim &#8211; claim access to the port </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

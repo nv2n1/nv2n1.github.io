@@ -1,4 +1,5 @@
 ---
+
 title: "diffindex-download(1)"
 name: "diffindex-download"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-diffindex-download/"
 description: "diffindex-download – Download utility for Debian Contents files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> diffindex-download &#8211; Download utility for Debian Contents files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>diffindex-download</code> [ <code>options</code> ] <code>URL</code> <code>filename</code> </p>

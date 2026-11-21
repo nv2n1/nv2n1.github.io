@@ -1,4 +1,5 @@
 ---
+
 title: "fade_interpolate(3)"
 name: "fade_interpolate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fade_interpolate/"
 description: "fade_interpolate – Calculates a new palette interpolated between two others. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fade_interpolate &#8211; Calculates a new palette interpolated between two others. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

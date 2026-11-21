@@ -1,4 +1,5 @@
 ---
+
 title: "kpasswd(1)"
 name: "kpasswd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kpasswd/"
 description: "kpasswd – change a user’s Kerberos password"
 ---
 
-<h2>NAME</h2>
 <p> kpasswd &#8211; change a user&#8217;s Kerberos password</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kpasswd</code> [<i>principal</i>]</p>

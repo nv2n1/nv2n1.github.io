@@ -1,4 +1,5 @@
 ---
+
 title: "dd_rescue(1)"
 name: "dd_rescue"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dd_rescue/"
 description: "dd_rescue – Data recovery and protection tool"
 ---
 
-<h2>NAME</h2>
 <p> dd_rescue &#8211; Data recovery and protection tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dd_rescue</code> [options] infile outfile<br />

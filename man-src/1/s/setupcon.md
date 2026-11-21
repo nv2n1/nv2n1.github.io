@@ -1,4 +1,5 @@
 ---
+
 title: "setupcon(1)"
 name: "setupcon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setupcon/"
 description: "setupcon – sets up the font and the keyboard on the console"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setupcon &#8211; sets up the font and the keyboard on the console</p>
 <h2>SYNOPSIS</h2>
 <p> <code>setupcon</code> [<i>OPTION</i>]&#8230;&nbsp;[<i>VARIANT</i>] </p>

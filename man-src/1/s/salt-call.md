@@ -1,4 +1,5 @@
 ---
+
 title: "salt-call(1)"
 name: "salt-call"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-salt-call/"
 description: "salt-call – salt-call Documentation"
 ---
 
-<h2>NAME</h2>
 <p> salt-call &#8211; salt-call Documentation</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-children(3)"
 name: "antlr3-children"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-children/"
 description: "ANTLR3_BASE_TREE_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_BASE_TREE_struct &#8211; </p>
 <p> A generic tree implementation with no payload.</p>
 <h2>SYNOPSIS</h2>

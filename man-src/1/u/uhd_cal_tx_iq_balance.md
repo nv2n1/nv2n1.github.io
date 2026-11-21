@@ -1,4 +1,5 @@
 ---
+
 title: "uhd_cal_tx_iq_balance(1)"
 name: "uhd_cal_tx_iq_balance"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uhd_cal_tx_iq_balance/"
 description: "uhd_cal_tx_iq_balance – Generate TX IQ Balance Calibration Table for a UHD Device"
 ---
 
-<h2>NAME</h2>
 <p> uhd_cal_tx_iq_balance &#8211; Generate TX IQ Balance Calibration Table for a UHD Device</p>
 <h2>DESCRIPTION</h2>
 <p> The Universal Software Radio Peripheral Hardware Drivers handle calibration information. This application reduces TX IQ imbalance within the specified frequency range using transmit leakage into the receive path. Remove all external hardware from the RF antenna ports before using this application. This can take up to several minutes with default settings. </p>

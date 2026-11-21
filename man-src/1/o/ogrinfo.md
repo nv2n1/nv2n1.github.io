@@ -1,4 +1,5 @@
 ---
+
 title: "ogrinfo(1)"
 name: "ogrinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ogrinfo/"
 description: "ogrinfo – ogrinfo lists information about an OGR supported data source"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ogrinfo &#8211; ogrinfo lists information about an OGR supported data source </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

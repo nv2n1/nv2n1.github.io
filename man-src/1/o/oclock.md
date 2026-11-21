@@ -1,4 +1,5 @@
 ---
+
 title: "oclock(1)"
 name: "oclock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oclock/"
 description: "oclock – round X clock"
 ---
 
-<h2 class="name">NAME</h2>
 <p> oclock &#8211; round X clock </p>
 <h2>SYNOPSIS</h2>
 <p> <code>oclock</code> [-option &#8230; ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "entangle(1)"
 name: "entangle"
 section: "1"
@@ -6,10 +7,7 @@ letter: "e"
 url: "/docs/linux/man/1-entangle/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- entangle - tethered camera control &amp; capture 
+entangle - tethered camera control &amp; capture 
 
 <h2>SYNOPSIS</h2>
 

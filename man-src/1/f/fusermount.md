@@ -1,4 +1,5 @@
 ---
+
 title: "fusermount(1)"
 name: "fusermount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fusermount/"
 description: "fusermount3 – mount and unmount FUSE filesystems"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>fusermount3</code> &#8211; mount and unmount FUSE filesystems</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fusermount3</code> [<i>OPTIONS</i>] <i>MOUNTPOINT</i> </p>

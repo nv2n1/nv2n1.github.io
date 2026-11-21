@@ -1,4 +1,5 @@
 ---
+
 title: "pcp2graphite(1)"
 name: "pcp2graphite"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp2graphite/"
 description: "pcp2graphite – pcp-to-graphite metrics exporter"
 ---
 
-<h2>NAME</h2>
 <p> <code>pcp2graphite </code> &#8211; pcp-to-graphite metrics exporter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcp2graphite</code> [<code>-h</code> <i>hostspec</i>] [<code>-a</code> <i>archive</i>] [<code>-L</code>] [<code>-O</code> <i>origin</i>] [<code>-T</code> <i>finish</i>] [<code>-s</code> <i>samples</i>] [<code>-t</code> <i>delta</i>] [<code>-g</code> <i>graphitehost</i>] [<code>-p</code> <i>pickleport</i>] [<code>-P</code> <i>textport</i>] [<code>-r</code> <i>pickleprotocol</i>] [<code>-u</code> <i>units</i>] [<code>-m</code> <i>prefix</i>] <i>metricname</i> &#8230;</p>

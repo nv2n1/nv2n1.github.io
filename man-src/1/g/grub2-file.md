@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-file(1)"
 name: "grub2-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub2-file/"
 description: "grub-file — Check if FILE is of specified type."
 ---
 
-<h2>NAME</h2>
 <p> <code>grub-file</code> &#8212; Check if FILE is of specified type. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-file</code> (&#8211;is-i386-xen-pae-domu | &#8211;is-x86_64-xen-domu |</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xqodem(1)"
 name: "xqodem"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xqodem/"
 description: "xqodem – Qodem Terminal Emulator"
 ---
 
-<h2>NAME</h2>
 <p> xqodem &#8211; Qodem Terminal Emulator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xqodem</code> <i>qodem-options</i></p>

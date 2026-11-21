@@ -1,4 +1,5 @@
 ---
+
 title: "pidstat(1)"
 name: "pidstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pidstat/"
 description: "pidstat – Report statistics for Linux tasks."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pidstat &#8211; Report statistics for Linux tasks.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pidstat [ -d ] [ -H ] [ -h ] [ -I ] [ -l ] [ -R ] [ -r ] [ -s ] [ -t ] [ -U [</code> <i>username </i><code>] ] [ -u ] [ -V ] [ -v ] [ -w ] [ -C </code><i>comm </i><code>] [ -G </code><i>process_name</i> <code>] [ &#8211;dec={ 0 | 1 | 2 } ] [ &#8211;human ] [ -p { </code><i>pid</i><code>[,&#8230;]</code> <code>| SELF | ALL } ] [ -T { TASK | CHILD | ALL } ] [</code> <i>interval </i><code>[ </code><i>count </i><code>] ] [ -e </code><i>program</i> <i>args </i><code>]</code> </p>

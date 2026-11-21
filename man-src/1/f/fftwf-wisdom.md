@@ -1,4 +1,5 @@
 ---
+
 title: "fftwf-wisdom(1)"
 name: "fftwf-wisdom"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fftwf-wisdom/"
 description: "fftwf-wisdom – create wisdom (pre-optimized FFTs)"
 ---
 
-<h2>NAME</h2>
 <p> fftwf-wisdom &#8211; create wisdom (pre-optimized FFTs)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fftwf-wisdom</code> [<i>OPTION</i>]&#8230; [<i>SIZE</i>]&#8230;</p>

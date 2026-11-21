@@ -1,4 +1,5 @@
 ---
+
 title: "system(1)"
 name: "system"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-system/"
 description: "system.rootdaemonrc, .rootdaemonrc – access control directives for ROOT daemons"
 ---
 
-<h2 class="name">NAME</h2>
 <p> system.rootdaemonrc, .rootdaemonrc &#8211; access control directives for ROOT daemons </p>
 <h2>LOCATIONS</h2>
 <pre>

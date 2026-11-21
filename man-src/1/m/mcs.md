@@ -1,4 +1,5 @@
 ---
+
 title: "mcs(1)"
 name: "mcs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mcs/"
 description: "mcs – Mono C# Compiler"
 ---
 
-<h2>NAME</h2>
 <p> mcs &#8211; Mono C# Compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mcs </code> [option] [source-files]</p>

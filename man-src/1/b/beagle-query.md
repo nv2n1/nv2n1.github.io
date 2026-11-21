@@ -1,4 +1,5 @@
 ---
+
 title: "beagle-query(1)"
 name: "beagle-query"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beagle-query/"
 description: "beagle-query – search your personal information space"
 ---
 
-<h2>NAME</h2>
 <p> beagle-query &#8211; search your personal information space</p>
 <h2>SYNOPSIS</h2>
 <p> <code>beagle-query</code> [<i>options</i>] <i>query</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "iv_init(3)"
 name: "iv_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_init/"
 description: "iv_init, iv_deinit, iv_inited – initialise and deinitialise ivykis"
 ---
 
-<h2>NAME</h2>
 <p> iv_init, iv_deinit, iv_inited &#8211; initialise and deinitialise ivykis</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>

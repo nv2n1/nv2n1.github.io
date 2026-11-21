@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_find_structure_from_oid(3)"
 name: "asn1_find_structure_from_oid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-asn1_find_structure_from_oid/"
 description: "asn1_find_structure_from_oid – API function"
 ---
 
-<h2>NAME</h2>
 <p> asn1_find_structure_from_oid &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>

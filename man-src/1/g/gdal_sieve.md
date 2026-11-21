@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_sieve(1)"
 name: "gdal_sieve"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdal_sieve/"
 description: "gdal_sieve – gdal_sieve.py removes small raster polygons"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdal_sieve &#8211; gdal_sieve.py removes small raster polygons </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

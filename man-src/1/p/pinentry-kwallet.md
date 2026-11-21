@@ -1,4 +1,5 @@
 ---
+
 title: "pinentry-kwallet(1)"
 name: "pinentry-kwallet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pinentry-kwallet/"
 description: "pinentry-kwallet – kwallet-based pass-phrase dialog for use with GnuPG"
 ---
 
-<h2>NAME</h2>
 <p> <code>pinentry-kwallet</code> &#8211; kwallet-based pass-phrase dialog for use with GnuPG</p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>q</code> ] [<i>options</i> ]</p>

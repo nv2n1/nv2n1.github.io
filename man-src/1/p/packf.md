@@ -1,4 +1,5 @@
 ---
+
 title: "packf(1)"
 name: "packf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-packf/"
 description: "packf – pack messages in nmh folder into a single file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> packf &#8211; pack messages in nmh folder into a single file </p>
 <h2>SYNOPSIS</h2>
 <dl>

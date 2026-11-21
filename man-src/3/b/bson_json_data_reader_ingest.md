@@ -1,4 +1,5 @@
 ---
+
 title: "bson_json_data_reader_ingest(3)"
 name: "bson_json_data_reader_ingest"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_json_data_reader_ingest/"
 description: "bson_json_data_reader_ingest() – Feed data to a memory based json reader."
 ---
 
-<h2>NAME</h2>
 <p> bson_json_data_reader_ingest() &#8211; Feed data to a memory based json reader.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

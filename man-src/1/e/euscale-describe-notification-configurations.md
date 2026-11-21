@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-notification-configurations(1)"
 name: "euscale-describe-notification-configurations"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-notification-configurations/"
 description: "euscale-describe-notification-configurations – Describe notification actions associated with auto-scaling groups"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-notification-configurations &#8211; Describe notification actions associated with auto-scaling groups</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-notification-configurations [&#8211;show-empty-fields]</p>

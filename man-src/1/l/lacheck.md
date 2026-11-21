@@ -1,4 +1,5 @@
 ---
+
 title: "lacheck(1)"
 name: "lacheck"
 section: "1"
@@ -6,7 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-lacheck/"
 description: "lacheck – A consistency checker for LaTeX documents."
 ---
-<h2 class="name">NAME</h2>
+
 <p> lacheck - A consistency checker for LaTeX documents. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lacheck </code> <i>filename</i> [ <i>.tex</i> ]  </p>

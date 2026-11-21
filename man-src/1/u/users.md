@@ -1,4 +1,5 @@
 ---
+
 title: "users(1)"
 name: "users"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-users/"
 description: "users – print the user names of users currently logged in to the current host"
 ---
 
-<h2 class="name">NAME</h2>
 <p> users &#8211; print the user names of users currently logged in to the current host </p>
 <h2>SYNOPSIS</h2>
 <p> <code>users</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]</p>

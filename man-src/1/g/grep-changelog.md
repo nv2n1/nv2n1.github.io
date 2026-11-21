@@ -1,4 +1,5 @@
 ---
+
 title: "grep-changelog(1)"
 name: "grep-changelog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grep-changelog/"
 description: "grep-changelog – print ChangeLog entries matching criteria"
 ---
 
-<h2>NAME</h2>
 <p> grep-changelog &#8211; print ChangeLog entries matching criteria</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grep-changelog</code> [<i>options</i>] [<i>CHANGELOG</i>&#8230;]</p>

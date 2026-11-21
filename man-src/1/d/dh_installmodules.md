@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installmodules(1)"
 name: "dh_installmodules"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installmodules/"
 description: "dh_installmodules – register kernel modules"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installmodules &#8211; register kernel modules </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installmodules</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8211;name=</code><i>name</i>]</p>

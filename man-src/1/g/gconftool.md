@@ -1,4 +1,5 @@
 ---
+
 title: "gconftool(1)"
 name: "gconftool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gconftool/"
 description: "gconftool-2 – GNOME configuration tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gconftool-2 &#8211; GNOME configuration tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gconftool-2</code> [-?] [-?|&#8211;help] [&#8211;usage] [-s|&#8211;set] [-g|&#8211;get] [&#8211;set-schema] [-u|&#8211;unset] [&#8211;recursive-unset] [-a|&#8211;all-entries] [&#8211;all-dirs] [&#8211;dump] [&#8211;load=STRING] [-R|&#8211;recursive-list] [&#8211;dir-exists=STRING] [&#8211;shutdown] [-p|&#8211;ping] [&#8211;spawn] [-t|&#8211;type int|bool|float|string|list|pair] [-T|&#8211;get-type] [&#8211;get-list-size] [&#8211;get-list-element] [&#8211;list-type=int|bool|float|string] [&#8211;car-type=int|bool|float|string] [&#8211;cdr-type=int|bool|float|string] [&#8211;short-desc=DESCRIPTION] [&#8211;long-desc=DESCRIPTION] [&#8211;owner=OWNER] [&#8211;install-schema-file=FILENAME] [&#8211;config-source=SOURCE] [&#8211;direct] [&#8211;makefile-install-rule] [&#8211;makefile-uninstall-rule] [&#8211;break-key] [&#8211;break-directory] [&#8211;short-docs] [&#8211;long-docs] [&#8211;get-schema-name] [&#8211;apply-schema] [&#8211;unapply-schema] [&#8211;get-default-source] [-v|&#8211;version]</p>

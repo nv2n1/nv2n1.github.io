@@ -1,4 +1,5 @@
 ---
+
 title: "calendar(1)"
 name: "calendar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-calendar/"
 description: "calendar – reminder service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>calendar</code> &#8211; reminder service </p>
 <h2>SYNOPSIS</h2>
 <p> <code>calendar</code> [-<code>abw</code> ] [-<code>A </code><i>num</i> ] [-<code>B </code><i>num</i> ] [-<code>l </code><i>num</i> ] [-<code>e </code><i>num</i> ] [-<code>f </code><i>calendarfile</i> ] [-<code>t </code>[[[<i>cc </i><i>yy </i><i>mm </i><i>dd</i> ] ] ] ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "kmplot(1)"
 name: "kmplot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kmplot/"
 description: "kmplot – mathematical function plotter"
 ---
 
-<h2>NAME</h2>
 <p> kmplot &#8211; mathematical function plotter</p>
 <h2>SYNOPSIS</h2>
 <dl>

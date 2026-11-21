@@ -1,4 +1,5 @@
 ---
+
 title: "virt-list-filesystems(1)"
 name: "virt-list-filesystems"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-list-filesystems/"
 description: "virt-list-filesystems – List filesystems in a virtual machine or disk image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-list-filesystems &#8211; List filesystems in a virtual machine or disk image </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

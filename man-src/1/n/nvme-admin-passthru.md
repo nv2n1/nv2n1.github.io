@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-admin-passthru(1)"
 name: "nvme-admin-passthru"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-admin-passthru/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-admin-passthru - Submit an arbitrary admin command, return results 
+nvme-admin-passthru - Submit an arbitrary admin command, return results 
 
 <h2>SYNOPSIS</h2>
 

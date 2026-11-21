@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-subnet(1)"
 name: "euca-create-subnet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-subnet/"
 description: "euca-create-subnet – Create a new VPC subnet"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-subnet &#8211; Create a new VPC subnet</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-subnet <code>-c</code> VPCID [-z ZONE] [&#8211;show-empty-fields] [-U URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "namazu(1)"
 name: "namazu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-namazu/"
 description: "namazu – a search program of Namazu"
 ---
 
-<h2>NAME</h2>
 <p> namazu &#8211; a search program of Namazu</p>
 <h2>SYNOPSIS</h2>
 <p> <code>namazu</code> [<i>options</i>] <i>&lt;query&gt; </i>[<i>index</i>]&#8230;</p>

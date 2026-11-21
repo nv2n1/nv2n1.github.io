@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_cancel_callback(3)"
 name: "getdns_cancel_callback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_cancel_callback/"
 description: "getdns_cancel_callback — cancel an outstanding asyn getdns request"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_cancel_callback</code> &#8212; cancel an outstanding asyn getdns request </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

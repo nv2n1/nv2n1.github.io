@@ -1,4 +1,5 @@
 ---
+
 title: "django-admin(1)"
 name: "django-admin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-django-admin/"
 description: "django-admin – Utility script for the Django Web framework"
 ---
 
-<h2>NAME</h2>
 <p> django-admin &#8211; Utility script for the Django Web framework </p>
 <p> <code>django-admin</code> is Django&#8217;s command-line utility for administrative tasks. This document outlines all it can do. </p>
 <p> Prior to Django 1.7, <code>django-admin</code> was only installed as <code>django-admin.py</code>. </p>

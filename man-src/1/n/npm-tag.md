@@ -1,4 +1,5 @@
 ---
+
 title: "npm-tag(1)"
 name: "npm-tag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-tag/"
 description: "npm-tag – Tag a published version"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-tag</code> &#8211; Tag a published version </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

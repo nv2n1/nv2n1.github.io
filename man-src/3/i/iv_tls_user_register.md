@@ -1,4 +1,5 @@
 ---
+
 title: "iv_tls_user_register(3)"
 name: "iv_tls_user_register"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_tls_user_register/"
 description: "iv_tls_user_register, iv_tls_user_ptr – thread-local storage handling for ivykis modules"
 ---
 
-<h2>NAME</h2>
 <p> iv_tls_user_register, iv_tls_user_ptr &#8211; thread-local storage handling for ivykis modules</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_tls.h&gt;</code> </p>

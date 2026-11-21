@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-install-debuginfo(1)"
 name: "abrt-action-install-debuginfo"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-install-debuginfo/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-install-debuginfo - Install debuginfos for build-ids 
+abrt-action-install-debuginfo - Install debuginfos for build-ids 
 
 <h2>SYNOPSIS</h2>
 

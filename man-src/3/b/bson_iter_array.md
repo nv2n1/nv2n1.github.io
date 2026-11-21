@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_array(3)"
 name: "bson_iter_array"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_array/"
 description: "bson_iter_array() – The bson_iter_array() function shall retrieve the raw buffer of a sub-array from iter. iter MUST be on an element that is of type BSON_TYPE_ARRAY. This can be verified with bson..."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_array() &#8211; The bson_iter_array() function shall retrieve the raw buffer of a sub-array from iter. iter MUST be on an element that is of type BSON_TYPE_ARRAY. This can be verified with bson_iter_type() or the BSON_ITER_HOLDS_ARRAY() macro.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

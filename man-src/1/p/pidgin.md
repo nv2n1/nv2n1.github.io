@@ -1,4 +1,5 @@
 ---
+
 title: "pidgin(1)"
 name: "pidgin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pidgin/"
 description: "pidgin – Instant Messaging client"
 ---
 
-<h2>NAME</h2>
 <p> pidgin &#8211; Instant Messaging client</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-network-create(1)"
 name: "docker-latest-network-create"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-network-create/"
 description: "docker-network-create – create a new network"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-network-create &#8211; create a new network </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker network create</code> [<code>&#8211;aux-address</code>=<i>map[]</i>] [<code>-d</code>|<code>&#8211;driver</code>=<i>DRIVER</i>] [<code>&#8211;gateway</code>=<i>[]</i>] [<code>&#8211;help</code>] [<code>&#8211;internal</code>] [<code>&#8211;ip-range</code>=<i>[]</i>] [<code>&#8211;ipam-driver</code>=<i>default</i>] [<code>&#8211;ipam-opt</code>=<i>map[]</i>] [<code>&#8211;ipv6</code>] [<code>&#8211;label</code>[=<i>[]</i>]] [<code>-o</code>|<code>&#8211;opt</code>=<i>map[]</i>] [<code>&#8211;subnet</code>=<i>[]</i>] NETWORK-NAME </p>

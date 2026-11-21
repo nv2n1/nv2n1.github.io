@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-keypair(1)"
 name: "euca-delete-keypair"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-keypair/"
 description: "euca-delete-keypair – Delete a key pair"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-keypair &#8211; Delete a key pair</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-keypair [&#8211;show-empty-fields] [-U URL]</p>

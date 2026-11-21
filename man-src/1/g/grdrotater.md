@@ -1,4 +1,5 @@
 ---
+
 title: "grdrotater(1)"
 name: "grdrotater"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdrotater/"
 description: "grdrotater – Finite rotation reconstruction of geographic grid"
 ---
 
-<h2>NAME</h2>
 <p> grdrotater &#8211; Finite rotation reconstruction of geographic grid</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdrotate</code> <i>ingrdfile</i> <i>rot_file</i>|<i>lon</i>/<i>lat</i>/<i>angle</i> <i>outgrdfile</i> [ <i>rotoutline</i> ] [ <i>polygonfile</i> ] [ ] [ <i>region</i> ] [ ] [ <i>ages</i> ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

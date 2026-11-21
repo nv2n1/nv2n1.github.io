@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_double(3)"
 name: "bson_append_double"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_double/"
 description: "bson_append_double() – The bson_append_double() function shall append a new element to a bson document of type double."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_double() &#8211; The bson_append_double() function shall append a new element to a bson document of type double.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

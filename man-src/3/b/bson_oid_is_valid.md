@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_is_valid(3)"
 name: "bson_oid_is_valid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_oid_is_valid/"
 description: "bson_oid_is_valid() – Checks if a string containing a hex encoded string is a valid BSON ObjectID."
 ---
 
-<h2>NAME</h2>
 <p> bson_oid_is_valid() &#8211; Checks if a string containing a hex encoded string is a valid BSON ObjectID.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

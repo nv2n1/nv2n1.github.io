@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-stack(1)"
 name: "trace-cmd-stack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trace-cmd-stack/"
 description: "trace-cmd-stack – read, enable or disable Ftrace Linux kernel stack tracing."
 ---
 
-<h2 class="name">NAME</h2>
 <p> trace-cmd-stack &#8211; read, enable or disable Ftrace Linux kernel stack tracing. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd stack</code></p>

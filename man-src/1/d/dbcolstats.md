@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolstats(1)"
 name: "dbcolstats"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbcolstats/"
 description: "dbcolstats – compute statistics on a fsdb column"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbcolstats &#8211; compute statistics on a fsdb column </p>
 <h2>SYNOPSIS</h2>
 <p> dbcolstats [-amS] [-c ConfidenceFraction] [-q NumberOfQuantiles] column</p>

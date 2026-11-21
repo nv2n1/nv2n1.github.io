@@ -1,4 +1,5 @@
 ---
+
 title: "ps2pdf12(1)"
 name: "ps2pdf12"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ps2pdf12/"
 description: "ps2pdf – Convert PostScript to PDF using ghostscript ps2pdf12 – Convert PostScript to PDF 1.2 (Acrobat 3-and-later compatible) using ghostscript ps2pdf13 – Convert PostScript to PDF 1.3 (Acrobat 4-..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ps2pdf &#8211; Convert PostScript to PDF using ghostscript<br />
  ps2pdf12 &#8211; Convert PostScript to PDF 1.2 (Acrobat 3-and-later compatible) using ghostscript<br />
  ps2pdf13 &#8211; Convert PostScript to PDF 1.3 (Acrobat 4-and-later compatible) using ghostscript<br />

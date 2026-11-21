@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_dr_domain_sync(3)"
 name: "mlx5dv_dr_domain_sync"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_dr_domain_sync/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_dr_domain_create, mlx5dv_dr_domain_sync, mlx5dv_dr_domain_destroy - Manage flow domains 
+mlx5dv_dr_domain_create, mlx5dv_dr_domain_sync, mlx5dv_dr_domain_destroy - Manage flow domains 
 
  mlx5dv_dr_table_create, mlx5dv_dr_table_destroy - Manage flow tables 
 

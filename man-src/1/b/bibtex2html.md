@@ -1,4 +1,5 @@
 ---
+
 title: "bibtex2html(1)"
 name: "bibtex2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bibtex2html/"
 description: "BibTeX2HTML – A translator of bibliography databases into HTML"
 ---
 
-<h2 class="name">NAME</h2>
 <p> BibTeX2HTML &#8211; A translator of bibliography databases into HTML</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bibtex2html &lt;options&gt; [filename]</code> </p>

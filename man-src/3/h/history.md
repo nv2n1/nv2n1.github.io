@@ -1,4 +1,5 @@
 ---
+
 title: "history(3)"
 name: "history"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-history/"
 description: "history – GNU History Library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> history &#8211; GNU History Library </p>
 <h2>COPYRIGHT</h2>
 <p> The GNU History Library is Copyright (C) 1989-2011 by the Free Software Foundation, Inc.</p>

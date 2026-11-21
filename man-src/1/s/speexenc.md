@@ -1,4 +1,5 @@
 ---
+
 title: "speexenc(1)"
 name: "speexenc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-speexenc/"
 description: "speexenc – The reference implementation speex encoder."
 ---
 
-<h2>NAME</h2>
 <p> speexenc &#8211; The reference implementation speex encoder.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>speexenc</code> [<i>options</i>] <i>input_file output_file</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_call(3)"
 name: "ck_epoch_call"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_epoch_call/"
 description: "ck_epoch_call – defer function execution until a grace period"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_epoch_call</code> &#8211; defer function execution until a grace period</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

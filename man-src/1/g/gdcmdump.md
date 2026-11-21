@@ -1,4 +1,5 @@
 ---
+
 title: "gdcmdump(1)"
 name: "gdcmdump"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gdcmdump/"
 description: "gdcmdump – .TH \"gdcmdump\" 1 \"Fri Oct 29 2010\" \"Version 2.0.16\" \"GDCM\""
 ---
-<h2 class="name">NAME</h2>
+
 <p> gdcmdump - .TH &quot;gdcmdump&quot; 1 &quot;Fri Oct 29 2010&quot; &quot;Version 2.0.16&quot; &quot;GDCM&quot; </p>
 <h2 class="name">NAME</h2>
 <p> gdcmdump - .SH &quot;SYNOPSIS&quot; </p>

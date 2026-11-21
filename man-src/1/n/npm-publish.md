@@ -1,4 +1,5 @@
 ---
+
 title: "npm-publish(1)"
 name: "npm-publish"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-publish/"
 description: "npm-publish – Publish a package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-publish</code> &#8211; Publish a package </p>
 <h3>Synopsis</h3>
 <dl>

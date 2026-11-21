@@ -1,4 +1,5 @@
 ---
+
 title: "euca-cancel-bundle-task(1)"
 name: "euca-cancel-bundle-task"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-cancel-bundle-task/"
 description: "euca-cancel-bundle-task – Cancel an instance bundling operation"
 ---
 
-<h2>NAME</h2>
 <p> euca-cancel-bundle-task &#8211; Cancel an instance bundling operation</p>
 <h2>SYNOPSIS</h2>
 <p> euca-cancel-bundle-task [&#8211;show-empty-fields] [-U URL]</p>

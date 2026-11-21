@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3debugeventlistener(3)"
 name: "antlr3debugeventlistener"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3debugeventlistener/"
 description: "include/antlr3debugeventlistener.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> include/antlr3debugeventlistener.h &#8211; </p>
 <p> The definition of all debugging events that a recognizer can trigger.</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "pgpewrap(1)"
 name: "pgpewrap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgpewrap/"
 description: "pgpewrap – Mutt command line munging tool"
 ---
 
-<h2>NAME</h2>
 <p> pgpewrap &#8211; Mutt command line munging tool </p>
 <h2>SYNTAX</h2>
 <p> <code>pgpewrap</code> [ <code>flags</code> ] &#8212; <code>prefix</code> [ <code>recipients</code> ] </p>

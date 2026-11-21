@@ -1,4 +1,5 @@
 ---
+
 title: "mknmz(1)"
 name: "mknmz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mknmz/"
 description: "mknmz – an indexer of Namazu"
 ---
 
-<h2>NAME</h2>
 <p> mknmz &#8211; an indexer of Namazu</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mknmz</code> [<i>options</i>] <i>&lt;target&gt;</i>&#8230;</p>

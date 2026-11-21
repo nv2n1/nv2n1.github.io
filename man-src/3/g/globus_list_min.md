@@ -1,4 +1,5 @@
 ---
+
 title: "globus_list_min(3)"
 name: "globus_list_min"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_list_min/"
 description: "globus_list –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_list &#8211; </p>
 <p> List data type.</p>
 <h2>SYNOPSIS</h2>

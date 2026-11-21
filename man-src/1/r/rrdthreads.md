@@ -1,4 +1,5 @@
 ---
+
 title: "rrdthreads(1)"
 name: "rrdthreads"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rrdthreads/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- rrdthreads - Provisions for linking the RRD library to use in multi-threaded programs 
+rrdthreads - Provisions for linking the RRD library to use in multi-threaded programs 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-nat-gateway(1)"
 name: "euca-delete-nat-gateway"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-nat-gateway/"
 description: "euca-delete-nat-gateway – Delete a VPC NAT gateway"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-nat-gateway &#8211; Delete a VPC NAT gateway</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-nat-gateway [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] NGATEWAY</p>

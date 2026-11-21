@@ -1,4 +1,5 @@
 ---
+
 title: "aa_editkey(3)"
 name: "aa_editkey"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_editkey/"
 description: "aa_editkey – Notify the line editor about keypress."
 ---
 
-<h2>NAME</h2>
 <p> aa_editkey &#8211; Notify the line editor about keypress.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

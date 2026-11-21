@@ -1,4 +1,5 @@
 ---
+
 title: "xlogo(1)"
 name: "xlogo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xlogo/"
 description: "xlogo – X Window System logo"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xlogo &#8211; X Window System logo </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xlogo</code> [-<i>toolkitoption</i> &#8230;]</p>

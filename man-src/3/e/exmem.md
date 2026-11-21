@@ -1,4 +1,5 @@
 ---
+
 title: "exmem(3)"
 name: "exmem"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exmem/"
 description: "exmem – Drawing onto memory bitmaps and then blitting them to the screen. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exmem &#8211; Drawing onto memory bitmaps and then blitting them to the screen. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

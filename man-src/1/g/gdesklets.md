@@ -1,4 +1,5 @@
 ---
+
 title: "gdesklets(1)"
 name: "gdesklets"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdesklets/"
 description: "gDesklets – provides an advanced architecture for desktop applets"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gDesklets</code> &#8211; provides an advanced architecture for desktop applets </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gdesklets open [ display ]</code> </p>

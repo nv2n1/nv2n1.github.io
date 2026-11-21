@@ -1,4 +1,5 @@
 ---
+
 title: "remmina(1)"
 name: "remmina"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-remmina/"
 description: "remmina – Remmina the GTK+ Remote Desktop Client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>remmina</code> &#8211; Remmina the GTK+ Remote Desktop Client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>remmina</code> [-<code>a|i|n|q|v</code> ] [-<code>c </code><i>FILE</i> ] [-<code>e </code><i>FILE</i> ] [-<code>p </code><i>TABINDEX</i> ] [-<code>s </code><i>SERVER</i> ] [-<code>t </code><i>PROTOCOL</i> ] [-<code>x </code><i>PLUGIN</i> ] [-<code>-update-profile</code> ] [-<code>-set-option </code><i>OPTION[=VALUE]</i> ] [-<code>-display </code><i>DISPLAY</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "jack_iodelay(1)"
 name: "jack_iodelay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jack_iodelay/"
 description: "jack_iodelay – JACK toolkit client to measure roundtrip latency"
 ---
 
-<h2>NAME</h2>
 <p> jack_iodelay &#8211; JACK toolkit client to measure roundtrip latency</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jack_iodelay</code></p>

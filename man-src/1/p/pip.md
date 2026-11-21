@@ -1,4 +1,5 @@
 ---
+
 title: "pip(1)"
 name: "pip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pip/"
 description: "pip – A tool for installing and managing Python packages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pip &#8211; A tool for installing and managing Python packages </p>
 <h2>SYNOPSIS</h2>
 <p> pip &lt;command&gt; [options] </p>

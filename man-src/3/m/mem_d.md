@@ -1,4 +1,5 @@
 ---
+
 title: "mem_d(3)"
 name: "mem_d"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mem_d/"
 description: "mem_d – AA-lib memory driver."
 ---
 
-<h2>NAME</h2>
 <p> mem_d &#8211; AA-lib memory driver.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

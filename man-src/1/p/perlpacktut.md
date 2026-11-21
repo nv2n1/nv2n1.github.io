@@ -1,4 +1,5 @@
 ---
+
 title: "perlpacktut(1)"
 name: "perlpacktut"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlpacktut/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlpacktut - tutorial on &quot;pack&quot; and &quot;unpack&quot; 
+perlpacktut - tutorial on &quot;pack&quot; and &quot;unpack&quot; 
 
 <h2>DESCRIPTION</h2>
 

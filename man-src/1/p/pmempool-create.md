@@ -1,4 +1,5 @@
 ---
+
 title: "pmempool-create(1)"
 name: "pmempool-create"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmempool-create/"
 description: "pmempool-create – Create Persistent Memory Pool of specified type"
 ---
 
-<h2>NAME</h2>
 <p> pmempool-create &#8211; Create Persistent Memory Pool of specified type</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmempool create</code> [&lt;options&gt;] [&lt;type&gt;] [&lt;bsize&gt;] &lt;file&gt;</p>

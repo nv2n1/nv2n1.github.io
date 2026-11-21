@@ -1,4 +1,5 @@
 ---
+
 title: "pq2-cache(1)"
 name: "pq2-cache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pq2-cache/"
 description: "pq2-cache – display or clear the local cache content of a remote dataset meta-repository based on ROOT files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pq2-cache &#8211; display or clear the local cache content of a remote dataset meta-repository based on ROOT files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pq2-cache</code> [action] [options] [datasets]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "uptime(1)"
 name: "uptime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uptime/"
 description: "uptime – Tell how long the system has been running."
 ---
 
-<h2 class="name">NAME</h2>
 <p> uptime &#8211; Tell how long the system has been running. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>uptime</code> [<i>options</i>]</p>

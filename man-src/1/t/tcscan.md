@@ -1,4 +1,5 @@
 ---
+
 title: "tcscan(1)"
 name: "tcscan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcscan/"
 description: "tcscan – scan multimedia streams from medium and print information on the standard output"
 ---
 
-<h2>NAME</h2>
 <p> tcscan &#8211; scan multimedia streams from medium and print information on the standard output</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "xmltest(1)"
 name: "xmltest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmltest/"
 description: "xmltest – Test script to send CIM-XML (via wbemcat) to CIMOM and compare to known results"
 ---
 
-<h2>NAME</h2>
 <p> xmltest &#8211; Test script to send CIM-XML (via wbemcat) to CIMOM and compare to known results</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmltest</code> [<i>FILE</i><code>] </code></p>

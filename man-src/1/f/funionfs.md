@@ -1,4 +1,5 @@
 ---
+
 title: "funionfs(1)"
 name: "funionfs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funionfs/"
 description: "funionfs – user-space directory concatenation."
 ---
 
-<h2>NAME</h2>
 <p> funionfs &#8211; user-space directory concatenation.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>funionfs </code> <i>upper_dir mountpoint [ option ] &#8230;</i></p>

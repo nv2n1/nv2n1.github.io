@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_pkt_free(3)"
 name: "ldns_pkt_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_pkt_free/"
 description: "ldns_pkt_new, ldns_pkt_free, ldns_pkt_print, ldns_pkt_query_new, ldns_pkt_query_new_frm_str, ldns_pkt_reply_type"
 ---
 
-<h2>NAME</h2>
 <p> ldns_pkt_new, ldns_pkt_free, ldns_pkt_print, ldns_pkt_query_new, ldns_pkt_query_new_frm_str, ldns_pkt_reply_type </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

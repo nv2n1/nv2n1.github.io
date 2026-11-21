@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_knownhost_get(3)"
 name: "libssh2_knownhost_get"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_knownhost_get/"
 description: "libssh2_knownhost_get – get a known host off the collection of known hosts"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_knownhost_get &#8211; get a known host off the collection of known hosts</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

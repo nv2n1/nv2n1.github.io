@@ -1,4 +1,5 @@
 ---
+
 title: "xmessage(1)"
 name: "xmessage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmessage/"
 description: "xmessage – display a message or query in a window (X-based /bin/echo)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xmessage &#8211; display a message or query in a window (X-based /bin/echo) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmessage</code> [ <code>-buttons</code> <i>label1</i>[<code>:</code>value1]<code>,</code>label2[<code>:</code>value2]<code>,</code> &#8230; ] [ <i>options</i> ] <code>-file</code> <i>filename</i><br />

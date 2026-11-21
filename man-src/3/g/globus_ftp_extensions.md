@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_extensions(3)"
 name: "globus_ftp_extensions"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_extensions/"
 description: "globus_ftp_extensions – GridFTP: Protocol Extensions to FTP for the Grid"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_ftp_extensions &#8211; GridFTP: Protocol Extensions to FTP for the Grid</p>
 <h2>Introduction</h2>
 <p> This section defines extensions to the FTP specification STD 9, RFC 959, <code>FILE TRANSFER PROTOCOL (FTP)</code> (October 1985) These extensions provide striped data transfer, parallel data transfer, extended data transfer, data buffer size configuration, and data channel authentication. </p>

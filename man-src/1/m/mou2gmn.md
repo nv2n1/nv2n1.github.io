@@ -1,4 +1,5 @@
 ---
+
 title: "mou2gmn(1)"
 name: "mou2gmn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mou2gmn/"
 description: "mb2gmn – convert MapBlast files into GPSManager files"
 ---
 
-<h2>NAME</h2>
 <p> mb2gmn &#8211; convert MapBlast files into GPSManager files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mb2gmn</code> <i>[port]</i> </p>

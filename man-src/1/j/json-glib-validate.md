@@ -1,4 +1,5 @@
 ---
+
 title: "json-glib-validate(1)"
 name: "json-glib-validate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-json-glib-validate/"
 description: "json-glib-validate – JSON-GLib validation tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> json-glib-validate &#8211; JSON-GLib validation tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

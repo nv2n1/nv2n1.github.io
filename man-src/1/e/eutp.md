@@ -1,4 +1,5 @@
 ---
+
 title: "eutp(1)"
 name: "eutp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eutp/"
 description: "eutp – EuroBraille file transferring"
 ---
 
-<h2 class="name">NAME</h2>
 <p> eutp &#8211; EuroBraille file transferring </p>
 <h2>SYNOPSIS</h2>
 <p> eutp</p>

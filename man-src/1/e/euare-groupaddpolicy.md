@@ -1,4 +1,5 @@
 ---
+
 title: "euare-groupaddpolicy(1)"
 name: "euare-groupaddpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-groupaddpolicy/"
 description: "euare-groupaddpolicy – Add a new policy to a group. To add more complex policies than this tool supports, see euare-groupuploadpolicy(1)."
 ---
 
-<h2>NAME</h2>
 <p> euare-groupaddpolicy &#8211; Add a new policy to a group. To add more complex policies than this tool supports, see <a href="/docs/linux/man/1-euare-groupuploadpolicy/">euare-groupuploadpolicy</a>(1).</p>
 <h2>SYNOPSIS</h2>
 <p> euare-groupaddpolicy <code>-p</code> POLICY <code>-e</code> {Allow,Deny} <code>-a</code> ACTIONS <code>-r</code> RESOURCES</p>

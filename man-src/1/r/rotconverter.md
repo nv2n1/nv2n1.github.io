@@ -1,4 +1,5 @@
 ---
+
 title: "rotconverter(1)"
 name: "rotconverter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rotconverter/"
 description: "rotconverter – Manipulate total reconstruction and stage rotations"
 ---
 
-<h2>NAME</h2>
 <p> rotconverter &#8211; Manipulate total reconstruction and stage rotations</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rotconverter</code> [ <code>+</code>|<code>&#8211;</code> ] <i>rotA</i> [ <code>+</code>|<code>&#8211;</code> <i>rotB</i> ] [ <code>+</code>|<code>&#8211;</code> <i>rotC</i> ] &#8230; [ ] [ ] [ [<i>fact</i>] ] [ <i>out</i> ] [ ] [ ] [ ] [ ] [ ] [ [<i>level</i>] ] [ <code>-h</code><i>&lt;headers&gt;</i> ] </p>

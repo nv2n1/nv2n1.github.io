@@ -1,4 +1,5 @@
 ---
+
 title: "bzegrep(1)"
 name: "bzegrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bzegrep/"
 description: "bzgrep, bzfgrep, bzegrep – search possibly bzip2 compressed files for a regular expression"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bzgrep, bzfgrep, bzegrep &#8211; search possibly bzip2 compressed files for a regular expression </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bzgrep</code> [ grep_options ] <code>[&nbsp;-e&nbsp;]</code><i> pattern</i> <i>filename</i>&#8230;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "signver(1)"
 name: "signver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-signver/"
 description: "signver – Verify a detached PKCS#7 signature for a file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> signver &#8211; Verify a detached PKCS#7 signature for a file. </p>
 <h2>SYNOPSIS</h2>
 <dl>

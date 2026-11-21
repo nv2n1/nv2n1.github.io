@@ -1,4 +1,5 @@
 ---
+
 title: "innetgr(3)"
 name: "innetgr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-innetgr/"
 description: "setnetgrent, endnetgrent, getnetgrent, getnetgrent_r, innetgr – handle network group entries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setnetgrent, endnetgrent, getnetgrent, getnetgrent_r, innetgr &#8211; handle network group entries </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

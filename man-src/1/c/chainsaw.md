@@ -1,4 +1,5 @@
 ---
+
 title: "chainsaw(1)"
 name: "chainsaw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chainsaw/"
 description: "chainsaw – GUI based log viewer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chainsaw &#8211; GUI based log viewer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>chainsaw</code> </p>

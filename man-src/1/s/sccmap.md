@@ -1,4 +1,5 @@
 ---
+
 title: "sccmap(1)"
 name: "sccmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sccmap/"
 description: "sccmap – extract strongly connected components of directed graphs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sccmap &#8211; extract strongly connected components of directed graphs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sccmap</code> [<code>-dsv</code>] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>

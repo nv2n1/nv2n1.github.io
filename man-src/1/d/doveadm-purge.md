@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-purge(1)"
 name: "doveadm-purge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-purge/"
 description: "doveadm-purge – Remove messages with refcount=0 from mdbox files"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-purge &#8211; Remove messages with refcount=0 from mdbox files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>purge</code> [<code>-S</code> <i>socket_path</i>]<br />

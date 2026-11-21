@@ -1,4 +1,5 @@
 ---
+
 title: "libstatgrab(3)"
 name: "libstatgrab"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libstatgrab/"
 description: "statgrab, libstatgrab – get system statistics"
 ---
 
-<h2>NAME</h2>
 <p> statgrab, libstatgrab &#8211; get system statistics</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

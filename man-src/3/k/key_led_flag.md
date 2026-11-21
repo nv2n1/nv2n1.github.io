@@ -1,4 +1,5 @@
 ---
+
 title: "key_led_flag(3)"
 name: "key_led_flag"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-key_led_flag/"
 description: "key_led_flag – Flag to prevent the keyboard LEDs from being updated. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> key_led_flag &#8211; Flag to prevent the keyboard LEDs from being updated. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

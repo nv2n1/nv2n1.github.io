@@ -1,4 +1,5 @@
 ---
+
 title: "nfprofile(1)"
 name: "nfprofile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfprofile/"
 description: "nfprofile – netflow profiler"
 ---
 
-<h2>NAME</h2>
 <p> nfprofile &#8211; netflow profiler</p>
 <h2>SYNOPSIS</h2>
 <dl>

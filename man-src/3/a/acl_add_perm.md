@@ -1,4 +1,5 @@
 ---
+
 title: "acl_add_perm(3)"
 name: "acl_add_perm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_add_perm/"
 description: "acl_add_perm – add a permission to an ACL permission set"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_add_perm</code> &#8211; add a permission to an ACL permission set </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

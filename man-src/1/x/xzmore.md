@@ -1,4 +1,5 @@
 ---
+
 title: "xzmore(1)"
 name: "xzmore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xzmore/"
 description: "xzmore, lzmore – view xz or lzma compressed (text) files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xzmore, lzmore &#8211; view xz or lzma compressed (text) files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xzmore</code> [<i>file&#8230;</i>]<br />

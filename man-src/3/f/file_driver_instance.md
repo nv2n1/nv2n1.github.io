@@ -1,4 +1,5 @@
 ---
+
 title: "file_driver_instance(3)"
 name: "file_driver_instance"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-file_driver_instance/"
 description: "Opening/Closing –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Opening/Closing &#8211; </p>
 <p> An XIO handle with the file driver can be created with <code>globus_xio_handle_create()</code>. An XIO handle with the file driver can be created with <code>globus_xio_handle_create()</code>. </p>
 <p> If there is no handle set on the attr passed to the <code>globus_xio_open()</code> call, it performs the equivalent of an open() call. In this case, the contact string must contain either a pathname or one of </p>

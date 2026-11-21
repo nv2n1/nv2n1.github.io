@@ -1,4 +1,5 @@
 ---
+
 title: "acl_copy_int(3)"
 name: "acl_copy_int"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_copy_int/"
 description: "acl_copy_int – copy an ACL from external to internal representation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_copy_int</code> &#8211; copy an ACL from external to internal representation </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

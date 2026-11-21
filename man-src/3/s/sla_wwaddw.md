@@ -1,4 +1,5 @@
 ---
+
 title: "sla_wwaddw(3)"
 name: "sla_wwaddw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sla_wwaddw/"
 description: "sla_wwaddw.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sla_wwaddw.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

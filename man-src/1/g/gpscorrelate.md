@@ -1,4 +1,5 @@
 ---
+
 title: "gpscorrelate(1)"
 name: "gpscorrelate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpscorrelate/"
 description: "gpscorrelate – correlates digital images with GPS data filling EXIF fields"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpscorrelate &#8211; correlates digital images with GPS data filling EXIF fields </p>
 <h2>SYNOPSIS</h2>
 <dl>

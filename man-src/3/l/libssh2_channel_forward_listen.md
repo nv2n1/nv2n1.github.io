@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_forward_listen(3)"
 name: "libssh2_channel_forward_listen"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_forward_listen/"
 description: "libssh2_channel_forward_listen – convenience macro for libssh2_channel_forward_listen_ex(3) calls"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_forward_listen &#8211; convenience macro for <i><a href="/docs/linux/man/3-libssh2_channel_forward_listen_ex/">libssh2_channel_forward_listen_ex</a>(3)</i> calls</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

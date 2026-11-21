@@ -1,4 +1,5 @@
 ---
+
 title: "cinnamon-settings(1)"
 name: "cinnamon-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cinnamon-settings/"
 description: "cinnamon-settings – Configuration panel for cinnamon"
 ---
 
-<h2>NAME</h2>
 <p> cinnamon-settings &#8211; Configuration panel for cinnamon</p>
 <h2>SYNOPSIS</h2>
 <h2>DESCRIPTION</h2>

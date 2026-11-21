@@ -1,4 +1,5 @@
 ---
+
 title: "log10f(3)"
 name: "log10f"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-log10f/"
 description: "log10, log10f, log10l – base-10 logarithmic function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> log10, log10f, log10l &#8211; base-10 logarithmic function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

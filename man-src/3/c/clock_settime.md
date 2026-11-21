@@ -1,4 +1,5 @@
 ---
+
 title: "clock_settime(3)"
 name: "clock_settime"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clock_settime/"
 description: "clock_getres, clock_gettime, clock_settime – clock and time functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clock_getres, clock_gettime, clock_settime &#8211; clock and time functions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>

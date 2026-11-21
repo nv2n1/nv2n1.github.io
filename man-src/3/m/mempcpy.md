@@ -1,4 +1,5 @@
 ---
+
 title: "mempcpy(3)"
 name: "mempcpy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mempcpy/"
 description: "mempcpy, wmempcpy – copy memory area"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mempcpy, wmempcpy &#8211; copy memory area </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

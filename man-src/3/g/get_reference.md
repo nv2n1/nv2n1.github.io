@@ -1,4 +1,5 @@
 ---
+
 title: "get_reference(3)"
 name: "get_reference"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_reference/"
 description: "dirfile_reference, get_reference — retrieve or set the reference field for a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_reference, get_reference &#8212; retrieve or set the reference field for a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

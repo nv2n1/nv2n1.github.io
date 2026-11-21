@@ -1,4 +1,5 @@
 ---
+
 title: "yapet(1)"
 name: "yapet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yapet/"
 description: "yapet – text based password manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> yapet &#8211; text based password manager </p>
 <h2>SYNOPSIS</h2>
 <dl>

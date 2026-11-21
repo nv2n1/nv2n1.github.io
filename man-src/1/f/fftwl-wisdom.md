@@ -1,4 +1,5 @@
 ---
+
 title: "fftwl-wisdom(1)"
 name: "fftwl-wisdom"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fftwl-wisdom/"
 description: "fftwl-wisdom – create wisdom (pre-optimized FFTs)"
 ---
 
-<h2>NAME</h2>
 <p> fftwl-wisdom &#8211; create wisdom (pre-optimized FFTs)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fftwl-wisdom</code> [<i>OPTION</i>]&#8230; [<i>SIZE</i>]&#8230;</p>

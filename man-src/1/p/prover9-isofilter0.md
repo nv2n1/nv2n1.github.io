@@ -1,4 +1,5 @@
 ---
+
 title: "prover9-isofilter0(1)"
 name: "prover9-isofilter0"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prover9-isofilter0/"
 description: "isofilter – removes isomorphic structures from mace4(1) models"
 ---
 
-<h2>NAME</h2>
 <p> isofilter &#8211; removes isomorphic structures from <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1) models</p>
 <h2>SYNOPSIS</h2>
 <p> <code>isofilter</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i><br />

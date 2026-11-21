@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-pw(1)"
 name: "doveadm-pw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-pw/"
 description: "doveadm-pw – Dovecot’s password hash generator"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-pw &#8211; Dovecot&#8217;s password hash generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>pw -l</code><br />

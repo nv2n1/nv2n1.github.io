@@ -1,4 +1,5 @@
 ---
+
 title: "look(1)"
 name: "look"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-look/"
 description: "look – display lines beginning with a given string"
 ---
 
-<h2 class="name">NAME</h2>
 <p> look &#8211; display lines beginning with a given string </p>
 <h2>SYNOPSIS</h2>
 <p> <code>look</code> [options] <i>string</i> [<i>file</i>]</p>

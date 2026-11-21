@@ -1,4 +1,5 @@
 ---
+
 title: "globus_condattr_t(3)"
 name: "globus_condattr_t"
 section: "3"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-globus_condattr_t/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- globus_condattr_t - 
+globus_condattr_t - 
 
  Condition variable attribute.
 

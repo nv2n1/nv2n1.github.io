@@ -1,4 +1,5 @@
 ---
+
 title: "udav(1)"
 name: "udav"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-udav/"
 description: "udav – program for data visualization based on MathGL library"
 ---
 
-<h2>NAME</h2>
 <p> udav &#8211; program for data visualization based on MathGL library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>udav</code> [scriptfile]</p>

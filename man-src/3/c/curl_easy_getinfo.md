@@ -1,4 +1,5 @@
 ---
+
 title: "curl_easy_getinfo(3)"
 name: "curl_easy_getinfo"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_easy_getinfo/"
 description: "curl_easy_getinfo – extract information from a curl handle"
 ---
 
-<h2>NAME</h2>
 <p> curl_easy_getinfo &#8211; extract information from a curl handle</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

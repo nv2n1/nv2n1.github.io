@@ -1,4 +1,5 @@
 ---
+
 title: "qhull(1)"
 name: "qhull"
 section: "1"
@@ -6,9 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qhull/"
 ---
 
-<h2>NAME</h2>
-
- qhull - convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, hull volume, facet area
+qhull - convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, hull volume, facet area
 
 <h2>SYNOPSIS</h2>
 

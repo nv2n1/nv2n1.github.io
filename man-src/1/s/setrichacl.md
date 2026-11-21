@@ -1,4 +1,5 @@
 ---
+
 title: "setrichacl(1)"
 name: "setrichacl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setrichacl/"
 description: "setrichacl – Set Rich Access Control Lists"
 ---
 
-<h2>NAME</h2>
 <p> setrichacl &#8211; Set Rich Access Control Lists</p>
 <h2>SYNOPSIS</h2>
 <p> <code>setrichacl</code> [<i>option</i>]&#8230; [<i>file</i>]&#8230;</p>

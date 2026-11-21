@@ -1,4 +1,5 @@
 ---
+
 title: "nettee(1)"
 name: "nettee"
 section: "1"
@@ -6,7 +7,6 @@ letter: "n"
 url: "/docs/linux/man/1-nettee/"
 ---
 
-<h2 class="name">NAME</h2>
 <dl>
 <dt>nettee &#8211; a network &quot;tee&quot; program</dt>
 <dd>

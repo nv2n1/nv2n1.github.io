@@ -1,4 +1,5 @@
 ---
+
 title: "docker-network-create(1)"
 name: "docker-network-create"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-network-create/"
 description: "docker-network-create – Create a network"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-network-create &#8211; Create a network </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker network create [OPTIONS] NETWORK</code> </p>

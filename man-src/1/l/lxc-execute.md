@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-execute(1)"
 name: "lxc-execute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-execute/"
 description: "lxc-execute – run an application inside a container."
 ---
 
-<h2>NAME</h2>
 <p> lxc-execute &#8211; run an application inside a container.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-execute</code> {-n <i>name</i>} [-f <i>config_file</i>] [-s KEY=VAL] [&#8211; <i>command</i>]</p>

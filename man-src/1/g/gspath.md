@@ -1,4 +1,5 @@
 ---
+
 title: "gspath(1)"
 name: "gspath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gspath/"
 description: "gspath – Utility to display standard directory/path information"
 ---
 
-<h2>NAME</h2>
 <p> gspath &#8211; Utility to display standard directory/path information</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gspath</code> </p>

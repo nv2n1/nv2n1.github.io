@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_stat_servername(3)"
 name: "memcached_stat_servername"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_stat_servername/"
 description: "memcached_stat_servername – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_stat_servername &#8211; libmemcached Documentation </p>
 <p> Get memcached statistics</p>
 <h2>SYNOPSIS</h2>

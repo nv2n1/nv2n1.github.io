@@ -1,4 +1,5 @@
 ---
+
 title: "rmt(1)"
 name: "rmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rmt/"
 description: "rmt – remote magnetic tape protocol server"
 ---
 
-<h2>NAME</h2>
 <p> rmt &#8211; remote magnetic tape protocol server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>/opt/schily/sbin/rmt</code><br />

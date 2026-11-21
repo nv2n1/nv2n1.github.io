@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_code_with_scope(3)"
 name: "bson_append_code_with_scope"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_code_with_scope/"
 description: "bson_append_code_with_scope() – The bson_append_code_with_scope() function shall perform like bson_append_code() except it allows providing a scope to the javascript function in the form of a bson ..."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_code_with_scope() &#8211; The bson_append_code_with_scope() function shall perform like bson_append_code() except it allows providing a scope to the javascript function in the form of a bson document.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

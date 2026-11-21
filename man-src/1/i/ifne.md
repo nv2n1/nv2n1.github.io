@@ -1,4 +1,5 @@
 ---
+
 title: "ifne(1)"
 name: "ifne"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ifne/"
 description: "ifne – Run command if the standard input is not empty"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ifne &#8211; Run command if the standard input is not empty </p>
 <h2>SYNOPSIS</h2>
 <dl>

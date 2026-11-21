@@ -1,4 +1,5 @@
 ---
+
 title: "git-merge-file(1)"
 name: "git-merge-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-merge-file/"
 description: "git-merge-file – Run a three-way file merge"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-merge-file &#8211; Run a three-way file merge </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

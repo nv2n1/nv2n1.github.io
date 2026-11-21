@@ -1,4 +1,5 @@
 ---
+
 title: "ffi_call(3)"
 name: "ffi_call"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ffi_call/"
 description: "ffi_call – Invoke a foreign function."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ffi_call</code> &#8211; Invoke a foreign function. </p>
 <h2>SYNOPSIS</h2>
 <p> In ffi.h Ft void Fo ffi_call Fa ffi_cif *cif Fa void (*fn)(void) Fa void *rvalue Fa void **avalue Fc</p>

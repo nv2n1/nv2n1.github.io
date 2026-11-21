@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_topology_check(3)"
 name: "hwloc_topology_check"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_topology_check/"
 description: "hwlocality_creation – Topology Creation and Destruction"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_creation &#8211; Topology Creation and Destruction </p>
 <h3>Typedefs</h3>
 <p> typedef struct hwloc_topology * <code>hwloc_topology_t</code> </p>

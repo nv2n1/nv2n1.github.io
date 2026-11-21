@@ -1,4 +1,5 @@
 ---
+
 title: "dcmdump(1)"
 name: "dcmdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmdump/"
 description: "dcmdump – Dump DICOM file and data set"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmdump &#8211; Dump DICOM file and data set </p>
 <h2>SYNOPSIS</h2>
 <pre>

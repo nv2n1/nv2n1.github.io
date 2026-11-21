@@ -1,4 +1,5 @@
 ---
+
 title: "git-fast-import(1)"
 name: "git-fast-import"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-fast-import/"
 description: "git-fast-import – Backend for fast Git data importers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-fast-import &#8211; Backend for fast Git data importers </p>
 <h2>SYNOPSIS</h2>
 <pre>

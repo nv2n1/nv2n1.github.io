@@ -1,4 +1,5 @@
 ---
+
 title: "getutmp(3)"
 name: "getutmp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getutmp/"
 description: "getutmp, getutmpx – copy utmp structure to utmpx, and vice versa"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getutmp, getutmpx &#8211; copy utmp structure to utmpx, and vice versa </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

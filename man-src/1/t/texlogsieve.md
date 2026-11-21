@@ -1,4 +1,5 @@
 ---
+
 title: "texlogsieve(1)"
 name: "texlogsieve"
 section: "1"
@@ -6,7 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-texlogsieve/"
 description: "texlogsieve – filter and summarize LaTeX log files"
 ---
-<h2 class="name">NAME</h2>
+
 <p> texlogsieve - filter and summarize LaTeX log files  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>texlogsieve</code> [<i>,OPTION/</i>]... [<i>,INPUT FILE/</i>] </p>

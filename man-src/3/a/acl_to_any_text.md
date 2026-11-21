@@ -1,4 +1,5 @@
 ---
+
 title: "acl_to_any_text(3)"
 name: "acl_to_any_text"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_to_any_text/"
 description: "acl_to_any_text – convert an ACL to text"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_to_any_text</code> &#8211; convert an ACL to text </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

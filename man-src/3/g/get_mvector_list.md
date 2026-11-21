@@ -1,4 +1,5 @@
 ---
+
 title: "get_mvector_list(3)"
 name: "get_mvector_list"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_mvector_list/"
 description: "get_mvector_list — retrieve a list of vector fields in a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> get_mvector_list &#8212; retrieve a list of vector fields in a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

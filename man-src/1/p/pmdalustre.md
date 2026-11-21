@@ -1,4 +1,5 @@
 ---
+
 title: "pmdalustre(1)"
 name: "pmdalustre"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdalustre/"
 description: "pmdalustre – lustre filesystem statistics performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdalustre</code> &#8211; lustre filesystem statistics performance metrics domain agent (PMDA)</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdalustre</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the <i>/proc/fs/lustre</i> and <i>/proc/sys/lnet</i> trees to provide information on mounted lustre filesystems.</p>

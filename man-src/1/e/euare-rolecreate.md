@@ -1,4 +1,5 @@
 ---
+
 title: "euare-rolecreate(1)"
 name: "euare-rolecreate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-rolecreate/"
 description: "euare-rolecreate – Create a new role"
 ---
 
-<h2>NAME</h2>
 <p> euare-rolecreate &#8211; Create a new role</p>
 <h2>SYNOPSIS</h2>
 <p> euare-rolecreate [-p PATH] (<code>-f</code> FILE | <code>-s</code> SERVICE) [-v]</p>

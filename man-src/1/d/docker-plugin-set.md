@@ -1,4 +1,5 @@
 ---
+
 title: "docker-plugin-set(1)"
 name: "docker-plugin-set"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-plugin-set/"
 description: "docker-plugin-set – Change settings for a plugin"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-plugin-set &#8211; Change settings for a plugin </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker plugin set PLUGIN KEY=VALUE [KEY=VALUE&#8230;]</code> </p>

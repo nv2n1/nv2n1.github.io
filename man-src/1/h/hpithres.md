@@ -1,4 +1,5 @@
 ---
+
 title: "hpithres(1)"
 name: "hpithres"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpithres/"
 description: "hpithres – This sample openhpi application interactively displays sensors and sensor info."
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpithres &#8211; This sample openhpi application interactively displays sensors and sensor info. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

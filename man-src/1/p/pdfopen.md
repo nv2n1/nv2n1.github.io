@@ -1,4 +1,5 @@
 ---
+
 title: "pdfopen(1)"
 name: "pdfopen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdfopen/"
 description: "pdfopen, pdfclose – open or close a PDF file viewer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdfopen, pdfclose &#8211; open or close a PDF file viewer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfopen </code> [ <i>options</i> ]&nbsp; [ <code>&#8211;file </code> ]&nbsp; <i>file.pdf</i><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "cimag(3)"
 name: "cimag"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cimag/"
 description: "cimag, cimagf, cimagl – get imaginary part of a complex number"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cimag, cimagf, cimagl &#8211; get imaginary part of a complex number </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

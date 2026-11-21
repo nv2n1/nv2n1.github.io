@@ -1,4 +1,5 @@
 ---
+
 title: "bson_writer_end(3)"
 name: "bson_writer_end"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_writer_end/"
 description: "bson_writer_end() – Complete writing of a bson_writer_t to the buffer supplied."
 ---
 
-<h2>NAME</h2>
 <p> bson_writer_end() &#8211; Complete writing of a bson_writer_t to the buffer supplied.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

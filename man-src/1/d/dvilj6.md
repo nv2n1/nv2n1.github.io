@@ -1,4 +1,5 @@
 ---
+
 title: "dvilj6(1)"
 name: "dvilj6"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvilj6/"
 description: "dvilj4, dvilj4l, dvilj2p, dvilj – convert a TeX DVI file to PCL, for HP LaserJet printers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dvilj4, dvilj4l, dvilj2p, dvilj &#8211; convert a TeX DVI file to PCL, for HP LaserJet printers </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

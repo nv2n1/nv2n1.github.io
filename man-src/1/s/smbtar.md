@@ -1,4 +1,5 @@
 ---
+
 title: "smbtar(1)"
 name: "smbtar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smbtar/"
 description: "smbtar – shell script for backing up SMB/CIFS shares directly to UNIX tape drives"
 ---
 
-<h2 class="name">NAME</h2>
 <p> smbtar &#8211; shell script for backing up SMB/CIFS shares directly to UNIX tape drives </p>
 <h2>SYNOPSIS</h2>
 <dl>

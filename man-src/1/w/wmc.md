@@ -1,4 +1,5 @@
 ---
+
 title: "wmc(1)"
 name: "wmc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wmc/"
 description: "wmc – Wine Message Compiler"
 ---
 
-<h2>NAME</h2>
 <p> wmc &#8211; Wine Message Compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wmc</code> [<i>options</i>]&nbsp;<wbr>[<i>inputfile</i>]</p>

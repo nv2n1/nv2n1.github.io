@@ -1,4 +1,5 @@
 ---
+
 title: "rigswr(1)"
 name: "rigswr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rigswr/"
 description: "rigswr – measure VSWR vs frequency using Hamlib."
 ---
 
-<h2 class="name">NAME</h2>
 <p> rigswr &#8211; measure VSWR vs frequency using <code>Hamlib</code>. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rigswr</code> [<i>OPTION</i>]&#8230; start_freq stop_freq [freq_step]</p>

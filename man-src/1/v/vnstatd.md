@@ -1,4 +1,5 @@
 ---
+
 title: "vnstatd(1)"
 name: "vnstatd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vnstatd/"
 description: "vnstatd – daemon based database updating for vnStat"
 ---
 
-<h2>NAME</h2>
 <p> vnstatd &#8211; daemon based database updating for vnStat </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vnstatd</code> [ <code>-Ddnpsv?</code> ] [ <code>&#8211;alwaysadd</code> ] [ <code>&#8211;config</code> <i>file</i> ] [ <code>&#8211;daemon</code> ] [ <code>&#8211;debug</code> ] [ <code>-g</code> <i>group</i> ] [ <code>&#8211;group</code> <i>group</i> ] [ <code>&#8211;help</code> ] [ <code>&#8211;noadd</code> ] [ <code>&#8211;nodaemon</code> ] [ <code>&#8211;pidfile</code> <i>file</i> ] [ <code>&#8211;sync</code> ] [ <code>&#8211;u</code> <i>user</i> ] [ <code>&#8211;user</code> <i>user</i> ] [ <code>&#8211;version</code> ] </p>

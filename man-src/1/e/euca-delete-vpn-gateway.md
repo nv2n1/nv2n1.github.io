@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-vpn-gateway(1)"
 name: "euca-delete-vpn-gateway"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-vpn-gateway/"
 description: "euca-delete-vpn-gateway – Delete a virtual private gateway"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-vpn-gateway &#8211; Delete a virtual private gateway</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-vpn-gateway [&#8211;show-empty-fields] [-U URL]</p>

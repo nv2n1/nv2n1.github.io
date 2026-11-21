@@ -1,4 +1,5 @@
 ---
+
 title: "paps(1)"
 name: "paps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-paps/"
 description: "paps – UTF-8 to PostScript converter using Pango"
 ---
 
-<h2 class="name">NAME</h2>
 <p> paps &#8211; UTF-8 to PostScript converter using Pango </p>
 <h2>SYNOPSIS</h2>
 <p> <code>paps</code> [<i>options</i>]<i> files</i>&#8230;</p>

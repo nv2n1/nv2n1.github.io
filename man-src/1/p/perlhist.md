@@ -1,4 +1,5 @@
 ---
+
 title: "perlhist(1)"
 name: "perlhist"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlhist/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlhist - the Perl history records 
+perlhist - the Perl history records 
 
 <h2>DESCRIPTION</h2>
 

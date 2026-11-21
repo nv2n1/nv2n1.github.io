@@ -1,4 +1,5 @@
 ---
+
 title: "stap-prep(1)"
 name: "stap-prep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stap-prep/"
 description: "stap-prep – prepare system for systemtap use"
 ---
 
-<h2>NAME</h2>
 <p> stap-prep &#8211; prepare system for systemtap use </p>
 <h2>SYNOPSIS</h2>
 <p> <code>stap-prep</code> [ <i>KERNEL_VERSION</i> ] </p>

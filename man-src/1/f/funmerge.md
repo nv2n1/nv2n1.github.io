@@ -1,4 +1,5 @@
 ---
+
 title: "funmerge(1)"
 name: "funmerge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funmerge/"
 description: "funmerge – merge one or more Funtools table files"
 ---
 
-<h2>NAME</h2>
 <p> <code>funmerge &#8211; merge one or more Funtools table files</code></p>
 <h2>SYNOPSIS</h2>
 <p> funmerge [-w|-x] -f [colname] &lt;iname1&gt; &lt;iname2&gt; &#8230; &lt;oname&gt;</p>

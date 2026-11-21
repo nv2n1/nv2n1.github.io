@@ -1,4 +1,5 @@
 ---
+
 title: "cgcc(1)"
 name: "cgcc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cgcc/"
 description: "cgcc – Compiler wrapper to run Sparse after compiling"
 ---
 
-<h2>NAME</h2>
 <p> cgcc &#8211; Compiler wrapper to run Sparse after compiling</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cgcc</code> [<i>SPARSE OPTIONS</i>]&#8230; [<i>COMPILER OPTIONS</i>]&#8230; [<i>INPUT FILES</i>]&#8230;<br />

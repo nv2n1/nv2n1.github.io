@@ -1,4 +1,5 @@
 ---
+
 title: "docker-stack-ls(1)"
 name: "docker-stack-ls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-stack-ls/"
 description: "docker-stack-ls – List stacks"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-stack-ls &#8211; List stacks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker stack ls [OPTIONS]</code> </p>

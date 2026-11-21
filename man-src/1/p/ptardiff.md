@@ -1,4 +1,5 @@
 ---
+
 title: "ptardiff(1)"
 name: "ptardiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ptardiff/"
 description: "ptardiff – program that diffs an extracted archive against an unextracted one"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ptardiff &#8211; program that diffs an extracted archive against an unextracted one </p>
 <h2>DESCRIPTION</h2>
 <pre>

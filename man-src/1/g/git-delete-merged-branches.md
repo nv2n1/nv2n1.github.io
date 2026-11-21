@@ -1,4 +1,5 @@
 ---
+
 title: "git-delete-merged-branches(1)"
 name: "git-delete-merged-branches"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-delete-merged-branches/"
 description: "git-delete-merged-branches – Delete merged branches"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-delete-merged-branches</code> &#8211; Delete merged branches</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-delete-merged-branches</code></p>

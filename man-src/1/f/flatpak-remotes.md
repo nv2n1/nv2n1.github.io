@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-remotes(1)"
 name: "flatpak-remotes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-remotes/"
 description: "flatpak-remotes – List remote repositories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-remotes &#8211; List remote repositories </p>
 <h2>SYNOPSIS</h2>
 <dl>

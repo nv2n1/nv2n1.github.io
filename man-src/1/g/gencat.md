@@ -1,4 +1,5 @@
 ---
+
 title: "gencat(1)"
 name: "gencat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gencat/"
 description: "gencat – Generate message catalog"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gencat &#8211; Generate message catalog </p>
 <h2>SYNOPSIS</h2>
 <p> gencat [OPTION&#8230;] -o OUTPUT-FILE [INPUT-FILE]&#8230;</p>

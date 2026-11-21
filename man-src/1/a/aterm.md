@@ -1,4 +1,5 @@
 ---
+
 title: "aterm(1)"
 name: "aterm"
 section: "1"
@@ -6,7 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-aterm/"
 description: "aterm (Afterstep XVT) – a VT102 emulator for the X window system"
 ---
-<h2>NAME</h2>
+
 <p> aterm (Afterstep XVT) - a VT102 emulator for the X window system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aterm</code> [options] [-e command [ args ]] </p>

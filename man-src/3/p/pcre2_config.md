@@ -1,4 +1,5 @@
 ---
+
 title: "pcre2_config(3)"
 name: "pcre2_config"
 section: "3"
@@ -6,8 +7,9 @@ letter: "p"
 url: "/docs/linux/man/3-pcre2_config/"
 description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 ---
+
 <p>PCRE2 &#8211; Perl-compatible regular expressions (revised API) </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;pcre2.h&gt;</code> </p>
 <p> <font SIZE="-1"><code>int pcre2_config(uint32_t </code><i>what</i>, void *<i>where</i>); </font>  </p>
 <h2>DESCRIPTION</h2>

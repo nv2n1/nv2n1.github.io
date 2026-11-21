@@ -1,4 +1,5 @@
 ---
+
 title: "iswprint(3)"
 name: "iswprint"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iswprint/"
 description: "iswprint – test for printing wide character"
 ---
 
-<h2 class="name">NAME</h2>
 <p> iswprint &#8211; test for printing wide character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

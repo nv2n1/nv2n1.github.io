@@ -1,4 +1,5 @@
 ---
+
 title: "gethostid(3)"
 name: "gethostid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gethostid/"
 description: "gethostid, sethostid – get or set the unique identifier of the current host"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gethostid, sethostid &#8211; get or set the unique identifier of the current host </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

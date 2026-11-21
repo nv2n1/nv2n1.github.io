@@ -1,4 +1,5 @@
 ---
+
 title: "fwup_get_ux_capsule_info(3)"
 name: "fwup_get_ux_capsule_info"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fwup_get_ux_capsule_info/"
 description: "libfwup – library to support management of system firmware updates"
 ---
 
-<h2>NAME</h2>
 <p> libfwup &#8211; library to support management of system firmware updates</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

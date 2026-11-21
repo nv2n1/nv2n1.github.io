@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_block_directions(3)"
 name: "libssh2_session_block_directions"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_block_directions/"
 description: "libssh2_session_block_directions – get directions to wait for"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_block_directions &#8211; get directions to wait for</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

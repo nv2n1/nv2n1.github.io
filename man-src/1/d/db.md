@@ -1,4 +1,5 @@
 ---
+
 title: "db(1)"
 name: "db"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db/"
 description: "db.test – Test database driver, database must exist and set by db.connect."
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>db.test</code> &#8211; Test database driver, database must exist and set by db.connect.</p>
 <h2>KEYWORDS</h2>
 <p> database, attribute table</p>

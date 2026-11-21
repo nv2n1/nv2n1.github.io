@@ -1,4 +1,5 @@
 ---
+
 title: "system-config-printer-applet(1)"
 name: "system-config-printer-applet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-system-config-printer-applet/"
 description: "system-config-printer-applet – print job manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> system-config-printer-applet &#8211; print job manager </p>
 <h2>SYNOPSIS</h2>
 <dl>

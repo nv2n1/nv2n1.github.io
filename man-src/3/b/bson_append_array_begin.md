@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_array_begin(3)"
 name: "bson_append_array_begin"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_array_begin/"
 description: "bson_append_array_begin() – The bson_append_array_begin() function shall begin appending an array field to bson. This allows for incrementally building a sub-array. Doing so will generally yield be..."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_array_begin() &#8211; The bson_append_array_begin() function shall begin appending an array field to bson. This allows for incrementally building a sub-array. Doing so will generally yield better performance as you will serialize to a single buffer. When done building the sub-array, the caller MUST call bson_append_array_end().</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

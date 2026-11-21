@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_nvml_get_device_osdev(3)"
 name: "hwloc_nvml_get_device_osdev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_nvml_get_device_osdev/"
 description: "hwlocality_nvml – Interoperability with the NVIDIA Management Library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_nvml &#8211; Interoperability with the NVIDIA Management Library </p>
 <h3>Functions</h3>
 <p> static int <code>hwloc_nvml_get_device_cpuset</code> (<code>hwloc_topology_t</code> topology, nvmlDevice_t device, <code>hwloc_cpuset_t</code> set) </p>

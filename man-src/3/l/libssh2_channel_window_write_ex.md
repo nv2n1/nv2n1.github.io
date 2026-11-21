@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_window_write_ex(3)"
 name: "libssh2_channel_window_write_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_window_write_ex/"
 description: "libssh2_channel_window_write_ex – Check the status of the write window"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_window_write_ex &#8211; Check the status of the write window</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

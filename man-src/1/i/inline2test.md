@@ -1,4 +1,5 @@
 ---
+
 title: "inline2test(1)"
 name: "inline2test"
 section: "1"
@@ -6,10 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-inline2test/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- inline2test - The Test::Inline 2 Test Compiler 
+inline2test - The Test::Inline 2 Test Compiler 
 
 <h2>SYNOPIS</h2>
 

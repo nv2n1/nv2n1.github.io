@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-smart-log(1)"
 name: "nvme-smart-log"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-smart-log/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-smart-log - Send NVMe SMART log page request, returns result and log 
+nvme-smart-log - Send NVMe SMART log page request, returns result and log 
 
 <h2>SYNOPSIS</h2>
 

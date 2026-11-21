@@ -1,4 +1,5 @@
 ---
+
 title: "kitrace_to_db(1)"
 name: "kitrace_to_db"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kitrace_to_db/"
 description: "kitrace_to_db – convert kitrace output to Fsdb format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kitrace_to_db &#8211; convert kitrace output to Fsdb format </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

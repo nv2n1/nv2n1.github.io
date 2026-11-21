@@ -1,4 +1,5 @@
 ---
+
 title: "pgmcrater(1)"
 name: "pgmcrater"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmcrater/"
 description: "pgmcrater – create cratered terrain by fractal forgery"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pgmcrater &#8211; create cratered terrain by fractal forgery </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmcrater</code><br />

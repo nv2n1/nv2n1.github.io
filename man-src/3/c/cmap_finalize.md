@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_finalize(3)"
 name: "cmap_finalize"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmap_finalize/"
 description: "cmap_finalize – Finalize connection to CMAP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cmap_finalize &#8211; Finalize connection to CMAP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>

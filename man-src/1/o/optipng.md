@@ -1,4 +1,5 @@
 ---
+
 title: "optipng(1)"
 name: "optipng"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-optipng/"
 description: "OptiPNG – Optimize Portable Network Graphics files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>OptiPNG</code> &#8211; Optimize Portable Network Graphics files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>optipng</code> [<code>-?</code> | <code>-h</code> | <code>-help</code>]<br />

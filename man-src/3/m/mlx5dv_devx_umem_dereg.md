@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_devx_umem_dereg(3)"
 name: "mlx5dv_devx_umem_dereg"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_umem_dereg/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_devx_umem_reg - Register a user memory to be used by the devx interface 
+mlx5dv_devx_umem_reg - Register a user memory to be used by the devx interface 
 
  mlx5dv_devx_umem_dereg - Deregister a devx umem object 
 

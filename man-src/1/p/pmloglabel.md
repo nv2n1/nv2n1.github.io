@@ -1,4 +1,5 @@
 ---
+
 title: "pmloglabel(1)"
 name: "pmloglabel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmloglabel/"
 description: "pmloglabel – check and repair a performance metrics archive label"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmloglabel</code> &#8211; check and repair a performance metrics archive label</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmloglabel</code> [<code>-Llsv</code>] [<code>-h</code> <i>hostname</i>] [<code>-p</code> <i>pid</i>] [<code>-V</code> <i>version</i>] [<code>-Z</code> <i>timezone</i>] <i>archive</i></p>

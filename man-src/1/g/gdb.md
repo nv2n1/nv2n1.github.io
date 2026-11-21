@@ -1,4 +1,5 @@
 ---
+
 title: "gdb(1)"
 name: "gdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdb/"
 description: "gdb – The GNU Debugger"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdb &#8211; The GNU Debugger </p>
 <h2>SYNOPSIS</h2>
 <p> gdb [<font SIZE="-1">OPTIONS</font>] [<i>prog</i>|<i>prog</i> <i>procID</i>|<i>prog</i> <i>core</i>]</p>

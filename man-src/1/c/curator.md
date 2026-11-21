@@ -1,4 +1,5 @@
 ---
+
 title: "curator(1)"
 name: "curator"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-curator/"
 description: "curator – manual page for curator, version 3.0.3"
 ---
 
-<h2>NAME</h2>
 <p> curator &#8211; manual page for curator, version 3.0.3</p>
 <h2>SYNOPSIS</h2>
 <p> <code>curator</code> [<i>,OPTIONS/</i>] <i>,COMMAND /</i>[<i>,ARGS/</i>]&#8230;</p>

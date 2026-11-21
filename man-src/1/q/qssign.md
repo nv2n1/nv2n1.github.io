@@ -1,4 +1,5 @@
 ---
+
 title: "qssign(1)"
 name: "qssign"
 section: "1"
@@ -6,10 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qssign/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- qssign - an utility to sign and verify the integrity of log data. 
+qssign - an utility to sign and verify the integrity of log data. 
 
 <h2>SYNOPSIS</h2>
 

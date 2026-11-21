@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_priority_init(3)"
 name: "gnutls_priority_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_priority_init/"
 description: "gnutls_priority_init – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_priority_init &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

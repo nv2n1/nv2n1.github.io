@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_context_get(3)"
 name: "cpg_context_get"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpg_context_get/"
 description: "cpg_context_get – Gets the context variable for a CPG instance"
 ---
 
-<h2>NAME</h2>
 <p> cpg_context_get &#8211; Gets the context variable for a CPG instance</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cinnamon-screensaver(1)"
 name: "cinnamon-screensaver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cinnamon-screensaver/"
 description: "cinnamon-screensaver – screen saver and locker"
 ---
 
-<h2>NAME</h2>
 <p> cinnamon-screensaver &#8211; screen saver and locker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cinnamon-screensaver</code> [<i>OPTIONS&#8230;</i>]</p>

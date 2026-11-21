@@ -1,4 +1,5 @@
 ---
+
 title: "shtoolize(1)"
 name: "shtoolize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtoolize/"
 description: "shtoolize – Build individual GNU shtool scripts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shtoolize &#8211; Build individual GNU shtool scripts </p>
 <h2>VERSION</h2>
 <p> <font SIZE="-1">GNU</font> shtool <font SIZE="-1">2.0.8 (18-Jul-2008)</font></p>

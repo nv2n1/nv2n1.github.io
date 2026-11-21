@@ -1,4 +1,5 @@
 ---
+
 title: "mmv(1)"
 name: "mmv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mmv/"
 description: "mmv – move/copy/append/link multiple files by wildcard patterns"
 ---
 
-<h2>NAME</h2>
 <p> mmv &#8211; move/copy/append/link multiple files by wildcard patterns</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mmv</code> [<code>-h</code>] [<code>-d</code>|<code>p</code>] [<code>-g</code>|<code>t</code>] [<code>-v</code>|<code>n</code>] [<code>&#8212;</code>] [<code>from to</code>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "voms-proxy-list(1)"
 name: "voms-proxy-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-voms-proxy-list/"
 description: "voms-proxy-list – Shows a list of all availabel attributes from a specified server"
 ---
 
-<h2>NAME</h2>
 <p> voms-proxy-list &#8211; Shows a list of all availabel attributes from a specified server</p>
 <h2>SYNOPSIS</h2>
 <dl>

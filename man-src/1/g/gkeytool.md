@@ -1,4 +1,5 @@
 ---
+
 title: "gkeytool(1)"
 name: "gkeytool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gkeytool/"
 description: "gkeytool – Manage private keys and public certificates"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gkeytool &#8211; Manage private keys and public certificates </p>
 <h2>SYNOPSIS</h2>
 <p> keytool [<i></i><font SIZE="-1"><i>COMMAND</i></font><i></i>] &#8230;</p>

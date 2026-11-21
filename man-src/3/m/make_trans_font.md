@@ -1,4 +1,5 @@
 ---
+
 title: "make_trans_font(3)"
 name: "make_trans_font"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-make_trans_font/"
 description: "make_trans_font – Makes a font use transparency. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> make_trans_font &#8211; Makes a font use transparency. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

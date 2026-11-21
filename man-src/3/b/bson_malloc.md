@@ -1,4 +1,5 @@
 ---
+
 title: "bson_malloc(3)"
 name: "bson_malloc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_malloc/"
 description: "bson_malloc() – This is a portable malloc() wrapper."
 ---
 
-<h2>NAME</h2>
 <p> bson_malloc() &#8211; This is a portable malloc() wrapper.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

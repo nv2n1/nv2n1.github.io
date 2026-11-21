@@ -1,4 +1,5 @@
 ---
+
 title: "clamdscan(1)"
 name: "clamdscan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clamdscan/"
 description: "clamdscan – scan files and directories for viruses using Clam AntiVirus Daemon"
 ---
 
-<h2>NAME</h2>
 <p> clamdscan &#8211; scan files and directories for viruses using Clam AntiVirus Daemon</p>
 <h2>SYNOPSIS</h2>
 <p> clamdscan [options] [file/directory]</p>

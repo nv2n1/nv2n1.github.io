@@ -1,4 +1,5 @@
 ---
+
 title: "ghex(1)"
 name: "ghex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ghex/"
 description: "ghex – A GNOME Hex Editor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ghex &#8211; A GNOME Hex Editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ghex</code> [<i>options</i>]<i> files</i>&#8230;</p>

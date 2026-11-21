@@ -1,4 +1,5 @@
 ---
+
 title: "pages2raw(1)"
 name: "pages2raw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pages2raw/"
 description: "pages2raw – debug the conversion library"
 ---
 
-<h2>NAME</h2>
 <p> pages2raw &#8211; debug the conversion library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pages2raw</code> [<i>OPTION</i>] <i>&lt;Pages Document&gt; | &lt;Pages Directory&gt;</i></p>

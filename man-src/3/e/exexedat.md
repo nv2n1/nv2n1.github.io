@@ -1,4 +1,5 @@
 ---
+
 title: "exexedat(3)"
 name: "exexedat"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exexedat/"
 description: "exexedat – Appending datafiles onto your executable. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exexedat &#8211; Appending datafiles onto your executable. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

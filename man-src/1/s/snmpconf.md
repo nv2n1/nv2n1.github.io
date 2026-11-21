@@ -1,4 +1,5 @@
 ---
+
 title: "snmpconf(1)"
 name: "snmpconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpconf/"
 description: "snmpconf – creates and modifies SNMP configuration files"
 ---
 
-<h2>NAME</h2>
 <p> snmpconf &#8211; creates and modifies SNMP configuration files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpconf</code> [OPTIONS] [fileToCreate]</p>

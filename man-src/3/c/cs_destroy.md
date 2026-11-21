@@ -1,4 +1,5 @@
 ---
+
 title: "cs_destroy(3)"
 name: "cs_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cs_destroy/"
 description: "cs_destroy – clean up and dealloc a parse tree"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cs_destroy &#8211; clean up and dealloc a parse tree </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "g_saltbr(1)"
 name: "g_saltbr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_saltbr/"
 description: "g_saltbr – computes salt bridges"
 ---
 
-<h2>NAME</h2>
 <p> g_saltbr &#8211; computes salt bridges </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

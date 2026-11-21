@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_expand_octet_string(3)"
 name: "asn1_expand_octet_string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-asn1_expand_octet_string/"
 description: "asn1_expand_octet_string – API function"
 ---
 
-<h2>NAME</h2>
 <p> asn1_expand_octet_string &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>

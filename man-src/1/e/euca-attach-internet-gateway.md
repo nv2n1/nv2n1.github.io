@@ -1,4 +1,5 @@
 ---
+
 title: "euca-attach-internet-gateway(1)"
 name: "euca-attach-internet-gateway"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-attach-internet-gateway/"
 description: "euca-attach-internet-gateway – Attach an Internet gateway to a VPC"
 ---
 
-<h2>NAME</h2>
 <p> euca-attach-internet-gateway &#8211; Attach an Internet gateway to a VPC</p>
 <h2>SYNOPSIS</h2>
 <p> euca-attach-internet-gateway <code>-c</code> VPC [&#8211;show-empty-fields] [-U URL]</p>

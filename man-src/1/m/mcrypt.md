@@ -1,4 +1,5 @@
 ---
+
 title: "mcrypt(1)"
 name: "mcrypt"
 section: "1"
@@ -6,7 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mcrypt/"
 description: "mcrypt, mdecrypt – encrypt or decrypt files"
 ---
-<h2>NAME</h2>
+
 <p> mcrypt, mdecrypt - encrypt or decrypt files  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mcrypt</code> [<code> -dLFubhvrzp </code>] [<code>-a algorithm</code>] [<code>-c config_file</code>] [<code>-m mode</code>] [<code>-s keysize</code>] [<code>-o keymode</code>] [<code>-k key1 key2 ...</code>] [<code>-f keyfile</code>] [ <i>filename ...</i> ] <br />

@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_lock(1)"
 name: "nfstest_lock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfstest_lock/"
 description: "nfstest_lock – Locking tests"
 ---
 
-<h2>NAME</h2>
 <p> nfstest_lock &#8211; Locking tests</p>
 <h2>SYNOPSIS</h2>
 <p> nfstest_lock &#8211;server &lt;server&gt; [&#8211;client &lt;client&gt;] [options]</p>

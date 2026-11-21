@@ -1,4 +1,5 @@
 ---
+
 title: "gconf-editor(1)"
 name: "gconf-editor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gconf-editor/"
 description: "gconf-editor – an editor for the GConf configuration system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gconf-editor &#8211; an editor for the GConf configuration system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gconf-editor</code></p>

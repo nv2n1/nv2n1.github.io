@@ -1,4 +1,5 @@
 ---
+
 title: "qtiplot(1)"
 name: "qtiplot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qtiplot/"
 description: "QtiPlot – Data Analysis and Scientific Plotting"
 ---
 
-<h2>NAME</h2>
 <p> QtiPlot &#8211; Data Analysis and Scientific Plotting</p>
 <h2>SYNOPSIS</h2>
 <p> <code>qtiplot</code> [<i>options</i>]<i>[file(s)]</i></p>

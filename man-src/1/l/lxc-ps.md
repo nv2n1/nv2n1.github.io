@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-ps(1)"
 name: "lxc-ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-ps/"
 description: "lxc-ps – list the processes belonging to a specific container."
 ---
 
-<h2>NAME</h2>
 <p> lxc-ps &#8211; list the processes belonging to a specific container.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-ps [&#8211;name name] [&#8211;lxc] [ps option] </code>.SH &quot;DESCRIPTION&quot; </p>

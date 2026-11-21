@@ -1,4 +1,5 @@
 ---
+
 title: "size(1)"
 name: "size"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-size/"
 description: "size – list section sizes and total size of binary files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> size &#8211; list section sizes and total size of binary files </p>
 <h2>SYNOPSIS</h2>
 <p> size [<code>-A</code>|<code>-B</code>|<code>-G</code>|<code>&#8211;format=</code><i>compatibility</i>]<br />

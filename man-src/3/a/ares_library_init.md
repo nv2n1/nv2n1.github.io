@@ -1,4 +1,5 @@
 ---
+
 title: "ares_library_init(3)"
 name: "ares_library_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_library_init/"
 description: "ares_library_init – c-ares library initialization"
 ---
 
-<h2>NAME</h2>
 <p> ares_library_init &#8211; c-ares library initialization</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

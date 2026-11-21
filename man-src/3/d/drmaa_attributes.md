@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa_attributes(3)"
 name: "drmaa_attributes"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drmaa_attributes/"
 description: "drmaa_get_attribute_names, drmaa_get_vector_attribute_names, drmaa_get_next_attr_name, drmaa_get_num_attr_names, drmaa_release_attr_names – DRMAA job template attributes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> drmaa_get_attribute_names, drmaa_get_vector_attribute_names, drmaa_get_next_attr_name, drmaa_get_num_attr_names, drmaa_release_attr_names &#8211; DRMAA job template attributes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>

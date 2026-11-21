@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-yank(1)"
 name: "cargo-yank"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-yank/"
 description: "cargo-yank – Remove a pushed crate from the index"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cargo-yank &#8211; Remove a pushed crate from the index </p>
 <h2>SYNOPSIS</h2>
 <p> cargo yank [OPTIONS] [&lt;CRATE&gt;]</p>

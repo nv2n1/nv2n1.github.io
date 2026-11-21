@@ -1,4 +1,5 @@
 ---
+
 title: "dcmqrti(1)"
 name: "dcmqrti"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmqrti/"
 description: "dcmqrti – The Terminal Initiator Telnet Client Program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmqrti &#8211; The Terminal Initiator Telnet Client Program </p>
 <h2>SYNOPSIS</h2>
 <pre>

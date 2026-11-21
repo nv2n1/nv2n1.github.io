@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_barrier(3)"
 name: "ck_pr_barrier"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_barrier/"
 description: "ck_pr_barrier – compiler optimization barrier"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_barrier</code> &#8211; compiler optimization barrier</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

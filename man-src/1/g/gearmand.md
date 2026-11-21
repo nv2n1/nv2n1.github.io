@@ -1,4 +1,5 @@
 ---
+
 title: "gearmand(1)"
 name: "gearmand"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gearmand/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- gearmand - Gearman client/worker connector. 
+gearmand - Gearman client/worker connector. 
 
 <h2>SYNOPSIS</h2>
 

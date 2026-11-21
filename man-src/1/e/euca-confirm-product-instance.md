@@ -1,4 +1,5 @@
 ---
+
 title: "euca-confirm-product-instance(1)"
 name: "euca-confirm-product-instance"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-confirm-product-instance/"
 description: "euca-confirm-product-instance – Verify if a product code is associated with an instance"
 ---
 
-<h2>NAME</h2>
 <p> euca-confirm-product-instance &#8211; Verify if a product code is associated with an instance</p>
 <h2>SYNOPSIS</h2>
 <p> euca-confirm-product-instance <code>-i</code> INSTANCE [&#8211;show-empty-fields]</p>

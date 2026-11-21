@@ -1,4 +1,5 @@
 ---
+
 title: "midi_out(3)"
 name: "midi_out"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-midi_out/"
 description: "midi_out – Streams a block of MIDI commands into the player. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> midi_out &#8211; Streams a block of MIDI commands into the player. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

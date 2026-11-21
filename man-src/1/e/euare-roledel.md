@@ -1,4 +1,5 @@
 ---
+
 title: "euare-roledel(1)"
 name: "euare-roledel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-roledel/"
 description: "euare-roledel – Delete a role"
 ---
 
-<h2>NAME</h2>
 <p> euare-roledel &#8211; Delete a role</p>
 <h2>SYNOPSIS</h2>
 <p> euare-roledel [-c] [-p] [&#8211;as-account ACCOUNT] [-U URL]</p>

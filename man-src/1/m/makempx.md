@@ -1,4 +1,5 @@
 ---
+
 title: "makempx(1)"
 name: "makempx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makempx/"
 description: "makempx – typeset labels in MetaPost pictures with TeX or Troff"
 ---
 
-<h2 class="name">NAME</h2>
 <p> makempx &#8211; typeset labels in MetaPost pictures with TeX or Troff </p>
 <h2>SYNOPSIS</h2>
 <p> <code>makempx</code> [<i>&#8211;tex</i>|<i>&#8211;troff</i>] <i>mpfile mpxfile</i></p>

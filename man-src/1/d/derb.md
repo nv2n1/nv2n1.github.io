@@ -1,4 +1,5 @@
 ---
+
 title: "derb(1)"
 name: "derb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-derb/"
 description: "derb – disassemble a resource bundle"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>derb</code> &#8211; disassemble a resource bundle </p>
 <h2>SYNOPSIS</h2>
 <p> <code>derb</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-V</code>, <code>&#8211;version</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-e</code>, <code>&#8211;encoding</code><i> encoding</i> ] [ <code>&#8211;bom</code> ] [ <code>-t</code>, <code>&#8211;truncate</code><i> </i>[ size ] ] [ <code>-s</code>, <code>&#8211;sourcedir</code><i> source</i> ] [ <code>-d</code>, <code>&#8211;destdir</code><i> destination</i> ] [ <code>-i</code>, <code>&#8211;icudatadir</code><i> directory</i> ] [ <code>-c</code>, <code>&#8211;to-stdout</code> ] <i>bundle</i> &#8230;</p>

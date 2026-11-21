@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_minkey(3)"
 name: "bson_append_minkey"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_minkey/"
 description: "bson_append_minkey() – The bson_append_minkey() function shall append an element of type BSON_TYPE_MINKEY to a bson document. This is primarily used in queries and unlikely to be used when storing ..."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_minkey() &#8211; The bson_append_minkey() function shall append an element of type BSON_TYPE_MINKEY to a bson document. This is primarily used in queries and unlikely to be used when storing a document to MongoDB.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

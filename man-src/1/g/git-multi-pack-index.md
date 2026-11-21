@@ -1,4 +1,5 @@
 ---
+
 title: "git-multi-pack-index(1)"
 name: "git-multi-pack-index"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-multi-pack-index/"
 description: "git-multi-pack-index – Write and verify multi-pack-indexes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-multi-pack-index &#8211; Write and verify multi-pack-indexes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

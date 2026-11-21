@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_resp_get_response(3)"
 name: "gnutls_ocsp_resp_get_response"
 section: "3"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-gnutls_ocsp_resp_get_response/"
 ---
 
-<h2>NAME</h2>
-
- gnutls_ocsp_resp_get_response - API function
+gnutls_ocsp_resp_get_response - API function
 
 <h2>SYNOPSIS</h2>
 

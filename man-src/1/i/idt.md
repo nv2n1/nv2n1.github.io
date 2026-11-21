@@ -1,4 +1,5 @@
 ---
+
 title: "idt(1)"
 name: "idt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idt/"
 description: "idt – X window interactive image display tool"
 ---
 
-<h2>NAME</h2>
 <p> idt &#8211; X window interactive image display tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idt </code> [ <code>-toolkitoption</code><i> &#8230;</i> ] [ <code>-background</code><i> color</i> ] [ <code>-f</code><i> font</i> ] [ <code>-foreground</code><i> color</i> ] [ <code>-history</code> ] [ <code>-lmin</code><i> min</i> ] [ <code>-lmax</code><i> max</i> ] [ <code>-lscale</code><i> scale</i> ] [ <code>-oldidt</code> ] [ <code>-pal</code><i> pal_fname</i> ] [ <code>-reverse</code> ] [ <code>-soft</code> ] [ <code>-Version</code> ] [ <code>metafile</code> ]</p>

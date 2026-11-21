@@ -1,4 +1,5 @@
 ---
+
 title: "lpass(1)"
 name: "lpass"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lpass/"
 description: "lpass – command line interface for LastPass"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lpass &#8211; command line interface for LastPass </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

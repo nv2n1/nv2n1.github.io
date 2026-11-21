@@ -1,4 +1,5 @@
 ---
+
 title: "g_confrms(1)"
 name: "g_confrms"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_confrms/"
 description: "g_confrms – fits two structures and calculates the rmsd"
 ---
 
-<h2>NAME</h2>
 <p> g_confrms &#8211; fits two structures and calculates the rmsd </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

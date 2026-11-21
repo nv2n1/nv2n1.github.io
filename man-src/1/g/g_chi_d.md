@@ -1,4 +1,5 @@
 ---
+
 title: "g_chi_d(1)"
 name: "g_chi_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_chi_d/"
 description: "g_chi – calculates everything you want to know about chi and other dihedrals"
 ---
 
-<h2>NAME</h2>
 <p> g_chi &#8211; calculates everything you want to know about chi and other dihedrals </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

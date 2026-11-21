@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_last_error_message(3)"
 name: "memcached_last_error_message"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_last_error_message/"
 description: "memcached_last_error_message – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_last_error_message &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>

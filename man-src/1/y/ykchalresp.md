@@ -1,4 +1,5 @@
 ---
+
 title: "ykchalresp(1)"
 name: "ykchalresp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ykchalresp/"
 description: "ykchalresp – Perform challenge-response operation with YubiKey"
 ---
 
-<h2>NAME</h2>
 <p> ykchalresp &#8211; Perform challenge-response operation with YubiKey</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ykchalresp</code> [<i>-1</i> | <i>-2</i>] [<i>-H</i>] [<i>-Y</i>] [<i>-N</i>] [<i>-x</i>] [<i>-v</i>] [<i>-6</i>] [<i>-8</i>] [<i>-t</i>] [<i>-V</i>] [<i>-h</i>]</p>

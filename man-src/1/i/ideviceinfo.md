@@ -1,4 +1,5 @@
 ---
+
 title: "ideviceinfo(1)"
 name: "ideviceinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ideviceinfo/"
 description: "ideviceinfo – Show information about the first connected device."
 ---
 
-<h2>NAME</h2>
 <p> ideviceinfo &#8211; Show information about the first connected device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ideviceinfo</code> [OPTIONS] </p>

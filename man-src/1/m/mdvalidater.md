@@ -1,4 +1,5 @@
 ---
+
 title: "mdvalidater(1)"
 name: "mdvalidater"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdvalidater/"
 description: "mdvalidator – Validate XML Documents against the ECMA Documentation Schema"
 ---
 
-<h2>NAME</h2>
 <p> mdvalidator &#8211; Validate XML Documents against the ECMA Documentation Schema</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdvalidator</code> PROVIDER [FILES]+</p>

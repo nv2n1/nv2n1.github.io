@@ -1,4 +1,5 @@
 ---
+
 title: "openbox-session(1)"
 name: "openbox-session"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-openbox-session/"
 description: "openbox-session — Runs an Openbox session without any session manager."
 ---
 
-<h2>NAME</h2>
 <p> openbox-session &#8212; Runs an Openbox session without any session manager.<br />
 &nbsp;<wbr></p>
 <h2>DESCRIPTION</h2>

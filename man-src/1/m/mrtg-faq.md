@@ -1,4 +1,5 @@
 ---
+
 title: "mrtg-faq(1)"
 name: "mrtg-faq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrtg-faq/"
 description: "mrtg-faq – How to get help if you have problems with MRTG"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mrtg-faq &#8211; How to get help if you have problems with MRTG </p>
 <h2>SYNOPSIS</h2>
 <p> <font SIZE="-1">MRTG</font> seems to raise a lot of questions. There are a number of resources apart from the documentation where you can find help for mrtg.</p>

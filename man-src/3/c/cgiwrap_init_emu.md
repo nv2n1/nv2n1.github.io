@@ -1,4 +1,5 @@
 ---
+
 title: "cgiwrap_init_emu(3)"
 name: "cgiwrap_init_emu"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgiwrap_init_emu/"
 description: "cgiwrap_init_emu – initialize cgiwrap for emulated use"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgiwrap_init_emu &#8211; initialize cgiwrap for emulated use </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

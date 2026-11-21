@@ -1,4 +1,5 @@
 ---
+
 title: "ffado-dbus-server(1)"
 name: "ffado-dbus-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffado-dbus-server/"
 description: "dbus – expose the mixer features of connected FFADO devices through DBus"
 ---
 
-<h2>NAME</h2>
 <p> dbus &#8211; expose the mixer features of connected FFADO devices through DBus</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ffado-dbus-server [OPTION&#8230;]</code> </p>

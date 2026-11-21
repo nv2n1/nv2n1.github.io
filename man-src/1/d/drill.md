@@ -1,4 +1,5 @@
 ---
+
 title: "drill(1)"
 name: "drill"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-drill/"
 description: "drill – get (debug) information out of DNS(SEC)"
 ---
 
-<h2>NAME</h2>
 <p> drill &#8211; get (debug) information out of DNS(SEC)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>drill</code> [ <i>OPTIONS</i> ] <i>name</i> [ <i>@server</i> ] [ <i>type</i> ] [ <i>class</i> ] </p>

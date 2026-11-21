@@ -1,4 +1,5 @@
 ---
+
 title: "netreport(1)"
 name: "netreport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-netreport/"
 description: "netreport – request notification of network interface changes"
 ---
 
-<h2>NAME</h2>
 <p> netreport &#8211; request notification of network interface changes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>netreport</code> <i>[</i>-r<i>]</i></p>

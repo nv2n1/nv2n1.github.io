@@ -1,4 +1,5 @@
 ---
+
 title: "pyclean(1)"
 name: "pyclean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pyclean/"
 description: "pyclean – removes .pyc and .pyo files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pyclean &#8211; removes .pyc and .pyo files </p>
 <h2>SYNOPSIS</h2>
 <p> pyclean [-p PACKAGE | DIR_OR_FILE]</p>

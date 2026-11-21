@@ -1,4 +1,5 @@
 ---
+
 title: "mpeg2desc(1)"
 name: "mpeg2desc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpeg2desc/"
 description: "mpeg2desc – multiplex audio/video streams"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mpeg2desc &#8211; multiplex audio/video streams </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mpeg2desc</code> [ <code>-a </code><i>stream</i> ] [ <code>-v </code><i>stream</i> ] [ <code>-o </code><i>FILE</i> ] [ <code>-s </code> ] [ <code>-m </code> ] [ <code>-h </code> ] [ <i>&lt; movie.mpg</i><i> &#8230;</i> ] </p>

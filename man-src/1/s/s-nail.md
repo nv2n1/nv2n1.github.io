@@ -1,4 +1,5 @@
 ---
+
 title: "s-nail(1)"
 name: "s-nail"
 section: "1"
@@ -6,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-s-nail/"
 description: "S-nail [v14.9.23] – send and receive Internet mail"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>S-nail [v14.9.23]</code> - send and receive Internet mail </p>
 <h2>SYNOPSIS</h2>
 <p> <code>s-nail</code> [-<code>DdEFinv~#</code> ] [-<code>: </code><i>spec</i> ] [-<code>A </code><i>account</i> ] [: <code>-a </code><i>attachment </i><code>:</code> ] [: <code>-b </code><i>bcc-addr </i><code>:</code> ] [: <code>-C </code><i>field: body </i><code>:</code> ] [: <code>-c </code><i>cc-addr </i><code>:</code> ] [-<code>M </code><i>type | -</i><code>m </code><i>file | -</i><code>q </code><i>file | -</i><code>t</code> ] [-<code>r </code><i>from-addr</i> ] [: <code>-S&nbsp; </code><i>var </i>[<code>= </code><i>value </i><code>: </code>] ] [-<code>s </code><i>subject</i> ] [: <code>-T </code><i>field: addr </i><code>:</code> ] [: <code>-X </code><i>cmd </i><code>:</code> ] [: <code>-Y </code><i>cmd </i><code>:</code> ] [-<code>.</code> ] : <i>to-addr </i><code>:</code> [-<code>-~ : </code><i>mta-option </i><code>:</code> ] </p>

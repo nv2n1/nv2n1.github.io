@@ -1,4 +1,5 @@
 ---
+
 title: "libnetpbm_image(3)"
 name: "libnetpbm_image"
 section: "3"
@@ -8,7 +9,7 @@ description: "libnetpbm_image – overview of netpbm image-processing functions"
 ---
 
 <p>Table Of Contents</p>
-<h2 class="name">NAME</h2>
+
 <p> libnetpbm_image &#8211; overview of netpbm image-processing functions </p>
 <h2>DESCRIPTION</h2>
 <p> This reference manual covers functions in the <code>libnetpbm</code> library for processing images, using the Netpbm image formats and the <code>libnetpbm</code> in-memory image formats. </p>

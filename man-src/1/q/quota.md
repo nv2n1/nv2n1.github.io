@@ -1,4 +1,5 @@
 ---
+
 title: "quota(1)"
 name: "quota"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-quota/"
 description: "quota – display disk usage and limits"
 ---
 
-<h2>NAME</h2>
 <p> quota &#8211; display disk usage and limits</p>
 <h2>SYNOPSIS</h2>
 <p> <code>quota</code> [ <code>-F</code> <i>format-name</i> ] [ <code>-guqvswi</code> ] [ <code>-l</code>&nbsp;<wbr>| [ <code>-QAm</code> ]]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "ptrash(1)"
 name: "ptrash"
 section: "1"
@@ -6,7 +7,6 @@ letter: "p"
 url: "/docs/linux/man/1-ptrash/"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>ptrash</code> [<i>Option</i>] file-name-1 [file-name-2 &#8230;]</dt>
 <dd></dd></dl>

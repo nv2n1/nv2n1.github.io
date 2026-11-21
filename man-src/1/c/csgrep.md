@@ -1,4 +1,5 @@
 ---
+
 title: "csgrep(1)"
 name: "csgrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-csgrep/"
 description: "csgrep – filter the list of defects by the specified regex-based predicates"
 ---
 
-<h2>NAME</h2>
 <p> csgrep &#8211; filter the list of defects by the specified regex-based predicates</p>
 <h2>SYNOPSIS</h2>
 <p> <code>csgrep</code> [<i>options</i>] [<i>file1.err </i>[&#8230;]]<i>, where options are:</i></p>

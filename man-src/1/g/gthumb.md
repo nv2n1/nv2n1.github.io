@@ -1,4 +1,5 @@
 ---
+
 title: "gthumb(1)"
 name: "gthumb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gthumb/"
 description: "gThumb – an image viewer and browser for GNOME"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gThumb &#8211; an image viewer and browser for GNOME</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gthumb </code> [&#8211;help] [&#8211;version] [-f] [&#8211;fullscreen] [-s] [&#8211;slideshow] [&#8211;import-photos] [<i>directory</i>] [<i>filename</i>] &#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dzen2(1)"
 name: "dzen2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dzen2/"
 description: "dzen2 – general-purpose messaging and notification for X11"
 ---
 
-<h2>NAME</h2>
 <p> dzen2 &#8211; general-purpose messaging and notification for X11</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dzen2</code> [-v] [-p [seconds]] [-m [v|h]] [-ta &lt;l|c|r&gt;] [-sa &lt;l|c|r&gt;]<br />

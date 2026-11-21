@@ -1,4 +1,5 @@
 ---
+
 title: "ranger(1)"
 name: "ranger"
 section: "1"
@@ -8,7 +9,7 @@ description: "ranger – visual file manager"
 ---
 
 <p>ranger &#8211; visual file manager</p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>ranger</code> [<code>&#8211;version</code>] [<code>&#8211;help</code>] [<code>&#8211;debug</code>] [<code>&#8211;clean</code>] [<code>&#8211;cachedir</code>=<i>directory</i>] [<code>&#8211;confdir</code>=<i>directory</i>] [<code>&#8211;datadir</code>=<i>directory</i>] [<code>&#8211;copy-config</code>=<i>which</i>] [<code>&#8211;choosefile</code>=<i>target</i>] [<code>&#8211;choosefiles</code>=<i>target</i>] [<code>&#8211;choosedir</code>=<i>target</i>] [<code>&#8211;selectfile</code>=<i>filepath</i>] [<code>&#8211;show-only-dirs</code>] [<code>&#8211;list-unused-keys</code>] [<code>&#8211;list-tagged-files</code>=<i>tag</i>] [<code>&#8211;profile</code>] [<code>&#8211;cmd</code>=<i>command</i>] [<i>path &#8230;</i>]</p>
 <h2>DESCRIPTION</h2>
 <p> ranger is a console file manager with <font SIZE="-1">VI</font> key bindings.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dcngettext(3)"
 name: "dcngettext"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dcngettext/"
 description: "ngettext, dngettext, dcngettext – translate message and choose plural form"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ngettext, dngettext, dcngettext &#8211; translate message and choose plural form </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

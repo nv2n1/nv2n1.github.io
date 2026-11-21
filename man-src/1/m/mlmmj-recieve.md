@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-recieve(1)"
 name: "mlmmj-recieve"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mlmmj-recieve/"
 description: "mlmmj-recieve – recieve mails for an mlmmj managed mailinglist"
 ---
 
-<h2>NAME</h2>
 <p> mlmmj-recieve &#8211; recieve mails for an mlmmj managed mailinglist</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-recieve</code> <i>-L /path/to/listdir </i>[<i>-h</i>] [<i>-V</i>] [<i>-P</i>] [<i>-F</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnetlist(1)"
 name: "gnetlist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnetlist/"
 description: "gnetlist – gEDA/gaf Netlist extraction/generation"
 ---
 
-<h2>NAME</h2>
 <p> gnetlist &#8211; gEDA/gaf Netlist extraction/generation</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnetlist</code> [-e] [-i] [-I] [-q] [-s] [-v] [-l schem_file] [-m schem_file ] [-n] [ -O option ] [-h | &#8211;help] [-g guile_procedure] [-c scheme_string ] [-o output_filename] schematic1 [&#8230; schematicN]</p>

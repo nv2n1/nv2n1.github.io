@@ -1,4 +1,5 @@
 ---
+
 title: "lpr-cups(1)"
 name: "lpr-cups"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lpr-cups/"
 description: "lpr – print files"
 ---
 
-<h2>NAME</h2>
 <p> lpr &#8211; print files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lpr</code> [ -E ] [ -H <i>server[:port]</i> ] [ -U <i>username</i> ] [ -P <i>destination[/instance]</i> ] [ -# <i>num-copies</i> [ -h ] [ -l ] [ -m ] [ -o <i>option[=value]</i> ] [ -p] [ -q ] [ -r ] [ -C/J/T <i>title</i> ] [ <i>file(s)</i> ]</p>

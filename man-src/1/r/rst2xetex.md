@@ -1,4 +1,5 @@
 ---
+
 title: "rst2xetex(1)"
 name: "rst2xetex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rst2xetex/"
 description: "rst2xetex – convert reST documents to XeLaTeX"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rst2xetex &#8211; convert reST documents to XeLaTeX </p>
 <h2>SYNOPSIS</h2>
 <p> rst2xetex [options] [&lt;source&gt; [&lt;destination&gt;]]</p>

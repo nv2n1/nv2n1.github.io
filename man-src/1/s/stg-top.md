@@ -1,4 +1,5 @@
 ---
+
 title: "stg-top(1)"
 name: "stg-top"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-top/"
 description: "stg-top – Print the name of the top patch"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-top &#8211; Print the name of the top patch </p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "pgmdeshadow(1)"
 name: "pgmdeshadow"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmdeshadow/"
 description: "pgmdeshadow – Deshadow a PGM image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pgmdeshadow &#8211; Deshadow a PGM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmdeshadow</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pammixinterlace(1)"
 name: "pammixinterlace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pammixinterlace/"
 description: "pammixinterlace – mix adjacent lines to merge interlaced images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pammixinterlace &#8211; mix adjacent lines to merge interlaced images</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pammixinterlace</code> </p>

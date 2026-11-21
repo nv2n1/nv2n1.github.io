@@ -1,4 +1,5 @@
 ---
+
 title: "docbook2texi-spec(1)"
 name: "docbook2texi-spec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docbook2texi-spec/"
 description: "docbook2texi-spec.pl – convert DocBook Booksto Texinfo documents"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docbook2texi-spec.pl &#8211; convert DocBook Booksto Texinfo documents </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sgmlspl</code> <code>docbook2man-spec.pl</code> </p>

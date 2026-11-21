@@ -1,4 +1,5 @@
 ---
+
 title: "gtk-query-settings(1)"
 name: "gtk-query-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtk-query-settings/"
 description: "gtk-query-settings – Utility to print name and value of all GtkSettings properties"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gtk-query-settings &#8211; Utility to print name and value of all GtkSettings properties </p>
 <h2>SYNOPSIS</h2>
 <dl>

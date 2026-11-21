@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crl_privkey_sign(3)"
 name: "gnutls_x509_crl_privkey_sign"
 section: "3"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-gnutls_x509_crl_privkey_sign/"
 ---
 
-<h2>NAME</h2>
-
- gnutls_x509_crl_privkey_sign - API function
+gnutls_x509_crl_privkey_sign - API function
 
 <h2>SYNOPSIS</h2>
 

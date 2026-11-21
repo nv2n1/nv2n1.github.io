@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_or(3)"
 name: "ck_pr_or"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_or/"
 description: "ck_pr_or_ptr ck_pr_or_char ck_pr_or_uint ck_pr_or_int ck_pr_or_64 ck_pr_or_32 ck_pr_or_16 ck_pr_or_8 – atomic bitwise-or operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_or_ptr</code> <code>ck_pr_or_char</code> <code>ck_pr_or_uint</code> <code>ck_pr_or_int</code> <code>ck_pr_or_64</code> <code>ck_pr_or_32</code> <code>ck_pr_or_16</code> <code>ck_pr_or_8</code> &#8211; atomic bitwise-or operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

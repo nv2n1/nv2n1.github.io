@@ -1,4 +1,5 @@
 ---
+
 title: "fittedbonddiscountcurve(3)"
 name: "fittedbonddiscountcurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fittedbonddiscountcurve/"
 description: "ql/termstructures/yield/fittedbonddiscountcurve.hpp – discount curve fitted to a set of fixed-coupon bonds"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/termstructures/yield/fittedbonddiscountcurve.hpp &#8211; discount curve fitted to a set of fixed-coupon bonds </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/yield/bondhelpers.hpp&gt;<br />

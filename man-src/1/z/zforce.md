@@ -1,4 +1,5 @@
 ---
+
 title: "zforce(1)"
 name: "zforce"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zforce/"
 description: "zforce – force a ‘.gz’ extension on all gzip files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zforce &#8211; force a &#8216;.gz&#8217; extension on all gzip files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zforce</code> [ name &#8230; ]</p>

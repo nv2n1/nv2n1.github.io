@@ -1,4 +1,5 @@
 ---
+
 title: "pbmclean(1)"
 name: "pbmclean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmclean/"
 description: "pbmclean – flip isolated pixels in portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmclean &#8211; flip isolated pixels in portable bitmap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmclean </code> [<code>-minneighbors=</code><i>N</i>] [<code>-black</code>|<code>-white</code>] [<i>pbmfile</i>] </p>

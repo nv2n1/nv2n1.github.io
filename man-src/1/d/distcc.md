@@ -1,4 +1,5 @@
 ---
+
 title: "distcc(1)"
 name: "distcc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-distcc/"
 description: "distcc – distributed C/C++/ObjC compiler with distcc-pump extensions"
 ---
 
-<h2>NAME</h2>
 <p> distcc &#8211; distributed C/C++/ObjC compiler with distcc-pump extensions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>distcc </code> <i>&lt;compiler&gt; [COMPILER OPTIONS] </i> </p>

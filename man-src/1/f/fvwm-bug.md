@@ -1,4 +1,5 @@
 ---
+
 title: "fvwm-bug(1)"
 name: "fvwm-bug"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fvwm-bug/"
 description: "fvwm-bug – report a bug in fvwm"
 ---
 
-<h2>NAME</h2>
 <p> fvwm-bug &#8211; report a bug in fvwm</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fvwm-bug</code> [<i>&#8211;help</i>] [<i>&#8211;version</i>] [<i>address</i>]</p>

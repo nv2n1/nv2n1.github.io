@@ -1,4 +1,5 @@
 ---
+
 title: "pinfo(1)"
 name: "pinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pinfo/"
 description: "pinfo – curses based lynx-style info browser"
 ---
 
-<h2>NAME</h2>
 <p> <code>pinfo</code> &#8211; curses based lynx-style info browser</p>
 <h2>SYNTAX</h2>
 <p> <code>pinfo </code> [<i>options</i>] [<code>infopage</code>]</p>

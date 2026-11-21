@@ -1,4 +1,5 @@
 ---
+
 title: "rst2pseudoxml(1)"
 name: "rst2pseudoxml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rst2pseudoxml/"
 description: "rst2pseudoxml – convert reST documents to pseudo-XML"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rst2pseudoxml &#8211; convert reST documents to pseudo-XML </p>
 <h2>SYNOPSIS</h2>
 <p> rst2pseudoxml [options] [&lt;source&gt; [&lt;destination&gt;]]</p>

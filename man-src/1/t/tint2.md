@@ -1,4 +1,5 @@
 ---
+
 title: "tint2(1)"
 name: "tint2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tint2/"
 description: "tint2 – lightweight panel/taskbar"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tint2 &#8211; lightweight panel/taskbar </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tint2</code><br />

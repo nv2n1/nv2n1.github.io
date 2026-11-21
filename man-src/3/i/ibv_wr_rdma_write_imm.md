@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_wr_rdma_write_imm(3)"
 name: "ibv_wr_rdma_write_imm"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_wr_rdma_write_imm/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_wr_abort, ibv_wr_complete, ibv_wr_start - Manage regions allowed to post work 
+ibv_wr_abort, ibv_wr_complete, ibv_wr_start - Manage regions allowed to post work 
 
  ibv_wr_atomic_cmp_swp, ibv_wr_atomic_fetch_add - Post remote atomic operation work requests 
 

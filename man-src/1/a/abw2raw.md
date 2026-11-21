@@ -1,4 +1,5 @@
 ---
+
 title: "abw2raw(1)"
 name: "abw2raw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abw2raw/"
 description: "abw2raw – debug the conversion library"
 ---
 
-<h2>NAME</h2>
 <p> abw2raw &#8211; debug the conversion library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>abw2raw</code> [<i>OPTION</i>] <i>&lt;AbiWord Document&gt;</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gdl(1)"
 name: "gdl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdl/"
 description: "gdl – GNU Data Language incremental compiler"
 ---
 
-<h2>NAME</h2>
 <p> gdl &#8211; GNU Data Language incremental compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gdl</code> [&#8211;help] [-h] [&#8211;version] [-v] [-V] [[-]-quiet] [-q] [ -arg value ] [ -args &#8230; ] [ -e statement ] [ -pref=/path/to/preferenceFile ] [ batch_file &#8230; ]</p>

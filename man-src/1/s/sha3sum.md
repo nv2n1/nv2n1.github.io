@@ -1,4 +1,5 @@
 ---
+
 title: "sha3sum(1)"
 name: "sha3sum"
 section: "1"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-sha3sum/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- sha3sum - Print or Check SHA-3 Checksums 
+sha3sum - Print or Check SHA-3 Checksums 
 
 <h2>SYNOPSIS</h2>
 

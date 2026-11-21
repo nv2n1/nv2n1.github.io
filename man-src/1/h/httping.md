@@ -1,4 +1,5 @@
 ---
+
 title: "httping(1)"
 name: "httping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-httping/"
 description: "httping – measure the latency and throughput of a webserver"
 ---
 
-<h2>NAME</h2>
 <p> httping &#8211; measure the latency and throughput of a webserver</p>
 <h2>SYNOPSIS</h2>
 <p> <code>httping [</code><i>options</i><code>]</code> </p>

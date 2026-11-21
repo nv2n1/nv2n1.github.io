@@ -1,4 +1,5 @@
 ---
+
 title: "npm-fund(1)"
 name: "npm-fund"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-fund/"
 description: "npm-fund – Retrieve funding information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-fund</code> &#8211; Retrieve funding information </p>
 <h3>Synopsis</h3>
 <dl>

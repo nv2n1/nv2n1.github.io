@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_mord(1)"
 name: "scotch_mord"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_mord/"
 description: "mord – compute sparse matrix orderings of meshes"
 ---
 
-<h2>NAME</h2>
 <p> <code>mord </code>&#8211; compute sparse matrix orderings of meshes</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

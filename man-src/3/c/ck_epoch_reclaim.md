@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_reclaim(3)"
 name: "ck_epoch_reclaim"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_epoch_reclaim/"
 description: "ck_epoch_reclaim – immediately execute all deferred callbacks"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_epoch_reclaim</code> &#8211; immediately execute all deferred callbacks</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

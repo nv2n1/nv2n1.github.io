@@ -1,4 +1,5 @@
 ---
+
 title: "varnishd(1)"
 name: "varnishd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-varnishd/"
 description: "varnishd – HTTP accelerator daemon"
 ---
 
-<h2>NAME</h2>
 <p> varnishd &#8211; HTTP accelerator daemon</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "opentool(1)"
 name: "opentool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opentool/"
 description: "opentool – Command line tool for starting tools"
 ---
 
-<h2>NAME</h2>
 <p> opentool &#8211; Command line tool for starting tools </p>
 <h2>SYNOPSIS</h2>
 <p> <code>opentool</code> [<code>&#8211;library-combo=&#8230;</code>] <code>tool</code> [<i>arguments&#8230;</i>] </p>

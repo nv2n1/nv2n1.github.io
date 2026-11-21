@@ -1,4 +1,5 @@
 ---
+
 title: "bget(1)"
 name: "bget"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bget/"
 description: "axgetput – upload or download files via AX.25 / axspawn Linux login session."
 ---
 
-<h2>NAME</h2>
 <p> axgetput &#8211; upload or download files via AX.25 / axspawn Linux login session.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>axgetput</code> [-b <i>blocksize</i>] [-i] [-v] [-h] [?] <i>filename</i><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "sgscan(1)"
 name: "sgscan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sgscan/"
 description: "sgscan – scan an file or mailbox for viruses/spams"
 ---
 
-<h2>NAME</h2>
 <p> sgscan &#8211; scan an file or mailbox for viruses/spams</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sgscan</code> [&#8211;help] [&#8211;config filename] [&#8211;debug level] [&#8211;clean] [&#8211;verbose] [&#8211;quiet] [&#8211;av-only] files&#8230;</p>

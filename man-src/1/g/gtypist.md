@@ -1,4 +1,5 @@
 ---
+
 title: "gtypist(1)"
 name: "gtypist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtypist/"
 description: "gtypist – manual page for gtypist 2.8.1"
 ---
 
-<h2>NAME</h2>
 <p> gtypist &#8211; manual page for gtypist 2.8.1</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtypist</code> [ <i>Options</i>&#8230; ] [ <i>script-file </i>]</p>

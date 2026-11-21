@@ -1,4 +1,5 @@
 ---
+
 title: "afpfsd(1)"
 name: "afpfsd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-afpfsd/"
 description: "afpfsd – Daemon to manage AFP sessions for the afpfs-ng FUSE client."
 ---
 
-<h2>NAME</h2>
 <p> afpfsd &#8211; Daemon to manage AFP sessions for the afpfs-ng FUSE client.</p>
 <h2>SYNOPSIS</h2>
 <p> <i>afpfsd</i> [<code>-l|logmethod=method</code> [f|&#8211;foreground [d|&#8211;debug </p>

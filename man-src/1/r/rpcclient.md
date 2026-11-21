@@ -1,4 +1,5 @@
 ---
+
 title: "rpcclient(1)"
 name: "rpcclient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpcclient/"
 description: "rpcclient – tool for executing client side MS-RPC functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rpcclient &#8211; tool for executing client side MS-RPC functions </p>
 <h2>SYNOPSIS</h2>
 <dl>

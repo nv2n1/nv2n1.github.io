@@ -1,4 +1,5 @@
 ---
+
 title: "ioperm(2)"
 name: "ioperm"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-ioperm/"
 description: "ioperm – set port input/output permissions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ioperm &#8211; set port input/output permissions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/io.h&gt;</code> /* for glibc */ </p>

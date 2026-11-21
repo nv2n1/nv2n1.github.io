@@ -1,4 +1,5 @@
 ---
+
 title: "fail2ban-testcases(1)"
 name: "fail2ban-testcases"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fail2ban-testcases/"
 description: "fail2ban-testcases – run Fail2Ban unit-tests"
 ---
 
-<h2>NAME</h2>
 <p> fail2ban-testcases &#8211; run Fail2Ban unit-tests</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fail2ban-testcases</code> [<i>,OPTIONS/</i>] [<i>,regexps/</i>]</p>

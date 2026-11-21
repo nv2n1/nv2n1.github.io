@@ -1,4 +1,5 @@
 ---
+
 title: "docker-checkpoint-create(1)"
 name: "docker-checkpoint-create"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-checkpoint-create/"
 description: "docker-checkpoint-create – Create a checkpoint from a running container"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-checkpoint-create &#8211; Create a checkpoint from a running container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker checkpoint create [OPTIONS] CONTAINER CHECKPOINT</code> </p>

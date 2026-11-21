@@ -1,4 +1,5 @@
 ---
+
 title: "dlsym(3)"
 name: "dlsym"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlsym/"
 description: "dlsym, dlvsym – obtain address of a symbol in a shared object or executable"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlsym, dlvsym &#8211; obtain address of a symbol in a shared object or executable </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;dlfcn.h&gt;</code> </p>

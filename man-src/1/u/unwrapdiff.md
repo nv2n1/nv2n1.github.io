@@ -1,4 +1,5 @@
 ---
+
 title: "unwrapdiff(1)"
 name: "unwrapdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unwrapdiff/"
 description: "unwrapdiff – demangle word-wrapped patches"
 ---
 
-<h2 class="name">NAME</h2>
 <p> unwrapdiff &#8211; demangle word-wrapped patches </p>
 <h2>SYNOPSIS</h2>
 <dl>

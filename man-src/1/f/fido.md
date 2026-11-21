@@ -1,4 +1,5 @@
 ---
+
 title: "fido(1)"
 name: "fido"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fido/"
 description: "fido is a realish-time log watchdog and alert daemon."
 ---
 
-<h2>NAME</h2>
 <p> fido is a realish-time log watchdog and alert daemon.</p>
 <h2>SYNOPSIS</h2>
 <p> fido [<i>option</i>]</p>

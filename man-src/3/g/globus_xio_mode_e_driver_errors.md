@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_mode_e_driver_errors(3)"
 name: "globus_xio_mode_e_driver_errors"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_xio_mode_e_driver_errors/"
 description: "Error Types –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Error Types &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_mode_e_error_type_t</code> { <code>GLOBUS_XIO_MODE_E_HEADER_ERROR</code> } </p>

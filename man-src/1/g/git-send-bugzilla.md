@@ -1,4 +1,5 @@
 ---
+
 title: "git-send-bugzilla(1)"
 name: "git-send-bugzilla"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-send-bugzilla/"
 description: "git-send-bugzilla – Attach patches to a bugzilla bug"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-send-bugzilla &#8211; Attach patches to a bugzilla bug </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

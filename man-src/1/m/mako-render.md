@@ -1,4 +1,5 @@
 ---
+
 title: "mako-render(1)"
 name: "mako-render"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mako-render/"
 description: "mako-render – renders Mako templates"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mako-render &#8211; renders Mako templates </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mako-render</code> [FILE] </p>

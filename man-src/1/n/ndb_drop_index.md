@@ -1,4 +1,5 @@
 ---
+
 title: "ndb_drop_index(1)"
 name: "ndb_drop_index"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ndb_drop_index/"
 description: "ndb_drop_index – drop index from an NDB table"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ndb_drop_index &#8211; drop index from an NDB table </p>
 <h2>SYNOPSIS</h2>
 <dl>

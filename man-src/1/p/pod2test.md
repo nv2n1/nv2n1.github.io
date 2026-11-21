@@ -1,4 +1,5 @@
 ---
+
 title: "pod2test(1)"
 name: "pod2test"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pod2test/"
 description: "pod2test – Convert embedded tests and code examples to .t files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pod2test &#8211; Convert embedded tests and code examples to .t files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

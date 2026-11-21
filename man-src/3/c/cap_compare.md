@@ -1,4 +1,5 @@
 ---
+
 title: "cap_compare(3)"
 name: "cap_compare"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cap_compare/"
 description: "cap_clear, cap_clear_flag, cap_get_flag, cap_set_flag, cap_compare – capability data object manipulation"
 ---
 
-<h2>NAME</h2>
 <p> cap_clear, cap_clear_flag, cap_get_flag, cap_set_flag, cap_compare &#8211; capability data object manipulation</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

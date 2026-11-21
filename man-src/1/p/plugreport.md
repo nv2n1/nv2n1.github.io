@@ -1,4 +1,5 @@
 ---
+
 title: "plugreport(1)"
 name: "plugreport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-plugreport/"
 description: "plugreport – a program to read all MPR/PCR registers from all devices and report them."
 ---
 
-<h2>NAME</h2>
 <p> plugreport &#8211; a program to read all MPR/PCR registers from all devices and report them.</p>
 <h2>SYNOPSIS</h2>
 <dl>

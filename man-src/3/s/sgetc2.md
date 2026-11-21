@@ -1,4 +1,5 @@
 ---
+
 title: "sgetc2(3)"
 name: "sgetc2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgetc2/"
 description: "sgetc2.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sgetc2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

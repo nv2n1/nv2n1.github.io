@@ -1,4 +1,5 @@
 ---
+
 title: "kvirc(1)"
 name: "kvirc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kvirc/"
 description: "KVIrc – an Internet Relay Chat client."
 ---
 
-<h2>NAME</h2>
 <p> KVIrc &#8211; an Internet Relay Chat client.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kvirc [options] [server [port]] [ircurl [ircurl [&#8230;]]]</code> </p>

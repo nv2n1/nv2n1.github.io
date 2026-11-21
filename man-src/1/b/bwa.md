@@ -1,4 +1,5 @@
 ---
+
 title: "bwa(1)"
 name: "bwa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bwa/"
 description: "bwa – Burrows-Wheeler Alignment Tool"
 ---
 
-<h2>NAME</h2>
 <p> bwa &#8211; Burrows-Wheeler Alignment Tool</p>
 <h2>SYNOPSIS</h2>
 <p> bwa index ref.fa </p>

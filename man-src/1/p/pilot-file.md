@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-file(1)"
 name: "pilot-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-file/"
 description: "pilot-file – Dump application and header information from your local PRC/PDB files."
 ---
 
-<h2>NAME</h2>
 <p> pilot-file &#8211; Dump application and header information from your local PRC/PDB files.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>

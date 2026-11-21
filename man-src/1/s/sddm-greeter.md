@@ -1,4 +1,5 @@
 ---
+
 title: "sddm-greeter(1)"
 name: "sddm-greeter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sddm-greeter/"
 description: "sddm-greeter – sddm display manager greeter"
 ---
 
-<h2>NAME</h2>
 <p> sddm-greeter &#8211; sddm display manager greeter</p>
 <h2>SYNOPSIS</h2>
 <p> sddm-greeter [OPTIONS&#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mprof-heap-viewer(1)"
 name: "mprof-heap-viewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mprof-heap-viewer/"
 description: "mprof-heap-viewer – GUI viewer for the logging profiler heap snapshots"
 ---
 
-<h2>NAME</h2>
 <p> mprof-heap-viewer &#8211; GUI viewer for the logging profiler heap snapshots</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mprof-heap-viewer</code> file</p>

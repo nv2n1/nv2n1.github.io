@@ -1,4 +1,5 @@
 ---
+
 title: "openvt(1)"
 name: "openvt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-openvt/"
 description: "openvt – start a program on a new virtual terminal (VT)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> openvt &#8211; start a program on a new virtual terminal (VT). </p>
 <h2>SYNOPSIS</h2>
 <p> <code>openvt</code> [-c vtnumber] [OPTIONS] [&#8211;] command</p>

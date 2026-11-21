@@ -1,4 +1,5 @@
 ---
+
 title: "gendarme(1)"
 name: "gendarme"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gendarme/"
 description: "Gendarme – Rule-based code analysis for Mono::"
 ---
 
-<h2>NAME</h2>
 <p> Gendarme &#8211; Rule-based code analysis for Mono::</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gendarme [&#8211;config configfile] [&#8211;set ruleset] [&#8211;log file | &#8211;xml file | &#8211;html file] [options] assemblies &#8230;</code></p>

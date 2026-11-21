@@ -1,4 +1,5 @@
 ---
+
 title: "icewm(1)"
 name: "icewm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icewm/"
 description: "icewm – lightweight X11 window manager"
 ---
 
-<h2>NAME</h2>
 <p> icewm &#8211; lightweight X11 window manager </p>
 <h2>DESCRIPTION</h2>
 <p> <i>IceWM</i> is lightweight X11 window manager. The goal of IceWM is to provide a small, fast and familiar window manager for the X11 window system. Compatibility with the window manager is desired and will be implemented where appropriate. </p>

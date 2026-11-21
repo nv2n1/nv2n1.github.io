@@ -1,4 +1,5 @@
 ---
+
 title: "skipfish(1)"
 name: "skipfish"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-skipfish/"
 description: "skipfish – web application security scanner"
 ---
 
-<h2>NAME</h2>
 <p> skipfish &#8211; web application security scanner</p>
 <h2>SYNOPSIS</h2>
 <p> <code>skipfish</code> [<i>options</i>]<i> -o output-directory [ start-url | @url-file [ start-url2 &#8230; ]]</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pppob(1)"
 name: "pppob"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pppob/"
 description: "pppob – Barry Project’s program to access the Blackberry modem for pppd"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>pppob</code> &#8211; Barry Project&#8217;s program to access the Blackberry modem for pppd </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pppob</code> [-l filename][-p pin][-P password][-s][-v]</p>

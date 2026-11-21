@@ -1,4 +1,5 @@
 ---
+
 title: "splitword(1)"
 name: "splitword"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-splitword/"
 description: "splitwd – Collect several text-form dictionary files into a single file to make a <1 line / 1 word type / 1 candidate> format."
 ---
 
-<h2>NAME</h2>
 <p> splitwd &#8211; Collect several text-form dictionary files into a single file to make a &lt;1 line / 1 word type / 1 candidate&gt; format.</p>
 <h2>SYNOPSISS</h2>
 <p> <code>splitwd </code><i>textjisho</i> &#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pg_test_timing(1)"
 name: "pg_test_timing"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg_test_timing/"
 description: "pg_test_timing – measure timing overhead"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg_test_timing &#8211; measure timing overhead </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnokii(1)"
 name: "gnokii"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnokii/"
 description: "gnokii – tool suite for mobile phones"
 ---
 
-<h2>NAME</h2>
 <p> gnokii &#8211; tool suite for mobile phones</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnokii</code> <i>[CONFIG OPTIONS]</i> [<i>OPTIONS</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_iter_next(3)"
 name: "cmap_iter_next"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmap_iter_next/"
 description: "cmap_iter_next – Return next item in iteration in CMAP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cmap_iter_next &#8211; Return next item in iteration in CMAP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>

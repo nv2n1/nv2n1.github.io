@@ -1,4 +1,5 @@
 ---
+
 title: "qsgeo(1)"
 name: "qsgeo"
 section: "1"
@@ -6,10 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qsgeo/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- qsgeo - an utility to lookup a client's country code. 
+qsgeo - an utility to lookup a client's country code. 
 
 <h2>SYNOPSIS</h2>
 

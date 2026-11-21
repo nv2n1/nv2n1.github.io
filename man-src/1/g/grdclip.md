@@ -1,4 +1,5 @@
 ---
+
 title: "grdclip(1)"
 name: "grdclip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdclip/"
 description: "grdclip – Clip the range of grids"
 ---
 
-<h2>NAME</h2>
 <p> grdclip &#8211; Clip the range of grids</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdclip</code> <i>ingrid</i> <i>outgrid</i> [ <i>region</i> ] [ <code>a</code><i>high/above</i> ] [ <code>b</code><i>low/below</i> ] [ <code>i</code><i>low/high/between</i> ] [ <code>r</code><i>old/new</i> ] [ [<i>level</i>] ] </p>

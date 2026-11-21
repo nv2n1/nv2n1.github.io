@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_field_str(3)"
 name: "auparse_get_field_str"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_field_str/"
 description: "auparse_get_field_str – get current field’s value"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_field_str &#8211; get current field&#8217;s value</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

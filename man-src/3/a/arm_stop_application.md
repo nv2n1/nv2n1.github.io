@@ -1,4 +1,5 @@
 ---
+
 title: "arm_stop_application(3)"
 name: "arm_stop_application"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arm_stop_application/"
 description: "arm_stop_application – stop application"
 ---
 
-<h2>NAME</h2>
 <p> arm_stop_application &#8211; stop application</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>

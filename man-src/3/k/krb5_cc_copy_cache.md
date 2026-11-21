@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_cc_copy_cache(3)"
 name: "krb5_cc_copy_cache"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_cc_copy_cache/"
 description: "Heimdal Kerberos 5 credential cache functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Heimdal Kerberos 5 credential cache functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />

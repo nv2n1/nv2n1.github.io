@@ -1,4 +1,5 @@
 ---
+
 title: "mdoc-validate(1)"
 name: "mdoc-validate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdoc-validate/"
 description: "mdoc validate – Validate XML documents against a schema"
 ---
 
-<h2>NAME</h2>
 <p> mdoc validate &#8211; Validate XML documents against a schema</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdoc validate</code> [OPTIONS]* PATHS+</p>

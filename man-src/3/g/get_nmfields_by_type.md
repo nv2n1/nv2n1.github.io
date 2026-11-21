@@ -1,4 +1,5 @@
 ---
+
 title: "get_nmfields_by_type(3)"
 name: "get_nmfields_by_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_nmfields_by_type/"
 description: "get_nmfields_by_type — report the number of fields of a given type in a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> get_nmfields_by_type &#8212; report the number of fields of a given type in a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

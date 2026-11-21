@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_srtp_get_selected_profile(3)"
 name: "gnutls_srtp_get_selected_profile"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_srtp_get_selected_profile/"
 description: "gnutls_srtp_get_selected_profile – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_srtp_get_selected_profile &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

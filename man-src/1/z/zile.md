@@ -1,4 +1,5 @@
 ---
+
 title: "zile(1)"
 name: "zile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zile/"
 description: "Zile – Zile Is Lossy Emacs"
 ---
 
-<h2>NAME</h2>
 <p> Zile &#8211; Zile Is Lossy Emacs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>zile</code> [<i>OPTION-OR-FILENAME</i>]&#8230;</p>

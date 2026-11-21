@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-index(1)"
 name: "doveadm-index"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-index/"
 description: "doveadm-index – Index mailboxes"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-index &#8211; Index mailboxes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>index</code> [<code>-S</code> <i>socket_path</i>] [<code>-q</code>] [<code>-n</code> <i>max_recent</i>] <i>mailbox</i><br />

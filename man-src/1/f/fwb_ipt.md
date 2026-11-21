@@ -1,4 +1,5 @@
 ---
+
 title: "fwb_ipt(1)"
 name: "fwb_ipt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fwb_ipt/"
 description: "fwb_ipt – Policy compiler for iptables"
 ---
 
-<h2>NAME</h2>
 <p> fwb_ipt &#8211; Policy compiler for iptables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fwb_ipt</code> [-wvV] [-d<code>wdir]</code> [-o<code>output.fw]</code> [-4] [-6] [-i] -f<code>data_file.xml</code> object_name </p>

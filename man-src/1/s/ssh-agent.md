@@ -1,4 +1,5 @@
 ---
+
 title: "ssh-agent(1)"
 name: "ssh-agent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ssh-agent/"
 description: "ssh-agent – OpenSSH authentication agent"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ssh-agent</code> &#8211; OpenSSH authentication agent </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssh-agent</code> [-<code>c | s</code> ] [-[-<code>a </code><i>bind_address</i> ] ] [-<code>E </code><i>fingerprint_hash</i> ] [-<code>P </code><i>allowed_providers</i> ] [-<code>t </code><i>life</i> ]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "g-ir-scanner(1)"
 name: "g-ir-scanner"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g-ir-scanner/"
 description: "g-ir-scanner – extracting C metadata from sources and headers"
 ---
 
-<h2>NAME</h2>
 <p> g-ir-scanner &#8211; extracting C metadata from sources and headers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>g-ir-scanner</code> [OPTION&#8230;] FILES&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3debughandlers(3)"
 name: "antlr3debughandlers"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3debughandlers/"
 description: "src/antlr3debughandlers.c –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> src/antlr3debughandlers.c &#8211; </p>
 <p> Provides the debugging functions invoked by a recognizer built using the debug generator mode of the antlr tool.</p>
 <h2>SYNOPSIS</h2>

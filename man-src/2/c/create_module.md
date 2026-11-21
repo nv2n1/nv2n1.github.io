@@ -1,4 +1,5 @@
 ---
+
 title: "create_module(2)"
 name: "create_module"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-create_module/"
 description: "create_module – create a loadable module entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> create_module &#8211; create a loadable module entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "funtable(1)"
 name: "funtable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funtable/"
 description: "funtable – copy selected rows from a Funtools file to a FITS binary table"
 ---
 
-<h2>NAME</h2>
 <p> <code>funtable &#8211; copy selected rows from a Funtools file to a FITS binary table</code></p>
 <h2>SYNOPSIS</h2>
 <p> funtable [-a] [-i|-z] [-m] [-s cols] &lt;iname&gt; &lt;oname&gt; [columns]</p>

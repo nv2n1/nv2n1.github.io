@@ -1,4 +1,5 @@
 ---
+
 title: "crypt_preferred_method(3)"
 name: "crypt_preferred_method"
 section: "3"
@@ -8,7 +9,7 @@ description: "crypt_preferred_method – get the prefix of the preferred hash me
 ---
 
 <p>libxcrypt</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>crypt_preferred_method</code> &#8211; get the prefix of the preferred hash method </p>
 <h2>LIBRARY</h2>
 <p> Lb libcrypt</p>

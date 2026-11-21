@@ -1,4 +1,5 @@
 ---
+
 title: "aa_registerfont(3)"
 name: "aa_registerfont"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_registerfont/"
 description: "aa_registerfont – add new font specification to aa_fonts array."
 ---
 
-<h2>NAME</h2>
 <p> aa_registerfont &#8211; add new font specification to aa_fonts array.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

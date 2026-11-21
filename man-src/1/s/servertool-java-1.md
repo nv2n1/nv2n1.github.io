@@ -1,4 +1,5 @@
 ---
+
 title: "servertool-java-1(1)"
 name: "servertool-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-servertool-java-1/"
 description: "servertool – Provides an easy-to-use interface for developers to register, unregister, start up, and shut down a persistent server."
 ---
 
-<h2>NAME</h2>
 <p> servertool &#8211; Provides an easy-to-use interface for developers to register, unregister, start up, and shut down a persistent server.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

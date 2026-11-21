@@ -1,4 +1,5 @@
 ---
+
 title: "meanbias(1)"
 name: "meanbias"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-meanbias/"
 description: "meanbias – CCD bias frame composition"
 ---
 
-<h2 class="name">NAME</h2>
 <p> meanbias &#8211; CCD bias frame composition</p>
 <h2>SYNOPSIS</h2>
 <p> <code>meanbias </code><i>[options] source_file &#8230;</i> </p>

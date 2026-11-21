@@ -1,4 +1,5 @@
 ---
+
 title: "euform-create-stack(1)"
 name: "euform-create-stack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euform-create-stack/"
 description: "euform-create-stack – Create a new stack"
 ---
 
-<h2>NAME</h2>
 <p> euform-create-stack &#8211; Create a new stack</p>
 <h2>SYNOPSIS</h2>
 <p> euform-create-stack (<code>&#8211;template-file</code> FILE | <code>&#8211;template-url</code> URL) [-d]</p>

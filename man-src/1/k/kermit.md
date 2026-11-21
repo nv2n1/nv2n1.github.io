@@ -1,4 +1,5 @@
 ---
+
 title: "kermit(1)"
 name: "kermit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kermit/"
 description: "kermit – C-Kermit 9.0: transport- and platform-independent interactive and scriptable communications software."
 ---
 
-<h2 class="name">NAME</h2>
 <p> kermit &#8211; <code>C-Kermit 9.0:</code> transport- and platform-independent interactive and scriptable communications software.</p>
 <dl>
 <dt>

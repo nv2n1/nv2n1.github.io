@@ -1,4 +1,5 @@
 ---
+
 title: "widl(1)"
 name: "widl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-widl/"
 description: "widl – Wine Interface Definition Language (IDL) compiler"
 ---
 
-<h2>NAME</h2>
 <p> widl &#8211; Wine Interface Definition Language (IDL) compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>widl</code> [<i>options</i>] <i>IDL_file</i><br />

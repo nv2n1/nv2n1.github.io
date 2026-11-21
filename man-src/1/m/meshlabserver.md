@@ -1,4 +1,5 @@
 ---
+
 title: "meshlabserver(1)"
 name: "meshlabserver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-meshlabserver/"
 description: "MeshLab – a tool for mesh inspection, processing, and conversion"
 ---
 
-<h2>NAME</h2>
 <p> MeshLab &#8211; a tool for mesh inspection, processing, and conversion</p>
 <h2>SYNOPSYS</h2>
 <p> meshlabserver [args]</p>

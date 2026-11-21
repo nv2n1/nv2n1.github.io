@@ -1,4 +1,5 @@
 ---
+
 title: "ginsh(1)"
 name: "ginsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ginsh/"
 description: "ginsh – GiNaC Interactive Shell"
 ---
 
-<h2>NAME</h2>
 <p> ginsh &#8211; GiNaC Interactive Shell</p>
 <h2>SYNPOSIS</h2>
 <p> <code>ginsh</code> [<i>file&#8230;</i>]</p>

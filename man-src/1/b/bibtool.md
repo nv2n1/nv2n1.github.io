@@ -1,4 +1,5 @@
 ---
+
 title: "bibtool(1)"
 name: "bibtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bibtool/"
 description: "BibTool – BibTeX file manipulation tool"
 ---
 
-<h2>NAME</h2>
 <p> BibTool &#8211; BibTeX file manipulation tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bibtool</code> [options] [files]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "calculate(3)"
 name: "calculate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-calculate/"
 description: "QuantLib::PerturbativeBarrierOptionEngine – perturbative barrier-option engine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::PerturbativeBarrierOptionEngine &#8211; perturbative barrier-option engine </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/barrieroption/perturbativebarrieroptionengine.hpp&gt; </p>

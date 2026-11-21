@@ -1,4 +1,5 @@
 ---
+
 title: "acpidump-acpica(1)"
 name: "acpidump-acpica"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-acpidump-acpica/"
 description: "acpidump – ACPI table dump utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> acpidump &#8211; ACPI table dump utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>acpidump</code> [<i>&lt;option&gt;</i>&#8230;<i>]</i> </p>

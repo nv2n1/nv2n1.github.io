@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_handshake(3)"
 name: "gnutls_handshake"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_handshake/"
 description: "gnutls_handshake – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_handshake &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

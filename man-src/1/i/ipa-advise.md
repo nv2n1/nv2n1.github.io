@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-advise(1)"
 name: "ipa-advise"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-advise/"
 description: "ipa-advise – Provide configurations advice for various use cases."
 ---
 
-<h2>NAME</h2>
 <p> ipa-advise &#8211; Provide configurations advice for various use cases.</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-advise ADVICE</p>

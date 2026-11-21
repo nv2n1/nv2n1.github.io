@@ -1,4 +1,5 @@
 ---
+
 title: "qrsub(1)"
 name: "qrsub"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qrsub/"
 description: "qrsub – Submit an Advance Reservation (AR) to xxQS_NAMExx."
 ---
 
-<h2 class="name">NAME</h2>
 <p> qrsub &#8211; Submit an Advance Reservation (AR) to xxQS_NAMExx. </p>
 <h2>SYNTAX</h2>
 <p> <code>qrsub</code> [<code>-a</code> <i>date_time</i>] [<code>-A</code> <i>account_string</i>] [<code>-ckpt</code> <i>ckpt_name</i>] [<code>-d</code> <i>time</i>] [<code>-e</code> <i>date_time</i>] [<code>-he</code> <i>yes</i>|<i>no</i>] [<code>-help</code>] [<code>-l</code> <i>resource_list</i>] [<code>-now</code>] [<code>-M</code> <i>user</i>[@<i>host</i>],&#8230;] [<code>-N</code> <i>ar_name</i>] [<code>-w</code> <i>e|v</i>] [<code>-pe</code> <i>pe_name slot_range</i>] [<code>-q</code> <i>wc_queue_list</i>] [<code>-u</code> <i>wc_user_list</i>]</p>

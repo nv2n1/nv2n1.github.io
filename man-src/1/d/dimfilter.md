@@ -1,4 +1,5 @@
 ---
+
 title: "dimfilter(1)"
 name: "dimfilter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dimfilter/"
 description: "dimfilter – Directional filtering of 2-D gridded files in the space (or time) domain"
 ---
 
-<h2>NAME</h2>
 <p> dimfilter &#8211; Directional filtering of 2-D gridded files in the space (or time) domain</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dimfilter</code> <i>input_file.nc</i> <i>distance_flag</i> <i>&lt;filtertype&gt;&lt;width&gt;</i>[<i>mode</i>] <i>output_file.nc</i> <i>&lt;filtertype&gt;&lt;n_sectors&gt;</i> [ <i>cols</i> ] [ <i>increment</i> ] [ <i>region</i> ] [ ] [ [<i>level</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] </p>

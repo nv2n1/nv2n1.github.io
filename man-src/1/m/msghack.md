@@ -1,4 +1,5 @@
 ---
+
 title: "msghack(1)"
 name: "msghack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msghack/"
 description: "msghack – alter PO files in ways"
 ---
 
-<h2>NAME</h2>
 <p> msghack &#8211; alter PO files in ways</p>
 <h2>SYNOPSIS</h2>
 <p> <code>msghack</code> [<i>OPTION</i>] <i>file.po </i>[<i>ref.po</i>]</p>

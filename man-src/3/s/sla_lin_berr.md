@@ -1,4 +1,5 @@
 ---
+
 title: "sla_lin_berr(3)"
 name: "sla_lin_berr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sla_lin_berr/"
 description: "sla_lin_berr.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sla_lin_berr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

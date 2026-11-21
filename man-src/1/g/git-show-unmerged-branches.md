@@ -1,4 +1,5 @@
 ---
+
 title: "git-show-unmerged-branches(1)"
 name: "git-show-unmerged-branches"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-show-unmerged-branches/"
 description: "git-show-unmerged-branches – Show unmerged branches"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-show-unmerged-branches</code> &#8211; Show unmerged branches</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-show-unmerged-branches</code></p>

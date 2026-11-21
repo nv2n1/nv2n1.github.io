@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_uscale(3)"
 name: "cdk_uscale"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_uscale/"
 description: "cdk_uscale – curses scale widget (type unsigned)."
 ---
 
-<h2>NAME</h2>
 <p> cdk_uscale &#8211; curses scale widget (type unsigned).</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

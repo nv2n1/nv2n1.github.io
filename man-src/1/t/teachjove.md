@@ -1,4 +1,5 @@
 ---
+
 title: "teachjove(1)"
 name: "teachjove"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-teachjove/"
 description: "teachjove – learn how to use the JOVE editor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> teachjove &#8211; learn how to use the JOVE editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>teachjove</code> [ <code>-s</code><i>&nbsp;<wbr>sharedir</i> ]</p>

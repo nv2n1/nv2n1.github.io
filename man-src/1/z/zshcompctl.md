@@ -1,4 +1,5 @@
 ---
+
 title: "zshcompctl(1)"
 name: "zshcompctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zshcompctl/"
 description: "zshcompctl – zsh programmable completion"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zshcompctl &#8211; zsh programmable completion </p>
 <h2>DESCRIPTION</h2>
 <p> This version of zsh has two ways of performing completion of words on the command line. New users of the shell may prefer to use the newer and more powerful system based on shell functions; this is described in <i><a href="/docs/linux/man/1-zshcompsys/">zshcompsys</a></i>(1), and the basic shell mechanisms which support it are described in <i><a href="/docs/linux/man/1-zshcompwid/">zshcompwid</a></i>(1). This manual entry describes the older <code>compctl</code> command. </p>

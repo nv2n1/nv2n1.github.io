@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-client-automount(1)"
 name: "ipa-client-automount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-client-automount/"
 description: "ipa-client-automount – Configure automount and NFS for IPA"
 ---
 
-<h2>NAME</h2>
 <p> ipa-client-automount &#8211; Configure automount and NFS for IPA</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-client-automount [<i>OPTION</i>]&#8230; &lt;location&gt;</p>

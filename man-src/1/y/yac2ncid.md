@@ -1,4 +1,5 @@
 ---
+
 title: "yac2ncid(1)"
 name: "yac2ncid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yac2ncid/"
 description: "yac2ncid – YAC server to NCID server gateway"
 ---
 
-<h2>NAME</h2>
 <p> <code>yac2ncid</code> &#8211; YAC server to NCID server gateway</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yac2ncid</code> [-v]</p>

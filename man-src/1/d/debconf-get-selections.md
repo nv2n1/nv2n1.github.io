@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-get-selections(1)"
 name: "debconf-get-selections"
 section: "1"
@@ -6,10 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-debconf-get-selections/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- debconf-get-selections - output contents of debconf database 
+debconf-get-selections - output contents of debconf database 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "ffado-bridgeco-downloader(1)"
 name: "ffado-bridgeco-downloader"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffado-bridgeco-downloader/"
 description: "ffado-bridgeco-downloader – firmware download application for BridgeCo devices"
 ---
 
-<h2>NAME</h2>
 <p> ffado-bridgeco-downloader &#8211; firmware download application for BridgeCo devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ffado-bridgeco-downloader [OPTION&#8230;] OPERATION</code> </p>

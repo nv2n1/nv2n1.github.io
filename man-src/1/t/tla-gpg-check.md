@@ -1,4 +1,5 @@
 ---
+
 title: "tla-gpg-check(1)"
 name: "tla-gpg-check"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tla-gpg-check/"
 description: "tla-gpg-check – GNU Arch revision signature checker"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tla-gpg-check &#8211; GNU Arch revision signature checker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tla-gpg-check</code> gpg_command=&quot;<i>gpg_command</i>&quot;</p>

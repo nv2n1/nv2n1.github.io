@@ -1,4 +1,5 @@
 ---
+
 title: "dc1394_grab_partial_image(1)"
 name: "dc1394_grab_partial_image"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dc1394_grab_partial_image/"
 description: "grab_partial_image – grab a partial image using libdc1394"
 ---
 
-<h2>NAME</h2>
 <p> grab_partial_image &#8211; grab a partial image using libdc1394</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grab_partial_image</code></p>

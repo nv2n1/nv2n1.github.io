@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlmetagrep(1)"
 name: "mysqlmetagrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlmetagrep/"
 description: "mysqlmetagrep – Search Database Object Definitions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlmetagrep &#8211; Search Database Object Definitions </p>
 <h2>SYNOPSIS</h2>
 <dl>

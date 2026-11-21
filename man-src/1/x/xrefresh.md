@@ -1,4 +1,5 @@
 ---
+
 title: "xrefresh(1)"
 name: "xrefresh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xrefresh/"
 description: "xrefresh – refresh all or part of an X screen"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xrefresh &#8211; refresh all or part of an X screen </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xrefresh</code> [-option &#8230;]</p>

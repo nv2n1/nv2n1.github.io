@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_destroy(3)"
 name: "auparse_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_destroy/"
 description: "auparse_destroy – release instance of parser"
 ---
 
-<h2>NAME</h2>
 <p> auparse_destroy &#8211; release instance of parser</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

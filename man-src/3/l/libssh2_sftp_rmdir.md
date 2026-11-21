@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_rmdir(3)"
 name: "libssh2_sftp_rmdir"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_rmdir/"
 description: "libssh2_sftp_rmdir – convenience macro for libssh2_sftp_rmdir_ex(3)"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_rmdir &#8211; convenience macro for <i><a href="/docs/linux/man/3-libssh2_sftp_rmdir_ex/">libssh2_sftp_rmdir_ex</a>(3)</i></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

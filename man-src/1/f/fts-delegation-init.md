@@ -1,4 +1,5 @@
 ---
+
 title: "fts-delegation-init(1)"
 name: "fts-delegation-init"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fts-delegation-init/"
 ---
 
-<h2>NAME</h2>
-
- fts-delegation-init
+fts-delegation-init
 
 <h2>SYNOPSIS</h2>
 

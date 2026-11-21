@@ -1,4 +1,5 @@
 ---
+
 title: "ideviceenterrecovery(1)"
 name: "ideviceenterrecovery"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ideviceenterrecovery/"
 description: "ideviceenterrecovery – Make a device enter recovery mode."
 ---
 
-<h2>NAME</h2>
 <p> ideviceenterrecovery &#8211; Make a device enter recovery mode.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ideviceenterrecovery</code> [OPTIONS] UDID </p>

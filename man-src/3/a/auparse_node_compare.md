@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_node_compare(3)"
 name: "auparse_node_compare"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_node_compare/"
 description: "auparse_node_compare – compares node name values"
 ---
 
-<h2>NAME</h2>
 <p> auparse_node_compare &#8211; compares node name values</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

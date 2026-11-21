@@ -1,4 +1,5 @@
 ---
+
 title: "tctmgr(1)"
 name: "tctmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tctmgr/"
 description: "tctmgr – the command line utility of the table database API"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tctmgr &#8211; the command line utility of the table database API</p>
 <h2>DESCRIPTION</h2>
 <p> The command `<code>tctmgr</code>&#8216; is a utility for test and debugging of the table database API and its applications. `<i>path</i>&#8216; specifies the path of a database file. `<i>bnum</i>&#8216; specifies the number of buckets. `<i>apow</i>&#8216; specifies the power of the alignment. `<i>fpow</i>&#8216; specifies the power of the free block pool. `<i>pkey</i>&#8216; specifies the primary key of a record. `<i>cols</i>&#8216; specifies the names and the values of a record alternately. `<i>name</i>&#8216; specifies the name of a column. `<i>op</i>&#8216; specifies an operator. `<i>expr</i>&#8216; specifies the condition expression. `<i>file</i>&#8216; specifies the input file. </p>

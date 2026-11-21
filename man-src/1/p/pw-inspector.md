@@ -1,4 +1,5 @@
 ---
+
 title: "pw-inspector(1)"
 name: "pw-inspector"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pw-inspector/"
 description: "pw-inspector – A tool to reduce the password list"
 ---
 
-<h2>NAME</h2>
 <p> pw-inspector &#8211; A tool to reduce the password list</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pw-inspector</code> [-i FILE] [-o FILE] [-m MINLEN] [-M MAXLEN] [-c MINSETS] -l -u -n -p -s </p>

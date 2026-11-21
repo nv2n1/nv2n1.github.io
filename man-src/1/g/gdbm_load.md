@@ -1,4 +1,5 @@
 ---
+
 title: "gdbm_load(1)"
 name: "gdbm_load"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdbm_load/"
 description: "gdbm_load – re-create a GDBM database from a dump file."
 ---
 
-<h2>NAME</h2>
 <p> gdbm_load &#8211; re-create a GDBM database from a dump file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gdbm_load</code> [<code>-Mnr</code>] [<code>-b</code> <i>NUM</i>] [<code>-c</code> <i>NUM]<br />

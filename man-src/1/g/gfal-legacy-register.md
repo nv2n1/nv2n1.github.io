@@ -1,4 +1,5 @@
 ---
+
 title: "gfal-legacy-register(1)"
 name: "gfal-legacy-register"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfal-legacy-register/"
 description: "gfal-legacy-register – register a replica"
 ---
 
-<h2>NAME</h2>
 <p> gfal-legacy-register &#8211; register a replica</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfal-legacy-register</code> [ <code>-h</code> ] [ <code>-V</code> ] [ <code>-v</code> ] [ <code>-D</code> <i>DEFINITION</i> ] [ <code>-C</code> <i>CLIENT-INFO</i> ] [ <code>-t</code> <i>TIMEOUT</i> ] <i> lfc surl</i> </p>

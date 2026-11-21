@@ -1,4 +1,5 @@
 ---
+
 title: "msd-datetime-mechanism(1)"
 name: "msd-datetime-mechanism"
 section: "1"
@@ -6,9 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-msd-datetime-mechanism/"
 ---
 
-<h2>NAME</h2>
-
- msd-datetime-mechanism - set system time via D-Bus
+msd-datetime-mechanism - set system time via D-Bus
 
 <h2>SYNOPSIS</h2>
 

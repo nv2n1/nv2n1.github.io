@@ -1,4 +1,5 @@
 ---
+
 title: "dimension_(3)"
 name: "dimension_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dimension_/"
 description: "QuantLib::GenericSequenceStatistics – Statistics analysis of N-dimensional (sequence) data."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::GenericSequenceStatistics &#8211; Statistics analysis of N-dimensional (sequence) data. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/statistics/sequencestatistics.hpp&gt; </p>

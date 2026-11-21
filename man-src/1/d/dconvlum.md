@@ -1,4 +1,5 @@
 ---
+
 title: "dconvlum(1)"
 name: "dconvlum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dconvlum/"
 description: "dconvlum – Convert VeriLUM files to DCMTK display files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dconvlum &#8211; Convert VeriLUM files to DCMTK display files </p>
 <h2>SYNOPSIS</h2>
 <pre>

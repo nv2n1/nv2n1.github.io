@@ -1,4 +1,5 @@
 ---
+
 title: "bson_t(3)"
 name: "bson_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_t/"
 description: "bson_t – BSON Document Abstraction"
 ---
 
-<h2>NAME</h2>
 <p> bson_t &#8211; BSON Document Abstraction</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

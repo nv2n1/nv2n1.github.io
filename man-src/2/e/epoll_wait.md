@@ -1,4 +1,5 @@
 ---
+
 title: "epoll_wait(2)"
 name: "epoll_wait"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-epoll_wait/"
 description: "epoll_wait, epoll_pwait – wait for an I/O event on an epoll file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> epoll_wait, epoll_pwait &#8211; wait for an I/O event on an epoll file descriptor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

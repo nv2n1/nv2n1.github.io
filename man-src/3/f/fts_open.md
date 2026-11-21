@@ -1,4 +1,5 @@
 ---
+
 title: "fts_open(3)"
 name: "fts_open"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fts_open/"
 description: "fts, fts_open, fts_read, fts_children, fts_set, fts_close – traverse a file hierarchy"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fts, fts_open, fts_read, fts_children, fts_set, fts_close &#8211; traverse a file hierarchy </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

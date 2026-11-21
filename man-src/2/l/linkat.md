@@ -1,4 +1,5 @@
 ---
+
 title: "linkat(2)"
 name: "linkat"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-linkat/"
 description: "link, linkat – make a new name for a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> link, linkat &#8211; make a new name for a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "tput(1)"
 name: "tput"
 section: "1"
@@ -6,7 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tput/"
 description: "tput, reset – initialize a terminal or query terminfo database"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>tput</code>, <code>reset</code> - initialize a terminal or query terminfo database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tput</code> [<code>-T</code><i>type</i>] <i>capname</i> [<i>parameters</i>] <br />

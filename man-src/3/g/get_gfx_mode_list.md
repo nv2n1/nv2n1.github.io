@@ -1,4 +1,5 @@
 ---
+
 title: "get_gfx_mode_list(3)"
 name: "get_gfx_mode_list"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_gfx_mode_list/"
 description: "get_gfx_mode_list – Obtains a list of available video modes. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_gfx_mode_list &#8211; Obtains a list of available video modes. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

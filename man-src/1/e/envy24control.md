@@ -1,4 +1,5 @@
 ---
+
 title: "envy24control(1)"
 name: "envy24control"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-envy24control/"
 description: "envy24control – GUI control tool for Envy24 (ice1712) based soundcards, under ALSA."
 ---
 
-<h2>NAME</h2>
 <p> envy24control &#8211; GUI control tool for Envy24 (ice1712) based soundcards, under ALSA. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>envy24control</code> [<i>-c</i> card-number] [<i>-D</i> control-name] [<i>-o</i> 0-num DACs max 8] [<i>-i</i> 0-num ADCs max 8] [<i>-p</i> 0-8] [<i>-s</i> 0-2] [<i>-f</i> &lt;profiles file name&gt;] [<i>-v</i>] [&lt;profile number&gt;|&lt;profile name&gt;] [<i>-m</i> midi-channel] [<i>-M</i>] [<i>-w</i> window-width] [<i>-t</i> 0-9] </p>

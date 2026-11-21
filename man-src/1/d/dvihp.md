@@ -1,4 +1,5 @@
 ---
+
 title: "dvihp(1)"
 name: "dvihp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvihp/"
 description: "dvihp – convert a TeX DVI file to Hewlett-Packard PCL"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dvihp &#8211; convert a TeX DVI file to Hewlett-Packard PCL </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvihp</code> [<i>options</i>] <i>dvifile</i>[.dvi]</p>

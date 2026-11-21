@@ -1,4 +1,5 @@
 ---
+
 title: "gmtsimplify(1)"
 name: "gmtsimplify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtsimplify/"
 description: "gmtsimplify – Line reduction using the Douglas-Peucker algorithm"
 ---
 
-<h2>NAME</h2>
 <p> gmtsimplify &#8211; Line reduction using the Douglas-Peucker algorithm</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtsimplify</code> [ <i>table</i> ] <i>tolerance</i>[<i>unit</i>] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

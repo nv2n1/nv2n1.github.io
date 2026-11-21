@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-socket(3)"
 name: "antlr3-socket"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-socket/"
 description: "ANTLR3_DEBUG_EVENT_LISTENER_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_DEBUG_EVENT_LISTENER_struct &#8211; </p>
 <p> The ANTLR3 debugging interface for communicating with ANLTR Works.</p>
 <h2>SYNOPSIS</h2>

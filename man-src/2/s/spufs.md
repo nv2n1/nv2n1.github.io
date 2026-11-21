@@ -1,4 +1,5 @@
 ---
+
 title: "spufs(2)"
 name: "spufs"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-spufs/"
 description: "spufs – the SPU file system"
 ---
 
-<h2>NAME</h2>
 <p> spufs &#8211; the SPU file system </p>
 <h2>DESCRIPTION</h2>
 <p> The SPU file system is used on PowerPC machines that implement the Cell Broadband Engine Architecture in order to access Synergistic Processor Units (SPUs). </p>

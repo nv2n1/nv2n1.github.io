@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-compare(1)"
 name: "nvme-compare"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-compare/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-compare - Send an NVMe Compare command, provide results 
+nvme-compare - Send an NVMe Compare command, provide results 
 
 <h2>SYNOPSIS</h2>
 

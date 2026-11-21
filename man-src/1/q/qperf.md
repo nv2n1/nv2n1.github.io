@@ -1,4 +1,5 @@
 ---
+
 title: "qperf(1)"
 name: "qperf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qperf/"
 description: "qperf – Measure RDMA and IP performance"
 ---
 
-<h2>NAME</h2>
 <p> qperf &#8211; Measure RDMA and IP performance</p>
 <h2>SYNOPSIS</h2>
 <p> <code>qperf</code><br />

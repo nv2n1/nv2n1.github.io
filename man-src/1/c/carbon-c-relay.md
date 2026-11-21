@@ -1,4 +1,5 @@
 ---
+
 title: "carbon-c-relay(1)"
 name: "carbon-c-relay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-carbon-c-relay/"
 description: "carbon-c-relay — graphite relay, aggregator and rewriter https://travis-ci.org/grobian/carbon-c-relay"
 ---
 
-<h2>NAME</h2>
 <p> <code>carbon-c-relay</code> &#8212; graphite relay, aggregator and rewriter <i><a rel="nofollow" href="https://travis-ci.org/grobian/carbon-c-relay">https://travis-ci.org/grobian/carbon-c-relay</a></i></p>
 <h2>SYNOPSIS</h2>
 <p> <code>carbon-c-relay</code> <code>-f</code> <i>config-file</i> <code>[ options</code> &#8230; <code>]</code></p>

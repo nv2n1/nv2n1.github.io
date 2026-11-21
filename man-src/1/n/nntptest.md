@@ -1,4 +1,5 @@
 ---
+
 title: "nntptest(1)"
 name: "nntptest"
 section: "1"
@@ -8,7 +9,7 @@ description: "nntptest – interactive NNTP test program"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2 class="name">NAME</h2>
+
 <p> nntptest &#8211; interactive NNTP test program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nntptest</code> [ <code>-t</code> <i>keyfile</i> ] [ <code>-p</code> <i>port</i> ] [ <code>-m</code> <i>mechanism</i> ] </p>

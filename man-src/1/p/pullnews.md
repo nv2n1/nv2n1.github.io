@@ -1,4 +1,5 @@
 ---
+
 title: "pullnews(1)"
 name: "pullnews"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pullnews/"
 description: "pullnews – Pull news from multiple news servers and feed it to another"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pullnews &#8211; Pull news from multiple news servers and feed it to another </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pullnews</code> [<code>-BhnOqRx</code>] [<code>-a</code> <i>hashfeed</i>] [<code>-b</code> <i>fraction</i>] [<code>-c</code> <i>config</i>] [<code>-C</code> <i>width</i>] [<code>-d</code> <i>level</i>] [<code>-f</code> <i>fraction</i>] [<code>-F</code> <i>fakehop</i>] [<code>-g</code> <i>groups</i>] [<code>-G</code> <i>newsgroups</i>] [<code>-H</code> <i>headers</i>] [<code>-k</code> <i>checkpt</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>header_pats</i>] [<code>-M</code> <i>num</i>] [<code>-N</code> <i>timeout</i>] [<code>-p</code> <i>port</i>] [<code>-P</code> <i>hop_limit</i>] [<code>-Q</code> <i>level</i>] [<code>-r</code> <i>file</i>] [<code>-s</code> <i>to-server</i>[:<i>port</i>]] [<code>-S</code> <i>max-run</i>] [<code>-t</code> <i>retries</i>] [<code>-T</code> <i>connect-pause</i>] [<code>-w</code> <i>num</i>] [<code>-z</code> <i>article-pause</i>] [<code>-Z</code> <i>group-pause</i>] [<i>from-server</i> &#8230;]</p>

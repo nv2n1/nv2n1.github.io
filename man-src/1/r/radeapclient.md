@@ -1,4 +1,5 @@
 ---
+
 title: "radeapclient(1)"
 name: "radeapclient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-radeapclient/"
 description: "radeapclient – send EAP packets to a RADIUS server, calculate responses"
 ---
 
-<h2>NAME</h2>
 <p> radeapclient &#8211; send EAP packets to a RADIUS server, calculate responses</p>
 <h2>SYNOPSIS</h2>
 <p> <code>radeapclient</code> [<code>-4</code>] [<code>-6</code>] [<code>-c</code> <i>count</i>] [<code>-d</code> <i>raddb_directory</i>] [<code>-f</code> <i>file</i>] [<code>-h</code>] [<code>-i</code> <i>source_ip</i>] [<code>-q</code>] [<code>-s</code>] [<code>-r</code> <i>retries</i>] [<code>-S</code> <i>file</i>] [<code>-t</code> <i>timeout</i>] [<code>-v</code>] [<code>-x</code>] <i>server {acct|auth} secret</i></p>

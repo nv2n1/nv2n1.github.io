@@ -1,4 +1,5 @@
 ---
+
 title: "euca-unbundle-stream(1)"
 name: "euca-unbundle-stream"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-unbundle-stream/"
 description: "euca-unbundle-stream – Recreate an image solely from its combined bundled parts without using a manifest"
 ---
 
-<h2>NAME</h2>
 <p> euca-unbundle-stream &#8211; Recreate an image solely from its combined bundled parts without using a manifest</p>
 <h2>SYNOPSIS</h2>
 <p> euca-unbundle-stream [-i FILE] [-o FILE] <code>&#8211;enc-key</code> HEX <code>&#8211;enc-iv</code> HEX</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bashbug(1)"
 name: "bashbug"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bashbug/"
 description: "bashbug – report a bug in bash"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bashbug &#8211; report a bug in bash </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "sslswamp(1)"
 name: "sslswamp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sslswamp/"
 description: "swamp – SSL/TLS load-tester based on OpenSSL"
 ---
 
-<h2>NAME</h2>
 <p> swamp &#8211; SSL/TLS load-tester based on OpenSSL</p>
 <h2>SYNOPSIS</h2>
 <p> <code>swamp</code> -connect &lt;address&gt; [options]</p>

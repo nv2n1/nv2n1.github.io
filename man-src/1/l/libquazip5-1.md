@@ -1,4 +1,5 @@
 ---
+
 title: "libquazip5-1(1)"
 name: "libquazip5-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libquazip5-1/"
 description: "quazip – C++/Qt wrapper for UNZIP/ZIP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> quazip &#8211; C++/Qt wrapper for UNZIP/ZIP </p>
 <h2>SYNOPSIS</h2>
 <p> <code>quazip</code></p>

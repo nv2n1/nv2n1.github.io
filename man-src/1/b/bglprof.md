@@ -1,4 +1,5 @@
 ---
+
 title: "bglprof(1)"
 name: "bglprof"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bglprof/"
 description: "bglprof – display call graph profile data for Bigloo programs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bglprof &#8211; display call graph profile data for Bigloo programs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bglprof</code> [ options ] [ <i>objfile</i> [ <i>gmon.out</i> ] ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-node-promote(1)"
 name: "docker-node-promote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-node-promote/"
 description: "docker-node-promote – Promote one or more nodes to manager in the swarm"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-node-promote &#8211; Promote one or more nodes to manager in the swarm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker node promote NODE [NODE&#8230;]</code> </p>

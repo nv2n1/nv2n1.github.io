@@ -1,4 +1,5 @@
 ---
+
 title: "nuxwdog(1)"
 name: "nuxwdog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nuxwdog/"
 description: "nuxwdog – Provides a simple watchdog process that can be used to start, stop, monitor, or reconfigure a server process."
 ---
 
-<h2 class="name">NAME</h2>
 <p> nuxwdog &#8211; Provides a simple watchdog process that can be used to start, stop, monitor, or reconfigure a server process. </p>
 <h2>SYNOPSIS</h2>
 <dl>

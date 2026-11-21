@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-ctrl-a(1)"
 name: "byobu-ctrl-a"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-ctrl-a/"
 description: "byobu-ctrl-a – Configure Byobu’s ctrl-a behavior"
 ---
 
-<h2>NAME</h2>
 <p> byobu-ctrl-a &#8211; Configure Byobu&#8217;s ctrl-a behavior </p>
 <h2>DESCRIPTION</h2>
 <p> <code>byobu-ctrl-a</code> is an interactive program that allows a user to configure the behavior of the &#8216;ctrl-a&#8217; key sequence. </p>

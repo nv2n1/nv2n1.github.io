@@ -1,4 +1,5 @@
 ---
+
 title: "symcryptrun(1)"
 name: "symcryptrun"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-symcryptrun/"
 description: "symcryptrun – Call a simple symmetric encryption tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>symcryptrun</code> &#8211; Call a simple symmetric encryption tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>symcryptrun</code> <code>&#8211;class</code> <i>class</i> <code>&#8211;program</code> <i>program</i> <code>&#8211;keyfile</code> <i>keyfile</i> [<code>&#8211;decrypt</code>|<code>&#8211;encrypt</code>] [<i>inputfile</i>] </p>

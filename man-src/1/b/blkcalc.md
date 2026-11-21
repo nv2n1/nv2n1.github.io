@@ -1,4 +1,5 @@
 ---
+
 title: "blkcalc(1)"
 name: "blkcalc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-blkcalc/"
 description: "blkcalc – Converts between unallocated disk unit numbers and regular disk unit numbers."
 ---
 
-<h2 class="name">NAME</h2>
 <p> blkcalc &#8211; Converts between unallocated disk unit numbers and regular disk unit numbers. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blkcalc [-dsu unit_addr] [-vV] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-f fstype] image [images]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_tell(3)"
 name: "bson_reader_tell"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_reader_tell/"
 description: "bson_reader_tell() – Tells the current position within the underlying stream."
 ---
 
-<h2>NAME</h2>
 <p> bson_reader_tell() &#8211; Tells the current position within the underlying stream.</p>
 <h2>SYNOPSIS</h2>
 <pre>

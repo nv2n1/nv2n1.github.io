@@ -1,4 +1,5 @@
 ---
+
 title: "compile_et(1)"
 name: "compile_et"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-compile_et/"
 description: "compile_et – error table compiler"
 ---
 
-<h2>NAME</h2>
 <p> compile_et &#8211; error table compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>compile_et</code> file</p>

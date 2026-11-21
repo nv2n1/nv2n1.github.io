@@ -1,4 +1,5 @@
 ---
+
 title: "ipcontroller(1)"
 name: "ipcontroller"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipcontroller/"
 description: "ipcontroller – start a controller for IPython parallel computing"
 ---
 
-<h2>NAME</h2>
 <p> <code>ipcontroller &#8211; start a controller for IPython parallel computing </p>
 <p> </code></p>
 <h2>SYNOPSIS</h2>

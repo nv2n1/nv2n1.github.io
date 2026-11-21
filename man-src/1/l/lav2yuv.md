@@ -1,4 +1,5 @@
 ---
+
 title: "lav2yuv(1)"
 name: "lav2yuv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lav2yuv/"
 description: "lav2yuv – Convert a MJPEG file to raw yuv"
 ---
 
-<h2>NAME</h2>
 <p> lav2yuv &#8211; Convert a MJPEG file to raw yuv </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lav2yuv</code> [<i>options</i>] <i>lavfile1 </i>[<i>lavfile2 </i>&#8230;<i> lavfileN</i>] </p>

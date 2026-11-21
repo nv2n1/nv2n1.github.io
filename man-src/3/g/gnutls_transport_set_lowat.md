@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_transport_set_lowat(3)"
 name: "gnutls_transport_set_lowat"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_transport_set_lowat/"
 description: "gnutls_transport_set_lowat – Used to set the lowat value in order for select to check for pending data."
 ---
 
-<h2>NAME</h2>
 <p> gnutls_transport_set_lowat &#8211; Used to set the lowat value in order for select to check for pending data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>

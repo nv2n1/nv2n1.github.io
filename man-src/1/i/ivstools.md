@@ -1,4 +1,5 @@
 ---
+
 title: "ivstools(1)"
 name: "ivstools"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ivstools/"
 description: "ivstools – extract IVs from a pcap file or merges several .ivs files into one"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ivstools &#8211; extract IVs from a pcap file or merges several .ivs files into one </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ivstools</code> &#8211;convert &lt;pcap file&gt; &lt;ivs output file&gt; <code>ivstools</code> &#8211;merge &lt;ivs file 1&gt; &lt;ivs file 2&gt; .. &lt;output file&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lirc-lsremotes(1)"
 name: "lirc-lsremotes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lirc-lsremotes/"
 description: "lirc-lsremotes – parse lirc configuration files."
 ---
 
-<h2>NAME</h2>
 <p> lirc-lsremotes &#8211; parse lirc configuration files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lirc-lsremotes [options] &lt;directory&gt;</code><br />

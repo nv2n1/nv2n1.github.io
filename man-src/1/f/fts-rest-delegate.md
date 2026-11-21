@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-delegate(1)"
 name: "fts-rest-delegate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fts-rest-delegate/"
 description: "fts-rest-delegate"
 ---
 
-<h2>NAME</h2>
 <p> fts-rest-delegate</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-delegate [options]</p>

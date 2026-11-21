@@ -1,4 +1,5 @@
 ---
+
 title: "medusa(1)"
 name: "medusa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-medusa/"
 description: "MEDUSA – Parallel Network Login Auditor"
 ---
 
-<h2>NAME</h2>
 <p> MEDUSA &#8211; Parallel Network Login Auditor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>medusa</code> [-h host|-H file] [-u username|-U file] [-p password|-P file] [-C file] -M module [OPTIONS]</p>

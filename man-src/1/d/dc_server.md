@@ -1,4 +1,5 @@
 ---
+
 title: "dc_server(1)"
 name: "dc_server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dc_server/"
 description: "dc_server – Distributed session cache server"
 ---
 
-<h2>NAME</h2>
 <p> dc_server &#8211; Distributed session cache server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dc_server</code> -listen &lt;address&gt; [options]</p>

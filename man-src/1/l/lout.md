@@ -1,4 +1,5 @@
 ---
+
 title: "lout(1)"
 name: "lout"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lout/"
 description: "lout – prepare Lout document for printing"
 ---
 
-<h2>NAME</h2>
 <p> lout &#8211; prepare Lout document for printing</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lout</code> [ <i>options</i> ] <i>file</i>&#8230;</p>

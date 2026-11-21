@@ -1,4 +1,5 @@
 ---
+
 title: "pnminterp-gen(1)"
 name: "pnminterp-gen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnminterp-gen/"
 description: "pamstretch-gen – use pamstretch and pnmscale to scale by non-integer values"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamstretch-gen &#8211; use pamstretch and pnmscale to scale by non-integer values</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamstretch-gen</code> <i>N</i> [<i>pnmfile</i>] </p>

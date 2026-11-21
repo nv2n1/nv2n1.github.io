@@ -1,4 +1,5 @@
 ---
+
 title: "getent(1)"
 name: "getent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getent/"
 description: "getent – get entries from Name Service Switch libraries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getent &#8211; get entries from Name Service Switch libraries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>getent&nbsp;[</code><i>option</i>]&#8230;&nbsp;<i>database</i>&nbsp;<i>key</i>&#8230;</p>

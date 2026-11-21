@@ -1,4 +1,5 @@
 ---
+
 title: "mpqc(1)"
 name: "mpqc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpqc/"
 description: "mpqc – The Massively Parallel Quantum Chemistry program (MPQC) computes the properties of molecules from first principles."
 ---
 
-<h2 class="name">NAME</h2>
 <p> mpqc &#8211; The Massively Parallel Quantum Chemistry program (MPQC) computes the properties of molecules from first principles. </p>
 <p> This documentation is divided into the following chapters: </p>
 <dl>

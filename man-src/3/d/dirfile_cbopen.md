@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_cbopen(3)"
 name: "dirfile_cbopen"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_cbopen/"
 description: "dirfile_cbopen, dirfile_open — open or create a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_cbopen, dirfile_open &#8212; open or create a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

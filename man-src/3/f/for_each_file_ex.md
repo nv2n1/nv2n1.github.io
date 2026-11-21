@@ -1,4 +1,5 @@
 ---
+
 title: "for_each_file_ex(3)"
 name: "for_each_file_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-for_each_file_ex/"
 description: "for_each_file_ex – Executes callback() for each file matching a wildcard. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> for_each_file_ex &#8211; Executes callback() for each file matching a wildcard. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

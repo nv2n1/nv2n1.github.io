@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-snapshot(1)"
 name: "trace-cmd-snapshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trace-cmd-snapshot/"
 description: "trace-cmd-snapshot – take, reset, free, or show a Ftrace kernel snapshot"
 ---
 
-<h2 class="name">NAME</h2>
 <p> trace-cmd-snapshot &#8211; take, reset, free, or show a Ftrace kernel snapshot </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd snapshot</code> [<i>OPTIONS</i>]</p>

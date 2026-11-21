@@ -1,4 +1,5 @@
 ---
+
 title: "hcrypto_rsa(3)"
 name: "hcrypto_rsa"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hcrypto_rsa/"
 description: "RSA functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> RSA functions &#8211; </p>
 <h3>Functions</h3>
 <p> RSA * <code>RSA_new</code> (void) </p>

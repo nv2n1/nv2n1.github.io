@@ -1,4 +1,5 @@
 ---
+
 title: "bson_json_data_reader_new(3)"
 name: "bson_json_data_reader_new"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_json_data_reader_new/"
 description: "bson_json_data_reader_new() – Creates a new streaming JSON reader that will convert JSON documents to BSON."
 ---
 
-<h2>NAME</h2>
 <p> bson_json_data_reader_new() &#8211; Creates a new streaming JSON reader that will convert JSON documents to BSON.</p>
 <h2>SYNOPSIS</h2>
 <pre>

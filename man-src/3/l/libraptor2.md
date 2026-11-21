@@ -1,4 +1,5 @@
 ---
+
 title: "libraptor2(3)"
 name: "libraptor2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libraptor2/"
 description: "libraptor2 – Raptor RDF syntax library 2.0"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libraptor2 &#8211; Raptor RDF syntax library 2.0 </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

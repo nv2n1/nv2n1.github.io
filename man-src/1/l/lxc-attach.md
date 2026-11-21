@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-attach(1)"
 name: "lxc-attach"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-attach/"
 description: "lxc-attach – start a process inside a running container."
 ---
 
-<h2>NAME</h2>
 <p> lxc-attach &#8211; start a process inside a running container.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-attach</code> {-n <i>name</i>} [-a <i>arch</i>] [-e] [-s <i>namespaces</i>] [-R] [&#8211;keep-env] [&#8211;clear-env] [&#8211; <i>command</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_count_references(3)"
 name: "ldap_count_references"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_count_references/"
 description: "ldap_first_reference, ldap_next_reference, ldap_count_references – Stepping through continuation references in a result chain"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_first_reference, ldap_next_reference, ldap_count_references &#8211; Stepping through continuation references in a result chain </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

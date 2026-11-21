@@ -1,4 +1,5 @@
 ---
+
 title: "davix-rm(1)"
 name: "davix-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-davix-rm/"
 description: "davix-rm – Deletion tool based on libdavix."
 ---
 
-<h2>NAME</h2>
 <p> davix-rm &#8211; Deletion tool based on libdavix.</p>
 <h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-rm [options]&#8230; url</p>

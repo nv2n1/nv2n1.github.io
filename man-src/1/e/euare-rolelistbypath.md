@@ -1,4 +1,5 @@
 ---
+
 title: "euare-rolelistbypath(1)"
 name: "euare-rolelistbypath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-rolelistbypath/"
 description: "euare-rolelistbypath – List your account’s roles"
 ---
 
-<h2>NAME</h2>
 <p> euare-rolelistbypath &#8211; List your account&#8217;s roles</p>
 <h2>SYNOPSIS</h2>
 <p> euare-rolelistbypath [-p PREFIX] [&#8211;as-account ACCOUNT] [-U URL]</p>

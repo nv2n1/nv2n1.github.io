@@ -1,4 +1,5 @@
 ---
+
 title: "ansible(1)"
 name: "ansible"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ansible/"
 description: "ansible – run a task on a target host(s)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ansible &#8211; run a task on a target host(s) </p>
 <h2>SYNOPSIS</h2>
 <p> ansible &lt;host-pattern&gt; [-m module_name] [-a args] [options]</p>

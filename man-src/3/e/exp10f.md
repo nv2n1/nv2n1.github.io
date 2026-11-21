@@ -1,4 +1,5 @@
 ---
+
 title: "exp10f(3)"
 name: "exp10f"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exp10f/"
 description: "exp10, exp10f, exp10l – base-10 exponential function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> exp10, exp10f, exp10l &#8211; base-10 exponential function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

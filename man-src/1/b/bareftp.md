@@ -1,4 +1,5 @@
 ---
+
 title: "bareftp(1)"
 name: "bareftp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bareftp/"
 description: "bareftp – graphical file transfer client"
 ---
 
-<h2>NAME</h2>
 <p> bareftp &#8211; graphical file transfer client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bareftp</code> <i>[OPTION] &#8230;</i> </p>

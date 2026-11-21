@@ -1,4 +1,5 @@
 ---
+
 title: "ack(1)"
 name: "ack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ack/"
 description: "ack – grep-like text finder"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ack &#8211; grep-like text finder </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

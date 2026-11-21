@@ -1,4 +1,5 @@
 ---
+
 title: "dlasv2(3)"
 name: "dlasv2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlasv2/"
 description: "dlasv2.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlasv2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

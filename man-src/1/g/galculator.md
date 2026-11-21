@@ -1,4 +1,5 @@
 ---
+
 title: "galculator(1)"
 name: "galculator"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-galculator/"
 description: "galculator – a GTK 2 based scientific calculator"
 ---
 
-<h2>NAME</h2>
 <p> galculator &#8211; a GTK 2 based scientific calculator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>galculator</code> [<i>options</i>]</p>

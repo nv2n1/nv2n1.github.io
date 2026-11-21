@@ -1,4 +1,5 @@
 ---
+
 title: "rdiscount(1)"
 name: "rdiscount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdiscount/"
 description: "rdiscount — humane markup to HTML conversion tool"
 ---
 
-<h2>NAME</h2>
 <p> <code>rdiscount</code> &#8212; humane markup to HTML conversion tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdiscount</code> [<i>file</i>&#8230;]</p>

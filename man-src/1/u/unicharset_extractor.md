@@ -1,4 +1,5 @@
 ---
+
 title: "unicharset_extractor(1)"
 name: "unicharset_extractor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unicharset_extractor/"
 description: "unicharset_extractor – extract unicharset from Tesseract boxfiles"
 ---
 
-<h2 class="name">NAME</h2>
 <p> unicharset_extractor &#8211; extract unicharset from Tesseract boxfiles </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unicharset_extractor</code> <i>[-D dir]</i> <i>FILE</i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "montage(1)"
 name: "montage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-montage/"
 description: "montage – create a composite image by combining several separate images. The images are tiled on the composite image optionally adorned with a border, frame, image name, and more."
 ---
 
-<h2 class="name">NAME</h2>
 <p> montage &#8211; create a composite image by combining several separate images. The images are tiled on the composite image optionally adorned with a border, frame, image name, and more. </p>
 <h2>SYNOPSIS</h2>
 <dl>

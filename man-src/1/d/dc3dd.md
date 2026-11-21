@@ -1,4 +1,5 @@
 ---
+
 title: "dc3dd(1)"
 name: "dc3dd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dc3dd/"
 description: "dc3dd – convert and copy a file"
 ---
 
-<h2>NAME</h2>
 <p> dc3dd &#8211; convert and copy a file</p>
 <h2>DESCRIPTION</h2>
 <h2>AUTHOR</h2>

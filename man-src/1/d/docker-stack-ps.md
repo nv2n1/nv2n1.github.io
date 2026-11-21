@@ -1,4 +1,5 @@
 ---
+
 title: "docker-stack-ps(1)"
 name: "docker-stack-ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-stack-ps/"
 description: "docker-stack-ps – List the tasks in the stack"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-stack-ps &#8211; List the tasks in the stack </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker stack ps [OPTIONS] STACK</code> </p>

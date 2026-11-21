@@ -1,4 +1,5 @@
 ---
+
 title: "cinnamon-session-quit(1)"
 name: "cinnamon-session-quit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cinnamon-session-quit/"
 description: "cinnamon-session-quit – End the current GNOME session"
 ---
 
-<h2>NAME</h2>
 <p> cinnamon-session-quit &#8211; End the current GNOME session</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cinnamon-session-quit [&#8211;logout|&#8211;power-off|&#8211;reboot] [&#8211;force] [&#8211;no-prompt]</code></p>

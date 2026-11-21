@@ -1,4 +1,5 @@
 ---
+
 title: "llseek(2)"
 name: "llseek"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-llseek/"
 description: "_llseek – reposition read/write file offset"
 ---
 
-<h2 class="name">NAME</h2>
 <p> _llseek &#8211; reposition read/write file offset </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

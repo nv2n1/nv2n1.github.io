@@ -1,4 +1,5 @@
 ---
+
 title: "localvolcurve(3)"
 name: "localvolcurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-localvolcurve/"
 description: "ql/termstructures/volatility/equityfx/localvolcurve.hpp – Local volatility curve derived from a Black curve."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/termstructures/volatility/equityfx/localvolcurve.hpp &#8211; Local volatility curve derived from a Black curve. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/equityfx/blackvariancecurve.hpp&gt;<br />

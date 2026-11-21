@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-set-instance-health(1)"
 name: "euscale-set-instance-health"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-set-instance-health/"
 description: "euscale-set-instance-health – Manually set an auto-scaling instance’s health status"
 ---
 
-<h2>NAME</h2>
 <p> euscale-set-instance-health &#8211; Manually set an auto-scaling instance&#8217;s health status</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-set-instance-health <code>-s</code> {Healthy,Unhealthy}</p>

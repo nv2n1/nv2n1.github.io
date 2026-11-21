@@ -1,4 +1,5 @@
 ---
+
 title: "ovf2ovp(1)"
 name: "ovf2ovp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ovf2ovp/"
 description: "ovf2ovp – convert virtual font file and associated font metrics to property-list format"
 ---
 
-<h2>NAME</h2>
 <p> ovf2ovp &#8211; convert virtual font file and associated font metrics to property-list format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ovf2ovp</code> [<i>options</i>] <i>ovfname</i>[<i></i><code>.ovf</code>] [<i>ofmname</i>[<i></i><code>.ofm</code>] [<i>ovpfile</i>[<i></i><code>.ovp</code>]]] </p>

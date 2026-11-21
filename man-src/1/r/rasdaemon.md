@@ -1,4 +1,5 @@
 ---
+
 title: "rasdaemon(1)"
 name: "rasdaemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rasdaemon/"
 description: "rasdaemon – RAS daemon to log the RAS events."
 ---
 
-<h2 class="name">NAME</h2>
 <p> rasdaemon &#8211; RAS daemon to log the RAS events.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rasdaemon</code> [<i>OPTION</i>]&#8230; </p>

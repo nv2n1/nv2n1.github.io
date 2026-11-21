@@ -1,4 +1,5 @@
 ---
+
 title: "ksverdiff(1)"
 name: "ksverdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ksverdiff/"
 description: "ksverdiff — display the differences in kickstart syntax"
 ---
 
-<h2>NAME</h2>
 <p> ksverdiff &#8212; display the differences in kickstart syntax</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ksverdiff</code> [<code>-f</code> | <code>&#8211;from FROMVER</code>] [<code>-t</code> | <code>&#8211;to TOVER</code>]</p>

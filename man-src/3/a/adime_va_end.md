@@ -1,4 +1,5 @@
 ---
+
 title: "adime_va_end(3)"
 name: "adime_va_end"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-adime_va_end/"
 description: "adime_va_list, adime_va_start, adime_va_arg, adime_va_end"
 ---
 
-<h2>NAME</h2>
 <p> adime_va_list, adime_va_start, adime_va_arg, adime_va_end</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/adime.h">adime.h</a>&gt;</code> </p>

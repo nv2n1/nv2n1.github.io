@@ -1,4 +1,5 @@
 ---
+
 title: "holland(1)"
 name: "holland"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-holland/"
 description: "holland – pluggable database backup agent"
 ---
 
-<h2>NAME</h2>
 <p> holland &#8211; pluggable database backup agent </p>
 <h2>SYNOPSIS</h2>
 <p> holland [global-options] command [command-options] </p>

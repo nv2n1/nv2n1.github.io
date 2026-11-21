@@ -1,4 +1,5 @@
 ---
+
 title: "euca-replace-route(1)"
 name: "euca-replace-route"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-replace-route/"
 description: "euca-replace-route – Replace a route in a VPC route table"
 ---
 
-<h2>NAME</h2>
 <p> euca-replace-route &#8211; Replace a route in a VPC route table</p>
 <h2>SYNOPSIS</h2>
 <p> euca-replace-route <code>-r</code> CIDR</p>

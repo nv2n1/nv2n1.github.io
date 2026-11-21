@@ -1,4 +1,5 @@
 ---
+
 title: "pbm2g3(1)"
 name: "pbm2g3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbm2g3/"
 description: "pbm2g3 – convert portable bitmaps (PBM) into G3 fax files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbm2g3 &#8211; convert portable bitmaps (PBM) into G3 fax files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbm2g3</code> [<code>-r</code>] [<code>-w</code>&lt;page<code>width&gt;</code>] [<code>-h</code>&lt;blank<code>lines&gt;</code>] [<code>-d</code>] [<code>-a</code>] [<i>pbmfile</i>]</p>

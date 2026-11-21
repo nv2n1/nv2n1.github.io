@@ -1,4 +1,5 @@
 ---
+
 title: "chegvx(3)"
 name: "chegvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chegvx/"
 description: "chegvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chegvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "gource(1)"
 name: "gource"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gource/"
 description: "Gource – a software version control visualization"
 ---
 
-<h2>NAME</h2>
 <p> Gource &#8211; a software version control visualization</p>
 <h2>SYNOPSIS</h2>
 <p> <i>gource</i> &lt;options&gt; &lt;path&gt;</p>

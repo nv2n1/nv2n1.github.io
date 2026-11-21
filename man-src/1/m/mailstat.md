@@ -1,4 +1,5 @@
 ---
+
 title: "mailstat(1)"
 name: "mailstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mailstat/"
 description: "mailstat – shows mail-arrival statistics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mailstat &#8211; shows mail-arrival statistics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mailstat</code> [-klmots] [logfile]</p>

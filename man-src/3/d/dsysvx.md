@@ -1,4 +1,5 @@
 ---
+
 title: "dsysvx(3)"
 name: "dsysvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsysvx/"
 description: "dsysvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dsysvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "ctpl(1)"
 name: "ctpl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ctpl/"
 description: "ctpl – CTPL command-line template parsing tool"
 ---
 
-<h2>NAME</h2>
 <p> <code>ctpl</code> &#8211; CTPL command-line template parsing tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ctpl</code> [<i>OPTION</i>]&#8230; <i>INPUTFILE</i>&#8230;</p>

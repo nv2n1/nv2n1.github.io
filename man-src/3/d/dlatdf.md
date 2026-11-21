@@ -1,4 +1,5 @@
 ---
+
 title: "dlatdf(3)"
 name: "dlatdf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlatdf/"
 description: "dlatdf.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlatdf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

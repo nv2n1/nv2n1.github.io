@@ -1,4 +1,5 @@
 ---
+
 title: "euform-describe-stacks(1)"
 name: "euform-describe-stacks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euform-describe-stacks/"
 description: "euform-describe-stacks – Describe one or more stacks"
 ---
 
-<h2>NAME</h2>
 <p> euform-describe-stacks &#8211; Describe one or more stacks</p>
 <h2>SYNOPSIS</h2>
 <p> euform-describe-stacks [&#8211;show-long] [&#8211;show-empty-fields] [-U URL]</p>

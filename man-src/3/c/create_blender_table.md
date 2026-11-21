@@ -1,4 +1,5 @@
 ---
+
 title: "create_blender_table(3)"
 name: "create_blender_table"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-create_blender_table/"
 description: "create_blender_table – Emulates truecolor blender effects in paletted modes. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> create_blender_table &#8211; Emulates truecolor blender effects in paletted modes. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

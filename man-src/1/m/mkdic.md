@@ -1,4 +1,5 @@
 ---
+
 title: "mkdic(1)"
 name: "mkdic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkdic/"
 description: "mkdic – Tool for creating a user dictionary"
 ---
 
-<h2>NAME</h2>
 <p> mkdic &#8211; Tool for creating a user dictionary</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkdic [{-cs|-cannaserver} </code><i>canna-server</i>] [-s] [- | -l <i>local-file</i>] <i>remote-dic</i></p>

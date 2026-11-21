@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_binary(3)"
 name: "bson_iter_binary"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_binary/"
 description: "bson_iter_binary() – This function shall return the binary data of a BSON_TYPE_BINARY element. It is a programming error to call this function on a field that is not of type BSON_TYPE_BINARY. You c..."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_binary() &#8211; This function shall return the binary data of a BSON_TYPE_BINARY element. It is a programming error to call this function on a field that is not of type BSON_TYPE_BINARY. You can check this with the BSON_ITER_HOLDS_BINARY() macro or bson_iter_type().</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

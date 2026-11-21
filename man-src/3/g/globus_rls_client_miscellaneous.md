@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rls_client_miscellaneous(3)"
 name: "globus_rls_client_miscellaneous"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rls_client_miscellaneous/"
 description: "Miscellaneous –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Miscellaneous &#8211; </p>
 <p> Miscellaneous functions and types.</p>
 <h3>Data Structures</h3>

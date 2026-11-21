@@ -1,4 +1,5 @@
 ---
+
 title: "ncwa(1)"
 name: "ncwa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncwa/"
 description: "ncwa – netCDF Weighted Averager"
 ---
 
-<h2>NAME</h2>
 <p> ncwa &#8211; netCDF Weighted Averager</p>
 <h2>SYNTAX</h2>
 <p> ncwa [-3] [-4] [-6] [-7] [-A] [-a <i>dim</i>[,&#8230;]] [-B <i>mask_cond]</i> [-b] [&#8211;bfr <i>sz</i>]<i>[-C]</i>[-c]<i>[&#8211;cnk_byt</i> <i>sz</i>]<i>[&#8211;cnk_dmn</i> <i>nm,sz</i>] [&#8211;cnk_map <i>map</i>] [&#8211;cnk_plc <i>plc</i>] [&#8211;cnk_scl <i>sz</i>]<i>[-D</i> <i>dbg_lvl</i>] [-d <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]]] [&#8211;dbl|flt] [-F] [-G <i>gpe_dsc</i>] [-g <i>grp</i>[,&#8230;]] [-h] [&#8211;hdf] [&#8211;hdr_pad <i>sz</i>] [-I] [-L <i>dfl_lvl</i>]<i>[-l</i> <i>path</i>] [-M <i>val</i>] [-m <i>mask</i>] [-N] [&#8211;no_cll_mth] [&#8211;no_tmp_fl] [-O] [-o <i>output-file</i>] [-p <i>path</i>] [-R] [-r] [&#8211;ram_all] [-T <i>mask_comp</i>] [-t <i>thr_nbr</i>] [&#8211;unn] [-v <i>var</i>[,&#8230;]] [-w <i>weight</i>] [-x] [-y <i>op_typ</i>] <i>input-file</i> <i>output-file</i></p>

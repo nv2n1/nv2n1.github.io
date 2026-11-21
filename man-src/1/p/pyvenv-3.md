@@ -1,4 +1,5 @@
 ---
+
 title: "pyvenv-3(1)"
 name: "pyvenv-3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pyvenv-3/"
 description: "pyvenv-3.3 – create virtual python environments"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pyvenv-3.3 &#8211; create virtual python environments </p>
 <h2>DESCRIPTION</h2>
 <p> usage: venv [-h] [&#8211;system-site-packages] [&#8211;symlinks] [&#8211;clear] [&#8211;upgrade]</p>

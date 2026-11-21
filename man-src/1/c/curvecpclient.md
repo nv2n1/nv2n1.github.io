@@ -1,4 +1,5 @@
 ---
+
 title: "curvecpclient(1)"
 name: "curvecpclient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-curvecpclient/"
 description: "CurveCP — Message-handling programs"
 ---
 
-<h2>NAME</h2>
 <p> CurveCP &#8212; Message-handling programs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>curvecpclient</code> [<code>-q </code><i>(optional)</i>] [<code>-Q </code><i>(optional)</i>] [<code>-v </code><i>(optional)</i>] [<code>-c keydir</code><i>(optional)</i>] [sname] [pk] [ip] [port] [ext] [prog]</p>

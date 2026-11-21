@@ -1,4 +1,5 @@
 ---
+
 title: "aide(1)"
 name: "aide"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aide/"
 description: "aide – Advanced Intrusion Detection Environment"
 ---
 
-<h2>NAME</h2>
 <p> <code>aide</code> &#8211; Advanced Intrusion Detection Environment</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aide</code> [<code>parameters</code>] <code>command</code></p>

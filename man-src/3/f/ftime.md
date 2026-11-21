@@ -1,4 +1,5 @@
 ---
+
 title: "ftime(3)"
 name: "ftime"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ftime/"
 description: "ftime – return date and time"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ftime &#8211; return date and time </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/timeb.h&gt;</code> </p>

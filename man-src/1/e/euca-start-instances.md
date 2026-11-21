@@ -1,4 +1,5 @@
 ---
+
 title: "euca-start-instances(1)"
 name: "euca-start-instances"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-start-instances/"
 description: "euca-start-instances – Start one or more stopped instances"
 ---
 
-<h2>NAME</h2>
 <p> euca-start-instances &#8211; Start one or more stopped instances</p>
 <h2>SYNOPSIS</h2>
 <p> euca-start-instances [&#8211;show-empty-fields] [-U URL]</p>

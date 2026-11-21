@@ -1,4 +1,5 @@
 ---
+
 title: "mateweather(1)"
 name: "mateweather"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mateweather/"
 description: "mateweather – Weather Applet for the MATE panel."
 ---
 
-<h2>NAME</h2>
 <p> mateweather &#8211; Weather Applet for the MATE panel.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mateweather</code> [ <code>&#8211;activate-goad-server </code><i>[=GOAD_ID]</i> ] </p>

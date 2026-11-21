@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-zcat(1)"
 name: "ldns-zcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-zcat/"
 description: "ldns-zcat – reunite (z)split up a zone files"
 ---
 
-<h2>NAME</h2>
 <p> ldns-zcat &#8211; reunite (z)split up a zone files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-zcat</code> <i>zonefiles</i> </p>

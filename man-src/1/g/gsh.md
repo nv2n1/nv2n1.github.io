@@ -1,4 +1,5 @@
 ---
+
 title: "gsh(1)"
 name: "gsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsh/"
 description: "gsh – Group Shell"
 ---
 
-<h2>NAME</h2>
 <p> gsh &#8211; Group Shell</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gsh</code> [OPTIONS]&#8230; HOSTS&#8230;</p>

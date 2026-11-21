@@ -1,4 +1,5 @@
 ---
+
 title: "mcheck_check_all(3)"
 name: "mcheck_check_all"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mcheck_check_all/"
 description: "mcheck, mcheck_check_all, mcheck_pedantic, mprobe – heap consistency checking"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mcheck, mcheck_check_all, mcheck_pedantic, mprobe &#8211; heap consistency checking </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

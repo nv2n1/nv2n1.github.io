@@ -1,4 +1,5 @@
 ---
+
 title: "ibp(1)"
 name: "ibp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibp/"
 description: "ibp – show which of the International Beacon Project beacons is transmitting"
 ---
 
-<h2>NAME</h2>
 <p> ibp &#8211; show which of the International Beacon Project beacons is transmitting</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ibp</code> <i>[arguments]</i> </p>

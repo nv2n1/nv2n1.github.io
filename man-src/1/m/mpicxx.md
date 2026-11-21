@@ -1,4 +1,5 @@
 ---
+
 title: "mpicxx(1)"
 name: "mpicxx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpicxx/"
 description: "mpicxx — Open MPI C++ wrapper compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mpicxx &#8212; Open MPI C++ wrapper compiler </p>
 <h2>SYNTAX</h2>
 <p> mpicxx [-showme|-showme:compile|-showme:link] &#8230;</p>

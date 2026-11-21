@@ -1,4 +1,5 @@
 ---
+
 title: "sgbequ(3)"
 name: "sgbequ"
 section: "3"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/3-sgbequ/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- sgbequ.f - 
+sgbequ.f - 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "sddm(1)"
 name: "sddm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sddm/"
 description: "sddm – the simple desktop display manager"
 ---
 
-<h2>NAME</h2>
 <p> sddm &#8211; the simple desktop display manager</p>
 <h2>SYNOPSIS</h2>
 <p> sddm [OPTIONS&#8230;]</p>

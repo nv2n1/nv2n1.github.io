@@ -1,4 +1,5 @@
 ---
+
 title: "hx509_ca_tbs_add_eku(3)"
 name: "hx509_ca_tbs_add_eku"
 section: "3"
@@ -6,10 +7,7 @@ letter: "h"
 url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- hx509 CA functions - 
+hx509 CA functions - 
 
 <h3>Functions</h3>
 

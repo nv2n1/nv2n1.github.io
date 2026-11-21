@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_document_end(3)"
 name: "bson_append_document_end"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_document_end/"
 description: "bson_append_document_end() – The bson_append_document_end() function shall complete the appending of a document with bson_append_document_begin(). child is invalid after calling this function."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_document_end() &#8211; The bson_append_document_end() function shall complete the appending of a document with bson_append_document_begin(). child is invalid after calling this function.</p>
 <h2>SYNOPSIS</h2>
 <pre>

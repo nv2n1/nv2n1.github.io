@@ -1,4 +1,5 @@
 ---
+
 title: "htsserver(1)"
 name: "htsserver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htsserver/"
 description: "htsserver – offline browser server : copy websites to a local directory"
 ---
 
-<h2>NAME</h2>
 <p> htsserver &#8211; offline browser server : copy websites to a local directory</p>
 <h2>SYNOPSIS</h2>
 <p> <code>htsserver [ path/ ] [ keyword value [ keyword value .. ] ]</code></p>

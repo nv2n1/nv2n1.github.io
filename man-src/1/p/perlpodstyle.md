@@ -1,4 +1,5 @@
 ---
+
 title: "perlpodstyle(1)"
 name: "perlpodstyle"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlpodstyle/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlpodstyle - Perl POD style guide 
+perlpodstyle - Perl POD style guide 
 
 <h2>DESCRIPTION</h2>
 

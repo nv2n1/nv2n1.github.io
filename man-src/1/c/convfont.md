@@ -1,4 +1,5 @@
 ---
+
 title: "convfont(1)"
 name: "convfont"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-convfont/"
 description: "convfont – convert font files for svgalib"
 ---
 
-<h2>NAME</h2>
 <p> convfont &#8211; convert font files for svgalib</p>
 <h2>SYNOPSIS</h2>
 <p> <code>convfont</code><i> fontfile fontheight vgafontfile</i> </p>

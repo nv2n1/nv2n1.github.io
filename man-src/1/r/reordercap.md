@@ -1,4 +1,5 @@
 ---
+
 title: "reordercap(1)"
 name: "reordercap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-reordercap/"
 description: "reordercap – Reorder input file by timestamp into output file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> reordercap &#8211; Reorder input file by timestamp into output file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>reordercap</code> [&nbsp;<wbr><code>-n</code>&nbsp;<wbr>] &lt;<i>infile</i>&gt; &lt;<i>outfile</i>&gt;</p>

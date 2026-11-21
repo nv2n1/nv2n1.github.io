@@ -1,4 +1,5 @@
 ---
+
 title: "crtest(1)"
 name: "crtest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-crtest/"
 description: "crtest – test cases for QDBM Curia"
 ---
 
-<h2 class="name">NAME</h2>
 <p> crtest &#8211; test cases for QDBM Curia</p>
 <h2>SYNOPSIS</h2>
 <p> <code>crtest write</code> [-s] [-lob] <i>name</i> <i>rnum</i> <i>bnum</i> <i>dnum</i><br />

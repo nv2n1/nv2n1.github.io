@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-read-expenses(1)"
 name: "pilot-read-expenses"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-read-expenses/"
 description: "pilot-read-expenses – Export Palm Expense application data in a text format."
 ---
 
-<h2>NAME</h2>
 <p> pilot-read-expenses &#8211; Export Palm Expense application data in a text format.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

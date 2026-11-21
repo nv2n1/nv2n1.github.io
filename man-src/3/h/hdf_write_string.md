@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_write_string(3)"
 name: "hdf_write_string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_write_string/"
 description: "hdf_write_string – serialize an HDF dataset to a string Description: Input: Output:"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_write_string &#8211; serialize an HDF dataset to a string Description: Input: Output: </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

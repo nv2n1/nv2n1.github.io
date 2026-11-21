@@ -1,4 +1,5 @@
 ---
+
 title: "x_edit(1)"
 name: "x_edit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x_edit/"
 description: "x_edit – convert between binary and ASCII crossover correction tables."
 ---
 
-<h2>NAME</h2>
 <p> <code>x_edit</code> &#8211; convert between binary and ASCII crossover correction tables.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x_edit</code> <code>-A</code>|<code>X</code>[<i>name</i>] <code>-O</code>[<i>outname</i>]</p>

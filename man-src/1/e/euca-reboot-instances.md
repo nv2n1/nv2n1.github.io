@@ -1,4 +1,5 @@
 ---
+
 title: "euca-reboot-instances(1)"
 name: "euca-reboot-instances"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-reboot-instances/"
 description: "euca-reboot-instances – Reboot one or more instances"
 ---
 
-<h2>NAME</h2>
 <p> euca-reboot-instances &#8211; Reboot one or more instances</p>
 <h2>SYNOPSIS</h2>
 <p> euca-reboot-instances [&#8211;show-empty-fields] [-U URL]</p>

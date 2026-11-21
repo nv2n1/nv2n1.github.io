@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-pwpolicy(1)"
 name: "ipa-pwpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-pwpolicy/"
 description: "ipa-pwpolicy – Display or modify the IPA password policy"
 ---
 
-<h2>NAME</h2>
 <p> ipa-pwpolicy &#8211; Display or modify the IPA password policy </p>
 <h2>SYNOPSIS</h2>
 <p> ipa-pwpolicy [&#8211;maxlife days] [&#8211;minlife hours] [&#8211;history number] [&#8211;minclasses number] [&#8211;minlength number]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "zmore(1)"
 name: "zmore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zmore/"
 description: "zmore – file perusal filter for crt viewing of compressed text"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zmore &#8211; file perusal filter for crt viewing of compressed text </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zmore</code> [ name &#8230; ]</p>

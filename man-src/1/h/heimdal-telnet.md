@@ -1,4 +1,5 @@
 ---
+
 title: "heimdal-telnet(1)"
 name: "heimdal-telnet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-heimdal-telnet/"
 description: "telnet – user interface to the TELNET protocol"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>telnet</code> &#8211; user interface to the <code>TELNET</code> protocol </p>
 <h2>SYNOPSIS</h2>
 <p> <code>telnet</code> [-<code>78EFKLacdfrx</code> ] [-<code>S </code><i>tos</i> ] [-<code>X </code><i>authtype</i> ] [-<code>e </code><i>escapechar</i> ] [-<code>k </code><i>realm</i> ] [-<code>l </code><i>user</i> ] [-<code>n </code><i>tracefile</i> ] [<i>host</i> [port] ]</p>

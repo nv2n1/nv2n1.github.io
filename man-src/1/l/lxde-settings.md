@@ -1,4 +1,5 @@
 ---
+
 title: "lxde-settings(1)"
 name: "lxde-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxde-settings/"
 description: "lxde-settings — lightweight XSettings daemon for LXDE"
 ---
 
-<h2>NAME</h2>
 <p> lxde-settings &#8212; lightweight XSettings daemon for LXDE</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxde-settings</code></p>

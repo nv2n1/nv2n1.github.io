@@ -1,4 +1,5 @@
 ---
+
 title: "dvconnect(1)"
 name: "dvconnect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvconnect/"
 description: "dvconnect – receive or transmit raw DV using the video1394 device"
 ---
 
-<h2>NAME</h2>
 <p> dvconnect &#8211; receive or transmit raw DV using the video1394 device</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvconnect</code> [ <code>options</code> ] <i>raw dv files or &#8216;&#8211; -&#8216; for stdin/stdout</i></p>

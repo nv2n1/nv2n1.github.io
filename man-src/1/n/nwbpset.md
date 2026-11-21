@@ -1,4 +1,5 @@
 ---
+
 title: "nwbpset(1)"
 name: "nwbpset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwbpset/"
 description: "nwbpset – Create a bindery property or set its value"
 ---
 
-<h2>NAME</h2>
 <p> nwbpset &#8211; Create a bindery property or set its value</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwbpset</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] </p>

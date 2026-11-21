@@ -1,4 +1,5 @@
 ---
+
 title: "zeitgeist-daemon(1)"
 name: "zeitgeist-daemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zeitgeist-daemon/"
 description: "zeitgeist-daemon – D-Bus interface providing a log of activities"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zeitgeist-daemon &#8211; D-Bus interface providing a log of activities</p>
 <h2>SYNOPSIS</h2>
 <p> <code>zeitgeist-daemon</code> <i>[OPTION]</i> </p>

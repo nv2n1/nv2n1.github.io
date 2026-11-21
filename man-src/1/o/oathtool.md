@@ -1,4 +1,5 @@
 ---
+
 title: "oathtool(1)"
 name: "oathtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oathtool/"
 description: "oathtool – OATH one-time password tool"
 ---
 
-<h2>NAME</h2>
 <p> oathtool &#8211; OATH one-time password tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>oathtool</code> [<i>OPTIONS</i>]&#8230; [<i>KEY </i>[<i>OTP</i>]]&#8230;</p>

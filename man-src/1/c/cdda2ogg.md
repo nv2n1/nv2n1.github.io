@@ -1,4 +1,5 @@
 ---
+
 title: "cdda2ogg(1)"
 name: "cdda2ogg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cdda2ogg/"
 description: "cdda2ogg — extract audio CD audio tracks and encode them"
 ---
 
-<h2>NAME</h2>
 <p> cdda2ogg &#8212; extract audio CD audio tracks and encode them</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cdda2ogg</code> </p>

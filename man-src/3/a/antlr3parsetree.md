@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3parsetree(3)"
 name: "antlr3parsetree"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3parsetree/"
 description: "include/antlr3parsetree.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> include/antlr3parsetree.h &#8211; </p>
 <p> Abstraction of Common tree to provide payload and string representation of node.</p>
 <h2>SYNOPSIS</h2>

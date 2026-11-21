@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-machine-id-setup(1)"
 name: "systemd-machine-id-setup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-machine-id-setup/"
 description: "systemd-machine-id-setup – Initialize the machine ID in /etc/machine-id"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-machine-id-setup &#8211; Initialize the machine ID in /etc/machine-id </p>
 <h2>SYNOPSIS</h2>
 <dl>

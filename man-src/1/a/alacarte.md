@@ -1,4 +1,5 @@
 ---
+
 title: "alacarte(1)"
 name: "alacarte"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alacarte/"
 description: "alacarte – Edit freedesktop.org menus"
 ---
 
-<h2 class="name">NAME</h2>
 <p> alacarte &#8211; Edit freedesktop.org menus </p>
 <h2>SYNOPSIS</h2>
 <dl>

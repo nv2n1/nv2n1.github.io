@@ -1,4 +1,5 @@
 ---
+
 title: "synopsis(1)"
 name: "synopsis"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-synopsis/"
 description: "synopsis – simple frontend to the Synopsis framework, a multi-language source code introspection tool that provides a variety of representations for the parsed code, to enable further processing su..."
 ---
 
-<h2>NAME</h2>
 <p> synopsis &#8211; simple frontend to the Synopsis framework, a multi-language source code introspection tool that provides a variety of representations for the parsed code, to enable further processing such as documentation extraction, reverse engineering, and source-to-source translation.</p>
 <h2>DESCRIPTION</h2>
 <p> Usage : synopsis [options] &lt;input files&gt;</p>

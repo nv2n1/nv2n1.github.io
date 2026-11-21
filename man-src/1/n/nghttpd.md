@@ -1,4 +1,5 @@
 ---
+
 title: "nghttpd(1)"
 name: "nghttpd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nghttpd/"
 description: "nghttpd – HTTP/2 server"
 ---
 
-<h2>NAME</h2>
 <p> nghttpd &#8211; HTTP/2 server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nghttpd</code> [OPTION]&#8230; &lt;PORT&gt; [&lt;PRIVATE_KEY&gt; &lt;CERT&gt;]</p>

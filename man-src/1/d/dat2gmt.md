@@ -1,4 +1,5 @@
 ---
+
 title: "dat2gmt(1)"
 name: "dat2gmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dat2gmt/"
 description: "dat2gmt – Convert an ASCII file to a binary gmt file"
 ---
 
-<h2>NAME</h2>
 <p> dat2gmt &#8211; Convert an ASCII file to a binary gmt file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dat2gmt</code> <i>gmtfile</i></p>

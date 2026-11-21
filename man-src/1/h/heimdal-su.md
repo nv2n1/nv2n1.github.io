@@ -1,4 +1,5 @@
 ---
+
 title: "heimdal-su(1)"
 name: "heimdal-su"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-heimdal-su/"
 description: "su – substitute user identity"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>su</code> &#8211; substitute user identity </p>
 <h2>SYNOPSIS</h2>
 <p> <code>su</code> [-<code>K | &#8211;no-kerberos</code> ] [-<code>f</code> ] [-<code>l | &#8211;full</code> ] [-<code>m</code> ] [-<code>i </code><i>instance | </i> &#8211;<code>-instance= </code><i>instance</i> ] [-<code>c </code><i>command | </i> &#8211;<code>-command= </code><i>command</i> ] [<i>login </i>[<i>shell arguments</i> ] ]</p>

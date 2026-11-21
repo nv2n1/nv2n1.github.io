@@ -1,4 +1,5 @@
 ---
+
 title: "slrn(1)"
 name: "slrn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-slrn/"
 description: "slrn – An easy to use NNTP / spool based newsreader."
 ---
 
-<h2 class="name">NAME</h2>
 <p> slrn &#8211; An easy to use NNTP / spool based newsreader. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>slrn</code> [-aCdknmw] [-C-] [-D<i>name</i>] [-f&nbsp;<wbr><i>newsrc-file</i>] [-i&nbsp;<wbr><i>config-file</i>] [-k0] [&#8211;create] [&#8211;debug&nbsp;<wbr><i>file</i>] [&#8211;help] [&#8211;inews] [&#8211;kill-log <i>file</i>] [&#8211;nntp [-h&nbsp;<wbr><i>server</i>] [-p&nbsp;<wbr><i>port</i>]] [&#8211;show-config] [&#8211;spool] [&#8211;version]</p>

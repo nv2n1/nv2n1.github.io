@@ -1,4 +1,5 @@
 ---
+
 title: "euca-download-bundle(1)"
 name: "euca-download-bundle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-download-bundle/"
 description: "euca-download-bundle – Download a bundled image from the cloud"
 ---
 
-<h2>NAME</h2>
 <p> euca-download-bundle &#8211; Download a bundled image from the cloud</p>
 <h2>SYNOPSIS</h2>
 <p> euca-download-bundle [-d DIR] [&#8211;progress | <code>&#8211;no-progress]</code> <code>-b</code></p>

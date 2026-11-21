@@ -1,4 +1,5 @@
 ---
+
 title: "em8300setup(1)"
 name: "em8300setup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-em8300setup/"
 description: "em8300setup – program to configure and upload microcode images to em8300-based MPEG decoder cards"
 ---
 
-<h2 class="name">NAME</h2>
 <p> em8300setup &#8211; program to configure and upload microcode images to em8300-based MPEG decoder cards</p>
 <h2>SYNOPSIS</h2>
 <p> <code>em8300setup</code> [<i>options</i>] </p>

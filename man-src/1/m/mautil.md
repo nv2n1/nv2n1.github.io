@@ -1,4 +1,5 @@
 ---
+
 title: "mautil(1)"
 name: "mautil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mautil/"
 description: "mautil – Mono.Addins Setup Utility"
 ---
 
-<h2>NAME</h2>
 <p> mautil &#8211; Mono.Addins Setup Utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mautil</code> [<i>options</i>] <i>&lt;command&gt; </i>[<i>arguments</i>]</p>

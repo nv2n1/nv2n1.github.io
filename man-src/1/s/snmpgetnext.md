@@ -1,4 +1,5 @@
 ---
+
 title: "snmpgetnext(1)"
 name: "snmpgetnext"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpgetnext/"
 description: "snmpgetnext – communicates with a network entity using SNMP GETNEXT requests"
 ---
 
-<h2>NAME</h2>
 <p> snmpgetnext &#8211; communicates with a network entity using SNMP GETNEXT requests</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpgetnext</code> [COMMON OPTIONS] [-Cf] AGENT OID [OID]&#8230;</p>

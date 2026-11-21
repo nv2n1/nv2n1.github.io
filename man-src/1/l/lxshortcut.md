@@ -1,4 +1,5 @@
 ---
+
 title: "lxshortcut(1)"
 name: "lxshortcut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxshortcut/"
 description: "lxshortcut – desktop entry file editor"
 ---
 
-<h2>NAME</h2>
 <p> lxshortcut &#8211; desktop entry file editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxshortcut</code> [ -i <i>input-file</i> ] [ -o <i>output-file</i> ]</p>

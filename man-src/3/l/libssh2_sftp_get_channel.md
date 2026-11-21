@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_get_channel(3)"
 name: "libssh2_sftp_get_channel"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_get_channel/"
 description: "libssh2_sftp_get_channel – return the channel of sftp"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_get_channel &#8211; return the channel of sftp</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

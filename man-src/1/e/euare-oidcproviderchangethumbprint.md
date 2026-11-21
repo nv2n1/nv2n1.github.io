@@ -1,4 +1,5 @@
 ---
+
 title: "euare-oidcproviderchangethumbprint(1)"
 name: "euare-oidcproviderchangethumbprint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-oidcproviderchangethumbprint/"
 description: "euare-oidcproviderchangethumbprint – Replace an OpenID Connect provider’s list of thumbprints"
 ---
 
-<h2>NAME</h2>
 <p> euare-oidcproviderchangethumbprint &#8211; Replace an OpenID Connect provider&#8217;s list of thumbprints</p>
 <h2>SYNOPSIS</h2>
 <p> euare-oidcproviderchangethumbprint [-t HEX] [&#8211;as-account ACCOUNT]</p>

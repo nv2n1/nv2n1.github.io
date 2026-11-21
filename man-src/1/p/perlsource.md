@@ -1,4 +1,5 @@
 ---
+
 title: "perlsource(1)"
 name: "perlsource"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlsource/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlsource - A guide to the Perl source tree 
+perlsource - A guide to the Perl source tree 
 
 <h2>DESCRIPTION</h2>
 

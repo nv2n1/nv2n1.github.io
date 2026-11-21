@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-evohome(1)"
 name: "mtx-evohome"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtx-evohome/"
 description: "mtx-evohome – Evohome Fetcher"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;mtx-evohome &#8211; Evohome Fetcher </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script evohome [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>

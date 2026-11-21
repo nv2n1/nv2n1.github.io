@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_generate_random(3)"
 name: "krb5_generate_random"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_generate_random/"
 description: "Heimdal Kerberos 5 cryptography functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Heimdal Kerberos 5 cryptography functions &#8211; </p>
 <h3>Functions</h3>
 <p> HEIMDAL_WARN_UNUSED_RESULT_ATTRIBUTE<br />

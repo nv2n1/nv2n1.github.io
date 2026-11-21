@@ -1,4 +1,5 @@
 ---
+
 title: "sclient(1)"
 name: "sclient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sclient/"
 description: "sclient – sample Kerberos version 5 client"
 ---
 
-<h2>NAME</h2>
 <p> sclient &#8211; sample Kerberos version 5 client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sclient</code> <i>remotehost</i></p>

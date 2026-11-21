@@ -1,4 +1,5 @@
 ---
+
 title: "po4aman-display-po(1)"
 name: "po4aman-display-po"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-po4aman-display-po/"
 description: "po4aman-display-po – display a translated man page according to a PO"
 ---
 
-<h2 class="name">NAME</h2>
 <p> po4aman-display-po &#8211; display a translated man page according to a PO </p>
 <h2>SYNOPSIS</h2>
 <dl>

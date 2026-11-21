@@ -1,4 +1,5 @@
 ---
+
 title: "git-submodule(1)"
 name: "git-submodule"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-submodule/"
 description: "git-submodule – Initialize, update or inspect submodules"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-submodule &#8211; Initialize, update or inspect submodules </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

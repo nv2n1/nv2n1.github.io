@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_key(3)"
 name: "bson_iter_key"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_key/"
 description: "bson_iter_key() – Fetches the key for the current element observed by iter."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_key() &#8211; Fetches the key for the current element observed by iter.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

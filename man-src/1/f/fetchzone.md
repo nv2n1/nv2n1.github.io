@@ -1,4 +1,5 @@
 ---
+
 title: "fetchzone(1)"
 name: "fetchzone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fetchzone/"
 description: "fetchzone – get dns zone from server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fetchzone &#8211; get dns zone from server </p>
 <h2>DESCRIPTION</h2>
 <p> <code>fetchzone</code> transfers a user-specified dns zone from a zone server and displays it in csv2 format on the standard output.</p>

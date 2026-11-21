@@ -1,4 +1,5 @@
 ---
+
 title: "mailq(1)"
 name: "mailq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mailq/"
 description: "sendmail – Postfix to Sendmail compatibility interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sendmail &#8211; Postfix to Sendmail compatibility interface </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

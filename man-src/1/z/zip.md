@@ -1,4 +1,5 @@
 ---
+
 title: "zip(1)"
 name: "zip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zip/"
 description: "zip – package and compress (archive) files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zip &#8211; package and compress (archive) files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zip</code> [-<code>aABcdDeEfFghjklLmoqrRSTuvVwXyz!@$</code>] [&#8211;longoption &#8230;] [-<code>b</code> path] [-<code>n</code> suffixes] [-<code>t</code> date] [-<code>tt</code> date] [<i>zipfile</i> [<i>file</i> &#8230;]] [<code>-xi</code> list] </p>

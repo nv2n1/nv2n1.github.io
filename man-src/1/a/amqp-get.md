@@ -1,4 +1,5 @@
 ---
+
 title: "amqp-get(1)"
 name: "amqp-get"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-amqp-get/"
 description: "amqp-get – Get a message from a queue on an AMQP server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> amqp-get &#8211; Get a message from a queue on an AMQP server </p>
 <h2>SYNOPSIS</h2>
 <dl>

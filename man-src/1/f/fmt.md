@@ -1,4 +1,5 @@
 ---
+
 title: "fmt(1)"
 name: "fmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fmt/"
 description: "fmt – simple optimal text formatter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fmt &#8211; simple optimal text formatter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fmt</code> [<i>,-WIDTH/</i>] [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

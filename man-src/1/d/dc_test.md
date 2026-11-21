@@ -1,4 +1,5 @@
 ---
+
 title: "dc_test(1)"
 name: "dc_test"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dc_test/"
 description: "dc_test – Distributed session cache testing and benchmarking tool"
 ---
 
-<h2>NAME</h2>
 <p> dc_test &#8211; Distributed session cache testing and benchmarking tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dc_test</code> -connect &lt;addr&gt; [options]</p>

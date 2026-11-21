@@ -1,4 +1,5 @@
 ---
+
 title: "tap2deb(1)"
 name: "tap2deb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tap2deb/"
 description: "tap2deb – create Debian packages which wrap .tap files"
 ---
 
-<h2>NAME</h2>
 <p> tap2deb &#8211; create Debian packages which wrap .tap files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tap2deb</code> [options]</p>

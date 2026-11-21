@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_sort_entries(3)"
 name: "ldap_sort_entries"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_sort_entries/"
 description: "ldap_sort_entries, ldap_sort_values, ldap_sort_strcasecmp – LDAP sorting routines (deprecated)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_sort_entries, ldap_sort_values, ldap_sort_strcasecmp &#8211; LDAP sorting routines (deprecated) </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

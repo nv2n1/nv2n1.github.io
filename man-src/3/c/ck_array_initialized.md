@@ -1,4 +1,5 @@
 ---
+
 title: "ck_array_initialized(3)"
 name: "ck_array_initialized"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_array_initialized/"
 description: "ck_array_initialized – indicates whether an array was recently initialized or deinitialized"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_array_initialized</code> &#8211; indicates whether an array was recently initialized or deinitialized</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

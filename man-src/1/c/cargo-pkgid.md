@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-pkgid(1)"
 name: "cargo-pkgid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-pkgid/"
 description: "cargo-pkgid – Print a fully qualified package specification"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cargo-pkgid &#8211; Print a fully qualified package specification </p>
 <h2>SYNOPSIS</h2>
 <p> cargo pkgid [OPTIONS] [&lt;SPEC&gt;]</p>

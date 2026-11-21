@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-mld(1)"
 name: "urxvt-mld"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-urxvt-mld/"
 description: "urxvt-mld – urxvt-ml terminal daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> urxvt-mld &#8211; urxvt-ml terminal daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>urxvt-mld</code> [-q|&#8211;quiet] [-o|&#8211;opendisplay] [-f|&#8211;fork] [-m|&#8211;mlock] [-e|&#8211;eval <i>perlstring</i>] </p>

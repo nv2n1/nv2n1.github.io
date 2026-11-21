@@ -1,4 +1,5 @@
 ---
+
 title: "chatzilla(1)"
 name: "chatzilla"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chatzilla/"
 description: "chatzilla – standalone Mozilla IRC client, no browsers attached"
 ---
 
-<h2>NAME</h2>
 <p> chatzilla &#8211; standalone Mozilla IRC client, no browsers attached</p>
 <h2>SYNOPSIS</h2>
 <p> <code>chatzilla</code> [-h] [-chat URL]</p>

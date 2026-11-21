@@ -1,4 +1,5 @@
 ---
+
 title: "cilc(1)"
 name: "cilc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cilc/"
 description: "cilc – Mono CIL-to-C binding generator"
 ---
 
-<h2>NAME</h2>
 <p> cilc &#8211; Mono CIL-to-C binding generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cilc</code> [options] <i>assembly</i> <i>target</i></p>

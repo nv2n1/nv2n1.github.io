@@ -1,4 +1,5 @@
 ---
+
 title: "source-highlight(1)"
 name: "source-highlight"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-source-highlight/"
 description: "Source-highlight – convert source code to syntax highlighted document"
 ---
 
-<h2>NAME</h2>
 <p> Source-highlight &#8211; convert source code to syntax highlighted document</p>
 <h2>SYNOPSIS</h2>
 <p> <code>source-highlight</code> [<i>OPTIONS</i>]&#8230; <i>&lt; input_file &gt; output_file</i></p>

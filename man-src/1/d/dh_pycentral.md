@@ -1,4 +1,5 @@
 ---
+
 title: "dh_pycentral(1)"
 name: "dh_pycentral"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_pycentral/"
 description: "dh_pycentral – use the python-central framework to handle Python modules and extensions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_pycentral &#8211; use the python-central framework to handle Python modules and extensions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_pycentral</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>-X</code><i>item</i>] [<code>-V</code> <i>version</i>] [<i>module dirs &#8230;</i>]</p>

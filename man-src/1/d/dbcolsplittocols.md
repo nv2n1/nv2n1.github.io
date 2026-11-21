@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolsplittocols(1)"
 name: "dbcolsplittocols"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbcolsplittocols/"
 description: "dbcolsplittocols – split an existing column into multiple new columns"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbcolsplittocols &#8211; split an existing column into multiple new columns </p>
 <h2>SYNOPSIS</h2>
 <p> dbcolsplittocols [-E] [-C ElementSeparator] column [column&#8230;]</p>

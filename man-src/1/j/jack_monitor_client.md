@@ -1,4 +1,5 @@
 ---
+
 title: "jack_monitor_client(1)"
 name: "jack_monitor_client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jack_monitor_client/"
 description: "jack_monitor_client – The JACK Audio Connection Kit example client"
 ---
 
-<h2>NAME</h2>
 <p> jack_monitor_client &#8211; The JACK Audio Connection Kit example client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jack_monitor_client</code> client-name </p>

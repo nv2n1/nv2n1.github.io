@@ -1,4 +1,5 @@
 ---
+
 title: "jconsole(1)"
 name: "jconsole"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jconsole/"
 description: "jconsole – Starts a graphical console that lets you monitor and manage Java applications."
 ---
 
-<h2>NAME</h2>
 <p> jconsole &#8211; Starts a graphical console that lets you monitor and manage Java applications.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

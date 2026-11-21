@@ -1,4 +1,5 @@
 ---
+
 title: "pspell-config(1)"
 name: "pspell-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pspell-config/"
 description: "pspell-config – prints information about a libpspell installation"
 ---
 
-<h2>NAME</h2>
 <p> pspell-config &#8211; prints information about a libpspell installation</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pspell-config</code> <i>[options]</i> </p>

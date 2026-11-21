@@ -1,4 +1,5 @@
 ---
+
 title: "ffcall-trampoline_r(3)"
 name: "ffcall-trampoline_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ffcall-trampoline_r/"
 description: "trampoline – closures as first-class C functions"
 ---
 
-<h2>NAME</h2>
 <p> trampoline &#8211; closures as first-class C functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;trampoline_r.h&gt;</code> </p>

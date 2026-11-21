@@ -1,4 +1,5 @@
 ---
+
 title: "g_dist(1)"
 name: "g_dist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_dist/"
 description: "g_dist – calculates the distances between the centers of mass of two groups"
 ---
 
-<h2>NAME</h2>
 <p> g_dist &#8211; calculates the distances between the centers of mass of two groups </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

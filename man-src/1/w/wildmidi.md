@@ -1,4 +1,5 @@
 ---
+
 title: "wildmidi(1)"
 name: "wildmidi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wildmidi/"
 description: "wildmidi – example player for libWildMidi"
 ---
 
-<h2>NAME</h2>
 <p> wildmidi &#8211; example player for libWildMidi </p>
 <h2>LIBRARY</h2>
 <p> <code>libWildMidi</code> </p>

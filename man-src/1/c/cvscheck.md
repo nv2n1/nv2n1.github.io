@@ -1,4 +1,5 @@
 ---
+
 title: "cvscheck(1)"
 name: "cvscheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cvscheck/"
 description: "cvscheck – Offline status report for files in a checked-out CVS module."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cvscheck &#8211; Offline status report for files in a checked-out CVS module. </p>
 <h2>SYNOPSIS</h2>
 <dl>

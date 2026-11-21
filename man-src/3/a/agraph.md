@@ -1,4 +1,5 @@
 ---
+
 title: "agraph(3)"
 name: "agraph"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-agraph/"
 description: "Agraph – abstract graph library"
 ---
 
-<h2>NAME</h2>
 <p> <code>Agraph</code> &#8211; abstract graph library</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

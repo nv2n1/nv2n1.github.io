@@ -1,4 +1,5 @@
 ---
+
 title: "redis-cli(1)"
 name: "redis-cli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-redis-cli/"
 description: "redis-cli – Redis client"
 ---
 
-<h2>NAME</h2>
 <p> redis-cli &#8211; Redis client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>redis-cli</code> [ options ] [cmd [arg [arg &#8230;]]] </p>

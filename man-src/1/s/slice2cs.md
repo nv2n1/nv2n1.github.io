@@ -1,4 +1,5 @@
 ---
+
 title: "slice2cs(1)"
 name: "slice2cs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-slice2cs/"
 description: "slice2cs – translate Slice to Ice for C#"
 ---
 
-<h2>NAME</h2>
 <p> slice2cs &#8211; translate Slice to Ice for C#</p>
 <h2>SYNOPSIS</h2>
 <p> <code>slice2cs [OPTIONS]&#8230; FILES&#8230;</code></p>

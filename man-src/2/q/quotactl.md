@@ -1,4 +1,5 @@
 ---
+
 title: "quotactl(2)"
 name: "quotactl"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-quotactl/"
 description: "quotactl – manipulate disk quotas"
 ---
 
-<h2 class="name">NAME</h2>
 <p> quotactl &#8211; manipulate disk quotas </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

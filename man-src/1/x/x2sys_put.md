@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_put(1)"
 name: "x2sys_put"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x2sys_put/"
 description: "x2sys_put – Update track index database from track bin file"
 ---
 
-<h2>NAME</h2>
 <p> x2sys_put &#8211; Update track index database from track bin file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x2sys_put</code> [ <i>info.tbf</i> ] <i>TAG</i> [ ] [ ] [ [<i>level</i>] ] </p>

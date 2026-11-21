@@ -1,4 +1,5 @@
 ---
+
 title: "arc4random_stir(3)"
 name: "arc4random_stir"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arc4random_stir/"
 description: "arc4random arc4random_buf arc4random_uniform arc4random_stir arc4random_addrandom – arc4 random number generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>arc4random</code> <code>arc4random_buf</code> <code>arc4random_uniform</code> <code>arc4random_stir</code> <code>arc4random_addrandom</code> &#8211; arc4 random number generator </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>

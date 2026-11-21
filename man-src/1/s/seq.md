@@ -1,4 +1,5 @@
 ---
+
 title: "seq(1)"
 name: "seq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-seq/"
 description: "seq – print a sequence of numbers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> seq &#8211; print a sequence of numbers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>seq</code> [<i>,OPTION/</i>]&#8230; <i>,LAST/</i><br />

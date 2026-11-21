@@ -1,4 +1,5 @@
 ---
+
 title: "mpto(1)"
 name: "mpto"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpto/"
 description: "mpto – extract labels in MetaPost pictures for typesetting"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mpto &#8211; extract labels in MetaPost pictures for typesetting </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mpto</code> [<i>-tex</i>|<i>-troff</i>] <i>mpfile</i></p>

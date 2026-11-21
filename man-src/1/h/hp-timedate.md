@@ -1,4 +1,5 @@
 ---
+
 title: "hp-timedate(1)"
 name: "hp-timedate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hp-timedate/"
 description: "hp-timedate – Time/Date Utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hp-timedate &#8211; Time/Date Utility </p>
 <h2>DESCRIPTION</h2>
 <p> Set the time and date on an HP Officejet all-in-one device using the PC time and date.</p>

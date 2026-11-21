@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_kx_get_id(3)"
 name: "gnutls_kx_get_id"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_kx_get_id/"
 description: "gnutls_kx_get_id – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_kx_get_id &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tiff2ps(1)"
 name: "tiff2ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tiff2ps/"
 description: "tiff2ps – convert a TIFF image to PostScript"
 ---
 
-<h2>NAME</h2>
 <p> tiff2ps &#8211; convert a <font SIZE="-1">TIFF</font> image to PostScript</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiff2ps</code> [ <i>options</i> ] <i>input.tif &#8230;</i></p>

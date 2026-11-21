@@ -1,4 +1,5 @@
 ---
+
 title: "slocal(1)"
 name: "slocal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-slocal/"
 description: "slocal – asynchronously filter and deliver new mail"
 ---
 
-<h2 class="name">NAME</h2>
 <p> slocal &#8211; asynchronously filter and deliver new mail </p>
 <h2>SYNOPSIS</h2>
 <dl>

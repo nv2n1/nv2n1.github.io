@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_get_pcidev_by_busidstring(3)"
 name: "hwloc_get_pcidev_by_busidstring"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_get_pcidev_by_busidstring/"
 description: "hwlocality_advanced_io – Finding I/O objects"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_advanced_io &#8211; Finding I/O objects </p>
 <h3>Functions</h3>
 <p> static <code>hwloc_obj_t</code> <code>hwloc_get_non_io_ancestor_obj</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_obj_t</code> ioobj) </p>

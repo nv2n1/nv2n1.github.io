@@ -1,4 +1,5 @@
 ---
+
 title: "repoclosure(1)"
 name: "repoclosure"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-repoclosure/"
 description: "repoclosure – display a list of unresolved dependencies for a yum repository"
 ---
 
-<h2>NAME</h2>
 <p> repoclosure &#8211; display a list of unresolved dependencies for a yum repository</p>
 <h2>SYNOPSIS</h2>
 <p> <code>repoclosure</code> [options]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "afm2tfm(1)"
 name: "afm2tfm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-afm2tfm/"
 description: "afm2tfm – convert Adobe font metrics to TeX font metrics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> afm2tfm &#8211; convert Adobe font metrics to TeX font metrics </p>
 <h2>DESCRIPTION</h2>
 <p> PostScript fonts are (or should be) accompanied by font metric files such as <code>Times-Roman.afm,</code> which describes the characteristics of the font called Times-Roman. To use such fonts with TeX, we need TFM files that contain similar information. This program does that conversion. </p>

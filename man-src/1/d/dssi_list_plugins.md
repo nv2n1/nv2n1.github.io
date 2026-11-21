@@ -1,4 +1,5 @@
 ---
+
 title: "dssi_list_plugins(1)"
 name: "dssi_list_plugins"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dssi_list_plugins/"
 description: "dssi_list_plugins – list available DSSI plugins"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dssi_list_plugins &#8211; list available DSSI plugins </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dssi_list_plugins</code> [-v|&#8211;verbose]</p>

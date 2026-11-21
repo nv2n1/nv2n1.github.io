@@ -1,4 +1,5 @@
 ---
+
 title: "ziptorrent(1)"
 name: "ziptorrent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ziptorrent/"
 description: "ziptorrent – torrentzip zip archives"
 ---
 
-<h2>NAME</h2>
 <p> ziptorrent &#8211; torrentzip zip archives</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ziptorrent</code> [<code>-hnVv</code>] <code>archive Op &#8230;</code></p>

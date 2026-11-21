@@ -1,4 +1,5 @@
 ---
+
 title: "obfit(1)"
 name: "obfit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obfit/"
 description: "obfit – superimpose two molecules based on a pattern"
 ---
 
-<h2>NAME</h2>
 <p> <code>obfit</code> &#8211; superimpose two molecules based on a pattern</p>
 <h2>SYNOPSIS</h2>
 <p> <i>SMARTS-pattern</i> <i>fixed-file</i> <i>outfile</i></p>

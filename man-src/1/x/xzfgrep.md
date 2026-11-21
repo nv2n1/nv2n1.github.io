@@ -1,4 +1,5 @@
 ---
+
 title: "xzfgrep(1)"
 name: "xzfgrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xzfgrep/"
 description: "xzgrep – search compressed files for a regular expression"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xzgrep &#8211; search compressed files for a regular expression </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xzgrep</code> [<i>grep_options</i>] [<code>-e</code>] <i>pattern</i> <i>file</i>&#8230;<br />

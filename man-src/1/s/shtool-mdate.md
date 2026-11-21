@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-mdate(1)"
 name: "shtool-mdate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtool-mdate/"
 description: "shtool mdate – GNU shtool pretty-print last modification time"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shtool mdate &#8211; GNU shtool pretty-print last modification time </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool mdate</code> [<code>-n</code>|<code>&#8211;newline</code>] [<code>-z</code>|<code>&#8211;zero</code>] [<code>-s</code>|<code>&#8211;shorten</code>] [<code>-d</code>|<code>&#8211;digits</code>] [<code>-f</code>|<code>&#8211;field-sep</code> <i>str</i>] [<code>-o</code>|<code>&#8211;order</code> <i>spec</i>] <i>path</i></p>

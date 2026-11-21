@@ -1,4 +1,5 @@
 ---
+
 title: "cunglq(3)"
 name: "cunglq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cunglq/"
 description: "cunglq.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cunglq.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

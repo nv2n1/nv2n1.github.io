@@ -1,4 +1,5 @@
 ---
+
 title: "lrzip(1)"
 name: "lrzip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lrzip/"
 description: "lrzip – a large-file compression program"
 ---
 
-<h2>NAME</h2>
 <p> lrzip &#8211; a large-file compression program</p>
 <h2>SYNOPSIS</h2>
 <p> lrzip [OPTIONS] &lt;file&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "smiquery(1)"
 name: "smiquery"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smiquery/"
 description: "smiquery – query single information from SMI MIB modules"
 ---
 
-<h2>NAME</h2>
 <p> smiquery &#8211; query single information from SMI MIB modules</p>
 <h2>SYNOPSIS</h2>
 <p> <code>smiquery</code> [ <code>-Vh</code> ] [ <code>-p </code><i>module</i> ] <i>command name</i></p>

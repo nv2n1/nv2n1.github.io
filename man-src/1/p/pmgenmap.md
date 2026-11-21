@@ -1,4 +1,5 @@
 ---
+
 title: "pmgenmap(1)"
 name: "pmgenmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmgenmap/"
 description: "pmgenmap – generate C code to simplify handling of performance metrics"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmgenmap</code> &#8211; generate C code to simplify handling of performance metrics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmgenmap</code> [<i>infile</i>]</p>

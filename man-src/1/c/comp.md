@@ -1,4 +1,5 @@
 ---
+
 title: "comp(1)"
 name: "comp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-comp/"
 description: "comp – compose a message"
 ---
 
-<h2 class="name">NAME</h2>
 <p> comp &#8211; compose a message </p>
 <h2>SYNOPSIS</h2>
 <dl>

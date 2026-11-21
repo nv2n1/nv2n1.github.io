@@ -1,4 +1,5 @@
 ---
+
 title: "mongoperf(1)"
 name: "mongoperf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mongoperf/"
 description: "mongoperf – MongoDB Performance Utility"
 ---
 
-<h2>NAME</h2>
 <p> mongoperf &#8211; MongoDB Performance Utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mongoperf</code> is a utility to check disk I/O performance independently of MongoDB. </p>

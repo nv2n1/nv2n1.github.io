@@ -1,4 +1,5 @@
 ---
+
 title: "cdb(3)"
 name: "cdb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdb/"
 description: "cdb – Constant DataBase library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cdb &#8211; Constant DataBase library</p>
 <h2>SYNOPSYS</h2>
 <pre><code>

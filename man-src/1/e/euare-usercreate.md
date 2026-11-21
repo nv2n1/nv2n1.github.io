@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usercreate(1)"
 name: "euare-usercreate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-usercreate/"
 description: "euare-usercreate – Create a new user"
 ---
 
-<h2>NAME</h2>
 <p> euare-usercreate &#8211; Create a new user</p>
 <h2>SYNOPSIS</h2>
 <p> euare-usercreate [-p PATH] [-g GROUP_NAME] [&#8211;verify] [-k] [-v | <code>-w]</code></p>

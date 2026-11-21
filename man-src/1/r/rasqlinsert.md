@@ -1,4 +1,5 @@
 ---
+
 title: "rasqlinsert(1)"
 name: "rasqlinsert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rasqlinsert/"
 description: "rasqlinsert – write argus(8) data into mysql database tables."
 ---
 
-<h2>NAME</h2>
 <p> <code>rasqlinsert</code> &#8211; write <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data into mysql database tables.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rasqlinsert</code> [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>] </p>

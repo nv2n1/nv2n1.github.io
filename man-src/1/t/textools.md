@@ -1,4 +1,5 @@
 ---
+
 title: "textools(1)"
 name: "textools"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-textools/"
 description: "textools – generate TeX map files, afm files, fix texmf trees"
 ---
 
-<h2 class="name">NAME</h2>
 <p> textools &#8211; generate TeX map files, afm files, fix texmf trees</p>
 <h2>SYNOPSIS</h2>
 <p> <code>textools</code> [ <i>OPTIONS</i> &#8230; ] [ <i>pattern</i> or <i>name</i> or <i>fromroot toroot</i> ] [ <i>MODIFIER OPTIONS</i> &#8230; ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dates_(3)"
 name: "dates_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dates_/"
 description: "QuantLib::Exercise – Base exercise class."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::Exercise &#8211; Base exercise class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/exercise.hpp&gt; </p>

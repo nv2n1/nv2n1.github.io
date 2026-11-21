@@ -1,4 +1,5 @@
 ---
+
 title: "mdoc-export-html(1)"
 name: "mdoc-export-html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdoc-export-html/"
 description: "mdoc export-html – Convert mdoc(5) XML to HTML."
 ---
 
-<h2>NAME</h2>
 <p> mdoc export-html &#8211; Convert <code><a href="/docs/linux/man/5-mdoc/">mdoc</a></code>(5) XML to HTML.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdoc export-html</code> [OPTION]* DIRECTORIES</p>

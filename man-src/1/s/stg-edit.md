@@ -1,4 +1,5 @@
 ---
+
 title: "stg-edit(1)"
 name: "stg-edit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-edit/"
 description: "stg-edit – Edit a patch description or diff"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-edit &#8211; Edit a patch description or diff </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

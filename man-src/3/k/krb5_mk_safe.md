@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_mk_safe(3)"
 name: "krb5_mk_safe"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_mk_safe/"
 description: "krb5_mk_safe krb5_mk_priv – generates integrity protected and/or encrypted messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_mk_safe</code> <code>krb5_mk_priv</code> &#8211; generates integrity protected and/or encrypted messages </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

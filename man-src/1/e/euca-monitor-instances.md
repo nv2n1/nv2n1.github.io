@@ -1,4 +1,5 @@
 ---
+
 title: "euca-monitor-instances(1)"
 name: "euca-monitor-instances"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-monitor-instances/"
 description: "euca-monitor-instances – Enable monitoring for one or more instances"
 ---
 
-<h2>NAME</h2>
 <p> euca-monitor-instances &#8211; Enable monitoring for one or more instances</p>
 <h2>SYNOPSIS</h2>
 <p> euca-monitor-instances [&#8211;show-empty-fields] [-U URL]</p>

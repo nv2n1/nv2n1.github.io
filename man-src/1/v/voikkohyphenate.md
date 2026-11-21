@@ -1,4 +1,5 @@
 ---
+
 title: "voikkohyphenate(1)"
 name: "voikkohyphenate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-voikkohyphenate/"
 description: "voikkohyphenate – test program for Voikko hyphenator"
 ---
 
-<h2>NAME</h2>
 <p> voikkohyphenate &#8211; test program for Voikko hyphenator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>voikkohyphenate</code> [<i>options</i>]</p>

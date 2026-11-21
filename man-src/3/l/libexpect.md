@@ -1,4 +1,5 @@
 ---
+
 title: "libexpect(3)"
 name: "libexpect"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libexpect/"
 description: "libexpect – programmed dialogue library with interactive programs"
 ---
 
-<h2>NAME</h2>
 <p> libexpect &#8211; programmed dialogue library with interactive programs</p>
 <h2>DESCRIPTION</h2>
 <p> This library contains functions that allow Expect to be used as a Tcl extension or to be used directly from C or C++ (without Tcl). Adding Expect as a Tcl extension is very short and simple, so that will be covered first.</p>

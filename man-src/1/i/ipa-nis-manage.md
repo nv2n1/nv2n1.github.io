@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-nis-manage(1)"
 name: "ipa-nis-manage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-nis-manage/"
 description: "ipa-nis-manage – Enables or disables the NIS listener plugin"
 ---
 
-<h2>NAME</h2>
 <p> ipa-nis-manage &#8211; Enables or disables the NIS listener plugin</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-nis-manage [options] &lt;enable|disable|status&gt;</p>

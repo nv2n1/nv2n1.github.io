@@ -1,4 +1,5 @@
 ---
+
 title: "disco(1)"
 name: "disco"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-disco/"
 description: "disco – Mono’s Web Service Discovery Tool"
 ---
 
-<h2>NAME</h2>
 <p> disco &#8211; Mono&#8217;s Web Service Discovery Tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>disco</code> [options] url</p>

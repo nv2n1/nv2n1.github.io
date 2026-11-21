@@ -1,4 +1,5 @@
 ---
+
 title: "autotrace(1)"
 name: "autotrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-autotrace/"
 description: "autotrace – converts bitmap image data into vector graphics"
 ---
 
-<h2>NAME</h2>
 <p> autotrace &#8211; converts bitmap image data into vector graphics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>autotrace</code> [<code>-background-color</code> <i> hexvalue</i>] [<code>-centerline</code>] [<code>-color-count</code> <i> int</i>] [<code>-corner-always-threshold</code> <i> angle</i>] [<code>-corner-surround</code> <i> int</i>] [<code>-corner-threshold</code> <i> angle</i>] [<code>-despeckle-level</code> <i> int</i>] [<code>-despeckle-tightness</code> <i> real</i>] [<code>-dpi</code> <i> int</i>] [<code>-error-threshold</code> <i> real</i>] [<code>-filter-iterations</code> <i> int</i>] [<code>-help</code>] [<code>-input-format</code> <i> format</i>] [<code>-line-reversion-threshold</code> <i> real</i>] [<code>-line-threshold</code> <i> real</i>] [<code>-list-input-formats</code>] [<code>-list-output-formats</code>] [<code>-log</code>] [<code>-output-file</code> <i> file</i>] [<code>-output-format</code> <i> format</i>] [<code>-preserve-width</code>] [<code>-remove-adjacent-corners</code>] [<code>-report-progress</code>] [<code>-debug-arch</code>] [<code>-debug-bitmap</code>] [<code>-tangent-surround</code> <i> int</i>] [<code>-version</code>] [<code>-width-factor</code> <i> real</i>] <i>inputfile</i></p>

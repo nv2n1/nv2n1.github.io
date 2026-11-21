@@ -1,4 +1,5 @@
 ---
+
 title: "ares_search(3)"
 name: "ares_search"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_search/"
 description: "ares_search – Initiate a DNS query with domain search"
 ---
 
-<h2>NAME</h2>
 <p> ares_search &#8211; Initiate a DNS query with domain search</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

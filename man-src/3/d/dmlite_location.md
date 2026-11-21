@@ -1,4 +1,5 @@
 ---
+
 title: "dmlite_location(3)"
 name: "dmlite_location"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dmlite_location/"
 description: "dmlite_location –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dmlite_location &#8211; </p>
 <p> Collection of chunks that form a replica.</p>
 <h2>SYNOPSIS</h2>

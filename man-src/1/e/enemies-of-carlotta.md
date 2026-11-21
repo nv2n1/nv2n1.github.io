@@ -1,4 +1,5 @@
 ---
+
 title: "enemies-of-carlotta(1)"
 name: "enemies-of-carlotta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-enemies-of-carlotta/"
 description: "enemies-of-carlotta – a simple mailing list manager"
 ---
 
-<h2>NAME</h2>
 <p> enemies-of-carlotta &#8211; a simple mailing list manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>enemies-of-carlotta </code> <i></i>[<i>options</i>] [<i>addresses</i>]</p>

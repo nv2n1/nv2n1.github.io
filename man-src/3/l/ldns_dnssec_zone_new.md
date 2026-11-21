@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_zone_new(3)"
 name: "ldns_dnssec_zone_new"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dnssec_zone_new/"
 description: "ldns_dnssec_zone_find_rrset, ldns_dnssec_zone_new, ldns_dnssec_zone_free, ldns_dnssec_zone_add_rr, ldns_dnssec_zone_names_print, ldns_dnssec_zone_print, ldns_dnssec_zone_add_empty_nonterminals"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dnssec_zone_find_rrset, ldns_dnssec_zone_new, ldns_dnssec_zone_free, ldns_dnssec_zone_add_rr, ldns_dnssec_zone_names_print, ldns_dnssec_zone_print, ldns_dnssec_zone_add_empty_nonterminals </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

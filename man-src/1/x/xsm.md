@@ -1,4 +1,5 @@
 ---
+
 title: "xsm(1)"
 name: "xsm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xsm/"
 description: "xsm – X Session Manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xsm &#8211; X Session Manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xsm</code> [-display <i>display</i>] [-session <i>sessionName</i>] [-verbose]</p>

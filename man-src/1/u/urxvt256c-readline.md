@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-readline(1)"
 name: "urxvt256c-readline"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-readline/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- readline - improve readline editing (enabled by default) 
+readline - improve readline editing (enabled by default) 
 
 <h2>DESCRIPTION</h2>
 

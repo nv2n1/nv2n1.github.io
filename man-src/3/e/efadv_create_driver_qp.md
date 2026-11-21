@@ -1,4 +1,5 @@
 ---
+
 title: "efadv_create_driver_qp(3)"
 name: "efadv_create_driver_qp"
 section: "3"
@@ -6,12 +7,7 @@ letter: "e"
 url: "/docs/linux/man/3-efadv_create_driver_qp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- efadv_create_driver_qp - Create EFA specific Queue Pair # SYNOPSIS
+efadv_create_driver_qp - Create EFA specific Queue Pair # SYNOPSIS
 <dl>
 <dt>
 </dt><dd> <pre><code>

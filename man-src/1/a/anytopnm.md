@@ -1,4 +1,5 @@
 ---
+
 title: "anytopnm(1)"
 name: "anytopnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-anytopnm/"
 description: "anytopnm – attempt to convert an unknown type of image file to a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> anytopnm &#8211; attempt to convert an unknown type of image file to a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>anytopnm</code> [<i>file</i>] </p>

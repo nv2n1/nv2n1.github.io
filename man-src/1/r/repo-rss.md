@@ -1,4 +1,5 @@
 ---
+
 title: "repo-rss(1)"
 name: "repo-rss"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-repo-rss/"
 description: "repo-rss – generates an RSS feed from one or more Yum repositories"
 ---
 
-<h2>NAME</h2>
 <p> repo-rss &#8211; generates an RSS feed from one or more Yum repositories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>repo-rss</code> [options] repoid1 [repoid2&#8230;]</p>

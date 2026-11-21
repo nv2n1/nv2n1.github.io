@@ -1,4 +1,5 @@
 ---
+
 title: "itweb-settings(1)"
 name: "itweb-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-itweb-settings/"
 description: "itweb-settings – view and modify settings for javaws and the browser plugin"
 ---
 
-<h2 class="name">NAME</h2>
 <p> itweb-settings &#8211; view and modify settings for <code>javaws </code> and the <code>browser plugin</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>itweb-settings </code><br />

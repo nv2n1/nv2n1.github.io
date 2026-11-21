@@ -1,4 +1,5 @@
 ---
+
 title: "mysqldbexport(1)"
 name: "mysqldbexport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqldbexport/"
 description: "mysqldbexport – Export Object Definitions or Data from a Database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqldbexport &#8211; Export Object Definitions or Data from a Database </p>
 <h2>SYNOPSIS</h2>
 <dl>

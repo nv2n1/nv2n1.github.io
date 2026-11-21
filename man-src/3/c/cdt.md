@@ -1,4 +1,5 @@
 ---
+
 title: "cdt(3)"
 name: "cdt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdt/"
 description: "Cdt – container data types"
 ---
 
-<h2>NAME</h2>
 <p> <code>Cdt</code> &#8211; container data types</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

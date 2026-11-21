@@ -1,4 +1,5 @@
 ---
+
 title: "euare-oidcprovidercreate(1)"
 name: "euare-oidcprovidercreate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-oidcprovidercreate/"
 description: "euare-oidcprovidercreate – Create a new OpenID Connect provider"
 ---
 
-<h2>NAME</h2>
 <p> euare-oidcprovidercreate &#8211; Create a new OpenID Connect provider</p>
 <h2>SYNOPSIS</h2>
 <p> euare-oidcprovidercreate [-c CLIENT] [-t HEX] [&#8211;as-account ACCOUNT]</p>

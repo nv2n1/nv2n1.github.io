@@ -1,4 +1,5 @@
 ---
+
 title: "grdpaste(1)"
 name: "grdpaste"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdpaste/"
 description: "grdpaste – Join two grids along their common edge"
 ---
 
-<h2>NAME</h2>
 <p> grdpaste &#8211; Join two grids along their common edge</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdpaste</code> <i>file_a.nc file_b.nc</i> <i>outfile.nc</i> [ [<i>level</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] </p>

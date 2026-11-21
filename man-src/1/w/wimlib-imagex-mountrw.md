@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-mountrw(1)"
 name: "wimlib-imagex-mountrw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex-mountrw/"
 description: "wimlib-imagex-mount, wimlib-imagex-mountrw, wimlib-imagex-unmount – Mount and unmount an image from a WIM archive"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex-mount, wimlib-imagex-mountrw, wimlib-imagex-unmount &#8211; Mount and unmount an image from a WIM archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex mount</code> <i>WIMFILE</i> [<i>IMAGE</i>] <i>DIRECTORY</i> [<i>OPTION</i>&#8230;]<br />

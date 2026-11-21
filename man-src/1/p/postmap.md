@@ -1,4 +1,5 @@
 ---
+
 title: "postmap(1)"
 name: "postmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postmap/"
 description: "postmap – Postfix lookup table management"
 ---
 
-<h2 class="name">NAME</h2>
 <p> postmap &#8211; Postfix lookup table management </p>
 <h2>SYNOPSIS</h2>
 <p> <code>postmap</code> [<code>-bfFhimnNoprsuUvw</code>] [<code>-c </code><i>config_dir</i>] [<code>-d </code><i>key</i>] [<code>-q </code><i>key</i>]<br />

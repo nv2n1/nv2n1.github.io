@@ -1,4 +1,5 @@
 ---
+
 title: "randombytes(1)"
 name: "randombytes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-randombytes/"
 description: "randombytes — write random bytes generated via libnacl to stdout"
 ---
 
-<h2>NAME</h2>
 <p> <code>randombytes</code> &#8212; write random bytes generated via libnacl to stdout</p>
 <h2>SYNOPSIS</h2>
 <p> <code>randombytes</code></p>

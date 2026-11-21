@@ -1,4 +1,5 @@
 ---
+
 title: "citeproc(1)"
 name: "citeproc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-citeproc/"
 description: "citeproc – make CSL citations and bibliography for LaTeX"
 ---
 
-<h2 class="name">NAME</h2>
 <p> citeproc &#8211; make CSL citations and bibliography for LaTeX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>citeproc</code> [&lt;options&gt;] <i>auxname</i>[<i></i><code>.aux</code>]</p>

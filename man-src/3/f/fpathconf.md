@@ -1,4 +1,5 @@
 ---
+
 title: "fpathconf(3)"
 name: "fpathconf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fpathconf/"
 description: "fpathconf, pathconf – get configuration values for files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fpathconf, pathconf &#8211; get configuration values for files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

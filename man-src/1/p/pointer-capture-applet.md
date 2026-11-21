@@ -1,4 +1,5 @@
 ---
+
 title: "pointer-capture-applet(1)"
 name: "pointer-capture-applet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pointer-capture-applet/"
 description: "pointer-capture-applet – Creates an area on the panel to capture the pointer"
 ---
 
-<h2>NAME</h2>
 <p> pointer-capture-applet &#8211; Creates an area on the panel to capture the pointer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pointer-capture-applet</code></p>

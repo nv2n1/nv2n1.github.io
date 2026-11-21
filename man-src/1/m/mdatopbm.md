@@ -1,4 +1,5 @@
 ---
+
 title: "mdatopbm(1)"
 name: "mdatopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdatopbm/"
 description: "mdatopbm – convert a Microdesign .mda or .mdp file into a portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mdatopbm &#8211; convert a Microdesign .mda or .mdp file into a portable bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdatopbm</code> [<code>-a</code>][<code>-d</code>][<code>-i</code>][<code>&#8212;</code>] <i>[ mdafile ]</i></p>

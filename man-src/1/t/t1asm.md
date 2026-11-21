@@ -1,4 +1,5 @@
 ---
+
 title: "t1asm(1)"
 name: "t1asm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-t1asm/"
 description: "t1asm – assemble PostScript Type 1 font"
 ---
 
-<h2 class="name">NAME</h2>
 <p> t1asm &#8211; assemble PostScript Type 1 font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>t1asm</code> [<code>-a</code>|<code>-b</code>] [<code>-l</code> <i>length</i>] [<i>input</i> [<i>output</i>]]</p>

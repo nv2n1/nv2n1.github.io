@@ -1,4 +1,5 @@
 ---
+
 title: "srch_strings(1)"
 name: "srch_strings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-srch_strings/"
 description: "srch_strings – display printable strings in files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>srch_strings </code>&#8211; display printable strings in files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

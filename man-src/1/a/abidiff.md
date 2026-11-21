@@ -1,4 +1,5 @@
 ---
+
 title: "abidiff(1)"
 name: "abidiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abidiff/"
 description: "abidiff – compare ABIs of ELF files"
 ---
 
-<h2>NAME</h2>
 <p> abidiff &#8211; compare ABIs of ELF files </p>
 <p> abidiff compares the Application Binary Interfaces (ABI) of two shared libraries in <i>ELF</i> format. It emits a meaningful report describing the differences between the two ABIs. </p>
 <p> For a comprehensive ABI change report that includes changes about function and variable sub-types, the two input shared libraries must be accompanied with their debug information in <i>DWARF</i> format. Otherwise, only <i>ELF</i> symbols that were added or removed are reported.</p>

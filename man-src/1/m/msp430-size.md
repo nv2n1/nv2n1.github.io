@@ -1,4 +1,5 @@
 ---
+
 title: "msp430-size(1)"
 name: "msp430-size"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msp430-size/"
 description: "size – list section sizes and total size."
 ---
 
-<h2>NAME</h2>
 <p> size &#8211; list section sizes and total size.</p>
 <h2>SYNOPSIS</h2>
 <p> size [<code>-A</code>|<code>-B</code>|<code>&#8211;format=</code><i>compatibility</i>]<br />

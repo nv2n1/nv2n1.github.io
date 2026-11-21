@@ -1,4 +1,5 @@
 ---
+
 title: "abc(1)"
 name: "abc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abc/"
 description: "abc – sequential logic synthesis and formal verification"
 ---
 
-<h2>NAME</h2>
 <p> abc &#8211; sequential logic synthesis and formal verification</p>
 <h2>SYNOPSIS</h2>
 <p> <code>abc</code> [<i>OPTIONS</i>] <i>FILE</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mediatomb(1)"
 name: "mediatomb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mediatomb/"
 description: "mediatomb – UPnP MediaServer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mediatomb &#8211; UPnP MediaServer </p>
 <h2>SYNOPSIS</h2>
 <dl>

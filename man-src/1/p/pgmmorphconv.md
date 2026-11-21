@@ -1,4 +1,5 @@
 ---
+
 title: "pgmmorphconv(1)"
 name: "pgmmorphconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmmorphconv/"
 description: "pgmmorphconv – perform morphological convolutions: dilation, erosion"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pgmmorphconv &#8211; perform morphological convolutions: dilation, erosion</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmmorphconv</code> [ <code>-erode</code> | <code>-dilate</code> | <code>-open</code> | <code>-close</code> ] <i>templatefile</i> [<i>pgmfile</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-download-and-unbundle(1)"
 name: "euca-download-and-unbundle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-download-and-unbundle/"
 description: "euca-download-and-unbundle – Download and unbundle a bundled image from the cloud"
 ---
 
-<h2>NAME</h2>
 <p> euca-download-and-unbundle &#8211; Download and unbundle a bundled image from the cloud</p>
 <h2>SYNOPSIS</h2>
 <p> euca-download-and-unbundle [-d (FILE | DIR)] [-k PRIVATEKEY]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gettext(1)"
 name: "gettext"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gettext/"
 description: "gettext – translate message"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gettext &#8211; translate message </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gettext</code> [<i>,OPTION/</i>] [[<i>,TEXTDOMAIN/</i>] <i>,MSGID/</i>]<br />

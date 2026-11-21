@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-panel(1)"
 name: "xfce4-panel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-panel/"
 description: "xfce4-panel – A panel for the Xfce4 desktop environment"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfce4-panel &#8211; A panel for the Xfce4 desktop environment </p>
 <h2>DESCRIPTION</h2>
 <h3>Usage:</h3>

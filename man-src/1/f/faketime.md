@@ -1,4 +1,5 @@
 ---
+
 title: "faketime(1)"
 name: "faketime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-faketime/"
 description: "faketime – manipulate the system time for a given command"
 ---
 
-<h2>NAME</h2>
 <p> faketime &#8211; manipulate the system time for a given command</p>
 <h2>SYNOPSIS</h2>
 <p> <code>faketime</code> <i>[options] timestamp program [arguments&#8230;]</i></p>

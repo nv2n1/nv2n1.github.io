@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_control_layout_u(3)"
 name: "globus_ftp_control_layout_u"
 section: "3"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-globus_ftp_control_layout_u/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- globus_ftp_control_layout_u - 
+globus_ftp_control_layout_u - 
 
  Control striping attribute union.
 

@@ -1,4 +1,5 @@
 ---
+
 title: "dbjoin(1)"
 name: "dbjoin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbjoin/"
 description: "dbjoin – join two tables on common columns"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbjoin &#8211; join two tables on common columns </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

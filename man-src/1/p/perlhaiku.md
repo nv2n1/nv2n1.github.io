@@ -1,4 +1,5 @@
 ---
+
 title: "perlhaiku(1)"
 name: "perlhaiku"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlhaiku/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlhaiku - Perl version 5.10+ on Haiku 
+perlhaiku - Perl version 5.10+ on Haiku 
 
 <h2>DESCRIPTION</h2>
 

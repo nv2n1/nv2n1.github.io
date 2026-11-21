@@ -1,4 +1,5 @@
 ---
+
 title: "hdifftopam(1)"
 name: "hdifftopam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hdifftopam/"
 description: "hdifftopam – convert horizontal difference image to original PAM image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdifftopam &#8211; convert horizontal difference image to original PAM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hdifftopam</code>[<i>pamfile</i>] [<code>-pnm</code>] [<code>-verbose</code>] </p>

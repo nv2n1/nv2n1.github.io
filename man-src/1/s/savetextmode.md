@@ -1,4 +1,5 @@
 ---
+
 title: "savetextmode(1)"
 name: "savetextmode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-savetextmode/"
 description: "savetextmode, textmode – save or restore the complete SVGA status for textmode."
 ---
 
-<h2>NAME</h2>
 <p> savetextmode, textmode &#8211; save or restore the complete SVGA status for textmode.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>savetextmode</code><br />

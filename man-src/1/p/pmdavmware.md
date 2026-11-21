@@ -1,4 +1,5 @@
 ---
+
 title: "pmdavmware(1)"
 name: "pmdavmware"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdavmware/"
 description: "pmdavmware – VMware performance metrics domain agent (PMDA)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pmdavmware &#8211; VMware performance metrics domain agent (PMDA) </p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdavmware</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from a (possibly remote) VMware virtualisation host. </p>

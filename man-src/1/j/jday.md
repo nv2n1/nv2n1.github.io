@@ -1,4 +1,5 @@
 ---
+
 title: "jday(1)"
 name: "jday"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jday/"
 description: "jday, j2d – astronomical julian date conversion utilities"
 ---
 
-<h2>NAME</h2>
 <p> jday, j2d &#8211; astronomical julian date conversion utilities</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jday</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "openstack-db(1)"
 name: "openstack-db"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-openstack-db/"
 description: "openstack-db – Set up a local database for use with an OpenStack service"
 ---
 
-<h2>NAME</h2>
 <p> openstack-db &#8211; Set up a local database for use with an OpenStack service</p>
 <h2>SYNOPSIS</h2>
 <p> <code>openstack-db</code> <i>&#8211;service &lt;service&gt; &#8211;init|&#8211;drop </i>[<i>options</i>]</p>

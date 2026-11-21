@@ -1,4 +1,5 @@
 ---
+
 title: "runc-checkpoint(8)"
 name: "runc-checkpoint"
 section: "8"
@@ -6,7 +7,7 @@ letter: "r"
 url: "/docs/linux/man/8-runc-checkpoint/"
 description: "runc-checkpoint – checkpoint a running container"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>runc-checkpoint</code> - checkpoint a running container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>runc checkpoint</code> [<i>option</i> ...] <i>container-id</i> </p>

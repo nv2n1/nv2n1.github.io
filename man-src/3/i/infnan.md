@@ -1,4 +1,5 @@
 ---
+
 title: "infnan(3)"
 name: "infnan"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-infnan/"
 description: "infnan – deal with infinite or not-a-number (NaN) result"
 ---
 
-<h2>NAME</h2>
 <p> infnan &#8211; deal with infinite or not-a-number (NaN) result</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

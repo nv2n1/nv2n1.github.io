@@ -1,4 +1,5 @@
 ---
+
 title: "hcidump(1)"
 name: "hcidump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hcidump/"
 description: "hcidump – Parse HCI data"
 ---
 
-<h2>NAME</h2>
 <p> hcidump &#8211; Parse HCI data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hcidump [-h]</code><br />

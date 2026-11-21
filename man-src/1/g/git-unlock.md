@@ -1,4 +1,5 @@
 ---
+
 title: "git-unlock(1)"
 name: "git-unlock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-unlock/"
 description: "git-unlock – Unlock a file excluded from version control"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-unlock</code> &#8211; Unlock a file excluded from version control</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-lock</code> &lt;filename&gt;</p>

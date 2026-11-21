@@ -1,4 +1,5 @@
 ---
+
 title: "aa_setsupported(3)"
 name: "aa_setsupported"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_setsupported/"
 description: "aa_setsupported – alter the \"supported\" field of hardware_params structure used by AA-lib"
 ---
 
-<h2>NAME</h2>
 <p> aa_setsupported &#8211; alter the &quot;supported&quot; field of hardware_params structure used by AA-lib</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

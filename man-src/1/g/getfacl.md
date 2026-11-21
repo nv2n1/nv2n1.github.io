@@ -1,4 +1,5 @@
 ---
+
 title: "getfacl(1)"
 name: "getfacl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getfacl/"
 description: "getfacl – get file access control lists"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getfacl &#8211; get file access control lists </p>
 <h2>SYNOPSIS</h2>
 <p> <code>getfacl</code> [-aceEsRLPtpndvh] file &#8230; </p>

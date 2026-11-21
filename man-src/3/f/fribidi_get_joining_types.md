@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_get_joining_types(3)"
 name: "fribidi_get_joining_types"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_joining_types/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_get_joining_types - get joining types for an string of characters 
+fribidi_get_joining_types - get joining types for an string of characters 
 
 <h2>SYNOPSIS</h2>
 

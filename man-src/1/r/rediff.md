@@ -1,4 +1,5 @@
 ---
+
 title: "rediff(1)"
 name: "rediff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rediff/"
 description: "rediff, editdiff – fix offsets and counts of a hand-edited diff"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rediff, editdiff &#8211; fix offsets and counts of a hand-edited diff </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ckeygen(1)"
 name: "ckeygen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ckeygen/"
 description: "ckeygen – manipulate public/private keys"
 ---
 
-<h2>NAME</h2>
 <p> ckeygen &#8211; manipulate public/private keys</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ckeygen [-b </code><i>bits</i>] [-f <i>filename</i>] [-t <i>type</i>] <code>[-C </code><i>comment</i>] [-N <i>new passphrase</i>] [-P <i>old passphrase</i>] <code>[-l] [-p] [-q] [-y]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "md2html(1)"
 name: "md2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-md2html/"
 description: "md2html – Convert markdown to HTML"
 ---
 
-<h2>NAME</h2>
 <p> md2html &#8211; Convert markdown to HTML</p>
 <h2>SYNOPSIS</h2>
 <p> Usage: md2html [options] &lt;file&gt;</p>

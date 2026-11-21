@@ -1,4 +1,5 @@
 ---
+
 title: "anytermd(1)"
 name: "anytermd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-anytermd/"
 description: "anytermd – A terminal-emulating HTTP daemon"
 ---
 
-<h2>NAME</h2>
 <p> anytermd &#8211; A terminal-emulating HTTP daemon</p>
 <h2>SYNOPSIS</h2>
 <p> anytermd [<code>&#8211;command</code> <i>arg</i>] [<code>&#8211;device</code> <i>arg</i>] [<code>&#8211;port</code> <i>arg</i>] [<code>&#8211;user</code> <i>arg</i>] [<code>&#8211;auth</code> <i>arg</i>] [<code>&#8211;charset</code> <i>arg</i>] [<code>&#8211;foreground</code>] [<code>&#8211;diff</code>] [<code>&#8211;nodiff</code>] [<code>&#8211;max-sessions</code> <i>arg</i>] [<code>&#8211;max-http-connections</code> <i>arg</i>] [<code>&#8211;local-only</code>] [<code>&#8211;name</code> <i>arg</i>] </p>

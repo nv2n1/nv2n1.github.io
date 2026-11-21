@@ -1,4 +1,5 @@
 ---
+
 title: "perl5143delta(1)"
 name: "perl5143delta"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perl5143delta/"
 description: "perl5143delta – what is new for perl v5.14.3"
 ---
-<h2 class="name">NAME</h2>
+
 <p> perl5143delta - what is new for perl v5.14.3 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.14.2 release and the 5.14.3 release. </p>

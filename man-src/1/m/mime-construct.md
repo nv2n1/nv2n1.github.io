@@ -1,4 +1,5 @@
 ---
+
 title: "mime-construct(1)"
 name: "mime-construct"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mime-construct/"
 description: "mime-construct – construct and optionally mail MIME messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mime-construct &#8211; construct and optionally mail MIME messages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mime-construct</code> <i>switch</i>&#8230; </p>

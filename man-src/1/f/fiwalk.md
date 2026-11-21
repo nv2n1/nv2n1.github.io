@@ -1,4 +1,5 @@
 ---
+
 title: "fiwalk(1)"
 name: "fiwalk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fiwalk/"
 description: "fiwalk – print the filesystem statistics and exit"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>fiwalk </code>&#8211; print the filesystem statistics and exit </p>
 <h2>SYNOPSIS</h2>
 <pre>

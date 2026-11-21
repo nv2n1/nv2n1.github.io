@@ -1,4 +1,5 @@
 ---
+
 title: "pamlookup(1)"
 name: "pamlookup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamlookup/"
 description: "pamlookup – map an image to a new image by using it as indices into a table"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamlookup &#8211; map an image to a new image by using it as indices into a table</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamlookup</code> <code>-lookupfile=</code><i>lookupfile</i> <code>-missingcolor=</code><i>color</i> [<code>-fit</code>] <i>indexfile</i> </p>

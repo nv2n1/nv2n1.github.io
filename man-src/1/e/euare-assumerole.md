@@ -1,4 +1,5 @@
 ---
+
 title: "euare-assumerole(1)"
 name: "euare-assumerole"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-assumerole/"
 description: "euare-assumerole – Assume an IAM role"
 ---
 
-<h2>NAME</h2>
 <p> euare-assumerole &#8211; Assume an IAM role</p>
 <h2>SYNOPSIS</h2>
 <p> euare-assumerole [-d SECONDS] [&#8211;session-name PATH] [-c | <code>-s]</code></p>

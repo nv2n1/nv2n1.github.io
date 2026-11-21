@@ -1,4 +1,5 @@
 ---
+
 title: "dumpreg(1)"
 name: "dumpreg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dumpreg/"
 description: "dumpreg – dump the state of the card as the svgalib chipset driver sees it."
 ---
 
-<h2>NAME</h2>
 <p> dumpreg &#8211; dump the state of the card as the svgalib chipset driver sees it.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dumpreg</code><br />

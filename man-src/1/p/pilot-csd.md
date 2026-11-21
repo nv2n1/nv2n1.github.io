@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-csd(1)"
 name: "pilot-csd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-csd/"
 description: "pilot-csd – Connection Service Daemon for Palm Devices"
 ---
 
-<h2>NAME</h2>
 <p> pilot-csd &#8211; Connection Service Daemon for Palm Devices</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perl(1)"
 name: "perl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl/"
 description: "perl – The Perl 5 language interpreter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perl &#8211; The Perl 5 language interpreter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>perl</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-sTtuUWX</code>&nbsp;<wbr>]<br />

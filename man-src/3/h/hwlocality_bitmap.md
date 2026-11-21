@@ -1,4 +1,5 @@
 ---
+
 title: "hwlocality_bitmap(3)"
 name: "hwlocality_bitmap"
 section: "3"
@@ -6,7 +7,7 @@ letter: "h"
 url: "/docs/linux/man/3-hwlocality_bitmap/"
 description: "hwlocality_bitmap – The bitmap API"
 ---
-<h2 class="name">NAME</h2>
+
 <p> hwlocality_bitmap - The bitmap API </p>
 <h3>Macros</h3>
 <p> <br />

@@ -1,4 +1,5 @@
 ---
+
 title: "sysfs(2)"
 name: "sysfs"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sysfs/"
 description: "sysfs – get filesystem type information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sysfs &#8211; get filesystem type information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>int sysfs(int </code><i>option</i><code>, const char *</code><i>fsname</i><code>);</code> </p>

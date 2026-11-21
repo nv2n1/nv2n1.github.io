@@ -1,4 +1,5 @@
 ---
+
 title: "lou_translate(1)"
 name: "lou_translate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lou_translate/"
 description: "lou_translate – A Braille translator for large scale testing of liblouis Braille translation tables"
 ---
 
-<h2>NAME</h2>
 <p> lou_translate &#8211; A Braille translator for large scale testing of liblouis Braille translation tables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lou_translate</code> [<i>OPTION</i>] <i>TABLE</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gromit-mpx(1)"
 name: "gromit-mpx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gromit-mpx/"
 description: "Gromit-MPX – Presentation helper to make annotations on screen"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Gromit-MPX &#8211; Presentation helper to make annotations on screen </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gromit-mpx</code> [<i>options</i>] </p>

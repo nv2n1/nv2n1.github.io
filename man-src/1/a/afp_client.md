@@ -1,4 +1,5 @@
 ---
+
 title: "afp_client(1)"
 name: "afp_client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-afp_client/"
 description: "afp_client- Mount, unmount and control Apple Filing Protocol (AFP) sessions using the FUSE infrastructure."
 ---
 
-<h2>NAME</h2>
 <p> afp_client- Mount, unmount and control Apple Filing Protocol (AFP) sessions using the FUSE infrastructure.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>afp_client mount|status|unmount|suspend|resume|exit [options]</code></p>

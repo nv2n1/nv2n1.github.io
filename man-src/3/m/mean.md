@@ -1,4 +1,5 @@
 ---
+
 title: "mean(3)"
 name: "mean"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mean/"
 description: "QuantLib::StatsHolder – Helper class for precomputed distributions."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::StatsHolder &#8211; Helper class for precomputed distributions. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/statistics/gaussianstatistics.hpp&gt; </p>

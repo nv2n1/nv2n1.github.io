@@ -1,4 +1,5 @@
 ---
+
 title: "nwauth(1)"
 name: "nwauth"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwauth/"
 description: "nwauth – Verify username/password"
 ---
 
-<h2>NAME</h2>
 <p> nwauth &#8211; Verify username/password</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwauth</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-D</code> ]</p>

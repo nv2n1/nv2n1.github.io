@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_dh_get_peers_public_bits(3)"
 name: "gnutls_dh_get_peers_public_bits"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_dh_get_peers_public_bits/"
 description: "gnutls_dh_get_peers_public_bits – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_dh_get_peers_public_bits &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

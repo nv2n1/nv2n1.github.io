@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-join(1)"
 name: "ipa-join"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-join/"
 description: "ipa-join – Join a machine to an IPA realm and get a keytab for the host service principal"
 ---
 
-<h2>NAME</h2>
 <p> ipa-join &#8211; Join a machine to an IPA realm and get a keytab for the host service principal</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-join [<code>-d</code>|<code>&#8211;debug</code>] [<code>-q</code>|<code>&#8211;quiet</code>] [<code>-u</code>|<code>&#8211;unenroll</code>] [<code>-h</code>|<code>&#8211;hostname</code> hostname] [<code>-s</code>|<code>&#8211;server</code> hostname] [<code>-k</code>|<code>&#8211;keytab</code> filename] [<code>-w</code>|<code>&#8211;bindpw</code> password] [<code>-b</code>|&#8211;<code>basedn basedn</code>] [<code>-?</code>|<code>&#8211;help</code>] [<code>&#8211;usage</code>] </p>

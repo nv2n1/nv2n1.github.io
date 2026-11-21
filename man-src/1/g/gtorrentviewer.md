@@ -1,4 +1,5 @@
 ---
+
 title: "gtorrentviewer(1)"
 name: "gtorrentviewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtorrentviewer/"
 description: "gtorrentviewer – BitTorrent metainfo viewer/editor."
 ---
 
-<h2>NAME</h2>
 <p> gtorrentviewer &#8211; BitTorrent metainfo viewer/editor.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtorrentviewer</code> [options] [torrentfile] </p>

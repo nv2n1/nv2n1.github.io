@@ -1,4 +1,5 @@
 ---
+
 title: "incompletegamma(3)"
 name: "incompletegamma"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-incompletegamma/"
 description: "ql/math/incompletegamma.hpp – Incomplete Gamma function."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/math/incompletegamma.hpp &#8211; Incomplete Gamma function. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/errors.hpp&gt;<br />

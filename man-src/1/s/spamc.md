@@ -1,4 +1,5 @@
 ---
+
 title: "spamc(1)"
 name: "spamc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spamc/"
 description: "spamc – client for spamd"
 ---
 
-<h2 class="name">NAME</h2>
 <p> spamc &#8211; client for spamd </p>
 <h2>SYNOPSIS</h2>
 <dl>

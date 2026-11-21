@@ -1,4 +1,5 @@
 ---
+
 title: "basename(1)"
 name: "basename"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-basename/"
 description: "basename – strip directory and suffix from filenames"
 ---
 
-<h2 class="name">NAME</h2>
 <p> basename &#8211; strip directory and suffix from filenames </p>
 <h2>SYNOPSIS</h2>
 <p> <code>basename</code> <i>,NAME /</i>[<i>,SUFFIX/</i>]<br />

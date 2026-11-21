@@ -1,4 +1,5 @@
 ---
+
 title: "docker-manifest-push(1)"
 name: "docker-manifest-push"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-manifest-push/"
 description: "docker-manifest-push – Push a manifest list to a repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-manifest-push &#8211; Push a manifest list to a repository </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker manifest push [OPTIONS] MANIFEST_LIST</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fcloseall(3)"
 name: "fcloseall"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fcloseall/"
 description: "fcloseall – close all open streams"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fcloseall &#8211; close all open streams </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

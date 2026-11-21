@@ -1,4 +1,5 @@
 ---
+
 title: "gts2oogl(1)"
 name: "gts2oogl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gts2oogl/"
 description: "gts2oogl – converts a GTS file to OOGL file format (Geomview)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gts2oogl &#8211; converts a GTS file to OOGL file format (Geomview).</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gts2oogl</code> [<i>OPTIONS</i>]&nbsp;&lt;&nbsp;<i>input.srf&nbsp;</i>&gt;&nbsp;<i>output.oogl</i> </p>

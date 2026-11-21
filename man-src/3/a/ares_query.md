@@ -1,4 +1,5 @@
 ---
+
 title: "ares_query(3)"
 name: "ares_query"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_query/"
 description: "ares_query – Initiate a single-question DNS query"
 ---
 
-<h2>NAME</h2>
 <p> ares_query &#8211; Initiate a single-question DNS query</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_userauth_password(3)"
 name: "libssh2_userauth_password"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_userauth_password/"
 description: "libssh2_userauth_password – convenience macro for libssh2_userauth_password_ex(3) calls"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_userauth_password &#8211; convenience macro for <i><a href="/docs/linux/man/3-libssh2_userauth_password_ex/">libssh2_userauth_password_ex</a>(3)</i> calls</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

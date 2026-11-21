@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_get_persistent(3)"
 name: "keyctl_get_persistent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyctl_get_persistent/"
 description: "keyctl_get_persistent – Get the persistent keyring for a user"
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_get_persistent &#8211; Get the persistent keyring for a user </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

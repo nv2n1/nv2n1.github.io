@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rdf2wire(3)"
 name: "ldns_rdf2wire"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rdf2wire/"
 description: "ldns_rr2wire, ldns_pkt2wire, ldns_rdf2wire"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr2wire, ldns_pkt2wire, ldns_rdf2wire </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

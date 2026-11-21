@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_sasl_set_auth_data(3)"
 name: "memcached_sasl_set_auth_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_sasl_set_auth_data/"
 description: "memcached_sasl_set_auth_data – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_sasl_set_auth_data &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached_pool.h&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fnmatch(3)"
 name: "fnmatch"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fnmatch/"
 description: "fnmatch – match filename or pathname"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fnmatch &#8211; match filename or pathname </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

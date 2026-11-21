@@ -1,4 +1,5 @@
 ---
+
 title: "gammu-smsd(1)"
 name: "gammu-smsd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gammu-smsd/"
 description: "gammu-smsd – SMS daemon for Gammu"
 ---
 
-<h2>NAME</h2>
 <p> gammu-smsd &#8211; SMS daemon for Gammu</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gammu-smsd</code> [<i>OPTION</i>]&#8230;</p>

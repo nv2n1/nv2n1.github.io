@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_fslider(3)"
 name: "cdk_fslider"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_fslider/"
 description: "cdk_fslider – curses slider widget (type float)"
 ---
 
-<h2>NAME</h2>
 <p> cdk_fslider &#8211; curses slider widget (type float)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

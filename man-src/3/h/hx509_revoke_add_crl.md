@@ -1,4 +1,5 @@
 ---
+
 title: "hx509_revoke_add_crl(3)"
 name: "hx509_revoke_add_crl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hx509_revoke_add_crl/"
 description: "hx509 revokation checking functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hx509 revokation checking functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>hx509_ocsp_request</code> (hx509_context, hx509_certs, hx509_certs, hx509_cert, const AlgorithmIdentifier *, heim_octet_string *, heim_octet_string *) </p>

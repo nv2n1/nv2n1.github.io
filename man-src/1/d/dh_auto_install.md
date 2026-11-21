@@ -1,4 +1,5 @@
 ---
+
 title: "dh_auto_install(1)"
 name: "dh_auto_install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_auto_install/"
 description: "dh_auto_install – automatically runs make install or similar"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_auto_install &#8211; automatically runs make install or similar </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_auto_install</code> [<i>build system options</i>] [<i>debhelper options</i>] [<code>&#8212;</code> <i>params</i>]</p>

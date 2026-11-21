@@ -1,4 +1,5 @@
 ---
+
 title: "asr_run(3)"
 name: "asr_run"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-asr_run/"
 description: "asr_run, asr_run_sync, asr_abort, res_send_async, res_query_async, res_search_async, getrrsetbyname_async, gethostbyname_async, gethostbyname2_async, gethostbyaddr_async, getnetbyname_async, getnet..."
 ---
 
-<h2>NAME</h2>
 <p> <code>asr_run</code>, <code>asr_run_sync</code>, <code>asr_abort</code>, <code>res_send_async</code>, <code>res_query_async</code>, <code>res_search_async</code>, <code>getrrsetbyname_async</code>, <code>gethostbyname_async</code>, <code>gethostbyname2_async</code>, <code>gethostbyaddr_async</code>, <code>getnetbyname_async</code>, <code>getnetbyaddr_async</code>, <code>getaddrinfo_async</code>, <code>getnameinfo_async</code> &#8211; asynchronous resolver functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code> <code>#include &lt;sys/socket.h&gt;</code> <code>#include &lt;netdb.h&gt;</code> <code>#include &lt;asr.h&gt;</code><br />

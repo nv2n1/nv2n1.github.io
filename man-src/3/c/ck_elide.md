@@ -1,4 +1,5 @@
 ---
+
 title: "ck_elide(3)"
 name: "ck_elide"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_elide/"
 description: "CK_ELIDE_PROTOTYPE CK_ELIDE_LOCK_ADAPTIVE CK_ELIDE_UNLOCK_ADAPTIVE CK_ELIDE_LOCK CK_ELIDE_UNLOCK CK_ELIDE_TRYLOCK_PROTOTYPE CK_ELIDE_TRYLOCK – lock elision wrappers"
 ---
 
-<h2>NAME</h2>
 <p> <code>CK_ELIDE_PROTOTYPE</code> <code>CK_ELIDE_LOCK_ADAPTIVE</code> <code>CK_ELIDE_UNLOCK_ADAPTIVE</code> <code>CK_ELIDE_LOCK</code> <code>CK_ELIDE_UNLOCK</code> <code>CK_ELIDE_TRYLOCK_PROTOTYPE</code> <code>CK_ELIDE_TRYLOCK</code> &#8211; lock elision wrappers</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaactivemq(1)"
 name: "pmdaactivemq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaactivemq/"
 description: "pmdaactivemq – ActiveMQ performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaactivemq</code> &#8211; ActiveMQ performance metrics domain agent (PMDA)</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdaactivemq</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports performance metrics from ActiveMQ.</p>

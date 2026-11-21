@@ -1,4 +1,5 @@
 ---
+
 title: "pmdagluster(1)"
 name: "pmdagluster"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdagluster/"
 description: "pmdagluster – Gluster Filesystem PMDA"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdagluster</code> &#8211; Gluster Filesystem PMDA</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdagluster</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values about mounted gluster filesystems using the <code><a href="/docs/linux/man/8-gluster/">gluster</a></code>(8) command. This PMDA exports metrics about volumes and bricks both local and remote to the node where pmdagluster is running. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "flow-tools(1)"
 name: "flow-tools"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-tools/"
 description: "flow-tools – Tool set for working with NetFlow data."
 ---
 
-<h2>NAME</h2>
 <p> flow-tools &#8211; Tool set for working with NetFlow data.</p>
 <h2>DESCRIPTION</h2>
 <p> Flow-tools is library and a collection of programs used to collect, send, process, and generate reports from NetFlow data. The tools can be used together on a single server or distributed to multiple servers for large deployments. The flow-toools library provides an API for development of custom applications for NetFlow export versions 1,5,6 and the 14 currently defined version 8 subversions. A Perl and Python interface have been contributed and are included in the distribution. </p>

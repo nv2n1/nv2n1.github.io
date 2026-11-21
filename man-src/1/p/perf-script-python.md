@@ -1,4 +1,5 @@
 ---
+
 title: "perf-script-python(1)"
 name: "perf-script-python"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-script-python/"
 description: "perf-script-python – Process trace data with a Python script"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-script-python &#8211; Process trace data with a Python script </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

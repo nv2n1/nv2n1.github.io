@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-update(1)"
 name: "cargo-update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-update/"
 description: "cargo-update – Update the package dependencies"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cargo-update &#8211; Update the package dependencies </p>
 <h2>SYNOPSIS</h2>
 <p> cargo update [OPTIONS]</p>

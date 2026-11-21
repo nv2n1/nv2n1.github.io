@@ -1,4 +1,5 @@
 ---
+
 title: "osx(1)"
 name: "osx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-osx/"
 description: "osx – An SGML to XML converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> osx &#8211; An SGML to XML converter </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_session_ticket_enable_client(3)"
 name: "gnutls_session_ticket_enable_client"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_session_ticket_enable_client/"
 description: "gnutls_session_ticket_enable_client – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_session_ticket_enable_client &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

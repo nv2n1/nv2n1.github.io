@@ -1,4 +1,5 @@
 ---
+
 title: "zrun(1)"
 name: "zrun"
 section: "1"
@@ -6,10 +7,7 @@ letter: "z"
 url: "/docs/linux/man/1-zrun/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- zrun - automatically uncompress arguments to command 
+zrun - automatically uncompress arguments to command 
 
 <h2>SYNOPSIS</h2>
 

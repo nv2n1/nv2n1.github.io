@@ -1,4 +1,5 @@
 ---
+
 title: "vboxplay(1)"
 name: "vboxplay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vboxplay/"
 description: "vboxplay – play vbox sound files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vboxplay &#8211; play vbox sound files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vboxplay</code> soundfile [volume] </p>

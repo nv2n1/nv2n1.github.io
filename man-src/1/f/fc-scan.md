@@ -1,4 +1,5 @@
 ---
+
 title: "fc-scan(1)"
 name: "fc-scan"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fc-scan/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fc-scan - scan font files or directories 
+fc-scan - scan font files or directories 
 
 <h2>SYNOPSIS</h2>
 

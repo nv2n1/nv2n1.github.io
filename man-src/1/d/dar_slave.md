@@ -1,4 +1,5 @@
 ---
+
 title: "dar_slave(1)"
 name: "dar_slave"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dar_slave/"
 description: "dar_slave – disk archive slave for remote access to a dar archive"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dar_slave &#8211; disk archive slave for remote access to a dar archive </p>
 <h2>SYNOPSIS</h2>
 <p> dar_slave [options] [&lt;path&gt;/]source </p>

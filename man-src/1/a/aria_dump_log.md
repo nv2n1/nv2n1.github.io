@@ -1,4 +1,5 @@
 ---
+
 title: "aria_dump_log(1)"
 name: "aria_dump_log"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aria_dump_log/"
 description: "aria_dump_log – Dump content of Aria log pages."
 ---
 
-<h2>NAME</h2>
 <p> aria_dump_log &#8211; Dump content of Aria log pages.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aria_dump_log</code> <i>-f file OPTIONS</i></p>

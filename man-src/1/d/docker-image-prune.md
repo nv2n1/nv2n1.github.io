@@ -1,4 +1,5 @@
 ---
+
 title: "docker-image-prune(1)"
 name: "docker-image-prune"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-image-prune/"
 description: "docker-image-prune – Remove unused images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-image-prune &#8211; Remove unused images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker image prune [OPTIONS]</code> </p>

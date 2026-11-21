@@ -1,4 +1,5 @@
 ---
+
 title: "acl_equiv_mode(3)"
 name: "acl_equiv_mode"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_equiv_mode/"
 description: "acl_equiv_mode – check for an equivalent ACL"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_equiv_mode</code> &#8211; check for an equivalent ACL </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gsettings-data-convert(1)"
 name: "gsettings-data-convert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsettings-data-convert/"
 description: "gsettings-data-convert – GConf to GSettings data migration"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gsettings-data-convert &#8211; GConf to GSettings data migration </p>
 <h2>SYNOPSIS</h2>
 <dl>

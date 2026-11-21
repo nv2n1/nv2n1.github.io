@@ -1,4 +1,5 @@
 ---
+
 title: "implantisomd5(1)"
 name: "implantisomd5"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-implantisomd5/"
 description: "implantisomd5 — implant an MD5 checksum in an ISO9660 image"
 ---
 
-<h2>NAME</h2>
 <p> implantisomd5 &#8212; implant an MD5 checksum in an ISO9660 image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>implantisomd5</code> [<code>&#8211;force</code>] [<code>&#8211;supported-iso</code>] [isofilename]</p>

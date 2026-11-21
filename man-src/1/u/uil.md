@@ -1,4 +1,5 @@
 ---
+
 title: "uil(1)"
 name: "uil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uil/"
 description: "uil — The user interface language compiler"
 ---
 
-<h2>NAME</h2>
 <p> <code>uil</code> &#8212; The user interface language compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>uil</code> [<i>options</i> ] [<i>file</i>]</p>

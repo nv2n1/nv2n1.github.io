@@ -1,4 +1,5 @@
 ---
+
 title: "anjuta-launcher(1)"
 name: "anjuta-launcher"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-anjuta-launcher/"
 description: "anjuta-launcher – GNOME Integrated Development Environment"
 ---
 
-<h2>NAME</h2>
 <p> anjuta-launcher &#8211; GNOME Integrated Development Environment </p>
 <p> anjuta-launcher normally is not called directly by the user but invoked by anjuta</p>
 <h2>SYNTAX</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "djvused(1)"
 name: "djvused"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-djvused/"
 description: "djvused – Multi-purpose DjVu document editor."
 ---
 
-<h2 class="name">NAME</h2>
 <p> djvused &#8211; Multi-purpose DjVu document editor.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>djvused [</code><i>options</i><code>] </code><i>djvufile</i> </p>

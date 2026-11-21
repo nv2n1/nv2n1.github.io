@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_init(3)"
 name: "ck_epoch_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_epoch_init/"
 description: "ck_epoch_init – initialize epoch reclamation object"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_epoch_init</code> &#8211; initialize epoch reclamation object</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

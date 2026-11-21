@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-set-feature(1)"
 name: "nvme-set-feature"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-set-feature/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-set-feature - Sets an NVMe feature, returns applicable results 
+nvme-set-feature - Sets an NVMe feature, returns applicable results 
 
 <h2>SYNOPSIS</h2>
 

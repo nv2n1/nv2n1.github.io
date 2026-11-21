@@ -1,4 +1,5 @@
 ---
+
 title: "hbwallocator(3)"
 name: "hbwallocator"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hbwallocator/"
 description: "hbw::allocator<T> – The C++ allocator compatible with the C++ standard library allocator concepts Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (includ..."
 ---
 
-<h2>NAME</h2>
 <p> hbw::allocator&lt;T&gt; &#8211; The C++ allocator compatible with the C++ standard library allocator concepts<br />
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
 <h2>SYNOPSIS</h2>

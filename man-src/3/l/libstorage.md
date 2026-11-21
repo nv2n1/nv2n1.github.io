@@ -1,4 +1,5 @@
 ---
+
 title: "libstorage(3)"
 name: "libstorage"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libstorage/"
 description: "libstorage – routines for managing INN storage"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libstorage &#8211; routines for managing INN storage </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

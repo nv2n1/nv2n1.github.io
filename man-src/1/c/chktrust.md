@@ -1,4 +1,5 @@
 ---
+
 title: "chktrust(1)"
 name: "chktrust"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chktrust/"
 description: "chktrust – Check the trust of a PE executable."
 ---
 
-<h2>NAME</h2>
 <p> chktrust &#8211; Check the trust of a PE executable.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>chktrust [options] filename</code></p>

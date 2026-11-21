@@ -1,4 +1,5 @@
 ---
+
 title: "ffcall-callback(3)"
 name: "ffcall-callback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ffcall-callback/"
 description: "callback – closures with variable arguments as first-class C functions"
 ---
 
-<h2>NAME</h2>
 <p> callback &#8211; closures with variable arguments as first-class C functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;callback.h&gt;</code> </p>

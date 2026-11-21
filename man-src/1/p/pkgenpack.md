@@ -1,4 +1,5 @@
 ---
+
 title: "pkgenpack(1)"
 name: "pkgenpack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkgenpack/"
 description: "pkgenpack – PackageKit Pack Generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pkgenpack &#8211; PackageKit Pack Generator </p>
 <h2>SYNOPSIS</h2>
 <dl>

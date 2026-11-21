@@ -1,4 +1,5 @@
 ---
+
 title: "cd-convert(1)"
 name: "cd-convert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cd-convert/"
 description: "cd-it8 – Color Manager Testing Tool"
 ---
 
-<h2>NAME</h2>
 <p> cd-it8 &#8211; Color Manager Testing Tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cd-it8</code> [ <code>&#8211;verbose</code> ]</p>

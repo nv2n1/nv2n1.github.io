@@ -1,4 +1,5 @@
 ---
+
 title: "gsmartcontrol(1)"
 name: "gsmartcontrol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsmartcontrol/"
 description: "GSmartControl – Hard disk drive health inspection tool"
 ---
 
-<h2>NAME</h2>
 <p> GSmartControl &#8211; Hard disk drive health inspection tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gsmartcontrol</code> [OPTIONS]</p>

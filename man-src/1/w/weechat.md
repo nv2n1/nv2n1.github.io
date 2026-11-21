@@ -1,4 +1,5 @@
 ---
+
 title: "weechat(1)"
 name: "weechat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-weechat/"
 description: "weechat – the extensible chat client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> weechat &#8211; the extensible chat client </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

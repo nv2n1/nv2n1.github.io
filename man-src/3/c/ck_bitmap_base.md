@@ -1,4 +1,5 @@
 ---
+
 title: "ck_bitmap_base(3)"
 name: "ck_bitmap_base"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_bitmap_base/"
 description: "ck_bitmap_base – determine the size of a bit array in bytes"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_bitmap_base</code> &#8211; determine the size of a bit array in bytes</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

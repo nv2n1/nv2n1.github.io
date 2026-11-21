@@ -1,4 +1,5 @@
 ---
+
 title: "funimage(1)"
 name: "funimage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funimage/"
 description: "funimage – create a FITS image from a Funtools data file"
 ---
 
-<h2>NAME</h2>
 <p> <code>funimage &#8211; create a FITS image from a Funtools data file</code></p>
 <h2>SYNOPSIS</h2>
 <p> funimage [-a] &lt;iname&gt; &lt;oname&gt; [bitpix=n] funimage [-l] &lt;iname&gt; &lt;oname&gt; &lt;xcol:xdims&gt; &lt;ycol:ydims&gt; &lt;vcol&gt; [bitpix=n] funimage [-p x|y] &lt;iname&gt; &lt;oname&gt; [bitpix=n]</p>

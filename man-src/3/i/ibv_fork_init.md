@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_fork_init(3)"
 name: "ibv_fork_init"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_fork_init/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_fork_init - initialize libibverbs to support fork() 
+ibv_fork_init - initialize libibverbs to support fork() 
 
 <h2>SYNOPSIS</h2>
 

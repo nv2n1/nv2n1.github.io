@@ -1,4 +1,5 @@
 ---
+
 title: "yarac(1)"
 name: "yarac"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yarac/"
 description: "yarac – compile rules to yara"
 ---
 
-<h2>NAME</h2>
 <p> <code>yarac </code>&#8211; compile rules to yara</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

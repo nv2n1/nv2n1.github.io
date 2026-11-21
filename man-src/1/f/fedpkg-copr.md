@@ -1,4 +1,5 @@
 ---
+
 title: "fedpkg-copr(1)"
 name: "fedpkg-copr"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fedpkg-copr/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fedpkg-copr - COPR dist-git client based on fedpkg 
+fedpkg-copr - COPR dist-git client based on fedpkg 
 
 <h2>SYNOPSIS</h2>
 

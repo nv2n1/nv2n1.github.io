@@ -1,4 +1,5 @@
 ---
+
 title: "gmtgravmag3d(1)"
 name: "gmtgravmag3d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtgravmag3d/"
 description: "gmtgravmag3d – Compute the gravity/magnetic effect of a body by the method of Okabe"
 ---
 
-<h2>NAME</h2>
 <p> gmtgravmag3d &#8211; Compute the gravity/magnetic effect of a body by the method of Okabe</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtgravmag3d</code> [[<i>d</i>]<i>xyz_file</i>/<i>vert_file</i>[<i>/m</i>]]|[<i>r|s</i>]<i>raw_file</i> [ <i>density</i> ] [ ] [ <i>thickness</i> ] [ <i>xy_file</i> ] [ <i>outputgrid</i> ] [ <i>f_dec</i>/<i>f_dip</i>/<i>m_int</i>/<i>m_dec</i>/<i>m_dip</i> ] [ <i>z_observation</i> ] [ <i>radius</i> ] [ <i>level</i> ] [ [<i>level</i>] ] [ <code>-fg</code>] </p>

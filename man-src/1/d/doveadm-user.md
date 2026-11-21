@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-user(1)"
 name: "doveadm-user"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-user/"
 description: "doveadm-user – Perform a user lookup in Dovecot’s userdbs"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-user &#8211; Perform a user lookup in Dovecot&#8217;s userdbs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>user</code> [<code>-a</code> <i>userdb_socket_path</i>] [<code>-f</code> <i>field</i>] [<code>-u</code>] [<code>-x</code> <i>auth_info</i>] <i>user&nbsp;<wbr></i>&#8230;</p>

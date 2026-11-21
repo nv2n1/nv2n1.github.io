@@ -1,4 +1,5 @@
 ---
+
 title: "update-mime-database(1)"
 name: "update-mime-database"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-update-mime-database/"
 description: "update-mime-database – a program to build the Shared MIME-Info database cache"
 ---
 
-<h2 class="name">NAME</h2>
 <p> update-mime-database &#8211; a program to build the Shared MIME-Info database cache</p>
 <h2>SYNOPSIS</h2>
 <p> <code>update-mime-database -h</code> | <code>-v</code> | [ <code>-V</code> | <code>-n</code> ] <i>MIME-DIR</i> </p>

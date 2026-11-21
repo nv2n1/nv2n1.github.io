@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_validate(3)"
 name: "dirfile_validate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_validate/"
 description: "dirfile_validate — check a dirfile field code for validity"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_validate &#8212; check a dirfile field code for validity</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

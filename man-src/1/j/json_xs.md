@@ -1,4 +1,5 @@
 ---
+
 title: "json_xs(1)"
 name: "json_xs"
 section: "1"
@@ -6,10 +7,7 @@ letter: "j"
 url: "/docs/linux/man/1-json_xs/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- json_xs - JSON::XS commandline utility 
+json_xs - JSON::XS commandline utility 
 
 <h2>SYNOPSIS</h2>
 

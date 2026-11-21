@@ -1,4 +1,5 @@
 ---
+
 title: "bcharge(1)"
 name: "bcharge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bcharge/"
 description: "bcharge – program to set BlackBerry handhelds to 500mA"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bcharge &#8211; program to set BlackBerry handhelds to 500mA </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bcharge</code></p>

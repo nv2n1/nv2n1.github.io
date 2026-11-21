@@ -1,4 +1,5 @@
 ---
+
 title: "trend2d(1)"
 name: "trend2d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trend2d/"
 description: "trend2d – Fit a [weighted] [robust] polynomial model for z = f(x,y) to xyz[w] data"
 ---
 
-<h2>NAME</h2>
 <p> trend2d &#8211; Fit a [weighted] [robust] polynomial model for z = f(x,y) to xyz[w] data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>trend2d</code> [ <i>table</i> ] <code>xyzmrw</code> <i>n_model</i>[<code>r</code>] [ <i>xyz[w]file</i> ] [ <i>condition_number</i> ] [ [<i>confidence_level</i>] ] [ [<i>level</i>] ] [ ] [ [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

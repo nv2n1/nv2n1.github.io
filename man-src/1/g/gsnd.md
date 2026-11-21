@@ -1,4 +1,5 @@
 ---
+
 title: "gsnd(1)"
 name: "gsnd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsnd/"
 description: "gsnd – Run ghostscript (PostScript and PDF engine) without display"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gsnd &#8211; Run ghostscript (PostScript and PDF engine) without display </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gsnd</code> [ <i>options</i> ] [ <i>files</i> ] &#8230;</p>

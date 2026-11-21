@@ -1,4 +1,5 @@
 ---
+
 title: "xwdtopnm(1)"
 name: "xwdtopnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xwdtopnm/"
 description: "xwdtopnm – convert a X11 or X10 window dump file into a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xwdtopnm &#8211; convert a X11 or X10 window dump file into a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xwdtopnm</code> [<i>xwdfile</i>]</p>

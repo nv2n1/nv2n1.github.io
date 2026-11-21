@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_ibv_get_device_osdev_by_name(3)"
 name: "hwloc_ibv_get_device_osdev_by_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_ibv_get_device_osdev_by_name/"
 description: "hwlocality_openfabrics – Interoperability with OpenFabrics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_openfabrics &#8211; Interoperability with OpenFabrics </p>
 <h3>Functions</h3>
 <p> static int <code>hwloc_ibv_get_device_cpuset</code> (<code>hwloc_topology_t</code> topology, struct ibv_device *ibdev, <code>hwloc_cpuset_t</code> set) </p>

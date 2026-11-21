@@ -1,4 +1,5 @@
 ---
+
 title: "scribus(1)"
 name: "scribus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scribus/"
 description: "scribus – cross platform WYSIWYG desktop publishing app"
 ---
 
-<h2>NAME</h2>
 <p> scribus &#8211; cross platform WYSIWYG desktop publishing app</p>
 <h2>SYNOPSIS</h2>
 <p> scribus [-h|&#8211;help] [-v|&#8211;version] [-l|&#8211;lang language] [-la|&#8211;langs-available] [-f|&#8211;file|&#8211;] [filename]</p>

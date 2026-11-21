@@ -1,4 +1,5 @@
 ---
+
 title: "po4a-updatepo(1)"
 name: "po4a-updatepo"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-po4a-updatepo/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- po4a-updatepo - update the translation (in po format) of documentation 
+po4a-updatepo - update the translation (in po format) of documentation 
 
 <h2>SYNOPSIS</h2>
 

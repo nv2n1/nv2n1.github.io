@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rsl_value_eval(3)"
 name: "globus_rsl_value_eval"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rsl_value_eval/"
 description: "RSL Memory Management –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> RSL Memory Management &#8211; </p>
 <h3>Functions</h3>
 <p> globus_rsl_t * <code>globus_rsl_copy_recursive</code> (globus_rsl_t *ast_node)<br />

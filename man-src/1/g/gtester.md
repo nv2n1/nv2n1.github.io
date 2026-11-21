@@ -1,4 +1,5 @@
 ---
+
 title: "gtester(1)"
 name: "gtester"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtester/"
 description: "gtester – test running utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gtester &#8211; test running utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

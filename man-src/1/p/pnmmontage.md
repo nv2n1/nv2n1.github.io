@@ -1,4 +1,5 @@
 ---
+
 title: "pnmmontage(1)"
 name: "pnmmontage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmmontage/"
 description: "pnmmontage – create a montage of portable anymaps"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmmontage &#8211; create a montage of portable anymaps </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmmontage</code> [<code>-?</code>|<code>-help</code>] [<code>-header=</code><i>headerfile</i>] [<code>-quality=</code><i>n</i>] [<code>-prefix=</code><i>prefix</i>] [<code>-0</code>|<code>-1</code>|<code>-2</code>|<code>&#8230;</code>|<code>-9</code>] pnmfile<i>&#8230;</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pydoc3(1)"
 name: "pydoc3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pydoc3/"
 description: "pydoc3.10 – the Python documentation tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pydoc3.10 &#8211; the Python documentation tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pydoc3.10</code> <i>name</i> </p>

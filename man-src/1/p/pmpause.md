@@ -1,4 +1,5 @@
 ---
+
 title: "pmpause(1)"
 name: "pmpause"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmpause/"
 description: "pmpause, pmsleep – portable subsecond-capable sleep"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmpause</code>, <code>pmsleep</code> &#8211; portable subsecond-capable sleep</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmpause</code><br />

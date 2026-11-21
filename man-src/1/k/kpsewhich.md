@@ -1,4 +1,5 @@
 ---
+
 title: "kpsewhich(1)"
 name: "kpsewhich"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kpsewhich/"
 description: "kpsewhich – standalone path lookup and and expansion for kpathsea"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kpsewhich &#8211; standalone path lookup and and expansion for kpathsea </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kpsewhich</code> [<i>options</i>] [<i>filenames</i>]</p>

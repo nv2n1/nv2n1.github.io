@@ -1,4 +1,5 @@
 ---
+
 title: "expackf(3)"
 name: "expackf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-expackf/"
 description: "expackf – Using custom PACKFILE vtables. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> expackf &#8211; Using custom PACKFILE vtables. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

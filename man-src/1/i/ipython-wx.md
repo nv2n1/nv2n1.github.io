@@ -1,4 +1,5 @@
 ---
+
 title: "ipython-wx(1)"
 name: "ipython-wx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipython-wx/"
 description: "ipython-wx – Graphical frontend that embeds a multithreaded IPython Shell"
 ---
 
-<h2>NAME</h2>
 <p> <code>ipython-wx &#8211; Graphical frontend that embeds a multithreaded IPython Shell </code></p>
 <h2>SYNOPSIS</h2>
 <pre>

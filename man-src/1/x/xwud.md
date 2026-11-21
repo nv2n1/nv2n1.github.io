@@ -1,4 +1,5 @@
 ---
+
 title: "xwud(1)"
 name: "xwud"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xwud/"
 description: "xwud – image displayer for X"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xwud &#8211; image displayer for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xwud</code> [-in <i>file</i>] [-noclick] [-geometry <i>geom</i>] [-display <i>display</i>] [-new] [-std &lt;maptype&gt;] [-raw] [-vis &lt;vis-type-or-id&gt;] [-scale] [-help] [-rv] [-plane <i>number</i>] [-fg <i>color</i>] [-bg <i>color</i>] [-dumpheader] [-version]</p>

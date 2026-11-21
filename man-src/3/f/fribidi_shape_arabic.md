@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_shape_arabic(3)"
 name: "fribidi_shape_arabic"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_shape_arabic/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_shape_arabic - do Arabic shaping 
+fribidi_shape_arabic - do Arabic shaping 
 
 <h2>SYNOPSIS</h2>
 

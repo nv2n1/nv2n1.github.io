@@ -1,4 +1,5 @@
 ---
+
 title: "md5deep(1)"
 name: "md5deep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-md5deep/"
 description: "md5deep – Compute and compare MD5 message digests sha1deep – Compute and compare SHA-1 message digests sha256deep – Compute and compare SHA-256 message digests sha3deep – Compute and compare SHA-3-..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> md5deep &#8211; Compute and compare MD5 message digests<br />
  sha1deep &#8211; Compute and compare SHA-1 message digests<br />
  sha256deep &#8211; Compute and compare SHA-256 message digests<br />

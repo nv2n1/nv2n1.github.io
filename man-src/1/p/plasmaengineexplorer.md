@@ -1,4 +1,5 @@
 ---
+
 title: "plasmaengineexplorer(1)"
 name: "plasmaengineexplorer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-plasmaengineexplorer/"
 description: "plasmaengineexplorer – Provides direct access to plasma data engines"
 ---
 
-<h2>NAME</h2>
 <p> plasmaengineexplorer &#8211; Provides direct access to plasma data engines</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "meld(1)"
 name: "meld"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-meld/"
 description: "meld – Visual diff and merge tool for the GNOME Desktop"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>meld</code> &#8211; Visual diff and merge tool for the GNOME Desktop </p>
 <h2>SYNOPSIS</h2>
 <p> <code>meld</code> [options]<br />

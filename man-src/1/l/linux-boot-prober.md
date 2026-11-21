@@ -1,4 +1,5 @@
 ---
+
 title: "linux-boot-prober(1)"
 name: "linux-boot-prober"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-linux-boot-prober/"
 description: "linux-boot-prober — Determine boot characteristics of a specified device."
 ---
 
-<h2>NAME</h2>
 <p> linux-boot-prober &#8212; Determine boot characteristics of a specified device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>linux-boot-prober</code> <i>&lt;partition&gt;</i></p>

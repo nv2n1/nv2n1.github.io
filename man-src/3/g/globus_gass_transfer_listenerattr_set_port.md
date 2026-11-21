@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_transfer_listenerattr_set_port(3)"
 name: "globus_gass_transfer_listenerattr_set_port"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_listenerattr_set_port/"
 description: "Listener attributes –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Listener attributes &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>globus_gass_transfer_listenerattr_init</code> (globus_gass_transfer_listenerattr_t *attr, char *url_scheme) </p>

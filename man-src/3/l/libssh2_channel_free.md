@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_free(3)"
 name: "libssh2_channel_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_free/"
 description: "libssh2_channel_free – free all resources associated with a channel"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_free &#8211; free all resources associated with a channel</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

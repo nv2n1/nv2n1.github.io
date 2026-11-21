@@ -1,4 +1,5 @@
 ---
+
 title: "grisbi(1)"
 name: "grisbi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grisbi/"
 description: "grisbi – Personal finance tracking program based on GTK"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grisbi &#8211; Personal finance tracking program based on GTK </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grisbi</code> [<i>options</i>]<i> file</i>&#8230; </p>

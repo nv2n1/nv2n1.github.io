@@ -1,4 +1,5 @@
 ---
+
 title: "lorder(1)"
 name: "lorder"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lorder/"
 description: "lorder – list dependencies for object files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>lorder</code> &#8211; list dependencies for object files </p>
 <h2>SYNOPSIS</h2>
 <p> <i>file &#8230;</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-unassign-private-ip-addresses(1)"
 name: "euca-unassign-private-ip-addresses"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-unassign-private-ip-addresses/"
 description: "euca-unassign-private-ip-addresses – Remove one or more private IP addresses from a network interface"
 ---
 
-<h2>NAME</h2>
 <p> euca-unassign-private-ip-addresses &#8211; Remove one or more private IP addresses from a network interface</p>
 <h2>SYNOPSIS</h2>
 <p> euca-unassign-private-ip-addresses [-n INTERFACE] <code>&#8211;secondary-address</code></p>

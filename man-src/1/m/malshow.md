@@ -1,4 +1,5 @@
 ---
+
 title: "malshow(1)"
 name: "malshow"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-malshow/"
 description: "malshow – show Malaga’s results and/or debugging state"
 ---
 
-<h2 class="name">NAME</h2>
 <p> malshow &#8211; show Malaga&#8217;s results and/or debugging state</p>
 <h2>SYNOPSIS</h2>
 <p> <code>malshow</code> </p>

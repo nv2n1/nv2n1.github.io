@@ -1,4 +1,5 @@
 ---
+
 title: "cla_gerfsx_extended(3)"
 name: "cla_gerfsx_extended"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cla_gerfsx_extended/"
 description: "cla_gerfsx_extended.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cla_gerfsx_extended.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

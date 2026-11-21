@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-configure(1)"
 name: "foomatic-configure"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-foomatic-configure/"
 description: "foomatic-configure – the main configuration program of the foomatic printing system."
 ---
 
-<h2>NAME</h2>
 <p> foomatic-configure &#8211; the main configuration program of the foomatic printing system.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>foomatic-configure</code> [<i>OPTION</i>]&#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_malloc(3)"
 name: "gnutls_malloc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_malloc/"
 description: "gnutls_malloc – Allocates and returns data"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_malloc &#8211; Allocates and returns data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cross-strings(1)"
 name: "cross-strings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cross-strings/"
 description: "strings – print the strings of printable characters in files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> strings &#8211; print the strings of printable characters in files. </p>
 <h2>SYNOPSIS</h2>
 <p> strings [<code>-afovV</code>] [<code>&#8211;</code><i>min-len</i>]<br />

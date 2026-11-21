@@ -1,4 +1,5 @@
 ---
+
 title: "bro-cut(1)"
 name: "bro-cut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bro-cut/"
 description: "bro-cut – parse Bro logs"
 ---
 
-<h2>NAME</h2>
 <p> bro-cut &#8211; parse Bro logs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bro-cut</code> [<i>options</i>] [<i>columns</i>]</p>

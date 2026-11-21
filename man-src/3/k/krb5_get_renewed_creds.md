@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_get_renewed_creds(3)"
 name: "krb5_get_renewed_creds"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_get_renewed_creds/"
 description: "krb5_get_credentials krb5_get_credentials_with_flags krb5_get_kdc_cred krb5_get_renewed_creds – get credentials from the KDC using krbtgt"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_get_credentials</code> <code>krb5_get_credentials_with_flags</code> <code>krb5_get_kdc_cred</code> <code>krb5_get_renewed_creds</code> &#8211; get credentials from the KDC using krbtgt </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

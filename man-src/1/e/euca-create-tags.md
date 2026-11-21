@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-tags(1)"
 name: "euca-create-tags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-tags/"
 description: "euca-create-tags – Add or overwrite tags for one or more resources"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-tags &#8211; Add or overwrite tags for one or more resources</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-tags <code>&#8211;tag</code> KEY[=VALUE] [&#8211;show-empty-fields] [-U URL]</p>

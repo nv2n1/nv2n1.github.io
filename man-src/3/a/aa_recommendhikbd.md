@@ -1,4 +1,5 @@
 ---
+
 title: "aa_recommendhikbd(3)"
 name: "aa_recommendhikbd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_recommendhikbd/"
 description: "aa_recommendhikbd – insert the given driver on beggining of the list of recommended keyboard drivers."
 ---
 
-<h2>NAME</h2>
 <p> aa_recommendhikbd &#8211; insert the given driver on beggining of the list of recommended keyboard drivers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

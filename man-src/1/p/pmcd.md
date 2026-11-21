@@ -1,4 +1,5 @@
 ---
+
 title: "pmcd(1)"
 name: "pmcd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmcd/"
 description: "pmcd – performance metrics collector daemon"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmcd</code> &#8211; performance metrics collector daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmcd</code> [<code>-AfQSv</code>] [<code>-c</code> <i>config</i>] [<code>-C</code> <i>dirname</i>] [<code>-H</code> <i>hostname</i>] [<code>-i</code> <i>ipaddress</i>] [<code>-l</code> <i>logfile</i>] [<code>-L</code> <i>bytes</i>] [<code>-M</code> <i>certname</i>] [<code>&#8211;</code>[<code>n</code>|<code>N</code>] <i>pmnsfile</i>] [<code>-p</code> <i>port</i>[,<i>port</i> &#8230;]] [<code>-P</code> <i>passfile</i>] [<code>-q</code> <i>timeout</i>] [<code>-s</code> <i>sockname</i>] [<code>-T</code> <i>traceflag</i>] [<code>-t</code> <i>timeout</i>] [<code>-U</code> <i>username</i>] [<code>-x</code> <i>file</i>]</p>

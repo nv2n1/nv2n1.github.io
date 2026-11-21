@@ -1,4 +1,5 @@
 ---
+
 title: "genxs(1)"
 name: "genxs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-genxs/"
 description: "genxs – Mono’s Xml Serializer Generator"
 ---
 
-<h2>NAME</h2>
 <p> genxs &#8211; Mono&#8217;s Xml Serializer Generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>genxs</code> configurationFile [destinationFolder]</p>

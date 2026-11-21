@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-ipcs(1)"
 name: "pcp-ipcs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp-ipcs/"
 description: "pcp-ipcs – provide information on IPC facilities"
 ---
 
-<h2>NAME</h2>
 <p> pcp-ipcs &#8211; provide information on IPC facilities</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcp-ipcs</code> [<code>resource-option</code>] [<code>output-format</code>]<br />

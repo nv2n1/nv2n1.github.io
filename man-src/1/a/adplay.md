@@ -1,4 +1,5 @@
 ---
+
 title: "adplay(1)"
 name: "adplay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-adplay/"
 description: "adplay – AdPlay/UNIX console-based OPL2 audio player"
 ---
 
-<h2>NAME</h2>
 <p> adplay &#8211; AdPlay/UNIX console-based OPL2 audio player</p>
 <h2>SYNOPSIS</h2>
 <p> <code>adplay</code> [OPTION]&#8230; FILE&#8230;</p>

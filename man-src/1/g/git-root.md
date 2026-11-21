@@ -1,4 +1,5 @@
 ---
+
 title: "git-root(1)"
 name: "git-root"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-root/"
 description: "git-root – show path of root"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-root</code> &#8211; show path of root</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git root</code> <i>OPTIONS</i></p>

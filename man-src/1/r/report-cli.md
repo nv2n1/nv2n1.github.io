@@ -1,4 +1,5 @@
 ---
+
 title: "report-cli(1)"
 name: "report-cli"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-report-cli/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- report-cli - Work with ABRT problem directories from command line. 
+report-cli - Work with ABRT problem directories from command line. 
 
 <h2>SYNOPSIS</h2>
 

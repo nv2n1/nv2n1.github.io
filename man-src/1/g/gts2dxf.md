@@ -1,4 +1,5 @@
 ---
+
 title: "gts2dxf(1)"
 name: "gts2dxf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gts2dxf/"
 description: "gts2dxf – converts a GTS file to DXF format."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gts2dxf &#8211; converts a GTS file to DXF format.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gts2dxf</code> &lt;&nbsp;<i>input.gts&nbsp;</i>&gt;&nbsp;<i>output.dxf</i> </p>

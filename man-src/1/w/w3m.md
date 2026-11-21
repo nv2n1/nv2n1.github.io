@@ -1,4 +1,5 @@
 ---
+
 title: "w3m(1)"
 name: "w3m"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-w3m/"
 description: "w3m – a text based web browser and pager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> w3m &#8211; a text based web browser and pager </p>
 <h2>SYNOPSIS</h2>
 <p> w3m [OPTION]&#8230; [ <i>file</i> | <i>URL</i> ]&#8230;</p>

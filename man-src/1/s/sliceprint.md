@@ -1,4 +1,5 @@
 ---
+
 title: "sliceprint(1)"
 name: "sliceprint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sliceprint/"
 description: "sliceprint – slice documents with long lines."
 ---
 
-<h2 class="name">NAME</h2>
 <p> sliceprint &#8211; slice documents with long lines.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sliceprint </code>[-o<i>file</i>][<i>enscript_options</i>][<i>files</i>] </p>

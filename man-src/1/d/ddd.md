@@ -1,4 +1,5 @@
 ---
+
 title: "ddd(1)"
 name: "ddd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ddd/"
 description: "ddd – The Data Display Debugger"
 ---
 
-<h2>NAME</h2>
 <p> ddd &#8211; The Data Display Debugger</p>
 <h2>SYNOPSIS</h2>
 <dl>

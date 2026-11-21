@@ -1,4 +1,5 @@
 ---
+
 title: "zblacklist(1)"
 name: "zblacklist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zblacklist/"
 description: "zblacklist – zmap IP blacklist tool"
 ---
 
-<h2>NAME</h2>
 <p> <code>zblacklist</code> &#8211; zmap IP blacklist tool</p>
 <h2>SYNOPSIS</h2>
 <p> zblacklist [ -b &lt;blacklist&gt; ] [ -w &lt;whitelist&gt; ] [ OPTIONS&#8230; ]</p>

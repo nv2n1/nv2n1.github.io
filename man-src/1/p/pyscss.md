@@ -1,4 +1,5 @@
 ---
+
 title: "pyscss(1)"
 name: "pyscss"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pyscss/"
 description: "pyscss – pyScss Documentation"
 ---
 
-<h2>NAME</h2>
 <p> pyscss &#8211; pyScss Documentation </p>
 <p> <i>build-status</i> <i>coverage</i> </p>
 <p> pyScss is a Python implementation of <i>Sass</i>, a CSS preprocessing language that adds variables, expressions, nested rules, mixins, inheritance, and other features that help ease the maintenance of large stylesheets. </p>

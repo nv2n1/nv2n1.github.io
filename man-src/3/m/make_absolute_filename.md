@@ -1,4 +1,5 @@
 ---
+
 title: "make_absolute_filename(3)"
 name: "make_absolute_filename"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-make_absolute_filename/"
 description: "make_absolute_filename – Makes an absolute filename from a path and relative filename. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> make_absolute_filename &#8211; Makes an absolute filename from a path and relative filename. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

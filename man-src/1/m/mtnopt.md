@@ -1,4 +1,5 @@
 ---
+
 title: "mtnopt(1)"
 name: "mtnopt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtnopt/"
 description: "mtnopt – generate shell variables from monotone workspace options"
 ---
 
-<h2>NAME</h2>
 <p> mtnopt &#8211; generate shell variables from monotone workspace options</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtnopt</code> [<code>-s</code>|<code>-c</code>|<code>-v</code>] [<code>-d</code> <i>dir</i>] [<code>-k</code> <i>keys</i>]<br />

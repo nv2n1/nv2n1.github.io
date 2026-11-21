@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-getcert(1)"
 name: "ipa-getcert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-getcert/"
 description: "ipa-getcert"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipa-getcert</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>ipa-getcert request&nbsp;<wbr>[options]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "apper(1)"
 name: "apper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apper/"
 description: "apper – An application and package manager using PackageKit"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apper &#8211; An application and package manager using PackageKit </p>
 <h2>SYNOPSIS</h2>
 <dl>

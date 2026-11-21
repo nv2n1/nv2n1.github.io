@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-auth(1)"
 name: "doveadm-auth"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-auth/"
 description: "doveadm-auth – Test authentication for a user"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-auth &#8211; Test authentication for a user</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>auth</code> [<code>-a</code> <i>auth_socket_path</i>] [<code>-x</code> <i>auth_info</i>] <i>user</i> [<i>password</i>]</p>

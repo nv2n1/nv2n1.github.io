@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-mkrelpath(1)"
 name: "grub2-mkrelpath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub2-mkrelpath/"
 description: "grub-mkrelpath — Generate a relative GRUB path given an OS path."
 ---
 
-<h2>NAME</h2>
 <p> <code>grub-mkrelpath</code> &#8212; Generate a relative GRUB path given an OS path. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-mkrelpath</code> <i>FILE</i> </p>

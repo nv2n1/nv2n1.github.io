@@ -1,4 +1,5 @@
 ---
+
 title: "fakeroot(1)"
 name: "fakeroot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fakeroot/"
 description: "fakeroot – run a command in an environment faking root privileges for file manipulation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fakeroot &#8211; run a command in an environment faking root privileges for file manipulation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fakeroot </code> <code>[-l|&#8211;lib</code> <i>library]</i> <code>[&#8211;faked</code> <i>faked-binary</i><code>]</code> <code>[-i</code> <i>load-file</i><code>]</code> <code>[-s</code> <i>save-file</i><code>]</code> <code>[-u|&#8211;unknown-is-real ]</code> <code>[-b|&#8211;fd-base ]</code> <code>[-h|&#8211;help ]</code> <code>[-v|&#8211;version ]</code> <code>[&#8211;]</code> <code>[command]</code></p>

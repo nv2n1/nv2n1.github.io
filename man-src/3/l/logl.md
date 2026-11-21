@@ -1,4 +1,5 @@
 ---
+
 title: "logl(3)"
 name: "logl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-logl/"
 description: "log, logf, logl – natural logarithmic function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> log, logf, logl &#8211; natural logarithmic function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

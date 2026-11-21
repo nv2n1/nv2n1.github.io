@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_crt_get_name(3)"
 name: "gnutls_openpgp_crt_get_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_openpgp_crt_get_name/"
 description: "gnutls_openpgp_crt_get_name – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_openpgp_crt_get_name &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cl_status(1)"
 name: "cl_status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cl_status/"
 description: "cl_status – Check Status of the High-Availability Linux (Linux-HA) Subsystem"
 ---
 
-<h2>NAME</h2>
 <p> cl_status &#8211; Check Status of the High-Availability Linux (Linux-HA) Subsystem</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cl_status</code> &lt;sub-command&gt;<i>[&lt;options&gt;] [&lt;parameters&gt;]</i></p>

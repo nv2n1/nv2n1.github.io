@@ -1,4 +1,5 @@
 ---
+
 title: "dislocate(1)"
 name: "dislocate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dislocate/"
 description: "Dislocate – disconnect and reconnect processes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Dislocate &#8211; disconnect and reconnect processes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dislocate</code> [ <i>program args&#8230;</i> ]</p>

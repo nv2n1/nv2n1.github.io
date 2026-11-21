@@ -1,4 +1,5 @@
 ---
+
 title: "pmcd_wait(1)"
 name: "pmcd_wait"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmcd_wait/"
 description: "pmcd_wait – wait for PMCD to accept client connections"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmcd_wait</code> &#8211; wait for PMCD to accept client connections</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmcd_wait</code> [<code>-h</code> <i>host</i>] [<code>-t</code> <i>interval</i>] [<code>-v</code>]</p>

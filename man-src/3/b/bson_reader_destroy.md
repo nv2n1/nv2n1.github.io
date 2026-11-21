@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_destroy(3)"
 name: "bson_reader_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_reader_destroy/"
 description: "bson_reader_destroy() – Destroys and releases all resources associated with reader."
 ---
 
-<h2>NAME</h2>
 <p> bson_reader_destroy() &#8211; Destroys and releases all resources associated with reader.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

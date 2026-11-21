@@ -1,4 +1,5 @@
 ---
+
 title: "git-reauthor(1)"
 name: "git-reauthor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-reauthor/"
 description: "git-reauthor – Rewrite history to change author’s identity"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-reauthor</code> &#8211; Rewrite history to change author&#8217;s identity</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git reauthor [&lt;options&gt;]</code></p>

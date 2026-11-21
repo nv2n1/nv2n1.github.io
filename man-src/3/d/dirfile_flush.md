@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_flush(3)"
 name: "dirfile_flush"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_flush/"
 description: "dirfile_flush — write all pending dirfile changes to disk."
 ---
 
-<h2>NAME</h2>
 <p> dirfile_flush &#8212; write all pending dirfile changes to disk.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

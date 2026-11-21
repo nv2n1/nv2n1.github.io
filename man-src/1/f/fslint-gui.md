@@ -1,4 +1,5 @@
 ---
+
 title: "fslint-gui(1)"
 name: "fslint-gui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fslint-gui/"
 description: "fslint-gui – A GUI wrapper for the individual fslint command line tools"
 ---
 
-<h2>NAME</h2>
 <p> fslint-gui &#8211; A GUI wrapper for the individual fslint command line tools</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fslint-gui</code> [<i>OPTIONS</i>] [<i>PATHS</i>]</p>

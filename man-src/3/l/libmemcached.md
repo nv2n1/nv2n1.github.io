@@ -1,4 +1,5 @@
 ---
+
 title: "libmemcached(3)"
 name: "libmemcached"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libmemcached/"
 description: "libmemcached – Introducing the C Client Library for memcached"
 ---
 
-<h2>NAME</h2>
 <p> libmemcached &#8211; Introducing the C Client Library for memcached</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt; </p>

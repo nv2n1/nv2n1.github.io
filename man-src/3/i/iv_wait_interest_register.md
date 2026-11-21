@@ -1,4 +1,5 @@
 ---
+
 title: "iv_wait_interest_register(3)"
 name: "iv_wait_interest_register"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_wait_interest_register/"
 description: "IV_WAIT_INTEREST_INIT, iv_wait_interest_register, iv_wait_interest_register_spawn, iv_wait_interest_unregister, iv_wait_interest_kill – ivykis wait4(2) wrapper"
 ---
 
-<h2>NAME</h2>
 <p> IV_WAIT_INTEREST_INIT, iv_wait_interest_register, iv_wait_interest_register_spawn, iv_wait_interest_unregister, iv_wait_interest_kill &#8211; ivykis <code><a href="/docs/linux/man/2-wait4/">wait4</a></code>(2) wrapper</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_wait.h&gt;</code> </p>

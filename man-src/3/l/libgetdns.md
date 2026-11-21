@@ -1,4 +1,5 @@
 ---
+
 title: "libgetdns(3)"
 name: "libgetdns"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libgetdns/"
 description: "libgetdns — an implementation of a modern asynchronous DNS API by and for application developers"
 ---
 
-<h2>NAME</h2>
 <p> libgetdns &#8212; an implementation of a modern asynchronous DNS API by and for application developers </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

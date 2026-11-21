@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_startup(3)"
 name: "libssh2_session_startup"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_startup/"
 description: "libssh2_session_startup – begin transport layer"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_startup &#8211; begin transport layer</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fstminer(1)"
 name: "fstminer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fstminer/"
 description: "fst2miner – Data mining of FST files"
 ---
 
-<h2>NAME</h2>
 <p> fst2miner &#8211; Data mining of FST files</p>
 <h2>SYNTAX</h2>
 <p> fstminer [<i>option</i>]&#8230; [<i>FSTFILE</i>]</p>

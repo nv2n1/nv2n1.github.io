@@ -1,4 +1,5 @@
 ---
+
 title: "rustc(1)"
 name: "rustc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rustc/"
 description: "rustc – The Rust compiler"
 ---
 
-<h2>NAME</h2>
 <p> rustc &#8211; The Rust compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rustc</code> [<i>OPTIONS</i>] <i>INPUT</i> </p>

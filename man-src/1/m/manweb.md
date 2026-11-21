@@ -1,4 +1,5 @@
 ---
+
 title: "manweb(1)"
 name: "manweb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-manweb/"
 description: "manweb – browse netpbm (and other) documentation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> manweb &#8211; browse netpbm (and other) documentation</p>
 <h2>SYNOPSIS</h2>
 <p> <code>manweb</code> <code>-help</code> </p>

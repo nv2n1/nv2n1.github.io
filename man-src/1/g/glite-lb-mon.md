@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-mon(1)"
 name: "glite-lb-mon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glite-lb-mon/"
 description: "glite-lb-mon – program for monitoring the number of jobs on the LB server and their several statistics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> glite-lb-mon &#8211; program for monitoring the number of jobs on the LB server and their several statistics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>glite-lb-mon</code> <code>[-t time -h]</code> </p>

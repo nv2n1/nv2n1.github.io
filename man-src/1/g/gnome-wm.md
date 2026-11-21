@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-wm(1)"
 name: "gnome-wm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-wm/"
 description: "gnome-wm – Launches the user selected window manager for the GNOME session"
 ---
 
-<h2>NAME</h2>
 <p> gnome-wm &#8211; Launches the user selected window manager for the GNOME session</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-wm [&#8211;default-wm windowmanager] [&#8211;sm-client-id id]</code></p>

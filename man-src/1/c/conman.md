@@ -1,4 +1,5 @@
 ---
+
 title: "conman(1)"
 name: "conman"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-conman/"
 description: "conman – ConMan client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> conman &#8211; ConMan client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>conman</code> [<i>OPTION</i>]&#8230; [<i>CONSOLE</i>]&#8230; </p>

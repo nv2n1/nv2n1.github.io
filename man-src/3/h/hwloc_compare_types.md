@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_compare_types(3)"
 name: "hwloc_compare_types"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_compare_types/"
 description: "hwlocality_object_types – Object Types"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_object_types &#8211; Object Types </p>
 <h3>Typedefs</h3>
 <p> typedef enum <code>hwloc_obj_cache_type_e</code> <code>hwloc_obj_cache_type_t</code> </p>

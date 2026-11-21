@@ -1,4 +1,5 @@
 ---
+
 title: "t1binary(1)"
 name: "t1binary"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-t1binary/"
 description: "t1binary – convert PostScript Type 1 font from ASCII to binary"
 ---
 
-<h2 class="name">NAME</h2>
 <p> t1binary &#8211; convert PostScript Type 1 font from ASCII to binary </p>
 <h2>SYNOPSIS</h2>
 <p> <code>t1binary</code> [<code>-l</code> <i>length</i>] [<i>input</i> [<i>output</i>]]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cli(1)"
 name: "cli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cli/"
 description: "mono – Mono’s ECMA-CLI native code generator (Just-in-Time and Ahead-of-Time)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mono &#8211; Mono&#8217;s ECMA-CLI native code generator (Just-in-Time and Ahead-of-Time) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mono [options] file [arguments&#8230;]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-put-notification-configuration(1)"
 name: "euscale-put-notification-configuration"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-put-notification-configuration/"
 description: "euscale-put-notification-configuration – Create or replace an auto-scaling group’s notification configuration"
 ---
 
-<h2>NAME</h2>
 <p> euscale-put-notification-configuration &#8211; Create or replace an auto-scaling group&#8217;s notification configuration</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-put-notification-configuration <code>-n</code> TYPE1,TYPE2,&#8230; <code>-t</code> TOPIC</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "po4a-normalize(1)"
 name: "po4a-normalize"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-po4a-normalize/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- po4a-normalize - normalize a documentation file by parsing it in po4a, and writing it back 
+po4a-normalize - normalize a documentation file by parsing it in po4a, and writing it back 
 
 <h2>SYNOPSIS</h2>
 

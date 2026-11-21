@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_cancel_query(3)"
 name: "dblink_cancel_query"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dblink_cancel_query/"
 description: "dblink_cancel_query – cancels any active query on the named connection"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dblink_cancel_query &#8211; cancels any active query on the named connection </p>
 <h2>SYNOPSIS</h2>
 <pre>

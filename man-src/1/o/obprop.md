@@ -1,4 +1,5 @@
 ---
+
 title: "obprop(1)"
 name: "obprop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obprop/"
 description: "obprop – print standard molecular properties"
 ---
 
-<h2>NAME</h2>
 <p> <code>obprop</code> &#8211; print standard molecular properties</p>
 <h2>SYNOPSIS</h2>
 <p> <i>filename</i></p>

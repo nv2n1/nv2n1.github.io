@@ -1,4 +1,5 @@
 ---
+
 title: "finch(1)"
 name: "finch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-finch/"
 description: "Finch – A Pimpin’ Penguin console frontend to libpurple. Instant Messaging client."
 ---
 
-<h2>NAME</h2>
 <p> Finch &#8211; A Pimpin&#8217; Penguin console frontend to libpurple. Instant Messaging client.</p>
 <h2>SYNOPSIS</h2>
 <dl>

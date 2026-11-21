@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_flag(3)"
 name: "libssh2_session_flag"
 section: "3"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libssh2_session_flag/"
 ---
 
-<h2>NAME</h2>
-
- libssh2_session_flag - TODO
+libssh2_session_flag - TODO
 
 <h2>SYNOPSIS</h2>
 

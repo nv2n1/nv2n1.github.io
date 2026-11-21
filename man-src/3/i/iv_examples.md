@@ -1,4 +1,5 @@
 ---
+
 title: "iv_examples(3)"
 name: "iv_examples"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_examples/"
 description: "iv_examples – ivykis examples"
 ---
 
-<h2>NAME</h2>
 <p> iv_examples &#8211; ivykis examples</p>
 <h2>EXAMPLE</h2>
 <p> ivykis is initialised by calling <code>iv_init</code>(3). This function is the first function to call when dealing with ivykis &#8212; it has to be called before registering file descriptors or timers. </p>

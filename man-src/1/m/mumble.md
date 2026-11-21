@@ -1,4 +1,5 @@
 ---
+
 title: "mumble(1)"
 name: "mumble"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mumble/"
 description: "mumble – a low-latency, high quality voice chat program for gaming."
 ---
 
-<h2>NAME</h2>
 <p> mumble &#8211; a low-latency, high quality voice chat program for gaming.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mumble</code></p>

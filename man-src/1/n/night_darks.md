@@ -1,4 +1,5 @@
 ---
+
 title: "night_darks(1)"
 name: "night_darks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-night_darks/"
 description: "night_darks – non-iteractive dark snapshoting with CCD camera"
 ---
 
-<h2>NAME</h2>
 <p> night_darks &#8211; non-iteractive dark snapshoting with CCD camera</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>night_darks&nbsp;<wbr>[options]&nbsp;<wbr>exptime1&nbsp;<wbr>[exptime2]&nbsp;<wbr>&#8230;</p>

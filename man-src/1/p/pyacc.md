@@ -1,4 +1,5 @@
 ---
+
 title: "pyacc(1)"
 name: "pyacc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pyacc/"
 description: "pyacc – Pascal Yacc compiler compiler."
 ---
 
-<h2>NAME</h2>
 <p> pyacc &#8211; Pascal Yacc compiler compiler. </p>
 <h2>USAGE</h2>
 <p> <code>yacc [options] yacc-file[.y] [output-file[.pas]]</code> </p>

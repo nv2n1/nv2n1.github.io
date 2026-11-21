@@ -1,4 +1,5 @@
 ---
+
 title: "ctfttp(3)"
 name: "ctfttp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctfttp/"
 description: "ctfttp.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ctfttp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

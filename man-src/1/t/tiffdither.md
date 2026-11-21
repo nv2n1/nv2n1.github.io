@@ -1,4 +1,5 @@
 ---
+
 title: "tiffdither(1)"
 name: "tiffdither"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tiffdither/"
 description: "tiffdither – convert a greyscale image to bilevel using dithering"
 ---
 
-<h2>NAME</h2>
 <p> tiffdither &#8211; convert a greyscale image to bilevel using dithering</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffdither</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>
