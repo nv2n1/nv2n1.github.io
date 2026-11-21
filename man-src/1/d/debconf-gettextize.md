@@ -52,4 +52,3 @@ description: "debconf-gettextize – extract translations of debconf templates i
 Denis Barbier&lt;barbier[at] linuxfr.org&gt;
     Martin Quinson&lt;martin.quinson[at] ens - lyon.fr&gt;
 </code></pre>
-<h2>Index</h2>

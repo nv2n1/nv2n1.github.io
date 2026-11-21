@@ -144,4 +144,3 @@ atomic trust show --json
 </dd></dl>
 <h2>HISTORY</h2>
 <p> September 2016, originally compiled by Aaron Weitekamp (aweiteka at redhat dot com) </p>
-<h2>Index</h2>

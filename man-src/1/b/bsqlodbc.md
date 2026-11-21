@@ -51,4 +51,3 @@ description: "bsqlodbc – batch SQL script processor using ODBC"
 <p> first appeared in FreeTDS 0.65.</p>
 <h2>AUTHORS</h2>
 <p> The utility was written by An James K. Lowden Aq jklowden [at] freetds.org . </p>
-<h2>Index</h2>

@@ -94,4 +94,3 @@ description: "advmng – AdvanceCOMP MNG Compression Utility"
 <p> This file is Copyright (C) 2003 Andrea Mazzoleni, Filipe Estima</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-advzip/">advzip</a>(1), <a href="/docs/linux/man/1-advpng/">advpng</a>(1), <a href="/docs/linux/man/1-advdef/">advdef</a>(1) </p>
-<h2>Index</h2>

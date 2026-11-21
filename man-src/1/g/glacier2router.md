@@ -37,4 +37,3 @@ description: "glacier2router – The Glacier2 router daemon."
 <dd>
  Do not change the current working directory. </dd>
 </dl>
-<h2>Index</h2>

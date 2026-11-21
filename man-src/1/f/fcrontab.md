@@ -67,4 +67,3 @@ description: "fcrontab – manipulate per-user fcrontab files"
 <p> If you&#8217;re learning how to use fcron from scratch, I suggest that you read the HTML version of the documentation (if your are not reading it right now! :) ): the content is the same, but it is easier to navigate thanks to the hyperlinks.</p>
 <h2>AUTHOR</h2>
 <p> Thibault Godouet &lt;fcron [at] free.fr&gt; </p>
-<h2>Index</h2>

@@ -57,4 +57,3 @@ description: "patgen – generate patterns for TeX hyphenation"
 <p> Donald E. Knuth, <i>The TeXbook</i>, Addison-Wesley, 1986, ISBN 0-201-13447-0, Appendix H.</p>
 <h2>AUTHORS</h2>
 <p> Frank Liang wrote the first version of this program. Peter Breitenlohner made a substantial revision in 1991 for TeX 3. The first version was published as the appendix to the <i>TeXware</i> technical report. Howard Trickey originally ported it to Unix. </p>
-<h2>Index</h2>

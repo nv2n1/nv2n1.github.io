@@ -23,4 +23,3 @@ description: "psmerge – filter to merge several PostScript files into one"
 <p> <code>PostScript</code> is a trademark of Adobe Systems Incorporated.</p>
 <h2>BUGS</h2>
 <p> <i>psmerge</i> is for a very specific case; it does not merge files in the general case. </p>
-<h2>Index</h2>

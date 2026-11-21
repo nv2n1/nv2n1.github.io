@@ -49,4 +49,3 @@ $ datefudge "2007-04-01 10:23" sh - c "sleep 3; date -R" Sun, 01 Apr 2007 10 : 2
  For more information about these matters, see the file named COPYING.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-date/">date</a></code>(1), <code>ld.so</code>(1), <code><a href="/docs/linux/man/2-time/">time</a></code>(2), <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2), <code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2) </p>
-<h2>Index</h2>

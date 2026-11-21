@@ -32,4 +32,3 @@ description: "efivar – Tool to manipulate UEFI variables"
 <dt><code>&#8211;usage</code></dt>
 <dd> Display brief usage message </dd>
 </dl>
-<h2>Index</h2>

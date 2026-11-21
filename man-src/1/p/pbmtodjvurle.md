@@ -22,4 +22,3 @@ description: "pbmtodjvurle – convert a PBM image to DjVu Bitonal RLE format"
 <p> <code>pbmtodjvurle</code> was new in Netpbm 10.22 (April 2004). </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2004 Scott Pakin &lt;scott+pbm [at] pakin.org&gt;. </p>
-<h2>Index</h2>

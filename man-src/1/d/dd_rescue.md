@@ -240,4 +240,3 @@ description: "dd_rescue – Data recovery and protection tool"
  <a rel="nofollow" href="http://garloff.de/kurt/linux/ddrescue/">http://garloff.de/kurt/linux/ddrescue/</a><br />
  LAB Valentin&#8217;s <code>dd_rhelp</code> can be found on<br />
  <a rel="nofollow" href="http://www.kalysto.org/utilities/dd_rhelp/index.en.html">http://www.kalysto.org/utilities/dd_rhelp/index.en.html</a> </p>
-<h2>Index</h2>

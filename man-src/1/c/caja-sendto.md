@@ -22,4 +22,3 @@ description: "caja-sendto – convenience application to send a file via email o
 <h2>AUTHOR</h2>
 <p> Written by Roberto Majadas &lt;roberto.majadas [at] openshine.com&gt; </p>
 <p> This manual page was originally written by Oystein Gisnas for the Debian system. </p>
-<h2>Index</h2>

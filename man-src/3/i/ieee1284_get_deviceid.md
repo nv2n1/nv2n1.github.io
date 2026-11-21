@@ -60,4 +60,3 @@ description: "ieee1284_get_deviceid – retrieve an IEEE 1284 Device ID"
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2003 Tim Waugh </p>
-<h2>Index</h2>

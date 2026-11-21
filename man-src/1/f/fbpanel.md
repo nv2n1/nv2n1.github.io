@@ -59,4 +59,3 @@ cp&nbsp;<wbr>/usr/share/fbpanel/default&nbsp;<wbr>~/.fbpanel<br />
 <dd> The user&#8217;s default profile.</dd></dl>
 <h2>AUTHOR</h2>
 <p> fbpanel was written by Anatoly Asviyan &lt;aanatoly [at] users.sf.net&gt;. This manual page was originally written for the Debian GNU/Linux system by Shyamal Prasad &lt;shyamal [at] member.fsf.org&gt;. </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "QuantLib::Histogram – Histogram class."
 <p> This class computes the histogram of a given data set. The caller can specify the number of bins, the breaks, or the algorithm for determining these quantities in computing the histogram. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

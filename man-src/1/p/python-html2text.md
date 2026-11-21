@@ -70,4 +70,3 @@ description: "python-html2text – manual page for python-html2text 2016.9.19"
 <dt><code>&#8211;decode-errors</code>=<i>DECODE_ERRORS</i></dt>
 <dd> What to do in case of decode errors.&#8217;ignore&#8217;, &#8216;strict&#8217; and &#8216;replace&#8217; are acceptable values </dd>
 </dl>
-<h2>Index</h2>

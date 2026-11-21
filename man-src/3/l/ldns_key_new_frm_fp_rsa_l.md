@@ -33,4 +33,3 @@ description: "ldns_key_new_frm_fp_rsa, ldns_key_new_frm_fp_rsa_l"
 <p> <i>ldns_key_new_frm_fp</i>, <i>ldns_key</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
-<h2>Index</h2>

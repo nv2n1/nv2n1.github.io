@@ -6664,4 +6664,3 @@ rar p test-SVCD.rar | mencoder -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=800 -of
 <p> MPlayer was initially written by Arpad Gereoffy. See the AUTHORS file for a list of some of the many other contributors. </p>
 <p> MPlayer is (C) 2000-2016 The MPlayer Team </p>
 <p> This man page was written mainly by Gabucino, Jonas Jermann and Diego Biurrun. It is maintained by Diego Biurrun. Please send mails about it to the MPlayer-DOCS mailing list. Translation specific mails belong on the MPlayer-translations mailing list. </p>
-<h2>Index</h2>

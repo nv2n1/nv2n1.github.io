@@ -33,4 +33,3 @@ description: "psicc – little cms PostScript converter."
 <p> <code><a href="/docs/linux/man/1-jpgicc/">jpgicc</a></code>(1), <code><a href="/docs/linux/man/1-tificc/">tificc</a></code>(1), <code><a href="/docs/linux/man/1-linkicc/">linkicc</a></code>(1), <code><a href="/docs/linux/man/1-transicc/">transicc</a></code>(1),</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Shiju p. Nair &lt;shiju.p [at] gmail.com&gt;, for the Debian project. </p>
-<h2>Index</h2>

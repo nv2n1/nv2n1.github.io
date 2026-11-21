@@ -33,4 +33,3 @@ description: "kmag – Screen magnifier"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://accessibility.kde.org/">http://accessibility.kde.org/</a></dd></dl>
 </dl>
-<h2>Index</h2>

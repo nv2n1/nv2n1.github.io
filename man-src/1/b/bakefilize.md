@@ -36,4 +36,3 @@ description: "bakefilize – prepare Bakefile project for use with Autoconf"
 <dl>
 <dt>
 </dt><dd> Display usage information for <code>bakefilize</code></dd></dl>
-<h2>Index</h2>

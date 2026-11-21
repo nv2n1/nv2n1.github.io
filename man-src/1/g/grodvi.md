@@ -82,4 +82,3 @@ description: "grodvi – convert groff output to TeX DVI format"
 <p> When using the <code>-d</code> option with boxed tables, vertical and horizontal lines can sometimes protrude by one pixel. This is a consequence of the way TeX requires that the heights and widths of rules be rounded.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tfmtodit/">tfmtodit</a></code>(1), <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1), <code><a href="/docs/linux/man/5-groff_out/">groff_out</a></code>(5), <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5), <code><a href="/docs/linux/man/7-groff_char/">groff_char</a></code>(7), <code><a href="/docs/linux/man/5-groff_tmac/">groff_tmac</a></code>(5) </p>
-<h2>Index</h2>

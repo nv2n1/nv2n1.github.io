@@ -215,4 +215,3 @@ description: "Message Packing –"
  <i>GLOBUS_GRAM_PROTOCOL_ERROR_MALLOC_FAILED</i> Out of memory</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_protocol from the source code. </p>
-<h2>Index</h2>

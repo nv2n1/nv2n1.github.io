@@ -20,4 +20,3 @@ description: "libssh2_channel_set_blocking – set or clear blocking mode on cha
 <p> None</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_set_blocking/">libssh2_session_set_blocking</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_channel_read_ex/">libssh2_channel_read_ex</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_channel_write_ex/">libssh2_channel_write_ex</a>(3)</code> </p>
-<h2>Index</h2>

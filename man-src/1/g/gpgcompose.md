@@ -24,4 +24,3 @@ description: "gpgcompose – Generate a stream of OpenPGP packets"
 <h2>AUTHOR</h2>
 <p> gpgcompose is copyright (C) 2016, g10 Code GmbH. </p>
 <p> This manpage was written by Daniel Kahn Gillmor &lt;dkg [at] fifthhorseman.net&gt;. </p>
-<h2>Index</h2>

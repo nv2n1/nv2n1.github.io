@@ -28,4 +28,3 @@ bson_json_data_reader_new (bool   allow_multiple,
 <p> A newly allocated bson_json_reader_t that should be freed with bson_json_reader_destroy(). </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

@@ -43,4 +43,3 @@ description: "afcat – Output contents of an image file to stdout."
 <p> Simson Garfinkel &lt;simsong [at] acm.org&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> This file is a work of a US government employee and as such is in the Public domain. </p>
-<h2>Index</h2>

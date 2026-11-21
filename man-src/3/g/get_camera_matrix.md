@@ -19,4 +19,3 @@ description: "get_camera_matrix – Constructs a camera matrix for perspective p
 <p> Note that versions prior to 4.1.0 multiplied this aspect ratio by 4/3. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-apply_matrix/">apply_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_align_matrix/">get_align_matrix</a></code>(3), <code><a href="/docs/linux/man/3-set_projection_viewport/">set_projection_viewport</a></code>(3), <code><a href="/docs/linux/man/3-persp_project/">persp_project</a></code>(3) </p>
-<h2>Index</h2>

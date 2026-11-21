@@ -41,4 +41,3 @@ description: "ppmquant – quantize the colors in a portable pixmap down to a sp
 <p> <code><a href="/docs/linux/man/1-pnmquant/">pnmquant</a></code>(1), <code><a href="/docs/linux/man/1-ppmquantall/">ppmquantall</a></code>(1), <code><a href="/docs/linux/man/1-pnmdepth/">pnmdepth</a></code>(1), <code><a href="/docs/linux/man/1-ppmdither/">ppmdither</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989, 1991 by Jef Poskanzer. </p>
-<h2>Index</h2>

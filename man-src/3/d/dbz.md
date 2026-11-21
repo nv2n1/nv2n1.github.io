@@ -43,4 +43,3 @@ bool dbzinit(const char *base) bool dbzclose(void) bool dbzfresh(const char *bas
 <p> Unlike <i>dbm</i>, <i>dbz</i> will refuse to <i>dbzstore</i> with a key already in the database. The user is responsible for avoiding this. </p>
 <p> The RFC5322 case mapper implements only a first approximation to the hideously-complex RFC5322 case rules. </p>
 <p> <i>Dbz</i> no longer tries to be call-compatible with <i>dbm</i> in any way. </p>
-<h2>Index</h2>

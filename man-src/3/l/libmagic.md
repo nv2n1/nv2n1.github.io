@@ -87,4 +87,3 @@ description: "magic_open magic_close magic_error magic_descriptor magic_buffer m
 <p> <a href="/docs/linux/man/1-file/">file</a>(1), <a href="/docs/linux/man/5-magic/">magic</a>(5)</p>
 <h2>AUTHORS</h2>
 <p> An M&aring;ns Rullg&aring;rd Initial libmagic implementation, and configuration. An Christos Zoulas API cleanup, error code and allocation handling. </p>
-<h2>Index</h2>

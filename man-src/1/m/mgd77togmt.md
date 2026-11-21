@@ -48,4 +48,3 @@ description: "mgd77togmt – Convert an MGD-77 ASCII file to a binary gmt file"
  Wessel, P., and W. H. F. Smith, 1991, Free Software Helps Map and Display Data, EOS Trans., AGU, 72 (41), p. 441. </p>
 <p> MGD77 Task Group, 1977, The Marine Geophysical Data Exchange Format &#8211; MGD77, Key to Geophysical Records documentation No. 10, National Geophysical and Solar-Terrestrial Data Center, Boulder, CO. </p>
 <p> Carter, D. J. T., <i>Echo Sounding Correction Tables: Formerly Matthews&#8217; Tables</i>,150 pp, Hydrographic Department, Ministry of Defense, Taunton, Somerset, England, 1980. </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "trace-cmd-check-events – parse the event formats on local system
 <dt>
 </dt><dd> mailto:vnagarnaik [at] google.com</dd></dl>
 </dl>
-<h2>Index</h2>

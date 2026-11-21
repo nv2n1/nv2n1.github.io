@@ -151,4 +151,3 @@ pnm_writepamrow(&amp;outpam, outrow);
 <p> <code>Description</code> </p>
 <p> <code>pnm_checkpam()</code> checks for the common file integrity error where the file is the wrong size to contain the raster, according to the information in the header. </p>
 <p> <code>pnm_nextimage()</code>positions a Netpbm image input file to the next image in it (so that a subsequent <code>pnm_readpaminit()</code> reads its header). </p>
-<h2>Index</h2>

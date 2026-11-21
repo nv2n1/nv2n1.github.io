@@ -18,4 +18,3 @@ description: "calibrate_joystick_name – Returns the next calibration text stri
 <p> Returns a text description for the next type of calibration that will be done on the specified joystick, or NULL if no more calibration is required. </p>
 <h2>SEE ALSO</h2>
 <p> <code>install_joystick</code>(3), <code><a href="/docs/linux/man/3-calibrate_joystick/">calibrate_joystick</a></code>(3), <code><a href="/docs/linux/man/3-joy/">joy</a></code>(3), <code>num_joysticks</code>(3), <code><a href="/docs/linux/man/3-exjoy/">exjoy</a></code>(3) </p>
-<h2>Index</h2>

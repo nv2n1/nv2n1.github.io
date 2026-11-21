@@ -164,4 +164,3 @@ description: "pkexec – Execute a command as another user"
 <dt> 3.</dt>
 <dd> /usr/share/gtk-doc/html/polkit-1/pkexec-frobnicate-da.png </dd>
 </dl>
-<h2>Index</h2>

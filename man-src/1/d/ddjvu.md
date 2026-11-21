@@ -90,4 +90,3 @@ description: "ddjvu – Command line DjVu decoder."
 <p> This program includes code derived from program <code>tiff2pdf</code>, written by Ross Finlayson and released under a BSD license. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-djview/">djview</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5), <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5), <code><a href="/docs/linux/man/5-pgm/">pgm</a></code>(5), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code><a href="/docs/linux/man/1-cjpeg/">cjpeg</a></code>(1), <code><a href="/docs/linux/man/1-tiffsplit/">tiffsplit</a></code>(1), <code><a href="/docs/linux/man/1-tiffcp/">tiffcp</a></code>(1) </p>
-<h2>Index</h2>

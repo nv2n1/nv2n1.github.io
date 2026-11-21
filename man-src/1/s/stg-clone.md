@@ -27,4 +27,3 @@ description: "stg-clone – Make a local clone of a remote repository"
 <dt>
 </dt><dd> [set $man.base.url.for.relative.links]/stg</dd></dl>
 </dl>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ description: "rpms2solv – convert one or more rpms into a solv file"
 <p> <a href="/docs/linux/man/1-rpmdb2solv/">rpmdb2solv</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Michael Schroeder &lt;mls [at] suse.de&gt; </p>
-<h2>Index</h2>

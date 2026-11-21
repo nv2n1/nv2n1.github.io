@@ -16,4 +16,3 @@ description: "is_memory_bitmap – Tells if a bitmap is a memory bitmap. Allegro
 <p> Returns TRUE if bmp is a memory bitmap, ie. it was created by calling create_bitmap() or loaded from a grabber datafile or image file. Memory bitmaps can be accessed directly via the line pointers in the bitmap structure, eg. bmp-&gt;line[y][x] = color. </p>
 <h2>SEE ALSO</h2>
 <p> <code>is_linear_bitmap</code>(3), <code>is_planar_bitmap</code>(3) </p>
-<h2>Index</h2>

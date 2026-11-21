@@ -69,4 +69,3 @@ description: "ctan-o-mat – Validate and upload a package for CTAN"
 <dt>&bull;</dt>
 <dd> The program can not be used without a working connection to the Internet. </dd>
 </dl>
-<h2>Index</h2>

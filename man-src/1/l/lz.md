@@ -19,4 +19,3 @@ description: "lz – gunzips and shows a listing of a gzip’d tar’d archive"
 <p> Robert King (Robert.King [at] mailbox.gu.edu.au) wrote this page for the <i>Debian/GNU</i> mtools package. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mtools/">mtools</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1), <code><a href="/docs/linux/man/1-uz/">uz</a></code>(1). </p>
-<h2>Index</h2>

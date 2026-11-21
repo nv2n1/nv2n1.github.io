@@ -61,4 +61,3 @@ void exit(int status);
 <p> <code>_exit</code>(2), <code><a href="/docs/linux/man/2-get_robust_list/">get_robust_list</a></code>(2), <code><a href="/docs/linux/man/2-setpgid/">setpgid</a></code>(2), <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2), <code><a href="/docs/linux/man/3-atexit/">atexit</a></code>(3), <code>on_exit</code>(3), <code><a href="/docs/linux/man/3-tmpfile/">tmpfile</a></code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

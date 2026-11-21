@@ -60,4 +60,3 @@ description: "xkibitz – allow multiple people to interact in an xterm"
  <i>&quot;kibitz &#8211; Connecting Multiple Interactive Programs Together&quot;, </i>by Don Libes, Software &#8211; Practice &amp; Experience, John Wiley &amp; Sons, West Sussex, England, Vol. 23, No. 5, May, 1993.</p>
 <h2>AUTHOR</h2>
 <p> Don Libes, National Institute of Standards and Technology </p>
-<h2>Index</h2>

@@ -81,4 +81,3 @@ description: "pkgenpack – PackageKit Pack Generator"
 <p> This manual page was written by Shishir Goel crazyontheedge [at] gmail.com and Richard Hughes richard [at] hughsie.com.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2008 Shishir Goel </p>
-<h2>Index</h2>

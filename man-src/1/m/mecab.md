@@ -62,4 +62,3 @@ description: "mecab – manual page for mecab of 0.98pre1"
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help and exit. </dd>
 </dl>
-<h2>Index</h2>

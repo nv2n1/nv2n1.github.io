@@ -52,4 +52,3 @@ TD(1)&nbsp;<wbr>=&nbsp;<wbr>00 &#8211;&gt;&nbsp;<wbr>Y(i+1)&nbsp;<wbr>=&nbsp;<wb
 <p> <code><a href="/docs/linux/man/8-pcscd/">pcscd</a></code>(8), <code>ATR_analysis</code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Ludovic Rousseau &lt;ludovic.rousseau [at] free.fr&gt; </p>
-<h2>Index</h2>

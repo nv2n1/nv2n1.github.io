@@ -94,4 +94,3 @@ description: "pigz, unpigz – compress or expand files"
 <h2>COPYRIGHT NOTICE</h2>
 <p> This software is provided &#8216;as-is&#8217;, without any express or implied warranty. In no event will the author be held liable for any damages arising from the use of this software. </p>
 <p> Copyright (C) 2007-2021 Mark Adler &lt;madler [at] alumni.caltech.edu&gt; </p>
-<h2>Index</h2>

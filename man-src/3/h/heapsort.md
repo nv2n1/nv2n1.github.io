@@ -45,4 +45,3 @@ description: "heapsort , mergesort – sort functions"
 <dl>
 <dt>
 </dt><dd> Bentley, J.L. McIlroy, M.D. <i>&quot;Engineering a Sort Function&quot;</i> <i>&quot;Software&#8211;Practice and Experience&quot;</i> Vol. 23(11) pp. 1249-1265 November 1993</dd></dl>
-<h2>Index</h2>

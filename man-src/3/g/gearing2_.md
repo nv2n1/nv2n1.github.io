@@ -44,4 +44,3 @@ description: "QuantLib::DoubleStickyRatchetPayoff – Intermediate class for sin
 <p> Reimplemented in <code>RatchetPayoff</code>, <code>StickyPayoff</code>, <code>RatchetMaxPayoff</code>, <code>RatchetMinPayoff</code>, <code>StickyMaxPayoff</code>, and <code>StickyMinPayoff</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

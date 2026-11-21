@@ -17,4 +17,3 @@ description: "xapian-metadata – Read and write user metadata"
 <dt>
 </dt><dd> xapian-metadata list PATH_TO_DATABASE [PREFIX] xapian-metadata set PATH_TO_DATABASE KEY VALUE </dd>
 </dl>
-<h2>Index</h2>

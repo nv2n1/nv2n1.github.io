@@ -42,4 +42,3 @@ description: "cannacheck – Display information about Japanese input system Can
 <dt>CANNAFILE</dt>
 <dd> Specifies the initialize file (.canna). </dd>
 </dl>
-<h2>Index</h2>

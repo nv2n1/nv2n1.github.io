@@ -201,4 +201,3 @@ description: "netstiff – powerful and easy tool to check for Web and FTP updat
 <p> Feel free to send feedback, bug reports, etc. </p>
 <h2>AUTHOR AND COPYRIGHT</h2>
 <p> &#169; 2004, 2007-2008 Stephan Beyer &lt;s-beyer [at] gmx.net&gt;, GNU GPL </p>
-<h2>Index</h2>

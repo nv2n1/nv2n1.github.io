@@ -29,4 +29,3 @@ $ docker wait 079b83f558a2bc
 </dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
-<h2>Index</h2>

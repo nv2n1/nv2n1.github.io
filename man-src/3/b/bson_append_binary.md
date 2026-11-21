@@ -43,4 +43,3 @@ bool bson_append_binary(bson_t *bson,
 <p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

@@ -74,4 +74,3 @@ read a &lt; / tmp / waldo systemd - notify-- status = "Processing $a"
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5), <code><a href="/docs/linux/man/3-sd_notify/">sd_notify</a></code>(3), <code><a href="/docs/linux/man/3-sd_booted/">sd_booted</a></code>(3) </p>
-<h2>Index</h2>

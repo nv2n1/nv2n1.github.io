@@ -34,4 +34,3 @@ description: "gnome-screensaver-command – controls GNOME screensaver"
 <p> This manual page was written by Sven Arvidsson &lt;sa [at] whiz.se&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gnome-screensaver/">gnome-screensaver</a></code>(1) </p>
-<h2>Index</h2>

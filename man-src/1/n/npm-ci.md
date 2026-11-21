@@ -78,4 +78,3 @@ cache:
 <dd> npm help package-locks </dd>
 </dl>
 </dl>
-<h2>Index</h2>

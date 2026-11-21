@@ -261,4 +261,3 @@ xdg - icon - resource install-- size 22./ wmicon - 22.png shinythings - webmirro
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.freedesktop.org/wiki/Specifications/menu-spec/">http://www.freedesktop.org/wiki/Specifications/menu-spec/</a></dd></dl>
 </dl>
-<h2>Index</h2>

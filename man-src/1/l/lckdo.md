@@ -57,4 +57,3 @@ description: "lckdo – run a program with a lock held"
 <p> If the lock was successfully acquired, the return value is that of the program invoked by <code>lckdo</code>. If the lock couldn&#8217;t be acquired, EX_TEMPFAIL is returned. If there was a problem opening/creating or locking the lock file, EX_CANTCREAT or EX_OSERR will be returned.</p>
 <h2>AUTHOR</h2>
 <p> Michael Tokarev </p>
-<h2>Index</h2>

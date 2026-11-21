@@ -33,4 +33,3 @@ description: "irunner – interactive runner interface"
 <h2>AUTHOR</h2>
 <p> <code>irunner</code> is an extension of Ken Schutte &lt;kschutte-AT-csail.mit.edu&gt;&#8217;s script contributed on the ipython-user list: <a rel="nofollow" href="http://scipy.net/pipermail/ipython-user/2006-May/001705.html">http://scipy.net/pipermail/ipython-user/2006-May/001705.html</a> </p>
 <p> This manual page was written by Bernd Zeimetz &lt;bernd [at] bzed.de&gt;, for the Debian project (but may be used by others). Modified by Fernando Perez &lt;Fernando.Perez [at] berkeley.edu&gt; for inclusion in IPython. </p>
-<h2>Index</h2>

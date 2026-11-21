@@ -30,4 +30,3 @@ description: "bgltags – generate tag file for Emacs"
 <p> <a href="/docs/linux/man/1-bigloo/">bigloo</a>(1), <a href="/docs/linux/man/1-bglafile/">bglafile</a>(1), <a href="/docs/linux/man/1-bgldepend/">bgldepend</a>(1), <a href="/docs/linux/man/1-etags/">etags</a>(1), <a href="/docs/linux/man/1-emacs/">emacs</a>(1), <a href="/docs/linux/man/1-bglmco/">bglmco</a>(1), <a href="/docs/linux/man/1-xemacs/">xemacs</a>(1) </p>
 <h2>AUTHOR</h2>
 <p> Manuel SERRANO, Manuel.Serrano [at] inria.fr </p>
-<h2>Index</h2>

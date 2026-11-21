@@ -45,4 +45,3 @@ description: "aptd – package managing daemon proving a D-Bus interface"
 <p> Sebastian Heinlein &lt;devel at glatzor dot de&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-aptdcon/">aptdcon</a></code>(1), <code><a href="/docs/linux/man/7-org-debian-apt/">org.debian.apt</a></code>(7), <code><a href="/docs/linux/man/7-org-debian-apt-transaction/">org.debian.apt.transaction</a></code>(7), <code>PolicyKit.conf</code>(7) </p>
-<h2>Index</h2>

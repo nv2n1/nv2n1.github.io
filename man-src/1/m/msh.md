@@ -98,4 +98,3 @@ whom
 <p> in their <i>.mh_profile</i> file so that <code>pick</code> works equally well from both the shell and <code>msh</code>. </p>
 <p> <code>sortm</code> always uses <code>-noverbose</code> and if <code>-textfield</code> <i>field</i> is used, <code>-limit</code> <i>0</i>. </p>
 <p> The <code>msh</code> program inherits most (if not all) of the bugs from the <code>nmh</code> commands it implements. </p>
-<h2>Index</h2>

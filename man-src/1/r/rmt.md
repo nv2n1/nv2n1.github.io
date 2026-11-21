@@ -210,4 +210,3 @@ Germany
 </pre>
 <p> Mail bugs and suggestions to: </p>
 <p> <code>joerg.schilling [at] fokus.fraunhofer.de</code> or <code>js [at] cs.tu-berlin.de</code> or <code>joerg [at] schily.isdn.cs.tu-berlin.de</code> </p>
-<h2>Index</h2>

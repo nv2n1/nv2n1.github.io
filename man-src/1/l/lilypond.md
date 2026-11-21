@@ -62,4 +62,3 @@ description: "LilyPond – manual page for LilyPond 2.12.2"
 <dt>
 </dt><dd> <code>info LilyPond</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

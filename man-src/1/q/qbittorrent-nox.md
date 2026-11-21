@@ -25,4 +25,3 @@ description: "qBittorrent-nox – a command line Bittorrent client written in C+
 <p> If you find a bug, please report it at <a rel="nofollow" href="http://bugs.qbittorrent.org">http://bugs.qbittorrent.org</a> </p>
 <h2>AUTHOR</h2>
 <p> Christophe Dumez &lt;chris [at] qbittorrent.org&gt; </p>
-<h2>Index</h2>

@@ -16,4 +16,3 @@ description: "generate_332_palette – Constructs a fake truecolor palette. Alle
 <p> Constructs a fake truecolor palette, using three bits for red and green and two for the blue. The load_bitmap() function fills the palette parameter with this if the file does not contain a palette itself (ie. you are reading a truecolor bitmap). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-generate_optimized_palette/">generate_optimized_palette</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3), <code><a href="/docs/linux/man/3-excolmap/">excolmap</a></code>(3), <code><a href="/docs/linux/man/3-exrgbhsv/">exrgbhsv</a></code>(3), <code><a href="/docs/linux/man/3-extruec/">extruec</a></code>(3), <code><a href="/docs/linux/man/3-exupdate/">exupdate</a></code>(3) </p>
-<h2>Index</h2>

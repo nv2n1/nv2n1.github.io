@@ -49,4 +49,3 @@ Alan Cox GW4PTS&lt;alan[at] cymru.net&gt;
         Phil Karn KA9Q&lt;karn[at] qualcomm.com&gt;
             Heikki Hannikainen OH7LZB&lt;hessu[at] pspt.fi&gt;
 </code></pre>
-<h2>Index</h2>

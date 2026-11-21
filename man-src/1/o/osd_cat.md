@@ -54,4 +54,3 @@ description: "osd_cat – X on-screen file displayer"
 <p> More information on the X OSD Library and its author can be found on <a rel="nofollow" href="http://www.ignavus.net/software.html">http://www.ignavus.net/software.html</a></p>
 <h2>COPYRIGHT</h2>
 <p> It is distributed under the GNU General Public License. </p>
-<h2>Index</h2>

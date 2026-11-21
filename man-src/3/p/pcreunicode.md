@@ -52,4 +52,3 @@ Cambridge CB2 3QH, England.
 <pre><code>Last updated: 27 February 2013
 Copyright (c) 1997-2013 University of Cambridge.
 </code></pre>
-<h2>Index</h2>

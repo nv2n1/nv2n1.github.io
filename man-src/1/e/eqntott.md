@@ -113,4 +113,3 @@ description: "eqntott – generate truth table from Boolean equations"
 <h2>AUTHOR</h2>
 <p> Bob Cmelik.<br />
  -l option added by Jeff Deutsch. </p>
-<h2>Index</h2>

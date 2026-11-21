@@ -21,4 +21,3 @@ void ares_free_string(void *str)
 <h2>AUTHOR</h2>
 <p> Greg Hudson, MIT Information Systems<br />
  Copyright 2000 by the Massachusetts Institute of Technology. </p>
-<h2>Index</h2>

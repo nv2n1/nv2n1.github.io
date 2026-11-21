@@ -19,4 +19,3 @@ description: "pjtoppm – convert an HP PaintJet file to a portable pixmap"
 <p> <a href="/docs/linux/man/1-ppmtopj/">ppmtopj</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Christos Zoulas. </p>
-<h2>Index</h2>

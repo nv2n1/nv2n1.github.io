@@ -58,4 +58,3 @@ description: "ncview – graphically display netCDF files under X windows"
 <h2>BUGS</h2>
 <p> Occasional bugs surface, especially when mixing variables in different files. </p>
 <p> Please send all bug reports to pierce [at] cirrus.ucsd.edu </p>
-<h2>Index</h2>

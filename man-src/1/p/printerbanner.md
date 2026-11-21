@@ -29,4 +29,3 @@ description: "printerbanner – print large banner on printer"
 <p> The &#8211;<code>w</code> option is implemented by skipping some rows and columns. The smaller it gets, the grainier the output. Sometimes it runs letters together. </p>
 <p> Messages are limited to 1024 characters in length. </p>
 <p> This program is called just banner on FreeBSD. </p>
-<h2>Index</h2>

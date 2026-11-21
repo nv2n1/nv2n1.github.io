@@ -78,4 +78,3 @@ description: "ipa-csreplica-manage – Manage an IPA CS replica"
 <dt>1 if an error occurred</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

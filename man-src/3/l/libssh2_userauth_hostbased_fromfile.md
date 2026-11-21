@@ -20,4 +20,3 @@ description: "libssh2_userauth_hostbased_fromfile – convenience macro for libs
 <p> See <i><a href="/docs/linux/man/3-libssh2_userauth_hostbased_fromfile_ex/">libssh2_userauth_hostbased_fromfile_ex</a>(3)</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_userauth_hostbased_fromfile_ex/">libssh2_userauth_hostbased_fromfile_ex</a>(3)</code> </p>
-<h2>Index</h2>

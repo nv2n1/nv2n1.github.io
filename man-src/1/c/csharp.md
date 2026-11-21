@@ -182,4 +182,3 @@ csharp &gt; Time(() = &gt; { for (int i = 0; i &lt; 5; i++) Console.WriteLine (i
 <h2>MORE INFORMATION</h2>
 <p> The Mono C# compiler was developed by Novell, Inc (<a rel="nofollow" href="http://www.novell.com,">http://www.novell.com,</a> http) and is based on the ECMA C# language standard available here: <a rel="nofollow" href="http://www.ecma.ch/ecma1/STAND/ecma-334.htm">http://www.ecma.ch/ecma1/STAND/ecma-334.htm</a> </p>
 <p> The home page for the Mono C# compiler is at <a rel="nofollow" href="http://www.mono-project.com/docs/about-mono/languages/csharp/">http://www.mono-project.com/docs/about-mono/languages/csharp/</a> information about the interactive mode for C# is available in <a rel="nofollow" href="http://mono-project.com/docs/tools+libraries/tools/repl/">http://mono-project.com/docs/tools+libraries/tools/repl/</a> </p>
-<h2>Index</h2>

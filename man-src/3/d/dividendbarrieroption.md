@@ -24,4 +24,3 @@ description: "ql/experimental/finitedifferences/dividendbarrieroption.hpp – Ba
 <p> Barrier option on a single asset with discrete dividends. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

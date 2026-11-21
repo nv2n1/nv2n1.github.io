@@ -38,4 +38,3 @@ description: "ccrewrite – Rewrite CLR assemblies for runtime code contract ver
 <p> Copyright (C) 2010 Chris Bacon. Released under MIT license.</p>
 <h2>WEB SITE</h2>
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details </p>
-<h2>Index</h2>

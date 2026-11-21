@@ -32,4 +32,3 @@ description: "acl_create_entry – create a new ACL entry"
 <p> acl_init3, acl_delete_entry3, acl_free3, acl_create_entry3, <a href="/docs/linux/man/5-acl/">acl</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Derived from the FreeBSD manual pages written by An Robert N M Watson Aq rwatson [at] FreeBSD.org , and adapted for Linux by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
-<h2>Index</h2>

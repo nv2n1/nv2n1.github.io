@@ -61,4 +61,3 @@ afppasswd: updated password.
 </dt><dd> This is the minimum <i>user id</i> (uid) that <code>afppasswd</code> will use when creating users.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8), <code><a href="/docs/linux/man/8-atalkd/">atalkd</a></code>(8). </p>
-<h2>Index</h2>

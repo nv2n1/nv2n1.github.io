@@ -73,4 +73,3 @@ uucp sys1!~user1/file1 sys2!~user2/file2 ~user3
 <p> File modes are not preserved, except for the execute bit. The resulting file is owned by the uucp user.</p>
 <h2>AUTHOR</h2>
 <p> Ian Lance Taylor &lt;ian [at] airs.com&gt; </p>
-<h2>Index</h2>

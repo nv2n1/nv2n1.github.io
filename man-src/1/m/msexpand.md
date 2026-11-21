@@ -21,4 +21,3 @@ description: "msexpand – decompress data compressed using"
  Algorithm &amp; data structures by M. Winterhoff &lt;100326.2776 [at] compuserve.com&gt; </p>
 <h2>DOWNLOAD</h2>
 <p> mscompress package is available at <a href="ftp://ftp.penguin.cz">ftp.penguin.cz</a>/pub/users/mhi/. </p>
-<h2>Index</h2>

@@ -42,4 +42,3 @@ gencases -h 23:56:89:ab:de -f test -n 200
 <p> <a href="/docs/linux/man/1-airsnort/">airsnort</a>(1) <a href="/docs/linux/man/1-decrypt/">decrypt</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> An Jeremy Bruestle &lt;melvin [at] melvin.net&gt; An Blake Hegerle &lt;blake [at] melvin.net&gt; An Snax &lt;snax [at] shmoo.com&gt;</p>
-<h2>Index</h2>

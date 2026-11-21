@@ -30,4 +30,3 @@ do {
 <p> Returns the value of midi_time, the length of the midi. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-load_midi/">load_midi</a></code>(3), <code><a href="/docs/linux/man/3-midi_time/">midi_time</a></code>(3), <code><a href="/docs/linux/man/3-midi_pos/">midi_pos</a></code>(3), <code><a href="/docs/linux/man/3-exmidi/">exmidi</a></code>(3) </p>
-<h2>Index</h2>

@@ -65,4 +65,3 @@ description: "pamtowinicon – convert Netpbm PAM images to a Microsoft Windows 
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2013 by Ludolf Holzheid. </p>
 <p> Translated to Netpbm coding style by Bryan Henderson. </p>
-<h2>Index</h2>

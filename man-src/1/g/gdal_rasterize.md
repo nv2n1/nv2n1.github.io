@@ -101,4 +101,3 @@ gdal_rasterize -a ROOF_H -where 'class=&quot;A&quot;' -l footprints footprints.s
 </pre>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com </p>
-<h2>Index</h2>

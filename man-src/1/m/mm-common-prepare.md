@@ -58,4 +58,3 @@ description: "mm-common-prepare – Prepare a C++ binding module to use mm-commo
 <p> <code><a href="/docs/linux/man/1-autoreconf/">autoreconf</a></code>(1) </p>
 <p> <i>/usr/share/doc/mm-common/README</i> </p>
 <p> <i>/usr/share/doc/mm-common/skeletonmm.tar.gz</i> </p>
-<h2>Index</h2>

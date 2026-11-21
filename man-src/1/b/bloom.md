@@ -34,4 +34,3 @@ $ sudo pip install -U bloom
 <p> William Woodall</p>
 <h2>COPYRIGHT</h2>
 <p> 2014, Open Source Robotics Foundation </p>
-<h2>Index</h2>

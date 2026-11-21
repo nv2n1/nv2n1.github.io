@@ -40,4 +40,3 @@ perf mem[&lt;options&gt;](record[&lt;command&gt;] | report)
 </dt><dd> Restrict dump of raw samples to those provided via this option. Note that the same option can be passed in record mode. It will be interpreted the same way as perf record.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1) </p>
-<h2>Index</h2>

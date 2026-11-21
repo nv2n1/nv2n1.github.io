@@ -43,4 +43,3 @@ int iswctype(wint_t wc, wctype_t desc);
 <p> <code>iswalnum</code>(3), <code>iswalpha</code>(3), <code>iswblank</code>(3), <code>iswcntrl</code>(3), <code>iswdigit</code>(3), <code>iswgraph</code>(3), <code>iswlower</code>(3), <code>iswprint</code>(3), <code>iswpunct</code>(3), <code>iswspace</code>(3), <code>iswupper</code>(3), <code>iswxdigit</code>(3), <code><a href="/docs/linux/man/3-wctype/">wctype</a></code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

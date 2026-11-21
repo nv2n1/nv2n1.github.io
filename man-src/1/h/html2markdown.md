@@ -75,4 +75,3 @@ description: "html2markdown – converts a page of HTML into markdown."
 </dl>
 <h2>AUTHOR</h2>
 <p> This manpage was written for Debian, by Stefano Rivera &lt;stefanor [at] debian.org&gt;. </p>
-<h2>Index</h2>

@@ -36,4 +36,3 @@ description: "startlxqt – script to initialize and launch LXQt sessions"
 <dl>
 <dt>
 </dt><dd> Desktop Entry Specification defining desktop entry files (*.desktop).</dd></dl>
-<h2>Index</h2>

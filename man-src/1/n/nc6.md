@@ -123,4 +123,3 @@ description: "nc6 – network swiss army knife"
 <h2>AUTHORS</h2>
 <p>&nbsp;<wbr>Mauro Tortonesi&nbsp;<wbr>&lt;mauro [at] deepspace6.net&gt;<br />
 &nbsp;<wbr>Chris Leishman&nbsp;<wbr>&lt;chris [at] leishman.org&gt; The original netcat was written by a guy we know as the Hobbit &lt;hobbit [at] avian.org&gt;. </p>
-<h2>Index</h2>

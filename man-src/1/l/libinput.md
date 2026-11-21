@@ -43,4 +43,3 @@ description: "libinput – tool to interface with libinput"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/4-libinput/">libinput</a>(4) </p>
 <p> libinput&#8217;s online documentation <i><a rel="nofollow" href="https://wayland.freedesktop.org/libinput/doc/latest/">https://wayland.freedesktop.org/libinput/doc/latest/</a></i> </p>
-<h2>Index</h2>

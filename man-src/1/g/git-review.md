@@ -205,4 +205,3 @@ defaultbranch=master
 <h2>AUTHORS</h2>
 <p> is maintained by An OpenStack, LLC </p>
 <p> This manpage has been enhanced by: An Antoine Musso Aq hashar [at] free.fr An Marcin Cieslak Aq saper [at] saper.info An Pavel Sedlák Aq psedlak [at] redhat.com </p>
-<h2>Index</h2>

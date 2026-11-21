@@ -19,4 +19,3 @@ description: "krb5_check_transited krb5_check_transited_realms krb5_domain_x500_
 <p> Fn krb5_domain_x500_encode and Fn krb5_domain_x500_decode encodes and decodes the realm names in the X500 format that Kerberos uses to describe the transited realms in krbtgts.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5.conf5 </p>
-<h2>Index</h2>

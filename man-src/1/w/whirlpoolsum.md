@@ -51,4 +51,3 @@ description: "whirlpoolsum – compute and check WHIRLPOOL message digest"
  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sha256sum/">sha256sum</a></code>(1), <code><a href="/docs/linux/man/1-sha384sum/">sha384sum</a></code>(1), <code><a href="/docs/linux/man/1-sha512sum/">sha512sum</a></code>(1). </p>
-<h2>Index</h2>

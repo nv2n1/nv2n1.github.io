@@ -28,4 +28,3 @@ BITMAP *bmp;
 <p> Unlike most of the graphics routines, blit() allows the source and destination bitmaps to be of different color depths, so it can be used to convert images from one pixel format to another. In this case, the behavior is affected by the COLORCONV_KEEP_TRANS and COLORCONV_DITHER* flags of the current color conversion mode: see set_color_conversion() for more information. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-masked_blit/">masked_blit</a></code>(3), <code><a href="/docs/linux/man/3-stretch_blit/">stretch_blit</a></code>(3), <code><a href="/docs/linux/man/3-draw_sprite/">draw_sprite</a></code>(3), <code><a href="/docs/linux/man/3-gfx_capabilities/">gfx_capabilities</a></code>(3), <code><a href="/docs/linux/man/3-set_color_conversion/">set_color_conversion</a></code>(3) </p>
-<h2>Index</h2>

@@ -88,4 +88,3 @@ description: "itstool – convert between XML and PO using ITS"
 <h2>SEE ALSO</h2>
 <p> More documentation for <code>itstool</code> is maintained online. For more information, see: </p>
 <p> <code><a rel="nofollow" href="http://itstool.org/documentation/">http://itstool.org/documentation/</a></code> </p>
-<h2>Index</h2>

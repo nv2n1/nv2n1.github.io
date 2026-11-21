@@ -16,4 +16,3 @@ description: "ksshaskpass – prompts a user for a passphrase using KDE"
 <p> In order to be called automatically by <code>ssh-add</code>, <code>ksshaskpass</code> should be installed as <i>/usr/bin/ssh-askpass</i>.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Armin Berres &lt;trigger [at] space-based.de&gt;. It was based on that for gnome-ssh-askpass by Colin Watson &lt;cjwatson [at] debian.org&gt;. </p>
-<h2>Index</h2>

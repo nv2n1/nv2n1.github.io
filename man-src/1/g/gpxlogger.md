@@ -80,4 +80,3 @@ GPSD_UNITS one of : imperial = miles / feet
 <dt>
 </dt><dd> <a rel="nofollow" href="http://gpsd.berlios.de/">http://gpsd.berlios.de/</a></dd></dl>
 </dl>
-<h2>Index</h2>

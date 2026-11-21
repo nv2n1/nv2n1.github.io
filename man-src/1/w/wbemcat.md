@@ -45,4 +45,3 @@ description: "wbemcat – a multi-protocol CIM-XML client"
 </dt><dd> <a rel="nofollow" href="http://sblim.sourceforge.net/">http://sblim.sourceforge.net/</a></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xmltest/">xmltest</a>(1)</code> <code><a href="/docs/linux/man/1-wbemcat/">wbemcat</a>(1)</code> </p>
-<h2>Index</h2>

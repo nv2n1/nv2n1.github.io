@@ -131,4 +131,3 @@ xdg - email-- subject 'Your password is about to expire' 'jwhite [at] example.co
 <dt>
 </dt><dd> <a rel="nofollow" href="https://tools.ietf.org/html/rfc6068">https://tools.ietf.org/html/rfc6068</a></dd></dl>
 </dl>
-<h2>Index</h2>

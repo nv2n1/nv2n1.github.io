@@ -180,4 +180,3 @@ description: "cdparanoia 10.2 (Paranoia release III) – an audio CD reading uti
 <h2>AUTHOR</h2>
 <p> Monty &lt;monty [at] xiph.org&gt; </p>
 <p> Cdparanoia&#8217;s homepage may be found at: <a rel="nofollow" href="http://www.xiph.org/paranoia/">http://www.xiph.org/paranoia/</a> </p>
-<h2>Index</h2>

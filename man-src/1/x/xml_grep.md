@@ -96,4 +96,3 @@ description: "xml_grep – grep XML files looking for specific elements"
 <p> This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
 <h2>AUTHOR</h2>
 <p> Michel Rodriguez &lt;mirod [at] xmltwig.com&gt; </p>
-<h2>Index</h2>

@@ -314,4 +314,3 @@ i.e., -f &quot;&quot; is not allowed.
 <p> &#8211;header-only Show only perf.data header.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-script-perl/">perf-script-perl</a></code>(1), <code><a href="/docs/linux/man/1-perf-script-python/">perf-script-python</a></code>(1) </p>
-<h2>Index</h2>

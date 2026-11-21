@@ -52,4 +52,3 @@ description: "nameclt – Naming Service client"
 <p> omniNames(1) </p>
 <h2>AUTHOR</h2>
 <p> Tristan Richardson, ORL (Olivetti &amp; Oracle Research Laboratory) </p>
-<h2>Index</h2>

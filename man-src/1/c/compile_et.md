@@ -30,4 +30,3 @@ description: "compile_et – error table compiler"
 <h2>SEE ALSO</h2>
 <p> com_err (3). </p>
 <p> Ken Raeburn, &quot;A Common Error Description Library for UNIX&quot;. </p>
-<h2>Index</h2>

@@ -17,4 +17,3 @@ description: "fade_out – Gradually fades the palette to black. Allegro game pr
 <p> Note that this function will block your game while the fade is in effect, and it won&#8217;t work right visually if you are not in an 8 bit color depth resolution. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-fade_in/">fade_in</a></code>(3), <code><a href="/docs/linux/man/3-fade_from/">fade_from</a></code>(3), <code><a href="/docs/linux/man/3-fade_interpolate/">fade_interpolate</a></code>(3), <code><a href="/docs/linux/man/3-fade_in_range/">fade_in_range</a></code>(3), <code><a href="/docs/linux/man/3-ex12bit/">ex12bit</a></code>(3) </p>
-<h2>Index</h2>

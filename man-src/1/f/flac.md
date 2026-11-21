@@ -268,4 +268,3 @@ description: "flac – Free Lossless Audio Codec"
 <p> The programs are documented fully by HTML format documentation, available in <i>/usr/share/doc/libflac-doc/html</i> on Debian GNU/Linux systems.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Matt Zimmerman &lt;mdz [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

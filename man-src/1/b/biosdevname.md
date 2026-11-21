@@ -53,4 +53,3 @@ description: "biosdevname – give BIOS-given name of a device"
 <h2>AUTHOR</h2>
 <p> biosdevname was written by Matt Domsch &lt;Matt_Domsch [at] dell.com&gt; </p>
 <p> This manual page was written by Rudy Gevaert &lt;Rudy.Gevaert [at] UGent.be&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

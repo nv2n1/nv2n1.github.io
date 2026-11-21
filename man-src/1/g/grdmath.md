@@ -2463,4 +2463,3 @@ gmt grdmath -R0/10/0/10 -I0.25 5 5 CDIST 2 MUL PI MUL 5 DIV STO@r COS @r SIN MUL
 <p> <code>gmt</code>, <code>gmtmath</code>, <code>grd2xyz</code>, <code>grdedit</code>, <code>grdinfo</code>, <code>xyz2grd</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

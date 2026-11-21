@@ -71,4 +71,3 @@ description: "rctest – RFCOMM testing"
 <p> Maxim Krasnyansky &lt;maxk [at] qualcomm.com&gt;, Marcel Holtmann &lt;marcel [at] holtmann.org&gt;, Filippo Giunchedi &lt;filippo [at] debian.org&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Free use of this software is granted under ther terms of the GNU Lesser General Public Licenses (LGPL). </p>
-<h2>Index</h2>

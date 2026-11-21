@@ -25,4 +25,3 @@ description: "pwdx – report current working directory of a process"
 <p> Nicholas Miell wrote pwdx in 2004.</p>
 <h2>REPORTING BUGS</h2>
 <p> Please send bug reports to </p>
-<h2>Index</h2>

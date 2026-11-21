@@ -271,4 +271,3 @@ url: "/docs/linux/man/1-variables/"
 <p> <i> g.gisenv, g.parser </i> </p>
 <p> <i>Last changed: $Date: 2008-04-15 19:10:05 +0200 (Tue, 15 Apr 2008) $</i> </p>
 <p> Help Index </p>
-<h2>Index</h2>

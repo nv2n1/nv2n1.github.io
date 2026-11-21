@@ -785,4 +785,3 @@ PrefixList mib_prefixes []</code></pre>
 </code></pre>
 <p> Definition at line 160 of file mib.c. </p>
 <p> Referenced by netsnmp_init_mib(), and netsnmp_sprint_realloc_objid_tree(). </p>
-<h2>Index</h2>

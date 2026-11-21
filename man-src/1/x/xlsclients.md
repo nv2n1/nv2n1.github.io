@@ -33,4 +33,3 @@ description: "xlsclients – list client applications running on a display"
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xwininfo/">xwininfo</a>(1), <a href="/docs/linux/man/1-xprop/">xprop</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Jim Fulton, MIT X Consortium </p>
-<h2>Index</h2>

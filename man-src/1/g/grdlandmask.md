@@ -65,4 +65,3 @@ gmt grdlandmask -R0/360/-90/90 -Dl -I1 -N0/1/2/3/4 -Glevels.nc -V
 <p> <code>gmt</code>, <code>grdmath</code>, <code>grdclip</code>, <code>psmask</code>, <code>psclip</code>, <code>pscoast</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

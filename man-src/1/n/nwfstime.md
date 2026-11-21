@@ -42,4 +42,3 @@ description: "nwfstime – Display / Set a NetWare server’s date and time"
 <dl>
 <dt>
 </dt><dd> With <code>-s,</code> nwfstime sets the file server&#8217;s date and time according to the local date and time.</dd></dl>
-<h2>Index</h2>

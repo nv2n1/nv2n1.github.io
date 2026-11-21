@@ -109,4 +109,3 @@ description: "fetchlog – fetch and convert new messages of a logfile"
 <p> If an regex error occurs during pattern matching this error is silently ignored and will be handled as non-match. </p>
 <h2>LEGAL</h2>
 <p> Nagios is a registered trademark of Ethan Galstad. </p>
-<h2>Index</h2>

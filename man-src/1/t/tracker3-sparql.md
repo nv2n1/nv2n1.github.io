@@ -289,4 +289,3 @@ ORDER BY ? date "
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-sql/">tracker3-sql</a></code>(1), <code><a href="/docs/linux/man/1-tracker3-info/">tracker3-info</a></code>(1). </p>
 <p> <code><a rel="nofollow" href="http://nepomuk.semanticdesktop.org/">http://nepomuk.semanticdesktop.org/</a></code> <code><a rel="nofollow" href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a></code> </p>
-<h2>Index</h2>

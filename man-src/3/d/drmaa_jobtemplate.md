@@ -155,4 +155,3 @@ int *size
 <h3>DRMAA_ERRNO_INVALID_ATTRIBUTE_VALUE</h3>
 <p> When there are no more entries in the vector. </p>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

@@ -44,4 +44,3 @@ description: "QuantLib::Schedule – Payment schedule."
 <p> <code>BermudanSwaption.cpp</code>, <code>Bonds.cpp</code>, <code>CallableBonds.cpp</code>, <code>CDS.cpp</code>, <code>ConvertibleBonds.cpp</code>, <code>FittedBondCurve.cpp</code>, <code>Repo.cpp</code>, and <code>swapvaluation.cpp</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

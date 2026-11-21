@@ -19,4 +19,3 @@ description: "krb5_find_padata krb5_padata_add – Kerberos 5 pre-authentication
 <p> Fn krb5_padata_add adds a pre-authentication data entry of type Fa type pointed out by Fa buf and Fa len to Fa md .</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) </p>
-<h2>Index</h2>

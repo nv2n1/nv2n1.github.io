@@ -18,4 +18,3 @@ description: "iv_main – enter the ivykis main loop"
 <p> Each thread that wants to use ivykis must individually call <code>iv_main</code> to enter the ivykis main loop &#8212; but only after having called <code>iv_init</code>(3) earlier.</p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_examples</code>(3), <code>iv_quit</code>(3) </p>
-<h2>Index</h2>

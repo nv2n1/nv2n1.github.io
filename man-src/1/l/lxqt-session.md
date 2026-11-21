@@ -42,4 +42,3 @@ description: "lxqt-session – Session manager of LXQt: The Lightweight Qt Deskt
 <p> <code>lxqt-policykit-agent.1</code> LXQt polkit authorization agent </p>
 <p> <code>lxqt-runner.1</code> LXQt application launcher by keyboard shortcut </p>
 <p> <code>lxqt-sudo.1</code> LXQt sudo/su GUI for application privilege elevation </p>
-<h2>Index</h2>

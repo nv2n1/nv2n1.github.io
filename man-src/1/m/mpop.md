@@ -354,4 +354,3 @@ description: "mpop – A POP3 client"
  Other authors are listed in the AUTHORS file in the source distribution.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-procmail/">procmail</a></code>(1), <code><a href="/docs/linux/man/1-spamassassin/">spamassassin</a></code>(1), <code><a href="/docs/linux/man/5-netrc/">netrc</a></code>(5) or <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1), <code><a href="/docs/linux/man/5-mbox/">mbox</a></code>(5), <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) </p>
-<h2>Index</h2>

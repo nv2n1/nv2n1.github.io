@@ -97,4 +97,3 @@ description: "flatpak-ps – Enumerate running instances"
 <p> <code>$ flatpak ps &#8211;columns=application,pid,runtime,runtime-branch</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-run/">flatpak-run</a></code>(1) </p>
-<h2>Index</h2>

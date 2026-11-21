@@ -51,4 +51,3 @@ description: "dpkg-name – rename Debian packages to full package names"
 <dd> This can be used when building new packages.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb/">deb</a></code>(5), <code><a href="/docs/linux/man/5-deb-control/">deb-control</a></code>(5), <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-deb/">dpkg-deb</a></code>(1), <code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code><a href="/docs/linux/man/1-xargs/">xargs</a></code>(1). </p>
-<h2>Index</h2>

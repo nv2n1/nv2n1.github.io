@@ -38,4 +38,3 @@ description: "ndctl-destroy-namespace – destroy the given namespace(s)"
 </dt><dd> Unless this option is specified the <i>destroy namespace</i> operation will fail if the namespace is presently active. Specifying &#8211;force causes the namespace to be disabled before the operation is attempted.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ndctl-create-namespace/">ndctl-create-namespace</a></code>(1) </p>
-<h2>Index</h2>

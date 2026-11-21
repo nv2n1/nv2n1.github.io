@@ -101,4 +101,3 @@ description: "acheck – Check common localization mistakes"
 <dt>Around line 196:</dt>
 <dd> You forgot a &#8216;=back&#8217; before &#8216;=head1&#8217; </dd>
 </dl>
-<h2>Index</h2>

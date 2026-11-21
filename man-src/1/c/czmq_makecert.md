@@ -40,4 +40,3 @@ Please add @selftest section in ../src/makecert.c.
 <dt>
 </dt><dd> mailto:zeromq-dev [at] lists.zeromq.org</dd></dl>
 </dl>
-<h2>Index</h2>

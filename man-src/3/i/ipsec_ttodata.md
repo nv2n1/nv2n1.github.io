@@ -68,4 +68,3 @@ description: "ipsec_ttodata, ipsec_datatot – convert binary data bytes from an
 <h2>BUGS</h2>
 <p> <i>Datatot</i> should have a format code to produce character-text output. </p>
 <p> The <code>0s</code> and <code>0t</code> prefixes are the author&#8217;s inventions and are not a standard of any kind. They have been chosen to avoid collisions with existing practice (some C implementations use <code>0b</code> for binary) and possible confusion with unprefixed hexadecimal. </p>
-<h2>Index</h2>

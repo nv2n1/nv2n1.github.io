@@ -153,4 +153,3 @@ msktutil-- create-- service host / hostname-- service host / hostname.example.co
 <p> This will create a computer account in Active Directory that is compatible with Samba. The command creates a new password, write out a new keytab, and ensure that it includes both &quot;host/hostname&quot; and &quot;host/hostname.example.com&quot; as service principals (which is equivalent to what setspn.exe -R would do on windows). The new computer password will be stored in Samba&#8217;s secrets.tdb database to provide interoperability with Samba. As Samba (version 3) only supports arcfour-encrypted Kerberos tickets the &#8211;enctypes option must be used to select only that encryption type.</p>
 <h2>AUTHOR</h2>
 <p> Ken Dreyer, Mark Pröhl, Olaf Flebbe </p>
-<h2>Index</h2>

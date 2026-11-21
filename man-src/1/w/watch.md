@@ -103,4 +103,3 @@ description: "watch – execute a program periodically, showing output fullscree
 <dt>
 </dt><dd> watch uname -r</dd></dl>
 <p> (Note that <code>-p</code> isn&#8217;t guaranteed to work across reboots, especially in the face of <code>ntpdate</code> (if present) or other bootup time-changing mechanisms) </p>
-<h2>Index</h2>

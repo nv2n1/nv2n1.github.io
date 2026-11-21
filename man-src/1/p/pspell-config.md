@@ -23,4 +23,3 @@ description: "pspell-config – prints information about a libpspell installatio
 <dd> displays the aspell package directory</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Brian Nelson &lt;pyro [at] debian.org&gt;. </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "atomic-unmount – Unmount Images/Containers"
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>HISTORY</h2>
 <p> June 2015, Originally compiled by William Temple (wtemple at redhat dot com) </p>
-<h2>Index</h2>

@@ -60,4 +60,3 @@ description: "slptool – SLP command line tool"
 </dt><dd>slptool deregister service:myserv.x://myhost.com</dd>
 <dt>
 </dt><dd>slptool getproperty net.slp.useScopes</dd></dl>
-<h2>Index</h2>

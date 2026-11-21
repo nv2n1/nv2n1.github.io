@@ -61,4 +61,3 @@ description: "mmpfb – creates single-master fonts from multiple master fonts"
 <p> The latest version is available from:<br />
  <a rel="nofollow" href="http://www.lcdf.org/type/">http://www.lcdf.org/type/</a> </p>
 <p> Thanks to Melissa O&#8217;Neill for suggestions and patient debugging. </p>
-<h2>Index</h2>

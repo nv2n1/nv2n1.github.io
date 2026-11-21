@@ -20,4 +20,3 @@ description: "auparse_get_num_fields – get the number of fields"
 <p> <code><a href="/docs/linux/man/3-auparse_next_record/">auparse_next_record</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

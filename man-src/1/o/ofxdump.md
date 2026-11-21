@@ -36,4 +36,3 @@ description: "ofxdump – Dump content of OFX files as human-readable text"
 <dt><code>&#8211;msg_status</code></dt>
 <dd> Output status messages (default=on) </dd>
 </dl>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ description: "Bglafile – a Module Access File Generator"
 <p> <a href="/docs/linux/man/1-bigloo/">bigloo</a>(1), <a href="/docs/linux/man/1-bgldepend/">bgldepend</a>(1), <a href="/docs/linux/man/1-bglmake/">bglmake</a>(1), <a href="/docs/linux/man/1-bglpp/">bglpp</a>(1), <a href="/docs/linux/man/1-bglprof/">bglprof</a>(1), <a href="/docs/linux/man/1-bgltags/">bgltags</a>(1) </p>
 <h2>AUTHOR</h2>
 <p> Manuel SERRANO, Manuel.Serrano [at] inria.fr </p>
-<h2>Index</h2>

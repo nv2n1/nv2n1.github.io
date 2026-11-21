@@ -19,4 +19,3 @@ description: "dirfile_parser_callback — set the syntax error callback handler 
 <p> This function always succeeds, and has no return value. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-dirfile_cbopen/">dirfile_cbopen</a></code>(3), <code><a href="/docs/linux/man/3-dirfile_include/">dirfile_include</a></code>(3), <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5) </p>
-<h2>Index</h2>

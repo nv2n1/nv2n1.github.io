@@ -72,4 +72,3 @@ description: "crmgr – administration utility for QDBM Curia"
 <h2>AUTHOR</h2>
 <p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
 <p> This manual page was written by Fumitoshi UKAI &lt;ukai [at] debian.or.jp&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

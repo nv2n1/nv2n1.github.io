@@ -90,4 +90,3 @@ url: "/docs/linux/man/5-shorewall6-nesting/"
 <dl>
 <dd> <p> <a rel="nofollow" href="http://www.shorewall.net/manpages6/shorewall6.conf.html">http://www.shorewall.net/manpages6/shorewall6.conf.html</a> </p>
  </dd></dl>
-<h2>Index</h2>

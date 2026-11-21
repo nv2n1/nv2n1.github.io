@@ -1666,4 +1666,3 @@ description: "perl561delta – what’s new for perl v5.6.1"
 <h2>HISTORY</h2>
 <p> Written by Gurusamy Sarathy &lt;<i>gsar [at] ActiveState.com</i>&gt;, with many contributions from The Perl Porters. </p>
 <p> Send omissions or corrections to &lt;<i>perlbug [at] perl.org</i>&gt;. </p>
-<h2>Index</h2>

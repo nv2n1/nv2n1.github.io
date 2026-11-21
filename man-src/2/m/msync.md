@@ -43,4 +43,3 @@ description: "msync – synchronize a file with a memory map"
 <p> B.O. Gallmeister, POSIX.4, O&#8217;Reilly, pp. 128-129 and 389-391.</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

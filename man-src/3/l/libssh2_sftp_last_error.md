@@ -19,4 +19,3 @@ description: "libssh2_sftp_last_error – return the last SFTP-specific error co
 <p> Current error code state of the SFTP instance. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_sftp_init/">libssh2_sftp_init</a>(3)</code> </p>
-<h2>Index</h2>

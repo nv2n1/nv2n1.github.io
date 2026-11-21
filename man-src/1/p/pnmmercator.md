@@ -46,4 +46,3 @@ description: "pnmmercator – transform a worldmap from rectangular projection t
 <p> <code>pnmmercator</code> was new in Netpbm 10.49 (December 2009). </p>
 <h2>AUTHORS</h2>
 <p> <i>Willem van Schaik</i> (of <code>pnmtopng</code>/<code>pngtopnm</code> fame) wrote this program in October 2009 and suggested it for inclusion in Netpbm. </p>
-<h2>Index</h2>

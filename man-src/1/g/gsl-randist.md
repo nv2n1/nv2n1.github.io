@@ -24,4 +24,3 @@ description: "gsl-randist – generate random samples from various distributions
 <h2>AUTHOR</h2>
 <p> <code>gsl-randist </code> was written by James Theiler and Brian Gough. Copyright 1996-2000; for copying conditions see the GNU General Public Licence. </p>
 <p> This manual page was added by the Dirk Eddelbuettel &lt;edd [at] debian.org&gt;, the Debian GNU/Linux maintainer for <code>GSL</code>. </p>
-<h2>Index</h2>

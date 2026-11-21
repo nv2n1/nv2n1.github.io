@@ -45,4 +45,3 @@ description: "cidlog – view Caller ID log file"
  Default: cidcall.log.new</dd></dl>
 <h2>SEE ALSO</h2>
 <p> ncidd.conf.5, ncidd.alias.5 </p>
-<h2>Index</h2>

@@ -60,4 +60,3 @@ description: "pamsumm – Summarize the samples in a Netpbm image arithmetically
 <p> <code><a href="/docs/linux/man/1-pamsumm/">pamsumm</a></code>(1) , <code>pam</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>pamsumm</code> was added to Netpbm in Release 10.21 (March 2004). </p>
-<h2>Index</h2>

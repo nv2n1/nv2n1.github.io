@@ -20,4 +20,3 @@ description: "docker-pause – Pause all processes within a container"
 <p> <code><a href="/docs/linux/man/1-docker-unpause/">docker-unpause</a>(1)</code> to unpause all processes within a container. </p>
 <h2>HISTORY</h2>
 <p> June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
-<h2>Index</h2>

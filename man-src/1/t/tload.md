@@ -33,4 +33,3 @@ description: "tload – graphic representation of system load average"
 <p> Branko Lankester, David Engel Michael K. Johnson</p>
 <h2>REPORTING BUGS</h2>
 <p> Please send bug reports to </p>
-<h2>Index</h2>

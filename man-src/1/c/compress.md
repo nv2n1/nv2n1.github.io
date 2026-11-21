@@ -37,4 +37,3 @@ description: "compress, uncompress, zcat – compress and expand data"
 <p> These warnings can be ignored. See the comments in compress42.c:compdir() in the source distribution for an explanation.</p>
 <h2>SEE ALSO</h2>
 <p> <code>pack</code>(1), <code>compact</code>(1) </p>
-<h2>Index</h2>

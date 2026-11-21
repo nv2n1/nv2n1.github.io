@@ -42,4 +42,3 @@ description: "flumotion-admin – streaming media server administration GUI"
 <p> Hopefully none. If you find any bugs, please report them at <a rel="nofollow" href="https://core.fluendo.com/trac/cgi-bin/trac.cgi">https://core.fluendo.com/trac/cgi-bin/trac.cgi</a> </p>
 <h2>SEE ALSO</h2>
 <p> <code>flumotion(1),<a href="/docs/linux/man/1-flumotion-worker/">flumotion-worker</a>(1),<a href="/docs/linux/man/1-flumotion-manager/">flumotion-manager</a>(1)</code> </p>
-<h2>Index</h2>

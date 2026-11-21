@@ -243,4 +243,3 @@ url: "/docs/linux/man/3-xcursorlibraryloadcursors/"
 <p> <code>Xcursor</code> will probably change radically in the future; weak attempts will be made to retain some level of source-file compatibility. </p>
 <h2>AUTHOR</h2>
 <p> Keith Packard </p>
-<h2>Index</h2>

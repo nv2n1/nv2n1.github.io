@@ -20,4 +20,3 @@ description: "psbbox.sh – Replace BoundingBox line in PostScript files by \"re
 <p> With the production of <code>ps2raster</code>, this script became obsolete.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-ps2raster/">ps2raster</a></i>(1) </p>
-<h2>Index</h2>

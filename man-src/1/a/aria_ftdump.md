@@ -27,4 +27,3 @@ description: "aria_ftdump – display full-text index information"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-myisam_ftdump/">myisam_ftdump</a>(1)</code> </p>
 <p> For more information, please refer to the MariaDB Knowledge Base, available online at <a rel="nofollow" href="https://mariadb.com/kb/">https://mariadb.com/kb/</a> </p>
-<h2>Index</h2>

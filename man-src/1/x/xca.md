@@ -30,4 +30,3 @@ description: "xca – X Certificate and key management A GUI for handling X509 c
 <p> A more detailed HTML documentation can be found in the doc directory, in the &quot;Help&quot; menu of the application or on <a rel="nofollow" href="http://xca.sf.net">http://xca.sf.net</a> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christian Hohnstaedt &lt;christian [at] hohnstaedt.de&gt; </p>
-<h2>Index</h2>

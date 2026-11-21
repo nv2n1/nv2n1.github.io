@@ -40,4 +40,3 @@ if shrinkfile -n -s 100m whey; then echo whey is way too big; fi
 <p> Written by Landon Curt Noll &lt;chongo [at] toad.com&gt; and Rich $alz &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-inn-conf/">inn.conf</a>(5) </p>
-<h2>Index</h2>

@@ -146,4 +146,3 @@ gmt gmt2kml contours.txt -Fl -Ccontours.cpt &gt; contours.kml
 <p> <code>gmt</code> , <code>gmt.conf</code>, <code>img2google</code>, <code>kml2gmt</code> , <code>psconvert</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

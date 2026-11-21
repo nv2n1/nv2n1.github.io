@@ -26,4 +26,3 @@ description: "ppdi – import ppd files (deprecated)"
 <p> <code><a href="/docs/linux/man/1-ppdc/">ppdc</a></code>(1), <code><a href="/docs/linux/man/1-ppdhtml/">ppdhtml</a></code>(1), <code><a href="/docs/linux/man/1-ppdmerge/">ppdmerge</a></code>(1), <code><a href="/docs/linux/man/1-ppdpo/">ppdpo</a></code>(1), <code><a href="/docs/linux/man/5-ppdcfile/">ppdcfile</a></code>(5), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2021-2022 by OpenPrinting. </p>
-<h2>Index</h2>

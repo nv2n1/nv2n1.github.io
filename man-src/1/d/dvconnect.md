@@ -53,4 +53,3 @@ description: "dvconnect – receive or transmit raw DV using the video1394 devic
 <h2>AUTHORS</h2>
 <p> <code>dvconnect</code> was written by Peter Schlaile &lt;udbz [at] rz.uni-karlsruhe.de&gt;. </p>
 <p> This manual page is based on dvconnect&#8217;s help message and was written by Dan Dennedy &lt;dan [at] dennedy.org&gt;. </p>
-<h2>Index</h2>

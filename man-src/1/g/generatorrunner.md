@@ -57,4 +57,3 @@ description: "generatorrunner – plugin-based binding source code generator"
 </dl>
 <h2>AUTHORS</h2>
 <p> Lauro Moura &lt;lauro.neto at openbossa dot org&gt;, Bruno Araujo &lt;bruno.araujo at openbossa dot org&gt;, Hugo Lima &lt;hugo.lima at openbossa dot org&gt; </p>
-<h2>Index</h2>

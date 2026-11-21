@@ -70,4 +70,3 @@ description: "systemd-machine-id-setup – Initialize the machine ID in /etc/mac
 <dt>
 </dt><dd> <a rel="nofollow" href="https://systemd.io/CONTAINER_INTERFACE">https://systemd.io/CONTAINER_INTERFACE</a></dd></dl>
 </dl>
-<h2>Index</h2>

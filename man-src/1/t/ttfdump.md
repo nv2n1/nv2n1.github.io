@@ -101,4 +101,3 @@ description: "ttfdump – Dumping the contents of a TrueType Font file"
 <p> Instruction disassembler in not implemented.</p>
 <h2>AUTHOR</h2>
 <p> Li-Da Lho, ollie [at] ms1.hinet.net </p>
-<h2>Index</h2>

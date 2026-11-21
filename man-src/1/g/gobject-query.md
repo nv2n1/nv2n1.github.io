@@ -55,4 +55,3 @@ description: "gobject-query – display a tree of types"
 <dl>
 <dt>
 </dt><dd> Print version and exit.</dd></dl>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ description: "gtk3-demo – Demonstrate GTK+ widgets"
 <dl>
 <dt>
 </dt><dd> Quit after a short timeout. This is intended for use with <code>&#8211;run</code>, e.g. when profiling.</dd></dl>
-<h2>Index</h2>

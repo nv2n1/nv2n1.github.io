@@ -142,4 +142,3 @@ S2 - *-symbol -
  David Slattengren (Berkeley)<br />
  Malcom Slaney (Schlumberger Palo Alto Research)<br />
  Mark Moraes (University of Toronto) </p>
-<h2>Index</h2>

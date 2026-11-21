@@ -53,4 +53,3 @@ description: "Artha – An cross-platform thesaurus based on WordNet"
 <p> Artha has a World Wide Web site at <code><a rel="nofollow" href="http://artha.sourceforge.net">http://artha.sourceforge.net</a></code>. From this web site users can know more about the Artha project and also download its source and binary distributions for various distros.</p>
 <h2>AUTHOR</h2>
 <p> Sundaram Ramaswamy &lt;legends2k [at] yahoo.com&gt; </p>
-<h2>Index</h2>

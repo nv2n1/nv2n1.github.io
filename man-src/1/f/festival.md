@@ -57,4 +57,3 @@ description: "festival – a text-to-speech system."
  80 South Bridge<br />
  Edinburgh EH1 1HN<br />
  <a rel="nofollow" href="http://www.cstr.ed.ac.uk/projects/festival.html">http://www.cstr.ed.ac.uk/projects/festival.html</a> </p>
-<h2>Index</h2>

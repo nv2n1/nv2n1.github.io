@@ -52,4 +52,3 @@ httpcfg -add -port 8081 -pvk myfile.pvk -cert MyCert
 <pre>
 <a rel="nofollow" href="http://www.drh-consultancy.demon.co.uk/pvk.html">http://www.drh-consultancy.demon.co.uk/pvk.html</a>
 </pre>
-<h2>Index</h2>

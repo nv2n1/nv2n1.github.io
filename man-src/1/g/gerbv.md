@@ -126,4 +126,3 @@ Copyright &#169;  2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 Stefan Petersen
 This document can be freely redistributed according to the terms of the 
 GNU General Public License version 2.0
 </pre>
-<h2>Index</h2>

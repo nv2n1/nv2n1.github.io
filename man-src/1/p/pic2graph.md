@@ -37,4 +37,3 @@ description: "pic2graph – convert a PIC diagram into a cropped image"
 <h2>SEE ALSO</h2>
 <p> W. Richard Stevens, <i>Turning PIC into HTML</i> </p>
 <p> <i><a href="/docs/linux/man/1-eqn2graph/">eqn2graph</a></i>(1), <i><a href="/docs/linux/man/1-grap2graph/">grap2graph</a></i>(1), <i><a href="/docs/linux/man/1-pic/">pic</a></i>(1), <i><a href="/docs/linux/man/1-eqn/">eqn</a></i>(1), <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1), <i><a href="/docs/linux/man/1-convert/">convert</a></i>(1) </p>
-<h2>Index</h2>

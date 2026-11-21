@@ -20,4 +20,3 @@ description: "pstex2eps – Generate EPS file from PLplot pstex driver generated
 <p> The PLplot package at <a rel="nofollow" href="http://plplot.sf.net">http://plplot.sf.net</a></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Rafael Laboissiere &lt;rafael [at] debian.org&gt;. </p>
-<h2>Index</h2>

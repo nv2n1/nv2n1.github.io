@@ -20,4 +20,3 @@ description: "libssh2_channel_window_write_ex – Check the status of the write 
 <h2>ERRORS</h2>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_window_read_ex/">libssh2_channel_window_read_ex</a>(3),</code> <code><a href="/docs/linux/man/3-libssh2_channel_receive_window_adjust/">libssh2_channel_receive_window_adjust</a>(3)</code> </p>
-<h2>Index</h2>

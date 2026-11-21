@@ -91,4 +91,3 @@ description: "flatpak-info – Show information about an installed application o
 <p> <code>$ tree `flatpak info -l org.gnome.Builder//master`/files</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-install/">flatpak-install</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-update/">flatpak-update</a></code>(1) </p>
-<h2>Index</h2>

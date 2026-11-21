@@ -25,4 +25,3 @@ description: "krb5plugin_db_ftable_desc –"
 <p> The init entry point is expected to call heim_db_register(). The fini entry point is expected to do nothing. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
-<h2>Index</h2>

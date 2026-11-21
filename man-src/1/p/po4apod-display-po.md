@@ -34,4 +34,3 @@ description: "po4apod-display-po – man display of a translated POD file accord
 <p> <code><a href="/docs/linux/man/1-po4aman-display-po/">po4aman-display-po</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Florentin Duneau </p>
-<h2>Index</h2>

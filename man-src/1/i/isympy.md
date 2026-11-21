@@ -75,4 +75,3 @@ description: "isympy – interactive shell for SymPy"
 <p> The upstreams BTS can be found at &lt;<a rel="nofollow" href="https://github.com/sympy/sympy/issues">https://github.com/sympy/sympy/issues</a>&gt; Please report all bugs that you find in there, this will help improve the overall quality of SymPy.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ipython/">ipython</a></code>(1), <code><a href="/docs/linux/man/1-python/">python</a></code>(1) </p>
-<h2>Index</h2>

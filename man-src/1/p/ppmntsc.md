@@ -37,4 +37,3 @@ description: "ppmntsc – make a portable pixmap look like taken from an America
 <p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code>ppmdepth</code>(1), <code><a href="/docs/linux/man/1-ppmdim/">ppmdim</a></code>(1), <code><a href="/docs/linux/man/1-ppmbrighten/">ppmbrighten</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Wes Barris, Minnesota Supercomputer Center, Inc., Bryan Henderson </p>
-<h2>Index</h2>

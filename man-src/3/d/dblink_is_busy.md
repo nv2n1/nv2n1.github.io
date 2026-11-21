@@ -30,4 +30,3 @@ dblink_is_busy(text connname) returns int
 SELECT dblink_is_busy('dtest1');
 </pre>
 </dd></dl>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ description: "metalink_chunk_checksum_t – The structure that holds piece hashe
 <p> Null terminated array of pointer of <code><a href="/docs/linux/man/3-metalink_piece_hash_t/">metalink_piece_hash_t</a></code>(3) structure. They are ordered so that a pointer to <code><a href="/docs/linux/man/3-metalink_piece_hash_t/">metalink_piece_hash_t</a></code>(3) of <i>i</i>th piece can be accessed by piece_hashes[<i>i</i>]. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-metalink_parse_file/">metalink_parse_file</a></code>(3), <code><a href="/docs/linux/man/3-metalink_piece_hash_t/">metalink_piece_hash_t</a></code>(3) </p>
-<h2>Index</h2>

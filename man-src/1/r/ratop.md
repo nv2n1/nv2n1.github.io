@@ -124,4 +124,3 @@ description: "ratop – display and update sorted network flow data"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-rarc/">rarc</a>(5) <a href="/docs/linux/man/1-racluster/">racluster</a>(1) racluster.conf(5) </p>
-<h2>Index</h2>

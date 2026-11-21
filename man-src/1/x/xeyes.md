@@ -49,4 +49,3 @@ description: "xeyes – a follow the mouse X demo"
 <h2>AUTHOR</h2>
 <p> Keith Packard, MIT X Consortium<br />
  Copied from the NeWS version written (apparently) by Jeremy Huxtable as seen at SIGGRAPH &#8217;88 </p>
-<h2>Index</h2>

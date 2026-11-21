@@ -24,4 +24,3 @@ description: "rrdrestore – Restore the contents of an RRD from its XML dump fo
 <dd> Allows <code>RRDtool</code> to overwrite the destination <font SIZE="-1"><code>RRD</code></font>.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>

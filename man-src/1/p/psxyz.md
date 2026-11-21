@@ -285,4 +285,3 @@ gmt psxyz heights.xyz -R0/10/0/10/0/100 -Jx1.25c -Jz0.125c -So1.25c \
 <p> <code>gmt</code>, <code>gmt.conf</code>, <code>gmtcolors</code>, <code>psbasemap</code>, <code>psxy</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

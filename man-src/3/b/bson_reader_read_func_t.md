@@ -34,4 +34,3 @@ typedef ssize_t (*bson_reader_read_func_t)(void *handle,
 <p> A value greater than zero for the number of bytes read into <code>buf</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

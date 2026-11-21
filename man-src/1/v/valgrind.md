@@ -1217,4 +1217,3 @@ PROGRESS: U 130s, W 134s, 97.0% CPU, EvC 574.90M, TIn 657.5k, TOut 3.0k, #thr 63
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.valgrind.org/docs/manual/cg-manual.html">http://www.valgrind.org/docs/manual/cg-manual.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

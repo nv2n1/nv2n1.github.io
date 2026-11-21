@@ -107,4 +107,3 @@ description: "webpmux – command line tool to create WebP Mux/container file."
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dwebp/">dwebp</a></code>(1), <code><a href="/docs/linux/man/1-cwebp/">cwebp</a></code>(1), <code><a href="/docs/linux/man/1-gif2webp/">gif2webp</a></code>(1).<br />
  Please refer to <a rel="nofollow" href="http://developers.google.com/speed/webp/">http://developers.google.com/speed/webp/</a> for additional information. </p>
-<h2>Index</h2>

@@ -39,4 +39,3 @@ description: "nasl – Nessus Attack Scripting Language"
 <p> The parser was completely hand-written and a pain to work with. In Mid-2002, Michel Arboi wrote a bison parser for NASL, and he and Renaud Deraison re-wrote NASL from scratch. Although the &quot;new&quot; NASL was nearly working as early as August 2002, Michel&#8217;s lazyness made us wait for early 2003 to have it working completely. </p>
 <h2>AUTHOR</h2>
 <p> Most of the engine is (C) 2003 Michel Arboi, most of the built-in functions are (C) 2003 Renaud Deraison </p>
-<h2>Index</h2>

@@ -73,4 +73,3 @@ description: "euca-describe-vpn-connections – Show information about VPN conne
 <dt>vpn-gateway-id</dt>
 <dd> ID of the connected virtual private gateway </dd>
 </dl>
-<h2>Index</h2>

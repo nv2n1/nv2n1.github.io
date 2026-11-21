@@ -37,4 +37,3 @@ description: "fusermount3 – mount and unmount FUSE filesystems"
 <p> FUSE is currently maintained by Nikolaus Rath &lt;Nikolaus [at] rath.org&gt; </p>
 <p> The original author of FUSE is Miklos Szeredi &lt;<i>miklos [at] szeredi.hu</i>&gt;. </p>
 <p> This manual page was originally written by Daniel Baumann &lt;<i>daniel.baumann [at] progress-technologies.net</i>&gt;. </p>
-<h2>Index</h2>

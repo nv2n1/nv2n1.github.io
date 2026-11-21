@@ -168,4 +168,3 @@ description: "ps2eps – convert PostScript to EPS (Encapsulated PostScript) fil
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2009 Roland Bless </p>
-<h2>Index</h2>

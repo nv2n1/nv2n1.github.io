@@ -87,4 +87,3 @@ description: "translate – translate a text or web page"
 <p> The libtranslate Reference Manual </p>
 <h2>AUTHOR</h2>
 <p> Jean-Yves Lefort. </p>
-<h2>Index</h2>

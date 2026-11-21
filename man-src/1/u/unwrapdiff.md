@@ -39,4 +39,3 @@ description: "unwrapdiff – demangle word-wrapped patches"
 <dl>
 <dt>
 </dt><dd> Package maintainer</dd></dl>
-<h2>Index</h2>

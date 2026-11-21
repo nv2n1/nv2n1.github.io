@@ -56,4 +56,3 @@ $HOME/mail/quarantine
 <p> Jan ONDREJ (SAL) &lt;ondrejj (at) salstar.sk&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-sgscan/">sgscan</a>(1), <a href="/docs/linux/man/8-sagator/">sagator</a>(8), <a href="/docs/linux/man/8-sqback/">sqback</a>(8) </p>
-<h2>Index</h2>

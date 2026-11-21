@@ -40,4 +40,3 @@ description: "jmtpfs – FUSE based MTP filesystem"
 <p> Copyright &#169; 2012 Jason &quot;J&quot; Ferrara <a rel="nofollow" href="http://research.jacquette.com/">http://research.jacquette.com/</a> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was originally written by Malcolm J Lewis &lt;malcolmlewis [at] opensuse.org&gt; for the openSUSE project. </p>
-<h2>Index</h2>

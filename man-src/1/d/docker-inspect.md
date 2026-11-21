@@ -295,4 +295,3 @@ $ docker inspect ded7cd95e059
 <p> <code>&#8211;type</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Return JSON for specified type</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code> </p>
-<h2>Index</h2>

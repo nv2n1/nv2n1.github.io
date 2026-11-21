@@ -17,4 +17,3 @@ description: "garmin_save_runs – retrieve track logs from a Forerunner device.
 <p> <code><a href="/docs/linux/man/1-garmin_get_info/">garmin_get_info</a></code>(1), <code><a href="/docs/linux/man/1-garmin_dump/">garmin_dump</a></code>(1), <code><a href="/docs/linux/man/1-garmin_gmap/">garmin_gmap</a></code>(1). </p>
 <h2>AUTHOR</h2>
 <p> garmin_save_runs was written by Dave Bailey. </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "afpfsd – Daemon to manage AFP sessions for the afpfs-ng FUSE cli
 <p> <code>-f|&#8211;debug</code> puts the daemon in the foreground and dumps logs to stdout </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-afp_client/">afp_client</a></code>(1), <code><a href="/docs/linux/man/1-mount_afp/">mount_afp</a></code>(1) </p>
-<h2>Index</h2>

@@ -43,4 +43,3 @@ description: "gopen – open files"
 <p> <code>gopen</code> was written November 2001. This manual page was first written July 2003.</p>
 <h2>AUTHORS</h2>
 <p> <code>gopen </code> was written by Gregory Casamento &lt;greg_casamento [at] yahoo.com&gt;. This man page was written by Martin Brecher &lt;martin [at] mb-itconsulting.com&gt;. </p>
-<h2>Index</h2>

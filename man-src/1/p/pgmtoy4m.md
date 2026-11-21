@@ -50,4 +50,3 @@ cat *.pgm | pgmtoy4m -r 30000:1001 -i t | yuvplay
 <p> This manpage was written by Steven Schultz (sms at 2bsd dot com).</p>
 <h2>BUGS</h2>
 <p> Possible but none known at the present time. </p>
-<h2>Index</h2>

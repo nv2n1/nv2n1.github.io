@@ -20,4 +20,3 @@ description: "apple_rm – Do an apple remove, remove metadata and resource fork
 <p> Report bugs to the Netatalk-devel list &lt;netatalk-devel [at] lists.sourceforge.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-apple_cp/">apple_cp</a></code>(1), <code><a href="/docs/linux/man/1-apple_mv/">apple_mv</a></code>(1). </p>
-<h2>Index</h2>

@@ -79,4 +79,3 @@ description: "y4mcolorbars – Create a YUV4MPEG2 stream containing a colorbar t
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a></code>(1), <code><a href="/docs/linux/man/1-y4mscaler/">y4mscaler</a></code>(1), <code><a href="/docs/linux/man/1-yuv2lav/">yuv2lav</a></code>(1), <code><a href="/docs/linux/man/1-yuvplay/">yuvplay</a></code>(1) </p>
-<h2>Index</h2>

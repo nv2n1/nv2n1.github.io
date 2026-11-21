@@ -16,4 +16,3 @@ description: "midi_pos – Stores the current position in the MIDI file. Allegro
 <p> Stores the current position (beat number) in the MIDI file, or contains a negative number if no music is currently playing. Useful for synchronising animations with the music, and for checking whether a MIDI file has finished playing. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-play_midi/">play_midi</a></code>(3), <code><a href="/docs/linux/man/3-midi_msg_callback/">midi_msg_callback</a></code>(3), <code><a href="/docs/linux/man/3-exmidi/">exmidi</a></code>(3) </p>
-<h2>Index</h2>

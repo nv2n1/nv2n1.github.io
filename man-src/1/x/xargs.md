@@ -124,4 +124,3 @@ description: "xargs – build and execute command lines from standard input"
 <p> <code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-locate/">locate</a></code>(1), <code>updatedb</code>(1), <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), <code><a href="/docs/linux/man/3-execvp/">execvp</a></code>(3), <code>locatedb</code>(5), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/findutils/xargs">https://www.gnu.org/software/findutils/xargs</a>&gt;<br />
  or available locally via: <code>info xargs</code> </p>
-<h2>Index</h2>

@@ -97,4 +97,3 @@ ogrlineref[--help - general][-progress][-quiet]
 </pre>
 <h2>AUTHORS</h2>
 <p> Dmitry Baryshnikov polimax [at] mail.ru </p>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ description: "urxvt256cc – control the urxvt256cd daemon"
 <dd> Both urxvt256cc and urxvt256cd use the environment variable <i></i><font SIZE="-1"><i>RXVT_SOCKET</i></font><i></i> to create a listening socket and to contact the urxvt256cd, respectively. If the variable is missing, <i></i>$HOME<i>/.urxvt/urxvtd-&lt;nodename&gt;</i> is used. The variable must specify the absolute path of the socket to create.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-urxvt256c/">urxvt256c</a>(7), <a href="/docs/linux/man/1-urxvt256cd/">urxvt256cd</a>(1) </p>
-<h2>Index</h2>

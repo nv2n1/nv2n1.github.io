@@ -40,4 +40,3 @@ description: "pinentry-curses – PIN or pass-phrase entry dialog for GnuPG"
 <p> should give you access to the complete manual.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Peter Eisentraut for the Debian project. </p>
-<h2>Index</h2>

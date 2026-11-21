@@ -43,4 +43,3 @@ gs2.set_cursor_drawer(tmp_cd);
 <p> The default cursor drawer is &#8216;cd_winconsole&#8217;. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-gstream-set_cursor_dimensions/">gstream-set_cursor_dimensions</a></code>(3), <code>gstream-get_cursor_drawer</code>(3), <code><a href="/docs/linux/man/3-gstream-cd_winconsole/">gstream-cd_winconsole</a></code>(3) </p>
-<h2>Index</h2>

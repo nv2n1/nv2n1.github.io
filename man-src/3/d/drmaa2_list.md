@@ -51,4 +51,3 @@ long drmaa2_list_size(const drmaa2_list l);
 <dt><code>drmaa2_list_size</code>()</dt>
 <dd> Returns the number of elements in the list. If the list is empty, then the function returns 0, which SHALL NOT be treated as an error case.</dd></dl>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

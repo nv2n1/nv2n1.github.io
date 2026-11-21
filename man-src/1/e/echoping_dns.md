@@ -29,4 +29,3 @@ description: "echoping_dns – echoping plugin which queries a DNS server"
 <p> <code><a href="/docs/linux/man/1-echoping/">echoping</a></code>(1),</p>
 <h2>AUTHOR</h2>
 <p> Stephane Bortzmeyer &lt;bortz [at] users.sourceforge.net&gt; </p>
-<h2>Index</h2>

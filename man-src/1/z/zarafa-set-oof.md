@@ -42,4 +42,3 @@ description: "zarafa-set-oof – Control a user’s out of office settings."
 </dt><dd> The contents of this file will be used as plain text body in the oof email.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Zarafa. </p>
-<h2>Index</h2>

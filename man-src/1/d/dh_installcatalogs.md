@@ -31,4 +31,3 @@ description: "dh_installcatalogs – install and register SGML Catalogs"
 <p> <i>/usr/share/doc/sgml-base-doc/</i></p>
 <h2>AUTHOR</h2>
 <p> Adam Di Carlo &lt;aph [at] debian.org&gt; </p>
-<h2>Index</h2>

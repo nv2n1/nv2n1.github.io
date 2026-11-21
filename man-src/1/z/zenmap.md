@@ -57,4 +57,3 @@ description: "zenmap – Graphical Nmap frontend and results viewer"
 <p> Hundreds of people have made valuable contributions to Nmap over the years. These are detailed in the CHANGELOG file which is distributed with Nmap and also available from m[blue]<code><a rel="nofollow" href="http://nmap.org/changelog.html">http://nmap.org/changelog.html</a></code>m[].</p>
 <h3>Umit</h3>
 <p> Zenmap is derived from the Umit Nmap frontend, which was started by Adriano Monteiro Marques as an Nmap/Google Summer of Code project (&lt;py.adriano [at] gmail.com&gt;, m[blue]<code><a rel="nofollow" href="http://www.umitproject.org">http://www.umitproject.org</a></code>m[]). </p>
-<h2>Index</h2>

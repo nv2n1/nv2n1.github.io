@@ -25,4 +25,3 @@ Refer to this file for more information.
 <p> There is currently no specific mechanism around error handling.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libnutclient_devices/">libnutclient_devices</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_commands/">libnutclient_commands</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_general/">libnutclient_general</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_misc/">libnutclient_misc</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_tcp/">libnutclient_tcp</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_variables/">libnutclient_variables</a></code>(3) </p>
-<h2>Index</h2>

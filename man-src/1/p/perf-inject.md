@@ -43,4 +43,3 @@ description: "perf-inject – Filter to augment the events stream with additiona
 </dt><dd> kallsyms pathname</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1), <code><a href="/docs/linux/man/1-perf-archive/">perf-archive</a></code>(1) </p>
-<h2>Index</h2>

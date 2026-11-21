@@ -86,4 +86,3 @@ $ <code>bogoupgrade -d ~/.bogofilter.safe</code>
 <dt>
 </dt><dd> <a rel="nofollow" href="http://bogofilter.sourceforge.net/">http://bogofilter.sourceforge.net/</a></dd></dl>
 </dl>
-<h2>Index</h2>

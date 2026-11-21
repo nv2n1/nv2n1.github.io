@@ -771,4 +771,3 @@ dvisvgm:
 <p> Written by Martin Gieseking &lt;m[blue]<code>martin.gieseking [at] uos.de</code>m[]&gt;</p>
 <h2>COPYING</h2>
 <p> Copyright &#169; 2005-2022 Martin Gieseking. Free use of this software is granted under the terms of the GNU General Public License (GPL) version 3 or, (at your option) any later version. </p>
-<h2>Index</h2>

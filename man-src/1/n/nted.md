@@ -18,4 +18,3 @@ description: "NtEd – A WYSIWYG Musical Score Editor"
 <h2>AUTHOR</h2>
 <p> NtEd was written by J[:o]rg Anders. </p>
 <p> This manual page was written by Gilles Filippini &lt;gilles.filippini [at] free.fr&gt; and J[:o]rg Anders &lt;ja [at] informatik.tu-chemnitz.de&gt; </p>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ description: "sfparse – string file parse"
 </dl>
 <h2>AUTHORS</h2>
 <p> <code>sfparse</code> was written by Richard Frith-Macdonald &lt;rfm [at] gnu.org&gt; </p>
-<h2>Index</h2>

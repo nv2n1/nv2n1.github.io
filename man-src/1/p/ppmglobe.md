@@ -45,4 +45,3 @@ description: "ppmglobe – generate strips to glue onto a sphere"
 <p> It is derived from Max Gensthaler&#8217;s <code>ppmglobemap</code>. </p>
 <h2>AUTHORS</h2>
 <p> <i>Max Gensthaler</i> wrote a program he called <code>ppmglobemap</code> in June 2003 and suggested it for inclusion in Netpbm. Bryan Henderson modified the code slightly and included it in Netpbm as <code>ppmglobe</code>. </p>
-<h2>Index</h2>

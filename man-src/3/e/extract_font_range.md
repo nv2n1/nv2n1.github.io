@@ -30,4 +30,3 @@ destroy_font(fontcopy);
 <p> Returns a pointer to the new font or NULL on error. Remember that you are responsible for destroying the font when you are finished with it to avoid memory leaks. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_font_range_begin/">get_font_range_begin</a></code>(3), <code><a href="/docs/linux/man/3-get_font_range_end/">get_font_range_end</a></code>(3), <code><a href="/docs/linux/man/3-merge_fonts/">merge_fonts</a></code>(3), <code><a href="/docs/linux/man/3-transpose_font/">transpose_font</a></code>(3), <code><a href="/docs/linux/man/3-exfont/">exfont</a></code>(3) </p>
-<h2>Index</h2>

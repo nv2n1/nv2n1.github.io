@@ -245,4 +245,3 @@ X = 'c'-&gt;#lines of code
 <p> The cloc program was written by Al Danial &lt;al.danial [at] gmail.com&gt; and is Copyright (C) 2006-2016 &lt;al.danial [at] gmail.com&gt;. </p>
 <p> The manual page was originally written by Jari Aalto &lt;jari.aalto [at] cante.net&gt;. </p>
 <p> Both the code and documentation is released under the <font SIZE="-1">GNU GPL</font> version 2 or (at your option) any later version. For more information about license, visit &lt;<a rel="nofollow" href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a>&gt;. </p>
-<h2>Index</h2>

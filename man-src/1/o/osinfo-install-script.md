@@ -62,4 +62,3 @@ description: "osinfo-install-script – generate a script for automated installa
 <p> Copyright (C) 2012 Red Hat, Inc.</p>
 <h2>LICENSE</h2>
 <p> <tt>&quot;osinfo-install-script&quot;</tt> is distributed under the termsof the <font SIZE="-1">GNU LGPL</font> v2 license. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font> </p>
-<h2>Index</h2>

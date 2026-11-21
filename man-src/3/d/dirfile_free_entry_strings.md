@@ -23,4 +23,3 @@ description: "dirfile_free_entry_strings — free strings in a GetData gd_entry_
 <p> This function is provided as a convenience only. Callers may free strings allocated by <code><a href="/docs/linux/man/3-get_entry/">get_entry</a></code>(3) themselves by simply calling <code><a href="/docs/linux/man/3-free/">free</a></code>(3) on the appropriate members for the given entry type, if they prefer to do so.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_entry/">get_entry</a></code>(3), <code><a href="/docs/linux/man/3-free/">free</a></code>(3) </p>
-<h2>Index</h2>

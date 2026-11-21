@@ -63,4 +63,3 @@ description: "gendlib – perl library for querying genders file"
 </dt><dd> Performs the inverse of the to_altnames() function. Just like to_altnames(), an input hostname is preserved in the output if it cannot be converted.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-nodeattr/">nodeattr</a>(1), <a href="/docs/linux/man/3-libgenders/">libgenders</a>(3), <a href="/docs/linux/man/3-libgenders/">Libgenders</a>(3) </p>
-<h2>Index</h2>

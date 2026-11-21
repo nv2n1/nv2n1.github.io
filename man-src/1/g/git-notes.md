@@ -225,4 +225,3 @@ $ git notes --ref=built add --allow-empty -C &quot;$blob&quot; HEAD
 <dt> 1.</dt>
 <dd> Permitted pathnames have the form <i>bf</i><code>/</code><i>fe</i><code>/</code><i>30</i><code>/</code><i>&#8230;</i><code>/</code><i>680d5a&#8230;</i>: a sequence of directory names of two hexadecimal digits each followed by a filename with the rest of the object ID. </dd>
 </dl>
-<h2>Index</h2>

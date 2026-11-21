@@ -33,4 +33,3 @@ description: "dh_systemd_start – start/stop/restart systemd unit files"
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7)</p>
 <h2>AUTHORS</h2>
 <p> pkg-systemd-maintainers [at] lists.alioth.debian.org </p>
-<h2>Index</h2>

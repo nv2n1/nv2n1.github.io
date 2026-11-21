@@ -27,4 +27,3 @@ description: "rawtoppm – convert raw RGB bytes into a portable pixmap"
 <p> <a href="/docs/linux/man/5-ppm/">ppm</a>(5), <a href="/docs/linux/man/1-rawtopgm/">rawtopgm</a>(1), <a href="/docs/linux/man/1-rgb3toppm/">rgb3toppm</a>(1), <a href="/docs/linux/man/1-pnmflip/">pnmflip</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Jef Poskanzer. </p>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ description: "pilot-reminders – Exports your Palm Datebook database into a rem
 <p>&nbsp;<wbr><i><a rel="nofollow" href="http://www.roaringpenguin.com/penguin/open_source_remind.php">http://www.roaringpenguin.com/penguin/open_source_remind.php</a></i>&nbsp;<wbr> </p>
 <p>&nbsp;<wbr><i><a href="/docs/linux/man/7-pilot-link/">pilot-link</a></i>(7) </p>
 <p>&nbsp;<wbr><i>remind</i>(1) </p>
-<h2>Index</h2>

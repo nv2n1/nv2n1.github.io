@@ -20,4 +20,3 @@ description: "auparse_goto_field_num – move field cursor to specific field"
 <p> <code><a href="/docs/linux/man/3-auparse_get_field_num/">auparse_get_field_num</a></code>(3),<code><a href="/docs/linux/man/3-auparse_goto_record_num/">auparse_goto_record_num</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

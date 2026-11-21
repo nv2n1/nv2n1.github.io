@@ -80,4 +80,3 @@ description: "prelude-manager – Collects and normalize events."
 <p> This man page hadn&#8217;t been proof-read yet. </p>
 <h2>SEE ALSO</h2>
 <p> prelude-adduser(1) </p>
-<h2>Index</h2>

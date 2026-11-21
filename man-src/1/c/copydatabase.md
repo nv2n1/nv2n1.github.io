@@ -22,4 +22,3 @@ description: "copydatabase – Perform a document-by-document copy of one or mor
 <dt><code>&#8211;version</code></dt>
 <dd> output version information and exit </dd>
 </dl>
-<h2>Index</h2>

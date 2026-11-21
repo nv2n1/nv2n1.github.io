@@ -19,4 +19,3 @@ description: "bspatch – apply a patch built with"
 <p> <a href="/docs/linux/man/1-bsdiff/">bsdiff</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> An Colin Percival Aq cperciva [at] freebsd.org </p>
-<h2>Index</h2>

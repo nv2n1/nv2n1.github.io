@@ -29,4 +29,3 @@ description: "Return Flags –"
 <p> Received Limited Proxy Flag. If the proxy received is a limited proxy, this flag will be set in the returned context flags (ret_flags)</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gssapi_gsi from the source code. </p>
-<h2>Index</h2>

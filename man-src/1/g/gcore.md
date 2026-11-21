@@ -25,4 +25,3 @@ description: "gcore – Generate core files for running processes"
 <p> Permission is granted to copy and distribute translations of this manual into another language, under the above conditions for modified versions, except that this permission notice may be included in translations approved by the Free Software Foundation instead of in the original English.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <code><a href="/docs/linux/man/5-core/">core</a></code>(5) </p>
-<h2>Index</h2>

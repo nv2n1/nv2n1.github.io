@@ -39,4 +39,3 @@ description: "mate-session-inhibit – inhibit mate-session functionality"
 </dt><dd> ARG specifies the things to inhibit, as a colon-separated list. The possible values are logout, switch-user, suspend, idle, automount. If this option is used more than once, the values are combined. If this option is not specified, &quot;idle&quot; is assumed.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></code>(1) </p>
-<h2>Index</h2>

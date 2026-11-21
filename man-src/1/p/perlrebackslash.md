@@ -337,4 +337,3 @@ description: "perlrebackslash – Perl Regular Expression Backslash Sequences an
  &quot;\r\n&quot; =~ /^\R$/; # Match, \r\n is a generic newline.
  &quot;P\x{307}&quot; =~ /^\X$/ # \X matches a P with a dot above.
 </code></pre>
-<h2>Index</h2>

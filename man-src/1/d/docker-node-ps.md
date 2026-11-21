@@ -22,4 +22,3 @@ description: "docker-node-ps – List tasks running on one or more nodes, defaul
 <p> <code>-q</code>, <code>&#8211;quiet</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Only display task IDs</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-node/">docker-node</a>(1)</code> </p>
-<h2>Index</h2>

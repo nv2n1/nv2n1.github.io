@@ -1260,4 +1260,3 @@ transcode -i file.avi -J pv=cache=30 --socket /tmp/sock
  &lt;ostreich [at] theorie.physik.uni-goettingen.de&gt; with contributions from many others. See AUTHORS for details. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1), <code><a href="/docs/linux/man/1-transcode_import/">transcode_import</a></code>(1), <code><a href="/docs/linux/man/1-transcode_export/">transcode_export</a></code>(1), <code><a href="/docs/linux/man/1-tcmodinfo/">tcmodinfo</a></code>(1), </p>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ description: "plasmaengineexplorer – Provides direct access to plasma data eng
 </dt><dd> <code>plasmaengineexplorer</code> <code>&#8211;engine time</code> <code>&#8211;source Local</code> <code>&#8211;interval 1000</code></dd></dl>
 <h2>AUTHORS</h2>
 <p> <code>plasmaengineexplorer</code> was written by Aaron Seigo &lt;aseigo [at] kde.org&gt;. </p>
-<h2>Index</h2>

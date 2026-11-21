@@ -40,4 +40,3 @@ description: "xfce4-dict — a client program to query different dictionaries"
 <p> There is a limitation of max. 12 characters in passing a search term to xfce4-dict when the panel plugin is loaded. That is, if you pass a search term as command line argument(s) to xfce4-dict which is longer than 12 characters, it is truncated. To be exact, the limit is 12 bytes so if the search term contains any non-ASCII characters it might be even less than 12 characters. To work around this limitation, you can add the command line &#8216;-i&#8217; so that xfce4-dict will start a single stand-alone application. Then all passed text is used as search term.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Enrico Troeger. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2, or (at your option) any later version. </p>
-<h2>Index</h2>

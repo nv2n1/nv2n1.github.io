@@ -64,4 +64,3 @@ description: "pki – Simple public key infrastructure (PKI) management tool"
 <p> The certificate given with &#8211;cacert must be either a CA certificate or a certificate with the <i>crlSign</i> extended key usage (&#8211;flag crlSign). URIs to CRLs may be included in issued certificates with the &#8211;crl option.</p>
 <h2>SEE ALSO</h2>
 <p> <code>pki&nbsp;<wbr>&#8211;gen</code>(1), <code>pki&nbsp;<wbr>&#8211;self</code>(1), <code>pki&nbsp;<wbr>&#8211;issue</code>(1), <code>pki&nbsp;<wbr>&#8211;signcrl</code>(1), <code>pki&nbsp;<wbr>&#8211;acert</code>(1), <code>pki&nbsp;<wbr>&#8211;req</code>(1), <code>pki&nbsp;<wbr>&#8211;pkcs7</code>(1), <code>pki&nbsp;<wbr>&#8211;keyid</code>(1), <code>pki&nbsp;<wbr>&#8211;print</code>(1), <code>pki&nbsp;<wbr>&#8211;pub</code>(1), <code>pki&nbsp;<wbr>&#8211;verify</code>(1) </p>
-<h2>Index</h2>

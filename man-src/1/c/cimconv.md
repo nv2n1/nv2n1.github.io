@@ -18,4 +18,3 @@ description: "cimconv"
 <p> centerim as well as the cimconv tool were written by Konstantin Klyagin &lt;k@thekonst.net&gt;. </p>
 <h2>WEB</h2>
 <p> <a rel="nofollow" href="http://www.centerim.org/">http://www.centerim.org/</a> </p>
-<h2>Index</h2>

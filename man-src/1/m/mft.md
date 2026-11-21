@@ -41,4 +41,3 @@ description: "mft – translate Metafont or MetaPost code to TeX code for pretty
  Donald E. Knuth et al., <i>Metafontware</i>.</p>
 <h2>AUTHORS</h2>
 <p> Donald E. Knuth wrote the program, and he ported it to Unix with the help of Pierre MacKay and the Unix port of <code>weave</code> by Howard Trickey and Pavel Curtis. The program is published in the <i>Metafontware</i> technical report, available from the TeX Users Group. </p>
-<h2>Index</h2>

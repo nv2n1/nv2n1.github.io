@@ -250,4 +250,3 @@ kabcclient -S -if dialog &gt; contacts.vcf
 <dl>
 <dt>
 </dt><dd> Author</dd></dl>
-<h2>Index</h2>

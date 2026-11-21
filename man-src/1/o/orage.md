@@ -51,4 +51,3 @@ description: "orage – Calendar for the Xfce Desktop Environment"
 <h2>AUTHOR</h2>
 <p> <code>orage</code> was originally written by Mickael Graf and is now being maintained by Juha Kautto &lt;juha [at] xfce.org&gt;. </p>
 <p> This manual page was written by Juha Kautto &lt;juha [at] xfce.org&gt;. </p>
-<h2>Index</h2>

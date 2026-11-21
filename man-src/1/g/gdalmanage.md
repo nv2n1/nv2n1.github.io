@@ -75,4 +75,3 @@ gdalmanage delete NE1_50M_SR_W.tif
 </pre>
 <h2>AUTHORS</h2>
 <p> Tyler Mitchell spatialguru [at] shaw.ca </p>
-<h2>Index</h2>

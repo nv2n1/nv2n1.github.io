@@ -74,4 +74,3 @@ description: "westcos-tool – utility for manipulating data structure on westco
 <p> opensc(7)</p>
 <h2>AUTHORS</h2>
 <p> <code>westcos-tool</code> was written by Francois Leblanc &lt;francois.leblanc [at] cev-sa.com&gt;. </p>
-<h2>Index</h2>

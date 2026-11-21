@@ -40,4 +40,3 @@ description: "podebconf-display-po – display content of a PO file in a debconf
 <pre>
   Denis Barbier &lt;barbier [at] linuxfr.org&gt;
 </pre>
-<h2>Index</h2>

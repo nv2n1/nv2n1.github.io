@@ -27,4 +27,3 @@ description: "matchpoint – Run feature detection and extraction"
 <dd> Output keypoint file..</dd></dl>
 <h2>AUTHORS</h2>
 <p> Zoran Mesec </p>
-<h2>Index</h2>

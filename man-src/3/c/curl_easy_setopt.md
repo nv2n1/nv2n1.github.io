@@ -1128,4 +1128,3 @@ return socket(addr-&gt;family, addr-&gt;socktype, addr-&gt;protocol);
 <p> If you try to set an option that libcurl doesn&#8217;t know about, perhaps because the library is too old to support it or the option was removed in a recent version, this function will return <i>CURLE_FAILED_INIT</i>.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_easy_init/">curl_easy_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_reset/">curl_easy_reset</a></code>(3) </p>
-<h2>Index</h2>

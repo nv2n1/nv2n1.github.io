@@ -711,4 +711,3 @@ if
 </code></pre>
 <p> The table of smartmatches in &#8220;Smartmatch Operator&#8221; in perlop is not identical to that proposed by the Perl 6 specification, mainly due to differences between Perl 6&#8217;s and Perl 5&#8217;s data models, but also because the Perl 6 spec has changed since Perl 5 rushed into early adoption. </p>
 <p> In Perl 6, <tt>&quot;when()&quot;</tt> will always do an implicit smartmatch with its argument, while in Perl 5 it is convenient (albeit potentially confusing) to suppress this implicit smartmatch in various rather loosely-defined situations, as roughly outlined above. (The difference is largely because Perl 5 does not have, even internally, a boolean type.) </p>
-<h2>Index</h2>

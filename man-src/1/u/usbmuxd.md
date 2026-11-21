@@ -48,4 +48,3 @@ description: "usbmuxd – Expose a socket to multiplex connections from and to i
 <p> <a rel="nofollow" href="http://www.libimobiledevice.org">http://www.libimobiledevice.org</a> </p>
 <p> <a rel="nofollow" href="http://github.com/libimobiledevice/usbmuxd/">http://github.com/libimobiledevice/usbmuxd/</a> </p>
 <p> <a href="/docs/linux/man/1-idevice_id/">idevice_id</a>(1), <a href="/docs/linux/man/1-iproxy/">iproxy</a>(1). </p>
-<h2>Index</h2>

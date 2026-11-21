@@ -31,4 +31,3 @@ description: "mate-control-center – Configure MATE settings"
 <p> On success 0 is returned, a non-zero failure code otherwise.</p>
 <h2>AUTHORS</h2>
 <p> This manual page has been adopted for MATE Desktop Environment by Vangelis Mouhtsis &lt;vangelis [at] gnugr.org&gt;. </p>
-<h2>Index</h2>

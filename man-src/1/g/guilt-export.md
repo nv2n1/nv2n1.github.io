@@ -32,4 +32,3 @@ description: "guilt-export – Export a patch series (to be used by quilt)"
 <dt>
 </dt><dd> mailto:madcoder [at] debian.org</dd></dl>
 </dl>
-<h2>Index</h2>

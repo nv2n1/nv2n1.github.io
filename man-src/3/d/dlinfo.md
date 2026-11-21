@@ -159,4 +159,3 @@ Link with - ldl.
 <p> <code><a href="/docs/linux/man/3-dl_iterate_phdr/">dl_iterate_phdr</a></code>(3), <code><a href="/docs/linux/man/3-dladdr/">dladdr</a></code>(3), <code><a href="/docs/linux/man/3-dlerror/">dlerror</a></code>(3), <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3), <code><a href="/docs/linux/man/3-dlsym/">dlsym</a></code>(3), <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

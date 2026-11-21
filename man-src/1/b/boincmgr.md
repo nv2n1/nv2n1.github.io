@@ -45,4 +45,3 @@ description: "boincmgr – The graphical BOINC manager for the client."
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2007-2013 University of California. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
-<h2>Index</h2>

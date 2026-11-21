@@ -88,4 +88,3 @@ description: "smbtar – shell script for backing up SMB/CIFS shares directly to
 <h2>AUTHOR</h2>
 <p> The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed. </p>
 <p> Ricky Poulten wrote the tar extension and this man page. The smbtar script was heavily rewritten and improved by Martin Kraemer. Many thanks to everyone who suggested extensions, improvements, bug fixes, etc. The man page sources were converted to YODL format (another excellent piece of Open Source software, available at <a href="ftp://ftp.icce.rug.nl/pub/unix/)">ftp://ftp.icce.rug.nl/pub/unix/)</a> and updated for the Samba 2.0 release by Jeremy Allison. The conversion to DocBook for Samba 2.2 was done by Gerald Carter. The conversion to DocBook XML 4.2 for Samba 3.0 was done by Alexander Bokovoy. </p>
-<h2>Index</h2>

@@ -104,4 +104,3 @@ ImplantationPlanSRDocumentStorage           1.2.840.10008.5.1.4.1.1.88.70
 <p> <code><a href="/docs/linux/man/1-dcmconv/">dcmconv</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2000-2010 by OFFIS e.V., Escherweg 2, 26121 Oldenburg, Germany. </p>
-<h2>Index</h2>

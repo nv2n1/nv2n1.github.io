@@ -120,4 +120,3 @@ description: "ipptool – perform internet printing protocol requests"
 <p> <code><a href="/docs/linux/man/5-ipptoolfile/">ipptoolfile</a></code>(5), IANA IPP Registry (<a rel="nofollow" href="https://www.iana.org/assignments/ipp-registrations">https://www.iana.org/assignments/ipp-registrations</a>), PWG Internet Printing Protocol Workgroup (<a rel="nofollow" href="https://www.pwg.org/ipp)">https://www.pwg.org/ipp)</a> RFC 8011 (<a rel="nofollow" href="https://datatracker.ietf.org/doc/html/rfc8011">https://datatracker.ietf.org/doc/html/rfc8011</a>),</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2021-2022 by OpenPrinting. </p>
-<h2>Index</h2>

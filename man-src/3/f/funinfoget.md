@@ -115,4 +115,3 @@ name type comment-- -- -- -- - -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 <p> This does not work for the last row read in each batch, since there is no succeeding row until the next batch is read. Therefore, the program saves that last row until it has read the next batch, then processes the former before starting on the new batch. In order to merge the last row successfully, the code uses <font SIZE="-1">FUN_RAWBUF</font> to save and restore the raw input data associated with each batch of rows. Clearly, this requires some information about how funtools works internally. We are happy to help you write such programs as the need arises.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

@@ -77,4 +77,3 @@ description: "lxpanel – a lightweight GTK2-based panel for the LXDE desktop."
 </dt><dd> Author.</dd></dl>
 <h2>Copyright</h2>
 <p> Copyright &#169; 2008 paulliu </p>
-<h2>Index</h2>

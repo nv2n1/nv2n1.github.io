@@ -17,4 +17,3 @@ description: "set_line_spacing"
 <p> Every time you select a new font, the gstream will call this function with 1. </p>
 <h2>SEE ALSO</h2>
 <p> <code>gstream-get_line_spacing</code>(3) </p>
-<h2>Index</h2>

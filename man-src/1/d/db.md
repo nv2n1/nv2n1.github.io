@@ -30,4 +30,3 @@ description: "db.test – Test database driver, database must exist and set by d
 <p> <i>Last changed: $Date: 2005-09-01 09:58:50 +0200 (Thu, 01 Sep 2005) $</i> </p>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
-<h2>Index</h2>

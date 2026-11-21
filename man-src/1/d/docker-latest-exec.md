@@ -37,4 +37,3 @@ Sets the username or UID used and optionally the groupname or GID for the specif
 <p> The <code>-t</code> option is incompatible with a redirection of the docker client standard input. </p>
 <h2>HISTORY</h2>
 <p> November 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
-<h2>Index</h2>

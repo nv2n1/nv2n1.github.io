@@ -22,4 +22,3 @@ description: "pfc – active precompiled filters generator"
 <p> pfc is from the FLoppy Isdn 4 Linux project &#8211; see <a rel="nofollow" href="http://www.fli4l.de/en/home/news/">http://www.fli4l.de/en/home/news/</a></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Roberto C. Sanchez &lt;roberto [at] connexer.com&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

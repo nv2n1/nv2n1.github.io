@@ -76,4 +76,3 @@ description: "cutycapt – utility to capture WebKit’s rendering of a web page
 <h2>AUTHOR</h2>
 <p> CutyCapt was written by Björn Höhrmann &lt;bjoern [at] hoehrmann.de&gt;. </p>
 <p> This manual page was written by David Paleino &lt;dapal [at] debian.org&gt;, for the Debian project (and may be used by others), and is licensed under the GNU General Public License, version 2 or later. </p>
-<h2>Index</h2>

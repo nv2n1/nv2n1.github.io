@@ -61,4 +61,3 @@ description: "nwbpvalues – Print a NetWare Bindery Propery’s contents"
 </dt><dd> Use canonical output, to be used with nwbpset.</dd></dl>
 <h2>AUTHORS</h2>
 <p> nwbpvalues was written by Volker Lendecke with the corresponding Caldera utility in mind. See the Changes file of ncpfs for other contributors. </p>
-<h2>Index</h2>

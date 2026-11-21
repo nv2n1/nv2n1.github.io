@@ -13,4 +13,3 @@ description: "abw2html – convert AbiWord document into HTML"
 <p> <code>abw2html</code> [<i>OPTION</i>] <i>&lt;AbiWord Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code> Shows this help message <code>&#8211;version</code> Output abw2html version </p>
-<h2>Index</h2>

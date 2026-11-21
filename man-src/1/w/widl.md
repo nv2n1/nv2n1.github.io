@@ -113,4 +113,3 @@ description: "widl – Wine Interface Definition Language (IDL) compiler"
 <p> <code>widl</code> is part of the Wine distribution, which is available through WineHQ, the <code>Wine development headquarters</code></p>
 <h2>SEE ALSO</h2>
 <p> <code>Wine documentation and support</code> </p>
-<h2>Index</h2>

@@ -100,4 +100,3 @@ gradients away from them. </dd>
 <p> <code>pampaintspill</code> was new in Netpbm 10.50 (March 2010). </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright&nbsp;<wbr>&#169; 2010 Scott Pakin, &lt;a href= &quot;mailto:scott+pbm [at] pakin.org&quot;&gt;<i>scott+pbm [at] pakin.org</i>&lt;/a&gt;. </p>
-<h2>Index</h2>

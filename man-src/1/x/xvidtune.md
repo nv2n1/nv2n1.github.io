@@ -90,4 +90,3 @@ description: "xvidtune – video mode tuner for Xorg"
  Additions and modifications by Jon Tombs, David Dawes, and Joe Moss.</p>
 <h2>BUGS</h2>
 <p> X Error handling, i.e. when the server does not allow xvidtune clients to write new modes, could be better. </p>
-<h2>Index</h2>

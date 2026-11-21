@@ -28,4 +28,3 @@ if (!sample)
 <p> Returns a pointer to the SAMPLE or NULL on error. Remember to free this sample later to avoid memory leaks. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-load_voc/">load_voc</a></code>(3) </p>
-<h2>Index</h2>

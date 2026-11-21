@@ -81,4 +81,3 @@ description: "grub-mkrescue – make a GRUB rescue image"
 <dt>
 </dt><dd> <code>info grub-mkrescue</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

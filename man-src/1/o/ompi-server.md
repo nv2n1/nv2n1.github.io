@@ -23,4 +23,3 @@ description: "ompi-server – Server for supporting name publish/lookup operatio
 <h2>DESCRIPTION</h2>
 <p> <i>ompi-server</i> acts as a data server for Open MPI jobs to exchange contact information in support of MPI-2&#8217;s Publish_name and Lookup_name functions.</p>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

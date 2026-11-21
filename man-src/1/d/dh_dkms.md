@@ -39,4 +39,3 @@ description: "dh_dkms – correctly handle DKMS usage by a kernel module package
 <p> <i><a href="/docs/linux/man/8-dkms/">dkms</a></i>(8)</p>
 <h2>AUTHOR</h2>
 <p> David Paleino &lt;dapal [at] debian.org&gt; </p>
-<h2>Index</h2>

@@ -76,4 +76,3 @@ description: "flipdiff – exchange the order of two incremental patches"
 <dl>
 <dt>
 </dt><dd> Package maintainer</dd></dl>
-<h2>Index</h2>

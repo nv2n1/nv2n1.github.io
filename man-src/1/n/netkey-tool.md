@@ -72,4 +72,3 @@ description: "netkey-tool – administrative utility for Netkey E4 cards"
 <p> opensc(7), <a href="/docs/linux/man/1-opensc-explorer/">opensc-explorer</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> <code>netkey-tool</code> was written by Peter Koch &lt;pk_opensc [at] web.de&gt;. </p>
-<h2>Index</h2>

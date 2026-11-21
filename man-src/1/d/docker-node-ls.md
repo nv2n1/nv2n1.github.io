@@ -20,4 +20,3 @@ description: "docker-node-ls – List nodes in the swarm"
 <p> <code>-q</code>, <code>&#8211;quiet</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Only display IDs</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-node/">docker-node</a>(1)</code> </p>
-<h2>Index</h2>

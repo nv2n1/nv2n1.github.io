@@ -23,4 +23,3 @@ result = fixtof(itofix(100) / 6);
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ftofix/">ftofix</a></code>(3), <code>itofix</code>(3), <code><a href="/docs/linux/man/3-fixtoi/">fixtoi</a></code>(3), <code><a href="/docs/linux/man/3-exfixed/">exfixed</a></code>(3), <code><a href="/docs/linux/man/3-exspline/">exspline</a></code>(3), <code><a href="/docs/linux/man/3-exstars/">exstars</a></code>(3) </p>
-<h2>Index</h2>

@@ -47,4 +47,3 @@ description: "xfce4-screenshooter: – manual page for xfce4-screenshooter: Cann
 <dt><code>&#8211;display</code>=<i>,DISPLAY/</i></dt>
 <dd> X display to use</dd></dl>
 <p> Try xfce4-screenshooter <code>&#8211;help</code> to see a full list of available command line options. </p>
-<h2>Index</h2>

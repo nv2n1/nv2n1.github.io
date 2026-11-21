@@ -587,4 +587,3 @@ my $motto = &#8221;  &#8220;;<br />
 <p> Most of these examples taken from the current edition of the “Camel Book”; that is, from the 4ᵗʰ Edition of <i>Programming Perl</i>, Copyright © 2012 Tom Christiansen &lt;et al.&gt;, 2012-02-13 by O’Reilly Media. The code itself is freely redistributable, and you are encouraged to transplant, fold, spindle, and mutilate any of the examples in this manpage however you please for inclusion into your own programs without any encumbrance whatsoever. Acknowledgement via code comment is polite but not required.  </p>
 <h2>REVISION HISTORY</h2>
 <p> v1.0.0 – first public release, 2012-02-27 </p>
-<h2>Index</h2>

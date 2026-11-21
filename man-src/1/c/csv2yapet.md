@@ -160,4 +160,3 @@ $
 <p> <code><a href="/docs/linux/man/1-yapet/">yapet</a></code>(1), <code><a href="/docs/linux/man/1-yapet2csv/">yapet2csv</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2008, 2009, 2010, 2011, 2013, 2014 Rafael Ostertag &lt;rafi [at] guengel.ch&gt; </p>
-<h2>Index</h2>

@@ -28,4 +28,3 @@ description: "idevicedate – Display the current date or set it on a device."
 </dl>
 <h2>AUTHOR</h2>
 <p> Martin Szulecki </p>
-<h2>Index</h2>

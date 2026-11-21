@@ -115,4 +115,3 @@ description: "initdb – create a new PostgreSQL database cluster"
 <p> <code>initdb</code> can also be invoked via <code>pg_ctl initdb</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pg_ctl/">pg_ctl</a></code>(1), <code><a href="/docs/linux/man/1-postgres/">postgres</a></code>(1) </p>
-<h2>Index</h2>

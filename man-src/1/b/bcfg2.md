@@ -78,4 +78,3 @@ description: "bcfg2 – reconfigure machine based on settings in BCFG2"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-bcfg2-server/">bcfg2-server</a>(8),</code> <code><a href="/docs/linux/man/8-bcfg2-info/">bcfg2-info</a>(8)</code></p>
 <h2>BUGS</h2>
-<h2>Index</h2>

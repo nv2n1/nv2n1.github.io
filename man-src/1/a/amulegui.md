@@ -39,4 +39,3 @@ description: "amulegui – aMule control program with GUI"
 <h2>AUTHOR</h2>
 <p> This manpage was written by Julien Delange for Debian &lt;julien AT gunnm DOT org&gt; </p>
 <p> This manpage was rewritten by Vollstrecker &lt;amule [at] vollstreckernet.de&gt; </p>
-<h2>Index</h2>

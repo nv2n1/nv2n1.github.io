@@ -106,4 +106,3 @@ Written by Thomas Renninger&lt;trenn[at] suse.de&gt;
     Nehalem, SandyBridge monitors and command passing
                  based on turbostat .8 from Len Brown&lt;len.brown[at] intel.com&gt;
 </code></pre>
-<h2>Index</h2>

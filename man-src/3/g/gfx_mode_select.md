@@ -17,4 +17,3 @@ description: "gfx_mode_select – Displays the Allegro graphics mode selection d
 <p> The initial values of card, w, h are not used. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-gfx_mode_select_ex/">gfx_mode_select_ex</a></code>(3), <code><a href="/docs/linux/man/3-gfx_mode_select_filter/">gfx_mode_select_filter</a></code>(3), <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-gui_fg_color/">gui_fg_color</a></code>(3) </p>
-<h2>Index</h2>

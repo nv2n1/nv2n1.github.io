@@ -30,4 +30,3 @@ description: "idevicecrashreport – Retrieve crash reports from a device."
 <h2>AUTHOR</h2>
 <p> Martin Szulecki </p>
 <p> Nikias Bassen </p>
-<h2>Index</h2>

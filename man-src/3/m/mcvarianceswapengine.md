@@ -23,4 +23,3 @@ description: "ql/pricingengines/forward/mcvarianceswapengine.hpp – Monte Carlo
 <p> Monte Carlo variance-swap engine. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

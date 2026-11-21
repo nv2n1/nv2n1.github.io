@@ -178,4 +178,3 @@ description: "texi2any – translate Texinfo documents"
 <dt>
 </dt><dd> <code>info texi2any</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

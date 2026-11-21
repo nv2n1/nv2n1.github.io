@@ -41,4 +41,3 @@ description: "dnsreplay – A PowerDNS nameserver debugging tool"
 <p> pcap(3PCAP), <a href="/docs/linux/man/8-tcpdump/">tcpdump</a>(8), dnswascher(8)</p>
 <h2>AUTHORS</h2>
 <p> This manpage was written by Joerg Jungermann (jj+debian At borkum.net) for the Debian Project and the PowerDNS versatile DNS server. </p>
-<h2>Index</h2>

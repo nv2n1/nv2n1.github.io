@@ -181,4 +181,3 @@ description: "rdesktop – Remote Desktop Protocol client"
 <p> Main website of rdesktop<br />
  <i><a rel="nofollow" href="http://www.rdesktop.org/">http://www.rdesktop.org/</a> </p>
 <p> </i></p>
-<h2>Index</h2>

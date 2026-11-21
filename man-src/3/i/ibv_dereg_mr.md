@@ -58,4 +58,3 @@ int ibv_dereg_mr(struct ibv_mr *mr);
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

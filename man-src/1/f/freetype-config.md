@@ -50,4 +50,3 @@ description: "freetype-config – Get information about a libfreetype installati
 <p> Setting <code>&#8211;exec-prefix</code> (either explicitly or implicitly) might return incorrect results if combined with option <code>&#8211;static</code>. The same problem can occur if you set the <code>SYSROOT</code> environment variable.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was contributed by Nis Martensen &lt;nis.martensen [at] web.de&gt;, with further refinements from the FreeType team. </p>
-<h2>Index</h2>

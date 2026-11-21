@@ -53,4 +53,3 @@ dd if=/dev/nrst0 ibs=8k | funzip | tar xf -
 </pre>
 <h2>AUTHOR</h2>
 <p> Mark Adler (Info-ZIP) </p>
-<h2>Index</h2>

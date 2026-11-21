@@ -46,4 +46,3 @@ void ibnd_destroy_fabric(ibnd_fabric_t *fabric) void ibnd_debug(int i) void ibnd
 <dt>Ira Weiny &lt;weiny2 [at] llnl.gov&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

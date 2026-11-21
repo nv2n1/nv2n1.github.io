@@ -54,4 +54,3 @@ description: "sha256sum – compute and check SHA256 message digest"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/sha256sum">https://www.gnu.org/software/coreutils/sha256sum</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) sha2 utilities&#8217; </p>
-<h2>Index</h2>

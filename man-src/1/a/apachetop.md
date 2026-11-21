@@ -39,4 +39,3 @@ description: "apachetop – display real-time web server statistics"
 <p> Report bugs at: <a rel="nofollow" href="https://github.com/tessus/apachetop/issues">https://github.com/tessus/apachetop/issues</a></p>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="https://www.cae.me.uk/projects/apachetop">https://www.cae.me.uk/projects/apachetop</a> </p>
-<h2>Index</h2>

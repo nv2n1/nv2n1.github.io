@@ -27,4 +27,3 @@ description: "chkhelp – check performance metrics help text files"
 <p> <code><a href="/docs/linux/man/1-newhelp/">newhelp</a></code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmlookupindomtext/">pmLookupInDomText</a></code>(3), <code><a href="/docs/linux/man/3-pmlookuptext/">pmLookupText</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
 <h2>DIAGNOSTICS</h2>
 <p> There are all sorts of reasons a help database may be inconsistent, the most likely is that a performance metric in the database is not defined in the loaded PMNS. </p>
-<h2>Index</h2>

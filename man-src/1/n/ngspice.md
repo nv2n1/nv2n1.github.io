@@ -94,4 +94,3 @@ description: "ngspice – circuit simulator derived from spice]3f5"
 <p> <code>spice3</code>: Tom Quarles (quarles [at] cad.berkeley.edu)<br />
  <code>nutmeg</code>: User interface: Wayne Christopher (faustus [at] cad.berkeley.edu)<br />
  <code>ngspice</code>: various authors (see <code><a rel="nofollow" href="http://sourceforge.net/projects/ngspice/">http://sourceforge.net/projects/ngspice/</a></code>) </p>
-<h2>Index</h2>

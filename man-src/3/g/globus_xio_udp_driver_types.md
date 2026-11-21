@@ -21,4 +21,3 @@ description: "Types –"
 </dt><dd> <code>GLOBUS_XIO_UDP_SET_HANDLE</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>

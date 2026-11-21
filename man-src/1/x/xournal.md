@@ -18,4 +18,3 @@ description: "xournal – GTK+ Application for note taking"
 <h2>AUTHOR</h2>
 <p> xournal was written by Denis Auroux &lt;auroux [at] math.mit.edu&gt;. </p>
 <p> This manual page was originally written by Mathieu Bouchard &lt;mbouchar [at] bioinfo.ulaval.ca&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

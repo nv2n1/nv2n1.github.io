@@ -21,4 +21,3 @@ description: "sgml2xml-isoent – Convert SGML to XML with support for ISO entit
 <p> Steve Cheng &lt;stevecheng [at] users.sourceforge.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sgml2xml/">sgml2xml</a></code>(1), <code><a href="/docs/linux/man/1-osx/">osx</a></code>(1) </p>
-<h2>Index</h2>

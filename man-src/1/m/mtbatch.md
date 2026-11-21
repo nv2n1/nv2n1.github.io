@@ -25,4 +25,3 @@ description: "mtbatch – Sends SMS in batch mode"
 &nbsp;<wbr>use a specific route for the MT traffic</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-kannel/">kannel</a></code>(8) </p>
-<h2>Index</h2>

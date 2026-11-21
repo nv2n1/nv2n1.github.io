@@ -44,4 +44,3 @@ description: "smidiff – check differences between a pair of SMI or SPPI module
 <p> (C) 2001 T. Klie, TU Braunschweig, Germany &lt;tklie [at] ibr.cs.tu-bs.de&gt;<br />
  (C) 2001 J. Schoenwaelder, TU Braunschweig, Germany &lt;schoenw [at] ibr.cs.tu-bs.de&gt;<br />
  and contributions by many other people. </p>
-<h2>Index</h2>

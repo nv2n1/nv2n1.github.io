@@ -78,4 +78,3 @@ description: "netmask – a netmask generation and conversion program"
 <p> Let me know if you find any. This man page is a bit more simplistic than I&#8217;d like, but I&#8217;ve forgotten most of the groff I once knew.</p>
 <h2>SEE ALSO</h2>
 <p> <code>ipchains</code>(1), <code>ipfwadm</code>(8), <code><a href="/docs/linux/man/8-netstat/">netstat</a></code>(8), <code><a href="/docs/linux/man/8-route/">route</a></code>(8), <code>routed</code>(8), <code>gated</code>(8), <code><a href="/docs/linux/man/8-tcpd/">tcpd</a></code>(8) </p>
-<h2>Index</h2>

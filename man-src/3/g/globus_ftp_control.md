@@ -46,4 +46,3 @@ globus_module_deactivate(GLOBUS_FTP_CONTROL_MODULE);
 <p>&nbsp;<wbr></p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_control from the source code. </p>
-<h2>Index</h2>

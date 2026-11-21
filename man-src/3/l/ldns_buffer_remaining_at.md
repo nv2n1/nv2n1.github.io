@@ -49,4 +49,3 @@ description: "ldns_buffer_remaining_at, ldns_buffer_remaining, ldns_buffer_avail
 <p> <i>ldns_buffer</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
-<h2>Index</h2>

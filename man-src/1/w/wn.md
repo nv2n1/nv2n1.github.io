@@ -143,4 +143,3 @@ Sense n
 <p> <code><a href="/docs/linux/man/1-wnintro/">wnintro</a></code>(1), <code><a href="/docs/linux/man/1-wnb/">wnb</a></code>(1), <code><a href="/docs/linux/man/3-wnintro/">wnintro</a></code>(3), <code><a href="/docs/linux/man/5-lexnames/">lexnames</a></code>(5), <code><a href="/docs/linux/man/5-senseidx/">senseidx</a></code>(5) <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code><a href="/docs/linux/man/5-wninput/">wninput</a></code>(5), <code><a href="/docs/linux/man/7-morphy/">morphy</a></code>(7), <code><a href="/docs/linux/man/7-wngloss/">wngloss</a></code>(7), <code><a href="/docs/linux/man/7-wngroups/">wngroups</a></code>(7).</p>
 <h2>BUGS</h2>
 <p> Please report bugs to wordnet [at] princeton.edu. </p>
-<h2>Index</h2>

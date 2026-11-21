@@ -186,4 +186,3 @@ BigEndianExplicitTransferSyntax                    1.2.840.10008.1.2.2
 <p> <code><a href="/docs/linux/man/1-movescu/">movescu</a></code>(1), <code><a href="/docs/linux/man/1-dump2dcm/">dump2dcm</a></code>(1), <code><a href="/docs/linux/man/1-dcmodify/">dcmodify</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 1994-2010 by OFFIS e.V., Escherweg 2, 26121 Oldenburg, Germany. </p>
-<h2>Index</h2>

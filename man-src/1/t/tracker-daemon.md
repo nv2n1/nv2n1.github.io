@@ -93,4 +93,3 @@ tracker daemon --miner &lt;miner&gt; --resume &lt;cookie&gt;
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-store/">tracker-store</a></code>(1). </p>
-<h2>Index</h2>

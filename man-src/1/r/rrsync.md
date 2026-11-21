@@ -91,4 +91,3 @@ command=&quot;rrsync -ro results&quot; ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAmk...
 <p> An rsync web site is available at <a rel="nofollow" href="https://rsync.samba.org/">https://rsync.samba.org/</a> and its github project is <a rel="nofollow" href="https://github.com/WayneD/rsync.">https://github.com/WayneD/rsync.</a> </p>
 <h2>AUTHOR</h2>
 <p> The original rrsync perl script was written by Joe Smith. Many people have later contributed to it. The python version was created by Wayne Davison. </p>
-<h2>Index</h2>

@@ -31,4 +31,3 @@ description: "idevicedebug – Interact with the debugserver service of a device
 </dl>
 <h2>AUTHORS</h2>
 <p> Martin Szulecki </p>
-<h2>Index</h2>

@@ -111,4 +111,3 @@ description: "ldapexop – issue LDAP extended operations"
 <p> This manual page was written by Peter Marschall based on <code>ldapexop</code>&#8216;s usage message and a few tests with <code>ldapexop</code>. Do not expect it to be complete or absolutely correct. </p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> <code>OpenLDAP Software</code> is developed and maintained by The OpenLDAP Project &lt;<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>&gt;. <code>OpenLDAP Software</code> is derived from University of Michigan LDAP 3.3 Release. </p>
-<h2>Index</h2>

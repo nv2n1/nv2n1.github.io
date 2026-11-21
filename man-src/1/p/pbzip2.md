@@ -79,4 +79,3 @@ description: "pbzip2 – parallel bzip2 file compressor, v1.1.10"
 <h2>AUTHOR</h2>
 <p> Jeff Gilchrist </p>
 <p> <a rel="nofollow" href="http://compression.ca">http://compression.ca</a> </p>
-<h2>Index</h2>

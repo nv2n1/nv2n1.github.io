@@ -42,4 +42,3 @@ description: "dvitype, odvitype – translate a dvi file for humans"
  Donald E. Knuth, <i>TeXware</i>.</p>
 <h2>AUTHORS</h2>
 <p> Donald E. Knuth wrote the program. It was published as part of the <i>TeXware</i> technical report, available from the TeX Users Group. Howard Trickey and Pavel Curtis originally ported it to Unix. </p>
-<h2>Index</h2>

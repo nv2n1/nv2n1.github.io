@@ -46,4 +46,3 @@ description: "genrb – compile a resource bundle"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-derb/">derb</a></code>(1)<br />
  <code><a href="/docs/linux/man/1-pkgdata/">pkgdata</a></code>(1) </p>
-<h2>Index</h2>

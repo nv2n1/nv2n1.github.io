@@ -57,4 +57,3 @@ description: "kpsewhich – standalone path lookup and and expansion for kpathse
 <dd> Print version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mktexlsr/">mktexlsr</a></code>(1), <code><a href="/docs/linux/man/1-mktexmf/">mktexmf</a></code>(1), <code><a href="/docs/linux/man/1-mktexpk/">mktexpk</a></code>(1), <code><a href="/docs/linux/man/1-mktextfm/">mktextfm</a></code>(1). </p>
-<h2>Index</h2>

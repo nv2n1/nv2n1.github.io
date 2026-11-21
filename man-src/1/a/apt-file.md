@@ -175,4 +175,3 @@ EOF
 <p> The <font SIZE="-1">APT</font> users guide in /usr/share/doc/apt/ </p>
 <p> The example config in /usr/share/doc/apt-file/examples </p>
 <p> The <font SIZE="-1">README</font> at <i>/usr/share/doc/apt-file/README.md.gz</i> </p>
-<h2>Index</h2>

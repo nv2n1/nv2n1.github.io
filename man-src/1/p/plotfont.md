@@ -106,4 +106,3 @@ description: "plotfont – produce character maps of fonts supported by the plot
 <p> <code>plotfont</code> was written by Robert S. Maier (<code>rsm [at] math.arizona.edu</code>).</p>
 <h2>BUGS</h2>
 <p> Email bug reports to <code>bug-gnu-utils [at] gnu.org</code>. </p>
-<h2>Index</h2>

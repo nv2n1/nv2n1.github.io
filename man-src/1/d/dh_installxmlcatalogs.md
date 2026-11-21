@@ -33,4 +33,3 @@ description: "dh_installxmlcatalogs – install and register XML catalog files"
 <h2>AUTHOR</h2>
 <p> <code>Ardo van Rangelrooij</code> &lt;ardo [at] debian.org&gt; </p>
 <p> <code>Adam Di Carlo</code> &lt;aph [at] debian.org&gt; </p>
-<h2>Index</h2>

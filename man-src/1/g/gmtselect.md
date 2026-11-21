@@ -120,4 +120,3 @@ gmt select stations.d -C5/origin.d -R20/50/-10/20 -JM20c \
 <p> <code>gmt</code>, <code>gmt.conf</code>, <code>gmtconvert</code>, <code>gmtsimplify</code>, <code>gmtspatial</code>, <code>grdlandmask</code>, <code>pscoast</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

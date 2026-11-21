@@ -89,4 +89,3 @@ description: "BACKUPNINJA – A lightweight, extensible meta-backup system \"a s
 <p> <code><a href="/docs/linux/man/1-ninjahelper/">ninjahelper</a></code>(1), <code><a href="/docs/linux/man/5-backupninja-conf/">backupninja.conf</a></code>(5), <code><a href="/docs/linux/man/5-backup-d/">backup.d</a></code>(5), </p>
 <h2>AUTHOR</h2>
 <p> BACKUPNINJA was written by the riseup.net collective. </p>
-<h2>Index</h2>

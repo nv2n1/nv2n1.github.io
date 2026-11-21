@@ -49,4 +49,3 @@ description: "imapfilter – mail filter"
 <dd> RFC 3501, RFC 3348, RFC 2683, RFC 2595, RFC 2342, RFC 2195, RFC 2177</dd>
 <dt><code>IMAP4:</code></dt>
 <dd> RFC 1730</dd></dl>
-<h2>Index</h2>

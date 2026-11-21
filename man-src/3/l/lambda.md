@@ -28,4 +28,3 @@ description: "QuantLib::BatesModel – Bates stochastic-volatility model."
 </dt><dd> calibration is tested against known values.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

@@ -36,4 +36,3 @@ description: "sfcbinst2mof – Dump static instances to mof"
 <dd> output ONLY instances that were created in MOF (don&#8217;t include instances created interactively)</dd>
 <dt> <code>-r</code> &lt;repository dir&gt; use alternate repository (override sfcb cfg file). (default = /var/lib/sfcb/registration/repository) </dt>
 </dl>
-<h2>Index</h2>

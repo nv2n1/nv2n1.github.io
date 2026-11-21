@@ -44,4 +44,3 @@ description: "pycompile – byte compile Python source files"
 <dd> exclude items that match given REGEXPR. You may use this option multiple times to build up a list of things to exclude</dd></dl>
 <h2>AUTHOR</h2>
 <p> Piotr Ożarowski, 2012-2013 </p>
-<h2>Index</h2>

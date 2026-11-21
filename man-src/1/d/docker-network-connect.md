@@ -57,4 +57,3 @@ $ docker network connect --ip 172.20.128.2 multi-host-network container2
 <p> <code>&#8211;link-local-ip</code>=[] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Add a link-local address for the container</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-network/">docker-network</a>(1)</code> </p>
-<h2>Index</h2>

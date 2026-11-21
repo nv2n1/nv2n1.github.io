@@ -72,4 +72,3 @@ Paolo Maggi&lt;paolo[at] gnome.org&gt;
 <h2>SEE ALSO</h2>
 <h3>Pluma documentation can be found from the Help menu, or by pressing the F1 key.</h3>
 <p> Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a> </p>
-<h2>Index</h2>

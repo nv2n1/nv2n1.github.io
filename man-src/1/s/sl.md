@@ -28,4 +28,3 @@ description: "sl – cure your bad habit of mistyping"
 <p> It sometimes lists directory contents.</p>
 <h2>AUTHOR</h2>
 <p> Toyoda Masashi (mtoyoda [at] acm.org) </p>
-<h2>Index</h2>

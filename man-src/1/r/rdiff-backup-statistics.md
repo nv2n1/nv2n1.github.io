@@ -32,4 +32,4 @@ description: "rdiff-backup-statistics – summarize rdiff-backup statistics file
   <h2>BUGS</h2>
  When aggregating multiple statistics files, some directories above (but close to) the minimum ratio may not be displayed. For this reason, you may want to set the minimum-ratio lower than need. <h2>AUTHOR</h2>
  Ben Escoto &lt;ben [at] emerose.org&gt;, based on original script by Dean Gaudet. <h2>SEE ALSO</h2>
- <code><a href="/docs/linux/man/1-rdiff-backup/">rdiff-backup</a></code>(1), <code><a href="/docs/linux/man/1-python/">python</a></code>(1). The rdiff-backup web page is at <i><a rel="nofollow" href="http://rdiff-backup.nongnu.org/">http://rdiff-backup.nongnu.org/</a></i>. <h2>Index</h2>
+ <code><a href="/docs/linux/man/1-rdiff-backup/">rdiff-backup</a></code>(1), <code><a href="/docs/linux/man/1-python/">python</a></code>(1). The rdiff-backup web page is at <i><a rel="nofollow" href="http://rdiff-backup.nongnu.org/">http://rdiff-backup.nongnu.org/</a></i>. 

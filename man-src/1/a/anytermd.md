@@ -63,4 +63,3 @@ description: "anytermd – A terminal-emulating HTTP daemon"
 <p> Anyterm is more fully documented on its web site, <code><a rel="nofollow" href="http://anyterm.org/">http://anyterm.org/</a></code>. The web site may be more up-to-date than this man page.</p>
 <h2>AUTHOR</h2>
 <p> Anyterm is written by Phil Endecott. This man page was contributed by Eric Rossen. </p>
-<h2>Index</h2>

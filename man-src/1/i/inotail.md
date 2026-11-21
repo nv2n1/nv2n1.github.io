@@ -32,4 +32,3 @@ description: "inotail – A fast and lightweight version of tail using inotify"
 <p> Written by Tobias Klauser &lt;tklauser [at] distanz.ch&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tail/">tail</a>(1),</code> <code><a href="/docs/linux/man/7-inotify/">inotify</a>(7)</code> </p>
-<h2>Index</h2>

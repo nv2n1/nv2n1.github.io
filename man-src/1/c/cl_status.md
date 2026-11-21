@@ -52,4 +52,3 @@ description: "cl_status – Check Status of the High-Availability Linux (Linux-H
 <p> cl_status &#8211; Sun Jiang Dong &lt;sunjd [at] cn.ibm.com&gt;<br />
  linux-ha &#8211; Alan Robertson &lt;alanr [at] unix.sh&gt; <i>et al</i>.<br />
  man page &#8211; Horms &lt;horms [at] verge.net.au&gt; </p>
-<h2>Index</h2>

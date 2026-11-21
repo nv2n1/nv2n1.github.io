@@ -21,4 +21,3 @@ description: "matchmediacon – get the default SELinux security context for the
 <p> <i>/etc/selinux/{POLICYTYPE}/contexts/files/media</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3) </p>
-<h2>Index</h2>

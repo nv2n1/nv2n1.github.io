@@ -78,4 +78,3 @@ description: "db2x_xsltproc – XSLT processor invocation wrapper"
 <p> The docbook2X manual (in Texinfo or HTML format) fully describes how to convert DocBook to man pages and Texinfo. </p>
 <p> Up-to-date information about this program can be found at the docbook2X Web site &lt;<a rel="nofollow" href="http://docbook2x.sourceforge.net/">http://docbook2x.sourceforge.net/</a>&gt; . </p>
 <p> You may wish to consult the documentation that comes with libxslt, SAXON, or Xalan. The W3C XSLT 1.0 specification would be useful for writing stylesheets. </p>
-<h2>Index</h2>

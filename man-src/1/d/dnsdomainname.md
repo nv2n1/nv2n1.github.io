@@ -78,4 +78,3 @@ description: "hostname – show or set the system’s host name domainname – s
 <p> Peter Tobias, &lt;tobias [at] et-inf.fho-emden.de&gt;<br />
  Bernd Eckenfels, &lt;net-tools [at] lina.inka.de&gt; (NIS and manpage).<br />
  Michael Meskes, &lt;meskes [at] debian.org&gt; </p>
-<h2>Index</h2>

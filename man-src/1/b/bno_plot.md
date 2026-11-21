@@ -31,4 +31,3 @@ description: "bno_plot – generate interactive 3D plot of IO blocks and sizes"
  On Debian systems, the text of the GNU General Public License can be found in /usr/share/common-licenses/GPL-2. </p>
 <h2>SEE ALSO</h2>
 <p> btt (1), gnuplot (1), blktrace (8), blkparse (1), verify_blkparse (1), blkrawverify (1) </p>
-<h2>Index</h2>

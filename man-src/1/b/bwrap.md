@@ -254,4 +254,3 @@ description: "bwrap – container setup utility"
 </dt><dd> Used as the cwd in the sandbox if <code>&#8211;chdir</code> has not been explicitly specified and the current cwd is not present inside the sandbox. The <code>&#8211;setenv</code> option can be used to override the value that is used here.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The <code>bwrap</code> command returns the exit status of the initial application process (pid 2 in the sandbox). </p>
-<h2>Index</h2>

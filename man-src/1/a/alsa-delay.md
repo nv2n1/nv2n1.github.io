@@ -55,4 +55,3 @@ description: "alsadelay – a command to (re)initialize sound hardware"
 <h2>SEE ALSO</h2>
 <p> <code> <a href="/docs/linux/man/1-alsaloop/">alsaloop</a>(1) <a href="/docs/linux/man/1-amixer/">amixer</a>(1) <a href="/docs/linux/man/1-alsamixer/">alsamixer</a>(1) </p>
 <p> </code></p>
-<h2>Index</h2>

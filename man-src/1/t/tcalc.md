@@ -46,4 +46,3 @@ description: "tcalc – The terminal calculator"
 <p> The free mode:<br />
  &#8212;&#8212;&#8212;&#8212;&#8211;<br />
  If you start tcalc with no command line formula and no input file, this will invoke the free mode. You will see a &#8216;&gt;&#8217; prompt indicating this mode. Enter your formulas one by one, ending each one with an ENTER, and tcalc will process the formula and output the result. You can enter other commands like</p>
-<h2>Index</h2>

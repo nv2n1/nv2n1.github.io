@@ -17,4 +17,3 @@ description: "cxpm – Check an XPM (X PixMap) file, versions XPM 1, 2, or 3."
 <h2>AUTHOR</h2>
 <p> Arnaud Le Hors (lehors [at] sophia.inria.fr)<br />
  Copyright (C) 1998 by Arnaud LE HORS. </p>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "achfile – change type and/or creator of Apple Macintosh files (n
 <p> returns exit status 0 if all files changed successfully</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-afile/">afile</a></code>(1), <code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8) </p>
-<h2>Index</h2>

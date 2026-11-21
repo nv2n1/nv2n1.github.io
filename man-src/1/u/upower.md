@@ -34,4 +34,3 @@ description: "upower – UPower command line tool"
 <p> Please send bug reports to either the distribution or the DeviceKit mailing list, see m[blue]<code><a rel="nofollow" href="http://lists.freedesktop.org/mailman/listinfo/devkit-devel">http://lists.freedesktop.org/mailman/listinfo/devkit-devel</a></code>m[] on how to subscribe.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-upowerd/">upowerd</a></code>(8), <code><a href="/docs/linux/man/7-upower/">UPower</a></code>(7), </p>
-<h2>Index</h2>

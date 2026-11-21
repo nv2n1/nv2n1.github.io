@@ -27,4 +27,3 @@ description: "pnmtoddif – Convert a portable anymap to DDIF format"
 <p> Burkhard Neidecker-Lutz<br />
  Digital Equipment Corporation, CEC Karlsruhe<br />
  neideck [at] nestvx.enet.dec.com </p>
-<h2>Index</h2>

@@ -163,4 +163,3 @@ but its Perl counterpart does.
 <p> <code><a href="/docs/linux/man/1-db2x_xsltproc/">db2x_xsltproc</a></code>(1), <code><a href="/docs/linux/man/1-db2x_manxml/">db2x_manxml</a></code>(1), <code><a href="/docs/linux/man/1-utf8trans/">utf8trans</a></code>(1) </p>
 <p> The docbook2X manual (in Texinfo or HTML format) fully describes how to convert DocBook to man pages and Texinfo. </p>
 <p> Up-to-date information about this program can be found at the docbook2X Web site &lt;<a rel="nofollow" href="http://docbook2x.sourceforge.net/">http://docbook2x.sourceforge.net/</a>&gt; . </p>
-<h2>Index</h2>

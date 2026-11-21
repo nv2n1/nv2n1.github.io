@@ -40,4 +40,3 @@ description: "ini2po – Convert .ini files to Gettext PO localization files."
 <dt>&#8211;duplicates</dt>
 <dd> what to do with duplicate strings (identical source text): merge, msgctxt (default: &#8216;msgctxt&#8217;) </dd>
 </dl>
-<h2>Index</h2>

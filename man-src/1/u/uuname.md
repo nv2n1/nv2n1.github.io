@@ -31,4 +31,3 @@ description: "uuname – List the names of the known remote UUCP sites."
 <p> <code><a href="/docs/linux/man/1-uucp/">uucp</a>(1)</code></p>
 <h2>AUTHOR</h2>
 <p> This manual page is a quick write-up for Debian done by Kevin Kreamer &lt;kkreamer [at] etherhogz.org&gt;, by making a manpage out of <code>uuname</code> <i>&#8211;help</i>. </p>
-<h2>Index</h2>

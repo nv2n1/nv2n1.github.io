@@ -32,4 +32,3 @@ description: "gst-typefind – print Media type of file"
 <p> <code>gst-feedback</code>(1), <code>gst-inspect</code>(1), <code>gst-launch</code>(1)</p>
 <h2>AUTHOR</h2>
 <p> The GStreamer team at <a rel="nofollow" href="http://gstreamer.freedesktop.org/">http://gstreamer.freedesktop.org/</a> </p>
-<h2>Index</h2>

@@ -207,4 +207,3 @@ description: "clamscan – scan files and directories for viruses"
 <p> Tomasz Kojm &lt;tkojm [at] clamav.net&gt;, Kevin Lin &lt;klin [at] sourcefire.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-clamdscan/">clamdscan</a>(1), <a href="/docs/linux/man/1-freshclam/">freshclam</a>(1), <a href="/docs/linux/man/5-freshclam-conf/">freshclam.conf</a>(5) </p>
-<h2>Index</h2>

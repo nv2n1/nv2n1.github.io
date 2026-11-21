@@ -31,4 +31,3 @@ description: "gshhs – Extract ASCII listings from binary GSHHS or WDBII data f
 <p> While the GSHHS data is organized as a set of closed polygons, the rivers and boundary data are just a set of line segments in no particular order. Thus, it is not possible to extract information pertaining to just one river or one country.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-gshhs_dp/">gshhs_dp</a></i>(1) <i><a href="/docs/linux/man/1-gshhstograss/">gshhstograss</a></i>(1) </p>
-<h2>Index</h2>

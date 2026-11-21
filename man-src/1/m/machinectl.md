@@ -254,4 +254,3 @@ description: "machinectl – Control the systemd machine manager"
 </dt><dd> Override the default options passed to <code>less</code> (&quot;FRSXMK&quot;).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-systemd-machined-service/">systemd-machined.service</a></code>(8), <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1), <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7) </p>
-<h2>Index</h2>

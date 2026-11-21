@@ -48,4 +48,3 @@ description: "ldbrename – Edit LDB databases using your favorite editor"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://samba.org/~tridge/">http://samba.org/~tridge/</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ while (next_fli_frame(0) == FLI_OK) {
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-play_fli/">play_fli</a></code>(3), <code><a href="/docs/linux/man/3-play_memory_fli/">play_memory_fli</a></code>(3), <code><a href="/docs/linux/man/3-next_fli_frame/">next_fli_frame</a></code>(3) </p>
-<h2>Index</h2>

@@ -24,4 +24,3 @@ description: "ql/math/integrals/kronrodintegral.hpp – Integral of a 1-dimensio
 <p> Integral of a 1-dimensional function using the Gauss-Kronrod method. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

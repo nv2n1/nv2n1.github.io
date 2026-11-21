@@ -29,4 +29,3 @@ description: "rundig – sample script to create a search database for ht://Dig"
 <p> Please refer to the HTML pages (in the htdig-doc package) <code>/usr/share/doc/htdig-doc/html/index.html</code> and the manual pages <i><a href="/docs/linux/man/1-htdig/">htdig</a>(1)</i> , <i><a href="/docs/linux/man/1-htmerge/">htmerge</a>(1)</i> , <i><a href="/docs/linux/man/1-htnotify/">htnotify</a>(1)</i> , <i><a href="/docs/linux/man/1-htfuzzy/">htfuzzy</a>(1)</i> for a detailed description of ht://Dig and its commands.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christian Schwarz, modified by Gergely Madarasz and Stijn de Bekker, based on the HTML documentation of ht://Dig. </p>
-<h2>Index</h2>

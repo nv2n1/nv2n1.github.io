@@ -145,4 +145,3 @@ $ ls - F Makefile src / lib / $ gtags $ global main src / main.c $ global - x ma
 <p> Tama Communications Corporation.</p>
 <h2>HISTORY</h2>
 <p> The <code>global</code> command appeared in FreeBSD 2.2.2. </p>
-<h2>Index</h2>

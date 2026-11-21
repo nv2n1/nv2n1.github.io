@@ -55,4 +55,3 @@ export SIMPLEVISOR_NAME = myinstance
 <h2>AUTHOR</h2>
 <p> Massimo Paladin &lt;massimo.paladin [at] gmail.com&gt; </p>
 <p> Copyright (C) <font SIZE="-1">CERN 2013-2016</font> </p>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "metalink_piece_hash_t – The structure that holds hash value of a
 <p> Null terminated string of a hash value in ASCII hexadecimal notation. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-metalink_parse_file/">metalink_parse_file</a></code>(3), </p>
-<h2>Index</h2>

@@ -124,4 +124,3 @@ description: "cxxtestgen – performs test discovery to create a CxxTest test ru
 <p> CxxTest User Guide: <a rel="nofollow" href="http://cxxtest.com/cxxtest/doc/guide.html">http://cxxtest.com/cxxtest/doc/guide.html</a></p>
 <h2>COPYING</h2>
 <p> Copyright (c) 2008 Sandia Corporation. This software is distributed under the Lesser GNU General Public License (LGPL) v3 </p>
-<h2>Index</h2>

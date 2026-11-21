@@ -83,4 +83,3 @@ description: "gsh – Group Shell"
 <h2>AUTHOR</h2>
 <p> Guillaume Chazarain &lt;guichaz [at] gmail.com&gt;<br />
  See <a rel="nofollow" href="http://guichaz.free.fr/gsh">http://guichaz.free.fr/gsh</a> </p>
-<h2>Index</h2>

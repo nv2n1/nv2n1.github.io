@@ -740,4 +740,3 @@ struct ex_st *f3(pid_t *p, struct ex_st k);
 <dt>
 </dt><dd> mailto:sping [at] gentoo.org</dd></dl>
 </dl>
-<h2>Index</h2>

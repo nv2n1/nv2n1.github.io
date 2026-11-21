@@ -23,4 +23,3 @@ int ares_dup(ares_channel *dest, ares_channel source)
 <p> <a href="/docs/linux/man/3-ares_dup/">ares_dup</a>(3) was added in c-ares 1.6.0</p>
 <h2>AUTHOR</h2>
 <p> Daniel Stenberg </p>
-<h2>Index</h2>

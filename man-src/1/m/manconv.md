@@ -52,4 +52,3 @@ Colin Watson (cjwatson [at] debian.org).
 <h2>BUGS</h2>
 <p> <a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br />
  <a rel="nofollow" href="https://savannah.nongnu.org/bugs/?group=man-db">https://savannah.nongnu.org/bugs/?group=man-db</a> </p>
-<h2>Index</h2>

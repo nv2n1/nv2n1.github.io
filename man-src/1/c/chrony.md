@@ -31,4 +31,3 @@ description: "chrony – programs for keeping computer clocks accurate"
 <p> Richard Curnow &lt;rc [at] rc0.org.uk&gt; </p>
 <p> This man-page was written by Jan Schaumann &lt;jschauma [at] netmeister.org&gt; as part of &quot;The Missing Man Pages Project&quot;. Please see <i><a rel="nofollow" href="http://www.netmeister.org/misc/m2p2/index.html">http://www.netmeister.org/misc/m2p2/index.html</a></i> for details. </p>
 <p> The complete chrony documentation is supplied in texinfo format. </p>
-<h2>Index</h2>

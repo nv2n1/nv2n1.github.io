@@ -34,4 +34,3 @@ void bson_set_error(bson_error_t *error,
 <p> This is a helper function to set the parameters of a <code>bson_error_t</code> \&amp;. It handles the case where <code>error</code> is NULL by doing nothing. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

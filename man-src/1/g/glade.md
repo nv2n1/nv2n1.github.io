@@ -47,4 +47,3 @@ description: "glade – Create GTK+ user interfaces"
 </dt><dd> X display to use.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>devhelp</code>(1) </p>
-<h2>Index</h2>

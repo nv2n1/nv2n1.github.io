@@ -69,4 +69,3 @@ description: "Moe – manual page for Moe 1.3"
 <dt>
 </dt><dd> <code>info Moe</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

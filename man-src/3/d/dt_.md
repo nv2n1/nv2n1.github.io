@@ -30,4 +30,3 @@ description: "QuantLib::ExtendedBinomialTree – Binomial tree base class."
 <p> Binomial tree base class. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

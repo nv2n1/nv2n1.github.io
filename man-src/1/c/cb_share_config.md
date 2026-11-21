@@ -19,4 +19,3 @@ Martin Halle
 </pre>
 <h2>HISTORY</h2>
 <p> 2007 &#8211; Initial version </p>
-<h2>Index</h2>

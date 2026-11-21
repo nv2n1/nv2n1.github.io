@@ -29,4 +29,3 @@ globus_module_deactivate(GLOBUS_GSI_GSS_ASSIST_MODULE)
 <p> Module descriptor</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gss_assist from the source code. </p>
-<h2>Index</h2>

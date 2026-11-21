@@ -31,4 +31,3 @@ description: "ncpdq – netCDF Permute Dimensions Quickly, Pack Data Quietly…"
 <p> should give you access to the complete manual, except for the TeX-intensive portions. </p>
 <h2>HOMEPAGE</h2>
 <p> The <code>NCO</code> homepage at &lt;<a rel="nofollow" href="http://nco.sf.net">http://nco.sf.net</a>&gt; contains more information. </p>
-<h2>Index</h2>

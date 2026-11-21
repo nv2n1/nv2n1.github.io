@@ -101,4 +101,3 @@ Stream events until this timestamp </p>
 <p> If you do not provide the &#8211;since option, the command returns only new and/or live events. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; June 2015, updated by Brian Goff &lt;cpuguy83 [at] gmail.com&gt; October 2015, updated by Mike Brown &lt;mikebrow [at] gmail.com&gt; </p>
-<h2>Index</h2>

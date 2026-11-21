@@ -36,4 +36,3 @@ description: "QuantLib::TrinomialTree – Recombining trinomial tree class."
 </dt><dd> The diffusion term of the SDE must be independent of the underlying process.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

@@ -79,4 +79,3 @@ description: "journalctl, systemd-journalctl – Query the systemd journal"
 <dl>
 <dt>
 </dt><dd> Developer</dd></dl>
-<h2>Index</h2>

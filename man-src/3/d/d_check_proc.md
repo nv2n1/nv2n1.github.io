@@ -17,4 +17,3 @@ description: "d_check_proc – Dialog procedure implementing a check box object.
 <p> Note: the object width should allow space for the text as well as the check box (which is square, with sides equal to the object height). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-excustom/">excustom</a></code>(3), <code><a href="/docs/linux/man/3-exgui/">exgui</a></code>(3) </p>
-<h2>Index</h2>

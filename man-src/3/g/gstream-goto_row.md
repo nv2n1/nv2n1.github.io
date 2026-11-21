@@ -19,4 +19,3 @@ description: "goto_row"
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code>gstream-move_row</code>(3), <code>gstream-goto_xy</code>(3) </p>
-<h2>Index</h2>

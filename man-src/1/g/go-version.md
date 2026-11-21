@@ -20,4 +20,3 @@ description: "go-version – print the build information for Go executables"
 <p> go doc runtime/debug.BuildInfo.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Michael Stapelberg &lt;stapelberg [at] debian.org&gt; and is maintained by the Debian Go Compiler Team &lt;team+go-compiler [at] tracker.debian.org&gt; based on the output of &#8216;go help version&#8217; for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

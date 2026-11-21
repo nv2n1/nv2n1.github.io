@@ -62,4 +62,3 @@ description: "synopsis – simple frontend to the Synopsis framework, a multi-la
 <dt><code>&#8211;probe</code></dt>
 <dd> Probe the specified processor. </dd>
 </dl>
-<h2>Index</h2>

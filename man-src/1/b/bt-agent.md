@@ -43,4 +43,3 @@ description: "bt-adapter – a bluetooth agent"
 <p> Alexander Orlenko &lt;zxteam [at] gmail.com&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-bt-adapter/">bt-adapter</a></i>(1) <i><a href="/docs/linux/man/1-bt-device/">bt-device</a></i>(1) <i><a href="/docs/linux/man/1-bt-network/">bt-network</a></i>(1) </p>
-<h2>Index</h2>

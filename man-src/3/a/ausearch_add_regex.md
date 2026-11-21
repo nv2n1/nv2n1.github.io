@@ -21,4 +21,3 @@ description: "ausearch_add_regex – use regular expression search rule"
 <p> <code><a href="/docs/linux/man/3-ausearch_add_expression/">ausearch_add_expression</a></code>(3), <code><a href="/docs/linux/man/3-ausearch_add_item/">ausearch_add_item</a></code>(3), <code><a href="/docs/linux/man/3-ausearch_clear/">ausearch_clear</a></code>(3), <code><a href="/docs/linux/man/3-ausearch_next_event/">ausearch_next_event</a></code>(3), <code><a href="/docs/linux/man/3-regcomp/">regcomp</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

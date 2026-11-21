@@ -28,4 +28,3 @@ bson_iter_overwrite_int32 (bson_iter_t *iter,
 <p> It is a programming error to call this function when <code>iter</code> is not obvserving an element of type BSON_TYPE_BOOL. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

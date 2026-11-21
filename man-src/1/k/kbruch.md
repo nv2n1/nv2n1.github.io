@@ -22,4 +22,3 @@ description: "kbruch – Learn calculating with fractions"
 <p> KBruch was written by Sebastian Stein &lt;seb.kde [at] hpfsc.de&gt; </p>
 <h2>AUTHOR</h2>
 <p> Lauri Watts. </p>
-<h2>Index</h2>

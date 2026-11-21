@@ -26,4 +26,3 @@ description: "h52gif – Converts an HDF5 file to a GIF file."
 <dd> Palette option, specifying the name of an HDF5 dataset containing a palette to be used in an image conversion</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-h5dump/">h5dump</a></i>(1), <i><a href="/docs/linux/man/1-h5ls/">h5ls</a></i>(1), <i><a href="/docs/linux/man/1-h5diff/">h5diff</a></i>(1), <i><a href="/docs/linux/man/1-h5repart/">h5repart</a></i>(1), <i><a href="/docs/linux/man/1-h5import/">h5import</a></i>(1), <i><a href="/docs/linux/man/1-gif2h5/">gif2h5</a></i>(1), <i>h5perf</i>(1) </p>
-<h2>Index</h2>

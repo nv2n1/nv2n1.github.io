@@ -24,4 +24,3 @@ description: "pamtompfont – Convert Netpbm image to Mplayer bitmap font file"
 <p> <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamtompfont</code> was added to Netpbm in Release 10.43 (June 2008). </p>
-<h2>Index</h2>

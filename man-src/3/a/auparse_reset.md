@@ -20,4 +20,3 @@ description: "auparse_reset – reset audit parser instance"
 <p> <code><a href="/docs/linux/man/3-auparse_init/">auparse_init</a></code>(3), <code><a href="/docs/linux/man/3-auparse_destroy/">auparse_destroy</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

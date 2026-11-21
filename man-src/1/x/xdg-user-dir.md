@@ -46,4 +46,3 @@ description: "xdg-user-dir – Find an XDG user dir"
 <p> The <code>XDG_CONFIG_HOME</code> environment variable determines where the user-dirs.dirs file is located.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xdg-user-dirs-update/">xdg-user-dirs-update</a></code>(1) </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ if (install_joystick(JOY_TYPE_AUTODETECT) != 0)
 <p> Returns zero on success. As soon as you have installed the joystick module, you will be able to read the button state and digital (on/off toggle) direction information, which may be enough for some games. If you want to get full analogue input, though, you need to use the calibrate_joystick() functions to measure the exact range of the inputs: see below. </p>
 <h2>SEE ALSO</h2>
 <p> <code>remove_joystick</code>(3), <code>num_joysticks</code>(3), <code><a href="/docs/linux/man/3-load_joystick_data/">load_joystick_data</a></code>(3), <code><a href="/docs/linux/man/3-calibrate_joystick/">calibrate_joystick</a></code>(3), <code><a href="/docs/linux/man/3-calibrate_joystick_name/">calibrate_joystick_name</a></code>(3), <code><a href="/docs/linux/man/3-poll_joystick/">poll_joystick</a></code>(3), <code><a href="/docs/linux/man/3-exjoy/">exjoy</a></code>(3) </p>
-<h2>Index</h2>

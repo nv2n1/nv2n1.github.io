@@ -197,4 +197,3 @@ description: "install-tl – TeX Live cross-platform installer"
 <h2>AUTHORS AND COPYRIGHT</h2>
 <p> This script and its documentation were written for the TeX Live distribution (&lt;<a rel="nofollow" href="https://tug.org/texlive">https://tug.org/texlive</a>&gt;) and both are licensed under the <font SIZE="-1">GNU</font> General Public License Version 2 or later. </p>
 <p> <tt>$Id:</tt> install-tl 59056 2021-05-02 21:48:01Z karl $ </p>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "tftopl – convert TeX font metric (tfm) files to property lists"
  Donald E. Knuth, <i>The Metafontbook</i> (Volume C of <i>Computers and Typesetting</i>), Addison-Wesley, 1986, ISBN 0-201-13445-4.</p>
 <h2>AUTHORS</h2>
 <p> Donald E. Knuth wrote the program. It was published as part of the <i>TeXware</i> technical report, available from the TeX Users Group. Howard Trickey and Pavel Curtis originally ported it to Unix. </p>
-<h2>Index</h2>

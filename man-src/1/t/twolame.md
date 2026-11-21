@@ -246,4 +246,3 @@ sox sound_11025.aiff -t raw -r 16000 | twolame -r -s 16000 - - &gt; out.mp2
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

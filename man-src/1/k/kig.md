@@ -39,4 +39,3 @@ description: "kig – an interactive geometry program for KDE"
 <p> This man page based on the one prepared for Debian by Ben Burton &lt;bab [at] debian.org&gt;. </p>
 <h2>AUTHOR</h2>
 <p> Ben Burton. </p>
-<h2>Index</h2>

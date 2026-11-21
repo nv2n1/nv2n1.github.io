@@ -134,4 +134,3 @@ description: "ipa-replica-install – Create an IPA replica"
 <p> 0 if the command was successful </p>
 <p> 1 if an error occurred </p>
 <p> 3 if the host exists in the IPA server or a replication agreement to the remote master already exists </p>
-<h2>Index</h2>

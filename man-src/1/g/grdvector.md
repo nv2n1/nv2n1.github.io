@@ -111,4 +111,3 @@ gmt grdvector comp_x.nc comp_y.nc -Ix3 -JH0/20c -Q0.1i+e+jc -S200 &gt; globe.ps
 <p> <code>gmt</code>, <code>gmtcolors</code>, <code>grdcontour</code>, <code>psxy</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

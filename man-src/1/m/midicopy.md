@@ -44,4 +44,3 @@ description: "midicopy – Copy selected track, channel, time interval of a MIDI
 <p> This manual page was written by Seymour Shlien.</p>
 <h2>VERSION</h2>
 <p> This man page describes midicopy version 1.04 from September 19 2005. </p>
-<h2>Index</h2>

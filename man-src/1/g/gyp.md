@@ -86,4 +86,3 @@ description: "gyp – cross-platform makefile generator for Chromium"
 </dt><dd> Implicitly included before anything else in every .gyp file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-qmake/">qmake</a></code>(1), <code><a href="/docs/linux/man/1-cmake/">cmake</a></code>(1) </p>
-<h2>Index</h2>

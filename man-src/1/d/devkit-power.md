@@ -34,4 +34,3 @@ description: "devkit-power – DeviceKit-power command line tool"
 <p> Please send bug reports to either the distribution or the DeviceKit mailing list, see m[blue]<code><a rel="nofollow" href="http://lists.freedesktop.org/mailman/listinfo/devkit-devel">http://lists.freedesktop.org/mailman/listinfo/devkit-devel</a></code>m[] on how to subscribe.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-devkit-power-daemon/">devkit-power-daemon</a></code>(8), <code><a href="/docs/linux/man/7-devicekit-power/">DeviceKit-power</a></code>(7), </p>
-<h2>Index</h2>

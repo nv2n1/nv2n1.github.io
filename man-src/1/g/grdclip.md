@@ -60,4 +60,3 @@ gmt grdclip classes.nc -Gnew_classes.nc -Si25/30/99 -Si35/39/55 -Sr17/11 -Sb10/0
 <p> <code>gmt</code>, <code>grdlandmask</code>, <code>grdmask</code>, <code>grdmath</code>, <code>grd2xyz</code>, <code>xyz2grd</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

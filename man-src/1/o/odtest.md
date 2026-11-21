@@ -34,4 +34,3 @@ description: "odtest – test cases for QDBM Odeum"
 <p> <code>qdbm</code>(3), <code>odeum</code>(3) </p>
 <h2>AUTHOR</h2>
 <p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
-<h2>Index</h2>

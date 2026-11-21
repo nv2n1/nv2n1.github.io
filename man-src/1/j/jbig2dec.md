@@ -38,4 +38,3 @@ description: "jbig2dec – File format converter specialized in JBIG2 decoding"
 </dl>
 <h2>AUTHOR</h2>
 <p> jbig2-dev &lt;jbig2-dev [at] ghostscript.com&gt; This manpage was initially written by Sebastian Rasmussen &lt;sebras [at] hotmail.com&gt; for jbig2dec and the Debian Project. </p>
-<h2>Index</h2>

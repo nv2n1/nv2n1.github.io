@@ -35,4 +35,3 @@ description: "plymouth-set-default-theme – Set the plymouth theme"
 </dt><dd> Rebuild initrd (necessary after changing theme).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-grub/">grub</a></code>(8), <code><a href="/docs/linux/man/8-plymouth/">plymouth</a></code>(8), <code><a href="/docs/linux/man/8-plymouthd/">plymouthd</a></code>(8), <code><a href="/docs/linux/man/1-plymouth/">plymouth</a></code>(1), m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/Plymouth">http://www.freedesktop.org/wiki/Software/Plymouth</a></code>m[] </p>
-<h2>Index</h2>

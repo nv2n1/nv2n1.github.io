@@ -175,4 +175,3 @@ avg($total, $n) - returns average given a sum and a total number of values
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-script/">perf-script</a></code>(1) </p>
-<h2>Index</h2>

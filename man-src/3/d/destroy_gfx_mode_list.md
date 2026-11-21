@@ -16,4 +16,3 @@ description: "destroy_gfx_mode_list – Frees the list created by get_gfx_mode_l
 <p> Removes the mode list created by get_gfx_mode_list() from memory. Use this once you are done with the generated mode list to avoid memory leaks in your program. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_gfx_mode_list/">get_gfx_mode_list</a></code>(3), <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3) </p>
-<h2>Index</h2>

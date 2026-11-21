@@ -25,4 +25,3 @@ description: "newer – compare file modification times"
 <dt><code>&#8211;verbose, -v</code></dt>
 <dd> List missing source files. This is the default. </dd>
 </dl>
-<h2>Index</h2>

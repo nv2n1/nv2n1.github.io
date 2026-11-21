@@ -60,4 +60,3 @@ description: "Ocrad – manual page for Ocrad 0.18"
 <dt>
 </dt><dd> <code>info Ocrad</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

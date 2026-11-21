@@ -66,4 +66,3 @@ $ docker container stats-- all-- format "table &#123;&#123;.ID}}	&#123;&#123;.Na
 <p> <code>&#8211;no-trunc</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Do not truncate output</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-container/">docker-container</a>(1)</code> </p>
-<h2>Index</h2>

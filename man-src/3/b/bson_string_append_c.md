@@ -25,4 +25,3 @@ void bson_string_append_c(bson_string_t *string,
 <p> Appends <code>c</code> to the string builder <code>string</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

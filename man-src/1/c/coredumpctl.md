@@ -117,4 +117,3 @@ description: "coredumpctl – Retrieve coredumps from the journal"
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-systemd-coredump/">systemd-coredump</a></code>(8), <code><a href="/docs/linux/man/5-coredump-conf/">coredump.conf</a></code>(5), <code><a href="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></code>(8), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1) </p>
-<h2>Index</h2>

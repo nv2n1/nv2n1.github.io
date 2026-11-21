@@ -59,4 +59,3 @@ struct avc_cache_stats {
 <p> Eamon Walsh &lt;ewalsh [at] tycho.nsa.gov&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-avc_init/">avc_init</a></code>(3), <code><a href="/docs/linux/man/3-avc_has_perm/">avc_has_perm</a></code>(3), <code><a href="/docs/linux/man/3-avc_context_to_sid/">avc_context_to_sid</a></code>(3), <code><a href="/docs/linux/man/3-avc_add_callback/">avc_add_callback</a></code>(3), <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>
-<h2>Index</h2>

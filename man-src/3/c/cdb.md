@@ -255,4 +255,3 @@ if (cdb_find(&amp;cdb, key, keylen) &gt; 0) {<br />
 <p> The <code>tinycdb</code> package written by Michael Tokarev &lt;mjt [at] corpit.ru&gt;, based on ideas and shares file format with original cdb library by Dan Bernstein. </p>
 <h2>LICENSE</h2>
 <p> Public domain. </p>
-<h2>Index</h2>

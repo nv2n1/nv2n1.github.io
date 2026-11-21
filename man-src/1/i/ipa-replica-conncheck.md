@@ -62,4 +62,3 @@ description: "ipa-replica-conncheck – Check a replica-master network connectio
 <p> 1 if an error occurred</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ipa-replica-install/">ipa-replica-install</a></code>(1) </p>
-<h2>Index</h2>

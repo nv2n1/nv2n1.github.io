@@ -23,4 +23,3 @@ description: "aafire, aainfo, aasavefont, aatest – aalib example programs"
 <p> <code>aatest</code> tests the capabilities of aalib.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Joey Hess, for the Debian GNU/Linux system. </p>
-<h2>Index</h2>

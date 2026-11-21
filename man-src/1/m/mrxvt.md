@@ -749,4 +749,3 @@ Mrxvt.macro.Ctrl+Shift+t:       Dummy
 <p> <i><a rel="nofollow" href="http://materm.sourceforge.net">http://materm.sourceforge.net</a></i></p>
 <h2>AUTHORS</h2>
 <p> An Terminator &lt; Ns Mt jimmyzhou [at] users.sourceforge.net Ns &gt; An Gautam Iyer &lt; Ns Mt gi1242 [at] users.sourceforge.net Ns &gt; </p>
-<h2>Index</h2>

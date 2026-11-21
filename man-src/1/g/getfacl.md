@@ -87,4 +87,3 @@ description: "getfacl – get file access control lists"
 <p> Please send your bug reports and comments to the above address.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-setfacl/">setfacl</a></code>(1), <code><a href="/docs/linux/man/5-acl/">acl</a></code>(5) </p>
-<h2>Index</h2>

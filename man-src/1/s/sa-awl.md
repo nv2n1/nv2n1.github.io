@@ -37,4 +37,3 @@ description: "sa-awl – examine and manipulate SpamAssassin’s auto-whitelist 
   - chop off the last two octets, assuming that the user may be in an ISP's
     dynamic address pool.
 </pre>
-<h2>Index</h2>

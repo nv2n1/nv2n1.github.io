@@ -94,4 +94,3 @@ default:\
 <p> <a href="/docs/linux/man/1-su/">su</a>(1), login.access5, <a href="/docs/linux/man/8-getty/">getty</a>(8), telnetd(8)</p>
 <h2>AUTHORS</h2>
 <p> This login program was written for the Heimdal Kerberos 5 implementation. The login.access code was written by Wietse Venema. </p>
-<h2>Index</h2>

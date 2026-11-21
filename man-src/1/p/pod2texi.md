@@ -52,4 +52,3 @@ description: "pod2texi – convert Pod to Texinfo"
 <p> There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law.</p>
 <h2>AUTHOR</h2>
 <p> Patrice Dumas &lt;bug-texinfo [at] gnu.org&gt;. </p>
-<h2>Index</h2>

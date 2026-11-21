@@ -27,4 +27,3 @@ description: "gem2.7 – frontend to RubyGems, the Ruby package manager"
 <p> gem2.7 install rake gem2.7 list &#8211;local gem2.7 build package.gemspec gem2.7 help install</p>
 <h2>SEE ALSO</h2>
 <p> bundle(1) </p>
-<h2>Index</h2>

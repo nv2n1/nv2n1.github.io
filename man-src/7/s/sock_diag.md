@@ -587,4 +587,3 @@ information about reporting bugs,
 and the latest version of this page,
 can be found at
 https://www.kernel.org/doc/man-pages/.
-<h2>Index</h2>

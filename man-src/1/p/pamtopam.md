@@ -20,4 +20,3 @@ description: "pamtopam – copy PAM image"
 <p> <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtoppm/">ppmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pgmtopgm/">pgmtopgm</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) , <code>ppm</code>(1) , <code>pgm</code>(1) , <code>pbm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> This program was added to Netpbm in Release 10.41 (December 2007). </p>
-<h2>Index</h2>

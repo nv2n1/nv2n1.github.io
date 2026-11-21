@@ -71,4 +71,3 @@ LOGDIR = $PCP_LOG_DIR / pmlogger /`hostname`
 <h2>CAVEATS</h2>
 <p> If no <i>configfile</i> is specified, the method for synthesizing a configuration file using a <code><a href="/docs/linux/man/1-pmlc/">pmlc</a></code>(1) connection to the existing <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) is, of necessity, incomplete. In particular, for metrics with dynamic underlying instance domains, it is not possible to identify a configuration that logs <code>all</code> instances of a metric all of the time, so rather the synthesized configuration file requests the continued logging of the set of instances that exist at the time <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) is interrogated by <code>pmnewlog</code>. </p>
 <p> If this situation is a concern, a fixed configuration file should be used, and passed to <code>pmnewlog</code> via the <code>-c</code> option. </p>
-<h2>Index</h2>

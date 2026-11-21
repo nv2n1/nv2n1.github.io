@@ -110,4 +110,3 @@ CUNBDB6 orthogonalizes the column vector
 <p> Definition at line 154 of file cunbdb6.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

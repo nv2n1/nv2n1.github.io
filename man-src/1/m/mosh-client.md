@@ -38,4 +38,3 @@ description: "mosh-client – client-side helper for mosh"
 <h2>BUGS</h2>
 <p> Please report bugs to <i>mosh-devel [at] mit.edu</i>. Users may also subscribe to the <i>mosh-users [at] mit.edu</i> mailing list, at<br />
  <i><a rel="nofollow" href="http://mailman.mit.edu/mailman/listinfo/mosh-users">http://mailman.mit.edu/mailman/listinfo/mosh-users</a></i> </p>
-<h2>Index</h2>

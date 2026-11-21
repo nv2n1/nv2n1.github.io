@@ -67,4 +67,3 @@ description: "unsquashfs – tool to uncompress squashfs filesystems"
 <h2>AUTHOR</h2>
 <p> squashfs was written by Phillip Lougher &lt;<i>phillip [at] squashfs.org.uk</i>&gt;. </p>
 <p> This manual page was written by Daniel Baumann &lt;<i>mail [at] daniel-baumann.ch</i>&gt;. </p>
-<h2>Index</h2>

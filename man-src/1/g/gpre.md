@@ -80,4 +80,3 @@ description: "gpre – Firebird source pre-processor"
 <h2>COPYRIGHT &amp; LICENSE</h2>
 <p> Copyright (C) Damyan Ivanov, 2009. </p>
 <p> This manpage was written by Damyan Ivanov for the Debian project but may be used by others. Permission is granted to use this document, with or without modifications, provided that this notice is retained. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return. </p>
-<h2>Index</h2>

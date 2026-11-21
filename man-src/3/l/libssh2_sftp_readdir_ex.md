@@ -38,4 +38,3 @@ int libssh2_sftp_readdir_ex(LIBSSH2_SFTP_HANDLE *handle,
 <p> From 1.2.8, LIBSSH2_ERROR_BUFFER_TOO_SMALL is returned if any of the given &#8216;buffer&#8217; or &#8216;longentry&#8217; buffers are too small to fit the requested object name.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3),</code> <code><a href="/docs/linux/man/3-libssh2_sftp_close_handle/">libssh2_sftp_close_handle</a>(3)</code> </p>
-<h2>Index</h2>

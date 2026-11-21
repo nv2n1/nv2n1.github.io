@@ -20,4 +20,3 @@ description: "xwdtopnm – convert a X11 or X10 window dump file into a portable
 <p> <a href="/docs/linux/man/1-pnmtoxwd/">pnmtoxwd</a>(1), <a href="/docs/linux/man/5-pnm/">pnm</a>(5), <a href="/docs/linux/man/1-xwd/">xwd</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989, 1991 by Jef Poskanzer. </p>
-<h2>Index</h2>

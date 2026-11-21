@@ -40,4 +40,3 @@ description: "lsb_release – print distribution-specific information"
 <p> lsb(8)</p>
 <h2>AUTHOR</h2>
 <p> Chris Lawrence &lt;lawrencc [at] debian.org&gt;. </p>
-<h2>Index</h2>

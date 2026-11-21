@@ -74,4 +74,3 @@ description: "paperkey – extract secret information out of OpenPGP secret keys
 <p> <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1), <code><a rel="nofollow" href="http://www.jabberwocky.com/software/paperkey/">http://www.jabberwocky.com/software/paperkey/</a></code></p>
 <h2>AUTHORS</h2>
 <p> <code>paperkey</code> is written by David Shaw &lt;dshaw [at] jabberwocky.com&gt;. </p>
-<h2>Index</h2>

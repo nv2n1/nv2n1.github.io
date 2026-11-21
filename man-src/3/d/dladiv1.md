@@ -80,4 +80,3 @@ DLADIV performs complex division in real arithmetic
 <p> Definition at line 216 of file dladiv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

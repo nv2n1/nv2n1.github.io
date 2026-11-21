@@ -19,4 +19,3 @@ description: "vimdot – Combined text editor and dot viewer"
 <h2>AUTHOR</h2>
 <p> vimdot was written by John Ellson &lt;ellson [at] research.att.com&gt; </p>
 <p> This manual page was written by David Claughton &lt;dave [at] eclecticdave.com&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

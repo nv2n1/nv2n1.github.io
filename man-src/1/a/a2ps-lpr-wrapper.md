@@ -28,4 +28,3 @@ description: "a2ps-lpr-wrapper — lp/lpr wrapper script for GNU a2ps on Debian"
 &nbsp; </p>
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br />
 &nbsp; </p>
-<h2>Index</h2>

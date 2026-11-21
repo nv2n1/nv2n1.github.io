@@ -61,4 +61,3 @@ description: "istanbul – a desktop session recorder"
 <h2>AUTHOR</h2>
 <p> Istanbul was written by Zaheer Abbas Merali &lt;zaheerabbas [at] merali.org&gt;. </p>
 <p> This manual page was written by Luca Bruno &lt;luca.br [at] uno.it&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

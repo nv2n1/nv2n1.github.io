@@ -39,4 +39,3 @@ strfree(myfilename);
 <p> If you don&#8217;t need to access the file by name, use <code>pm_tmpfile_fd()</code> instead, because it&#8217;s cleaner. With <code>pm_tmpfile_fd()</code>, the operating system always deletes the temporary file when your program exits, if the program failed to clean up after itself. </p>
 <h2>HISTORY</h2>
 <p> <code>pm_tmpfile()</code> was introduced in Netpbm 10.42 (March 2008). </p>
-<h2>Index</h2>

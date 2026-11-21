@@ -117,4 +117,3 @@ description: "mlton – whole-program compiler for the Standard ML (SML) program
 <p> MLton&#8217;s type error messages are not in a form suitable for processing by Emacs. For details on how to fix this, see <a rel="nofollow" href="http://mlton.org/Emacs.">http://mlton.org/Emacs.</a> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mlprof/">mlprof</a></code>(1) and the <code>MLton Guide</code>. </p>
-<h2>Index</h2>

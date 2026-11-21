@@ -122,4 +122,3 @@ gmt mapproject quakes.dat -Lcoastline.xy/k &gt; quake_dist.dat
 <p> Vanicek, P. and Krakiwsky, E, 1982, Geodesy &#8211; The Concepts, North-Holland Publ., ISBN: 0 444 86149 1.</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

@@ -114,4 +114,3 @@ description: "saxon8 – manual page for saxon8"
 <p> <code><a href="/docs/linux/man/1-xsltproc/">xsltproc</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Michael H. Kay &lt;mike [at] saxonica.com&gt; </p>
-<h2>Index</h2>

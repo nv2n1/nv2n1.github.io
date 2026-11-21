@@ -68,4 +68,3 @@ description: "smaclient – tool for accessing z/VM System Management functions"
 <p> smaclient written by Leland Lucius one fun week in the snowy winter of 2011. Manpage written by Rafael Fonseca.</p>
 <h2>LICENSE</h2>
 <p> Released under the Artistic License 2.0. Full license text can be found at <a rel="nofollow" href="http://opensource.org/licenses/artistic-license-2.0">http://opensource.org/licenses/artistic-license-2.0</a> </p>
-<h2>Index</h2>

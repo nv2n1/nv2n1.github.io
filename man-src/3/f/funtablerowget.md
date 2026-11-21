@@ -43,4 +43,3 @@ while ((buf = (Ev)FunTableRowGet(fun, NULL, MAXROW, NULL, &amp;got))) {
 <p> Note that <i>FunTableRowGet()</i> also can be called as <i>FunEventsGet()</i>, for backward compatibility.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

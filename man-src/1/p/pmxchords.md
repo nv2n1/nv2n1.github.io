@@ -28,4 +28,3 @@ description: "pmxchords – This script processes pmx files with chord symbols, 
 <p> pmx(1), <a href="/docs/linux/man/1-musixtex/">musixtex</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> pmxchords was written by Ondrej Fafejta &lt;fafejtao [at] gmail.com&gt;. This manual page was written by Bob Tennent &lt;rdt [at] cs.queensu.ca&gt;. </p>
-<h2>Index</h2>

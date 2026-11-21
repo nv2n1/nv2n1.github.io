@@ -31,4 +31,3 @@ description: "virt-pki-validate – validate libvirt PKI files are configured co
 <p> virt-pki-validate is distributed under the terms of the <font SIZE="-1">GNU GPL</font> v2+. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font></p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), online <font SIZE="-1">PKI</font> setup instructions &lt;<a rel="nofollow" href="http://libvirt.org/remote.html">http://libvirt.org/remote.html</a>&gt; </p>
-<h2>Index</h2>

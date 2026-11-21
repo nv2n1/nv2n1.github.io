@@ -28,4 +28,3 @@ description: "rpdump – alpine remote data utility"
 <p> <a href="/docs/linux/man/1-rpload/">Rpload</a>(1). </p>
 <p> Copyright 1989-2007 by the University of Washington. </p>
 <p> $Date: 2005/01/14 20:40:14 $ </p>
-<h2>Index</h2>

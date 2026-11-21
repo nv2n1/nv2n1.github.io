@@ -21,4 +21,3 @@ description: "docker-node-update – Update a node"
 <p> <code>&#8211;role</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Role of the node (&quot;worker&quot;|&quot;manager&quot;)</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-node/">docker-node</a>(1)</code> </p>
-<h2>Index</h2>

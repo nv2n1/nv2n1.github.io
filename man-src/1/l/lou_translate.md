@@ -35,4 +35,3 @@ description: "lou_translate – A Braille translator for large scale testing of 
 <dt>
 </dt><dd> <code>info liblouis</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

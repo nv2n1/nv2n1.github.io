@@ -22,4 +22,3 @@ description: "libssh2_session_last_error – get the most recent error"
 <p> Numeric error code corresponding to the the Error Code constants. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_last_errno/">libssh2_session_last_errno</a>(3)</code> </p>
-<h2>Index</h2>

@@ -325,4 +325,3 @@ LINTIAN_PROFILE = debian
 <p> Richard Braakman &lt;dark [at] xs4all.nl&gt; </p>
 <p> Christian Schwarz &lt;schwarz [at] monet.m.isar.de&gt; </p>
 <p> Please use the email address &lt;lintian-maint [at] debian.org&gt; for Lintian related comments. </p>
-<h2>Index</h2>

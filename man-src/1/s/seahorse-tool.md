@@ -63,4 +63,3 @@ description: "seahorse-tool – PGP/GnuPG file encryption for the GNOME Desktop"
  Documentation and help files are covered by GFDL license. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-seahorse-daemon/">seahorse-daemon</a>(1)</code>, </p>
-<h2>Index</h2>

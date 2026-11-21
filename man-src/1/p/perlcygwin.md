@@ -483,4 +483,3 @@ Any additional ld flags(NOT including libraries) ? [none] - s
 <p> Charles Wilson &lt;cwilson [at] ece.gatech.edu&gt;, Eric Fifer &lt;egf7 [at] columbia.edu&gt;, alexander smishlajev &lt;als [at] turnhere.com&gt;, Steven Morlock &lt;newspost [at] morlock.net&gt;, Sebastien Barre &lt;Sebastien.Barre [at] utc.fr&gt;, Teun Burgers &lt;burgers [at] ecn.nl&gt;, Gerrit P. Haase &lt;gp [at] familiehaase.de&gt;, Reini Urban &lt;rurban [at] cpan.org&gt;, Jan Dubois &lt;jand [at] activestate.com&gt;, Jerry D. Hedden &lt;jdhedden [at] cpan.org&gt;.  </p>
 <h2>HISTORY</h2>
 <p> Last updated: 2012-02-08 </p>
-<h2>Index</h2>

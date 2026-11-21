@@ -56,4 +56,3 @@ description: "nvidia-persistenced – A daemon to maintain persistent software s
 <p> <code><a href="/docs/linux/man/1-nvidia-smi/">nvidia-smi</a></code>(1), <code>nvidia-modprobe</code>(1) </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2013-2016 NVIDIA Corporation. </p>
-<h2>Index</h2>

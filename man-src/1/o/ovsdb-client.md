@@ -274,4 +274,3 @@ description: "ovsdb-client – command-line interface to"
 <dd> Prints version information to the console.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ovsdb-server/">ovsdb-server</a></code>(1), <code><a href="/docs/linux/man/1-ovsdb-client/">ovsdb-client</a></code>(1), and the OVSDB specification. </p>
-<h2>Index</h2>

@@ -43,4 +43,3 @@ description: "fotoxx – digital photo editor and collection manager"
 <p>&nbsp;<wbr>The online user manual is available using the menu command<br />
 &nbsp;<wbr>Help&nbsp;<wbr>&gt;&nbsp;<wbr>User Guide<br />
 &nbsp;<wbr>This manual explains fotoxx operation in great detail. </p>
-<h2>Index</h2>

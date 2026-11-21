@@ -72,4 +72,3 @@ Ftrace buffers.
 <dt>
 </dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
-<h2>Index</h2>

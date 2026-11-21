@@ -42,4 +42,3 @@ fauxv 1234
 <p> <a href="/docs/linux/man/7-frysk/">frysk</a>(7)</p>
 <h2>BUGS</h2>
 <p> Report bugs to m[blue]<code><a rel="nofollow" href="http://sourceware.org/frysk">http://sourceware.org/frysk</a></code>m[] </p>
-<h2>Index</h2>

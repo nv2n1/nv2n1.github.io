@@ -60,4 +60,3 @@ foo(unsigned int x, float y)
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-ffi/">ffi</a>(3), ffi_prep_cif3 </p>
-<h2>Index</h2>

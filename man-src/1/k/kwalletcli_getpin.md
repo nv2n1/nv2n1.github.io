@@ -78,4 +78,3 @@ description: "kwalletcli_getpin – command line interface to pinentry"
 <p> Some <code>pinentry</code> programmes may not support messages correctly and display them as boolean queries instead. </p>
 <p> Some implementations display labels with the wrong charset. </p>
 <p> Neither of these two problems is an issue in but a bug of the backend implementation. </p>
-<h2>Index</h2>

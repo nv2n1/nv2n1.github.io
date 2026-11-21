@@ -34,4 +34,3 @@ description: "glite-lb-state_history – utility to show job state changes store
 <p> L&amp;B Product Team, CESNET. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-glite-lb-mon/">glite-lb-mon</a></code>(1), <code><a href="/docs/linux/man/1-glite-lb-statistics/">glite-lb-statistics</a></code>(1) </p>
-<h2>Index</h2>

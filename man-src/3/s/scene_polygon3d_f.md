@@ -25,4 +25,3 @@ url: "/docs/linux/man/3-scene_polygon3d_f/"
 <p> Returns zero on success, or a negative number if it won&#8217;t be rendered for lack of a rendering routine. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-create_scene/">create_scene</a></code>(3), <code><a href="/docs/linux/man/3-clear_scene/">clear_scene</a></code>(3), <code><a href="/docs/linux/man/3-render_scene/">render_scene</a></code>(3), <code><a href="/docs/linux/man/3-destroy_scene/">destroy_scene</a></code>(3), <code><a href="/docs/linux/man/3-polygon3d/">polygon3d</a></code>(3), <code><a href="/docs/linux/man/3-cpu_capabilities/">cpu_capabilities</a></code>(3), <code><a href="/docs/linux/man/3-exscn3d/">exscn3d</a></code>(3) </p>
-<h2>Index</h2>

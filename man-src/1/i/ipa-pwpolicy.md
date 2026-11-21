@@ -34,4 +34,3 @@ description: "ipa-pwpolicy – Display or modify the IPA password policy"
 <dd> Display the XML-RPC request and response for more verbose debugging output</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, nonzero on error. </p>
-<h2>Index</h2>

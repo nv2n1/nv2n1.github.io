@@ -117,4 +117,3 @@ npm search[-l | --long][--json][--parseable][--no - description][search terms...
 <dd> npm help view </dd>
 </dl>
 </dl>
-<h2>Index</h2>

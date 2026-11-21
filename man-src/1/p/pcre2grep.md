@@ -185,4 +185,3 @@ Cambridge, England.
 Last updated: 03 January 2015
 Copyright (c) 1997-2015 University of Cambridge.
 </pre>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "lndir – create a shadow directory of symbolic links to another d
 <p> If the link already exists but doesn&#8217;t point to the correct file, the program prints the link name and the location where it does point.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ln/">ln</a></code>(1). </p>
-<h2>Index</h2>

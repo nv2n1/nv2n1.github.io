@@ -19,4 +19,3 @@ description: "npm-bundle – REMOVED"
 <dd> npm help install </dd>
 </dl>
 </dl>
-<h2>Index</h2>

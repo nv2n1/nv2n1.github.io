@@ -65,4 +65,3 @@ FAX: +1 801 581 4148
 Email: &lt;beebe [at] math.utah.edu&gt;
 </pre>
 </dd></dl>
-<h2>Index</h2>

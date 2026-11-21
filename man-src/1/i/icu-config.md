@@ -99,4 +99,3 @@ description: "icu-config – output ICU build options"
 <p> 50.1.2</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2002-2004 IBM, Inc. and others. </p>
-<h2>Index</h2>

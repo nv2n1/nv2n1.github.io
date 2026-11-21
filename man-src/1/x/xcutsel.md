@@ -53,4 +53,3 @@ description: "xcutsel – interchange between cut buffer and selection"
 <p> There is no way to change the name of the selection or the number of the cut buffer while the program is running.</p>
 <h2>AUTHOR</h2>
 <p> Ralph R. Swick, DEC/MIT Project Athena </p>
-<h2>Index</h2>

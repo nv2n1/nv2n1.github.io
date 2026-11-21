@@ -66,4 +66,3 @@ description: "setxkbmap – set the keyboard using the X Keyboard Extension"
 <p> <a href="/docs/linux/man/1-xkbcomp/">xkbcomp</a>(1), <a href="/docs/linux/man/7-xkeyboard-config/">xkeyboard-config</a>(7)</p>
 <h2>FILES</h2>
 <p> <i>/usr/share/X11/xkb</i> </p>
-<h2>Index</h2>

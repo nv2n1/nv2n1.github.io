@@ -17,4 +17,3 @@ description: "mate-color-select – Select a color from a palette or from screen
 <p> The <code>mate-color-select</code> tool supports all known GTK options, but has no options of its own.</p>
 <h2>BUGS</h2>
 <p> If you find bugs in the <i>mate-color-select</i> program, please report these on <a rel="nofollow" href="https://github.com/mate-desktop/mate-desktop/issues.">https://github.com/mate-desktop/mate-desktop/issues.</a> </p>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ dblink_disconnect-- -- -- -- -- -- -- -- -- -OK(1 row)
 dblink_disconnect-- -- -- -- -- -- -- -- -- -OK(1 row)
 </code></pre>
 </dd></dl>
-<h2>Index</h2>

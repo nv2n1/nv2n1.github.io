@@ -26,4 +26,3 @@ description: "NVIDIA – manual page for NVIDIA Texture Tools – Copyright NVID
 <dt><code>-alpha</code></dt>
 <dd> Compare alpha weighted images. </dd>
 </dl>
-<h2>Index</h2>

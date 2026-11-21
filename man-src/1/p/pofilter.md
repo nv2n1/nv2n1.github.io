@@ -71,4 +71,3 @@ description: "pofilter – Perform quality checks on Gettext PO, XLIFF and TMX l
 <dt>&#8211;validcharsfile</dt>
 <dd> read list of all valid characters from FILE (must be in UTF-8) </dd>
 </dl>
-<h2>Index</h2>

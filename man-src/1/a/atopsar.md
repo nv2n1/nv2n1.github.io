@@ -523,4 +523,3 @@ description: "atopsar – Advanced System Activity Report (atop related)"
  <code><a rel="nofollow" href="http://www.atoptool.nl">http://www.atoptool.nl</a></code></p>
 <h2>AUTHOR</h2>
 <p> Gerlof Langeveld (gerlof.langeveld [at] atoptool.nl) </p>
-<h2>Index</h2>

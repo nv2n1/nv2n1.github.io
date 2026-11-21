@@ -30,4 +30,3 @@ description: "rpmdev-extract – manual page for rpmdev-extract version 1.10"
 <p> Report bugs to &lt;<a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a>&gt;.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2004-2011 Ville Skyttä &lt;ville.skytta [at] iki.fi&gt; This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<h2>Index</h2>

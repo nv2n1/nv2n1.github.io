@@ -88,4 +88,3 @@ description: "spatch – apply a semantic patch file to a set of C files"
 <p> Copyright 2005-2009, Ecole des Mines de Nantes, University of Copenhagen. spatch is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, according to version 2 of the License. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-patch/">patch</a></code>(1). </p>
-<h2>Index</h2>

@@ -139,4 +139,3 @@ Enter        mute (keypad)
 <p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>
 <h2>MISC</h2>
 <p> Huh? Still with me? Looks like some people <code>do</code> read manuals carefully. </p>
-<h2>Index</h2>

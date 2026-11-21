@@ -27,4 +27,3 @@ description: "otpprint – print lists of one-time passwords"
 <dd> Print <i>count</i> one-time passwords, starting at <i>sequence-number</i> and going backwards. The default is 10.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-otp/">otp</a>(1) </p>
-<h2>Index</h2>

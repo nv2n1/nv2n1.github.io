@@ -70,4 +70,3 @@ description: "oggdec – simple decoder, Ogg Vorbis file to PCM audio file (Wave
 <p> Frederick Lee &lt;phaethon [at] linux.ucla.edu&gt;, assisted by a few million monkeys armed with keyboards in <a href="irc://irc.openprojects.net/#vorbis">irc://irc.openprojects.net/#vorbis</a> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ogg123/">ogg123</a></code>(1), <code><a href="/docs/linux/man/1-oggenc/">oggenc</a></code>(1), <code><a href="/docs/linux/man/1-vorbiscomment/">vorbiscomment</a></code>(1), <code><a href="/docs/linux/man/1-flac/">flac</a></code>(1), <code><a href="/docs/linux/man/1-speexdec/">speexdec</a></code>(1) </p>
-<h2>Index</h2>

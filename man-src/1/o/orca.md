@@ -120,4 +120,3 @@ description: "orca – a scriptable screen reader"
 <h2>SEE ALSO</h2>
 <p> For more information please visit <code>orca</code> wiki at &lt;<a rel="nofollow" href="http://live.gnome.org/Orca">http://live.gnome.org/Orca</a>&gt; </p>
 <p> The <code>orca</code> mailing list &lt;<a rel="nofollow" href="http://mail.gnome.org/mailman/listinfo/orca-list">http://mail.gnome.org/mailman/listinfo/orca-list</a>&gt; To post a message to all <code>orca</code> list, send a email to orca-list [at] gnome.org </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "hb_standby – hb_standby is a simple linux-ha shell script. It is
 <h2>AUTHORS</h2>
 <p> linux-ha &#8212; Alan Robertson &lt;alanr [at] unix.sh&gt; <i>et al</i>. </p>
 <p> man page &#8212; Guochun Shi &lt;gshi [at] ncsa.uiuc.edu&gt; </p>
-<h2>Index</h2>

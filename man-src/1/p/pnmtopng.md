@@ -77,4 +77,3 @@ description: "pnmtopng – convert a portable anymap into a Portable Network Gra
 <h2>AUTHORS</h2>
 <p> Copyright (C) 1995-1997 by Alexander Lehmann </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;and Willem van Schaik. </p>
-<h2>Index</h2>

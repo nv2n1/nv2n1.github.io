@@ -41,4 +41,3 @@ odfimgimport -v -o newfile.odt oldfile.odt
 <dl>
 <dt>
 </dt><dd> Original author</dd></dl>
-<h2>Index</h2>

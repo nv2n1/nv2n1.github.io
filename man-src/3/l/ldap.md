@@ -131,4 +131,3 @@ description: "ldap – OpenLDAP Lightweight Directory Access Protocol API"
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> <code>OpenLDAP Software</code> is developed and maintained by The OpenLDAP Project &lt;<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>&gt;. <code>OpenLDAP Software</code> is derived from University of Michigan LDAP 3.3 Release. </p>
 <p> These API manual pages are loosely based upon descriptions provided in the IETF/LDAPEXT C LDAP API Internet Draft, a (orphaned) work in progress. </p>
-<h2>Index</h2>

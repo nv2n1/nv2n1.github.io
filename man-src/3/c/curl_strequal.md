@@ -23,4 +23,3 @@ description: "curl_strequal, curl_strnequal – case insensitive string comparis
 <p> Non-zero if the strings are identical. Zero if they&#8217;re not.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-strcmp/">strcmp</a></code>(3), <code><a href="/docs/linux/man/3-strcasecmp/">strcasecmp</a></code>(3) </p>
-<h2>Index</h2>

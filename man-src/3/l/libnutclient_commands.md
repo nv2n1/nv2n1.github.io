@@ -32,4 +32,3 @@ void nutclient_execute_device_command(NUTCLIENT_t client, const char *dev, const
 <p> <i>cmd</i> is the instant command name.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libnutclient/">libnutclient</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_devices/">libnutclient_devices</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_general/">libnutclient_general</a></code>(3) </p>
-<h2>Index</h2>

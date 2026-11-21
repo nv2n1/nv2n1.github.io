@@ -31,4 +31,3 @@ npm uninstall &lt;name&gt;
 <dt>&bull;</dt>
 <dd> npm help npmrc</dd>
 </dl>
-<h2>Index</h2>

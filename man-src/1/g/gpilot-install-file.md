@@ -24,4 +24,3 @@ description: "gpilot-install-file – gnome-pilot file conduit scheduler"
 <p> <code>gpilot-applet</code>(1), <code>gpilotd</code>(1), <code>file-conduit-control-applet</code>(1).</p>
 <h2>AUTHOR</h2>
 <p> The file installation conduit was written by Eskil Olsen &lt;eskil [at] eazel.com&gt;. This manual page was written by Mark Brown &lt;broonie [at] sirena.org.uk&gt;. </p>
-<h2>Index</h2>

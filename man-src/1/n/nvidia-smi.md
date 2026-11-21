@@ -1348,4 +1348,3 @@ description: "nvidia-smi – NVIDIA System Management Interface program"
 <p> NVIDIA Corporation</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2011-2023 NVIDIA Corporation. </p>
-<h2>Index</h2>

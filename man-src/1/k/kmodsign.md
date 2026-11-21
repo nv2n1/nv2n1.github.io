@@ -24,4 +24,3 @@ description: "kmodsign – Kernel module signing tool"
 <dt><code>-k</code></dt>
 <dd> switch to using keyid for identification </dd>
 </dl>
-<h2>Index</h2>

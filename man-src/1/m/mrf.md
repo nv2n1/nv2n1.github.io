@@ -49,4 +49,3 @@ if square size &gt; 1x1 and square is all one color, output 1 bit
 <p> <code><a href="/docs/linux/man/1-mrftopbm/">mrftopbm</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtomrf/">pbmtomrf</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Russell Marks. </p>
-<h2>Index</h2>

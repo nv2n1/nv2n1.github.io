@@ -142,4 +142,3 @@ description: "slasq3.f –"
 <p> Definition at line 181 of file slasq3.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

@@ -42,4 +42,3 @@ int qlen, ares_callback callback, void *arg)
 <h2>AUTHOR</h2>
 <p> Greg Hudson, MIT Information Systems<br />
  Copyright 1998 by the Massachusetts Institute of Technology. </p>
-<h2>Index</h2>

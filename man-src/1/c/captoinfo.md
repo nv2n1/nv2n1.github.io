@@ -432,4 +432,3 @@ description: "captoinfo – convert a termcap description into a terminfo descri
 <h2>AUTHOR</h2>
 <p> Eric S. Raymond &lt;esr [at] snark.thyrsus.com&gt; and<br />
  Thomas E. Dickey &lt;dickey [at] invisible-island.net&gt; </p>
-<h2>Index</h2>

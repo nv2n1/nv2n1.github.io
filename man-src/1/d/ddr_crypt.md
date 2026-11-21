@@ -146,4 +146,3 @@ description: "ddr_crypt – Data de/encryption plugin for dd_rescue"
  Version 1.99 brought support for ARMv8 crypto acceleration and support for openssl style key derivation and Salted__ headers. It also added storing pbkdf related infos in xattrs and added support for storing and retrieving keys (not recommended!) and IVs in/from xattrs. A bug with CTR initialization was resolved (see ctrbug198 option). </p>
 <p> Some additional information can be found on<br />
  <a rel="nofollow" href="http://garloff.de/kurt/linux/ddrescue/">http://garloff.de/kurt/linux/ddrescue/</a> </p>
-<h2>Index</h2>

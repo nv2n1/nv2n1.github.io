@@ -63,4 +63,3 @@ description: "grub-mkstandalone – make a memdisk-based GRUB image"
 <dt>
 </dt><dd> <code>info grub-mkstandalone</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

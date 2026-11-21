@@ -50,4 +50,3 @@ description: "pq2-ls-files-server – List the file content of a dataset on a gi
 <p> You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
 <h2>AUTHOR</h2>
 <p> This manual page was originally written by Gerardo Ganis &lt;gerardo.ganis [at] cern.ch&gt;, for ROOT version 5. </p>
-<h2>Index</h2>

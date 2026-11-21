@@ -29,4 +29,3 @@ description: "ql/instruments/lookbackoption.hpp – Lookback option on a single 
 <p> Lookback option on a single asset. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

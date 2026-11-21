@@ -23,4 +23,3 @@ gtk4 - launch[OPTIONS...]&lt;APPLICATION&gt;[URI...]
 <h2>ENVIRONMENT</h2>
 <p> Some environment variables affect the behavior of <code>gtk4-launch</code>: </p>
 <p> <code>XDG_DATA_HOME, XDG_DATA_DIRS</code> The environment variables specifying the XDG data directories. </p>
-<h2>Index</h2>

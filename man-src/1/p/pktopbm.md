@@ -27,4 +27,3 @@ description: "pktopbm – convert packed (PK) format font into PBM"
 <p> <code><a href="/docs/linux/man/1-pbmtopk/">pbmtopk</a></code>(1) , <code>pbm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Adapted from Tom Rokicki&#8217;s pxtopk by Angus Duggan &lt;<i>ajcd [at] dcs.ed.ac.uk</i>&gt;. &lt;<i>bartel [at] informatik.tu-muenchen.de</i>&gt; in March 1995. </p>
-<h2>Index</h2>

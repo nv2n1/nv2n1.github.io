@@ -33,4 +33,3 @@ description: "QuantLib::LeastSquareFunction – Cost function for least-square p
 <p> Implements a cost function using the interface provided by the <code>LeastSquareProblem</code> class. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

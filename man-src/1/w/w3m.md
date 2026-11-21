@@ -178,4 +178,3 @@ description: "w3m – a text based web browser and pager"
 <p> <i>w3m</i> has incorporated code from several sources. Users have contributed patches and suggestions over time.</p>
 <h2>AUTHOR</h2>
 <p> Akinori ITO </p>
-<h2>Index</h2>

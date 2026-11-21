@@ -29,4 +29,3 @@ description: "librsync – library for delta compression of streams"
 <h2>AUTHOR</h2>
 <p> Martin Pool &lt;mbp [at] samba.org&gt;, with Andrew Tridgell &lt;tridge [at] samba.org&gt;. </p>
 <p> rdiff development has been supported by Linuxcare, Inc and VA Linux Systems. </p>
-<h2>Index</h2>

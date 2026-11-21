@@ -72,4 +72,3 @@ description: "QuantLib::CreditDefaultSwap – Credit default swap."
 <p> Reimplemented from <code>Instrument</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

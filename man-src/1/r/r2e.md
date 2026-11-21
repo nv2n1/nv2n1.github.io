@@ -66,4 +66,3 @@ It is possible to use authenticated feeds using the following syntax:
 <dd> If this file exists, it is read to configure the program.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Aaron Swartz &lt;rss2email [at] aaronsw.com&gt; </p>
-<h2>Index</h2>

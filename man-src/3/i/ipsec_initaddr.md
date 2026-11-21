@@ -36,4 +36,3 @@ description: "ipsec_initaddr, ipsec_addrtypeof, ipsec_addrlenof, ipsec_addrbytes
 <p> Written for the FreeS/WAN project by Henry Spencer.</p>
 <h2>BUGS</h2>
 <p> <i>Addrtypeof</i> should probably have been named <i>addrfamilyof</i>. </p>
-<h2>Index</h2>

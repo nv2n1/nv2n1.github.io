@@ -147,4 +147,3 @@ description: "rst2pseudoxml – convert reST documents to pseudo-XML"
 <dt><code>&#8211;no-section-subtitles</code></dt>
 <dd> Deactivate the promotion of lone subsection titles. </dd>
 </dl>
-<h2>Index</h2>

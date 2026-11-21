@@ -21,4 +21,3 @@ int port = krb5_getportbyname(context, "kerberos", "tcp", 88);
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3) </p>
-<h2>Index</h2>

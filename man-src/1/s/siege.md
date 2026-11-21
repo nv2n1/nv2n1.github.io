@@ -199,4 +199,3 @@ Transactions : 2000 hits
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://download.joedog.org/pub/siege">http://download.joedog.org/pub/siege</a></p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-siege-config/">siege.config</a></i>(1) <i><a href="/docs/linux/man/1-bombardment/">bombardment</a></i>(1) <i><a href="/docs/linux/man/1-siege2csv/">siege2csv</a></i>(1) </p>
-<h2>Index</h2>

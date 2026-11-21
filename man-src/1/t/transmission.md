@@ -39,4 +39,3 @@ description: "transmission – a bittorrent client"
 <h2>SEE ALSO</h2>
 <p> transmissioncli(1), transmission-daemon1, transmission-remote1 </p>
 <p> <a rel="nofollow" href="http://www.transmissionbt.com/">http://www.transmissionbt.com/</a> </p>
-<h2>Index</h2>

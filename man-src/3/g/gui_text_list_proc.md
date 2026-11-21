@@ -21,4 +21,3 @@ description: "gui_shadow_box_proc, gui_ctext_proc, gui_button_proc, gui_edit_pro
 <p> If set, these functions will be used by the standard Allegro dialogs. This allows you to customise the look and feel, much like gui_fg_color and gui_bg_color, but much more flexibly. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-alert/">alert</a></code>(3), <code>alert3</code>(3), <code><a href="/docs/linux/man/3-file_select_ex/">file_select_ex</a></code>(3), <code><a href="/docs/linux/man/3-gfx_mode_select/">gfx_mode_select</a></code>(3), <code><a href="/docs/linux/man/3-gui_fg_color/">gui_fg_color</a></code>(3) </p>
-<h2>Index</h2>

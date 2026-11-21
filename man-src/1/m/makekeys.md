@@ -55,4 +55,3 @@ makekeys | head -20 &gt;keys.txt
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-publictoip6/">publictoip6</a>(1) </p>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "libssh2_publickey_add – convenience macro for libssh2_publickey_
 <p> See <i><a href="/docs/linux/man/3-libssh2_publickey_add_ex/">libssh2_publickey_add_ex</a>(3)</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_publickey_add_ex/">libssh2_publickey_add_ex</a>(3)</code> </p>
-<h2>Index</h2>

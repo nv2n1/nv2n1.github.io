@@ -60,4 +60,3 @@ int CDKparamValue(
 <dd> Parse the string as one of CDK&#8217;s positioning keywords, or an actual position.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> cdk_position (3), getopt (3) </p>
-<h2>Index</h2>

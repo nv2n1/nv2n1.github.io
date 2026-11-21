@@ -74,4 +74,3 @@ description: "npm-fund – Retrieve funding information"
 <dd> npm help ls </dd>
 </dl>
 </dl>
-<h2>Index</h2>

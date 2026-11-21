@@ -44,4 +44,3 @@ description: "gethead – Print FITS or IRAF header keyword values"
 <p> <a rel="nofollow" href="http://tdc-www.harvard.edu/software/wcstools/gethead.html">http://tdc-www.harvard.edu/software/wcstools/gethead.html</a> </p>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

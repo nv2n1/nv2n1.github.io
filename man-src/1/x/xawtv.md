@@ -141,4 +141,3 @@ Enter        mute (keypad)
 <p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>
 <h2>MISC</h2>
 <p> You are the 4711th visitor of this page. </p>
-<h2>Index</h2>

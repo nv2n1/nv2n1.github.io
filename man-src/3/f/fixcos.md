@@ -27,4 +27,3 @@ ASSERT(result &gt; 0.7 &amp;&amp; result &lt; 0.71);
 <p> Returns the cosine of a fixed point binary format angle. The return value will be in radians. </p>
 <h2>SEE ALSO</h2>
 <p> , <code><a href="/docs/linux/man/3-ex12bit/">ex12bit</a></code>(3), <code><a href="/docs/linux/man/3-ex3buf/">ex3buf</a></code>(3), <code><a href="/docs/linux/man/3-exblend/">exblend</a></code>(3), <code><a href="/docs/linux/man/3-excustom/">excustom</a></code>(3), <code><a href="/docs/linux/man/3-exspline/">exspline</a></code>(3), <code><a href="/docs/linux/man/3-exupdate/">exupdate</a></code>(3) </p>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "rrdflushcached – Flush the values for a spcific RRD file from me
 <dd> If this environment variable is set it will have the same effect as specifying the <tt>&quot;--daemon&quot;</tt> option on the command line. If both are present, the command line argument takes precedence.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Florian Forster &lt;octo at verplant.org&gt; </p>
-<h2>Index</h2>

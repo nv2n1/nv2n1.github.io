@@ -111,4 +111,3 @@ description: "BibTool – BibTeX file manipulation tool"
  This man page is updated only occasionally, so it is very likely out of date. For complete, current documentation, refer to the <i>BibTool Manual</i> which is distributed as LaTeX source file (<code>bibtool.tex</code>) in the original <code>BibTool</code> source distribution.</p>
 <h2>AUTHOR</h2>
 <p> BibTool is designed and maintained by Gerd Neugebauer. </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "diffindex-download – Download utility for Debian Contents files"
 <p> <code><a href="/docs/linux/man/1-apt-file/">apt-file</a></code>(1), <code><a href="/docs/linux/man/1-diffindex-rred/">diffindex-rred</a></code>(1), <code><a href="/docs/linux/man/1-curl/">curl</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> <code>diffindex-download</code> was written by Stefan Fritsch &lt;sf [at] debian.org&gt;. </p>
-<h2>Index</h2>

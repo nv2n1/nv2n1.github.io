@@ -25,4 +25,3 @@ description: "samdump2 retrieves syskey and extract hashes from Windows 2k/NT/XP
 <p> This manual page was written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Debian system (but may be used by others) and modified by Objectif Securite &lt;info [at] objectif-securite.ch&gt; Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>
 <p> <code>ophcrack(1)</code> </p>
-<h2>Index</h2>

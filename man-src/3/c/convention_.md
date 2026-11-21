@@ -35,4 +35,3 @@ description: "QuantLib::IborIndex – base class for Inter-Bank-Offered-Rate ind
 <p> base class for Inter-Bank-Offered-Rate indexes (e.g. Libor, etc.) </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

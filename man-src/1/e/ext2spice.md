@@ -45,4 +45,3 @@ description: "ext2spice – convert hierarchical"
 <p> Stefanos Sidiropoulos. </p>
 <h2>BUGS</h2>
 <p> The areas and perimeters of fet sources and drains work only with the simple extraction algorith and not with the extresis flow. So you have to model them as linear capacitors (create a special extraction style) if you want to extract parasitic resistances with extresis. </p>
-<h2>Index</h2>

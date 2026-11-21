@@ -26,4 +26,3 @@ description: "bs11nread – Barry Project’s program to read database serializa
 <p> <code>bs11nread</code> is part of the Barry project.</p>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://www.netdirect.ca/software/packages/barry">http://www.netdirect.ca/software/packages/barry</a> </p>
-<h2>Index</h2>

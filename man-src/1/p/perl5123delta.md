@@ -49,4 +49,3 @@ description: "perl5123delta – what is new for perl v5.12.3"
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "pslog – report current logs path of a process"
 <p> <code><a href="/docs/linux/man/1-pgrep/">pgrep</a></code>(1), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/1-pwdx/">pwdx</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> Vito Mule&#8217; wrote <code>pslog</code> in 2015. Please send bug reports to </p>
-<h2>Index</h2>

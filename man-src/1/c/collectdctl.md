@@ -67,4 +67,3 @@ description: "collectdctl – Control interface for collectd"
 <h2>AUTHOR</h2>
 <p> collectd has been written by Florian Forster &lt;octo at collectd.org&gt; and many contributors (see `<font SIZE="-1">AUTHORS</font>&#8216;). </p>
 <p> collectdctl has been written by HXkon J Dugstad Johnsen &lt;hakon-dugstad.johnsen at telenor.com&gt; and Sebastian Harl &lt;sh at tokkee.org&gt;. </p>
-<h2>Index</h2>

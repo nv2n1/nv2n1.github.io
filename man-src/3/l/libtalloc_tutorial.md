@@ -37,4 +37,3 @@ description: "libtalloc_tutorial – The Tutorial"
 <p> <code>Chapter 6: Debugging</code> </p>
 <p> <code>Chapter 7: Best practises</code> </p>
 <p> <code>Chapter 8: Using threads with talloc</code> </p>
-<h2>Index</h2>

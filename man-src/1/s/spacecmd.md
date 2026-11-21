@@ -147,4 +147,3 @@ component.
 <p> <a rel="nofollow" href="https://fedorahosted.org/spacewalk/wiki/spacecmd">https://fedorahosted.org/spacewalk/wiki/spacecmd</a></p>
 <h2>AUTHOR</h2>
 <p> spacecmd was written by Aron Parsons &lt;aronparsons [at] gmail.com&gt; </p>
-<h2>Index</h2>

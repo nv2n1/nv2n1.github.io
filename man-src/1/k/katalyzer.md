@@ -40,4 +40,3 @@ description: "katalyzer – analyzes Kate streams and displays various informati
 <p>&nbsp;<wbr>katalyzer -l e input.ogg </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-katedec/">katedec</a></code>(1), <code><a href="/docs/linux/man/1-kateenc/">kateenc</a></code>(1) </p>
-<h2>Index</h2>

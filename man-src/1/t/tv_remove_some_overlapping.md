@@ -21,4 +21,3 @@ description: "tv_remove_some_overlapping – Remove some overlapping programmes 
 <p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Ed Avis, ed [at] membled.com </p>
-<h2>Index</h2>

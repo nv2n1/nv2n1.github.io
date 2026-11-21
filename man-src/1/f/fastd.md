@@ -87,4 +87,3 @@ description: "fastd – Fast and Secure Tunnelling Daemon"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>fastd</code> is maintained in the Wiki at <i><a rel="nofollow" href="https://projects.universe-factory.net/projects/fastd/wiki/Fastd">https://projects.universe-factory.net/projects/fastd/wiki/Fastd</a></i>. </p>
 <p> See the user manual at <i><a rel="nofollow" href="https://projects.universe-factory.net/projects/fastd/wiki/User_manual">https://projects.universe-factory.net/projects/fastd/wiki/User_manual</a></i> in particular. </p>
-<h2>Index</h2>

@@ -28,4 +28,3 @@ npm install - test(with no args, in package dir) npm install - test[&lt;@scope&g
 <dd> npm help test </dd>
 </dl>
 </dl>
-<h2>Index</h2>

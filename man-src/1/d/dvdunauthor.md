@@ -21,4 +21,3 @@ description: "dvdunauthor – Decodes DVD-Video file structure"
 <p> Depends on libdvdread to decode the DVD-Video structure and to report any errors trying to do so. But libdvdread will sometimes just exit without reporting any error.</p>
 <h2>AUTHOR</h2>
 <p> MarcLeemanThis manual page was written by Marc Leeman &lt;marc.leeman [at] gmail.com&gt;, for the Debian GNU/Linux system (but may be used by others). &lt;marc.leeman [at] gmail.com&gt; MarcLeeman2003Marc Leeman </p>
-<h2>Index</h2>

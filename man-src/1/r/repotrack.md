@@ -43,4 +43,3 @@ description: "repotrack – track a package and its dependencies and download th
 <pre>
 See the Authors file included with this program.
 </pre>
-<h2>Index</h2>

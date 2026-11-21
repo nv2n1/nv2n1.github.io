@@ -22,4 +22,3 @@ description: "mwaw2text – convert Mac text document into plain text"
 <dt><code>-v</code>:</dt>
 <dd> Output mwaw2text version </dd>
 </dl>
-<h2>Index</h2>

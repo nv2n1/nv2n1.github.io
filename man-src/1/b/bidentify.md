@@ -31,4 +31,3 @@ description: "bidentify – Barry Project’s program to identify BlackBerry han
 <p> <code>bidentify</code> is part of the Barry project. This manual page was written by Chris Frey.</p>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://www.netdirect.ca/software/packages/barry">http://www.netdirect.ca/software/packages/barry</a> </p>
-<h2>Index</h2>

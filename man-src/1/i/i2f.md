@@ -17,4 +17,3 @@ description: "i2f – Write FITS files from IRAF image files"
 <p> <code>-d directory</code> Move .imh file to this directory <code>-i</code> Delete unnecessary IRAF keywords <code>-o filename</code> Output name for one file <code>-s</code> Write output to standard output <code>-v</code> Verbose listing of processing intermediate results <code>-x</code> Delete IRAF image file after successfully writing FITS file</p>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

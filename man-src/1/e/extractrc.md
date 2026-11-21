@@ -22,4 +22,3 @@ description: "extractrc – Extract message strings from UI and GUI-RC files"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

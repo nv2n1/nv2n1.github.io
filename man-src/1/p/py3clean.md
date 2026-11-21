@@ -27,4 +27,3 @@ description: "py3clean – removes .pyc and .pyo files"
 <dd> specify Python 3 version to clean</dd></dl>
 <h2>AUTHOR</h2>
 <p> Piotr Ożarowski, 2012-2013 </p>
-<h2>Index</h2>

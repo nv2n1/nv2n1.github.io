@@ -67,4 +67,3 @@ description: "bpython – a fancy {curses, GTK+, urwid} interface to the Python 
 <p> This manual page was written by Jørgen Pedersen Tjernø &lt;<i>jorgen [at] devsoft.no</i>&gt;, for the Debian project (but may be used by others).</p>
 <h2>COPYRIGHT</h2>
 <p> 2008-2012 Bob Farrell, Andreas Stuehrk et al. </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ tracker3 status
 <dl>
 <dt>
 </dt><dd> &bull; <code><a rel="nofollow" href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a></code></dd></dl>
-<h2>Index</h2>

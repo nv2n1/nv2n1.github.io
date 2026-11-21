@@ -49,4 +49,3 @@ No BitLocker volume found.
 <h2>AUTHOR</h2>
 <p> This tool is developed by Romain Coltel on behalf of HSC (<code><a rel="nofollow" href="http://www.hsc.fr/">http://www.hsc.fr/</a></code>) </p>
 <p> Feel free to send bugs report to &lt;dislocker __AT__ hsc __DOT__ fr&gt; </p>
-<h2>Index</h2>

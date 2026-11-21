@@ -27,4 +27,3 @@ Attach container&#8217;s STDIN. The default is&nbsp;<wbr><i>false</i>. </p>
 <p> <code><a href="/docs/linux/man/1-docker-stop/">docker-stop</a>(1)</code> to stop a container. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
-<h2>Index</h2>

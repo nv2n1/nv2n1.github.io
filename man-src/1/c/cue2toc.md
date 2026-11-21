@@ -175,4 +175,3 @@ AUDIOFILE "uwe.froehn.wav" 02 : 45 : 38 05 : 13 : 36 TRACK AUDIO
 <p> Since <code>cue2toc</code>&#8216;s definition of the CUE format is entirely based on a number of different CUE files the author came across there is a very high probability that it will not work correctly with all the other CUE files you might encounter. If this is the case for you please send the problematic CUE file along with the version number of <code>cue2toc</code> to &lt;dermatsch [at] gmx.de&gt;. </p>
 <h2>AUTHOR</h2>
 <p> Matthias Czapla &lt;dermatsch [at] gmx.de&gt; </p>
-<h2>Index</h2>

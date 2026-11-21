@@ -116,4 +116,3 @@ description: "libreoffice – LibreOffice office suite"
 <p> <code><a rel="nofollow" href="http://www.documentfoundation.org/">http://www.documentfoundation.org/</a></code> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was created by Rene Engelhard &lt;rene [at] debian.org&gt; for the Debian GNU/Linux Distribution, because the original package does not have one. It was updated for Novell by Petr Mladek &lt;petr.mladek [at] novell.com&gt; and adapted for LibreOffice by Philipp Weissenbacher &lt;philipp.weissenbacher [at] gmail.com&gt;. </p>
-<h2>Index</h2>

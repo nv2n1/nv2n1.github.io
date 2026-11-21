@@ -30,4 +30,3 @@ description: "users – print the user names of users currently logged in to the
 <p> <a href="/docs/linux/man/1-getent/">getent</a>(1), <a href="/docs/linux/man/1-who/">who</a>(1) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/users">https://www.gnu.org/software/coreutils/users</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) users invocation&#8217; </p>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ description: "cmark – convert CommonMark formatted text to HTML"
 <p> John MacFarlane, Vicent Marti, Kārlis Gaņģis, Nick Wellnhofer.</p>
 <h2>SEE ALSO</h2>
 <p> CommonMark spec: <a rel="nofollow" href="http://spec.commonmark.org.">http://spec.commonmark.org.</a> </p>
-<h2>Index</h2>

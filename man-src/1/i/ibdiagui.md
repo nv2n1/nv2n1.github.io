@@ -31,4 +31,3 @@ description: "ibdiagui – IB Diagnostic GUI"
 <dt>ibdiagui simply passes its options to ibdiagnet. Please see ibdiagnet man page for the complete list.</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

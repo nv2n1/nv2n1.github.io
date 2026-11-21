@@ -34,4 +34,3 @@ description: "chicken-profile – generate a report from profile-information"
 <p> The CHICKEN Team </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chicken/">chicken</a>(1)</code> <code><a href="/docs/linux/man/1-csc/">csc</a>(1)</code> </p>
-<h2>Index</h2>

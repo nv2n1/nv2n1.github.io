@@ -35,4 +35,3 @@ description: "glite-lb-statistics – tool for converting L&B job dump to Job Hi
 <p> L&amp;B Product Team, CESNET. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-glite-lb-dump_exporter/">glite-lb-dump_exporter</a></code>(1), <code><a href="/docs/linux/man/1-glite-lb-purge/">glite-lb-purge</a></code>(1), README.LB-statistics </p>
-<h2>Index</h2>

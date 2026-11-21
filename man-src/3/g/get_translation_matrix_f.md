@@ -17,4 +17,3 @@ description: "get_translation_matrix, get_translation_matrix_f – Constructs a 
 <p> Constructs a translation matrix, storing it in m. When applied to the point (px, py, pz), this matrix will produce the point (px+x, py+y, pz+z). In other words, it moves things sideways. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-apply_matrix/">apply_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_transformation_matrix/">get_transformation_matrix</a></code>(3), <code><a href="/docs/linux/man/3-qtranslate_matrix/">qtranslate_matrix</a></code>(3), <code><a href="/docs/linux/man/3-exstars/">exstars</a></code>(3) </p>
-<h2>Index</h2>

@@ -68,4 +68,3 @@ description: "pnmtotiffcmyk – convert a portable anymap into a CMYK encoded TI
 <dt>
 </dt><dd> This file is provided AS IS with no warranties of any kind. The author shall have no liability with respect to the infringement of copyrights, trade secrets or any patents by this file or any part thereof. In no event will the author be liable for any lost revenue or profits or other special, indirect and consequential damages. </dd>
 </dl>
-<h2>Index</h2>

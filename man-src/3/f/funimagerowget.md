@@ -55,4 +55,3 @@ for (i = 1; i &lt;= dim2; i++) {
 <p> On success, a pointer to the image buffer is returned. (This will be the same as the second argument, if <font SIZE="-1">NULL</font> is not passed to the latter.) On error, <font SIZE="-1">NULL</font> is returned. Note that the considerations described above for specifying binning columns in <i>FunImageGet()</i> also apply to FunImageRowGet().</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

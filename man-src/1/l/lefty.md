@@ -37,4 +37,3 @@ description: "lefty – A Programmable Graphics Editor"
 <dd> Prints the usage and exits.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>lefty</i> user guide. </p>
-<h2>Index</h2>

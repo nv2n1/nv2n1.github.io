@@ -35,4 +35,3 @@ description: "queryparse – extract DNS queries from pcap capture files."
 <p> Nominum, Inc.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dnsperf/">dnsperf</a></code>(1), <code><a href="/docs/linux/man/1-resperf/">resperf</a></code>(1), <code>pcap</code>(3), <code><a href="/docs/linux/man/8-tcpdump/">tcpdump</a></code>(8) </p>
-<h2>Index</h2>

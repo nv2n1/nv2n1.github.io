@@ -17,4 +17,3 @@ description: "pi3topbm – convert an Atari Degas .pi3 file into a portable bitm
 <p> <a href="/docs/linux/man/1-pbmtopi3/">pbmtopi3</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5), <a href="/docs/linux/man/1-pi1toppm/">pi1toppm</a>(1), <a href="/docs/linux/man/1-ppmtopi1/">ppmtopi1</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1988 by David Beckemeyer (bdt!david) and Diomidis D. Spinellis. </p>
-<h2>Index</h2>

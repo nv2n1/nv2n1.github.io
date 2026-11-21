@@ -70,4 +70,3 @@ description: "pamaddnoise – add noise to a Netpbm image"
 <p> Burns&#8217; version, and the one in Netpbm 10.29, was called <code>pnmaddnoise</code> and worked only on PNM images. In Netpbm 10.30, it was converted to handle PAM images and renamed to <code>pamaddnoise</code>. </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1995 by Mike Burns &lt;<i>burns [at] cac.psu.edu</i>&gt; </p>
-<h2>Index</h2>

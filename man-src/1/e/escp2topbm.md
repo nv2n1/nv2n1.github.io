@@ -35,4 +35,3 @@ description: "escp2topbm – convert an ESC/P2 printer file to a PBM image"
 <p> Copyright (C) 2003 by Ulrich Walcher (<i>u.walcher [at] gmx.de</i>). </p>
 <h2>HISTORY</h2>
 <p> <code>escp2topbm</code> was added to Netpbm in Release 10.18 (August 2003); it was created around the same time. </p>
-<h2>Index</h2>

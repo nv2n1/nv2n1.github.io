@@ -45,4 +45,3 @@ description: "luac – Lua compiler"
 <p> Error messages should be self explanatory.</p>
 <h2>AUTHORS</h2>
 <p> L. H. de Figueiredo, R. Ierusalimschy and W. Celes </p>
-<h2>Index</h2>

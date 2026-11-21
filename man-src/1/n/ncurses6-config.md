@@ -56,4 +56,3 @@ description: "ncurses6-config – helper script for ncurses libraries"
 <h2>SEE ALSO</h2>
 <p> <code>curses</code>(3X) </p>
 <p> This describes <code>ncurses</code> version 6.3 (patch 20211021). </p>
-<h2>Index</h2>

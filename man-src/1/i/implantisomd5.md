@@ -21,4 +21,3 @@ description: "implantisomd5 — implant an MD5 checksum in an ISO9660 image"
 <dd> Indicate that the image will be written to a &quot;supported&quot; media, such as pressed CD. On Red Hat-based Anaconda installers, this bypasses the prompt to check the CD.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> checkisomd5 (1). </p>
-<h2>Index</h2>

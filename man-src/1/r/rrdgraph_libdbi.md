@@ -142,4 +142,3 @@ DS_BASE = "sql//mysql/host=127.0.0.1/dbname=rrd/username=rrd/password=passwd//RR
 &nbsp;<wbr></font>&nbsp;<wbr>and then the message will not get shown.</p>
 <h2>AUTHOR</h2>
 <p> Martin Sperl &lt;rrdtool [at] martin.sperl.org&gt; </p>
-<h2>Index</h2>

@@ -21,4 +21,3 @@ description: "randombytes — write random bytes generated via libnacl to stdout
 <p> Writes random bytes to stdout forever using the cjdns secure random generator. In practice, the output is piped to a program like <a href="/docs/linux/man/1-dd/">dd</a>(1) or <a href="/docs/linux/man/1-base64/">base64</a>(1).</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-makekeys/">makekeys</a>(1) </p>
-<h2>Index</h2>

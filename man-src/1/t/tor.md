@@ -1897,4 +1897,3 @@ TestingEnableTbEmptyEvent 1
 <p> Plenty, probably. Tor is still in development. Please report them at <a rel="nofollow" href="https://trac.torproject.org/.">https://trac.torproject.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Roger Dingledine [arma at mit.edu], Nick Mathewson [nickm at alum.mit.edu]. </p>
-<h2>Index</h2>

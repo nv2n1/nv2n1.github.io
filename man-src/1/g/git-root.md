@@ -35,4 +35,3 @@ $ git add . &amp;&amp; git commit
 <p> &lt;<i><a rel="nofollow" href="https://github.com/tj/git-extras/issues">https://github.com/tj/git-extras/issues</a></i>&gt;</p>
 <h2>SEE ALSO</h2>
 <p> &lt;<i><a rel="nofollow" href="https://github.com/tj/git-extras">https://github.com/tj/git-extras</a></i>&gt; </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "QuantLib::NthToDefault – N-th to default swap."
 <p> The class is tested against data in Hull-White (see reference above.) </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

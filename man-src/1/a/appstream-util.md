@@ -17,4 +17,3 @@ description: "appstream-util – Manipulate AppStream, AppData and MetaInfo meta
 <p> <code>appstream-util</code> allows you to manipulate and validate AppStream, AppData and MetaInfo for syntax, formatting and style guidelines.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Richard Hughes &lt;richard [at] hughsie.com&gt;. </p>
-<h2>Index</h2>

@@ -216,4 +216,3 @@ the libunwind library) should be used instead.
 </dt><dd> After starting the program, wait msecs before measuring. This is useful to filter out the startup phase of the program, which is often very different.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-stat/">perf-stat</a></code>(1), <code><a href="/docs/linux/man/1-perf-list/">perf-list</a></code>(1) </p>
-<h2>Index</h2>

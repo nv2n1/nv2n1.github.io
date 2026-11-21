@@ -138,4 +138,3 @@ reading BCT from system, writing to ventana.bct...done!
 <p> <code><a href="/docs/linux/man/1-cbootimage/">cbootimage</a></code>(1), </p>
 <h2>AUTHOR</h2>
 <p> Allen Martin, &lt;amartin [at] nvidia.com&gt; </p>
-<h2>Index</h2>

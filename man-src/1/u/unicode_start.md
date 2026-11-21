@@ -20,4 +20,3 @@ description: "unicode_start – put keyboard and console in unicode mode"
 <p> Unicode mode is a parameter with a value per virtual console. However, usually the font and keymap is common to all consoles.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dumpkeys/">dumpkeys</a></code>(1), <code><a href="/docs/linux/man/1-kbd_mode/">kbd_mode</a></code>(1), <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1), <code><a href="/docs/linux/man/1-unicode_stop/">unicode_stop</a></code>(1), <code><a href="/docs/linux/man/7-utf-8/">utf-8</a></code>(7), <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8) </p>
-<h2>Index</h2>

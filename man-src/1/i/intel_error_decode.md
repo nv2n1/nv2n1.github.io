@@ -21,4 +21,3 @@ description: "intel_error_decode – Decodes an Intel GPU dump automatically cap
 <dt><code>filename</code></dt>
 <dd> Decodes a previously saved error. </dd>
 </dl>
-<h2>Index</h2>

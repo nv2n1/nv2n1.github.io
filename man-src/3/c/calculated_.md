@@ -59,4 +59,3 @@ description: "QuantLib::LazyObject – Framework for calculation on demand and r
 <p> Implemented in <code>EnergyBasisSwap</code>, <code>EnergyFuture</code>, <code>EnergyVanillaSwap</code>, <code>AbcdAtmVolCurve</code>, <code>Instrument</code>, <code>ConvertibleBond</code>, <code>CompositeInstrument</code>, <code>FixedRateBondForward</code>, <code>Forward</code>, <code>Stock</code>, <code>YearOnYearInflationSwap</code>, <code>ZeroCouponInflationSwap</code>, <code>EurodollarFuturesImpliedStdDevQuote</code>, <code>ForwardSwapQuote</code>, <code>ImpliedStdDevQuote</code>, <code>CapFloorTermVolCurve</code>, <code>CapFloorTermVolSurface</code>, <code>OptionletStripper1</code>, <code>OptionletStripper2</code>, <code>StrippedOptionletAdapter</code>, <code>SwaptionVolatilityMatrix</code>, and <code>FlatForward</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

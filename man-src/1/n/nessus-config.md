@@ -26,4 +26,3 @@ description: "nessus-config – displays compiler/linker flags for the Nessus li
 <h2>AUTHOR</h2>
 <p> Nessus is made by Renaud Deraison &lt;deraison [at] cvs.nessus.org&gt;. </p>
 <p> This manual page was written by Josip Rodin &lt;jrodin [at] jagor.srce.hr&gt;. </p>
-<h2>Index</h2>

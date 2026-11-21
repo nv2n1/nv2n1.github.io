@@ -51,4 +51,3 @@ description: "sessreg – manage utmpx/wtmpx entries for non-init clients"
 <p> <code><a href="/docs/linux/man/1-xdm/">xdm</a></code>(1), <code><a href="/docs/linux/man/5-utmpx/">utmpx</a></code>(5), <code>wtmpx</code>(5)</p>
 <h2>AUTHOR</h2>
 <p> Keith Packard, MIT X Consortium </p>
-<h2>Index</h2>

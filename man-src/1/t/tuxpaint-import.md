@@ -37,4 +37,3 @@ description: "tuxpaint-import — Import image files into Tux Paint(1)"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tuxpaint/">tuxpaint</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5), <code><a href="/docs/linux/man/5-png/">png</a></code>(5), <code><a href="/docs/linux/man/1-anytopnm/">anytopnm</a></code>(1), <code><a href="/docs/linux/man/1-pnmscale/">pnmscale</a></code>(1), <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1), <code><a href="/docs/linux/man/1-date/">date</a></code>(1), </p>
 <p> And documentation within /usr/[local/]share/doc/tuxpaint/. </p>
-<h2>Index</h2>

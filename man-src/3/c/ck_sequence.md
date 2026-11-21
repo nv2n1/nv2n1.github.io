@@ -70,4 +70,3 @@ void writer(void)
 <h2>SEE ALSO</h2>
 <p> ck_brlock3, ck_bytelock3, ck_rwlock3 </p>
 <p> Additional information available at <a rel="nofollow" href="http://concurrencykit.org/">http://concurrencykit.org/</a> </p>
-<h2>Index</h2>

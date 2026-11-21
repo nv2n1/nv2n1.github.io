@@ -18,4 +18,3 @@ description: "curl_slist_free_all – free an entire curl_slist list"
 <p> Nothing.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_slist_append/">curl_slist_append</a></code>(3), </p>
-<h2>Index</h2>

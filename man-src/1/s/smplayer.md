@@ -67,4 +67,3 @@ description: "SMPlayer – The best GUI frontend for MPlayer"
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. On Debian systems, the complete text of the GNU General Public License can be found in <code>/usr/share/common-licenses/GPL</code>. <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> </p>
 <h2>BUGS</h2>
 <p> Please submit bugs to <code><a rel="nofollow" href="http://sourceforge.net/projects/smplayer">http://sourceforge.net/projects/smplayer</a></code>. </p>
-<h2>Index</h2>

@@ -471,4 +471,3 @@ description: "dbus-daemon – Message bus daemon"
 <dt>
 </dt><dd> <a rel="nofollow" href="https://lists.freedesktop.org/archives/dbus/2018-April/017447.html">https://lists.freedesktop.org/archives/dbus/2018-April/017447.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

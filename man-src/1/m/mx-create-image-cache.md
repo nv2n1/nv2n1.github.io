@@ -22,4 +22,3 @@ description: "mx-create-image-cache — program to make a cache of a directory"
 &nbsp; </p>
 <p> On Debian systems, the complete text of the GNU Lesser General Public License can be found in /usr/share/common-licenses/LGPL-2.1.<br />
 &nbsp; </p>
-<h2>Index</h2>

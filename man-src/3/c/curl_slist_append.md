@@ -28,4 +28,3 @@ curl_slist_free_all(slist); /* free the list again */
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_slist_free_all/">curl_slist_free_all</a></code>(3), </p>
-<h2>Index</h2>

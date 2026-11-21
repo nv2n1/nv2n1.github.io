@@ -83,4 +83,3 @@ A(i, i) = BETA, 1 &lt;= i &lt;= min(m, n)
 <p> Definition at line 107 of file claset.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

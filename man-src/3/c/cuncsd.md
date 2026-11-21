@@ -246,4 +246,3 @@ CUNCSD computes the CS decomposition of an M - by - M partitioned unitary matrix
 <p> Definition at line 316 of file cuncsd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

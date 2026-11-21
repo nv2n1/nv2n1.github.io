@@ -158,4 +158,3 @@ description: "csyrfs.f –"
 <p> Definition at line 192 of file csyrfs.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

@@ -39,4 +39,3 @@ description: "mkpasswd – Overfeatured front end to"
 <p> <i><a href="/docs/linux/man/1-passwd/">passwd</a></i>(1), <i><a href="/docs/linux/man/5-passwd/">passwd</a></i>(5), <i><a href="/docs/linux/man/3-crypt/">crypt</a></i>(3), <i><a href="/docs/linux/man/5-crypt/">crypt</a></i>(5), <i><a href="/docs/linux/man/3-crypt_gensalt/">crypt_gensalt</a></i>(3), <i><a href="/docs/linux/man/3-getpass/">getpass</a></i>(3).</p>
 <h2>AUTHOR</h2>
 <p> <code>mkpasswd</code> and this man page were written by Marco d&#8217;Itri &lt;<i>md [at] linux.it</i>&gt; and are licensed under the terms of the GNU General Public License, version 2 or higher. </p>
-<h2>Index</h2>

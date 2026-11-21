@@ -44,4 +44,3 @@ description: "pamfix – repair a Netpbm image with various corruptions"
 <p> <code>pnm</code>(1) , <code>pam</code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pamfile/">pamfile</a></code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>pamfix</code> was new in Netpbm 10.66 (March 2014). But it grew out of <code>pamfixtrunc</code>, which was new in Netpbm 10.38 (March 2007) and did only the truncated image repair (and for invalid sample values would simply pass them through to its output, generating an invalid Netpbm image). </p>
-<h2>Index</h2>

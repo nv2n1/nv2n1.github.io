@@ -20,4 +20,3 @@ description: "imsettings-reload – Reload imsettings-daemon"
 <dd> Show summary of options</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Akira TAGOH &lt;akira [at] tagoh.org&gt; </p>
-<h2>Index</h2>

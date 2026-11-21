@@ -584,4 +584,3 @@ description: "netpbm – package of graphics manipulation programs and libraries
 <h2>AUTHOR</h2>
 <p> <code>Netpbm </code> is based on the <code>Pbmplus</code> package by Jef Poskanzer, first distributed in 1988 and maintained by him until 1991. But the package contains work by countless other authors, added since Jef&#8217;s original work. In fact, the name is derived from the fact that the work was contributed by people all over the world via the Internet, when such collaboration was still novel enough to merit naming the package after it. </p>
 <p> Bryan Henderson has been maintaining <code>Netpbm</code> since 1999. In addition to packaging work by others, Bryan has also written a significant amount of new material for the package. </p>
-<h2>Index</h2>

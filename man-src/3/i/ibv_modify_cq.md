@@ -36,4 +36,3 @@ struct ibv_modify_cq_attr {
 <dt>Yonatan Cohen &lt;yonatanc [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

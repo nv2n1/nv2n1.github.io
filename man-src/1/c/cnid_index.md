@@ -24,4 +24,3 @@ description: "cnid_index – check and repair Netatalk CNID database indexes"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-cnid_dbd/">cnid_dbd</a></code>(8), <code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8) </p>
-<h2>Index</h2>

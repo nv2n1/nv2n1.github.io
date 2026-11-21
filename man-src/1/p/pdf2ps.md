@@ -19,4 +19,3 @@ description: "pdf2ps – Ghostscript PDF to PostScript translator"
 <p> This document was last revised for Ghostscript version 9.55.0.</p>
 <h2>AUTHOR</h2>
 <p> Artifex Software, Inc. are the primary maintainers of Ghostscript. </p>
-<h2>Index</h2>

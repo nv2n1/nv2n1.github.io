@@ -52,4 +52,3 @@ description: "firefox – a free and open source web browser from Mozilla"
 <dt><code>-jsconsole</code></dt>
 <dd> Open the Error console. If <code>firefox</code> is not already running, this will open a new browser window too </dd>
 </dl>
-<h2>Index</h2>

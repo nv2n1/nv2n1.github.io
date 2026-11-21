@@ -55,4 +55,3 @@ npm explore some-dependency -- git pull origin master
 <dd> npm help install </dd>
 </dl>
 </dl>
-<h2>Index</h2>

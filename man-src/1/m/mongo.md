@@ -609,4 +609,3 @@ mongo --eval 'db.collection.find().forEach(printjson)'
 <p> MongoDB Documentation Project</p>
 <h2>COPYRIGHT</h2>
 <p> 2011-2014, MongoDB, Inc. </p>
-<h2>Index</h2>

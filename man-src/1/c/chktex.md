@@ -87,4 +87,3 @@ description: "chktex – finds typographic errors in LaTeX."
 <p> This manual page was cobbled together by Clint Adams &lt;schizo [at] debian.org&gt;, based on the output of &quot;chktex &#8211;help&quot; and <a href="/docs/linux/man/1-deweb/">deweb</a>(1).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-deweb/">deweb</a>(1), <a href="/docs/linux/man/1-chkweb/">chkweb</a>(1)</code> </p>
-<h2>Index</h2>

@@ -24,4 +24,3 @@ description: "nwsfind – Find a NetWare Server"
 </dt><dd> By default nwsfind looks for file servers. In case you want to look up another server type, you have to specify its numerical type as <code>type.</code></dd></dl>
 <h2>CREDITS</h2>
 <p> nwsfind was written by Volker Lendecke (lendecke [at] math.uni-goettingen.de) </p>
-<h2>Index</h2>

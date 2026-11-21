@@ -70,4 +70,3 @@ description: "pp – Prints certificates, keys, crls, and pkcs7 files"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a></dd></dl>
 </dl>
-<h2>Index</h2>

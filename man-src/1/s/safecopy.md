@@ -358,4 +358,3 @@ description: "safecopy – rescue data from a source that causes IO errors"
 <dt><i><a href="/docs/linux/man/1-ddrescue/">ddrescue</a></i>(1), <i>dd-rescue</i>(1), &#8230;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

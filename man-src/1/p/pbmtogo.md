@@ -17,4 +17,3 @@ description: "pbmtogo – convert a portable bitmap into compressed GraphOn grap
 <p> <a href="/docs/linux/man/5-pbm/">pbm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1988, 1989 by Jef Poskanzer, Michael Haberler, and Bo Thide&#8217;. </p>
-<h2>Index</h2>

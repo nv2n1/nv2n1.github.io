@@ -51,4 +51,3 @@ description: "getdns_list, getdns_list_create, getdns_list_create_with_extended_
 <p> TBD </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_dict/">getdns_dict</a></code>(3), <code><a href="/docs/linux/man/3-getdns_list_get/">getdns_list_get</a></code>(3), <code><a href="/docs/linux/man/3-getdns_list_set/">getdns_list_set</a></code>(3) </p>
-<h2>Index</h2>

@@ -1578,4 +1578,3 @@ s[len + newlen] = &#8216;\0&#8217;; SvCUR_set(sv, len + newlen); SvUTF8_off(sv);
 <p> With lots of help and suggestions from Dean Roehrich, Malcolm Beattie, Andreas Koenig, Paul Hudson, Ilya Zakharevich, Paul Marquess, Neil Bowers, Matthew Green, Tim Bunce, Spider Boardman, Ulrich Pfeifer, Stephen McCamant, and Gurusamy Sarathy.  </p>
 <h2>SEE ALSO</h2>
 <p> perlapi, perlintern, perlxs, perlembed </p>
-<h2>Index</h2>

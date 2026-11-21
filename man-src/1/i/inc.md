@@ -92,4 +92,3 @@ description: "inc – incorporate new mail"
 <dd></dd></dl>
 <h2>CONTEXT</h2>
 <p> The folder into which messages are being incorporated will become the current folder. The first message incorporated will become the current message, unless the <code>-nochangecur</code> option is specified. This leaves the context ready for a <code>show</code> of the first new message. </p>
-<h2>Index</h2>

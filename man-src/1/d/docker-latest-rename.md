@@ -15,4 +15,3 @@ description: "docker-rename – Rename a container"
 <p> There are no available options. </p>
 <h2>DESCRIPTION</h2>
 <p> Rename a container. Container may be running, paused or stopped. </p>
-<h2>Index</h2>

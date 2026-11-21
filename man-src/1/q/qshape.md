@@ -65,4 +65,3 @@ $queue_directory/deferred/, messages postponed for later delivery.
 Victor Duchovni
 Morgan Stanley
 </pre>
-<h2>Index</h2>

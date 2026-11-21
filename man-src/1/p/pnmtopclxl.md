@@ -94,4 +94,3 @@ description: "pnmtopclxl – convert a PNM image to an HP LaserJet PCL XL printe
 <p> <code><a href="/docs/linux/man/1-ppmtolj/">ppmtolj</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtolj/">pbmtolj</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtopj/">ppmtopj</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtopjxl/">ppmtopjxl</a></code>(1) , <code><a href="/docs/linux/man/1-thinkjettopbm/">thinkjettopbm</a></code>(1) , <code>ppm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pnmtopclxl</code> was added to Netpbm in Release 10.6 (July 2002). It was contributed by <i>Jochen Karrer</i>. </p>
-<h2>Index</h2>

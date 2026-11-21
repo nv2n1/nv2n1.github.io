@@ -21,4 +21,3 @@ description: "docker-system-prune – Remove unused data"
 <p> <code>&#8211;volumes</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Prune volumes</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-system/">docker-system</a>(1)</code> </p>
-<h2>Index</h2>

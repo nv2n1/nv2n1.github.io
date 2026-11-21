@@ -27,4 +27,3 @@ description: "chatzilla – standalone Mozilla IRC client, no browsers attached"
 <p> To report a bug, please visit <a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a></p>
 <h2>AUTHOR</h2>
 <p> Hicham HAOUARI (hicham (at) fedoraproject.org) </p>
-<h2>Index</h2>

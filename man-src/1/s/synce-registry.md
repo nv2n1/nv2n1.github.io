@@ -77,4 +77,3 @@ description: "synce-registry – read or modify the registry on a PDA"
 <p> David Eriksson &lt;twogood [at] users.sourceforge.net&gt;, Scott Gifford &lt;gifford [at] umich.edu&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> synce(1) <a href="/docs/linux/man/1-pstatus/">pstatus</a>(1) </p>
-<h2>Index</h2>

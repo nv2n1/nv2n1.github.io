@@ -34,4 +34,3 @@ description: "imlib-config – Display Imlib and GDK-Imlib Library Configuration
 <p> <code><a href="/docs/linux/man/1-imlib_config/">imlib_config</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Ossama Othman &lt;ossama [at] debian.org&gt; </p>
-<h2>Index</h2>

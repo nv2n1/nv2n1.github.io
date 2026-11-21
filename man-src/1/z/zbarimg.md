@@ -146,4 +146,3 @@ description: "zbarimg – scan and decode bar codes from image file(s)"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2007-2010 Jeff Brown </p>
 <p> All Rights Reserved </p>
-<h2>Index</h2>

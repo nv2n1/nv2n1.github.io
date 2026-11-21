@@ -122,4 +122,3 @@ description: "devilspie – perform actions on windows as they are created"
 <p> This manpage is almost useless, as it was thrown together on a train. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Ross Burton &lt;ross [at] burtonini.com&gt;. </p>
-<h2>Index</h2>

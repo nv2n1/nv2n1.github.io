@@ -29,4 +29,3 @@ description: "presage_simulator – presage simulator program"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; Matteo Vescovi.<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE, to the extent permitted by law. </p>
-<h2>Index</h2>

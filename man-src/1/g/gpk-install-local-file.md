@@ -19,4 +19,3 @@ description: "gpk-install-local-file – GNOME PackageKit Local File Helper"
 <p> gpk-install-provide-file (2).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Richard Hughes &lt;richard [at] hughsie.com&gt;. </p>
-<h2>Index</h2>

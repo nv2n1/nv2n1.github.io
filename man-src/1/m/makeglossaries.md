@@ -62,4 +62,3 @@ description: "makeglossaries – Calls makeindex/xindy for LaTeX documents using
 <pre>
         texdoc glossaries
 </pre>
-<h2>Index</h2>

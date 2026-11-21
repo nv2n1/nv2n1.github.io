@@ -21,4 +21,3 @@ description: "pto_merge – Merges two or more Hugin project files"
 <dd> Shows help</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
-<h2>Index</h2>

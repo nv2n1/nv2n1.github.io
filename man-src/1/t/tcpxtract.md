@@ -32,4 +32,3 @@ description: "tcpxtract – manual page for tcpxtract v1.0.1"
 <dt>
 </dt><dd> <code>info tcpxtract</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

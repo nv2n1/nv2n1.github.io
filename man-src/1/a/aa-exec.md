@@ -33,4 +33,3 @@ description: "aa-exec – confine a program with the specified AppArmor profile"
 <p> If you find any bugs, please report them at &lt;<a rel="nofollow" href="https://gitlab.com/apparmor/apparmor/-/issues">https://gitlab.com/apparmor/apparmor/-/issues</a>&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code>aa-stack</code>(8), <code>aa-namespace</code>(8), <code><a href="/docs/linux/man/7-apparmor/">apparmor</a></code>(7), <code><a href="/docs/linux/man/5-apparmor-d/">apparmor.d</a></code>(5), <code>aa_change_profile</code>(3), <code>aa_change_onexec</code>(3) and &lt;<a rel="nofollow" href="https://wiki.apparmor.net">https://wiki.apparmor.net</a>&gt;. </p>
-<h2>Index</h2>

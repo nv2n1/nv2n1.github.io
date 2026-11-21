@@ -43,4 +43,3 @@ description: "qgpumode – change GPU mode"
 <p> If the qgpumode command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> pbs_mom(8B) and pbs_server(8B) </p>
-<h2>Index</h2>

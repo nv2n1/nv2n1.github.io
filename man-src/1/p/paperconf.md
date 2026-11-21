@@ -54,4 +54,3 @@ description: "paperconf – print paper configuration information"
 <p> Yves Arrouye &lt;arrouye [at] debian.org&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-papersize/">papersize</a></code>(5) </p>
-<h2>Index</h2>

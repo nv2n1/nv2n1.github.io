@@ -34,4 +34,3 @@ description: "update-mime-database – a program to build the Shared MIME-Info d
 <h2>LICENCE</h2>
 <p> Copyright (C) 2002 Thomas Leonard.<br />
  You may redistribute copies of <code>update-mime-database</code> under the terms of the GNU General Public License. </p>
-<h2>Index</h2>

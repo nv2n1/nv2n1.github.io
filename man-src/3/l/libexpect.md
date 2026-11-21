@@ -221,4 +221,3 @@ extern int exp_logfile_all extern FILE *exp_logfile;
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> Thanks to John Ousterhout (UCBerkeley) for supplying the pattern matcher. </p>
 <p> Design and implementation of the <code>expect</code> library was paid for by the U.S. government and is therefore in the public domain. However the author and NIST would like credit if this program and documentation or portions of them are used. </p>
-<h2>Index</h2>

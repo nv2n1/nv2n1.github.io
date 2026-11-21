@@ -27,4 +27,3 @@ url: "/docs/linux/man/1-dnstxt/"
 <p> Report bugs to &lt;pj.pandit [at] yahoo.co.in&gt; </p>
 <h2>Manual Author</h2>
 <p> Prasad J Pandit </p>
-<h2>Index</h2>

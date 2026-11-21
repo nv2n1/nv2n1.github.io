@@ -55,4 +55,3 @@ david
 <p> The MIT Kerberos 5 implementation was developed at MIT, with contributions from many outside parties. It is currently maintained by the MIT Kerberos Consortium.</p>
 <h2>RESTRICTIONS</h2>
 <p> Copyright 1985,1986,1989-1996,2002,2011 Massachusetts Institute of Technology </p>
-<h2>Index</h2>

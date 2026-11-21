@@ -97,4 +97,3 @@ description: "LyX – A Document Processor"
 <p> <code>LaTeX</code> import is still not perfect and may produce buggy *.lyx files. Consult the <code>tex2lyx</code> documentation. </p>
 <h2>AUTHORS</h2>
 <p> LyX is Copyright (C) 1995 by Matthias Ettrich, 1995-2010 LyX Team </p>
-<h2>Index</h2>

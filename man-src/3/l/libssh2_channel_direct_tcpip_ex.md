@@ -26,4 +26,3 @@ description: "libssh2_channel_direct_tcpip_ex – Tunnel a TCP connection throug
 <p> <i>LIBSSH2_ERROR_ALLOC</i> &#8211; An internal memory allocation call failed.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
-<h2>Index</h2>

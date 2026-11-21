@@ -192,4 +192,3 @@ key_serial_t request_key(const char *type, const char *description,
 <p> The kernel source files <i>Documentation/security/keys/core.rst</i> and <i>Documentation/keys/request-key.rst</i> (or, before Linux 4.13, in the files <i>Documentation/security/keys.txt</i> and <i>Documentation/security/keys-request-key.txt</i>).</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

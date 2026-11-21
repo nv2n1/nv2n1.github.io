@@ -23,4 +23,3 @@ description: "ql/indexes/interestrateindex.hpp – base class for interest rate 
 <p> base class for interest rate indexes </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

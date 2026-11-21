@@ -13,4 +13,3 @@ description: "xerces-j2-constants – display constants used by Xerces2 Java Par
 <p> <code>xerces-j2-constants</code> </p>
 <h2>DESCRIPTION</h2>
 <p> Xerces-J2-Constants dumps common constants used by Xerces2 Java Parser to standard output. </p>
-<h2>Index</h2>

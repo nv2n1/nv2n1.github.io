@@ -47,4 +47,3 @@ description: "ptop – The FPC Pascal configurable source beautifier."
 <dt>Other FPC utils</dt>
 <dd> <code><a href="/docs/linux/man/1-ppdep/">ppdep</a></code>(1) <code><a href="/docs/linux/man/1-ppudump/">ppudump</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) <code><a href="/docs/linux/man/1-h2pas/">h2pas</a></code>(1) </dd>
 </dl>
-<h2>Index</h2>

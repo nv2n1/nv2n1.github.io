@@ -142,4 +142,3 @@ once           1.3.2    1.3.3    1.3.3  test-outdated-output
 <dd> npm help folders </dd>
 </dl>
 </dl>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ text2html-- paras-- urls-- email-- bold-- underline
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> This software is copyright (c) 2003 by Casey West. </p>
 <p> This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself. </p>
-<h2>Index</h2>

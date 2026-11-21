@@ -241,4 +241,3 @@ description: "nitrocli – access Nitrokey devices"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$&nbsp;<code>&nbsp;nitrocli pws status</code><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;slot<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>name</p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>example.org</p>
-<h2>Index</h2>

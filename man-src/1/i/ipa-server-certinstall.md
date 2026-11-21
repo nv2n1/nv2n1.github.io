@@ -31,4 +31,3 @@ description: "ipa-server-certinstall – Install new SSL server certificates"
 <h2>EXIT STATUS</h2>
 <p> 0 if the installation was successful </p>
 <p> 1 if an error occurred </p>
-<h2>Index</h2>

@@ -138,4 +138,3 @@ description: "distccd – distributed C/C++ compiler server"
 <p> You are free to use distcc. distcc (including this manual) may be copied, modified or distributed only under the terms of the GNU General Public Licence version 2 or later. distcc comes with absolutely no warrany. A copy of the GPL is included in the file COPYING.</p>
 <h2>AUTHOR</h2>
 <p> distcc was written by Martin Pool &lt;mbp [at] sourcefrog.net&gt;, with the co-operation of many scholars including Wayne Davison, Frerich Raabe, Dimitri Papadopoulos and others noted in the NEWS file. See <code><a href="/docs/linux/man/1-pump/">pump</a></code>(1) for the authors of pump mode. Please report bugs to &lt;distcc [at] lists.samba.org&gt;. </p>
-<h2>Index</h2>

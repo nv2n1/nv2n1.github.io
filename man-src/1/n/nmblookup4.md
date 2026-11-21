@@ -84,4 +84,3 @@ description: "nmblookup4 – NetBIOS over TCP/IP client used to lookup NetBIOS n
 <dt>
 </dt><dd> <a href="ftp://ftp.icce.rug.nl/pub/unix/">ftp://ftp.icce.rug.nl/pub/unix/</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -50,4 +50,3 @@ description: "ppmtoxpm – convert a portable pixmap into an X11 pixmap"
 <p> Upgraded to XPM version 3 by<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Arnaud Le Hors&nbsp;(lehors [at] mirsa.inria.fr)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;Tue Apr 9 1991 </p>
-<h2>Index</h2>

@@ -84,4 +84,3 @@ description: "fisql – interactive SQL shell"
 <p> The utility was written by An Nicholas S. Castellano Aq entropy [at] freetds.org Ns , who contributed it to the FreeTDS project under the terms of the GPL.</p>
 <h2>BUGS</h2>
 <p> Requires the GNU readline library. </p>
-<h2>Index</h2>

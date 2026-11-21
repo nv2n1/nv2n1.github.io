@@ -30,4 +30,3 @@ description: "mate-settings-daemon – Handles the MATE session settings"
 <p> <code>mate-settings-daemon</code> was written by Jonathan Blandford &lt;jrb [at] redhat.com&gt; and William Jon McCann &lt;mccann [at] jhu.edu&gt;. </p>
 <p> This manual page was originally written by Joshua Cummings &lt;jrac [at] internode.on.net&gt;. </p>
 <p> This manual page was adopted for MATE by Vangelis Mouhtsis &lt;vangelis [at] gnugr.org&gt;. </p>
-<h2>Index</h2>

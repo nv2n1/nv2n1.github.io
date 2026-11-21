@@ -25,4 +25,3 @@ description: "411toppm – convert Sony Mavica .411 image to ppm"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
-<h2>Index</h2>

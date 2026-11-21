@@ -51,4 +51,3 @@ description: "gmtstitch – Join line segments whose end points match within tol
 <p> <code>gmtstitch</code> my_lines.d <code>-Tf</code>0.15k <code>-m</code> <code>-D</code>Map_segment_%4.4d.dat </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-mapproject/">mapproject</a></i>(1) </p>
-<h2>Index</h2>

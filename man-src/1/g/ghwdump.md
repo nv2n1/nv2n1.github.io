@@ -32,4 +32,3 @@ description: "ghwdump – Dumps info contained in GHW files"
 <p> Tristan Gingold</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) </p>
-<h2>Index</h2>

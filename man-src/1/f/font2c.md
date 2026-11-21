@@ -22,4 +22,3 @@ description: "font2c – Write PostScript Type 0 or Type 1 font as C code"
 <p> This document was last revised for Ghostscript version 9.07.</p>
 <h2>AUTHOR</h2>
 <p> Artifex Software, Inc. are the primary maintainers of Ghostscript. This manpage by George Ferguson. </p>
-<h2>Index</h2>

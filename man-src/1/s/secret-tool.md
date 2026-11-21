@@ -68,4 +68,3 @@ My password
 $ secret-tool clear key1 value1 key2 value2
 </pre>
 </dd></dl>
-<h2>Index</h2>

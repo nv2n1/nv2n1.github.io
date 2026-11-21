@@ -16,4 +16,3 @@ description: "glxdemo – a demonstration of the GLX functions"
 <h2>AUTHOR</h2>
 <p> glxdemo was written by Brian Paul &lt;brian.paul [at] tungstengraphics.com&gt;. </p>
 <p> This manual page was written by Thierry Reding &lt;thierry [at] gilfi.de&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

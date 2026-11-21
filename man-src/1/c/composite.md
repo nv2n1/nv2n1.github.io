@@ -116,4 +116,3 @@ description: "composite – overlaps one image over another."
 <p> <a href="/docs/linux/man/1-imagemagick-im6-q16/">ImageMagick-im6.q16</a>(1) </p>
 <h2>COPYRIGHT</h2>
 <p> <code>Copyright (C) 1999-2020 ImageMagick Studio LLC. Additional copyrights and licenses apply to this software, see file:///usr/share/doc/imagemagick-6-common/html/www/license.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="http://imagemagick.org/script/license.php">http://imagemagick.org/script/license.php</a></code> </p>
-<h2>Index</h2>

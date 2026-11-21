@@ -370,4 +370,3 @@ description: "tbl – format tables for troff"
 <p> Lesk, M.E.: &quot;TBL &#8211; A Program to Format Tables&quot;. For copyright reasons it cannot be included in the groff distribution, but copies can be found with a title search on the World Wide Web.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1) </p>
-<h2>Index</h2>

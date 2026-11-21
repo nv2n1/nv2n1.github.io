@@ -243,4 +243,3 @@ ca [at] grid.example.org
 </dt><dd> SSL configuration file for requesting a host or service certificate. The first form is the default location, the second form is used when the <i>-ca</i> command-line option is specified.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
-<h2>Index</h2>

@@ -52,4 +52,3 @@ description: "nwbpset – Create a bindery property or set its value"
 </dt><dd> By default, passwords are converted to uppercase before they are sent to the server, because most servers require this. You can turn off this conversion by <code>-C.</code></dd></dl>
 <h2>AUTHORS</h2>
 <p> nwbpset was written by Volker Lendecke. See the Changes file of ncpfs for other contributors. </p>
-<h2>Index</h2>

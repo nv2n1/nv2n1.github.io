@@ -30,4 +30,3 @@ description: "bglprof – display call graph profile data for Bigloo programs"
 <p> <a href="/docs/linux/man/1-bigloo/">bigloo</a>(1), prof(1), <a href="/docs/linux/man/1-gprof/">gprof</a>(1) </p>
 <h2>AUTHOR</h2>
 <p> Manuel SERRANO, Manuel.Serrano [at] inria.fr </p>
-<h2>Index</h2>

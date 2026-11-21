@@ -1067,4 +1067,3 @@ systemctl mount-image --mkdir bar.service /tmp/img.raw /var/lib/baz/img
 <dt>
 </dt><dd> <a rel="nofollow" href="http://refspecs.linuxbase.org/LSB_3.0.0/LSB-PDA/LSB-PDA/iniscrptact.html">http://refspecs.linuxbase.org/LSB_3.0.0/LSB-PDA/LSB-PDA/iniscrptact.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

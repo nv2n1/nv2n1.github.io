@@ -20,4 +20,3 @@ description: "ql/quotes/lastfixingquote.hpp – quote for the last fixing availa
 <p> quote for the last fixing available for a given index </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

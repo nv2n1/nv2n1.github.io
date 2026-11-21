@@ -88,4 +88,3 @@ xdg-screensaver suspend 0x1c00007
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2006 </p>
-<h2>Index</h2>

@@ -47,4 +47,3 @@ description: "parallel – run programs in parallel"
 <p> All output to stdout and stderr is serialised through a corresponding internal pipe, in order to prevent annoying concurrent output behaviour. Note that serialisation is not done on any other file descriptors and file position based access to a nonstandard file descriptor might have unexpected results.</p>
 <h2>AUTHOR</h2>
 <p> Tollef Fog Heen </p>
-<h2>Index</h2>

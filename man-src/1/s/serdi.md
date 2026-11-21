@@ -45,4 +45,3 @@ description: "serdi – Read and write RDF syntax"
  There is NO WARRANTY, to the extent permitted by law. </p>
 <h2>SEE ALSO</h2>
 <p> &lt;<a rel="nofollow" href="http://drobilla.net/software/serd">http://drobilla.net/software/serd</a>&gt; </p>
-<h2>Index</h2>

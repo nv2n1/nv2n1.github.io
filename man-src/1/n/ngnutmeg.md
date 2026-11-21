@@ -43,4 +43,3 @@ description: "ngnutmeg – ngspice post-processor"
 <h2>AUTHOR</h2>
 <p> Wayne Christopher (faustus [at] cad.berkeley.edu)<br />
  <code>ngspice</code>: various authors (see <code><a rel="nofollow" href="http://sourceforge.net/projects/ngspice/">http://sourceforge.net/projects/ngspice/</a></code>) </p>
-<h2>Index</h2>

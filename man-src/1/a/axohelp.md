@@ -28,4 +28,3 @@ description: "axohelp – helper program for use of LaTeX package axodraw2 with 
 <h2>AUTHOR</h2>
 <p> Current version, by John Collins (username jcc8 at node psu.edu) and Jos Vermaseren (username t68 at nikhef dot nl). </p>
 <p> The released version can be obtained from CTAN: &lt;<a rel="nofollow" href="http://www.ctan.org/pkg/axodraw2/">http://www.ctan.org/pkg/axodraw2/</a>&gt;, and an author&#8217;s website &lt;<a rel="nofollow" href="https://www.nikhef.nl/~form/maindir/others/axodraw2/axodraw2.html">https://www.nikhef.nl/~form/maindir/others/axodraw2/axodraw2.html</a>&gt;. </p>
-<h2>Index</h2>

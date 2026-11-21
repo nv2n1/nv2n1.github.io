@@ -62,4 +62,3 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 <p> Additional options may be set in the compile context via the <code>pcre2_set_compile_extra_options</code> function. </p>
 <p> The yield of this function is a pointer to a private data structure that contains the compiled pattern, or NULL if an error was detected. </p>
 <p> There is a complete description of the PCRE2 native API, with more detail on each option, in the <code>pcre2api</code> page, and a description of the POSIX API in the <code>pcre2posix</code> page. </p>
-<h2>Index</h2>

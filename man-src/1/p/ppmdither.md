@@ -27,4 +27,3 @@ description: "ppmdither – ordered dither for color images"
 <p> <a href="/docs/linux/man/1-pnmdepth/">pnmdepth</a>(1), <a href="/docs/linux/man/1-ppmquant/">ppmquant</a>(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Christos Zoulas. </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "libssh2_channel_wait_eof – wait for the remote to reply to an EO
 <p> Return 0 on success or negative on failure. It returns LIBSSH2_ERROR_EAGAIN when it would otherwise block. While LIBSSH2_ERROR_EAGAIN is a negative number, it isn&#8217;t really a failure per se.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_send_eof/">libssh2_channel_send_eof</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_channel_eof/">libssh2_channel_eof</a>(3)</code> </p>
-<h2>Index</h2>

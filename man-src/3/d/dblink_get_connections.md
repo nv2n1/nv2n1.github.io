@@ -25,4 +25,3 @@ dblink_get_connections() returns text[]
 SELECT dblink_get_connections();
 </pre>
 </dd></dl>
-<h2>Index</h2>

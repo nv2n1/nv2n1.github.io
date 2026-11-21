@@ -65,4 +65,3 @@ description: "wdiff – manual page for wdiff 1.2.2"
 <dt>
 </dt><dd> <code>info wdiff</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

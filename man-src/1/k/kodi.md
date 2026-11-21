@@ -27,4 +27,3 @@ description: "kodi.bin – Kodi main executable"
 <dd> LircDevice to use. See &#8211;help output for the default.</dd>
 <dt><code>-n</code> or <code>&#8211;nolirc</code></dt>
 <dd> do not use Lirc, aka no remote input.</dd></dl>
-<h2>Index</h2>

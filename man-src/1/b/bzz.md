@@ -170,4 +170,3 @@ description: "bzz – DjVu general purpose compression utility."
 <p> Program <code>bzz </code> was written by L&eacute;on Bottou &lt;leonb [at] users.sourceforge.net&gt; and was then improved by Andrei Erofeev &lt;andrew_erofeev [at] yahoo.com&gt;, Bill Riemers &lt;docbill [at] sourceforge.net&gt; and many others. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-compress/">compress</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1) </p>
-<h2>Index</h2>

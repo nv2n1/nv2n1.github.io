@@ -112,4 +112,3 @@ Internet: bruce [at] perens.com
 <p> There are, without doubt, other bugs and porting issues. Please contact me via e-mail if you have any bug reports, ideas, etc.</p>
 <h2>WHAT&#8217;S BETTER</h2>
 <p> <i>Purify</i> does a much more thorough job than Electric Fence, and does not have the huge memory overhead. <i>Checkergcc,</i> a modified version of the GNU C Compiler that instruments all memory references, is available on Linux systems and where GCC is used. It performs some of the same tasks as Purify, but only on code that it has compiled. </p>
-<h2>Index</h2>

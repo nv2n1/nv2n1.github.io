@@ -400,4 +400,3 @@ $self-&gt;
     } -&gt; save('/tmp/job_description.$$');
 </code></pre>
 <p> in any of the methods you&#8217;ve implemented. </p>
-<h2>Index</h2>

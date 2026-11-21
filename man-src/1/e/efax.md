@@ -433,4 +433,3 @@ lpr -P fax -J &quot;555 1212&quot; file.ps
 <p> May fail if multitasking delays cause the received data to overflow the computer&#8217;s serial device buffer or if an under-run of transmit data exceeds 5 seconds. </p>
 <p> Polling does not work. </p>
 <p> Does not support 2-D coding, ECM, or BFT. </p>
-<h2>Index</h2>

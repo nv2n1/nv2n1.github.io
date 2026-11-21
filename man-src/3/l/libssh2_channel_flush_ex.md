@@ -22,4 +22,3 @@ description: "libssh2_channel_flush_ex – flush a channel"
 <p> Flush the read buffer for a given channel instance. Individual substreams may be flushed by number or using one of the provided macros. </p>
 <h2>RETURN VALUE</h2>
 <p> Return 0 on success or negative on failure. It returns LIBSSH2_ERROR_EAGAIN when it would otherwise block. While LIBSSH2_ERROR_EAGAIN is a negative number, it isn&#8217;t really a failure per se. </p>
-<h2>Index</h2>

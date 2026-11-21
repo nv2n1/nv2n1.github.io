@@ -29,4 +29,3 @@ description: "libtasn1_perror – prints a string to stderr with a description o
 <dt>
 </dt><dd> <code>info libtasn1</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

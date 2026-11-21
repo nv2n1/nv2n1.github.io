@@ -243,4 +243,3 @@ description: "mpg123 – play audio MPEG 1.0/2.0/2.5 stream (layers 1, 2 and 3)"
 <h2>WEBSITE</h2>
 <p> <a rel="nofollow" href="http://www.mpg123.org">http://www.mpg123.org</a><br />
  <a rel="nofollow" href="http://sourceforge.net/projects/mpg123">http://sourceforge.net/projects/mpg123</a> </p>
-<h2>Index</h2>

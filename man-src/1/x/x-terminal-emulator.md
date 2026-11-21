@@ -191,4 +191,3 @@ description: "Terminator – Multiple GNOME terminals in one window"
 <h2>AUTHOR</h2>
 <p> Terminator was written by Chris Jones &lt;cmsj [at] tenshu.net&gt; and others. </p>
 <p> This manual page was written by Chris Jones &lt;cmsj [at] tenshu.net&gt; and others. </p>
-<h2>Index</h2>

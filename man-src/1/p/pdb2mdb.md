@@ -22,4 +22,3 @@ description: "pdb2mdb – Program Database to Mono Debugging Symbol converter."
 <p> <a href="/docs/linux/man/1-mono/">mono</a>(1), mdb(1)</p>
 <h2>WEB SITE</h2>
 <p> <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> </p>
-<h2>Index</h2>

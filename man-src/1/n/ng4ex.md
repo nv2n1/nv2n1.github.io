@@ -318,4 +318,3 @@ description: "ng4ex – NCAR Graphics High Level Utilities Example Programs"
 <p> Copyright (C) 1987-2000<br />
  University Corporation for Atmospheric Research<br />
  The use of this Software is governed by a License Agreement. </p>
-<h2>Index</h2>

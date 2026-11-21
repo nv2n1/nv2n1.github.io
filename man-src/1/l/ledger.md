@@ -676,4 +676,3 @@ Here follows a note describing the posting.Liabilities : MasterCard $ - 200.00
 <p> beancount(1), hledger(1)</p>
 <h2>AUTHORS</h2>
 <p> An John Wiegley Aq johnw [at] newartisans.com </p>
-<h2>Index</h2>

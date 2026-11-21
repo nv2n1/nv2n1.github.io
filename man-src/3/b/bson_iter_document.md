@@ -32,4 +32,3 @@ void bson_iter_document(const bson_iter_t *iter,
 <p> <code>MUST</code> be on an element that is of type BSON_TYPE_DOCUMENT. This can be verified with <code><a href="/docs/linux/man/3-bson_iter_type/">bson_iter_type</a>(3)</code> or the <code>BSON_ITER_HOLDS_DOCUMENT(3)</code> macro. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

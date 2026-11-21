@@ -601,4 +601,3 @@ set passive on
 <h2>APOLOGIES</h2>
 <p> To the users, for not being able to respond personally to most of your inquiries. </p>
 <p> To Phil, for things not being the way they should be. </p>
-<h2>Index</h2>

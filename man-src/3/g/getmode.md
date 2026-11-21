@@ -42,4 +42,3 @@ chmod(file, newmode);
 <p> The Fn getmode and Fn setmode functions first appeared in BSD 4.4</p>
 <h2>BUGS</h2>
 <p> The type of Fa set should really be some opaque struct type used only by these functions rather than Ft void * . </p>
-<h2>Index</h2>

@@ -42,4 +42,3 @@ description: "vanessa_socket_pipe – Trivial TCP/IP pipe based on libvanessa_so
  -L|&#8211;listen_port and -o|&#8211;outgoing_host must be defined.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Simon Horman &lt;horms [at] verge.net.au&gt; </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "swamp – SSL/TLS load-tester based on OpenSSL"
 <h2>AUTHOR</h2>
 <p> Swamp was designed and implemented by Geoff Thorpe. Steve Robb has contributed numerous tweaks and fixes along the way too. To consolidate resources and provide an improved framework for ongoing development, the swamp utility was made a component of the distcache project in 2003 (swamp happens to be the ideal tool for testing distcache&#8217;s most common usage &#8211; secure web servers). </p>
 <p> Home Page: <i><a rel="nofollow" href="http://www.distcache.org">http://www.distcache.org</a></i> </p>
-<h2>Index</h2>

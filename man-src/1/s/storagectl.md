@@ -94,4 +94,3 @@ description: "storagectl – The storaged command line tool"
 <p> Please send bug reports to either the distribution bug tracker or the upstream bug tracker at m[blue]<code><a rel="nofollow" href="https://github.com/storaged-project/storaged/issues">https://github.com/storaged-project/storaged/issues</a></code>m[].</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-storaged/">storaged</a></code>(8), <code><a href="/docs/linux/man/8-umount-storaged/">umount.storaged</a></code>(8), <code><a href="/docs/linux/man/8-polkit/">polkit</a></code>(8) </p>
-<h2>Index</h2>

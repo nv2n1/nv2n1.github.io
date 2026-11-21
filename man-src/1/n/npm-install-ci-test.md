@@ -29,4 +29,3 @@ alias: npm cit
 <dd> npm help test </dd>
 </dl>
 </dl>
-<h2>Index</h2>

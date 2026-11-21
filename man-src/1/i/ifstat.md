@@ -85,4 +85,3 @@ description: "ifstat – Report InterFace STATistics"
 <p> <i>vmstat</i>(1), <i><a href="/docs/linux/man/1-iostat/">iostat</a></i>(1)</p>
 <h2>AUTHOR</h2>
 <p> Gaël Roualland, &lt;gael.roualland [at] dial.oleane.com&gt; </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "st4topgm – convert an SBIG ST4 format file into a portable graym
 <p> Copyright (C) 2003 by Justin Pryzby &lt;justinpryzby [at] users.sf.net&gt;. </p>
 <h2>COPYRIGHT</h2>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. This software is provided &quot;as is&quot; without express or implied warranty. </p>
-<h2>Index</h2>

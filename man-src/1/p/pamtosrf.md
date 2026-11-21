@@ -40,4 +40,3 @@ description: "pamtosrf – convert a sequence of Netpbm images to a SRF image fi
 <h2>HISTORY</h2>
 <p> <code>srftopam</code> was new in Netpbm 10.55 (June 2011). </p>
 <p> It was contributed by Mike Frysinger. </p>
-<h2>Index</h2>

@@ -79,4 +79,3 @@ description: "pto_var – change image variables inside Hugin .pto project files
 </dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
-<h2>Index</h2>

@@ -62,4 +62,3 @@ kbdcontrol -f 70 &quot;`printf '[3~'`&quot;
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-keyboard/">keyboard</a></code>(5), <code><a href="/docs/linux/man/1-setxkbmap/">setxkbmap</a></code>(1) </p>
-<h2>Index</h2>

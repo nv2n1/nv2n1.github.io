@@ -16,4 +16,3 @@ description: "jack_showtime – The JACK Audio Connection Kit example client"
 <h2>AUTHOR</h2>
 <p> Paul Davis </p>
 <p> This manpage was written by Stefan Schwandter &lt;swan [at] debian.org&gt; </p>
-<h2>Index</h2>

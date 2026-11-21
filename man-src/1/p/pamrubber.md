@@ -50,4 +50,3 @@ description: "pamrubber – a rubber-sheeting utility that stretches an image ba
 <p> <code>pamrubber</code> was new in Netpbm 10.54 (March 2011). </p>
 <h2>AUTHORS</h2>
 <p> <i>Willem van Schaik</i> wrote this program in February 2011 and contributed it to Netpbm. </p>
-<h2>Index</h2>

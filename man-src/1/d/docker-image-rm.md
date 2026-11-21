@@ -30,4 +30,3 @@ docker image rm fedora/httpd
 <p> <code>&#8211;no-prune</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Do not delete untagged parents</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-image/">docker-image</a>(1)</code> </p>
-<h2>Index</h2>

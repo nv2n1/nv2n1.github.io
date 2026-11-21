@@ -50,4 +50,3 @@ description: "unitdiff – Describe differences in the interface of a FPC unit."
 <dt>
 </dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-fpdoc/">fpdoc</a></code>(1) </dd>
 </dl>
-<h2>Index</h2>

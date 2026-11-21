@@ -50,4 +50,3 @@ description: "rcsfreeze – freeze a configuration of sources checked in under R
 <p> Although both working and <font SIZE="-1">RCS</font> file names are accepted, they are not paired as usual with RCS commands. </p>
 <p> Error checking is rudimentary. </p>
 <p> <code>rcsfreeze</code> is just an optional example shell script, and should not be taken too seriously. See <font SIZE="-1">CVS</font> for a more complete solution. </p>
-<h2>Index</h2>

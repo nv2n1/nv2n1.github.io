@@ -17,4 +17,3 @@ description: "get_color_depth – Returns the current pixel color depth. Allegro
 <p> Note that the function returns whatever value you may have set previously with set_color_depth(), which can be different from the current color depth of the screen global variable. If you really need to know the color depth of the screen, use bitmap_color_depth(). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3), <code><a href="/docs/linux/man/3-bitmap_color_depth/">bitmap_color_depth</a></code>(3), <code><a href="/docs/linux/man/3-exrgbhsv/">exrgbhsv</a></code>(3) </p>
-<h2>Index</h2>

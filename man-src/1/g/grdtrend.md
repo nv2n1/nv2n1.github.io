@@ -62,4 +62,3 @@ gmt grdtrend hawaii_topo.nc -N10r -Thawaii_trend.nc -Whawaii_weight.nc -V
 <p> <code>gmt</code>, <code>grdfft</code>, <code>grdfilter</code>, <code>grdmath</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

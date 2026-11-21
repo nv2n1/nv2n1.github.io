@@ -64,4 +64,3 @@ description: "sla_wwaddw.f –"
 <p> Definition at line 82 of file sla_wwaddw.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

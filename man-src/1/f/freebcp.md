@@ -96,4 +96,3 @@ description: "freebcp – bulk loading utility for Sybase and Microsoft database
 <p> The utility was written by An Bill Thompson Aq thompbil [at] exchange.uk.ml.com</p>
 <h2>BUGS</h2>
 <p> Currently, there is no support for text data types in <code>, when</code> SQL Server 2000 is the target server. </p>
-<h2>Index</h2>

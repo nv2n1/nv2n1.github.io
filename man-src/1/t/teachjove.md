@@ -23,4 +23,3 @@ description: "teachjove – learn how to use the JOVE editor"
 <p> <i><a href="/docs/linux/man/1-jove/">jove</a>(1)</i> &#8212; to learn about JOVE in general.</p>
 <h2>AUTHOR</h2>
 <p> Jonathan Payne </p>
-<h2>Index</h2>

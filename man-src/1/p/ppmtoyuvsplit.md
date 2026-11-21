@@ -18,4 +18,3 @@ description: "ppmtoyuvsplit – convert a portable pixmap into 3 subsampled raw 
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1993 by Andre Beck. (Andre_Beck [at] IRS.Inf.TU-Dresden.de) </p>
 <p> Based on ppmtoyuv.c </p>
-<h2>Index</h2>

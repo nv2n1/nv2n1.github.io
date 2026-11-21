@@ -246,4 +246,3 @@ graph test123
  E. R. Gansner and E. Koutsofios and S. C. North, &quot;Drawing Graphs with dot,&quot; Available at <a rel="nofollow" href="http://www.graphviz.org/pdf/dotguide.pdf.">http://www.graphviz.org/pdf/dotguide.pdf.</a><br />
  S. C. North, &quot;NEATO User&#8217;s Manual&quot;. Available <a rel="nofollow" href="http://www.graphviz.org/pdf/neatoguide.pdf.">http://www.graphviz.org/pdf/neatoguide.pdf.</a><br />
  E. R. Gansner and Y. Hu, &quot;Efficient, Proximity-Preserving Node Overlap Removal&quot;, J. Graph Algorithms Appl., 14(1) pp. 53-74, 2010. </p>
-<h2>Index</h2>

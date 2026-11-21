@@ -25,4 +25,3 @@ description: "cntraining – character normalization training for Tesseract"
 <p> Copyright (c) Hewlett-Packard Company, 1988 Licensed under the Apache License, Version 2.0</p>
 <h2>AUTHOR</h2>
 <p> The Tesseract OCR engine was written by Ray Smith and his research groups at Hewlett Packard (1985-1995) and Google (2006-present). </p>
-<h2>Index</h2>

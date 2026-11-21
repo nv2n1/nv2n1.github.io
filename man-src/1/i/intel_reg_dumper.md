@@ -22,4 +22,3 @@ description: "intel_reg_dumper – Decode a bunch of Intel GPU registers for deb
 <dd> prints a help message</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>intel_reg_snapshot(1)</code> </p>
-<h2>Index</h2>

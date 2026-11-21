@@ -38,4 +38,3 @@ description: "csv2tbx – Convert Comma-Separated Value (.csv) files to a TermBa
 <dt>&#8211;columnorder</dt>
 <dd> specify the order and position of columns (comment,source,target) </dd>
 </dl>
-<h2>Index</h2>

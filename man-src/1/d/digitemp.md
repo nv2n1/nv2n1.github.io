@@ -91,4 +91,3 @@ description: "digitemp – program to read from 1-wire temperature sensors."
 <p> This manual page was written by Jes&uacute;s Roncero &lt;jesus [at] roncero.org&gt;, for the Debian project (but may be used by others). Modifications by Brian C. Lane &lt;bcl [at] brianlane.com&gt;</p>
 <h2>UPDATES</h2>
 <p> DigiTemp updates can be found on the <a rel="nofollow" href="http://www.digitemp.com">http://www.digitemp.com</a> website. </p>
-<h2>Index</h2>

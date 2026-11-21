@@ -78,4 +78,3 @@ description: "apt – annotation processing tool"
 <dd> <a href="/docs/linux/man/1-javac/">javac</a>(1), <a href="/docs/linux/man/1-java/">java</a>(1)</dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

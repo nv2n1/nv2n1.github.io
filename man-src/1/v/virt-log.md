@@ -102,4 +102,3 @@ virt - log[--options] - d domname virt - log[--options] - a disk.img[-a disk.img
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>

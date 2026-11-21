@@ -27,4 +27,3 @@ description: "nxagent – NoMachine’s NX Agent."
 <p> Information on FreeNX: <a rel="nofollow" href="http://freenx.berlios.de">http://freenx.berlios.de</a> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Per Hansen &lt;spamhans [at] yahoo.de&gt;, and modified by Marcelo Boveto Shima &lt;marceloshima [at] gmail.com&gt; and Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt;. </p>
-<h2>Index</h2>

@@ -64,4 +64,3 @@ description: "xfontsel – point and click selection of X11 font names"
 <h2>AUTHOR</h2>
 <p> Ralph R. Swick, Digital Equipment Corporation/MIT Project Athena </p>
 <p> Mark Leisher &lt;mleisher [at] crl.nmsu.edu&gt; added the support for the UTF-8 sample text. </p>
-<h2>Index</h2>

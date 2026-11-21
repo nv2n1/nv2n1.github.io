@@ -49,4 +49,3 @@ description: "lscp – list NILFS2 checkpoints"
 <p> <code>lscp</code> is part of the nilfs-utils package and is available from <a rel="nofollow" href="http://www.nilfs.org.">http://www.nilfs.org.</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-nilfs/">nilfs</a></code>(8), <code><a href="/docs/linux/man/8-mkcp/">mkcp</a></code>(8), <code><a href="/docs/linux/man/8-chcp/">chcp</a></code>(8), <code><a href="/docs/linux/man/8-rmcp/">rmcp</a></code>(8). </p>
-<h2>Index</h2>

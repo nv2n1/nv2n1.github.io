@@ -29,4 +29,3 @@ description: "ipa-advise – Provide configurations advice for various use cases
 <h2>EXIT STATUS</h2>
 <p> 0 if the command was successful </p>
 <p> 1 if an error occurred </p>
-<h2>Index</h2>

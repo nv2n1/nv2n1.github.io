@@ -74,4 +74,3 @@ bitmap-out   output DICOM image or PGM bitmap
 <p> <i>&lt;etcdir&gt;/dcmpstat.cfg</i> &#8211; sample configuration file</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 1998-2010 by OFFIS e.V., Escherweg 2, 26121 Oldenburg, Germany. </p>
-<h2>Index</h2>

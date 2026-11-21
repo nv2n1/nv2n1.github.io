@@ -47,4 +47,3 @@ description: "whichman – show the location of a man page using a fault toleran
 <p> Guido Socher (guido [at] linuxfocus.org)</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ftff/">ftff</a></code>(1), <code><a href="/docs/linux/man/1-man/">man</a></code>(1) </p>
-<h2>Index</h2>

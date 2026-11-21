@@ -19,4 +19,3 @@ description: "dumpsolv – print a solv file into a human readable format"
 </dt><dd> Write the contents in JSON format.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Michael Schroeder &lt;mls [at] suse.de&gt; </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "idevicebackup – Create or restore backup for devices."
 <p> Martin Szulecki </p>
 <p> Nikias Bassen </p>
 <p> Man page written to conform with Debian by Julien Lavergne. </p>
-<h2>Index</h2>

@@ -43,4 +43,3 @@ description: "pambayer – interpret Bayer patterns"
 <p> <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pambayer</code> was new in Netpbm 10.30 (October 2005). </p>
-<h2>Index</h2>

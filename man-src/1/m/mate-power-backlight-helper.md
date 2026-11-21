@@ -30,4 +30,3 @@ description: "mate-power-backlight-helper – helper application for MATE’s po
 <p> mate-power-manager (1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page has been written by Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt; for the Debian system (but may be used by others). </p>
-<h2>Index</h2>

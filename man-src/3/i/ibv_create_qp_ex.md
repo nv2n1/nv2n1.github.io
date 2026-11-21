@@ -104,4 +104,3 @@ struct ibv_qp_create_send_ops_flags {
 <dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

@@ -82,4 +82,3 @@ description: "gdk-pixbuf-csource – C code generation utility for GdkPixbuf ima
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.gtk.org">http://www.gtk.org</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -319,4 +319,3 @@ description: "xfreerdp – FreeRDP X11 client"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://msdn.microsoft.com/en-us/library/cc240476%28v=prot.10%29.aspx">http://msdn.microsoft.com/en-us/library/cc240476%28v=prot.10%29.aspx</a></dd></dl>
 </dl>
-<h2>Index</h2>

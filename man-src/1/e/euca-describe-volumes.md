@@ -55,4 +55,3 @@ description: "euca-describe-volumes – Display information about volumes"
 <dt>attachment.status</dt>
 <dd> attachment state availability-zone create-time creation time size size in GiB snapshot-id snapshot from which the volume was created status tag-key key of a tag assigned to the volume tag-value value of a tag assigned to the volume tag:KEY specific tag key/value combination volume-id volume-type </dd>
 </dl>
-<h2>Index</h2>

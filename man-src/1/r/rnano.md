@@ -37,4 +37,3 @@ description: "rnano – a restricted nano"
 <p> <i><a rel="nofollow" href="https://nano-editor.org/">https://nano-editor.org/</a></i> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nano/">nano</a></code>(1) </p>
-<h2>Index</h2>

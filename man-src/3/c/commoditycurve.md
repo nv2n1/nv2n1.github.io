@@ -25,4 +25,3 @@ description: "ql/experimental/commodities/commoditycurve.hpp – Commodity curve
 <p> Commodity curve. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

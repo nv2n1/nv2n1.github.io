@@ -74,4 +74,3 @@ description: "dumpdb – The Freeze database inspector."
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-transformdb/">transformdb</a></code>(1) </p>
-<h2>Index</h2>

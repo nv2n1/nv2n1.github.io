@@ -48,4 +48,3 @@ description: "vermin – Parses and processes Verilog HDL files"
 <p> Anthony Bybell &lt;bybell [at] rocketmail.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-rtlbrowse/">rtlbrowse</a></i>(1) <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) </p>
-<h2>Index</h2>

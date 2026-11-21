@@ -193,4 +193,3 @@ description: "xsltproc – command line XSLT processor"
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001, 2002 </p>
-<h2>Index</h2>

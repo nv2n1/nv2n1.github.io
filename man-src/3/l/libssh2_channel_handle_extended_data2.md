@@ -23,4 +23,3 @@ description: "libssh2_channel_handle_extended_data2 – set extended data handli
 <p> Return 0 on success or LIBSSH2_ERROR_EAGAIN when it would otherwise block. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_handle_extended_data/">libssh2_channel_handle_extended_data</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_channel_read_ex/">libssh2_channel_read_ex</a>(3)</code> </p>
-<h2>Index</h2>

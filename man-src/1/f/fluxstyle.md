@@ -392,4 +392,3 @@ rgb:&lt;0-255&gt;/&lt;0-255&gt;/&lt;0-255&gt;
 <p> This manpage was composed from various resources including the official documentation, <a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) man page and numerous other resources by Curt &quot;Asenchi&quot; Micol. If you notice any errors or problems with this page, please contact him here: &lt;asenchi [at] asenchi.com&gt; and using the great contributions of &lt;grubert [at] users.sourceforge.net&gt;. Numerous other languages could be available if someone jumps in. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) <a href="/docs/linux/man/1-fbsetbg/">fbsetbg</a>(1) <a href="/docs/linux/man/1-fbsetroot/">fbsetroot</a>(1) </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "intel_reg_write – Set an Intel GPU register to a value"
 <dt>intel_reg_write 0x61230 0x0</dt>
 <dd> Disables the first internal panel fitter. </dd>
 </dl>
-<h2>Index</h2>

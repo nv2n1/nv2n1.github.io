@@ -33,4 +33,3 @@ description: "infokey – compile customizations for Info"
 <dt>
 </dt><dd> <code>info infokey</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

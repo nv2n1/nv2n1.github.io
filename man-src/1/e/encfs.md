@@ -245,4 +245,3 @@ description: "encfs – mounts or creates an encrypted virtual filesystem"
 <p> Cygwin, Windows ports : <code><a rel="nofollow" href="https://github.com/vgough/encfs/wiki">https://github.com/vgough/encfs/wiki</a></code>.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-encfsctl/">encfsctl</a></code>(1) </p>
-<h2>Index</h2>

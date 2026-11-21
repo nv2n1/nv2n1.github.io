@@ -114,4 +114,3 @@ description: "osm2pgsql – Openstreetmap data to PostgreSQL converter."
 <h2>AUTHOR</h2>
 <p> osm2pgsql was written by Jon Burgess, Artem Pavlenko, and other OpenStreetMap project members. </p>
 <p> This manual page was written by Andreas Putzo &lt;andreas [at] putzo.net&gt; for the Debian project, and amended by OpenStreetMap authors. </p>
-<h2>Index</h2>

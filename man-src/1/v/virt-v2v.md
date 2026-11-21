@@ -943,4 +943,3 @@ RHEL 3 No virtio drivers are available
 <dt>&bull;</dt>
 <dd> <p> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
  </dd></dl>
-<h2>Index</h2>

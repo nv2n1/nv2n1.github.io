@@ -18,4 +18,3 @@ description: "peicon — extract icon resources from PE files"
 <dt><code>-L</code></dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

@@ -69,4 +69,3 @@ description: "mautil – Mono.Addins Setup Utility"
 <dd> Prints the contents of a registry file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mono/">mono</a></code>(1). </p>
-<h2>Index</h2>

@@ -21,4 +21,3 @@ description: "KBibTeX – a BibTeX editor for KDE"
 <p> Visit the <code>KBibTeX</code> homepage at: <i><a rel="nofollow" href="http://home.gna.org/kbibtex/">http://home.gna.org/kbibtex/</a></i> </p>
 <h2>BUGS</h2>
 <p> For more information on how to report bugs, please go to: <i><a rel="nofollow" href="http://home.gna.org/kbibtex/bugs.html">http://home.gna.org/kbibtex/bugs.html</a></i> </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ description: "murmurd – VoIP server."
 <p> <code><a href="/docs/linux/man/1-mumble/">mumble</a></code>(1), <code>murmur-wrapper</code>(1). </p>
 <h2>AUTHOR</h2>
 <p> mumble and murmurd was written by Thorvald Natvig &lt;slicer [at] users.sourceforge.net&gt;. </p>
-<h2>Index</h2>

@@ -39,4 +39,3 @@ description: "quest – Xapian command line search tool"
 <dt><code>-v</code>, <code>&#8211;version</code></dt>
 <dd> output version information and exit </dd>
 </dl>
-<h2>Index</h2>

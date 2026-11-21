@@ -99,4 +99,3 @@ description: "zarafa-mailbox-permissions – Manage mailbox delegate permissions
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-zarafa-server/">zarafa-server</a></code>(1)<code><a href="/docs/linux/man/5-zarafa-server-cfg/">zarafa-server.cfg</a></code>(5) </p>
-<h2>Index</h2>

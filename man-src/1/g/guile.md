@@ -90,4 +90,3 @@ description: "guile – The GNU Project Extension Language"
 <h2>AUTHORS</h2>
 <p> Robert Merkel &lt;rgmerk [at] mira.net&gt; wrote this manpage. Rob Browning &lt;rlb [at] cs.utexas.edu&gt; has added to it. </p>
 <p> <code>guile</code> is GNU software. Guile is originally based on Aubrey Jaffer&#8217;s SCM interpreter, and is the work of many individuals. </p>
-<h2>Index</h2>

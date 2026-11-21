@@ -15,4 +15,3 @@ description: "grub-mknetdir — Prepare a GRUB netboot directory."
 <p> <code>grub-mknetdir</code> prepares a directory for GRUB to be netbooted from. </p>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>
-<h2>Index</h2>

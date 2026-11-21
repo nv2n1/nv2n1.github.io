@@ -140,4 +140,3 @@ recovery_end_command = 'del C:\pgsql.trigger.5442'
 <p> Simon Riggs &lt;simon [at] 2ndquadrant.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pg_archivecleanup/">pg_archivecleanup</a></code>(1) </p>
-<h2>Index</h2>

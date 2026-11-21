@@ -21,4 +21,3 @@ description: "Mono CIL strip"
 <p> mono-cil-strip is licensed under the MIT/X11 license. Please read the accompayning MIT.X11 file for details.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-monolinker/">monolinker</a>(1),<a href="/docs/linux/man/1-mkbundle/">mkbundle</a>(1),<a href="/docs/linux/man/1-mono/">mono</a>(1),<a href="/docs/linux/man/1-mcs/">mcs</a>(1).</code> </p>
-<h2>Index</h2>

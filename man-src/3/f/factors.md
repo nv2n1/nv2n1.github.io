@@ -27,4 +27,3 @@ description: "QuantLib::LfmCovarianceParameterization – Libor market model par
 <p> Brigo, Damiano, Mercurio, Fabio, Morini, Massimo, 2003, Different Covariance Parameterizations of the <code>Libor</code> Market Model and Joint Caps/Swaptions Calibration (&lt;<a rel="nofollow" href="http://www.exoticderivatives.com/Files/Papers/brigomercuriomorini.pdf">http://www.exoticderivatives.com/Files/Papers/brigomercuriomorini.pdf</a>&gt;) </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

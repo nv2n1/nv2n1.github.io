@@ -151,4 +151,3 @@ grepdiff pf_gfp_mask my.patch | \
 <dl>
 <dt>
 </dt><dd> Package maintainer</dd></dl>
-<h2>Index</h2>

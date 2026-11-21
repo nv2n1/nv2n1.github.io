@@ -21,4 +21,3 @@ description: "dh_scour – run scour optimizer on shipped SVG files"
 <p> debhelper</p>
 <h2>AUTHOR</h2>
 <p> Martin Pitt &lt;martin.pitt [at] ubuntu.com&gt; </p>
-<h2>Index</h2>

@@ -99,4 +99,3 @@ description: "sphinx-build – Sphinx documentation generator tool"
 <p> This manual page was initially written by Mikhail Gusarov &lt;<i>dottedmag [at] dottedmag.net</i>&gt;, for the Debian project.</p>
 <h2>COPYRIGHT</h2>
 <p> 2007-2014, Georg Brandl and the Sphinx team </p>
-<h2>Index</h2>

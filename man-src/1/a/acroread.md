@@ -160,4 +160,3 @@ description: "acroread – Adobe PDF Viewer for viewing PDF files on X Window Sy
 <p> 9.1.0 </p>
 <h2>AUTHORS</h2>
 <p> This program was written by <code>Adobe Systems Incorporated</code> <i><a rel="nofollow" href="http://www.adobe.com">http://www.adobe.com</a></i>. </p>
-<h2>Index</h2>

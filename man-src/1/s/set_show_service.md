@@ -28,4 +28,3 @@ description: "set_show_service – enable or disable a service for the current u
 <p> Work on <code>set_show_service</code> started in November 1998.</p>
 <h2>AUTHORS</h2>
 <p> set_show_service was written by Richard Frith-Macdonald &lt;richard [at] brainstorm.co.uk&gt; This man page was written by Dennis Leeuw &lt;dleeuw [at] made-it.com&gt;. </p>
-<h2>Index</h2>

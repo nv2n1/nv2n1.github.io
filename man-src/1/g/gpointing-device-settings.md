@@ -21,4 +21,3 @@ description: "gpointing-device-settings – program to configure pointing device
 <h2>AUTHOR</h2>
 <p> gpointing-device-settings was written by Hiroyuki Ikezoe &lt;poincare [at] ikezoe.net&gt;. </p>
 <p> This manual page was written by Michal Cihar &lt;nijel [at] debian.org&gt; for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

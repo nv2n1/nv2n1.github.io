@@ -32,4 +32,3 @@ description: "ischroot – detect if running in a chroot"
 <dd> Print version information on standard output and exit successfully.</dd></dl>
 <h2>BUGS</h2>
 <p> On GNU/Linux, chroot detection is not possible when not root. This works correctly on GNU/Hurd and GNU/kFreeBSD. </p>
-<h2>Index</h2>

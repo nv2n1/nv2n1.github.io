@@ -43,4 +43,3 @@ description: "distro-info – provides information about the distributions’ re
 <p> <code><a href="/docs/linux/man/1-debian-distro-info/">debian-distro-info</a></code>(1), <code><a href="/docs/linux/man/1-ubuntu-distro-info/">ubuntu-distro-info</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> The script and this manual page was written by Benjamin Drung &lt;bdrung [at] debian.org&gt;. </p>
-<h2>Index</h2>

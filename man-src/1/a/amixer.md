@@ -88,4 +88,3 @@ description: "amixer – command-line mixer for ALSA soundcard driver"
 <p> None known. </p>
 <h2>AUTHOR</h2>
 <p> <code>amixer</code> is by Jaroslav Kysela &lt;perex [at] perex.cz&gt;. This document is by Paul Winkler &lt;zarmzarm [at] erols.com&gt; and Jaroslav Kysela &lt;perex [at] perex.cz&gt;. </p>
-<h2>Index</h2>

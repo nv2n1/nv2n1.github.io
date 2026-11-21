@@ -88,4 +88,3 @@ description: "glite-lb-notify – Register and receive notification from L&B"
 <p> L&amp;B Users Guide, <a rel="nofollow" href="http://www.glite.org">http://www.glite.org</a> </p>
 <h2>AUTHOR</h2>
 <p> EU EGEE, JRA1. </p>
-<h2>Index</h2>

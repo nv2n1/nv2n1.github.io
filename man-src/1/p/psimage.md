@@ -91,4 +91,3 @@ gmt psimage 1_bit.ras -Gbbrown -Gfred -Dx0/0+w1c+n5 &gt; image.ps
 <p> <code>gmt</code>, <code>gmtcolors</code>, <code>gmtlogo</code> <code>pslegend</code>, <code>psscale</code> <code>psxy</code>, <i><a href="/docs/linux/man/1-convert/">convert</a>(1)</i></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

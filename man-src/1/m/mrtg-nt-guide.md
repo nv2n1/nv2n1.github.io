@@ -241,4 +241,3 @@ perl cfgmaker public[at] 10.10.10.1 --global "WorkDir: c:\www\mrtg" --output mrt
 <p> This is a nice example of how to monitor any <font SIZE="-1">SNMP</font> device if you know what <font SIZE="-1">OID</font> you want to use. Once again, for an explanation of the more advance features of mrtg, please see the rest of the documentation.</p>
 <h2>AUTHORS</h2>
 <p> Tobi Oetiker &lt;tobi [at] oetiker.ch&gt;, David S. Divins &lt;ddivins [at] moon.jic.com&gt;, Steve Pierce &lt;MRTG [at] HDL.com&gt;, Artyom Adjemov &lt;one.bofh [at] gmail.com&gt;, Ilja Ivanov &lt;ivanov [at] bseu.by&gt; Karel Fajkus &lt;<a rel="nofollow" href="http://fajkus.cz/">http://fajkus.cz/</a>&gt; </p>
-<h2>Index</h2>

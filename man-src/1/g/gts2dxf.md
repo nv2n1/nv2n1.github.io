@@ -16,4 +16,3 @@ description: "gts2dxf – converts a GTS file to DXF format."
 <h2>AUTHOR</h2>
 <p> gts2dxf was written by Stephane Popinet &lt;popinet [at] users.sourceforge.net&gt;. </p>
 <p> This manual page was written by Ruben Molina &lt;rmolina [at] udea.edu.co&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

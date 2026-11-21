@@ -139,4 +139,3 @@ git archive[--format = &lt;fmt&gt;][--list][--prefix = &lt;prefix&gt; / ][&lt;ex
 <p> <code><a href="/docs/linux/man/5-gitattributes/">gitattributes</a></code>(5)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

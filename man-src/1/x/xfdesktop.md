@@ -70,4 +70,3 @@ description: "xfdesktop – The Xfce 4 Desktop Environment’s desktop manager"
 <h2>AUTHOR</h2>
 <p> Jasper Huijsmans &lt;huysmans [at] users.sourceforge.net&gt;, Benedikt Meurer &lt;benny [at] xfce.org&gt;, Brian Tarricone &lt;bjt23 [at] cornell.edu&gt;, and Eric Koegel &lt;eric [at] xfce.org&gt;. </p>
 <p> This manual page was originally written by Brian Tarricone &lt;bjt23 [at] cornell.edu&gt;. </p>
-<h2>Index</h2>

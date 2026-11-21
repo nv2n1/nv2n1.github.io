@@ -55,4 +55,3 @@ description: "pilot-foto-treo600 – Copies Treo \"foto\" databases to current d
 <p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA. </p>
 <h2>SEE ALSO</h2>
 <p>&nbsp;<wbr><i>pilot-foto</i>&nbsp;<wbr>(1),&nbsp;<wbr><i><a href="/docs/linux/man/7-pilot-link/">pilot-link</a></i>(7). </p>
-<h2>Index</h2>

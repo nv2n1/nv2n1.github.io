@@ -15,4 +15,3 @@ description: "ldb_extended_match_rule –"
 <p> int(* <code>callback</code> )(struct <code>ldb_context</code> *, const char *oid, const struct <code>ldb_message</code> *, const char *, const struct <code>ldb_val</code> *, bool *) </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

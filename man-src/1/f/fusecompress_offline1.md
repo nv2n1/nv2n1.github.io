@@ -35,4 +35,3 @@ description: "fusecompress_offline – decompress or compress data without need 
 <p> fusecompress_offline was written by Milan Svoboda &lt;milan.svoboda [at] centrum.cz&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> fusecompress </p>
-<h2>Index</h2>

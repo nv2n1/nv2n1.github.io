@@ -39,4 +39,3 @@ description: "freecolor – Display amount of free and used memory graphically"
 <p> Written by Roy Keene.</p>
 <h2>REPORTING BUGS</h2>
 <p> Please send bug reports to </p>
-<h2>Index</h2>

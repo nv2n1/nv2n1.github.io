@@ -95,4 +95,3 @@ description: "magnifier – GNOME Magnifier (gnome-mag)"
 <p> Licensed under the GNU Lesser Public License (LGPL) v2.1</p>
 <h2>SEE ALSO</h2>
 <p> <i>gnopernicus(1), </i> <i><a href="/docs/linux/man/1-orca/">orca</a>(1), </i> <i>lsr(1),</i> Bonobo, Assistive Technology Service Provider Interface (AT-SPI) </p>
-<h2>Index</h2>

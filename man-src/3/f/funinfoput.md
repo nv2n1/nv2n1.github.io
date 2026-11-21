@@ -62,4 +62,3 @@ FunColumnSelect(fun, sizeof(EvRec), NULL,
 <p> Once the <font SIZE="-1">FUN_OPS</font> variable has been reset, the next I/O call on the output extension will output the header, as expected.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

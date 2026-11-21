@@ -54,4 +54,3 @@ atomic top -o ppid -o uid
 </dd></dl>
 <h2>HISTORY</h2>
 <p> December 2015, Originally written by Brent Baude (bbaude at redhat dot com) </p>
-<h2>Index</h2>

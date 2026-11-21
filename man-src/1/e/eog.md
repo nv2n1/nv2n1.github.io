@@ -56,4 +56,3 @@ description: "eog – a GNOME image viewer"
 <h2>AUTHOR</h2>
 <p> This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page. </p>
 <p> This manual page was written by Dan Nguyen &lt;dnn [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

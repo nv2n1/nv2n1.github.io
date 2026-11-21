@@ -38,4 +38,3 @@ description: "getdns_convert, getdns_convert_dns_name_to_fqdn, getdns_convert_fq
 <p> TBD </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3) </p>
-<h2>Index</h2>

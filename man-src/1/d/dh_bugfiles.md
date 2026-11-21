@@ -31,4 +31,3 @@ description: "dh_bugfiles – install bug reporting customization files into pac
 <p> This program is a part of debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Modestas Vainius &lt;modestas [at] vainius.eu&gt; </p>
-<h2>Index</h2>

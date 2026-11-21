@@ -22,4 +22,3 @@ description: "gnome-software-editor – Design the featured banners for GNOME So
 </dt><dd> Prints a short help text and exits.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Richard Hughes &lt;richard [at] hughsie.com&gt;. </p>
-<h2>Index</h2>

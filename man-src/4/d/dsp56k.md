@@ -38,4 +38,4 @@ int ioctl(int fd, DSP56K_HOST_CMD, int cmd);</code></pre>
   <h2>FILES</h2>
  <i>/dev/dsp56k</i>  <h2>SEE ALSO</h2>
  <i>linux/include/asm-m68k/dsp56k.h</i>, <i>linux/drivers/char/dsp56k.c</i>, DSP56000/DSP56001 Digital Signal Processor User&#8217;s Manual  <h2>COLOPHON</h2>
- This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> <h2>Index</h2>
+ This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> 

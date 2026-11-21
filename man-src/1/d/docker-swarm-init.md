@@ -32,4 +32,3 @@ description: "docker-swarm-init – Initialize a swarm"
 <p> <code>&#8211;task-history-limit</code>=5 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Task history retention limit</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-swarm/">docker-swarm</a>(1)</code> </p>
-<h2>Index</h2>

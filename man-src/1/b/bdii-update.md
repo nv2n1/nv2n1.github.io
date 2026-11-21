@@ -27,4 +27,3 @@ description: "bdii-update – the bdii update process"
 </dt><dd> The default configuration file.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Laurence Field &lt;Laurence.Field at cern dot ch&gt; </p>
-<h2>Index</h2>

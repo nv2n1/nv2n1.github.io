@@ -21,4 +21,3 @@ description: "foomatic-combo-xml – <put a short description here>"
 <p> This manpage needs editing. </p>
 <p> Please post bug reports on </p>
 <p> <a rel="nofollow" href="http://lists.freestandards.org/mailman/listinfo/printing-foomatic">http://lists.freestandards.org/mailman/listinfo/printing-foomatic</a> </p>
-<h2>Index</h2>

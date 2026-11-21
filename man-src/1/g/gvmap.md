@@ -97,4 +97,3 @@ description: "gvmap – find clusters and create a geographical map highlighting
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gvmap-sh/">gvmap.sh</a>(1), <a href="/docs/linux/man/1-sfdp/">sfdp</a>(1), <a href="/docs/linux/man/1-neato/">neato</a>(1), <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1) </p>
 <p> E. R. Gansner, Y. Hu, S. G. Kobourov, &quot;GMap: Visualizing graphs and clusters as maps,&quot; Proc. Pacific Vis. 2010, pp. 201-208. </p>
-<h2>Index</h2>

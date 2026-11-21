@@ -197,4 +197,3 @@ pki[CLI options]&lt;subsystem&gt; - key pki[CLI options]&lt;subsystem&gt; - key 
 <p> Copyright (c) 2014 Red Hat, Inc. This is licensed under the GNU General Public License, version 2 (GPLv2). A copy of this license is available at <a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.">http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.</a> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-pkispawn/">pkispawn</a>(8),</code> <code><a href="/docs/linux/man/1-pki/">pki</a>(1)</code> </p>
-<h2>Index</h2>

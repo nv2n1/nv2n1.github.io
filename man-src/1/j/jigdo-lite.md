@@ -30,4 +30,3 @@ description: "jigdo-lite – Download jigdo files using wget"
 <p> CD images for Debian Linux can be downloaded with jigdo &lt;URL:<a rel="nofollow" href="http://www.debian.org/CD/jigdo-cd/">http://www.debian.org/CD/jigdo-cd/</a>&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Jigsaw Download &lt;URL:<a rel="nofollow" href="http://atterer.net/jigdo/">http://atterer.net/jigdo/</a>&gt; was written by Richard Atterer &lt;jigdo atterer.net&gt;, to make downloading of CD ROM images for the Debian Linux distribution more convenient. </p>
-<h2>Index</h2>

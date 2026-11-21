@@ -51,4 +51,3 @@ description: "xsetroot – root window parameter setting utility for X"
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xset/">xset</a>(1), <a href="/docs/linux/man/1-xrdb/">xrdb</a>(1), <a href="/docs/linux/man/3-xcursor/">Xcursor</a>(3)</p>
 <h2>AUTHOR</h2>
 <p> Mark Lillibridge, MIT Project Athena </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "ndctl-enable-region – enable the given region(s) and all descend
 </dt><dd> Enforce that the operation only be carried on devices that are attached to the given bus. Where <i>bus</i> can be a provider name or a bus id number.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ndctl-disable-region/">ndctl-disable-region</a></code>(1) </p>
-<h2>Index</h2>

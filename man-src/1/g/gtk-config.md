@@ -31,4 +31,3 @@ description: "gtk-config – script to get information about the installed versi
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1998 Owen Taylor </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. </p>
-<h2>Index</h2>

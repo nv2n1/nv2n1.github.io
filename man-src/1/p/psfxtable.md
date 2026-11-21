@@ -17,4 +17,3 @@ description: "psfxtable – handle Unicode character tables for console fonts"
 <p> By default the output font (if any) will have a Unicode table when either the input font has one, or an explicit table (which overrides an input font table) has been provided. The option <i>-nt</i> causes output of a font without table. When <i>outfont</i> is requested it will get a psf1 header when infont has a psf1 header and <i>intable</i> does not have sequences and a psf2 header otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8), <code><a href="/docs/linux/man/1-psfaddtable/">psfaddtable</a></code>(1), <code><a href="/docs/linux/man/1-psfgettable/">psfgettable</a></code>(1), <code><a href="/docs/linux/man/1-psfstriptable/">psfstriptable</a></code>(1) </p>
-<h2>Index</h2>

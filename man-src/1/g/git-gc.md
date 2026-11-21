@@ -138,4 +138,3 @@ git gc[--aggressive][--auto][--quiet][--prune = &lt;date&gt; | --no - prune][--f
 <p> <code><a href="/docs/linux/man/1-git-prune/">git-prune</a></code>(1) <code><a href="/docs/linux/man/1-git-reflog/">git-reflog</a></code>(1) <code><a href="/docs/linux/man/1-git-repack/">git-repack</a></code>(1) <code><a href="/docs/linux/man/1-git-rerere/">git-rerere</a></code>(1)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

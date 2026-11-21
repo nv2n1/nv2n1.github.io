@@ -55,4 +55,3 @@ description: "sphinx-apidoc – Sphinx API doc generator tool"
 <p> Etienne Desautels, &lt;<i>etienne.desautels [at] gmail.com</i>&gt;, Georg Brandl &lt;<i>georg [at] python.org</i>&gt; et al.</p>
 <h2>COPYRIGHT</h2>
 <p> 2007-2014, Georg Brandl and the Sphinx team </p>
-<h2>Index</h2>

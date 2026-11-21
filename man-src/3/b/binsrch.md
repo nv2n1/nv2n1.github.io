@@ -29,4 +29,3 @@ description: "bin_search, copyfile, replace_line, insert_line – general purpos
 <p> <code><a href="/docs/linux/man/3-wnintro/">wnintro</a></code>(3), <code><a href="/docs/linux/man/3-morph/">morph</a></code>(3), <code><a href="/docs/linux/man/3-wnsearch/">wnsearch</a></code>(3), <code><a href="/docs/linux/man/3-wnutil/">wnutil</a></code>(3), <code><a href="/docs/linux/man/5-wnintro/">wnintro</a></code>(5).</p>
 <h2>WARNINGS</h2>
 <p> <code>binsearch()</code> returns a pointer to a static character buffer. The returned string should be copied by the caller if the results need to be saved, as a subsequent call will replace the contents of the static buffer. </p>
-<h2>Index</h2>

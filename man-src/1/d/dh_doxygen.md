@@ -29,4 +29,3 @@ description: "dh_doxygen – helps with packaging doxygen-generated documentatio
 <p> This program is meant to be used together with debhelper.</p>
 <h2>AUTHORS</h2>
 <p> Jakub Wilk &lt;jwilk [at] debian.org&gt; Helmut Grohne &lt;helmut [at] subdivi.de&gt; </p>
-<h2>Index</h2>

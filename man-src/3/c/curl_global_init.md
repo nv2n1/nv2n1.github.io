@@ -36,4 +36,3 @@ description: "curl_global_init – Global libcurl initialisation"
 <p> If this function returns non-zero, something went wrong and you cannot use the other curl functions.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_global_init_mem/">curl_global_init_mem</a></code>(3), <code><a href="/docs/linux/man/3-curl_global_cleanup/">curl_global_cleanup</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_init/">curl_easy_init</a></code>(3) <code><a href="/docs/linux/man/3-libcurl/">libcurl</a></code>(3) </p>
-<h2>Index</h2>

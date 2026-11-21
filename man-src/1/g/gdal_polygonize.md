@@ -50,4 +50,3 @@ gdal_polygonize.py[-8][-nomask][-mask filename] raster_file[-b band]
 <dd> The script runs in quiet mode. The progress monitor is supressed and routine messages are not displayed.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com </p>
-<h2>Index</h2>

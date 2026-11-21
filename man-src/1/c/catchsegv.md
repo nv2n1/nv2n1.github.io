@@ -16,4 +16,3 @@ description: "catchsegv – Catch segmentation faults in programs"
 <h2>AUTHOR</h2>
 <p> <i>catchsegv</i> was written by Ulrich Drepper for the GNU C Library </p>
 <p> This man page was written by Ben Collins &lt;bcollins [at] debian.org&gt; for the Debian GNU/Linux system. </p>
-<h2>Index</h2>

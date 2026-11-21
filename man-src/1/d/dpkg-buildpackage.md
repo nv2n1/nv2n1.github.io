@@ -266,4 +266,3 @@ description: "dpkg-buildpackage – build binary or source packages from sources
 <p> It should be possible to specify spaces and shell metacharacters and initial arguments for <i>gain-root-command</i> and <i>sign-command</i>.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dpkg-source/">dpkg-source</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-architecture/">dpkg-architecture</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-buildflags/">dpkg-buildflags</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-genbuildinfo/">dpkg-genbuildinfo</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-genchanges/">dpkg-genchanges</a></code>(1), <code><a href="/docs/linux/man/1-fakeroot/">fakeroot</a></code>(1), <code><a href="/docs/linux/man/1-lintian/">lintian</a></code>(1), <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1). </p>
-<h2>Index</h2>

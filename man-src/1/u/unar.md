@@ -47,4 +47,3 @@ description: "unar – extract archive file contents"
 <dd> Display help information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-lsar/">lsar</a></code>(1) </p>
-<h2>Index</h2>

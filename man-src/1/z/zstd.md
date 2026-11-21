@@ -304,4 +304,3 @@ description: "zstd – zstd, zstdmt, unzstd, zstdcat – Compress or decompress 
 <p> Report bugs at: <a rel="nofollow" href="https://github.com/facebook/zstd/issues">https://github.com/facebook/zstd/issues</a></p>
 <h2>AUTHOR</h2>
 <p> Yann Collet </p>
-<h2>Index</h2>

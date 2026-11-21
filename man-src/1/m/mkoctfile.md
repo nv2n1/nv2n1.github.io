@@ -106,4 +106,3 @@ description: "mkoctfile – Compile dynamic-load modules for GNU Octave"
 <p> This manual page was contributed by Dirk Eddelbuettel &lt;edd [at] debian.org&gt; for the Debian GNU/Linux distribution but may be used by others.</p>
 <h2>SEE ALSO</h2>
 <p> octave (1). </p>
-<h2>Index</h2>

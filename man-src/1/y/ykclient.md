@@ -34,4 +34,3 @@ description: "ykclient – YubiCloud One-Time-Password Validation Client"
 <p> Exit status is 0 on success, 1 if there is a hard failure, 2 if the OTP was replayed, 3 for other soft OTP-related failures.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs at &lt;<a rel="nofollow" href="https://github.com/Yubico/yubico-c-client">https://github.com/Yubico/yubico-c-client</a>&gt;. </p>
-<h2>Index</h2>

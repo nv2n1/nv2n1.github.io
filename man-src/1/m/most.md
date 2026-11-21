@@ -202,4 +202,3 @@ status-- the status line
 <p> I would also like to thank Shinichi Hama for his valuable criticisms of <i>most.</i> </p>
 <p> Javier Kohen was instrumental in the support for UTF-8. </p>
 <p> Thanks to David W. Sanderson (dws [at] cs.wisc.edu) for adapting the documentation to nroff man page source format. </p>
-<h2>Index</h2>

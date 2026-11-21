@@ -22,4 +22,3 @@ description: "kpsestat – compute octal mode from mode of existing file"
 <dd> Print version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1). </p>
-<h2>Index</h2>

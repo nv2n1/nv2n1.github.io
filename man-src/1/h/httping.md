@@ -165,4 +165,3 @@ description: "httping – measure the latency and throughput of a webserver"
 <p> <code><a rel="nofollow" href="http://www.vanheusden.com/httping/">http://www.vanheusden.com/httping/</a></code> </p>
 <h2>NOTES</h2>
 <p> This page describes <code>httping</code> as found in the httping-2.3 package; other versions may differ slightly. Please mail corrections and additions to mail [at] vanheusden.com. Report bugs in the program to mail [at] vanheusden.com. Please consider sending bitcoins to 1N5Sn4jny4xVwTwSYLnf7WnFQEGoVRmTQF </p>
-<h2>Index</h2>

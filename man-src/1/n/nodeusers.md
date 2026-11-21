@@ -29,4 +29,3 @@ description: "nodeusers – LinuxNode user information lookup program"
 <p> <code><a href="/docs/linux/man/8-node/">node</a></code>(8)</p>
 <h2>AUTHOR</h2>
 <p> Tomi Manninen OH2BNS &lt;tpmannin [at] cc.hut.fi&gt; </p>
-<h2>Index</h2>

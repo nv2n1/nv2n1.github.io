@@ -32,4 +32,3 @@ description: "GNU libmicrohttpd – library for embedding HTTP servers"
 <p> GNU libmicrohttpd was originally designed by Christian Grothoff &lt;christian [at] grothoff.org&gt; and Chris GauthierDickey &lt;chrisg [at] cs.du.edu&gt;. The original implementation was done by Daniel Pittman &lt;depittman [at] gmail.com&gt; and Christian Grothoff. SSL/TLS support was added by Sagie Amir using code from GnuTLS. See the AUTHORS file in the distribution for a more detailed list of contributors. </p>
 <h2>AVAILABILITY</h2>
 <p> You can obtain the latest version from <a rel="nofollow" href="http://www.gnu.org/software/libmicrohttpd/.">http://www.gnu.org/software/libmicrohttpd/.</a> </p>
-<h2>Index</h2>

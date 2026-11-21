@@ -281,4 +281,3 @@ cat &gt; x509v3ca.cnf &lt;&lt; 'EOF'
 <dl>
 <dt>
 </dt><dd> <i><a rel="nofollow" href="https://github.com/droe/sslsplit">https://github.com/droe/sslsplit</a></i></dd></dl>
-<h2>Index</h2>

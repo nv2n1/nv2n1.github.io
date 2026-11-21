@@ -49,4 +49,3 @@ description: "cgexec – run the task in given control groups"
 </dl>
 <h2>SEE ALSO</h2>
 <p> cgrules.conf (5) </p>
-<h2>Index</h2>

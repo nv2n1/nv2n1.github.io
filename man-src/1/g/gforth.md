@@ -82,4 +82,3 @@ description: "gforth, gforth-fast, gforthmi – a fast and portable Forth system
 <p> More information on Gforth (e.g., pointers to new versions, to the manual on the WWW and to papers about Gforth) is available through <a rel="nofollow" href="http://www.complang.tuwien.ac.at/projects/forth.html.">http://www.complang.tuwien.ac.at/projects/forth.html.</a></p>
 <h2>AUTHORS</h2>
 <p> <code>Gforth</code> was written by Anton Ertl, Bernd Paysan, Jens Wilke and others. </p>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ description: "sane-config – get information about the installed version of lib
 <p> <code><a href="/docs/linux/man/7-sane/">sane</a></code>(7)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Julien BLACHE &lt;jblache [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

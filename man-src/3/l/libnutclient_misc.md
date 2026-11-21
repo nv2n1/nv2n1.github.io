@@ -36,4 +36,3 @@ void nutclient_device_forced_shutdown(NUTCLIENT_t client, const char *dev);
 <p> <i>dev</i> is the device name.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libnutclient/">libnutclient</a></code>(3) </p>
-<h2>Index</h2>

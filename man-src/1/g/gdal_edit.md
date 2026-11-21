@@ -54,4 +54,3 @@ gdal_edit -mo DATUM=WGS84 -mo PROJ=GEODETIC -a_ullr 7 47 8 46 test.ecw
 </pre>
 <h2>AUTHORS</h2>
 <p> Even Rouault &lt;even dot=&#8221; rouault=&#8221; at=&#8221; mines=&#8221; dash=&#8221; paris=&#8221; dot=&#8221; org&gt;=&#8221;&gt; </p>
-<h2>Index</h2>

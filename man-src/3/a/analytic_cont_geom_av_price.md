@@ -19,4 +19,3 @@ description: "ql/pricingengines/asian/analytic_cont_geom_av_price.hpp – Analyt
 <p> Analytic engine for continuous geometric average price Asian. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

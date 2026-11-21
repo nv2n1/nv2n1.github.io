@@ -42,4 +42,3 @@ description: "tv_grab_huro – Grab TV listings for Hungary or Romania."
 <p> Attila Szekeres and Zsolt Varga. Based on tv_grab_fi by Matti Airas. Heavily patched and earlier maintained by Stefan siegl &lt;stesie [at] brokenpipe.de&gt;, reworked and now maintained by Balazs Molnar &lt;mbdev [at] freemail.hu&gt;.</p>
 <h2>BUGS</h2>
 <p> The data source does not include full channels information and the channels are identified by short names rather than the <font SIZE="-1">RFC2838</font> form recommended by the <font SIZE="-1">XMLTV DTD.</font> </p>
-<h2>Index</h2>

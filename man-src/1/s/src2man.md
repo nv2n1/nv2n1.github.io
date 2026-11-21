@@ -46,4 +46,3 @@ int foobar(char *parm1, int parm2)
 <p> <code><a href="/docs/linux/man/1-txt2man/">txt2man</a></code>(1), <code><a href="/docs/linux/man/1-bookman/">bookman</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> Marc Vertes &lt;mvertes [at] free.fr&gt; </p>
-<h2>Index</h2>

@@ -235,4 +235,3 @@ Id User Host Dbase Time Cmd Query or State-- -- -- -- -- -- -- - -- -- -- - -- -
 <p> See the Changes file on the <code>mytop</code> distribution page for more details on what has changed.</p>
 <h2>LICENSE</h2>
 <p> <code>mytop</code> is licensed under the <font SIZE="-1">GNU</font> General Public License version 2. For the full license information, please visit <a rel="nofollow" href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a> </p>
-<h2>Index</h2>

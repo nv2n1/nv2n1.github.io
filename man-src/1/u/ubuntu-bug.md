@@ -70,4 +70,3 @@ apport-bug /tmp/apport.firefox.332G9t.apport
 <p> <code><a href="/docs/linux/man/1-apport-cli/">apport-cli</a></code>(1), <code><a href="/docs/linux/man/1-apport-unpack/">apport-unpack</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> <code>apport</code> and the accompanying tools are developed by Martin Pitt &lt;martin.pitt [at] ubuntu.com&gt;. </p>
-<h2>Index</h2>

@@ -126,4 +126,3 @@ description: "pdfxup – n-up tool with reduced margins"
 <p> <a href="/docs/linux/man/1-gs/">gs</a>(1), <a href="/docs/linux/man/1-pdflatex/">pdflatex</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Nicolas Markey (pdfxup [at] markey.fr) </p>
-<h2>Index</h2>

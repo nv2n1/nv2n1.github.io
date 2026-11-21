@@ -38,4 +38,3 @@ description: "a2query – retrieve runtime configuration from a local Apache 2 H
 <p> <a href="/docs/linux/man/8-apache2ctl/">apache2ctl</a>(8), <a href="/docs/linux/man/8-apache2/">apache2</a>(8), <a href="/docs/linux/man/1-perl/">perl</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual and a2query was written by Arno Toell &lt;debian [at] toell.net&gt;. </p>
-<h2>Index</h2>

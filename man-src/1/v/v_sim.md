@@ -88,4 +88,3 @@ description: "v_sim – a GTK program for 3D visualisation of atomic systems"
 <p> V_Sim was written by Luc Billard, Damien Caliste, Olivier D&#8217;Astier Aurélien Lherbier, Jérémy Blanc, Simon Planès, Thomas Jourdan and Yoann Ratao. </p>
 <p> This manual page was written by Damien Caliste &lt;damien.caliste [at] cea.fr&gt;.<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; </p>
-<h2>Index</h2>

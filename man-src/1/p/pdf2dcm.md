@@ -71,4 +71,3 @@ burned - in annotation : +an-- annotation - yes PDF contains patient identifying
 <p> <code><a href="/docs/linux/man/1-dcm2pdf/">dcm2pdf</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2005-2010 by OFFIS e.V., Escherweg 2, 26121 Oldenburg, Germany. </p>
-<h2>Index</h2>

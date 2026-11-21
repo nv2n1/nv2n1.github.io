@@ -86,4 +86,3 @@ description: "chattr – change file attributes on a Linux file system"
 <p> <code>chattr</code> is part of the e2fsprogs package and is available from <a rel="nofollow" href="http://e2fsprogs.sourceforge.net.">http://e2fsprogs.sourceforge.net.</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-lsattr/">lsattr</a></code>(1), <code><a href="/docs/linux/man/5-btrfs/">btrfs</a></code>(5), <code><a href="/docs/linux/man/5-ext4/">ext4</a></code>(5), <code><a href="/docs/linux/man/5-xfs/">xfs</a></code>(5). </p>
-<h2>Index</h2>

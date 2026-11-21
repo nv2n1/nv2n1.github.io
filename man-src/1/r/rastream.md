@@ -73,4 +73,3 @@ description: "rastream – stream block processor for argus(8) data."
 <pre>
 Carter Bullard (carter [at] qosient.com).
 </pre>
-<h2>Index</h2>

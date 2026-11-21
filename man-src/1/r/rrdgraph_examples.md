@@ -146,4 +146,3 @@ Last four weeks : --start end - 4w --end 00 : 00 January 2001 : --start 20010101
 <h2>AUTHOR</h2>
 <p> Program by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <p> This manual page by Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; with corrections and/or additions by several people </p>
-<h2>Index</h2>

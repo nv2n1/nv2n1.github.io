@@ -47,4 +47,3 @@ description: "rcvstore – asynchronously incorporate mail into a folder"
 </pre>
 <h2>CONTEXT</h2>
 <p> No context changes will be attempted, with the exception of sequence manipulation. </p>
-<h2>Index</h2>

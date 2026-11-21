@@ -40,4 +40,3 @@ description: "glade-previewer – Preview glade user interface definitions"
 <p> One of the <code>&#8211;filename</code> or <code>&#8211;listen</code> options has to be specified.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-glade/">glade</a></code>(1) </p>
-<h2>Index</h2>

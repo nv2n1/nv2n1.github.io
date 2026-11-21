@@ -24,4 +24,3 @@ description: "ql/pricingengines/hybrid/binomialconvertibleengine.hpp – binomia
 <p> binomial engine for convertible bonds </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

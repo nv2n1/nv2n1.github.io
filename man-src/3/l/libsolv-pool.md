@@ -765,4 +765,3 @@ void pool_clear_pos(Pool *pool);
 <p> The returned set is cached, so that for each namespace dependency the callback is just called once. If you need to flush the cache (maybe because the user has selected a different language), use the pool_flush_namespaceproviders() function.</p>
 <h2>AUTHOR</h2>
 <p> Michael Schroeder &lt;mls [at] suse.de&gt; </p>
-<h2>Index</h2>

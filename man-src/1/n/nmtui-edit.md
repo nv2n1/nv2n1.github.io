@@ -33,4 +33,3 @@ description: "nmtui – Text User Interface for controlling NetworkManager"
 <p> Corresponding to above activities, <code>nmtui</code> also comes with binaries named <code>nmtui-edit</code>, <code>nmtui-connect</code>, and <code>nmtui-hostname</code> to skip the selection of the activities.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nmcli/">nmcli</a></code>(1), <code><a href="/docs/linux/man/1-nm-applet/">nm-applet</a></code>(1), <code><a href="/docs/linux/man/1-nm-connection-editor/">nm-connection-editor</a></code>(1), <code><a href="/docs/linux/man/8-networkmanager/">NetworkManager</a></code>(8). </p>
-<h2>Index</h2>

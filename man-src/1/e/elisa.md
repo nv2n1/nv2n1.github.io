@@ -83,4 +83,3 @@ description: "elisa – media center solution"
 <p> <code>elisa</code> was written by the Elisa team &lt;contact [at] fluendo.com&gt; This manual page was previously written Philippe Normand and got reworked by Benjamin Kampmann</p>
 <h2>DISTRIBUTION</h2>
 <p> The latest version of Elisa may be downloaded from &lt;<a rel="nofollow" href="http://www.elisa.fluendo.com/">http://www.elisa.fluendo.com/</a>&gt; </p>
-<h2>Index</h2>

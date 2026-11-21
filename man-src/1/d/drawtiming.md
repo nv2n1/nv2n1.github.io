@@ -108,4 +108,3 @@ FIRE =&gt; COUNT=&quot;N+1&quot;.
 <p> This software package was written by An Edward Counce Aq ecounce [at] users.sourceforge.net Additional modifications by An Salvador E. Tropea Aq set [at] users.sourceforge.net An Daniel Beer</p>
 <h2>BUGS</h2>
 <p> None reported. </p>
-<h2>Index</h2>

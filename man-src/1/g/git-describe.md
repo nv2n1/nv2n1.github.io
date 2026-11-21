@@ -127,4 +127,3 @@ tags/v1.0.0
 <p> Tree objects as well as tag objects not pointing at commits, cannot be described. When describing blobs, the lightweight tags pointing at blobs are ignored, but the blob is still described as &lt;committ-ish&gt;:&lt;path&gt; despite the lightweight tag being favorable.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

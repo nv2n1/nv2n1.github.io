@@ -44,4 +44,3 @@ description: "entr – run arbitrary commands when files change"
 <blockquote><p><tt>$ echo my.sql | entr -p psql -f /_</tt></p></blockquote>
 <p> Rebuild project if a source file is modified or added to the src/ directory: </p>
 <blockquote><p><tt>$ while true; do ls src/*.rb | entr -d make; done</tt></p></blockquote>
-<h2>Index</h2>

@@ -42,4 +42,3 @@ $ guilt-rebase FETCH_HEAD
 <dt>
 </dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
-<h2>Index</h2>

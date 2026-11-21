@@ -69,4 +69,3 @@ description: "gnome-keyring-daemon – The gnome-keyring daemon"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-secret-tool/">secret-tool</a></code>(1), <code><a href="/docs/linux/man/1-seahorse/">seahorse</a></code>(1) </p>
 <p> Further details available in the gnome-keyring online documentation at m[blue]<code><a rel="nofollow" href="https://wiki.gnome.org/GnomeKeyring">https://wiki.gnome.org/GnomeKeyring</a></code>m[] and in the secret-service online documentation at m[blue]<code><a rel="nofollow" href="http://standards.freedesktop.org/secret-service/">http://standards.freedesktop.org/secret-service/</a></code>m[] </p>
-<h2>Index</h2>

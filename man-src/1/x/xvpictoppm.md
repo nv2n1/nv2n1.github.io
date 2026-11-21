@@ -15,4 +15,3 @@ description: "xvpictoppm – converts XV ‘thumbnail’ files to standard PPM f
 <p> <code>xvpictoppm</code> reads an XV &#8216;thumbnail&#8217; file (located in the &#8216;.xvpics&#8217; subdirectories) on stdin, and writes a standard PPM version of same to stdout. This may be useful for putting thumbnails in WWW pages, or something like that. </p>
 <h2>AUTHOR</h2>
 <p> John Bradley &#8211; bradley [at] dccs.upenn.edu </p>
-<h2>Index</h2>

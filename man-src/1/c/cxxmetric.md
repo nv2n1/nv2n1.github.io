@@ -20,4 +20,3 @@ description: "cxxmetric – Simple source metrics for C and C++"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

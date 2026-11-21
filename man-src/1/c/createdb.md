@@ -125,4 +125,3 @@ CREATE DATABASE demo ENCODING 'LATIN1';
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dropdb/">dropdb</a></code>(1), CREATE DATABASE (<code><a href="/docs/linux/man/7-create_database/">CREATE_DATABASE</a></code>(7)) </p>
-<h2>Index</h2>

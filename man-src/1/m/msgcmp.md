@@ -57,4 +57,3 @@ description: "msgcmp – compare message catalog and template"
 <dt>
 </dt><dd> <code>info msgcmp</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

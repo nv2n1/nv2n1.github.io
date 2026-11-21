@@ -165,4 +165,3 @@ description: "oggenc – encode audio into the Ogg Vorbis format"
 <p> Reading type 3 Wave files (floating point samples) probably doesn&#8217;t work other than on Intel (or other 32 bit, little endian machines). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-vorbiscomment/">vorbiscomment</a></code>(1), <code><a href="/docs/linux/man/1-ogg123/">ogg123</a></code>(1), <code><a href="/docs/linux/man/1-oggdec/">oggdec</a></code>(1), <code><a href="/docs/linux/man/1-flac/">flac</a></code>(1), <code><a href="/docs/linux/man/1-speexenc/">speexenc</a></code>(1), <code><a href="/docs/linux/man/1-ffmpeg2theora/">ffmpeg2theora</a></code>(1), <code><a href="/docs/linux/man/1-kateenc/">kateenc</a></code>(1) </p>
-<h2>Index</h2>

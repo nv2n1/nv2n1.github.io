@@ -26,4 +26,3 @@ description: "krb5_appdefault_boolean krb5_appdefault_string krb5_appdefault_tim
 <p> Fa appname is the name of the application, and Fa realm is the realm name. If the realm is omitted it will not be used for resolving values. Fa def_val is the value to return if no value is found in krb5.conf5.</p>
 <h2>SEE ALSO</h2>
 <p> krb5_config3, krb5.conf5 </p>
-<h2>Index</h2>

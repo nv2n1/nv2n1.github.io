@@ -33,4 +33,3 @@ description: "gfm – a program to manipulate files for TI’s handhelds"
 <p> Original author (Linux &amp; Win32): Romain Lievin &amp; Tyler Cassidy. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-tilp/">tilp</a>(1) </p>
-<h2>Index</h2>

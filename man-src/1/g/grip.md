@@ -44,4 +44,3 @@ description: "Grip – Grip is a cd-player and cd-ripper for the Gnome desktop."
 <p> Mike Oliphant &lt;grip [at] nostatic.org&gt;</p>
 <h3>this manual page</h3>
 <p> Adrian Reber &lt;adrian [at] lisas.de&gt; </p>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "globus_ftp_client_restart_marker_t –"
 </dt><dd> <code>globus_ftp_client_restart_marker_init()</code>, <code>globus_ftp_client_restart_marker_destroy()</code>, <code>globus_ftp_client_restart_marker_copy()</code>, <code>globus_ftp_client_restart_marker_insert_range()</code>, <code>globus_ftp_client_restart_marker_set_offset()</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
-<h2>Index</h2>

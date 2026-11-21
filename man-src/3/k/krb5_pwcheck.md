@@ -28,4 +28,3 @@ description: "krb5_pwcheck kadm5_setup_passwd_quality_check kadm5_add_passwd_qua
 <p> <code>kadm5_add_passwd_quality_verifier</code> sets up type 1 checks. It sets up all type 1 tests defined in krb5.conf5 if called with a null second argument. <code>kadm5_check_password_quality</code> runs the checks in the order in which they are defined in krb5.conf5 and the order in which they occur in a module&#8217;s Ft funcs array until one returns non-zero.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-libtool/">libtool</a>(1), <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5.conf5 </p>
-<h2>Index</h2>

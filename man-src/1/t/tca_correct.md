@@ -57,4 +57,3 @@ description: "tca_correct – Calculate transverse chromatic aberration"
 <dd> Use this file as blue channel</dd></dl>
 <h2>AUTHORS</h2>
 <p> Written by Pablo d&#8217;Angelo and others. </p>
-<h2>Index</h2>

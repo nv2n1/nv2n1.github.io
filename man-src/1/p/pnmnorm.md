@@ -30,4 +30,3 @@ description: "pnmnorm – normalize the contrast in a Netbpm image"
 <p> Before March 2002, there was no <code>-brightmax</code> option. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmhist/">ppmhist</a></code>(1), <code><a href="/docs/linux/man/1-pgmhist/">pgmhist</a></code>(1), <code><a href="/docs/linux/man/1-pnmgamma/">pnmgamma</a></code>(1), <code><a href="/docs/linux/man/1-ppmbrighten/">ppmbrighten</a></code>(1), <code><a href="/docs/linux/man/1-ppmdim/">ppmdim</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
-<h2>Index</h2>

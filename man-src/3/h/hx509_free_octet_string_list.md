@@ -28,4 +28,3 @@ description: "hx509 misc functions –"
 </dt><dd> <i>ptr</i> data to be freed.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>
-<h2>Index</h2>

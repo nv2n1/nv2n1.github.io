@@ -114,4 +114,3 @@ description: "a2ping.pl — convert between PS, EPS and PDF and other page descr
 <p> The author of <code>a2ping</code> is Peter Szabo &lt;<i>pts [at] fazekas.hu</i>&gt;. </p>
 <p> <code>a2ping</code> is inspired by and historically based on the <code>epstopdf</code> Perl script modified by Thomas Esser, Sept. 1998, but his modifications have been removed from <code>a2ping</code>, and also <code>a2ping</code> and <code>epstopdf</code> do not share common code anymore. <code>epstopdf</code> is written by Sebastian Rahtz, for Elsevier Science. <code>epstopdf</code> contained extra tricks from Hans Hagen&#8217;s texutil. </p>
 <p> <code>a2ping</code> contains contributions from several people, see the file <i></i><font SIZE="-1"><i>HISTORY</i></font><i>.txt</i> for details. Thank you all for contributing! </p>
-<h2>Index</h2>

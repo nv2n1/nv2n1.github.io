@@ -61,4 +61,3 @@ description: "rpmextra – display extra packages : not from distribution reposi
 <h2>AUTHOR</h2>
 <p> Eric Gerbier </p>
 <p> you can report any bug or suggest to gerbier [at] users.sourceforge.net </p>
-<h2>Index</h2>

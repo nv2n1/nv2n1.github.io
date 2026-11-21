@@ -79,4 +79,3 @@ description: "natspec – command line utility to access libnatspec functions"
 <p> This manual page was written for the Debian system (and may be used by others). </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Lesser General Public License, Version 2.1 or (at your option) any later version published by the Free Software Foundation. </p>
 <p> On Debian systems, the complete text of the GNU Lesser General Public License can be found in /usr/share/common-licenses/LGPL-2.1. </p>
-<h2>Index</h2>

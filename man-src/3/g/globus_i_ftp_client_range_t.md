@@ -26,4 +26,3 @@ description: "globus_i_ftp_client_range_t –"
 <p> Minimum value of this range. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
-<h2>Index</h2>

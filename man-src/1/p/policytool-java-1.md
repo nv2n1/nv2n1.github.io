@@ -37,4 +37,3 @@ description: "policytool – PolicyTool Administration GUI Utility"
 <p> <i>Security Permissions</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/permissions.html">http://docs.oracle.com/javase/7/docs/technotes/guides/security/permissions.html</a> </p>
 <p> <i>Security Overview</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/overview/jsoverview.html">http://docs.oracle.com/javase/7/docs/technotes/guides/security/overview/jsoverview.html</a> </p>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

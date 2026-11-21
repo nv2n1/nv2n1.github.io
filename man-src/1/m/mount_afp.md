@@ -80,4 +80,3 @@ mount_afp &quot;<a href="afp://;AUTH=Client%20Krb%20v2@myserver/myVolume">afp://
 <dd> The server volume could not be mounted.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code> <a href="/docs/linux/man/1-afp_client/">afp_client</a>(1), <a href="/docs/linux/man/1-afpfsd/">afpfsd</a>(1)</code> </p>
-<h2>Index</h2>

@@ -61,4 +61,3 @@ foonly = Fred Foonly &lt;foonly&gt;
 <p> <code><a href="/docs/linux/man/1-reposurgeon/">reposurgeon</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> Eric S. Raymond &lt;esr [at] thyrsus.com&gt;. This tool is distributed with reposurgeon; see the project page at m[blue]<code><a rel="nofollow" href="http://www.catb.org/~esr/reposurgeon">http://www.catb.org/~esr/reposurgeon</a></code>m[]. </p>
-<h2>Index</h2>

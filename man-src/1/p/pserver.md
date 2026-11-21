@@ -65,4 +65,3 @@ description: "pserver – NetWare print server"
 <p> <code><a href="/docs/linux/man/5-nwclient/">nwclient</a>(5), <a href="/docs/linux/man/1-slist/">slist</a>(1), <a href="/docs/linux/man/1-pqlist/">pqlist</a>(1), <a href="/docs/linux/man/8-ncpmount/">ncpmount</a>(8), <a href="/docs/linux/man/8-ncpumount/">ncpumount</a>(8)</code> </p>
 <h2>CREDITS</h2>
 <p> pserver was written by Volker Lendecke (lendecke [at] math.uni-goettingen.de) </p>
-<h2>Index</h2>

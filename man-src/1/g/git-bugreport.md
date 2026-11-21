@@ -53,4 +53,3 @@ git bugreport[(-o | --output - directory) &lt; path &gt; ][(-s | --suffix) &lt; 
 </dt><dd> Specify an alternate suffix for the bugreport name, to create a file named <i>git-bugreport-&lt;formatted suffix&gt;</i>. This should take the form of a <a href="/docs/linux/man/3-strftime/">strftime</a>(3) format string; the current local time will be used.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

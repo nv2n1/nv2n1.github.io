@@ -43,4 +43,3 @@ description: "MPD – A daemon for playing music"
 <h2>AUTHORS</h2>
 <p> Max Kellermann &lt;max [at] duempel.org&gt; </p>
 <p> Special thanks to all the people that provided feedback and patches. </p>
-<h2>Index</h2>

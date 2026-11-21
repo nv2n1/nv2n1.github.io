@@ -26,4 +26,3 @@ description: "docker-stack-ps – List the tasks in the stack"
 <p> <code>&#8211;orchestrator</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Orchestrator to use (swarm|kubernetes|all)</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-stack/">docker-stack</a>(1)</code> </p>
-<h2>Index</h2>

@@ -51,4 +51,3 @@ description: "extlinux – install the SYSLINUX bootloader on an ext2/ext3/ext4/
 <p> There is a mailing list for discussion among <font SIZE="-1">SYSLINUX</font> users and for announcements of new and test versions. You can subscribe to this mailing list</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-syslinux/">syslinux</a></code>(1) </p>
-<h2>Index</h2>

@@ -38,4 +38,3 @@ description: "pamtodbimg – convert a Netpbm image to a Palm Pilot Image Viewer
 <p> <code><a href="/docs/linux/man/1-pdbimgtopam/">pdbimgtopam</a></code>(1) , <code><a href="/docs/linux/man/1-palmtopnm/">palmtopnm</a></code>(1) , <code>pam</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>pamtopdbimg</code> was new in Netpbm 10.52 (September 2010). It was modelled after Eric A. Howe&#8217;s <code>imgvtopbm</code> package, which dates back to September 1997. </p>
-<h2>Index</h2>

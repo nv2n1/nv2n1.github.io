@@ -33,4 +33,3 @@ int bson_compare(const bson_t *bson,
 <p> less than zero, zero, or greater than zero in <code><a href="/docs/linux/man/3-qsort/">qsort</a>(3)</code> style. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

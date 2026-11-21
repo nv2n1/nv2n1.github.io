@@ -33,4 +33,3 @@ description: "pre2ncgm – convert a pre-CGM NCAR metafile to an NCAR CGM."
 <p> Copyright (C) 1987-2002<br />
  University Corporation for Atmospheric Research<br />
  The use of this Software is governed by a License Agreement. </p>
-<h2>Index</h2>

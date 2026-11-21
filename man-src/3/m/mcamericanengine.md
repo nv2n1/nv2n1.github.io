@@ -27,4 +27,3 @@ description: "ql/pricingengines/vanilla/mcamericanengine.hpp – American Monte 
 <p> American Monte Carlo engine. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

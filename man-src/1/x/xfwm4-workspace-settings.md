@@ -31,4 +31,3 @@ description: "xfwm4 – Workspace settings for Xfce window manager"
 <dt><code>&#8211;display</code>=<i>DISPLAY</i></dt>
 <dd> X display to use </dd>
 </dl>
-<h2>Index</h2>

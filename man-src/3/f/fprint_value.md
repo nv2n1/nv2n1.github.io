@@ -91,4 +91,3 @@ description: "snmp_pdu_add_variable, snmp_varlist_add_variable, snmp_add_null_va
  <code>snmp_free_varbind</code> releases all memory used by each varbind structure in the varbind list provided. </p>
 <h2>SEE ALSO</h2>
 <p> <code>pdu_api</code>(3) <code><a href="/docs/linux/man/3-mib_api/">mib_api</a></code>(3) </p>
-<h2>Index</h2>

@@ -44,4 +44,3 @@ description: "dzen2-dbar – simple gadget that you can use in combination with 
  Output: 43% [=========== ]</dd></dl>
 <p> Dbar was written by Robert Manea. </p>
 <p> This manual page was written by bertagaz &lt;bertagaz [at] ptitcanardnoir.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

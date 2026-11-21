@@ -26,4 +26,3 @@ description: "dh_bash-completion – install bash completions for package"
 <p> <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> David Paleino &lt;d.paleino [at] gmail.com&gt; </p>
-<h2>Index</h2>

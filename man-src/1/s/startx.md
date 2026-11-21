@@ -49,4 +49,3 @@ description: "startx – initialize an X session"
 <dd> Server to run if the user has no <i>.xserverrc</i> file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xinit/">xinit</a></code>(1), <code><a href="/docs/linux/man/7-x/">X</a></code>(7), <code><a href="/docs/linux/man/1-xserver/">Xserver</a></code>(1), <code><a href="/docs/linux/man/1-xorg/">Xorg</a></code>(1), <code><a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a></code>(5) </p>
-<h2>Index</h2>

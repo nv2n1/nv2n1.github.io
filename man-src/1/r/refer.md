@@ -305,4 +305,3 @@ description: "refer – preprocess bibliographic references for groff"
 <p> <code><a href="/docs/linux/man/1-indxbib/">indxbib</a></code>(1), <code><a href="/docs/linux/man/1-lookbib/">lookbib</a></code>(1), <code><a href="/docs/linux/man/1-lkbib/">lkbib</a></code>(1) </p>
 <h2>BUGS</h2>
 <p> In label expressions, <code>&lt;&gt;</code> expressions are ignored inside <code>.</code><i>char</i> expressions. </p>
-<h2>Index</h2>

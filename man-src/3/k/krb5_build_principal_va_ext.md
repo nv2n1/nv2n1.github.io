@@ -56,4 +56,3 @@ description: "krb5_get_default_principal krb5_principal krb5_build_principal krb
 <p> krb5_425_conv_principal3, krb5_config3, krb5.conf5</p>
 <h2>BUGS</h2>
 <p> You can not have a NUL in a component in some of the variable argument functions above. Until someone can give a good example of where it would be a good idea to have NUL&#8217;s in a component, this will not be fixed. </p>
-<h2>Index</h2>

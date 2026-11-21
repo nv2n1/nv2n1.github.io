@@ -23,4 +23,3 @@ for (y = 0; y h; y++)
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-mask_color_8/">MASK_COLOR_8</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3), <code><a href="/docs/linux/man/3-bitmap_color_depth/">bitmap_color_depth</a></code>(3), <code><a href="/docs/linux/man/3-ex3d/">ex3d</a></code>(3), <code><a href="/docs/linux/man/3-exmouse/">exmouse</a></code>(3), <code><a href="/docs/linux/man/3-expat/">expat</a></code>(3) </p>
-<h2>Index</h2>

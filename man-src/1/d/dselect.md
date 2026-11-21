@@ -183,4 +183,3 @@ description: "dselect – Debian package management frontend"
 <p> The built in access methods can no longer stand up to current quality standards. Use the access method provided by apt, it is not only not broken, it is also much more flexible than the built in access methods.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1), <code><a href="/docs/linux/man/8-apt-get/">apt-get</a></code>(8), <code><a href="/docs/linux/man/5-sources-list/">sources.list</a></code>(5), <code><a href="/docs/linux/man/5-deb/">deb</a></code>(5). </p>
-<h2>Index</h2>

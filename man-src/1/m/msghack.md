@@ -38,4 +38,3 @@ description: "msghack – alter PO files in ways"
 <dt><code>&#8211;append</code></dt>
 <dd> append entries from ref.po that don&#8217;t exist in file.po</dd></dl>
 <p> Note: It is just a replacement of msghack for backward support. </p>
-<h2>Index</h2>

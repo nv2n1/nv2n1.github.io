@@ -19,4 +19,3 @@ description: "unarj – Unarchive ARJ files"
 <p> <code><a href="/docs/linux/man/1-arj/">arj</a></code>(1), <code><a href="/docs/linux/man/1-rearj/">rearj</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Guillem Jover &lt;guillem [at] debian.org&gt;. </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "QtiPlot – Data Analysis and Scientific Plotting"
 <h2>AUTHOR</h2>
 <p> This manual page was written by Gudjon I. Gudjonsson &lt;gudjon [at] gudjon.org&gt;, for Debian GNU/Linux, but may be used by others. </p>
 <p> QtiPlot was written by Ion Vasilief and more. </p>
-<h2>Index</h2>

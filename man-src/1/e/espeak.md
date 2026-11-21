@@ -74,4 +74,3 @@ description: "espeak – A multi-lingual software speech synthesizer."
 <h2>AUTHOR</h2>
 <p> eSpeak was written by Jonathan Duddington &lt;jonsd [at] jsd.clara.co.uk&gt;. The webpage for this package can be found at <a rel="nofollow" href="http://espeak.sourceforge.net/.">http://espeak.sourceforge.net/.</a> </p>
 <p> This manual page was written by Luke Yelavich &lt;themuso [at] ubuntu.com&gt;, for the Ubuntu project (but may be used by others). Several updates by Jaroslav Škarvada &lt;jskarvad [at] redhat.com&gt;. </p>
-<h2>Index</h2>

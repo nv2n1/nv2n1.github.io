@@ -186,4 +186,3 @@ rate).
 </dt><dd> Show events other than HLT (x86 only) or Wait state (s390 only) that take longer than duration usecs.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-top/">perf-top</a></code>(1), <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1), <code><a href="/docs/linux/man/1-perf-diff/">perf-diff</a></code>(1), <code><a href="/docs/linux/man/1-perf-buildid-list/">perf-buildid-list</a></code>(1), <code><a href="/docs/linux/man/1-perf-stat/">perf-stat</a></code>(1) </p>
-<h2>Index</h2>

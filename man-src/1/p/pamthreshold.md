@@ -47,4 +47,3 @@ description: "pamthreshold – threshold grayscale image to black and white"
 <p> <code>pamthreshold</code> was new in Netpbm 10.34 (June 2006). </p>
 <h2>AUTHOR</h2>
 <p> <code>pamthreshold</code> is Copyright &#169; 2006 by Erik Auerswald and released under the <code>GPL</code>(1) </p>
-<h2>Index</h2>

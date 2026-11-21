@@ -141,4 +141,3 @@ struct pamtuples {
 <p> For the Standard Output Accepter, you supply only space in memory for the struct pam and the address of the tuple array. The routine fills in the struct pam up through the <i>tuple_type</i> member (except leaves the <i>file</i> member undefined) and allocates space for the tuple array with malloc(). You are responsible for freeing that memory. </p>
 <h2>HISTORY</h2>
 <p> <code>pm_system()</code> was introduced in Netpbm 10.13 (January 2003). </p>
-<h2>Index</h2>

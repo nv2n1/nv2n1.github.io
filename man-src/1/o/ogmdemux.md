@@ -59,4 +59,3 @@ description: "ogmdemux – Extract streams from OGG/OGM files into separate file
 <p> <code><a href="/docs/linux/man/1-ogmmerge/">ogmmerge</a></code>(1), <code><a href="/docs/linux/man/1-ogmsplit/">ogmsplit</a></code>(1), <code><a href="/docs/linux/man/1-ogminfo/">ogminfo</a></code>(1), <code><a href="/docs/linux/man/1-ogmcat/">ogmcat</a></code>(1), <code><a href="/docs/linux/man/1-dvdxchap/">dvdxchap</a></code>(1)</p>
 <h2>WWW</h2>
 <p> The newest version can always be found at &lt;<a rel="nofollow" href="http://www.bunkus.org/videotools/ogmtools/">http://www.bunkus.org/videotools/ogmtools/</a>&gt; </p>
-<h2>Index</h2>

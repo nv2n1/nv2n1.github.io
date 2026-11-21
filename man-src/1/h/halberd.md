@@ -45,4 +45,3 @@ description: "halberd – manual page for halberd 0.2.4 (14-Aug-2010)"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2004, 2005, 2006, 2010 Juan M. Bello Rivas &lt;jmbr [at] superadditive.com&gt; </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

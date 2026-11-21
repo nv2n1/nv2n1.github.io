@@ -35,4 +35,3 @@ description: "nhlf90 – Command for compiling Fortran code that uses the NCAR G
 <p> Copyright (C) 2000<br />
  University Corporation for Atmospheric Research<br />
  The use of this Software is governed by a License Agreement. </p>
-<h2>Index</h2>

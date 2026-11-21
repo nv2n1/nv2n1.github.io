@@ -50,4 +50,3 @@ description: "unify – manual page for unify 1.2.2"
 <dt>
 </dt><dd> <code>info unify</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

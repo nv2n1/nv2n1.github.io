@@ -33,4 +33,3 @@ description: "gnome-contacts – Access and store information about contacts"
 <dl>
 <dt>
 </dt><dd> Show the current version of Contacts.</dd></dl>
-<h2>Index</h2>

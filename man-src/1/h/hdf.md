@@ -91,4 +91,3 @@ description: "hdf – Hierarchical Data Format library"
 <dt><code>/usr/local/include/hdf</code></dt>
 <dd> Location of include file hdf.h, mfhdf.h, and others </dd>
 </dl>
-<h2>Index</h2>

@@ -82,4 +82,3 @@ description: "agrep – print lines approximately matching a pattern"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2002-2004 Ville Laurikari.<br />
  This is free software, and comes with ABSOLUTELY NO WARRANTY. You are welcome to redistribute this software under certain conditions; see the source for the full license text. </p>
-<h2>Index</h2>

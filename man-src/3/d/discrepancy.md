@@ -26,4 +26,3 @@ description: "QuantLib::DiscrepancyStatistics – Statistic tool for sequences w
 <p> It inherit from SequenceStatistics&lt;Statistics&gt; and adds $ L^2 $ discrepancy calculation </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

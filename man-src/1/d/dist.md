@@ -103,4 +103,3 @@ nmh-cc string  Addresses specified with `-cc address'
 <h2>BUGS</h2>
 <p> <code>Dist</code> does not rigorously check the message being distributed for adherence to the transport standard, but <code>post</code> called by <code>send</code> does. The <code>post</code> program will balk (and rightly so) at poorly formatted messages, and <code>dist</code> won&#8217;t correct things for you. </p>
 <p> If <i>whatnowproc</i> is <code>whatnow</code>, then <code>comp</code> uses a built-in <code>whatnow</code>, it does not actually run the <code>whatnow</code> program. Hence, if you define your own <i>whatnowproc</i>, don&#8217;t call it <code>whatnow</code> since <code>comp</code> won&#8217;t run it. </p>
-<h2>Index</h2>

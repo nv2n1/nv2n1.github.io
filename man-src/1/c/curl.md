@@ -3037,4 +3037,3 @@ curl - T file https : // example.com
 <p> <a rel="nofollow" href="https://curl.se">https://curl.se</a>  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1), <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) </p>
-<h2>Index</h2>

@@ -145,4 +145,3 @@ if JOBVR
 <p> Definition at line 177 of file cgeev.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

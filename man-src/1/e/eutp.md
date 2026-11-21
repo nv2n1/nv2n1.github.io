@@ -28,4 +28,3 @@ description: "eutp – EuroBraille file transferring"
 <p> The same warning applies to other special chars, such as $, ~, &amp;,&#8230; which should be protected by surrounding arguments by quotes (&#8216;) or by using single backslashes (\) just before them (please read your shell manual). </p>
 <h2>AUTHOR</h2>
 <p> Olivier Bert &lt;olivier.bert [at] laposte.net&gt; </p>
-<h2>Index</h2>

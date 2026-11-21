@@ -440,4 +440,3 @@ description: "Heimdal Kerberos 5 support functions –"
 </dt><dd> In case of error a non zero error com_err error is returned and the Kerberos error string is set.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
-<h2>Index</h2>

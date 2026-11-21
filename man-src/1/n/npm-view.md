@@ -120,4 +120,3 @@ npm view connect versions
 <dd> npm help docs </dd>
 </dl>
 </dl>
-<h2>Index</h2>

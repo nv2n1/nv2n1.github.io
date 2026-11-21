@@ -22,4 +22,3 @@ description: "ql/legacy/libormarketmodels/liborforwardmodel.hpp – libor forwar
 <p> libor forward model incl. exact cap pricing Rebonato formula to approximate swaption prices. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

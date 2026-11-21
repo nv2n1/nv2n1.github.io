@@ -291,4 +291,3 @@ dpkg - query - f = '${binary:Package} ${Version}	${Maintainer}
 <dd> Defined by <code>dpkg-query</code> to &#8220;<code>-FRSXMQ</code>&#8220;, if not already set, when spawning a pager (since dpkg 1.19.2). To change the default behavior, this variable can be preset to some other value including an empty string, or the <font SIZE="-1"><code>PAGER</code></font> or <font SIZE="-1"><code>DPKG_PAGER</code></font> variables can be set to disable specific options with &laquo;<code>-+</code>&raquo;, for example <code>DPKG_PAGER=&#8220;less -+F&#8221;</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1). </p>
-<h2>Index</h2>

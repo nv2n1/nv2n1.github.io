@@ -74,4 +74,3 @@ description: "blaze-add – add a blog post or a page to the BlazeBlogger reposi
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2008, 2009 Jaromir Hradilek </p>
 <p> This program is free software; see the source for copying conditions. It is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. </p>
-<h2>Index</h2>

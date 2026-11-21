@@ -18,4 +18,3 @@ description: "allocate_voice – Allocates a sound card voice for a sample. Alle
 <p> Returns the voice number, or -1 if no voices are available. </p>
 <h2>SEE ALSO</h2>
 <p> <code>deallocate_voice</code>(3), <code><a href="/docs/linux/man/3-reallocate_voice/">reallocate_voice</a></code>(3), <code><a href="/docs/linux/man/3-release_voice/">release_voice</a></code>(3), <code><a href="/docs/linux/man/3-load_sample/">load_sample</a></code>(3) </p>
-<h2>Index</h2>

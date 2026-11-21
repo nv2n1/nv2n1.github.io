@@ -38,4 +38,3 @@ description: "bluefish – editor for experienced web designers and programmers"
 <dt><code>Davide Puricelli</code> &lt;evo [at] debian.org&gt;</dt>
 <dd> Original author of the manpage written for the Debian system. </dd>
 </dl>
-<h2>Index</h2>

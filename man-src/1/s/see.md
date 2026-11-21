@@ -39,4 +39,3 @@ description: "run-mailcap, view, see, edit, compose, print – execute programs 
 <p> <code>run-mailcap</code> (and its aliases) was written by Brian White &lt;bcwhite [at] pobox.com&gt;.</p>
 <h2>COPYRIGHT</h2>
 <p> <code>run-mailcap</code> (and its aliases) is in the public domain (the only true &quot;free&quot;). </p>
-<h2>Index</h2>

@@ -87,4 +87,3 @@ Hello World
 <h2>SEE ALSO</h2>
 <p> If JavaScript is used, then before evaluating any user defined script, jrunscript initializes certain built-in functions and objects. These JavaScript built-ins are documented in <i>jsdocs</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/tools/share/jsdocs/allclasses-noframe.html.">http://docs.oracle.com/javase/7/docs/technotes/tools/share/jsdocs/allclasses-noframe.html.</a> </p>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

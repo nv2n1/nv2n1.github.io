@@ -22,4 +22,3 @@ description: "gcloseall – This tool terminates all applications"
 <p> Work on <code>gcloseall </code> started in January 2006.</p>
 <h2>AUTHORS</h2>
 <p> gcloseall was written by Richard Frith-Macdoanld &lt;rfm [at] gnu.org&gt; This man page was written by Dennis Leeuw &lt;dleeuw [at] made-it.com&gt;. </p>
-<h2>Index</h2>

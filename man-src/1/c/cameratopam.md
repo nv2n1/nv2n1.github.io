@@ -58,4 +58,3 @@ description: "cameratopam – convert raw camera image to PAM"
 <h2>HISTORY</h2>
 <p> <code>cameratopam</code> was new in Netpbm 10.28 (June 2005). </p>
 <p> It was derived from the program <code>dcraw</code> by Dave Coffin , by Bryan Henderson in April 2005. Bryan replaced the part that generates the Netpbm output image and removed the Adobe Photoshop output function. Bryan changed the command syntax and made other small changes to make the program consistent with Netpbm. He also split the source code into manageable pieces (<code>dcraw</code> has a single 5000 line source file). </p>
-<h2>Index</h2>

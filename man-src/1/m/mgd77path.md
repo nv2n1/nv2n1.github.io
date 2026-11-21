@@ -68,4 +68,3 @@ gmt mgd77path -D
 <p> The Marine Geophysical Data Exchange Format &#8211; MGD77, see <i>*<a rel="nofollow" href="http://www.ngdc.noaa.gov/mgg/dat/geodas/docs/mgd77.txt*.">http://www.ngdc.noaa.gov/mgg/dat/geodas/docs/mgd77.txt*.</a></i></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

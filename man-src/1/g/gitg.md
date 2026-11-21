@@ -20,4 +20,3 @@ description: "gitg – Git repository viewer"
 <p> <code>[&lt;refspec&gt;]</code> Populate the history view of <code>gitg</code> using the specified <code>&lt;refspec&gt;</code> which has the same format as used with <code>git log</code> (Example: <code>gitg</code> &#8211;left-right HEAD..FETCH_HEAD) </p>
 <h2>AUTHORS</h2>
 <p> Jesse van den Kieboom &lt;jesse [at] icecrew.nl&gt; </p>
-<h2>Index</h2>

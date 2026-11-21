@@ -71,4 +71,3 @@ description: "jhat – Java Heap Analysis Tool"
 <dd> <i>hprof &#8211; Heap and CPU profiling tool</i> @ <a rel="nofollow" href="http://java.sun.com/developer/technicalArticles/Programming/HPROF.html">http://java.sun.com/developer/technicalArticles/Programming/HPROF.html</a></dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

@@ -42,4 +42,3 @@ description: "xcam – a graphical camera frontend for SANE"
 <h2>AUTHOR</h2>
 <p> David Mosberger-Tang </p>
 <p> Gerard Klaver (2005 update) </p>
-<h2>Index</h2>

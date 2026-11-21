@@ -76,4 +76,3 @@ description: "pkcs15-tool – utility for manipulating PKCS #15 data structures 
 </dt><dd> Causes <code>pkcs15-tool</code> to be more verbose. Specify this flag several times to enable debug output in the OpenSC library.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> opensc(7), <a href="/docs/linux/man/1-pkcs15-init/">pkcs15-init</a>(1), <a href="/docs/linux/man/1-pkcs15-crypt/">pkcs15-crypt</a>(1) </p>
-<h2>Index</h2>

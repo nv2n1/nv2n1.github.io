@@ -23,4 +23,3 @@ description: "smew – search related messages from Mew’s database file"
 <dt><code>-p</code></dt>
 <dd> Search a child message only. </dd>
 </dl>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ description: "memcached-tool – stats and management tool for memcached"
  <code><a rel="nofollow" href="http://www.memcached.org">http://www.memcached.org</a></code> </p>
 <h2>AUTHOR</h2>
 <p> The memcached-tool script was written by Brad Fitzpatrick <code>&lt;brad [at] danga.com&gt;</code> </p>
-<h2>Index</h2>

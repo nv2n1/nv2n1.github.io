@@ -60,4 +60,3 @@ cc prog.c - o prog `pkg - config rasqal-- cflags` `pkg - config rasqal-- libs`
 <p> <code><a href="/docs/linux/man/1-roqet/">roqet</a></code>(1),<code><a href="/docs/linux/man/3-libraptor/">libraptor</a>(3)</code></p>
 <h2>AUTHOR</h2>
 <p> Dave Beckett &#8211; <a rel="nofollow" href="http://purl.org/net/dajobe/">http://purl.org/net/dajobe/</a> </p>
-<h2>Index</h2>

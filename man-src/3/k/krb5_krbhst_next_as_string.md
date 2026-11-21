@@ -69,4 +69,3 @@ krb5_krbhst_free(context, handle);
 <p> <a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a>(3), krb5_get_krbhst3, krb5_send_to_kdc_flags3</p>
 <h2>HISTORY</h2>
 <p> These functions first appeared in Heimdal 0.3g. </p>
-<h2>Index</h2>

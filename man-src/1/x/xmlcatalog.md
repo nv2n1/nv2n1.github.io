@@ -138,4 +138,3 @@ description: "xmlcatalog – Command line tool to parse and manipulate XML or SG
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001, 2004 </p>
-<h2>Index</h2>

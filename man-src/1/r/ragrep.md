@@ -60,4 +60,3 @@ description: "ragrep – grep argus(8) user captured data."
 Carter Bullard (carter [at] qosient.com).
 </pre>
 <h2>BUGS</h2>
-<h2>Index</h2>

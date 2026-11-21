@@ -833,4 +833,3 @@ avrdude: Please restart avrdude without power-cycling the target.
 <p> Page-mode programming the EEPROM through JTAG (i.e. through an &#8211;<code>U</code> option) requires a prior chip erase. This is an inherent feature of the way JTAG EEPROM programming works. This also applies to the STK500 and STK600 in parallel programming mode. </p>
 <p> The USBasp and USBtinyISP drivers do not offer any option to distinguish multiple devices connected simultaneously, so effectively only a single device is supported. </p>
 <p> The avrftdi driver allows to select specific devices using any combination of vid,pid serial number (usbsn) vendor description (usbvendoror part description (usbproduct) as seen with lsusb or whatever tool used to view USB device information. Multiple devices can be on the bus at the same time. For the H parts, which have multiple MPSSE interfaces, the interface can also be selected. It defaults to interface &#8216;A&#8217;. </p>
-<h2>Index</h2>

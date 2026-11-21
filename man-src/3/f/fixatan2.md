@@ -28,4 +28,3 @@ ASSERT(!errno);
 <p> Returns the arc tangent of `y / x&#8217; in fixed point binary format angle, from `-128&#8242; to `128&#8242;. If both `x&#8217; and `y&#8217; are zero, returns zero and sets `errno&#8217; to EDOM. </p>
 <h2>SEE ALSO</h2>
 <p> , <code><a href="/docs/linux/man/3-exlights/">exlights</a></code>(3), <code><a href="/docs/linux/man/3-exspline/">exspline</a></code>(3) </p>
-<h2>Index</h2>

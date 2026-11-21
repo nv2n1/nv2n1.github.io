@@ -48,4 +48,3 @@ description: "po2rc – Convert Gettext PO localization files back to Windows Re
 <dt>&#8211;nofuzzy</dt>
 <dd> don&#8217;t use translations marked fuzzy (default) </dd>
 </dl>
-<h2>Index</h2>

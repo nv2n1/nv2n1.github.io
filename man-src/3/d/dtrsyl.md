@@ -129,4 +129,3 @@ each 2 - by - 2 diagonal block has its diagonal elements equal and its off - dia
 <p> Definition at line 164 of file dtrsyl.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

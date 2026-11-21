@@ -25,4 +25,3 @@ description: "retrace-server-reposync – Maintains local repository cache for R
 <dt>
 </dt><dd> mailto:_mtoman [at] redhat.com_</dd></dl>
 </dl>
-<h2>Index</h2>

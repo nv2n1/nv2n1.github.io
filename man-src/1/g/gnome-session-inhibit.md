@@ -47,4 +47,3 @@ description: "gnome-session-inhibit – inhibit gnome-session functionality"
 </dt><dd> list the existing inhibitions and exit</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd-inhibit/">systemd-inhibit</a></code>(1) </p>
-<h2>Index</h2>

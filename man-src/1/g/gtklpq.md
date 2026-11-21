@@ -150,4 +150,3 @@ description: "gtklpq – manage print queues via CUPS"
  It is part of the <code>GtkLP</code>-package.<br />
  Feel also free to contact me.<br />
  Please mail also, if you like the software !!! ;-) </p>
-<h2>Index</h2>

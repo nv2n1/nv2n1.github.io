@@ -48,4 +48,3 @@ description: "delaunay – constructs the constrained Delaunay triangulation of 
 <h2>AUTHOR</h2>
 <p> delaunay was written by Stephane Popinet &lt;popinet [at] users.sourceforge.net&gt;. </p>
 <p> This manual page was written by Ruben Molina &lt;rmolina [at] udea.edu.co&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

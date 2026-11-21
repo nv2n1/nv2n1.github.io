@@ -133,4 +133,3 @@ struct structname var = {field : value};
 <p> linux-sparse [at] vger.kernel.org</p>
 <h2>MAINTAINER</h2>
 <p> Josh Triplett &lt;josh [at] kernel.org&gt; </p>
-<h2>Index</h2>

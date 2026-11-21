@@ -22,4 +22,3 @@ description: "docker-manifest-annotate – Add additional information to a local
 <p> <code>&#8211;variant</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Set architecture variant</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-manifest/">docker-manifest</a>(1)</code> </p>
-<h2>Index</h2>

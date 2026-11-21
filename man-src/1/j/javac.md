@@ -954,4 +954,3 @@ for (int i = 0; i &lt; args.length; i++) {
 <dt>&bull;</dt>
 <dd> <a href="/docs/linux/man/1-jdb/">jdb</a>(1) </dd>
 </dl>
-<h2>Index</h2>

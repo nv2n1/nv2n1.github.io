@@ -163,4 +163,3 @@ url: "/docs/linux/man/3-sormbr/"
 <p> Definition at line 196 of file sormbr.f.  </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

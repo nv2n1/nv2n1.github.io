@@ -22,4 +22,3 @@ description: "pbmtoepsi – convert a portable bitmap into an encapsulated PostS
 <p> <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5), <code><a href="/docs/linux/man/1-pnmtops/">pnmtops</a></code>(1), <code><a href="/docs/linux/man/1-pstopnm/">pstopnm</a></code>(1), <code><a href="/docs/linux/man/1-psidtopgm/">psidtopgm</a></code>(1), <code><a href="/docs/linux/man/1-pbmtolps/">pbmtolps</a></code>(1), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1988 Jef Poskanzer, modified by Doug Crabill 1992 </p>
-<h2>Index</h2>

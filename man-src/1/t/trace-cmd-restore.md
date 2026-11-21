@@ -79,4 +79,3 @@ $ trace-cmd restore -i box-partial.dat trace.dat.cpu0 trace.dat.cpu1
 <dt>
 </dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
-<h2>Index</h2>

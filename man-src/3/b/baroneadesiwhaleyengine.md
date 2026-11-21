@@ -19,4 +19,3 @@ description: "ql/pricingengines/vanilla/baroneadesiwhaleyengine.hpp – Barone-A
 <p> Barone-Adesi and Whaley approximation engine. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

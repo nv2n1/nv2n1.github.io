@@ -30,4 +30,3 @@ description: "smproxy – Session Manager Proxy"
 <p> <a href="/docs/linux/man/1-xsm/">xsm</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Ralph Mor, X Consortium </p>
-<h2>Index</h2>

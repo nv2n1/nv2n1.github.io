@@ -56,4 +56,3 @@ $ nytprofcsv[-h][-d][-o&lt;output directory&gt;][-f&lt;input file&gt;] perl - d 
 <p> Adam Kaplan, akaplan at nytimes dotcom</p>
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself, either Perl version 5.8.8 or, at your option, any later version of Perl 5 you may have available. </p>
-<h2>Index</h2>

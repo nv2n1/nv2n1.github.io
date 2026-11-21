@@ -81,4 +81,3 @@ description: "euca-describe-images – Show information about images"
 <dt>virtualization-type</dt>
 <dd> virtualization type (&quot;paravirtual&quot; or &quot;hvm&quot;) </dd>
 </dl>
-<h2>Index</h2>

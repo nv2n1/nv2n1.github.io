@@ -74,4 +74,3 @@ description: "mongoose – lightweight web server"
 <p> is licensed under the terms of the MIT license.</p>
 <h2>AUTHOR</h2>
 <p> An Sergey Lyubka Aq valenok [at] gmail.com . </p>
-<h2>Index</h2>

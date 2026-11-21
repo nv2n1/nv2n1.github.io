@@ -43,4 +43,3 @@ description: "getcon, getprevcon, getpidcon – get SELinux security context of 
 <p> On error -1 is returned. On success 0 is returned.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-setexeccon/">setexeccon</a></code>(3) </p>
-<h2>Index</h2>

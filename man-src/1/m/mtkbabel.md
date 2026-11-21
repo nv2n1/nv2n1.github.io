@@ -83,4 +83,3 @@ description: "mtkbabel – Tool for managing GPS data loggers based on the MTK c
 <h2>AUTHORS</h2>
 <p> Niccolo Rigacci &lt;niccolo [at] rigacci.org&gt; </p>
 <p> This manual page was written by Uwe Hermann &lt;uwe [at] hermann-uwe.de&gt;. It is licensed under the terms of the GNU GPL (version 2 or later). </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ description: "chicken – A Scheme-to-C translator"
 <p> The CHICKEN Team. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-csc/">csc</a>(1)</code> <code><a href="/docs/linux/man/1-chicken-bug/">chicken-bug</a>(1)</code> </p>
-<h2>Index</h2>

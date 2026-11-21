@@ -20,4 +20,3 @@ description: "auparse_get_milli – get the millisecond value of the event"
 <p> <code><a href="/docs/linux/man/3-auparse_get_timestamp/">auparse_get_timestamp</a></code>(3), <code><a href="/docs/linux/man/3-auparse_get_time/">auparse_get_time</a></code>(3). <code><a href="/docs/linux/man/3-auparse_get_milli/">auparse_get_milli</a></code>(3). <code><a href="/docs/linux/man/3-auparse_get_node/">auparse_get_node</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

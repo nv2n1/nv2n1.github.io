@@ -123,4 +123,3 @@ surround40:CARD=ICH5,DEV=0
 <p> <code><a href="/docs/linux/man/1-aplay/">aplay</a>(1)</code> </p>
 <h2>AUTHOR</h2>
 <p> The speaker-test program was written by James Courtier-Dutton. Pink noise support was added by Nathan Hurst. Further extensions by Takashi Iwai. </p>
-<h2>Index</h2>

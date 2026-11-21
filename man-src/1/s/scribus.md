@@ -78,4 +78,3 @@ description: "scribus – cross platform WYSIWYG desktop publishing app"
 <p> See <i><a rel="nofollow" href="http://bugs.scribus.net/">http://bugs.scribus.net/</a></i> for the Scribus on-line status tracker, which is used to track bug reports and feature requests. <code>If you intend to submit a bug report or feature request, please search the bug database first.</code></p>
 <h2>AUTHORS</h2>
 <p> Please see the About Scribus option in the Help menu for a list of authors, translators, and contributors. </p>
-<h2>Index</h2>

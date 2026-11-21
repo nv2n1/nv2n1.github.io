@@ -74,4 +74,3 @@ description: "readprofile – read kernel profiling information"
 </pre>
 <h2>AVAILABILITY</h2>
 <p> The readprofile command is part of the util-linux package and is available from <a href="ftp://ftp.kernel.org/pub/linux/utils/util-linux/.">ftp://ftp.kernel.org/pub/linux/utils/util-linux/.</a> </p>
-<h2>Index</h2>

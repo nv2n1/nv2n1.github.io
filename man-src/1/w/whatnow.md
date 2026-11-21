@@ -98,4 +98,3 @@ description: "whatnow – prompting front-end for sending messages"
 <p> If the <i>buildmimeproc</i> fails (returns a nonzero status), <code>whatnow</code> simply prints a &#8220;What now?&#8221; prompt. <code>whatnow</code> depends on the <i>buildmimeproc</i> to tell the user that something went wrong. </p>
 <p> If <i>whatnowproc</i> is <code>whatnow</code>, then <code>comp</code>, <code>dist</code>, <code>forw</code>, and <code>repl</code> use a built-in <code>whatnow</code>, and do not actually run the <code>whatnow</code> program. Hence, if you define your own <i>whatnowproc</i>, don&#8217;t call it <code>whatnow</code> since it won&#8217;t be run. </p>
 <p> If <i>sendproc</i> is <code>send</code>, then <code>whatnow</code> uses a built-in <code>send</code>, it does not actually run the <code>send</code> program. Hence, if you define your own <i>sendproc</i>, don&#8217;t call it <code>send</code> since <code>whatnow</code> won&#8217;t run it. </p>
-<h2>Index</h2>

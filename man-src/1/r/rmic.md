@@ -132,4 +132,3 @@ description: "rmic – Generates stub, skeleton, and tie classes for remote obje
 <dt>&bull;</dt>
 <dd> Setting the Class Path </dd>
 </dl>
-<h2>Index</h2>

@@ -74,4 +74,3 @@ description: "tracker-search – Search for content by type or across all types"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-store/">tracker-store</a></code>(1), <code><a href="/docs/linux/man/1-tracker-stats/">tracker-stats</a></code>(1), <code><a href="/docs/linux/man/1-tracker-tag/">tracker-tag</a></code>(1), <code><a href="/docs/linux/man/1-tracker-info/">tracker-info</a></code>(1). </p>
-<h2>Index</h2>

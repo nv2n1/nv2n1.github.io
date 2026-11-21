@@ -28,4 +28,3 @@ description: "kuipc – the CERN KUIP compiler"
 <p> When the -split option is used, kuipc will still create an output file that it would have made if -split was not used; the file will be of zero size.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Kevin McCarty &lt;kmccarty [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

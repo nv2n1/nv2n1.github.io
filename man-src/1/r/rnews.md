@@ -53,4 +53,3 @@ description: "rnews – Inject individual articles and UUCP batches into INN"
 <p> <tt>$Id:</tt> rnews.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-bzip2/">bzip2</a></i>(1), <i><a href="/docs/linux/man/1-compress/">compress</a></i>(1), <i><a href="/docs/linux/man/1-gzip/">gzip</a></i>(1), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8). </p>
-<h2>Index</h2>

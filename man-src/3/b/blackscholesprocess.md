@@ -31,4 +31,3 @@ description: "ql/processes/blackscholesprocess.hpp – Black-Scholes processes."
 <p> Black-Scholes processes. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

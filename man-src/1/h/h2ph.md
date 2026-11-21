@@ -82,4 +82,3 @@ enum {
 };
 </code></pre>
 <p> Doesn&#8217;t necessarily locate all of your C compiler&#8217;s internally-defined symbols. </p>
-<h2>Index</h2>

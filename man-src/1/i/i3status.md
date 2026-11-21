@@ -122,4 +122,3 @@ i3status-xmobar | xmobar -o -t &quot;%StdinReader%&quot; -c &quot;[Run StdinRead
 <p> Michael Stapelberg and contributors </p>
 <p> Thorsten Toepper </p>
 <p> Baptiste Daroussin </p>
-<h2>Index</h2>

@@ -70,4 +70,3 @@ description: "vcdimager – manual page for vcdimager 0.7.24"
 <dt>
 </dt><dd> <code>info vcdimager</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

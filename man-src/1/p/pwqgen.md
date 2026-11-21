@@ -32,4 +32,3 @@ description: "pwqgen – Generate quality controllable random passphrase"
 <p> <a rel="nofollow" href="http://www.openwall.com/passwdqc/">http://www.openwall.com/passwdqc/</a></p>
 <h2>AUTHORS</h2>
 <p> The pam_passwdqc module was written for Openwall GNU/*/Linux by Solar Designer. The <code>Op Ar options</code> program was originally written for ALT GNU/*/Linux by Dmitry V. Levin, indirectly reusing code from pam_passwdqc (via libpasswdqc). This manual page was written for Openwall GNU/*/Linux by Dmitry V. Levin. </p>
-<h2>Index</h2>

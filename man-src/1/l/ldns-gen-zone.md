@@ -52,4 +52,3 @@ description: "ldns-gen-zone – read a zonefile and print it while adding DS rec
 <p> Despite a number of efforts, this program is still not the fastest in the world. </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2010 SIDN. This is free software. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

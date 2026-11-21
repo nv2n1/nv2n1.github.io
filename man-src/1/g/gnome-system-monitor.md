@@ -22,4 +22,3 @@ description: "gnome-system-monitor — view and control processes"
 <h2>AUTHOR</h2>
 <p> The gnome-system-monitor was written by Kevin Vandersloot . </p>
 <p> This manual page was written by Colin Walters walters [at] debian.org for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts. </p>
-<h2>Index</h2>

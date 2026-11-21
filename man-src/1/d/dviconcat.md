@@ -21,4 +21,3 @@ description: "dviconcat – concatenate DVI files"
  <i>MC-TeX User&#8217;s Guide</i></p>
 <h2>BUGS</h2>
 <p> The program should be called <i>dvicat</i>, but that name was taken (for the driver for the C/A/T typesetter). </p>
-<h2>Index</h2>

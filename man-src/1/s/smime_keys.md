@@ -38,4 +38,3 @@ description: "smime_keys – Utility to add S/MIME certificate to the internal d
 <h2>NO WARRANTIES</h2>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
 <p> Mutt Home Page: <a rel="nofollow" href="http://www.mutt.org/">http://www.mutt.org/</a> </p>
-<h2>Index</h2>

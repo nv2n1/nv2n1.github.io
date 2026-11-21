@@ -29,4 +29,3 @@ description: "evcd2vcd – Converts EVCD files to VCD files"
 <p> Anthony Bybell &lt;bybell [at] rocketmail.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-vcd2fst/">vcd2fst</a></i>(1) <i><a href="/docs/linux/man/1-fst2vcd/">fst2vcd</a></i>(1) <i><a href="/docs/linux/man/1-vcd2lxt/">vcd2lxt</a></i>(1) <i><a href="/docs/linux/man/1-vcd2lxt2/">vcd2lxt2</a></i>(1) <i><a href="/docs/linux/man/1-lxt2vcd/">lxt2vcd</a></i>(1) <i><a href="/docs/linux/man/1-vcd2vzt/">vcd2vzt</a></i>(1) <i><a href="/docs/linux/man/1-vzt2vcd/">vzt2vcd</a></i>(1) <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) </p>
-<h2>Index</h2>

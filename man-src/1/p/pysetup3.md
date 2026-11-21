@@ -35,4 +35,3 @@ description: "pysetup3.3 – pysetup tool"
 <dt><code>&#8211;version</code></dt>
 <dd> Display the version </dd>
 </dl>
-<h2>Index</h2>

@@ -27,4 +27,3 @@ description: "tpm_version – report TPM version and manufacturer information"
 <p> <code><a href="/docs/linux/man/8-tpm_selftest/">tpm_selftest</a></code>(8), <code><a href="/docs/linux/man/8-tpm_takeownership/">tpm_takeownership</a></code>(8), <code><a href="/docs/linux/man/8-tpm_setownable/">tpm_setownable</a></code>(8), <code><a href="/docs/linux/man/8-tcsd/">tcsd</a></code>(8) </p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;trousers-users [at] lists.sourceforge.net&gt; </p>
-<h2>Index</h2>

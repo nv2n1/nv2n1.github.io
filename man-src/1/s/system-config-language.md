@@ -14,4 +14,3 @@ description: "system-config-language – A graphical interface for modifying the
 <p> This project is available at <a rel="nofollow" href="http://fedorahosted.org/system-config-language">http://fedorahosted.org/system-config-language</a> </p>
 <h2>AUTHOR</h2>
 <p> Parag Nemade &lt;pnemade [at] fedoraproject.org&gt; </p>
-<h2>Index</h2>

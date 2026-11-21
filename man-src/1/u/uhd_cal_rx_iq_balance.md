@@ -45,4 +45,3 @@ description: "uhd_cal_rx_iq_balance – Generate RX IQ Balance Calibration Table
 <p> Copyright (c) 2012 Ettus Research LLC </p>
 <p> This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
-<h2>Index</h2>

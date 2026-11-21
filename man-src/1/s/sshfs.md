@@ -202,4 +202,3 @@ description: "SSHFS – filesystem client based on ssh"
 <h2>AUTHORS</h2>
 <p> SSHFS has been written by Miklos Szeredi &lt;miklos [at] szeredi.hu&gt;. </p>
 <p> This man page was written by Bartosz Fenski &lt;fenio [at] debian.org&gt; for the Debian GNU/Linux distribution (but it may be used by others). </p>
-<h2>Index</h2>

@@ -87,4 +87,3 @@ description: "dumpkeys – dump keyboard translation tables"
 <dd> The recommended directory for keytable files.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1), <code><a href="/docs/linux/man/5-keymaps/">keymaps</a></code>(5) </p>
-<h2>Index</h2>

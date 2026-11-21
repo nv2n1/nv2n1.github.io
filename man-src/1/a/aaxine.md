@@ -96,4 +96,3 @@ description: "aaxine – an ASCII art video player"
 <p> Siggi Langauf for the xine project. </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001 The xine project </p>
-<h2>Index</h2>

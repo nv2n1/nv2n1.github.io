@@ -39,4 +39,3 @@ description: "gpsflash – 2-stage firmware loader for GPS chipsets"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://gpsd.berlios.de/">http://gpsd.berlios.de/</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -72,4 +72,3 @@ description: "alevt-cap – simple capture of teletext pages"
 <h2>BUGS</h2>
 <p> If you give a page number that is never transmitted the program will not terminate. </p>
 <p> Bug reports to &lt;froese [at] gmx.de&gt;. </p>
-<h2>Index</h2>

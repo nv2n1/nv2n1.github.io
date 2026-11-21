@@ -53,4 +53,3 @@ description: "cjdnslog — display cjdroute log messages"
 <p> <code>~/.cjdnsadmin</code></p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cjdroute/">cjdroute</a>(1) </p>
-<h2>Index</h2>

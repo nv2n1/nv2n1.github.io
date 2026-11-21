@@ -75,4 +75,3 @@ description: "dpkg-genbuildinfo – generate Debian .buildinfo files"
 <dd> The list of generated files. <code>dpkg-genbuildinfo</code> reads the data here when producing a <code>.buildinfo</code> file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb-buildinfo/">deb-buildinfo</a></code>(5). </p>
-<h2>Index</h2>

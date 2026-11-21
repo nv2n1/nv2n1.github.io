@@ -32,4 +32,3 @@ description: "teredo-mire – Stateless Teredo IPv6 responder"
 <h2>AUTHOR</h2>
 <p> R33mi Denis-Courmont &lt;remi at remlab dot net&gt; </p>
 <p> <a rel="nofollow" href="http://www.remlab.net/miredo/">http://www.remlab.net/miredo/</a> </p>
-<h2>Index</h2>

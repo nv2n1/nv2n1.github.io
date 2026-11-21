@@ -33,4 +33,3 @@ description: "pnmhistmap – draw a histogram for a PGM or PPM file"
 <p> <a href="/docs/linux/man/1-pgmhist/">pgmhist</a>(1), <a href="/docs/linux/man/1-ppmhist/">ppmhist</a>(1), <a href="/docs/linux/man/5-pgm/">pgm</a>(5), <a href="/docs/linux/man/5-ppm/">ppm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Wilson H. Bent. Jr. (whb [at] usc.edu). </p>
-<h2>Index</h2>

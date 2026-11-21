@@ -136,4 +136,3 @@ gmt gravfft -C400/5000/3000/b -T10000/2700/3300/1035 -Z9000/40000
 <p> <code>gmt</code>, <code>grdfft</code>, <code>grdmath</code>, <code>grdproject</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

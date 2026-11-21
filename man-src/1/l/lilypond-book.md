@@ -61,4 +61,3 @@ description: "lilypond-book – manual page for lilypond-book 2.12.2"
 <dt>
 </dt><dd> <code>info lilypond-book</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

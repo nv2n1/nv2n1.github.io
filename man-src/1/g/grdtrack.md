@@ -106,4 +106,3 @@ grdtrack -ELB/RT+i1k+d -Gdata.nc &gt; profiles.txt
 <p> <code>gmt</code>, <code>gmtconvert</code>, <code>sample1d</code>, <code>surface</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

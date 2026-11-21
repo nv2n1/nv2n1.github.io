@@ -26,4 +26,3 @@ description: "wifi – enable/disable internal wifi (wireless lan) device"
 <p> <code><a href="/docs/linux/man/8-tlp/">tlp</a></code>(8). </p>
 <h2>AUTHOR</h2>
 <p> Thomas Koch &lt;linrunner at gmx.net&gt; </p>
-<h2>Index</h2>

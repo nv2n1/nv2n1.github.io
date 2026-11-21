@@ -43,4 +43,3 @@ description: "fadvise64,fadvise64_64 – Give advice about file access"
 <p> <code><a href="/docs/linux/man/2-madvise/">madvise</a>(2)</code> </p>
 <h2>AUTHOR</h2>
 <p> Niki Rahimi </p>
-<h2>Index</h2>

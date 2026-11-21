@@ -279,4 +279,3 @@ description: "linkchecker – command line client to check HTML documents and we
 <p> Bastian Kleineidam &lt;bastian.kleineidam [at] web.de&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2000-2014 Bastian Kleineidam </p>
-<h2>Index</h2>

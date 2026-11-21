@@ -19,4 +19,3 @@ description: "sclient – sample Kerberos version 5 client"
 <p> MIT</p>
 <h2>COPYRIGHT</h2>
 <p> 1985-2016, MIT </p>
-<h2>Index</h2>

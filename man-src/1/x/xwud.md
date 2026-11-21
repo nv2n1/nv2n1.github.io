@@ -76,4 +76,3 @@ description: "xwud – image displayer for X"
 <p> <a href="/docs/linux/man/1-xwd/">xwd</a>(1), <a href="/docs/linux/man/1-xstdcmap/">xstdcmap</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7)</p>
 <h2>AUTHOR</h2>
 <p> Bob Scheifler, MIT X Consortium </p>
-<h2>Index</h2>

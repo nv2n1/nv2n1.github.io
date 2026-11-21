@@ -13,4 +13,3 @@ description: "rbash – restricted bash, see"
 <h2>RESTRICTED SHELL</h2>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-bash/">bash</a>(1) </p>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ description: "imsettings-switch – Switch Input Method"
 <p> <code><a href="/docs/linux/man/1-imsettings-list/">imsettings-list</a></code>(1) <code><a href="/docs/linux/man/1-imsettings-reload/">imsettings-reload</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Akira TAGOH &lt;akira [at] tagoh.org&gt; </p>
-<h2>Index</h2>

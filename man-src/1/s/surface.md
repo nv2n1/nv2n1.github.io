@@ -85,4 +85,3 @@ gmt surface hawaii_5x5.xyg -R198/208/18/25 -I5m -Ghawaii_grd.nc -T0.25 -C0.1 -Vl
 <p> Smith, W. H. F, and P. Wessel, 1990, Gridding with continuous curvature splines in tension, <i>Geophysics</i>, 55, 293-305.</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

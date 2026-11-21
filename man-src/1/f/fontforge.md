@@ -151,4 +151,3 @@ description: "fontforge – create and modify PostScript, TrueType and SVG fonts
 <dt>
 </dt><dd> <a rel="nofollow" href="http://fontforge.sourceforge.net/#known-bugs">http://fontforge.sourceforge.net/#known-bugs</a> for a current list. </dd>
 </dl>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "gclose – This tool terminates an application"
 <p> Work on <code>gclose</code> started in November 2001.</p>
 <h2>AUTHORS</h2>
 <p> gclose was written by Gregory Casamento &lt;greg_casamento [at] yahoo.com&gt; This man page was written by Dennis Leeuw &lt;dleeuw [at] made-it.com&gt;. </p>
-<h2>Index</h2>

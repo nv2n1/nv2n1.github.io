@@ -38,4 +38,3 @@ description: "openct-tool – OpenCT smart card utility"
 <dt><code>read</code></dt>
 <dd> dump memory of synchronous card </dd>
 </dl>
-<h2>Index</h2>

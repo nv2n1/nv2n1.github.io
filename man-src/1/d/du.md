@@ -93,4 +93,3 @@ description: "du – estimate file space usage"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/du">https://www.gnu.org/software/coreutils/du</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) du invocation&#8217; </p>
-<h2>Index</h2>

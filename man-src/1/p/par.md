@@ -59,4 +59,3 @@ epoch and N is the par process number ([0..]).
 </pre>
 <h2>HISTORY</h2>
 <p> <code>par</code> was ported from the perl version. </p>
-<h2>Index</h2>

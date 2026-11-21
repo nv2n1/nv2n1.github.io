@@ -37,4 +37,3 @@ description: "Request Flags –"
 <p> Force SSLv3 Flag. Set if you want to force SSLv3 instead of negotiating TLSv1 or SSLv3</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gssapi_gsi from the source code. </p>
-<h2>Index</h2>

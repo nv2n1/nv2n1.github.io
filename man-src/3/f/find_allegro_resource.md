@@ -30,4 +30,3 @@ if (ret == 0) {
 <p> Returns zero on success, and stores a full path to the file (at most size bytes) into the dest buffer. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_allegro_resource_path/">set_allegro_resource_path</a></code>(3) </p>
-<h2>Index</h2>

@@ -67,4 +67,3 @@ gif2png[-bdfghinprsvwO][file.[gif]...]
 <p> web2png(1) </p>
 <h2>AUTHORS</h2>
 <p> Code by Alexander Lehmann &lt;alex [at] hal.rhein-main.de&gt;, 1995. Auto-interlace conversion and tRNS optimization by Greg Roelofs &lt;newt [at] pobox.com&gt;, 1999. Man page, -O, -w, and production packaging by Eric S. Raymond &lt;esr [at] thyrsus.com&gt;, 1999. </p>
-<h2>Index</h2>

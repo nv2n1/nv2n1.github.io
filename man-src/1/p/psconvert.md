@@ -133,4 +133,3 @@ gmt psconvert tile.ps -Tg -W+k+t&quot;my title&quot;+l256/-1 -V
 <p> <code>gmt</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

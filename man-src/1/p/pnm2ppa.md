@@ -92,4 +92,3 @@ description: "pnm2ppa – convert portable anymap (PNM) images to HP’s PPA pri
 <h2>BUGS</h2>
 <p> Faint horizontal lines marking boundaries between print sweeps may be visible. You may get better results when printing images, with the options:<br />
 &nbsp;<code>&nbsp;-p &#8211;uni&nbsp;</code>&nbsp;(this may no longer apply since recent code improvements). </p>
-<h2>Index</h2>

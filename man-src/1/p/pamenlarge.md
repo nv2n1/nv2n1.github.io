@@ -33,4 +33,3 @@ description: "pamenlarge – Enlarge a Netpbm image N times"
 <p> <code><a href="/docs/linux/man/1-pbmreduce/">pbmreduce</a></code>(1) , <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) , <code><a href="/docs/linux/man/1-pamstretch/">pamstretch</a></code>(1) , <code><a href="/docs/linux/man/1-pbmpscale/">pbmpscale</a></code>(1) , <code><a href="/docs/linux/man/1-pnmsmooth/">pnmsmooth</a></code>(1) , <code>pnm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989 by Jef Poskanzer. </p>
-<h2>Index</h2>

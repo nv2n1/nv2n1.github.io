@@ -163,4 +163,3 @@ typedef struct {
 <p> GetData&#8217;s parser assumes it is running on an ASCII-compatible platform. Format file parsing will fail gloriously on an EBCDIC platform.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5), <code><a href="/docs/linux/man/5-dirfile-encoding/">dirfile-encoding</a></code>(5), <code><a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a></code>(5), <code><a href="/docs/linux/man/3-dirfile_close/">dirfile_close</a></code>(3), <code><a href="/docs/linux/man/3-dirfile_include/">dirfile_include</a></code>(3), <code><a href="/docs/linux/man/3-dirfile_parser_callback/">dirfile_parser_callback</a></code>(3), <code><a href="/docs/linux/man/3-getdata/">getdata</a></code>(3), <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3), <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3) </p>
-<h2>Index</h2>

@@ -15,4 +15,3 @@ description: "unicode_stop – revert keyboard and console from unicode mode"
 <p> The <code>unicode_stop</code> command will more-or-less undo the effect of <code>unicode_start</code>. It puts the keyboard in ASCII (XLATE) mode, and clears the console UTF-8 mode.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kbd_mode/">kbd_mode</a></code>(1), <code><a href="/docs/linux/man/1-unicode_start/">unicode_start</a></code>(1), <code><a href="/docs/linux/man/7-utf-8/">utf-8</a></code>(7), <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8) </p>
-<h2>Index</h2>

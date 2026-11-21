@@ -69,4 +69,3 @@ description: "globus_xio_gsi.h – XIO GSI Driver."
 <p> doxygen varargs filter stuff</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio_gsi_driver from the source code. </p>
-<h2>Index</h2>

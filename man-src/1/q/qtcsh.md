@@ -81,4 +81,3 @@ description: "qtcsh – tcsh with transparent remote execution by use of qrsh"
 <h2>COPYRIGHT</h2>
 <p> <i>Qtcsh</i> is an adaptation of <i>tcsh</i> which is copyrighted by The Regents of the University of California. </p>
 <p> See and the information provided in &lt;xxqs_name_sxx_root&gt;/doc/LICENCES for a statement of further rights and permissions. </p>
-<h2>Index</h2>

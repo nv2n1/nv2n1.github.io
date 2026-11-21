@@ -67,4 +67,3 @@ description: "zshroadmap – informal introduction to the zsh manual The Zsh Man
 <dt><code>zmv</code></dt>
 <dd> a command for renaming files by means of shell patterns. </dd>
 </dl>
-<h2>Index</h2>

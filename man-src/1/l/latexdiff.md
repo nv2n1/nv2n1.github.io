@@ -413,4 +413,3 @@ description: "latexdiff – determine and markup differences between two latex f
 <p> Version 1.3.0 Copyright (C) 2004-2018 Frederik Tilmann </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License Version 3 </p>
 <p> Contributors of fixes and additions: V. Kuhlmann, J. Paisley, N. Becker, T. Doerges, K. Huebner, T. Connors, Sebastian Gouezel and many others. Thanks to the many people who sent in bug reports, feature suggestions, and other feedback. </p>
-<h2>Index</h2>

@@ -46,4 +46,3 @@ description: "dh_systemd_enable – enable/disable systemd unit files"
 <p> <i><a href="/docs/linux/man/1-dh_systemd_start/">dh_systemd_start</a></i>(1), <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7)</p>
 <h2>AUTHORS</h2>
 <p> pkg-systemd-maintainers [at] lists.alioth.debian.org </p>
-<h2>Index</h2>

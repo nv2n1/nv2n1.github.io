@@ -43,4 +43,3 @@ description: "cheese – tool to take pictures and videos from your webcam"
 <h2>AUTHOR</h2>
 <p> <code>cheese</code> was written by Daniel G. Siegel &lt;dgsiegel [at] gnome.org&gt;, Jaap A. Haitsma &lt;jaap [at] haitsma.org&gt;, Filippo Argiolas &lt;fargiolas [at] gnome.org&gt;, Yuvaraj Pandian T &lt;yuvipanda [at] yuvi.in&gt;, Luciana Fujii Pontello &lt;luciana [at] fujii.eti.br&gt; and David King &lt;amigadave [at] amigadave.com&gt;. </p>
 <p> This manual page was written by David King &lt;amigadave [at] amigadave.com&gt;. </p>
-<h2>Index</h2>

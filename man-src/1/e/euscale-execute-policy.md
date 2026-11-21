@@ -45,4 +45,3 @@ description: "euscale-execute-policy â€“ Manually set an auto-scaling instanceâ€
 <dt><code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

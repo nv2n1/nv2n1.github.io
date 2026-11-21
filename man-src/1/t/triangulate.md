@@ -97,4 +97,3 @@ gmt triangulate samples.xyz -M -Q -R-100/-90/30/34 -JM15c | \
 <p> <i>Shewchuk&#8217;s Homepage</i></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

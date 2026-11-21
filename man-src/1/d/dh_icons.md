@@ -23,4 +23,3 @@ description: "dh_icons – Update caches of Freedesktop icons"
 <p> This program is a part of debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Ross Burton &lt;ross [at] burtonini.com&gt; Jordi Mallach &lt;jordi [at] debian.org&gt; Josselin Mouette &lt;joss [at] debian.org&gt; </p>
-<h2>Index</h2>

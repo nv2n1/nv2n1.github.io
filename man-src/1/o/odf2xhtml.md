@@ -36,4 +36,3 @@ odf2xhtml odf-file
 <dl>
 <dt>
 </dt><dd> Original author</dd></dl>
-<h2>Index</h2>

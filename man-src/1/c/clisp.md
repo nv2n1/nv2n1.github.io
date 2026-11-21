@@ -698,4 +698,3 @@ description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.vim.org">http://www.vim.org</a></dd></dl>
 </dl>
-<h2>Index</h2>

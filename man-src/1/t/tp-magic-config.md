@@ -74,4 +74,3 @@ description: "tp-magic-config — Helps creating ‘Magic’ tool plugins for Tu
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tuxpaint/">tuxpaint</a></code>(1), </p>
 <p> And documentation within /usr/[local/]share/doc/tuxpaint/. </p>
-<h2>Index</h2>

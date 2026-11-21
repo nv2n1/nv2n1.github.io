@@ -49,4 +49,3 @@ description: "atomic-storage – Manage container storage."
 <p> <code>&#8211;graph</code> Root of the docker runtime. atomic will search for either /var/lib/docker or /var/lib/docker-latest, if only one exists, atomic will select it as the default. If both exists or you are running docker with a graph storage at a non default location, you need to pass this flag. </p>
 <h2>HISTORY</h2>
 <p> October 2015, Originally compiled by Shishir Mahajan (shishir dot mahajan at redhat dot com) </p>
-<h2>Index</h2>

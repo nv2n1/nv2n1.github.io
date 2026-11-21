@@ -73,4 +73,3 @@ mode = and
 <h2>AUTHOR</h2>
 <p> This manual page was written by Toni Corvera &lt;outlyer [at] gmail.com&gt;. Permission is granted to copy, distribute and/or modify this document under the terms of a BSD 2-clause license.<br />
 &nbsp;<wbr> </p>
-<h2>Index</h2>

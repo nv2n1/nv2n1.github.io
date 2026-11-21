@@ -28,4 +28,3 @@ description: "t1testpage – create a PostScript proof for a Type 1 font"
 <dd> Print the version number and some short non-warranty information and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Eddie Kohler (ekohler [at] gmail.com) </p>
-<h2>Index</h2>

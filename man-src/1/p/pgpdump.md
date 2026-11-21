@@ -34,4 +34,3 @@ description: "pgpdump – A PGP packet visualizer"
 <dt><code>-v</code></dt>
 <dd> Displays the version. </dd>
 </dl>
-<h2>Index</h2>

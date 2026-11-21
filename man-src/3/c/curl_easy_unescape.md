@@ -23,4 +23,3 @@ description: "curl_easy_unescape – URL decodes the given string"
 <p> A pointer to a zero terminated string or NULL if it failed.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/3-curl_easy_escape/">curl_easy_escape</a>(3), <a href="/docs/linux/man/3-curl_free/">curl_free</a>(3), RFC 2396</i> </p>
-<h2>Index</h2>

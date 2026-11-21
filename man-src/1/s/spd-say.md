@@ -75,4 +75,3 @@ description: "spd-say – send text-to-speech output request to speech-dispatche
 <dt>
 </dt><dd> <code>info spd-say</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

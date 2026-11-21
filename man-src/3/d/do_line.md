@@ -22,4 +22,3 @@ do_line(screen, 0, 0, SCREEN_W - 1, SCREEN_H - 2,
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-do_circle/">do_circle</a></code>(3), <code><a href="/docs/linux/man/3-do_ellipse/">do_ellipse</a></code>(3), <code><a href="/docs/linux/man/3-do_arc/">do_arc</a></code>(3), <code><a href="/docs/linux/man/3-line/">line</a></code>(3) </p>
-<h2>Index</h2>

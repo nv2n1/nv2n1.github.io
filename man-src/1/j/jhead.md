@@ -160,4 +160,3 @@ description: "jhead – Digicam JPEG Exif header manipulation tool"
 <p> Send bug reports to mwandel at sentex dot net. </p>
 <h2>COPYING PERMISSIONS</h2>
 <p> Jhead is &#8216;public domain&#8217;. You may freely copy jhead, and reuse part or all of its code in free or proprietary programs. I do however request that you do not post my e-mail address in ways that spam robots can harvest it. </p>
-<h2>Index</h2>

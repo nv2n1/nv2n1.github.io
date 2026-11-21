@@ -156,4 +156,3 @@ description: "html2ps – convert HTML to PostScript"
 <p> <a rel="nofollow" href="http://user.it.uu.se/~jan/html2ps.html">http://user.it.uu.se/~jan/html2ps.html</a></p>
 <h2>AUTHOR</h2>
 <p> Jan Karrman (jan [at] it.uu.se) </p>
-<h2>Index</h2>

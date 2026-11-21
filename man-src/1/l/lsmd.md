@@ -24,4 +24,3 @@ description: "Daemon – lsmd"
 <dd>Please report bugs to &lt;libstoragemgmt-devel [at] lists.fedorahosted.org&gt;</dd>
 <h2>AUTHOR</h2>
 <p> Tony Asleson &lt;tasleson [at] redhat.com&gt; </p>
-<h2>Index</h2>

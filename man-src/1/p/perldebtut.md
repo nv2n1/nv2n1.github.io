@@ -505,4 +505,3 @@ BEGIN
 <p> Ronald J Kimball &lt;rjk [at] linguist.dartmouth.edu&gt; </p>
 <p> Hugo van der Sanden &lt;hv [at] crypt0.demon.co.uk&gt; </p>
 <p> Peter Scott &lt;Peter [at] PSDT.com&gt; </p>
-<h2>Index</h2>

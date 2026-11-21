@@ -83,4 +83,3 @@ description: "monkeysphere – Monkeysphere client user interface"
 <p> Written by: Jameson Rollins &lt;jrollins [at] finestructure.net&gt;, Daniel Kahn Gillmor &lt;dkg [at] fifthhorseman.net&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-monkeysphere-host/">monkeysphere-host</a></code>(8), <code><a href="/docs/linux/man/8-monkeysphere-authentication/">monkeysphere-authentication</a></code>(8), <code><a href="/docs/linux/man/7-monkeysphere/">monkeysphere</a></code>(7), <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1), <code><a href="/docs/linux/man/1-ssh-add/">ssh-add</a></code>(1), <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1) </p>
-<h2>Index</h2>

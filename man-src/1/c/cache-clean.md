@@ -36,4 +36,3 @@ description: "cache-clean – Administration tool for the A-REX cache."
 <p> APACHE LICENSE Version 2.0 </p>
 <h2>AUTHOR</h2>
 <p> ARC software is developed by the NorduGrid Collaboration (<a rel="nofollow" href="http://www.nordugrid.org">http://www.nordugrid.org</a>), please consult the AUTHORS file distributed with ARC. Please report bugs and feature requests to <a rel="nofollow" href="http://bugzilla.nordugrid.org">http://bugzilla.nordugrid.org</a> </p>
-<h2>Index</h2>

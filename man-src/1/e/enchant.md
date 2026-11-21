@@ -46,4 +46,3 @@ description: "Enchant – a spellchecker"
 <p>&nbsp;Dom Lachowicz<br />
 &nbsp;WEB:&nbsp;<a rel="nofollow" href="http://www.abisource.com/enchant/">http://www.abisource.com/enchant/</a><br />
 &nbsp;MAIL: domlachowicz [at] gmail.com </p>
-<h2>Index</h2>

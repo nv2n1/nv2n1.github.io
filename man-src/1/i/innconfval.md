@@ -60,4 +60,3 @@ export MAXFORKS;
 <p> <tt>$Id:</tt> innconfval.pod 9311 2011-08-06 20:18:42Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i>INN::Config</i>(3pm). </p>
-<h2>Index</h2>

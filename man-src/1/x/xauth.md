@@ -93,4 +93,3 @@ description: "xauth – X authority file utility"
 <p> Spaces are currently not allowed in the protocol name. Quoting could be added for the truly perverse.</p>
 <h2>AUTHOR</h2>
 <p> Jim Fulton, MIT X Consortium </p>
-<h2>Index</h2>

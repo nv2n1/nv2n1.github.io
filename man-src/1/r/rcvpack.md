@@ -26,4 +26,3 @@ description: "rcvpack – append message to file"
 <p> <i><a href="/docs/linux/man/1-rcvdist/">rcvdist</a></i>(1), <i><a href="/docs/linux/man/1-rcvstore/">rcvstore</a></i>(1), <i><a href="/docs/linux/man/1-rcvtty/">rcvtty</a></i>(1), <i><a href="/docs/linux/man/1-slocal/">slocal</a></i>(1)</p>
 <h2>BUGS</h2>
 <p> Only two return codes are meaningful, others should be. </p>
-<h2>Index</h2>

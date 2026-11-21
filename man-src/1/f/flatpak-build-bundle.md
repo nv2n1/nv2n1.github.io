@@ -67,4 +67,3 @@ description: "flatpak-build-bundle – Create a single-file bundle from a local 
 <p> <code>$ flatpak build-bundle ~/.local/share/flatpak/repo gnome-calculator.flatpak org.gnome.Calculator stable</code></p>
 <h2>SEE ALSO</h2>
 <p> <code>ostree</code>(1), <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-init/">flatpak-build-init</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build/">flatpak-build</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-finish/">flatpak-build-finish</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-import-bundle/">flatpak-build-import-bundle</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-update-repo/">flatpak-build-update-repo</a></code>(1) </p>
-<h2>Index</h2>

@@ -51,4 +51,3 @@ description: "grid-proxy-destroy – Destroy the default proxy certificate"
 <p> <a href="/docs/linux/man/1-grid-proxy-init/">grid-proxy-init</a>(1), <a href="/docs/linux/man/1-grid-proxy-info/">grid-proxy-info</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
-<h2>Index</h2>

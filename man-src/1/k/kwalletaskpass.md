@@ -28,4 +28,3 @@ description: "kwalletaskpass – kwallet-based pass-phrase dialog for use with O
 <p> <a href="/docs/linux/man/1-kwalletcli/">kwalletcli</a>(1), kwalletcli_getpin1, ssh-add1, ssh-askpass1</p>
 <h2>AUTHORS</h2>
 <p> was written by An mirabilos Aq m@mirbsd.org mostly for tarent solutions GmbH. The idea came from an askpass.C file found somewhere on the &#8216;net, with no author information. Since it was licenced less freely, this is a rewrite from scratch; modular and with more functionality, too. </p>
-<h2>Index</h2>

@@ -52,4 +52,3 @@ npm team edit &lt;scope:team&gt;
 <dd> npm help registry </dd>
 </dl>
 </dl>
-<h2>Index</h2>

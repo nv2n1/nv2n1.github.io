@@ -13,4 +13,3 @@ description: "xerces-j2-version – display version of Xerces2 Java Parser"
 <p> <code>xerces-j2-version</code> </p>
 <h2>DESCRIPTION</h2>
 <p> Xerces-J2-Version prints version of Xerces2 Java Parser to standard output. </p>
-<h2>Index</h2>

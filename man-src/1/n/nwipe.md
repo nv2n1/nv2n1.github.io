@@ -67,4 +67,3 @@ description: "nwipe – securely erase disks"
 <p> Nwipe was released by Andy Beverley &lt;andy [at] andybev.com&gt; as modified version of dwipe from DBAN by Darik Horn &lt;dajhorn-dban [at] vanadac.com&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-shred/">shred</a></code>(1), <code>dwipe</code>(1), <code><a href="/docs/linux/man/1-dd/">dd</a></code>(1), <code><a href="/docs/linux/man/1-dcfldd/">dcfldd</a></code>(1), <code><a href="/docs/linux/man/1-dc3dd/">dc3dd</a></code>(1) </p>
-<h2>Index</h2>

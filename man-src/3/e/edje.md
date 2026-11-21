@@ -808,4 +808,3 @@ action:
 <p> References edje_object_thaw().</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Edje from the source code. </p>
-<h2>Index</h2>

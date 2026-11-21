@@ -458,4 +458,3 @@ description: "lli – manual page for lli 14"
 <dt>=stripmine</dt>
 <dd> &#8211; Strip-mine outer loops for the loop-vectorizer to trigger </dd>
 </dl>
-<h2>Index</h2>

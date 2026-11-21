@@ -233,4 +233,3 @@ DIFR is REAL array,
 <p> Definition at line 312 of file slasd6.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

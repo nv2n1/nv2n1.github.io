@@ -62,4 +62,3 @@ description: "tilestache-seed – seed a single layer in your TileStache configu
 <h2>AUTHOR</h2>
 <p> <code>TileStache</code> was written by Michal Migurski &lt;mike [at] stamen.com&gt;. </p>
 <p> This manual page was written by David Paleino &lt;dapal [at] debian.org&gt;, for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

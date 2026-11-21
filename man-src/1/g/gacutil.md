@@ -53,4 +53,3 @@ assembly_list.txt contents:
 <p> Visit: <a rel="nofollow" href="http://www.go-mono.com">http://www.go-mono.com</a> for details</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mcs/">mcs</a>(1),</code><a href="/docs/linux/man/1-mono/">mono</a>(1) </p>
-<h2>Index</h2>

@@ -49,4 +49,3 @@ Pause container during commit. The default is&nbsp;<wbr><i>true</i>. </p>
 </dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and in June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; July 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; Oct 2014, updated by Daniel, Dao Quang Minh &lt;daniel at nitrous dot io&gt; June 2015, updated by Sally O&#8217;Malley &lt;somalley [at] redhat.com&gt; </p>
-<h2>Index</h2>

@@ -43,4 +43,3 @@ description: "show-installed – show installed RPM packages and descriptions"
 <dt><code>&#8211;ignore-missing-excludes</code></dt>
 <dd> Do not produce exclude lines for packages not in the repository. </dd>
 </dl>
-<h2>Index</h2>

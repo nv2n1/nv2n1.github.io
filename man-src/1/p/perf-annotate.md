@@ -103,4 +103,3 @@ perf annotate[-i&lt;file&gt; | --input = file][symbol_name]
 </dt><dd> Show event group information together</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1) </p>
-<h2>Index</h2>

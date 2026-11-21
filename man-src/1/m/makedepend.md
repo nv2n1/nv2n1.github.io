@@ -77,4 +77,3 @@ $(SRCS)
 <p> Imagine you are parsing two files, say <i>file1.c</i> and <i>file2.c,</i> each includes the file <i>def.h.</i> The list of files that <i>def.h</i> includes might truly be different when <i>def.h</i> is included by <i>file1.c</i> than when it is included by <i>file2.c.</i> But once <code>makedepend</code> arrives at a list of dependencies for a file, it is cast in concrete.</p>
 <h2>AUTHOR</h2>
 <p> Todd Brunhoff, Tektronix, Inc. and MIT Project Athena </p>
-<h2>Index</h2>

@@ -538,4 +538,3 @@ epsv4 off
 <p> Correct execution of many commands depends upon proper behavior by the remote server. </p>
 <p> An error in the treatment of carriage returns in the BSD 4.2 ascii-mode transfer code has been corrected. This correction may result in incorrect transfers of binary files to and from BSD 4.2 servers using the ascii type. Avoid this problem by using the binary image type. </p>
 <p> <code>tnftp</code> assumes that all IPv4 mapped addresses Po IPv6 addresses with a form like <code>::ffff:10.1.1.1</code> Pc indicate IPv4 destinations which can be handled by <code>AF_INET</code> sockets. However, in certain IPv6 network configurations, this assumption is not true. In such an environment, IPv4 mapped addresses must be passed to <code>AF_INET6</code> sockets directly. For example, if your site uses a SIIT translator for IPv6-to-IPv4 translation, <code>tnftp</code> is unable to support your configuration. </p>
-<h2>Index</h2>

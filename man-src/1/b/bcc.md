@@ -177,4 +177,3 @@ description: "bcc – Bruce’s C compiler"
 <h2>BUGS</h2>
 <p> The bcc.c compiler driver source is very untidy. </p>
 <p> The linker, ld86, produces a broken a.out object file if given one input and the <code>-r</code> option this is so it is compatible with pre-dev86 versions. </p>
-<h2>Index</h2>

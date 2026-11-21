@@ -194,4 +194,3 @@ description: "gxemul – an experimental framework for full-system machine emula
 <h2>AUTHOR</h2>
 <p> GXemul is Copyright (C) 2003-2009 Anders Gavare &lt;anders [at] gavare.se&gt; </p>
 <p> See <a rel="nofollow" href="http://gavare.se/gxemul/">http://gavare.se/gxemul/</a> for more information. For other Copyright messages, see the corresponding parts of the source code and/or documentation. </p>
-<h2>Index</h2>

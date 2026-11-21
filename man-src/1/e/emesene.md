@@ -29,4 +29,3 @@ description: "Emesene – MSN Messenger Client."
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Emilio Pozuelo Monfort &lt;pochu [at] ubuntu.com&gt;. </p>
-<h2>Index</h2>

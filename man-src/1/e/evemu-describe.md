@@ -56,4 +56,3 @@ fuser -v /dev/input/eventX
 <dt>
 </dt><dd> mailto:rydberg [at] euromail.se</dd></dl>
 </dl>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ description: "mprof-heap-viewer – GUI viewer for the logging profiler heap sna
 <p> None</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mono/">mono</a>(1) <code>.SH</code>COPYRIGHT Copyright (C) 2008 Novell, Inc (<a rel="nofollow" href="http://www.novell.com)">http://www.novell.com)</a> </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "setreg – Change settings for public key cryptography"
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chktrust/">chktrust</a>(1),</code><a href="/docs/linux/man/1-certmgr/">certmgr</a>(1),<code><a href="/docs/linux/man/1-makecert/">makecert</a>(1)</code> </p>
-<h2>Index</h2>

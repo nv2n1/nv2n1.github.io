@@ -27,4 +27,3 @@ description: "QuantLib::CostFunction – Cost function abstract class for optimi
 <p> Cost function abstract class for optimization problem. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

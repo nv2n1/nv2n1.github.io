@@ -57,4 +57,3 @@ description: "bbox – prints out the bounding box of a rawppm or rawpbm image"
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2003 Roland Bless </p>
-<h2>Index</h2>

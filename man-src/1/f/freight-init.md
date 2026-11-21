@@ -45,4 +45,3 @@ description: "freight-init – initialize a Freight directory"
 <p> Jens Braeuer <i>braeuer.jens [at] googlemail.com</i></p>
 <h2>SEE ALSO</h2>
 <p> Part of <code><a href="/docs/linux/man/1-freight/">freight</a></code>(1). </p>
-<h2>Index</h2>

@@ -115,4 +115,3 @@ description: "iperf3 – perform network throughput tests"
 <p> A list of the contributors to iperf3 can be found within the documentation located at <a rel="nofollow" href="http://software.es.net/iperf/dev.html#authors.">http://software.es.net/iperf/dev.html#authors.</a> </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-libiperf/">libiperf</a>(3), <a rel="nofollow" href="http://software.es.net/iperf">http://software.es.net/iperf</a> </p>
-<h2>Index</h2>

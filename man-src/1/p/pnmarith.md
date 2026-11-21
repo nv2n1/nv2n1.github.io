@@ -20,4 +20,3 @@ description: "pnmarith – perform arithmetic on two portable anymaps"
 <p> <a href="/docs/linux/man/1-pbmmask/">pbmmask</a>(1), <a href="/docs/linux/man/1-pnmpaste/">pnmpaste</a>(1), <a href="/docs/linux/man/1-pnminvert/">pnminvert</a>(1), <a href="/docs/linux/man/5-pnm/">pnm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989, 1991 by Jef Poskanzer. Lightly modified by Marcel Wijkstra &lt;wijkstra [at] fwi.uva.nl&gt; </p>
-<h2>Index</h2>

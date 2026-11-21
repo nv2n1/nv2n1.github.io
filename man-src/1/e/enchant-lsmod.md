@@ -26,4 +26,3 @@ description: "enchant-lsmod – Show information about available spell-checking 
 <p> This manual page was written by Agustin Martin &lt;agmartin [at] debian.org&gt; for the Debian project (but may be used by others). It was generated with some help of help2man.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-enchant/">enchant</a>(1) </p>
-<h2>Index</h2>

@@ -51,4 +51,3 @@ description: "mshowfat – shows FAT clusters allocated to file"
 </dl>
 <p>&nbsp; </p>
 <p> The texinfo doc looks most pretty when printed or as html. Indeed, in the info version certain examples are difficult to read due to the quoting conventions used in info. </p>
-<h2>Index</h2>

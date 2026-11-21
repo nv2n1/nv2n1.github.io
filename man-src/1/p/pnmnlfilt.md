@@ -36,4 +36,3 @@ description: "pnmnlfilt – non-linear filters: smooth, alpha trim mean, optimal
 <p> Integers and tables may overflow if PPM_MAXMAXVAL is greater than 255.</p>
 <h2>AUTHOR</h2>
 <p> Graeme W. Gill graeme [at] labtam.oz.au </p>
-<h2>Index</h2>

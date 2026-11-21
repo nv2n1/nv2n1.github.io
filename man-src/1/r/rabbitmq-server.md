@@ -58,4 +58,3 @@ rabbitmq-server -detached
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.rabbitmq.com/clustering.html#single-machine">http://www.rabbitmq.com/clustering.html#single-machine</a></dd></dl>
 </dl>
-<h2>Index</h2>

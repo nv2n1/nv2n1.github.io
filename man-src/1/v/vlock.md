@@ -90,4 +90,3 @@ description: "vlock – Virtual Console lock program"
 <h2>AUTHORS</h2>
 <p> Michael K. Johnson &lt;<a rel="nofollow" href="http://danlj.org/mkj/">http://danlj.org/mkj/</a>&gt; </p>
 <p> Frank Benkstein &lt;frank-vlock [at] benkstein.net&gt; </p>
-<h2>Index</h2>

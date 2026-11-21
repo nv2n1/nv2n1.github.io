@@ -23,4 +23,3 @@ description: "edhead – Edit header of FITS or IRAF image file"
 <dd> List processing steps</dd></dl>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

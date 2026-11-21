@@ -19,4 +19,3 @@ description: "zarafa-autorespond – Vacation message response script."
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-zarafa-dagent/">zarafa-dagent</a></code>(1) </p>
-<h2>Index</h2>

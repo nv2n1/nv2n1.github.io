@@ -28,4 +28,3 @@ description: "ppmdist – simplistic grayscale assignment for machine generated,
 <p> <a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a>(1), <a href="/docs/linux/man/1-ppmhist/">ppmhist</a>(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1993 by Dan Stromberg. </p>
-<h2>Index</h2>

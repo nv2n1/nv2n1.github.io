@@ -20,4 +20,3 @@ description: "ldb_debug_ops –"
 <p> The function is based on the vfprintf() style of interface, but with the addition of a severity level </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

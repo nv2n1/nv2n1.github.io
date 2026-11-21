@@ -47,4 +47,3 @@ description: "euca-describe-nat-gateways – Describe one or more VPC NAT gatewa
 <dt>tag:KEY</dt>
 <dd> specific tag key/value combination </dd>
 </dl>
-<h2>Index</h2>

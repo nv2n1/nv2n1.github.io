@@ -20,4 +20,3 @@ description: "adime_d_button_proc"
 <p> The button exits the dialog when clicked. </p>
 <p> ADIME_BUTTON_CALLBACK </p>
 <p> If you provide a callback function in the dp2 field, then it will be called whenever the button is clicked. This callback should have the form `int my_callback(DIALOG *d)&#8217;, and its return value will be passed back to the dialog manager. </p>
-<h2>Index</h2>

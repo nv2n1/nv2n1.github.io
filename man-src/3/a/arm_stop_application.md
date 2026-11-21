@@ -38,4 +38,3 @@ description: "arm_stop_application – stop application"
 <p> None.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-arm_discard_transaction/">arm_discard_transaction</a></code>(3), <code><a href="/docs/linux/man/3-arm_start_application/">arm_start_application</a></code>(3), <code><a href="/docs/linux/man/3-arm_start_transaction/">arm_start_transaction</a></code>(3), <code><a href="/docs/linux/man/3-arm_stop_transaction/">arm_stop_transaction</a></code>(3) </p>
-<h2>Index</h2>

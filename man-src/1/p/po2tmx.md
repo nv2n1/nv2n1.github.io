@@ -40,4 +40,3 @@ description: "po2tmx – Convert Gettext PO localization files to a TMX (Transla
 <dt>&#8211;comments</dt>
 <dd> set default comment import: none, source, type or others (default: none) </dd>
 </dl>
-<h2>Index</h2>

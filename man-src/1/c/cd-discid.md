@@ -39,4 +39,3 @@ description: "cd-discid – read CD and get CDDB discid information"
 </dl>
 <h2>AUTHOR</h2>
 <p> Robert Woodcock &lt;rcw [at] debian.org&gt;. Updates by Timur Bish &lt;taem [at] linukz.org&gt;. </p>
-<h2>Index</h2>

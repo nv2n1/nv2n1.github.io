@@ -640,4 +640,3 @@ description: "groffer – display groff files and man pages on X and tty"
 <dt><code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1)</dt>
 <dd> <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1) <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) The decompression programs supported by <code>groffer</code>. </dd>
 </dl>
-<h2>Index</h2>

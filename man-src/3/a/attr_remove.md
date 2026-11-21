@@ -57,4 +57,3 @@ int attr_removef(int fd, const char *attrname, int flags);
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-attr/">attr</a></code>(1), <code><a href="/docs/linux/man/3-attr_get/">attr_get</a></code>(3), <code><a href="/docs/linux/man/3-attr_list/">attr_list</a></code>(3), <code><a href="/docs/linux/man/3-attr_multi/">attr_multi</a></code>(3), and <code><a href="/docs/linux/man/3-attr_set/">attr_set</a></code>(3). </p>
-<h2>Index</h2>

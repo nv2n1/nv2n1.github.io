@@ -38,4 +38,3 @@ description: "po2wordfast – Convert Gettext PO localization files to a Wordfas
 <dt>&#8211;source-language</dt>
 <dd> set source language code (default: en) </dd>
 </dl>
-<h2>Index</h2>

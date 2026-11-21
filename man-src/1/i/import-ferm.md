@@ -18,4 +18,3 @@ description: "import-ferm – import existing firewall rules into ferm"
 <p> If no input file was specified on the command line, <code>import-ferm</code> runs <i>iptables-save</i>.</p>
 <h2>BUGS</h2>
 <p> iptables-save older than 1.3 is unable to write valid saves &#8211; this is not a bug in <code>import-ferm</code>. </p>
-<h2>Index</h2>

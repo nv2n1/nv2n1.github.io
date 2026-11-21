@@ -51,4 +51,3 @@ description: "faad — Process an Advanced Audio Codec stream"
 <p> Matthew W. S. Bell &lt;matthew (at) bells23.org.uk&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-faac/">faac</a></code>(1) </p>
-<h2>Index</h2>

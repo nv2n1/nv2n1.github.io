@@ -18,4 +18,3 @@ description: "exists – Shortcut version of file_exists() for normal files. All
 <p> Returns non-zero if the file exists, or zero if it doesn&#8217;t. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-file_exists/">file_exists</a></code>(3), <code>file_size_ex</code>(3), <code>file_time</code>(3) </p>
-<h2>Index</h2>

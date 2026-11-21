@@ -79,4 +79,3 @@ struct astruct {
 <h2>BUGS</h2>
 <p> Use the Bugzilla link of the project web page or our mailing list. <code><a rel="nofollow" href="http://sourceware.org/systemtap/">http://sourceware.org/systemtap/</a></code>, <code>&lt;systemtap [at] sourceware.org&gt;</code>. </p>
 <p> <i>error::reporting</i>(7stap), <code><a rel="nofollow" href="https://sourceware.org/systemtap/wiki/HowToReportBugs">https://sourceware.org/systemtap/wiki/HowToReportBugs</a></code> </p>
-<h2>Index</h2>

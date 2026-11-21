@@ -368,4 +368,3 @@ vol[option] vol - f[image]-- profile = [profile][plugin]
 <h2>AUTHOR</h2>
 <p> Volatility was written by Volatility Foundation and several contributors. For contact, use the email &lt;info [at] volatilityfoundation.org&gt;. </p>
 <p> This manual page was written by Joao Eriberto Mota Filho &lt;eriberto [at] debian.org&gt; for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

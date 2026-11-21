@@ -39,4 +39,3 @@ description: "rmiregistry – Starts a remote object registry on the specified p
 <dt>&bull;</dt>
 <dd> <code>java.rmi.Naming class description</code> at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/api/java/rmi/Naming.html">http://docs.oracle.com/javase/8/docs/api/java/rmi/Naming.html</a> </dd>
 </dl>
-<h2>Index</h2>

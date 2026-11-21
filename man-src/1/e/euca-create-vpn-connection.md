@@ -51,4 +51,3 @@ description: "euca-create-vpn-connection – Create a VPN connection between a v
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

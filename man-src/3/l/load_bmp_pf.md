@@ -28,4 +28,3 @@ if (!bmp)
 <p> Returns a pointer to the bitmap or NULL on error. Remember that you are responsible for destroying the bitmap when you are finished with it to avoid memory leaks. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-load_bmp/">load_bmp</a></code>(3), <code><a href="/docs/linux/man/3-expackf/">expackf</a></code>(3) </p>
-<h2>Index</h2>

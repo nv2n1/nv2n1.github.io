@@ -57,4 +57,3 @@ Archive:        gonzo                   mydir/gonzo/960702.00.10
 <p> <code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmafm/">pmafm</a></code>(1), <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), <code><a href="/docs/linux/man/1-pmview/">pmview</a></code>(1), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
 <h2>DIAGNOSTICS</h2>
 <p> Some informational messages, warnings and pathological conditions are reported on standard error. </p>
-<h2>Index</h2>

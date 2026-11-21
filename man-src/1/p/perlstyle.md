@@ -152,4 +152,3 @@ tr[abc]
 <dt>&bull;</dt>
 <dd> Be nice. </dd>
 </dl>
-<h2>Index</h2>

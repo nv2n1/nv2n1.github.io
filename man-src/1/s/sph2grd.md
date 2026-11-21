@@ -74,4 +74,3 @@ gmt sph2grd EGM96_to_360.txt -GEGM96_to_360.nc -Rg -I1 -V
 <p> <code>gmt</code>, <code>grdfft</code>, <code>grdmath</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

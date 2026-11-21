@@ -40,4 +40,3 @@ description: "dpkg-scansources – create Sources index files"
 <dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb-override/">deb-override</a></code>(5), <code><a href="/docs/linux/man/5-deb-extra-override/">deb-extra-override</a></code>(5), <code><a href="/docs/linux/man/1-dpkg-scanpackages/">dpkg-scanpackages</a></code>(1). </p>
-<h2>Index</h2>

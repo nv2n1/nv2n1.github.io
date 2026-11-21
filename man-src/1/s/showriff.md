@@ -29,4 +29,3 @@ description: "showriff – show structure of RIFF files (wav, avi, …)"
 <p> 1994 UP-Vision Computergrafik<br />
  1998-2000 Gerd Knorr </p>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

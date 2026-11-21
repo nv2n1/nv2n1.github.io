@@ -16,4 +16,3 @@ description: "install_keyboard_hooks – Installs custom keyboard hooks. Allegro
 <p> You should only use this function if you *aren&#8217;t* using the rest of the keyboard handler. It should be called in the place of install_keyboard(), and lets you provide callback routines to detect and read keypresses, which will be used by the main keypressed() and readkey() functions. This can be useful if you want to use Allegro&#8217;s GUI code with a custom keyboard handler, as it provides a way for the GUI to get keyboard input from your own code, bypassing the normal Allegro input system. </p>
 <h2>SEE ALSO</h2>
 <p> <code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-keypressed/">keypressed</a></code>(3), <code><a href="/docs/linux/man/3-readkey/">readkey</a></code>(3) </p>
-<h2>Index</h2>

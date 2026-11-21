@@ -93,4 +93,3 @@ description: "fig2mpdf – creation of multilayer pdf or eps figures from fig fi
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if the option&nbsp;<code>-G</code>&nbsp;is set).  </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-xfig/">xfig</a>(1)</i> <i><a href="/docs/linux/man/1-fig2dev/">fig2dev</a>(1)</i> <i><a href="/docs/linux/man/1-gawk/">gawk</a>(1)</i> <i><a href="/docs/linux/man/1-pdflatex/">pdflatex</a>(1)</i> <i><a href="/docs/linux/man/1-latex/">latex</a>(1)</i> <i><a href="/docs/linux/man/1-dvips/">dvips</a>(1)</i> </p>
-<h2>Index</h2>

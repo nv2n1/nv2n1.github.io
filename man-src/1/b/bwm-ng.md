@@ -180,4 +180,3 @@ OUTPUT=plain
 <h2>AUTHORS</h2>
 <p> Volker Gropp &lt;bwmng [at] gropp.org&gt; wrote bwm-ng and is current maintainer.<br />
  For further Authors please refer to AUTHORS file which should come with <code>bwm-ng</code>. </p>
-<h2>Index</h2>

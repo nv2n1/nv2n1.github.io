@@ -247,4 +247,3 @@ the original value before and after the filter is applied.
 <p> Pressing any unmapped key displays a menu, and prompts for input.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-stat/">perf-stat</a></code>(1), <code><a href="/docs/linux/man/1-perf-list/">perf-list</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1) </p>
-<h2>Index</h2>

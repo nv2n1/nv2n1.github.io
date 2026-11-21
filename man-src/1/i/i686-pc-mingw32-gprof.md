@@ -236,4 +236,3 @@ description: "gprof – display call graph profile data"
 <dt>Around line 539:</dt>
 <dd> You can&#8217;t have =items (as at line 545) unless the first thing after the =over is an =item </dd>
 </dl>
-<h2>Index</h2>

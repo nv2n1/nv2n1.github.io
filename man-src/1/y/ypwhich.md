@@ -36,4 +36,3 @@ description: "ypwhich – return name of NIS server or map master"
 <p> <code>domainname</code>(8), <code><a href="/docs/linux/man/5-nicknames/">nicknames</a></code>(5), <code><a href="/docs/linux/man/8-ypbind/">ypbind</a></code>(8), <code><a href="/docs/linux/man/1-ypcat/">ypcat</a></code>(1), <code><a href="/docs/linux/man/1-ypmatch/">ypmatch</a></code>(1), <code><a href="/docs/linux/man/8-yppoll/">yppoll</a></code>(8), <code><a href="/docs/linux/man/8-ypserv/">ypserv</a></code>(8), <code><a href="/docs/linux/man/8-ypset/">ypset</a></code>(8) </p>
 <h2>AUTHOR</h2>
 <p> <code>ypwhich</code> is part of the <code>yp-tools</code> package, which was written by Thorsten Kukuk &lt;kukuk [at] linux-nis.org&gt;. </p>
-<h2>Index</h2>

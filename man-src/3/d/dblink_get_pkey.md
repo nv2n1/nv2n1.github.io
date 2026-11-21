@@ -45,4 +45,3 @@ CREATE TABLE
 position | colname-- -- -- -- --+-- -- -- -- -1 | f1 2 | f2 3 | f3(3 rows)
 </code></pre>
 </dd></dl>
-<h2>Index</h2>

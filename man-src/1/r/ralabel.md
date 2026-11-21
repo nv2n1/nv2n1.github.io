@@ -33,4 +33,3 @@ description: "ralabel – inserts fixed form or free form metadata labels into a
 <pre>
 Carter Bullard (carter [at] qosient.com).
 </pre>
-<h2>Index</h2>

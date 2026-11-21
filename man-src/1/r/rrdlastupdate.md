@@ -29,4 +29,3 @@ description: "rrdlastupdate – Return the most recent update to an RRD"
 <dd> If this environment variable is set it will have the same effect as specifying the <tt>&quot;--daemon&quot;</tt> option on the command line. If both are present, the command line argument takes precedence.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Andy Riebs &lt;andy.riebs [at] hp.com&gt; </p>
-<h2>Index</h2>

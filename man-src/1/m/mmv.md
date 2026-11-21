@@ -108,4 +108,3 @@ description: "mmv – move/copy/append/link multiple files by wildcard patterns"
 <h2>BUGS</h2>
 <p> If the search pattern is not quoted, the shell expands the wildcards. <i>Mmv</i> then (usually) gives some error message, but can not determine that the lack of quotes is the cause. </p>
 <p> To avoid difficulties in semantics and error checking, <i>mmv</i> refuses to move or create directories. </p>
-<h2>Index</h2>

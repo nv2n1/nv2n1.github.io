@@ -70,4 +70,3 @@ description: "pmempool-create – Create Persistent Memory Pool of specified typ
 <p> <code>libpmemblk(3) libpmemlog(3) <a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code></p>
 <h2>PMEMPOOL</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code> suite. </p>
-<h2>Index</h2>

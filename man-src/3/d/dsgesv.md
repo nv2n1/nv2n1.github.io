@@ -157,4 +157,3 @@ row i of the matrix was interchanged with row IPIV(i).Corresponds either to the 
 <p> Definition at line 195 of file dsgesv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

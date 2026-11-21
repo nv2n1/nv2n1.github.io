@@ -31,4 +31,3 @@ description: "pnmconvol – general MxN convolution on a portable anymap"
 <h2>AUTHORS</h2>
 <p> Copyright (C) 1989, 1991 by Jef Poskanzer.<br />
  Modified 26 November 1994 by Mike Burns, burns [at] chem.psu.edu </p>
-<h2>Index</h2>

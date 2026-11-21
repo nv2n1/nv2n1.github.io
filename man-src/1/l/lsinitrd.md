@@ -39,4 +39,3 @@ description: "lsinitrd – tool to show the contents of an initramfs image"
 <p> Nikoli</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-dracut/">dracut</a></code>(8) </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "pcp-numastat – report on NUMA memory allocation"
 <p> <code>pcp-numastat</code> is inspired by the <code>numastat</code>(1) command and produces exactly the same output.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1), <code>numastat</code>(1) and <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). </p>
-<h2>Index</h2>

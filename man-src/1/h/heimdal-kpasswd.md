@@ -20,4 +20,3 @@ description: "kpasswd – Kerberos 5 password changing program"
 <p> If the password quality check fails or some other error occurs, an explanation is printed.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-kpasswdd/">kpasswdd</a>(8) </p>
-<h2>Index</h2>

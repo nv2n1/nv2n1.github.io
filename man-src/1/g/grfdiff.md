@@ -36,4 +36,3 @@ description: "GRFDiff – A tool to create a binary GRF diff from to GRFs."
 <p> This manual page was written by Remko Bijker.</p>
 <h2>COPYRIGHT</h2>
 <p> GRFDiff is Copyright (C) 2003 by Josef Drexler &lt;jdrexler [at] uwo.ca&gt; </p>
-<h2>Index</h2>

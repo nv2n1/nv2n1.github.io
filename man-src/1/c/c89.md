@@ -20,4 +20,3 @@ description: "c89 – ANSI (1989) C compiler"
 <p> Appeared in NetBSD 1.4 .</p>
 <h2>BUGS</h2>
 <p> Since <code>c89</code> is a shell wrapper script to <code>cc ,</code> compile errors are prefixed by &quot;cc:&quot;. </p>
-<h2>Index</h2>

@@ -81,4 +81,3 @@ icecast2-- - 13 *[{icecast2}]
 <p> Some character sets may be incompatible with the VT100 characters.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/1-top/">top</a></code>(1), <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5). </p>
-<h2>Index</h2>

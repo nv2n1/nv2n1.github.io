@@ -57,4 +57,3 @@ description: "translit – transliterate text between various writing systems"
 <p> Copyright (C) 2009-2016 Lingua-Systems Software GmbH </p>
 <p> Copyright (C) 2016 Netzum Sorglos, Lingua-Systems Software GmbH </p>
 <p> This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
-<h2>Index</h2>

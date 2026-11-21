@@ -35,4 +35,3 @@ shell&gt; <code>mysqlbug</code>
 <p> For more information, please refer to the MariaDB Knowledge Base, available online at <a rel="nofollow" href="https://mariadb.com/kb/">https://mariadb.com/kb/</a></p>
 <h2>AUTHOR</h2>
 <p> MariaDB Foundation (<a rel="nofollow" href="http://www.mariadb.org/">http://www.mariadb.org/</a>). </p>
-<h2>Index</h2>

@@ -63,4 +63,3 @@ description: "pdftopng – Portable Document Format (PDF) to Portable Network Gr
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xpdf/">xpdf</a></code>(1), <code><a href="/docs/linux/man/1-pdftops/">pdftops</a></code>(1), <code><a href="/docs/linux/man/1-pdftotext/">pdftotext</a></code>(1), <code><a href="/docs/linux/man/1-pdftohtml/">pdftohtml</a></code>(1), <code><a href="/docs/linux/man/1-pdfinfo/">pdfinfo</a></code>(1), <code><a href="/docs/linux/man/1-pdffonts/">pdffonts</a></code>(1), <code><a href="/docs/linux/man/1-pdfdetach/">pdfdetach</a></code>(1), <code><a href="/docs/linux/man/1-pdftoppm/">pdftoppm</a></code>(1), <code><a href="/docs/linux/man/1-pdfimages/">pdfimages</a></code>(1), <code><a href="/docs/linux/man/5-xpdfrc/">xpdfrc</a></code>(5)<br />
  <code><a rel="nofollow" href="http://www.foolabs.com/xpdf/">http://www.foolabs.com/xpdf/</a></code> </p>
-<h2>Index</h2>

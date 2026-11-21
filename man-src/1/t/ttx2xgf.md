@@ -25,4 +25,3 @@ description: "ttx2xgf – extracts instructions from a TTX file and creates an X
 <h2>AUTHOR</h2>
 <p> <code>ttx2xgf</code> was written by Peter Baker &lt;psb6m [at] virginia.edu&gt;. </p>
 <p> This manual page was written by Peter Baker </p>
-<h2>Index</h2>

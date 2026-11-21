@@ -20,4 +20,3 @@ description: "extconv – convert a TeX document in either Big 5+ or GBK encodin
  the <code>CJK</code> documentation files.</p>
 <h2>AUTHOR</h2>
 <p> Werner Lemberg </p>
-<h2>Index</h2>

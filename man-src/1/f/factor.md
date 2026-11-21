@@ -30,4 +30,3 @@ description: "factor – factor numbers"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/factor">https://www.gnu.org/software/coreutils/factor</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) factor invocation&#8217; </p>
-<h2>Index</h2>

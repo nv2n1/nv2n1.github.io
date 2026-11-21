@@ -21,4 +21,3 @@ description: "alsaunmute – a simple script to initialize ALSA sound devices"
 <p> None known. </p>
 <h2>AUTHOR</h2>
 <p> <code>alsaunmute</code> is by Jaroslav Kysela &lt;perex [at] perex.cz&gt; </p>
-<h2>Index</h2>

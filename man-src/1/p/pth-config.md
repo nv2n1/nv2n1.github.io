@@ -68,4 +68,3 @@ description: "pth-config – Pth library build utility"
  rse [at] engelschall.com
  <a rel="nofollow" href="http://www.engelschall.com">www.engelschall.com</a>
 </pre>
-<h2>Index</h2>

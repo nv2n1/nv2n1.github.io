@@ -17,4 +17,3 @@ description: "sensible-pager – sensible paging"
 <p> Documentation of the PAGER variable in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7)</p>
 <h2>STANDARD</h2>
 <p> Documentation of behavior of sensible-utils under a debian system is available under section 11.4 of debian-policy usually installed under /usr/share/doc/debian-policy (you might need to install debian-policy) </p>
-<h2>Index</h2>

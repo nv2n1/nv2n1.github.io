@@ -110,4 +110,3 @@ description: "pprof – manual page for pprof (part of gperftools)"
 <dt>
 </dt><dd> <code>/usr/share/gperftools/cpu_profiler.html</code><br />
  <code>/usr/local/share/gperftools/cpu_profiler.html</code></dd></dl>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "tv_to_text – Convert XMLTV listings to text."
 <p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Ed Avis, ed [at] membled.com </p>
-<h2>Index</h2>

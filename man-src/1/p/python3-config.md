@@ -58,4 +58,3 @@ description: "python-config – output build options for python C/C++ extensions
  /usr/share/doc/python/faq/extending.html </p>
 <h2>AUTHORS</h2>
 <p> This manual page was written by Johann Felix Soden &lt;johfel [at] gmx.de&gt; for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

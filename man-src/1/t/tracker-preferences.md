@@ -16,4 +16,3 @@ description: "tracker-preferences – Preferences editor for tracker-miner-fs"
 <p> Importantly, the <code>TRACKER_USE_CONFIG_FILES</code> environment variable which can be used by the <code>tracker-miner-fs</code> and other binaries for switching from GSettings to config files is not supported by <code>tracker-preferences.</code> This means that configuration changes (usually stored in <i>$HOME/.config/tracker</i>) must be manually updated when not using GSettings.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-miner-fs/">tracker-miner-fs</a></code>(1), <code><a href="/docs/linux/man/1-tracker-control/">tracker-control</a></code>(1), <code><a href="/docs/linux/man/1-tracker-store/">tracker-store</a></code>(1). </p>
-<h2>Index</h2>

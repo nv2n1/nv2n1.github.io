@@ -69,4 +69,3 @@ npm run test -- --grep=&quot;pattern&quot;
 <dd> npm help config </dd>
 </dl>
 </dl>
-<h2>Index</h2>

@@ -55,4 +55,3 @@ url: "/docs/linux/man/8-sg_referrals/"
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-sg_vpd/">sg_vpd</a>(8)</code> </p>
-<h2>Index</h2>

@@ -49,4 +49,3 @@ description: "grive – Google Drive client for GNU/Linux"
 <p> The full list of contributors may be found here <i><a rel="nofollow" href="http://yourcmc.ru/wiki/Grive2#Full_list_of_contributors">http://yourcmc.ru/wiki/Grive2#Full_list_of_contributors</a></i> </p>
 <h2>REPORT BUGS</h2>
 <p> <i><a rel="nofollow" href="https://github.com/vitalif/grive2/issues">https://github.com/vitalif/grive2/issues</a></i> <i><a rel="nofollow" href="https://groups.google.com/forum/?fromgroups#!forum/grive-devel">https://groups.google.com/forum/?fromgroups#!forum/grive-devel</a></i> </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "mimedefang-util — Utility script for message structure debugging
 <h2>LICENSE AND COPYRIGHT</h2>
 <p> Copyright (C) 2010 Roaring Penguin Software Inc. </p>
 <p> This program may be distributed under the terms of the <font SIZE="-1">GNU</font> General Public License, Version 2, or (at your option) any later version. </p>
-<h2>Index</h2>

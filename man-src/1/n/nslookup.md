@@ -99,4 +99,3 @@ nslookup -query=hinfo  -timeout=10
 <p> Internet Systems Consortium</p>
 <h2>COPYRIGHT</h2>
 <p> 2023, Internet Systems Consortium </p>
-<h2>Index</h2>

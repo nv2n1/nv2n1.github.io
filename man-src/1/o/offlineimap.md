@@ -363,4 +363,3 @@ John Goerzen, Sebastian Spaetz, Eygene Ryabinkin, Nicolas Sebrecht.
 <a rel="nofollow" href="http://www.offlineimap.org">http://www.offlineimap.org</a>
 </pre>
 </dd></dl>
-<h2>Index</h2>

@@ -43,4 +43,3 @@ description: "ifuse – Mount directories of an iOS device locally using fuse."
 <p> Nikias Bassen </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-fusermount/">fusermount</a>(1) </p>
-<h2>Index</h2>

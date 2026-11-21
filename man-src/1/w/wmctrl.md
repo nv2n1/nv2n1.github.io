@@ -129,4 +129,3 @@ description: "wmctrl – interact with a EWMH/NetWM compatible X Window Manager.
 <h2>AUTHOR</h2>
 <p> wmctrl was written by Tomas Styblo &lt;tripie [at] cpan.org&gt;. </p>
 <p> This manual page was written by Shyamal Prasad &lt;shyamal [at] member.fsf.org&gt; for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

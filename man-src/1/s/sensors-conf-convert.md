@@ -29,4 +29,3 @@ description: "sensors-conf-convert – convert sensors.conf from lm-sensors 2 fo
 <p> <a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Jean Delvare. </p>
-<h2>Index</h2>

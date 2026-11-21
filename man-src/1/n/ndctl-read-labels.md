@@ -46,4 +46,3 @@ ndctl read - labels&lt;nmem0&gt;[&lt;nmem1&gt;..&lt;nmemN&gt;][&lt;options&gt;]
 <dt>
 </dt><dd> <a rel="nofollow" href="http://pmem.io/documents/NVDIMM_Namespace_Spec.pdf">http://pmem.io/documents/NVDIMM_Namespace_Spec.pdf</a></dd></dl>
 </dl>
-<h2>Index</h2>

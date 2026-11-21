@@ -17,4 +17,3 @@ description: "ybmtopbm – convert a Bennet Yee \"face\" file into a portable bi
 <p> <a href="/docs/linux/man/1-pbmtoybm/">pbmtoybm</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5), face(1), face(5), xbm(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Jamie Zawinski and Jef Poskanzer. </p>
-<h2>Index</h2>

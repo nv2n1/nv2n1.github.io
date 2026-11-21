@@ -23,4 +23,3 @@ description: "im-launch – launch input method and execute session program"
 <p> <code><a href="/docs/linux/man/8-im-config/">im-config</a>(8),</code> <code>/usr/share/doc/im-config/README.Debian.gz</code></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Aron Xu &lt;aron [at] debian.org&gt;, and Osamu Aoki &lt;osamu [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

@@ -64,4 +64,3 @@ description: "axi-cache – query the Apt Xapian Index"
 <dt><code>&#8211;all</code></dt>
 <dd> disable pagination and always show all results. Note that search results are normally sorted by relevance, so you may find meaningless results at the end of the output </dd>
 </dl>
-<h2>Index</h2>

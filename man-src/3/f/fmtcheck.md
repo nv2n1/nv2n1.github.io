@@ -32,4 +32,3 @@ printf(fmtcheck(user_format, standard_format), arg1, arg2);
 <p> <a href="/docs/linux/man/3-printf/">printf</a>(3)</p>
 <h2>BUGS</h2>
 <p> The Fn fmtcheck function does not understand all of the conversions that <a href="/docs/linux/man/3-printf/">printf</a>(3) does. </p>
-<h2>Index</h2>

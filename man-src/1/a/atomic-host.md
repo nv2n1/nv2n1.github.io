@@ -34,4 +34,3 @@ man ostree
 </dd></dl>
 <h2>HISTORY</h2>
 <p> January 2015, Originally compiled by Daniel Walsh (dwalsh at redhat dot com) </p>
-<h2>Index</h2>

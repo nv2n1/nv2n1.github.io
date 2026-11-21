@@ -85,4 +85,3 @@ radrecv: Packet from host 192.0.2.42 code=2, id=140, length=54
 <p> <a href="/docs/linux/man/8-radiusd/">radiusd</a>(8),</p>
 <h2>AUTHORS</h2>
 <p> Miquel van Smoorenburg, miquels [at] cistron.nl. Alan DeKok &lt;aland [at] freeradius.org&gt; </p>
-<h2>Index</h2>

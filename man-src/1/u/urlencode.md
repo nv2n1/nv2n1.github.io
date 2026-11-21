@@ -27,4 +27,3 @@ description: "urlencode – convert strings to or from URL-encoded form"
 <h2>AUTHOR</h2>
 <p> Andrew McNab &lt;Andrew.McNab [at] manchester.ac.uk&gt; </p>
 <p> urlencode is part of GridSite: <a rel="nofollow" href="http://www.gridsite.org/">http://www.gridsite.org/</a> </p>
-<h2>Index</h2>

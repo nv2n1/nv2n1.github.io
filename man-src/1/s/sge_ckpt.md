@@ -29,4 +29,3 @@ description: "Grid Engine Checkpointing – the Grid Engine checkpointing mechan
 <p> <i>Grid Engine Installation and Administration Guide,</i> <i>Grid Engine User&#8217;s Guide</i></p>
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
-<h2>Index</h2>

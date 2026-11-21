@@ -123,4 +123,3 @@ perf record -e r1a8 ...
 <dt>
 </dt><dd> <a rel="nofollow" href="http://support.amd.com/us/Processor_TechDocs/24593_APM_v2.pdf">http://support.amd.com/us/Processor_TechDocs/24593_APM_v2.pdf</a></dd></dl>
 </dl>
-<h2>Index</h2>

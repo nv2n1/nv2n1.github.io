@@ -120,4 +120,3 @@ description: "ogonkify – international support for PostScript"
 <p> Larry Wall wrote <code>perl</code>, the syntax and semantics of which are a never ending source of puzzlement. </p>
 <h2>AUTHOR</h2>
 <p> Juliusz Chroboczek &lt;jec [at] dcs.ed.ac.uk&gt;, with help from loads of people. </p>
-<h2>Index</h2>

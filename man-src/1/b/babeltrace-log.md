@@ -37,4 +37,3 @@ babeltrace-log [OPTIONS] OUTPUT
 <p> Thanks to the Linux Foundation and Ericsson for funding part of this work. Thanks to the Multicore Association Tool Infrastructure Working Group for their active role in the creation of the Common Trace Format. </p>
 <h2>AUTHORS</h2>
 <p> Babeltrace was originally written by Mathieu Desnoyers, with additional contributions from various other people. It is currently maintained by Mathieu Desnoyers &lt;mathieu.desnoyers [at] efficios.com&gt;. </p>
-<h2>Index</h2>

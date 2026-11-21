@@ -301,4 +301,3 @@ g3 = s7;
 <p> There can be no more than 99 titlesets, no more than 99 menus in the VMG or a titleset, and no more than 99 titles in a titleset. </p>
 <p> Each title may be made up of up to 999 PGCs. Each PGC may consist of up to 255 programs. The &lt;pre&gt; and &lt;post&gt; sections of a PGC put together can contain no more than 128 VM instructions. </p>
 <p> Since there is only one VOB file (VIDEO_TS.VOB) in the VMG, the total amount of video in the VMG menus must fit into 1073709056 bytes (524272 sectors of 2kiB each). In each titleset, all the menu video must fit in the first VOB (VTS_nn_0.VOB), so is limited to the same amount. &lt;marc.leeman [at] gmail.com&gt; MarcLeeman2003Marc Leeman </p>
-<h2>Index</h2>

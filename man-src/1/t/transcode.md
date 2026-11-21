@@ -1082,4 +1082,3 @@ bitrate * 1000 bpp = -- -- -- -- -- -- -- -- --width * height * fps
 <dt>
 </dt><dd> a</dd></dl>
 </dl>
-<h2>Index</h2>

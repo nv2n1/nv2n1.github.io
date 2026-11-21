@@ -18,4 +18,3 @@ description: "dev-ram-control – checks features of DVD-RAM discs"
 <p> The manpage for <code><a href="/docs/linux/man/1-growisofs/">growisofs</a></code>(1), <code>dvd+rw-format</code>(1), <code>dvd+rw-booktype</code>(1). </p>
 <h2>AUTHOR</h2>
 <p> <code>dvd+rw-mediainfo</code> was written by Andy Polyakov &lt;appro [at] fy.chalmers.se&gt;. This manual page was written by Rog&eacute;rio Brito &lt;rbrito [at] ime.usp.br&gt; for the Debian project, but it may be used by others. </p>
-<h2>Index</h2>

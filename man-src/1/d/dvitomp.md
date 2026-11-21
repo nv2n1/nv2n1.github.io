@@ -22,4 +22,3 @@ description: "dvitomp – convert a TeX DVI file to a MetaPost MPXFILE"
 <dd> output version information and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> Email bug reports to metapost [at] tug.org. </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "pydoc3.10 – the Python documentation tool"
 <p> <code>pydoc3.10 -w</code> <i>name [&#8230;]</i> Write out the HTML documentation for a module to a file in the current directory. If <i>name</i> contains a &#8216;/&#8217;, it is treated as a filename; if it names a directory, documentation is written for all the contents.</p>
 <h2>AUTHOR</h2>
 <p> Moshe Zadka, based on &quot;pydoc &#8211;help&quot; </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "vcut – cuts Ogg Vorbis files"
 <dt>Manpage Author:</dt>
 <dd> Christoper L Cheney &lt;ccheney [at] debian.org&gt; </dd>
 </dl>
-<h2>Index</h2>

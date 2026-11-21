@@ -103,4 +103,3 @@ description: "perlbug – how to submit bug reports on Perl"
 <p> <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code><a href="/docs/linux/man/1-perldebug/">perldebug</a></code>(1), <code><a href="/docs/linux/man/1-perldiag/">perldiag</a></code>(1), <code><a href="/docs/linux/man/1-perlport/">perlport</a></code>(1), <code><a href="/docs/linux/man/1-perltrap/">perltrap</a></code>(1), <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1), <code><a href="/docs/linux/man/1-patch/">patch</a></code>(1), <code>dbx</code>(1), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1)</p>
 <h2>BUGS</h2>
 <p> None known (guess what must have been used to report them?) </p>
-<h2>Index</h2>

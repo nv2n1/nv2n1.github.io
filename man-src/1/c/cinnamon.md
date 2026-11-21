@@ -40,4 +40,3 @@ description: "cinnamon – desktop"
 <p> Before sending a bug report, please verify that you have the latest version of cinnamon. Many bugs (major and minor) are fixed at each release, and if yours is out of date, the problem may already have been solved. </p>
 <h2>ADDITIONAL INFORMATION</h2>
 <p> For further information, visit the website <i><a rel="nofollow" href="http://cinnamon.linuxmint.com">http://cinnamon.linuxmint.com</a></i> </p>
-<h2>Index</h2>

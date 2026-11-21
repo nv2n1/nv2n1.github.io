@@ -32,4 +32,3 @@ description: "setup – A text mode system configuration tool"
   /bin/ls --color; /bin/sleep 5|Give this help list|libc
 </pre>
 <p> to use one of libc&#8217;s (not meaningful here, but) translatable messages. </p>
-<h2>Index</h2>

@@ -31,4 +31,3 @@ description: "libssh2_channel_open_ex – establish a generic session channel"
 <p> <i>LIBSSH2_ERROR_EAGAIN</i> &#8211; Marked for non-blocking I/O but the call would block. </p>
 <h2>SEE ALSO</h2>
 <p> Add related functions </p>
-<h2>Index</h2>

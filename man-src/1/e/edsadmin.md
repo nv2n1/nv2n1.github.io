@@ -21,4 +21,3 @@ description: "EDSAdmin – the Erudite Directory Service Admin tool"
 <p> If the python-dns package and/or the mdnsresponder and ctypes packages are installed, EDSAdmin will use them to automatically detect LDAP servers on the network.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Mark Roach &lt;mrroach [at] okmaybe.com&gt;. </p>
-<h2>Index</h2>

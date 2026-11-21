@@ -112,4 +112,3 @@ description: "monodis – CIL image content dumper and disassembler."
 <p> monodis was written by Miguel de Icaza, Paolo Molaro and Dietmar Maurer.</p>
 <h2>SEE ALSO</h2>
 <p> <code>pedump(1)</code> </p>
-<h2>Index</h2>

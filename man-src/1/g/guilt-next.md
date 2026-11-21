@@ -32,4 +32,3 @@ description: "guilt-next – Output the name of next patch to be pushed"
 <dt>
 </dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
-<h2>Index</h2>

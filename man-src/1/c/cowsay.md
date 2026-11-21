@@ -36,4 +36,3 @@ description: "cowsay/cowthink – configurable speaking/thinking cow (and a bit 
 <p> Tony Monroe (tony [at] nog.net), with suggestions from Shannon Appel (appel [at] CSUA.Berkeley.EDU) and contributions from Anthony Polito (aspolito [at] CSUA.Berkeley.EDU).</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-perl/">perl</a>(1), <a href="/docs/linux/man/1-wall/">wall</a>(1), nwrite(1), figlet(6) </p>
-<h2>Index</h2>

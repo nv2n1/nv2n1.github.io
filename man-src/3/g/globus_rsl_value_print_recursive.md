@@ -74,4 +74,3 @@ description: "RSL Display –"
 </dt><dd> Upon success, the <code>globus_rsl_value_unparse()</code> function returns a new string which represents the RSL value ndoe passed as the <i>rsl_value</i> parameter. If an error occurs, <code>globus_rsl_value_unparse()</code> returns NULL.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_rsl from the source code. </p>
-<h2>Index</h2>

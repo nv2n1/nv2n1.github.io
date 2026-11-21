@@ -44,4 +44,3 @@ description: "Zile – Zile Is Lossy Emacs"
 <p> Copyright &#169; 2014 Free Software Foundation, Inc. GNU Zile comes with ABSOLUTELY NO WARRANTY. You may redistribute copies of Zile under the terms of the GNU General Public License. For more information about these matters, see the file named COPYING.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-emacs/">emacs</a></code>(1) </p>
-<h2>Index</h2>

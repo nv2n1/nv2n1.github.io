@@ -21,4 +21,3 @@ description: "grab_partial_image – grab a partial image using libdc1394"
 <p> The filename should be a commandline argument</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Peter De Schrijver &lt;p2 [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others) and added to upstream by Peter Antoniac &lt;theseinfeld [at] users.sf.net&gt;. </p>
-<h2>Index</h2>

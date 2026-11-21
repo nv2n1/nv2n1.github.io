@@ -93,4 +93,3 @@ description: "QuantLib::OneFactorCopula – Abstract base class for one-factor c
 <p> [ int_{-infty}^infty,dm,ho(m), f (n and unit variance) of the distributions of M, Z, and Y by numerically integrating the respective density. <code>Parameter</code> tolerance is the maximum tolerable absolute error. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

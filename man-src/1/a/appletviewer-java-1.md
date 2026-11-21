@@ -27,4 +27,3 @@ description: "appletviewer – The Java Applet Viewer."
 <dd> Passes through the string <i>javaoption</i> as a single argument to the Java interpreter which runs the appletviewer. The argument should not contain spaces. Multiple argument words must all begin with the prefix <code>-J</code>, which is stripped. This is useful for adjusting the compiler&#8217;s execution environment or memory usage.</dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ Signal to send to the container </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com)<br />
 &nbsp;<wbr>based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "audit_set_backlog_limit – Set the audit backlog limit"
 <p> <code><a href="/docs/linux/man/3-audit_set_failure/">audit_set_failure</a></code>(3), <code><a href="/docs/linux/man/3-audit_open/">audit_open</a></code>(3), <code><a href="/docs/linux/man/8-auditd/">auditd</a></code>(8), <code><a href="/docs/linux/man/8-auditctl/">auditctl</a></code>(8). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

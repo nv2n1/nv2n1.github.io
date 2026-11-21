@@ -36,4 +36,3 @@ description: "icepatch2calc – IcePatch2 tool to compress files and calculate c
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icepatch2client/">icepatch2client</a></code>(1), <code><a href="/docs/linux/man/1-icepatch2server/">icepatch2server</a></code>(1) </p>
-<h2>Index</h2>

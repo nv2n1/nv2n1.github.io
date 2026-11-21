@@ -117,4 +117,3 @@ description: "drill – get (debug) information out of DNS(SEC)"
 <p> Copyright (c) 2004-2008 NLnet Labs. Licensed under the revised BSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dig/">dig</a></code>(1), <i>RFC403{3,4,5}</i>. </p>
-<h2>Index</h2>

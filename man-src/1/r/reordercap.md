@@ -30,4 +30,3 @@ description: "reordercap – Reorder input file by timestamp into output file"
 <pre><code>
 Original Author-- -- -- -- -- -- --Martin Mathieson&lt;martin.r.mathieson[AT] googlemail.com&gt;
 </code></pre>
-<h2>Index</h2>

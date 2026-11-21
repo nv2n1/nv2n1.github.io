@@ -202,4 +202,3 @@ exit(0);
 <p> If you find any, please send a bug report (preferrably together with a patch) to the maintainer with a detailed description on how to reproduce the bug.</p>
 <h2>AUTHORS</h2>
 <p> Sascha Schumann &lt;sascha [at] schumann.cx&gt; Nikos Mavroyanopoulos &lt;nmav [at] hellug.gr&gt; </p>
-<h2>Index</h2>

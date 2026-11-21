@@ -82,4 +82,3 @@ fbrun -fg black -bg white -text xterm -title &quot;run xterm&quot;
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

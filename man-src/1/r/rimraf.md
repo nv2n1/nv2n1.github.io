@@ -20,4 +20,3 @@ description: "rimraf – Fast deep deletion (like rm -rf)"
 <dd> <a href="/docs/linux/man/1-rm/">rm</a>(1) </dd>
 </dl>
 </dl>
-<h2>Index</h2>

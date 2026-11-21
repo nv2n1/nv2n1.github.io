@@ -143,4 +143,3 @@ description: "dh_python3 – calculates Python dependencies, adds maintainer scr
 <dd> <i><a rel="nofollow" href="http://deb.li/dhp3">http://deb.li/dhp3</a></i> &#8211; most recent version of this document</dd></dl>
 <h2>AUTHOR</h2>
 <p> Piotr Ożarowski, 2012-2013 </p>
-<h2>Index</h2>

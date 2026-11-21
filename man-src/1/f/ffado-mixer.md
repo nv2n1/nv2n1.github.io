@@ -18,4 +18,3 @@ description: "ffado-mixer – a graphical front-end for the FFADO mixer DBus con
 <p> Currently <code>ffado-mixer</code> does not have any command line options.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ffado-dbus-server/">ffado-dbus-server</a></code>(1) </p>
-<h2>Index</h2>

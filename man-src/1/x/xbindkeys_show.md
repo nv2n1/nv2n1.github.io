@@ -40,4 +40,3 @@ description: "xbindkeys_show – a program to show the grabbing keys used in xbi
 <code>/usr/include/X11/keysymdef.h</code>
     X11 KeySym definitions.
 </pre>
-<h2>Index</h2>

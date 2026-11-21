@@ -30,4 +30,3 @@ struct iv_popen_request {
 <p> <code>iv_popen_request_close</code> must be called from the same thread that <code>iv_popen_request_submit</code> was called from on this object. </p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_wait</code>(3), <code>execvp</code>(2), <code><a href="/docs/linux/man/3-popen/">popen</a></code>(3) </p>
-<h2>Index</h2>

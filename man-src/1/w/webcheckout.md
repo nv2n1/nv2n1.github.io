@@ -30,4 +30,3 @@ description: "webcheckout – check out repositories referenced on a web page"
 <p> Copyright 2009 Joey Hess &lt;joey [at] kitenet.net&gt; </p>
 <p> Licensed under the <font SIZE="-1">GNU GPL</font> version 2 or higher. </p>
 <p> This program is included in myrepos &lt;<a rel="nofollow" href="http://myrepos.branchable.com/">http://myrepos.branchable.com/</a>&gt; </p>
-<h2>Index</h2>

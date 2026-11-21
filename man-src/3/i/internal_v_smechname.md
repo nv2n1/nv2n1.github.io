@@ -19,4 +19,3 @@ description: "internal_v_smechname – Internal names and mechanism names"
 <dt>&bull;</dt>
 <dd> There is also a special form of the Internal Name (IN), and that is the Mechanism Name (MN). In the mechanism name all the generic information is stripped of and only contain the information for one mechanism. In GSS-API some function return MN and some require MN as input. Each of these function is marked up as such.</dd></dl>
 <p> Describe relationship between import_name, canonicalize_name, export_name and friends. </p>
-<h2>Index</h2>

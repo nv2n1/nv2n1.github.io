@@ -23,4 +23,3 @@ description: "libssh2_channel_receive_window_adjust – adjust the channel windo
 <p> In 1.0 and earlier, this function returns LIBSSH2_ERROR_EAGAIN for non-blocking channels where it would otherwise block. However, that is a negative number and this function only returns an unsigned value and this then leads to a very strange value being returned.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_window_read_ex/">libssh2_channel_window_read_ex</a>(3)</code> </p>
-<h2>Index</h2>

@@ -47,4 +47,3 @@ description: "fslsfonts – list fonts served by X font server"
 <p> Doing &#8220;fslsfonts -l&#8221; can tie up your server for a very long time. This is really a bug with single-threaded non-preemptable servers, not with this program.</p>
 <h2>AUTHOR</h2>
 <p> Dave Lemke, Network Computing Devices, Inc </p>
-<h2>Index</h2>

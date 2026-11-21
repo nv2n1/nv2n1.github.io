@@ -26,4 +26,3 @@ description: "xapian-replicate-server – Service database replication requests 
 <dt><code>&#8211;version</code></dt>
 <dd> output version information and exit </dd>
 </dl>
-<h2>Index</h2>

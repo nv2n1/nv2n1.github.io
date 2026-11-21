@@ -228,4 +228,3 @@ description: "vim – Vi IMproved, a programmer’s text editor"
 <h2>BUGS</h2>
 <p> Probably. See &quot;:help todo&quot; for a list of known problems. </p>
 <p> Note that a number of things that may be regarded as bugs by some, are in fact caused by a too-faithful reproduction of Vi&#8217;s behaviour. And if you think other things are bugs &quot;because Vi does it differently&quot;, you should take a closer look at the vi_diff.txt file (or type :help vi_diff.txt when in Vim). Also have a look at the &#8216;compatible&#8217; and &#8216;cpoptions&#8217; options. </p>
-<h2>Index</h2>

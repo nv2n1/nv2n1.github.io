@@ -408,4 +408,3 @@ $ git bisect broken HEAD~10
 <dt>
 </dt><dd> file:///usr/share/doc/git/html/git-bisect-lk2009.html</dd></dl>
 </dl>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "ql/pricingengines/basket/mcbasketengine.hpp – European basket MC
 <p> European basket MC Engine. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

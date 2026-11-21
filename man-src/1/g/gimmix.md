@@ -54,4 +54,3 @@ description: "Gimmix – a graphical music player daemon (MPD) client"
 <h2>AUTHOR</h2>
 <p> Gimmix was written by Priyank Gosalia &lt;priyankmg [at] gmail.com&gt;. </p>
 <p> This manual page was written by Vincent Legout &lt;vincent [at] legout.info&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

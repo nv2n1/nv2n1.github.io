@@ -23,4 +23,3 @@ description: "cefsconv – convert a TeX document in SJIS encoding containing CE
  the <code>CJK</code> documentation files.</p>
 <h2>AUTHOR</h2>
 <p> Werner Lemberg </p>
-<h2>Index</h2>

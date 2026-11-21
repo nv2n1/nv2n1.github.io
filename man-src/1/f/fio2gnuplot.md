@@ -96,4 +96,3 @@ fio2gnuplot[-ghbiodvk][-t title][-o outputfile]
 <dd> $ <code>fio2gnuplot</code> <code>-g</code> <code>-b</code> <code>-d</code> outdir</dd></dl>
 <h2>AUTHOR</h2>
 <p> Erwan Velu &lt;erwan [at] enovance.com&gt; </p>
-<h2>Index</h2>

@@ -89,4 +89,3 @@ gdalinfo ~ / openev / utm.tif Driver : GTiff / GeoTIFF Size is 512, 512 Coordina
 </code></pre>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com, Silke Reimer silke [at] intevation.de </p>
-<h2>Index</h2>

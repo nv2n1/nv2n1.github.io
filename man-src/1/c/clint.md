@@ -96,4 +96,3 @@ $ pip install bpython
 <p> Kenneth Reitz</p>
 <h2>COPYRIGHT</h2>
 <p> 2011, Kenneth Reitz </p>
-<h2>Index</h2>

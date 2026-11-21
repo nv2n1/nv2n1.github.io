@@ -36,4 +36,3 @@ description: "atomic-install – Execute Image Install Method"
 <p> <code>&#8211;user</code> If running as non-root, specify to install the image from the current OSTree repository and manage it through systemd and bubblewrap. OSTree and bwrap-oci are required for this feature to be available. </p>
 <h2>HISTORY</h2>
 <p> January 2015, Originally compiled by Daniel Walsh (dwalsh at redhat dot com) July 2015, edited by Sally O&#8217;Malley (somalley at redhat dot com) </p>
-<h2>Index</h2>

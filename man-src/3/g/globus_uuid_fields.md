@@ -42,4 +42,3 @@ description: "Globus UUID Generator –"
 <p> 1b4e28ba-2fa1-11d2-883f-b9a761bde3fb 012345678901234567890123456789012345 0 1 2 3</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>

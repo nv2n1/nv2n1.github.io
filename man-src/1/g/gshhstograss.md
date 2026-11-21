@@ -35,4 +35,3 @@ description: "gshhs2grass – Extracting GSHHS and WDBII data in GRASS-compatibl
 <p> Original version by Simon Cox (simon [at] ned.dem.csiro.au) with some maintenance by Paul Wessel (pwessel [at] hawaii.edu).</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-gshhs/">gshhs</a></i>(1) <i><a href="/docs/linux/man/1-gshhs_dp/">gshhs_dp</a></i>(1) </p>
-<h2>Index</h2>

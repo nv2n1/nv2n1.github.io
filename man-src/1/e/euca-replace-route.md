@@ -51,4 +51,3 @@ description: "euca-replace-route – Replace a route in a VPC route table"
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

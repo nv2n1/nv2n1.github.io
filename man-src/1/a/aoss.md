@@ -34,4 +34,3 @@ description: "aoss – Wrapper script to facilitate use of the ALSA OSS compatib
 </dl>
 <h2>AUTHORS</h2>
 <p> The OSS compatibility library is by Abramo Bagnara &lt;abramo [at] alsa-project.org&gt;. The aoss script and this document are by James Tappin &lt;james [at] xena.uklinux.net&gt;. </p>
-<h2>Index</h2>

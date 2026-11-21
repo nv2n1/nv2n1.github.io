@@ -30,4 +30,3 @@ description: "makempx – typeset labels in MetaPost pictures with TeX or Troff"
 <dd> Print version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mpost/">mpost</a></code>(1), <code><a href="/docs/linux/man/1-mpto/">mpto</a></code>(1). </p>
-<h2>Index</h2>

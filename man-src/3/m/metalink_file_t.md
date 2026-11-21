@@ -43,4 +43,3 @@ description: "metalink_file_t – The structure that holds information of a sing
 <p> The chunk checksum(aka piece hash) for the resource. This corresponds to pieces element under verification element in Metalink XML file. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-metalink_checksum_t/">metalink_checksum_t</a></code>(3), <code><a href="/docs/linux/man/3-metalink_chunk_checksum_t/">metalink_chunk_checksum_t</a></code>(3), <code><a href="/docs/linux/man/3-metalink_resource_t/">metalink_resource_t</a></code>(3), <code><a href="/docs/linux/man/3-metalink_parse_file/">metalink_parse_file</a></code>(3) </p>
-<h2>Index</h2>

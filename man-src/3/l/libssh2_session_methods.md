@@ -23,4 +23,3 @@ description: "libssh2_session_methods – return the currently active algorithms
 <p> <i>LIBSSH2_ERROR_METHOD_NONE</i> &#8211; no method has been set</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
-<h2>Index</h2>

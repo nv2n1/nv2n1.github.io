@@ -3498,4 +3498,3 @@ if (r == -1)<br />
 <dt>&bull;</dt>
 <dd> <p> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
  </dd></dl>
-<h2>Index</h2>

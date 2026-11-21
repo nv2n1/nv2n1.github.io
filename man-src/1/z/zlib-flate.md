@@ -18,4 +18,3 @@ description: "zlib-flate – raw zlib compression program"
 <p> For details about qpdf, please see the qpdf manual, which can be found at <a rel="nofollow" href="https://qpdf.readthedocs.io.">https://qpdf.readthedocs.io.</a></p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-qpdf/">qpdf</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1) </p>
-<h2>Index</h2>

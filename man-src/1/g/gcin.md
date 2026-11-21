@@ -63,4 +63,3 @@ description: "gcin – an input method server"
 <dt>Dayi Co., Ltd. &lt;<a rel="nofollow" href="http://www.dayi.com">http://www.dayi.com</a>&gt;</dt>
 <dd> Author of Dayi IM. </dd>
 </dl>
-<h2>Index</h2>

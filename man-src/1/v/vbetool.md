@@ -49,4 +49,3 @@ description: "vbetool – run real-mode video BIOS code to alter hardware state"
 <p> The VESA flat panel interface ceased development at the proposal stage. panelid and panelsize will work on many machines, but the other arguments are unlikely to be implemented on available hardware. </p>
 <h2>AUTHOR</h2>
 <p> vbetool was written by Matthew Garrett &lt;mjg59 [at] srcf.ucam.org&gt;, based on code from read-edid by John Fremlin &lt;john [at] fremlin.de&gt;, LRMI (<a rel="nofollow" href="http://sourceforge.net/projects/lrmi/)">http://sourceforge.net/projects/lrmi/)</a> and XFree (<a rel="nofollow" href="http://www.xfree86.org">http://www.xfree86.org</a>). It is released under the terms of the GNU General Public License. </p>
-<h2>Index</h2>

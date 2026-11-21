@@ -137,4 +137,3 @@ description: "xmlsec1 – sign, verify, encrypt and decrypt XML documents"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2002-2003 Aleksey Sanin.<br />
  This is free software: see the source for copying information. </p>
-<h2>Index</h2>

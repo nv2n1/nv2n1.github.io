@@ -24,4 +24,3 @@ description: "libssh2_knownhost_readline – read a known host line"
 <p> Added in libssh2 1.2</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_knownhost_get/">libssh2_knownhost_get</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_knownhost_writeline/">libssh2_knownhost_writeline</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_knownhost_readfile/">libssh2_knownhost_readfile</a>(3)</code> </p>
-<h2>Index</h2>

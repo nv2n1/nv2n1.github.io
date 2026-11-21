@@ -56,4 +56,3 @@ struct ibv_parent_domain_init_attr {
 </dd><dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

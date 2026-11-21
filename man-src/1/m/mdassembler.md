@@ -99,4 +99,3 @@ description: "mdassembler – Compile documentation for use in monodoc browser"
 <dd></dd></dl>
 <h2>WEB SITE</h2>
 <p> See also: <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> and <a rel="nofollow" href="http://www.mono-project.com/docs/tools+libraries/tools/mdassembler/">http://www.mono-project.com/docs/tools+libraries/tools/mdassembler/</a> </p>
-<h2>Index</h2>

@@ -60,4 +60,3 @@ description: "dbus-run-session – start a process as a new D-Bus session"
 <p> Please send bug reports to the D-Bus mailing list or bug tracker, see m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[]</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), <code><a href="/docs/linux/man/1-dbus-launch/">dbus-launch</a></code>(1) </p>
-<h2>Index</h2>

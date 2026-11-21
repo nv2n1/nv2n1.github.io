@@ -198,4 +198,3 @@ Hunspell 1.2.3
 <p> This manual based on Ispell&#8217;s manual. See ispell(1).</p>
 <h2>BUGS</h2>
 <p> There are some layout problems with long lines. </p>
-<h2>Index</h2>

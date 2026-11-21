@@ -81,4 +81,3 @@ gmt blockmedian depths.xyz -Rg -I5 -Eb -r &gt; depths_5x5.txt
 <p> <code>blockmean</code>, <code>blockmode</code>, <code>gmt</code>, <code>gmt.conf</code>, <code>greenspline</code>, <code>nearneighbor</code>, <code>surface</code>, <code>sphtriangulate</code>, <code>triangulate</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "bkhive dumps the syskey bootkey from a Windows NT/2K/XP/Vista syst
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-samdump2/">samdump2</a>(1)</code><br />
  <code>ophcrack(1)</code> </p>
-<h2>Index</h2>

@@ -66,4 +66,3 @@ $ docker version-- format '&#123;&#123;json .}}'
 <p> <code>&#8211;kubeconfig</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Kubernetes config file</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code> </p>
-<h2>Index</h2>

@@ -244,4 +244,3 @@ description: "qstat – show status of pbs batch jobs"
 <p> If the qstat command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> qalter(1B), qsub(1B), pbs_alterjob(3B), pbs_statjob(3B), pbs_statque(3B), pbs_statserver(3B), pbs_submit(3B), pbs_job_attributes(7B), pbs_queue_attributes(7B), pbs_server_attributes(7B), pbs_resources_*(7B) where * is system type, and the PBS ERS. </p>
-<h2>Index</h2>

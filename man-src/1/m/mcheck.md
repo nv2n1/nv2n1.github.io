@@ -23,4 +23,3 @@ description: "mcheck – verify all files on an MS-DOS formatted disk"
 &nbsp;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mtools/">mtools</a></code>(1), <code><a href="/docs/linux/man/1-mdir/">mdir</a></code>(1), <code><a href="/docs/linux/man/1-mtype/">mtype</a></code>(1) </p>
-<h2>Index</h2>

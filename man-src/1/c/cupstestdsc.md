@@ -21,4 +21,3 @@ description: "cupstestdsc – test conformance of postscript files (deprecated)"
 <p> CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a>), Adobe PostScript Language Document Structuring Conventions Specification, Version 3.0.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2007-2017 by Apple Inc. </p>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "pfbtops – translate Printer Font Binary files to PostScript ASCI
 <dd> <code>&#8211;version</code> Display version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-grops/">grops</a></i>(1), <i><a href="/docs/linux/man/1-gropdf/">gropdf</a></i>(1) </p>
-<h2>Index</h2>

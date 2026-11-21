@@ -51,4 +51,3 @@ description: "pop3test – interactive POP3 test program"
 <dd> Verbose. Print out more information than usual.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>pop3d(8)</code> </p>
-<h2>Index</h2>

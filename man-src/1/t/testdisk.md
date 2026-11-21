@@ -51,4 +51,3 @@ It works with :<br />
 <p> <code>fdisk</code>(1), <code><a href="/docs/linux/man/1-photorec/">photorec</a>(1).</code> <code>.SH</code>AUTHOR TestDisk 6.11, Data Recovery Utility, April 2009<br />
  Christophe GRENIER &lt;grenier [at] cgsecurity.org&gt;<br />
  <a rel="nofollow" href="http://www.cgsecurity.org">http://www.cgsecurity.org</a> </p>
-<h2>Index</h2>

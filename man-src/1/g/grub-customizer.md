@@ -18,4 +18,3 @@ description: "grub-customizer – a graphical grub2/burg editor"
 <p> Daniel Richter (2007-2011) &lt;danielrichter2007 [at] web.de&gt;. </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2011 Daniel Richter &lt;danielrichter2007 [at] web.de&gt;. </p>
-<h2>Index</h2>

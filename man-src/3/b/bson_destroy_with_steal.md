@@ -32,4 +32,3 @@ bson_destroy_with_steal (bson_t   *bson,
 <p> <code><a href="/docs/linux/man/3-bson_destroy_with_steal/">bson_destroy_with_steal</a>(3)</code> shall return a buffer containing the contents of the <code>bson_t</code> if <code>steal</code> is non-zero. This should be freed with <code><a href="/docs/linux/man/3-bson_free/">bson_free</a>(3)</code> when no longer in use. <code>length</code> will be set to the length of the bson document if non-NULL. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

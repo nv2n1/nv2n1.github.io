@@ -131,4 +131,3 @@ By the command, eg <i>xterm</i>
 <p> <a href="/docs/linux/man/1-rstart/">rstart</a>(1), <a href="/docs/linux/man/1-rsh/">rsh</a>(1), A Flexible Remote Execution Protocol Based on <code>rsh</code></p>
 <h2>AUTHOR</h2>
 <p> Jordan Brown, Quarterdeck Office Systems </p>
-<h2>Index</h2>

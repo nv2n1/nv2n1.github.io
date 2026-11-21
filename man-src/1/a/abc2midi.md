@@ -157,4 +157,3 @@ description: "abc2midi – converts abc file to MIDI file(s)"
 <p> Copyright 1999 James Allwright </p>
 <p> abc2midi is supplied &quot;as is&quot; without any warranty. It is free software and can be used, copied, modified and distributed without fee under the terms of the GNU General Public License. </p>
 <p> More complete documentation may be found in abcguide.txt which comes with the abcMIDI distribution. </p>
-<h2>Index</h2>

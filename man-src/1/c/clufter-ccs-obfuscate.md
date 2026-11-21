@@ -61,4 +61,3 @@ description: "clufter – ccs-obfuscate"
 <h2>SEE ALSO</h2>
 <p> <i>cluster.conf</i>(5), <i>ccs</i>(7), <i><a href="/docs/linux/man/1-clufter/">clufter</a></i>(1), </p>
 <p> <i><a href="/docs/linux/man/1-clufter-ccs-artefacts/">clufter-ccs-artefacts</a></i>(1), <i><a href="/docs/linux/man/1-clufter-ccs-disable-rg/">clufter-ccs-disable-rg</a></i>(1), <i><a href="/docs/linux/man/1-clufter-ccs-revitalize/">clufter-ccs-revitalize</a></i>(1), and perhaps more </p>
-<h2>Index</h2>

@@ -93,4 +93,3 @@ gmt regress points.txt -A0/90/0.2 -Eo -Nr &gt; points_analysis.txt
 <p> <code>gmt</code>, <code>trend1d</code>, <code>trend2d</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

@@ -38,4 +38,3 @@ description: "gvfsd-metadata – Metadata daemon for gvfs"
 </dt><dd> The directory where the gvfs metadata database files are stored</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-gvfs/">gvfs</a></code>(7), <code><a href="/docs/linux/man/1-nautilus/">nautilus</a></code>(1) </p>
-<h2>Index</h2>

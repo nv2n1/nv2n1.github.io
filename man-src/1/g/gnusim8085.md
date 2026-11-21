@@ -87,4 +87,3 @@ description: "gnusim8085 – graphical Intel 8085 simulator, assembler and debug
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://sourceforge.net/projects/gnusim8085">http://sourceforge.net/projects/gnusim8085</a> </p>
-<h2>Index</h2>

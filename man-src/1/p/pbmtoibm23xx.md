@@ -34,4 +34,3 @@ description: "pbmtoibm23xx – convert a PBM image to IBM 23XX printer stream"
 <p> <code>pbm</code>(1) , Ghostscript (<code>gs</code>). </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2004 Jorrit Fahlke &lt;jorrit [at] jorrit.de&gt;. Copying policy: GNU GPL version 2 </p>
-<h2>Index</h2>

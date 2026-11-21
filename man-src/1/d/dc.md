@@ -162,4 +162,3 @@ description: "dc – an arbitrary precision calculator"
 <dd> The commands in this file will be executed when <i>dc</i> is first run.</dd></dl>
 <h2>BUGS</h2>
 <p> Email bug reports to <code>bug-dc [at] gnu.org</code>. </p>
-<h2>Index</h2>

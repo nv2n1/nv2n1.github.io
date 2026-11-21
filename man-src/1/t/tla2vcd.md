@@ -34,4 +34,3 @@ description: "tla2vcd – Converts TLA to VCD or LST files"
 <p> Emil</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-lxt2vcd/">lxt2vcd</a></i>(1) <i><a href="/docs/linux/man/1-vzt2vcd/">vzt2vcd</a></i>(1) <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) </p>
-<h2>Index</h2>

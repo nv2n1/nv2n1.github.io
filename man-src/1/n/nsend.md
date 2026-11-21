@@ -76,4 +76,3 @@ description: "nsend – Send messages to users or groups"
 <p> nsend was written by looking at mars_nwe&#8217;s message handling. Thanks to Martin Stover &lt;mstover [at] freeway.de&gt;.<br />
  Support for Netware groups by Philippe Andersson &lt;philippe_andersson [at] ste.scitex.com&gt;.<br />
  Support for connections greater than 255 by Petr Vandrovec &lt;vandrove [at] vc.cvut.cz&gt;. </p>
-<h2>Index</h2>

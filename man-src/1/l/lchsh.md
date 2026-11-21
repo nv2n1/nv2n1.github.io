@@ -24,4 +24,3 @@ description: "lchsh – Change login shell"
 <p> The exit status is 0 on success, 1 on error. </p>
 <h2>BUGS</h2>
 <p> <code>lchsh</code> ignores <i>/etc/shells</i>. </p>
-<h2>Index</h2>

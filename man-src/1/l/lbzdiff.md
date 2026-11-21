@@ -18,4 +18,3 @@ description: "lbzcmp, lbzdiff – compare compressed files"
 <p> <a href="/docs/linux/man/1-cmp/">cmp</a>(1), <a href="/docs/linux/man/1-diff/">diff</a>(1), <a href="/docs/linux/man/1-lbzmore/">lbzmore</a>(1), <a href="/docs/linux/man/1-lbzgrep/">lbzgrep</a>(1), <a href="/docs/linux/man/1-lbzforce/">lbzforce</a>(1), <a href="/docs/linux/man/1-lbzip2/">lbzip2</a>(1), <a href="/docs/linux/man/1-lbzexe/">lbzexe</a>(1)</p>
 <h2>BUGS</h2>
 <p> Messages from the <i>cmp</i> or <i>diff</i> programs may refer to file names such as &quot;-&quot; instead of to the file names specified. </p>
-<h2>Index</h2>

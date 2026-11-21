@@ -92,4 +92,3 @@ description: "resize – set environment and terminal settings to current xterm 
  Thomas Dickey (invisible-island.net).<br />
  Copyright (c) 1984, 1985 by X Consortium<br />
  See <i><a href="/docs/linux/man/7-x/">X</a></i>(7) for a complete copyright notice. </p>
-<h2>Index</h2>

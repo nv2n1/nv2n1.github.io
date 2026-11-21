@@ -36,4 +36,3 @@ description: "htdigest – manage user files for digest authentication"
 <p>&nbsp; </p>
 <p> This program is not safe as a setuid executable. Do <i>not</i> make it setuid.<br />
 &nbsp; </p>
-<h2>Index</h2>

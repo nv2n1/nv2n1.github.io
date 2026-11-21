@@ -24,4 +24,3 @@ description: "docker-swarm-ca – Display and rotate the root CA"
 <p> <code>&#8211;rotate</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Rotate the swarm CA &#8211; if no certificate or key are provided, new ones will be generated</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-swarm/">docker-swarm</a>(1)</code> </p>
-<h2>Index</h2>

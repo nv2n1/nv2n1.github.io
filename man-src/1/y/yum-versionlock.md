@@ -43,4 +43,3 @@ description: "yum-versionlock – Version lock rpm packages"
  Gerhardus Geldenhuis &lt;gerhardus.geldenhuis [at] gmail.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code>yum(1)</code> </p>
-<h2>Index</h2>

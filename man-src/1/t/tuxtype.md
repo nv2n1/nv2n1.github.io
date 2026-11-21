@@ -36,4 +36,3 @@ description: "tuxtype – TuxTyping typing tutor"
 <dd> Select verbose output (for debugging) (Warning! Verbose is /very/ verbose!)</dd></dl>
 <h2>AUTHORS</h2>
 <p> Sam Hart &lt;hart [at] geekcomix.com&gt;. Man page written by Laurence J. Lane &lt;ljlane [at] debian.org&gt;. </p>
-<h2>Index</h2>

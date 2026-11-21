@@ -96,4 +96,3 @@ description: "htmlmapdriver"
 <p> <i>Last changed: $Date: 2007-05-14 08:26:06 +0200 (Mon, 14 May 2007) $</i> </p>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
-<h2>Index</h2>

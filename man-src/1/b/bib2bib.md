@@ -21,4 +21,3 @@ description: "BibTeX2HTML – A translator of bibliography databases into HTML"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-bibtex/">bibtex</a></code>(1),<br />
  <i><a rel="nofollow" href="http://www.lri.fr/~filliatr/bibtex2html/">http://www.lri.fr/~filliatr/bibtex2html/</a></i> </p>
-<h2>Index</h2>

@@ -157,4 +157,3 @@ url: "/docs/linux/man/1-kdig/"
 <dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-khost/">khost</a></code>(1), <code><a href="/docs/linux/man/1-knsupdate/">knsupdate</a></code>(1). </p>
-<h2>Index</h2>

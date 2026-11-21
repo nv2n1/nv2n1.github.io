@@ -68,4 +68,3 @@ description: "ippserver – a simple internet printing protocol server"
 <p> PWG Internet Printing Protocol Workgroup (<a rel="nofollow" href="http://www.pwg.org/ipp)">http://www.pwg.org/ipp)</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2007-2014 by Apple Inc. </p>
-<h2>Index</h2>

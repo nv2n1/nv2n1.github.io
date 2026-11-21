@@ -62,4 +62,3 @@ description: "voikkospell – test program for Voikko spell checker"
 <dd> Print version numbers for libvoikko and the test tool.</dd></dl>
 <h2>AUTHOR</h2>
 <p> voikkospell and this manual page were written by Harri Pitk&auml;nen (hatapitk [at] iki.fi). </p>
-<h2>Index</h2>

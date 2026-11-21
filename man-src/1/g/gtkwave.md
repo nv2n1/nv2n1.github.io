@@ -117,4 +117,3 @@ description: "gtkwave – Visualization tool for VCD, LXT, LXT2, VZT, FST, and G
 <p> Anthony Bybell &lt;bybell [at] rocketmail.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-gtkwaverc/">gtkwaverc</a></i>(5) <i><a href="/docs/linux/man/1-lxt2vcd/">lxt2vcd</a></i>(1) <i><a href="/docs/linux/man/1-vcd2lxt/">vcd2lxt</a></i>(1) <i><a href="/docs/linux/man/1-vcd2lxt2/">vcd2lxt2</a></i>(1) <i><a href="/docs/linux/man/1-vzt2vcd/">vzt2vcd</a></i>(1) <i><a href="/docs/linux/man/1-vcd2vzt/">vcd2vzt</a></i>(1) <i><a href="/docs/linux/man/1-vermin/">vermin</a></i>(1) <i><a href="/docs/linux/man/1-rtlbrowse/">rtlbrowse</a></i>(1) <i><a href="/docs/linux/man/1-twinwave/">twinwave</a></i>(1) <i><a href="/docs/linux/man/1-shmidcat/">shmidcat</a></i>(1) </p>
-<h2>Index</h2>

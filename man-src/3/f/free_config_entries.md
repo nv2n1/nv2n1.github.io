@@ -17,4 +17,3 @@ description: "free_config_entries – Frees memory allocated for config entry li
 <p> See list_config_entries for an example of how to use it. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-list_config_entries/">list_config_entries</a></code>(3), <code><a href="/docs/linux/man/3-list_config_sections/">list_config_sections</a></code>(3) </p>
-<h2>Index</h2>

@@ -16,4 +16,3 @@ description: "intel_upload_blit_small – microbenchmark of Intel GPU performanc
 <h2>DESCRIPTION</h2>
 <p> <code>intel_upload_blit_small</code> is a microbenchmark tool for DRM performance. It should be run with kernel modesetting enabled, and may require root privilege for correct operation. It does not require X to be running. </p>
 <p> Given that it is a microbenchmark, its utility is largely for regression testing of the kernel, and not for general conclusions on graphics performance. </p>
-<h2>Index</h2>

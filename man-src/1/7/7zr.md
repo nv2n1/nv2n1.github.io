@@ -182,4 +182,3 @@ description: "7zr – A file archiver with high compression ratio format"
 <dt>Written for Debian by Mohammed Adnene Trojette. Updated by Robert Luberda.</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

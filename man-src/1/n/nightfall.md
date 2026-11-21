@@ -59,4 +59,3 @@ description: "nightfall – binary star astronomy"
 <p> Rainer Wichmann (rwichmann [at] hs.uni-hamburg.de) </p>
 <h2>BUG REPORTS</h2>
 <p> If you find a bug in <code>nightfall</code>, please send electronic mail to <i>rwichmann [at] hs.uni-hamburg.de</i>. Please include your operating system and its revision, the version of <code>nightfall</code>, what C compiler you used to compile it, and the output from &#8216;configure&#8217;. </p>
-<h2>Index</h2>

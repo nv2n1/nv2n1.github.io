@@ -24,4 +24,3 @@ description: "pnmcat – concatenate portable anymaps"
 <p> <code><a href="/docs/linux/man/1-pamdice/">pamdice</a></code>(1), <code><a href="/docs/linux/man/1-pnmtile/">pnmtile</a></code>(1), <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989 by Jef Poskanzer. </p>
-<h2>Index</h2>

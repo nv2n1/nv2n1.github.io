@@ -31,4 +31,3 @@ description: "gnucap – GNU Circuit Analysis Package"
 <h2>AUTHOR</h2>
 <p> GNUCAP is being written by Albert Davis &lt;aldavis [at] ieee.org&gt; </p>
 <p> This manual page was written by Jon Rabone &lt;jkr [at] debian.org&gt; and maintained by Hamish Moffatt &lt;hamish [at] debian.org&gt; for the Debian package of gnucap. For the full LaTeX documentation, please see <code>/usr/share/doc/gnucap/manual.</code> </p>
-<h2>Index</h2>

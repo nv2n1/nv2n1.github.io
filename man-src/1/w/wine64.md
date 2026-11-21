@@ -116,4 +116,3 @@ description: "wine – run Windows programs on Unix"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wineserver/">wineserver</a></code>(1), <code><a href="/docs/linux/man/1-winedbg/">winedbg</a></code>(1),<br />
  <code>Wine documentation and support</code> </p>
-<h2>Index</h2>

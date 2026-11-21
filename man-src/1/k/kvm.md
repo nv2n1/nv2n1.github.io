@@ -24,4 +24,3 @@ description: "kvm – kvm-enabling wrapper for qemu-system-x86_64"
 <p> <code><a href="/docs/linux/man/1-qemu-system/">qemu-system</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Michael Tokarev &lt;mjt [at] tls.msk.ru&gt;. </p>
-<h2>Index</h2>

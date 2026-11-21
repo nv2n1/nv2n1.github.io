@@ -27,4 +27,3 @@ CURLMcode curl_multi_fdset(CURLM *multi_handle,
 <p> CURLMcode type, general libcurl multi interface error code. See <i><a href="/docs/linux/man/3-libcurl-errors/">libcurl-errors</a>(3)</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_multi_cleanup/">curl_multi_cleanup</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_init/">curl_multi_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_timeout/">curl_multi_timeout</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_perform/">curl_multi_perform</a></code>(3) </p>
-<h2>Index</h2>

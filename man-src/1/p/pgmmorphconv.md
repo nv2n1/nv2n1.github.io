@@ -46,4 +46,3 @@ description: "pgmmorphconv – perform morphological convolutions: dilation, ero
 <h2>AUTHORS</h2>
 <p> Luuk van Dijk, 2001. </p>
 <p> Based on work which is Copyright (C) 1989, 1991 by Jef Poskanzer. </p>
-<h2>Index</h2>

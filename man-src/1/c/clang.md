@@ -333,4 +333,3 @@ description: "clang – the Clang C, C++, and Objective-C compiler"
 <p> Maintained by the Clang / LLVM Team (&lt;<a rel="nofollow" href="http://clang.llvm.org">http://clang.llvm.org</a>&gt;)</p>
 <h2>COPYRIGHT</h2>
 <p> 2007-2022, The Clang Team </p>
-<h2>Index</h2>

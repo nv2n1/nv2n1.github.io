@@ -36,4 +36,3 @@ description: "ppmtomitsu – convert a portable pixmap to a Mitsubishi S340-10 f
 <p> We didn&#8217;t find any &#8211; yet. (Besides, they&#8217;re called features anyway :-) If you should find one, my email-adress is below.</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1992, 93 by S.Petra Zeidler, MPIfR Bonn, Germany. (spz [at] specklec.mpifr-bonn.mpg.de) </p>
-<h2>Index</h2>

@@ -706,4 +706,3 @@ description: "libsolv-constantids – fixed Ids for often used strings"
 </dt><dd> The last part of the delta sequence, the content selection string.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Michael Schroeder &lt;mls [at] suse.de&gt; </p>
-<h2>Index</h2>

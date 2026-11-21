@@ -177,4 +177,3 @@ man docker-run
 </dd></dl>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. </p>
-<h2>Index</h2>

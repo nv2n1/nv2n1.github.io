@@ -103,4 +103,3 @@ description: "xdg-dbus-proxy – D-Bus proxy"
 </dt><dd> Set a rule for broadcast signals from the given name.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>$ xdg-dbus-proxy &#8211;fd=26 unix:path=/run/usr/1000/bus /run/usr/1000/.dbus-proxy/session-bus-proxy &#8211;filter &#8211;own=org.gnome.ghex.* &#8211;talk=ca.desrt.dconf &#8211;call=org.freedesktop.portal.*=* &#8211;broadcast=org.freedesktop.portal.*=@/org/freedesktop/portal/*</code> </p>
-<h2>Index</h2>

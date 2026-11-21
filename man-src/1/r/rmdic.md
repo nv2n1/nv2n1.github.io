@@ -21,4 +21,3 @@ description: "rmdic – Tool for deleting a user dictionary"
 <dd> Specifies the name of the server machine that contains the dictionary to be renamed.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cpdic/">cpdic</a>(1), <a href="/docs/linux/man/1-lsdic/">lsdic</a>(1), <a href="/docs/linux/man/1-mkdic/">mkdic</a>(1), <a href="/docs/linux/man/1-mvdic/">mvdic</a>(1) </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "btmgmt: – A command-line interface of BlueZ for management Usage
 <dt><code>&#8211;help</code></dt>
 <dd> Display help </dd>
 </dl>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "ql/pricingengines/capfloor/mchullwhiteengine.hpp – Monte Carlo H
 <p> Monte Carlo Hull-White engine for cap/floors. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

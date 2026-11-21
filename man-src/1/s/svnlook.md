@@ -18,4 +18,3 @@ description: "svnlook – Subversion repository examination tool"
 <p> For more information about the Subversion project, visit <a rel="nofollow" href="http://subversion.apache.org.">http://subversion.apache.org.</a> </p>
 <p> Documentation for Subversion and its tools, including detailed usage explanations of the <code>svn</code>, <code>svnadmin</code>, <code>svnserve</code> and <code>svnlook</code> programs, historical background, philosophical approaches and reasonings, etc., can be found at <a rel="nofollow" href="http://svnbook.red-bean.com/.">http://svnbook.red-bean.com/.</a> </p>
 <p> Run `svnlook help&#8217; to access the built-in tool documentation. </p>
-<h2>Index</h2>

@@ -68,4 +68,3 @@ description: "reposdump – utility for dumping SBLIM Data Gatherer online metri
 <p> You can obtain a current copy of the Eclipse Public License from <a rel="nofollow" href="http://www.opensource.org/licenses/eclipse-1.0.php">http://www.opensource.org/licenses/eclipse-1.0.php</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-reposd/">reposd</a></code>(8) </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "gamma4scanimage – create a gamma table for scanimage"
 <p> Oliver Rauch </p>
 <h2>EMAIL-CONTACT</h2>
 <p> <i>Oliver.Rauch [at] Rauch-Domain.DE</i> </p>
-<h2>Index</h2>

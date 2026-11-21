@@ -42,4 +42,3 @@ description: "sfcbuuid – Script to create a universally unique identifier for 
 </dt><dd> <a rel="nofollow" href="http://sblim.sourceforge.net/">http://sblim.sourceforge.net/</a></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sfcbd/">sfcbd</a></code>(1), </p>
-<h2>Index</h2>

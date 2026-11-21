@@ -18,4 +18,3 @@ description: "bestfit_color – Finds a palette color fitting the requested RGB 
 <p> Returns the index of the palette for the closest match to the requested color. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-makecol8/">makecol8</a></code>(3) </p>
-<h2>Index</h2>

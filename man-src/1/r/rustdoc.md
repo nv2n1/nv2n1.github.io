@@ -87,4 +87,3 @@ description: "rustdoc – generate documentation from Rust source code"
 <p> See <i>AUTHORS.txt</i> in the Rust source distribution. </p>
 <h2>COPYRIGHT</h2>
 <p> This work is dual-licensed under Apache 2.0 and MIT terms. See <i>COPYRIGHT</i> file in the rust source distribution. </p>
-<h2>Index</h2>

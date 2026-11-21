@@ -221,4 +221,3 @@ description: "cfv – Verify file consistency with .sfv, .csv, .crc, .md5, md5su
  <a rel="nofollow" href="http://www.dakotacom.net/~donut/programs/">http://www.dakotacom.net/~donut/programs/</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-md5sum/">md5sum</a></code>(1), <code><a href="/docs/linux/man/1-sha1sum/">sha1sum</a></code>(1), <code>md5</code>(1), <code><a href="/docs/linux/man/1-xargs/">xargs</a></code>(1) </p>
-<h2>Index</h2>

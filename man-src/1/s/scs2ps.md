@@ -24,4 +24,3 @@ description: "scs2ps – convert IBM SCS printer data into PostScript"
 <p> PostScript is a trademark of Adobe Systems Incorporated.</p>
 <h2>AUTHORS</h2>
 <p> <code>scs2ps</code> was written by Rich Duzenbury, based on <code>scs2ascii</code> written by Michael Madore. This manual page was written by Carey Evans. </p>
-<h2>Index</h2>

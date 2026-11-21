@@ -22,4 +22,3 @@ description: "libwacom-list-local-devices – utility to list tablet devices"
 <h2>NOTES</h2>
 <p> The Linux kernel provides separate <i>/dev/input/event*</i> nodes for the stylus, the pad and the touch part of the tablet. These devices nodes are listed as part of this tool&#8217;s output. </p>
 <p> This tool is unable to distinguish between multiple identical devices. Only one such device will be listed, with all event nodes from all devices that are of the same type. </p>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "ktouch – a typing tutor for KDE"
 <p> KTouch was written by Haavard Froeiland &lt;haavard [at] users.sourceforge.net&gt; and Andreas Nicolai &lt;Andreas.Nicolai [at] gmx.net&gt;.This manual page based on the one prepared for Debian by Ben Burton </p>
 <h2>AUTHOR</h2>
 <p> Ben Burton. </p>
-<h2>Index</h2>

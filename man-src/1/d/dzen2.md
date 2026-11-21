@@ -58,4 +58,3 @@ description: "dzen2 – general-purpose messaging and notification for X11"
 <p> More detailed documentation (especially on the formatting language of dzen2) is available in /usr/share/doc/dzen2/README.gz. </p>
 <h2>AUTHOR</h2>
 <p> <code>Dzen2</code> has been written by <code>Robert Manea.</code> This manpage has been written, based on dzen documentation, by Petr Ročkai, for Debian GNU/Linux, but may be used by others. This manpage falls under the same licence as Dzen2 itself, see /usr/share/doc/dzen2/copyright. </p>
-<h2>Index</h2>

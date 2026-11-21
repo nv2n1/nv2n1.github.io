@@ -27,4 +27,3 @@ description: "psresize – rescales and centers a document for new output paper 
 <p> <code>PostScript</code> is a trademark of Adobe Systems Incorporated.</p>
 <h2>BUGS</h2>
 <p> <i>Psresize</i> does not accept all DSC comments. </p>
-<h2>Index</h2>

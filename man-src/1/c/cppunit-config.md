@@ -37,4 +37,3 @@ description: "cppunit-config – script to get information about the installed v
 <p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>
 <h2>AUTHOR</h2>
 <p> This manpage is an almost word-for-word copy of the gtk-config manpage, written by Owen Taylor. It was modified by E. Sommerlade &lt;eric [at] sommerla.de&gt;. </p>
-<h2>Index</h2>

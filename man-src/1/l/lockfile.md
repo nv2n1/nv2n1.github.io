@@ -94,4 +94,3 @@ rm -f important.lock
 <dl><dt></dt><dd>&lt;guenther [at] sendmail.com&gt;
 </dd></dl>
 </pre>
-<h2>Index</h2>

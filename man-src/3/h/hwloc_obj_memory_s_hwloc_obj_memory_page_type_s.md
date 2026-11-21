@@ -24,4 +24,3 @@ description: "hwloc_obj_memory_s::hwloc_obj_memory_page_type_s –"
 <p> Size of pages. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "gnc-prices – update stock prices from online sources for gnucash
 <h2>AUTHOR</h2>
 <p> Robert Merkel &lt;rgmerk [at] mira.net&gt; wrote this manpage. </p>
 <p> <code>GnuCash</code> was written by Robin Clark, Linas Vepstas, and a cast of thousands. </p>
-<h2>Index</h2>

@@ -24,4 +24,3 @@ description: "weave – translate WEB to TeX"
 <dd> TeX macros used by <code>weave</code> output.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tangle/">tangle</a></code>(1) for references, authors, and other information. </p>
-<h2>Index</h2>

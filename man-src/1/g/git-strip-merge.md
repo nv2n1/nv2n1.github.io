@@ -36,4 +36,3 @@ git-strip-merge design &quot;photoshop/*&quot;
 <p> <code><a rel="nofollow" href="https://github.com/MestreLion/git-tools">https://github.com/MestreLion/git-tools</a></code></p>
 <h2>AUTHOR</h2>
 <p> Rodrigo Silva (MestreLion) linux [at] rodrigosilva.com </p>
-<h2>Index</h2>

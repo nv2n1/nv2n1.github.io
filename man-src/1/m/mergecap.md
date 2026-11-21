@@ -57,4 +57,3 @@ description: "mergecap – Merges two or more capture files into one"
 Original Author-- -- -- -- -- -- --Scott Renfro&lt;scott[AT] renfro.org&gt;
     Contributors-- -- -- -- -- --Bill Guyton&lt;guyton[AT] bguyton.com&gt;
 </code></pre>
-<h2>Index</h2>

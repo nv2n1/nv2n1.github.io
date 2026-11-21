@@ -66,4 +66,3 @@ description: "glite-lb-purge – utility for removing inactive jobs from the L&B
 <p> <code><a href="/docs/linux/man/8-glite-lb-bkindex/">glite-lb-bkindex</a></code>(8), <code><a href="/docs/linux/man/8-glite-lb-bkserverd/">glite-lb-bkserverd</a></code>(8), <code><a href="/docs/linux/man/8-glite-lb-interlogd/">glite-lb-interlogd</a></code>(8), <code><a href="/docs/linux/man/8-glite-lb-logd/">glite-lb-logd</a></code>(8), <code><a href="/docs/linux/man/1-glite-lb-logevent/">glite-lb-logevent</a></code>(1), <code><a href="/docs/linux/man/1-glite-lb-dump/">glite-lb-dump</a></code>(1), <code><a href="/docs/linux/man/1-glite-lb-load/">glite-lb-load</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> EU EGEE, JRA1. </p>
-<h2>Index</h2>

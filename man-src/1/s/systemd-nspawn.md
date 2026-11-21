@@ -251,4 +251,3 @@ description: "systemd-nspawn – Spawn a namespace container for debugging, test
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.freedesktop.org/wiki/Specifications/DiscoverablePartitionsSpec/">http://www.freedesktop.org/wiki/Specifications/DiscoverablePartitionsSpec/</a></dd></dl>
 </dl>
-<h2>Index</h2>

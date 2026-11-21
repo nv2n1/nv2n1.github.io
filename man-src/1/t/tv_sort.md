@@ -32,4 +32,3 @@ description: "tv_sort – Sort XMLTV listings files by date, and add stop times.
 <p> These are different ways of saying the same thing.</p>
 <h2>AUTHOR</h2>
 <p> Ed Avis, ed [at] membled.com </p>
-<h2>Index</h2>

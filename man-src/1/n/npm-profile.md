@@ -78,4 +78,3 @@ npm profile get[--json | --parseable][&lt;property&gt;] npm profile set[--json |
 <dd> npm help config </dd>
 </dl>
 </dl>
-<h2>Index</h2>

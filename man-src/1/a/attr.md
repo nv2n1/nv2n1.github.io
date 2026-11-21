@@ -45,4 +45,3 @@ attr[-LRSq] - s attrname[-V attrvalue] pathname attr[-LRSq] - g attrname pathnam
 <p> Please send your bug reports or comments to &lt;<i><a rel="nofollow" href="https://savannah.nongnu.org/bugs/?group=attr">https://savannah.nongnu.org/bugs/?group=attr</a></i>&gt; or &lt;<i>acl-devel [at] nongnu.org</i>&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-getfattr/">getfattr</a></code>(1), <code><a href="/docs/linux/man/1-setfattr/">setfattr</a></code>(1), <code><a href="/docs/linux/man/3-attr_get/">attr_get</a></code>(3), <code><a href="/docs/linux/man/3-attr_set/">attr_set</a></code>(3), <code><a href="/docs/linux/man/3-attr_multi/">attr_multi</a></code>(3), <code><a href="/docs/linux/man/3-attr_remove/">attr_remove</a></code>(3), <code><a href="/docs/linux/man/5-attr/">attr</a></code>(5), <code><a href="/docs/linux/man/8-xfsdump/">xfsdump</a></code>(8) </p>
-<h2>Index</h2>

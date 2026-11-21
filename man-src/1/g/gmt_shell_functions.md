@@ -64,4 +64,3 @@ description: "gmt_shell_functions.sh – Practical functions to be used in GMT b
  2. <code>gmt_shell_functions.sh</code> were first introduced in <code>GMT</code> version 4.2.2 and have since been regularly expanded with other practical scripting short-cuts. If you want to suggest other functions, please do so by mailing to the GMT mailing list: gmt-help [at] hawaii.edu.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1), <i><a href="/docs/linux/man/1-bash/">bash</a></i>(1), <i><a href="/docs/linux/man/1-minmax/">minmax</a></i>(1), <i><a href="/docs/linux/man/1-grdinfo/">grdinfo</a></i>(1) </p>
-<h2>Index</h2>

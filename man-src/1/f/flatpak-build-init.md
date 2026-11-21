@@ -86,4 +86,3 @@ description: "flatpak-build-init – Initialize a build directory"
 <p> <code>$ flatpak build-init /build/my-app org.gnome.Sdk org.gnome.Platform 3.16</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build/">flatpak-build</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-finish/">flatpak-build-finish</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-export/">flatpak-build-export</a></code>(1) </p>
-<h2>Index</h2>

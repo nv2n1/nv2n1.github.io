@@ -77,4 +77,3 @@ description: "llvmc – The LLVM Compiler Driver (WIP)"
 <p> llvm-gcc, llvm-g++, llvm-as, llvm-dis, llc, llvm-link</p>
 <h2>AUTHORS</h2>
 <p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
-<h2>Index</h2>

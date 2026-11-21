@@ -37,4 +37,3 @@ description: "repomanage – list the newest or oldest RPM packages in a directo
 <pre>
 See the Authors file included with this program.
 </pre>
-<h2>Index</h2>

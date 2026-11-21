@@ -145,4 +145,3 @@ main()
 <p> <code>cyradm, imapd, imspd,</code> RFC2033 (IMAP LITERAL+ extension), RFC2060 (IMAP4rev1 specification), and <code><a href="/docs/linux/man/2-select/">select</a>(2)</code> </p>
 <h2>KEYWORDS</h2>
 <p> IMAP, ACAP, IMSP, Kerberos, Authentication </p>
-<h2>Index</h2>

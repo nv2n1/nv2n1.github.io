@@ -30,4 +30,3 @@ description: "dbus – expose the mixer features of connected FFADO devices thro
 <dd> Produce verbose output. The higher the <i>LEVEL</i> the more verbose the messages. The some verbose messages may only be available of FFADO was compiled with debugging enabled.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ffado-mixer/">ffado-mixer</a></code>(1) </p>
-<h2>Index</h2>

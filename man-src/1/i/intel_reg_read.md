@@ -18,4 +18,3 @@ description: "intel_reg_read – Reads an Intel GPU register value"
 <dt>intel_reg_read 0x61230</dt>
 <dd> Shows the register value for the first internal panel fitter. </dd>
 </dl>
-<h2>Index</h2>

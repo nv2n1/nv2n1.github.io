@@ -31,4 +31,3 @@ description: "libblkid – block device identification library"
 <p> <code><a href="/docs/linux/man/8-blkid/">blkid</a></code>(8), <code><a href="/docs/linux/man/8-findfs/">findfs</a></code>(8)</p>
 <h2>AVAILABILITY</h2>
 <p> libblkid is part of the util-linux package since version 2.15 and is available from <a rel="nofollow" href="https://www.kernel.org/pub/linux/utils/util-linux/.">https://www.kernel.org/pub/linux/utils/util-linux/.</a> </p>
-<h2>Index</h2>

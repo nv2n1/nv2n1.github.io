@@ -136,4 +136,3 @@ description: "foremost – Recover files using their headers, footers, and data 
 <h2>SEE ALSO</h2>
 <p> There is more information in the README file. </p>
 <p> Foremost was originally designed to imitate the functionality of CarvThis, a DOS program written by the Defense Computer Forensics Lab in in 1999. </p>
-<h2>Index</h2>

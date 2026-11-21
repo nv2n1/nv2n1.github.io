@@ -29,4 +29,3 @@ description: "tlock – terminal lock"
 <p> <a href="/docs/linux/man/3-readpass/">readpass</a>(3) <a href="/docs/linux/man/3-crypt/">crypt</a>(3)</p>
 <h2>AUTHOR</h2>
 <p> Prasad J Pandit &lt;<i>pj.pandit AT yahoo.co.in</i>&gt; </p>
-<h2>Index</h2>

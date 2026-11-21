@@ -23,4 +23,3 @@ description: "ksverdiff — display the differences in kickstart syntax"
 <dd> The version of kickstart syntax to end with. In other words, this is the upper bound version.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> ksflatten (1), ksvalidator (1) </p>
-<h2>Index</h2>

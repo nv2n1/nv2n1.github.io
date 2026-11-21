@@ -66,4 +66,3 @@ description: "pspsvg – convert PaintShop Pro® gradients (jgd, PspGradient) to
 <p> J.J. Green</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pssvg/">pssvg</a></code>(1), <code>svgpsp</code>(1), <code><a href="/docs/linux/man/1-tidy/">tidy</a></code>(1). </p>
-<h2>Index</h2>

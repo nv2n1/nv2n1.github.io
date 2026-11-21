@@ -28,4 +28,3 @@ description: "pto_move – Move a project file with all images in it."
 <dd> Overwrite all existing files. Otherwise you will be asked for each existing file.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
-<h2>Index</h2>

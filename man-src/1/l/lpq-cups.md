@@ -40,4 +40,3 @@ description: "lpq – show printer queue status"
  <a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2007-2013 by Apple Inc. </p>
-<h2>Index</h2>

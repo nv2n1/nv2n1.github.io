@@ -55,4 +55,3 @@ description: "mewl – Message scanner for Mew 4 or later"
 </dl>
 <h2>BUGS</h2>
 <p> If a field is long, only the beginning three lines are extracted by default. </p>
-<h2>Index</h2>

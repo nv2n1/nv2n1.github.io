@@ -54,4 +54,3 @@ description: "pamsummcol – summarize (sum, average, etc) a Netpbm image by col
 <p> <code><a href="/docs/linux/man/1-pamsumm/">pamsumm</a></code>(1) , <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) , <code><a href="/docs/linux/man/1-pamfunc/">pamfunc</a></code>(1) , <code><a href="/docs/linux/man/1-pamarith/">pamarith</a></code>(1) , <code><a href="/docs/linux/man/1-pamscale/">pamscale</a></code>(1) , <code>pam</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>pamsummcol</code> was added to Netpbm in Release 10.21 (March 2004). </p>
-<h2>Index</h2>

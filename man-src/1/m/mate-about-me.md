@@ -16,4 +16,3 @@ description: "mate-about-me — is a control center applet."
 <p> It allows one to change user password and set user avatar image (~/.face file). </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Stefano Karapetsas &lt;stefano [at] karapetsas.com&gt;. </p>
-<h2>Index</h2>

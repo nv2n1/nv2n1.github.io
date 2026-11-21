@@ -21,4 +21,3 @@ void bson_writer_end(bson_writer_t *writer);
 <p> Complete writing of a <code>bson_writer_t</code> to the buffer supplied. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

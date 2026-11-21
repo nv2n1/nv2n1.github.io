@@ -72,4 +72,3 @@ description: "afpcmd – Transfer files over the networking using the Apple Fili
 <p> Report bugs to the afpfs-ng-devel [at] sf.net mailing list.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-afpgetstatus/">afpgetstatus</a></code>(1) </p>
-<h2>Index</h2>

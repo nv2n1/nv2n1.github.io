@@ -63,4 +63,3 @@ description: "prune – Prune directed graphs"
 <p> <code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), <code><a href="/docs/linux/man/1-gvpr/">gvpr</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Marcus Harnisch &lt;marcus.harnisch [at] gmx.net&gt; </p>
-<h2>Index</h2>

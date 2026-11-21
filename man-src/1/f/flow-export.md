@@ -113,4 +113,3 @@ description: "flow-export – Export flow-tools files into other NetFlow package
 <p> Database Support: William Emmanuel Yu &lt;wyu [at] ateno.edu&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flow-tools/">flow-tools</a></code>(1) </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ RLE_SPRITE *rle_sprite;
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_rle_sprite/">get_rle_sprite</a></code>(3), <code><a href="/docs/linux/man/3-draw_sprite/">draw_sprite</a></code>(3), <code><a href="/docs/linux/man/3-draw_compiled_sprite/">draw_compiled_sprite</a></code>(3), <code><a href="/docs/linux/man/3-draw_trans_rle_sprite/">draw_trans_rle_sprite</a></code>(3), <code><a href="/docs/linux/man/3-draw_lit_rle_sprite/">draw_lit_rle_sprite</a></code>(3), <code><a href="/docs/linux/man/3-bitmap_mask_color/">bitmap_mask_color</a></code>(3) </p>
-<h2>Index</h2>

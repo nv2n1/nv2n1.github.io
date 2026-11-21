@@ -111,4 +111,3 @@ paste data.t data.g | gmt spectrum1d -S256 -D1.5 -Ndata -C &gt; results.txt
 <p> Welch, P. D., 1967, The use of Fast Fourier Transform for the estimation of power spectra: a method based on time averaging over short, modified periodograms, IEEE Transactions on Audio and Electroacoustics, Vol AU-15, No 2.</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

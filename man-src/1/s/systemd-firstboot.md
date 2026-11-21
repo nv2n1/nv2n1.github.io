@@ -91,4 +91,3 @@ description: "systemd-firstboot, systemd-firstboot.service – Initialize basic 
 <p> On success, 0 is returned, a non-zero failure code otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-locale-conf/">locale.conf</a></code>(5), <code><a href="/docs/linux/man/5-localtime/">localtime</a></code>(5), <code><a href="/docs/linux/man/5-hostname/">hostname</a></code>(5), <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5), <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5), <code><a href="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></code>(1), <code><a href="/docs/linux/man/1-localectl/">localectl</a></code>(1), <code><a href="/docs/linux/man/1-timedatectl/">timedatectl</a></code>(1), <code><a href="/docs/linux/man/1-hostnamectl/">hostnamectl</a></code>(1) </p>
-<h2>Index</h2>

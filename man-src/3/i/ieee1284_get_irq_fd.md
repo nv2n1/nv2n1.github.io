@@ -55,4 +55,3 @@ description: "ieee1284_get_irq_fd, ieee1284_clear_irq – interrupt notification
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2003 Tim Waugh </p>
-<h2>Index</h2>

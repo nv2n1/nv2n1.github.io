@@ -60,4 +60,3 @@ description: "filebench – interprets WML script and generates appropriate file
 <dd></dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=133644">http://sourceforge.net/tracker/?group_id=133644</a>&amp;atid=727883 </p>
-<h2>Index</h2>

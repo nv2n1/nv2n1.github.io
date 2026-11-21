@@ -160,4 +160,3 @@ Wall-clock time elapsed:   719.554352 msecs
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-top/">perf-top</a></code>(1), <code><a href="/docs/linux/man/1-perf-list/">perf-list</a></code>(1) </p>
-<h2>Index</h2>

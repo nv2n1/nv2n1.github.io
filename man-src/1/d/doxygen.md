@@ -61,4 +61,3 @@ description: "doxygen – documentation system for various programming languages
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-doxywizard/">doxywizard</a>(1). </p>
 <p> Please consider installing the doxygen-doc package as it contains additional documentation on how to use doxygen. </p>
-<h2>Index</h2>

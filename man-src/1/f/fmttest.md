@@ -173,4 +173,3 @@ dat[0] % (num)dat[1] % (cur)dat[2] % (size)dat[3] % (width)dat[4] % (unseen)
 </pre>
 <h2>BUGS</h2>
 <p> It shouldn&#8217;t require as much code from other programs as it does. </p>
-<h2>Index</h2>

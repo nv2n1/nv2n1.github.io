@@ -554,4 +554,3 @@ description: "perlhack – How to hack on Perl"
 <p> So if you were to supply a new, complete, top-level source file to add to Perl, you should conform to this peculiar practice by yourself selecting an appropriate quotation from Tolkien, retaining the original spelling and punctuation and using the same format the rest of the quotes are in. Indirect and oblique is just fine; remember, it&#8217;s a metaphor, so being meta is, after all, what it&#8217;s for.  </p>
 <h2>AUTHOR</h2>
 <p> This document was originally written by Nathan Torkington, and is maintained by the perl5-porters mailing list. </p>
-<h2>Index</h2>

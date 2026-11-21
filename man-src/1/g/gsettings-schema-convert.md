@@ -55,4 +55,3 @@ description: "gsettings-schema-convert – GConf to GSettings schema conversion"
 </dt><dd> Keep underscores in key names instead of replacing them with dashes. GSettings keys should not contain any underscore.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gsettings-data-convert/">gsettings-data-convert</a></code>(1) a related command to migrate user settings from GConf to GSettings. </p>
-<h2>Index</h2>

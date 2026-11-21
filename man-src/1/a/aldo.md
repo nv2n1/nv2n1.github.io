@@ -32,4 +32,3 @@ description: "aldo – A fully console morse code trainer written in ISO C++."
 </dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Giuseppe Martino &lt;denever [at] users.sf.net&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

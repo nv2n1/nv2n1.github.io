@@ -42,4 +42,3 @@ void ldap_value_free_len(vals) struct berval **vals;
 <p> <code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3), <code><a href="/docs/linux/man/3-ldap_first_entry/">ldap_first_entry</a></code>(3), <code><a href="/docs/linux/man/3-ldap_first_attribute/">ldap_first_attribute</a></code>(3), <code><a href="/docs/linux/man/3-ldap_error/">ldap_error</a></code>(3)</p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> <code>OpenLDAP Software</code> is developed and maintained by The OpenLDAP Project &lt;<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>&gt;. <code>OpenLDAP Software</code> is derived from University of Michigan LDAP 3.3 Release. </p>
-<h2>Index</h2>

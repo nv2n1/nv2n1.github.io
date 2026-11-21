@@ -67,4 +67,3 @@ description: "odbc_config – get compile options for compiling unixODBC client"
 <p> The authors of unixODBC are Peter Harvey and Nick Gorham For the full list of contributors see the <i>AUTHORS</i> file. </p>
 <h2>COPYRIGHT</h2>
 <p> unixODBC is licensed under the GNU Lesser General Public License. For details about the license, see the <i>COPYING</i> file. </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "git-get-tar-commit-id – Extract commit ID from an archive create
 <p> If no commit ID is found, <i>git get-tar-commit-id</i> quietly exists with a return code of 1. This can happen if the archive had not been created using <i>git archive</i> or if the first parameter of <i>git archive</i> had been a tree ID instead of a commit ID or tag.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

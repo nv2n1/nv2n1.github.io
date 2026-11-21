@@ -28,4 +28,3 @@ npm rebuild[[&lt;@scope&gt; / &lt;name&gt;]...] alias : npm rb
 <dd> npm help install </dd>
 </dl>
 </dl>
-<h2>Index</h2>

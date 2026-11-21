@@ -62,4 +62,3 @@ UTF8 Servername: Fire V480
 </dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to the Netatalk-devel list &lt;netatalk-devel [at] lists.sourceforge.net&gt;. </p>
-<h2>Index</h2>

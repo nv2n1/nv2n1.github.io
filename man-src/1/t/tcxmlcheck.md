@@ -44,4 +44,3 @@ description: "tcxmlcheck – Check information in smil input file"
  &lt;marzio_malanchini [at] vodafone.it&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) </p>
-<h2>Index</h2>

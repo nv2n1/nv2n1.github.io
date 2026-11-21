@@ -27,4 +27,3 @@ description: "llvm-ranlib – Generate index for LLVM archive"
 <p> llvm-ar, <i><a href="/docs/linux/man/1-ranlib/">ranlib</a></i>(1)</p>
 <h2>AUTHORS</h2>
 <p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
-<h2>Index</h2>

@@ -92,4 +92,3 @@ description: "gsftopk – render a ghostscript font in TeX pk form"
 <p> Written by Paul Vojta. This program was inspired by Karl Berry&#8217;s <code>gsrenderfont</code>.</p>
 <h2>MODIFICATIONS</h2>
 <p> Modified by Yves Arrouye to use Karl Berry&#8217;s <code>Kpathsea</code> library. </p>
-<h2>Index</h2>

@@ -349,4 +349,3 @@ Ending arp-scan 1.4: 8 hosts scanned in 0.820 seconds (9.76 hosts/sec).  4 respo
 <p> <code>RFC 826</code> &#8211; An Ethernet Address Resolution Protocol </p>
 <p> <i><a rel="nofollow" href="http://www.nta-monitor.com/wiki/">http://www.nta-monitor.com/wiki/</a></i> The arp-scan wiki page. </p>
 <p> <i><a rel="nofollow" href="http://www.nta-monitor.com/tools-resources/security-tools/arp-scan/">http://www.nta-monitor.com/tools-resources/security-tools/arp-scan/</a></i> The arp-scan homepage. </p>
-<h2>Index</h2>

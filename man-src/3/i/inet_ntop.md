@@ -57,4 +57,3 @@ const char *inet_ntop(int af, const void *src,
 <p> <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a></code>(3), <code>inet</code>(3), <code>inet_pton</code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

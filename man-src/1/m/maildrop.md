@@ -313,4 +313,3 @@ description: "maildrop – mail delivery filter/agent"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/courier.html">http://www.courier-mta.org/maildrop/courier.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ description: "sgpio – captive backplane LED control utility"
 <p> sgpio should return zero when successful. It will return with a non-zero value if there was a failure.</p>
 <h2>AUTHOR</h2>
 <p> Eric R. Hall &lt;Eric.R.Hall [at] intel.com&gt; </p>
-<h2>Index</h2>

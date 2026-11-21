@@ -41,4 +41,3 @@ description: "checkbashisms – check for bashisms in /bin/sh scripts"
 <p> <code><a href="/docs/linux/man/1-lintian/">lintian</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> <code>checkbashisms</code> was originally written as a shell script by Yann Dirson &lt;<i>dirson [at] debian.org</i>&gt; and rewritten in Perl with many more features by Julian Gilbey &lt;<i>jdg [at] debian.org</i>&gt;. </p>
-<h2>Index</h2>

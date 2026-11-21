@@ -30,4 +30,3 @@ description: "arch – print machine hardware name (same as uname -m)"
 <p> <a href="/docs/linux/man/1-uname/">uname</a>(1), <a href="/docs/linux/man/2-uname/">uname</a>(2) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/arch">https://www.gnu.org/software/coreutils/arch</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) arch invocation&#8217; </p>
-<h2>Index</h2>

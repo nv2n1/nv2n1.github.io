@@ -61,4 +61,3 @@ description: "mysqlreport – Makes a friendly report of important MySQL status 
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mytop/">mytop</a>(1) </p>
 <p> The comprehensive Guide To Understanding mysqlreport at <a rel="nofollow" href="http://hackmysql.com/mysqlreportguide.">http://hackmysql.com/mysqlreportguide.</a> </p>
-<h2>Index</h2>

@@ -125,4 +125,3 @@ description: "nmh – new MH message system"
 <p> Send bug reports and suggestions to <i>nmh-workers [at] nongnu.org</i>.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mh-chart/">mh-chart</a>(1) </p>
-<h2>Index</h2>

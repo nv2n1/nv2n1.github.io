@@ -19,4 +19,3 @@ description: "pnmtosir – convert a portable anymap into a Solitaire format"
 <h2>BUGS</h2>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Marvin Landis. </p>
-<h2>Index</h2>

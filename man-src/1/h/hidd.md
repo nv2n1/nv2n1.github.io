@@ -40,4 +40,3 @@ description: "hidd – Bluetooth HID daemon"
 <dt><code>&#8211;show</code></dt>
 <dd> List current HID connections </dd>
 </dl>
-<h2>Index</h2>

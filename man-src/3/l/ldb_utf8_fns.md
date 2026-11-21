@@ -19,4 +19,3 @@ description: "ldb_utf8_fns –"
 <p> The user can optionally supply a custom utf8 functions, to handle comparisons and casefolding. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

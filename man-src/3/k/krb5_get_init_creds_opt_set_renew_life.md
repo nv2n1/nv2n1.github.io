@@ -63,4 +63,3 @@ typedef struct {
 <p> Fn krb5_get_init_creds_opt_set_win2k turns on compatibility with Windows 2000.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_creds3, krb5_verify_user3, krb5.conf5, <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) </p>
-<h2>Index</h2>

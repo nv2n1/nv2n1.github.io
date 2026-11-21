@@ -79,4 +79,3 @@ description: "fail2ban-regex – test Fail2ban \"failregex\" option"
  Copyright of modifications held by their respective authors. Licensed under the GNU General Public License v2 (GPL).</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-fail2ban-client/">fail2ban-client</a>(1) <a href="/docs/linux/man/1-fail2ban-server/">fail2ban-server</a>(1) </p>
-<h2>Index</h2>

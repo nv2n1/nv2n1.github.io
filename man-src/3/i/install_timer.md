@@ -18,4 +18,3 @@ description: "install_timer – Installs the Allegro timer interrupt handler."
 <p> Returns zero on success, or a negative number on failure (but you may decide not to check the return value as this function is very unlikely to fail). </p>
 <h2>SEE ALSO</h2>
 <p> <code>remove_timer</code>(3), <code>install_int</code>(3) </p>
-<h2>Index</h2>

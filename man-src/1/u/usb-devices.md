@@ -33,4 +33,3 @@ description: "usb-devices – print USB device details"
 <p> Greg Kroah-Hartman &lt;greg [at] kroah.com&gt; </p>
 <p> Randy Dunlap &lt;rdunlap [at] xenotime.net&gt; </p>
 <p> Frans Pop &lt;elendil [at] planet.nl&gt; </p>
-<h2>Index</h2>

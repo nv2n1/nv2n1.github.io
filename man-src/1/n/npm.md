@@ -115,4 +115,3 @@ npm &lt;command&gt; [args]
 <dd> npm help npmrc </dd>
 </dl>
 </dl>
-<h2>Index</h2>

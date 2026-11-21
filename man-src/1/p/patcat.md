@@ -19,4 +19,3 @@ description: "patcat – combine two GUS patches into one stereo extended GUS pa
 <h2>AUTHORS</h2>
 <p> Greg Lee &lt;greg [at] ling.lll.hawaii.edu&gt;<br />
  Based on code from Hannu Savolainen </p>
-<h2>Index</h2>

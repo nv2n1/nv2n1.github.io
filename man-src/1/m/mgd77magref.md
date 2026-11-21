@@ -105,4 +105,3 @@ echo -28 38 0 2001-05-01T12:00:00 | gmt mgd77magref -Ftdi/13456
 <p> The International Geomagnetic Reference Field (IGRF), see <i><a rel="nofollow" href="http://www.iugg.org/IAGA/iaga_pages/pubs_prods/igrf.htm">http://www.iugg.org/IAGA/iaga_pages/pubs_prods/igrf.htm</a></i></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

@@ -97,4 +97,3 @@ description: "wmweather – dockable weather monitor"
 <dt>Contributors:</dt>
 <dd> Athanasius, Pablo Castellazzi, Avtar Gill, Adam Lackorzynski, Jon Larabee, Jordi Mallach, Paul Martin, HIROSE Masaaki, Michael P&ouml;tters </dd>
 </dl>
-<h2>Index</h2>

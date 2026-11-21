@@ -30,4 +30,3 @@ description: "krb5_mk_req krb5_mk_req_exact krb5_mk_req_extended krb5_rd_req krb
 <p> The <code>krb5_verify_ap_req</code> and <code>krb5_build_ap_req</code> both constructs and verify the AP_REQ message, should not be used by external code.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5.conf5 </p>
-<h2>Index</h2>

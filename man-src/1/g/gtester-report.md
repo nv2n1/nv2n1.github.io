@@ -31,4 +31,3 @@ description: "gtester-report – test report formatting utility"
 </dt><dd> Output subunit. Needs python-subunit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gtester/">gtester</a></code>(1) </p>
-<h2>Index</h2>

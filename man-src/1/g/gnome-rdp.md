@@ -44,4 +44,3 @@ description: "gnome-rdp – Remote Desktop Client for the GNOME Desktop"
 <dt>
 </dt><dd> Maintains the Debian package. </dd>
 </dl>
-<h2>Index</h2>

@@ -3904,4 +3904,3 @@ Maarten ter Huurne&lt;maarten[at] treewalker.org&gt;,
 <p> Send bug-reports, fixes, enhancements, t-shirts, money, beer &amp; pizza to <code>screen-devel [at] gnu.org</code>. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-termcap/">termcap</a>(5),</code> <code><a href="/docs/linux/man/5-utmp/">utmp</a>(5),</code> <code><a href="/docs/linux/man/1-vi/">vi</a>(1),</code> <code><a href="/docs/linux/man/1-captoinfo/">captoinfo</a>(1),</code> <code><a href="/docs/linux/man/1-tic/">tic</a>(1),</code> <code><a href="/docs/linux/man/4-tty/">tty</a>(4),</code> <code><a href="/docs/linux/man/7-pty/">pty</a>(7)</code> </p>
-<h2>Index</h2>

@@ -24,4 +24,3 @@ description: "ql/experimental/credit/onefactorstudentcopula.hpp – One-factor S
 <p> One-factor Student-t copula. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

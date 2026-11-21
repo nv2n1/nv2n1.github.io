@@ -49,4 +49,3 @@ description: "flatpak-build-sign – Sign an application or runtime"
 <p> <code>$ flatpak build-sign &#8211;gpg-sign=D8BA6573DDD2418027736F1BC33B315E53C1E9D6 /some/repo org.my.App</code></p>
 <h2>SEE ALSO</h2>
 <p> <code>ostree</code>(1), <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-export/">flatpak-build-export</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build/">flatpak-build</a></code>(1), </p>
-<h2>Index</h2>

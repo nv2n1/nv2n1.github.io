@@ -58,4 +58,3 @@ description: "ttmkfdir – Utility to create fonts.scale files for truetype font
 <p> Yu Shao &lt;yshao [at] redhat.com&gt; and Pravin Satpute &lt;psatpute [at] redhat.com&gt; </p>
 <h2>LICENSE</h2>
 <p> GNU Library General Public License </p>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ description: "guilt-pop – Pop patches from the tree"
 <dt>
 </dt><dd> mailto:brandon [at] ifup.org</dd></dl>
 </dl>
-<h2>Index</h2>

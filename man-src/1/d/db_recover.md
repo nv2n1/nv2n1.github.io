@@ -59,4 +59,3 @@ description: "db5.3_recover – Restore the database to a consistent state"
 <dd> If the <code>-h</code> option is not specified and the environment variable DB_HOME is set, it is used as the path of the database home, as described in DB_ENV-&gt;open.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Sleepycat Software, Inc. This manual page was created based on the HTML documentation for db_recover from Sleepycat, by Thijs Kinkhorst &lt;thijs [at] kinkhorst.com&gt;, for the Debian system (but may be used by others). </p>
-<h2>Index</h2>

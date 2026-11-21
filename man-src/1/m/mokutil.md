@@ -118,4 +118,3 @@ description: "mokutil – utility to manipulate machine owner keys"
 <dt><code>&#8211;dbx</code></dt>
 <dd> List the keys in the secure boot blacklist signature store (dbx)</dd>
 </dl>
-<h2>Index</h2>

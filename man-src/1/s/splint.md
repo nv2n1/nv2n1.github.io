@@ -126,4 +126,3 @@ description: "splint – A tool for statically checking C programs"
 <p> or visit </p>
 <h2>SEE ALSO</h2>
 <p> lint(1) </p>
-<h2>Index</h2>

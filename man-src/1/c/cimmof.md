@@ -110,4 +110,3 @@ description: "cimmof – compile MOF files into the CIM Repository"
 </dt><dd> <code>cimmof -h</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> cimserver(1). </p>
-<h2>Index</h2>

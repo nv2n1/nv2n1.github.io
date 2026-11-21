@@ -378,4 +378,3 @@ unzip -l--q file.zip
 <dt>v6.0 20 Apr 09</dt>
 <dd> Info-ZIP (Zip-Bugs subgroup, SPC) </dd>
 </dl>
-<h2>Index</h2>

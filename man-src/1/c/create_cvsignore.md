@@ -20,4 +20,3 @@ description: "create_cvsignore – Create preliminary .cvsignore in the current 
 <p> This utility is part of the KDE Software Development Kit. </p>
 <h2>AUTHOR</h2>
 <p> Ben Burton. </p>
-<h2>Index</h2>

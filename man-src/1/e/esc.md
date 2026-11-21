@@ -29,4 +29,3 @@ description: "esc – Minimal Command-Line Interface for Smart Card Manager."
 <p> Jack Magne &lt;jmagne [at] redhat.com&gt; <code>esc</code> was written with the Dogtag project. </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2013 Red Hat, Inc. </p>
-<h2>Index</h2>

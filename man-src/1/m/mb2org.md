@@ -41,4 +41,3 @@ description: "createPYMB, readPYBase, readPYMB, mb2org, scel2org – fcitx Pinyi
 <dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> Please see the homepage at <code><a rel="nofollow" href="https://fcitx-im.org/">https://fcitx-im.org/</a></code> </p>
-<h2>Index</h2>

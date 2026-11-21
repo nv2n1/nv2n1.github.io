@@ -65,4 +65,3 @@ description: "diff3 – compare three files line by line"
 <dt>
 </dt><dd> <code>info diff3</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

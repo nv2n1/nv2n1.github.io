@@ -34,4 +34,3 @@ description: "a5toa4 – arrange A5 pages in a PDF onto A4 landscape paper"
 <p> <code>a5toa4</code> was written by Markus Kohm. </p>
 <h2>COPYRIGHT</h2>
 <p> <code>a5toa4</code> is distributed under the conditions of the LaTeX Project Public License, either version 1.3c or (at your option) any later version.. </p>
-<h2>Index</h2>

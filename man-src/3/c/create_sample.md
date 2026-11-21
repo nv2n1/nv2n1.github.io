@@ -18,4 +18,3 @@ description: "create_sample – Constructs a new sample structure of the specifi
 <p> Returns a pointer to the created sample, or NULL if the sample could not be created. Remember to free this sample later to avoid memory leaks. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-load_sample/">load_sample</a></code>(3), <code>destroy_sample</code>(3) </p>
-<h2>Index</h2>

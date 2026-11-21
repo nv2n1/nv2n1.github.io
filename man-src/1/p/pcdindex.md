@@ -12,4 +12,3 @@ description: "pcdindex – renamed to pcdovtoppm"
 <h2>DESCRIPTION</h2>
 <p> <code>pcdindex</code> has been renamed to <code><a href="/docs/linux/man/1-pcdovtoppm/">pcdovtoppm</a></code>(1) </p>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

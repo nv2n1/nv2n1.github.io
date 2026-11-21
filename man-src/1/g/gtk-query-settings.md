@@ -15,4 +15,3 @@ description: "gtk-query-settings – Utility to print name and value of all GtkS
 <h2>DESCRIPTION</h2>
 <p> <code>gtk-query-settings</code></p>
 <dd>prints both name and value of all properties available in the GtkSettings class. Optionally, you can filter which properties to list by specifying a PATTERN. </dd>
-<h2>Index</h2>

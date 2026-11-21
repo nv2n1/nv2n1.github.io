@@ -86,4 +86,3 @@ description: "opalcc — Open PAL C wrapper compiler"
 <dt>FCFLAGS</dt>
 <dd> Fortran compiler flags </dd>
 </dl>
-<h2>Index</h2>

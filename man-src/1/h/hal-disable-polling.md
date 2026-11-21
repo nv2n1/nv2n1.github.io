@@ -43,4 +43,3 @@ description: "hal-disable-polling – disable polling on drives with removable m
 <p> <i><a href="/docs/linux/man/8-hald/">hald</a></i>(8), <i><a href="/docs/linux/man/1-lshal/">lshal</a></i>(1), <i><a href="/docs/linux/man/1-hal-lock/">hal-lock</a></i>(1), <i><a href="/docs/linux/man/2-open/">open</a></i>(2), <i><a rel="nofollow" href="http://www.t10.org/scsi-3.htm">http://www.t10.org/scsi-3.htm</a></i>, <i><a rel="nofollow" href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=halpolling">https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=halpolling</a></i> </p>
 <h2>AUTHOR</h2>
 <p> Written by David Zeuthen &lt;david [at] fubar.dk&gt; with a lot of help from many others. </p>
-<h2>Index</h2>

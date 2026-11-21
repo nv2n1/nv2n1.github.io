@@ -49,4 +49,3 @@ KEY3=VALUE3
 <p> Please send bug reports to either the distribution or the polkit-devel mailing list, see the link m[blue]<code><a rel="nofollow" href="http://lists.freedesktop.org/mailman/listinfo/polkit-devel">http://lists.freedesktop.org/mailman/listinfo/polkit-devel</a></code>m[] on how to subscribe.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-polkit/">polkit</a></code>(8), <code><a href="/docs/linux/man/1-pkaction/">pkaction</a></code>(1), <code><a href="/docs/linux/man/1-pkexec/">pkexec</a></code>(1), <code><a href="/docs/linux/man/1-pkttyagent/">pkttyagent</a></code>(1) </p>
-<h2>Index</h2>

@@ -85,4 +85,3 @@ description: "pmlogreduce – temporal reduction of Performance Co-Pilot archive
 <p> If any error is detected, <code>pmlogreduce</code> will exit with a non-zero status.</p>
 <h2>CAVEATS</h2>
 <p> The preamble metrics (pmcd.pmlogger.archive, pmcd.pmlogger.host, and pmcd.pmlogger.port), which are automatically recorded by <code>pmlogger</code> at the start of the archive, may not be present in the archive output by <code>pmlogreduce</code>. These metrics are only relevant while the archive is being created, and have no significance once recording has finished. </p>
-<h2>Index</h2>

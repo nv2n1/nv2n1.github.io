@@ -20,4 +20,3 @@ description: "wps2raw – debug the conversion library"
 <dt><code>-v</code>, <code>&#8211;version</code>:</dt>
 <dd> Output wps2raw version </dd>
 </dl>
-<h2>Index</h2>

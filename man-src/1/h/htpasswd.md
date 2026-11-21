@@ -112,4 +112,3 @@ description: "htpasswd – Manage user files for basic authentication"
 &nbsp; </p>
 <p> The cost of computing a bcrypt password hash value increases with the number of rounds specified by the <code>-C</code> option. The <code>apr-util</code> library enforces a maximum number of rounds of 17 in version <code>1.6.0</code> and later.<br />
 &nbsp; </p>
-<h2>Index</h2>

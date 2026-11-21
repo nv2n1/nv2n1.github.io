@@ -21,4 +21,3 @@ description: "pnmsplit – split a multi-image portable anymap into multiple sin
 <p> <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5), <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Written by Bryan Henderson </p>
-<h2>Index</h2>

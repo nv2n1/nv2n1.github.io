@@ -69,4 +69,3 @@ description: "mv – move (rename) files"
 <p> <a href="/docs/linux/man/2-rename/">rename</a>(2) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/mv">https://www.gnu.org/software/coreutils/mv</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) mv invocation&#8217; </p>
-<h2>Index</h2>

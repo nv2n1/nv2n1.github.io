@@ -18,4 +18,3 @@ description: "CK_LIST_EMPTY CK_LIST_ENTRY CK_LIST_FIRST CK_LIST_FOREACH CK_LIST_
 <h2>SEE ALSO</h2>
 <p> queue </p>
 <p> Additional information available at <a rel="nofollow" href="http://concurrencykit.org/">http://concurrencykit.org/</a> </p>
-<h2>Index</h2>

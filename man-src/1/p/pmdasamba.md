@@ -35,4 +35,3 @@ description: "pmdasamba – Samba performance metrics domain agent (PMDA)"
 <dd> default log file for error messages from <code>pmdasamba</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1), <i><a href="/docs/linux/man/7-samba/">samba</a></i>(7) and <i><a href="/docs/linux/man/8-smbd/">smbd</a></i>(8). </p>
-<h2>Index</h2>

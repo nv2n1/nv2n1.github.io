@@ -77,4 +77,3 @@ description: "soapsuds – Mono’s Remoting Proxy Generator"
 <p> wsdl is released under the terms of the GNU GPL. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-wsdl/">wsdl</a>(1), <a href="/docs/linux/man/1-disco/">disco</a>(1), <a href="/docs/linux/man/1-mono/">mono</a>(1), <a href="/docs/linux/man/1-mcs/">mcs</a>(1) </p>
-<h2>Index</h2>

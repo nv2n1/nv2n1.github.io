@@ -36,4 +36,3 @@ description: "sky2xy – Compute X Y from RA Dec using WCS in FITS and IRAF imag
 <p> xy2sky() </p>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

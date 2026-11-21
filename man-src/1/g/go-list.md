@@ -177,4 +177,3 @@ my / main / module golang.org / x / text v0 .3.0 [v0 .4.0] = &gt; / tmp / text r
 <p> For more about modules, see <a rel="nofollow" href="https://golang.org/ref/mod.">https://golang.org/ref/mod.</a></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Michael Stapelberg &lt;stapelberg [at] debian.org&gt; and is maintained by the Debian Go Compiler Team &lt;team+go-compiler [at] tracker.debian.org&gt; based on the output of &#8216;go help list&#8217; for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

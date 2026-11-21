@@ -58,4 +58,3 @@ description: "da – setup development environment and create basic projects in 
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>da-gui</code>(1) </p>
-<h2>Index</h2>

@@ -54,4 +54,3 @@ description: "frepple – open source production planning and scheduling"
 <h2>AUTHORS</h2>
 <p> <code>FrePPLe</code> is developed as Open Source under the AGPL license, v3 or later. </p>
 <p> The authors and contributors are listed on <a rel="nofollow" href="http://frepple.com.">http://frepple.com.</a> </p>
-<h2>Index</h2>

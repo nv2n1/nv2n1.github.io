@@ -134,4 +134,3 @@ description: "nccopy – Copy a netCDF file, optionally changing format, compres
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ncdump/">ncdump</a>(1),</code><a href="/docs/linux/man/1-ncgen/">ncgen</a>(1),<code><a href="/docs/linux/man/3-netcdf/">netcdf</a>(3)</code> </p>
-<h2>Index</h2>

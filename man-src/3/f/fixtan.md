@@ -28,4 +28,3 @@ allegro_message("Precision error: %f
 <h2>RETURN VALUE</h2>
 <p> Returns the tangent of a fixed point binary format angle. The return value will be in radians. </p>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

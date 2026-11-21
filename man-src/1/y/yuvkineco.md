@@ -72,4 +72,3 @@ description: "yuvkineco – revert 2-3 pulldown movie"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-yuvycsnoise/">yuvycsnoise</a></code>(1). </p>
-<h2>Index</h2>

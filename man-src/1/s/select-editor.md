@@ -17,4 +17,3 @@ description: "select-editor – select your default sensible-editor from all ins
 <p> <code>select-editor</code> was written by Dustin Kirkland &lt;kirkland [at] canonical.com&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sensible-editor/">sensible-editor</a></code>(1) </p>
-<h2>Index</h2>

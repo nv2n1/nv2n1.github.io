@@ -34,4 +34,3 @@ description: "gdebi – Simple tool to install deb files"
 <dd> Homepage: &lt;<a rel="nofollow" href="https://launchpad.net/gdebi/">https://launchpad.net/gdebi/</a>&gt;</dd>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Gustavo Franco &lt;stratus [at] debian.org&gt; and Kartik Mistry &lt;kartik [at] debian.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

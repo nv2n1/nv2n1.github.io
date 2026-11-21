@@ -37,4 +37,3 @@ description: "sync – Synchronize cached writes to persistent storage"
 <p> <a href="/docs/linux/man/2-fdatasync/">fdatasync</a>(2), <a href="/docs/linux/man/2-fsync/">fsync</a>(2), <a href="/docs/linux/man/2-sync/">sync</a>(2), <a href="/docs/linux/man/2-syncfs/">syncfs</a>(2) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/sync">https://www.gnu.org/software/coreutils/sync</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) sync invocation&#8217; </p>
-<h2>Index</h2>

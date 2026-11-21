@@ -54,4 +54,3 @@ description: "GSmartControl – Hard disk drive health inspection tool"
 <p> Copyright &#169; 2008 &#8211; 2012 Alexander Shaduri &lt;ashaduri &#8216;at&#8217; gmail.com&gt; </p>
 <h2>AUTHOR</h2>
 <p> This manual page was originally written by Giuseppe Iuculano &lt;giuseppe [at] iuculano.it&gt; for the Debian project. </p>
-<h2>Index</h2>

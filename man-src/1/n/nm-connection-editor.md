@@ -26,4 +26,3 @@ description: "nm-connection-editor – network connection editor for NetworkMana
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nmcli/">nmcli</a>(1),</code> <code><a href="/docs/linux/man/8-networkmanager/">NetworkManager</a>(8),</code> <code><a href="/docs/linux/man/1-nm-applet/">nm-applet</a>(1).</code> </p>
-<h2>Index</h2>

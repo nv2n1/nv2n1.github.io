@@ -104,4 +104,3 @@ description: "cjpeg – compress an image file to a JPEG file"
 <p> Support for GIF input files was removed in cjpeg v6b due to concerns over the Unisys LZW patent. Although this patent expired in 2006, cjpeg still lacks GIF support, for these historical reasons. (Conversion of GIF files to JPEG is usually a bad idea anyway, since GIF is a 256-color format.) </p>
 <p> Not all variants of BMP and Targa file formats are supported. </p>
 <p> The <code>-targa</code> switch is not a bug, it&#8217;s a feature. (It would be a bug if the Targa format designers had not been clueless.) </p>
-<h2>Index</h2>

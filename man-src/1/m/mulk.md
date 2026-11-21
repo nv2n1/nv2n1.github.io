@@ -70,4 +70,3 @@ description: "mulk – Non-interactive multi-connection network downloader with 
 <h2>AUTHOR</h2>
 <p> Emanuele Bovisio &lt;pocoyo [at] users.sourceforge.net&gt; wrote this manpage. </p>
 <p> <code>Mulk</code> was written by Emanuele Bovisio. </p>
-<h2>Index</h2>

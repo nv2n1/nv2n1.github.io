@@ -52,4 +52,3 @@ openssl passwd -1  &gt; ~/.config/broadway.passwd
 <dl>
 <dt>
 </dt><dd> Use <i>ADDRESS</i> as the unix domain socket address. This option overrides &#8211;address and &#8211;port. It is available only on Unix-like systems.</dd></dl>
-<h2>Index</h2>

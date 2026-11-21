@@ -949,4 +949,3 @@ Cambridge CB2 3QH, England.
 <pre><code>Last updated: 18 December 2015
 Copyright (c) 1997-2015 University of Cambridge.
 </code></pre>
-<h2>Index</h2>

@@ -52,4 +52,3 @@ description: "Enchant – a spellchecker"
 <p> <code><a href="/docs/linux/man/1-aspell/">aspell</a></code>(1), <code><a href="/docs/linux/man/1-enchant-lsmod-2/">enchant-lsmod-2</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Written by Dom Lachowicz and Reuben Thomas. </p>
-<h2>Index</h2>

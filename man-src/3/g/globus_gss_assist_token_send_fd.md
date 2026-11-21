@@ -68,4 +68,3 @@ description: "Token Transport –"
 <p> Send token to a FILE *. Write a token to the open FILE. This function will write it without a length, so that the FILE stream only contains GSSAPI tokens.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gss_assist from the source code. </p>
-<h2>Index</h2>

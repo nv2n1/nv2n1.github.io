@@ -41,4 +41,3 @@ description: "libgphoto2 – cross-platform digital camera library"
 <dt>1. gphoto website</dt>
 <dd> <a rel="nofollow" href="http://www.gphoto.org/">http://www.gphoto.org/</a> </dd>
 </dl>
-<h2>Index</h2>

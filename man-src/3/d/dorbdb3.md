@@ -144,4 +144,3 @@ DORBDB3 simultaneously bidiagonalizes the blocks of a tall and skinny
 <p> Definition at line 201 of file dorbdb3.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

@@ -39,4 +39,3 @@ description: "xfce4-power-manager – The Xfce 4 Power manager"
 <p> Ali Abdallah &lt;aliov [at] xfce.org&gt;, Eric Koegel &lt;eric [at] xfce.org&gt;, Simon Steinbeiss &lt;simon [at] xfce.org&gt;, Harald Judt &lt;h.judt [at] gmx.at&gt; </p>
 <h2>MANPAGE AUTHORS</h2>
 <p> Ali Abdallah &lt;aliov [at] xfce.org&gt;, Robby Workman &lt;rworkman [at] slackware.com&gt;, Eric Koegel &lt;eric [at] xfce.org&gt;. </p>
-<h2>Index</h2>

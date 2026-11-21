@@ -23,4 +23,3 @@ description: "krb5_string_to_key krb5_string_to_key_data krb5_string_to_key_data
 <p> Fn krb5_free_salt frees the content of Fa salt .</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_data3, krb5_keyblock3, <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) </p>
-<h2>Index</h2>

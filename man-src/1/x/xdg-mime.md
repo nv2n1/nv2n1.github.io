@@ -171,4 +171,3 @@ xdg-icon-resource install --context mimetypes --size 64 shiny-file-icon.png text
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.freedesktop.org/wiki/Specifications/mime-apps-spec/">http://www.freedesktop.org/wiki/Specifications/mime-apps-spec/</a></dd></dl>
 </dl>
-<h2>Index</h2>

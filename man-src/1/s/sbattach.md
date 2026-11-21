@@ -26,4 +26,3 @@ description: "sbattach – UEFI secure boot detached signature tool"
 <dt><code>&#8211;signum</code></dt>
 <dd> signature to operate on (defaults to first) </dd>
 </dl>
-<h2>Index</h2>

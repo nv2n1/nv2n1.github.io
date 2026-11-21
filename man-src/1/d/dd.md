@@ -124,4 +124,3 @@ description: "dd – convert and copy a file"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/dd">https://www.gnu.org/software/coreutils/dd</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) dd invocation&#8217; </p>
-<h2>Index</h2>

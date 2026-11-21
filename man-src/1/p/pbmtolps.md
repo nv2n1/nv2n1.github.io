@@ -19,4 +19,3 @@ description: "pbmtolps – convert PBM image to PostScript"
 <p> <code><a href="/docs/linux/man/1-pnmtops/">pnmtops</a></code>(1) , <code><a href="/docs/linux/man/1-pstopnm/">pstopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtoepsi/">pbmtoepsi</a></code>(1) , <code><a href="/docs/linux/man/1-psidtopgm/">psidtopgm</a></code>(1) , <code>gs</code>, <code>pbm</code>(1) , </p>
 <h2>AUTHOR</h2>
 <p> George Phillips &lt;<i>phillips [at] cs.ubc.ca</i>&gt; </p>
-<h2>Index</h2>

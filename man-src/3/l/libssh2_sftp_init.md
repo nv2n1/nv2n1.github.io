@@ -25,4 +25,3 @@ description: "libssh2_sftp_init – open SFTP channel for the given SSH session.
 <p> <i>LIBSSH2_ERROR_EAGAIN</i> &#8211; Marked for non-blocking I/O but the call would block.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_sftp_shutdown/">libssh2_sftp_shutdown</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3)</code> </p>
-<h2>Index</h2>

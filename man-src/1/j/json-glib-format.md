@@ -29,4 +29,3 @@ description: "json-glib-format – JSON-GLib formatting tool"
 <dl>
 <dt>
 </dt><dd> Changes the number of spaces using to indent the JSON data from the default of 2. This argument is only considered if <code>&#8211;prettify</code> is used.</dd></dl>
-<h2>Index</h2>

@@ -76,4 +76,3 @@ $ join-dctrl -j Package \
 <p> The <code>join-dctrl</code> program and this manual page were written by Antti-Juhani Kaijanaho.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-grep-dctrl/">grep-dctrl</a></code>(1), <code><a href="/docs/linux/man/1-sort-dctrl/">sort-dctrl</a></code>(1), <code><a href="/docs/linux/man/1-tbl-dctrl/">tbl-dctrl</a></code>(1) </p>
-<h2>Index</h2>

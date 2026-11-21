@@ -74,4 +74,3 @@ description: "bon_csv2html program to convert CSV format Bonnie++ data to a HTML
 <p> A string that starts with &#8216;#&#8217; is a comment. </p>
 <h2>AUTHOR</h2>
 <p> These programs were written by Russell Coker &lt;russell [at] coker.com.au&gt;. May be freely used and distributed without restriction. </p>
-<h2>Index</h2>

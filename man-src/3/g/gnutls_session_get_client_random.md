@@ -32,4 +32,3 @@ description: "gnutls_session_get_client_random – get the session’s client ra
 <dt>
 </dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

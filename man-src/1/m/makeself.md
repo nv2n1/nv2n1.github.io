@@ -62,4 +62,3 @@ description: "makeself – An utility to generate self-extractable archives."
 <dd> LSM file describing the package.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Makeself has been written by Stéphane Peter &lt;megastep [at] megastep.org&gt;. This man page was originally written by Bartosz Fenski &lt;fenio [at] o2.pl&gt; for the Debian GNU/Linux distribution (but it may be used by others). </p>
-<h2>Index</h2>

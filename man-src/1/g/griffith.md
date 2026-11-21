@@ -49,4 +49,3 @@ description: "griffith – film collection manager"
 <p> Griffith was written by Vasco Nunes and Piotr OoA&#188;arowski. See the AUTHORS and THANKS files for a list of other contributors. </p>
 <p> Copyright (C) 2005-2008 Vasco Nunes &lt;vasco.m.nunes [at] gmail.com&gt;, Piotr OoA&#188;arowski &lt;ozarow+griffith [at] gmail.com&gt;, </p>
 <p> This man page was written by Piotr Ozarowski </p>
-<h2>Index</h2>

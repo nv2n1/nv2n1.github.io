@@ -51,4 +51,3 @@ bar    380.  760-772 824-828
 </pre>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-scan/">scan</a></i>(1), <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) </p>
-<h2>Index</h2>

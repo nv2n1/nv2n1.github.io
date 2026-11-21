@@ -19,4 +19,3 @@ description: "gnome-session-selector – Selects a session to use with gnome-ses
 <p> When started without arguments, <code>gnome-session-selector</code> will present a dialog that allows to choose one of the existing sessions or create a new one.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gnome-session/">gnome-session</a></code>(1) </p>
-<h2>Index</h2>

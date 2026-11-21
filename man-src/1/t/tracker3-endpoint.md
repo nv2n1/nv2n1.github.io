@@ -101,4 +101,3 @@ $ tracker3 sparql --remote-service <a rel="nofollow" href="http://127.0.0.1:8080
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-sparql/">tracker3-sparql</a></code>(1), </p>
 <p> <a rel="nofollow" href="https://www.w3.org/TR/sparql11-query/">https://www.w3.org/TR/sparql11-query/</a> </p>
-<h2>Index</h2>

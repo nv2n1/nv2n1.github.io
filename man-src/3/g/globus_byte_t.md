@@ -49,4 +49,3 @@ description: "globus_types.h –"
 <p> NULL value. From back long ago before NULL was standardized? No reason to use this on any modern system.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>

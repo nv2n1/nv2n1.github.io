@@ -244,4 +244,3 @@ $ git ls-remote mybundle
 <dt>
 </dt><dd> file:///usr/share/doc/git/html/technical/pack-format.html</dd></dl>
 </dl>
-<h2>Index</h2>

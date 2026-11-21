@@ -26,4 +26,3 @@ description: "libssh2_banner_set – set the SSH prococol banner for the local c
 <p> <i>LIBSSH2_ERROR_ALLOC</i> &#8211; An internal memory allocation call failed.</p>
 <h2>SEE ALSO</h2>
 <p> <code>libssh2_session_handshake(3)</code> </p>
-<h2>Index</h2>

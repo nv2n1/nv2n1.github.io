@@ -139,4 +139,3 @@ gitk[&lt;options&gt;][&lt;revision range&gt;][--][&lt;path&gt;...]
 </dt><dd> A minimal repository browser and Git tool output highlighter written in C using Ncurses.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

@@ -86,4 +86,3 @@ globus_l_net_manager_logging_pre_listen(
 /* globus_l_net_manager_logging_pre_listen() */
 </code></pre>
 <hr>
-<h2>Index</h2>

@@ -244,4 +244,3 @@ description: "gropdf – PDF driver for groff"
 <dd> Macros for use with <code>gropdf</code>; automatically loaded by <code>troffrc</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-afmtodit/">afmtodit</a></code>(1), <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1), <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5), <code><a href="/docs/linux/man/5-groff_out/">groff_out</a></code>(5) </p>
-<h2>Index</h2>

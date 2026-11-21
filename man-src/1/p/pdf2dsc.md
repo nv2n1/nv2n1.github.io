@@ -24,4 +24,3 @@ description: "pdf2dsc – generate a PostScript page list of a PDF document"
 <p> This document was last revised for Ghostscript version 9.55.0.</p>
 <h2>AUTHOR</h2>
 <p> Yves Arrouye &lt;yves.arrouye [at] usa.net&gt; and Russell Lang gsview at ghostgum.com.au </p>
-<h2>Index</h2>

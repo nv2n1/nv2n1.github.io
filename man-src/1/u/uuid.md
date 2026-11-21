@@ -95,4 +95,3 @@ description: "uuid – Universally Unique Identifier Command-Line Tool"
 </pre>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3), <i>OSSP::uuid</i>(3). </p>
-<h2>Index</h2>

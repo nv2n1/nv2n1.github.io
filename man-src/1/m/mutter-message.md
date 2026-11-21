@@ -28,4 +28,3 @@ description: "MUTTER-MESSAGE – a command to send a message to Mutter"
 <p> <code><a href="/docs/linux/man/1-mutter/">mutter</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Akira TAGOH &lt;tagoh [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

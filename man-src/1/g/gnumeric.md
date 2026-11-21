@@ -113,4 +113,3 @@ description: "gnumeric – a GNOME spreadsheet application."
 <h3>This manual page</h3>
 <p> Jan Schaumann &lt;jschauma [at] netmeister.org&gt;<br />
  Adrian Custer &lt;acuster [at] gnome.org&gt; </p>
-<h2>Index</h2>

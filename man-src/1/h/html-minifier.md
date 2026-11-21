@@ -77,4 +77,3 @@ description: "html-minifier – HTML minifier with lint-like capabilities"
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Display help and usage details </dd>
 </dl>
-<h2>Index</h2>

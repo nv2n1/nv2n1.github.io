@@ -33,4 +33,3 @@ description: "qmsg – send message to pbs batch jobs"
 <p> If the qmsg command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> qsub(1B), pbs_msgjob(3B) </p>
-<h2>Index</h2>

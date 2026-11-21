@@ -24,4 +24,3 @@ description: "lsdic – Display the user dictionary list"
 <dd> Displays the dictionary list of the specified user.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cpdic/">cpdic</a>(1), <a href="/docs/linux/man/1-mkdic/">mkdic</a>(1), <a href="/docs/linux/man/1-mvdic/">mvdic</a>(1), <a href="/docs/linux/man/1-rmdic/">rmdic</a>(1), </p>
-<h2>Index</h2>

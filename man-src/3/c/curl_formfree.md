@@ -20,4 +20,3 @@ description: "curl_formfree – free a previously build multipart/formdata HTTP 
 <p> None</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_formadd/">curl_formadd</a></code>(3) </p>
-<h2>Index</h2>

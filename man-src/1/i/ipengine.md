@@ -18,4 +18,3 @@ description: "ipengine – IPython parallel computing engine"
 <p> <code><a href="/docs/linux/man/1-ipython/">ipython</a>(1),</code> <code><a href="/docs/linux/man/1-ipcontroller/">ipcontroller</a>(1),</code> <code><a href="/docs/linux/man/1-ipcluster/">ipcluster</a>(1)</code> </p>
 <h2>AUTHORS</h2>
 <p> <code>ipengine</code> ships with IPython, maintained by the IPython Development Team. </p>
-<h2>Index</h2>

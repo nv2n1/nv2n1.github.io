@@ -18,4 +18,3 @@ description: "sbigtopgm – convert an SBIG CCDOPS file into a portable graymap"
 <p> <code><a href="/docs/linux/man/5-pgm/">pgm</a></code>(5)</p>
 <h2>AUTHOR</h2>
 <p> John Walker (<code><a rel="nofollow" href="http://www.fourmilab.ch/">http://www.fourmilab.ch/</a></code>), January 1998. This program is in the public domain. </p>
-<h2>Index</h2>

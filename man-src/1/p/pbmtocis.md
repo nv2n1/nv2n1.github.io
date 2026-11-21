@@ -27,4 +27,3 @@ description: "pbmtocis – convert a PBM image to a CompuServe RLE image"
 <p> <code>pbmtocis</code> was new in Netpbm 10.48 (September 2009). </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2009 John Elliot &lt;jce [at] seasip.demon.co.uk&gt; </p>
-<h2>Index</h2>

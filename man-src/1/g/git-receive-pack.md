@@ -161,4 +161,3 @@ exec git update-server-info
 <p> <code><a href="/docs/linux/man/1-git-send-pack/">git-send-pack</a></code>(1), <code><a href="/docs/linux/man/7-gitnamespaces/">gitnamespaces</a></code>(7)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

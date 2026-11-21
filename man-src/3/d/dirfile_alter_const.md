@@ -73,4 +73,3 @@ int dirfile_alter_cpolynom(DIRFILE *dirfile, const char *field_code,
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-dirfile_alter_entry/">dirfile_alter_entry</a></code>(3), <code><a href="/docs/linux/man/3-dirfile_alter_spec/">dirfile_alter_spec</a></code>(3), <code><a href="/docs/linux/man/3-dirfile_malter_spec/">dirfile_malter_spec</a></code>(3), <code><a href="/docs/linux/man/3-dirfile_metaflush/">dirfile_metaflush</a></code>(3), <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3), <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3), <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3), <code><a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a></code>(5) </p>
-<h2>Index</h2>

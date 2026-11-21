@@ -363,4 +363,3 @@ ctr[GLOBAL OPTIONS] command[COMMAND OPTIONS][ARGUMENTS...]
 <p> start a container with a task </p>
 <h3>state</h3>
 <p> get the state of all the processes of the task </p>
-<h2>Index</h2>

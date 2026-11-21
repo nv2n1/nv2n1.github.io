@@ -42,4 +42,3 @@ description: "pretranslate – Fill localization files with suggested translatio
 <dt>&#8211;nofuzzymatching</dt>
 <dd> Disable fuzzy matching </dd>
 </dl>
-<h2>Index</h2>

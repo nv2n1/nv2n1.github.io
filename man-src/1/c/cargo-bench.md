@@ -113,4 +113,3 @@ $&nbsp;<wbr>cargo bench --bench BENCH
 <p> <a href="/docs/linux/man/1-cargo/">cargo</a>(1), <a href="/docs/linux/man/1-cargo-build/">cargo-build</a>(1), <a href="/docs/linux/man/1-cargo-test/">cargo-test</a>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> This work is dual-licensed under Apache 2.0 and MIT terms. See COPYRIGHT file in the cargo source distribution. </p>
-<h2>Index</h2>

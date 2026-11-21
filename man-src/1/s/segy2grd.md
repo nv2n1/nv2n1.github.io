@@ -71,4 +71,3 @@ gmt segy2grd test.segy -Gtest.nc -R0/100/0/10 -I0.5/0.2 -V -Qx0.1 -Qy0.1
 <p> <code>gmt</code>, <code>grd2xyz</code>, <code>grdedit</code>, <code>pssegy</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

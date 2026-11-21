@@ -1663,4 +1663,3 @@ $kid3-&gt;setFrame(2, "Artist", "One Hit Wonder");
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.kde.org">http://www.kde.org</a></dd></dl>
 </dl>
-<h2>Index</h2>

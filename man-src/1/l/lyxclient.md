@@ -48,4 +48,3 @@ description: "lyxclient – send commands to a running LyX editor"
 <p> <a href="/docs/linux/man/1-lyx/">lyx</a>(1), <a href="/docs/linux/man/1-xdvi/">xdvi</a>(1), LFUNs.lyx.</p>
 <h2>AUTHORS</h2>
 <p> Jo&atilde;o Luis M. Assirati &lt;assirati [at] fma.if.usp.br&gt; is the principal author of lyxclient. </p>
-<h2>Index</h2>

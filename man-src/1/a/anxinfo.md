@@ -31,4 +31,3 @@ description: "anxinfo — Display information about annodexed media"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-anxrip/">anxrip</a></code><code>(1)</code> <code><a href="/docs/linux/man/1-anxgrep/">anxgrep</a></code><code>(1)</code> <code><a href="/docs/linux/man/1-anxenc/">anxenc</a></code><code>(1)</code> </p>
 <p> More information is available at <i>Annodex.net (link to URL <a rel="nofollow" href="http://www.annodex.net/)">http://www.annodex.net/)</a> </i> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </p>
-<h2>Index</h2>

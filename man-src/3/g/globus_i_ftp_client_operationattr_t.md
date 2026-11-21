@@ -16,4 +16,3 @@ description: "globus_i_ftp_client_operationattr_t –"
 <p> The <code>globus_i_ftp_client_operationattr_t</code> is a pointer to this structure type. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
-<h2>Index</h2>

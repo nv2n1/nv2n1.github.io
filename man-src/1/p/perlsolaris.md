@@ -298,4 +298,3 @@ Failed Test Stat Wstat Total Fail Failed List of Failed-- -- -- -- -- -- -- -- -
 <h2>AUTHOR</h2>
 <p> The original was written by Andy Dougherty <i>doughera [at] lafayette.edu</i> drawing heavily on advice from Alan Burlison, Nick Ing-Simmons, Tim Bunce, and many other Solaris users over the years. </p>
 <p> Please report any errors, updates, or suggestions to <i>perlbug [at] perl.org</i>. </p>
-<h2>Index</h2>

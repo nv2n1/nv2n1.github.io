@@ -41,4 +41,3 @@ description: "spuunmux – demultiplexes subtitles from an existing mpeg2 progra
 <p> None.</p>
 <h2>AUTHOR</h2>
 <p> MarcLeemanThis manual page was written by Marc Leeman &lt;marc.leeman [at] gmail.com&gt;, for the Debian GNU/Linux system (but may be used by others). &lt;marc.leeman [at] gmail.com&gt; MarcLeeman2016Marc Leeman </p>
-<h2>Index</h2>

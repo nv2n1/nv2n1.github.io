@@ -22,4 +22,3 @@ description: "globus_gram_job_manager_script_interface – Job Manager Scheduler
 <dt><code>Globus::GRAM::JobDescription </code></dt>
 <dd> This module mimics the RSL job description using perl syntax. The job manager passes an object of this type to the JobManager modules&#8217;s constructor. The job manager stores RSL and some configuration values in that JobDescription object. The manager accesses values stored in the JobDescription by invoking methods containing the RSL attribute&#8217;s name (example: $description-&gt;gram_my_job()). Method names are handled as if they were based on the canonical RSL representation of the attribute name. For example, the <code>gram_my_job</code> may be equivalently referred to as <code>GramMyJob</code>, <code>grammyjob</code>, or <code>GRAM_My_Job</code>.</dd></dl>
 <hr>
-<h2>Index</h2>

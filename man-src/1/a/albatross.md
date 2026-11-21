@@ -39,4 +39,3 @@ description: "albatross – a tool for finding fonts that contain a given (Unico
 <dd> Show a help message and exit</dd></dl>
 <h2>BUGS</h2>
 <p> Issue tracker at </p>
-<h2>Index</h2>

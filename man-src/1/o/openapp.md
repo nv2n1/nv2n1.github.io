@@ -50,4 +50,3 @@ description: "openapp – launch applications from the command line"
 <h2>AUTHORS</h2>
 <p> This manual page was first written July 2003 by Martin Brecher &lt;martin [at] mb-itconsulting.com&gt;. </p>
 <p> Updated with notes from Hubert Chathi &lt;uhoreg [at] debian.org&gt; and Dennis Leeuw &lt;dleeuw [at] made-it.com&gt;, December 2007 by Dennis Leeuw. </p>
-<h2>Index</h2>

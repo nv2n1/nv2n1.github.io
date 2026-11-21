@@ -103,4 +103,3 @@ git revert[--[no - ] edit][-n][-m parent - number][-s][-S[&lt;keyid&gt;]]&lt;com
 <dt>
 </dt><dd> file:///usr/share/doc/git/html/howto/revert-a-faulty-merge.html</dd></dl>
 </dl>
-<h2>Index</h2>

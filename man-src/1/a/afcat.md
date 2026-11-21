@@ -41,4 +41,3 @@ description: "afcat – Output contents of an image file to stdout."
 <p> <code>afcat</code> first appeared in <code>AFFLIB</code> v1.00.</p>
 <h2>AUTHOR</h2>
 <p> Simson Garfinkel &lt;simsong [at] acm.org&gt; </p>
-<h2>Index</h2>

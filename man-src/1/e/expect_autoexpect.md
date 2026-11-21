@@ -87,4 +87,3 @@ description: "autoexpect – generate an Expect script from watching a session"
 <h2>AUTHOR</h2>
 <p> Don Libes, National Institute of Standards and Technology </p>
 <p> <code>expect</code> and <code>autoexpect</code> are in the public domain. NIST and I would appreciate credit if these programs or parts of them are used. </p>
-<h2>Index</h2>

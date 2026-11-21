@@ -21,4 +21,3 @@ description: "makeg – make a debuggable executable"
 <dd> Set to a non-null value if using the <i>gdb</i> debugger on Solaris 2, which requires additional debugging options to be passed to the compiler.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>make (1),</i> <i>imake (1)</i> </p>
-<h2>Index</h2>

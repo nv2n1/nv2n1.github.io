@@ -54,4 +54,3 @@ description: "zarafa-ical – Start the Zarafa ICal/CalDAV gateway."
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-zarafa-ical-cfg/">zarafa-ical.cfg</a></code>(5)<code><a href="/docs/linux/man/1-zarafa-server/">zarafa-server</a></code>(1) </p>
-<h2>Index</h2>

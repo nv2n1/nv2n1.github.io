@@ -139,4 +139,3 @@ An overview of the six time values available from curl_easy_getinfo()
 <p> If the operation was successful, CURLE_OK is returned. Otherwise an appropriate error code will be returned.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a></code>(3) </p>
-<h2>Index</h2>

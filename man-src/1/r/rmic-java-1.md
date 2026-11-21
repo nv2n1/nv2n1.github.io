@@ -102,4 +102,3 @@ _&lt;interfaceName&gt;_tie.class</code>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-java/">java</a>(1), <a href="/docs/linux/man/1-javac/">javac</a>(1), <i>CLASSPATH</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/tools/index.html#classpath">http://docs.oracle.com/javase/7/docs/technotes/tools/index.html#classpath</a> </p>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

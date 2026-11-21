@@ -26,4 +26,3 @@ description: "libipmimonitoring – a library for IPMI system event and sensor m
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-freeipmi_interpret_sel-conf/">freeipmi_interpret_sel.conf</a>(5), freeipmi_interpret_sensors.conf(5) </p>
 <p> <a rel="nofollow" href="http://www.gnu.org/software/freeipmi/">http://www.gnu.org/software/freeipmi/</a> </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "plserver – PLplot graphics server"
 <p> See /usr/share/doc/plplot/plplot.ps.gz for more details.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Rafael Laboissiere &lt;rafael [at] debian.org&gt;. </p>
-<h2>Index</h2>

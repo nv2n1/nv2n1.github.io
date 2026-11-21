@@ -123,4 +123,3 @@ ssh mailuser [at] host dsync -u user
 <dt>dsync design</dt>
 <dd> <a rel="nofollow" href="http://wiki2.dovecot.org/Design/Dsync">http://wiki2.dovecot.org/Design/Dsync</a> </dd>
 </dl>
-<h2>Index</h2>

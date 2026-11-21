@@ -296,4 +296,3 @@ class FooType
 <dd></dd></dl>
 <h2>WEB SITE</h2>
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details </p>
-<h2>Index</h2>

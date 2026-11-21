@@ -19,4 +19,3 @@ description: "wishwn – default version of the Tcl_AppInit procedure for wnb(1)
 <h2>AUTHOR</h2>
 <p> <code>wishwn</code> was written by the authors of wordnet 1.6. </p>
 <p> This manual page was created by Andreas Tille &lt;tille [at] debian.org&gt; for the Debian GNU/Linux system. Feel free to improve this! </p>
-<h2>Index</h2>

@@ -108,4 +108,3 @@ description: "globus-job-submit – Submit a batch job using GRAM"
 <p> <a href="/docs/linux/man/1-globusrun/">globusrun</a>(1), <a href="/docs/linux/man/1-globus-job-run/">globus-job-run</a>(1), <a href="/docs/linux/man/1-globus-job-clean/">globus-job-clean</a>(1), <a href="/docs/linux/man/1-globus-job-get-output/">globus-job-get-output</a>(1), <a href="/docs/linux/man/1-globus-job-cancel/">globus-job-cancel</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
-<h2>Index</h2>

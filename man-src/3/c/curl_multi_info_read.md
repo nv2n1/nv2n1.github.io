@@ -35,4 +35,3 @@ struct CURLMsg {
 <p> A pointer to a filled-in struct, or NULL if it failed or ran out of structs. It also writes the number of messages left in the queue (after this read) in the integer the second argument points to.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_multi_cleanup/">curl_multi_cleanup</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_init/">curl_multi_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_perform/">curl_multi_perform</a></code>(3) </p>
-<h2>Index</h2>

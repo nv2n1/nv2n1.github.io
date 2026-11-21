@@ -182,4 +182,3 @@ description: "ccache-swig – a fast compiler cache"
 <p> ccache was written by Andrew Tridgell <a rel="nofollow" href="http://samba.org/~tridge/.">http://samba.org/~tridge/.</a> ccache was adapted to create ccache-swig for use with SWIG by William Fulton. </p>
 <p> If you wish to report a problem or make a suggestion then please email the SWIG developers on the swig-devel mailing list, see <a rel="nofollow" href="http://www.swig.org/mail.html">http://www.swig.org/mail.html</a> </p>
 <p> ccache is released under the GNU General Public License version 2 or later. Please see the file COPYING for license details. </p>
-<h2>Index</h2>

@@ -50,4 +50,3 @@ hpidomain[-D id][-N host[:port]][-C&lt;cfgfile&gt;][-t tttt][-V - X - h] hpidoma
 Ulrich Kleber(ulikleber[at] users.sourceforge.net)
     Anton Pak(avpak[at] users.sourceforge.net)
 </code></pre>
-<h2>Index</h2>

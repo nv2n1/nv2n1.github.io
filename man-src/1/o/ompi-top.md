@@ -34,4 +34,3 @@ description: "ompi-top, orte-top – Diagnostic to provide process info similar 
 <h2>DESCRIPTION</h2>
 <p> <i>ompi-top</i> collects and displays process information in a manner similar to that of the popular &quot;top&quot; program. It doesn&#8217;t do the fancy screen display, but does allow you to monitor available process information (to the limits of the underlying operating system) of processes irrespective of their location.</p>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

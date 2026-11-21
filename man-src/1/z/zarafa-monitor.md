@@ -53,4 +53,3 @@ description: "zarafa-monitor – Start the Zarafa monitor."
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-zarafa-monitor-cfg/">zarafa-monitor.cfg</a></code>(5)<code><a href="/docs/linux/man/1-zarafa-server/">zarafa-server</a></code>(1) </p>
-<h2>Index</h2>

@@ -345,4 +345,3 @@ http://www.mono-project.com
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mono/">mono</a>(1) </p>
-<h2>Index</h2>

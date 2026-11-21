@@ -278,4 +278,3 @@ cvs -d &quot;:ext;CVS_SERVER=git cvsserver:user [at] server/path/repo.git&quot; 
 <p> <i>git-cvsserver</i> depends on DBD::SQLite.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

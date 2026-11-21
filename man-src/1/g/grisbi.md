@@ -37,4 +37,3 @@ description: "grisbi – Personal finance tracking program based on GTK"
 <dd> Show version of program.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Benjamin Drieu &lt;benj [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

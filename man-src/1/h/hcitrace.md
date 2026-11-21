@@ -22,4 +22,3 @@ description: "hcitrace – hcitrace daemon"
 &nbsp;<wbr>&nbsp;<wbr><code>-d</code>,&nbsp;<wbr><code>&#8211;debug</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Enable debug information output </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Nobuhiro Iwamatsu &lt;iwamatsu [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

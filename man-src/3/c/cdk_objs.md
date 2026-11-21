@@ -75,4 +75,3 @@ bool validCDKObject(
 <dd> Returns true if a &quot;new&quot; was done on the object but no &quot;destroy&quot;.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> cdk_binding (3) cdk_process (3) </p>
-<h2>Index</h2>

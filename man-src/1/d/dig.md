@@ -279,4 +279,3 @@ dig +qr <a rel="nofollow" href="http://www.isc.org">www.isc.org</a> any -x 127.0
 <p> Internet Systems Consortium</p>
 <h2>COPYRIGHT</h2>
 <p> 2023, Internet Systems Consortium </p>
-<h2>Index</h2>

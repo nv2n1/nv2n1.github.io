@@ -19,4 +19,3 @@ description: "select-default-iwrap – Selects the user default ispell dictionar
 <p> <code><a href="/docs/linux/man/1-ispell-wrapper/">ispell-wrapper</a></code>(1)</p>
 <h2>AUTHORS</h2>
 <p> Rafael Laboissiere </p>
-<h2>Index</h2>

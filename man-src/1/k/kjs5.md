@@ -67,4 +67,3 @@ JS&gt;
 <dt>
 </dt><dd> <a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a></dd></dl>
 </dl>
-<h2>Index</h2>

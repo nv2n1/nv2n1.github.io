@@ -46,4 +46,3 @@ description: "dc1394_vloopback – send format0 video to V4L vloopback device"
 <p> On Debian systems (like Ubuntu), the complete text of the GNU Lesser General Public License can be found in /usr/share/common-licenses/LGPL-2.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dc1394_reset_bus/">dc1394_reset_bus</a></code>(1) </p>
-<h2>Index</h2>

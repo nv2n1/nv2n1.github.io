@@ -40,4 +40,3 @@ message&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<
 <p> Email bug reports to <i>mike [at] dragonflylogic.com</i></p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2008, 2009 Mike Laughton </p>
-<h2>Index</h2>

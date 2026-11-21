@@ -38,4 +38,3 @@ npm deprecate my-thing@&quot;&lt; 0.2.3&quot; &quot;critical bug fixed in v0.2.3
 <dd> npm help registry </dd>
 </dl>
 </dl>
-<h2>Index</h2>

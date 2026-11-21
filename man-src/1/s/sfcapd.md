@@ -134,4 +134,3 @@ description: "sfcapd – sflow capture daemon"
 <p> Socket buffer: Setting the socket buffer size is system dependent. When starting up, sfcapd returns the number of bytes the buffer was actually set. This is done by reading back the buffer size and may differ from what you requested.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-nfcapd/">nfcapd</a>(1), <a href="/docs/linux/man/1-nfdump/">nfdump</a>(1), <a href="/docs/linux/man/1-nfprofile/">nfprofile</a>(1), <a href="/docs/linux/man/1-nfreplay/">nfreplay</a>(1) </p>
-<h2>Index</h2>

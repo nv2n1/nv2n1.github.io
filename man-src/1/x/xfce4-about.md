@@ -34,4 +34,3 @@ description: "xfce4-about – About and Credits dialog for Xfce"
 <dt>
 </dt><dd> The Xfce development team. All rights reserved.</dd></dl>
 <p> Please report bugs to &lt;<a rel="nofollow" href="https://bugzilla.xfce.org/">https://bugzilla.xfce.org/</a>&gt;. </p>
-<h2>Index</h2>

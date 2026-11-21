@@ -45,4 +45,3 @@ description: "icegridnode – The IceGrid node server."
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icegridadmin/">icegridadmin</a></code>(1), <code><a href="/docs/linux/man/1-icegridregistry/">icegridregistry</a></code>(1) </p>
-<h2>Index</h2>

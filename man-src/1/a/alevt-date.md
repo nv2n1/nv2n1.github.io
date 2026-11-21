@@ -39,4 +39,3 @@ description: "alevt-date – display/set time received via Teletext"
 <h2>BUGS</h2>
 <p> This program is just a toy. The time transmitted by the TV stations is more than inaccurate. Some are within a few seconds of your local time reference but others are more then 15 minutes off. You&#8217;ve been warned. (And don&#8217;t assume the pkt8/30 time is better. It&#8217;s even worse.) </p>
 <p> No bug reports to &lt;froese [at] gmx.de&gt; *g*. </p>
-<h2>Index</h2>

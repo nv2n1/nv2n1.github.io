@@ -16,4 +16,3 @@ description: "get_config_hex – Retrieves a hexadecimal value from the configur
 <p> Reads an integer variable from the current config file, in hexadecimal format. See the comments about get_config_string(). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_config_file/">set_config_file</a></code>(3), <code><a href="/docs/linux/man/3-set_config_hex/">set_config_hex</a></code>(3), <code><a href="/docs/linux/man/3-get_config_string/">get_config_string</a></code>(3), <code><a href="/docs/linux/man/3-get_config_argv/">get_config_argv</a></code>(3), <code><a href="/docs/linux/man/3-get_config_float/">get_config_float</a></code>(3), <code><a href="/docs/linux/man/3-get_config_int/">get_config_int</a></code>(3), <code><a href="/docs/linux/man/3-get_config_id/">get_config_id</a></code>(3) </p>
-<h2>Index</h2>

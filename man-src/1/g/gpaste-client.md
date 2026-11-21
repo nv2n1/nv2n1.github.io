@@ -90,4 +90,3 @@ description: "GPaste – A lightweight clipboard manager for the Gnome desktop"
 <dt><code>&#8211;zero</code></dt>
 <dd> Use NUL character instead of new lines between each item </dd>
 </dl>
-<h2>Index</h2>

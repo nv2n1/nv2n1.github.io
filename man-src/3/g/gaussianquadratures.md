@@ -37,4 +37,3 @@ description: "ql/math/integrals/gaussianquadratures.hpp – Integral of a 1-dime
 <p> Integral of a 1-dimensional function using the Gauss quadratures. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

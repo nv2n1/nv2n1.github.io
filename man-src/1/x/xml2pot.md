@@ -27,4 +27,3 @@ description: "xml2pot – Creates a PO template file from a DocBook XML file."
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

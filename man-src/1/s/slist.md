@@ -35,4 +35,3 @@ description: "slist – Lists available NetWare Servers"
 <p> slist was written by Volker Lendecke (lendecke [at] math.uni-goettingen.de) </p>
 <h2>BUGS</h2>
 <p> <code>slist</code> works only in <i>IPX</i> environment, as it uses <i>SAP</i> to find first server and then <i>Bindery</i> to get list of servers. </p>
-<h2>Index</h2>

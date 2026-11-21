@@ -54,4 +54,3 @@ description: "otter-browser – the web browser controlled by the user, not vice
 <p> Be sure to do your search within open and closed issues before submitting reports.</p>
 <h2>AUTHOR</h2>
 <p> The Otter Browser team &#8211; &lt;<a rel="nofollow" href="http://otter-browser.org">http://otter-browser.org</a>&gt; </p>
-<h2>Index</h2>

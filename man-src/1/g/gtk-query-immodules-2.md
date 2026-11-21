@@ -27,4 +27,3 @@ description: "gtk-query-immodules-2.0 – Input method module registration utili
 <p> The environment variable <code>GTK_PATH</code> can be used to prepend directories to the input method module path.</p>
 <h2>BUGS</h2>
 <p> None known yet. </p>
-<h2>Index</h2>

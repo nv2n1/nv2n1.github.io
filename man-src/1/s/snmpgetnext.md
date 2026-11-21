@@ -25,4 +25,3 @@ description: "snmpgetnext – communicates with a network entity using SNMP GETN
 <p> In addition to this option, <code>snmpgetnext</code> takes the common options described in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page. Note that <code>snmpgetnext</code> REQUIRES an argument specifying the agent to query and at least one OID argument, as described there.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/1-snmpget/">snmpget</a>(1), <a href="/docs/linux/man/5-variables/">variables</a>(5). </p>
-<h2>Index</h2>

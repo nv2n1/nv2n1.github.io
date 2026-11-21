@@ -22,4 +22,3 @@ description: "ql/instruments/forwardvanillaoption.hpp – Forward version of a v
 <p> Forward version of a vanilla option. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

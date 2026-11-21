@@ -49,4 +49,3 @@ description: "funcd – deaemon for the Fedora Universal Network Controller"
 <p> <tt><a href="/docs/linux/man/1-func/">func</a>(1)</tt>, <tt><a href="/docs/linux/man/1-certmaster/">certmaster</a>(1)</tt>, <tt>&quot;<a href="/docs/linux/man/1-certmaster-ca/">certmaster-ca</a>(1)&quot;</tt>, <tt>&quot;<a href="/docs/linux/man/1-func-transmit/">func-transmit</a>(1)&quot;</tt></p>
 <h2>AUTHOR</h2>
 <p> Various, see <a rel="nofollow" href="https://fedorahosted.org/func/">https://fedorahosted.org/func/</a> </p>
-<h2>Index</h2>

@@ -87,4 +87,3 @@ description: "wflinfo – a utility for printing OpenGL or OpenGL ES driver info
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2013 Intel </p>
 <p> This manual page is licensed under the Creative Commons Attribution-ShareAlike 3.0 United States License (CC BY-SA 3.0). To view a copy of this license, visit m[blue]<code><a rel="nofollow" href="http://creativecommons.org.license/by-sa/3.0/us">http://creativecommons.org.license/by-sa/3.0/us</a></code>m[]. </p>
-<h2>Index</h2>

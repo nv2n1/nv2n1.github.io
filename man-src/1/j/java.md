@@ -1869,4 +1869,3 @@ static void main(String[] args)
 <dl>
 <dt>
 </dt><dd> &bull; <a href="/docs/linux/man/1-jstat/">jstat</a>(1)</dd></dl>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ npm stop [-- &lt;args&gt;]
 <dd> npm help restart </dd>
 </dl>
 </dl>
-<h2>Index</h2>

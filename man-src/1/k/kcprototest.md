@@ -42,4 +42,3 @@ description: "kcprototest – command line interface to test the prototype datab
  <code>-it </code><i>num</i> : specifies the number of repetition.
 </dd></dl>
 <p> This command returns 0 on success, another on failure. </p>
-<h2>Index</h2>

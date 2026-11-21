@@ -25,4 +25,3 @@ description: "ql/termstructures/localbootstrap.hpp – localised-term-structure 
 <p> localised-term-structure bootstrapper for most curve types. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

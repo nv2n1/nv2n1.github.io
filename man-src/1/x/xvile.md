@@ -136,4 +136,3 @@ vile -c'search-forward /pattern/' filename
 <h2>BUGS</h2>
 <p> The &quot;<code>VI L</code>ike <code>E</code>macs&quot; joke isn&#8217;t really funny. It only sounds that way. :-) Other suspicious behavior should be reported via the project mailing list, or via the web-based bug reporting system. Both of these are available here: </p>
 <p> <a rel="nofollow" href="https://savannah.nongnu.org/projects/vile">https://savannah.nongnu.org/projects/vile</a> </p>
-<h2>Index</h2>

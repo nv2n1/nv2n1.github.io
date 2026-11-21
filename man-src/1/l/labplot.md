@@ -23,4 +23,3 @@ description: "LabPlot – data plotting and function analysis tool for KDE"
 <h2>AUTHOR</h2>
 <p> LabPlot was written by Stefan Gerlach &lt;gerlach [at] mbi-berlin.de&gt;.<br />
  This manual page was prepared by Helen Faulkner &lt;helen_ml_faulkner [at] yahoo.co.uk&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

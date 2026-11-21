@@ -110,4 +110,3 @@ description: "reformail – E-mail reformatting tool"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/maildrop.html">http://www.courier-mta.org/maildrop/maildrop.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

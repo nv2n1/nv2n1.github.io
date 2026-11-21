@@ -54,4 +54,3 @@ description: "guilt-select – Select guards to apply when pushing patches"
 <dt>
 </dt><dd> mailto:eclesh [at] ucla.edu</dd></dl>
 </dl>
-<h2>Index</h2>

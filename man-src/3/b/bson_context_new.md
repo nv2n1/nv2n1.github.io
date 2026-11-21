@@ -24,4 +24,3 @@ bson_context_new (bson_context_flags_t flags);
 <p> A newly allocated <code>bson_context_t</code> that should be freed with <code>bson_context_destroy</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

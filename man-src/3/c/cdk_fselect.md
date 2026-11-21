@@ -357,4 +357,3 @@ void setCDKFselectVerticalChar(
 <dt>
 </dt><dd> <code>bindCDKObject (vSCROLL, fselect-&gt;filelist, X, deleteFile, fselect);</code></dd></dl>
 <p> where <code>fselect</code> is a pointer to the object. This was originally turned on, but I thought it better to put the control of file deletion on an &#8216;as-need&#8217; basis. </p>
-<h2>Index</h2>

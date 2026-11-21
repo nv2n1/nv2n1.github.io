@@ -54,4 +54,3 @@ description: "nwdir – Lists files in directory"
 <p> nwdir was written by Milan Vandrovec. See the Changes file of ncpfs for other contributors. </p>
 <h2>BUGS</h2>
 <p> Directory quotas are not displayed. User names are not taken from NDS, but only from bindery. </p>
-<h2>Index</h2>

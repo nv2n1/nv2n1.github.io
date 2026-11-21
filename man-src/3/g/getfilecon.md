@@ -30,4 +30,3 @@ description: "getfilecon, fgetfilecon, lgetfilecon – get SELinux security cont
 <p> The errors documented for the <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) system call are also applicable here.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3), <code><a href="/docs/linux/man/3-setfilecon/">setfilecon</a></code>(3), <code><a href="/docs/linux/man/3-setfscreatecon/">setfscreatecon</a></code>(3) </p>
-<h2>Index</h2>

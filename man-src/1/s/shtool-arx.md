@@ -39,4 +39,3 @@ description: "shtool arx – GNU shtool"
 <p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>arx</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1999 for <font SIZE="-1"><code>GNU</code></font><code> shtool</code>. It was prompted by need to build libraries out of sub-libraries inside the <font SIZE="-1"><code>OSSP</code></font> project.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-ar/">ar</a></i>(1). </p>
-<h2>Index</h2>

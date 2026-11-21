@@ -603,4 +603,3 @@ jarsigner - verify[options] jar - file[alias...]
 <dt>&bull;</dt>
 <dd> Trail: Security Features in Java SE at <a rel="nofollow" href="http://docs.oracle.com/javase/tutorial/security/index.html">http://docs.oracle.com/javase/tutorial/security/index.html</a> </dd>
 </dl>
-<h2>Index</h2>

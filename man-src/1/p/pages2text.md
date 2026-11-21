@@ -13,4 +13,3 @@ description: "pages2text – convert Pages document into plain text"
 <p> <code>pages2text</code> [<i>OPTION</i>] <i>&lt;Pages Document&gt; | &lt;Pages Directory&gt;</i></p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;info</code> Display document metadata instead of the text <code>&#8211;help</code> Shows this help message <code>&#8211;version</code> Output pages2text version </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "gnome-screensaver-preferences – configure GNOME Screensaver"
 <p> <code>gnome-screensaver-preferences</code> is written by William Jon McCann &lt;mccann [at] jhu.edu&gt;. This manual page was written by Sven Arvidsson &lt;sa [at] whiz.se&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gnome-screensaver/">gnome-screensaver</a></code>(1), <code><a href="/docs/linux/man/7-gtk-options/">gtk-options</a></code>(7) The online documentation available through the program&#8217;s <i>Help</i> menu. </p>
-<h2>Index</h2>

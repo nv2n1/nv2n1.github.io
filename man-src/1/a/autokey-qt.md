@@ -28,4 +28,3 @@ description: "autokey-qt – keyboard automation utility for KDE and QT"
 <h2>AUTHOR</h2>
 <p> AutoKey was written by Chris Dekter, loosely based on a script by Sam Peterson. </p>
 <p> This manual page was written by Chris Dekter &lt;cdekter [at] gmail.com&gt;. </p>
-<h2>Index</h2>

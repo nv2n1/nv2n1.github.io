@@ -58,4 +58,3 @@ description: "riparrange – FLAC file organiser"
 <p> <a href="/docs/linux/man/1-ripright/">ripright</a>(1) </p>
 <p> <a rel="nofollow" href="http://www.mcternan.co.uk/ripright/">http://www.mcternan.co.uk/ripright/</a><br />
  <a rel="nofollow" href="http://wiki.musicbrainz.org/MusicBrainz_Tag">http://wiki.musicbrainz.org/MusicBrainz_Tag</a> </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "pcxtoppm – convert a PCX file into a portable pixmap"
 <h2>AUTHORS</h2>
 <p> Copyright (C) 1990 by Michael Davidson.<br />
  Modified 1994 by Ingo Wilken (Ingo.Wilken [at] informatik.uni-oldenburg.de) </p>
-<h2>Index</h2>

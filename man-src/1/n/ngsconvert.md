@@ -38,4 +38,3 @@ Old : What Size in Bytes
 <h2>BUGS</h2>
 <p> If variable names and the title and plotname strings have trailing blanks in them they will be stripped off when the file is read, if it is in ascii format. </p>
 <p> If a plot title begins with &quot;Title:&quot; <code>nutmeg</code> will be fooled into thinking that this is an ascii format file. <code>Sconvert</code> always requires the type to be specified, however. </p>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ description: "php-config – get information about PHP configuration and compile
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1997-2010 The PHP Group </p>
 <p> This source file is subject to version 3.01 of the PHP license, that is bundled with this package in the file LICENSE, and is available through the world-wide-web at the following url: <code><a rel="nofollow" href="http://www.php.net/license/3_01.txt">http://www.php.net/license/3_01.txt</a></code> If you did not receive a copy of the PHP license and are unable to obtain it through the world-wide-web, please send a note to <code>license [at] php.net</code> so we can mail you a copy immediately. </p>
-<h2>Index</h2>

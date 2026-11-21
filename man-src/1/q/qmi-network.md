@@ -62,4 +62,3 @@ description: "qmi-network – Simple network management of QMI devices"
 <dt>
 </dt><dd> <code>info qmi-network</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

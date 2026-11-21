@@ -187,4 +187,3 @@ description: "xrandr – primitive command line interface to RandR extension"
 <p> <a href="/docs/linux/man/3-xrandr/">Xrandr</a>(3), <a href="/docs/linux/man/1-cvt/">cvt</a>(1), xkeystone(1), <a href="/docs/linux/man/1-xbacklight/">xbacklight</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> Keith Packard, Open Source Technology Center, Intel Corporation. and Jim Gettys, Cambridge Research Laboratory, HP Labs, HP. </p>
-<h2>Index</h2>

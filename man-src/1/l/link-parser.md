@@ -66,4 +66,3 @@ description: "link-parser – parses natural language sentences"
 <h2>AUTHOR</h2>
 <p> link-parser was written by Daniel Sleator &lt;sleator [at] cs.cmu.edu&gt;, Davy Temperley &lt;dtemp [at] theory.esm.rochester.edu&gt;, and John Lafferty &lt;lafferty [at] cs.cmu.edu&gt; </p>
 <p> This manual page was written by Ken Bloom &lt;kbloom [at] gmail.com&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

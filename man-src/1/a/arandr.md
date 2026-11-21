@@ -26,4 +26,3 @@ description: "arandr – visual front end for XRandR 1.2"
 <p> <code>man 1 xrandr</code></p>
 <h2>AUTHOR</h2>
 <p> chrysn &lt;chrysn [at] fsfe.org&gt; </p>
-<h2>Index</h2>

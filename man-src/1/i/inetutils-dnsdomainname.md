@@ -25,4 +25,3 @@ description: "dnsdomainname – show DNS domain name"
 <dd> Print program version.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/2-gethostname/">gethostname</a>(2), <a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a>(3) </p>
-<h2>Index</h2>

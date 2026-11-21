@@ -115,4 +115,3 @@ description: "xcf2png – convert from GIMP xcf files to png format"
 <p> <code>xcf2png</code> was written by Henning Makholm &lt;henning [at] makholm.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xcfinfo/">xcfinfo</a></code>(1), <code><a href="/docs/linux/man/1-xcf2pnm/">xcf2pnm</a></code>(1) </p>
-<h2>Index</h2>

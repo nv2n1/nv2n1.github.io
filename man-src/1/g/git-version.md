@@ -23,4 +23,3 @@ description: "git-version – Display version information about Git"
 </dt><dd> Include additional information about how git was built for diagnostic purposes.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "chvt – change foreground virtual terminal"
 <dt><i>-h, &#8211;help</i></dt>
 <dd> show this text and exit. </dd>
 </dl>
-<h2>Index</h2>

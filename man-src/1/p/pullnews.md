@@ -138,4 +138,3 @@ description: "pullnews – Pull news from multiple news servers and feed it to a
 <p> <tt>$Id:</tt> pullnews.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-incoming-conf/">incoming.conf</a></i>(5), <i><a href="/docs/linux/man/1-rnews/">rnews</a></i>(1). </p>
-<h2>Index</h2>

@@ -12,4 +12,3 @@ description: "Server – globus_xio_server_create() causes a tcp listener socket
 <p> All accepted handles inherit all tcp specific attributes set in the attr to <code>globus_xio_server_create()</code>, but can be overridden with the attr to <code>globus_xio_register_open()</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>

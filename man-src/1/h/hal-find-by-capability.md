@@ -33,4 +33,3 @@ description: "hal-find-by-capability – find device objects by capability match
 <p> <i><a href="/docs/linux/man/8-hald/">hald</a></i>(8), <i><a href="/docs/linux/man/1-lshal/">lshal</a></i>(1), <i><a href="/docs/linux/man/1-hal-set-property/">hal-set-property</a></i>(1), <i><a href="/docs/linux/man/1-hal-get-property/">hal-get-property</a></i>(1), <i><a href="/docs/linux/man/1-hal-find-by-property/">hal-find-by-property</a></i>(1), <i><a href="/docs/linux/man/1-dbus-send/">dbus-send</a></i>(1) </p>
 <h2>AUTHOR</h2>
 <p> Written by David Zeuthen &lt;david [at] fubar.dk&gt; with a lot of help from many others. </p>
-<h2>Index</h2>

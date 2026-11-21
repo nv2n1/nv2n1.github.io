@@ -25,4 +25,3 @@ description: "libssh2_agent_userauth – authenticate a session with a public ke
 <p> Added in libssh2 1.2</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_agent_init/">libssh2_agent_init</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_agent_get_identity/">libssh2_agent_get_identity</a>(3)</code> </p>
-<h2>Index</h2>

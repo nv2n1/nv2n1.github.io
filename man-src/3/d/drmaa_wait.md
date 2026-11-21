@@ -137,4 +137,3 @@ size_t&amp;nbsp;error_diag_len
 <dt><code>DRMAA_ERRNO_NO_RUSAGE</code></dt>
 <dd> This error code is returned by drmaa_wait() when a job has finished but no rusage and stat data could be provided.</dd></dl>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

@@ -387,4 +387,3 @@ description: "grn – groff preprocessor for gremlin files"
 <p> David Slattengren and Barry Roitblat wrote the original Berkeley <i>grn</i>. Daniel Senderowicz and Werner Lemberg modified it for <i>groff</i>.</p>
 <h2>SEE ALSO</h2>
 <p> <code>gremlin</code>(1), <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-pic/">pic</a></code>(1), <code>ideal</code>(1) </p>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ description: "hunzip – decompress and decrypt hzip files to the standard outpu
 <p> <code>hunzip (1), <a href="/docs/linux/man/1-hunspell/">hunspell</a>(1)</code></p>
 <h2>AUTHOR</h2>
 <p> László Németh. </p>
-<h2>Index</h2>

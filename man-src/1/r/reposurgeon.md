@@ -1625,4 +1625,3 @@ M 644 inline README
 <dt>
 </dt><dd> <a rel="nofollow" href="http://docs.python.org/2/library/re.html">http://docs.python.org/2/library/re.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

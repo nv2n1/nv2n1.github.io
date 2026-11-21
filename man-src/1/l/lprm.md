@@ -43,4 +43,3 @@ description: "lprm – cancel print jobs"
 <p> <code><a href="/docs/linux/man/1-cancel/">cancel</a></code>(1), <code><a href="/docs/linux/man/1-lp/">lp</a></code>(1), <code><a href="/docs/linux/man/1-lpq/">lpq</a></code>(1), <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1), <code><a href="/docs/linux/man/1-lpstat/">lpstat</a></code>(1), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2021-2022 by OpenPrinting. </p>
-<h2>Index</h2>

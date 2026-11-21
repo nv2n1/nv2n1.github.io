@@ -42,4 +42,3 @@ $ echo $?
 <p> tries to make a cross between a legacy bourne/posix compatibl-ish shell and a legacy pdksh-alike but &#8220;legacy&#8221; is not exactly specified. </p>
 <p> The <code>set</code> built-in command does not have all options one would expect from a full-blown <code>mksh</code> or <code>pdksh</code> </p>
 <p> Talk to the MirOS development team using the mailing list at Aq miros-mksh [at] mirbsd.org or the <code>#!/bin/mksh</code> (or <code>#ksh</code> ) IRC channel at irc.freenode.net (Port 6697 SSL, 6667 unencrypted) if you need any further quirks or assistance, and consider migrating your legacy scripts to work with <code>mksh</code> instead of requiring <code>.</code> </p>
-<h2>Index</h2>

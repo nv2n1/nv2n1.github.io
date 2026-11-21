@@ -17,4 +17,3 @@ description: "allegro_exit – Closes down the Allegro system."
 <p> Note that after you call this function, other functions like destroy_bitmap() will most likely crash. This is a problem for C++ global destructors, which usually get called after atexit(), so don&#8217;t put Allegro calls in them. You can write the destructor code in another method which you can manually call before your program exits, avoiding this problem. </p>
 <h2>SEE ALSO</h2>
 <p> <code>install_allegro</code>(3), <code>allegro_init</code>(3), <code><a href="/docs/linux/man/3-destroy_bitmap/">destroy_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-ex3d/">ex3d</a></code>(3), <code><a href="/docs/linux/man/3-exscn3d/">exscn3d</a></code>(3), <code><a href="/docs/linux/man/3-exswitch/">exswitch</a></code>(3), <code><a href="/docs/linux/man/3-exxfade/">exxfade</a></code>(3), <code><a href="/docs/linux/man/3-exzbuf/">exzbuf</a></code>(3) </p>
-<h2>Index</h2>

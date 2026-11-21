@@ -76,4 +76,3 @@ description: "udp-receiver – receive files broadcast by udp-sender"
 <p> udp-sender</p>
 <h2>AUTHOR</h2>
 <p> Alain Knaff </p>
-<h2>Index</h2>

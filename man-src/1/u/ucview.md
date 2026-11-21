@@ -15,4 +15,3 @@ description: "ucview – a video capture and display program"
 <p> UCView is a video capture and display program based on the unicap video imaging library. </p>
 <h2>AUTHOR</h2>
 <p> Arne Caspari </p>
-<h2>Index</h2>

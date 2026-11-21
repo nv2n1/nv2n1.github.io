@@ -76,4 +76,3 @@ $ npm org ls my-org @mx-santos
 <dd> Documentation on npm Orgs <i><a rel="nofollow" href="https://docs.npmjs.com/orgs/">https://docs.npmjs.com/orgs/</a></i> </dd>
 </dl>
 </dl>
-<h2>Index</h2>

@@ -186,4 +186,3 @@ description: "rstpep2html – convert reST Python Enhancement Proposals to HTML"
 <dt><code>&#8211;pep-home=</code><i>&lt;URL&gt;</i></dt>
 <dd> Home URL prefix for PEPs. Default is &quot;.&quot; (current directory). </dd>
 </dl>
-<h2>Index</h2>

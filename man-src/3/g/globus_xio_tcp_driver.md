@@ -21,4 +21,3 @@ description: "Globus XIO TCP Driver –"
 <p> The IPV4/6 TCP socket driver.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>

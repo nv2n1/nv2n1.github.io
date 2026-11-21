@@ -25,4 +25,3 @@ url: "/docs/linux/man/1-xml2pmx/"
 <p> <code>pmx</code>(1) <code>obc</code>(1) <code><a href="/docs/linux/man/1-musixtex/">musixtex</a></code>(1) <code><a href="/docs/linux/man/1-recode/">recode</a></code>(1) </p>
 <h2>AUTHORS</h2>
 <p> This man page was written by Bob Tennent &lt;rdt [at] cs.queensu.ca&gt;. <code>xml2pmx</code> was written by Dieter Gloetzel &lt;d.gloetzel [at] web.de&gt; and adapted for compilation by obc (the Oxford Oberon Compiler) by Mike Spivey &lt;mike [at] cs.ox.ac.uk&gt;. </p>
-<h2>Index</h2>

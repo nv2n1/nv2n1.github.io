@@ -35,4 +35,3 @@ npm prefix [-g]
 <dd> npm help npmrc </dd>
 </dl>
 </dl>
-<h2>Index</h2>

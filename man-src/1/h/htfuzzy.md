@@ -42,4 +42,3 @@ description: "htfuzzy – fuzzy command-line search utility for the ht://Dig sea
 <p> Please refer to the HTML pages (in the htdig-doc package) <code>/usr/share/doc/htdig-doc/html/index.html</code> and the manual pages <i>htdigconfig(8)</i> , <i><a href="/docs/linux/man/1-htmerge/">htmerge</a>(1)</i> , <i><a href="/docs/linux/man/1-htnotify/">htnotify</a>(1)</i> , <i><a href="/docs/linux/man/1-htsearch/">htsearch</a>(1)</i> and <i><a href="/docs/linux/man/1-rundig/">rundig</a>(1)</i> for a detailed description of ht://Dig and its commands.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Robert Ribnitz. It is based on documentation of ht://Dig, and on earlier manpages provided by Christian Schwarz and Stijn de Bekker. </p>
-<h2>Index</h2>

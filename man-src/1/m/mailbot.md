@@ -264,4 +264,3 @@ to &quot;./Maildir&quot;
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/reformime.html">http://www.courier-mta.org/maildrop/reformime.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -160,4 +160,3 @@ description: "transcode_import – transcode import modules collection"
 <p> See the <i>AUTHORS</i> file for details.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) , <code><a href="/docs/linux/man/1-tcmodinfo/">tcmodinfo</a></code>(1) , <code><a href="/docs/linux/man/1-transcode_filter/">transcode_filter</a></code>(1) , <code><a href="/docs/linux/man/1-transcode_export/">transcode_export</a></code>(1) </p>
-<h2>Index</h2>

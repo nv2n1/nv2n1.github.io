@@ -26,4 +26,3 @@ description: "syslinux2ansi – converts a syslinux-format screen to pc-ansi"
 <p> <code><a href="/docs/linux/man/1-syslinux/">syslinux</a>(1),</code> <code><a href="/docs/linux/man/1-perl/">perl</a>(1)</code></p>
 <h2>AUTHOR</h2>
 <p> This manual page is a quick write-up for Debian done by Kevin Kreamer &lt;kkreamer [at] etherhogz.org&gt;, by looking over the 1 screenful of Perl that is <code>syslinux2ansi.</code> </p>
-<h2>Index</h2>

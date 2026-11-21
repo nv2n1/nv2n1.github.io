@@ -173,4 +173,3 @@ either version 3 of the License, or (at your option) any later version.This prog
  Catalyst IT (catalyst.net.nz)
  For supporting the development of Gource!
 </pre>
-<h2>Index</h2>

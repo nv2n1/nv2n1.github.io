@@ -59,4 +59,3 @@ description: "sort-dctrl – sort Debian control files"
 <h2>SEE ALSO</h2>
 <p> Debian Policy Manual. Published as the Debian package <code>debian-policy</code>. Also available in the Debian website. </p>
 <p> <code><a href="/docs/linux/man/1-grep-dctrl/">grep-dctrl</a></code>(1) </p>
-<h2>Index</h2>

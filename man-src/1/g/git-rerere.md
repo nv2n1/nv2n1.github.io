@@ -112,4 +112,3 @@ o-- - *-- -o-- -- -- -o-- - o topic / o-- - o-- - o-- - *-- -o-- - o-- - o-- - o
 <p> [NOTE] <i>git rerere</i> relies on the conflict markers in the file to detect the conflict. If the file already contains lines that look the same as lines with conflict markers, <i>git rerere</i> may fail to record a conflict resolution. To work around this, the <code>conflict-marker-size</code> setting in <code><a href="/docs/linux/man/5-gitattributes/">gitattributes</a></code>(5) can be used.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

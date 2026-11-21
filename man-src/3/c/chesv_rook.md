@@ -162,4 +162,3 @@ Definition at line 205 of file chesv_rook.f.
 </pre>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

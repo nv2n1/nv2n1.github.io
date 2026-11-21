@@ -33,4 +33,3 @@ description: "galculator – a GTK 2 based scientific calculator"
 <p> This manual page was written by Simon Floery &lt;chimaira [at] users.sf.net&gt;.</p>
 <h2>BUGS</h2>
 <p> If you find one, please report it at <a rel="nofollow" href="http://galculator.sourceforge.net">http://galculator.sourceforge.net</a> </p>
-<h2>Index</h2>

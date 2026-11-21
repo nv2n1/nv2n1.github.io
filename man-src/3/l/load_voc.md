@@ -23,4 +23,3 @@ if (!sample)
 <p> Returns a pointer to the SAMPLE or NULL on error. Remember to free this sample later to avoid memory leaks. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-load_sample/">load_sample</a></code>(3), <code><a href="/docs/linux/man/3-register_sample_file_type/">register_sample_file_type</a></code>(3) </p>
-<h2>Index</h2>

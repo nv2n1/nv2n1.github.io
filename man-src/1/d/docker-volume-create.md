@@ -58,4 +58,3 @@ $ docker volume create --driver local --opt type=btrfs --opt device=/dev/sda2
 <p> <code>-o</code>, <code>&#8211;opt</code>=map[] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Set driver specific options</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-volume/">docker-volume</a>(1)</code> </p>
-<h2>Index</h2>

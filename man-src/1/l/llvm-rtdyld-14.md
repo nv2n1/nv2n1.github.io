@@ -38,4 +38,3 @@ description: "llvm-rtdyld – manual page for llvm-rtdyld 14"
 <dt> <code>&#8211;printobjline</code> &#8211; Like <code>-printlineinfo</code> but does not load the object first</dt>
 <dt> <code>&#8211;verify</code> &#8211; Load, link and verify the resulting memory image. </dt>
 </dl>
-<h2>Index</h2>

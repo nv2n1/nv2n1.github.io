@@ -26,4 +26,3 @@ description: "pkcs11_setup – SmartCard PKCS#11 setup"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a>(8)<br />
  PAM-PKCS11 User Manual </p>
-<h2>Index</h2>

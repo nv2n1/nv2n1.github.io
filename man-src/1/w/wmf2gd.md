@@ -62,4 +62,3 @@ description: "wmf2gd – Convert metafile image to one of: png,jpg"
 <h2>AUTHOR</h2>
 <p> <code>wmf2gd</code> is originally written by Martin Vermeer and currently maintained by Caolán McNamara </p>
 <p> This manual page was written by Yangfl for the Debian Project (and may be used by others). </p>
-<h2>Index</h2>

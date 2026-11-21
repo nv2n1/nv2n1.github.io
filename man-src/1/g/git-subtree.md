@@ -232,4 +232,3 @@ $ git push &lt;new-repo&gt; split:master
 <dt>
 </dt><dd> mailto:apenwarr [at] gmail.com</dd></dl>
 </dl>
-<h2>Index</h2>

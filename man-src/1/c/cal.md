@@ -75,4 +75,3 @@ description: "cal ncal – displays a calendar and the date of Easter"
 <h2>BUGS</h2>
 <p> The assignment of Julian-Gregorian switching dates to country codes is historically naive for many countries. </p>
 <p> Not all options are compatible and using them in different orders will give varying results. </p>
-<h2>Index</h2>

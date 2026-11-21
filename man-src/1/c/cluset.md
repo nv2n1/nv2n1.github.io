@@ -231,4 +231,3 @@ dc1n[1 - 2] dc1n[4 - 5] dc3n[1 - 2] dc3n[4 - 5]
 <p> Stephane Thiell &lt;sthiell [at] stanford.edu&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> GNU Lesser General Public License version 2.1 or later (LGPLv2.1+) </p>
-<h2>Index</h2>

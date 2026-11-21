@@ -16,4 +16,3 @@ description: "foomatic-extract-text – Generate .po files from Foomatic UI stri
 <h2>DESCRIPTION</h2>
 <dd>The <code>foomatic-extract-text</code> command generates .po files from the UI strings in the currently installed Foomatic database. </dd>
 <p> It is not intended to be called directly by the user. </p>
-<h2>Index</h2>

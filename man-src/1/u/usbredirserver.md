@@ -29,4 +29,3 @@ description: "usbredirserver – exporting an USB device for use from another (v
 <h2>COPYRIGHT</h2>
 <p> Copyright 2010-2012 Red Hat, Inc. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br />
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>
-<h2>Index</h2>

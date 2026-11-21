@@ -145,4 +145,3 @@ description: "ike-scan – Discover and fingerprint IKE hosts (IPsec VPN servers
 <h2>SEE ALSO</h2>
 <p> <i><a rel="nofollow" href="http://www.nta-monitor.com/wiki/">http://www.nta-monitor.com/wiki/</a></i> The ike-scan wiki page. </p>
 <p> <i><a rel="nofollow" href="http://www.nta-monitor.com/tools/ike-scan/">http://www.nta-monitor.com/tools/ike-scan/</a></i> The ike-scan homepage. </p>
-<h2>Index</h2>

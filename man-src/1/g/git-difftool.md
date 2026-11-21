@@ -110,4 +110,3 @@ git difftool[&lt;options&gt;][&lt;commit&gt;[&lt;commit&gt;]][--][&lt;path&gt;..
 </dt><dd> Get and set repository or global options</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

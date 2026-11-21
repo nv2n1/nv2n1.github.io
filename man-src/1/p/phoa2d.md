@@ -23,4 +23,3 @@ description: "phoa2d, phod2a – gcin’s Bopomofo tools"
 <p> <code><a href="/docs/linux/man/1-gcin/">gcin</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> phoa2d and phod2a were written by Edward Der-Hua Liu &lt;cp76 [at] csie.nctu.edu.tw&gt;. </p>
-<h2>Index</h2>

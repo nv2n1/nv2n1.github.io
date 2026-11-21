@@ -99,4 +99,3 @@ description: "cpanspec – Generate a spec file for a CPAN module"
 <p> Steven Pritchard &lt;steve [at] kspei.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i>cpan2rpm</i>(1), <i>cpanflute2</i>(1) </p>
-<h2>Index</h2>

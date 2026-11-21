@@ -70,4 +70,3 @@ Klaus Kudielka
 <br>
 This manual page written by Craig Small &lt;csmall [at] small.dropbear.id.au&gt;
 </pre>
-<h2>Index</h2>

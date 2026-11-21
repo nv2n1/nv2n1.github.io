@@ -67,4 +67,3 @@ $ docker version-- format '&#123;&#123;json .}}'
 </dd></dl>
 <h2>HISTORY</h2>
 <p> June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; June 2015, updated by John Howard &lt;jhoward [at] microsoft.com&gt; June 2015, updated by Patrick Hemmer &lt;patrick.hemmer [at] gmail.com </p>
-<h2>Index</h2>

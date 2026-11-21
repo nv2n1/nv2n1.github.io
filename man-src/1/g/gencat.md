@@ -23,4 +23,3 @@ description: "gencat – Generate message catalog"
 <h2>AUTHOR</h2>
 <p> <i>gencat</i> was written by Ulrich Drepper as part of the GNU C Library. </p>
 <p> This man page was written by Jeff Bailey &lt;jbailey [at] debian.org&gt;. </p>
-<h2>Index</h2>

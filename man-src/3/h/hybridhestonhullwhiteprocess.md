@@ -21,4 +21,3 @@ description: "ql/processes/hybridhestonhullwhiteprocess.hpp – hybrid equity (h
 <p> hybrid equity (heston model) with stochastic interest rates (hull white model) </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

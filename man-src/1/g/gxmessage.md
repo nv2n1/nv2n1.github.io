@@ -148,4 +148,3 @@ $XMESSAGE &quot;hello, world&quot; --buttons bad
 <h2>COPYRIGHT NOTICE</h2>
 <p> Copyright &#169; 2003, 2004, 2005, 2006, 2007, 2008, 2009 Timothy Richard Musson </p>
 <p> Copying and distribution of this file, with or without modification, are permitted provided the copyright notice and this notice are preserved. </p>
-<h2>Index</h2>

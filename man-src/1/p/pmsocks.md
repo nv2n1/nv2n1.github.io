@@ -73,4 +73,3 @@ description: "pmsocks – shell wrapper for performance monitoring across firewa
 <dd> configuration file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pminfo/">pminfo</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code>pmval</code>(1), <code>X</code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/5-resolver/">resolver</a></code>(5), and <code><a href="/docs/linux/man/5-tsocks/">tsocks</a></code>(5). </p>
-<h2>Index</h2>

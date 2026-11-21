@@ -40,4 +40,3 @@ description: "cifscreds – manage NTLM credentials in kernel keyring"
 <p> <i><a href="/docs/linux/man/8-pam_keyinit/">pam_keyinit</a></i>(8)</p>
 <h2>AUTHORS</h2>
 <p> The cifscreds program was originally developed by Igor Druzhinin &lt;jaxbrigs [at] gmail.com&gt;. This manpage and a redesign of the code was done by Jeff Layton &lt;jlayton [at] samba.org&gt;. </p>
-<h2>Index</h2>

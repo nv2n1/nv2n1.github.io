@@ -81,4 +81,3 @@ description: "vm-dump-metrics – Dump VM metrics."
 <h2>AUTHORS</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>Pat Campbell&nbsp;<wbr>&lt;plc [at] novell.com&gt;.<br />
 &nbsp;<wbr>&nbsp;<wbr>Jim Fehlig&nbsp;<wbr>&lt;jfehlig [at] novell.com&gt;. </p>
-<h2>Index</h2>

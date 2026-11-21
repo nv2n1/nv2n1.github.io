@@ -48,4 +48,3 @@ description: "abrt-backtrace – a backtrace analyzer for abrt"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-abrtd/">abrtd</a></i>(8), <i><a href="/docs/linux/man/5-abrt-conf/">abrt.conf</a></i>(5), <i><a href="/docs/linux/man/1-abrt-cli/">abrt-cli</a></i>(1), <i><a href="/docs/linux/man/7-abrt-plugins/">abrt-plugins</a></i>(7) </p>
-<h2>Index</h2>

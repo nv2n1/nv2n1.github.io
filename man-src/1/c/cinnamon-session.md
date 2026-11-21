@@ -75,4 +75,3 @@ DefaultProvider - notifications = notification - daemon
 </dt><dd> This directory contains the list of applications of the saved session.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cinnamon-settings/">cinnamon-settings</a>(1)</code> <code><a href="/docs/linux/man/1-cinnamon-session-quit/">cinnamon-session-quit</a>(1)</code> </p>
-<h2>Index</h2>

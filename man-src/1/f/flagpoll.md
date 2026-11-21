@@ -92,4 +92,3 @@ description: "flagpoll – manual page for flagpoll 0.9.1"
 <dt>
 </dt><dd> <code>info flagpoll</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

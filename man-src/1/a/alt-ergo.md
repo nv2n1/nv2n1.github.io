@@ -22,4 +22,3 @@ description: "Alt-Ergo – An automatic theorem prover dedicated to program veri
 <p> <i>Sylvain Conchon &lt;conchon [at] lri.fr&gt; and Evelyne Contejean &lt;contejea [at] lri.fr&gt;</i> </p>
 <h2>SEE ALSO</h2>
 <p> <i>Alt-Ergo web site: <a rel="nofollow" href="http://alt-ergo.lri.fr">http://alt-ergo.lri.fr</a></i> </p>
-<h2>Index</h2>

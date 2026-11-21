@@ -21,4 +21,3 @@ description: "ppmtopict – convert a portable pixmap into a Macintosh PICT file
 <p> picttoppm(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5), mcvert(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1990 by Ken Yap &lt;ken [at] cs.rocester.edu&gt;. </p>
-<h2>Index</h2>

@@ -202,4 +202,3 @@ description: "ibdiagpath – IB diagnostic path"
 </dd><dt>6 &#8211; Failed to load required Package</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

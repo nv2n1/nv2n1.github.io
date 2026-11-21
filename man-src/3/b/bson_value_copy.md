@@ -25,4 +25,3 @@ void bson_value_copy(const bson_value_t *src,
 <p> This function will copy the boxed content in <code>src</code> into <code>dst</code> \&amp;. <code>dst</code> must be freed with <code><a href="/docs/linux/man/3-bson_value_destroy/">bson_value_destroy</a>(3)</code> when no longer in use. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

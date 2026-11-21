@@ -85,4 +85,3 @@ description: "xmlstarlet – command line XML/XSLT toolkit"
 </dt><dd> XMLStarlet creator.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2012 </p>
-<h2>Index</h2>

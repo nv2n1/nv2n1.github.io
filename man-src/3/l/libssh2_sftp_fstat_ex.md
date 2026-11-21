@@ -74,4 +74,3 @@ struct _LIBSSH2_SFTP_ATTRIBUTES {
 <p> This function has been around since forever, but most of the LIBSSH2_SFTP_S_* defines were introduced in libssh2 0.14 and the LIBSSH2_SFTP_S_IS***() macros were introduced in libssh2 1.2.5.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3)</code> </p>
-<h2>Index</h2>

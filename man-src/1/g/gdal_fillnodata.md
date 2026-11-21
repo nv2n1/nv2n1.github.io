@@ -49,4 +49,3 @@ gdal_fillnodata.py[-q][-md max_distance][-si smooth_iterations]
 <dd> Select the output format. The default is GeoTIFF (GTiff). Use the short format name.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com </p>
-<h2>Index</h2>

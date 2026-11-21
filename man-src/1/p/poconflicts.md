@@ -38,4 +38,3 @@ description: "poconflicts – Conflict finder for Gettext PO localization files.
 <dt>&#8211;accelerator</dt>
 <dd> ignores the given accelerator characters when matching </dd>
 </dl>
-<h2>Index</h2>

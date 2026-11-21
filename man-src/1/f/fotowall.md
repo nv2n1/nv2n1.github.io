@@ -19,4 +19,3 @@ description: "fotowall – wallpaper generator for high resolution composition."
 <dd> Start Fotowall with the factory settings. Can be used to reset a broken configuration. <code>-novideo</code> Load Fotowall without checking for video device.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Patrick Matth[:a]i &lt;patrick.matthaei [at] web.de&gt; for <code>fotowall</code>. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation. </p>
-<h2>Index</h2>

@@ -17,4 +17,3 @@ description: "docker-tag – Create a tag TARGET_IMAGE that refers to SOURCE_IMA
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for tag</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code> </p>
-<h2>Index</h2>

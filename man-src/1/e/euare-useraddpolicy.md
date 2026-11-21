@@ -51,4 +51,3 @@ description: "euare-useraddpolicy – Add a new policy to a user. To add more co
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

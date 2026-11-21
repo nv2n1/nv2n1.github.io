@@ -67,4 +67,3 @@ P24 -&gt;&nbsp;<wbr><font SIZE="-1">MT23108</font>&nbsp;<wbr>H-2 P1</p>
 <p> <font SIZE="-1">MTS9600</font> PartialGz1 <font SIZE="-1">CFG:</font> leaf3=R,leaf5=R,leaf7=R,spine1=R</p>
 <h2>AUTHOR</h2>
 <p> Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il </p>
-<h2>Index</h2>

@@ -134,4 +134,3 @@ description: "osx – An SGML to XML converter"
 <dt>
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
-<h2>Index</h2>

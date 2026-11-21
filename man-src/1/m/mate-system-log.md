@@ -25,4 +25,3 @@ description: "mate-system-log – the MATE System Log Viewer"
 <dd> Configuration file for syslogd. See <code>syslog.conf</code>(5) for exact information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>syslogd</code>(8), <code>sysklogd</code>(8), <code>syslog.conf</code>(5), <code>syslogd-listfiles</code>(8) </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "Error Data Accessors and Modifiers –"
 </dt><dd> void</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>

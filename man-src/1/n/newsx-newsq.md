@@ -53,4 +53,3 @@ description: "newsq – list news server outgoing queue"
 <p> Egil Kvaleberg &lt;egil [at] kvaleberg.no&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-newsx/">newsx</a></i>(8) </p>
-<h2>Index</h2>

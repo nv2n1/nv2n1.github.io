@@ -54,4 +54,3 @@ Michal Suszycki&lt;mike[at] wizard.ae.krakow.pl&gt;,
            Tree functions written by Jan Bobrowski&lt;jb[at] wizard.ae.krakow.pl&gt;,
            http: // wizard.ae.krakow.pl/~jb
 </code></pre>
-<h2>Index</h2>

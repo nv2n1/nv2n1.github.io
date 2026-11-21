@@ -25,4 +25,3 @@ description: "lxshortcut – desktop entry file editor"
 <h2>AUTHOR</h2>
 <p> lxshortcut was written by Hong Jen Yee &lt;pcman.tw [at] gmail.com&gt; and modified by Andriy Grytsenko &lt;andrej [at] rep.kiev.ua&gt;. </p>
 <p> This manual page was written by Andriy Grytsenko &lt;andrej [at] rep.kiev.ua&gt;. </p>
-<h2>Index</h2>

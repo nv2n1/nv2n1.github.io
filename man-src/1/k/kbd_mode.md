@@ -22,4 +22,3 @@ description: "kbd_mode – report or set the keyboard mode"
 <p> Warning: changing the keyboard mode, other than between ASCII and Unicode, will probably make your keyboard unusable. Set the &quot;-f&quot; option to force such changes. This command is only meant for use (say via remote login) when some program left your keyboard in the wrong state. Note that in some obsolete versions of this program the &quot;-u&quot; option was a synonym for &quot;-s&quot; and older versions of this program may not recognize the &quot;-f&quot; option.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1) </p>
-<h2>Index</h2>

@@ -69,4 +69,3 @@ description: "unpack200 – Transforms a packed file produced by pack200(1) into
 <dt>&bull;</dt>
 <dd> The Java SE Technical Documentation page at <a rel="nofollow" href="http://docs.oracle.com/javase/">http://docs.oracle.com/javase/</a> </dd>
 </dl>
-<h2>Index</h2>

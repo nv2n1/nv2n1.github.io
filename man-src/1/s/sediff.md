@@ -103,4 +103,3 @@ description: "sediff – SELinux policy difference tool"
 <p> Please report bugs via an email to setools-bugs [at] tresys.com.</p>
 <h2>SEE ALSO</h2>
 <p> sediffx(1) </p>
-<h2>Index</h2>

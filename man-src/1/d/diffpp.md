@@ -25,4 +25,3 @@ description: "diffpp – pretty-print diff outputs with GNU enscript"
 <p> <a href="/docs/linux/man/1-diff/">diff</a>(1), <a href="/docs/linux/man/1-enscript/">enscript</a>(1) </p>
 <h2>AUTHOR</h2>
 <p> Markku Rossi &lt;mtr [at] iki.fi&gt; &lt;<a rel="nofollow" href="http://www.iki.fi/~mtr/">http://www.iki.fi/~mtr/</a>&gt; </p>
-<h2>Index</h2>

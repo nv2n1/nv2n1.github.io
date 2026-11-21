@@ -214,4 +214,3 @@ local filename
 <p> If a folder is given, it will become the current folder. The last message selected will become the current message.</p>
 <h2>BUGS</h2>
 <p> Partial messages contained within a multipart content are not reassembled. </p>
-<h2>Index</h2>

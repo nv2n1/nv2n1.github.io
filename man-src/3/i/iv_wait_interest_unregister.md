@@ -37,4 +37,3 @@ struct iv_wait_interest {
 <p> Internally, <code>iv_wait</code> is implemented using <code>iv_signal</code>(3) and <code>iv_event</code>(3). </p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_signal</code>(3), <code>iv_event</code>(3), <code><a href="/docs/linux/man/2-wait4/">wait4</a></code>(2) </p>
-<h2>Index</h2>

@@ -250,4 +250,3 @@ notdir SP &lt;size&gt; LF
 <p> Note also that multiple copies of an object may be present in the object database; in this case, it is undefined which copy&#8217;s size or delta base will be reported.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

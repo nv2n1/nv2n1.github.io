@@ -100,4 +100,3 @@ description: "flatpak-build-commit-from – Create new commits based on existing
 <p> <code>$ flatpak build-commit-from &#8211;timestamp=NOW &#8211;src-ref=app/org.gnome.gedit/x86_64/master^ repo app/org.gnome.gedit/x86_64/master</code></p>
 <h2>SEE ALSO</h2>
 <p> <code>ostree</code>(1), <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-init/">flatpak-build-init</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build/">flatpak-build</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-finish/">flatpak-build-finish</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-sign/">flatpak-build-sign</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-update-repo/">flatpak-build-update-repo</a></code>(1) </p>
-<h2>Index</h2>

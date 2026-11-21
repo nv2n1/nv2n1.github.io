@@ -71,4 +71,3 @@ description: "rpmlint – check common problems in rpm packages"
 <p> Originally written by Frédéric Lepied, see the file AUTHORS for (probably incomplete) list of additional contributors.</p>
 <h2>COPYRIGHT</h2>
 <p> This program is licensed under the GNU General Public License, see the file COPYING included in the distribution archive. </p>
-<h2>Index</h2>

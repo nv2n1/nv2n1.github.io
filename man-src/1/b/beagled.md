@@ -61,4 +61,3 @@ description: "beagled – the Beagle desktop search daemon"
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-beagle-query/">beagle-query</a></code>(1), <code><a href="/docs/linux/man/1-beagle-status/">beagle-status</a></code>(1), <code><a href="/docs/linux/man/1-beagle-shutdown/">beagle-shutdown</a></code>(1), </p>
-<h2>Index</h2>

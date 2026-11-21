@@ -13,4 +13,3 @@ description: "openstack-status – Show status overview of installed OpenStack s
 <p> <code>openstack-status</code></p>
 <h2>DESCRIPTION</h2>
 <p> Query the system for installed OpenStack services and display both the running state and basic information managed by those services. </p>
-<h2>Index</h2>

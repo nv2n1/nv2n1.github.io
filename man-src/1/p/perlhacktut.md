@@ -116,4 +116,3 @@ $test++;
 <p> See perlhack for details on how to submit this patch.</p>
 <h2>AUTHOR</h2>
 <p> This document was originally written by Nathan Torkington, and is maintained by the perl5-porters mailing list. </p>
-<h2>Index</h2>

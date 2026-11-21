@@ -19,4 +19,3 @@ description: "ipcontroller – start a controller for IPython parallel computing
 <p> <code><a href="/docs/linux/man/1-ipython/">ipython</a>(1),</code> <code><a href="/docs/linux/man/1-ipengine/">ipengine</a>(1),</code> <code><a href="/docs/linux/man/1-ipcluster/">ipcluster</a>(1)</code> </p>
 <h2>AUTHORS</h2>
 <p> <code>ipcontroller</code> ships with IPython, maintained by the IPython Development Team. </p>
-<h2>Index</h2>

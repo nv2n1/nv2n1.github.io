@@ -48,4 +48,3 @@ description: "xgfmerge – merges two Xgridfit program files"
 <h2>AUTHOR</h2>
 <p> <code>Xgfmerge</code> was written by Peter Baker &lt;psb6m [at] virginia.edu&gt;. </p>
 <p> This manual page was written by Peter Baker </p>
-<h2>Index</h2>

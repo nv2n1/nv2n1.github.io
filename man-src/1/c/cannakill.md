@@ -20,4 +20,3 @@ description: "cannakill – Terminate operation of the Kana-Kanji conversion ser
 <dd> Socket</dd></dl>
 <h2>SEE ALSO</h2>
 <p> cannaserver(1M), <a href="/docs/linux/man/1-cannastat/">cannastat</a>(1), <a href="/docs/linux/man/1-cannacheck/">cannacheck</a>(1) </p>
-<h2>Index</h2>

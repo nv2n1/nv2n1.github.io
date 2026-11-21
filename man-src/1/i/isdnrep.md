@@ -515,4 +515,3 @@ Zone x : UNKNOWN          11 call(s)  0:17:00     20 EH    2,40 DM
 <p> <code><a href="/docs/linux/man/5-isdnlog/">isdnlog</a>(5) <a href="/docs/linux/man/8-isdnlog/">isdnlog</a>(8) <a href="/docs/linux/man/5-isdn-conf/">isdn.conf</a>(5)</code> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was adapted from isdnlog/README by Paul Slootman &lt;paul [at] isdn4linux.de&gt;, for Debian GNU/Linux and isdn4linux. </p>
-<h2>Index</h2>

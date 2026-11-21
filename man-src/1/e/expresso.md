@@ -45,4 +45,3 @@ description: "expresso – A JavaScript TDD framework written for Node.js"
 <p> The main author of expresso is TJ Holowaychuk &lt;<code>tj [at] vision-media.ca</code>&gt;. For a more complete list of contributors, see the GitHub page at &lt;<code><a rel="nofollow" href="https://github.com/visionmedia/expresso">https://github.com/visionmedia/expresso</a></code>&gt;</p>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs on the GitHub issue tracker: &lt;<code><a rel="nofollow" href="https://github.com/visionmedia/expresso/issues">https://github.com/visionmedia/expresso/issues</a></code>&gt; </p>
-<h2>Index</h2>

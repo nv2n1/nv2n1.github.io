@@ -56,4 +56,3 @@ description: "qtchooser – a wrapper used to select between Qt development bina
 <h2>AUTHOR</h2>
 <p> qtchooser was written by Thiago Macieira from Intel. </p>
 <p> This manual page was written by Timo Jyrinki &lt;timo [at] debian.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

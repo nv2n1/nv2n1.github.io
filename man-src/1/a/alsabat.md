@@ -92,4 +92,3 @@ description: "alsabat – command-line sound tester for ALSA sound card driver"
 <p> Currently only support RIFF WAV format with PCM data. Please report any bugs to the alsa-devel mailing list. </p>
 <h2>AUTHOR</h2>
 <p> <code>alsabat</code> is by Liam Girdwood &lt;liam.r.girdwood [at] linux.intel.com&gt;, Bernard Gautier &lt;bernard.gautier [at] intel.com&gt; and Han Lu &lt;han.lu [at] intel.com&gt;. This document is by Liam Girdwood &lt;liam.r.girdwood [at] linux.intel.com&gt; and Han Lu &lt;han.lu [at] intel.com&gt;. </p>
-<h2>Index</h2>

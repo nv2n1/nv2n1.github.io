@@ -61,4 +61,3 @@ description: "euca-describe-addresses – Show information about elastic IP addr
 <dt>public-ip</dt>
 <dd> the elastic IP address </dd>
 </dl>
-<h2>Index</h2>

@@ -28,4 +28,3 @@ description: "dh_dwz – optimize DWARF debug information in ELF binaries via dw
 <p> This program is a part of debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Niels Thykier &lt;niels [at] thykier.net&gt; </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ ar cr library.a `lorder ${OBJS} | tsort` cc - o foo $
 <p> <a href="/docs/linux/man/1-ar/">ar</a>(1), <a href="/docs/linux/man/1-ld/">ld</a>(1), <a href="/docs/linux/man/1-nm/">nm</a>(1), <a href="/docs/linux/man/1-ranlib/">ranlib</a>(1), <a href="/docs/linux/man/1-tsort/">tsort</a>(1)</p>
 <h2>HISTORY</h2>
 <p> A utility appeared in AT&amp;T System v7 . </p>
-<h2>Index</h2>

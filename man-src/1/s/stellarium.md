@@ -85,4 +85,3 @@ description: "stellarium – A real-time realistic planetarium"
 <h2>AUTHOR</h2>
 <p> Fabien Chereau, Rob Spearman, Johan Meuris, Matthew Gates, Johannes Gajdosik, Nigel Kerr, Andras Mohari, Bogdan Marinov, Timothy Reaves, Mike Storm, Diego Marcos, Guillaume Chereau, Alexander Wolf, Georg Zotti </p>
 <p> x14817 </p>
-<h2>Index</h2>

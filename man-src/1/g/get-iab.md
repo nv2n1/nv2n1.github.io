@@ -57,4 +57,3 @@ Opening output file ieee-iab.txt
 </dd><dt><code><a href="/docs/linux/man/1-arp-fingerprint/">arp-fingerprint</a></code>(1)</dt>
 <dd></dd></dl>
 <p> <i><a rel="nofollow" href="http://www.nta-monitor.com/wiki/">http://www.nta-monitor.com/wiki/</a></i> The arp-scan wiki page. </p>
-<h2>Index</h2>

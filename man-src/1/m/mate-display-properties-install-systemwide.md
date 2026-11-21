@@ -24,4 +24,3 @@ description: "mate-display-properties-install-systemwide – customize MATE disp
 <h2>SEE ALSO</h2>
 <p> Latest version of the MATE Desktop User Guide for your platform. </p>
 <p> <code><a href="/docs/linux/man/1-mate-control-center/">mate-control-center</a></code>(1), <code><a href="/docs/linux/man/1-mate-display-properties/">mate-display-properties</a></code>(1), <code><a href="/docs/linux/man/1-mate-settings-daemon/">mate-settings-daemon</a></code>(1), </p>
-<h2>Index</h2>

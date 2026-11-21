@@ -38,4 +38,3 @@ description: "laptop-detect – attempt to detect a laptop"
  <i>/proc/apm</i></p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-dmidecode/">dmidecode</a>(8) </p>
-<h2>Index</h2>

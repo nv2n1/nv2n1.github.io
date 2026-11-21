@@ -22,4 +22,3 @@ $ smbencrypt foo bar
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-radiusd/">radiusd</a>(8)</p>
 <h2>AUTHORS</h2>
-<h2>Index</h2>

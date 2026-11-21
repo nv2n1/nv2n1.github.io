@@ -201,4 +201,3 @@ description: "______cmis-client ____ – command line CMIS client tool."
 <p> <code>cmis-client</code> -r A1 &#8211;url <a rel="nofollow" href="http://localhost/atom">http://localhost/atom</a> show-by id 133 116</p>
 <h2>AUTHOR</h2>
 <p> C&eacute;dric Bosdonnat cbosdo </p>
-<h2>Index</h2>

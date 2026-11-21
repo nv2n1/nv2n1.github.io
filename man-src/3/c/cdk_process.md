@@ -17,4 +17,3 @@ description: "cdk_process – curses widget pre/post-processing"
 <p> Postprocessing is performed after all other actions have been done in the injection function. Like the other actions, it is performed only if the preprocess function returns a nonzero value. Unlike the preprocess function, its return value is ignored.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-cdk/">cdk</a></code>(3), <code><a href="/docs/linux/man/3-cdk_binding/">cdk_binding</a></code>(3). </p>
-<h2>Index</h2>

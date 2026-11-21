@@ -173,4 +173,3 @@ description: "OptiPNG – Optimize Portable Network Graphics files"
 <h2>AUTHOR</h2>
 <p> <code>OptiPNG</code> is written and maintained by Cosmin Truta. </p>
 <p> This manual page was originally written by Nelson A. de Oliveira for the Debian Project. It was later updated by Cosmin Truta, and is now part of the <code>OptiPNG</code> distribution. </p>
-<h2>Index</h2>

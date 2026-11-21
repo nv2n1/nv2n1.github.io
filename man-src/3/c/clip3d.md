@@ -18,4 +18,3 @@ description: "clip3d – Clips the polygon given in vtx using fixed point math. 
 <p> Returns the number of vertices after clipping is done. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-polygon3d/">polygon3d</a></code>(3), <code><a href="/docs/linux/man/3-clip3d_f/">clip3d_f</a></code>(3) </p>
-<h2>Index</h2>

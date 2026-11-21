@@ -347,4 +347,3 @@ description: "ovsdb-server – Open vSwitch database server"
 <p> Of these cases, the only error that a well-written application is likely to encounter in practice is <code>monitor</code> of tables or columns that do not exist, in an situation where the application has been upgraded but the old database schema is still temporarily in use. To handle this situation gracefully, we recommend that clients should treat a <code>monitor</code> response with a <code>result</code> that contains an <code>error</code> key-value pair as an error (assuming that the database being monitored does not contain a table named <code>error</code>).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ovsdb-tool/">ovsdb-tool</a></code>(1). </p>
-<h2>Index</h2>

@@ -14,4 +14,3 @@ description: "Configuration keys for the decoder ctl interface. –"
 <p> No keys are currently defined. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for daala from the source code. </p>
-<h2>Index</h2>

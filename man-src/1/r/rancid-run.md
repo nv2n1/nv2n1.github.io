@@ -53,4 +53,3 @@ description: "rancid-run – run rancid for each of the groups"
 <p> <code><a href="/docs/linux/man/1-control_rancid/">control_rancid</a></code>(1), <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5), <code><a href="/docs/linux/man/5-router-db/">router.db</a></code>(5)</p>
 <h2>CAVEATS</h2>
 <p> DO NOT leave temporary files in the &lt;group name&gt;/configs directory, they WILL be removed by <code><a href="/docs/linux/man/1-control_rancid/">control_rancid</a></code>(1). </p>
-<h2>Index</h2>

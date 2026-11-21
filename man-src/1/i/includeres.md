@@ -26,4 +26,3 @@ description: "includeres – filter to include resources in a PostScript documen
 <p> <code>PostScript</code> is a trademark of Adobe Systems Incorporated.</p>
 <h2>BUGS</h2>
 <p> <i>includeres</i> does not alter the <i>%%DocumentNeededResources</i> comments. </p>
-<h2>Index</h2>

@@ -17,4 +17,3 @@ description: "is_linear_bitmap – Tells if a bitmap is linear. Allegro game pro
 <p> Historically there were only linear and planar bitmaps for Allegro, so is_linear_bitmap() is actually an alias for !is_planar_bitmap(). </p>
 <h2>SEE ALSO</h2>
 <p> <code>is_planar_bitmap</code>(3), <code>is_memory_bitmap</code>(3) </p>
-<h2>Index</h2>

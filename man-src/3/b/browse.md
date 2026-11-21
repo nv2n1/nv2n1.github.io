@@ -35,4 +35,3 @@ description: "QuantLib::CmsMarket – set of CMS quotes"
 <p> Reimplemented from <code>LazyObject</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ description: "mingle – fast edge bundling"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-sfdp/">sfdp</a>(1), <a href="/docs/linux/man/1-neato/">neato</a>(1), <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1) </p>
 <p> Emden R. Gansner, Yifan Hu, Stephen C. North and Carlos Scheidegger, &#8220;Multilevel Agglomerative Edge Bundling for Visualizing Large Graphs&#8221;, IEEE Pacific Visualization Symposium PacificVis, pp. 187-194, 2011. </p>
-<h2>Index</h2>

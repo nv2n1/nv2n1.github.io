@@ -33,4 +33,3 @@ description: "bcharge – program to set BlackBerry handhelds to 500mA"
 <h2>AUTHOR</h2>
 <p> bcharge and this manual page were written by Chris Frey &lt;cdfrey [at] foursquare.net&gt; for the Barry project. </p>
 <p> <a rel="nofollow" href="http://www.netdirect.ca/software/packages/barry">http://www.netdirect.ca/software/packages/barry</a> </p>
-<h2>Index</h2>

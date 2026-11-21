@@ -18,4 +18,3 @@ description: "sndfile-convert – convert a sound files from one format to anoth
 <p> The optional encoding parameter allows setting of the data encoding for the output file. Run &quot;sndfile-convert &#8211;help&quot; for more information.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Erik de Castro Lopo &lt;erikd [at] mega-nerd.com&gt;. </p>
-<h2>Index</h2>

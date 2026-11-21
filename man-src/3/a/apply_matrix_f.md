@@ -17,4 +17,3 @@ description: "apply_matrix, apply_matrix_f – Multiplies a point by a transform
 <p> Multiplies the point (x, y, z) by the transformation matrix m, storing the result in (*xout, *yout, *zout). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-matrix_mul/">matrix_mul</a></code>(3), <code><a href="/docs/linux/man/3-ex12bit/">ex12bit</a></code>(3), <code><a href="/docs/linux/man/3-ex3d/">ex3d</a></code>(3), <code><a href="/docs/linux/man/3-exstars/">exstars</a></code>(3) </p>
-<h2>Index</h2>

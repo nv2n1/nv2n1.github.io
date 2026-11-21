@@ -37,4 +37,3 @@ description: "curl_easy_pause – pause and unpause a connection"
 <p> If the downloaded data is compressed and is asked to get uncompressed automatically on download, libcurl will continue to uncompress the entire downloaded chunk and it will cache the data uncompressed. This has the side- effect that if you download something that is compressed a lot, it can result in a very large data amount needing to be allocated to save the data during the pause. This said, you should probably consider not using paused reading if you allow libcurl to uncompress data automatically.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_reset/">curl_easy_reset</a></code>(3) </p>
-<h2>Index</h2>
