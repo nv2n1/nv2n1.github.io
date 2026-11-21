@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zoneserver(8) · Linux Manual Pages</title>
+<meta name="description" content="zoneserver – handle zone transfers and other TCP functions for MaraDNS">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-zoneserver/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>zoneserver(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>zoneserver &#8211; handle zone transfers and other TCP functions for MaraDNS</p>
+<h2>Description</h2>
+<p><code>zoneserver</code> listens on port 53/tcp and handles DNS zone transfers and any DNS query done over TCP instead of UDP. <code>zoneserver</code> uses a configuration file, <code>/etc/mararc</code> by default, to determine its parameters.</p>
+<h2>Usage</h2>
+<p><code>zoneserver -f</code> pointer_to_mararc_file</p>
+<h2>Options</h2>
+<dl>
+<dt>-f</dt>
+<dd>Specifies the location of the configuration file. MaraDNS uses the same configuration file for both the main dns server and the zoneserver.</dd></dl>
+<h2>Configuration File Format</h2>
+<p>The file format for the mararc file can be found in the <code><a href="/docs/linux/man/5-mararc/">mararc</a>(5)</code> manual page. In particular, the zoneserver uses the zone_transfer_acl, tcp_convert_acl, tcp_convert_server, bind_address, and recursive_acl mararc parameters.</p>
+<h2>Example Mararc File</h2>
+<p>In this example mararc file, which is used both by maradns and zoneserver, we allow 10.1.2.3, 10.1.14.7, and 192.168.116.{any} to transfer zones, and we allow anyone on the internet to perform TCP queries. The only zone served in this example is example.com: </p>
+<pre>ipv4_bind_addresses = &quot;10.1.1.1&quot; # Our IP
+tcp_convert_server = &quot;10.1.1.1&quot; # IP of UDP DNS server
+tcp_convert_acl = &quot;0.0.0.0/0&quot; # Anyone may do DNS-over-TCP
+chroot_dir = &quot;/etc/maradns&quot; # Where zone files are
+csv2 = {} # Initialize list of zone files
+csv2[&quot;example.com.&quot;] = &quot;db.example.com&quot; # example.com zone file
+# The next line is a list of who can transfer zones from us
+zone_transfer_acl = &quot;10.1.2.3, 10.1.14.7, 192,168.116.0/24&quot;</pre>
+<h2>See Also</h2>
+<p>The man pages <code><a href="/docs/linux/man/8-maradns/">maradns</a>(8)</code> and <code><a href="/docs/linux/man/5-mararc/">mararc</a>(5)</code> </p>
+<p> <a rel="nofollow" href="http://www.maradns.org">http://www.maradns.org</a></p>
+<h2>Bugs</h2>
+<p><code>zoneserver</code> assumes that the authoritative NS records are immediately after the SOA record, and that there is at least one non-NS between that last authority NS record for the zone and the first delegation NS record. </p>
+<p> IXFR requests are incremental zone transfers, meaning that the DNS server should only display records changed since the last IXFR request. <code>zoneserver</code>, however, treats an IXFR as if it were an AXFR request, outputting all of the records for the zone in question. </p>
+<p> <code>zoneserver</code> closes the TCP connection after transferring the requested zone. </p>
+<p> If an unauthorized client attempts to connect to the zoneserver, <code>zoneserver</code> immediately disconnects the unauthorized client.</p>
+<h2>Legal Disclaimer</h2>
+<p>THIS SOFTWARE IS PROVIDED BY THE AUTHORS aqaqAS ISaqaq AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHORS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<h2>Author</h2>
+<p>MaraDNS is written by Sam Trenholme. Jaakko Niemi used 5 minutes to put the original version this manpage together. Sam has subsequently revised this manual page.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

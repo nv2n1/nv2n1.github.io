@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ab(8) · Linux Manual Pages</title>
+<meta name="description" content="ab – Apache HTTP server benchmarking tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ab/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ab(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>ab &#8211; Apache HTTP server benchmarking tool</p>
+<h2>Synopsis</h2>
+<p> <code>ab</code> [ &#8211;<code>A</code> <i>auth-username</i>:<i>password</i> ] [ &#8211;<code>b</code> <i>windowsize</i> ] [ &#8211;<code>c</code> <i>concurrency</i> ] [ &#8211;<code>C</code> <i>cookie-name</i>=<i>value</i> ] [ &#8211;<code>d</code> ] [ &#8211;<code>e</code> <i>csv-file</i> ] [ &#8211;<code>f</code> <i>protocol</i> ] [ &#8211;<code>g</code> <i>gnuplot-file</i> ] [ &#8211;<code>h</code> ] [ &#8211;<code>H</code> <i>custom-header</i> ] [ &#8211;<code>i</code> ] [ &#8211;<code>k</code> ] [ &#8211;<code>n</code> <i>requests</i> ] [ &#8211;<code>p</code> <i>POST-file</i> ] [ &#8211;<code>P</code> <i>proxy-auth-username</i>:<i>password</i> ] [ &#8211;<code>q</code> ] [ &#8211;<code>r</code> ] [ &#8211;<code>s</code> ] [ &#8211;<code>S</code> ] [ &#8211;<code>t</code> <i>timelimit</i> ] [ &#8211;<code>T</code> <i>content-type</i> ] [ &#8211;<code>u</code> <i>PUT-file</i> ] [ &#8211;<code>v</code> <i>verbosity</i>] [ &#8211;<code>V</code> ] [ &#8211;<code>w</code> ] [ &#8211;<code>x</code> <i>&lt;table&gt;-attributes</i> ] [ &#8211;<code>X</code> <i>proxy</i>[:<i>port</i>] ] [ &#8211;<code>y</code> <i>&lt;tr&gt;-attributes</i> ] [ &#8211;<code>z</code> <i>&lt;td&gt;-attributes</i> ] [ &#8211;<code>Z</code> <i>ciphersuite</i> ] [http[s]://]<i>hostname</i>[:<i>port</i>]/<i>path</i><br />
+&nbsp;<wbr> </p>
+<h2>Summary</h2>
+<p>&nbsp;<wbr> </p>
+<p> ab is a tool for benchmarking your Apache Hypertext Transfer Protocol (HTTP) server. It is designed to give you an impression of how your current Apache installation performs. This especially shows you how many requests per second your Apache installation is capable of serving.<br />
+&nbsp;<wbr></p>
+<h2>Options</h2>
+<p>&nbsp;<wbr><br />
+&nbsp;<wbr></p>
+<dl>
+<dt>-A <i>auth-username</i>:<i>password</i></dt>
+<dd>Supply BASIC Authentication credentials to the server. The username and password are separated by a single : and sent on the wire base64 encoded. The string is sent regardless of whether the server needs it (<i>i.e.</i>, has sent an 401 authentication needed).</dd>
+<dt>-b <i>windowsize</i></dt>
+<dd>Size of TCP send/receive buffer, in bytes.</dd>
+<dt>-c <i>concurrency</i></dt>
+<dd>Number of multiple requests to perform at a time. Default is one request at a time.</dd>
+<dt>-C <i>cookie-name</i>=<i>value</i></dt>
+<dd>Add a Cookie: line to the request. The argument is typically in the form of a <i>name</i>=<i>value</i> pair. This field is repeatable.</dd>
+<dt>-d</dt>
+<dd>Do not display the &quot;percentage served within XX [ms] table&quot;. (legacy support).</dd>
+<dt>-e <i>csv-file</i></dt>
+<dd>Write a Comma separated value (CSV) file which contains for each percentage (from 1% to 100%) the time (in milliseconds) it took to serve that percentage of the requests. This is usually more useful than the &#8216;gnuplot&#8217; file; as the results are already &#8216;binned&#8217;.</dd>
+<dt>-f <i>protocol</i></dt>
+<dd>Specify SSL/TLS protocol (SSL2, SSL3, TLS1, or ALL).</dd>
+<dt>-g <i>gnuplot-file</i></dt>
+<dd>Write all measured values out as a &#8216;gnuplot&#8217; or TSV (Tab separate values) file. This file can easily be imported into packages like Gnuplot, IDL, Mathematica, Igor or even Excel. The labels are on the first line of the file.</dd>
+<dt>-h</dt>
+<dd>Display usage information.</dd>
+<dt>-H <i>custom-header</i></dt>
+<dd>Append extra headers to the request. The argument is typically in the form of a valid header line, containing a colon-separated field-value pair (<i>i.e.</i>, &quot;Accept-Encoding: zip/zop;8bit&quot;).</dd>
+<dt>-i</dt>
+<dd>Do HEAD requests instead of GET.</dd>
+<dt>-k</dt>
+<dd>Enable the HTTP KeepAlive feature, <i>i.e.</i>, perform multiple requests within one HTTP session. Default is no KeepAlive.</dd>
+<dt>-n <i>requests</i></dt>
+<dd>Number of requests to perform for the benchmarking session. The default is to just perform a single request which usually leads to non-representative benchmarking results.</dd>
+<dt>-p <i>POST-file</i></dt>
+<dd>File containing data to POST. Remember to also set -T.</dd>
+<dt>-P <i>proxy-auth-username</i>:<i>password</i></dt>
+<dd>Supply BASIC Authentication credentials to a proxy en-route. The username and password are separated by a single : and sent on the wire base64 encoded. The string is sent regardless of whether the proxy needs it (<i>i.e.</i>, has sent an 407 proxy authentication needed).</dd>
+<dt>-q</dt>
+<dd>When processing more than 150 requests, ab outputs a progress count on stderr every 10% or 100 requests or so. The -q flag will suppress these messages.</dd>
+<dt>-r</dt>
+<dd>Don&#8217;t exit on socket receive errors.</dd>
+<dt>-s</dt>
+<dd>When compiled in (ab -h will show you) use the SSL protected https rather than the http protocol. This feature is experimental and <i>very</i> rudimentary. You probably do not want to use it.</dd>
+<dt>-S</dt>
+<dd>Do not display the median and standard deviation values, nor display the warning/error messages when the average and median are more than one or two times the standard deviation apart. And default to the min/avg/max values. (legacy support).</dd>
+<dt>-t <i>timelimit</i></dt>
+<dd>Maximum number of seconds to spend for benchmarking. This implies a -n 50000 internally. Use this to benchmark the server within a fixed total amount of time. Per default there is no timelimit.</dd>
+<dt>-T <i>content-type</i></dt>
+<dd>Content-type header to use for POST/PUT data, eg. application/x-www-form-urlencoded. Default: text/plain.</dd>
+<dt>-u <i>PUT-file</i></dt>
+<dd>File containing data to PUT. Remember to also set -T.</dd>
+<dt>-v <i>verbosity</i></dt>
+<dd>Set verbosity level &#8211; 4 and above prints information on headers, 3 and above prints response codes (404, 200, etc.), 2 and above prints warnings and info.</dd>
+<dt>-V</dt>
+<dd>Display version number and exit.</dd>
+<dt>-w</dt>
+<dd>Print out results in HTML tables. Default table is two columns wide, with a white background.</dd>
+<dt>-x <i>&lt;table&gt;-attributes</i></dt>
+<dd>String to use as attributes for &lt;table&gt;. Attributes are inserted &lt;table <i>here</i> &gt;.</dd>
+<dt>-X <i>proxy</i>[:<i>port</i>]</dt>
+<dd>Use a proxy server for the requests.</dd>
+<dt>-y <i>&lt;tr&gt;-attributes</i></dt>
+<dd>String to use as attributes for &lt;tr&gt;.</dd>
+<dt>-z <i>&lt;td&gt;-attributes</i></dt>
+<dd>String to use as attributes for &lt;td&gt;.</dd>
+<dt>-Z <i>ciphersuite</i></dt>
+<dd>Specify SSL/TLS cipher suite (See openssl ciphers).<br />
+&nbsp;<wbr></dd></dl>
+<h2>Description Of Output</h2>
+<p>&nbsp;<wbr> </p>
+<p> The following list describes the values returned by ab:<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr></p>
+<dl>
+<dt>Server Software</dt>
+<dd>The value, if any, returned in the <i>server</i> HTTP header of the first successful response. This includes all characters in the header from beginning to the point a character with decimal value of 32 (most notably: a space or CR/LF) is detected.</dd>
+<dt>Server Hostname</dt>
+<dd>The DNS or IP address given on the command line</dd>
+<dt>Server Port</dt>
+<dd>The port to which ab is connecting. If no port is given on the command line, this will default to 80 for http and 443 for https.</dd>
+<dt>SSL/TLS Protocol</dt>
+<dd>The protocol parameters negotiated between the client and server. This will only be printed if SSL is used.</dd>
+<dt>Document Path</dt>
+<dd>The request URI parsed from the command line string.</dd>
+<dt>Document Length</dt>
+<dd>This is size in bytes of the first succesfully returning document. If the document length changes during testing, the response is considered an error.</dd>
+<dt>Concurrency Level</dt>
+<dd>The number of concurrent clients used during the test</dd>
+<dt>Time taken for tests</dt>
+<dd>This is the time taken from the moment the first socket connection is created to the moment the last response is recieved</dd>
+<dt>Complete requests</dt>
+<dd>The number of successful responses recieved</dd>
+<dt>Failed requests</dt>
+<dd>The number of requests that were considered a failure. If the number is greater than zero, another line will be printed showing the numer of requests that failed due to connecting, reading, incorrect content length, or exceptions.</dd>
+<dt>Write errors</dt>
+<dd>The number of errors that failed during write (broken pipe).</dd>
+<dt>Non-2xx responses</dt>
+<dd>The number of responses that were not in the 200 series of response codes. If all responses were 200, this field is not printed.</dd>
+<dt>Keep-Alive requests</dt>
+<dd>The number of connections that resulted in Keep-Alive requests</dd>
+<dt>Total body sent</dt>
+<dd>If configured to send data as part of the test, this is the total number of bytes sent during the tests. This field is omitted if the test did not include a body to send.</dd>
+<dt>Total transferred</dt>
+<dd>The total number of bytes received from the server. This number is essentially the number of bytes sent over the wire.</dd>
+<dt>HTML transferred</dt>
+<dd>The total number of document bytes received from the server. This number excludes bytes received in HTTP headers</dd>
+<dt>Requests per second</dt>
+<dd>This is the number of requests per second. This value is the result of dividing the number of requests by the total time taken</dd>
+<dt>Time per request</dt>
+<dd>The average time spent per request. The first value is calculated with the formula concurrency * timetaken * 1000 / done while the second value is calculated with the formula timetaken * 1000 / done</dd>
+<dt>Transfer rate</dt>
+<dd>The rate of transfer as calculated by the formula totalread / 1024 / timetaken<br />
+&nbsp;<wbr></dd></dl>
+<h2>Bugs</h2>
+<p> There are various statically declared buffers of fixed length. Combined with the lazy parsing of the command line arguments, the response headers from the server and other external inputs, this might bite you.<br />
+&nbsp;<wbr> It does not implement HTTP/1.x fully; only accepts some &#8216;expected&#8217; forms of responses. The rather heavy use of <a href="/docs/linux/man/3-strstr/">strstr</a>(3) shows up top in profile, which might indicate a performance problem; <i>i.e.</i>, you would measure the ab performance rather than the server&#8217;s.<br />
+&nbsp;<wbr> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xcb_input_device_property_notify_event_t(3) · Linux Manual Pages</title>
+<meta name="description" content="xcb_input_device_property_notify_event_t –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xcb_input_device_property_notify_event_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xcb_input_device_property_notify_event_t(3)</h1>
+
+
+
+
+
+<p>xcb_input_device_property_notify_event_t &#8211;</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;xcb/xinput.h&gt;</code></pre>
+<h3>Event datastructure</h3>
+<pre>typedef struct xcb_input_device_property_notify_event_t {
+ uint8_t <i>response_type</i>;
+ uint8_t <i>state</i>;
+ uint16_t <i>sequence</i>;
+ xcb_timestamp_t <i>time</i>;
+ xcb_atom_t <i>property</i>;
+ uint8_t <i>pad0</i>[19];
+ uint8_t <i>device_id</i>;
+} <code>xcb_input_device_property_notify_event_t</code>;</pre>
+<h2>Event Fields</h2>
+<dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_INPUT_DEVICE_PROPERTY_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>state</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>time</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>property</i></dt>
+<dd>NOT YET DOCUMENTED.</dd>
+<dt><i>device_id</i></dt>
+<dd>NOT YET DOCUMENTED.</dd></dl>
+<h2>Description</h2>
+<h2>See Also</h2>
+<h2>Author</h2>
+<p>Generated from xinput.xml. Contact xcb [at] lists.freedesktop.org for corrections and improvements.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

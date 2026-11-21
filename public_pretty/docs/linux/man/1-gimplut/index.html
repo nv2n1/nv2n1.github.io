@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gimplut(1) · Linux Manual Pages</title>
+<meta name="description" content="gimplut – convert GIMP gradient (ggr) files to binary lookup tables (lut).">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gimplut/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gimplut(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> gimplut &#8211; convert GIMP gradient (ggr) files to binary lookup tables (lut). </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>gimplut</code> [-h] [-o&nbsp;<wbr><i>file</i>] [-s&nbsp;<wbr><i>samples</i>] [-v] [-V] [<i>file</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>gimplut</code> utility converts gradient files from the <code><a href="/docs/linux/man/1-gimp/">GIMP</a></code>(1), the GNU Image Manipulation Program, to a binary lookup table format commonly used by medical imaging software; in particular the <code>Medcon</code>(1) package. </dd>
+<p> The LUT format consists of <code>n</code> red, <code>n</code> green and <code>n</code> blue bytes, interpreted as integers from 0 to 255. </p>
+<p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified.</p>
+<h2>OPTIONS</h2>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Brief help.</dd></dl>
+<p> <code>-o</code>, <code>&#8211;output</code> <i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Write the output to <i>file</i>, rather than stdout.</dd></dl>
+<p> <code>-s</code>, <code>&#8211;samples</code> <i>number</i></p>
+<dl>
+<dt>
+</dt><dd> Use the specified <i>number</i> of samples rather than 256.</dd></dl>
+<p> <code>-v</code>, <code>&#8211;verbose</code></p>
+<dl>
+<dt>
+</dt><dd> Verbose operation.</dd></dl>
+<p> <code>-V</code>, <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Version information.</dd></dl>
+<h2>CAVEATS</h2>
+<p> The alpha channel of the input is completely ignored in the output. </p>
+<p> At some point in the future the functionality of this program will be transferred to the <code><a href="/docs/linux/man/1-svgx/">svgx</a></code>(1) program.</p>
+<h2>AUTHOR</h2>
+<p> J.J. Green</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gimp/">GIMP</a></code>(1), <code>medcon</code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

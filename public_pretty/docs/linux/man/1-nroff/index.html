@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nroff(1) · Linux Manual Pages</title>
+<meta name="description" content="nroff – use groff to format documents for TTY devices">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nroff/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nroff(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> nroff &#8211; use groff to format documents for TTY devices </p>
+<h2>SYNOPSIS</h2>
+<p> [<code>-CchipStUv</code>] [<code>-d</code><i>cs</i>] [<code>-M</code><i>dir</i>] [<code>-m</code><i>name</i>] [<code>-n</code><i>num</i>] [<code>-o</code><i>list</i>] [<code>-r</code><i>cn</i>] [<code>-T</code><i>name</i>] [<code>-W</code><i>warning</i>] [<code>-w</code><i>warning</i>] [<i>file</i> &#8230;] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
+<h2>DESCRIPTION</h2>
+<p> <i>nroff</i> formats documents written in the <i><a href="/docs/linux/man/7-roff/">roff</a></i>(7) language for typewriter-like devices such as terminal emulators. </p>
+<p> GNU <i>nroff</i> emulates the traditional Unix <i>nroff</i> command using <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1). <i>nroff</i> generates output via <i><a href="/docs/linux/man/1-grotty/">grotty</a></i>(1), <i>groff</i>&#8216;s TTY output device, which needs to know the character encoding scheme used by the terminal. Consequently, acceptable arguments to the <code>-T</code> option are <code>ascii</code>, <code>latin1</code>, <code>utf8</code>, and <code>cp1047</code>; any others are ignored. If neither the <i>GROFF_TYPESETTER</i> environment variable nor the <code>-T</code> command-line option (which overrides the environment variable) specifies a (valid) device, <i>nroff</i> consults the locale to select an appropriate output device. It first tries the <i><a href="/docs/linux/man/1-locale/">locale</a></i>(1) program, then checks several locale-related environment variables; see &#8220;ENVIRONMENT&#8221;, below. If all of the foregoing fail, <code>-Tascii</code> is implied. </p>
+<p> Whitespace is not permitted between an option and its argument. The <code>-h</code> and <code>-c</code> options are equivalent to <i>grotty</i>&#8216;s options <code>-h</code> (using tabs in the output) and <code>-c</code> (using the old output scheme instead of SGR escape sequences). The <code>-d</code>, <code>-C</code>, <code>-i</code>, <code>-M</code>, <code>-m</code>, <code>-n</code>, <code>-o</code>, <code>-r</code>, <code>-w</code>, and <code>-W</code> options have the effect described in <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1). In addition, <i>nroff</i> ignores <code>-e</code>, <code>-q</code>, and <code>-s</code> (which are not implemented in <i>troff</i>). The options <code>-p</code> (pic), <code>-t</code> (tbl), <code>-S</code> (safer), and <code>-U</code> (unsafe) are passed to <i>groff</i>. <code>-v</code> and <code>&#8211;version</code> show version information, while <code>&#8211;help</code> displays a usage message; all exit afterward.</p>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><i>GROFF_TYPESETTER</i></dt>
+<dd> specifies the default output device for <i>groff</i>.</dd>
+<dt><i>GROFF_BIN_PATH</i></dt>
+<dd> is a colon-separated list of directories in which to search for the <i>groff</i> executable before searching in <i>PATH</i>. If unset, <i>/usr/bin</i> is used.</dd>
+<dt><i>LC_ALL</i></dt>
+<dd> <i>LC_CTYPE</i> <i>LANG</i> <i>LESSCHARSET</i> are pattern-matched in this order for standard character encodings supported by <i>groff</i> in the event no <code>-T</code> option is given and <i>GROFF_TYPESETTER</i> is unset.</dd></dl>
+<h2>NOTES</h2>
+<p> Character definitions in the file <i>/usr/share/groff/1.22.4/tmac/tty-char.tmac</i> are loaded to replace unrepresentable glyphs.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1), <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1), <i><a href="/docs/linux/man/1-grotty/">grotty</a></i>(1), <i><a href="/docs/linux/man/1-locale/">locale</a></i>(1), <i><a href="/docs/linux/man/7-roff/">roff</a></i>(7) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

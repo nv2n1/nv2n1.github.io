@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scandeps(1) · Linux Manual Pages</title>
+<meta name="description" content="scandeps.pl – Scan file prerequisites">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-scandeps/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>scandeps(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> scandeps.pl &#8211; Scan file prerequisites </p>
+<h2>SYNOPSIS</h2>
+<pre>
+    % scandeps.pl *.pm          # Print PREREQ_PM section for *.pm
+    % scandeps.pl -e 'STRING'   # Scan an one-liner
+    % scandeps.pl -B *.pm       # Include core modules
+    % scandeps.pl -V *.pm       # Show autoload/shared/data files
+    % scandeps.pl -R *.pm       # Don't recurse
+    % scandeps.pl -C CACHEFILE  # use CACHEFILE to cache dependencies
+</pre>
+<h2>DESCRIPTION</h2>
+<p> <i>scandeps.pl</i> is a simple-minded utility that prints out the <tt>&quot;PREREQ_PM&quot;</tt> section needed by modules. </p>
+<p> If you have <font SIZE="-1"><code>CPANPLUS</code></font> installed, modules that are part of an earlier module&#8217;s distribution with be denoted with <tt>&quot;S&quot;</tt>; modules without a distribution name on <font SIZE="-1">CPAN</font> are marked with <tt>&quot;?&quot;</tt>. </p>
+<p> Also, if the <tt>&quot;-B&quot;</tt> option is specified, module belongs to a perl distribution on <font SIZE="-1">CPAN</font> (and thus uninstallable by <tt>&quot;CPAN.pm&quot;</tt> or <tt>&quot;CPANPLUS.pm&quot;</tt>) are marked with <tt>&quot;C&quot;</tt>. </p>
+<p> Finally, modules that has loadable shared object files (usually needing a compiler to install) are marked with <tt>&quot;X&quot;</tt>; with the <tt>&quot;-V&quot;</tt> flag, those files (and all other files found) will be listed before the main output. Additionally, all module files that the scanned code depends on but were not found (and thus not scanned recursively) are listed. These may include genuinely missing modules or false positives. That means, modules your code does not depend on (on this particular platform) but that were picked up by the heuristic anyway.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-e <font SIZE="-1">STRING</font></dt>
+<dd> Scan <i></i><font SIZE="-1"><i>STRING</i></font><i></i> as a string containing perl code.</dd>
+<dt>-c</dt>
+<dd> Compiles the code and inspects its <tt>%INC</tt>, in addition to static scanning.</dd>
+<dt>-x</dt>
+<dd> Executes the code and inspects its <tt>%INC</tt>, in addition to static scanning.</dd>
+<dt>-B</dt>
+<dd> Include core modules in the output and the recursive search list.</dd>
+<dt>-R</dt>
+<dd> Only show dependencies found in the files listed and do not recurse.</dd>
+<dt>-V</dt>
+<dd> Verbose mode: Output all files found during the process; show dependencies between modules and availability. </dd>
+<p> Additionally, warns of any missing dependencies. If you find missing dependencies that aren&#8217;t really dependencies, you have probably found false positives.</p>
+<dt>-C <font SIZE="-1">CACHEFILE</font></dt>
+<dd> Use <font SIZE="-1">CACHEFILE</font> to speed up the scanning process by caching dependencies. Creates <font SIZE="-1">CACHEFILE</font> if it does not exist yet.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> Module::ScanDeps, CPANPLUS::Backend, <font SIZE="-1">PAR</font></p>
+<h2>ACKNOWLEDGMENTS</h2>
+<p> Simon Cozens, for suggesting this script to be written.</p>
+<h2>AUTHORS</h2>
+<p> Audrey Tang &lt;autrijus [at] autrijus.org&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright 2003, 2004, 2005, 2006 by Audrey Tang &lt;autrijus [at] autrijus.org&gt;. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
+<p> See &lt;<a rel="nofollow" href="http://www.perl.com/perl/misc/Artistic.html">http://www.perl.com/perl/misc/Artistic.html</a>&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

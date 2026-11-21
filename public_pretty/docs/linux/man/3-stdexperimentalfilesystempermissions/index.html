@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalfilesystempermissions(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalfilesystempermissions/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalfilesystempermissions(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::experimental::filesystem::permissions - std::experimental::filesystem::permissions</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;experimental / filesystem&gt;
+    void permissions(const path &amp;p, perms prms);
+(filesystem TS)
+    void permissions(const path &amp;p, perms prms, error_code &amp;ec);</code></pre> 
+<p>Changes access permissions of the file to which p resolves, as if by POSIX fchmodat. Symlinks are followed if prms::resolve_symlinks is set.
+The effects depend on prms as follows:</p>
+<ul>
+<li>If neither perms::add_perms nor perms::remove_perms is set, file permissions are set to exactly prms &amp; fs::perms::mask (meaning, every valid bit of prms is applied)</li>
+<li>If perms::add_perms, the file permissions are set to exactly status(p).permissions() | (prms &amp; perms::mask) (meaning, any valid bit that is set in prms, but not in the file&rsquo;s current permissions is added to the file&rsquo;s permissions)</li>
+<li>If perms::remove_perms is set, the file permissions are set to exactly status(p).permissions() &amp; ~(prms &amp; perms::mask) (meaning, any valid bit that is clear in prms, but set in the file&rsquo;s current permissions is cleared in the file&rsquo;s permissions)</li>
+<li>If both perms::add_perms and perms::remove_perms are set, error occurs
+The non-throwing overload has no special action on error.</li>
+</ul>
+<h2>Parameters</h2>
+<p>p - path to examine
+prms - permissions to set, add, or remove
+ec - out-parameter for error reporting in the non-throwing overload</p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Exceptions</h2>
+<p>The overload that does not take a error_code&amp; parameter throws filesystem_error on underlying OS API errors, constructed with p as the first argument and the OS error code as the error code argument. std::bad_alloc may be thrown if memory allocation fails. The overload taking a error_code&amp; parameter sets it to the OS API error code if an OS API call fails, and executes ec.clear() if no errors occur. This overload has
+noexcept specification:
+noexcept</p>
+<h2>Notes</h2>
+<p>Permissions may not necessarily be implemented as bits, but they are treated that way conceptually.
+Some permission bits may be ignored on some systems, and changing some bits may automatically change others (e.g. on platforms without owner/group/all distinction, setting any of the three write bits set all three)</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;fstream&gt;
+#include &lt;bitset&gt;
+#include &lt;iostream&gt;
+#include &lt;experimental/filesystem&gt;
+namespace fs = std::experimental::filesystem;
+void demo_perms(fs::perms p)
+{
+std::cout &lt;&lt; ((p &amp; fs::perms::owner_read) != fs::perms::none ? &quot;r&quot; : &quot;-&quot;)
+&lt;&lt; ((p &amp; fs::perms::owner_write) != fs::perms::none ? &quot;w&quot; : &quot;-&quot;)
+&lt;&lt; ((p &amp; fs::perms::owner_exec) != fs::perms::none ? &quot;x&quot; : &quot;-&quot;)
+&lt;&lt; ((p &amp; fs::perms::group_read) != fs::perms::none ? &quot;r&quot; : &quot;-&quot;)
+&lt;&lt; ((p &amp; fs::perms::group_write) != fs::perms::none ? &quot;w&quot; : &quot;-&quot;)
+&lt;&lt; ((p &amp; fs::perms::group_exec) != fs::perms::none ? &quot;x&quot; : &quot;-&quot;)
+&lt;&lt; ((p &amp; fs::perms::others_read) != fs::perms::none ? &quot;r&quot; : &quot;-&quot;)
+&lt;&lt; ((p &amp; fs::perms::others_write) != fs::perms::none ? &quot;w&quot; : &quot;-&quot;)
+&lt;&lt; ((p &amp; fs::perms::others_exec) != fs::perms::none ? &quot;x&quot; : &quot;-&quot;)
+&lt;&lt; &lsquo;\n&rsquo;;
+}
+int main()
+{
+std::ofstream(&quot;test.txt&quot;); // create file
+std::cout &lt;&lt; &quot;Created file with permissions: &quot;;
+demo_perms(fs::status(&quot;test.txt&quot;).permissions());
+fs::permissions(&quot;test.txt&quot;, fs::perms::add_perms |
+fs::perms::owner_all | fs::perms::group_all);
+std::cout &lt;&lt; &quot;After adding o+rwx and g+rwx:  &quot;;
+demo_perms(fs::status(&quot;test.txt&quot;).permissions());
+fs::remove(&quot;test.txt&quot;);
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> Created file with permissions: rw-r&ndash;r&ndash;
+ <wbr> After adding o+rwx and g+rwx: rwxrwxr&ndash;</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> identifies file system permissions
+perms <i>(enum)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> determines file attributes
+status determines file attributes, checking the symlink target
+symlink_status <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

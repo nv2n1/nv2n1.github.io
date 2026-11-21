@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>infinoted-0-6(1) · Linux Manual Pages</title>
+<meta name="description" content="infinoted – dedicated server for the infinote protocol (e.g. Gobby)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-infinoted-0-6/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>infinoted-0-6(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>infinoted &#8211; dedicated server for the infinote protocol (e.g. Gobby)</p>
+<h2>Synopsis</h2>
+<p><code>infinoted-0.6</code> [<i>options</i>]</p>
+<h2>Description</h2>
+<p><code>infinoted</code> is a dedicated server which allows clients to edit plain text documents and source files collaboratively over a network. Changes to the documents are synchronized instantly to the other clients. </p>
+<p> This server supports the infinote protocol as implemented by libinfinity. Example clients include Gobby 0.5.x, Kobby and a special plugin for gedit. It is <code>not</code> compatible to the older libobby protocol.</p>
+<h2>Options</h2>
+<h3>Help Options:</h3>
+<dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show help options</dd></dl>
+<h3>Application Options:</h3>
+<dl>
+<dt><code>-c</code>, <code>&#8211;config-file</code>=<i>CONFIG-FILE</i></dt>
+<dd>Load the given configuration file instead of looking at the standard locations.</dd>
+<dt><code>-k</code>, <code>&#8211;key-file</code>=<i>KEY-FILE</i></dt>
+<dd>The server&#8217;s private key</dd>
+<dt><code>-c</code>, <code>&#8211;certificate-file</code>=<i>CERTIFICATE-FILE</i></dt>
+<dd>The server&#8217;s certificate</dd>
+<dt><code>&#8211;certificate-chain</code></dt>
+<dd>The certificate chain to the root certificate, if not included in the file given in &#8211;certificate-file.</dd>
+<dt><code>&#8211;create-key</code></dt>
+<dd>Creates a new random private key</dd>
+<dt><code>&#8211;create-certificate</code></dt>
+<dd>Creates a new self-signed certificate using the given key</dd>
+<dt><code>-p</code>, <code>&#8211;port-number</code>=<i>PORT</i></dt>
+<dd>The port number to listen on</dd>
+<dt><code>&#8211;security-policy</code>=<i>no-tls</i>|allow-tls|require-tls</dt>
+<dd>How to decide whether to use TLS</dd>
+<dt><code>-r</code>, <code>&#8211;root-directory</code>=<i>DIRECTORY</i></dt>
+<dd>A directory to save the document tree into in infinoted-xml format. This is the location where the tree is kept persistently so that it is available again after server restart. Usually, documents are saved in this tree 60 seconds after the last user left the session. In addition to this, when the autosave plugin is enabled, it is possible to save sessions into the tree periodically. The default directory is ~/.infinote.</dd>
+<dt><code>&#8211;plugins</code>=<i>PLUGIN</i></dt>
+<dd>Additional plugin to load. Repeat the option on the command-line to specify multiple plugins and semi-colons in the configuration file. Plugin options can be configured in the configuration file (one section for each plugin), or with the &#8211;plugin-parameter option.</dd>
+<dt><code>&#8211;plugin-parameter</code>=<i>PLUGIN:KEY:VALUE</i></dt>
+<dd>Sets the option KEY for plugin PLUGIN to the given VALUE. Normally, plugin options are specified in the configuration file, but this command line option allows one to set or override plugin options on the command line.</dd>
+<dt><code>-P</code>, <code>&#8211;password</code>=<i>PASSWORD</i></dt>
+<dd>Require given password on connections</dd>
+<dt><code>&#8211;pam-service</code>=<i>SERVICE</i></dt>
+<dd>Authenticate clients against given pam service on connection</dd>
+<dt><code>&#8211;pam-allow-user</code>=<i>USERS</i></dt>
+<dd>Users allowed to connect after pam authentication. Separate entries with semicolons.</dd>
+<dt><code>&#8211;pam-allow-group</code>=<i>GROUPS</i></dt>
+<dd>Group allowed to connect after pam authentication. Separate entries with semicolons.</dd>
+<dt><code>-d</code>, <code>&#8211;daemonize</code></dt>
+<dd>Daemonize the server</dd>
+<dt><code>-D</code>, <code>&#8211;kill-daemon</code></dt>
+<dd>Kill a running daemon</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Display version information and exit</dd></dl>
+<h2>Author</h2>
+<p><code>infinoted</code> and <code>libinfinity</code> were written by Armin Burgmeier &lt;armin [at] arbur.net&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

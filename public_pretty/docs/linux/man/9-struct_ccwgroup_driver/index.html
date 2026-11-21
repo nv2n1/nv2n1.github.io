@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_ccwgroup_driver(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_ccwgroup_driver – driver for ccw group devices">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_ccwgroup_driver/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_ccwgroup_driver(9)</h1>
+
+
+
+
+
+<p>struct_ccwgroup_driver &#8211; driver for ccw group devices</p>
+<h2>Synopsis</h2>
+<pre><code>struct ccwgroup_driver {
+    int (*setup)(struct ccwgroup_device *);
+    void (*remove)(struct ccwgroup_device *);
+    int (*set_online)(struct ccwgroup_device *);
+    int (*set_offline)(struct ccwgroup_device *);
+    void (*shutdown)(struct ccwgroup_device *);
+    int (*prepare)(struct ccwgroup_device *);
+    void (*complete)(struct ccwgroup_device *);
+    int (*freeze)(struct ccwgroup_device *);
+    int (*thaw)(struct ccwgroup_device *);
+    int (*restore)(struct ccwgroup_device *);
+    struct device_driver driver;
+};</code></pre>
+<h2>Members</h2>
+<p>setup</p>
+<dl>
+<dd>function called during device creation to setup the device</dd></dl>
+<p> remove</p>
+<dl>
+<dd>function called on remove</dd></dl>
+<p> set_online</p>
+<dl>
+<dd>function called when device is set online</dd></dl>
+<p> set_offline</p>
+<dl>
+<dd>function called when device is set offline</dd></dl>
+<p> shutdown</p>
+<dl>
+<dd>function called when device is shut down</dd></dl>
+<p> prepare</p>
+<dl>
+<dd>prepare for pm state transition</dd></dl>
+<p> complete</p>
+<dl>
+<dd>undo work done in <i>prepare</i></dd></dl>
+<p> freeze</p>
+<dl>
+<dd>callback for freezing during hibernation snapshotting</dd></dl>
+<p> thaw</p>
+<dl>
+<dd>undo work done in <i>freeze</i></dd></dl>
+<p> restore</p>
+<dl>
+<dd>callback for restoring after hibernation</dd></dl>
+<p> driver</p>
+<dl>
+<dd>embedded driver structure</dd></dl>
+<h2>Author</h2>
+<p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

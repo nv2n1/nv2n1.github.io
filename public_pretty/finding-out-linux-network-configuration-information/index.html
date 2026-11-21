@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspecting Linux Network Configuration - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/finding-out-linux-network-configuration-information/">
+  <meta name="description" content="Linux provides multiple ways to query network configuration. While the underlying concepts remain consistent, modern tools have evolved from the older net-tools …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Inspecting Linux Network Configuration">
+  <meta property="og:url" content="https://www.systutorials.com/finding-out-linux-network-configuration-information/">
+  <meta property="og:description" content="Linux provides multiple ways to query network configuration. While the underlying concepts remain consistent, modern tools have evolved from the older net-tools …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>Inspecting Linux Network Configuration</h1>
+        <time class="post-date" datetime="2013-07-12T16:32:14Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Linux provides multiple ways to query network configuration. While the underlying concepts remain consistent, modern tools have evolved from the older net-tools utilities.</p>
+<h2 id="ip-address-mac-address-and-netmask">IP Address, MAC Address, and Netmask</h2>
+<p>The modern replacement for <code>ifconfig</code> is <code>ip addr</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ip addr show
+</span></span></code></pre></div><p>This displays all network interfaces with their IPv4 and IPv6 addresses, MAC addresses, and subnet masks:</p>
+<pre><code>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:26:22:a1:25:0f brd ff:ff:ff:ff:ff:ff
+    inet 143.89.135.175/24 brd 143.89.135.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::226:22ff:fea1:250f/64 scope link
+       valid_lft forever preferred_lft forever
+</code></pre>
+<p>To get information about a specific interface:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ip addr show eth0
+</span></span><span class="line"><span class="cl">$ ip link show eth0
+</span></span></code></pre></div><p>The CIDR notation (e.g., <code>/24</code>) replaces the old netmask format. If you need the netmask in dotted-decimal notation, use <code>ipcalc</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ipcalc 143.89.135.175/24
+</span></span></code></pre></div><p>For quick reference, <code>hostname -I</code> shows all IP addresses on the system.</p>
+<h2 id="dns-configuration">DNS Configuration</h2>
+<p>Modern systems using systemd typically manage DNS through <code>systemd-resolved</code>. Query the current DNS configuration with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ resolvectl status
+</span></span></code></pre></div><p>This shows active DNS servers, search domains, and DNSSEC status.</p>
+<p>Legacy <code>/etc/resolv.conf</code> may still exist but is often a symlink to systemd’s managed configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cat /etc/resolv.conf
+</span></span></code></pre></div><p>If you need to configure DNS manually (for systems not using systemd or for overrides), edit <code>/etc/resolv.conf</code>:</p>
+<pre><code>nameserver 8.8.8.8
+nameserver 8.8.4.4
+</code></pre>
+<p>For persistent DNS configuration on systems with NetworkManager:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ nmcli dev show
+</span></span></code></pre></div><p>Or edit the NetworkManager connection profile directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo nmcli connection modify <span class="s2">&#34;Connection Name&#34;</span> ipv4.dns <span class="s2">&#34;8.8.8.8 8.8.4.4&#34;</span>
+</span></span><span class="line"><span class="cl">$ sudo nmcli connection up <span class="s2">&#34;Connection Name&#34;</span>
+</span></span></code></pre></div><h2 id="the-hosts-file">The Hosts File</h2>
+<p>The <code>/etc/hosts</code> file provides local hostname-to-IP mapping, bypassing DNS lookups. The loopback entries should remain unchanged:</p>
+<pre><code>127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.0.1.8    mysite.mydomain mysite
+</code></pre>
+<p>The system consults this file before DNS queries when configured properly in Name Service Switch.</p>
+<h2 id="name-service-switch-order">Name Service Switch Order</h2>
+<p>The <code>/etc/nsswitch.conf</code> file controls the order of hostname resolution:</p>
+<pre><code>hosts: files mdns4_minimal [NOTFOUND=return] dns
+</code></pre>
+<p>This line means: check <code>/etc/hosts</code> first, then mDNS, then DNS. Modify the order based on your needs.</p>
+<h2 id="gateway-and-routing">Gateway and Routing</h2>
+<p>View the routing table with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ip route show
+</span></span></code></pre></div><p>Output example:</p>
+<pre><code>default via 143.89.135.254 dev eth0 proto static
+143.89.135.0/24 dev eth0 proto kernel scope link src 143.89.135.175
+</code></pre>
+<p>The <code>default via</code> line shows your gateway. To view routes for a specific interface:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ip route show dev eth0
+</span></span></code></pre></div><p>Add a static route:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo ip route add 192.168.1.0/24 via 10.0.0.1 dev eth0
+</span></span></code></pre></div><p>For persistence across reboots, use your distribution’s network configuration tool (NetworkManager, netplan, systemd-networkd) rather than manual route commands.</p>
+<h2 id="hostname-configuration">Hostname Configuration</h2>
+<p>View the current hostname:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ hostname
+</span></span></code></pre></div><p>Display the fully qualified domain name:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ hostname -f
+</span></span></code></pre></div><p>Change the hostname temporarily (reverts on reboot):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo hostname newhostname
+</span></span></code></pre></div><p>For permanent changes, use <code>hostnamectl</code> on systemd systems:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo hostnamectl set-hostname newhostname
+</span></span></code></pre></div><p>This updates <code>/etc/hostname</code> and applies the change immediately.</p>
+<p>Alternatively, edit <code>/etc/hostname</code> directly and reboot, or edit both <code>/etc/hostname</code> and <code>/etc/hosts</code> to ensure consistency.</p>
+<h2 id="complete-network-diagnostics">Complete Network Diagnostics</h2>
+<p>For comprehensive network information in one command, use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ip -a
+</span></span></code></pre></div><p>This shows all addresses, routes, and interface statistics.</p>
+<p>Test DNS resolution:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ nslookup example.com
+</span></span><span class="line"><span class="cl">$ dig example.com
+</span></span><span class="line"><span class="cl">$ getent hosts example.com
+</span></span></code></pre></div><p>These tools verify both your DNS configuration and network connectivity.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

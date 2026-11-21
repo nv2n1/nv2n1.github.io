@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>opaextractstat(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-opaextractstat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>opaextractstat(8)</h1>
+
+
+
+
+
+<p>opaextractstat</p>
+<p>Performs an error analysis of a fabric and provides augmented information from a topology_file. The report provides cable information as well as symbol error counts.</p>
+<p>opaextractstat generates a detailed opareport errors report that also has a topology file (see <i>opareport</i> for more information about topology files). The report is piped to opaxmlextract which extracts values for Link, Cable and Port. (The port element names are context-sensitive.) Note that opaxmlextract generates two extraction records for each link (one for each port on the link); therefore, opaextractstat merges the two records into a single record and removes redundant link and cable information.</p>
+<p>opaextractstat contains a while read loop that reads the CSV line-by-line, uses cut to remove redundant information, and outputs the data on a common line.</p>
+<h2>Syntax</h2>
+<p>opaextractstat topology_file [ <i>opareport options</i>]</p>
+<h2>Options</h2>
+<dl><dt>--help
+</dt><dd>Produces full help text. 
+</dd><dt>topology_file
+</dt><dd>Specifies topology_file to use. 
+</dd><dt>
+&nbsp;<wbr><i>opareport options</i>&nbsp;<wbr>
+</dt><dd>&nbsp;<wbr><i>Options</i>&nbsp;<wbr>are passed to opareport. See <i>opareport</i> for the full set of options.</dd></dl>
+<p>The portion of the script that calls opareport and opaxmlextract follows:</p>
+<p>opareport -x -d 10 -s -o errors -T $@ | opaxmlextract -d ;
+-e Rate -e MTU -e LinkDetails -e CableLength -e CableLabel
+-e CableDetails -e Port.NodeDesc -e Port.PortNum -e SymbolErrors.Value</p>
+<h2>Examples</h2>
+<p>opaextractstat topology_file
+opaextractstat topology_file -c my_opamon.conf</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

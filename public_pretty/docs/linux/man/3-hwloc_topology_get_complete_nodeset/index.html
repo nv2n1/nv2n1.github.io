@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hwloc_topology_get_complete_nodeset(3) · Linux Manual Pages</title>
+<meta name="description" content="hwlocality_helper_topology_sets – CPU and node sets of entire topologies">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-hwloc_topology_get_complete_nodeset/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>hwloc_topology_get_complete_nodeset(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> hwlocality_helper_topology_sets &#8211; CPU and node sets of entire topologies </p>
+<h3>Functions</h3>
+<p> static <code>hwloc_const_cpuset_t</code> <code>hwloc_topology_get_complete_cpuset</code> (<code>hwloc_topology_t</code> topology) </p>
+<p> static <code>hwloc_const_cpuset_t</code> <code>hwloc_topology_get_topology_cpuset</code> (<code>hwloc_topology_t</code> topology) </p>
+<p> static <code>hwloc_const_cpuset_t</code> <code>hwloc_topology_get_online_cpuset</code> (<code>hwloc_topology_t</code> topology) </p>
+<p> static <code>hwloc_const_cpuset_t</code> <code>hwloc_topology_get_allowed_cpuset</code> (<code>hwloc_topology_t</code> topology) </p>
+<p> static <code>hwloc_const_nodeset_t</code> <code>hwloc_topology_get_complete_nodeset</code> (<code>hwloc_topology_t</code> topology) </p>
+<p> static <code>hwloc_const_nodeset_t</code> <code>hwloc_topology_get_topology_nodeset</code> (<code>hwloc_topology_t</code> topology) </p>
+<p> static <code>hwloc_const_nodeset_t</code> <code>hwloc_topology_get_allowed_nodeset</code> (<code>hwloc_topology_t</code> topology) </p>
+<h2>Detailed Description</h2>
+<h2>Function Documentation</h2>
+<h3>static <code>hwloc_const_cpuset_t</code> hwloc_topology_get_allowed_cpuset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
+<p> Get allowed CPU set. </p>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> the CPU set of allowed logical processors of the system. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> The returned cpuset is not newly allocated and should thus not be changed or freed, <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
+<h3>static <code>hwloc_const_nodeset_t</code> hwloc_topology_get_allowed_nodeset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
+<p> Get allowed node set. </p>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> the node set of allowed memory of the system. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> The returned nodeset is not newly allocated and should thus not be changed or freed, <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
+<h3>static <code>hwloc_const_cpuset_t</code> hwloc_topology_get_complete_cpuset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
+<p> Get complete CPU set. </p>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> the complete CPU set of logical processors of the system. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> The returned cpuset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
+<h3>static <code>hwloc_const_nodeset_t</code> hwloc_topology_get_complete_nodeset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
+<p> Get complete node set. </p>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> the complete node set of memory of the system. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> The returned nodeset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
+<h3>static <code>hwloc_const_cpuset_t</code> hwloc_topology_get_online_cpuset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
+<p> Get online CPU set. </p>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> the CPU set of online logical processors of the system. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> The returned cpuset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
+<h3>static <code>hwloc_const_cpuset_t</code> hwloc_topology_get_topology_cpuset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
+<p> Get topology CPU set. </p>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> the CPU set of logical processors of the system for which hwloc provides topology information. This is equivalent to the cpuset of the system object. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> The returned cpuset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
+<h3>static <code>hwloc_const_nodeset_t</code> hwloc_topology_get_topology_nodeset (<code>hwloc_topology_t</code> topology) [inline], [static]</h3>
+<p> Get topology node set. </p>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> the node set of memory of the system for which hwloc provides topology information. This is equivalent to the nodeset of the system object. If the topology is the result of a combination of several systems, NULL is returned.</dd></dl>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> The returned nodeset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAM">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

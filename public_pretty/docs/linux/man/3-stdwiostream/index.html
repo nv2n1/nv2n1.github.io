@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdwiostream(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdwiostream/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdwiostream(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::basic_iostream - std::basic_iostream</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;istream&gt;
+template&lt;
+class CharT,
+class Traits = std::char_traits&lt;CharT&gt;
+&gt; class basic_iostream;</code></pre> 
+<p>The class template basic_iostream provides support for high level input/output operations on streams. The supported operations include sequential reading or writing and formatting. This functionality is implemented over the interface provided by the basic_streambuf class. It is accessed through basic_ios class.
+ std-basic iostream-inheritance.svg
+Inheritance diagram
+Two specializations for common character types are defined:
+Defined in header &lt;istream&gt;
+Type Definition
+iostream basic_iostream&lt;char&gt;
+wiostream basic_iostream&lt;wchar_t&gt;</p>
+<h2>Member types</h2>
+<p>Member type Definition
+char_type CharT
+traits_type Traits; the program is ill-formed if Traits::char_type is not CharT.
+int_type Traits::int_type
+pos_type Traits::pos_type
+off_type Traits::off_type</p>
+<h2>Member functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs the object
+constructor <i>(public member function)</i></p>
+<p>destructor destructs the object
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(virtual public member function)</i>
+<b>[virtual]</b></p>
+<h2>Protected member functions</h2>
+<p>operator= move-assigns another basic_iostream
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(protected member function)</i>
+<i>(C++11)</i></p>
+<p>swap exchanges the state with another basic_iostream
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i>
+<i>(C++11)</i></p>
+<p>Inherited from std::basic_istream</p>
+<h2>Member functions</h2>
+<h2>Formatted input</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> extracts formatted data
+operator&gt;&gt; <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i></p>
+<h2>Unformatted input</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> extracts characters
+get <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> reads the next character without extracting it
+peek <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> unextracts a character
+unget <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> puts character into input stream
+putback <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> extracts characters until the given character is found
+getline <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> extracts and discards characters until the given character is found
+ignore <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> extracts blocks of characters
+read <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> extracts already available blocks of characters
+readsome <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns number of characters extracted by last unformatted input operation
+gcount <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i></p>
+<h2>Positioning</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the input position indicator
+tellg <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sets the input position indicator
+seekg <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i></p>
+<h2>Miscellaneous</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> synchronizes with the underlying storage device
+sync <i>(public member function of std::basic_istream&lt;CharT,Traits&gt;)</i></p>
+<h2>Member classes</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> implements basic logic for preparation of the stream for input operations
+sentry <i>(public member class of std::basic_istream&lt;CharT,Traits&gt;)</i></p>
+<p>Inherited from std::basic_ostream</p>
+<h2>Member functions</h2>
+<h2>Formatted output</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> inserts formatted data
+operator&lt;&lt; <i>(public member function of std::basic_ostream&lt;CharT,Traits&gt;)</i></p>
+<h2>Unformatted output</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> inserts a character
+put <i>(public member function of std::basic_ostream&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> inserts blocks of characters
+write <i>(public member function of std::basic_ostream&lt;CharT,Traits&gt;)</i></p>
+<h2>Positioning</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the output position indicator
+tellp <i>(public member function of std::basic_ostream&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sets the output position indicator
+seekp <i>(public member function of std::basic_ostream&lt;CharT,Traits&gt;)</i></p>
+<h2>Miscellaneous</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> synchronizes with the underlying storage device
+flush <i>(public member function of std::basic_ostream&lt;CharT,Traits&gt;)</i></p>
+<h2>Member classes</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> implements basic logic for preparation of the stream for output operations
+sentry <i>(public member class of std::basic_ostream&lt;CharT,Traits&gt;)</i></p>
+<p>Inherited from std::basic_ios</p>
+<h2>Member types</h2>
+<p>Member type Definition
+char_type CharT
+traits_type Traits
+int_type Traits::int_type
+pos_type Traits::pos_type
+off_type Traits::off_type</p>
+<h2>Member functions</h2>
+<h2>State functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if no error has occurred i.e. I/O operations are available
+good <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if end-of-file has been reached
+eof <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if an error has occurred
+fail <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if a non-recoverable error has occurred
+bad <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if an error has occurred (synonym of fail())
+operator! <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i></p>
+<p>operator_void*
+operator_bool checks if no error has occurred (synonym of !fail())
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+<i>(until C++11)</i>
+<i>(since C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns state flags
+rdstate <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sets state flags
+setstate <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> modifies state flags
+clear <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i></p>
+<h2>Formatting</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> copies formatting information
+copyfmt <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> manages the fill character
+fill <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i></p>
+<h2>Miscellaneous</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> manages exception mask
+exceptions <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sets the locale
+imbue <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> manages associated stream buffer
+rdbuf <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> manages tied stream
+tie <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> narrows characters
+narrow <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> widens characters
+widen <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i></p>
+<p>Inherited from std::ios_base</p>
+<h2>Member functions</h2>
+<h2>Formatting</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> manages format flags
+flags <i>(public member function of std::ios_base)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sets specific format flag
+setf <i>(public member function of std::ios_base)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> clears specific format flag
+unsetf <i>(public member function of std::ios_base)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> manages decimal precision of floating point operations
+precision <i>(public member function of std::ios_base)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> manages field width
+width <i>(public member function of std::ios_base)</i></p>
+<h2>Locales</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sets locale
+imbue <i>(public member function of std::ios_base)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns current locale
+getloc <i>(public member function of std::ios_base)</i></p>
+<h2>Internal extensible array</h2>
+<p>xalloc returns a program-wide unique integer that is safe to use as index to pword() and iword()
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public static member function of std::ios_base)</i>
+<b>[static]</b>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> resizes the private storage if necessary and access to the long element at the given index
+iword <i>(public member function of std::ios_base)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> resizes the private storage if necessary and access to the void* element at the given index
+pword <i>(public member function of std::ios_base)</i></p>
+<h2>Miscellaneous</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> registers event callback function
+register_callback <i>(public member function of std::ios_base)</i></p>
+<p>sync_with_stdio sets whether C++ and C IO libraries are interoperable
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public static member function of std::ios_base)</i>
+<b>[static]</b></p>
+<h2>Member classes</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> stream exception
+failure <i>(public member class of std::ios_base)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> initializes standard stream objects
+Init <i>(public member class of std::ios_base)</i></p>
+<h2>Member types and constants</h2>
+<p>Type Explanation
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> stream open mode type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The following constants are also defined:</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Constant Explanation
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> app seek to the end of stream before each write
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> binary open in binary_mode
+openmode in open for reading
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> out open for writing
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> trunc discard the contents of the stream when opening
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ate seek to the end of stream immediately after open</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(typedef)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> formatting flags type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The following constants are also defined:</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Constant Explanation
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> dec use decimal base for integer I/O: see std::dec
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> oct use octal base for integer I/O: see std::oct
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> hex use hexadecimal base for integer I/O: see std::hex
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> basefield dec|oct|hex. Useful for masking operations
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> left left adjustment (adds fill characters to the right): see std::left
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> right right adjustment (adds fill characters to the left): see std::right
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> internal internal adjustment (adds fill characters to the internal designated point): see std::internal
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> adjustfield left|right|internal. Useful for masking operations
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> scientific generate floating point types using scientific notation, or hex notation if combined with fixed: see std::scientific
+fmtflags fixed generate floating point types using fixed notation, or hex notation if combined with scientific: see std::fixed
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> floatfield scientific|fixed. Useful for masking operations
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> boolalpha insert and extract bool type in alphanumeric format: see std::boolalpha
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> showbase generate a prefix indicating the numeric base for integer output, require the currency indicator in monetary I/O: see std::showbase
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> showpoint generate a decimal-point character unconditionally for floating-point number output: see std::showpoint
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> showpos generate a + character for non-negative numeric output: see std::showpos
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> skipws skip leading whitespace before certain input operations: see std::skipws
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> unitbuf flush the output after each output operation: see std::unitbuf
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> uppercase replace certain lowercase letters with their uppercase
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> equivalents in certain output operations: see std::uppercase</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(typedef)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> state of the stream type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The following constants are also defined:</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Constant Explanation
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> goodbit no error
+iostate badbit irrecoverable stream error
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> failbit input/output operation failed (formatting or extraction error)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> eofbit associated input sequence has reached end-of-file</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(typedef)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> seeking direction type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The following constants are also defined:</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Constant Explanation
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> beg the beginning of a stream
+seekdir end the ending of a stream
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> cur the current position of stream position indicator</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(typedef)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> specifies event type
+event <i>(enum)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> callback function type
+event_callback <i>(typedef)</i></p>
+<h2>See also</h2>
+<p>Input/output_manipulators</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

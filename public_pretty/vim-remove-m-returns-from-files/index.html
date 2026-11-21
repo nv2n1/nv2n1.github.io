@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Removing ^M Line Endings in Vim - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/vim-remove-m-returns-from-files/">
+  <meta name="description" content="When you open a Windows file in Vim (or Neovim), you’ll often see ^M characters at the end of lines. These are carriage returns (\r) from Windows line endings …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Removing ^M Line Endings in Vim">
+  <meta property="og:url" content="https://www.systutorials.com/vim-remove-m-returns-from-files/">
+  <meta property="og:description" content="When you open a Windows file in Vim (or Neovim), you’ll often see ^M characters at the end of lines. These are carriage returns (\r) from Windows line endings …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>Removing ^M Line Endings in Vim</h1>
+        <time class="post-date" datetime="2013-07-12T16:31:47Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When you open a Windows file in Vim (or Neovim), you’ll often see <code>^M</code> characters at the end of lines. These are carriage returns (<code>\r</code>) from Windows line endings (CRLF), which don’t display properly on Unix-like systems that expect LF-only line endings.</p>
+<h2 id="quick-fix">Quick Fix</h2>
+<p>The fastest way to remove these characters is with a substitution command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="m">1</span><span class="p">,</span>$<span class="nx">s</span><span class="sr">/^M/</span>/<span class="nx">g</span>
+</span></span></code></pre></div><p>To enter the literal <code>^M</code>, type <code>Ctrl+V</code> followed by <code>Ctrl+M</code> in command mode. The <code>Ctrl+V</code> tells Vim to insert the next character literally instead of interpreting it as a command.</p>
+<p>Breaking down the command:</p>
+<ul>
+<li><code>:</code> — enter ex command mode</li>
+<li><code>1,$</code> — range from line 1 to the last line (you can use <code>%</code> as shorthand)</li>
+<li><code>s/pattern/replacement/flags</code> — substitution command</li>
+<li><code>^M</code> — the carriage return character (entered as <code>Ctrl+V</code> + <code>Ctrl+M</code>)</li>
+<li><code>g</code> — replace all occurrences on each line</li>
+</ul>
+<p>So the equivalent shorthand version:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span>%<span class="nx">s</span><span class="sr">/^M/</span>/<span class="nx">g</span>
+</span></span></code></pre></div><h2 id="better-approach-fix-the-file-format">Better Approach: Fix the File Format</h2>
+<p>Rather than removing characters after the fact, it’s better to convert the file format. Vim has a <code>fileformat</code> option for this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="k">set</span> <span class="nx">fileformat</span><span class="p">=</span><span class="nx">unix</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nx">wq</span>
+</span></span></code></pre></div><p>This converts CRLF to LF and writes the file. Check your current file format with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="k">set</span> <span class="nx">fileformat</span>?
+</span></span></code></pre></div><p>Output will show <code>fileformat=dos</code> (Windows), <code>fileformat=unix</code> (Linux/Mac), or <code>fileformat=mac</code> (old Mac, rarely used).</p>
+<h2 id="automatic-detection-and-conversion">Automatic Detection and Conversion</h2>
+<p>If you’re frequently working with cross-platform files, configure Vim to handle this automatically. Add this to your <code>~/.vimrc</code> or <code>~/.config/nvim/init.vim</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">fileformats</span><span class="p">=</span><span class="nx">unix</span><span class="p">,</span><span class="nx">dos</span><span class="p">,</span><span class="nx">mac</span>
+</span></span></code></pre></div><p>Vim will detect the file format when opening and use the first matching format from the list. You can also force detection on a specific file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">e</span> <span class="p">++</span><span class="nx">fileformat</span><span class="p">=</span><span class="nx">dos</span>
+</span></span></code></pre></div><p>Then immediately convert and save:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="k">set</span> <span class="nx">fileformat</span><span class="p">=</span><span class="nx">unix</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nx">wq</span>
+</span></span></code></pre></div><h2 id="using-dos2unix-command">Using dos2unix Command</h2>
+<p>For bulk conversion outside of Vim, use the <code>dos2unix</code> utility:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dos2unix file.txt
+</span></span></code></pre></div><p>Or without installing extra tools, use sed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/\r$//&#39;</span> file.txt
+</span></span></code></pre></div><p>The <code>\r</code> matches the carriage return character, and <code>$</code> anchors it to the end of the line.</p>
+<h2 id="checking-for-hidden-line-endings">Checking for Hidden Line Endings</h2>
+<p>If you’re unsure whether a file has mixed line endings, use <code>cat -A</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat -A file.txt
+</span></span></code></pre></div><p>Lines ending with <code>$</code> have Unix line endings. Lines ending with <code>^M$</code> have Windows line endings.</p>
+<p>In Vim, you can also check by looking at the status line (rightmost corner), which displays the file format. Or use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="k">set</span> <span class="nx">list</span>
+</span></span></code></pre></div><p>This shows whitespace characters — <code>$</code> marks line ends, and you’ll see <code>^M</code> if carriage returns are present.</p>
+<h2 id="essential-editor-configuration">Essential Editor Configuration</h2>
+<p>A well-configured editor dramatically improves productivity. For Vim users, invest time in crafting a solid vimrc. For Emacs users, use use-package for cleaner configuration management. Both editors support extensive plugin ecosystems that can transform them into full IDEs.</p>
+<p>Learn the navigation commands thoroughly before adding plugins. Mastery of core movement commands (word, paragraph, search motions in Vim; mark, isearch, ace-jump in Emacs) provides more productivity gains than any single plugin.</p>
+<h2 id="performance-tips">Performance Tips</h2>
+<p>Large files can slow down both editors. For Vim, set lazyredraw and disable syntax highlighting for files over a certain size. For Emacs, use so-long-mode for files with long lines. Both editors benefit from disabling line numbers on very large files to improve scrolling performance.</p>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

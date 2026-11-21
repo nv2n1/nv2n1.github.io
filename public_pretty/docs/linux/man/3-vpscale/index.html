@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vpscale(3) · Linux Manual Pages</title>
+<meta name="description" content="vpScale – multiply the current transformation matrix by a scaling matrix">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-vpscale/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>vpscale(3)</h1>
+
+
+
+
+
+<p>vpScale &#8211; multiply the current transformation matrix by a scaling matrix</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;volpack.h&gt;
+</code></pre>
+<p> vpResult</p>
+<dl>
+<dt> <code>vpScale(</code><i>vpc, sx, sy, sz</i><code>)</code></dt>
+<dd>
+</dd><dd>vpContext <i>*vpc;</i></dd>
+<dd>double <i>sxR;</dd>
+<dd>double syR;</dd>
+<dd>double szR;</dd></dl>
+<p> </i></p>
+<h2>Arguments</h2>
+<dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>sx</i></dt>
+<dd>Scale factor for the X dimension.</dd>
+<dt><i>sy</i></dt>
+<dd>Scale factor for the Y dimension.</dd>
+<dt><i>sz</i></dt>
+<dd>Scale factor for the Z dimension.</dd></dl>
+<h2>Description</h2>
+<p><code>vpScale</code> is used to multiply the current transformation matrix by a 4-by-4 scaling matrix. The arguments specify independent scale factors for each of the three cartesian axes. The scaling matrix is:</p>
+<dl>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr></tt>sx<tt>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0</dd>
+<p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>sy<tt>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0</p>
+<p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>sz<tt>&nbsp;<wbr>&nbsp;<wbr></tt>0</p>
+<p> <tt>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>0<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>1
+</dl>
+<p> Use <code>vpCurrentMatrix</code> to set the current transformation matrix. By default, the scaling matrix is post-multiplied (M = M*S where M is the current matrix and S is the scaling matrix). The VP_CONCAT_MODE option to <code>vpSeti</code> can be used to select pre-multiplication.</p>
+<h2>State Variables</h2>
+<p>The current matrix concatenation parameters can be retrieved with the following state variable codes (see <a href="/docs/linux/man/3-vpgeti/">vpGeti</a>(3)): VP_CURRENT_MATRIX, VP_CONCAT_MODE.</p>
+<h2>Errors</h2>
+<p>The return value is always VP_OK.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3), <a href="/docs/linux/man/3-vpcurrentmatrix/">vpCurrentMatrix</a>(3) </p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

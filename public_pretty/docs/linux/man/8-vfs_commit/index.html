@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vfs_commit(8) · Linux Manual Pages</title>
+<meta name="description" content="vfs_commit – flush dirty data at specified intervals">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-vfs_commit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>vfs_commit(8)</h1>
+
+
+
+
+
+<p>vfs_commit &#8211; flush dirty data at specified intervals</p>
+<h2>Synopsis</h2>
+<dl>
+<dd>vfs objects = commit</dd></dl>
+<h2>Description</h2>
+<p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
+<p> The vfs_commit VFS module keeps track of the amount of data written to a file and synchronizes it to disk when a specified amount accumulates. </p>
+<p> vfs_commit is useful in two circumstances. First, if you have very precious data, the impact of unexpected power loss can be minimized by a small commit:dthresh value. Secondly, write performance can be improved on some systems by flushing file data early and at regular intervals. </p>
+<p> This module is stackable.</p>
+<h2>Options</h2>
+<p>commit:dthresh = BYTES</p>
+<dl>
+<dd>Synchronize file data each time the specified number of bytes has been written. </dd>
+<p> The following suffixes may be applied to BYTES: </p>
+<dl>
+<dd>&bull; K &#8211; BYTES is a number of kilobytes</dd></dl>
+<dl>
+<dd>&bull; M &#8211; BYTES is a number of megabytes</dd></dl>
+<dl>
+<dd>&bull; G &#8211; BYTES is a number of gigabytes</dd></dl>
+</dl>
+<h2>Examples</h2>
+<p>Synchronize the file data on the [precious] share after every 512 kilobytes (524288 bytes) of data is written: </p>
+<dl>
+<dd>
+<pre> <i>[precious]</i>
+ m[blue]<code>path = /data/precious</code>m[]
+ m[blue]<code>vfs objects = commit</code>m[]
+ m[blue]<code>commit:dthresh = 512K</code>m[]</pre>
+</dd></dl>
+<h2>Caveats</h2>
+<p>On some systems, the data synchronization performed by commit may reduce performance.</p>
+<h2>Version</h2>
+<p>This man page is correct for version 3.0.25 of the Samba suite.</p>
+<h2>Author</h2>
+<p>The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

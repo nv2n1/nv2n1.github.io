@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_ftp_client_api(3) · Linux Manual Pages</title>
+<meta name="description" content="Globus FTP Client API –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_ftp_client_api/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_ftp_client_api(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> Globus FTP Client API &#8211; </p>
+<h3>Modules</h3>
+<p> <code>Activation</code> </p>
+<p> <code>Restart Markers</code> </p>
+<p> <code>Handle Management</code> </p>
+<p> <code>Handle Attributes</code> </p>
+<p> <code>FTP Operations</code> </p>
+<p> <code>FTP Operation Attributes</code> </p>
+<p> <code>Reading and Writing Data</code> </p>
+<p> <code>Plugins</code><br />
+ <i>Plugin API. </i></p>
+<h2>Detailed Description</h2>
+<p> The Globus FTP Client library provides a convenient way of accessing files on remote FTP servers. In addition to supporting the basic FTP protocol, the FTP Client library supports several security and performance extensions to make FTP more suitable for Grid applications. These extensions are described in the Grid FTP Protocol document. </p>
+<p> In addition to protocol support for grid applications, the FTP Client library provides a <code>plugin architecture </code> for installing application or grid-specific fault recovery and performance tuning algorithms within the library. Application writers may then target their code toward the FTP Client library, and by simply enabling the appropriate plugins, easily tune their application to run it on a different grid. </p>
+<p> All applications which use the Globus FTP Client API must include the header file <code>globus_ftp_client.h</code> and activate the GLOBUS_FTP_CLIENT_MODULE </p>
+<p> To use the Globus FTP Client API, one must create an <code>FTP Client handle </code>. This structure contains context information about FTP operations which are being executed, a cache of FTP control and data connections, and information about plugins which are being used. The specifics of the connection caching and plugins are found in the <code>Handle Attributes</code> section of this manual. </p>
+<p> Once the handle is created, one may begin transferring files or doing other FTP operations by calling the functions in the <code>FTP Operations</code> section of this manual. In addition to whole-file transfers, the API supports partial file transfers, restarting transfers from a known point, and various FTP directory management commands. All FTP operations may have a set of attributes, defined in the <code>FTP Operation Attributes</code> section, associated with them to tune various FTP parameters. The data structures and functions needed to restart a file transfer are described in the <code>Restart Markers</code> section of this manual. For operations which require the user to send to or receive data from an FTP server the must call the functions in the <code>Reading and Writing Data</code> section of the manual.</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

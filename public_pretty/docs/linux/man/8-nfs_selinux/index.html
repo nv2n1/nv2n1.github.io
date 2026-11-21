@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nfs_selinux(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-nfs_selinux/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>nfs_selinux(8)</h1>
+
+
+
+
+
+<p>nfs_selinux - Security Enhanced Linux Policy for NFS</p>
+<h2>Description</h2>
+<p>Security Enhanced Linux secures the NFS server via flexible mandatory access control.</p>
+<h2>Booleans</h2>
+<p>SELinux policy is customizable based on the least level of access required. SELinux can be configured to not allow NFS to share files. If you want to share NFS partitions, and only allow read-only access to those NFS partitions, turn the nfs_export_all_ro boolean on:</p>
+<dl><dt>setsebool -P nfs_export_all_ro 1
+</dt><dd></dd><dt>If you want to share files read/write you must set the nfs_export_all_rw boolean.
+</dt><dd></dd><dt>setsebool -P nfs_export_all_rw 1
+</dt><dd></dd><dt>These booleans are not required when files to be shared are labeled with the public_content_t or public_content_rw_t types. NFS can share files labeled with the public_content_t or public_content_rw_t types even if the nfs_export_all_ro and nfs_export_all_rw booleans are off.
+</dt><dd></dd><dt>If you want to use a remote NFS server for the home directories on this machine, you must set the use_nfs_home_dirs boolean:
+</dt><dd></dd><dt>setsebool -P use_nfs_home_dirs 1
+</dt><dd></dd><dt>system-config-selinux is a GUI tool available to customize SELinux policy settings.
+</dt><dd></dd></dl>
+<h2>AUTHOR<tt>&nbsp;<wbr>&nbsp;<wbr></tt></h2>
+<p>This manual page was written by Dan Walsh &lt;dwalsh [at] redhat.com&gt;.</p>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/8-selinux/">selinux</a>(8), <a HREF="/docs/linux/man/1-chcon/">chcon</a>(1), <a HREF="/docs/linux/man/8-setsebool/">setsebool</a>(8)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

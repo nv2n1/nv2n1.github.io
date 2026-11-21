@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_gstxfp(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_gstxfp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_gstxfp(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>GSTXFP (Set text font and precision) - sets the text font and precision.</p>
+<h2>Synopsis</h2>CALL GSTXFP (FONT, PREC)
+<h2>C-Binding Synopsis</h2>#include &lt;ncarg/gks.h&gt; 
+<p>void gset_text_font_prec(const Gtext_font_prec *text_font_prec);</p>
+<h2>Description</h2><dl COMPACT><dt>FONT
+</dt><dd>(Integer, Input) - Specifies the text font to be used in subsequent calls to the GTX output primitive. Options are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt> 1
+</dt><dd>ASCII font (default)
+</dd><dt> -2
+</dt><dd>Hershey cartographic Roman
+</dd><dt> -3
+</dt><dd>Hershey cartographic Greek
+</dd><dt> -4
+</dt><dd>Hershey simplex Roman
+</dd><dt> -5
+</dt><dd>Hershey simplex Greek
+</dd><dt> -6
+</dt><dd>Hershey simplex script
+</dd><dt> -7
+</dt><dd>Hershey complex Roman
+</dd><dt> -8
+</dt><dd>Hershey complex Greek
+</dd><dt> -9
+</dt><dd>Hershey complex script
+</dd><dt>-10
+</dt><dd>Hershey complex italic
+</dd><dt>-11
+</dt><dd>Hershey complex Cyrillic
+</dd><dt>-12
+</dt><dd>Hershey duplex Roman
+</dd><dt>-13
+</dt><dd>Hershey triplex Roman
+</dd><dt>-14
+</dt><dd>Hershey triplex italic
+</dd><dt>-15
+</dt><dd>Hershey Gothic German
+</dd><dt>-16
+</dt><dd>Hershey Gothic English
+</dd><dt>-17
+</dt><dd>Hershey Gothic Italian
+</dd><dt>-18
+</dt><dd>Hershey math symbols
+</dd><dt>-19
+</dt><dd>Hershey symbol set 1
+</dd><dt>-20
+</dt><dd>Hershey symbol set 2</dd></dl>
+<p>The Hershey fonts are not standardized by GKS but are locally implemented in NCAR GKS-0A. GKS requires that such locally implemented fonts be assigned negative font numbers. To view the Hershey fonts, look at the plots produced from the PLOTCHAR example (execute &quot;ncargex epltch&quot; to get a metafile) and examine the plot titled &quot;PLCHHQ - FONTCAP DATABASES ADDED 6/90&quot;. The font numbers there are the absolute values of the value for FONT described here (PLOTCHAR has no need to follow the strictures that GKS imposes on font names for GSTXFP).</dl><dt>PREC</p>
+</dt><dd>(Integer, Input) - Gives the precision used in subsequent calls to the GTX output primitive for font type FONT. Options are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>String precision (good). This is the GKS default.
+</dd><dt>1
+</dt><dd>Character precision (better).
+</dd><dt>2
+</dt><dd>Stroke precision (best). This is the default for NCAR GSK-0A.</dd></dl></dl>
+</dl><h2>Usage</h2>If one accesses the Hershey fonts via GSTXFP and GTX, then the characters are not stroked until viewing time. If one accesses the Hershey fonts via PLOTCHAR, then the characters are stroked by PLOTCHAR itself. This can make a significant difference in metafile sizes.
+<h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+<h2>See Also</h2>Online: gtx, gstxp, gstxal, gschh, gschsp, gschup, gschxp, gscr, gstxci, gqtxp, gqtxal, gqtxfp, gqchh, gqchsp, gqchup, gqchxp, plotchar, gset_text_font_prec 
+<p>Hardcopy: User&rsquo;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>Copyright (C) 1987-2009 
+ University Corporation for Atmospheric Research 
+ The use of this Software is governed by a License Agreement.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

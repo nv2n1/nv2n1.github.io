@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stddata(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stddata/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stddata(3)</h1>
+
+
+
+
+
+<p>std::data - std::data</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;iterator&gt;
+    template &lt;class C&gt;
+    (1)(since C++ 17)
+        constexpr auto data(C &amp;c) -&gt; decltype(c.data());
+template &lt;class C&gt;
+(2)(since C++ 17)
+    constexpr auto data(const C &amp;c) -&gt; decltype(c.data());
+template &lt;class T, std::size_t N&gt;
+(3)(since C++ 17)
+    constexpr T *data(T (&amp;array)[N]) noexcept;
+template &lt;class E&gt;
+(4)(since C++ 17)
+    constexpr const E *data(std::initializer_list&lt;E&gt; il) noexcept;</code></pre> 
+<p>Returns a pointer to the block of memory containing the elements of the container.
+1,2) returns c.data()
+3) returns array
+4) returns il.begin()</p>
+<h2>Parameters</h2>
+<p>c - a container with a data() method
+array - an array of arbitrary type
+il - an initializer list</p>
+<h2>Return value</h2>
+<p>A pointer to the block of memory containing the elements of the container.</p>
+<h2>Notes</h2>
+<p>In addition to being included in &lt;iterator&gt;, std::data is guaranteed to become available if any of the following headers are included: &lt;array&gt;, &lt;deque&gt;, &lt;forward_list&gt;, &lt;list&gt;, &lt;map&gt;, &lt;regex&gt;, &lt;set&gt;
+, &lt;span&gt;
+<i>(since C++20)</i>, &lt;string&gt;, &lt;string_view&gt;, &lt;unordered_map&gt;, &lt;unordered_set&gt;, and &lt;vector&gt;.</p>
+<h2>Possible implementation</h2>
+<h2>First version</h2>
+<p> <wbr> template &lt;class C&gt;
+ <wbr> constexpr auto data(C&amp; c) -&gt; decltype(c.data())
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return c.data();
+ <wbr> }</p>
+<h2>Second version</h2>
+<p> <wbr> template &lt;class C&gt;
+ <wbr> constexpr auto data(const C&amp; c) -&gt; decltype(c.data())
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return c.data();
+ <wbr> }</p>
+<p>Third version</p>
+<p> <wbr> template &lt;class T, std::size_t N&gt;
+ <wbr> constexpr T* data(T (&amp;array)[N]) noexcept
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return array;
+ <wbr> }</p>
+<p>Fourth version</p>
+<p> <wbr> template &lt;class E&gt;
+ <wbr> constexpr const E* data(std::initializer_list&lt;E&gt; il) noexcept
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return il.begin();
+ <wbr> }</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;string&gt; //std::data is guaranteed to be available after inclusion
+#include &lt;cstring&gt;
+#include &lt;iostream&gt;
+int main()
+{
+std::string s{&quot;Hello world!\n&quot;};
+char a[20]; // storage for a C-style string
+std::strcpy(a, std::data(s));
+//[s.data(), s.data() + s.size()] is guaranteed to be an NTBS since C++11
+std::cout &lt;&lt; a &lt;&lt; &quot;\n&quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Hello world!</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

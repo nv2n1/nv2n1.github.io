@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ccomps(1) · Linux Manual Pages</title>
+<meta name="description" content="ccomps – connected components filter for graphs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ccomps/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ccomps(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> ccomps &#8211; connected components filter for graphs </p>
+<h2>SYNOPSIS</h2>
+<p> <code>ccomps</code> [ <code>-sxvenzC?</code> ] [ <code>-X</code><i>[#%]s[-f]</i> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>ccomps</code> decomposes graphs into their connected components, printing the components to standard output.</p>
+<h2>OPTIONS</h2>
+<p> The following options are supported:</p>
+<dl>
+<dt><code>-e</code></dt>
+<dd> Do not induce edges in the connected components.</dd>
+<dt><code>-s</code></dt>
+<dd> No output graph is printed. The return value can be used to check if the graph is connected or not.</dd>
+<dt><code>-x</code></dt>
+<dd> Only the connected components are printed, as separate graphs.</dd>
+<dt><code>-v</code></dt>
+<dd> Counts of nodes, edges and connected components are printed.</dd>
+<dt><code>-z</code></dt>
+<dd> Sort components by size, with the largest first. This is only effective if either <code>-x</code> or <code>-X#</code> is present. Thus, <code>-zX#0</code> will cause the largest component to be printed.</dd>
+<dt><code>-C</code></dt>
+<dd> Use clusters in computing components in addition to normal edge connectivity. In essence, this gives the connected components of the derived graph in which nodes top-level clusters and nodes in the original graph. This maintains all subgraph structure within a component, even if a subgraph does not contain any nodes.</dd>
+<dt><code>-n</code></dt>
+<dd> Do not project subgraph structure. Normally, if <code>ccomps</code> produces components as graphs distinct from the input graph, it will define subgraphs which are projections of subgraphs of the input graph onto the component. (If the projection is empty, no subgraph is produced.) If this flag is set, the component contains only the relevant nodes and edges.</dd>
+<dt><code>-X</code><i> node_name</i></dt>
+<dd> Prints only the component containing the node <i>node_name</i>, if any.</dd>
+<dt><code>-X#</code><i> start</i></dt>
+<dd>
+</dd><dt><code>-X#</code><i> start-</i></dt>
+<dd>
+</dd><dt><code>-X#</code><i> start-last</i></dt>
+<dd> Prints only components in the given range of indices. In the first form, only the component whose index is <i>start</i>, if any, is printed. In the second form, each component whose index is at least <i>start</i> is printed. In the last form, only those components whose indices are in the range <code>[</code><i>Istart</i><code>,</code><i>last</i><code>]</code> are printed. Thus, the flag <code>-x</code> is equivalent to <code>-X#0-</code>.</dd>
+<dt><code>-X%</code><i> min</i></dt>
+<dd>
+</dd><dt><code>-X%</code><i> min-</i></dt>
+<dd>
+</dd><dt><code>-X%</code><i> min-max</i></dt>
+<dd> Prints only components in the given range of sizes. In the first form, only a component whose size is <i>min</i>, if any, is printed. In the second form, each component whose size is at least <i>min</i> is printed. In the last form, only those components whose sizes are in the range <code>[</code><i>Imin</i><code>,</code><i>max</i><code>]</code> are printed.</dd>
+<dt><code>-o</code><i> outfile</i></dt>
+<dd> If specified, each graph will be written to a different file with the names derived from <i>outfile</i>. In particular, if both <code>-o</code> and <code>-x</code> flags are used, then each connected component is written to a different file. If <i>outfile</i> does not have a suffix, the first file will have the name <i>outfile</i>; then next <i>outfile_1</i>, then next <i>outfile_2</i>, and so on. If <i>outfile</i> has a suffix, i.e., has the form <i>base.sfx</i>, then the files will be named <i>base.sfx</i>, <i>base_1.sfx</i>, <i>base_2.sfx</i>, etc.</dd></dl>
+<p> By default, each input graph is printed, with each connected component given as a subgraph whose name is a concatenation of the name of the input graph, the string &quot;_cc_&quot; and the number of the component.</p>
+<h2>OPERANDS</h2>
+<p> The following operand is supported:</p>
+<dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
+<h2>RETURN CODES</h2>
+<p> Unless used to extract a single connected component, <code>ccomps</code> returns <code>0</code> if all the input graphs are connected; and non-zero if any graph has multiple components, or any error occurred. If just extracting a single component, <code>ccomps</code> returns <code>0</code> on success and non-zero if an error occurred.</p>
+<h2>BUGS</h2>
+<p> It is possible, though unlikely, that the names used for connected components and their subgraphs may conflict with existing subgraph names.</p>
+<h2>AUTHORS</h2>
+<p> Stephen C. North &lt;north [at] research.att.com&gt;<br />
+ Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-gc/">gc</a>(1), <a href="/docs/linux/man/1-dot/">dot</a>(1), <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1), <a href="/docs/linux/man/1-gvcolor/">gvcolor</a>(1), <a href="/docs/linux/man/1-acyclic/">acyclic</a>(1), <a href="/docs/linux/man/1-sccmap/">sccmap</a>(1), <a href="/docs/linux/man/1-tred/">tred</a>(1), libgraph(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

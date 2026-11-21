@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalfilesystemstatus_known(3) · Linux Manual Pages</title>
+<meta name="description" content="std::experimental::filesystem::status_known – std::experimental::filesystem::status_known">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalfilesystemstatus_known/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalfilesystemstatus_known(3)</h1>
+
+
+
+
+
+<p>std::experimental::filesystem::status_known &#8211; std::experimental::filesystem::status_known</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;experimental/filesystem&gt;<br />
+bool status_known( file_status s ); <code>(1)</code> (filesystem TS)<br />
+Checks if the given file status is known, Equivalent to s.type() != file_type::none. </p>
+<h2>Parameters</h2>
+<p>s &#8211; file status to check</p>
+<h2>Return value</h2>
+<p>true if the given file status is an unknown file status </p>
+<h2>Exceptions</h2>
+<p>noexcept specification:<br />
+noexcept</p>
+<h2>Notes</h2>
+<p>Despite the name, the function checks for the file status of file_type::none (meaning an error occurred), not file_type::unknown (meaning file exists, but its type cannot be determined). </p>
+<h2>See also</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;determines file attributes<br />
+status determines file attributes, checking the symlink target<br />
+symlink_status <i>(function)</i><br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cached status of the file designated by this directory entry<br />
+status cached symlink_status of the file designated by this directory entry<br />
+symlink_status <i>(public member function of std::experimental::filesystem::directory_entry)</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

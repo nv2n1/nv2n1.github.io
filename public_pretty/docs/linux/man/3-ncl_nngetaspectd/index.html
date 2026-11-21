@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_nngetaspectd(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_nngetaspectd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_nngetaspectd(3)</h1>
+
+
+
+
+
+<p>NNGETASPECTD - retrieve the double precision aspect at a specified coordinate.</p>
+<h2>Synopsis</h2>
+<p>CALL NNGETASPECTD (I,J,ASPECT,IER)</p>
+<h2>Description</h2>
+<dl><dt>I
+</dt><dd>(Integer, Input) - A subscript indexing the first dimensioned variable in the output grid of the most recent call to NATGRIDD.
+</dd><dt>J
+</dt><dd>(Integer, Input) - A subscript indexing the second dimensioned variable in the output grid of the most recent call to NATGRIDD.
+</dd><dt>ASPECT
+</dt><dd>(Double precision, Output) - The slope at the grid point Z(I,J), where Z is the output grid in the most recent call to NATGRIDD.
+</dd><dt>IER
+</dt><dd>(Integer, Output) - An error return value. If IER is returned as 0, then no errors were detected. If IER is non-zero, then refer to the man page for natgrid_errors for details.</dd></dl>
+<h2>Access</h2>
+<p>To use NNGETASPECTD, load the NCAR Graphics library ngmath.</p>
+<h2>See Also</h2>
+<p>natgrid, natgridd, natgrid_params.</p>
+<p>Complete documentation for Natgrid is available at URL
+<a rel="nofollow" HREF="http://ngwww.ucar.edu/ngdoc/ng/ngmath/natgrid/nnhome.html"><a href="http://ngwww.ucar.edu/ngdoc/ng/ngmath/natgrid/nnhome.html">http://ngwww.ucar.edu/ngdoc/ng/ngmath/natgrid/nnhome.html</a></a></p>
+<h2>Copyright</h2>
+<p>Copyright (C) 2000
+University Corporation for Atmospheric Research</p>
+<p>The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

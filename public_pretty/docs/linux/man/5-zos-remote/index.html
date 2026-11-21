@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zos-remote(5) · Linux Manual Pages</title>
+<meta name="description" content="zos-remote.conf – the audisp-racf plugin configuration file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-zos-remote/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>zos-remote(5)</h1>
+
+
+
+
+
+<p>zos-remote.conf &#8211; the audisp-racf plugin configuration file</p>
+<h2>Description</h2>
+<p><code>zos-remote.conf</code> controls the configuration for the <code><a href="/docs/linux/man/8-audispd-zos-remote/">audispd-zos-remote</a>(8)</code> Audit dispatcher plugin. The default location for this file is <i>/etc/audisp/zos-remote.conf</i>, however, a different file can be specified as the first argument to the <code>audispd-zos-remote</code> plugin. See <code><a href="/docs/linux/man/8-audispd-zos-remote/">audispd-zos-remote</a>(8)</code> and <code><a href="/docs/linux/man/8-auditd/">auditd</a>(8)</code>. The options available are as follows:</p>
+<dl>
+<dt><i>server</i></dt>
+<dd>This is the IBM z/OS ITDS server hostname or IP address</dd>
+<dt><i>port</i></dt>
+<dd>The port number where ITDS is running on the z/OS server. Default is 389 (ldap port)</dd>
+<dt><i>user</i></dt>
+<dd>The z/OS RACF user ID which the audispd-zos-remote plugin will use to perform Remote Audit requests. This user needs READ access to FACILITY Class resource IRR.LDAP.REMOTE.AUDIT (See <code><a href="/docs/linux/man/8-audispd-zos-remote/">audispd-zos-remote</a>(8)</code>).</dd>
+<dt><i>password</i></dt>
+<dd>The password associated the the z/OS user ID configured above.</dd>
+<dt><i>timeout</i></dt>
+<dd>The number in seconds that <code>audispd-zos-remote</code> plugin will wait before giving up in connection attemps and event submissions. The default value is 15</dd>
+<dt><i>q_depth</i></dt>
+<dd>The <code>audispd-zos-remote</code> plugin will queue inputed events to the maximum of <i>q_depth</i> events while trying to submit those remotely. This can handle burst of events or in case of a slow network connection. However, the <code>audispd-zos-remote</code> plugin will drop events in case the queue is full. The default queue depth is 64 &#8211; Increase this value in case you are experiencing event drop due to full queue (<code>audispd-zos-remote</code> will log this to syslog).</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-audispd-zos-remote/">audispd-zos-remote</a></code>(8)</p>
+<h2>Author</h2>
+<p>Klaus Heinrich Kiwi &lt;klausk [at] br.ibm.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

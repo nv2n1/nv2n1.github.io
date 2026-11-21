@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>llvm-strings-14(1) · Linux Manual Pages</title>
+<meta name="description" content="llvm-strings – print strings">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-llvm-strings-14/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>llvm-strings-14(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> llvm-strings &#8211; print strings </p>
+<h2>SYNOPSIS</h2>
+<p> <code>llvm-strings</code> [<i>options</i>] [<i>input…</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>llvm-strings</code> is a tool intended as a drop-in replacement for GNU’s <code>strings</code>, which looks for printable strings in files and writes them to the standard output stream. A printable string is any sequence of four (by default) or more printable ASCII characters. The end of the file, or any other byte, terminates the current sequence. </p>
+<p> <code>llvm-strings</code> looks for strings in each <code>input</code> file specified. Unlike GNU <code>strings</code> it looks in the entire input file, regardless of file format, rather than restricting the search to certain sections of object files. If “<code>&#8211;</code>” is specified as an <code>input</code>, or no <code>input</code> is specified, the program reads from the standard input stream.</p>
+<h2>EXAMPLE</h2>
+<pre>
+$ cat input.txt
+bars
+foo
+wibble blob
+$ llvm-strings input.txt
+bars
+wibble blob
+</pre>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;all, -a</code></dt>
+<dd> Silently ignored. Present for GNU <code>strings</code> compatibility.</dd>
+<dt><code>&#8211;bytes=&lt;length&gt;, -n</code></dt>
+<dd> Set the minimum number of printable ASCII characters required for a sequence of bytes to be considered a string. The default value is 4.</dd>
+<dt><code>&#8211;help, -h</code></dt>
+<dd> Display a summary of command line options.</dd>
+<dt><code>&#8211;print-file-name, -f</code></dt>
+<dd> Display the name of the containing file before each string. </dd>
+<p> Example: </p>
+<pre>
+$ llvm-strings --print-file-name test.o test.elf
+test.o: _Z5hellov
+test.o: some_bss
+test.o: test.cpp
+test.o: main
+test.elf: test.cpp
+test.elf: test2.cpp
+test.elf: _Z5hellov
+test.elf: main
+test.elf: some_bss
+</pre>
+<dt><code>&#8211;radix=&lt;radix&gt;, -t</code></dt>
+<dd> Display the offset within the file of each string, before the string and using the specified radix. Valid <code>&lt;radix&gt;</code> values are <code>o</code>, <code>d</code> and <code>x</code> for octal, decimal and hexadecimal respectively. </dd>
+<p> Example: </p>
+<pre>
+$ llvm-strings --radix=o test.o
+    1054 _Z5hellov
+    1066 .rela.text
+    1101 .comment
+    1112 some_bss
+    1123 .bss
+    1130 test.cpp
+    1141 main
+$ llvm-strings --radix=d test.o
+    556 _Z5hellov
+    566 .rela.text
+    577 .comment
+    586 some_bss
+    595 .bss
+    600 test.cpp
+    609 main
+$ llvm-strings -t x test.o
+    22c _Z5hellov
+    236 .rela.text
+    241 .comment
+    24a some_bss
+    253 .bss
+    258 test.cpp
+    261 main
+</pre>
+<dt><code>&#8211;version</code></dt>
+<dd> Display the version of the <code>llvm-strings</code> executable.</dd>
+<dt><code>@&lt;FILE&gt;</code></dt>
+<dd> Read command-line options from response file <code>&lt;FILE&gt;</code>.</dd></dl>
+<h2>EXIT STATUS</h2>
+<p> <code>llvm-strings</code> exits with a non-zero exit code if there is an error. Otherwise, it exits with code 0.</p>
+<h2>BUGS</h2>
+<p> To report bugs, please visit &lt;<i><a rel="nofollow" href="https://github.com/llvm/llvm-project/labels/tools:llvm-strings/">https://github.com/llvm/llvm-project/labels/tools:llvm-strings/</a></i>&gt;.</p>
+<h2>AUTHOR</h2>
+<p> Maintained by the LLVM Team (<a rel="nofollow" href="https://llvm.org/">https://llvm.org/</a>).</p>
+<h2>COPYRIGHT</h2>
+<p> 2003-2022, LLVM Project </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

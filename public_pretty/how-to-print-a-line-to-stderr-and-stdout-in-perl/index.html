@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Printing to STDERR and STDOUT in Perl - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-print-a-line-to-stderr-and-stdout-in-perl/">
+  <meta name="description" content="Perl gives you straightforward ways to send output to both standard output and standard error. Understanding the difference matters — STDOUT handles normal …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Printing to STDERR and STDOUT in Perl">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-print-a-line-to-stderr-and-stdout-in-perl/">
+  <meta property="og:description" content="Perl gives you straightforward ways to send output to both standard output and standard error. Understanding the difference matters — STDOUT handles normal …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Printing to STDERR and STDOUT in Perl</h1>
+        <time class="post-date" datetime="2018-03-24T11:53:05Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Perl gives you straightforward ways to send output to both standard output and standard error. Understanding the difference matters — STDOUT handles normal program output, while STDERR carries diagnostics, warnings, and error messages. Separating them lets users redirect, log, or suppress errors independently.</p>
+<h2 id="basic-output-methods">Basic Output Methods</h2>
+<p>The simplest approach uses <code>print</code> with filehandles:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="k">print</span> <span class="bp">STDOUT</span> <span class="s">&#34;This goes to standard output\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&#34;This is an error message\n&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><p>When you call <code>print</code> without specifying a filehandle, it defaults to STDOUT:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="k">print</span> <span class="s">&#34;Normal output\n&#34;</span><span class="p">;</span>  <span class="c1"># Same as: print STDOUT &#34;Normal output\n&#34;;</span>
+</span></span></code></pre></div><h2 id="printing-to-both-streams">Printing to Both Streams</h2>
+<p>Send output to both STDOUT and STDERR by making two separate calls:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$message</span> <span class="o">=</span> <span class="s">&#34;Important information&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">print</span> <span class="bp">STDOUT</span> <span class="s">&#34;$message\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&#34;$message\n&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><p>For cleaner code when handling multiple messages, you might use a helper function:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="k">sub</span> <span class="nf">notify</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="p">(</span><span class="nv">$msg</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="bp">STDOUT</span> <span class="s">&#34;$msg\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&#34;$msg\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">notify</span><span class="p">(</span><span class="s">&#34;System started&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="using-warn-for-stderr">Using warn() for STDERR</h2>
+<p>Perl’s <code>warn()</code> function automatically writes to STDERR and adds a newline:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="nb">warn</span> <span class="s">&#34;This warning goes to STDERR\n&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><p>You can capture and handle warnings with signal handlers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="nv">$SIG</span><span class="p">{</span><span class="bp">__WARN__</span><span class="p">}</span> <span class="o">=</span> <span class="k">sub</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="p">(</span><span class="nv">$msg</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Custom warning handling</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="bp">STDOUT</span> <span class="s">&#34;Warning caught: $msg&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">warn</span> <span class="s">&#34;This triggers the handler&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="flushing-output">Flushing Output</h2>
+<p>Buffering can delay output to STDERR. Force immediate output by setting autoflush:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">IO::Handle</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="bp">STDOUT</span><span class="o">-&gt;</span><span class="n">autoflush</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="bp">STDERR</span><span class="o">-&gt;</span><span class="n">autoflush</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&#34;Immediate error\n&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><p>Or disable buffering for a single filehandle:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="vg">$|</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1"># $| enables autoflush for currently selected filehandle</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&#34;This appears immediately\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="real-world-example">Real-World Example</h2>
+<p>Here’s a practical pattern for logging errors while maintaining normal output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/perl</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">strict</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">warnings</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">IO::Handle</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="bp">STDERR</span><span class="o">-&gt;</span><span class="n">autoflush</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">sub</span> <span class="nf">log_error</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="p">(</span><span class="nv">$code</span><span class="p">,</span> <span class="nv">$message</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&#34;[ERROR $code] $message\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">sub</span> <span class="nf">log_info</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="p">(</span><span class="nv">$message</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="bp">STDOUT</span> <span class="s">&#34;[INFO] $message\n&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Usage</span>
+</span></span><span class="line"><span class="cl"><span class="n">log_info</span><span class="p">(</span><span class="s">&#34;Processing started&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">unless</span> <span class="p">(</span><span class="nb">open</span> <span class="k">my</span> <span class="nv">$fh</span><span class="p">,</span> <span class="s">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s">&#39;config.txt&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">log_error</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&#34;Cannot read config: $!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">log_info</span><span class="p">(</span><span class="s">&#34;Configuration loaded successfully&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nb">close</span> <span class="nv">$fh</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="redirecting-at-runtime">Redirecting at Runtime</h2>
+<p>Users can redirect streams at the shell level without changing your code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Send only errors to a file</span>
+</span></span><span class="line"><span class="cl">perl script.pl 2&gt; errors.log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Send both stdout and stderr to the same file</span>
+</span></span><span class="line"><span class="cl">perl script.pl <span class="p">&amp;</span>&gt; output.log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Suppress STDERR</span>
+</span></span><span class="line"><span class="cl">perl script.pl 2&gt; /dev/null
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Send STDERR to STDOUT for piping</span>
+</span></span><span class="line"><span class="cl">perl script.pl 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> grep <span class="s2">&#34;ERROR&#34;</span>
+</span></span></code></pre></div><h2 id="duplicating-output">Duplicating Output</h2>
+<p>To write to both streams and a file simultaneously, use <code>Tee::Tiny</code> or implement it manually:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">Tee::Tiny</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$tee</span> <span class="o">=</span> <span class="nn">Tee::Tiny</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Output goes to STDOUT, STDERR, and file simultaneously</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$tee</span><span class="o">-&gt;</span><span class="n">to_file</span><span class="p">(</span><span class="s">&#34;output.log&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">print</span> <span class="s">&#34;This line appears everywhere\n&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><p>Or without a module:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="nb">open</span> <span class="k">my</span> <span class="nv">$log</span><span class="p">,</span> <span class="s">&#39;&gt;&gt;&#39;</span><span class="p">,</span> <span class="s">&#39;app.log&#39;</span> <span class="ow">or</span> <span class="nb">die</span> <span class="s">&#34;Cannot open log: $!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">sub</span> <span class="nf">tee_output</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">my</span> <span class="p">(</span><span class="nv">$msg</span><span class="p">)</span> <span class="o">=</span> <span class="nv">@_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="bp">STDOUT</span> <span class="nv">$msg</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="bp">STDERR</span> <span class="nv">$msg</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="nv">$log</span> <span class="nv">$msg</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">tee_output</span><span class="p">(</span><span class="s">&#34;Logged to all streams\n&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nb">close</span> <span class="nv">$log</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="error-handling-best-practices">Error Handling Best Practices</h2>
+<p>Always use STDERR for diagnostics and reserve STDOUT for program output. This separation allows downstream tools to handle errors independently:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/perl</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">strict</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nn">warnings</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">my</span> <span class="nv">$result</span> <span class="o">=</span> <span class="n">process_data</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$result</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="s">&#34;Success: Data processed\n&#34;</span><span class="p">;</span>  <span class="c1"># STDOUT</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">print</span> <span class="bp">STDERR</span> <span class="s">&#34;Error: Processing failed\n&#34;</span><span class="p">;</span>  <span class="c1"># STDERR</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>When writing modules or scripts that will be piped or redirected, respecting this convention prevents mixing error messages with data output, making logs and automation more reliable.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

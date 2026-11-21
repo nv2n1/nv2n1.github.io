@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gvfsd-fuse(1) · Linux Manual Pages</title>
+<meta name="description" content="gvfsd-fuse – Fuse daemon for gvfs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gvfsd-fuse/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gvfsd-fuse(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> gvfsd-fuse &#8211; Fuse daemon for gvfs </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>gvfsd-fuse</code> PATH</dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>gvfsd-fuse</code></p>
+<dd>maintains a fuse mount to make gvfs backends available to POSIX applications. The mount point for the fuse filesystem is provided by the [PATH] argument. </dd>
+<p> <code>gvfsd-fuse</code> is normally started by <code><a href="/docs/linux/man/1-gvfsd/">gvfsd</a></code>(1). In this case, the mount point is <code>$XDG_RUNTIME_DIR</code>/gvfs or <code>$HOME</code>/.gvfs.</p>
+<h2>OPTIONS</h2>
+<p> <code>-d</code></p>
+<dl>
+<dt>
+</dt><dd> Enable fuse debug output. This implies <code>-f</code>.</dd></dl>
+<p> <code>-f</code></p>
+<dl>
+<dt>
+</dt><dd> Run in the foreground.</dd></dl>
+<p> <code>-s</code></p>
+<dl>
+<dt>
+</dt><dd> Run single-threaded.</dd></dl>
+<p> <code>-o OPTION</code></p>
+<dl>
+<dt>
+</dt><dd> Set a fuse-specific option. See the fuse documentation for a list of these.</dd></dl>
+<h2>EXIT STATUS</h2>
+<p> On success 0 is returned, a non-zero failure code otherwise.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/7-gvfs/">gvfs</a></code>(7) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>readmsg-mailutils(1) · Linux Manual Pages</title>
+<meta name="description" content="readmsg.mailutils – print messages.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-readmsg-mailutils/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>readmsg-mailutils(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>readmsg.mailutils &#8211; print messages. </p>
+<h2>Synopsis</h2>
+<p><code>readmsg.mailutils</code> [<i>,OPTION/</i>&#8230;]</p>
+<h2>Description</h2>
+<p>GNU readmsg <code>&#8212;</code> print messages.</p>
+<dl COMPACT>
+<dt><code>-a</code>, <code>&#8211;[no-]show-all-match</code></dt>
+<dd>print all messages matching pattern, not only the first</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>display debugging information</dd>
+<dt><code>-f</code>, <code>&#8211;folder</code>=<i>,FOLDER/</i></dt>
+<dd>folder to use</dd>
+<dt><code>-h</code>, <code>&#8211;[no-]header</code></dt>
+<dd>display entire headers</dd>
+<dt><code>-n</code>, <code>&#8211;[no-]no-header</code></dt>
+<dd>exclude all headers</dd>
+<dt><code>-p</code>, <code>&#8211;[no-]form-feeds</code></dt>
+<dd>output formfeeds between messages</dd>
+<dt><code>-w</code>, <code>&#8211;weedlist</code>=<i>,LIST/</i></dt>
+<dd>list of header names separated by whitespace or commas</dd>
+<dd>Global debugging settings</dd>
+<dt><code>&#8211;debug-level</code>=<i>,LEVEL/</i></dt>
+<dd>set Mailutils debugging level</dd>
+<dt> <code>&#8211;[no-]debug-line-info</code> show source info with debugging messages</dt>
+<dd>
+</dd><dd>Configuration handling</dd>
+<dt><code>&#8211;config-file</code>=<i>,FILE/</i></dt>
+<dd>load this configuration file; implies <code>&#8211;no-config</code></dd>
+<dt><code>&#8211;config-lint</code></dt>
+<dd>check configuration file syntax and exit</dd>
+<dt><code>&#8211;config-verbose</code></dt>
+<dd>verbosely log parsing of the configuration files</dd>
+<dt><code>&#8211;no-config</code></dt>
+<dd>do not load site and user configuration files</dd>
+<dt><code>&#8211;no-site-config</code></dt>
+<dd>do not load site-wide configuration file</dd>
+<dt><code>&#8211;no-user-config</code></dt>
+<dd>do not load user configuration file</dd>
+<dt><code>&#8211;set</code>=<i>,PARAM=VALUE/</i></dt>
+<dd>set configuration parameter</dd>
+<dd>Informational options</dd>
+<dt><code>&#8211;config-help</code></dt>
+<dd>show configuration file summary</dd>
+<dt><code>&#8211;show-config-options</code></dt>
+<dd>show compilation options</dd>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd>give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>give a short usage message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print program version</dd></dl>
+<p> Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;bug-mailutils [at] gnu.org&gt;.<br />
+ GNU Mailutils home page: &lt;<a rel="nofollow" href="http://mailutils.org">http://mailutils.org</a>&gt;<br />
+ General help using GNU software: &lt;<a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a>&gt;</p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2007-2019 Free Software Foundation, inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+ This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
+<h2>See Also</h2>
+<p>The complete GNU mailutils documentation is maintained as a Texinfo manual. If the <code>mailutils-doc</code> package is installed, the command</p>
+<dl COMPACT>
+<dd><code>info mailutils</code></dd></dl>
+<p> should give you access to the complete manual.<br />
+ You can also find this manual online in the GNU mailutils webpage:<br />
+ <a rel="nofollow" href="https://www.gnu.org/software/mailutils/manual/index.html.">https://www.gnu.org/software/mailutils/manual/index.html.</a><br />
+ Please note this manpage was automatically generated by the Debian mailutils packagers. Do not file bugs for its content to the GNU Mailutils upstream authors.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

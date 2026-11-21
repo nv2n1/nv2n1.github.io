@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dstev-f(3) · Linux Manual Pages</title>
+<meta name="description" content="dstev.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dstev-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dstev-f(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>dstev.f &#8211; </p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>dstev</code> (JOBZ, N, D, E, Z, LDZ, WORK, INFO)<br />
+ <i></i><code> DSTEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine dstev (characterJOBZ, integerN, double precision, dimension( * )D, double precision, dimension( * )E, double precision, dimension( ldz, * )Z, integerLDZ, double precision, dimension( * )WORK, integerINFO)</h3>
+<p><code> DSTEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code> </p>
+<p> <code>Purpose: </code></p>
+<dl COMPACT>
+<dd>
+<pre> DSTEV computes all eigenvalues and, optionally, eigenvectors of a
+ real symmetric tridiagonal matrix A.</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>JOBZ</i> </dd>
+<pre> JOBZ is CHARACTER*1
+ = 'N': Compute eigenvalues only;
+ = 'V': Compute eigenvalues and eigenvectors.</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ The order of the matrix. N &gt;= 0.</pre>
+<p><i>D</i> </p>
+<pre> D is DOUBLE PRECISION array, dimension (N)
+ On entry, the n diagonal elements of the tridiagonal matrix
+ A.
+ On exit, if INFO = 0, the eigenvalues in ascending order.</pre>
+<p><i>E</i> </p>
+<pre> E is DOUBLE PRECISION array, dimension (N-1)
+ On entry, the (n-1) subdiagonal elements of the tridiagonal
+ matrix A, stored in elements 1 to N-1 of E.
+ On exit, the contents of E are destroyed.</pre>
+<p><i>Z</i> </p>
+<pre> Z is DOUBLE PRECISION array, dimension (LDZ, N)
+ If JOBZ = 'V', then if INFO = 0, Z contains the orthonormal
+ eigenvectors of the matrix A, with the i-th column of Z
+ holding the eigenvector associated with D(i).
+ If JOBZ = 'N', then Z is not referenced.</pre>
+<p><i>LDZ</i> </p>
+<pre> LDZ is INTEGER
+ The leading dimension of the array Z. LDZ &gt;= 1, and if
+ JOBZ = 'V', LDZ &gt;= max(1,N).</pre>
+<p><i>WORK</i> </p>
+<pre> WORK is DOUBLE PRECISION array, dimension (max(1,2*N-2))
+ If JOBZ = 'N', WORK is not referenced.</pre>
+<p><i>INFO</i> </p>
+<pre> INFO is INTEGER
+ = 0: successful exit
+ &lt; 0: if INFO = -i, the i-th argument had an illegal value
+ &gt; 0: if INFO = i, the algorithm failed to converge; i
+ off-diagonal elements of E did not converge to zero.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl COMPACT>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl COMPACT>
+<dd>November 2011</dd></dl>
+<p> Definition at line 117 of file dstev.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

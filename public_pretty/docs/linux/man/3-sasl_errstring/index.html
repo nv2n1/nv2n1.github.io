@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sasl_errstring(3) · Linux Manual Pages</title>
+<meta name="description" content="sasl_errstring – Translate a SASL return code to a human-readable form">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sasl_errstring/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sasl_errstring(3)</h1>
+
+
+
+
+
+<p>sasl_errstring &#8211; Translate a SASL return code to a human-readable form </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;sasl/sasl.h&gt;
+const char *sasl_errstring(int saslerr,
+                           const char *langlist,
+                           const char **outlang);</code></pre>
+<h2>Description</h2>
+<p><code>sasl_usererr</code> is called to convert a SASL return code (an integer) into a human readable string. At this time the only language available is american english written by programmers (aka gobbledygook). Note that a server should call sasl_usererr on a return code first if the string is going to be sent to the client. <i>saslerr</i> specifies the error number to convert. <i>langlist</i> is currently unused; Use NULL. <i>outlang</i> specifies the desired RFC 1766 language for output. NULL defaults to &quot;en-us,&quot; currently the only supported language. It should be noted that this function is not the recommended means of extracting error code information from SASL, instead application should use <a href="/docs/linux/man/3-sasl_errdetail/">sasl_errdetail</a>(3), which contains this information (and more) </p>
+<h2>Return Value</h2>
+<p>Returns the string. If langlist is NULL, US-ASCII is used. </p>
+<h2>Conforming To</h2>
+<p>RFC 4422</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-sasl/">sasl</a>(3), <a href="/docs/linux/man/3-sasl_errdetail/">sasl_errdetail</a>(3), <a href="/docs/linux/man/3-sasl_errors/">sasl_errors</a>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

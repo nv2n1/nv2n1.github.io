@@ -1,0 +1,1009 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCII Table, Character Codes, and Linux Text Tools - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/ascii-table-and-ascii-code/">
+  <meta name="description" content="ASCII stands for American Standard Code for Information Interchange. It’s a 7-bit character encoding standard mapping numeric values (0-127) to printable …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ASCII Table, Character Codes, and Linux Text Tools">
+  <meta property="og:url" content="https://www.systutorials.com/ascii-table-and-ascii-code/">
+  <meta property="og:description" content="ASCII stands for American Standard Code for Information Interchange. It’s a 7-bit character encoding standard mapping numeric values (0-127) to printable …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/databases-storage/">Databases &amp; Storage</a>
+        </nav>
+        
+        <h1>ASCII Table, Character Codes, and Linux Text Tools</h1>
+        <time class="post-date" datetime="2013-07-15T10:05:25Z">July 15, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>ASCII stands for American Standard Code for Information Interchange. It’s a 7-bit character encoding standard mapping numeric values (0-127) to printable characters and control codes. Since computers work with numbers at the lowest level, ASCII provides a universal way to represent text—each character has a unique numeric value.</p>
+<p>Standardized in 1963, ASCII remains foundational to modern computing. Most character-encoding schemes today (UTF-8, UTF-16, ISO-8859-1) maintain backward compatibility with ASCII for the 0-127 range, meaning the first 128 characters are identical across these encodings.</p>
+<h2 id="ascii-ranges">ASCII Ranges</h2>
+<p>The 128 ASCII codes divide into three categories:</p>
+<ul>
+<li><strong>Control codes (0-31)</strong>: Non-printing characters originally designed for device control, text formatting, and transmission protocols. Most original purposes are obsolete, but several remain essential: LF (line feed), CR (carriage return), TAB, and ESC (escape sequences).</li>
+<li><strong>Printable characters (32-126)</strong>: Space, punctuation, digits 0-9, uppercase letters A-Z, lowercase letters a-z, and symbols.</li>
+<li><strong>DEL (127)</strong>: The delete character, technically classified as a control code.</li>
+</ul>
+<h2 id="converting-characters-and-ascii-codes">Converting Characters and ASCII Codes</h2>
+<h3 id="using-printf">Using printf</h3>
+<p>Convert a character to its ASCII code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s1">&#39;%d\n&#39;</span> <span class="s2">&#34;&#39;A&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: 65</span>
+</span></span></code></pre></div><p>Convert an ASCII code to a character:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s1">&#39;\x41\n&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: A</span>
+</span></span></code></pre></div><p>Or using octal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\\</span><span class="k">$(</span><span class="nb">printf</span> <span class="s1">&#39;%03o&#39;</span> 65<span class="k">)</span><span class="s2">\n&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: A</span>
+</span></span></code></pre></div><p>Multiple conversions at once:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s1">&#39;Char: A\n&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s1">&#39;  Decimal: %d\n&#39;</span> <span class="s2">&#34;&#39;A&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s1">&#39;  Hex: %x\n&#39;</span> <span class="s2">&#34;&#39;A&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s1">&#39;  Octal: %o\n&#39;</span> <span class="s2">&#34;&#39;A&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Output:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Char: A</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   Decimal: 65</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   Hex: 41</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   Octal: 101</span>
+</span></span></code></pre></div><h3 id="using-od-octal-dump">Using od (octal dump)</h3>
+<p>Inspect ASCII values in a file or string:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Hello&#34;</span> <span class="p">|</span> od -An -td1
+</span></span><span class="line"><span class="cl"><span class="c1">#  72  101  108  108  111</span>
+</span></span></code></pre></div><p>Display in hexadecimal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Hello&#34;</span> <span class="p">|</span> od -An -tx1
+</span></span><span class="line"><span class="cl"><span class="c1">#  48  65  6c  6c  6f</span>
+</span></span></code></pre></div><p>Display with character names:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;test&#34;</span> <span class="p">|</span> od -c
+</span></span><span class="line"><span class="cl"><span class="c1"># 0000000 t e s t \n</span>
+</span></span></code></pre></div><h3 id="using-xxd-for-hex-dumps">Using xxd for hex dumps</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;test&#34;</span> <span class="p">|</span> xxd
+</span></span><span class="line"><span class="cl"><span class="c1"># 00000000: 7465 7374 0a                             test.</span>
+</span></span></code></pre></div><p>The <code>0a</code> at the end is the newline character (LF, decimal 10).</p>
+<h3 id="using-python">Using Python</h3>
+<p>Convert individual characters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>        <span class="c1"># Returns: 65</span>
+</span></span><span class="line"><span class="cl"><span class="nb">chr</span><span class="p">(</span><span class="mi">65</span><span class="p">)</span>         <span class="c1"># Returns: &#39;A&#39;</span>
+</span></span></code></pre></div><p>Process entire strings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s2">&#34;Hello&#34;</span><span class="p">]</span>  <span class="c1"># Returns: [72, 101, 108, 108, 111]</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">):</span> <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s2">&#34;ASCII&#34;</span><span class="p">}</span>  <span class="c1"># Returns: {65: &#39;A&#39;, 83: &#39;S&#39;, 67: &#39;C&#39;, 73: &#39;I&#39;}</span>
+</span></span></code></pre></div><h3 id="using-bash-parameter-expansion">Using Bash parameter expansion</h3>
+<p>Extract the ASCII value of the first character:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">var</span><span class="o">=</span><span class="s2">&#34;Hello&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s1">&#39;%d\n&#39;</span> <span class="s2">&#34;&#39;</span><span class="si">${</span><span class="nv">var</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">1</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: 72</span>
+</span></span></code></pre></div><h2 id="key-control-characters">Key Control Characters</h2>
+<p>Most control codes are obsolete for their original purposes, but a few remain relevant in system administration and text processing:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Code</th>
+					<th>Decimal</th>
+					<th>Hex</th>
+					<th>Name</th>
+					<th>Purpose</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>NUL</td>
+					<td>0</td>
+					<td>0x00</td>
+					<td>Null</td>
+					<td>String terminator in C</td>
+			</tr>
+			<tr>
+					<td>BEL</td>
+					<td>7</td>
+					<td>0x07</td>
+					<td>Bell</td>
+					<td>Alert signal (rarely used)</td>
+			</tr>
+			<tr>
+					<td>BS</td>
+					<td>8</td>
+					<td>0x08</td>
+					<td>Backspace</td>
+					<td>Cursor control</td>
+			</tr>
+			<tr>
+					<td>TAB</td>
+					<td>9</td>
+					<td>0x09</td>
+					<td>Horizontal Tab</td>
+					<td>Text formatting, field separation</td>
+			</tr>
+			<tr>
+					<td>LF</td>
+					<td>10</td>
+					<td>0x0A</td>
+					<td>Line Feed</td>
+					<td>Newline (Unix/Linux)</td>
+			</tr>
+			<tr>
+					<td>CR</td>
+					<td>13</td>
+					<td>0x0D</td>
+					<td>Carriage Return</td>
+					<td>Legacy newline (Windows/old Mac)</td>
+			</tr>
+			<tr>
+					<td>ESC</td>
+					<td>27</td>
+					<td>0x1B</td>
+					<td>Escape</td>
+					<td>ANSI escape sequences, terminal control</td>
+			</tr>
+			<tr>
+					<td>DEL</td>
+					<td>127</td>
+					<td>0x7F</td>
+					<td>Delete</td>
+					<td>Erase character</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="complete-ascii-table-0-127">Complete ASCII Table (0-127)</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Dec</th>
+					<th>Oct</th>
+					<th>Hex</th>
+					<th>Char</th>
+					<th>Dec</th>
+					<th>Oct</th>
+					<th>Hex</th>
+					<th>Char</th>
+					<th>Dec</th>
+					<th>Oct</th>
+					<th>Hex</th>
+					<th>Char</th>
+					<th>Dec</th>
+					<th>Oct</th>
+					<th>Hex</th>
+					<th>Char</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>0</td>
+					<td>000</td>
+					<td>0x00</td>
+					<td>NUL</td>
+					<td>32</td>
+					<td>040</td>
+					<td>0x20</td>
+					<td>SP</td>
+					<td>64</td>
+					<td>100</td>
+					<td>0x40</td>
+					<td>@</td>
+					<td>96</td>
+					<td>140</td>
+					<td>0x60</td>
+					<td>`</td>
+			</tr>
+			<tr>
+					<td>1</td>
+					<td>001</td>
+					<td>0x01</td>
+					<td>SOH</td>
+					<td>33</td>
+					<td>041</td>
+					<td>0x21</td>
+					<td>!</td>
+					<td>65</td>
+					<td>101</td>
+					<td>0x41</td>
+					<td>A</td>
+					<td>97</td>
+					<td>141</td>
+					<td>0x61</td>
+					<td>a</td>
+			</tr>
+			<tr>
+					<td>2</td>
+					<td>002</td>
+					<td>0x02</td>
+					<td>STX</td>
+					<td>34</td>
+					<td>042</td>
+					<td>0x22</td>
+					<td>“</td>
+					<td>66</td>
+					<td>102</td>
+					<td>0x42</td>
+					<td>B</td>
+					<td>98</td>
+					<td>142</td>
+					<td>0x62</td>
+					<td>b</td>
+			</tr>
+			<tr>
+					<td>3</td>
+					<td>003</td>
+					<td>0x03</td>
+					<td>ETX</td>
+					<td>35</td>
+					<td>043</td>
+					<td>0x23</td>
+					<td>#</td>
+					<td>67</td>
+					<td>103</td>
+					<td>0x43</td>
+					<td>C</td>
+					<td>99</td>
+					<td>143</td>
+					<td>0x63</td>
+					<td>c</td>
+			</tr>
+			<tr>
+					<td>4</td>
+					<td>004</td>
+					<td>0x04</td>
+					<td>EOT</td>
+					<td>36</td>
+					<td>044</td>
+					<td>0x24</td>
+					<td>$</td>
+					<td>68</td>
+					<td>104</td>
+					<td>0x44</td>
+					<td>D</td>
+					<td>100</td>
+					<td>144</td>
+					<td>0x64</td>
+					<td>d</td>
+			</tr>
+			<tr>
+					<td>5</td>
+					<td>005</td>
+					<td>0x05</td>
+					<td>ENQ</td>
+					<td>37</td>
+					<td>045</td>
+					<td>0x25</td>
+					<td>%</td>
+					<td>69</td>
+					<td>105</td>
+					<td>0x45</td>
+					<td>E</td>
+					<td>101</td>
+					<td>145</td>
+					<td>0x65</td>
+					<td>e</td>
+			</tr>
+			<tr>
+					<td>6</td>
+					<td>006</td>
+					<td>0x06</td>
+					<td>ACK</td>
+					<td>38</td>
+					<td>046</td>
+					<td>0x26</td>
+					<td>&amp;</td>
+					<td>70</td>
+					<td>106</td>
+					<td>0x46</td>
+					<td>F</td>
+					<td>102</td>
+					<td>146</td>
+					<td>0x66</td>
+					<td>f</td>
+			</tr>
+			<tr>
+					<td>7</td>
+					<td>007</td>
+					<td>0x07</td>
+					<td>BEL</td>
+					<td>39</td>
+					<td>047</td>
+					<td>0x27</td>
+					<td>‘</td>
+					<td>71</td>
+					<td>107</td>
+					<td>0x47</td>
+					<td>G</td>
+					<td>103</td>
+					<td>147</td>
+					<td>0x67</td>
+					<td>g</td>
+			</tr>
+			<tr>
+					<td>8</td>
+					<td>010</td>
+					<td>0x08</td>
+					<td>BS</td>
+					<td>40</td>
+					<td>050</td>
+					<td>0x28</td>
+					<td>(</td>
+					<td>72</td>
+					<td>110</td>
+					<td>0x48</td>
+					<td>H</td>
+					<td>104</td>
+					<td>150</td>
+					<td>0x68</td>
+					<td>h</td>
+			</tr>
+			<tr>
+					<td>9</td>
+					<td>011</td>
+					<td>0x09</td>
+					<td>TAB</td>
+					<td>41</td>
+					<td>051</td>
+					<td>0x29</td>
+					<td>)</td>
+					<td>73</td>
+					<td>111</td>
+					<td>0x49</td>
+					<td>I</td>
+					<td>105</td>
+					<td>151</td>
+					<td>0x69</td>
+					<td>i</td>
+			</tr>
+			<tr>
+					<td>10</td>
+					<td>012</td>
+					<td>0x0A</td>
+					<td>LF</td>
+					<td>42</td>
+					<td>052</td>
+					<td>0x2A</td>
+					<td>*</td>
+					<td>74</td>
+					<td>112</td>
+					<td>0x4A</td>
+					<td>J</td>
+					<td>106</td>
+					<td>152</td>
+					<td>0x6A</td>
+					<td>j</td>
+			</tr>
+			<tr>
+					<td>11</td>
+					<td>013</td>
+					<td>0x0B</td>
+					<td>VT</td>
+					<td>43</td>
+					<td>053</td>
+					<td>0x2B</td>
+					<td>+</td>
+					<td>75</td>
+					<td>113</td>
+					<td>0x4B</td>
+					<td>K</td>
+					<td>107</td>
+					<td>153</td>
+					<td>0x6B</td>
+					<td>k</td>
+			</tr>
+			<tr>
+					<td>12</td>
+					<td>014</td>
+					<td>0x0C</td>
+					<td>FF</td>
+					<td>44</td>
+					<td>054</td>
+					<td>0x2C</td>
+					<td>,</td>
+					<td>76</td>
+					<td>114</td>
+					<td>0x4C</td>
+					<td>L</td>
+					<td>108</td>
+					<td>154</td>
+					<td>0x6C</td>
+					<td>l</td>
+			</tr>
+			<tr>
+					<td>13</td>
+					<td>015</td>
+					<td>0x0D</td>
+					<td>CR</td>
+					<td>45</td>
+					<td>055</td>
+					<td>0x2D</td>
+					<td>–</td>
+					<td>77</td>
+					<td>115</td>
+					<td>0x4D</td>
+					<td>M</td>
+					<td>109</td>
+					<td>155</td>
+					<td>0x6D</td>
+					<td>m</td>
+			</tr>
+			<tr>
+					<td>14</td>
+					<td>016</td>
+					<td>0x0E</td>
+					<td>SO</td>
+					<td>46</td>
+					<td>056</td>
+					<td>0x2E</td>
+					<td>.</td>
+					<td>78</td>
+					<td>116</td>
+					<td>0x4E</td>
+					<td>N</td>
+					<td>110</td>
+					<td>156</td>
+					<td>0x6E</td>
+					<td>n</td>
+			</tr>
+			<tr>
+					<td>15</td>
+					<td>017</td>
+					<td>0x0F</td>
+					<td>SI</td>
+					<td>47</td>
+					<td>057</td>
+					<td>0x2F</td>
+					<td>/</td>
+					<td>79</td>
+					<td>117</td>
+					<td>0x4F</td>
+					<td>O</td>
+					<td>111</td>
+					<td>157</td>
+					<td>0x6F</td>
+					<td>o</td>
+			</tr>
+			<tr>
+					<td>16</td>
+					<td>020</td>
+					<td>0x10</td>
+					<td>DLE</td>
+					<td>48</td>
+					<td>060</td>
+					<td>0x30</td>
+					<td>0</td>
+					<td>80</td>
+					<td>120</td>
+					<td>0x50</td>
+					<td>P</td>
+					<td>112</td>
+					<td>160</td>
+					<td>0x70</td>
+					<td>p</td>
+			</tr>
+			<tr>
+					<td>17</td>
+					<td>021</td>
+					<td>0x11</td>
+					<td>DC1</td>
+					<td>49</td>
+					<td>061</td>
+					<td>0x31</td>
+					<td>1</td>
+					<td>81</td>
+					<td>121</td>
+					<td>0x51</td>
+					<td>Q</td>
+					<td>113</td>
+					<td>161</td>
+					<td>0x71</td>
+					<td>q</td>
+			</tr>
+			<tr>
+					<td>18</td>
+					<td>022</td>
+					<td>0x12</td>
+					<td>DC2</td>
+					<td>50</td>
+					<td>062</td>
+					<td>0x32</td>
+					<td>2</td>
+					<td>82</td>
+					<td>122</td>
+					<td>0x52</td>
+					<td>R</td>
+					<td>114</td>
+					<td>162</td>
+					<td>0x72</td>
+					<td>r</td>
+			</tr>
+			<tr>
+					<td>19</td>
+					<td>023</td>
+					<td>0x13</td>
+					<td>DC3</td>
+					<td>51</td>
+					<td>063</td>
+					<td>0x33</td>
+					<td>3</td>
+					<td>83</td>
+					<td>123</td>
+					<td>0x53</td>
+					<td>S</td>
+					<td>115</td>
+					<td>163</td>
+					<td>0x73</td>
+					<td>s</td>
+			</tr>
+			<tr>
+					<td>20</td>
+					<td>024</td>
+					<td>0x14</td>
+					<td>DC4</td>
+					<td>52</td>
+					<td>064</td>
+					<td>0x34</td>
+					<td>4</td>
+					<td>84</td>
+					<td>124</td>
+					<td>0x54</td>
+					<td>T</td>
+					<td>116</td>
+					<td>164</td>
+					<td>0x74</td>
+					<td>t</td>
+			</tr>
+			<tr>
+					<td>21</td>
+					<td>025</td>
+					<td>0x15</td>
+					<td>NAK</td>
+					<td>53</td>
+					<td>065</td>
+					<td>0x35</td>
+					<td>5</td>
+					<td>85</td>
+					<td>125</td>
+					<td>0x55</td>
+					<td>U</td>
+					<td>117</td>
+					<td>165</td>
+					<td>0x75</td>
+					<td>u</td>
+			</tr>
+			<tr>
+					<td>22</td>
+					<td>026</td>
+					<td>0x16</td>
+					<td>SYN</td>
+					<td>54</td>
+					<td>066</td>
+					<td>0x36</td>
+					<td>6</td>
+					<td>86</td>
+					<td>126</td>
+					<td>0x56</td>
+					<td>V</td>
+					<td>118</td>
+					<td>166</td>
+					<td>0x76</td>
+					<td>v</td>
+			</tr>
+			<tr>
+					<td>23</td>
+					<td>027</td>
+					<td>0x17</td>
+					<td>ETB</td>
+					<td>55</td>
+					<td>067</td>
+					<td>0x37</td>
+					<td>7</td>
+					<td>87</td>
+					<td>127</td>
+					<td>0x57</td>
+					<td>W</td>
+					<td>119</td>
+					<td>167</td>
+					<td>0x77</td>
+					<td>w</td>
+			</tr>
+			<tr>
+					<td>24</td>
+					<td>030</td>
+					<td>0x18</td>
+					<td>CAN</td>
+					<td>56</td>
+					<td>070</td>
+					<td>0x38</td>
+					<td>8</td>
+					<td>88</td>
+					<td>130</td>
+					<td>0x58</td>
+					<td>X</td>
+					<td>120</td>
+					<td>170</td>
+					<td>0x78</td>
+					<td>x</td>
+			</tr>
+			<tr>
+					<td>25</td>
+					<td>031</td>
+					<td>0x19</td>
+					<td>EM</td>
+					<td>57</td>
+					<td>071</td>
+					<td>0x39</td>
+					<td>9</td>
+					<td>89</td>
+					<td>131</td>
+					<td>0x59</td>
+					<td>Y</td>
+					<td>121</td>
+					<td>171</td>
+					<td>0x79</td>
+					<td>y</td>
+			</tr>
+			<tr>
+					<td>26</td>
+					<td>032</td>
+					<td>0x1A</td>
+					<td>SUB</td>
+					<td>58</td>
+					<td>072</td>
+					<td>0x3A</td>
+					<td>:</td>
+					<td>90</td>
+					<td>132</td>
+					<td>0x5A</td>
+					<td>Z</td>
+					<td>122</td>
+					<td>172</td>
+					<td>0x7A</td>
+					<td>z</td>
+			</tr>
+			<tr>
+					<td>27</td>
+					<td>033</td>
+					<td>0x1B</td>
+					<td>ESC</td>
+					<td>59</td>
+					<td>073</td>
+					<td>0x3B</td>
+					<td>;</td>
+					<td>91</td>
+					<td>133</td>
+					<td>0x5B</td>
+					<td>[</td>
+					<td>123</td>
+					<td>173</td>
+					<td>0x7B</td>
+					<td>{</td>
+			</tr>
+			<tr>
+					<td>28</td>
+					<td>034</td>
+					<td>0x1C</td>
+					<td>FS</td>
+					<td>60</td>
+					<td>074</td>
+					<td>0x3C</td>
+					<td>&lt;</td>
+					<td>92</td>
+					<td>134</td>
+					<td>0x5C</td>
+					<td>\</td>
+					<td>124</td>
+					<td>174</td>
+					<td>0x7C</td>
+					<td>|</td>
+			</tr>
+			<tr>
+					<td>29</td>
+					<td>035</td>
+					<td>0x1D</td>
+					<td>GS</td>
+					<td>61</td>
+					<td>075</td>
+					<td>0x3D</td>
+					<td>=</td>
+					<td>93</td>
+					<td>135</td>
+					<td>0x5D</td>
+					<td>]</td>
+					<td>125</td>
+					<td>175</td>
+					<td>0x7D</td>
+					<td>}</td>
+			</tr>
+			<tr>
+					<td>30</td>
+					<td>036</td>
+					<td>0x1E</td>
+					<td>RS</td>
+					<td>62</td>
+					<td>076</td>
+					<td>0x3E</td>
+					<td>&gt;</td>
+					<td>94</td>
+					<td>136</td>
+					<td>0x5E</td>
+					<td>^</td>
+					<td>126</td>
+					<td>176</td>
+					<td>0x7E</td>
+					<td>~</td>
+			</tr>
+			<tr>
+					<td>31</td>
+					<td>037</td>
+					<td>0x1F</td>
+					<td>US</td>
+					<td>63</td>
+					<td>077</td>
+					<td>0x3F</td>
+					<td>?</td>
+					<td>95</td>
+					<td>137</td>
+					<td>0x5F</td>
+					<td>_</td>
+					<td>127</td>
+					<td>177</td>
+					<td>0x7F</td>
+					<td>DEL</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="practical-use-cases">Practical Use Cases</h2>
+<h3 id="finding-non-ascii-or-control-characters">Finding Non-ASCII or Control Characters</h3>
+<p>Identify lines containing bytes outside the standard ASCII range:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -P -n <span class="s2">&#34;[\x80-\xFF]&#34;</span> filename
+</span></span></code></pre></div><p>View control characters in context:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">od -c filename <span class="p">|</span> head -20
+</span></span></code></pre></div><p>Check for embedded null bytes (often problematic in text files):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -c <span class="s1">$&#39;\x00&#39;</span> filename
+</span></span></code></pre></div><h3 id="byte-level-file-analysis">Byte-Level File Analysis</h3>
+<p>Examine raw bytes with ASCII equivalents side-by-side:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd -g <span class="m">1</span> filename <span class="p">|</span> head -20
+</span></span></code></pre></div><p>This format shows hex values and printable ASCII characters, making it straightforward to spot text embedded in binary data.</p>
+<p>Add the <code>-l</code> flag to limit output by byte count:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd -g <span class="m">1</span> -l <span class="m">512</span> filename
+</span></span></code></pre></div><h3 id="extracting-text-from-binary-files">Extracting Text from Binary Files</h3>
+<p>Extract all printable ASCII strings from a binary file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">strings filename
+</span></span></code></pre></div><p>Filter by minimum string length:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">strings -n <span class="m">8</span> filename    <span class="c1"># Only strings 8+ characters long</span>
+</span></span></code></pre></div><p>Combine with grep to find specific patterns:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">strings binary_file <span class="p">|</span> grep -i <span class="s2">&#34;version&#34;</span>
+</span></span></code></pre></div><h3 id="text-processing-and-line-endings">Text Processing and Line Endings</h3>
+<p>Check file line ending types:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">file filename  <span class="c1"># Shows line ending type (CRLF, LF, etc.)</span>
+</span></span></code></pre></div><p>Find lines with non-standard line endings (mixed LF/CR):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">od -c filename <span class="p">|</span> grep -E <span class="s2">&#34;(\\\\n|\\\\r)&#34;</span>
+</span></span></code></pre></div><p>Convert DOS line endings (CR+LF) to Unix (LF):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dos2unix filename
+</span></span></code></pre></div><p>Or using sed (works on systems without <code>dos2unix</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/\r$//&#39;</span> filename
+</span></span></code></pre></div><p>Convert Unix to DOS line endings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/$/\r/&#39;</span> filename
+</span></span></code></pre></div><h3 id="log-analysis">Log Analysis</h3>
+<p>Check for control characters that might corrupt log parsing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat logfile <span class="p">|</span> od -c <span class="p">|</span> grep -E <span class="s1">&#39;\\[0-7][0-7][0-7]&#39;</span>
+</span></span></code></pre></div><p>Display any character outside printable ASCII in escape notation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat logfile <span class="p">|</span> sed <span class="s1">&#39;s/[^[:print:]\n]/./g&#39;</span>
+</span></span></code></pre></div><p>Generate a summary of non-ASCII characters found:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">od -An -tx1 logfile <span class="p">|</span> tr -s <span class="s1">&#39; &#39;</span> <span class="s1">&#39;\n&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> grep -v <span class="s1">&#39;^[[:space:]]*[0-9]\+ 2[0-7]&#39;</span> <span class="p">|</span> grep -v <span class="s1">&#39;^[[:space:]]*[0-9]\+ [0-4][0-9a-f]&#39;</span>
+</span></span></code></pre></div><h3 id="working-with-special-characters-in-scripts">Working with Special Characters in Scripts</h3>
+<p>Safely handle strings containing ASCII codes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Store a tab character</span>
+</span></span><span class="line"><span class="cl"><span class="nv">tab</span><span class="o">=</span><span class="s1">$&#39;\t&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Store a newline</span>
+</span></span><span class="line"><span class="cl"><span class="nv">newline</span><span class="o">=</span><span class="s1">$&#39;\n&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use in commands</span>
+</span></span><span class="line"><span class="cl">awk -v <span class="nv">tab</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$tab</span><span class="s2">&#34;</span> <span class="s1">&#39;{print $1 tab $2}&#39;</span> input.txt
+</span></span></code></pre></div><p>Generate test data with specific ASCII codes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create a file with null-terminated strings</span>
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="err">&#39;</span>string1<span class="se">\x</span>00string
+</span></span></code></pre></div>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

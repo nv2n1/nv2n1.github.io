@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdendian(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdendian/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdendian(3)</h1>
+
+
+
+
+
+<p>std::endian - std::endian</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;type_traits&gt;
+enum class endian
+{
+    little = /*implementation-defined*/, (1) (since C++20)
+    big = /*implementation-defined*/,
+    native = /*implementation-defined*/
+};</code></pre> 
+<p>Indicates the endianness of all scalar_types:</p>
+<ul>
+<li>If all scalar types are little-endian, std::endian::native equals std::endian::little</li>
+<li>If all scalar types are big-endian, std::endian::native equals std::endian::big
+Corner case platforms are also supported:</li>
+<li>If all scalar types have sizeof equal to 1, endianness does not matter and all three values, std::endian::little, std::endian::big, and std::endian::native are the same</li>
+<li>If the platform uses mixed endian, std::endian::native does not equal either std::endian::big nor std::endian::little</li>
+</ul>
+<h2>Possible implementation</h2>
+<p> <wbr> enum class endian
+ <wbr> {
+ <wbr> #ifdef _WIN32
+ <wbr> <wbr> <wbr> <wbr> <wbr> little = 0,
+ <wbr> <wbr> <wbr> <wbr> <wbr> big = 1,
+ <wbr> <wbr> <wbr> <wbr> <wbr> native = little
+ <wbr> #else
+ <wbr> <wbr> <wbr> <wbr> <wbr> little = <strong>ORDER_LITTLE_ENDIAN</strong>,
+ <wbr> <wbr> <wbr> <wbr> <wbr> big = <strong>ORDER_BIG_ENDIAN</strong>,
+ <wbr> <wbr> <wbr> <wbr> <wbr> native = <strong>BYTE_ORDER</strong>
+ <wbr> #endif
+ <wbr> };</p>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

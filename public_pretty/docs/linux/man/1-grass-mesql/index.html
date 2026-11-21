@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grass-mesql(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-grass-mesql/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>grass-mesql(1)</h1>
+
+
+
+
+
+<p>MySQL database driver in GRASS enables GRASS to store vector attributes in MySQL embedded database without necessity to run MySQL server.</p>
+<h2>Driver and database name</h2>
+<p>GRASS modules require 2 parameters to connect to a database. Those parameters are &lsquo;driver&rsquo; and &lsquo;database&rsquo;. For MySQL embedded driver the parameter &lsquo;driver&rsquo; should be set to value &lsquo;mesql&rsquo;. The parameter &lsquo;database&rsquo; is a full path to the directory where database tables are stored. The best place is a directory in the mapset. The directory must be created before use of the driver. In the name of database it is possible to use 3 variables:</p>
+<dl>
+<dl>
+<dt>
+</dt><dd> 
+&nbsp;<wbr>$GISDBASE - path to current GISBASE
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>$LOCATION_NAME - name of current location
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>$MAPSET - name of current mapset</dd></dl>
+</dl>
+<p>Examples of connection parameters:</p>
+<p> <wbr> <wbr>db.connect driver=mesql database=&rsquo;$GISDBASE/$LOCATION_NAME/$MAPSET/mysql&rsquo;</p>
+<p> <wbr> <wbr>db.connect driver=mesql database=/home/user1/db</p>
+<h2>Data types, indexes</h2>
+<p>For more informations about supported data types and indexes see the documentation for MySQL (mysql) driver</p>
+<h2>Database type</h2>
+<p>Because database closing was found very slow if InnoDB was used, the InnoDB storage is disabled by default (hardcoded cq&ndash;skip-innodb&rsquo; server option).</p>
+<h2>Note</h2>
+<p>The embedded server is started with hardcoded &lsquo;&ndash;bootstrap&rsquo; option to avoid warning about missing mysql.time_zone_leap_second table. This can be fixed in future.</p>
+<h2>SEE ALSO</h2>
+<p><i> db.connect, SQL support in GRASS GIS</i></p>
+<h2>Credits</h2>
+<p>Development of the driver was sponsored by Faunalia (Italy) as part of a project for ATAC.</p>
+<h2>AUTHOR</h2>
+<p>Radim Blazek</p>
+<p><i>Last changed: $Date: 2007-10-28 22:04:00 +0100 (Sun, 28 Oct 2007) $</i>
+Help Index</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

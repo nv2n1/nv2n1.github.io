@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding the Raft Consensus Protocol - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/understanding-the-raft-consensus-protocol/">
+  <meta name="description" content="Raft is a consensus algorithm designed to be more understandable than alternatives like Paxos. It ensures a cluster of servers can agree on system state even …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Understanding the Raft Consensus Protocol">
+  <meta property="og:url" content="https://www.systutorials.com/understanding-the-raft-consensus-protocol/">
+  <meta property="og:description" content="Raft is a consensus algorithm designed to be more understandable than alternatives like Paxos. It ensures a cluster of servers can agree on system state even …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/distributed-systems-academy/">Distributed Systems Academy</a>
+           &rsaquo; <a href="/advanced-systems-path/">Advanced Systems &amp; Architecture Path</a>
+          &rsaquo; <a href="/category/consensus/">Consensus</a>
+        </nav>
+        
+        <h1>Understanding the Raft Consensus Protocol</h1>
+        <time class="post-date" datetime="2024-08-24T04:24:24Z">August 24, 2024</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Raft is a consensus algorithm designed to be more understandable than alternatives like Paxos. It ensures a cluster of servers can agree on system state even when some nodes fail. The core insight is breaking consensus into independent, manageable subproblems rather than treating it as one complex whole.</p>
+<h2 id="core-subproblems">Core Subproblems</h2>
+<p>Raft splits consensus into three areas:</p>
+<p><strong>Leader Election</strong> — Exactly one leader exists per term. If the leader fails or becomes unreachable, the cluster elects a replacement.</p>
+<p><strong>Log Replication</strong> — The leader accepts client commands, appends them to its log, and replicates entries across followers. All committed entries eventually exist on all nodes.</p>
+<p><strong>Safety</strong> — Logs remain consistent across nodes despite failures. Uncommitted entries may be lost, but committed entries are never lost or overwritten.</p>
+<h2 id="node-roles">Node Roles</h2>
+<p>Every Raft node is in exactly one of three states:</p>
+<p><strong>Leader</strong> — Accepts client requests, replicates log entries, sends periodic heartbeats. There’s one leader per term.</p>
+<p><strong>Follower</strong> — Receives AppendEntries RPCs from the leader and RequestVote RPCs from candidates. Followers are passive—they don’t initiate communication.</p>
+<p><strong>Candidate</strong> — A follower that initiates an election. It increments the term, votes for itself, and requests votes from peers.</p>
+<h2 id="leader-election">Leader Election</h2>
+<p>Raft uses randomized election timeouts to ensure liveness. Each follower picks a random timeout between 150-300ms (values vary by implementation). If no heartbeat arrives before this timeout expires, the follower becomes a candidate.</p>
+<p>When a node becomes a candidate, it:</p>
+<ol>
+<li>Increments its current term</li>
+<li>Votes for itself</li>
+<li>Sends RequestVote RPCs to all other nodes in parallel</li>
+<li>Waits for responses</li>
+</ol>
+<p>A node grants its vote to the first candidate requesting it within a term. It denies subsequent vote requests in that same term. This prevents multiple leaders from being elected in one term.</p>
+<p>A candidate wins the election by receiving votes from a majority of the cluster. On winning, it becomes the leader and sends heartbeat AppendEntries RPCs to all followers to suppress further elections.</p>
+<p>If the candidate doesn’t win (split vote), it waits for a new election timeout and tries again. The randomized timeouts prevent repeated splits—statistically, one candidate will timeout first and win before others can start an election.</p>
+<h2 id="log-replication">Log Replication</h2>
+<p>The leader is the only node that accepts client requests. When a client submits a command:</p>
+<ol>
+<li>The leader appends a log entry containing the command, the current term, and a unique log index</li>
+<li>The leader sends AppendEntries RPCs to all followers, including the new entry</li>
+<li>Followers append the entry to their logs and acknowledge</li>
+<li>Once a majority of nodes have the entry, the leader marks it as committed</li>
+<li>The leader applies the committed entry to its state machine and returns the result to the client</li>
+<li>The leader notifies followers of the new commitIndex; followers apply committed entries to their state machines</li>
+</ol>
+<p>If a follower is slow or crashes, the leader retries AppendEntries indefinitely until the follower catches up.</p>
+<h2 id="consistency-guarantees">Consistency Guarantees</h2>
+<p>Raft maintains consistency through several mechanisms:</p>
+<p><strong>Term Numbers</strong> — Each term is uniquely numbered and monotonically increases. A node always uses the highest term it has seen. If a candidate or leader receives a higher term from any peer, it immediately becomes a follower. This prevents old leaders from committing entries.</p>
+<p><strong>Log Matching Property</strong> — If two log entries exist with the same index and term on different servers, they are identical, and all entries before them are identical.</p>
+<p><strong>Leader Completeness</strong> — A newly elected leader is guaranteed to contain all entries committed in previous terms. This is enforced by vote restrictions—a candidate only wins if its log is at least as up-to-date as a majority of voters.</p>
+<h2 id="failure-scenarios">Failure Scenarios</h2>
+<p><strong>Follower Failure</strong> — If a follower crashes, the leader detects this when AppendEntries RPCs fail. The leader continues operating as long as a majority remains healthy. When the follower recovers, the leader replicates missing entries to bring it up-to-date.</p>
+<p><strong>Leader Failure</strong> — If the leader crashes, followers detect this via missing heartbeats. After an election timeout, one follower becomes a candidate and starts an election. The cluster elects a new leader and continues. Uncommitted entries from the old leader may be lost, but committed entries are preserved—the new leader contains all committed entries by the Leader Completeness property.</p>
+<p><strong>Network Partition</strong> — Raft handles arbitrary network delays and message loss. Only the partition containing a majority of nodes can elect a leader. The minority partition cannot commit new entries (its leader candidates fail to achieve majority votes). When the partition heals, the minority partition catches up. This sacrifices availability in the minority partition to ensure consistency.</p>
+<h2 id="practical-considerations">Practical Considerations</h2>
+<p>Raft is widely used in systems like etcd, Consul, and LiteFS. When implementing or deploying Raft:</p>
+<ul>
+<li>Election timeouts directly impact recovery time but must be high enough to avoid spurious elections on slow networks. 150-300ms is common for LAN deployments; adjust for higher latency networks.</li>
+<li>Batch AppendEntries RPCs to reduce network load and improve throughput.</li>
+<li>Persist term and vote state to disk before responding to RPCs—this ensures safety across restarts.</li>
+<li>The state machine applies committed entries sequentially. If your application requires strong linearizability, apply entries in order and use request deduplication to handle retries.</li>
+<li>Monitor leader election frequency and log replication lag. High election rates indicate timeout mistuning.</li>
+</ul>
+<p>Raft’s strength is clarity and practicality. The algorithm is straightforward to reason about and implement correctly, which has made it the standard choice for new distributed systems.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

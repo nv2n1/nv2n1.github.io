@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>usb_get_status(9) · Linux Manual Pages</title>
+<meta name="description" content="usb_get_status – issues a GET_STATUS call">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-usb_get_status/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>usb_get_status(9)</h1>
+
+
+
+
+
+<p>usb_get_status &#8211; issues a GET_STATUS call</p>
+<h2>Synopsis</h2>
+<pre><code>int usb_get_status(struct usb_device *dev, int type, int target, void *data);</code></pre>
+<h2>Arguments</h2>
+<p><i>dev</i></p>
+<dl>
+<dd>
+</dd><dd>the device whose status is being checked</dd></dl>
+<p> <i>type</i></p>
+<dl>
+<dd>USB_RECIP_*; for device, interface, or endpoint</dd></dl>
+<p> <i>target</i></p>
+<dl>
+<dd>zero (for device), else interface or endpoint number</dd></dl>
+<p> <i>data</i></p>
+<dl>
+<dd>pointer to two bytes of bitmap data</dd></dl>
+<h2>Context</h2>
+<p>!in_interrupt ()</p>
+<h2>Description</h2>
+<p>Returns device, interface, or endpoint status. Normally only of interest to see if the device is self powered, or has enabled the remote wakeup facility; or whether a bulk or interrupt endpoint is halted (&#8220;stalled&#8221;). </p>
+<p> Bits in these status bitmaps are set using the SET_FEATURE request, and cleared using the CLEAR_FEATURE request. The <code>usb_clear_halt</code> function should be used to clear halt (&#8220;stall&#8221;) status. </p>
+<p> This call is synchronous, and may not be used in an interrupt context. </p>
+<p> Returns 0 and the status value in *<i>data</i> (in host byte order) on success, or else the status code from the underlying <code>usb_control_msg</code> call.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

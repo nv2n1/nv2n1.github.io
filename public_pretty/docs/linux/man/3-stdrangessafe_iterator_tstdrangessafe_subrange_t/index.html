@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdrangessafe_iterator_tstdrangessafe_subrange_t(3) · Linux Manual Pages</title>
+<meta name="description" content="std::ranges::safe_iterator_t,std::ranges::safe_subrange_t – std::ranges::safe_iterator_t,std::ranges::safe_subrange_t">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdrangessafe_iterator_tstdrangessafe_subrange_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdrangessafe_iterator_tstdrangessafe_subrange_t(3)</h1>
+
+
+
+
+
+<p>std::ranges::safe_iterator_t,std::ranges::safe_subrange_t &#8211; std::ranges::safe_iterator_t,std::ranges::safe_subrange_t</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;ranges&gt;
+template&lt;Range R&gt;
+using safe_iterator_t = std::conditional_t&lt;__ForwardingRange&lt;R&gt;, (1) (since C++20)
+ranges::iterator_t&lt;R&gt;, ranges::dangling&gt;;
+template&lt;Range R&gt;
+using safe_subrange_t = std::conditional_t&lt;__ForwardingRange&lt;R&gt;, (2) (since C++20)
+ranges::subrange&lt;ranges::iterator_t&lt;R&gt;&gt;, ranges::dangling&gt;;</code></pre>
+<p>1) Same as ranges::iterator_t when R models exposition-only concept __ForwardingRange, otherwise yields ranges::dangling instead.<br />
+2) Similar to <code>(1)</code>, but it yields a specialization of ranges::subrange when the the same condition is met.<br />
+These two alias templates are used by some constrained_algorithms to avoid returning potentially dangling iterators or views. </p>
+<h2>See also</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;a placeholder type indicating that an iterator or a subrange should not be returned since it would be dangling<br />
+dangling <i>(class)</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

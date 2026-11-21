@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkblookupkeysym(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbLookupKeySym – Find the symbol associated with a key for a particular state">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkblookupkeysym/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkblookupkeysym(3)</h1>
+
+
+
+
+
+<p>XkbLookupKeySym &#8211; Find the symbol associated with a key for a particular state </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Bool XkbLookupKeySym</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>KeyCode </code><i>key</i><code>,</code> <code>unsigned int </code><i>state</i><code>,</code> <code>unsigned int *</code><i>mods_rtrn</i><code>,</code> <code>KeySym *</code><i>sym_rtrn</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; dpy</i></dt>
+<dd>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; key</i></dt>
+<dd>key for which symbols are to be found</dd>
+<dt><i>&#8211; state</i></dt>
+<dd>state for which symbol should be found</dd>
+<dt><i>&#8211; mods_rtrn</i></dt>
+<dd>backfilled with consumed modifiers</dd>
+<dt><i>&#8211; sym_rtrn</i></dt>
+<dd>backfilled with symbol associated with key + state</dd></dl>
+<h2>Description</h2>
+<p><i>XkbLookupKeySym </i> is the equivalent of the core <i>XLookupKeySym </i> function. For the core keyboard, given a keycode <i>key </i> and an Xkb state <i>state, XkbLookupKeySym </i> returns the symbol associated with the key in <i>sym_rtrn </i> and the list of modifiers that should still be applied in <i>mods_rtrn. </i> The <i>state </i> parameter is the state from a KeyPress or KeyRelease event. <i>XkbLookupKeySym </i> returns True if it succeeds.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xlookupkeysym/">XLookupKeySym</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

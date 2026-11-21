@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rlm_sql(5) · Linux Manual Pages</title>
+<meta name="description" content="rlm_sql – FreeRADIUS Module">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-rlm_sql/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>rlm_sql(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>rlm_sql &#8211; FreeRADIUS Module</p>
+<h2>Description</h2>
+<p>The <i>rlm_sql</i> module provides an SQL interface to retrieve authorization information and store accounting information. It can be used in conjunction with, or in lieu of the files and detail modules. The SQL module has drivers to support the following SQL databases: </p>
+<dl>
+<dd>
+<pre><br>
+ db2
+<br>
+ iodbc
+<br>
+ mysql
+<br>
+ oracle
+<br>
+ postgresql
+<br>
+ sybase
+<br>
+ unixodbc
+<br></pre>
+</dd></dl>
+<p> Due to the size of the configuration variables, the sql module is usually configured in a separate file, which is included in the main radiusd.conf via an include directive. </p>
+<p> The main configuration items to be aware of are:</p>
+<dl>
+<dt>driver</dt>
+<dd>This variable specifies the driver to be loaded.</dd>
+<dt>server</dt>
+<dd>
+</dd><dt>login</dt>
+<dd>
+</dd><dt>password</dt>
+<dd>These specify the servername, username, and password the module will use to connect to the database.</dd>
+<dt>radius_db</dt>
+<dd>The name of the database where the radius tables are stored.</dd>
+<dt>acct_table1</dt>
+<dd>
+</dd><dt>acct_table2</dt>
+<dd>These specify the tables names for accounting records. acct_table1 specifies the table where Start records are stored. acct_table2 specifies the table where Stop records are stored. In most cases, this should be the same table.</dd>
+<dt>postauth_table</dt>
+<dd>The name of the table to store post-authentication data.</dd>
+<dt>authcheck_table</dt>
+<dd>
+</dd><dt>authreply_table</dt>
+<dd>The tables where individual Check-Items and Reply-Items are stored.</dd>
+<dt>groupcheck_table</dt>
+<dd>
+</dd><dt>groupreply_table</dt>
+<dd>The tables where group Check-Items and Reply-Items are stored.</dd>
+<dt>usergroup_table</dt>
+<dd>The table where username to group relationships are stored.</dd>
+<dt>deletestatlesessions</dt>
+<dd>This option is set to &#8216;yes&#8217; or &#8216;no&#8217;. If you are doing Simultaneous-Use checking, and this is set to yes, stale sessions ( defined as sessions for which a Stop record was not received ) will be cleared.</dd>
+<dt>logfile</dt>
+<dd>This option is useful for debugging sql problems. If logfile is set then all sql queries for the containing section are written to the file specified. This is useful for debugging and bulk inserts.</dd>
+<dt>num_sql_socks</dt>
+<dd>The number of sql connections to make to the database.</dd>
+<dt>connect_failure_retry_delay</dt>
+<dd>The number of seconds to wait before attempting to reconnect to a failed database connection.</dd>
+<dt>sql_user_name</dt>
+<dd>This is the definition of the SQL-User-Name attribute. This is set once, so that you can use %{SQL-User-Name} in the SQL queries, rather than the nested username substitution. This ensures that Username is parsed consistently for all SQL queries executed.</dd>
+<dt>default_user_profile</dt>
+<dd>This is the default profile name that will be applied to all users if set. This is not set by default.</dd>
+<dt>query_on_not_found</dt>
+<dd>This option is set to &#8216;yes&#8217; or &#8216;no&#8217;. If set to yes, then the default user profile is returned if no specific match was found for the user.</dd>
+<dt>authorize_check_query</dt>
+<dd>
+</dd><dt>authorize_reply_query</dt>
+<dd>These queries are run during the authorization stage to extract the user authorization information from the ${authcheck_table} and ${authreply_table}.</dd>
+<dt>authorize_group_check_query</dt>
+<dd>
+</dd><dt>authorize_group_reply_query</dt>
+<dd>These queries are run during the authorization stage to extract the group authorization information from the ${groupcheck_table} and ${groupreply_table}.</dd>
+<dt>accounting_onoff_query</dt>
+<dd>The query to be run when receiving an Accounting On or Accounting Off packet.</dd>
+<dt>accounting_update_query</dt>
+<dd>
+</dd><dt>accounting_update_query_alt</dt>
+<dd>The query to be run when receiving an Accounting Update packet. If the primary query fails, the alt query is run.</dd>
+<dt>accounting_start_query</dt>
+<dd>
+</dd><dt>accounting_start_query_alt</dt>
+<dd>The query to be run when receiving an Accounting Start packet. If the primary query fails, the alt query is run.</dd>
+<dt>accounting_stop_query</dt>
+<dd>
+</dd><dt>accounting_stop_query_alt</dt>
+<dd>The query to be run when receiving an Accounting Stop packet. If the primary query fails, the alt query is run.</dd>
+<dt>simul_count_query</dt>
+<dd>The query to be run to return the number simultaneous sessions for the purposes of limiting Simultaneous Use.</dd>
+<dt>simul_verify_query</dt>
+<dd>The query to return the detail information needed to confirm that all suspected connected sessions are valid, and are not stale sessions.</dd>
+<dt>group_membership_query</dt>
+<dd>The query to run to check user group membership.</dd>
+<dt>postauth_query</dt>
+<dd>The query to run during the post-authentication stage.</dd></dl>
+<h2>Configuration</h2>
+<p>Due to the size of the configuration for this module, it is not included in this manual page. Please review the supplied configuration files for example queries and configuration details.</p>
+<h2>Sections</h2>
+<p><code>authorization,</code> <code>accounting,</code> <code>checksimul,</code> <code>post-authentication</code></p>
+<h2>Files</h2>
+<p><i>/etc/raddb/radiusd.conf,</i> <i>/etc/raddb/sql.conf,</i> <i>/etc/raddb/sql/&lt;DB&gt;/dialup.conf,</i> <i>/etc/raddb/sql/&lt;DB&gt;/schema.sql,</i></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-radiusd/">radiusd</a></code>(8), <code><a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a></code>(5),</p>
+<h2>Authors</h2>
+<p>Chris Parker, cparker [at] segv.org</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

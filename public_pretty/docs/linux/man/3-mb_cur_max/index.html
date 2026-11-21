@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mb_cur_max(3) · Linux Manual Pages</title>
+<meta name="description" content="MB_CUR_MAX – maximum length of a multibyte character in the current locale">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mb_cur_max/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mb_cur_max(3)</h1>
+
+
+
+
+
+<p>MB_CUR_MAX &#8211; maximum length of a multibyte character in the current locale </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;stdlib.h&gt;</code></pre>
+<h2>Description</h2>
+<p>The <code>MB_CUR_MAX</code> macro defines an integer expression giving the maximum number of bytes needed to represent a single wide character in the current locale. This value is locale dependent and therefore not a compile-time constant.</p>
+<h2>Return Value</h2>
+<p>An integer in the range [1, <code>MB_LEN_MAX</code>]. The value 1 denotes traditional 8-bit encoded characters.</p>
+<h2>Conforming To</h2>
+<p>POSIX.1-2001, POSIX.1-2008, C99.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-mb_len_max/">MB_LEN_MAX</a></code>(3), <code><a href="/docs/linux/man/3-mblen/">mblen</a></code>(3), <code><a href="/docs/linux/man/3-mbstowcs/">mbstowcs</a></code>(3), <code><a href="/docs/linux/man/3-mbtowc/">mbtowc</a></code>(3), <code><a href="/docs/linux/man/3-wcstombs/">wcstombs</a></code>(3), <code><a href="/docs/linux/man/3-wctomb/">wctomb</a></code>(3)</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

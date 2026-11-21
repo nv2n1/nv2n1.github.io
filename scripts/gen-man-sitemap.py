@@ -39,7 +39,7 @@ def main():
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         f.write('<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
         for n in range(1, len(chunks) + 1):
-            f.write(f"  <sitemap><loc>{BASE}/docs/sitemap-{n}.xml</loc></sitemap>\n")
+            f.write(f"  <sitemap><loc>{BASE}/sitemap-{n}.xml</loc></sitemap>\n")
         f.write("</sitemapindex>\n")
     print(f"man sitemap: {len(urls)} URLs in {len(chunks)} chunks -> {out_dir}")
 

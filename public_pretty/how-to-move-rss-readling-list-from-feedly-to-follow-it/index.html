@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Migrating Your Feedly RSS Feeds to Follow.it - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-move-rss-readling-list-from-feedly-to-follow-it/">
+  <meta name="description" content="RSS feed readers have become essential for staying on top of content from multiple sources. If you’re switching from Feedly to Follow.it, the migration is …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Migrating Your Feedly RSS Feeds to Follow.it">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-move-rss-readling-list-from-feedly-to-follow-it/">
+  <meta property="og:description" content="RSS feed readers have become essential for staying on top of content from multiple sources. If you’re switching from Feedly to Follow.it, the migration is …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Migrating Your Feedly RSS Feeds to Follow.it</h1>
+        <time class="post-date" datetime="2020-10-04T08:53:30Z">October 4, 2020</time> <span class="post-author">&middot; <a href="/author/davidyang/">David Yang</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>RSS feed readers have become essential for staying on top of content from multiple sources. If you’re switching from Feedly to Follow.it, the migration is straightforward — both services support OPML (Outline Processor Markup Language), a standard format for exporting and importing feed lists.</p>
+<h2 id="export-your-feed-list-from-feedly">Export Your Feed List from Feedly</h2>
+<p>Feedly makes exporting your feeds simple:</p>
+<ol>
+<li>Log into your Feedly account</li>
+<li>Click the gear icon next to “FEEDS” in the left sidebar</li>
+<li>Select “Export OPML”</li>
+<li>You’ll be redirected to <code>https://feedly.com/i/opml</code> where a download button appears</li>
+<li>Save the <code>.opml</code> file to your computer</li>
+</ol>
+<p>The export file is a plain XML document containing all your feed URLs and folder structure. If you have hundreds of feeds, the file may take a moment to generate.</p>
+<h2 id="verify-your-opml-file">Verify Your OPML File</h2>
+<p>Before importing, it’s worth checking the exported file. Open it with a text editor to confirm it contains your feeds:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;opml</span> <span class="na">version=</span><span class="s">&#34;2.0&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;head&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;title&gt;</span>Feedly Subscriptions<span class="nt">&lt;/title&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/head&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;body&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;outline</span> <span class="na">text=</span><span class="s">&#34;Technology&#34;</span> <span class="na">title=</span><span class="s">&#34;Technology&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;outline</span> <span class="na">type=</span><span class="s">&#34;rss&#34;</span> <span class="na">text=</span><span class="s">&#34;Example Feed&#34;</span> <span class="na">xmlUrl=</span><span class="s">&#34;https://example.com/feed.xml&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/outline&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/body&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/opml&gt;</span>
+</span></span></code></pre></div><p>If the file is empty or malformed, try exporting again.</p>
+<h2 id="import-into-followit">Import Into Follow.it</h2>
+<p>Follow.it’s import process is equally straightforward:</p>
+<ol>
+<li>Log into your Follow.it account</li>
+<li>Navigate to the Discovery section or go directly to <code>https://follow.it/mass-follow</code></li>
+<li>Click on the “Mass Follow” tab</li>
+<li>Look for the OPML upload option — you can either drag and drop your file or click to browse</li>
+<li>Select your exported Feedly OPML file</li>
+<li>Follow.it will process the file and begin subscribing to all feeds</li>
+</ol>
+<p>The import can take several minutes for large feed lists. Follow.it will display progress and notify you when complete. Any feeds that no longer exist or are inaccessible will be flagged so you can remove them manually.</p>
+<h2 id="post-migration-cleanup">Post-Migration Cleanup</h2>
+<p>After importing, check your feeds in Follow.it:</p>
+<ul>
+<li>Verify all feeds imported successfully by reviewing your subscription count</li>
+<li>Organize feeds into Follow.it’s collection system if needed (different from Feedly’s folder structure)</li>
+<li>Test that feeds are actively updating with new content</li>
+<li>Remove any duplicate subscriptions or broken feeds</li>
+<li>Configure Follow.it-specific features like keyword filtering or newsletter settings</li>
+</ul>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<p><strong>Missing feeds after import:</strong> Some feeds may fail to import if Follow.it can’t reach them or if they’re malformed. Check if the feed URL is still valid by pasting it into your browser.</p>
+<p><strong>Folder structure not preserved:</strong> Follow.it may not maintain Feedly’s exact folder hierarchy. You’ll need to reorganize subscriptions manually using Follow.it’s collections feature if organization matters to your workflow.</p>
+<p><strong>Import takes too long:</strong> Large imports (500+ feeds) can take 10-30 minutes. Don’t close the tab or refresh during the process.</p>
+<h2 id="alternative-command-line-approach">Alternative: Command-Line Approach</h2>
+<p>For those comfortable with command line, you can parse the OPML file and extract just the feed URLs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -oP <span class="s1">&#39;xmlUrl=&#34;\K[^&#34;]+&#39;</span> feedly.opml &gt; feeds.txt
+</span></span></code></pre></div><p>This creates a simple list of URLs that Follow.it can also import, useful if you need to filter or edit feeds before importing.</p>
+<p>The OPML standard ensures you’re never locked into a single reader — switching services is always possible as long as both support this format.</p>
+<h2 id="2026-comprehensive-guide-best-practices">2026 Comprehensive Guide: Best Practices</h2>
+<p>This extended guide covers Migrating Your Feedly RSS Feeds to Follow.it with advanced techniques and troubleshooting tips for 2026. Following modern best practices ensures reliable, maintainable, and secure systems.</p>
+<h2 id="advanced-implementation-strategies">Advanced Implementation Strategies</h2>
+<p>For complex deployments, consider these approaches: Infrastructure as Code for reproducible environments, container-based isolation for dependency management, and CI/CD pipelines for automated testing and deployment. Always document your custom configurations and maintain separate development, staging, and production environments.</p>
+<h2 id="security-and-hardening">Security and Hardening</h2>
+<p>Security is foundational to all system administration. Implement layered defense: network segmentation, host-based firewalls, intrusion detection, and regular security audits. Use SSH key-based authentication instead of passwords. Encrypt sensitive data at rest and in transit. Follow the principle of least privilege for access controls.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor resources continuously with tools like top, htop, iotop</li>
+<li>Profile application performance before and after optimizations</li>
+<li>Use caching strategically: application caches, database query caching, CDN for static assets</li>
+<li>Optimize database queries with proper indexing and query analysis</li>
+<li>Implement connection pooling for network services</li>
+</ul>
+<h2 id="troubleshooting-methodology">Troubleshooting Methodology</h2>
+<p>Follow a systematic approach to debugging: reproduce the issue, isolate variables, check logs, test fixes. Keep detailed logs and document solutions found. For intermittent issues, add monitoring and alerting. Use verbose modes and debug flags when needed.</p>
+<h2 id="related-tools-and-utilities">Related Tools and Utilities</h2>
+<p>These tools complement the techniques covered in this article:</p>
+<ul>
+<li>System monitoring: htop, vmstat, iostat, dstat for resource tracking</li>
+<li>Network analysis: tcpdump, wireshark, netstat, ss for connectivity debugging</li>
+<li>Log management: journalctl, tail, less for log analysis</li>
+<li>File operations: find, locate, fd, tree for efficient searching</li>
+<li>Package management: dnf, apt, rpm, zypper for package operations</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Modern operations emphasize automation, observability, and version control. Use orchestration tools like Ansible, Terraform, or Kubernetes for infrastructure. Implement centralized logging and metrics. Maintain comprehensive documentation for all systems and processes.</p>
+<h2 id="quick-reference-summary">Quick Reference Summary</h2>
+<p>This comprehensive guide provides extended knowledge for Migrating Your Feedly RSS Feeds to Follow.it. For specialized requirements, refer to official documentation. Practice in test environments before production deployment. Keep backups of critical configurations and data.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

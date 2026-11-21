@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ocf_pacemaker_remote(7) · Linux Manual Pages</title>
+<meta name="description" content="ocf_pacemaker_remote – remote resource agent">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-ocf_pacemaker_remote/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>ocf_pacemaker_remote(7)</h1>
+
+
+
+
+
+<p>ocf_pacemaker_remote &#8211; remote resource agent</p>
+<h2>Synopsis</h2>
+<p><code>OCF_RESKEY_server</code>=string [<code>OCF_RESKEY_port</code>=string] [<code>OCF_RESKEY_reconnect_interval</code>=string] <code>remote</code> [start | stop | reload | monitor | migrate_to | migrate_from | meta-data]</p>
+<h2>Description</h2>
+<h2>Supported Parameters</h2>
+<p><code>OCF_RESKEY_server</code> = string</p>
+<dl>
+<dd>Server location </dd>
+<p> Server location to connect to. This can be an ip address or hostname.</dl>
+<p> <code>OCF_RESKEY_port</code> = string [3121]</p>
+<dl>
+<dd>tcp port </dd>
+<p> tcp port to connect to.</dl>
+<p> <code>OCF_RESKEY_reconnect_interval</code> = string [0]</p>
+<dl>
+<dd>reconnect interval </dd>
+<p> Interval in seconds at which Pacemaker will attempt to reconnect to a remote node after an active connection to the remote node has been severed. When this value is nonzero, Pacemaker will retry the connection indefinitely, at the specified interval. As with any time-based actions, this is not guaranteed to be checked more frequently than the value of the cluster-recheck-interval cluster option.</dl>
+<h2>Author</h2>
+<p><code>Andrew Beekhof</code> &lt;andrew [at] beekhof.net&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

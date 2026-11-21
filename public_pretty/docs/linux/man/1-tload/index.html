@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tload(1) · Linux Manual Pages</title>
+<meta name="description" content="tload – graphic representation of system load average">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tload/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tload(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> tload &#8211; graphic representation of system load average </p>
+<h2>SYNOPSIS</h2>
+<p> <code>tload</code> [<i>options</i>] [<i>tty</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>tload</code> prints a graph of the current system load average to the specified <i>tty</i> (or the tty of the <code>tload</code> process if none is specified).</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-s</code>, <code>&#8211;scale</code> <i>number</i></dt>
+<dd> The scale option allows a vertical scale to be specified for the display (in characters between graph ticks); thus, a smaller value represents a larger scale, and vice versa.</dd>
+<dt><code>-d</code>, <code>&#8211;delay</code> <i>seconds</i></dt>
+<dd> The delay sets the delay between graph updates in <i>seconds</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display this help text.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd></dl>
+<h2>FILES</h2>
+<p> <i>/proc/loadavg</i> load average information</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/1-top/">top</a></code>(1), <code><a href="/docs/linux/man/1-uptime/">uptime</a></code>(1), <code><a href="/docs/linux/man/1-w/">w</a></code>(1)</p>
+<h2>BUGS</h2>
+<p> The <code>-d</code><i> delay</i> option sets the time argument for an <code><a href="/docs/linux/man/2-alarm/">alarm</a></code>(2); if -d 0 is specified, the alarm is set to 0, which will never send the <code>SIGALRM</code> and update the display.</p>
+<h2>AUTHORS</h2>
+<p> Branko Lankester, David Engel Michael K. Johnson</p>
+<h2>REPORTING BUGS</h2>
+<p> Please send bug reports to </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

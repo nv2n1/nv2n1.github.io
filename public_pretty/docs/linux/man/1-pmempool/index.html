@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pmempool(1) · Linux Manual Pages</title>
+<meta name="description" content="pmempool – Persistent Memory Pool Management Tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pmempool/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pmempool(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> pmempool &#8211; Persistent Memory Pool Management Tool</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pmempool [&#8211;help] [&#8211;version] &lt;command&gt; [&lt;args&gt;]</code></p>
+<h2>DESCRIPTION</h2>
+<p> The <code>pmempool</code> is a management tool for <i>Persistent Memory</i> pool files created by <code>NVML</code> libraries. </p>
+<p> The main purpose of <code>pmempool</code> is to provide a user with a set of utilities for off-line analysis and manipulation of pools created by pmem libraries. The pmempool is a generic command which consists of subcommands for specific purposes. Some of subcommands are required to work <i>without</i> any impact on processed pool, but some of them <i>may</i> create a new or modify an existing one. </p>
+<p> The <code>pmempool</code> may be useful for troubleshooting by system administrators and for software developers who work on applications based on <code>NVML</code> library. The latter may find these tools useful for testing and debugging purposes also.</p>
+<h2>OPTIONS</h2>
+<p> <code>-V, &#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Prints the version of <code>pmempool.</code></dd></dl>
+<p> <code>-h, &#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Prints synopsis and list of commands.</dd></dl>
+<h2>COMMANDS</h2>
+<p> Currently there is a following set of commands available: </p>
+<p> <code><a href="/docs/linux/man/1-pmempool-info/">pmempool-info</a>(1)</code></p>
+<dl>
+<dt>
+</dt><dd> Prints information and statistics in human-readable format about specified pool.</dd></dl>
+<p> <code><a href="/docs/linux/man/1-pmempool-check/">pmempool-check</a>(1)</code></p>
+<dl>
+<dt>
+</dt><dd> Checks pool&#8217;s consistency and repairs pool if it is not consistent.</dd></dl>
+<p> <code><a href="/docs/linux/man/1-pmempool-create/">pmempool-create</a>(1)</code></p>
+<dl>
+<dt>
+</dt><dd> Creates a pool of specified type with additional properties specific for this type of pool.</dd></dl>
+<p> <code><a href="/docs/linux/man/1-pmempool-dump/">pmempool-dump</a>(1)</code></p>
+<dl>
+<dt>
+</dt><dd> Dumps usable data from pool in hexadecimal or binary format.</dd></dl>
+<p> <code><a href="/docs/linux/man/1-pmempool-rm/">pmempool-rm</a>(1)</code></p>
+<dl>
+<dt>
+</dt><dd> Removes pool file or all pool files listed in poolset configuration file.</dd></dl>
+<p> <code><a href="/docs/linux/man/1-pmempool-convert/">pmempool-convert</a>(1)</code></p>
+<dl>
+<dt>
+</dt><dd> Updates the pool to the latest available layout version.</dd></dl>
+<p> In order to get more information about specific <i>command</i> you can use <code>pmempool help &lt;command&gt;.</code></p>
+<h2>SEE ALSO</h2>
+<p> <code>libpmemlog(3) libpmemblk(3) libpmemobj(3)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

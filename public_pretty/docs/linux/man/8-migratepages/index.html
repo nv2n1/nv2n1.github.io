@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>migratepages(8) · Linux Manual Pages</title>
+<meta name="description" content="migratepages – Migrate the physical location a processes pages">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-migratepages/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>migratepages(8)</h1>
+
+
+
+
+
+<p>migratepages &#8211; Migrate the physical location a processes pages</p>
+<h2>Synopsis</h2>
+<p><code>migratepages</code> pid from-nodes to-nodes</p>
+<h2>Description</h2>
+<p><code>migratepages</code> moves the physical location of a processes pages without any changes of the virtual address space of the process. Moving the pages allows one to change the distances of a process to its memory. Performance may be optimized by moving a processes pages to the node where it is executing. </p>
+<p> If multiple nodes are specified for from-nodes or to-nodes then an attempt is made to preserve the relative location of each page in each nodeset. </p>
+<p> For example if we move from nodes 2-5 to 7,9,12-13 then the preferred mode of operation is to move pages from 2-&gt;7, 3-&gt;9, 4-&gt;12 and 5-&gt;13. However, this is only posssible if enough memory is available.</p>
+<dl>
+<dt>Valid node specifiers</dt>
+<dd>
+<table>
+<tr VALIGN=top>
+<td>all</td>
+<td>All nodes
+</td>
+</tr>
+<tr VALIGN=top>
+<td>number</td>
+<td>Node number
+</td>
+</tr>
+<tr VALIGN=top>
+<td>number1{,number2}</td>
+<td>Node number1 and Node number2
+</td>
+</tr>
+<tr VALIGN=top>
+<td>number1-number2</td>
+<td>Nodes from number1 to number2
+</td>
+</tr>
+<tr VALIGN=top>
+<td>! nodes</td>
+<td>Invert selection of the following specification.
+</td>
+</tr>
+</table>
+</dd></dl>
+<h2>Notes</h2>
+<p>Requires an NUMA policy aware kernel with support for page migration (linux 2.6.16 and later). migratepages will only move pages that are not shared with other processes if called by a user without administrative priviledges (but with the right to modify the process). migratepages will move all pages if invoked from root (or a user with administrative priviledges). </p>
+<h2>Files</h2>
+<p><i>/proc/&lt;pid&gt;/numa_maps</i> for information about the NUMA memory use of a process.</p>
+<h2>Copyright</h2>
+<p>Copyright 2005-2006 Christoph Lameter, Silicon Graphics, Inc. migratepages is under the GNU General Public License, v.2</p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/8-numactl/">numactl</a>(8)</i> , <i><a href="/docs/linux/man/2-set_mempolicy/">set_mempolicy</a>(2)</i> , <i><a href="/docs/linux/man/2-get_mempolicy/">get_mempolicy</a>(2)</i> , <i><a href="/docs/linux/man/2-mbind/">mbind</a>(2)</i> , <i><a href="/docs/linux/man/2-sched_setaffinity/">sched_setaffinity</a>(2)</i> , <i><a href="/docs/linux/man/2-sched_getaffinity/">sched_getaffinity</a>(2)</i> , <i><a href="/docs/linux/man/5-proc/">proc</a>(5)</i> , <i><a href="/docs/linux/man/3-ftok/">ftok</a>(3)</i> , <i><a href="/docs/linux/man/2-shmat/">shmat</a>(2)</i> , <i><a href="/docs/linux/man/1-taskset/">taskset</a>(1)</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tc-vlan(8) · Linux Manual Pages</title>
+<meta name="description" content="vlan – vlan manipulation module">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-tc-vlan/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>tc-vlan(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>vlan &#8211; vlan manipulation module</p>
+<h2>Synopsis</h2>
+<p><code>tc</code> &#8230; <code>action vlan</code> { <code>pop</code> | <code>pop_eth</code> | <i>PUSH</i> | <i>MODIFY</i> | <i>PUSH_ETH</i> } [ <i>CONTROL</i> ] </p>
+<pre><code>PUSH :=
+push [ protocol
+VLANPROTO ]
+[ priority
+VLANPRIO ]
+id VLANID
+MODIFY :=
+modify [ protocol
+VLANPROTO ]
+[ priority
+VLANPRIO ]
+id VLANID
+PUSH_ETH :=
+push_eth
+dst_mac LLADDR src_mac LLADDR
+CONTROL := {
+    reclassify | pipe | drop | continue | pass | goto chain CHAIN_INDEX }</code></pre>
+<h2>Description</h2>
+<p>The <code>vlan</code> action allows to perform 802.1Q en- or decapsulation on a packet, reflected by the operation modes <i>POP</i>, <i>PUSH</i> and <i>MODIFY</i>. The <i>POP</i> mode is simple, as no further information is required to just drop the outer-most VLAN encapsulation. The <i>PUSH</i> and <i>MODIFY</i> modes require at least a <i>VLANID</i> and allow to optionally choose the <i>VLANPROTO</i> to use. The <code>vlan</code> action can also be used to add or remove the base Ethernet header. The <code>pop_eth</code> mode, which takes no argument, is used to remove the base Ethernet header. All existing VLANs must have been previously dropped. The opposite operation, adding a base Ethernet header, is done with the <code>push_eth</code> mode. In that case, the packet must have no MAC header (stacking MAC headers is not permitted). This mode is mostly useful when a previous action has encapsulated the whole original frame behind a network header and one needs to prepend an Ethernet header before forwarding the resulting packet. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>pop</code></dt>
+<dd>Decapsulation mode, no further arguments allowed.</dd>
+<dt><code>push</code></dt>
+<dd>Encapsulation mode. Requires at least <code>id</code> option.</dd>
+<dt><code>modify</code></dt>
+<dd>Replace mode. Existing 802.1Q tag is replaced. Requires at least <code>id</code> option.</dd>
+<dt><code>pop_eth</code></dt>
+<dd>Ethernet header decapsulation mode. Only works on a plain Ethernet header: VLANs, if any, must be removed first.</dd>
+<dt><code>push_eth</code></dt>
+<dd>Ethernet header encapsulation mode. The Ethertype is automatically set using the network header type. Chaining Ethernet headers is not allowed: the packet must have no MAC header when using this mode. Requires the <code>dst_mac </code>and<code> src_mac </code>options.</dd>
+<dt><code>id</code><i> VLANID</i></dt>
+<dd>Specify the VLAN ID to encapsulate into. <i>VLANID</i> is an unsigned 16bit integer, the format is detected automatically (e.g. prefix with &#8216;<code>0x</code>&#8216; for hexadecimal interpretation, etc.).</dd>
+<dt><code>protocol</code><i> VLANPROTO</i></dt>
+<dd>Choose the VLAN protocol to use. At the time of writing, the kernel accepts only <code>802.1Q</code> or <code>802.1ad</code>.</dd>
+<dt><code>priority</code><i> VLANPRIO</i></dt>
+<dd>Choose the VLAN priority to use. Decimal number in range of 0-7.</dd>
+<dt><code>dst_mac</code><i> LLADDR</i></dt>
+<dd>Choose the destination MAC address to use.</dd>
+<dt><code>src_mac</code><i> LLADDR</i></dt>
+<dd>Choose the source MAC address to use.</dd>
+<dt><i>CONTROL</i></dt>
+<dd>How to continue after executing this action.</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>reclassify</code></dt>
+<dd>Restarts classification by jumping back to the first filter attached to this action&#8217;s parent.</dd>
+<dt><code>pipe</code></dt>
+<dd>Continue with the next action, this is the default.</dd>
+<dt><code>drop</code></dt>
+<dd>Packet will be dropped without running further actions.</dd>
+<dt><code>continue</code></dt>
+<dd>Continue classification with next filter in line.</dd>
+<dt><code>pass</code></dt>
+<dd>Return to calling qdisc for packet processing. This ends the classification process.</dd></dl>
+</dl>
+</dl>
+<h2>Examples</h2>
+<p>The following example encapsulates incoming ICMP packets on eth0 from 10.0.0.2 into VLAN ID 123:</p>
+<dl>
+<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev eth0 parent ffff: pref 11 protocol ip \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>u32 match ip protocol 1 0xff flowid 1:1 \<br />
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt> match ip src 10.0.0.2 flowid 1:1 \<br />
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action vlan push id 123
+</dd></dl>
+<p> Here is an example of the <code>pop</code> function: Incoming VLAN packets on eth0 are decapsulated and the classification process then restarted for the plain packet:</p>
+<dl>
+<dd>#tc qdisc add dev eth0 handle ffff: ingress #tc filter add dev $ETH parent ffff: pref 1 protocol 802.1Q \ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>u32 match u32 0 0 flowid 1:1 \<br />
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>action vlan pop reclassify
+</dd></dl>
+<p> For an example of the <code>pop_eth</code> and <code>push_eth</code> modes, see <code><a href="/docs/linux/man/8-tc-mpls/">tc-mpls</a></code>(8). </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-tc-mpls/">tc-mpls</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

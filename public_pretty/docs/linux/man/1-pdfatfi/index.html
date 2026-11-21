@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pdfatfi(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pdfatfi/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pdfatfi(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>pdfatfi - Help program for the LaTeX package attachfile2.</p>
+<h2>SYNOPSIS</h2>
+<p>pdfatfi &lt;command&gt; [&lt;options&gt;] &lt;file[.atfi]&gt;]</p>
+<h2>DESCRIPTION</h2>
+<p>Helper program for the LaTeX package attachfile2.</p>
+<p>This package also tries to get and add meta information data, such as file size, file date, checksum, &hellip;.</p>
+<p>The script pdfatfi.pl is provided for use with old versions of pdfTeX and XeTeX that do not provide access to file metadata.</p>
+<p>The use of the Perl script is not mandatory. This data can be shown by PDF viewers, but they are not a requirement of the PDF specification.</p>
+<p>Package attachfile2 and the Perl script communicate via an auxiliary file with file extension .atfi. The script is used between two LaTeX runs and updates the auxiliary file.</p>
+ <pre>
+latex test
+pdfatfi test
+latex test
+dvips test
+ps2pdf test.ps test.pdf
+</pre> 
+<h2>OPTIONS</h2>
+<p>Various options are supported</p>
+<dl>
+<dt>--help
+</dt><dd> Show help text.
+</dd><dt>--version
+</dt><dd> Print version number
+</dd><dt>--(no)quiet
+</dt><dd> Suppress/don't suppress messages
+</dd><dt>--(no)verbose
+</dt><dd> Verbose (not verbose) printing.
+</dd><dt>--(no)debug
+</dt><dd> Debug infomation printed (not printed)</dd></dl>
+<h2>BUGS</h2>
+<p>Please log issues on the GitHub homepage:
+<a rel="nofollow" HREF="https://github.com/ho-tex/attachfile2/issues."><a href="https://github.com/ho-tex/attachfile2/issues">https://github.com/ho-tex/attachfile2/issues</a>.</a></p>
+<h2>AUTHOR</h2>
+<p>Heiko Oberdiek (ho-tex [at] tug.org)</p>
+<h2>SEE ALSO</h2>
+<p>See attachfile2.pdf for more details.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

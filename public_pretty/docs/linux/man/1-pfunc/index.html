@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pfunc(1) · Linux Manual Pages</title>
+<meta name="description" content="pfunc – grep for perl functions">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pfunc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pfunc(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pfunc &#8211; grep for perl functions </p>
+<h2>SYNOPSIS</h2>
+<pre>
+    pfunc subroutine FILES...
+</pre>
+<h2>DESCRIPTION</h2>
+<p> <code>pfunc</code> searches the named <font SIZE="-1">FILES</font> for all calls to the given subroutine. It will report back the file and line number each call is found on along with what sort of call it is </p>
+<pre>
+    function            foo()
+    class method        Class-&gt;foo()
+    object method       $obj-&gt;foo()
+</pre>
+<h2>EXAMPLE</h2>
+<pre>
+    $ pfunc isa /usr/share/perl/5.6.1/*.pm
+    Called as function in /usr/share/perl/5.6.1/CGI.pm at line 316
+    Called as function in /usr/share/perl/5.6.1/CGI.pm at line 327
+    Called as function in /usr/share/perl/5.6.1/CGI.pm at line 397
+    Called as function in /usr/share/perl/5.6.1/CGI.pm at line 494
+    Called as function in /usr/share/perl/5.6.1/CGI.pm at line 495
+    Called as object method in /usr/share/perl/5.6.1/CPAN.pm at line 4957
+    Called as function in /usr/share/perl/5.6.1/Dumpvalue.pm at line 191
+    Called as function in /usr/share/perl/5.6.1/Dumpvalue.pm at line 218
+    Called as function in /usr/share/perl/5.6.1/Dumpvalue.pm at line 248
+    Called as function in /usr/share/perl/5.6.1/Dumpvalue.pm at line 251
+    Called as function in /usr/share/perl/5.6.1/Dumpvalue.pm at line 254
+    Called as object method in /usr/share/perl/5.6.1/Shell.pm at line 28
+    Called as object method in /usr/share/perl/5.6.1/base.pm at line 12
+</pre>
+<h2>NOTES</h2>
+<p> Its not fast, but its accurate.</p>
+<h2>AUTHOR</h2>
+<p> Michael G Schwern &lt;schwern [at] pobox.com&gt;</p>
+<h2>SEE ALSO</h2>
+<p> Module::Info </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

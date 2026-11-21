@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lsdiff(1) · Linux Manual Pages</title>
+<meta name="description" content="lsdiff – show which files are modified by a patch">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lsdiff/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lsdiff(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> lsdiff &#8211; show which files are modified by a patch </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>lsdiff</code> [[-n] | [&#8211;line-number]] [[-p&nbsp;<i>n</i>] | [&#8211;strip-match=<i>n</i>]] [&#8211;strip=<i>n</i>] [&#8211;addprefix=<i>PREFIX</i>] [[-s] | [&#8211;status]] [[-E] | [&#8211;empty-files-as-removed]] [[-i&nbsp;<i>PATTERN</i>] | [&#8211;include=<i>PATTERN</i>]] [[-x&nbsp;<i>PATTERN</i>] | [&#8211;exclude=<i>PATTERN</i>]] [[-z] | [&#8211;decompress]] [[-#&nbsp;<i>RANGE</i>] | [&#8211;hunks=<i>RANGE</i>]] [&#8211;lines=<i>RANGE</i>] [[-F<i>RANGE</i>] | [&#8211;files=<i>RANGE</i>]] [[-H] | [&#8211;with-filename]] [[-h] | [&#8211;no-filename]] [[-v] | [&#8211;verbose]&#8230;] [<i>file</i>&#8230;]</dt>
+<dt> <code>lsdiff</code> {[&#8211;help] | [&#8211;version] | [&#8211;filter &#8230;] | [&#8211;grep &#8230;]}</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>List the files modified by a patch. </dd>
+<p> You can use both unified and context format diffs with this program.</p>
+<h2>OPTIONS</h2>
+<p> <code>-n</code>, <code>&#8211;line-number</code></p>
+<dl>
+<dt>
+</dt><dd> Display the line number that each patch begins at. If verbose output is requested (using <code>-nv</code>), each hunk of each patch is listed as well. </dd>
+<p> For each file that is modified, a line is generated containing the line number of the beginning of the patch, followed by a Tab character, followed by the name of the file that is modified. If <code>-v</code> is given once, following each of these lines will be one line for each hunk, consisting of a Tab character, the line number that the hunk begins at, another Tab character, the string &#8220;Hunk #&#8221;, and the hunk number (starting at 1). </p>
+<p> If the <code>-v</code> is given twice in conjunction with <code>-n</code> (i.e. <code>-nvv</code>), the format is slightly different: hunk-level descriptive text is shown after each hunk number, and the <code>&#8211;number-files</code> option is enabled.</dl>
+<p> <code>-N</code>, <code>&#8211;number-files</code></p>
+<dl>
+<dt>
+</dt><dd> File numbers are listed, beginning at 1, before each filename.</dd></dl>
+<p> <code>-#</code> <i>RANGE</i>, <code>&#8211;hunks</code>=<i>RANGE</i></p>
+<dl>
+<dt>
+</dt><dd> Only list hunks within the specified <i>RANGE</i>. Hunks are numbered from 1, and the range is a comma-separated list of numbers or &#8220;first-last&#8221; spans, optionially preceeded by a modifier &#8216;x&#8217; which inverts the entire range; either the first or the last in the span may be omitted to indicate no limit in that direction.</dd></dl>
+<p> <code>&#8211;lines</code>=<i>RANGE</i></p>
+<dl>
+<dt>
+</dt><dd> Only list hunks that contain lines from the original file that lie within the specified <i>RANGE</i>. Lines are numbered from 1, and the range is a comma-separated list of numbers or &#8220;first-last&#8221; spans, optionially preceeded by a modifier &#8216;x&#8217; which inverts the entire range; either the first or the last in the span may be omitted to indicate no limit in that direction.</dd></dl>
+<p> <code>-F</code>=<i>RANGE</i>, <code>&#8211;files</code>=<i>RANGE</i></p>
+<dl>
+<dt>
+</dt><dd> Only list files indicated by the specified <i>RANGE</i>. Files are numbered from 1 in the order they appear in the patch input, and the range is a comma-separated list of numbers or &#8220;first-last&#8221; spans, optionially preceeded by a modifier &#8216;x&#8217; which inverts the entire range; either the first or the last in the span may be omitted to indicate no limit in that direction.</dd></dl>
+<p> <code>-p</code> <i>n</i>, <code>&#8211;strip-match=</code><i>n</i></p>
+<dl>
+<dt>
+</dt><dd> When matching, ignore the first <i>n</i> components of the pathname.</dd></dl>
+<p> <code>&#8211;strip</code>=<i>n</i></p>
+<dl>
+<dt>
+</dt><dd> Remove the first <i>n</i> components of the pathname before displaying it.</dd></dl>
+<p> <code>&#8211;addprefix</code>=<i>PREFIX</i></p>
+<dl>
+<dt>
+</dt><dd> Prefix the pathname with <i>PREFIX</i> before displaying it.</dd></dl>
+<p> <code>-s</code>, <code>&#8211;status</code></p>
+<dl>
+<dt>
+</dt><dd> Show file additions, modifications and removals. A file addition is indicated by a &#8220;+&#8221;, a removal by a &#8220;-&#8220;, and a modification by a &#8220;!&#8221;.</dd></dl>
+<p> <code>-E</code>, <code>&#8211;empty-files-as-removed</code></p>
+<dl>
+<dt>
+</dt><dd> Treat empty files as absent for the purpose of displaying file additions, modifications and removals.</dd></dl>
+<p> <code>-i</code> <i>PATTERN</i>, <code>&#8211;include=</code><i>PATTERN</i></p>
+<dl>
+<dt>
+</dt><dd> Include only files matching <i>PATTERN</i>.</dd></dl>
+<p> <code>-x</code> <i>PATTERN</i>, <code>&#8211;exclude=</code><i>PATTERN</i></p>
+<dl>
+<dt>
+</dt><dd> Exclude files matching <i>PATTERN</i>.</dd></dl>
+<p> <code>-z</code>, <code>&#8211;decompress</code></p>
+<dl>
+<dt>
+</dt><dd> Decompress files with extensions .gz and .bz2.</dd></dl>
+<p> <code>-H</code>, <code>&#8211;with-filename</code></p>
+<dl>
+<dt>
+</dt><dd> Print the name of the patch file containing each patch.</dd></dl>
+<p> <code>-h</code>, <code>&#8211;no-filename</code></p>
+<dl>
+<dt>
+</dt><dd> Suppress the name of the patch file containing each patch.</dd></dl>
+<p> <code>-v</code>, <code>&#8211;verbose</code></p>
+<dl>
+<dt>
+</dt><dd> Verbose output.</dd></dl>
+<p> <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Display a short usage message.</dd></dl>
+<p> <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Display the version number of lsdiff.</dd></dl>
+<p> <code>&#8211;filter</code></p>
+<dl>
+<dt>
+</dt><dd> Behave like <code><a href="/docs/linux/man/1-filterdiff/">filterdiff</a></code>(1) instead.</dd></dl>
+<p> <code>&#8211;grep</code></p>
+<dl>
+<dt>
+</dt><dd> Behave like <code><a href="/docs/linux/man/1-grepdiff/">grepdiff</a></code>(1) instead.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-filterdiff/">filterdiff</a></code>(1), <code><a href="/docs/linux/man/1-grepdiff/">grepdiff</a></code>(1)</p>
+<h2>EXAMPLES</h2>
+<p> To sort the order of touched files in a patch, you can use: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+lsdiff patch | sort -u | \
+  xargs -rn1 filterdiff patch -i
+</pre>
+</dd></dl>
+<p> To show only added files in a patch: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+lsdiff -s patch | grep '^+' | \
+  cut -c2- | xargs -rn1 filterdiff patch -i
+</pre>
+</dd></dl>
+<p> To show the headers of all file hunks: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+lsdiff -n patch | (while read n file
+  do sed -ne &quot;$n,$(($n+1))p&quot; patch
+done)
+</pre>
+</dd></dl>
+<h2>AUTHOR</h2>
+<p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
+<dl>
+<dt>
+</dt><dd> Package maintainer</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

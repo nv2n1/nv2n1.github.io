@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>timedatex(8) · Linux Manual Pages</title>
+<meta name="description" content="timedatex – D-Bus service for system clock and RTC settings">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-timedatex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>timedatex(8)</h1>
+
+
+
+
+
+<p>timedatex &#8211; D-Bus service for system clock and RTC settings </p>
+<h2>Synopsis</h2>
+<p><code>timedatex</code> </p>
+<h2>Description</h2>
+<p>timedatex is a D-Bus service that implements the org.freedesktop.timedate1 interface. It can be used to read and set the system clock, the real-time clock (RTC), the system timezone, and enable or disable an NTP client installed on the system. It is a replacement for the systemd-timedated service. The system clock is read and set with microsecond resolution, the precision is limited mostly by D-Bus latency. When setting the clock to an absolute time, a correction is applied for the time spent in the polkit authorization check. The clock can be also adjusted precisely by an offset. The RTC is read with a resolution of one second. The hwclock program is used to set the RTC with a high precision, update the estimated drift, and change the UTC/LOCAL setting. The system timezone is set by creating symlink /etc/localtime to a file in the /usr/share/zoneinfo directory. NTP units that should be controlled by timedatex need to be listed in text files in /etc/systemd/ntp-units.d and /usr/lib/systemd/ntp-units.d directories. The first valid unit from the files sorted by name can be enabled/disabled and started/stopped. Other NTP units will be disabled and stopped. </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-timedatectl/">timedatectl</a></code>(1), <code><a href="/docs/linux/man/8-systemd-timedated/">systemd-timedated</a></code>(8), <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8) </p>
+<h2>Author</h2>
+<p>Miroslav Lichvar &lt;mlichvar [at] redhat.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

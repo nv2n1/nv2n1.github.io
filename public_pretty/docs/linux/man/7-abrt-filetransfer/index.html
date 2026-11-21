@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>abrt-filetransfer(7) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-abrt-filetransfer/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>abrt-filetransfer(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>FileTransfer plugin for abrt(8)</p>
+<h2>Description</h2>
+<p><i>abrt</i> is a daemon that watches for application crashes. When a crash occurs, it collects the crash data and takes action according to its configuration. This manual page describes the <i>FileTransfer</i> plugin for <i>abrt</i>. This plugin is used to transfer the crash report to another machine using a file transfer protocol. The protocols supported are FTP, FTPS, HTTP, HTTPS, SCP, SFTP, and TFTP.</p>
+<h2>Invocation</h2>
+<p>The plugin is invoked in the <i>abrt.conf</i> file, usually in the <i>ActionsAndReporters</i> option and/or the <i>[cron]</i> section. There are two modes of invocation: * Specify <i>FileTransfer(one)</i> in ActionsAndReporters directive. Immediately after crash is detected, the plugin transfers crash data to the server specified in the <i>FileTransfer.conf</i> configuration file. * Specify <i>FileTransfer(store)</i> in ActionsAndReporters directive and add <i>HH:MM = FileTransfer</i> line in [cron] section. At the time of the crash, the plugin stores a record of it in its internal list. When specified time is reached, the plugin iterates through its internal list and sends every recorded crash to the specified URL. After that, the internal list is cleared.</p>
+<h2>Configuration</h2>
+<p>The <i>FileTransfer.conf</i> configuration file contains several entries in the format &quot;Option = Value&quot;. The options are:</p>
+<h3>Url</h3>
+<p>The URL of the server, where the crash should be transfered, specifying the protocol, the path, the user name and the password, for example:
+URL = <a HREF="ftp://user:passwd@server.com/path"><a href="ftp://user:passwd@server.com/path">ftp://user:passwd@server.com/path</a></a></p>
+<h3>ArchiveType</h3>
+<p>The type of the archive in which to pack the crash data. Currently, <i>.tar</i>, <i>.tar.gz</i>, <i>.tar.bz2</i> and <i>.zip</i> are supported. The default is <i>.tar.gz</i></p>
+<h3>RetryCount</h3>
+<p>This specifies how many times the plugin will try to resend the file if the transfer was not succesful. The plugin waits a while before it retries the transfer: see <i>RetryDelay</i>. The default is 3</p>
+<h3>RetryDelay</h3>
+<p>If the transfer was not succesful, the plugin will wait some time before sending the file again. This configuration option specifies the time in seconds. The default is 20.</p>
+<h2>Examples</h2>
+<p>Typical configuration in <i>abrt.conf</i>. The crash is stored each time it happens and at midnight, all the crash data is transferred to a central server. [common]
+ActionsAndReporters = FileTransfer(store)
+[cron]
+00:00 = FileTransfer</p>
+<h2>See Also</h2>
+<p><i>abrt</i>(8), <i><a HREF="/docs/linux/man/5-abrt-conf/">abrt.conf</a></i>(5), <i><a HREF="/docs/linux/man/7-abrt-plugins/">abrt-plugins</a></i>(7)</p>
+<h2>Author</h2>
+<p>Written by Daniel Novotny &lt;dnovotny [at] redhat.com&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

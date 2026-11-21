@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xcmsqueryblue(3) · Linux Manual Pages</title>
+<meta name="description" content="XcmsQueryBlack, XcmsQueryBlue, XcmsQueryGreen, XcmsQueryRed, XcmsQueryWhite – obtain black, blue, green, red, and white CCC color specifications">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xcmsqueryblue/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xcmsqueryblue(3)</h1>
+
+
+
+
+
+<p>XcmsQueryBlack, XcmsQueryBlue, XcmsQueryGreen, XcmsQueryRed, XcmsQueryWhite &#8211; obtain black, blue, green, red, and white CCC color specifications </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>Status XcmsQueryBlack(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</dd>
+<dd>Status XcmsQueryBlue(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</dd>
+<dd>Status XcmsQueryGreen(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</dd>
+<dd>Status XcmsQueryRed(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</dd>
+<dd>Status XcmsQueryWhite(XcmsCCC <i>ccc</i>, XcmsColorFormat <i>target_format</i>, XcmsColor *<i>color_return</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>ccc</i></dt>
+<dd>Specifies the CCC. Note that the CCC&#8217;s Client White Point and White Point Adjustment procedures are ignored.</dd>
+<dt><i>color_return</i></dt>
+<dd>Returns the color specification in the specified target format. The white point associated with the returned color specification is the Screen White Point. The value returned in the pixel member is undefined.</dd>
+<dt><i>target_format</i></dt>
+<dd>Specifies the target color specification format.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XcmsQueryBlack</code> function returns the color specification in the specified target format for zero-intensity red, green, and blue. </p>
+<p> The <code>XcmsQueryBlue</code> function returns the color specification in the specified target format for full-intensity blue while red and green are zero. </p>
+<p> The <code>XcmsQueryGreen</code> function returns the color specification in the specified target format for full-intensity green while red and blue are zero. </p>
+<p> The <code>XcmsQueryRed</code> function returns the color specification in the specified target format for full-intensity red while green and blue are zero. </p>
+<p> The <code>XcmsQueryWhite</code> function returns the color specification in the specified target format for full-intensity red, green, and blue.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xcmscielabquerymaxc/">XcmsCIELabQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmscieluvquerymaxc/">XcmsCIELuvQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmstekhvcquerymaxc/">XcmsTekHVCQueryMaxC</a>(3)<br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

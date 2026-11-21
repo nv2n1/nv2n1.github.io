@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_daycounter_impl(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::DayCounter::Impl – abstract base class for day counter implementations">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_daycounter_impl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_daycounter_impl(3)</h1>
+
+
+
+
+
+<p>QuantLib::DayCounter::Impl &#8211; abstract base class for day counter implementations </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/time/daycounter.hpp&gt; </p>
+<p> Inherited by Impl, Impl, AFB_Impl, ISDA_Impl, ISMA_Impl, Impl, Impl, Impl, EU_Impl, IT_Impl, and US_Impl. </p>
+<h3>Public Member Functions</h3>
+<p>virtual std::string <code>name</code> () const =0 </p>
+<p> virtual <code>BigInteger</code> <code>dayCount</code> (const <code>Date</code> &amp;d1, const <code>Date</code> &amp;d2) const<br />
+ <i>to be overloaded by more complex day counters </i><br />
+ virtual <code>Time</code> <code>yearFraction</code> (const <code>Date</code> &amp;d1, const <code>Date</code> &amp;d2, const <code>Date</code> &amp;refPeriodStart, const <code>Date</code> &amp;refPeriodEnd) const =0 </p>
+<h2>Detailed Description</h2>
+<p>abstract base class for day counter implementations </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

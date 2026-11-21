@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>epylog-modules(5) · Linux Manual Pages</title>
+<meta name="description" content="epylog-modules – epylog module cofiguration.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-epylog-modules/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>epylog-modules(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>epylog-modules</code> &#8211; epylog module cofiguration.</p>
+<h2>Synopsis</h2>
+<p><code>epylog</code> uses pluggable modules to perform analysis and report on syslog strings. This manpage explains the format of the module config files. </p>
+<h2>modules.d</h2>
+<p>Epylog config files are placed in the <code>modules.d</code> directory of the cfgdir specified in epylog.conf. Any file ending in .conf in that directory is considered a module config file. Most common location for modules.d directory is in /etc/epylog/modules.d.</p>
+<h2>module.conf</h2>
+<p>The name of the config file doesn&#8217;t carry much meaning, however it MUST end in .conf in order to be recognized as a module config file. </p>
+<p> The config file for each module is separated into two parts: [module] and [conf].</p>
+<h2>[module]</h2>
+<dl>
+<dt><code>desc</code></dt>
+<dd>The description of the module. It will be shown in the final report.</dd>
+<dt><code>exec</code></dt>
+<dd>This is where the &quot;body&quot; of the module is located. Most modules that come with the distribution will be placed in /usr/share/epylog/modules, but depending on your setup, you may place them elsewhere.</dd>
+<dt><code>files</code></dt>
+<dd>List the logfiles requested by this module in this field. Separate multiple entries by comma. Epylog will handle rotated files, but you need to specify the mask appropriately. E.g. the most common logrotate setup will place rotated files in the same directory and add .0, .1, .2, etc to the end of the file. Therefore, a file entry would look like so:<br />
+ <code>/var/log/filename[.#]</code><br />
+ If you have compression turned on, your entry will look like so:<br />
+ <code>/var/log/filename[.#.gz]</code><br />
+ Lastly, for advanced configurations, more complex entries may be required. E.g. if your logrotate saves rotated files in a subdirectory in /var/log, you can specify it like so:<br />
+ <code>/var/log/[rotate/]filename[.#.gz]</code><br />
+ This will work, too:<br />
+ <code>/var/log/filename[/var/rotate/filename.#.gz]</code><br />
+ In any case, &quot;#&quot; will be where the increments will go.</dd>
+<dt><code>enabled</code></dt>
+<dd>Can be either &quot;yes&quot; or &quot;no&quot;. If &quot;no&quot; is specified, Epylog will completely ignore this module.</dd>
+<dt><code>internal</code></dt>
+<dd>Can be either &quot;yes&quot; or &quot;no&quot;. If &quot;yes&quot;, then the module is handled as an internal module, and if &quot;no&quot;, then the external module API is used. See doc/modules.txt for more information about the module APIs.</dd>
+<dt><code>outhtml</code></dt>
+<dd>Specifies whether the output produced by the module is HTML or not. Can be either &quot;yes&quot; or &quot;no&quot;.</dd>
+<dt><code>priority</code></dt>
+<dd>An unsigned int. Most commonly a number from 0 to 10. Modules with the lowest number will be considered the highest prioroty and will be both invoked and presented in the final report before the others. </dd>
+</dl>
+<h2>[conf]</h2>
+<p>This is where per-module configuration directives go. Some modules have these, some don&#8217;t. Look in the module config file &#8212; the available values should be listed and described there.</p>
+<h2>Comments</h2>
+<p>Lines starting with &quot;#&quot; will be considered commented out.</p>
+<h2>Authors</h2>
+<p>Konstantin Ryabitsev &lt;icon [at] linux.duke.edu&gt;</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-epylog/">epylog</a>(8), Epylog(3), <a href="/docs/linux/man/5-epylog-conf/">epylog.conf</a>(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

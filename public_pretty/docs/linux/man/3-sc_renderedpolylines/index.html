@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_renderedpolylines(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::RenderedPolylines –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_renderedpolylines/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_renderedpolylines(3)</h1>
+
+
+
+
+
+<p>sc::RenderedPolylines &#8211;</p>
+<h2>Synopsis</h2>
+<p> Inherits <code>sc::RenderedObject</code>.</p>
+<h3>Public Types</h3>
+<p>enum <code>Coloring</code> { <code>None</code>, <code>Vertex</code> }</p>
+<h3>Public Member Functions</h3>
+<pre><code>RenderedPolylines (const Ref&lt; KeyVal &gt; &amp;)
+void initialize (int nvertex, int npolylines, RenderedPolylines::Coloring c=RenderedPolylines::None)
+int npolyline ()
+int nvertex ()
+int nvertex_in_polyline (int i) const
+double vertex (int i, int j) const
+double vertex_rgb (int i, int j) const
+int polyline (int i, int j) const
+int have_vertex_rgb () const
+void set_vertex (int, double x, double y, double z)
+void set_vertex_rgb (int, double r, double g, double b)
+void set_polyline (int i, int v1, int v2)
+void set_polyline (int i, int v1, int v2, int v3)
+void set_polyline (int i, int v1, int v2, int v3, int v4)
+void render (const Ref&lt; Render &gt; &amp;)
+</code></pre>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

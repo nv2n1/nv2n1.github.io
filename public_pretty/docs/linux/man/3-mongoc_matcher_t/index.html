@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mongoc_matcher_t(3) · Linux Manual Pages</title>
+<meta name="description" content="mongoc_matcher_t – Client-side document matching abstraction">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mongoc_matcher_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mongoc_matcher_t(3)</h1>
+
+
+
+
+
+<p>mongoc_matcher_t &#8211; Client-side document matching abstraction</p>
+<h2>Synopsis</h2>
+<pre>typedef struct _mongoc_matcher_t mongoc_matcher_t;</pre>
+<p><code>mongoc_matcher_t</code> provides a reduced-interface for client-side matching of BSON documents. </p>
+<p> It can perform the basics such as $in, $nin, $eq, $neq, $gt, $gte, $lt, and $lte. </p>
+<p> <code>NOTE</code></p>
+<dl COMPACT>
+<dd><code>mongoc_matcher_t</code> does not currently support the full spectrum of query operations that the MongoDB server supports.</dd></dl>
+<h2>Deprecated</h2>
+<p><code>NOTE</code></p>
+<dl COMPACT>
+<dd><code>mongoc_matcher_t</code> is deprecated and will be removed in version 2.0.</dd></dl>
+<h2>Example</h2>
+<pre>#include &lt;bcon.h&gt;
+#include &lt;bson.h&gt;
+#include &lt;mongoc.h&gt;
+#include &lt;stdio.h&gt;
+int
+main (int argc,
+ char *argv[])
+{
+ mongoc_matcher_t *matcher;
+ bson_reader_t *reader;
+ const bson_t *bson;
+ bson_t *spec;
+ char *str;
+ int fd;
+ mongoc_init ();
+#ifdef _WIN32
+ fd = fileno (stdin);
+#else
+ fd = STDIN_FILENO;
+#endif
+ reader = bson_reader_new_from_fd (fd, false);
+ spec = BCON_NEW (&quot;hello&quot;, &quot;world&quot;);
+ matcher = mongoc_matcher_new (spec, NULL);
+ while ((bson = bson_reader_read (reader, NULL))) {
+ if (mongoc_matcher_match (matcher, bson)) {
+ str = bson_as_json (bson, NULL);
+ printf (&quot;%s
+&quot;, str);
+ bson_free (str);
+ }
+ }
+ bson_reader_destroy (reader);
+ bson_destroy (spec);
+ mongoc_cleanup ();
+ return 0;
+}</pre>
+<h2>Colophon</h2>
+<p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

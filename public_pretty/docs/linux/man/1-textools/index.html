@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>textools(1) · Linux Manual Pages</title>
+<meta name="description" content="textools – generate TeX map files, afm files, fix texmf trees">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-textools/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>textools(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> textools &#8211; generate TeX map files, afm files, fix texmf trees</p>
+<h2>SYNOPSIS</h2>
+<p> <code>textools</code> [ <i>OPTIONS</i> &#8230; ] [ <i>pattern</i> or <i>name</i> or <i>fromroot toroot</i> ] [ <i>MODIFIER OPTIONS</i> &#8230; ] </p>
+<h2>DESCRIPTION</h2>
+<p> <code>textools</code> processes map files, converts Mac files to DOS format, generates map files, fixes texmf trees, and performs a utility-belt worth of other tasks also useful in installing and maintaining the zillion auxilliary files that <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) and its friends require. </p>
+<h2>OPTIONS</h2>
+<p> The modifier options are listed after the options that they modify.</p>
+<dl>
+<dt><code>&#8211;downcasefilenames</code> [<code>&#8211;recurse</code>] [<code>&#8211;force</code>]</dt>
+<dd>
+</dd><dt><code>&#8211;encmake</code> <i>afmfile</i> <i>encodingname</i></dt>
+<dd>
+</dd><dt><code>&#8211;findfile</code> <i>filename</i> [<code>&#8211;recurse</code>]</dt>
+<dd>
+</dd><dt><code>&#8211;fixafmfiles</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
+<dd>
+</dd><dt><code>&#8211;fixtexmftrees</code> [<i>texmfroot</i>] [<code>&#8211;force</code>]</dt>
+<dd>
+</dd><dt><code>&#8211;hidemapnames</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
+<dd>
+</dd><dt><code>&#8211;mactodos</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
+<dd> Fixes newlines from Macintosh files so that the file is readable in DOS.</dd>
+<dt><code>&#8211;removemapnames</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
+<dd>
+</dd><dt><code>&#8211;replacefile</code> <i>filename</i> [<code>&#8211;force</code>]</dt>
+<dd>
+</dd><dt><code>&#8211;restoremapnames</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
+<dd>
+</dd><dt><code>&#8211;showfont</code> <i>filename</i></dt>
+<dd>
+</dd><dt><code>&#8211;stripformfeeds</code> [<code>&#8211;recurse</code>] [<code>&#8211;force</code>]</dt>
+<dd>
+</dd><dt><code>&#8211;tpmmake</code> <i>tpmfile</i></dt>
+<dd> Package files into a <i>t-modulename.tpm</i> file. Imagine this file structure: </dd>
+<pre>
+tex/context/third/modulename/t-modulename.vim
+doc/context/third/modulename/modulename-doc.pdf
+doc/context/third/modulename/modulename-demo.pdf
+tpm/t-modulename.tpm
+</pre>
+<p> where <i>t-modulename.tpm</i> is a valid tpm file. When you run </p>
+<pre>
+textools --tpmmake t-modulename
+</pre>
+<p> the <code>textools</code> command will replace file sizes declared in the tpm file with proper values and create a ZIP archive <i>t-modulename.zip</i> with the files specified by the tpm file. This command needs to be run in the root of the TEXMF tree.</p>
+<dt><code>&#8211;unzipfiles</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
+<dd>
+</dd><dt><code>&#8211;updatetree</code> <i>fromroot</i> <i>toroot</i> [<code>&#8211;force</code> <code>&#8211;nocheck</code> <code>&#8211;merge</code> <code>&#8211;delete</code>]</dt>
+<dd>
+</dd><dt><code>&#8211;videmapnames</code> [<i>pattern</i>] [<code>&#8211;recurse</code>]</dt>
+<dd>
+</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-texexec/">texexec</a></code>(1), <code><a href="/docs/linux/man/1-texmfstart/">texmfstart</a></code>(1). </p>
+<p> <a rel="nofollow" href="http://www.contextgarden.net">http://www.contextgarden.net</a> laURL: L raConTeXt wiki </p>
+<h2>BUGS</h2>
+<p> This manual page is incomplete because I have no clue what this program does. </p>
+<h2>AUTHOR</h2>
+<p> <code><a href="/docs/linux/man/1-textools/">textools</a></code>(1) is part of the <a rel="nofollow" href="http://www.contextgarden.net">http://www.contextgarden.net</a> laURL: L raConTeXt suite of typesetting programs based on the <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) family of typesetting programs. This manual page was written by Sanjoy Mahajan &lt;sanjoy [at] mit.edu&gt; based on running <code>textools &#8211;help</code> and with help from Mojca Miklavec. It is in the public domain. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rindex(3) · Linux Manual Pages</title>
+<meta name="description" content="index, rindex – locate character in string">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-rindex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>rindex(3)</h1>
+
+
+
+
+
+<p>index, rindex &#8211; locate character in string</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;strings.h&gt;
+char *index(const char *s, int c);
+char *rindex(const char *s, int c);</code></pre>
+<h2>Description</h2>
+<p>The <code>index</code>() function returns a pointer to the first occurrence of the character <i>c</i> in the string <i>s</i>. </p>
+<p> The <code>rindex</code>() function returns a pointer to the last occurrence of the character <i>c</i> in the string <i>s</i>. </p>
+<p> The terminating null byte (&#8216;\0&#8217;) is considered to be a part of the strings.  </p>
+<h2>RETURN VALUE</h2>
+<p> The <code>index</code>() and <code>rindex</code>() functions return a pointer to the matched character or NULL if the character is not found.  </p>
+<h2>ATTRIBUTES</h2>
+<p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
+<table BORDER>
+<tr VALIGN=top>
+<td><code>Interface</code></td>
+<td><code>Attribute</code></td>
+<td><code>Value</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>index</code>(), <code>rindex</code>() </td>
+<td>Thread safety</td>
+<td>MT-Safe
+</td>
+</tr>
+</table>
+<h2>CONFORMING TO</h2>
+<p> 4.3BSD; marked as LEGACY in POSIX.1-2001. POSIX.1-2008 removes the specifications of <code>index</code>() and <code>rindex</code>(), recommending <code><a href="/docs/linux/man/3-strchr/">strchr</a></code>(3) and <code><a href="/docs/linux/man/3-strrchr/">strrchr</a></code>(3) instead.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-memchr/">memchr</a></code>(3), <code><a href="/docs/linux/man/3-strchr/">strchr</a></code>(3), <code><a href="/docs/linux/man/3-string/">string</a></code>(3), <code><a href="/docs/linux/man/3-strpbrk/">strpbrk</a></code>(3), <code><a href="/docs/linux/man/3-strrchr/">strrchr</a></code>(3), <code><a href="/docs/linux/man/3-strsep/">strsep</a></code>(3), <code><a href="/docs/linux/man/3-strspn/">strspn</a></code>(3), <code><a href="/docs/linux/man/3-strstr/">strstr</a></code>(3), <code><a href="/docs/linux/man/3-strtok/">strtok</a></code>(3)  </p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

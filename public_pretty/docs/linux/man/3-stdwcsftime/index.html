@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdwcsftime(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdwcsftime/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdwcsftime(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::wcsftime - std::wcsftime</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cwchar&gt;
+    std::size_t wcsftime(wchar_t *str, std::size_t count, const wchar_t *format, const std::tm *time);</code></pre> 
+<p>Converts the date and time information from a given calendar time time to a null-terminated wide character string str according to format string format. Up to count wide characters are written.</p>
+<h2>Parameters</h2>
+<p>str - pointer to the first element of the wchar_t array for output
+count - maximum number of wide characters to write
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> pointer to a null-terminated wide character string specifying the format of conversion.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The format string consists of zero or more conversion specifiers and ordinary characters (except %). All ordinary characters, including the terminating null character, are copied to the output string without modification. Each conversion specification begins with % character, optionally followed by E or O modifier (ignored if unsupported by the locale), followed by the character that determines the behavior of the specifier. The following format specifiers are available:</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Conversion Explanation Used fields
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> specifier
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> % writes literal %. The full conversion specification must be %%.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> n writes newline character
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> t writes horizontal tab character
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Year
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Y writes year as a decimal number, e.g. 2017 tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> EY writes year in the alternative representation, e.g.平成23年 (year Heisei 23) instead of 2011年 (year 2011) in ja_JP loctm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> y writes last 2 digits of year as a decimal number (range [00,99]) tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Oy writes last 2 digits of year using the alternative numeric system, e.g. 十一 instead of 11 in ja_JP locale tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Ey writes year as offset from locale&rsquo;s alternative calendar period %EC (locale-dependent) tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> C writes first 2 digits of year as a decimal number (range [00,99]) tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> EC writes name of the base year (period) in the locale&rsquo;s alternative representation, e.g. 平成 (Heisei era) in ja_JP tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> writes ISO 8601 week-based year, i.e. the year that contains the specified week.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> In IS0 8601 weeks begin with Monday and the first week of the year must satisfy the following requirements:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> G tm_year, tm_wday, tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i> * Includes January 4
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> * Includes first Thursday of the year</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> writes last 2 digits of ISO 8601 week-based year, i.e. the year that contains the specified week (range [00,99]).
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> In IS0 8601 weeks begin with Monday and the first week of the year must satisfy the following requirements:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> g tm_year, tm_wday, tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i> * Includes January 4
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> * Includes first Thursday of the year</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Month
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> b writes abbreviated month name, e.g. Oct (locale dependent) tm_mon
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> h synonym of b tm_mon
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> B writes full month name, e.g. October (locale dependent) tm_mon
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> m writes month as a decimal number (range [01,12]) tm_mon
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Om writes month using the alternative numeric system, e.g. 十二 instead of 12 in ja_JP locale tm_mon
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Week
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> U writes week of the year as a decimal number (Sunday is the first day of the week) (range [00,53]) tm_year, tm_wday, tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> OU writes week of the year, as by %U, using the alternative numeric system, e.g. 五十二 instead of 52 in ja_JP locale tm_year, tm_wday, tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> W writes week of the year as a decimal number (Monday is the first day of the week) (range [00,53]) tm_year, tm_wday, tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> OW writes week of the year, as by %W, using the alternative numeric system, e.g. 五十二 instead of 52 in ja_JP locale tm_year, tm_wday, tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> writes ISO 8601 week of the year (range [01,53]).
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> In IS0 8601 weeks begin with Monday and the first week of the year must satisfy the following requirements:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> V tm_year, tm_wday, tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i> * Includes January 4
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> * Includes first Thursday of the year</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> OV writes week of the year, as by %V, using the alternative numeric system, e.g. 五十二 instead of 52 in ja_JP locale tm_year, tm_wday, tm_yday
+format - <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Day of the year/month
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> j writes day of the year as a decimal number (range [001,366]) tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> d writes day of the month as a decimal number (range [01,31]) tm_mday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Od writes zero-based day of the month using the alternative numeric system, e.g 二十七 instead of 27 in ja_JP locale tm_mday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i> Single character is preceded by a space.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> e writes day of the month as a decimal number (range [1,31]). tm_mday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i> Single digit is preceded by a space.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Oe writes one-based day of the month using the alternative numeric system, e.g. 二十七 instead of 27 in ja_JP locale tm_mday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i> Single character is preceded by a space.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Day of the week
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> a writes abbreviated weekday name, e.g. Fri (locale dependent) tm_wday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> A writes full weekday name, e.g. Friday (locale dependent) tm_wday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> w writes weekday as a decimal number, where Sunday is 0 (range [0-6]) tm_wday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Ow writes weekday, where Sunday is 0, using the alternative numeric system, e.g. 二 instead of 2 in ja_JP locale tm_wday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> u writes weekday as a decimal number, where Monday is 1 (ISO 8601 format) (range [1-7]) tm_wday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Ou writes weekday, where Monday is 1, using the alternative numeric system, e.g. 二 instead of 2 in ja_JP locale tm_wday
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Hour, minute, second
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> H writes hour as a decimal number, 24 hour clock (range [00-23]) tm_hour
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> OH writes hour from 24-hour clock using the alternative numeric system, e.g. 十八 instead of 18 in ja_JP locale tm_hour
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> I writes hour as a decimal number, 12 hour clock (range [01,12]) tm_hour
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> OI writes hour from 12-hour clock using the alternative numeric system, e.g. 六 instead of 06 in ja_JP locale tm_hour
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> M writes minute as a decimal number (range [00,59]) tm_min
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> OM writes minute using the alternative numeric system, e.g. 二十五 instead of 25 in ja_JP locale tm_min
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> S writes second as a decimal number (range [00,60]) tm_sec
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> OS writes second using the alternative numeric system, e.g. 二十四 instead of 24 in ja_JP locale tm_sec
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i></p>
+<h2>Other</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> c writes standard date and time string, e.g. Sun Oct 17 04:41:13 2010 (locale dependent) all
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Ec writes alternative date and time string, e.g. using 平成23年 (year Heisei 23) instead of 2011年 (year 2011) in ja_JP loalle
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> x writes localized date representation (locale dependent) all
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Ex writes alternative date representation, e.g. using 平成23年 (year Heisei 23) instead of 2011年 (year 2011) in ja_JP locall
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> X writes localized time representation (locale dependent) all
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> EX writes alternative time representation (locale dependent) all
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> D equivalent to &quot;%m/%d/%y&quot; tm_mon, tm_mday, tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> F equivalent to &quot;%Y-%m-%d&quot; (the ISO 8601 date format) tm_mon, tm_mday, tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> r writes localized 12-hour clock time (locale dependent) tm_hour, tm_min, tm_sec
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> R equivalent to &quot;%H:%M&quot; tm_hour, tm_min
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> T equivalent to &quot;%H:%M:%S&quot; (the ISO 8601 time format) tm_hour, tm_min, tm_sec
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> p writes localized a.m. or p.m. (locale dependent) tm_hour
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> z writes offset from UTC in the ISO 8601 format (e.g. -0430), or no characters if the time zone information is not available tm_isdst
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Z writes locale-dependent time zone name or abbreviation, or no characters if the time zone information is not available tm_isdst</p>
+<p>time - pointer to the date and time information to be converted</p>
+<h2>Return value</h2>
+<p>Number of wide characters written into the wide character array pointed to by str not including the terminating L&rsquo;\0&rsquo; on success. If count was reached before the entire string could be stored, 0 is returned and the contents are undefined.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;ctime&gt;
+#include &lt;cwchar&gt;
+#include &lt;iostream&gt;
+#include &lt;locale&gt;
+int main()
+{
+std::locale::global(std::locale(&quot;ja_JP.utf8&quot;));
+std::time_t t = std::time(nullptr);
+wchar_t wstr[100];
+if (std::wcsftime(wstr, 100, L&quot;%A %c&quot;, std::localtime(&amp;t))) {
+std::wcout &lt;&lt; wstr &lt;&lt; &lsquo;\n&rsquo;;
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 火曜日 2011年12月27日 17時43分13秒</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts a tm object to custom textual representation
+strftime <i>(function)</i>
+put_time formats and outputs a date/time value according to the specified format
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

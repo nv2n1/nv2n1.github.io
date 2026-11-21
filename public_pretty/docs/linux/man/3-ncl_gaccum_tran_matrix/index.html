@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_gaccum_tran_matrix(3) · Linux Manual Pages</title>
+<meta name="description" content="gaccum_tran_matrix (Accumulate transformation matrix) – Constructs a GKS segment transformation matrix by starting with an existing matrix and composing it with a shift vector, a rotation angle, an...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_gaccum_tran_matrix/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_gaccum_tran_matrix(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>gaccum_tran_matrix (Accumulate transformation matrix) &#8211; Constructs a GKS segment transformation matrix by starting with an existing matrix and composing it with a shift vector, a rotation angle, and X and Y scale factors to create a new transformation matrix. The rotation and scaling are done with respect to a user-defined fixed point.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;ncarg/gks.h&gt; </p>
+<p> void gaccum_tran_matrix(const Gtran_matrix t_matrix, const Gpoint *point, const Gvec *shift, Gdouble angle, const Gvec *scale, Gcoord_switch coord_switch, Gtran_matrix tran_matrix);</p>
+<h2>Description</h2>
+<dl COMPACT>
+<dt>t_matrix</dt>
+<dd>(Gfloat, Input) &#8211; A 2&#215;3 GKS transformation matrix.</dd>
+<dt>point.x</dt>
+<dd>(Gfloat, Input) &#8211; X coordinate value for a fixed point to be used for the scaling and rotation parts of the output transformation. point.x is either in world coordinates or normalized device coordinates depending on the setting of the argument coord_switch described below.</dd>
+<dt>point.y</dt>
+<dd>(Gfloat, Input) &#8211; Y coordinate value for a fixed point to be used for the scaling and rotation parts of the output transformation. point.y is either in world coordinates or normalized device coordinates depending on the setting of the argument coord_switch described below.</dd>
+<dt>shift.delta_x</dt>
+<dd>(Gfloat, Input) &#8211; The X component of a shift vector to be used for the scaling part of the output transformation. shift.delta_x is either in world coordinates or normalized device coordinates depending on the setting of the argument coord_switch described below.</dd>
+<dt>shift.delta_y</dt>
+<dd>(Gfloat, Input) &#8211; The Y component of a shift vector to be used for the scaling part of the output transformation. shift.delta_y is either in world coordinates or normalized device coordinates depending on the setting of the argument coord_switch described below.</dd>
+<dt>angle</dt>
+<dd>(Input) &#8211; The rotation angle, in radians, to be used for the rotation part of the output transformation.</dd>
+<dt>scale.delta_x</dt>
+<dd>(Gfloat, Input) &#8211; X coordinate scale factor to be used in the scaling part of the output transformation.</dd>
+<dt>scale.delta_y</dt>
+<dd>(Gfloat, Input) &#8211; Y coordinate scale factor to be used in the scaling part of the output transformation.</dd>
+<dt>coord_switch</dt>
+<dd>(Input) &#8211; A coordinate switch to indicate whether the values for the arguments point and shift (described above) are in world coordinates or normalized device coordinates. Possible values include:</dd>
+<dl COMPACT>
+<dd>
+</dd><dl COMPACT>
+<dt>GCOORD_WC</dt>
+<dd>World coordinates</dd>
+<dt>GCOORD_NDC</dt>
+<dd>Normalized device coordinates</dd>
+<dt>tran_matrix</dt>
+<dd>(Gfloat, Output) &#8211; A 2&#215;3 array that contains the GKS transformation matrix in a form that can be used as input to other GKS functions such as gset_seg_tran. This matrix is constructed by composing the scale, rotate, and shift input, described above, with the original input matrix t_matrix.</dd></dl>
+</dl>
+</dl>
+<h2>Usage</h2>
+<p>If world coordinates are used, the shift vector and the fixed point are transformed by the current normalization transformation. </p>
+<p> The order in which the transformations are applied is: input matrix, scale, rotate, and shift. </p>
+<p> Elements tran_matrix[0][2] and tran_matrix[1][2] are in normalized device coordinates and the other elements of tran_matrix are unitless. </p>
+<p> gaccum_tran_matrix can be used to construct more general transformation matrices than geval_tran_matrix. The most common usage of gaccum_tran_matrix is to change the order in which the operations of scale, rotate, and shift are applied (which is fixed in geval_tran_matrix). The example below shows how to construct a transformation matrix that shifts first and then rotates.</p>
+<h2>Example</h2>
+<p>Assuming that the input matrix t_matrix is initially the identity, the following code </p>
+<pre> pi = 3.1415926;
+ point.x = point.y = 0.5;
+ shift.delta_x = 0.25;
+ shift.delta_y = 0.;
+ scale.delta_x = 1.0;
+ scale.delta_y = 1.0;
+ gaccum_tran_matrix(t_matrix,&amp;point,&amp;shift,0.,&amp;scale,GCOORD_WC,tout);
+ for( i = 0; i &lt; 2; i++ ) {
+ for( j = 0; j &lt; 3; j++ ) {
+ t_matrix[i][j] = tout[i][j];
+ }
+ }
+ shift.delta_x = 0.;
+ shift.delta_y = 0.;
+ gaccum_tran_matrix(t_matrix,&amp;point,&amp;shift,45.*pi/180.,&amp;scale,GCOORD_WC,tout);</pre>
+<p>would produce a transformation matrix in tout that would shift by (.25,0.) first, and then rotate by 45 degrees.</p>
+<h2>Access</h2>
+<p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
+<h2>See Also</h2>
+<p>Online: <code>geval_tran_matrix(3NCARG),</code> <code>gclose_seg(3NCARG),</code> <code>gcreate_seg(3NCARG),</code> <code>gcopy_seg_ws(3NCARG),</code> <code>gdel_seg(3NCARG),</code> <code>ginq_name_open_seg(3NCARG),</code> <code>ginq_set_seg_names(3NCARG),</code> <code>gset_seg_tran(3NCARG),</code> <code>gks(3NCARG),</code> <code>ncarg_gks_cbind(3NCARG)</code> </p>
+<p> Hardcopy: User&#8217;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>
+<p>Copyright (C) 1987-2009<br />
+ University Corporation for Atmospheric Research<br />
+ The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

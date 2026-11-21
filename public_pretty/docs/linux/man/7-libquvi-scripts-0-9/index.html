@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libquvi-scripts-0-9(7) · Linux Manual Pages</title>
+<meta name="description" content="libquvi-scripts – Overview of the library scripts">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-libquvi-scripts-0-9/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>libquvi-scripts-0-9(7)</h1>
+
+
+
+
+
+<p>libquvi-scripts &#8211; Overview of the library scripts</p>
+<h2>Description</h2>
+<p>libquvi-scripts contains the Lua scripts for libquvi that it uses to parse the different properties, such as the media properties.</p>
+<h2>Types</h2>
+<h3>Common scripts</h3>
+<p>The common scripts are modules that may be loaded from other scripts, e.g. the <i><a href="/docs/linux/man/7-quvi-modules/">quvi-modules</a>(7)</i>. </p>
+<p> These scripts are typically installed at</p>
+<dl>
+<dd>$prefix/share/libquvi-scripts/$major_ver.$minor_ver/common/</dd></dl>
+<h3>Media scripts</h3>
+<p>The media scripts are responsible for parsing the media properties, e.g. the media stream URLs. There is usually a media script for each supported website. </p>
+<p> These scripts are typically installed at</p>
+<dl>
+<dd>$prefix/share/libquvi-scripts/$major_ver.$minor_ver/media/</dd></dl>
+<h3>Playlist scripts</h3>
+<p>The playlist scripts are responsible for parsing the playlist properties. There is usually a playlist script for each supported website. </p>
+<p> These scripts are typically installed at</p>
+<dl>
+<dd>$prefix/share/libquvi-scripts/$major_ver.$minor_ver/playlist/</dd></dl>
+<h3>Scan scripts</h3>
+<p>The scan scripts are used to scan an URL for embedded media URLs. </p>
+<p> These scripts are typically installed at</p>
+<dl>
+<dd>$prefix/share/libquvi-scripts/$major_ver.$minor_ver/scan/</dd></dl>
+<h3>Subtitlte scripts</h3>
+<p>The subtitle scripts are responsible for retrieving subtitle data for the media as well as exporting the data to another format, e.g. SubRip. </p>
+<p> These scripts are typically installed at</p>
+<dl>
+<dd>$prefix/share/libquvi-scripts/$major_ver.$minor_ver/subtitle/ $prefix/share/libquvi-scripts/$major_ver.$minor_ver/subtitle/export/</dd></dl>
+<h3>Utility scripts</h3>
+<p>The utility scripts are used by libquvi to perform misc. tasks, such as parsing file extension from a content-type, or converting HTML entities to UTF-8 characters. </p>
+<p> These scripts are typically installed at</p>
+<dl>
+<dd>$prefix/share/libquvi-scripts/$major_ver.$minor_ver/util/</dd></dl>
+<h2>Environment</h2>
+<p>LIBQUVI_SCRIPTS_VERBOSE</p>
+<dl>
+<dd>When defined, enables the output from any libquvi scripts using the debug facility (<i>quvi/debug</i> module).</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-libquvi/">libquvi</a></code>(3), <code><a href="/docs/linux/man/1-quvi/">quvi</a></code>(1)</p>
+<h2>Further Resources</h2>
+<p>Home</p>
+<dl>
+<dd><a rel="nofollow" href="http://quvi.sourceforge.net/">http://quvi.sourceforge.net/</a></dd></dl>
+<p> Development code</p>
+<dl>
+<dd><a href="git://repo.or.cz/libquvi-scripts.git">git://repo.or.cz/libquvi-scripts.git</a></dd></dl>
+<p> gitweb</p>
+<dl>
+<dd><a rel="nofollow" href="http://repo.or.cz/w/libquvi-scripts.git">http://repo.or.cz/w/libquvi-scripts.git</a></dd></dl>
+<h2>Authors</h2>
+<p>Toni Gundogdu &lt;legatvs [at] gmail.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to the quvi-devel mailing list &lt;quvi-devel [at] lists.sourceforge.net&gt; where the development and the maintenance is primarily done. You do not have to be subscribed to the list to send a message there.</p>
+<h2>License</h2>
+<p>libquvi-scripts is Free Software licensed under the GNU Affero GPLv3+</p>
+<h2>Libquvi-Scripts</h2>
+<p>Part of the <i><a href="/docs/linux/man/7-libquvi-scripts/">libquvi-scripts</a>(7)</i> suite</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_twobodygrid(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::TwoBodyGrid –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_twobodygrid/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_twobodygrid(3)</h1>
+
+
+
+
+
+<p>sc::TwoBodyGrid &#8211; </p>
+<p> Class <code>TwoBodyGrid</code> describes a set of coordinates of 2 particles.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;twobodygrid.h&gt;</code></pre>
+<p> Inherits <code>sc::SavableState</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>TwoBodyGrid</code> (<code>StateIn</code> &amp;) </p>
+<p> <code>TwoBodyGrid</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
+ <i>The </i><code>KeyVal</code> constructor.<br />
+ void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+ const std::string &amp; <code>name</code> () const </p>
+<p> int <code>nelem</code> () const </p>
+<p> const <code>SCVector3</code> &amp; <code>origin</code> () const </p>
+<p> <code>SCVector3</code> <code>xyz1</code> (int i, const <code>SCVector3</code> &amp;O=<code>SCVector3</code>(0.0)) const<br />
+ <i>Cartesian coordinates of particle 1 at grid </i><code>point</code> i with respect to origin O.<br />
+ <code>SCVector3</code> <code>xyz2</code> (int i, const <code>SCVector3</code> &amp;O=<code>SCVector3</code>(0.0)) const<br />
+ <i>Cartesian coordinates of particle 2 at grid </i><code>point</code> i with respect to origin O.<br />
+ <code>SCVector3</code> <code>rtp1</code> (int i, const <code>SCVector3</code> &amp;O=<code>SCVector3</code>(0.0)) const<br />
+ <i>Spherical polar coordinates of particle 1 at grid </i><code>point</code> i with respect to origin O.<br />
+ <code>SCVector3</code> <code>rtp2</code> (int i, const <code>SCVector3</code> &amp;O=<code>SCVector3</code>(0.0)) const<br />
+ <i>Spherical polar coordinates of particle 2 at grid </i><code>point</code> i with respect to origin O.<br />
+ void <code>print</code> (std::ostream &amp;o=ExEnv::out0()) const<br />
+ <i>Prints out this. </i></p>
+<h2>Detailed Description</h2>
+<p>Class <code>TwoBodyGrid</code> describes a set of coordinates of 2 particles.</p>
+<h2>Member Function Documentation</h2>
+<h3>void sc::TwoBodyGrid::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>
+<p>Save the base classes (with save_data_state) and the members in the same order that the <code>StateIn</code> CTOR initializes them. This must be implemented by the derived class if the class has data. </p>
+<p> Reimplemented from <code>sc::SavableState</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

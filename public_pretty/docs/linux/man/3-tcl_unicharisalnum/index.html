@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcl_unicharisalnum(3) · Linux Manual Pages</title>
+<meta name="description" content="Tcl_UniCharIsAlnum, Tcl_UniCharIsAlpha, Tcl_UniCharIsControl, Tcl_UniCharIsDigit, Tcl_UniCharIsGraph, Tcl_UniCharIsLower, Tcl_UniCharIsPrint, Tcl_UniCharIsPunct, Tcl_UniCharIsSpace, Tcl_UniCharIsUp...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tcl_unicharisalnum/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tcl_unicharisalnum(3)</h1>
+
+
+
+
+
+<p>Tcl_UniCharIsAlnum, Tcl_UniCharIsAlpha, Tcl_UniCharIsControl, Tcl_UniCharIsDigit, Tcl_UniCharIsGraph, Tcl_UniCharIsLower, Tcl_UniCharIsPrint, Tcl_UniCharIsPunct, Tcl_UniCharIsSpace, Tcl_UniCharIsUpper, Tcl_UniCharIsWordChar &#8211; routines for classification of Tcl_UniChar characters </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tcl.h&gt;</code>
+int
+<code>Tcl_UniCharIsAlnum</code>(<i>ch</i>)
+int
+<code>Tcl_UniCharIsAlpha</code>(<i>ch</i>)
+int
+<code>Tcl_UniCharIsControl</code>(<i>ch</i>)
+int
+<code>Tcl_UniCharIsDigit</code>(<i>ch</i>)
+int
+<code>Tcl_UniCharIsGraph</code>(<i>ch</i>)
+int
+<code>Tcl_UniCharIsLower</code>(<i>ch</i>)
+int
+<code>Tcl_UniCharIsPrint</code>(<i>ch</i>)
+int
+<code>Tcl_UniCharIsPunct</code>(<i>ch</i>)
+int
+<code>Tcl_UniCharIsSpace</code>(<i>ch</i>)
+int
+<code>Tcl_UniCharIsUpper</code>(<i>ch</i>)
+int
+<code>Tcl_UniCharIsWordChar</code>(<i>ch</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>int <i>ch</i> (in) The Tcl_UniChar to be examined. </dd>
+</dl>
+<h2>Description</h2>
+<p>All of the routines described examine Tcl_UniChars and return a boolean value. A non-zero return value means that the character does belong to the character class associated with the called routine. The rest of this document just describes the character classes associated with the various routines. </p>
+<p> Note: A Tcl_UniChar is a Unicode character represented as an unsigned, fixed-size quantity. </p>
+<h2>Character Classes</h2>
+<p><code>Tcl_UniCharIsAlnum</code> tests if the character is an alphanumeric Unicode character. </p>
+<p> <code>Tcl_UniCharIsAlpha</code> tests if the character is an alphabetic Unicode character. </p>
+<p> <code>Tcl_UniCharIsControl</code> tests if the character is a Unicode control character. </p>
+<p> <code>Tcl_UniCharIsDigit</code> tests if the character is a numeric Unicode character. </p>
+<p> <code>Tcl_UniCharIsGraph</code> tests if the character is any Unicode print character except space. </p>
+<p> <code>Tcl_UniCharIsLower</code> tests if the character is a lowercase Unicode character. </p>
+<p> <code>Tcl_UniCharIsPrint</code> tests if the character is a Unicode print character. </p>
+<p> <code>Tcl_UniCharIsPunct</code> tests if the character is a Unicode punctuation character. </p>
+<p> <code>Tcl_UniCharIsSpace</code> tests if the character is a whitespace Unicode character. </p>
+<p> <code>Tcl_UniCharIsUpper</code> tests if the character is an uppercase Unicode character. </p>
+<p> <code>Tcl_UniCharIsWordChar</code> tests if the character is alphanumeric or a connector punctuation mark. </p>
+<h2>Keywords</h2>
+<p>unicode, classification</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

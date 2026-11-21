@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scotch_mmk_m2(1) · Linux Manual Pages</title>
+<meta name="description" content="mmk_m2, mmk_m3 – create source meshes">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-scotch_mmk_m2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>scotch_mmk_m2(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>mmk_m2, mmk_m3 </code>&#8211; create source meshes</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+mmk_m2[options][-gcfile] dimX dimY[ofile] mmk_m3[options][-gcfile] dimX dimY dimZ[ofile]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>mmk_</code>* programs create source mesh files for some common, regular topologies. </p>
+<p> <code>mmk_m2</code> creates a 2D regular mesh of <i>dimX</i> times <i>dimY</i> elements and (<i>dimX</i>+1) times (<i>dimY</i>+1) nodes, such that element (i,j) is connected to nodes (i,j), (i,j+1), (i+1,j) and (i+1,j+1). </p>
+<p> <code>mmk_m3</code> creates a 3D regular mesh of <i>dimX</i> times <i>dimY</i> times <i>dimZ</i> elements and (<i>dimX</i>+1) times (<i>dimY</i>+1) times (<i>dimZ</i>+1) nodes, such that element (i,j,k) is connected to nodes (i,j,k), (i,j,k+1), (i,j+1,k), (i,j+1,k+1), (i+1,j,k), (i+1,j,k+1), (i+1,j+1,k) and (i+1,j+1,k+1).</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-g</code><i>cfile</i></dt>
+<dd> Output graph vertex coordinates (that is, geometry data to be used by <code>gout</code>(1)) in file <i>cfile</i>.</dd>
+<dt><code>-h</code></dt>
+<dd> Display some help.</dd>
+<dt><code>-V</code></dt>
+<dd> Display program version and copyright.</dd></dl>
+<h2>EXAMPLE</h2>
+<p> Create a mesh of 5&#215;7 elements, along with its geometry: </p>
+<pre>
+    $ mmk_m2 5 7 -g/tmp/m5x7.xyz /tmp/m5x7.msh
+</pre>
+<h2>SEE ALSO</h2>
+<p> <code>mord</code>(1), <code>mtst</code>(1), <code>gmk_msh</code>(1). </p>
+<p> Scotch user&#8217;s manual.</p>
+<h2>AUTHOR</h2>
+<p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

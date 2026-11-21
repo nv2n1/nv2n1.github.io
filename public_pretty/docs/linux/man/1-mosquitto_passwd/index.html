@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mosquitto_passwd(1) · Linux Manual Pages</title>
+<meta name="description" content="mosquitto_passwd – manage password files for mosquitto">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mosquitto_passwd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mosquitto_passwd(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> mosquitto_passwd &#8211; manage password files for mosquitto </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>mosquitto_passwd</code> [<code>-c</code> | <code>-D</code>] <i>passwordfile</i> <i>username</i></dt>
+<dt> <code>mosquitto_passwd</code> <code>-b</code> <i>passwordfile</i> <i>username</i> <i>password</i></dt>
+<dt> <code>mosquitto_passwd</code> <code>-U</code> <i>passwordfile</i></dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>mosquitto_passwd</code></p>
+<dd>is a tool for managing password files the mosquitto MQTT broker. </dd>
+<p> Usernames must not contain &quot;:&quot;. Passwords are stored in a similar format to <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3).</p>
+<h2>OPTIONS</h2>
+<p> <code>-b</code></p>
+<dl>
+<dt>
+</dt><dd> Run in batch mode. This allows the password to be provided at the command line which can be convenient but should be used with care because the password will be visible on the command line and in command history.</dd></dl>
+<p> <code>-c</code></p>
+<dl>
+<dt>
+</dt><dd> Create a new password file. If the file already exists, it will be overwritten.</dd></dl>
+<p> <code>-D</code></p>
+<dl>
+<dt>
+</dt><dd> Delete the specified user from the password file.</dd></dl>
+<p> <code>-U</code></p>
+<dl>
+<dt>
+</dt><dd> This option can be used to upgrade/convert a password file with plain text passwords into one using hashed passwords. It will modify the specified file. It does not detect whether passwords are already hashed, so using it on a password file that already contains hashed passwords will generate new hashes based on the old hashes and render the password file unusable.</dd></dl>
+<p> <code>passwordfile</code></p>
+<dl>
+<dt>
+</dt><dd> The password file to modify.</dd></dl>
+<p> <code>username</code></p>
+<dl>
+<dt>
+</dt><dd> The username to add/update/delete.</dd></dl>
+<p> <code>password</code></p>
+<dl>
+<dt>
+</dt><dd> The password to use when in batch mode.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Add a user to a new password file: </p>
+<dl>
+<dt>
+</dt><dd> &bull; mosquitto_passwd -c /etc/mosquitto/passwd ral</dd></dl>
+<p> Delete a user from a password file </p>
+<dl>
+<dt>
+</dt><dd> &bull; mosquitto_passwd -D /etc/mosquitto/passwd ral</dd></dl>
+<h2>BUGS</h2>
+<p> <code>mosquitto_passwd</code> bug information can be found at <a rel="nofollow" href="https://bugs.eclipse.org/bugs/describecomponents.cgi?product=Mosquitto">https://bugs.eclipse.org/bugs/describecomponents.cgi?product=Mosquitto</a></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-mosquitto/">mosquitto</a></code>(8), <code><a href="/docs/linux/man/5-mosquitto-conf/">mosquitto.conf</a></code>(5), <code><a href="/docs/linux/man/7-mqtt/">mqtt</a></code>(7)</p>
+<h2>AUTHOR</h2>
+<p> Roger Light &lt;roger [at] atchoo.org&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

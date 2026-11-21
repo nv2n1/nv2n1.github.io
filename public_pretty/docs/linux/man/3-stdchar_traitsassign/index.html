@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdchar_traitsassign(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdchar_traitsassign/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdchar_traitsassign(3)</h1>
+
+
+
+
+
+<p>std::char_traits&lt;CharT&gt;::assign - std::char_traits&lt;CharT&gt;::assign</p>
+<h2>Synopsis</h2>
+<pre><code>static void assign(char_type &amp;r, const char_type &amp;a);
+(until C++ 11)
+    static void assign(char_type &amp;r, const char_type &amp;a) noexcept;
+(since C++ 11)(until C++ 17)
+    static constexpr void assign(char_type &amp;r, const char_type &amp;a) noexcept;
+(1)(since C++ 17)
+    static char_type *assign(char_type *p, std::size_t count, char_type a);
+(until C++ 20)
+    static constexpr char_type *assign(char_type *p, (2)(since C++ 20)
+                                                         std::size_t count,
+                                       char_type a);</code></pre> 
+<p>Assigns a character.</p>
+<ol>
+<li>Assigns character a to character r.</li>
+<li>Assigns character a to each character in count characters in the character sequence pointed to by p.</li>
+</ol>
+<h2>Parameters</h2>
+<p>a - character value to assign
+r - character to assign to
+p - pointer to a character sequence to assign to
+count - the length of the character sequence</p>
+<h2>Return value</h2>
+<ol>
+<li><i>(none)</i></li>
+<li>p</li>
+</ol>
+<h2>Complexity</h2>
+<ol>
+<li>Constant.</li>
+<li>Linear in count</li>
+</ol>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

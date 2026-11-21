@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pam_pkcs11(8) · Linux Manual Pages</title>
+<meta name="description" content="pam_pkcs11 – PAM Authentication Module for PKCS#11 token libraries">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pam_pkcs11/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pam_pkcs11(8)</h1>
+
+
+
+
+
+<p>pam_pkcs11 &#8211; PAM Authentication Module for PKCS#11 token libraries</p>
+<h2>Synopsis</h2>
+<p><code>pam_pkcs11.so</code> [<code>debug</code>] [<code>configfile=</code><i>&lt;configfile&gt;</i>]</p>
+<h2>Description</h2>
+<p>This Linux-PAM login module allows a X.509 certificate based user login. The certificate and its dedicated private key are thereby accessed by means of an appropriate PKCS #11 module. For the verification of the users&#8217; certificates, locally stored CA certificates as well as either online or locally accessible CRLs are used.</p>
+<h2>Configuration</h2>
+<p>The program that needs a PAM service should be configured in <i>/etc/pam.conf</i> or <i>/etc/pam.d/&lt;servicename&gt;</i>. </p>
+<p> <code>pam_pkcs11</code> can be used in the &lt;auth&gt; PAM chain. </p>
+<p> For details on how to configure PAM services, see the PAM documentation for your system. This manual does not cover PAM configuration details. The existing PAM service definitions for other applications on your system is also a good source for examples on how to configure a PAM service.</p>
+<h2>Files</h2>
+<p><i>/etc/pam_pkcs11/pam_pkcs11.conf</i><br />
+ <i>/usr/lib/pam_pkcs11/*_mapper.so</i></p>
+<h2>Author</h2>
+<p>Original PAM-pkcs11 was written by Mario Strasser &lt;mast [at] gmx.net&gt;. Newer versions are from Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs ideas, comments, bug-fixes and so to: <i>Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;</i></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-pam/">pam</a></code>(8), PAM Systems Administrator Guide (/usr/share/doc/pam_pkcs11-0.6.2/pam_pkcs11.htm l), <i>README.mappers</i> file, PAM-PKCS#11 User Manual. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mgetty(8) · Linux Manual Pages</title>
+<meta name="description" content="mgetty – smart modem getty">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mgetty/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mgetty(8)</h1>
+
+
+
+
+
+<p>mgetty &#8211; smart modem getty</p>
+<h2>Synopsis</h2>
+<p><code>mgetty</code> [<code>options</code>] ttydevice [<i>gettydefs</i>]</p>
+<h2>Description</h2>
+<p>Mgetty is a &#8220;smart&#8221; getty replacement, designed for use with Hayes compatible data and data/fax modems. Mgetty knows about modem initialization, manual modem answering (so your modem doesn&#8217;t answer if the machine isn&#8217;t ready), UUCP locking (so you can use the same device for dial-in and dial-out). Mgetty provides very extensive logging facilities. This manpage doesn&#8217;t try to detail mgetty setup in detail, it just lists the most important options. For detailed instructions, see the info file mgetty.info (mgetty.texi). </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-k &lt;space&gt;</code></dt>
+<dd>Tells <i>mgetty</i> to leave &lt;space&gt; kbytes free on disk when receiving a fax.</dd>
+<dt><code>-x &lt;debug level&gt;</code></dt>
+<dd>Use the given level of verbosity for logging &#8211; 0 means no logging, 9 is really noisy. The log file is usually /tmp/log_mg.&lt;device&gt;</dd>
+<dt><code>-s &lt;speed&gt;</code></dt>
+<dd>Set the port speed to use, e.g. &quot;-s 19200&quot;.</dd>
+<dt><code>-r</code></dt>
+<dd>Tells <i>mgetty</i> that it is running on a direct line. UUCP locking is done, but no modem initialization whatsoever.</dd>
+<dt><code>-p &lt;login prompt&gt;</code></dt>
+<dd>Use the given string to prompt users for their login names. Various tokens are allowed in this string. These tokens are: @ for the system name, 
+, \g, , for newline, bell, and form feed, respectively.  and 
+ will expand to the OS version and release. \P, \l and \L will expand to the tty name (&quot;ttyS0&quot;). \Y will give the Caller ID, \I the &quot;CONNECT foobar&quot; string returned by the modem, and \S or  will output the port speed. \N and 
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

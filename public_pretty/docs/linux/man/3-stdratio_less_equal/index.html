@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdratio_less_equal(3) · Linux Manual Pages</title>
+<meta name="description" content="std::ratio_less_equal – std::ratio_less_equal">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdratio_less_equal/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdratio_less_equal(3)</h1>
+
+
+
+
+
+<p>std::ratio_less_equal &#8211; std::ratio_less_equal</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;ratio&gt;
+    template &lt;class R1, class R2&gt;
+    (since C++ 11)
+        struct ratio_less_equal : std::integral_constant;</code></pre>
+<p>If the ratio R1 is less than or equal to the ratio R2, provides the member constant value equal true. Otherwise, value is false.<br />
+Helper variable template </p>
+<pre><code>template&lt; class R1, class R2 &gt;                                               (since C++17)
+inline constexpr bool ratio_less_equal_v = ratio_less_equal&lt;R1, R2&gt;::value;
+</code></pre>
+<p>Inherited from std::integral_constant </p>
+<h2>Member constants</h2>
+<p>value true if R1::num * R2::den &lt;= R2::num * R1::den, or equivalent expression that avoids overflow , false otherwise<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br />
+<code>[static]</code></p>
+<h2>Member functions</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts the object to bool, returns value<br />
+operator bool <i>(public member function)</i> </p>
+<p>operator() returns value<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br />
+<i>(C++14)</i></p>
+<h2>Member types</h2>
+<p>Type Definition<br />
+value_type bool<br />
+type std::integral_constant&lt;bool, value&gt;</p>
+<h2>Example</h2>
+<p>&nbsp;This section is incomplete<br />
+&nbsp;Reason: no example </p>
+<h2>See also</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

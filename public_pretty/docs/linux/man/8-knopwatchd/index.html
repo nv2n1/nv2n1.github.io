@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>knopwatchd(8) · Linux Manual Pages</title>
+<meta name="description" content="knopwatchd – &#34;FwKnop Watch Daemon&#34; checks to make sure knopmd, knoptm and fwknop daemons are running.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-knopwatchd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>knopwatchd(8)</h1>
+
+
+
+
+
+<p><code>knopwatchd</code> &#8211; &quot;FwKnop Watch Daemon&quot; checks to make sure knopmd, knoptm and fwknop daemons are running.</p>
+<h2>Synopsis</h2>
+<p><code>knopwatchd [options]</code></p>
+<h2>Description</h2>
+<p><code>knopwatchd</code> checks on an interval of every five seconds to make sure that knopmd, knoptm and fwknopd are running on the box. If any of the three daemons have died, knopwatchd will restart the daemon and notify each email address listed in the EMAIL_ADDRESSES variable that the daemon has been restarted. <code>knopwatchd</code> uses the fwknop.conf configuration file which by default is located at /etc/fwknop/, but a different path can be specified on the command line.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-c&nbsp;<wbr>&lt;config-file&gt;</code></dt>
+<dd>Specify path to config file instead of using the default configuration file /etc/fwknop/fwknop.conf.</dd>
+<dt><code>-D</code></dt>
+<dd>Dump the configuration values that <code>knopwatchd</code> derives from /etc/fwknop/fwknop.conf (or other override files) on STDERR.</dd>
+<dt><code>-h</code></dt>
+<dd>Display usage information and exit.</dd>
+<dt><code>-O&nbsp;<wbr>&lt;config-file&gt;</code></dt>
+<dd>Override config variable values that are normally read from the /etc/fwknop/fwknop.conf file with values from the specified file. Multiple override config files can be given as a comma separated list.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-fwknop/">fwknop</a></code>(8), <code><a href="/docs/linux/man/8-fwknopd/">fwknopd</a></code>(8), <code><a href="/docs/linux/man/8-knopmd/">knopmd</a></code>(8),</p>
+<h2>Author</h2>
+<p>Michael Rash (mbr [at] cipherdyne.org)</p>
+<h2>Distribution</h2>
+<p><code>fwknop</code> is distributed under the GNU General Public License (GPL), and the latest version may be downloaded from <code><a rel="nofollow" href="http://www.cipherdyne.org">http://www.cipherdyne.org</a></code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

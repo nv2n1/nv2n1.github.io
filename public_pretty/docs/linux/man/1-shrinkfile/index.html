@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shrinkfile(1) · Linux Manual Pages</title>
+<meta name="description" content="shrinkfile – shrink a file on a line boundary">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-shrinkfile/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>shrinkfile(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> shrinkfile &#8211; shrink a file on a line boundary</p>
+<h2>SYNOPSIS</h2>
+<p> <code>shrinkfile</code> [ <code>-n</code> ] [ <code>-m</code><i> maxsize</i> ] [ <code>-s</code><i> size</i> ] [ <code>-v</code> ] <i>file&#8230;</i></p>
+<h2>DESCRIPTION</h2>
+<p> The <i>shrinkfile</i> program shrinks files to a given <i>size</i> if the size is larger than <i>maxsize</i>, preserving the data at the end of the file. Truncation is performed on line boundaries, where a line is a series of bytes ending with a newline, &#8220;
+&#8221;. There is no line length restriction and files may contain any binary data. </p>
+<p> Temporary files are created in the <i>&lt;pathtmp in inn.conf&gt;</i> directory. The &#8220;TMPDIR&#8221; environment variable may be used to specify a different directory. </p>
+<p> A newline will be added to any non-empty file that does not end with a newline. The maximum file size will not be exceeded by this addition.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-s</code></dt>
+<dd> By default, <i>size</i> is assumed to be zero and files are truncated to zero bytes. By default, <i>maxsize</i> is the same as <i>size</i>. If <i>maxsize</i> is less than <i>size</i>, <i>maxsize</i> is reset to <i>size</i>. The &#8220;<code>-s</code>&#8221; flag may be used to change the truncation size. Because the program truncates only on line boundaries, the final size may be smaller then the specified truncation size. The <i>size</i> and <i>maxsize</i> parameter may end with a &#8220;k&#8221;, &#8220;m&#8221;, or &#8220;g&#8221;, indicating kilobyte (1024), megabyte (1048576) or gigabyte (1073741824) lengths. Uppercase letters are also allowed. The maximum file size is 2147483647 bytes.</dd>
+<dt><code>-v</code></dt>
+<dd> If the &#8220;<code>-v</code>&#8221; flag is used, then <i>shrinkfile</i> will print a status line if a file was shrunk.</dd>
+<dt><code>-n</code></dt>
+<dd> If the &#8220;<code>-n</code>&#8221; flag is used, then <i>shrinkfile</i> will exit 0 if any file is larger than <i>maxsize</i> and exit 1 otherwise. No files will be altered.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Example usage: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+shrinkfile -s 4m curds
+shrinkfile -s 1g -v whey
+shrinkfile -s 500k -m 4m -v curds whey
+if shrinkfile -n -s 100m whey; then echo whey is way too big; fi
+</pre>
+</dd></dl>
+<h2>HISTORY</h2>
+<p> Written by Landon Curt Noll &lt;chongo [at] toad.com&gt; and Rich $alz &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/5-inn-conf/">inn.conf</a>(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

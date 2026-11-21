@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdrangesviewcounted(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdrangesviewcounted/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdrangesviewcounted(3)</h1>
+
+
+
+
+
+<p>std::ranges::view::counted - std::ranges::view::counted</p>
+<h2>Synopsis</h2>
+<pre><code>namespace view {
+    inline constexpr /*unspecified*/ counted = /*unspecified*/;  (since C++20)
+}</code></pre> 
+<p>A counted view presents a View of the elements of the counted range [i, n) for some iterator i and non-negative integer n.
+A counted range [i, n) is the n elements starting with the element pointed to by i and up to but not including the element, if any, pointed to by the result of n applications of ++i.
+If n == 0, the counted range is valid and empty. Otherwise, the counted range is only valid if n is positive, i is dereferenceable, and [++i, &ndash;n) is a valid counted range.
+Formally, if E and F are expressions, and T is the type std::decay_t&lt;decltype((E))&gt;, then
+ <wbr> <wbr> <wbr> <wbr> <wbr> if T models Iterator and decltype((F)) models ConvertibleTo&lt;iter_difference_t&lt;T&gt;&gt;, if T
+models RandomAccessIterator, view::counted(E, F) is expression - equivalent to ranges::subrange{E, E + static_cast&lt;std::iter_difference_t&lt;T&gt;&gt;(F)} otherwise view::counted(E, F) is expression - equivalent to ranges::subrange
+{
+std::counted_iterator{E, F}, std::default_sentinel
+}
+ <wbr> <wbr> <wbr> <wbr> <wbr> otherwise, view::counted(E, F) is ill-formed.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;ranges&gt;
+#include &lt;iostream&gt;
+int main()
+{
+int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+for (int i : std::view::counted(a, 3))
+std::cout &lt;&lt; i &lt;&lt; &rsquo; &lsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 1 2 3</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> combines an iterator-sentinel pair into a View
+subrange <i>(class template)</i>
+counted_iterator iterator adaptor that tracks the distance to the end of the range
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+(C++20)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

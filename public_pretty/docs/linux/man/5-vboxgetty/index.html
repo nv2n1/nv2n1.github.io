@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vboxgetty(5) · Linux Manual Pages</title>
+<meta name="description" content="vboxgetty.conf – config file for vboxgetty">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-vboxgetty/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>vboxgetty(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>vboxgetty.conf &#8211; config file for vboxgetty</p>
+<h2>Description</h2>
+<p>The file <code>/etc/isdn/vboxgetty.conf</code> is used to configure vboxgetty. Please read the man page <a href="/docs/linux/man/8-vboxgetty/">vboxgetty</a>(8) for a description of how vboxgetty works. Everything after &quot;#&quot; is ignored, as are empty lines. All arguments must be separated by whitespace (spaces, tabs). Arguments may not contain whitespace. All settings before the first <code>port </code> command are global settings, after a port command they only affect the current port.</p>
+<dl>
+<dt><code>port &lt;string&gt;</code></dt>
+<dd>ISDN device to configure.</dd>
+<dt><code>modeminit &lt;string&gt;</code></dt>
+<dd>Command to initialize the modem. You should set the MSN/EAZ on which vboxgetty should listen for incoming calls. Default is &quot;ATZ&quot;.</dd>
+<dt><code>user &lt;string&gt;</code></dt>
+<dd>Name of the user that vboxgetty will use. This user must exist in /etc/passwd and you must use this parameter.</dd>
+<dt><code>group &lt;string&gt;</code></dt>
+<dd>Name of the group that vboxgetty will use. This group must exist in /etc/group and you must use this parameter.</dd>
+<dt><code>umask &lt;number&gt;</code></dt>
+<dd>Vboxgetty will use this umask when creating new files. You must give the umask as an octal number. Default is 077.</dd>
+<dt><code>dropdtrtime &lt;seconds&gt;</code></dt>
+<dd>Number of milliseconds to hold the DTR-Line low to reset the modem. Default value is 800.</dd>
+<dt><code>initpause &lt;number&gt;</code></dt>
+<dd>Number of milliseconds to wait after initializing the modem. This is used to compensate the delay of the &quot;NO CARRIER&quot; response. Default value is 1500.</dd>
+<dt><code>badinitsexit &lt;number&gt;</code></dt>
+<dd>Maximum failures with modeminit. If this number is reached, vboxgetty exits. Default is 0.</dd>
+<dt><code>ringtimeout &lt;number&gt;</code></dt>
+<dd>Time in seconds to wait for a RING. If no RING is received within this time, no call is taken. Default is 5.</dd>
+<dt><code>echotimeout &lt;number&gt;</code></dt>
+<dd>Time in seconds to wait for the echo from the modem. Default is 4.</dd>
+<dt><code>commandtimeout &lt;number&gt;</code></dt>
+<dd>Time in seconds to wait for a response to a modem command. Default is 4.</dd>
+<dt><code>alivetimeout &lt;number&gt;</code></dt>
+<dd>After this time in seconds vboxgetty will check if the modem is still responding to modem commands. Default is 1800.</dd>
+<dt><code>compression &lt;string&gt;</code></dt>
+<dd>Audio compression to use to record new messages. Possible values are ADPCM-2, ADPCM-3, ADPCM-4 and ULAW. The ALAW compression mode is no longer supported. Default is ULAW.</dd>
+<dt><code>spooldir &lt;string&gt;</code></dt>
+<dd>Spool directory to use. This directory must exist. It&#8217;s used for control files of several programs. Default is /var/spool/vbox/&lt;user&gt;.</dd>
+<dt><code>vboxconfig &lt;string&gt;</code></dt>
+<dd>Full path of the vbox config file. Default value is &lt;spooldir&gt;/vbox.conf.</dd>
+<dt><code>freespace &lt;number&gt;</code></dt>
+<dd>Number of bytes that must be available on the partition with the spool directory, so that a call may be taken. Default is 0.</dd>
+<dt><code>debuglevel &lt;string&gt;</code></dt>
+<dd>What messages are be written to /var/log/vbox/vboxgetty-&lt;device&gt;.log. The string consists of letters representing the severities of the messages to log (F=FATAL, E=ERROR, W=WARNING, I=INFO, D=DEBUG, J=JUNK). Default is FEWI. </dd>
+<h2>Files</h2>
+<dl>
+<dt><code>/etc/isdn/vboxgetty.conf</code></dt>
+<dd>this configuration file </dd>
+</dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-vboxgetty/">vboxgetty</a>(8), <a href="/docs/linux/man/5-vbox/">vbox</a>(5), vboxtcl(5)</code> </p>
+<h2>Author</h2>
+<p>This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux.</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

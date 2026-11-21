@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>func(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-func/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>func(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p>Func &ndash; Fedora Unified Network Controller.</p>
+<h2>SYNOPSIS</h2>
+<p>func ``*&rsquo;&rsquo; list_minions</p>
+<p>func target.example.org call module method [args &hellip;]</p>
+<p>func ``target*.example.org&rsquo;&rsquo; call module method [args &hellip;]</p>
+<p>func ``webserver1;mailserver2&rsquo;&rsquo; call module method [args &hellip;]</p>
+<h2>DESCRIPTION</h2>
+<p><code>func'' allows remote control of machines running funcd (called </code>minions&rsquo;&rsquo;) that are set to obey this machine (called the ``overlord&rsquo;&rsquo;). This includes performing various remote operations and gathering data.</p>
+<p>``func&rsquo;&rsquo; can address multiple machines at the same time by specifying their names with globs, which follow shell glob syntax.</p>
+<p>Groups of machines can also be specified in /etc/func/groups. To invoke func on a group of machines specifying ``@groupname&rsquo;'.</p>
+<p>See the project homepage (below) for a list of modules available and a more in-depth description of what each of them do.</p>
+<h2>THE CALL MODULE</h2>
+<p>The ``call&rsquo;&rsquo; module is used for running func modules remotely.</p>
+<p>Format: func ``*.example.org&rsquo;&rsquo; call &lt;module&gt; &lt;function&gt; [ args &hellip; ]</p>
+<h2>LISTING REMOTE MODULES AVAILABLE</h2>
+<p>It&rsquo;s possible to ask func minions what modules they have installed:</p>
+<p>func ``*.example.org&rsquo;&rsquo; call system list_modules</p>
+<h2>LISTING REMOTE FUNCTIONS AVAILABLE IN A MODULE</h2>
+<p>It is also possible to ask remote func modules what functions they support:</p>
+<p>func target.example.org call modulename list_methods</p>
+<h2>CALLING A REMOTE COMMAND</h2>
+<p>Once you have the name of a module you want to run, use call to invoke it:</p>
+<p>func target.example.org call modulename methodname</p>
+<h2>OUTPUT FORMATS</h2>
+<p>The <code>call'' command by default outputs data using a </code>pretty printer&rsquo;&rsquo;. Other display options include &ndash;raw, &ndash;json, and &ndash;xmlrpc, which may be more desirable if you are running func inside another script or prefer to read those display formats.</p>
+<p>Example: func ``*&rsquo;&rsquo; call &ndash;json service inventory</p>
+<h2>HELPER MODULES</h2>
+<p>In addition to <code>call'', there are other modules that make control of remote machines, as well as data display, more user friendly. They augment </code>call&rsquo;&rsquo; by providing some additional functionality.</p>
+<p>You will notice that the syntax for using one of these helper modules varies slightly from just using ``call&rsquo;&rsquo; directly.</p>
+<p>For example ``show&rsquo;&rsquo; can be used to show remote data. The normal command &quot;func &lsquo;*&rsquo; command would dump a very large amount of data, while the show command can mine only a few details. This might make things more readable, for instance, when not going through the Python <font SIZE="-1">API</font> (where you would not care).</p>
+<p>func ``*.example.org&rsquo;&rsquo; show hardware &ndash;help</p>
+<p>func ``*.example.org&rsquo;&rsquo; show hardware systemMemory</p>
+<p>func ``*.example.org&rsquo;&rsquo; show hardware os</p>
+<p>Another useful helper command module is copyfile, which allows func to work like scp from the shell, though it can address multiple systems at the same time.</p>
+<p>The following example pushes one file out to multiple systems:</p>
+<p>func ``*.example.org&rsquo;&rsquo; copyfile &ndash;file=/tmp/foo &ndash;remotepath=/tmp/foo</p>
+<p>While these helper modules will grow over time, usage of ``call&rsquo;&rsquo; syntax directly is fine also. See the Wiki for more examples as they evolve.</p>
+<h2>--verbose</h2>
+<p>Use this flag to output extra information from func while it is running. All func commands can take this flag.</p>
+<h2>EXIT_STATUS</h2>
+<p>Func commands have return values that vary based on the module being called. See the project page (linked below) for more information.</p>
+<h2>ADDITONAL RESOURCES</h2>
+<p>See <a rel="nofollow" HREF="https://fedorahosted.org/func/"><a href="https://fedorahosted.org/func/">https://fedorahosted.org/func/</a></a> for more information, including information on scripting func from Python.</p>
+<p>See also the manpages for <code>func-inventory'', </code>funcd&rsquo;&rsquo;, <code>certmaster'', </code>certmaster-ca&rsquo;&rsquo;, and ``func-transmit&rsquo;&rsquo;.</p>
+<h2>AUTHOR</h2>
+<p>Various. See <a rel="nofollow" HREF="https://fedorahosted.org/func/"><a href="https://fedorahosted.org/func/">https://fedorahosted.org/func/</a></a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

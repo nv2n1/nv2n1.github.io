@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>curlopt_ssh_auth_types(3) · Linux Manual Pages</title>
+<meta name="description" content="CURLOPT_SSH_AUTH_TYPES – set desired auth types for SFTP and SCP">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-curlopt_ssh_auth_types/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>curlopt_ssh_auth_types(3)</h1>
+
+
+
+
+
+<p>CURLOPT_SSH_AUTH_TYPES &#8211; set desired auth types for SFTP and SCP</p>
+<h2>Synopsis</h2>
+<p>#include &lt;curl/curl.h&gt; </p>
+<p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_SSH_AUTH_TYPES, long bitmask);</p>
+<h2>Description</h2>
+<p>Pass a long set to a bitmask consisting of one or more of CURLSSH_AUTH_PUBLICKEY, CURLSSH_AUTH_PASSWORD, CURLSSH_AUTH_HOST, CURLSSH_AUTH_KEYBOARD and CURLSSH_AUTH_AGENT. </p>
+<p> Set <i>CURLSSH_AUTH_ANY</i> to let libcurl pick a suitable one. Currently CURLSSH_AUTH_HOST has no effect. If CURLSSH_AUTH_AGENT is used, libcurl attempts to connect to ssh-agent or pageant and let the agent attempt the authentication.</p>
+<h2>Default</h2>
+<p>None</p>
+<h2>Protocols</h2>
+<p>SFTP and SCP</p>
+<h2>Example</h2>
+<p>TODO</p>
+<h2>Availability</h2>
+<p>CURLSSH_AUTH_HOST was added in 7.16.1, CURLSSH_AUTH_AGENT was added in 7.28.0</p>
+<h2>Return Value</h2>
+<p>Returns CURLE_OK if the option is supported, and CURLE_UNKNOWN_OPTION if not.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-curlopt_ssh_host_public_key_md5/">CURLOPT_SSH_HOST_PUBLIC_KEY_MD5</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_ssh_public_keyfile/">CURLOPT_SSH_PUBLIC_KEYFILE</a></code>(3),</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

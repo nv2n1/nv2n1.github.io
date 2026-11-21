@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdlocalefacet(3) · Linux Manual Pages</title>
+<meta name="description" content="std::locale::facet – std::locale::facet">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdlocalefacet/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdlocalefacet(3)</h1>
+
+
+
+
+
+<p>std::locale::facet &#8211; std::locale::facet</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;locale&gt;
+class locale::facet;</code></pre>
+<p>std::locale::facet is the base class for facets. It provides a common base class so that locales could store pointers to the facets they implement in a single indexed container, and it abstracts support for facet reference counting. Whenever a facet is added to a locale, the locale increments the reference count in the facet (through an implementation-specific mechanism). Whenever a locale is destructed or modified, it decrements the reference count in each facet it no longer implements. Whenever a facet&#8217;s reference count becomes zero, the locale performs delete static_cast&lt;std::locale::facet*&gt;(f) where f is the pointer to the facet. </p>
+<h2>Member functions</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constructs a new facet with specified reference count<br />
+constructor <i>(protected member function)</i><br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the copy assignment operator is deleted<br />
+operator= <i>(protected member function)</i> </p>
+<p>destructor the destructor is protected virtual<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function)</i><br />
+<code>[virtual]</code></p>
+<h2>Example</h2>
+<p>&nbsp;This section is incomplete<br />
+&nbsp;Reason: no example </p>
+<h2>See also</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the facet index type: each facet class must declare or inherit a public static member of this type<br />
+id <i>(class)</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

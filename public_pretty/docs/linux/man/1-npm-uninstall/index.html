@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npm-uninstall(1) · Linux Manual Pages</title>
+<meta name="description" content="npm-uninstall – Remove a package">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-npm-uninstall/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>npm-uninstall(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>npm-uninstall</code> &#8211; Remove a package </p>
+<h3>Synopsis</h3>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+npm uninstall[&lt;@scope&gt; / ]&lt;pkg&gt;[@&lt;version&gt;]...[-S | --save | -D | --save - dev | -O | --save - optional | --no - save] aliases : remove, rm, r, un, unlink
+</code></pre>
+</dd></dl>
+<h3>Description</h3>
+<p> This uninstalls a package, completely removing everything npm installed on its behalf. </p>
+<p> Example: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+npm uninstall sax
+</pre>
+</dd></dl>
+<p> In global mode (ie, with <code>-g</code> or <code>&#8211;global</code> appended to the command), it uninstalls the current package context as a global package. </p>
+<p> <code>npm uninstall</code> takes 3 exclusive, optional flags which save or update the package version in your main package.json:</p>
+<dl>
+<dl>
+<dt>&bull;</dt>
+<dd> <code>-S, &#8211;save</code>: Package will be removed from your <code>dependencies</code>.</dd>
+<dt>&bull;</dt>
+<dd> <code>-D, &#8211;save-dev</code>: Package will be removed from your <code>devDependencies</code>.</dd>
+<dt>&bull;</dt>
+<dd> <code>-O, &#8211;save-optional</code>: Package will be removed from your <code>optionalDependencies</code>.</dd>
+<dt>&bull;</dt>
+<dd> <code>&#8211;no-save</code>: Package will not be removed from your <code>package.json</code> file. </dd>
+</dl>
+</dl>
+<p> Further, if you have an <code>npm-shrinkwrap.json</code> then it will be updated as well. </p>
+<p> Scope is optional and follows the usual rules for npm help <code>scope</code>. </p>
+<p> Examples: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+npm uninstall sax-- save
+            npm uninstall @myorg /
+        privatepackage-- save
+            npm uninstall node -
+    tap-- save - dev npm uninstall dtrace - provider-- save - optional npm uninstall lodash-- no - save
+</code></pre>
+</dd></dl>
+<h3>See Also</h3>
+<dl>
+<dl>
+<dt>&bull;</dt>
+<dd> npm help prune</dd>
+<dt>&bull;</dt>
+<dd> npm help install</dd>
+<dt>&bull;</dt>
+<dd> npm help folders</dd>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help npmrc </dd>
+</dl>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

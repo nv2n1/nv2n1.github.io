@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting Up SSH Server on Windows 10, 11, and Server 2019 - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/set-up-ssh-server-on-windows-xp/">
+  <meta name="description" content="Running an SSH server on Windows enables remote administration, port forwarding, and integration with Unix-like workflows. Modern Windows provides native …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Setting Up SSH Server on Windows 10, 11, and Server 2019">
+  <meta property="og:url" content="https://www.systutorials.com/set-up-ssh-server-on-windows-xp/">
+  <meta property="og:description" content="Running an SSH server on Windows enables remote administration, port forwarding, and integration with Unix-like workflows. Modern Windows provides native …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/web-development/">Web Development</a>
+        </nav>
+        
+        <h1>Setting Up SSH Server on Windows 10, 11, and Server 2019</h1>
+        <time class="post-date" datetime="2013-07-12T16:54:47Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Running an SSH server on Windows enables remote administration, port forwarding, and integration with Unix-like workflows. Modern Windows provides native OpenSSH support that’s far superior to legacy third-party solutions.</p>
+<h2 id="installation">Installation</h2>
+<p>Windows 10 (build 1809+), Windows 11, and Windows Server 2019+ include OpenSSH as an optional feature.</p>
+<p><strong>Via Settings:</strong></p>
+<ol>
+<li>Open Settings → System → Optional features</li>
+<li>Click “Add an optional feature”</li>
+<li>Search for “OpenSSH Server”</li>
+<li>Click Install</li>
+</ol>
+<p><strong>Via PowerShell (as Administrator):</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Add-WindowsCapability</span> <span class="n">-Online</span> <span class="n">-Name</span> <span class="n">OpenSSH</span><span class="p">.</span><span class="n">Server</span><span class="p">~~~~</span><span class="mf">0.0</span><span class="p">.</span><span class="py">1</span><span class="p">.</span><span class="py">0</span>
+</span></span></code></pre></div><h2 id="starting-the-service">Starting the Service</h2>
+<p>Enable and start OpenSSH Server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Set-Service</span> <span class="n">-Name</span> <span class="n">sshd</span> <span class="n">-StartupType</span> <span class="n">Automatic</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Start-Service</span> <span class="n">-Name</span> <span class="n">sshd</span>
+</span></span></code></pre></div><p>Verify it’s running:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Get-Service</span> <span class="n">sshd</span>
+</span></span></code></pre></div><h2 id="firewall-configuration">Firewall Configuration</h2>
+<p>Allow SSH through Windows Defender Firewall:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">New-NetFirewallRule</span> <span class="n">-Name</span> <span class="n">sshd</span> <span class="n">-DisplayName</span> <span class="s2">&#34;OpenSSH Server&#34;</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Action</span> <span class="n">Allow</span> <span class="n">-Protocol</span> <span class="n">TCP</span> <span class="n">-LocalPort</span> <span class="mf">22</span>
+</span></span></code></pre></div><p>Or manually: Settings → Privacy &amp; Security → Firewall &amp; network protection → Allow an app through firewall, then select OpenSSH Server.</p>
+<h2 id="basic-configuration">Basic Configuration</h2>
+<p>OpenSSH configuration lives in <code>C:\ProgramData\ssh\sshd_config</code>. Edit this file as Administrator to customize behavior.</p>
+<p><strong>Default port:</strong></p>
+<pre><code>Port 22
+</code></pre>
+<p><strong>Authentication methods:</strong></p>
+<pre><code>PasswordAuthentication yes
+PubkeyAuthentication yes
+</code></pre>
+<p><strong>Default shell (PowerShell 7+ recommended):</strong></p>
+<pre><code>Subsystem powershell C:\Program Files\PowerShell\7\pwsh.exe
+</code></pre>
+<p>For Windows PowerShell (built-in):</p>
+<pre><code>Subsystem powershell C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+</code></pre>
+<p>After editing, validate syntax:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">sshd</span> <span class="n">-T</span>
+</span></span></code></pre></div><p>Then restart the service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Restart-Service</span> <span class="n">sshd</span>
+</span></span></code></pre></div><h2 id="testing-the-connection">Testing the Connection</h2>
+<p>From any client machine (Linux, macOS, or Windows):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh username@windows-ip-address
+</span></span></code></pre></div><p>Accept the host key fingerprint on first connection. This adds the host key to your local <code>known_hosts</code> file.</p>
+<p>Check what port sshd is listening on:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">netstat</span> <span class="n">-ano</span> <span class="p">|</span> <span class="n">findstr</span> <span class="err">:</span><span class="mf">22</span>
+</span></span></code></pre></div><h2 id="key-based-authentication">Key-Based Authentication</h2>
+<p><strong>On your client machine, generate an Ed25519 key pair (if you don’t have one):</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t ed25519 -C <span class="s2">&#34;your-email@example.com&#34;</span>
+</span></span></code></pre></div><p><strong>Copy the public key to Windows:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat ~/.ssh/id_ed25519.pub <span class="p">|</span> ssh username@windows-ip-address <span class="s2">&#34;mkdir -p .ssh &amp;&amp; cat &gt;&gt; .ssh/authorized_keys&#34;</span>
+</span></span></code></pre></div><p>If that fails, manually place the public key content into <code>C:\Users\USERNAME\.ssh\authorized_keys</code> on Windows.</p>
+<p><strong>Fix permissions on the .ssh directory and authorized_keys file:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">icacls</span> <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">USERNAME</span><span class="p">\.</span><span class="py">ssh</span> <span class="p">/</span><span class="n">inheritance</span><span class="err">:</span><span class="nb">r </span><span class="p">/</span><span class="n">grant</span><span class="err">:</span><span class="nb">r </span><span class="s2">&#34;</span><span class="nv">$env:USERNAME</span><span class="s2">`:F&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">icacls</span> <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">USERNAME</span><span class="p">\.</span><span class="n">ssh</span><span class="p">\</span><span class="n">authorized_keys</span> <span class="p">/</span><span class="n">inheritance</span><span class="err">:</span><span class="nb">r </span><span class="p">/</span><span class="n">grant</span><span class="err">:</span><span class="nb">r </span><span class="s2">&#34;</span><span class="nv">$env:USERNAME</span><span class="s2">`:F&#34;</span>
+</span></span></code></pre></div><p>OpenSSH on Windows enforces strict permission checking—overly permissive ACLs on <code>.ssh</code> or <code>authorized_keys</code> will cause authentication to fail silently.</p>
+<h2 id="disabling-password-authentication">Disabling Password Authentication</h2>
+<p>For security-conscious deployments, disable passwords entirely and require key-based authentication:</p>
+<pre><code>PasswordAuthentication no
+PubkeyAuthentication yes
+PermitEmptyPasswords no
+</code></pre>
+<p>Restart the service after editing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Restart-Service</span> <span class="n">sshd</span>
+</span></span></code></pre></div><h2 id="restricting-login-to-specific-users">Restricting Login to Specific Users</h2>
+<pre><code>AllowUsers user1 user2 domain\user3
+</code></pre>
+<h2 id="changing-the-default-port">Changing the Default Port</h2>
+<pre><code>Port 2222
+</code></pre>
+<p>Update your firewall rule:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Remove-NetFirewallRule</span> <span class="n">-Name</span> <span class="n">sshd</span>
+</span></span><span class="line"><span class="cl"><span class="nb">New-NetFirewallRule</span> <span class="n">-Name</span> <span class="n">sshd</span> <span class="n">-DisplayName</span> <span class="s2">&#34;OpenSSH Server&#34;</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Action</span> <span class="n">Allow</span> <span class="n">-Protocol</span> <span class="n">TCP</span> <span class="n">-LocalPort</span> <span class="mf">2222</span>
+</span></span></code></pre></div><p>Connect on the new port:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -p <span class="m">2222</span> username@windows-ip-address
+</span></span></code></pre></div><h2 id="using-different-shells-per-user">Using Different Shells Per User</h2>
+<p>Define shell overrides with Match blocks:</p>
+<pre><code>Match User adminuser
+    Subsystem powershell C:\Program Files\PowerShell\7\pwsh.exe
+
+Match User serviceaccount
+    Subsystem powershell C:\Windows\System32\cmd.exe /c
+</code></pre>
+<h2 id="port-forwarding">Port Forwarding</h2>
+<p><strong>Local port forwarding</strong> (access a remote service from your local machine):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -L 9000:internal-server:9000 username@windows-ip-address
+</span></span></code></pre></div><p>Keep the tunnel alive without an interactive shell:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -N -L 9000:internal-server:9000 username@windows-ip-address
+</span></span></code></pre></div><p><strong>Reverse port forwarding</strong> (expose a local Windows service to a remote machine):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -R 8080:localhost:3000 username@remote-ip-address
+</span></span></code></pre></div><p>This binds port 8080 on the remote machine to port 3000 on your local Windows box.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Connection refused or timeout:</strong></p>
+<p>Verify the service is running and listening:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Get-Service</span> <span class="n">sshd</span>
+</span></span><span class="line"><span class="cl"><span class="n">netstat</span> <span class="n">-ano</span> <span class="p">|</span> <span class="n">findstr</span> <span class="err">:</span><span class="mf">22</span>
+</span></span></code></pre></div><p>Check the firewall rule allows traffic on your configured port.</p>
+<p><strong>Permission denied (publickey):</strong></p>
+<p>Ensure <code>.ssh</code> directory and <code>authorized_keys</code> file have correct NTFS permissions. Re-run the <code>icacls</code> commands above. Verify that only your user owns these files:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">icacls</span> <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">USERNAME</span><span class="p">\.</span><span class="py">ssh</span>
+</span></span><span class="line"><span class="cl"><span class="n">icacls</span> <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">USERNAME</span><span class="p">\.</span><span class="n">ssh</span><span class="p">\</span><span class="n">authorized_keys</span>
+</span></span></code></pre></div><p><strong>Wrong shell launching:</strong></p>
+<p>Verify the shell path exists and is specified correctly in <code>sshd_config</code>. Test the subsystem:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">PowerShell</span><span class="p">\</span><span class="mf">7</span><span class="p">\</span><span class="n">pwsh</span><span class="p">.</span><span class="py">exe</span>
+</span></span></code></pre></div><p><strong>sshd_config syntax error:</strong></p>
+<p>Validate the config file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">sshd</span> <span class="n">-T</span>
+</span></span></code></pre></div><p>This parses the config without starting the service and reports any syntax errors.</p>
+<p><strong>Slow connection or timeout on login:</strong></p>
+<p>Check for reverse DNS or GSSAPI issues. Disable GSSAPI authentication if not needed:</p>
+<pre><code>GSSAPIAuthentication no
+</code></pre>
+<h2 id="unsupported-windows-versions">Unsupported Windows Versions</h2>
+<p>Windows XP, Vista, Server 2003, and other versions beyond mainstream support should not run SSH. These systems lack security updates and are unsuitable for any network-facing service.</p>
+<p>If upgrading is impossible and SSH is absolutely necessary, third-party options like Bitvise SSH Server exist but lack the security maintenance and hardening of native OpenSSH. This should only be a temporary workaround in isolated environments.</p>
+<p>For Linux-based SSH alternatives, consider running a lightweight Linux VM or WSL2 (Windows Subsystem for Linux 2) on supported Windows hosts.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

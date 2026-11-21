@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shells(5) · Linux Manual Pages</title>
+<meta name="description" content="shells – pathnames of valid login shells">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-shells/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>shells(5)</h1>
+
+
+
+
+
+<p>shells &#8211; pathnames of valid login shells</p>
+<h2>Description</h2>
+<p><i>/etc/shells</i> is a text file which contains the full pathnames of valid login shells. This file is consulted by <code><a href="/docs/linux/man/1-chsh/">chsh</a></code>(1) and available to be queried by other programs. </p>
+<p> Be aware that there are programs which consult this file to find out if a user is a normal user; for example, FTP daemons traditionally disallow access to users with shells not included in this file.</p>
+<h2>Files</h2>
+<p><i>/etc/shells</i></p>
+<h2>Examples</h2>
+<p><i>/etc/shells</i> may contain the following paths: </p>
+<p> <i>/bin/sh</i> <i>/bin/bash</i> <i>/bin/csh</i></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-chsh/">chsh</a></code>(1), <code><a href="/docs/linux/man/3-getusershell/">getusershell</a></code>(3), <code><a href="/docs/linux/man/8-pam_shells/">pam_shells</a></code>(8)</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

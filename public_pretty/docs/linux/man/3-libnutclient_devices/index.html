@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libnutclient_devices(3) · Linux Manual Pages</title>
+<meta name="description" content="libnutclient_devices, nutclient_get_devices, nutclient_has_device, nutclient_get_device_description – Device related functions in Network UPS Tools high-level client access library">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-libnutclient_devices/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>libnutclient_devices(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> libnutclient_devices, nutclient_get_devices, nutclient_has_device, nutclient_get_device_description &#8211; Device related functions in Network UPS Tools high-level client access library </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;nutclient.h&gt;
+</code></pre>
+<pre>
+typedef void* NUTCLIENT_t;
+</pre>
+<pre><code>
+strarr nutclient_get_devices(NUTCLIENT_t client);
+int nutclient_has_device(NUTCLIENT_t client, const char *dev);
+char *nutclient_get_device_description(NUTCLIENT_t client, const char *dev);
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> These functions allow to manage devices. </p>
+<p> The <code>nutclient_get_devices()</code> function retrieve the list of devices monitored by a client. The returned strarr must be freed by <i>strarr_free</i>. </p>
+<p> The <code>nutclient_has_device()</code> function test if a device is monitored by a client. </p>
+<p> The <code>nutclient_get_device_description()</code> function retrieve the device description. The returned description string must be freed. </p>
+<p> <i>dev</i> is the device name.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-libnutclient/">libnutclient</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_commands/">libnutclient_commands</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_devices/">libnutclient_devices</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_general/">libnutclient_general</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_variables/">libnutclient_variables</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

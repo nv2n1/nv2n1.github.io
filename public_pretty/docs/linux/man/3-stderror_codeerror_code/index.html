@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stderror_codeerror_code(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stderror_codeerror_code/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stderror_codeerror_code(3)</h1>
+
+
+
+
+
+<p>std::error_code::error_code - std::error_code::error_code</p>
+<h2>Synopsis</h2>
+<pre><code>error_code() noexcept;
+(1)(since C++ 11)
+    error_code(int ec, const error_category &amp;ecat) noexcept;
+(2)(since C++ 11)
+    template &lt;class ErrorCodeEnum&gt;
+    (3)(since C++ 11)
+        error_code(ErrorCodeEnum e) noexcept;</code></pre> 
+<p>Constructs new error code.</p>
+<ol>
+<li>Constructs error code with default value. Equivalent to error_code(0, std::system_category()).</li>
+<li>Constructs error code with ec as the platform-dependent error code and ecat as the corresponding error category.</li>
+<li>Constructs error code from an error code enum e. Equivalent to *this = make_error_code(e). The overload participates in overload resolutions only if std::is_error_code_enum&lt;ErrorCodeEnum&gt;::value == true.</li>
+</ol>
+<h2>Parameters</h2>
+<p>ec - platform dependent error code to construct with
+ecat - error category corresponding to ec
+e - error code enum to construct with</p>
+<h2>See also</h2>
+<p>make_error_code(std::errc) constructs an std::errc error code
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+make_error_code(std::io_errc) constructs an iostream error code
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+make_error_code(std::future_errc) constructs a future error code
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

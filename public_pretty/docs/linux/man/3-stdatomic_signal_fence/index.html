@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdatomic_signal_fence(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdatomic_signal_fence/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdatomic_signal_fence(3)</h1>
+
+
+
+
+
+<p>std::atomic_signal_fence - std::atomic_signal_fence</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;atomic&gt;
+extern &quot;C&quot; void atomic_signal_fence( std::memory_order order ) noexcept; <i>(since C++11)</i>
+Establishes memory synchronization ordering of non-atomic and relaxed atomic accesses, as instructed by order, between a thread and a signal handler executed on the same thread. This is equivalent to std::atomic_thread_fence, except no CPU instructions for memory ordering are issued. Only reordering of the instructions by the compiler is suppressed as order instructs. For example, a fence with release semantics prevents reads or writes from being moved past subsequent writes and a fence with acquire semantics prevents reads or writes from being moved ahead of preceding reads.</p>
+<h2>Parameters</h2>
+<p>order - the memory ordering executed by this fence</p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example</p>
+<h2>See also</h2>
+<p>memory_order defines memory ordering constraints for the given atomic operation
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(enum)</i>
+<i>(C++11)</i>
+atomic_thread_fence generic memory order-dependent fence synchronization primitive
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

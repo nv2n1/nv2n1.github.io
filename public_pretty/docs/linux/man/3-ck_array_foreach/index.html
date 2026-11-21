@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ck_array_foreach(3) · Linux Manual Pages</title>
+<meta name="description" content="CK_ARRAY_FOREACH – iterate through an array">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ck_array_foreach/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ck_array_foreach(3)</h1>
+
+
+
+
+
+<p><code>CK_ARRAY_FOREACH</code> &#8211; iterate through an array</p>
+<h2>Library</h2>
+<p>Concurrency Kit (libck, -lck)</p>
+<h2>Synopsis</h2>
+<p>In ck_array.h Ft bool Fn CK_ARRAY_FOREACH ck_array_t *array ck_array_iterator_t *iterator void **b</p>
+<h2>Description</h2>
+<p>The Fn CK_ARRAY_FOREACH 3 macro iterates through the array pointed to by Fa array . A pointer to an iterator object must be specified by Fa iterator and Fa b must point to a void pointer.</p>
+<h2>Example</h2>
+<blockquote>
+<pre>#include &lt;ck_array.h&gt;
+/* Assume this was already previously initialized. */
+ck_array_t array;
+void
+example(void)
+{
+ ck_array_iterator_t iterator;
+ void *pointer;
+ CK_ARRAY_FOREACH(&amp;array, &amp;iterator, &amp;pointer) {
+ do_something(pointer);
+ }
+}</pre>
+</blockquote>
+<h2>Return Values</h2>
+<p>This macro has no return value.</p>
+<h2>See Also</h2>
+<p>ck_array_init3, ck_array_commit3, ck_array_put3, ck_array_put_unique3, ck_array_remove3, ck_array_deinit3 ck_array_length3, ck_array_buffer3, ck_array_initialized3 </p>
+<p> Additional information available at <a rel="nofollow" href="http://concurrencykit.org/">http://concurrencykit.org/</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

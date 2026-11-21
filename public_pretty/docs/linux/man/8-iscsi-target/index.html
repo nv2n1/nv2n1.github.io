@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iscsi-target(8) · Linux Manual Pages</title>
+<meta name="description" content="iscsi-target – service remote iSCSI requests">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-iscsi-target/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>iscsi-target(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>iscsi-target</code> &#8211; service remote iSCSI requests</p>
+<h2>Synopsis</h2>
+<p>[-<code>46DV</code> ] [-<code>b </code><i>block length</i> ] [-<code>f </code><i>configuration file</i> ] [-<code>p </code><i>port number</i> ] [-<code>s </code><i>maximum number of sessions</i> ] [-<code>t </code><i>target name</i> ] [-<code>v </code><i>verbose arg</i> ]</p>
+<h2>Description</h2>
+<p>is the server for iSCSI requests from iSCSI initiators. listens for discovery and login requests on the required port, and responds to those requests appropriately. Options and operands available for <code>iscsi-target</code></p>
+<dl>
+<dt><code>-4</code></dt>
+<dd>will listen for IPv4 connections, and respond back using IPv4. This is the default address family.</dd>
+<dt><code>-6</code></dt>
+<dd>will listen for IPv6 connections, and respond back using IPv6.</dd>
+<dt><code>-b </code><i>blocksize</i></dt>
+<dd>Specify the underlying block size for iSCSI storage which will be served. The possible sizes are: 512, 1024, 2048, and 4096 bytes, with the default being 512 bytes.</dd>
+<dt><code>-D</code></dt>
+<dd>When this option is specified, will not detach itself from the controlling tty, and will not become a daemon. This can be useful for debugging purposes.</dd>
+<dt><code>-f </code><i>configfile</i></dt>
+<dd>Use the named file as the configuration file. The default file can be found in <i>/etc/iscsi/targets</i> See <a href="/docs/linux/man/5-targets/">targets</a>(5) for more information.</dd>
+<dt><code>-p </code><i>port number</i></dt>
+<dd>Use the port number provided as the argument as the port on which to listen for iSCSI service requests from initiators.</dd>
+<dt><code>-s </code><i>maximum number of sessions</i></dt>
+<dd>Allow the maximum number of sessions to be initiated when connecting to the target.</dd>
+<dt><code>-t </code><i>filename</i></dt>
+<dd>The target name (as it appears to the iSCSI initiator) can be specified using this flag.</dd>
+<dt><code>-V</code></dt>
+<dd>will print the utility name and version number, and the address for bug reports, and then exit.</dd>
+<dt><code>-v </code><i>argument</i></dt>
+<dd>The amount of information shown can be varied by using this command. Possible values of <i>argument</i> are <i>net</i> to show network-related information, <i>iscsi</i> to show iSCSI protocol-related information, <i>scsi</i> to show SCSI protocol information, and <i>all</i> to show information from all of the above arguments.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><code>/etc/iscsi/targets </code></dt>
+<dd>the list of exported storage</dd>
+<dt><code>/var/run/iscsi-target.pid </code></dt>
+<dd>the PID of the currently running</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/5-targets/">targets</a>(5)</p>
+<h2>History</h2>
+<p>The utility first appeared in Nx 4.0 .</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

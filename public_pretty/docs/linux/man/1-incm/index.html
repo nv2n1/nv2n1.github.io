@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>incm(1) · Linux Manual Pages</title>
+<meta name="description" content="incm – Incorporating new mails for Mew">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-incm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>incm(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> incm &#8211; Incorporating new mails for Mew</p>
+<h2>SYNOPSIS</h2>
+<p> incm [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>incm</code> utility incorporates new mails from the mbox or the maildir to Mew&#8217;s inbox folder. </p>
+<p> The options are as follows:</p>
+<dl>
+<dt><code>-a</code></dt>
+<dd> Retrieve all mails from maildir/{cur,new} for maildir.</dd>
+<dt><code>-b</code></dt>
+<dd> Backup mails. mbox: No truncate mbox file. maildir: To maildir/cur directory.</dd>
+<dt><code>-c</code></dt>
+<dd> Use the Content-Length: field, instead of the &quot;From &quot; line, as a mail separator for mbox.</dd>
+<dt><code>-d</code><i> path</i></dt>
+<dd> Path to mbox/maildir. If <i>path</i> is a file, mbox is assumed. If <i>path</i> is a directory, maildir is assumed.</dd>
+<dt><code>-m</code><i> path</i></dt>
+<dd> The same as the <code>-d</code> option.</dd>
+<dt><code>-s</code></dt>
+<dd> Read one mail from stdin instead of mbox/maildir.</dd>
+<dt><code>-i</code><i> inboxdir</i></dt>
+<dd> A path to the inbox directory.</dd>
+<dt><code>-u</code></dt>
+<dd> Don&#8217;t touch &quot;.mew-mtime&quot;.</dd>
+<dt><code>-f</code></dt>
+<dd> Preserve Unix From (Envelope Sender) line in mbox case.</dd>
+<dt><code>-p</code><i> mode</i></dt>
+<dd> Specify file mode that creates in mbox case.</dd>
+<dt><code>-o</code></dt>
+<dd> Use the suffix when creating messages.</dd>
+<dt><code>-x</code><i> suffix</i></dt>
+<dd> Use this <i>suffix</i>.</dd>
+<dt><code>-h</code></dt>
+<dd> Display this help message.</dd>
+<dt><code>-v</code></dt>
+<dd> Display the version.</dd></dl>
+<h3>mbox</h3>
+<p> For mbox, the mail separator is &quot;From &quot; in the beginning of lines. The <code>incm</code> utility does not convert &quot;&gt;From &quot; to &quot;From &quot; in the beginning of lines in the body. On Solaris, Content-Length: should be used with the <code>-c</code> option to tell the end of mail. </p>
+<p> To lock mbox, a lock file(&quot;&lt;user&gt;.lock&quot;), flock() or lockf(), and open(O_EXLOCK) are used. </p>
+<h3>maildir</h3>
+<p> For maildir, no lock and no separator are necessary. </p>
+<p> Consider the following situation: </p>
+<pre><code>
+cur /
+{
+    1, 2
+}
+new /
+{
+    3, 4
+}
+</code></pre>
+<p> Executing <code>incm</code> without the options results in:<br />
+cur /<br />
+{<br />
+    1, 2<br />
+}<br />
+new /<br />
+{<br />
+}<br />
+to inbox:<br />
+{<br />
+    3, 4<br />
+}</p>
+<p> Executing <code>incm</code> with the <code>-a</code> option results in:<br />
+cur /<br />
+{<br />
+}<br />
+new /<br />
+{<br />
+}<br />
+to inbox:<br />
+{<br />
+    1, 2, 3, 4<br />
+}</p>
+<p> Executing <code>incm</code> with the <code>-b</code> option results in:<br />
+cur /<br />
+{<br />
+    1, 2, 3, 4<br />
+}<br />
+new /<br />
+{<br />
+}<br />
+to inbox:<br />
+{<br />
+    3, 4<br />
+}</p>
+<p> Executing <code>incm</code> with the <code>-a</code> option and the <code>-b</code> option results in: </p>
+<pre><code>
+cur /
+{
+    1, 2, 3, 4
+}
+new /
+{
+}
+to inbox:
+{
+    1, 2, 3, 4
+}
+</code></pre>
+<p> So, if both options are specified, messages are retrieved multiple times. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nand_setup_read_retry(9) · Linux Manual Pages</title>
+<meta name="description" content="nand_setup_read_retry – [INTERN] Set the READ RETRY mode">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-nand_setup_read_retry/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>nand_setup_read_retry(9)</h1>
+
+
+
+
+
+<p>nand_setup_read_retry &#8211; [INTERN] Set the READ RETRY mode</p>
+<h2>Synopsis</h2>
+<pre><code>int nand_setup_read_retry(struct mtd_info *mtd, int retry_mode);</code></pre>
+<h2>Arguments</h2>
+<p><i>mtd</i></p>
+<dl>
+<dd>
+</dd><dd>MTD device structure</dd></dl>
+<p> <i>retry_mode</i></p>
+<dl>
+<dd>the retry mode to use</dd></dl>
+<h2>Description</h2>
+<p>Some vendors supply a special command to shift the Vt threshold, to be used when there are too many bitflips in a page (i.e., ECC error). After setting a new threshold, the host should retry reading the page.</p>
+<h2>Author</h2>
+<p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

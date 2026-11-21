@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>d_add_ci(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-d_add_ci/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>d_add_ci(9)</h1>
+
+
+
+
+
+<p>d_add_ci - lookup or allocate new dentry with case-exact name</p>
+<h2>Synopsis</h2>
+<pre><code>struct dentry *d_add_ci(struct dentry *dentry, struct inode *inode, struct qstr *name);</code></pre>
+<h2>Arguments</h2>
+<p><i>dentry</i></p>
+<dl><dd></dd><dd>the negative dentry that was passed to the parent's lookup func</dd></dl>
+<p><i>inode</i></p>
+<dl><dd>the inode case-insensitive lookup has found</dd></dl>
+<p><i>name</i></p>
+<dl><dd>the case-exact name to be associated with the returned dentry</dd></dl>
+<h2>Description</h2>
+<p>This is to avoid filling the dcache with case-insensitive names to the same inode, only the actual correct case is stored in the dcache for case-insensitive filesystems.</p>
+<p>For a case-insensitive lookup match and if the the case-exact dentry already exists in in the dcache, use it and return it.</p>
+<p>If no entry exists with the exact case name, allocate new dentry with the exact case, and return the spliced entry.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

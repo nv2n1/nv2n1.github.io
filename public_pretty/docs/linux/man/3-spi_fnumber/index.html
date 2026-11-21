@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>spi_fnumber(3) · Linux Manual Pages</title>
+<meta name="description" content="SPI_fnumber – determine the column number for the specified column name">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-spi_fnumber/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>spi_fnumber(3)</h1>
+
+
+
+
+
+<p>SPI_fnumber &#8211; determine the column number for the specified column name </p>
+<h2>Synopsis</h2>
+<pre>int SPI_fnumber(TupleDesc <i>rowdesc</i>, const char * <i>colname</i>)</pre>
+<h2>Description</h2>
+<p><code>SPI_fnumber</code> returns the column number for the column with the specified name. </p>
+<p> If <i>colname</i> refers to a system column (e.g., oid) then the appropriate negative column number will be returned. The caller should be careful to test the return value for exact equality to SPI_ERROR_NOATTRIBUTE to detect an error; testing the result for less than or equal to 0 is not correct unless system columns should be rejected.</p>
+<h2>Arguments</h2>
+<p>TupleDesc <i>rowdesc</i></p>
+<dl COMPACT>
+<dd>input row description</dd></dl>
+<p> const char * <i>colname</i></p>
+<dl COMPACT>
+<dd>column name</dd></dl>
+<h2>Return Value</h2>
+<p>Column number (count starts at 1), or SPI_ERROR_NOATTRIBUTE if the named column was not found.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

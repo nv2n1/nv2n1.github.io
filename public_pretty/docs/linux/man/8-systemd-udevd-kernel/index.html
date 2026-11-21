@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemd-udevd-kernel(8) · Linux Manual Pages</title>
+<meta name="description" content="systemd-udevd.service, systemd-udevd-control.socket, systemd-udevd-kernel.socket, systemd-udevd – Device event managing daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-systemd-udevd-kernel/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>systemd-udevd-kernel(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>systemd-udevd.service, systemd-udevd-control.socket, systemd-udevd-kernel.socket, systemd-udevd &#8211; Device event managing daemon</p>
+<h2>Synopsis</h2>
+<p>systemd-udevd.service </p>
+<p> systemd-udevd-control.socket </p>
+<p> systemd-udevd-kernel.socket</p>
+<dl>
+<dt> <code>/usr/lib/systemd/systemd-udevd</code> [<code>&#8211;daemon</code>] [<code>&#8211;debug</code>] [<code>&#8211;children-max=</code>] [<code>&#8211;exec-delay=</code>] [<code>&#8211;event-timeout=</code>] [<code>&#8211;resolve-names=early|late|never</code>] [<code>&#8211;version</code>] [<code>&#8211;help</code>]</dt></dl>
+<h2>Description</h2>
+<p><code>systemd-udevd</code></p>
+<dd>listens to kernel uevents. For every event, systemd-udevd executes matching instructions specified in udev rules. See <code><a href="/docs/linux/man/7-udev/">udev</a></code>(7). </dd>
+<p> The behavior of the daemon can be configured using <code><a href="/docs/linux/man/5-udev-conf/">udev.conf</a></code>(5), its command-line options, environment variables, and on the kernel command-line, or changed dynamically with <code>udevadm control</code>.</p>
+<h2>Options</h2>
+<p><code>&#8211;daemon</code></p>
+<dl>
+<dd>Detach and run in the background.</dd></dl>
+<p> <code>&#8211;debug</code></p>
+<dl>
+<dd>Print debug messages to standard error.</dd></dl>
+<p> <code>&#8211;children-max=</code></p>
+<dl>
+<dd>Limit the number of events executed in parallel.</dd></dl>
+<p> <code>&#8211;exec-delay=</code></p>
+<dl>
+<dd>Delay the execution of <i>RUN</i> instructions by the given number of seconds. This option might be useful when debugging system crashes during coldplug caused by loading non-working kernel modules.</dd></dl>
+<p> <code>&#8211;event-timeout=</code></p>
+<dl>
+<dd>Set the number of seconds to wait for events to finish. After this time the event will be terminated. The default is 30 seconds.</dd></dl>
+<p> <code>&#8211;resolve-names=</code></p>
+<dl>
+<dd>Specify when systemd-udevd should resolve names of users and groups. When set to <code>early</code> (the default), names will be resolved when the rules are parsed. When set to <code>late</code>, names will be resolved for every event. When set to <code>never</code>, names will never be resolved and all devices will be owned by root.</dd></dl>
+<p> <code>&#8211;help</code></p>
+<dl>
+<dd>Print a short help text and exit.</dd></dl>
+<p> <code>&#8211;version</code></p>
+<dl>
+<dd>Print a short version string and exit.</dd></dl>
+<h2>Environment</h2>
+<p><i>$UDEV_LOG=</i></p>
+<dl>
+<dd>Set the logging priority.</dd></dl>
+<h2>Kernel Command Line</h2>
+<p>Parameters starting with &quot;rd.&quot; will be read when <code>systemd-udevd</code> is used in an initrd. </p>
+<p> <i>udev.log-priority=</i>, <i>rd.udev.log-priority=</i></p>
+<dl>
+<dd>Set the logging priority.</dd></dl>
+<p> <i>udev.children-max=</i>, <i>rd.udev.children-max=</i></p>
+<dl>
+<dd>Limit the number of events executed in parallel.</dd></dl>
+<p> <i>udev.exec-delay=</i>, <i>rd.udev.exec-delay=</i></p>
+<dl>
+<dd>Delay the execution of <i>RUN</i> instructions by the given number of seconds. This option might be useful when debugging system crashes during coldplug caused by loading non-working kernel modules.</dd></dl>
+<p> <i>udev.event-timeout=</i>, <i>rd.udev.event-timeout=</i></p>
+<dl>
+<dd>Wait for events to finish up to the given number of seconds. This option might be useful if events are terminated due to kernel drivers taking too long to initialize.</dd></dl>
+<p> <i>net.ifnames=</i></p>
+<dl>
+<dd>Network interfaces are renamed to give them predictable names when possible. It is enabled by default; specifying 0 disables it.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/5-udev-conf/">udev.conf</a></code>(5), <code><a href="/docs/linux/man/7-udev/">udev</a></code>(7), <code><a href="/docs/linux/man/8-udevadm/">udevadm</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

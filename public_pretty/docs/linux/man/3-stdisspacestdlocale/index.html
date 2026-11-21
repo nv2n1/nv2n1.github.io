@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdisspacestdlocale(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdisspacestdlocale/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdisspacestdlocale(3)</h1>
+
+
+
+
+
+<p>std::isspace(std::locale) - std::isspace(std::locale)</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;locale&gt;
+    template &lt;class charT&gt;
+    bool isspace(charT ch, const locale &amp;loc);</code></pre> 
+<p>Checks if the given character is classified as a whitespace character by the given locale&rsquo;s ctype facet.</p>
+<h2>Parameters</h2>
+<p>ch - character
+loc - locale</p>
+<h2>Return value</h2>
+<p>Returns true if the character is classified as a whitespace character, false otherwise.</p>
+<h2>Possible implementation</h2>
+<p> <wbr> template&lt; class charT &gt;
+ <wbr> bool isspace( charT ch, const std::locale&amp; loc ) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return std::use_facet&lt;std::ctype&lt;charT&gt;&gt;(loc).is(std::ctype_base::space, ch);
+ <wbr> }</p>
+<h2>Example</h2>
+<p>Demonstrates the use of isspace() with different locales (OS-specific).
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;locale&gt;
+void try_with(wchar_t c, const char *loc)
+{
+std::wcout &lt;&lt; &quot;isspace(&rsquo;&quot; &lt;&lt; c &lt;&lt; &quot;&rsquo;, locale(&amp;quot;&quot; &lt;&lt; loc &lt;&lt; &quot;&amp;quot;)) returned &quot;
+&lt;&lt; std::boolalpha &lt;&lt; std::isspace(c, std::locale(loc)) &lt;&lt; &lsquo;\n&rsquo;;
+}
+int main()
+{
+const wchar_t EM_SPACE = L&rsquo;\u2003&rsquo;; // Unicode character &lsquo;EM SPACE&rsquo;
+try_with(EM_SPACE, &quot;C&quot;);
+try_with(EM_SPACE, &quot;en_US.UTF8&quot;);
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> isspace(&rsquo; &lsquo;, locale(&quot;C&quot;)) returned false
+ <wbr> isspace(&rsquo; &lsquo;, locale(&quot;en_US.UTF8&quot;)) returned true</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if a character is a space character
+isspace <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if a wide character is a space character
+iswspace <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

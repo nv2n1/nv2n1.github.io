@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus-job-status(1) · Linux Manual Pages</title>
+<meta name="description" content="globus-job-status – Check the status of a GRAM5 job">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-globus-job-status/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>globus-job-status(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> globus-job-status &#8211; Check the status of a GRAM5 job </p>
+<h2>SYNOPSIS</h2>
+<p> <code>globus-job-status</code> <i>JOBID</i> </p>
+<p> <code>globus-job-status</code> -help | -usage | -version | -versions</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>globus-job-status</code> program checks the status of a GRAM job by sending a status request to the job manager contact for that job specified by the <i>JOBID</i> parameter. If successful, it will print the job status to standard output. The states supported by <code>globus-job-status</code> are: </p>
+<p> <code>PENDING</code></p>
+<dl>
+<dt>
+</dt><dd> The job has been submitted to the LRM but has not yet begun execution.</dd></dl>
+<p> <code>ACTIVE</code></p>
+<dl>
+<dt>
+</dt><dd> The job has begun execution.</dd></dl>
+<p> <code>FAILED</code></p>
+<dl>
+<dt>
+</dt><dd> The job has failed.</dd></dl>
+<p> <code>SUSPENDED</code></p>
+<dl>
+<dt>
+</dt><dd> The job is currently suspended by the LRM.</dd></dl>
+<p> <code>DONE</code></p>
+<dl>
+<dt>
+</dt><dd> The job has completed.</dd></dl>
+<p> <code>UNSUBMITTED</code></p>
+<dl>
+<dt>
+</dt><dd> The job has been accepted by GRAM, but not yet submitted to the LRM.</dd></dl>
+<p> <code>STAGE_IN</code></p>
+<dl>
+<dt>
+</dt><dd> The job has been accepted by GRAM and is currently staging files prior to being submitted to the LRM.</dd></dl>
+<p> <code>STAGE_OUT</code></p>
+<dl>
+<dt>
+</dt><dd> The job has completed execution and is currently staging files from the service node to other http, GASS, or GridFTP servers.</dd></dl>
+<h2>OPTIONS</h2>
+<p> The full set of options to <code>globus-job-status</code> are: </p>
+<p> <code>-help, -usage</code></p>
+<dl>
+<dt>
+</dt><dd> Display a help message to standard error and exit.</dd></dl>
+<p> <code>-version</code></p>
+<dl>
+<dt>
+</dt><dd> Display the software version of the <code>globus-job-status</code> program to standard output.</dd></dl>
+<p> <code>-versions</code></p>
+<dl>
+<dt>
+</dt><dd> Display the software version of the <code>globus-job-status</code> program including DiRT information to standard output.</dd></dl>
+<h2>ENVIRONMENT</h2>
+<p> If the following variables affect the execution of <code>globus-job-status</code>. </p>
+<p> <code>X509_USER_PROXY</code></p>
+<dl>
+<dt>
+</dt><dd> Path to proxy credential.</dd></dl>
+<p> <code>X509_CERT_DIR</code></p>
+<dl>
+<dt>
+</dt><dd> Path to trusted certificate directory.</dd></dl>
+<h2>BUGS</h2>
+<p> The <code>globus-job-status</code> program can not distinguish between the case of the job manager terminating for any reason and the job being in the DONE state.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-globusrun/">globusrun</a>(1)</p>
+<h2>AUTHOR</h2>
+<p> Copyright &#169; 1999-2014 University of Chicago </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

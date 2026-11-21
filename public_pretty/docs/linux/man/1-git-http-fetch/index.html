@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-http-fetch(1) · Linux Manual Pages</title>
+<meta name="description" content="git-http-fetch – Download from a remote Git repository via HTTP">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-http-fetch/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-http-fetch(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> git-http-fetch &#8211; Download from a remote Git repository via HTTP </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+git http - fetch[-c][-t][-a][-d][-v][-w filename][--recover][--stdin | --packfile = &lt;hash&gt; | &lt;commit&gt;]&lt;url&gt;
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> Downloads a remote Git repository via HTTP. </p>
+<p> This command always gets all objects. Historically, there were three options <code>-a</code>, <code>-c</code> and <code>-t</code> for choosing which objects to download. They are now silently ignored.</p>
+<h2>OPTIONS</h2>
+<p> commit-id</p>
+<dl>
+<dt>
+</dt><dd> Either the hash or the filename under [URL]/refs/ to pull.</dd></dl>
+<p> -a, -c, -t</p>
+<dl>
+<dt>
+</dt><dd> These options are ignored for historical reasons.</dd></dl>
+<p> -v</p>
+<dl>
+<dt>
+</dt><dd> Report what is downloaded.</dd></dl>
+<p> -w &lt;filename&gt;</p>
+<dl>
+<dt>
+</dt><dd> Writes the commit-id into the filename under $GIT_DIR/refs/&lt;filename&gt; on the local end after the transfer is complete.</dd></dl>
+<p> &#8211;stdin</p>
+<dl>
+<dt>
+</dt><dd> Instead of a commit id on the command line (which is not expected in this case), <i>git http-fetch</i> expects lines on stdin in the format </dd>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+&lt;commit-id&gt;['	'&lt;filename-as-in--w&gt;]
+</pre>
+</dd></dl>
+</dl>
+<p> &#8211;packfile=&lt;hash&gt;</p>
+<dl>
+<dt>
+</dt><dd> For internal use only. Instead of a commit id on the command line (which is not expected in this case), <i>git http-fetch</i> fetches the packfile directly at the given URL and uses index-pack to generate corresponding .idx and .keep files. The hash is used to determine the name of the temporary file and is arbitrary. The output of index-pack is printed to stdout. Requires &#8211;index-pack-args.</dd></dl>
+<p> &#8211;index-pack-args=&lt;args&gt;</p>
+<dl>
+<dt>
+</dt><dd> For internal use only. The command to run on the contents of the downloaded pack. Arguments are URL-encoded separated by spaces.</dd></dl>
+<p> &#8211;recover</p>
+<dl>
+<dt>
+</dt><dd> Verify that everything reachable from target is fetched. Used after an earlier fetch is interrupted.</dd></dl>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

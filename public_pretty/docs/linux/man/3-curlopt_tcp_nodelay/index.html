@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>curlopt_tcp_nodelay(3) · Linux Manual Pages</title>
+<meta name="description" content="CURLOPT_TCP_NODELAY – set the TCP_NODELAY option">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-curlopt_tcp_nodelay/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>curlopt_tcp_nodelay(3)</h1>
+
+
+
+
+
+<p>CURLOPT_TCP_NODELAY &#8211; set the TCP_NODELAY option</p>
+<h2>Synopsis</h2>
+<p>#include &lt;curl/curl.h&gt; </p>
+<p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_TCP_NODELAY, long nodelay);</p>
+<h2>Description</h2>
+<p>Pass a long specifying whether the TCP_NODELAY option is to be set or cleared (1 = set, 0 = clear). The option is cleared by default. This will have no effect after the connection has been established. </p>
+<p> Setting this option will disable TCP&#8217;s Nagle algorithm. The purpose of this algorithm is to try to minimize the number of small packets on the network (where &quot;small packets&quot; means TCP segments less than the Maximum Segment Size (MSS) for the network). </p>
+<p> Maximizing the amount of data sent per TCP segment is good because it amortizes the overhead of the send. However, in some cases small segments may need to be sent without delay. This is less efficient than sending larger amounts of data at a time, and can contribute to congestion on the network if overdone.</p>
+<h2>Default</h2>
+<p>0</p>
+<h2>Protocols</h2>
+<p>All</p>
+<h2>Example</h2>
+<p>TODO</p>
+<h2>Availability</h2>
+<p>Always</p>
+<h2>Return Value</h2>
+<p>Returns CURLE_OK</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-curlopt_sockoptfunction/">CURLOPT_SOCKOPTFUNCTION</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_tcp_keepalive/">CURLOPT_TCP_KEEPALIVE</a></code>(3),</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

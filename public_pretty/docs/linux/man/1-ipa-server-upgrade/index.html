@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ipa-server-upgrade(1) · Linux Manual Pages</title>
+<meta name="description" content="ipa-server-upgrade – upgrade IPA server">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ipa-server-upgrade/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ipa-server-upgrade(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> ipa-server-upgrade &#8211; upgrade IPA server</p>
+<h2>SYNOPSIS</h2>
+<p> ipa-server-upgrade [options]</p>
+<h2>DESCRIPTION</h2>
+<p> ipa-server-upgrade is used to upgrade IPA server when the IPA packages are being updated. It is not intended to be executed by end-users. </p>
+<p> ipa-server-upgrade will: </p>
+<p>&nbsp;<wbr>*&nbsp;<wbr>update LDAP schema<br />
+&nbsp;<wbr>*&nbsp;<wbr>process all files with the extension .update in&nbsp;<wbr>/usr/share/ipa/updates&nbsp;<wbr>(including update plugins).<br />
+&nbsp;<wbr>*&nbsp;<wbr>upgrade local configurations of IPA services </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;skip-version-check</code></dt>
+<dd> Skip version check. WARNING: this option may break your system</dd>
+<dt><code>&#8211;force</code></dt>
+<dd> Force upgrade (alias for &#8211;skip-version-check)</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show IPA version</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help message and exit</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Print debugging information</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Output only errors</dd>
+<dt><code>&#8211;log-file=FILE</code></dt>
+<dd> Log to given file</dd>
+</dl>
+<h2>EXIT STATUS</h2>
+<p> 0 if the command was successful </p>
+<p> 1 if an error occurred </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

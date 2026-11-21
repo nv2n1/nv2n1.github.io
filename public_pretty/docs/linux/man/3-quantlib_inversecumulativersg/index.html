@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_inversecumulativersg(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::InverseCumulativeRsg – Inverse cumulative random sequence generator.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_inversecumulativersg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_inversecumulativersg(3)</h1>
+
+
+
+
+
+<p>QuantLib::InverseCumulativeRsg &#8211; Inverse cumulative random sequence generator. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/math/randomnumbers/inversecumulativersg.hpp&gt; </p>
+<h3>Public Types</h3>
+<p>typedef <code>Sample</code>&lt; std::vector&lt; <code>Real</code> &gt; &gt; <code>sample_type</code> </p>
+<h3>Public Member Functions</h3>
+<p><code>InverseCumulativeRsg</code> (const USG &amp;uniformSequenceGenerator) </p>
+<p> <code>InverseCumulativeRsg</code> (const USG &amp;uniformSequenceGenerator, const IC &amp;inverseCumulative) </p>
+<p> const <code>sample_type</code> &amp; <code>nextSequence</code> () const<br />
+ <i>returns next sample from the Gaussian distribution </i><br />
+ const <code>sample_type</code> &amp; <code>lastSequence</code> () const </p>
+<p> Size <code>dimension</code> () const </p>
+<h2>Detailed Description</h2>
+<h3>template&lt;class USG, class IC&gt; class QuantLib::InverseCumulativeRsg&lt; USG, IC &gt;</h3>
+<p>Inverse cumulative random sequence generator. </p>
+<p> It uses a sequence of uniform deviate in (0, 1) as the source of cumulative distribution values. Then an inverse cumulative distribution is used to calculate the distribution deviate. </p>
+<p> The uniform deviate sequence is supplied by USG. </p>
+<p> Class USG must implement the following interface: </p>
+<pre> USG::sample_type USG::nextSequence() const;
+ Size USG::dimension() const;</pre>
+<p>The inverse cumulative distribution is supplied by IC. </p>
+<p> Class IC must implement the following interface: </p>
+<pre> IC::IC();
+ Real IC::operator() const;</pre>
+<p>&nbsp;<wbr> </p>
+<p> <code>Examples: </code> </p>
+<p> <code>DiscreteHedging.cpp</code>. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

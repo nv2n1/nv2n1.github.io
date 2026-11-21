@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmclipboardwithdrawformat(3) · Linux Manual Pages</title>
+<meta name="description" content="XmClipboardWithdrawFormat — A clipboard function that indicates that the application no longer wants to supply a data item">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmclipboardwithdrawformat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmclipboardwithdrawformat(3)</h1>
+
+
+
+
+
+<p><code>XmClipboardWithdrawFormat</code> &#8212; A clipboard function that indicates that the application no longer wants to supply a data item</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/CutPaste.h&gt;
+int XmClipboardWithdrawFormat (<i>display, window, data_id</i>)
+ Display <i>* display</i>;
+ Window <i>window</i>;
+ long <i>data_id</i>;
+(<code>void</code>)</pre>
+<h2>Description</h2>
+<p><code>XmClipboardWithdrawFormat</code> indicates that the application no longer supplies a data item to the clipboard that the application had previously passed by name.</p>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>Specifies a pointer to the <code>Display</code> structure that was returned in a previous call to <code>XOpenDisplay</code> or <code>XtDisplay</code>.</dd>
+<dt><i>window</i></dt>
+<dd>Specifies the window ID of a widget that relates the application window to the clipboard. The widget&#8217;s window ID can be obtained through <code>XtWindow</code>. The same application instance should pass the same window ID to each clipboard function it calls.</dd>
+<dt><i>data_id</i></dt>
+<dd>Specifies an identifying number assigned to the data item, that uniquely identifies the data item and the format. This was assigned to the item when it was originally passed by <code>XmClipboardCopy</code>.</dd></dl>
+<h2>Return</h2>
+<dl COMPACT>
+<dt><code>XmClipboardSuccess</code></dt>
+<dd>The function was successful.</dd>
+<dt><code>XmClipboardLocked</code></dt>
+<dd>The function failed because the clipboard was locked by another application. The application can continue to call the function again with the same parameters until the lock goes away. This gives the application the opportunity to ask if the user wants to keep trying or to give up on the operation.</dd></dl>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmclipboardcopy/">XmClipboardCopy</a></code>(3) and <code><a href="/docs/linux/man/3-xmclipboardstartcopy/">XmClipboardStartCopy</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

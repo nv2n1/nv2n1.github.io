@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_mcamericanengine(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::MCAmericanEngine – American Monte Carlo engine.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_mcamericanengine/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_mcamericanengine(3)</h1>
+
+
+
+
+
+<p>QuantLib::MCAmericanEngine &#8211; American Monte Carlo engine. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/pricingengines/vanilla/mcamericanengine.hpp&gt; </p>
+<p> Inherits <code>MCLongstaffSchwartzEngine&lt; VanillaOption::engine, SingleVariate, RNG, S &gt;</code>. </p>
+<h3>Public Member Functions</h3>
+<p><code>MCAmericanEngine</code> (const boost::shared_ptr&lt; <code>GeneralizedBlackScholesProcess</code> &gt; &amp;process, Size timeSteps, Size timeStepsPerYear, bool antitheticVariate, bool controlVariate, Size requiredSamples, Real requiredTolerance, Size maxSamples, BigNatural seed, Size polynomOrder, LsmBasisSystem::PolynomType polynomType, Size nCalibrationSamples=<code>Null</code>&lt; Size &gt;()) </p>
+<h3>Protected Member Functions</h3>
+<p>boost::shared_ptr&lt; <code>LongstaffSchwartzPathPricer</code>&lt; <code>Path</code> &gt; &gt; <code>lsmPathPricer</code> () const </p>
+<p> Real <code>controlVariateValue</code> () const </p>
+<p> boost::shared_ptr&lt; <code>PricingEngine</code> &gt; <code>controlPricingEngine</code> () const </p>
+<p> boost::shared_ptr&lt; <code>PathPricer</code>&lt; <code>Path</code> &gt; &gt; <code>controlPathPricer</code> () const </p>
+<h2>Detailed Description</h2>
+<h3>template&lt;class RNG = PseudoRandom, class S = Statistics&gt; class QuantLib::MCAmericanEngine&lt; RNG, S &gt;</h3>
+<p>American Monte Carlo engine. </p>
+<p> References: </p>
+<p> <code>Tests</code></p>
+<dl COMPACT>
+<dd>the correctness of the returned value is tested by reproducing results available in web/literature</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

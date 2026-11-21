@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>chronic(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-chronic/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>chronic(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>chronic - runs a command quietly unless it fails</p>
+<h2>SYNOPSIS</h2>
+<p>chronic [-ev] <font SIZE="-1">COMMAND&hellip;</font></p>
+<h2>DESCRIPTION</h2>
+<p>chronic runs a command, and arranges for its standard out and standard error to only be displayed if the command fails (exits nonzero or crashes). If the command succeeds, any extraneous output will be hidden.</p>
+<p>A common use for chronic is for running a cron job. Rather than trying to keep the command quiet, and having to deal with mails containing accidental output when it succeeds, and not verbose enough output when it fails, you can just run it verbosely always, and use chronic to hide the successful output.</p>
+ <pre>
+        0    1 * * * chronic backup # instead of backup &gt;/dev/null 2&gt;&amp;1
+        */20 * * * * chronic -ve my_script # verbose for debugging
+</pre>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-v
+</dt><dd> Verbose output (distinguishes between <font SIZE="-1">STDOUT</font> and <font SIZE="-1">STDERR,</font> also reports <font SIZE="-1">RETVAL</font>)
+</dd><dt>-e
+</dt><dd> Stderr triggering. Triggers output when stderr output length is non-zero. Without -e chronic needs non-zero return value to trigger output. 
+ In this mode, chronic's return value will be <tt>2</tt> if the command's return value is <tt>0</tt> but the command printed to stderr.</dd></dl>
+<h2>AUTHOR</h2>
+<p>Copyright 2010 by Joey Hess &lt;id [at] joeyh.name&gt;</p>
+<p>Original concept and ``chronic&rsquo;&rsquo; name by Chuck Houpt. Code for verbose and stderr trigger by Tomas &lsquo;Harvie&rsquo; Mudrunka 2016.</p>
+<p>Licensed under the <font SIZE="-1">GNU GPL</font> version 2 or higher.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

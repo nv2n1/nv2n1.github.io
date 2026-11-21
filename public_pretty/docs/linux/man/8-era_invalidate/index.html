@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>era_invalidate(8) · Linux Manual Pages</title>
+<meta name="description" content="era_invalidate – Provide a list of blocks that have changed since a particular era.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-era_invalidate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>era_invalidate(8)</h1>
+
+
+
+
+
+<p><code>era_invalidate </code>&#8211; Provide a list of blocks that have changed since a particular era.</p>
+<h2>Synopsis</h2>
+<pre><code>era_invalidate</code> [<i>options</i>] {device|file}</pre>
+<h2>Description</h2>
+<p><code>era_invalidate</code> examines era metadata and lists blocks that may have changed since a given era. </p>
+<p> This tool cannot be run on live metadata unless the <code>&#8211;metadata-snap</code> option is used.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-o</code> {output file}</dt>
+<dd>Write output to a file rather than stdout.</dd>
+<dt><code>&#8211;metadata-snapshot</code></dt>
+<dd>Use the metadata snapshot rather than the current superblock.</dd>
+<dt><code>&#8211;written-since</code> {era nr}</dt>
+<dd>Blocks written since the given era will be listed.</dd></dl>
+<h2>Example</h2>
+<p>List the blocks that may have been written since the beginning of era 13 on the metadata device /dev/vg/metadata: </p>
+<pre> $ era_invalidate --written-since 13 /dev/vg/metadata</pre>
+<p>The device may not be actively used by the target when running.</p>
+<h2>Diagnostics</h2>
+<p><code>era_invalidate</code> returns an exit code of 0 for success or 1 for error (eg, metadata corruption).</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-era_check/">era_check</a></code>(8), <code><a href="/docs/linux/man/8-era_dump/">era_dump</a></code>(8), <code><a href="/docs/linux/man/8-era_restore/">era_restore</a></code>(8)</p>
+<h2>Author</h2>
+<p>Joe Thornber &lt;ejt [at] redhat.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

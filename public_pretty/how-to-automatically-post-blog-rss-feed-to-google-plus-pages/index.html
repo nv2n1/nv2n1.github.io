@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automating RSS Feed Distribution to Social Media - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-automatically-post-blog-rss-feed-to-google-plus-pages/">
+  <meta name="description" content="Google&#43; shut down in 2019, so the original premise of this post no longer applies. However, the broader problem—automatically sharing blog RSS feeds across …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Automating RSS Feed Distribution to Social Media">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-automatically-post-blog-rss-feed-to-google-plus-pages/">
+  <meta property="og:description" content="Google&#43; shut down in 2019, so the original premise of this post no longer applies. However, the broader problem—automatically sharing blog RSS feeds across …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Automating RSS Feed Distribution to Social Media</h1>
+        <time class="post-date" datetime="2018-03-24T11:46:09Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Google+ shut down in 2019, so the original premise of this post no longer applies. However, the broader problem—automatically sharing blog RSS feeds across social platforms—remains relevant. Here’s how to handle RSS-to-social distribution in 2026.</p>
+<h2 id="modern-rss-distribution-tools">Modern RSS Distribution Tools</h2>
+<p>For most technical blogs, you have several solid options:</p>
+<p><strong>Zapier</strong> remains one of the most reliable platforms. It integrates with RSS feeds and can post to Twitter/X, LinkedIn, Bluesky, Threads, and other platforms. The free tier lets you set up basic RSS-to-social workflows, though posting limits apply. Premium plans offer higher volume and more frequent checks (every 15 minutes vs. hourly on free).</p>
+<p><strong>Make (formerly Integromat)</strong> is a strong alternative with similar capabilities. It’s often cheaper than Zapier at scale and offers more granular control over post formatting and scheduling.</p>
+<p><strong>IFTTT</strong> works for simple cases but is limited compared to Zapier or Make—fewer formatting options and less frequent feed polling.</p>
+<p><strong>Bluesky’s</strong> own RSS integration is native if you’re posting to that platform, though it’s read-only and doesn’t support scheduling.</p>
+<h2 id="setting-up-rss-to-social-with-zapier">Setting Up RSS-to-Social with Zapier</h2>
+<ol>
+<li>Create a Zapier account and connect your RSS feed as a trigger</li>
+<li>Select your RSS feed URL and test the connection</li>
+<li>Add an action for each platform (Twitter, LinkedIn, Bluesky, etc.)</li>
+<li>Customize the post format—most tools let you use feed fields like <code>{{title}}</code>, <code>{{link}}</code>, <code>{{description}}</code></li>
+<li>Set posting frequency (typically 1-24 hours)</li>
+<li>Enable the Zap and monitor the first few posts</li>
+</ol>
+<h2 id="self-hosted-alternatives">Self-Hosted Alternatives</h2>
+<p>If you prefer not to use third-party services, consider:</p>
+<ul>
+<li><strong>Mastodon’s</strong> built-in RSS feed feature (works well for Fediverse)</li>
+<li><strong>Custom scripts</strong> using <code>feedparser</code> (Python) + API calls to your target platforms</li>
+<li><strong>n8n</strong> or <strong>Windmill</strong> (self-hosted no-code automation platforms)</li>
+</ul>
+<p>For a simple Python approach using a cron job:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">feedparser</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">feed</span> <span class="o">=</span> <span class="n">feedparser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;https://yourblog.com/feed.xml&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">cutoff</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">feed</span><span class="o">.</span><span class="n">entries</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pub_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">entry</span><span class="o">.</span><span class="n">published_parsed</span><span class="p">[:</span><span class="mi">6</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pub_date</span> <span class="o">&gt;</span> <span class="n">cutoff</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Post to Twitter/X API</span>
+</span></span><span class="line"><span class="cl">        <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">entry</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">entry</span><span class="o">.</span><span class="n">link</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://api.twitter.com/2/tweets&#39;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">auth_headers</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="considerations">Considerations</h2>
+<ul>
+<li><strong>Rate limits</strong>: Social platforms enforce strict posting limits. Most tools respect these automatically.</li>
+<li><strong>Content quality</strong>: Auto-posting can hurt engagement if your blog’s titles are unclear or overly promotional.</li>
+<li><strong>Formatting</strong>: Different platforms have different character limits and link handling. Test before going live.</li>
+<li><strong>Post timing</strong>: Some tools let you schedule posts to go out during peak engagement hours for each platform.</li>
+<li><strong>Tracking</strong>: Use link shorteners (bit.ly, TinyURL) or platform-native link shortening to track click-through rates.</li>
+</ul>
+<p>For most technical blogs, Zapier strikes the right balance between ease of use and flexibility. Self-hosted solutions work better if you’re already running infrastructure and want to avoid subscription costs.</p>
+<h2 id="2026-best-practices-and-advanced-techniques">2026 Best Practices and Advanced Techniques</h2>
+<p>For Automating RSS Feed Distribution to Social Media, understanding both the fundamentals and modern practices ensures you can work efficiently and avoid common pitfalls. This guide extends the core article with practical advice for 2026 workflows.</p>
+<h2 id="troubleshooting-and-debugging">Troubleshooting and Debugging</h2>
+<p>When issues arise, a systematic approach saves time. Start by checking logs for error messages or warnings. Test individual components in isolation before integrating them. Use verbose modes and debug flags to gather more information when standard output is not enough to diagnose the problem.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor system resources to identify bottlenecks</li>
+<li>Use caching strategies to reduce redundant computation</li>
+<li>Keep software updated for security patches and performance improvements</li>
+<li>Profile code before applying optimizations</li>
+<li>Use connection pooling and keep-alive for network operations</li>
+</ul>
+<h2 id="security-considerations">Security Considerations</h2>
+<p>Security should be built into workflows from the start. Use strong authentication methods, encrypt sensitive data in transit, and follow the principle of least privilege for access controls. Regular security audits and penetration testing help maintain system integrity.</p>
+<h2 id="related-tools-and-commands">Related Tools and Commands</h2>
+<p>These complementary tools expand your capabilities:</p>
+<ul>
+<li>Monitoring: top, htop, iotop, vmstat for system resources</li>
+<li>Networking: ping, traceroute, ss, tcpdump for connectivity</li>
+<li>Files: find, locate, fd for searching; rsync for syncing</li>
+<li>Logs: journalctl, dmesg, tail -f for real-time monitoring</li>
+<li>Testing: curl for HTTP requests, nc for ports, openssl for crypto</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Consider automation and containerization for consistency across environments. Infrastructure as code tools enable reproducible deployments. CI/CD pipelines automate testing and deployment, reducing human error and speeding up delivery cycles.</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<p>This extended guide covers the topic beyond the original article scope. For specialized needs, refer to official documentation or community resources. Practice in test environments before production deployment.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

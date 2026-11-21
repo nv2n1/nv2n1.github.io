@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>oowriter(1) · Linux Manual Pages</title>
+<meta name="description" content="libreoffice – LibreOffice office suite">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-oowriter/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>oowriter(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>Name</h2>
+<p> libreoffice &#8211; LibreOffice office suite </p>
+<h2>SYNOPSIS</h2>
+<p> <code>libreoffice</code> [<code>&#8211;accept=</code><i>accept-string</i>] [<code>&#8211;base</code>] [<code>&#8211;calc</code>] [<code>&#8211;convert-to</code> output_file_extension[:output_filter_name] [&#8211;outdir output_dir] <i>file</i>]&#8230; [<code>&#8211;display </code><i>display</i>] [<code>&#8211;draw</code>] [<code>&#8211;global</code>] [<code>&#8211;headless</code>] [<code>&#8211;help</code>|<code>-h</code>|<code>-?</code>] [<code>&#8211;impress</code>] [<code>&#8211;invisible</code>] [<code>&#8211;infilter=&quot;&lt;filter&gt;&quot;</code>] [<code>&#8211;math</code>] [<code>&#8211;minimized</code>] [<code>-n </code><i>file</i>]&#8230; [<code>&#8211;nodefault</code>] [<code>&#8211;nolockcheck</code>] [<code>&#8211;nologo</code>] [<code>&#8211;norestore</code>] [<code>-o </code><i>file</i>]&#8230; [<code>-p </code><i>file</i>&#8230;] [<code>&#8211;print-to-file [&#8211;printer-name printer_name] [&#8211;outdir output_dir] file]&#8230; [&#8211;pt </code><i>printername</i> <i>file</i>&#8230;] [<code>&#8211;show </code><i>Impress file</i>]&#8230; [<code>&#8211;unaccept=</code><i>accept-string</i>] [<code>&#8211;terminate_after_init</code>] [<code>&#8211;view </code><i>file</i>]&#8230; [<code>&#8211;web</code>] [<code>&#8211;writer</code>] [<i>file</i>&#8230;]<br />
+ <code>lobase</code><br />
+ <code>localc</code><br />
+ <code>lodraw</code><br />
+ <code>lofromtemplate</code><br />
+ <code>loimpress</code><br />
+ <code>lomath</code><br />
+ <code>loweb</code><br />
+ <code>lowriter</code> </p>
+<h2>DESCRIPTION</h2>
+<p> LibreOffice (LO for short) is a multi-platform office productivity suite. It was derived from OpenOffice.org 3.3 Beta on September 28, 2010. </p>
+<p> <code>libreoffice</code> is a shell script that sets up the environment and passes the command line arguments to the <code>soffice.bin</code> binary. </p>
+<p> Alternatively, the following helper scripts start the respective module: </p>
+<p> sbase, scalc, sdraw, simpress, smath, sofficerc, swriter </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;accept=</code><i>accept-string</i></dt>
+<dd> Specify a UNO connect-string to create a UNO acceptor through which other programs can connect to access the API. </dd>
+<dt><code>&#8211;base</code></dt>
+<dd> Starts the wizard for a new Base document. </dd>
+<dt><code>&#8211;calc</code></dt>
+<dd> Starts with a new Calc document. </dd>
+<dt><code>&#8211;convert-to</code> output_file_extension[:output_filter_name] [&#8211;outdir output_dir] <i>file</i>&#8230;</dt>
+<dd> Batch converts files. If <i>&#8211;outdir</i> is not specified then the current working directory is used as the output directory for the converted files. It implies <i>&#8211;headless</i>. </dd>
+<p> Examples: </p>
+<p> <code>&#8211;convert-to</code> pdf *.doc </p>
+<p> Converts all .doc files to PDFs. </p>
+<p> <code>&#8211;convert-to</code> pdf:writer_pdf_Export &#8211;outdir /home/user *.doc </p>
+<p> Converts all .doc files to PDFs using the settings in the Writer PDF export dialog and saving them in /home/user. </p>
+<dt><code>&#8211;display </code><i>display</i></dt>
+<dd> This option specifies the X server to use; see <code><a href="/docs/linux/man/7-x/">X</a></code>(7) </dd>
+<dt><code>&#8211;draw</code></dt>
+<dd> Starts with a new Draw document. </dd>
+<dt><code>&#8211;global</code></dt>
+<dd> Starts with a new Global document. </dd>
+<dt><code>&#8211;headless</code></dt>
+<dd> Starts in &quot;headless mode&quot;, which allows using the application without user a interface. </dd>
+<p> This special mode can be used when the application is controlled by external clients via the API. </p>
+<p> It implies &#8211;invisible and strictly ignores any GUI environment. &#8211;quickstart does not work with this parameter. </p>
+<dt><code>&#8211;help</code>|<code>-h</code>|<code>-?</code></dt>
+<dd> Lists LibreOffice command line parameters. </dd>
+<dt><code>&#8211;impress</code></dt>
+<dd> Starts with a new Impress document. </dd>
+<dt><code>&#8211;invisible</code></dt>
+<dd> Starts in invisible mode. </dd>
+<p> Neither the start-up logo nor the initial program window will be visible. LO can be controlled and documents and dialogs can be opened via the API. </p>
+<p> When started with this parameter, it can only be quit using the taskmanager (Windows) or the kill command (UNIX based systems). </p>
+<p> &#8211;quickstart does not work with this parameter. </p>
+<dt><code>&#8211;infilter=&quot;&lt;filter&gt;&quot;</code></dt>
+<dd> Force an input filter type if possible. For example &#8211;infilter=&quot;Calc Office Open XML&quot; only </dd>
+<dt><code>&#8211;math</code></dt>
+<dd> Starts with a new Math document. </dd>
+<dt><code>&#8211;minimized</code></dt>
+<dd> Keeps the splash screen minimized. </dd>
+<dt><code>-n </code><i>template</i>&#8230;</dt>
+<dd> Creates the a new document from the given templates. </dd>
+<dt><code>&#8211;nodefault</code></dt>
+<dd> Starts LO without creating a new document. The next time you start LO, the welcome screen is shown. </dd>
+<p> It&#8217;s used together with <code>&#8211;nologo</code> by quick starters. Note that <code>&#8211;quickstart</code> has no longer been supported since OpenOffice.org 2.0.0. </p>
+<dt><code>&#8211;nolockcheck</code></dt>
+<dd> Disables the check for remote instances using the installation. </dd>
+<dt><code>&#8211;nologo</code></dt>
+<dd> Disables the splash screen at program start. </dd>
+<dt><code>&#8211;norestore</code></dt>
+<dd> Disables restart and file recovery after a system crash. It is possible that LO will try to restore a file it keeps crashing on, if that happens <code>&#8211;norestore</code> is the only way to start LO. </dd>
+<dt><code>&#8211;nosplash</code></dt>
+<dd> Disables the splash screen at program start. </dd>
+<dt><code>-o </code><i>file</i>&#8230;</dt>
+<dd> Opens the given files for editing, even templates. </dd>
+<p> Without <code>-o</code> a template file would create a new document derived from that template. </p>
+<dt><code>-p </code><i>file</i>&#8230;</dt>
+<dd> Prints the given files to the default printer and ends. The splash screen does not appear. </dd>
+<p> If the file name contains spaces, then it must be enclosed in quotation marks. </p>
+<dt><code>&#8211;print-to-file [&#8211;printer-name printer_name] [&#8211;outdir output_dir] file&#8230;</dt>
+<dd> Batch print files to file. If &#8211;printer-name is not specified the default printer is used. If &#8211;outdir is not specified then the current working directory is used as the output directory for the converted files. </dd>
+<p> Examples: </p>
+<p> &#8211;print-to-file *.doc </p>
+<p> Prints all .doc files to the current working directory using the default printer. </p>
+<p> &#8211;print-to-file &#8211;printer-name nasty_lowres_printer &#8211;outdir /home/user *.doc </p>
+<p> Prints all .doc files to /home/user directory using the nasty_lowres_printer. </p>
+<dt>&#8211;pt </code><i>printername</i> <i>file</i>&#8230;</dt>
+<dd> Prints the given files to the printer <i>printername</i> and ends. The splash screen does not appear. </dd>
+<p> If a file name contains spaces, then it must be enclosed in quotation marks. </p>
+<dt><code>&#8211;quickstart &#8211;quickstart=no</dt>
+<dd> Starts LO with it&#8217;s quick starter. &#8211;quickstart disable the quick starter. </dd>
+<p> Does not work with &#8211;invisible or &#8211;headless. </p>
+<dt>&#8211;show </code><i>Impress file</i>&#8230;</dt>
+<dd> Opens the given Impress files, starts the presentation and quits after they have finished. </dd>
+<dt><code>&#8211;unaccept=</code><i>accept-string</i></dt>
+<dd> Closes an acceptor that was created with <code>&#8211;accept</code> option. </dd>
+<p> Use <code>&#8211;unaccept</code>=<i>all</i> to close all open acceptors. </p>
+<dt><code>&#8211;terminate_after_init</code></dt>
+<dd> Starts LO and terminates after it registers some UNO services. Doesn&#8217;t show the splash during startup. </dd>
+<dt><code>&#8211;view </code><i>file</i>&#8230;</dt>
+<dd> Opens the given files read-only creating a temporary copy of them at $TMPDIR. </dd>
+<dt><code>&#8211;web</code></dt>
+<dd> Starts with a new HTML document. </dd>
+<dt><code>&#8211;writer</code></dt>
+<dd> Starts with a new Writer document. </dd>
+</dl>
+<h2>TROUBLESHOOTING PROBLEMS</h2>
+<p> See <code><a rel="nofollow" href="http://wiki.documentfoundation.org/BugReport">http://wiki.documentfoundation.org/BugReport</a></code> for more details on how to report bugs in LibreOffice.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a rel="nofollow" href="http://www.documentfoundation.org/">http://www.documentfoundation.org/</a></code> </p>
+<h2>AUTHOR</h2>
+<p> This manual page was created by Rene Engelhard &lt;rene [at] debian.org&gt; for the Debian GNU/Linux Distribution, because the original package does not have one. It was updated for Novell by Petr Mladek &lt;petr.mladek [at] novell.com&gt; and adapted for LibreOffice by Philipp Weissenbacher &lt;philipp.weissenbacher [at] gmail.com&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

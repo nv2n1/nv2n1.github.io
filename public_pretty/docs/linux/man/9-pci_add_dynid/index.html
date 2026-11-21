@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pci_add_dynid(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-pci_add_dynid/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>pci_add_dynid(9)</h1>
+
+
+
+
+
+<p>pci_add_dynid - add a new PCI device ID to this driver and re-probe devices</p>
+<h2>Synopsis</h2>
+<pre><code>int pci_add_dynid(struct pci_driver *drv, unsigned int vendor, unsigned int device, unsigned int subvendor, unsigned int subdevice, unsigned int class, unsigned int class_mask, unsigned long driver_data);</code></pre>
+<h2>Arguments</h2>
+<p><i>drv</i></p>
+<dl><dd></dd><dd>target pci driver</dd></dl>
+<p><i>vendor</i></p>
+<dl><dd>PCI vendor ID</dd></dl>
+<p><i>device</i></p>
+<dl><dd>PCI device ID</dd></dl>
+<p><i>subvendor</i></p>
+<dl><dd>PCI subvendor ID</dd></dl>
+<p><i>subdevice</i></p>
+<dl><dd>PCI subdevice ID</dd></dl>
+<p><i>class</i></p>
+<dl><dd>PCI class</dd></dl>
+<p><i>class_mask</i></p>
+<dl><dd>PCI class mask</dd></dl>
+<p><i>driver_data</i></p>
+<dl><dd>private driver data</dd></dl>
+<h2>Description</h2>
+<p>Adds a new dynamic pci device ID to this driver and causes the driver to probe for all devices again. <i>drv</i> must have been registered prior to calling this function.</p>
+<h2>Context</h2>
+<p>Does GFP_KERNEL allocation.</p>
+<h2>Return</h2>
+<p>0 on success, -errno on failure.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

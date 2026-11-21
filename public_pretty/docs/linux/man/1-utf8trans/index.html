@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>utf8trans(1) · Linux Manual Pages</title>
+<meta name="description" content="utf8trans – Transliterate UTF-8 characters according to a table">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-utf8trans/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>utf8trans(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> utf8trans &#8211; Transliterate UTF-8 characters according to a table</p>
+<h2>SYNOPSIS</h2>
+<p> <code>utf8trans</code> <i>charmap</i> [<i>file</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>utf8trans</code> transliterates characters in the specified files (or standard input, if they are not specified) and writes the output to standard output. All input and output is in the UTF-8 encoding. </p>
+<p> This program is usually used to render characters in Unicode text files as some markup escapes or ASCII transliterations. (It is not intended for general charset conversions.) It provides functionality similar to the character maps in XSLT 2.0 (XML Stylesheet Language &#8211; Transformations, version 2.0).</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-m</code>, <code>&#8211;modify</code></dt>
+<dd> Modifies the given files in-place with their transliterated output, instead of sending it to standard output. </dd>
+<p> This option is useful for efficient transliteration of many files at once.</p>
+<dt><code>&#8211;help</code></dt>
+<dd> Show brief usage information and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version and exit.</dd></dl>
+<h2>USAGE</h2>
+<p> The translation is done according to the rules in the &#8216;character map&#8217;, named in the file <i>charmap</i>. It has the following format:</p>
+<dl>
+<dt>1.</dt>
+<dd> Each line represents a translation entry, except for blank lines and comment lines, which are ignored.</dd>
+<dt>2.</dt>
+<dd> Any amount of whitespace (space or tab) may precede the start of an entry.</dd>
+<dt>3.</dt>
+<dd> Comment lines begin with #. Everything on the same line is ignored.</dd>
+<dt>4.</dt>
+<dd> Each entry consists of the Unicode codepoint of the character to translate, in hexadecimal, followed <i>one</i> space or tab, followed by the translation string, up to the end of the line.</dd>
+<dt>5.</dt>
+<dd> The translation string is taken literally, including any leading and trailing spaces (except the delimeter between the codepoint and the translation string), and all types of characters. The newline at the end is not included.</dd></dl>
+<p> The above format is intended to be restrictive, to keep <code>utf8trans</code> simple. But if a XML-based format is desired, there is a <i>xmlcharmap2utf8trans</i> script that comes with the docbook2X distribution, that converts character maps in XSLT 2.0 format to the <code>utf8trans</code> format.</p>
+<h2>LIMITATIONS</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> <code>utf8trans</code> does not work with binary files, because malformed UTF-8 sequences in the input are substituted with U+FFFD characters. However, null characters in the input are handled correctly. This limitation may be removed in the future.</dd>
+<dt>&bull;</dt>
+<dd> There is no way to include a newline or null in the substitution string.</dd></dl>
+<h2>AUTHOR</h2>
+<p> Steve Cheng &lt;stevecheng [at] users.sourceforge.net&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

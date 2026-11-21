@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>testlintianconfigfile(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-testlintianconfigfile/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>testlintianconfigfile(3)</h1>
+
+
+
+
+
+<p>Test::Lintian::ConfigFile &ndash; generic helper routines for colon-delimited configuration files</p>
+<h2>Synopsis</h2>use Test::Lintian::ConfigFile qw(read_config); my <tt>$desc</tt> = read_config('t/tags/testname/desc');
+<h2>Description</h2>Routines for dealing with colon-delimited configuration files.
+<h2>Functions</h2><dl COMPACT><dt>read_config(<font SIZE="-1">PATH, HASHREF</font>)
+</dt><dd>Reads the configuration file located at <font SIZE="-1">PATH</font> into a hash and returns it. When also passed a <font SIZE="-1">HASHREF,</font> will fill that instead.
+</dd><dt>write_config(<font SIZE="-1">TEST_CASE, PATH</font>)
+</dt><dd>Write the config described by hash reference <font SIZE="-1">TEST_CASE</font> to the file named <font SIZE="-1">PATH.</font>
+</dd><dt>read_field_from_file(<font SIZE="-1">FIELD, FILE</font>)
+</dt><dd>Returns the list of lines from file <font SIZE="-1">FILE</font> which start with the string <font SIZE="-1">FIELD</font> followed by a colon. The string <font SIZE="-1">FIELD</font> and the colon are removed from each line. 
+</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

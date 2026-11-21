@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>blazetheme(7) · Linux Manual Pages</title>
+<meta name="description" content="blazetheme – an introduction to BlazeBlogger theme creation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-blazetheme/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>blazetheme(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>blazetheme &#8211; an introduction to BlazeBlogger theme creation</p>
+<h2>Description</h2>
+<p>This document tries to provide a brief introduction on how to create new or modify existing theme for your BlazeBlogger web presentation.</p>
+<h2>BlazeBlogger Theme Structure</h2>
+<p>To make it as easy to alter as possible, BlazeBlogger theme consists of two parts: the template file located in the <tt>&quot;.blaze/theme/&quot;</tt> and corresponding stylesheet in the <tt>&quot;.blaze/style/&quot;</tt> directory. This way, you can easily switch between different styles (e.g. bright and dark one) without even touching the template file, which generally does not tend to vary much.</p>
+<h2>Creating the Template File</h2>
+<p>The template file is where the page layout is described. It is a bare <font SIZE="-1">HTML</font> (or <font SIZE="-1">XHTML</font>, it really does not matter) file with various placeholders to be substituted by appropriate data. Most of the placeholders are just ordinary <font SIZE="-1">HTML</font> comments with a reserved strings in them. Note that while the case is not significant, the fact that the whole placeholder has to be on a single line is. </p>
+<p> For the example usage, see the default template file. </p>
+<p> <i>List of Head Placeholders</i> </p>
+<p> These are the placeholders that usually appear in the <font SIZE="-1">HEAD</font> section of the <font SIZE="-1">HTML/XHTML</font> document.</p>
+<dl>
+<dt><code>&lt;!&#8211; content-type &#8211;&gt;</code></dt>
+<dd>The Content-Type <font SIZE="-1">META</font> tag.</dd>
+<dt><code>&lt;!&#8211; generator &#8211;&gt;</code></dt>
+<dd>The Generator <font SIZE="-1">META</font> tag.</dd>
+<dt><code>&lt;!&#8211; date &#8211;&gt;</code></dt>
+<dd>The Date <font SIZE="-1">META</font> tag.</dd>
+<dt><code>&lt;!&#8211; stylesheet &#8211;&gt;</code></dt>
+<dd>The Stylesheet <font SIZE="-1">LINK</font> tag.</dd>
+<dt><code>&lt;!&#8211; rss &#8211;&gt;</code></dt>
+<dd>The <font SIZE="-1">RSS</font> feed <font SIZE="-1">LINK</font> tag.</dd>
+<dt><code>&lt;!&#8211; page-title &#8211;&gt;</code></dt>
+<dd>Current page title, usually used inside <font SIZE="-1">TITLE</font> element.</dd></dl>
+<p> <i>List of Body Placeholders</i> </p>
+<p> These are the placeholders that usually appear in the <font SIZE="-1">BODY</font> section of the <font SIZE="-1">HTML/XHTML</font> document.</p>
+<dl>
+<dt><code>&lt;!&#8211; title &#8211;&gt;</code></dt>
+<dd>The blog title, see <tt>&quot;blog.title&quot;</tt> in the BlazeBlogger configuration.</dd>
+<dt><code>&lt;!&#8211; subtitle &#8211;&gt;</code></dt>
+<dd>The blog title, see <tt>&quot;blog.subtitle&quot;</tt> in the BlazeBlogger configuration.</dd>
+<dt><code>&lt;!&#8211; name &#8211;&gt;</code></dt>
+<dd>The user&#8217;s name, see <tt>&quot;user.name&quot;</tt> in the BlazeBlogger configuration.</dd>
+<dt><code>&lt;!&#8211; e-mail &#8211;&gt;</code></dt>
+<dd>The user&#8217;s e-mail, see <tt>&quot;user.email&quot;</tt> in the BlazeBlogger configuration.</dd>
+<dt><code>&lt;!&#8211; year &#8211;&gt;</code></dt>
+<dd>The current year.</dd>
+<dt><code>&lt;!&#8211; tags &#8211;&gt;</code></dt>
+<dd>List of tags.</dd>
+<dt><code>&lt;!&#8211; archive &#8211;&gt;</code></dt>
+<dd>List of months.</dd>
+<dt><code>&lt;!&#8211; pages &#8211;&gt;</code></dt>
+<dd>List of pages.</dd>
+<dt><code>&lt;!&#8211; posts &#8211;&gt;</code></dt>
+<dd>List of recent blog posts.</dd>
+<dt><code>&lt;!&#8211; content &#8211;&gt;</code></dt>
+<dd>Main content (e.g. post or page body, posts listing etc.).</dd>
+<dt><code>%root%</code></dt>
+<dd>Relative path to the root directory of the blog; to be used inside links. Note that this placeholder can safely appear in the post/page body as well and will be still taken into account.</dd>
+<dt><code>%home%</code></dt>
+<dd>Relative path to the website home (index) page; to be used inside links. Note that this placeholder can safely appear in the post/page body as well and will be still taken into account.</dd>
+<dt><code>%page[</code><i>id</i><code>]%</code></dt>
+<dd>Relative path to the page with given <i>id</i>; to be used inside links. Note that this placeholder can safely appear in the post/page body as well and will be still taken into account.</dd>
+<dt><code>%post[</code><i>id</i><code>]%</code></dt>
+<dd>Relative path to the post with given <i>id</i>; to be used inside links. Note that this placeholder can safely appear in the post/page body as well and will be still taken into account.</dd>
+<dt><code>%tag[</code><i>name</i><code>]%</code></dt>
+<dd>Relative path to the tag with given <i>name</i>; to be used inside links. Note that this placeholder can safely appear in the post/page body as well and will be still taken into account.</dd></dl>
+<h2>Creating the Stylesheet</h2>
+<p>The stylesheet is just a plain <font SIZE="-1">CSS</font> file (<font SIZE="-1">CSS</font> 2.1 is recommended, although not required) with most of its parts dependent on elements, classes and IDs introduced in the theme file. Those few that are produced by the <code><a href="/docs/linux/man/1-blaze-make/">blaze-make</a></code>(1) are described below. </p>
+<p> For the example usage, see the default stylesheet. </p>
+<p> <i>List of Obligatory Classes</i></p>
+<dl>
+<dt><code>post</code></dt>
+<dd><tt>&quot;H2&quot;</tt> element containing the page/post title.</dd>
+<dt><code>section</code></dt>
+<dd><tt>&quot;DIV&quot;</tt> element containing the name of the current section (e.g. monthly archive, tag listing etc.).</dd>
+<dt><code>information</code></dt>
+<dd><tt>&quot;DIV&quot;</tt> element, optionally containing the additional information about the post, such as the date of publishing, the post author, or the list of attached tags. It is placed above the post, right below its heading.</dd>
+<dt><code>post-footer</code></dt>
+<dd><tt>&quot;DIV&quot;</tt> element, optionally containing the additional information about the post, such as the date of publishing, the post author, or the list of attached tags. It is placed right below the post itself.</dd>
+<dt><code>date</code></dt>
+<dd><tt>&quot;SPAN&quot;</tt> element containing the date of publishing.</dd>
+<dt><code>author</code></dt>
+<dd><tt>&quot;SPAN&quot;</tt> element containing the post author.</dd>
+<dt><code>tags</code></dt>
+<dd><tt>&quot;SPAN&quot;</tt> element containing the list of attached tags.</dd>
+<dt><code>previous</code></dt>
+<dd><tt>&quot;DIV&quot;</tt> element containing link to the page with older posts.</dd>
+<dt><code>next</code></dt>
+<dd><tt>&quot;DIV&quot;</tt> element containing link to the page with newer posts.</dd>
+<dt><code>more</code></dt>
+<dd><tt>&quot;A&quot;</tt> element containing the `Read more&#8217; link.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><i>.blaze/theme/</i></dt>
+<dd>BlazeBlogger themes directory.</dd>
+<dt><i>.blaze/style/</i></dt>
+<dd>BlazeBlogger stylesheets directory.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-blaze-config/">blaze-config</a></code>(1), <code><a href="/docs/linux/man/1-blaze-make/">blaze-make</a></code>(1).</p>
+<h2>Author</h2>
+<p>Written by Jaromir Hradilek &lt;jhradilek [at] gmail.com&gt; </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
+<p> A copy of the license is included as a file called <font SIZE="-1">FDL</font> in the main directory of the BlazeBlogger source package.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

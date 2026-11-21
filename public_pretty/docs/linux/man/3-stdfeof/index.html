@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfeof(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfeof/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfeof(3)</h1>
+
+
+
+
+
+<p>std::feof - std::feof</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstdio&gt;
+    int feof(std::FILE *stream);</code></pre> 
+<p>Checks if the end of the given file stream has been reached.</p>
+<h2>Parameters</h2>
+<p>stream - the file stream to check</p>
+<h2>Return value</h2>
+<p>Nonzero value if the end of the stream has been reached, otherwise 0.</p>
+<h2>Notes</h2>
+<p>This function only reports the stream state as reported by the most recent I/O operation, it does not examine the associated data source. For example, if the most recent I/O was a std::fgetc, which returned the last byte of a file, std::feof returns zero. The next std::fgetc fails and changes the stream state to end-of-file. Only then std::feof returns non-zero.
+In typical usage, input stream processing stops on any error; feof and std::ferror are then used to distinguish between different error conditions.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+int main()
+{
+FILE *fp = std::fopen(&quot;test.txt&quot;, &quot;r&quot;);
+if (!fp) {
+std::perror(&quot;File opening failed&quot;);
+return EXIT_FAILURE;
+}
+int c;                                // note: int, not char, required to handle EOF
+while ((c = std::fgetc(fp)) != EOF) { // standard C I/O file reading loop
+std::putchar(c);
+}
+if (std::ferror(fp))
+std::puts(&quot;I/O error when reading&quot;);
+else if (std::feof(fp))
+std::puts(&quot;End of file reached successfully&quot;);
+std::fclose(fp);
+}
+</code></pre></p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if end-of-file has been reached
+eof <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> clears errors
+clearerr <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> displays a character string corresponding of the current error to stderr
+perror <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks for a file error
+ferror <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

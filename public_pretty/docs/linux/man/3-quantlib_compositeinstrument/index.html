@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_compositeinstrument(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::CompositeInstrument – Composite instrument">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_compositeinstrument/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_compositeinstrument(3)</h1>
+
+
+
+
+
+<p>QuantLib::CompositeInstrument &#8211; Composite instrument </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/instruments/compositeinstrument.hpp&gt; </p>
+<p> Inherits <code>QuantLib::Instrument</code>. </p>
+<h3>Public Member Functions</h3>
+<p>void <code>add</code> (const boost::shared_ptr&lt; <code>Instrument</code> &gt; &amp;instrument, <code>Real</code> multiplier=1.0)<br />
+ <i>adds an instrument to the composite </i><br />
+ void <code>subtract</code> (const boost::shared_ptr&lt; <code>Instrument</code> &gt; &amp;instrument, <code>Real</code> multiplier=1.0)<br />
+ <i>shorts an instrument from the composite </i></p>
+<h3>Instrument interface</h3>
+<p>bool <code>isExpired</code> () const<br />
+ <i>returns whether the instrument is still tradable. </i><br />
+ void <code>performCalculations</code> () const </p>
+<h2>Detailed Description</h2>
+<p>Composite instrument </p>
+<p> This instrument is an aggregate of other instruments. Its NPV is the sum of the NPVs of its components, each possibly multiplied by a given factor. </p>
+<p> <code>Example: </code> <code>static replication of a down-and-out barrier option </code> </p>
+<p> <code>Warning</code></p>
+<dl COMPACT>
+<dd>Methods that drive the calculation directly (such as <code>recalculate()</code>, <code>freeze()</code> and others) might not work correctly.</dd></dl>
+<p> <code>Examples: </code> </p>
+<p> <code>Replication.cpp</code>.</p>
+<h2>Member Function Documentation</h2>
+<h3>void performCalculations () const [protected, virtual]</h3>
+<p>In case a pricing engine is <code>not</code> used, this method must be overridden to perform the actual calculations and set any needed results. In case a pricing engine is used, the default implementation can be used. </p>
+<p> Reimplemented from <code>Instrument</code>. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

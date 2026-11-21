@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>x-terminal-emulator(1) · Linux Manual Pages</title>
+<meta name="description" content="Terminator – Multiple GNOME terminals in one window">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-x-terminal-emulator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>x-terminal-emulator(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> Terminator &#8211; Multiple GNOME terminals in one window </p>
+<h2>SYNOPSIS</h2>
+<p> <code>terminator</code> [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> This manual page documents <code>Terminator</code>, a terminal emulator application. </p>
+<p> <code>Terminator</code> is a program that allows users to set up flexible arrangements of GNOME terminals. It is aimed at those who normally arrange lots of terminals near each other, but don&#8217;t want to use a frame based window manager.</p>
+<h2>OPTIONS</h2>
+<p> This program follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show the version of the Terminator installation</dd>
+<dt><code>-m, &#8211;maximise</code></dt>
+<dd> Start with a maximised window <code>-M, &#8211;maximize</code> Start with a maximized window</dd>
+<dt><code>-f, &#8211;fullscreen</code></dt>
+<dd> Start with a fullscreen window</dd>
+<dt><code>-b, &#8211;borderless</code></dt>
+<dd> Instruct the window manager not to render borders/decoration on the Terminator window (this works well with -m)</dd>
+<dt><code>-H, &#8211;hidden</code></dt>
+<dd> Hide the Terminator window by default. Its visibility can be toggled with the <code>hide_window</code> keyboard shortcut (Ctrl-Shift-Alt-a by default)</dd>
+<dt><code>-T, &#8211;title</code></dt>
+<dd> Force the Terminator window to use a specific name rather than updating it dynamically based on the wishes of the child shell.</dd>
+<dt><code>&#8211;geometry=GEOMETRY</code></dt>
+<dd> Specifies the preferred size and position of Terminator&#8217;s window; see <a href="/docs/linux/man/7-x/">X</a>(7).</dd>
+<dt><code>-e, &#8211;command=COMMAND</code></dt>
+<dd> Runs the specified command instead of your default shell or profile specified command. Note: if Terminator is launched as x-terminal-emulator -e behaves like -x, and the longform becomes &#8211;execute2=COMMAND</dd>
+<dt><code>-x, &#8211;execute COMMAND [ARGS]</code></dt>
+<dd> Runs <code>the rest of the command line</code> instead of your default shell or profile specified command.</dd>
+<dt><code>&#8211;working-directory=DIR</code></dt>
+<dd> Set the terminal&#8217;s working directory</dd>
+<dt><code>-g, &#8211;config FILE</code></dt>
+<dd> Use the specified FILE for configuration</dd>
+<dt><code>-r, &#8211;role=ROLE</code></dt>
+<dd> Set a custom WM_WINDOW_ROLE property on the window</dd>
+<dt><code>-l, &#8211;layout=LAYOUT</code></dt>
+<dd> Start Terminator with a specific layout. The argument here is the name of a saved layout.</dd>
+<dt><code>-s, &#8211;select-layout=LAYOUT</code></dt>
+<dd> Open the layout launcher window instead of the normal terminal.</dd>
+<dt><code>-p, &#8211;profile=PROFILE</code></dt>
+<dd> Use a different profile as the default</dd>
+<dt><code>-i, &#8211;icon=FORCEDICON</code></dt>
+<dd> Set a custom icon for the window (by file or name)</dd>
+<dt><code>-u, &#8211;no-dbus</code></dt>
+<dd> Disable DBus</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Enable debugging output (please use this when reporting bugs). This can be specified twice to enable a built-in python debugging server.</dd>
+<dt><code>&#8211;debug-classes=DEBUG_CLASSES</code></dt>
+<dd> If this is specified as a comma separated list, debugging output will only be printed from the specified classes.</dd>
+<dt><code>&#8211;debug-methods=DEBUG_METHODS</code></dt>
+<dd> If this is specified as a comma separated list, debugging output will only be printed from the specified functions. If this is specified in addition to &#8211;debug-classes, only the intersection of the two lists will be displayed</dd>
+<dt><code>&#8211;new-tab</code></dt>
+<dd> If this is specified and Terminator is already running, DBus will be used to spawn a new tab in the first Terminator window.</dd></dl>
+<h2>KEYBINDINGS</h2>
+<p> The following default keybindings can be used to control Terminator:</p>
+<dl>
+<dt><code>F1</code></dt>
+<dd> Launches the full HTML manual.</dd></dl>
+<h3>Creation &amp; Destruction</h3>
+<p> The following items relate to creating and destroying terminals.</p>
+<dl>
+<dt><code>Ctrl+Shift+O</code></dt>
+<dd> Split terminals H<code>o</code>rizontally.</dd>
+<dt><code>Ctrl+Shift+E</code></dt>
+<dd> Split terminals V<code>e</code>rtically.</dd>
+<dt><code>Ctrl+Shift+T</code></dt>
+<dd> Open new <code>t</code>ab.</dd>
+<dt><code>Ctrl+Shift+I</code></dt>
+<dd> Open a new window. (Note: Unlike in previous releases, this window is part of the same Terminator process.)</dd>
+<dt><code>Super+I</code></dt>
+<dd> Spawn a new Terminator process.</dd>
+<dt><code>Alt+L</code></dt>
+<dd> Open <code>l</code>ayout launcher.</dd>
+<dt><code>Ctrl+Shift+W</code></dt>
+<dd> Close the current terminal.</dd>
+<dt><code>Ctrl+Shift+Q</code></dt>
+<dd> Close the current window.</dd></dl>
+<h3>Navigation</h3>
+<p> The following items relate to moving between and around terminals.</p>
+<dl>
+<dt><code>Alt+Up</code></dt>
+<dd> Move to the terminal <code>above</code> the current one.</dd>
+<dt><code>Alt+Down</code></dt>
+<dd> Move to the terminal <code>below</code> the current one.</dd>
+<dt><code>Alt+Left</code></dt>
+<dd> Move to the terminal <code>left of</code> the current one.</dd>
+<dt><code>Alt+Right</code></dt>
+<dd> Move to the terminal <code>right of</code> the current one.</dd>
+<dt><code>Ctrl+PageDown</code></dt>
+<dd> Move to next Tab.</dd>
+<dt><code>Ctrl+PageUp</code></dt>
+<dd> Move to previous Tab.</dd>
+<dt><code>Ctrl+Shift+N or Ctrl+Tab</code></dt>
+<dd> Move to <code>n</code>ext terminal within the same tab, use Ctrl+PageDown to move to the next tab. If <code>cycle_term_tab</code> is <code>False</code>, cycle within the same tab will be disabled.</dd>
+<dt><code>Ctrl+Shift+P or Ctrl+Shift+Tab</code></dt>
+<dd> Move to <code>p</code>revious terminal within the same tab, use Ctrl+PageUp to move to the previous tab. If <code>cycle_term_tab</code> is <code>False</code>, cycle within the same tab will be disabled.</dd></dl>
+<h3>Organisation</h3>
+<p> The following items relate to arranging and resizing terminals.</p>
+<dl>
+<dt><code>Ctrl+Shift+Right</code></dt>
+<dd> Move parent dragbar <code>Right</code>.</dd>
+<dt><code>Ctrl+Shift+Left</code></dt>
+<dd> Move parent dragbar <code>Left</code>.</dd>
+<dt><code>Ctrl+Shift+Up</code></dt>
+<dd> Move parent dragbar <code>Up</code>.</dd>
+<dt><code>Ctrl+Shift+Down</code></dt>
+<dd> Move parent dragbar <code>Down</code>.</dd>
+<dt><code>Super+R</code></dt>
+<dd> <code>R</code>otate terminals clockwise.</dd>
+<dt><code>Super+Shift+R</code></dt>
+<dd> <code>R</code>otate terminals counter-clockwise.</dd>
+<dt></dt></dl>
+<h2>Drag and Drop</h2>
+<dd> The layout can be modified by moving terminals with Drag and Drop. To start dragging a terminal, click and hold on its titlebar. Alternatively, hold down <code>Ctrl</code>, click and hold the <code>right</code> mouse button. Then, <code>**Release Ctrl**</code>. You can now drag the terminal to the point in the layout you would like it to be. The zone where the terminal would be inserted will be highlighted.</dd>
+<dl>
+<dt><code>Ctrl+Shift+PageDown</code></dt>
+<dd> Swap tab position with next Tab.</dd>
+<dt><code>Ctrl+Shift+PageUp</code></dt>
+<dd> Swap tab position with previous Tab.</dd></dl>
+<h3>Miscellaneous</h3>
+<p> The following items relate to miscellaneous terminal related functions.</p>
+<dl>
+<dt><code>Ctrl+Shift+C</code></dt>
+<dd> Copy selected text to clipboard.</dd>
+<dt><code>Ctrl+Shift+V</code></dt>
+<dd> Paste clipboard text.</dd>
+<dt><code>Ctrl+Shift+S</code></dt>
+<dd> Hide/Show <code>S</code>crollbar.</dd>
+<dt><code>Ctrl+Shift+F</code></dt>
+<dd> Search within terminal scrollback.</dd>
+<dt><code>Ctrl+Shift+R</code></dt>
+<dd> Reset terminal state.</dd>
+<dt><code>Ctrl+Shift+G</code></dt>
+<dd> Reset terminal state and clear window.</dd>
+<dt><code>Ctrl+Plus (+)</code></dt>
+<dd> Increase font size. <code>Note:</code> This may require you to press shift, depending on your keyboard.</dd>
+<dt><code>Ctrl+Minus (-)</code></dt>
+<dd> Decrease font size. <code>Note:</code> This may require you to press shift, depending on your keyboard.</dd>
+<dt><code>Ctrl+Zero (0)</code></dt>
+<dd> Restore font size to original setting.</dd>
+<dt><code>Ctrl+Alt+W</code></dt>
+<dd> Rename window title.</dd>
+<dt><code>Ctrl+Alt+A</code></dt>
+<dd> Rename tab title.</dd>
+<dt><code>Ctrl+Alt+X</code></dt>
+<dd> Rename terminal title.</dd>
+<dt><code>Super+1</code></dt>
+<dd> Insert terminal number, i.e. 1 to 12.</dd>
+<dt><code>Super+0</code></dt>
+<dd> Insert padded terminal number, i.e. 01 to 12.</dd></dl>
+<h3>Grouping &amp; Broadcasting</h3>
+<p> The following items relate to helping to focus on a specific terminal.</p>
+<dl>
+<dt><code>F11</code></dt>
+<dd> Toggle window to fullscreen.</dd>
+<dt><code>Ctrl+Shift+X</code></dt>
+<dd> Toggle between showing all terminals and only showing the current one (maximise).</dd>
+<dt><code>Ctrl+Shift+Z</code></dt>
+<dd> Toggle between showing all terminals and only showing a scaled version of the current one (zoom).</dd>
+<dt><code>Ctrl+Shift+Alt+A</code></dt>
+<dd> Hide the initial window. Note that this is a global binding, and can only be bound once.</dd></dl>
+<p> The following items relate to grouping and broadcasting.</p>
+<dl>
+<dt><code>Super+T</code></dt>
+<dd> Group all terminals in the current tab so input sent to one of them, goes to all terminals in the current tab.</dd>
+<dt><code>Super+Shift+T</code></dt>
+<dd> Remove grouping from all terminals in the current tab.</dd>
+<dt><code>Super+G</code></dt>
+<dd> Group all terminals so that any input sent to one of them, goes to all of them.</dd>
+<dt><code>Super+Shift+G</code></dt>
+<dd> Remove grouping from all terminals.</dd>
+<dt><code>Alt+A</code></dt>
+<dd> Broadcast to All terminals.</dd>
+<dt><code>Alt+G</code></dt>
+<dd> Broadcast to Grouped terminals.</dd>
+<dt><code>Alt+O</code></dt>
+<dd> Broadcast Off.</dd></dl>
+<p> Most of these keybindings are changeable in the Preferences.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-terminator_config/">terminator_config</a>(5)</code></p>
+<h2>AUTHOR</h2>
+<p> Terminator was written by Chris Jones &lt;cmsj [at] tenshu.net&gt; and others. </p>
+<p> This manual page was written by Chris Jones &lt;cmsj [at] tenshu.net&gt; and others. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fish_key_reader(1) · Linux Manual Pages</title>
+<meta name="description" content="fish_key_reader — explore what characters keyboard keys send">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-fish_key_reader/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>fish_key_reader(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>fish_key_reader</code> &#8212; explore what characters keyboard keys send </p>
+<h3>Synopsis</h3>
+<pre><code>
+fish_key_reader[-c][-d LEVEL]
+</code></pre>
+<h3>Description</h3>
+<p> fish_key_reader is used to study input received from the terminal and can help with key binds. The program is interactive and works on standard input. Individual characters themselves and their hexadecimal values are displayed. </p>
+<p> The tool will output an example bind command matching the character sequence captured. If the character sequence matches a special key name (see bind &#8211;key-names), both bind CHARS &#8230; and bind -k KEYNAME &#8230; usage will be shown. </p>
+<p> The following parameters are available: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> -c or &#8211;continuous begins a session where multiple key sequences can be inspected. By default the program exits after capturing a single key sequence.</dd>
+<dt>&bull;</dt>
+<dd> -d or &#8211;debug-level=DEBUG_LEVEL enables debug output and specifies a verbosity level (like fish -d). Defaults to 0.</dd></dl>
+<p> In continuous mode (-c), the delay in milliseconds since the previous character was received is also shown. This information may be useful to determine a preferred fish_escape_delay_ms setting or learn the amount of lag introduced by ssh or tmux. </p>
+<p> fish_key_reader intentionally disables handling of many signals. To terminate fish_key_reader in a &#8211;continuous run:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> press Ctrl-C twice, or</dd>
+<dt>&bull;</dt>
+<dd> press Ctrl-D twice, or</dd>
+<dt>&bull;</dt>
+<dd> type exit, or</dd>
+<dt>&bull;</dt>
+<dd> type quit</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

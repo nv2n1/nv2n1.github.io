@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pamtopdbimg(1) · Linux Manual Pages</title>
+<meta name="description" content="pamtodbimg – convert a Netpbm image to a Palm Pilot Image Viewer PDB Image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pamtopdbimg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pamtopdbimg(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pamtodbimg &#8211; convert a Netpbm image to a Palm Pilot Image Viewer PDB Image</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pamtopdbimg</code> </p>
+<p> [<code>-notefile=</code><i>filename</i>] [<code>-title=</code><i>text</i>] [<code>-compressed</code>] [<code>-uncompressed</code>] [<code>-maybecompressed</code>] [<code>-4depth</code>] </p>
+<p> [<i>netpbmfile</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
+<p> <code>pamtopdbimg</code> reads a Netpbm image as input and produced a Palm Pilot Image Viewer image (and Image record in a PDB file) as output. </p>
+<p> If the Neptbm image is black and white, the Pilot image is monochrome. Otherwise, the Pilot image is either 4-level or 16-level grayscale, depending on the <code>-4depth</code> option. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-title=</code><i>text</i></dt>
+<dd> The title of the image, to be included in the image. </dd>
+<dt><code>-compressed</code></dt>
+<dd>
+</dd><dt><code>-uncompressed</code></dt>
+<dd>
+</dd><dt><code>-maybecompressed</code></dt>
+<dd> You may specify only one of these. <code>-compressed</code> says to generate the image in compressed format. <code>-uncompressed</code> says to generate the image in uncompressed format. <code>-maybecompressed</code> says to generate whichever format is smaller (the compression algorithm sometimes actually makes the data larger). </dd>
+<dt><code>-4depth</code></dt>
+<dd> This option makes <code>pamtopdbimg</code> create the image in 16-level grayscale (4 bits per pixel) format. If you don&#8217;t specify this, <code>pamtopdbimg</code> uses 4-level (2 bits per pixel) format. </dd>
+<p> This option has no effect when the input is black and white (maxval 1). In that case, <code>pamtopdbimg</code> generates the monochrome (1 bit per pixel) format regardless. </p>
+<dt><code>-notefile=</code><i>filename</i></dt>
+<dd> Attach the note in the specified file to the image. </dd>
+<p> If you don&#8217;t specify this, <code>pamtopdbimg</code> does not attach any note. </p>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pdbimgtopam/">pdbimgtopam</a></code>(1) , <code><a href="/docs/linux/man/1-palmtopnm/">palmtopnm</a></code>(1) , <code>pam</code>(1) , </p>
+<h2>HISTORY</h2>
+<p> <code>pamtopdbimg</code> was new in Netpbm 10.52 (September 2010). It was modelled after Eric A. Howe&#8217;s <code>imgvtopbm</code> package, which dates back to September 1997. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

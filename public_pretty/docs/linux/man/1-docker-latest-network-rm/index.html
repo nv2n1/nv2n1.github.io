@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>docker-latest-network-rm(1) · Linux Manual Pages</title>
+<meta name="description" content="docker-network-rm – remove one or more networks">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-docker-latest-network-rm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>docker-latest-network-rm(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> docker-network-rm &#8211; remove one or more networks </p>
+<h2>SYNOPSIS</h2>
+<p> <code>docker network rm</code> [<code>&#8211;help</code>] NETWORK [NETWORK&#8230;] </p>
+<h2>DESCRIPTION</h2>
+<p> Removes one or more networks by name or identifier. To remove a network, you must first disconnect any containers connected to it. To remove the network named &#8216;my-network&#8217;: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+  $ docker network rm my-network
+</pre>
+</dd></dl>
+<p> To delete multiple networks in a single docker network rm command, provide multiple network names or ids. The following example deletes a network with id 3695c422697f and a network named my-network: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+  $ docker network rm 3695c422697f my-network
+</pre>
+</dd></dl>
+<p> When you specify multiple networks, the command attempts to delete each in turn. If the deletion of one network fails, the command continues to the next on the list and tries to delete that. The command reports success or failure for each deletion. </p>
+<h2>OPTIONS</h2>
+<p> <code>NETWORK</code><br />
+&nbsp;<wbr>&nbsp;<wbr>Specify network name or id </p>
+<p> <code>&#8211;help</code><br />
+&nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
+<h2>HISTORY</h2>
+<p> OCT 2015, created by Mary Anthony &lt;mary [at] docker.com&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sam_initialize(3) · Linux Manual Pages</title>
+<meta name="description" content="sam_initialize – Initialize health checking">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sam_initialize/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sam_initialize(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>sam_initialize &#8211; Initialize health checking</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;corosync/sam.h&gt;
+</code></pre>
+<p> <code>cs_error_t sam_initialize (int</code> <i>time_interval</i><code>, sam_recovery_policy_t </code><i>recovery_policy</i>); </p>
+<h2>Description</h2>
+<p>The <code>sam_initialize</code> function is used to initialize health checking of a process. Application can have only one instance of SAM. This function must be called before any other of SAM functions. It is recommended to initialize before the process begins any process initialization. The <i>time_interval</i> parameter is a timeout in milliseconds before taking recovery action after having not received a healthcheck. If <i>time_interval</i> parameter is zero, there is no time limit and no healthcheck must be sent by the process. In this operational mode, a process failure will continue to execute the recovery policy. The <i>recovery_policy</i> is defined as type:  where</p>
+<dl>
+<dt>SAM_RECOVERY_POLICY_QUIT</dt>
+<dd>on failure, the process will terminate.</dd>
+<dt>SAM_RECOVERY_POLICY_RESTART</dt>
+<dd>on failure, the process will restart.</dd>
+<dt>SAM_RECOVERY_POLICY_QUORUM</dt>
+<dd>is not policy. Used only as flag meaning quorum integration</dd>
+<dt>SAM_RECOVERY_POLICY_QUORUM_QUIT</dt>
+<dd>same as <i>SAM_RECOVERY_POLICY_QUIT</i> but <code>sam_start (3)</code> will block until corosync becomes quorate and process will be terminated if quorum is lost.</dd>
+<dt>SAM_RECOVERY_POLICY_QUORUM_RESTART</dt>
+<dd>same as <i>SAM_RECOVERY_POLICY_RESTART</i> but <code>sam_start (3)</code> will block until corosync becomes quorate and process will be restarted if quorum is lost.</dd>
+<dt>SAM_RECOVERY_POLICY_CMAP</dt>
+<dd>is not policy. Used only as flag meaning cmap integration. It can be used with all previous policies. For backward compatibility, SAM_RECOVERY_POLICY_CONFDB with same meaning as <i>SAM_RECOVERY_POLICY_CMAP</i> is also provided.  To perform event driven healthchecking, <code><a href="/docs/linux/man/3-sam_register/">sam_register</a>(3)</code> and <code><a href="/docs/linux/man/3-sam_start/">sam_start</a>(3)</code> functions must called. Event driven healthchecking causes the duplicate standby process running the SAM serve rto periodically request healthchecks from the active process. </dd>
+<h2>Return Value</h2>
+<p>This call return CS_OK value if successful, otherwise and error is returned. </p>
+<h2>Errors</h2>
+<dl>
+<dt>CS_ERR_BAD_HANDLE</dt>
+<dd>can happened in case of double initialization.</dd>
+<dt>CS_ERR_INVALID_PARAM</dt>
+<dd><i>recovery_policy</i> has invalid value. </dd>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-sam_register/">sam_register</a></code>(3), <code><a href="/docs/linux/man/3-sam_start/">sam_start</a></code>(3), <code><a href="/docs/linux/man/3-sam_hc_callback_register/">sam_hc_callback_register</a></code>(3) <code>CS_ERR_TRY_AGAIN</code> Resource temporarily unavailable <code>CS_ERR_INVALID_PARAM</code> Invalid argument <code>CS_ERR_ACCESS</code> Permission denied <code>CS_ERR_LIBRARY</code> The connection failed <code>CS_ERR_INTERRUPT</code> System call inturrupted by a signal <code>CS_ERR_NOT_SUPPORTED</code> The requested protocol/functuality not supported <code>CS_ERR_MESSAGE_ERROR</code> Incorrect auth message received <code>CS_ERR_NO_MEMORY</code> Not enough memory to completed the requested task </p>
+</dl></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

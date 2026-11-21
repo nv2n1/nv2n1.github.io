@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mdb_dump(1) · Linux Manual Pages</title>
+<meta name="description" content="mdb_dump – LMDB environment export tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mdb_dump/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mdb_dump(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> mdb_dump &#8211; LMDB environment export tool </p>
+<h2>SYNOPSIS</h2>
+<p> <code>mdb_dump</code> [<code>-V</code>] [<code>-f</code><i>&nbsp;<wbr>file</i>] [<code>-l</code>] [<code>-n</code>] [<code>-p</code>] [<code>-a</code>&nbsp;<wbr>| <code>-s</code><i>&nbsp;<wbr>subdb</i>] <code>&nbsp;<wbr>envpath</code></p>
+<h2>DESCRIPTION</h2>
+<p> The <code>mdb_dump</code> utility reads a database and writes its contents to the standard output using a portable flat-text format understood by the <code><a href="/docs/linux/man/1-mdb_load/">mdb_load</a></code>(1) utility.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-V</code></dt>
+<dd> Write the library version number to the standard output, and exit.</dd>
+<dt><code>-f</code>&nbsp;<wbr>file</dt>
+<dd> Write to the specified file instead of to the standard output.</dd>
+<dt><code>-l</code></dt>
+<dd> List the databases stored in the environment. Just the names will be listed, no data will be output.</dd>
+<dt><code>-n</code></dt>
+<dd> Dump an LMDB database which does not use subdirectories.</dd>
+<dt><code>-p</code></dt>
+<dd> If characters in either the key or data items are printing characters (as defined by isprint(3)), output them directly. This option permits users to use standard text editors and tools to modify the contents of databases. </dd>
+<p> Note: different systems may have different notions about what characters are considered printing characters, and databases dumped in this manner may be less portable to external systems.</p>
+<dt><code>-a</code></dt>
+<dd> Dump all of the subdatabases in the environment.</dd>
+<dt><code>-s</code>&nbsp;<wbr>subdb</dt>
+<dd> Dump a specific subdatabase. If no database is specified, only the main database is dumped.</dd></dl>
+<h2>DIAGNOSTICS</h2>
+<p> Exit status is zero if no errors occur. Errors result in a non-zero exit status and a diagnostic message being written to standard error. </p>
+<p> Dumping and reloading databases that use user-defined comparison functions will result in new databases that use the default comparison functions. <code>In this case it is quite likely that the reloaded database will be damaged beyond repair permitting neither record storage nor retrieval.</code> </p>
+<p> The only available workaround is to modify the source for the <code><a href="/docs/linux/man/1-mdb_load/">mdb_load</a></code>(1) utility to load the database using the correct comparison functions.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-mdb_load/">mdb_load</a></code>(1)</p>
+<h2>AUTHOR</h2>
+<p> Howard Chu of Symas Corporation &lt;<a rel="nofollow" href="http://www.symas.com">http://www.symas.com</a>&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

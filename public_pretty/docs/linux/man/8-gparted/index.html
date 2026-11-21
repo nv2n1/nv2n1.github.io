@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gparted(8) · Linux Manual Pages</title>
+<meta name="description" content="gparted – Gnome partition editor for manipulating disk partitions.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-gparted/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>gparted(8)</h1>
+
+
+
+
+
+<p>gparted &#8211; Gnome partition editor for manipulating disk partitions.</p>
+<h2>Synopsis</h2>
+<p><code>gparted [device]&#8230;</code></p>
+<h2>Description</h2>
+<p>The <code>gparted</code> application is the GNOME partition editor for creating, reorganizing, and deleting disk partitions. </p>
+<p> A disk device can be subdivided into one or more partitions. The <code>gparted</code> application enables you to change the partition organization on a disk device while preserving the contents of the partition. </p>
+<p> With <code>gparted</code> you can accomplish the following tasks:<br />
+ &#8211; Create a partition table on a disk device.<br />
+ &#8211; Enable and disable partition flags such as boot and hidden.<br />
+ &#8211; Perform actions with partitions such as create, delete, resize, move, check, label, copy, and paste. </p>
+<p> More documentation can be found in the application help manual, and online at:<br />
+ <a rel="nofollow" href="http://gparted.org">http://gparted.org</a></p>
+<h2>Examples</h2>
+<p>You can run <code>gparted</code> from a command line and specify one or more disk devices. </p>
+<p> For example, to start gparted with the devices /dev/sda and /dev/sdc you would use the following command: </p>
+<p> <code>gparted</code> /dev/sda /dev/sdc</p>
+<h2>Notes</h2>
+<p>Editing partitions has the potential to cause LOSS of DATA. </p>
+<p> The <code>gparted</code> application is designed to enable you to edit partitions while reducing the risk of data loss. The application is carefully tested and is used by the GParted project team. However, loss of data might occur due to software bugs, hardware problems, or power failure. </p>
+<p> You can help to reduce the risk of data loss by not mounting or unmounting partitions outside of the <code>gparted</code> application while <code>gparted</code> is running. </p>
+<p> You are advised to BACKUP your DATA before using the <code>gparted</code> application.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs at:<br />
+ <a rel="nofollow" href="http://gparted.org/bugs.php">http://gparted.org/bugs.php</a></p>
+<h2>Author</h2>
+<p>Manual page written by Curtis Gedak &lt;gedakc [at] users.sf.net&gt;</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-parted/">parted</a></code>(8), <code><a href="/docs/linux/man/8-fdisk/">fdisk</a></code>(8), <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

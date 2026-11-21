@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdvariantindex(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdvariantindex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdvariantindex(3)</h1>
+
+
+
+
+
+<p>std::variant&lt;Types&hellip;&gt;::index - std::variant&lt;Types&hellip;&gt;::index</p>
+<h2>Synopsis</h2>
+<p>constexpr std::size_t index() const noexcept; <i>(since C++17)</i>
+Returns the zero-based index of the alternative that is currently held by the variant.
+If the variant is valueless_by_exception, returns variant_npos.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;variant&gt;
+#include &lt;string&gt;
+#include &lt;iostream&gt;
+int main()
+{
+std::variant&lt;int, std::string&gt; v = &quot;abc&quot;;
+std::cout &lt;&lt; &quot;v.index = &quot; &lt;&lt; v.index() &lt;&lt; &lsquo;\n&rsquo;;
+v = {};
+std::cout &lt;&lt; &quot;v.index = &quot; &lt;&lt; v.index() &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> v.index = 1
+ <wbr> v.index = 0</p>
+<h2>See also</h2>
+<p>holds_alternative checks if a variant currently holds a given type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++17)</i>
+std::get(std::variant) reads the value of the variant given the index or the type (if the type is unique), throws on error
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++17)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

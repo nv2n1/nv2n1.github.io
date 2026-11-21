@@ -1,0 +1,64 @@
+baseURL = "https://www.systutorials.com/"
+title = "SysTutorials"
+
+[params]
+  description = "Tutorials and Q&A on Linux, systems, and software."
+
+# taxonomy = the /categories/ aggregate (a static content page provides it);
+# robotsTXT = a static robots.txt is committed; sitemap is a custom template.
+disableKinds = ["taxonomy", "robotsTXT"]
+disableHugoGeneratorInject = true
+disableGeneratorInject = true
+
+[taxonomies]
+  category = "categories"
+  author = "authors"
+
+[permalinks.term]
+  categories = "/category/:slug/"
+  authors = "/author/:slug/"
+
+# .Lastmod follows the `modified` front matter (feeds, sitemap, templates).
+[frontmatter]
+  lastmod = ["modified", "date"]
+
+[outputs]
+  home = ["HTML", "FeedXML"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+  page = ["HTML"]
+
+[mediaTypes."application/atom+xml"]
+  suffixes = ["xml"]
+
+[outputFormats.FeedXML]
+  mediaType = "application/atom+xml"
+  baseName = "feed"
+
+[mediaTypes."application/searchjson"]
+  suffixes = ["json"]
+
+[outputFormats.SearchJSON]
+  mediaType = "application/searchjson"
+  baseName = "search-index"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Post and man page bodies carry raw HTML recovered from WordPress.
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    # The exported Linux man pages, sharded by section and first letter.
+    source = "man-src"
+    target = "content/man"
+  [[module.mounts]]
+    source = "static"
+    target = "static"

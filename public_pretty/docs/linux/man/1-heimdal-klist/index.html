@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>heimdal-klist(1) · Linux Manual Pages</title>
+<meta name="description" content="klist – list Kerberos credentials">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-heimdal-klist/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>heimdal-klist(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> <code>klist</code> &#8211; list Kerberos credentials </p>
+<h2>SYNOPSIS</h2>
+<p> -words [-<code>c </code><i>cache | </i> &#8211;<code>-cache= </code><i>cache</i> ] [-<code>s | -t | &#8211;test</code> ] [-<code>T | &#8211;tokens</code> ] [-<code>5 | &#8211;v5</code> ] [-<code>v | &#8211;verbose</code> ] [-<code>l | &#8211;list-caches</code> ] [-<code>f</code> ] [-<code>-version</code> ] [-<code>-help</code> ]</p>
+<h2>DESCRIPTION</h2>
+<p> reads and displays the current tickets in the credential cache (also known as the ticket file). </p>
+<p> Options supported:</p>
+<dl>
+<dt><code>-c </code><i>cache , &#8211;</i><code>-cache= </code><i>cache</i></dt>
+<dd> credential cache to list</dd>
+<dt><code>-s , -t , &#8211;test</code></dt>
+<dd> Test for there being an active and valid TGT for the local realm of the user in the credential cache.</dd>
+<dt><code>-T , &#8211;tokens</code></dt>
+<dd> display AFS tokens</dd>
+<dt><code>-5 , &#8211;v5</code></dt>
+<dd> display v5 cred cache (this is the default)</dd>
+<dt><code>-f</code></dt>
+<dd> Include ticket flags in short form, each character stands for a specific flag, as follows:</dd>
+<dl>
+<dt><code>F</code></dt>
+<dd> forwardable</dd>
+<dt><code>f</code></dt>
+<dd> forwarded</dd>
+<dt><code>P</code></dt>
+<dd> proxiable</dd>
+<dt><code>p</code></dt>
+<dd> proxied</dd>
+<dt><code>D</code></dt>
+<dd> postdate-able</dd>
+<dt><code>d</code></dt>
+<dd> postdated</dd>
+<dt><code>R</code></dt>
+<dd> renewable</dd>
+<dt><code>I</code></dt>
+<dd> initial</dd>
+<dt><code>i</code></dt>
+<dd> invalid</dd>
+<dt><code>A</code></dt>
+<dd> pre-authenticated</dd>
+<dt><code>H</code></dt>
+<dd> hardware authenticated</dd></dl>
+<p> This information is also output with the &#8211;<code>-verbose</code> option, but in a more verbose way.</p>
+<dt><code>-v , &#8211;verbose</code></dt>
+<dd> Verbose output. Include all possible information:</dd>
+<dl>
+<dt><code>Server</code></dt>
+<dd> the principal the ticket is for</dd>
+<dt><code>Ticket etype</code></dt>
+<dd> the encryption type used in the ticket, followed by the key version of the ticket, if it is available</dd>
+<dt><code>Session key</code></dt>
+<dd> the encryption type of the session key, if it&#8217;s different from the encryption type of the ticket</dd>
+<dt><code>Auth time</code></dt>
+<dd> the time the authentication exchange took place</dd>
+<dt><code>Start time</code></dt>
+<dd> the time that this ticket is valid from (only printed if it&#8217;s different from the auth time)</dd>
+<dt><code>End time</code></dt>
+<dd> when the ticket expires, if it has already expired this is also noted</dd>
+<dt><code>Renew till</code></dt>
+<dd> the maximum possible end time of any ticket derived from this one</dd>
+<dt><code>Ticket flags</code></dt>
+<dd> the flags set on the ticket</dd>
+<dt><code>Addresses</code></dt>
+<dd> the set of addresses from which this ticket is valid</dd></dl>
+<dt><code>-l , &#8211;list-caches</code></dt>
+<dd> List the credential caches for the current users, not all cache types supports listing multiple caches. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-kdestroy/">kdestroy</a>(1), <a href="/docs/linux/man/1-kinit/">kinit</a>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

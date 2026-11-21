@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>regshell(1) · Linux Manual Pages</title>
+<meta name="description" content="regshell – Windows registry file browser using readline">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-regshell/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>regshell(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> regshell &#8211; Windows registry file browser using readline </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>regshell</code> [&#8211;help] [&#8211;backend=BACKEND] [&#8211;credentials=CREDENTIALS] [location]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>regshell is a utility that lets you browse thru a Windows registry file as if you were using a regular unix shell to browse thru a file system.</dd>
+<h2>OPTIONS</h2>
+<p> &#8211;help</p>
+<dl>
+<dt>
+</dt><dd> Show list of available options.</dd></dl>
+<p> &#8211;backend BACKEND</p>
+<dl>
+<dt>
+</dt><dd> Name of backend to load. Possible values are: creg, regf, dir and rpc. The default is <i>dir</i>.</dd></dl>
+<p> &#8211;credentials=CREDENTIALS</p>
+<dl>
+<dt>
+</dt><dd> Credentials to use, if any. Password should be separated from user name by a percent sign.</dd></dl>
+<h2>COMMANDS</h2>
+<p> ck|cd &lt;keyname&gt;</p>
+<dl>
+<dt>
+</dt><dd> Go to the specified subkey.</dd></dl>
+<p> ch|predef [predefined-key-name]</p>
+<dl>
+<dt>
+</dt><dd> Go to the specified predefined key.</dd></dl>
+<p> list|ls</p>
+<dl>
+<dt>
+</dt><dd> List subkeys and values of the current key.</dd></dl>
+<p> mkkey|mkdir &lt;keyname&gt;</p>
+<dl>
+<dt>
+</dt><dd> Create a key with the specified <i>keyname</i> as a subkey of the current key.</dd></dl>
+<p> rmval|rm &lt;valname&gt;</p>
+<dl>
+<dt>
+</dt><dd> Delete the specified value.</dd></dl>
+<p> rmkey|rmdir &lt;keyname&gt;</p>
+<dl>
+<dt>
+</dt><dd> Delete the specified subkey recursively.</dd></dl>
+<p> pwd|pwk</p>
+<dl>
+<dt>
+</dt><dd> Print the full name of the current key.</dd></dl>
+<p> set|update</p>
+<dl>
+<dt>
+</dt><dd> Update the value of a key value. Not implemented at the moment.</dd></dl>
+<p> help|?</p>
+<dl>
+<dt>
+</dt><dd> Print a list of available commands.</dd></dl>
+<p> exit|quit</p>
+<dl>
+<dt>
+</dt><dd> Leave regshell.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Browsing thru a nt4 registry file </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+<code>regshell -b nt4 NTUSER.DAT</code>
+$$$PROTO.HIV&gt; <code>ls</code>
+K AppEvents
+K Console
+K Control Panel
+K Environment
+K Identities
+K Keyboard Layout
+K Network
+K Printers
+K Software
+K UNICODE Program Groups
+K Windows 3.1 Migration Status
+$$$PROTO.HIV&gt; <code>exit</code>
+</pre>
+</dd></dl>
+<p> Listing the subkeys of HKEY_CURRENT_USER\AppEvents on a remote computer: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+<code>regshell --remote=ncacn_np:aurelia -c &quot;jelmer%secret&quot;</code>
+HKEY_CURRENT_MACHINE&gt; <code>predef HKEY_CURRENT_USER</code>
+HKEY_CURRENT_USER&gt; <code>cd AppEvents</code>
+Current path is: HKEY_CURRENT_USER\AppEvents
+HKEY_CURRENT_USER\AppEvents&gt; <code>ls</code>
+K EventLabels
+K Schemes
+HKEY_CURRENT_USER\AppEvents&gt; <code>exit</code>
+</pre>
+</dd></dl>
+<h2>VERSION</h2>
+<p> This man page is correct for version 4.0 of the Samba suite.</p>
+<h2>SEE ALSO</h2>
+<p> regtree, regdiff, regpatch, gregedit, samba</p>
+<h2>AUTHOR</h2>
+<p> This utility is part of the m[blue]<code>Samba</code>m[]<font SIZE="-2">[1]</font> suite, which is developed by the global m[blue]<code>Samba Team</code>m[]<font SIZE="-2">[2]</font>. </p>
+<p> This manpage and regshell were written by Jelmer Vernooij.</p>
+<h2>NOTES</h2>
+<dl>
+<dt> 1.</dt>
+<dd> Samba</dd>
+<dl>
+<dt>
+</dt><dd> <a rel="nofollow" href="http://www.samba.org/">http://www.samba.org/</a></dd></dl>
+<dt> 2.</dt>
+<dd> Samba Team</dd>
+<dl>
+<dt>
+</dt><dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dd></dl>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

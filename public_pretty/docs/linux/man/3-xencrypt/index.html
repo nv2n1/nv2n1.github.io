@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xencrypt(3) · Linux Manual Pages</title>
+<meta name="description" content="xencrypt, xdecrypt, passwd2des – RFS password encryption">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xencrypt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xencrypt(3)</h1>
+
+
+
+
+
+<p>xencrypt, xdecrypt, passwd2des &#8211; RFS password encryption</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;rpc/des_crypt.h&gt;
+void passwd2des(char *passwd, char *key);
+int xencrypt(char *secret, char *passwd);
+int xdecrypt(char *secret, char *passwd);</code></pre>
+<h2>Description</h2>
+<p><code>WARNING</code>: Do not use these functions in new code. They do not achieve any type of acceptable cryptographic security guarantees. </p>
+<p> The function <code>passwd2des</code>() takes a character string <i>passwd</i> of arbitrary length and fills a character array <i>key</i> of length 8. The array <i>key</i> is suitable for use as DES key. It has odd parity set in bit 0 of each byte. Both other functions described here use this function to turn their argument <i>passwd</i> into a DES key. </p>
+<p> The <code>xencrypt</code>() function takes the ASCII character string <i>secret</i> given in hex, which must have a length that is a multiple of 16, encrypts it using the DES key derived from <i>passwd</i> by <code>passwd2des</code>(), and outputs the result again in <i>secret</i> as a hex string of the same length. </p>
+<p> The <code>xdecrypt</code>() function performs the converse operation.</p>
+<h2>Return Value</h2>
+<p>The functions <code>xencrypt</code>() and <code>xdecrypt</code>() return 1 on success and 0 on error.</p>
+<h2>Versions</h2>
+<p>These functions are available in glibc since version 2.1.</p>
+<h2>Attributes</h2>
+<p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
+<table BORDER>
+<tr VALIGN=top>
+<td><code>Interface</code></td>
+<td><code>Attribute</code></td>
+<td><code>Value</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>passwd2des</code>(), <code>xencrypt</code>(), <code>xdecrypt</code>() </td>
+<td>Thread safety</td>
+<td>MT-Safe
+</td>
+</tr>
+</table>
+<h2>Bugs</h2>
+<p>The prototypes are missing from the abovementioned include file.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-cbc_crypt/">cbc_crypt</a></code>(3)</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmaddprotocolcallback(3) · Linux Manual Pages</title>
+<meta name="description" content="XmAddProtocolCallback — A VendorShell function that adds client callbacks for a protocol">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmaddprotocolcallback/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmaddprotocolcallback(3)</h1>
+
+
+
+
+
+<p><code>XmAddProtocolCallback</code> &#8212; A VendorShell function that adds client callbacks for a protocol</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Protocols.h&gt;
+<code>void XmAddProtocolCallback</code>(
+<code>Widget shell</code>,
+<code>Atom property</code>,
+<code>Atom protocol</code>,
+<code>XtCallbackProc callback</code>,
+<code>XtPointer closure</code>);</pre>
+<h2>Description</h2>
+<p><code>XmAddProtocolCallback</code> adds client callbacks for a protocol. It checks if the protocol is registered, and if it is not, calls <code>XmAddProtocols</code>. It then adds the callback to the internal list. These callbacks are called when the corresponding client message is received. </p>
+<p> <code>XmAddWMProtocolCallback</code> is a convenience interface. It calls <code>XmAddProtocolCallback</code> with the property value set to the atom returned by interning <code>WM_PROTOCOLS</code>.</p>
+<dl COMPACT>
+<dt><i>shell</i></dt>
+<dd>Specifies the widget with which the protocol property is associated</dd>
+<dt><i>property</i></dt>
+<dd>Specifies the protocol property</dd>
+<dt><i>protocol</i></dt>
+<dd>Specifies the protocol <code>Atom</code></dd>
+<dt><i>callback</i></dt>
+<dd>Specifies the procedure to call when a protocol message is received</dd>
+<dt><i>closure</i></dt>
+<dd>Specifies the client data to be passed to the callback when it is invoked</dd></dl>
+<p> For a complete definition of VendorShell and its associated resources, see <code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3).</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3), <code><a href="/docs/linux/man/3-xmaddwmprotocolcallback/">XmAddWMProtocolCallback</a></code>(3), <code><a href="/docs/linux/man/3-xminternatom/">XmInternAtom</a></code>(3), and <code><a href="/docs/linux/man/3-xmremoveprotocolcallback/">XmRemoveProtocolCallback</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

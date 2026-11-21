@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>titorc(5) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-titorc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>titorc(5)</h1>
+
+
+
+
+
+<p>titorc - A user specific settings file for <code>tito</code>.</p>
+<h2>Synopsis</h2>
+<p>None</p>
+<h2>Description</h2>
+<p>User preferences can optionally be stored:</p>
+<p>~/.titorc</p>
+<h2>Options</h2>
+<p>KOJI_OPTIONS</p>
+<dl><dd>Specify strings of options, which is passed to koji on commandline when you use KojiReleaser. For example: 
+</dd><dl><dd><pre>KOJI_OPTIONS=-c ~/.koji/katello-config build --nowait</pre></dd></dl></dl>
+<p>NO_AUTO_INSTALL</p>
+<dl><dd>Specify list of packages (separated by space), which should NOT be installed, when tito is run with -i option.</dd></dl>
+<p>RPMBUILD_BASEDIR</p>
+<dl><dd>Specifies a base directory for temp files, tarballs, and RPMs. If defined, and if the directory exists, tito will automatically create subdirectories as needed for <a HREF="/docs/linux/man/8-rpmbuild/">rpmbuild</a>(8). Can be overridden on the fly with -o. The default output directory is /tmp/tito.</dd></dl>
+<p>HIDE_EMAIL</p>
+<dl><dd>If set to something other than 0, your email address will not be used in changelog entries. I.e. instead of 
+</dd><dl><dd>&bull; Tue Feb 11 2011 Miroslav Suchy &lt;msuchy [at] redhat.com&gt; 0.3.0-2 You will get:</dd></dl><dl><dd>&bull; Tue Feb 11 2011 Miroslav Suchy 0.3.0-2</dd></dl></dl>
+<p>RHPKG_USER, FEDPKG_USER</p>
+<dl><dd>By default this is the UNIX user running the command. Overriding it will run all rhpkg/fedpkg commands with --user $RHPKG_USER/FEDPKG_USER</dd></dl>
+<p>COLOR</p>
+<dl><dd>Set to <i>0</i> or <i>False</i> to disable colored output.</dd></dl>
+<p>MEAD_SCM_USERNAME</p>
+<dl><dd>The username to use when pushing the repository MEAD is going to build from. If this value is unset, the MEAD releaser will default to using the name of the current user.</dd></dl>
+<p>COPR_REMOTE_LOCATION</p>
+<dl><dd>URL that Tito will push SRPMs to for Copr to use.</dd></dl>
+<h2>Example</h2>
+<p>KOJI_OPTIONS=-c ~/.koji/spacewalkproject.org-config build &ndash;nowait <pre><code># Default Location to write temp files, tarballs and rpms to:
+RPMBUILD_BASEDIR = &quot;/tmp/tito&quot;</code></pre></p>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/8-tito/">tito</a>(8)</p>
+<h2>Authors</h2>
+<p>Devan Goodwin &lt;dgoodwin [at] rm-rf.ca&gt;</p>
+<p>James Bowes &lt;jbowes [at] repl.ca&gt;</p>
+<p>Jan Pazdziora</p>
+<p>Jesus M Rodriguez &lt;jesusr [at] redhat.com&gt;</p>
+<p>Pall Sigurdsson &lt;palli [at] opensource.is&gt;</p>
+<p>Miroslav Suchý &lt;msuchy [at] redhat.com&gt;</p>
+<p>and: Adam Miller, Alex Wood, Aron Parsons, Brenton Leanhardt, Ivan Nečas, John Eckersberg, Kenny MacDermid, Lukáš Zapletal, Luke Meyer, Marian Csontos, Martin Bačovský, Michael Stead, Mike McCune, mscherer, Paul Morgan, Sean P. Kane, Steve <i>Ashcrow</i> Milner</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

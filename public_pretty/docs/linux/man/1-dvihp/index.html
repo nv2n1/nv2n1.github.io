@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dvihp(1) · Linux Manual Pages</title>
+<meta name="description" content="dvihp – convert a TeX DVI file to Hewlett-Packard PCL">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dvihp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dvihp(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> dvihp &#8211; convert a TeX DVI file to Hewlett-Packard PCL </p>
+<h2>SYNOPSIS</h2>
+<p> <code>dvihp</code> [<i>options</i>] <i>dvifile</i>[.dvi]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>dvihp</code> translates the given <i>dvifile</i> to Hewlett-Packard PCL using <code><a href="/docs/linux/man/1-dvicopy/">dvicopy</a></code>(1) then $DVILJ (dvilj4 by default). </p>
+<p> In the absence of other options, pipe the PCL to $SPOOL (lpr by default).</p>
+<h2>OPTIONS</h2>
+<p> Options are recognized from dvips where possible:</p>
+<dl>
+<dt><code>-A</code></dt>
+<dd> print odd pages</dd>
+<dt><code>-B</code></dt>
+<dd> print even pages</dd>
+<dt><code>-d</code> <i>n</i></dt>
+<dd> set debug bits to <i>n</i> (see documentation)</dd>
+<dt><code>-D</code> <i>n</i></dt>
+<dd> set resolution to <i>n</i></dd>
+<dt><code>-f</code></dt>
+<dd> run as filter</dd>
+<dt><code>-l</code> <i>n</i></dt>
+<dd> don&#8217;t print pages after <i>n</i></dd>
+<dt><code>-m</code></dt>
+<dd> manual feed</dd>
+<dt><code>-n</code> <i>n</i></dt>
+<dd> print <i>n</i> pages</dd>
+<dt><code>-O</code> <i>a</i>,<i>b</i></dt>
+<dd> set/change paper offset to <i>a</i>,<i>b</i> mm.</dd>
+<dt><code>-o</code> <i>s</i></dt>
+<dd> output to <i>s</i> instead of spooling</dd>
+<dt><code>-p</code> <i>n</i></dt>
+<dd> don&#8217;t print pages before <i>n</i>.</dd>
+<dt><code>-Ps</code></dt>
+<dd> pass directly to lpr.</dd>
+<dt><code>-v</code></dt>
+<dd> verbose operation.</dd>
+<dt><code>-x</code> <i>n</i></dt>
+<dd> set magnification to <i>n</i>.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> write usage summary.</dd></dl>
+<p> Other options are passed to the dvilj program.</p>
+<h2>BUGS</h2>
+<p> Email bug reports to tex-k [at] tug.org.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-dvicopy/">dvicopy</a></code>(1), <code><a href="/docs/linux/man/1-dvilj4/">dvilj4</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

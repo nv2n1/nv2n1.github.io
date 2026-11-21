@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>exspline(3) · Linux Manual Pages</title>
+<meta name="description" content="exspline – Constructing smooth movement paths from spline curves. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-exspline/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>exspline(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> exspline &#8211; Constructing smooth movement paths from spline curves. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>Example exspline</code></p>
+<h2>DESCRIPTION</h2>
+<p> This program demonstrates the use of spline curves to create smooth paths connecting a number of node points. This can be useful for constructing realistic motion and animations. </p>
+<p> The technique is to connect the series of guide points p1..p(n) with spline curves from p1-p2, p2-p3, etc. Each spline must pass though both of its guide points, so they must be used as the first and fourth of the spline control points. The fun bit is coming up with sensible values for the second and third spline control points, such that the spline segments will have equal gradients where they meet. I came up with the following solution: </p>
+<p> For each guide point p(n), calculate the desired tangent to the curve at that point. I took this to be the vector p(n-1) -&gt; p(n+1), which can easily be calculated with the inverse tangent function, and gives decent looking results. One implication of this is that two dummy guide points are needed at each end of the curve, which are used in the tangent calculations but not connected to the set of splines. </p>
+<p> Having got these tangents, it becomes fairly easy to calculate the spline control points. For a spline between guide points p(a) and p(b), the second control point should lie along the positive tangent from p(a), and the third control point should lie along the negative tangent from p(b). How far they are placed along these tangents controls the shape of the curve: I found that applying a &#8216;curviness&#8217; scaling factor to the distance between p(a) and p(b) works well. </p>
+<p> One thing to note about splines is that the generated points are not all equidistant. Instead they tend to bunch up nearer to the ends of the spline, which means you will need to apply some fudges to get an object to move at a constant speed. On the other hand, in situations where the curve has a noticeable change of direction at each guide point, the effect can be quite nice because it makes the object slow down for the curve. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-end_of_main/">END_OF_MAIN</a></code>(3), <code><a href="/docs/linux/man/3-screen_w/">SCREEN_W</a></code>(3), <code>acquire_screen</code>(3), <code><a href="/docs/linux/man/3-alert/">alert</a></code>(3), <code><a href="/docs/linux/man/3-allegro_error/">allegro_error</a></code>(3), <code>allegro_init</code>(3), <code><a href="/docs/linux/man/3-allegro_message/">allegro_message</a></code>(3), <code><a href="/docs/linux/man/3-calc_spline/">calc_spline</a></code>(3), <code><a href="/docs/linux/man/3-circlefill/">circlefill</a></code>(3), <code><a href="/docs/linux/man/3-clear_keybuf/">clear_keybuf</a></code>(3), <code>clear_to_color</code>(3), <code><a href="/docs/linux/man/3-desktop_palette/">desktop_palette</a></code>(3), <code><a href="/docs/linux/man/3-fixatan2/">fixatan2</a></code>(3), <code><a href="/docs/linux/man/3-fixcos/">fixcos</a></code>(3), <code><a href="/docs/linux/man/3-fixed/">fixed</a></code>(3), <code><a href="/docs/linux/man/3-fixmul/">fixmul</a></code>(3), <code><a href="/docs/linux/man/3-fixsin/">fixsin</a></code>(3), <code>fixsqrt</code>(3), <code><a href="/docs/linux/man/3-fixtof/">fixtof</a></code>(3), <code><a href="/docs/linux/man/3-fixtoi/">fixtoi</a></code>(3), <code><a href="/docs/linux/man/3-font/">font</a></code>(3), <code><a href="/docs/linux/man/3-ftofix/">ftofix</a></code>(3), <code>install_keyboard</code>(3), <code>install_mouse</code>(3), <code>install_timer</code>(3), <code>itofix</code>(3), <code><a href="/docs/linux/man/3-key/">key</a></code>(3), <code><a href="/docs/linux/man/3-keypressed/">keypressed</a></code>(3), <code><a href="/docs/linux/man/3-line/">line</a></code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3), <code><a href="/docs/linux/man/3-mouse_b/">mouse_b</a></code>(3), <code><a href="/docs/linux/man/3-mouse_x/">mouse_x</a></code>(3), <code><a href="/docs/linux/man/3-mouse_y/">mouse_y</a></code>(3), <code><a href="/docs/linux/man/3-palette_color/">palette_color</a></code>(3), <code><a href="/docs/linux/man/3-poll_mouse/">poll_mouse</a></code>(3), <code><a href="/docs/linux/man/3-readkey/">readkey</a></code>(3), <code>release_screen</code>(3), <code><a href="/docs/linux/man/3-screen/">screen</a></code>(3), <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-set_palette/">set_palette</a></code>(3), <code><a href="/docs/linux/man/3-show_mouse/">show_mouse</a></code>(3), <code><a href="/docs/linux/man/3-spline/">spline</a></code>(3), <code><a href="/docs/linux/man/3-textout_centre_ex/">textout_centre_ex</a></code>(3), <code><a href="/docs/linux/man/3-textprintf_centre_ex/">textprintf_centre_ex</a></code>(3), <code><a href="/docs/linux/man/3-textprintf_ex/">textprintf_ex</a></code>(3), <code><a href="/docs/linux/man/3-vsync/">vsync</a></code>(3), <code><a href="/docs/linux/man/3-xor_mode/">xor_mode</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

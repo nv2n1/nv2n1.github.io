@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdnormstdcomplex(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdnormstdcomplex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdnormstdcomplex(3)</h1>
+
+
+
+
+
+<p>std::norm(std::complex) - std::norm(std::complex)</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;complex&gt;
+    template &lt;class T&gt;
+    (until C++ 20)
+        T norm(const std::complex&lt;T&gt; &amp;z);
+template &lt;class T&gt;
+(since C++ 20)
+    constexpr T norm(const std::complex&lt;T&gt; &amp;z);
+float norm(float z);
+template &lt;class DoubleOrInteger&gt;
+(1)(since C++ 11)
+    double norm(DoubleOrInteger z);
+(until C++ 20)
+    long double norm(long double z);
+(2)
+    constexpr float norm(float z);
+template &lt;class DoubleOrInteger&gt;
+(since C++ 20)
+    constexpr double norm(DoubleOrInteger z);
+constexpr long double norm(long double z);</code></pre> 
+<ol>
+<li>Returns the squared magnitude of the complex number z.</li>
+<li>Additional overloads are provided for float, double, long double, and all integer types, which are treated as complex numbers with zero imaginary component. <i>(since C++11)</i></li>
+</ol>
+<h2>Parameters</h2>
+<p>z - complex value</p>
+<h2>Return value</h2>
+<p>the squared magnitude of z</p>
+<h2>Notes</h2>
+<p>The norm calculated by this function is also known as field_norm or absolute_square.
+The Euclidean norm of a complex number is provided by std::abs, which is more costly to compute. In some situations, it may be replaced by std::norm, for example, if abs(z1) &gt; abs(z2) then norm(z1) &gt; norm(z2).</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the magnitude of a complex number
+abs(std::complex) <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the complex conjugate
+conj <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs a complex number from magnitude and phase angle
+polar <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

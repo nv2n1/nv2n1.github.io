@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installing PHP on Apache with Fedora - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-install-php-on-apache-on-fedora/">
+  <meta name="description" content="Setting up PHP with Apache on Fedora involves installing the PHP module, configuring Apache to process PHP files, and verifying the setup works correctly. …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Installing PHP on Apache with Fedora">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-install-php-on-apache-on-fedora/">
+  <meta property="og:description" content="Setting up PHP with Apache on Fedora involves installing the PHP module, configuring Apache to process PHP files, and verifying the setup works correctly. …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Installing PHP on Apache with Fedora</h1>
+        <time class="post-date" datetime="2018-03-24T08:14:36Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Setting up PHP with Apache on Fedora involves installing the PHP module, configuring Apache to process PHP files, and verifying the setup works correctly.</p>
+<h2 id="install-php-and-apache">Install PHP and Apache</h2>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">sudo dnf install httpd php php-fpm
+
+# Start and enable Apache
+sudo systemctl enable --now httpd
+
+# If using PHP-FPM (recommended for modern Fedora)
+sudo systemctl enable --now php-fpm
+</code></pre><h2 id="configure-apache-for-php">Configure Apache for PHP</h2>
+<p>On Fedora, Apache with PHP-FPM requires configuring the proxy:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Create PHP-FPM configuration for Apache
+sudo tee /etc/httpd/conf.d/php-fpm.conf &gt; /dev/null &lt;&lt; &#39;EOF&#39;
+
+    SetHandler &#34;proxy:unix:/run/php-fpm/www.sock|fcgi://localhost&#34;
+
+
+# Enable directory index for PHP
+DirectoryIndex index.php index.html
+EOF
+
+# Restart Apache
+sudo systemctl restart httpd
+</code></pre><h2 id="configure-firewall">Configure Firewall</h2>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --permanent --add-service=https
+sudo firewall-cmd --reload
+</code></pre><h2 id="test-php">Test PHP</h2>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">echo &#39;&#39; | sudo tee /var/www/html/info.php
+</code></pre><p>Open <code>http://localhost/info.php</code> in a browser. You should see the PHP information page. Remove it after testing:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">sudo rm /var/www/html/info.php
+</code></pre><h2 id="install-common-php-extensions">Install Common PHP Extensions</h2>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Database drivers
+sudo dnf install php-mysqlnd php-pgsql php-sqlite
+
+# Image processing
+sudo dnf install php-gd php-imagick
+
+# XML and JSON
+sudo dnf install php-xml php-json
+
+# MBString (multibyte strings, needed by WordPress)
+sudo dnf install php-mbstring
+
+# cURL (needed by many APIs and CMS platforms)
+sudo dnf install php-curl
+
+# OPcache (performance)
+sudo dnf install php-opcache
+
+# Intl (internationalization)
+sudo dnf install php-intl
+</code></pre><p>Restart PHP-FPM after installing extensions:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">sudo systemctl restart php-fpm
+</code></pre><h2 id="php-configuration">PHP Configuration</h2>
+<p>Edit <code>/etc/php.ini</code> for common settings:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">memory_limit = 256M
+upload_max_filesize = 50M
+post_max_size = 55M
+max_execution_time = 300
+date.timezone = Asia/Hong_Kong
+display_errors = Off
+error_reporting = E_ALL &amp; ~E_DEPRECATED &amp; ~E_STRICT
+</code></pre><h2 id="selinux-configuration">SELinux Configuration</h2>
+<p>Fedora enforces SELinux, which can block PHP from accessing files:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Allow PHP to write to web directories
+sudo setsebool -P httpd_unified on
+
+# Allow PHP to connect to databases
+sudo setsebool -P httpd_can_network_connect_db on
+
+# Allow PHP to send email
+sudo setsebool -P httpd_can_sendmail on
+
+# Check SELinux context of web files
+ls -laZ /var/www/html/
+</code></pre><h2 id="virtual-host-configuration">Virtual Host Configuration</h2>
+<p>Create a virtual host for your PHP application:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">sudo tee /etc/httpd/conf.d/mysite.conf &gt; /dev/null &lt;&lt; &#39;EOF&#39;
+
+    ServerName mysite.local
+    DocumentRoot /var/www/mysite/public
+
+    
+        AllowOverride All
+        Require all granted
+    
+
+    ErrorLog /var/log/httpd/mysite-error.log
+    CustomLog /var/log/httpd/mysite-access.log combined
+
+EOF
+
+sudo systemctl restart httpd
+</code></pre><h2 id="quick-reference">Quick Reference</h2>
+<ul>
+<li><code>sudo dnf install httpd php php-fpm</code> — Install</li>
+<li><code>php -v</code> — Check PHP version</li>
+<li><code>/etc/php.ini</code> — PHP configuration</li>
+<li><code>/etc/httpd/conf.d/</code> — Apache site configs</li>
+<li><code>sudo systemctl restart httpd php-fpm</code> — Apply changes</li>
+</ul>
+<h2 id="php-version-management-on-fedora">PHP Version Management on Fedora</h2>
+<p>Fedora ships a single PHP version in the default repositories. To run multiple PHP versions:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Install Remi repository for multiple PHP versions
+sudo dnf install https://rpms.remirepo.net/fedora/remi-release-latest.rpm
+sudo dnf module reset php
+sudo dnf module install php:remi-8.3
+php -v
+</code></pre><h2 id="php-fpm-pool-configuration">PHP-FPM Pool Configuration</h2>
+<p>For production, tune PHP-FPM pool settings in the configuration file:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">[www]
+pm = dynamic
+pm.max_children = 50
+pm.start_servers = 5
+pm.min_spare_servers = 3
+pm.max_spare_servers = 35
+pm.max_requests = 500
+</code></pre><p>Use pm = dynamic for most sites, or pm = ondemand for low-traffic sites to save memory.</p>
+<h2 id="enable-https-with-let-encrypt">Enable HTTPS with Let Encrypt</h2>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">sudo dnf install certbot python3-certbot-apache
+sudo certbot --apache -d yourdomain.com
+</code></pre><p>Certbot automatically configures Apache with SSL and sets up automatic renewal. PHP works identically over HTTP and HTTPS without configuration changes.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

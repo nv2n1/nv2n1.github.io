@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>page_des(3) · Linux Manual Pages</title>
+<meta name="description" content="page_des – DES – Data Encryption Standard crypto interface See the library functions here: DES crypto functions">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-page_des/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>page_des(3)</h1>
+
+
+
+
+
+<p>page_des &#8211; DES &#8211; Data Encryption Standard crypto interface See the library functions here: <code>DES crypto functions</code> </p>
+<p> DES was created by IBM, modififed by NSA and then adopted by NBS (now NIST) and published ad FIPS PUB 46 (updated by FIPS 46-1). </p>
+<p> Since the 19th May 2005 DES was withdrawn by NIST and should no longer be used. See <code>EVP &#8211; generic crypto interface</code> for replacement encryption algorithms and interfaces. </p>
+<p> Read more the iteresting history of DES on Wikipedia </p>
+<p><a rel="nofollow" href="http://www.wikipedia.org/wiki/Data_Encryption_Standard">http://www.wikipedia.org/wiki/Data_Encryption_Standard</a> .</p>
+<h2>DES key generation</h2>
+<p>To generate a DES key safely you have to use the code-snippet below. This is because the <code>DES_random_key()</code> can fail with an abort() in case of and failure to start the random generator. </p>
+<p> There is a replacement function <code>DES_new_random_key()</code>, however that function does not exists in OpenSSL. </p>
+<pre>* DES_cblock key;
+* do {
+* if (RAND_rand(&amp;key, sizeof(key)) != 1)
+* goto failure;
+* DES_set_odd_parity(key);
+* } while (DES_is_weak_key(&amp;key));
+* </pre>
+<h2>DES implementation history</h2>
+<p>There was no complete BSD licensed, fast, GPL compatible implementation of DES, so Love wrote the part that was missing, fast key schedule setup and adapted the interface to the orignal libdes. </p>
+<p> The document that got me started for real was &#8216;Efficient<br />
+&nbsp;<wbr>&nbsp;<wbr>Implementation of the Data Encryption Standard&#8217;&nbsp;<wbr>by Dag Arne Osvik. I never got to the PC1 transformation was working, instead I used table-lookup was used for all key schedule setup. The document was very useful since it de-mystified other implementations for me. </p>
+<p> The core DES function (SBOX + P transformation) is from Richard Outerbridge public domain DES implementation. My sanity is saved thanks to his work. Thank you Richard.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

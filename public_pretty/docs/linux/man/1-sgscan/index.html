@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sgscan(1) · Linux Manual Pages</title>
+<meta name="description" content="sgscan – scan an file or mailbox for viruses/spams">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-sgscan/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>sgscan(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> sgscan &#8211; scan an file or mailbox for viruses/spams</p>
+<h2>SYNOPSIS</h2>
+<p> <code>sgscan</code> [&#8211;help] [&#8211;config filename] [&#8211;debug level] [&#8211;clean] [&#8211;verbose] [&#8211;quiet] [&#8211;av-only] files&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> This command is a part of sagator. It can be used to scan files or mailboxes for viruses/spams. It also can be used to clean mailboxes (if some viruses passes through sagator).</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>&#8211;help</dt>
+<dd> Display a short help text.</dd>
+<dt>&#8211;config filename</dt>
+<dd> Load &quot;filename&quot; as alternate config. This filename must be without &quot;.py&quot; extension.</dd>
+<dt>&#8211;debug level</dt>
+<dd> Set debug level to &quot;level&quot;. You can specifi level from 0 to 9.</dd>
+<dt>&#8211;clean</dt>
+<dd> Clean all known viruses from mailboxes.</dd>
+<dt>&#8211;quiet</dt>
+<dd> Quiet output. If an infection/spam will be found, only increment an counter and do not display anything.</dd>
+<dt>&#8211;verbose</dt>
+<dd> Verbose output. Also clean emails are shown. Virus name &quot;CLEAN&quot; will be shown.</dd>
+<dt>&#8211;progress</dt>
+<dd> Show progress indicator. Shows total number of emails in mailbox, email counter, infection/spam count and estimation time.</dd>
+<dt>&#8211;av-only</dt>
+<dd> Use only antivirus scanners and do not use antispam scanners.</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>Scan all mailboxes for viruses.</dt>
+<dd> <code>sgscan</code> &#8211;av-only /var/mail/*</dd>
+<dt>Scan and clean all mailboxes:</dt>
+<dd> <code>sgscan</code> &#8211;clean /var/mail/*</dd></dl>
+<h2>AUTHOR</h2>
+<p> Jan ONDREJ (SAL) &lt;ondrejj (at) salstar.sk&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-sgfilter/">sgfilter</a>(1), <a href="/docs/linux/man/8-sagator/">sagator</a>(8), <a href="/docs/linux/man/8-sqback/">sqback</a>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

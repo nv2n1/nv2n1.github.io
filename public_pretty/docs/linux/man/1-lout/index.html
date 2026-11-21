@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lout(1) · Linux Manual Pages</title>
+<meta name="description" content="lout – prepare Lout document for printing">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lout/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lout(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> lout &#8211; prepare Lout document for printing</p>
+<h2>SYNOPSIS</h2>
+<p> <code>lout</code> [ <i>options</i> ] <i>file</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> Invoke the Basser Lout interpreter on the concatenation of the named files, producing a PostScript file on standard output suitable for printing on PostScript printers using <i><a href="/docs/linux/man/1-lpr/">lpr</a></i>(1). If no files are named, stdin is used instead. The special file name `<code>&#8211;</code>&#8216; may be used to denote standard input. White space between flags and their associated option values is optional. </p>
+<p> An optional <code>.lt</code> suffix may be used for Lout source and include files. When invoking files ending in this suffix the suffix may be omitted.</p>
+<h2>OPTIONS</h2>
+<h3>Output</h3>
+<dl>
+<dt><code>-o</code><i> filename</i></dt>
+<dd> Direct output to <i>filename</i> instead of to stdout.</dd>
+<dt><code>-e</code><i> filename</i></dt>
+<dd> Direct error messages to <i>filename</i> instead of to stderr.</dd>
+<dt><code>-a</code></dt>
+<dd> Use &quot;<i>filename</i>:<i>linenum</i>:<i>colnum</i>:<i>message</i>&quot; alternative error message format (useful with Emacs compilation mode and other tools).</dd></dl>
+<h3>Output format</h3>
+<dl>
+<dt><code>-EPS</code></dt>
+<dd> Produce output in the form of an EPS (Encapsulated PostScript) file, suitable for inclusion in another document. Useful with stand-alone illustrations.</dd>
+<dt><code>-p</code></dt>
+<dd> Produce plain text output instead of PostScript.</dd>
+<dt><code>-P</code></dt>
+<dd> Like <code>-p</code>, but with a form-feed character between pages.</dd>
+<dt><code>-Z</code></dt>
+<dd> Produce Adobe Portable Document Format (PDF) output. This includes links, but the more advanced graphics packages of Lout are not supported.</dd>
+<dt><code>-PDF</code></dt>
+<dd> Synonym for <code>-Z.</code></dd>
+<dt><code>-t</code></dt>
+<dd> Ignore texture-changing options; everything that would otherwise have been printed using a texture will be printed in solid colour.</dd></dl>
+<h3>Cross-reference database</h3>
+<dl>
+<dt><code>-s</code></dt>
+<dd> Suppress all reading and writing of the cross reference database; other databases are not affected. Useful when many simple documents that don&#8217;t do any cross referencing are stored in one directory.</dd>
+<dt><code>-l</code></dt>
+<dd> Use ASCII order when sorting index entries etc.; the default depends on the COLLATE compilation option (use <code>-V</code> option to find out your default value).</dd>
+<dt><code>-L</code></dt>
+<dd> Use your locale&#8217;s order when sorting index entries etc.; the default depends on the COLLATE compilation option (use <code>-V</code> option to find out your default value).</dd></dl>
+<h3>Execution of filters</h3>
+<dl>
+<dt><code>-S</code></dt>
+<dd> Safe execution: disable all calls to <i><a href="/docs/linux/man/3-system/">system</a></i>(3), instead echoing the commands that would have been executed. Although this makes the Lout run certainly safe, the PostScript output file may not be.</dd>
+<dt><code>-U</code></dt>
+<dd> Unsafe execution: allow calls to <i><a href="/docs/linux/man/3-system/">system</a></i>(3). This is usually the default behavior, but it is possible to make safe execution the default during installation (use <code>-V</code> option to find out whether this was done or not), hence the need for this flag.</dd></dl>
+<h3>Changing document setup options</h3>
+<dl>
+<dt><code>&#8212;</code><i>option</i><code>{</code><i>value</i><code>}</code></dt>
+<dd> Set setup file <i>option</i> to <i>value</i>, overriding any value assigned to <i>option</i> in the setup file. For example, <code>&#8212; [at] PageType{Letter}</code> will set the <code>@PageType</code> setup file option to <code>Letter</code>. The value may be a sequence of words but not an arbitrary Lout object. If there are spaces you must ensure that it is passed to Lout as a single option; the usual way to do this is to enclose it in quotes.</dd></dl>
+<h3>Searching for files</h3>
+<dl>
+<dt><code>-i</code><i> filename</i></dt>
+<dd> Search the directories of the include file path (see below) for <i>filename</i> or <i>filename</i>.lt and include it. There may be multiple <code>-i</code> options.</dd>
+<dt><code>-I</code><i> dirname</i></dt>
+<dd> Add <i>dirname</i> to the list of directories searched for <code>@Include</code> files and <code>-i</code> option files. There may be multiple <code>-I</code> options. <code>@Include</code> first searches the current directory, then searches the <code>-I</code> directories in the order given, and finally searches the default include file directory (see below). <code>@SysInclude</code> and the <code>-i</code> option omit the search of the current directory.</dd>
+<dt><code>-C</code><i> dirname</i></dt>
+<dd> Add <i>dirname</i> to the list of directories searched for Lout character mapping (<code>.LCM</code>) files. There may be multiple <code>-C</code> options; the directories are searched in the order given, and finally the default character mappings directory is searched (see below).</dd>
+<dt><code>-F</code><i> dirname</i></dt>
+<dd> Add <i>dirname</i> to the list of directories searched for font metrics (formerly <code>.AFM</code>) files. There may be multiple <code>-F</code> options; the directories are searched in the order given, and finally the default font metrics directory is searched (see below).</dd>
+<dt><code>-H</code><i> dirname</i></dt>
+<dd> Add <i>dirname</i> to the list of directories searched for hyphenation patterns files, both unpacked (<code>.lh</code>) and packed (<code>.lp</code>). There may be multiple <code>-H</code> options; the directories are searched in the order given, and finally the default hyphenation directory is searched (see below).</dd>
+<dt><code>-D</code><i> dirname</i></dt>
+<dd> Add <i>dirname</i> to the list of directories searched for Lout database files. There may be multiple <code>-D</code> options. <code>@Database</code> searches the current directory, then the <code>-D</code> directories in the order given, and finally searches the default databases directory (see below). <code>@SysDatabase</code> omits the search of the current directory.</dd></dl>
+<h3>Miscellaneous options</h3>
+<dl>
+<dt><code>-r num</code></dt>
+<dd> Run Lout num times, producing output only on the last run. Useful for bringing cross references up to date quickly.</dd>
+<dt><code>-x</code></dt>
+<dd> Initializing run, not for ordinary use: read and check all font files mentioned in font definitions, read and check all hyphenation files mentioned in language definitions and build compressed versions, read and check all database files mentioned in database clauses and build index files.</dd>
+<dt><code>-u</code></dt>
+<dd> Print usage information on stderr and exit.</dd>
+<dt><code>-V</code></dt>
+<dd> Print version information on stderr and exit.</dd>
+<dt><code>-M</code></dt>
+<dd> Use less memory and run more slowly (the cross reference database index will be kept in a file rather than in memory).</dd>
+<dt><code>-w</code></dt>
+<dd> Show the total number of non-empty words printed in the output file. This includes words and numbers in page headers and footers; section numbers and other numbers; every punctuation character in a font different from its adjacent word; and every little fragment of every equation; so it will always somewhat overestimate the true number.</dd></dl>
+<h2>FILES AND ENVIRONMENT VARIABLE</h2>
+<pre>
+Default include file directory:   <i>LOUTLIB</i>/include
+Default databases directory:      <i>LOUTLIB</i>/data
+Default font metrics directory:   <i>LOUTLIB</i>/font
+Default hyphenation directory:    <i>LOUTLIB</i>/hyph
+Default character mappings dir.:  <i>LOUTLIB</i>/maps
+Default locales directory:        <i>LOUTLIB</i>/locale
+</pre>
+<p> The default library directory, usually <code>/usr/local/lib/lout</code>, can be changed by setting environment variable <font SIZE="-1"><code>LOUTLIB</code></font> to an alternative directory name.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-prg2lout/">prg2lout</a></code>(1), <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1), <code>ghostview</code>(1)</p>
+<h2>REFERENCES</h2>
+<p> Jeffrey H. Kingston, <i>&#8220;A User&#8217;s Guide to the Lout Document Formatting System&#8221;</i>, and <i>&#8220;An Expert&#8217;s Guide to the Lout Document Formatting System&#8221;</i>.</p>
+<h2>AUTHOR</h2>
+<p> Jeffrey H. Kingston </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

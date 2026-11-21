@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yum-filter-data(1) · Linux Manual Pages</title>
+<meta name="description" content="yum filter data plugin">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-yum-filter-data/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>yum-filter-data(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> yum filter data plugin</p>
+<h2>SYNOPSIS</h2>
+<p> <code>yum</code> [options] [command] [package &#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> This plugin extends <code>yum</code> with some options, currently just for &quot;update&quot; and &quot;list update&quot; type commands, to allow filters to be placed on which packages should be used based on the data in those packages. Note that due to some of the data being unknown, and thus could possibly match, all unknown data is treated as a match. </p>
+<h2>GENERAL OPTIONS</h2>
+<p> These are the options added to yum that are available in the &quot;list updates&quot;, &quot;info updates&quot;, &quot;check-update&quot; and &quot;update&quot; commands. They are: </p>
+<dl>
+<dt><code>&#8211;filter-vendors</code></dt>
+<dd> This option includes packages which have a vendor which matches one of the passed vendor wildcard strings, or is unknown. Note that vendors can have spaces in their value, so &quot;,&quot; is the only way to specify multiple vendors as one option argument.</dd>
+<dt><code>&#8211;filter-rpm-groups</code></dt>
+<dd> This option includes packages which have a group which matches one of the passed rpm group wildcard strings, or is unknown. Note that rpm groups can have spaces in their value, so &quot;,&quot; is the only way to specify multiple rpm groups as one option argument.</dd>
+<dt><code>&#8211;filter-packagers</code></dt>
+<dd> This option includes packages which have a packager which matches one of the passed packager wildcard strings, or is unknown. Note that vendors can have spaces in their value, so &quot;,&quot; is the only way to specify multiple packagers as one option argument.</dd>
+<dt><code>&#8211;filter-licenses</code></dt>
+<dd> This option includes packages which have a license which matches one of the passed license wildcard strings, or is unknown. Note that licenses can have spaces in their value, so &quot;,&quot; is the only way to specify multiple licenses as one option argument.</dd>
+<dt><code>&#8211;filter-arches</code></dt>
+<dd> This option includes packages which have a arch which matches one of the passed arch wildcard strings, or is unknown.</dd>
+<dt><code>&#8211;filter-committers</code></dt>
+<dd> This option includes packages which have a committer which matches one of the passed committer wildcard strings, or is unknown. Note that committers can have spaces in their value, so &quot;,&quot; is the only way to specify multiple committers as one option argument. Also, committer values are so loosely formed that they could contain commas too, it is recommended to not do that but you can work around it by using &quot;?&quot;.</dd>
+<dt><code>&#8211;filter-buildhosts</code></dt>
+<dd> This option includes packages which have a buildhost which matches one of the passed buildhost wildcard strings, or is unknown.</dd>
+<dt><code>&#8211;filter-urls</code></dt>
+<dd> This option includes packages which have a url which matches one of the passed url wildcard strings, or is unknown.</dd>
+<dt><code>&#8211;filter-package-sizes</code></dt>
+<dd> This option includes packages which have a packagesize which is within one of the passed packagesize ranges, or is unknown.</dd>
+<dt><code>&#8211;filter-archive-sizes</code></dt>
+<dd> This option includes packages which have a archivesize which is within one of the passed archivesize ranges, or is unknown.</dd>
+<dt><code>&#8211;filter-installed-sizes</code></dt>
+<dd> This option includes packages which have a installedsize which is within one of the passed installedsize ranges, or is unknown.</dd>
+<dt><code>&#8211;filter-groups</code></dt>
+<dd> This option includes packages which are in a yum group which matches one of the passed yum group id strings, or is unknown. Note that yum groups can have spaces in their value, so &quot;,&quot; is the only way to specify multiple yum groups as one option argument.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> To list all updates that are 1 MB or less use:</p>
+<dl>
+<dt>
+</dt><dd> yum &#8211;filter-package-sizes=-1m check-update</dd></dl>
+<p> To apply updates that Dan Walsh has committed use:</p>
+<dl>
+<dt>
+</dt><dd> yum &#8211;filter-committers=&#8217;Dan Walsh *&#8217; update</dd></dl>
+<p> To list updates for a specific group use:</p>
+<dl>
+<dt>
+</dt><dd> yum &#8211;filter-rpm-groups=&#8217;App*/Sys*&#8217; list updates</dd></dl>
+<p> To apply updates to a specific set of groups use:</p>
+<dl>
+<dt>
+</dt><dd> yum &#8211;filter-rpm-groups=&#8217;App*/System,Devel*/Lib*,System Environment/Base&#8217; update</dd></dl>
+<p> To list updates for a set of yum groups use:</p>
+<dl>
+<dt>
+</dt><dd> yum &#8211;filter-groups=&#8217;PostgreSQL Database,Web Server&#8217; list updates</dd></dl>
+<p> To apply updates to a specific set of yum groups use:</p>
+<dl>
+<dt>
+</dt><dd> yum &#8211;filter-groups=&#8217;KDE,Core,Printing Support&#8217; update </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<pre>
+<i>yum-list-data (1)</i>
+<i>yum (8)</i>
+<i>yum.conf (5)</i>
+</pre>
+<h2>AUTHORS</h2>
+<pre>
+James Antill &lt;james.antill [at] redhat.com&gt;.
+</pre>
+<h2>BUGS</h2>
+<p> Currently yum can&#8217;t filter packages in all of the commands, so for instance &quot;yum list &#8216;yum*&#8217;&quot; doesn&#8217;t get the results filtered. </p>
+<p> Apart from that there are no bugs, but should you find any, you should first consult the FAQ section on <a rel="nofollow" href="http://yum.baseurl.org/wiki/Faq">http://yum.baseurl.org/wiki/Faq</a> and if unsuccessful in finding a resolution contact the mailing list: yum-devel [at] lists.baseurl.org. To file a bug use <a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a> for Fedora/RHEL/Centos related bugs and <a rel="nofollow" href="http://yum.baseurl.org/report">http://yum.baseurl.org/report</a> for all other bugs. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

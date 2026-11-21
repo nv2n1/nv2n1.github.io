@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ssh-keysign(8) · Linux Manual Pages</title>
+<meta name="description" content="ssh-keysign – OpenSSH helper for host-based authentication">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ssh-keysign/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ssh-keysign(8)</h1>
+
+
+
+
+
+<p><code>ssh-keysign</code> &#8211; OpenSSH helper for host-based authentication</p>
+<h2>Synopsis</h2>
+<p><code>ssh-keysign</code></p>
+<h2>Description</h2>
+<p><code>ssh-keysign</code> is used by <a href="/docs/linux/man/1-ssh/">ssh</a>(1) to access the local host keys and generate the digital signature required during host-based authentication. </p>
+<p> <code>ssh-keysign</code> is disabled by default and can only be enabled in the global client configuration file /etc/ssh/ssh_config by setting <code>EnableSSHKeysign</code> to &#8220;yes&#8221; </p>
+<p> <code>ssh-keysign</code> is not intended to be invoked by the user, but from <a href="/docs/linux/man/1-ssh/">ssh</a>(1). See <a href="/docs/linux/man/1-ssh/">ssh</a>(1) and <a href="/docs/linux/man/8-sshd/">sshd</a>(8) for more information about host-based authentication.</p>
+<h2>Files</h2>
+<dl>
+<dt><code>/etc/ssh/ssh_config </code></dt>
+<dd>Controls whether <code>ssh-keysign</code> is enabled. </dd>
+<dt><code>/etc/ssh/ssh_host_dsa_key </code></dt>
+<dd>
+</dd><dt><code>/etc/ssh/ssh_host_ecdsa_key </code></dt>
+<dd>
+</dd><dt><code>/etc/ssh/ssh_host_ed25519_key </code></dt>
+<dd>
+</dd><dt><code>/etc/ssh/ssh_host_rsa_key </code></dt>
+<dd>These files contain the private parts of the host keys used to generate the digital signature. They should be owned by root, readable only by root, and not accessible to others. Since they are readable only by root, <code>ssh-keysign</code> must be set-uid root if host-based authentication is used. </dd>
+<dt><code>/etc/ssh/ssh_host_dsa_key-cert.pub </code></dt>
+<dd>
+</dd><dt><code>/etc/ssh/ssh_host_ecdsa_key-cert.pub </code></dt>
+<dd>
+</dd><dt><code>/etc/ssh/ssh_host_ed25519_key-cert.pub </code></dt>
+<dd>
+</dd><dt><code>/etc/ssh/ssh_host_rsa_key-cert.pub </code></dt>
+<dd>If these files exist they are assumed to contain public certificate information corresponding with the private keys above.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-keygen1, ssh_config5, <a href="/docs/linux/man/8-sshd/">sshd</a>(8)</p>
+<h2>History</h2>
+<p><code>ssh-keysign</code> first appeared in Ox 3.2 .</p>
+<h2>Authors</h2>
+<p>An Markus Friedl Aq Mt markus [at] openbsd.org</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

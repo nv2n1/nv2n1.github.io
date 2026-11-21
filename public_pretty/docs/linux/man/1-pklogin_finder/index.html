@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pklogin_finder(1) · Linux Manual Pages</title>
+<meta name="description" content="pklogin_finder – maps certificates into a user">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pklogin_finder/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pklogin_finder(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> pklogin_finder &#8211; maps certificates into a user</p>
+<h2>SYNTAX</h2>
+<p> <code>pklogin_finder</code> [<code>debug</code>] [<code>config_file=</code><i>&lt;filename&gt;</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>pklogin_finder</code> uses the pam_pkcs11 library infrastructure to interactively map a PKCS#11 provided certificate to a user. </p>
+<p> <code>pklogin_finder</code> uses the the same configuration file and arguments than <code><a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a></code>(8) PAM module. Load defined mapper modules, and try to find a map between found certificates and a user login.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>debug </code></dt>
+<dd> Enable debugging output. Default is no debug.</dd>
+<dt><code>config_file=</code><i>&lt;configuration file&gt;</i></dt>
+<dd> Sets the configuration file to use. Default value is <i>/etc/pam_pkcs11/pam_pkcs11.conf</i>.</dd></dl>
+<p> As it uses the same configuration file than pam_pkcs11, all pam_pkcs11 options are also available. Note that some of them has no sense in a non-PAM environment, so they will be ignored.</p>
+<h2>RETURN VALUE</h2>
+<p> On success <code>pklogin_finder</code> prints on stdout the login name and exits returns 0. </p>
+<p> On user mapping error it returns 1. </p>
+<p> On no user match it prints nothing and returns 2.</p>
+<h2>FILES</h2>
+<p> <i>/etc/pam_pkcs11/pam_pkcs11.conf</i></p>
+<h2>EXAMPLES</h2>
+<p> To run this program the standard way, insert a smart card into the reader and type:<br />
+&nbsp;<wbr>pklogin_finder&nbsp;<wbr> </p>
+<p> Alternatively you can specify options:<br />
+&nbsp;<wbr>pklogin_finder debug config_file=${HOME}/.pam_pkcs11.conf</p>
+<h2>AUTHORS</h2>
+<p> Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a></code>(8), <code><a href="/docs/linux/man/1-pkcs11_inspect/">pkcs11_inspect</a></code>(1), PAM-PKCS11 User Manual </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

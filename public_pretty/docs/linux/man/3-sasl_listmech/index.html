@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sasl_listmech(3) · Linux Manual Pages</title>
+<meta name="description" content="sasl_listmech – Retrieve a list of the supported SASL mechanisms">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sasl_listmech/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sasl_listmech(3)</h1>
+
+
+
+
+
+<p>sasl_listmech &#8211; Retrieve a list of the supported SASL mechanisms</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;sasl/sasl.h&gt;
+int sasl_listmech(sasl_conn_t *conn,
+                  const char *user,
+                  const char *prefix,
+                  const char *sep,
+                  const char *suffix,
+                  const char **result,
+                  unsigned *plen,
+                  int *pcount);</code></pre>
+<h2>Description</h2>
+<p><code>sasl_listmech()</code> returns a string listing the SASL names of all the mechanisms available to the specified user. This is typically given to the client through a capability command or initial server response. Client applications need this list so that they know what mechanisms the server supports. </p>
+<p> <i>conn</i> the SASL context for this connection <i>user</i> (optional) restricts the mechanism list to only those available to the user. <i>prefix</i> appended to beginning of result <i>sep</i> appended between mechanisms <i>suffix</i> appended to end of result <i>result</i> NULL terminated result string (allocated/freed by library) <i>plen</i> length of result filled in by library. May be NULL <i>pcount</i> Number of mechanisms available (filled in by library). May be NULL </p>
+<pre>Example:
+sasl_listmech(conn,NULL,&quot;(&quot;,&quot;,&quot;,&quot;)&quot;,&amp;mechlist,NULL,NULL);
+may give the string 
+<code>(ANONYMOUS,KERBEROS_V4,DIGEST-MD5)</code>
+as a result</pre>
+<h2>Return Value</h2>
+<p>Returns SASL_OK on success. SASL error code on failure. </p>
+<h2>Conforming To</h2>
+<p>RFC 4422</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-sasl/">sasl</a>(3), <a href="/docs/linux/man/3-sasl_errors/">sasl_errors</a>(3), <a href="/docs/linux/man/3-sasl_server_new/">sasl_server_new</a>(3), <a href="/docs/linux/man/3-sasl_client_new/">sasl_client_new</a>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

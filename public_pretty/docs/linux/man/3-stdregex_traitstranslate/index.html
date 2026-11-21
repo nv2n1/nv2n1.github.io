@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdregex_traitstranslate(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdregex_traitstranslate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdregex_traitstranslate(3)</h1>
+
+
+
+
+
+<p>std::regex_traits&lt;CharT&gt;::translate - std::regex_traits&lt;CharT&gt;::translate</p>
+<h2>Synopsis</h2>
+<pre><code>CharT translate(CharT c) const;</code></pre> 
+<p>Obtains the comparison key for the character c, such that all characters that are equivalent to this character in the imbued locale produce the same key.
+When the regex library needs to match two characters c1 and c2 and the flag std::regex_constants::collate is true, it executes regex_traits&lt;&gt;::translate(c1) == regex_traits&lt;&gt;::translate(c2).
+Standard library specializations of std::regex_traits return c unmodified.</p>
+<h2>Parameters</h2>
+<p>c - character that needs to be examined for equivalence</p>
+<h2>Return value</h2>
+<p>The comparison key for c in the currently imbued locale.</p>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

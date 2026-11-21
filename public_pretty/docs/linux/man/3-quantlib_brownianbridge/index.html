@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_brownianbridge(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::BrownianBridge – Builds Wiener process paths using Gaussian variates.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_brownianbridge/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_brownianbridge(3)</h1>
+
+
+
+
+
+<p>QuantLib::BrownianBridge &#8211; Builds Wiener process paths using Gaussian variates. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/methods/montecarlo/brownianbridge.hpp&gt; </p>
+<h3>Public Member Functions</h3>
+<p><code>BrownianBridge</code> (Size steps)<br />
+ <i>unit-time path </i><br />
+ <code>BrownianBridge</code> (const std::vector&lt; <code>Time</code> &gt; &amp;times)<br />
+ <i>generic times </i><br />
+ <code>BrownianBridge</code> (const <code>TimeGrid</code> &amp;timeGrid)<br />
+ <i>generic times </i> </p>
+<p> <code>inspectors</code> </p>
+<p> Size <code>size</code> () const </p>
+<p> const std::vector&lt; <code>Time</code> &gt; &amp; <code>times</code> () const </p>
+<h3>Brownian-bridge constructor</h3>
+<p>template&lt;class RandomAccessIterator1 , class RandomAccessIterator2 &gt; void <code>transform</code> (RandomAccessIterator1 begin, RandomAccessIterator1 end, RandomAccessIterator2 output) const </p>
+<h2>Detailed Description</h2>
+<p>Builds Wiener process paths using Gaussian variates. </p>
+<p> This class generates normalized (i.e., unit-variance) paths as sequences of variations. In order to obtain the actual path of the underlying, the returned variations must be multiplied by the integrated variance (including time) over the corresponding time step.</p>
+<h2>Constructor &amp; Destructor Documentation</h2>
+<h3><code>BrownianBridge</code> (const std::vector&lt; <code>Time</code> &gt; &amp; times)</h3>
+<p>generic times </p>
+<p> <code>Note:</code></p>
+<dl COMPACT>
+<dd>the starting time of the path is assumed to be 0 and must not be included</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

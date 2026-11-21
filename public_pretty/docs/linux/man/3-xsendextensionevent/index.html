@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xsendextensionevent(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xsendextensionevent/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xsendextensionevent(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XSendExtensionEvent - send input extension events to a client</p>
+<h2>Synopsis</h2><pre>#include &lt;X11/extensions/XInput.h&gt;</pre><pre>Status XSendExtensionEvent( Display *display,
+ XDevice *device,
+ Window destination,
+ Bool propagate,
+ int event_count,
+ XEventClass *event_list,
+ XEvent *event_send);</pre><pre>display
+ Specifies the connection to the X server.</pre><pre>device
+ Specifies the device from which the events are to be
+ sent.</pre><pre>destination
+ Specifies the window the event is to be sent to. You can
+ pass window id, PointerWindow,or InputFocus.</pre><pre>propagate
+ Specifies a Boolean value that is either True or False.</pre><pre>event_count
+ Specifies the count of XEventClasses in event_list.</pre><pre>event_list
+ Specifies the list of event selections to be used.</pre><pre>event_send
+ Specifies a pointer to the event that is to be sent.</pre><h2>Description</h2><dl COMPACT><dd><pre>The XSendExtensionEvent request identifies the destination
+window, determines which clients should receive the specified
+events, and ignores any active grabs. This request requires you
+to pass an event class list. For a discussion of the valid
+event class names, see XOpenDevice(3) This
+request uses the w argument to identify the destination window
+as follows:
+ * If w is PointerWindow,the destination window is the window
+ that contains the pointer.
+ * If w is InputFocusand if the focus window contains the
+ pointer,the destination window is the window that contains
+ the pointer; otherwise, the destination window is the focus
+ window.</pre></dd></dl><dl COMPACT><dd><pre>To determine which clients should receive the specified events,
+XSendExtensionEventuses the propagate argument as follows:
+ * If event_list is the empty set,the event is sent to the
+ client that created the destination window. If that client
+ no longer exists,no event is sent.
+ * If propagate is False,the event is sent to every client
+ selecting on destination any of the eventtypes specified by
+ the event_list array.
+ * If propagate is Trueand no clients have selected on
+ destination any ofthe events specified by the event_list
+ array,the destination is replaced with theclosest ancestor
+ of destination for which some client has selected atype
+ specified by the event-list array and for which no
+ interveningwindow has that type in
+ itsdo-not-propagate-mask. If no such window exists or if
+ the window isan ancestor of the focus window and
+ InputFocuswas originally specifiedas the destination, the
+ event is not sent to any clients. Otherwise, the event is
+ reported to every client selecting on the finaldestination
+ any of the events specified in the event_list array.</pre></dd></dl><dl COMPACT><dd><pre>The event in the XEventstructure must be one of the events
+defined by the input extension (or a BadValueerror results) so
+that the X server can correctly byte-swapthe contents as
+necessary. The contents of the event areotherwise unaltered and
+unchecked by the X server except to force send_event to Truein
+the forwarded event and to set the serial number in the event
+correctly.</pre></dd></dl><dl COMPACT><dd><pre>XSendExtensionEventreturns zero if the conversion to wire
+protocol format failedand returns nonzero
+otherwise.XSendExtensionEventcan generate BadClass, BadDevice,
+BadValue, and BadWindow errors.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+ An invalid device was specified. The specified device
+ does not exist or has not been opened by this client via
+ XOpenInputDevice. This error may also occur if the
+ specified device is the X keyboard or X pointer device.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
+ Some numeric value falls outside the range of values
+ accepted by the request. Unless a specific range is
+ specified for an argument, the full range defined by the
+ argument's type is accepted. Any argument defined as a
+ set of alternatives can generate this error.</pre></dd></dl><dl COMPACT><dd><pre>BadWindow
+ A value for a Window argument does not name a defined
+ window.</pre></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

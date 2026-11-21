@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debugging Linux Network Drivers: Essential Tools and Techniques - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-debug-check-network-related-driver-information-on-linux/">
+  <meta name="description" content="When network interfaces fail or behave unexpectedly, you need to inspect driver details, hardware state, and kernel messages. Here’s the practical toolkit for …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Debugging Linux Network Drivers: Essential Tools and Techniques">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-debug-check-network-related-driver-information-on-linux/">
+  <meta property="og:description" content="When network interfaces fail or behave unexpectedly, you need to inspect driver details, hardware state, and kernel messages. Here’s the practical toolkit for …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>Debugging Linux Network Drivers: Essential Tools and Techniques</h1>
+        <time class="post-date" datetime="2018-03-24T08:21:45Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When network interfaces fail or behave unexpectedly, you need to inspect driver details, hardware state, and kernel messages. Here’s the practical toolkit for diagnosing network hardware and driver issues.</p>
+<h2 id="kernel-messages-and-logs">Kernel Messages and Logs</h2>
+<p>Start by checking kernel logs where driver initialization and errors are recorded:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dmesg <span class="p">|</span> grep -i network
+</span></span><span class="line"><span class="cl">dmesg <span class="p">|</span> grep -i driver
+</span></span><span class="line"><span class="cl">dmesg <span class="p">|</span> tail -50
+</span></span></code></pre></div><p>For persistent logs across reboots, use the systemd journal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">journalctl -k <span class="p">|</span> grep -i network
+</span></span><span class="line"><span class="cl">journalctl -k <span class="p">|</span> grep -i eth
+</span></span><span class="line"><span class="cl">journalctl --since <span class="s2">&#34;1 hour ago&#34;</span> <span class="p">|</span> grep -i driver
+</span></span><span class="line"><span class="cl">journalctl -u NetworkManager -n <span class="m">50</span>
+</span></span></code></pre></div><p>On systems still using rsyslog, check traditional log files:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -i network /var/log/messages
+</span></span><span class="line"><span class="cl">grep -i driver /var/log/syslog
+</span></span></code></pre></div><h2 id="hardware-detection-and-driver-information">Hardware Detection and Driver Information</h2>
+<h3 id="pci-and-usb-devices">PCI and USB Devices</h3>
+<p><code>lspci</code> lists PCI devices including built-in network adapters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lspci <span class="p">|</span> grep -i network
+</span></span><span class="line"><span class="cl">lspci -v <span class="p">|</span> grep -i network  <span class="c1"># verbose output</span>
+</span></span><span class="line"><span class="cl">lspci -k <span class="p">|</span> grep -A <span class="m">2</span> -i network  <span class="c1"># includes loaded kernel modules</span>
+</span></span></code></pre></div><p><code>lsusb</code> lists USB devices including USB network adapters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsusb
+</span></span><span class="line"><span class="cl">lsusb -v  <span class="c1"># verbose output with all details</span>
+</span></span><span class="line"><span class="cl">lsusb -d 0bda:8153  <span class="c1"># search by vendor:device ID</span>
+</span></span><span class="line"><span class="cl">lsusb -t  <span class="c1"># tree view with hubs</span>
+</span></span></code></pre></div><p><code>lshw</code> provides comprehensive hardware details with driver information:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lshw -c network
+</span></span><span class="line"><span class="cl">lshw -c network -businfo
+</span></span></code></pre></div><h3 id="ethernet-driver-details">Ethernet Driver Details</h3>
+<p><code>ethtool</code> queries and modifies Ethernet device settings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ethtool eth0  <span class="c1"># basic interface information</span>
+</span></span><span class="line"><span class="cl">ethtool -i eth0  <span class="c1"># driver and firmware information</span>
+</span></span><span class="line"><span class="cl">ethtool -S eth0  <span class="c1"># driver statistics</span>
+</span></span><span class="line"><span class="cl">ethtool -k eth0  <span class="c1"># show offloads (TSO, GSO, etc.)</span>
+</span></span><span class="line"><span class="cl">ethtool -g eth0  <span class="c1"># ring buffer settings</span>
+</span></span><span class="line"><span class="cl">ethtool -c eth0  <span class="c1"># coalescing settings</span>
+</span></span></code></pre></div><p>Example output from <code>ethtool -i eth0</code>:</p>
+<pre><code>driver: e1000e
+version: 3.2.6-k
+firmware-version: 0.13-4
+bus-info: 0000:00:1f.6
+supports-statistics: yes
+supports-test: yes
+supports-eeprom-access: yes
+supports-register-dump: yes
+supports-priv-flags: no
+</code></pre>
+<h2 id="wireless-device-management">Wireless Device Management</h2>
+<p>For wireless interfaces, check hardware block state:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rfkill list
+</span></span><span class="line"><span class="cl">rfkill unblock all  <span class="c1"># unblock WiFi if hardware-blocked</span>
+</span></span><span class="line"><span class="cl">rfkill unblock wifi
+</span></span></code></pre></div><p>Modern systems use <code>iw</code> for wireless configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">iw dev
+</span></span><span class="line"><span class="cl">iw dev wlan0 link  <span class="c1"># connection status</span>
+</span></span><span class="line"><span class="cl">iw list  <span class="c1"># supported capabilities</span>
+</span></span><span class="line"><span class="cl">iw wlan0 station dump  <span class="c1"># connected station info</span>
+</span></span></code></pre></div><p>The legacy <code>iwconfig</code> still works on some systems but is deprecated:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">iwconfig
+</span></span><span class="line"><span class="cl">iwconfig wlan0
+</span></span></code></pre></div><h2 id="network-interface-configuration">Network Interface Configuration</h2>
+<p>View active interfaces and their state:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip link show
+</span></span><span class="line"><span class="cl">ip link show eth0
+</span></span><span class="line"><span class="cl">ip -s link show eth0  <span class="c1"># statistics (RX/TX packets, errors, dropped)</span>
+</span></span></code></pre></div><p>Check IP configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip addr show
+</span></span><span class="line"><span class="cl">ip route show
+</span></span><span class="line"><span class="cl">ip -6 route show  <span class="c1"># IPv6 routes</span>
+</span></span></code></pre></div><p>For DNS and DHCP information:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resolvectl status
+</span></span><span class="line"><span class="cl">resolvectl status eth0
+</span></span><span class="line"><span class="cl">nmcli device show eth0  <span class="c1"># if using NetworkManager</span>
+</span></span></code></pre></div><h2 id="finding-driver-module-information">Finding Driver Module Information</h2>
+<p>Determine which kernel module drives a device:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ethtool -i eth0 <span class="p">|</span> grep driver
+</span></span><span class="line"><span class="cl">lsmod <span class="p">|</span> grep driver_name
+</span></span><span class="line"><span class="cl">modinfo driver_name  <span class="c1"># detailed module information</span>
+</span></span></code></pre></div><p>Check module parameters and current values:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /sys/module/driver_name/parameters/*
+</span></span><span class="line"><span class="cl">cat /sys/module/e1000e/parameters/debug
+</span></span></code></pre></div><p>To see what firmware files a driver is trying to load:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">journalctl -k <span class="p">|</span> grep firmware
+</span></span><span class="line"><span class="cl">dmesg <span class="p">|</span> grep -i <span class="s2">&#34;firmware\|fw_path&#34;</span>
+</span></span></code></pre></div><h2 id="detailed-hardware-state">Detailed Hardware State</h2>
+<p>For USB network devices, check power management and descriptor information:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsusb -d 0bda:8153 -v
+</span></span><span class="line"><span class="cl">cat /sys/bus/usb/devices/*/power/control  <span class="c1"># check autosuspend settings</span>
+</span></span></code></pre></div><p>To disable autosuspend on a USB network device (permanent):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;0&#34;</span> <span class="p">|</span> sudo tee /sys/bus/usb/devices/1-1/power/autosuspend_delay_ms
+</span></span></code></pre></div><p>Check USB device tree:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsusb -t
+</span></span><span class="line"><span class="cl">cat /sys/bus/usb/devices/1-1/speed  <span class="c1"># USB 2.0, 3.0, etc.</span>
+</span></span></code></pre></div><h2 id="practical-debugging-workflow">Practical Debugging Workflow</h2>
+<p>When a network device isn’t recognized or behaves incorrectly:</p>
+<ol>
+<li><strong>Check kernel logs for hardware detection</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dmesg <span class="p">|</span> grep -E <span class="s2">&#34;eth|wlan|usb|Ethernet&#34;</span> <span class="p">|</span> tail -30
+</span></span><span class="line"><span class="cl">journalctl -k --since <span class="s2">&#34;30 minutes ago&#34;</span>
+</span></span></code></pre></div><ol start="2">
+<li><strong>Verify the device appears in hardware lists</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lspci <span class="p">|</span> grep -i network
+</span></span><span class="line"><span class="cl">lsusb <span class="p">|</span> grep -i network
+</span></span></code></pre></div><ol start="3">
+<li><strong>Confirm the driver module is loaded</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsmod <span class="p">|</span> grep driver_name
+</span></span><span class="line"><span class="cl">ethtool -i eth0 <span class="p">|</span> grep driver
+</span></span></code></pre></div><ol start="4">
+<li><strong>If the driver isn’t loaded, load it manually</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo modprobe driver_name
+</span></span><span class="line"><span class="cl">sudo modprobe -v driver_name  <span class="c1"># verbose, shows what it&#39;s doing</span>
+</span></span></code></pre></div><ol start="5">
+<li><strong>Check for hardware blocks (wireless devices)</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rfkill list
+</span></span></code></pre></div><ol start="6">
+<li><strong>Inspect detailed device status</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ethtool -i eth0
+</span></span><span class="line"><span class="cl">ip -s link show eth0
+</span></span><span class="line"><span class="cl">journalctl -k --grep<span class="o">=</span><span class="s2">&#34;eth0&#34;</span> --all
+</span></span></code></pre></div><ol start="7">
+<li><strong>For USB devices, check power state and firmware</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsusb -d vendor:product -v <span class="p">|</span> grep -A <span class="m">5</span> <span class="s2">&#34;MaxPower\|bMaxPower&#34;</span>
+</span></span><span class="line"><span class="cl">dmesg <span class="p">|</span> grep -E <span class="s2">&#34;firmware|fw&#34;</span> <span class="p">|</span> tail -10
+</span></span></code></pre></div><h2 id="common-issues-and-solutions">Common Issues and Solutions</h2>
+<p><strong>Driver not loading automatically:</strong> Check if the module exists and isn’t blacklisted:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find /lib/modules/<span class="k">$(</span>uname -r<span class="k">)</span> -name <span class="s2">&#34;*driver_name*&#34;</span>
+</span></span><span class="line"><span class="cl">grep -r <span class="s2">&#34;blacklist&#34;</span> /etc/modprobe.d/
+</span></span></code></pre></div><p><strong>Driver loads but interface doesn’t appear:</strong> Check kernel messages and driver initialization:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo modprobe -r driver_name
+</span></span><span class="line"><span class="cl">sudo modprobe driver_name
+</span></span><span class="line"><span class="cl">dmesg <span class="p">|</span> tail -20
+</span></span></code></pre></div><p><strong>Interface shows as DOWN:</strong> Check hardware block state and driver state:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip link show eth0
+</span></span><span class="line"><span class="cl">ethtool eth0 <span class="p">|</span> grep -i <span class="s2">&#34;link detected&#34;</span>
+</span></span><span class="line"><span class="cl">rfkill list
+</span></span></code></pre></div><p><strong>Poor network performance:</strong> Check for driver issues, offloads, and ring buffers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ethtool -k eth0  <span class="c1"># check if offloads are enabled</span>
+</span></span><span class="line"><span class="cl">ethtool -g eth0  <span class="c1"># verify ring buffer sizes</span>
+</span></span><span class="line"><span class="cl">ethtool -S eth0 <span class="p">|</span> grep -i drop  <span class="c1"># check for dropped packets</span>
+</span></span></code></pre></div><p>Most modern distributions manage network interfaces through systemd-networkd or NetworkManager. Always verify their status alongside driver information for complete visibility.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

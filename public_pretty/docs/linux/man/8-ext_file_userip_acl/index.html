@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ext_file_userip_acl(8) · Linux Manual Pages</title>
+<meta name="description" content="ext_file_userip_acl – Restrict users to certain IP addresses, using a text file backend.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ext_file_userip_acl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ext_file_userip_acl(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>ext_file_userip_acl &#8211; Restrict users to certain IP addresses, using a text file backend. </p>
+<p> Version 1.0</p>
+<h2>Synopsis</h2>
+<p><code>ext_file_userip_acl</code> <code>[-dh] [-f </code> file name <code>]</code></p>
+<h2>Description</h2>
+<p><code>ext_file_userip_acl</code> is an installed binary. An external helper for the Squid external acl scheme. </p>
+<p> It works by reading a pair composed by an IP address and an username on STDIN and matching it against a configuration file.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-d</code></dt>
+<dd>Write debug info to stderr.</dd>
+<dt><code>-f file</code></dt>
+<dd>Configuration <code>file </code> to load.</dd>
+<dt><code>-h</code></dt>
+<dd>Display the binary help and command line syntax info using stderr.</dd></dl>
+<h2>Configuration</h2>
+<p>The <code>squid.conf </code> configuration for the external ACL should be:</p>
+<dl>
+<dd><code>external_acl_type type-name %SRC %LOGIN /path/to/ext_file_userip_acl -f /path/to/config.file</code></dd></dl>
+<p> If the helper program finds a matching username/ip in the configuration file, it returns <code>OK</code> , otherwise it returns <code>ERR .</code> </p>
+<p> The configuration file format is as follows:</p>
+<dl>
+<dd>ip_addr[/netmask]<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>username|@group|ALL|NONE</dd></dl>
+<p> Where<br />
+ <code>ip_addr </code> is a dotted quad format IP address, the <code>netmask</code> must be in dotted quad format too. </p>
+<p> When the second parameter is prefixed with an <code>@</code> , the program will lookup the <code>/etc/group</code> file entry for the specified username. </p>
+<p> There are other two directives, <code>ALL </code> and <code>NONE </code> , which mean</p>
+<h2>Author</h2>
+<p>This program was written by <i>Rodrigo Campos &lt;rodrigo [at] geekbunker.org&gt;</i> </p>
+<p> This manual was written by <i>Rodrigo Campos &lt;rodrigo [at] geekbunker.org&gt;</i> <i>Amos Jeffries &lt;amosjeffries [at] squid-cache.org&gt;</i></p>
+<h2>Copyright</h2>
+<p>&nbsp;<wbr>*&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1996-2016 The Squid Software Foundation and contributors<br />
+&nbsp;<wbr>*<br />
+&nbsp;<wbr>*&nbsp;<wbr>Squid software is distributed under GPLv2+&nbsp;<wbr>license and includes<br />
+&nbsp;<wbr>*&nbsp;<wbr>contributions from numerous individuals and organizations.<br />
+&nbsp;<wbr>*&nbsp;<wbr>Please see the COPYING and CONTRIBUTORS files for details. </p>
+<p> This program and documentation is copyright to the authors named above. </p>
+<p> Distributed under the GNU General Public License (GNU GPL) version 2 or later (GPLv2+).</p>
+<h2>Questions</h2>
+<p>Questions on the usage of this program can be sent to the <i>Squid Users mailing list</i> &lt;squid-users [at] squid-cache.org&gt;</p>
+<h2>Reporting Bugs</h2>
+<p>Bug reports need to be made in English. See <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq/BugReporting">http://wiki.squid-cache.org/SquidFaq/BugReporting</a> for details of what you need to include with your bug report. </p>
+<p> Report bugs or bug fixes using <a rel="nofollow" href="http://bugs.squid-cache.org/">http://bugs.squid-cache.org/</a> </p>
+<p> Report serious security bugs to <i>Squid Bugs &lt;squid-bugs [at] squid-cache.org&gt;</i> </p>
+<p> Report ideas for new improvements to the <i>Squid Developers mailing list</i> &lt;squid-dev [at] squid-cache.org&gt;</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code>GPL</code>(7),<br />
+ The Squid FAQ wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a><br />
+ The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

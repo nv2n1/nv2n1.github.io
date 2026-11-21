@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdis_constant_evaluated(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdis_constant_evaluated/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdis_constant_evaluated(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::is_constant_evaluated - std::is_constant_evaluated</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;type_traits&gt;
+constexpr bool is_constant_evaluated() noexcept; <i>(since C++20)</i>
+Detects whether the function call occurs within a constant-evaluated context. Returns true if the evaluation of the call occurs within the evaluation of an expression or conversion that is manifestly constant-evaluated; otherwise returns false.
+The following expressions (including conversions to the destination type) are manifestly constant-evaluated:</p>
+<ul>
+<li>Where a constant expression is grammatically required, including:
+ <wbr> <wbr> <wbr> <wbr> <wbr> * array_bounds
+ <wbr> <wbr> <wbr> <wbr> <wbr> * the dimensions in new-expressions other than the first
+ <wbr> <wbr> <wbr> <wbr> <wbr> * bit-field_lengths
+ <wbr> <wbr> <wbr> <wbr> <wbr> * enumeration_initializers
+ <wbr> <wbr> <wbr> <wbr> <wbr> * alignments
+ <wbr> <wbr> <wbr> <wbr> <wbr> * case_expressions
+ <wbr> <wbr> <wbr> <wbr> <wbr> * non-type template_arguments
+ <wbr> <wbr> <wbr> <wbr> <wbr> * expressions in noexcept_specifications
+ <wbr> <wbr> <wbr> <wbr> <wbr> * expressions in static_assert_declarations
+ <wbr> <wbr> <wbr> <wbr> <wbr> * expressions in conditional_explicit_specifiers</li>
+<li>conditions of constexpr_if_statements</li>
+<li>immediate_invocations</li>
+<li>constraint expressions in concept definitions, nested_requirements, and requires_clauses</li>
+<li>initializers of variables that are usable in constant expressions, including:
+ <wbr> <wbr> <wbr> <wbr> <wbr> * initializers of constexpr_variables
+ <wbr> <wbr> <wbr> <wbr> <wbr> * initializers of variables with reference type or const-qualified integral or enumeration type, when the initializers are constant_expressions</li>
+<li>initializers of static and thread local variables, when all subexpressions of the initializers (including constructor calls and implicit conversions) are constant_expressions (that is, when the initializers are constant_initializers)
+To test the last two conditions, compilers may first perform a trial constant evaluation of the initializers. It is not recommended to depend on the result in this case. <pre><code>int y;
+const int a = std::is_constant_evaluated() ? y : 1;
+// Trial constant evaluation fails. The constant evaluation is discarded.
+// Variable a is dynamically initialized with 1
+const int b = std::is_constant_evaluated() ? 2 : y;
+// Constant evaluation with std::is_constant_evaluation() == true succeeds.
+// Variable b is statically initialized with 2
+</code></pre></li>
+</ul>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>true if the evaluation of the call occurs within the evaluation of an expression or conversion that is manifestly constant-evaluated; otherwise false</p>
+<h2>Notes</h2>
+<p>When directly used as the condition of static_assert_declaration or constexpr_if_statement, std::is_constant_evaluated() always returns true.</p>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

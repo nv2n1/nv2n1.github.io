@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>emergencyanalysis_event(5) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-emergencyanalysis_event/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>emergencyanalysis_event(5)</h1>
+
+
+
+
+
+<p>emergencyanalysis_event.conf - configuration file for libreport.</p>
+<h2>Description</h2>
+<p>This configuration file defines events for the emergency analysis. These events are supposed to be used when the standard reporting process fails.</p>
+<p>By default the file contains definition for <i>report_EmergencyAnalysis</i> event applicable for all problem types.</p>
+<h3>report_EmergencyAnalysis event configuration file</h3>
+<p>The configuration for report_EmergencyAnalysis event is read from /etc/libreport/events/report_EmergencyAnalysis.conf file if exists.</p>
+<p>The configuration file contains values for options defined in /usr/share/libreport/events/report_EmergencyAnalysis.xml</p>
+<p>Configuration file lines should have <i>PARAM = VALUE</i> format. The parameters are:</p>
+<p><i>Upload_URL</i></p>
+<dl><dd>Configured upload URL</dd></dl>
+<p><i>http_proxy</i></p>
+<dl><dd>the proxy server to use for HTTP</dd></dl>
+<p><i>HTTPS_PROXY</i></p>
+<dl><dd>the proxy server to use for HTTPS</dd></dl>
+<p><i>FTP_PROXY</i></p>
+<dl><dd>the proxy server to use for FTP</dd></dl>
+<h2>Example</h2>
+<p>The following example shows a possible configuration of <i>report_EmergencyAnalysis</i> event. In this particular case the event execution uploads an archive with all problem data to configured URL.</p>
+<p>EVENT=report_EmergencyAnalysis reporter-upload</p>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/5-report_event-conf/">report_event.conf</a>(5), <a HREF="/docs/linux/man/1-reporter-upload/">reporter-upload</a>(1)</p>
+<h2>Author</h2>
+<dl><dd>&bull; ABRT team</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

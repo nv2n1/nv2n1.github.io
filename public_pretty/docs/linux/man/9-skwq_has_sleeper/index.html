@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>skwq_has_sleeper(9) · Linux Manual Pages</title>
+<meta name="description" content="skwq_has_sleeper – check if there are any waiting processes">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-skwq_has_sleeper/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>skwq_has_sleeper(9)</h1>
+
+
+
+
+
+<p>skwq_has_sleeper &#8211; check if there are any waiting processes</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>bool skwq_has_sleeper(struct socket_wq&nbsp;<wbr>*&nbsp;<wbr></code><i>wq</i><code>);</code></dt></dl>
+<h2>Arguments</h2>
+<p><i>wq</i></p>
+<dl>
+<dd>
+</dd><dd>struct socket_wq</dd></dl>
+<h2>Description</h2>
+<p>Returns true if socket_wq has waiting processes The purpose of the skwq_has_sleeper and sock_poll_wait is to wrap the memory barrier call. They were added due to the race found within the tcp code. Consider following tcp code paths: CPU1 CPU2 </p>
+<pre><code>sys_select receive packet...... __add_wait_queue update tp-&gt;rcv_nxt...... tp-&gt;rcv_nxt check sock_def_readable...
+{
+    schedule
+        rcu_read_lock;
+    wq = rcu_dereference(sk-&gt;sk_wq);
+    if (wq &amp;&amp; waitqueue_active(wq-&gt;wait))
+        wake_up_interruptible(wq-&gt;wait)...
+}</code></pre>
+<p> The race for tcp fires when the __add_wait_queue changes done by CPU1 stay in its cache, and so does the tp-&gt;rcv_nxt update on CPU2 side. The CPU1 could then endup calling schedule and sleep forever if there are no more data on the socket.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

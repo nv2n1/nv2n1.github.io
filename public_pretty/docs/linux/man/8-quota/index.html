@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quota(8) · Linux Manual Pages</title>
+<meta name="description" content="quota – report and optionally fix quota usage">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-quota/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>quota(8)</h1>
+
+
+
+
+
+<p>&nbsp;<wbr>*</p>
+<h2>Name</h2>
+<p>quota &#8211; report and optionally fix quota usage</p>
+<h2>Synopsis</h2>
+<p><code>quota</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-d</code> <i>domain</i> ] [ <code>-f</code> ] [ <i>mailbox-prefix</i>&#8230; ]</p>
+<h2>Description</h2>
+<p><i>Quota</i> generates a report listing quota roots, giving their limits and usage. If the <i>-f</i> option is given, <i>quota</i> first fixes any inconsistencies in the quota subsystem, such as mailboxes with the wrong quota root or quota roots with the wrong quota usage reported. If an optional <i>domain</i> is given, the quota listing (and inconsistency fixing) is performed in that domain rather than the default domain. If any optional <i>mailbox-prefix</i> arguments are given, the quota listing (and inconsistency fixing) is limited to quota roots with names that start with one of the given prefixes. </p>
+<p> Running <i>quota</i> with both the <i>-f</i> option and <i>mailbox-prefix</i> arguments is not recommended. </p>
+<p> <i>Quota</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-d</code><i> domain</i></dt>
+<dd>List/fix quotas in <i>domain</i>.</dd>
+<dt><code>-f</code></dt>
+<dd>Fix any inconsistencies in the quota subsystem before generating a report.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_gcell_array(3) · Linux Manual Pages</title>
+<meta name="description" content="gcell_array (Cell array) – draws a cell array starting with a rectangle specified by two corner points; this initial rectangle is subdivided into subrectangles by specifying an arbitrary number of ...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_gcell_array/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_gcell_array(3)</h1>
+
+
+
+
+
+<p>gcell_array (Cell array) &#8211; draws a cell array starting with a rectangle specified by two corner points; this initial rectangle is subdivided into subrectangles by specifying an arbitrary number of divisions in the X and Y directions; each subrectangle (or cell) is assigned a color and drawn with that color.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;ncarg/gks.h&gt; </p>
+<p> void gcell_array(const Grect *rect, const Gpat_rep *colr_array);</p>
+<h2>Description</h2>
+<dl COMPACT>
+<dt>rect.p.x</dt>
+<dd>(Gfloat Input) &#8211; X world coordinate of point 1.</dd>
+<dt>rect.p.y</dt>
+<dd>(Gfloat Input) &#8211; Y world coordinate of point 1.</dd>
+<dt>rect.q.x</dt>
+<dd>(Gfloat Input) &#8211; X world coordinate of point 2.</dd>
+<dt>rect.q.y</dt>
+<dd>(Gfloat Input) &#8211; Y world coordinate of point 2.</dd>
+<dt>colr_array.dims.size_x</dt>
+<dd>(Gint, Input) &#8211; X dimension of the color index array colr_array.colr_array.</dd>
+<dt>colr_array.dims.size_y</dt>
+<dd>(Gint, Input) &#8211; Y dimension of the color index array colr_array.colr_array.</dd>
+<dt>colr_array.colr_array</dt>
+<dd>(Gint *, Input) &#8211; An array of color indices dimensioned colr_array.dims.size_x by colr_array.dims.size_y which is used to determine the color of each cell drawn.</dd></dl>
+<h2>Usage</h2>
+<p>Points 1 and 2 must be diagonally opposite corner points of a rectangle to be divided into colr_array.dims.size_x cells in the X dimension and colr_array.dims.size_y cells in the Y dimension.</p>
+<h2>Access</h2>
+<p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
+<h2>See Also</h2>
+<p>Online: <code>gset_colr_rep(3NCARG),</code> <code>gks(3NCARG),</code> <code>ncarg_gks_cbind(3NCARG)</code> </p>
+<p> Hardcopy: User&#8217;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>
+<p>Copyright (C) 1987-2009<br />
+ University Corporation for Atmospheric Research<br />
+ The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

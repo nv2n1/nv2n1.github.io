@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tie(1) · Linux Manual Pages</title>
+<meta name="description" content="tie – merge or apply WEB change files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tie/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tie(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> tie &#8211; merge or apply WEB change files </p>
+<h2>SYNOPSIS</h2>
+<p> <code>tie</code> <code>-c</code>|<code>-m</code> <i>outputfile masterfile</i> <i>changefile</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>tie</code> program is used to process multiple change files used with the WEB system for literate programming. The WEB programs allow to apply patches to a source file (the <i>masterfile</i>) by means of a number of change files (often only a single change file is allowed). <code>Tie</code> can be used to either merge up to 32 change files into a single one or to apply the changes to the <i>masterfile</i> in order to create a new one. Output of either the new change file or the patched master file goes into <i>outputfile</i>.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-c</code></dt>
+<dd> Create a single change file from the given <i>changefile</i>s.</dd>
+<dt><code>-m</code></dt>
+<dd> Create a new master file by applying the given <i>changefile</i>s.</dd></dl>
+<h2>ENVIRONMENT</h2>
+<p> The environment variable WEBINPUTS is used to search for the input files, or the system default if WEBINPUTS is not set. See <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) for the details of the searching. To avoid conflicts with other programs that also use the WEBINPUTS environment, you can be more specific and use WEBINPUTS_tie for special requirements in TIE.</p>
+<h2>SEE ALSO</h2>
+<p> <code>web</code>(1), <code><a href="/docs/linux/man/1-ctie/">ctie</a></code>(1), <code><a href="/docs/linux/man/1-cweb/">cweb</a></code>(1).</p>
+<h2>AUTHOR</h2>
+<p> Klaus Guntermann, TH Darmstadt, Institut f. Theoretische Informatik. Man page by Joachim Schnitter, TH Darmstadt, Phys. Chemie I. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

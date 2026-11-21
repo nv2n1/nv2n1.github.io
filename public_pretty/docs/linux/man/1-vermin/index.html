@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vermin(1) · Linux Manual Pages</title>
+<meta name="description" content="vermin – Parses and processes Verilog HDL files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-vermin/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>vermin(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> vermin &#8211; Parses and processes Verilog HDL files</p>
+<h2>SYNTAX</h2>
+<p> vermin [<i>VERILOGFILE</i>]&#8230; [<i>option</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> Parses Verilog HDL files for use by other tools. The Verilog grammar used is 1364-1995.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h[elp]</code></dt>
+<dd> Prints out help screen.</dd>
+<dt><code>-emitmono </code><i>fname</i></dt>
+<dd> Emit monolithic (parser view of) file to <i>fname</i>.</dd>
+<dt><code>-emitstems</code></dt>
+<dd> Emit source code stems to stdout.</dd>
+<dt><code>-emitvars</code></dt>
+<dd> Emit source code variables to stdout.</dd>
+<dt><code>-D</code><i>x</i>=<i>y</i></dt>
+<dd> Equivalent to `define <i>X Y</i> in source.</dd>
+<dt><code>+define+</code><i>x</i>=<i>y</i></dt>
+<dd> Equivalent to `define <i>X Y</i> in source.</dd>
+<dt><code>+incdir+</code><i>dirname</i></dt>
+<dd> Add <i>dirname</i> to include search path.</dd>
+<dt><code>+libext+</code><i>ext</i></dt>
+<dd> Add <i>ext</i> to filename when searching for files.</dd>
+<dt><code>-pragma </code><i>name</i></dt>
+<dd> Add <i>name</i> (synopsys, verilint, vertex) to accepted pragmas. Note that &quot;vertex&quot; is for legacy reasons; the executable name has since changed to avoid name clashes with an existing 3D modeling program.</dd>
+<dt><code>-y </code><i>dirname</i></dt>
+<dd> Add directory <i>dirname</i> to source input path.</dd>
+<dt><code>-yi </code><i>dirname</i></dt>
+<dd> Add directory <i>dirname</i> to source input path (case insensitive search).</dd>
+<dt><code>-f </code><i>filename</i></dt>
+<dd> Insert args from filename. Does not work recursively.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> The following indicates that the library extension is .v and that the include directory is the current working directory and that the library directory is also the current working directory. Stems generation is enabled to generate a stems file for use with other tools. Various compile-time defines are also defined on the command line.</p>
+<dl>
+<dt>vermin XYZ450AC6V1.v -emitstems -y . +incdir+. +libext+.v -DUTLB_OutputData=0 -D__PORTALS_VERILOG__</dt>
+<dd></dd></dl>
+<h2>AUTHORS</h2>
+<p> Anthony Bybell &lt;bybell [at] rocketmail.com&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-rtlbrowse/">rtlbrowse</a></i>(1) <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

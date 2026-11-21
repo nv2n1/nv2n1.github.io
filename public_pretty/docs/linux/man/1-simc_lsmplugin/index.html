@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>simc_lsmplugin(1) · Linux Manual Pages</title>
+<meta name="description" content="simc_lsmplugin — LibstorageMgmt Simulator C Plugin">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-simc_lsmplugin/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>simc_lsmplugin(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> simc_lsmplugin &#8212; LibstorageMgmt Simulator C Plugin </p>
+<h2>DESCRIPTION</h2>
+<p> LibStorageMgmt simulator C plugin is for development use. The plugin simulates an array which supports most features of the library. The simulator is memory based, state will be discarded once the plugin exits. The &#8216;simc_lsmplugin&#8217; executable file is for the libStorageMgmt daemon to execute when client user specifies simc plugin in the URI. </p>
+<p> Since every command of lsmcli is a standalone libStorageMgmt session, this plugin is essentially useless for this purpose. In this use case, the libStorageMgmt simulator plugin <code><a href="/docs/linux/man/1-sim_lsmplugin/">sim_lsmplugin</a>(1)</code> is suggested. </p>
+<p> This plugin is written in pure C and is intended to be an example of a C plugin for the library. </p>
+<h2>URI</h2>
+<p> To use this plugin, users should set their URI to this format: </p>
+<pre>
+    simc://
+</pre>
+<p> No password is required for this plugin. No URI parameters are supported by this plugin. </p>
+<h2>FIREWALL RULES</h2>
+<p> This plugin requires not network access. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-lsmcli/">lsmcli</a></code>(1), <code><a href="/docs/linux/man/1-lsmd/">lsmd</a></code>(1), <code><a href="/docs/linux/man/1-sim_lsmplugin/">sim_lsmplugin</a></code>(1) </p>
+<h2>BUGS</h2>
+<p> Please report bugs to <i>&lt;libstoragemgmt-devel [at] lists.sourceforge.net&gt;</i> </p>
+<h2>AUTHOR</h2>
+<p> Gris Ge <i>&lt;fge [at] redhat.com&gt;</i><br />
+ Tony Asleson <i>&lt;tasleson [at] redhat.com&gt;</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

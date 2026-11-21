@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdprev(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdprev/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdprev(3)</h1>
+
+
+
+
+
+<p>std::prev - std::prev</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;iterator&gt;
+template&lt; class BidirIt &gt;
+BidirIt prev(                                                     (since C++11)
+BidirIt it,                                                       (until C++17)
+typename std::iterator_traits&lt;BidirIt&gt;::difference_type n = 1 );
+template&lt; class BidirIt &gt;
+constexpr BidirIt prev(                                           (since C++17)
+BidirIt it,
+typename std::iterator_traits&lt;BidirIt&gt;::difference_type n = 1 );</code></pre> 
+<p>Return the nth predecessor of iterator it.</p>
+<h2>Parameters</h2>
+<p>it - an iterator
+n - number of elements it should be descended</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<p>BidirIt must meet the requirements of LegacyBidirectionalIterator.</p>
+<h2>Return value</h2>
+<p>The nth predecessor of iterator it.</p>
+<h2>Complexity</h2>
+<p>Linear.
+However, if BidirIt additionally meets the requirements of LegacyRandomAccessIterator, complexity is constant.</p>
+<h2>Possible implementation</h2>
+<p> <wbr> template&lt;class BidirIt&gt;
+ <wbr> BidirIt prev(BidirIt it, typename std::iterator_traits&lt;BidirIt&gt;::difference_type n = 1)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> std::advance(it, -n);
+ <wbr> <wbr> <wbr> <wbr> <wbr> return it;
+ <wbr> }</p>
+<h2>Notes</h2>
+<p>Although the expression &ndash;c.end() often compiles, it is not guaranteed to do so: c.end() is an rvalue expression, and there is no iterator requirement that specifies that decrement of an rvalue is guaranteed to work. In particular, when iterators are implemented as pointers, &ndash;c.end() does not compile, while std::prev(c.end()) does.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;iterator&gt;
+#include &lt;vector&gt;
+int main()
+{
+std::vector&lt;int&gt; v{3, 1, 4};
+auto it = v.end();
+auto pv = std::prev(it, 2);
+std::cout &lt;&lt; *pv &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 1</p>
+<h2>See also</h2>
+<p>next increment an iterator
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> advances an iterator by given distance
+advance <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

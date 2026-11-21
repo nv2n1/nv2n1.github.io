@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting the Current File Path in Emacs - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-print-the-name-of-the-current-file-being-edited-in-emacs/">
+  <meta name="description" content="To see the current file path immediately, use the Elisp evaluation prompt:
+M-: buffer-file-name This displays the full path in the echo area. Alternatively, …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Getting the Current File Path in Emacs">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-print-the-name-of-the-current-file-being-edited-in-emacs/">
+  <meta property="og:description" content="To see the current file path immediately, use the Elisp evaluation prompt:
+M-: buffer-file-name This displays the full path in the echo area. Alternatively, …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>Getting the Current File Path in Emacs</h1>
+        <time class="post-date" datetime="2018-03-24T11:40:27Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>To see the current file path immediately, use the Elisp evaluation prompt:</p>
+<pre><code>M-: buffer-file-name
+</code></pre>
+<p>This displays the full path in the echo area. Alternatively, press <code>M-x</code>, type <code>eval-expression</code>, and enter <code>buffer-file-name</code>.</p>
+<h2 id="in-elisp-code">In Elisp code</h2>
+<p>Reference <code>buffer-file-name</code> directly in your configuration or custom commands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">message</span> <span class="s">&#34;Editing: %s&#34;</span> <span class="nf">buffer-file-name</span><span class="p">)</span>
+</span></span></code></pre></div><p>This prints to the echo area and logs to the <code>*Messages*</code> buffer for later review.</p>
+<h2 id="extract-just-the-filename-or-directory">Extract just the filename or directory</h2>
+<p>When you need components of the path:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="c1">;; Filename only (without directory)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">file-name-nondirectory</span> <span class="nf">buffer-file-name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">;; Directory path only</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">file-name-directory</span> <span class="nf">buffer-file-name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">;; Basename without extension</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">file-name-sans-extension</span> <span class="p">(</span><span class="nf">file-name-nondirectory</span> <span class="nf">buffer-file-name</span><span class="p">))</span>
+</span></span></code></pre></div><h2 id="display-file-path-in-the-mode-line">Display file path in the mode line</h2>
+<p>Add the file path persistently to your mode line:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq-default</span> <span class="nv">mode-line-format</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;%e&#34;</span> <span class="nv">mode-line-mule-info</span> <span class="nv">mode-line-modified</span> <span class="s">&#34; &#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">mode-line-buffer-identification</span> <span class="s">&#34; &#34;</span> <span class="nf">buffer-file-name</span><span class="p">))</span>
+</span></span></code></pre></div><p>For a cleaner look, use only the filename:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq-default</span> <span class="nv">mode-line-format</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;%e&#34;</span> <span class="nv">mode-line-mule-info</span> <span class="nv">mode-line-modified</span> <span class="s">&#34; &#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">:eval</span> <span class="p">(</span><span class="nf">file-name-nondirectory</span> <span class="nf">buffer-file-name</span><span class="p">))))</span>
+</span></span></code></pre></div><h2 id="copy-file-path-to-clipboard">Copy file path to clipboard</h2>
+<p>Create a command to copy the current file path:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">copy-buffer-path</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;Copy the current buffer&#39;s file path to the clipboard.&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">if</span> <span class="nf">buffer-file-name</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nb">progn</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">kill-new</span> <span class="nf">buffer-file-name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;Copied: %s&#34;</span> <span class="nf">buffer-file-name</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;Buffer has no associated file&#34;</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c C-l&#34;</span><span class="p">)</span> <span class="ss">&#39;copy-buffer-path</span><span class="p">)</span>
+</span></span></code></pre></div><p>For just the filename:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">copy-buffer-filename</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;Copy just the filename to the clipboard.&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">if</span> <span class="nf">buffer-file-name</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">filename</span> <span class="p">(</span><span class="nf">file-name-nondirectory</span> <span class="nf">buffer-file-name</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nv">kill-new</span> <span class="nv">filename</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;Copied: %s&#34;</span> <span class="nv">filename</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;Buffer has no associated file&#34;</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c C-f&#34;</span><span class="p">)</span> <span class="ss">&#39;copy-buffer-filename</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="handle-unsaved-and-non-file-buffers">Handle unsaved and non-file buffers</h2>
+<p><code>buffer-file-name</code> returns <code>nil</code> for unsaved buffers, temporary buffers, and special buffers (like <code>*scratch*</code>). Always guard against this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">if</span> <span class="nf">buffer-file-name</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;File: %s&#34;</span> <span class="nf">buffer-file-name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;Buffer is not associated with a file&#34;</span><span class="p">))</span>
+</span></span></code></pre></div><p>Use this pattern in any function that depends on an actual file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">my-file-operation</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">unless</span> <span class="nf">buffer-file-name</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="ne">error</span> <span class="s">&#34;This buffer is not visiting a file&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;; Safe to use buffer-file-name now</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">do-something-with</span> <span class="nf">buffer-file-name</span><span class="p">))</span>
+</span></span></code></pre></div><h2 id="related-variables-and-functions">Related variables and functions</h2>
+<ul>
+<li><code>buffer-name</code> — The name of the current buffer (independent of file association)</li>
+<li><code>default-directory</code> — The working directory for the current buffer</li>
+<li><code>default-file-name-coding-system</code> — Character encoding used for file paths</li>
+<li><code>expand-file-name</code> — Convert relative paths to absolute paths</li>
+<li><code>file-truename</code> — Resolve symlinks and get the true file path</li>
+<li><code>locate-file</code> — Search for a file in a list of directories</li>
+<li><code>dired-current-directory</code> — In Dired mode, the directory being browsed</li>
+</ul>
+<h2 id="example-insert-file-path-at-cursor">Example: Insert file path at cursor</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">insert-buffer-path-at-point</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;Insert the current file path at the cursor position.&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">if</span> <span class="nf">buffer-file-name</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nf">insert</span> <span class="nf">buffer-file-name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="ne">error</span> <span class="s">&#34;Buffer has no associated file&#34;</span><span class="p">)))</span>
+</span></span></code></pre></div><h2 id="essential-editor-configuration">Essential Editor Configuration</h2>
+<p>A well-configured editor dramatically improves productivity. For Vim users, invest time in crafting a solid vimrc. For Emacs users, use use-package for cleaner configuration management. Both editors support extensive plugin ecosystems that can transform them into full IDEs.</p>
+<p>Learn the navigation commands thoroughly before adding plugins. Mastery of core movement commands (word, paragraph, search motions in Vim; mark, isearch, ace-jump in Emacs) provides more productivity gains than any single plugin.</p>
+<h2 id="performance-tips">Performance Tips</h2>
+<p>Large files can slow down both editors. For Vim, set lazyredraw and disable syntax highlighting for files over a certain size. For Emacs, use so-long-mode for files with long lines. Both editors benefit from disabling line numbers on very large files to improve scrolling performance.</p>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

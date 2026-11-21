@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>evas_list_traverse_group(3) · Linux Manual Pages</title>
+<meta name="description" content="Linked List Traverse Functions – Functions that you can use to traverse a linked list.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-evas_list_traverse_group/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>evas_list_traverse_group(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Linked List Traverse Functions &#8211; Functions that you can use to traverse a linked list. </p>
+<h3>Functions</h3>
+<p>EAPI <code>Evas_List</code> * <code>evas_list_last</code> (const <code>Evas_List</code> *list)<br />
+ <i>Get the last list node in the list. </i><br />
+ EAPI <code>Evas_List</code> * <code>evas_list_next</code> (const <code>Evas_List</code> *list)<br />
+ <i>Get the next list node after the specified list node. </i><br />
+ EAPI <code>Evas_List</code> * <code>evas_list_prev</code> (const <code>Evas_List</code> *list)<br />
+ <i>Get the previous list node before the specified list node. </i></p>
+<h2>Detailed Description</h2>
+<p>Functions that you can use to traverse a linked list.</p>
+<h2>Function Documentation</h2>
+<h3>EAPI <code>Evas_List</code>* evas_list_last (const <code>Evas_List</code> * list)</h3>
+<p>Get the last list node in the list. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>list</i> The list to get the last list node from</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>The last list node in the list list</dd></dl>
+<p> This function will return the last list node in the list (or NULL if the list is empty). </p>
+<p> NB: This is a order-1 operation (it takes the same short time regardless of the length of the list). </p>
+<p> Example: </p>
+<pre> extern Evas_List *list;
+ Evas_List *last, *l;
+ last = evas_list_last(list);
+ printf('The list in reverse:);
+ for (l = last; l; l = l-&gt;prev)
+ {
+ printf('%p, l-&gt;data);
+ }</pre>
+<p>&nbsp;<wbr> </p>
+<p> References _Evas_List::accounting.</p>
+<h3>EAPI <code>Evas_List</code>* evas_list_next (const <code>Evas_List</code> * list)</h3>
+<p>Get the next list node after the specified list node. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>list</i> The list node to get the next list node from</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>The next list node, or NULL if no next list node exists</dd></dl>
+<p> This function returns the next list node after the current one. It is equivalent to list-&gt;next. </p>
+<p> Example: </p>
+<pre> extern Evas_List *list;
+ Evas_List *l;
+ printf('The list:);
+ for (l = list; l; l = evas_list_next(l))
+ {
+ printf('%p, l-&gt;data);
+ }</pre>
+<p>&nbsp;<wbr> </p>
+<p> References _Evas_List::next. </p>
+<p> Referenced by evas_list_sort().</p>
+<h3>EAPI <code>Evas_List</code>* evas_list_prev (const <code>Evas_List</code> * list)</h3>
+<p>Get the previous list node before the specified list node. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>list</i> The list node to get the previous list node from</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>The previous list node, or NULL if no previous list node exists</dd></dl>
+<p> This function returns the previous list node before the current one. It is equivalent to list-&gt;prev. </p>
+<p> Example: </p>
+<pre> extern Evas_List *list;
+ Evas_List *last, *l;
+ last = evas_list_last(list);
+ printf('The list in reverse:);
+ for (l = last; l; l = evas_list_prev(l))
+ {
+ printf('%p, l-&gt;data);
+ }</pre>
+<p>&nbsp;<wbr> </p>
+<p> References _Evas_List::prev. </p>
+<p> Referenced by evas_list_sort().</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Evas from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

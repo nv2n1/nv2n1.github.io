@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmdatafieldxytopos(3) · Linux Manual Pages</title>
+<meta name="description" content="XmDataFieldXYToPos — A DataField function that accesses the character position nearest an x and y position">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmdatafieldxytopos/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmdatafieldxytopos(3)</h1>
+
+
+
+
+
+<p><code>XmDataFieldXYToPos</code> &#8212; A DataField function that accesses the character position nearest an x and y position</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/DataF.h&gt;
+<code>XmTextPosition XmDataFieldXYToPos</code>(
+<code>Widget widget</code>,
+<code>Position x</code>,
+<code>Position y</code>);</pre>
+<h2>Description</h2>
+<p><code>XmDataFieldXYToPos</code> accesses the character position nearest to the specified <i>x</i> and <i>y</i> position, relative to the upper left corner of the DataField widget.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the DataField widget ID</dd>
+<dt><i>x</i></dt>
+<dd>Specifies the <i>x</i> position, relative to the upper left corner of the widget.</dd>
+<dt><i>y</i></dt>
+<dd>Specifies the <i>y</i> position, relative to the upper left corner of the widget.</dd></dl>
+<p> For a complete definition of DataField and its associated resources, see <code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3).</p>
+<h2>Return</h2>
+<p>Returns the character position in the text nearest the <i>x</i> and <i>y</i> position specified. This is an integer number of characters from the beginning of the buffer. The first character position is 0 (zero).</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdlconv(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdlconv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdlconv(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::lconv - std::lconv</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;clocale&gt;
+    struct lconv;</code></pre> 
+<p>The class std::lconv contains numeric and monetary formatting rules as defined by a C locale. Objects of this struct may be obtained with std::localeconv. The members of std::lconv are values of type char and of type char*. Each char* member except decimal_point may be pointing at a null character (that is, at an empty C-string). The members of type char are all non-negative numbers, any of which may be CHAR_MAX if the corresponding value is not available in the current C locale.</p>
+<h2>Member objects</h2>
+<h2>Non-monetary numeric formatting parameters</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> the character used as the decimal point
+char* decimal_point <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> the character used to separate groups of digits before the decimal point
+char* thousands_sep <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> a string whose elements indicate the sizes of digit groups
+char* grouping <i>(public member object)</i></p>
+<h2>Monetary numeric formatting parameters</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> the character used as the decimal point
+char* mon_decimal_point <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> the character used to separate groups of digits before the decimal point
+char* mon_thousands_sep <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> a string whose elements indicate the sizes of digit groups
+char* mon_grouping <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> a string used to indicate non-negative monetary quantity
+char* positive_sign <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> a string used to indicate negative monetary quantity
+char* negative_sign <i>(public member object)</i></p>
+<h2>Local monetary numeric formatting parameters</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> the symbol used for currency in the current C locale
+char* currency_symbol <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> the number of digits after the decimal point to display in a monetary quantity
+char frac_digits <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> 1 if currency_symbol is placed before non-negative value, 0 if after
+char p_cs_precedes <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> 1 if currency_symbol is placed before negative value, 0 if after
+char n_cs_precedes <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> indicates the separation of currency_symbol, positive_sign, and the non-negative monetary value
+char p_sep_by_space <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> indicates the separation of currency_symbol, negative_sign, and the negative monetary value
+char n_sep_by_space <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> indicates the position of positive_sign in a non-negative monetary value
+char p_sign_posn <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> indicates the position of negative_sign in a negative monetary value
+char n_sign_posn <i>(public member object)</i></p>
+<h2>International monetary numeric formatting parameters</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> the string used as international currency name in the current C locale
+char* int_curr_symbol <i>(public member object)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> the number of digits after the decimal point to display in an international monetary quantity
+char int_frac_digits <i>(public member object)</i></p>
+<p>char int_p_cs_precedes 1 if int_curr_symbol is placed before non-negative international monetary value, 0 if after
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member object)</i>
+<i>(C++11)</i></p>
+<p>char int_n_cs_precedes 1 if int_curr_symboll is placed before negative international monetary value, 0 if after
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member object)</i>
+<i>(C++11)</i></p>
+<p>char int_p_sep_by_space indicates the separation of int_curr_symbol, positive_sign, and the non-negative international monetary value
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member object)</i>
+<i>(C++11)</i></p>
+<p>char int_n_sep_by_space indicates the separation of int_curr_symbol, negative_sign, and the negative international monetary value
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member object)</i>
+<i>(C++11)</i></p>
+<p>char int_p_sign_posn indicates the position of positive_sign in a non-negative international monetary value
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member object)</i>
+<i>(C++11)</i></p>
+<p>char int_n_sign_posn indicates the position of negative_sign in a negative international monetary value
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member object)</i>
+<i>(C++11)</i></p>
+<p>The characters of the C-strings pointed to by grouping and mon_grouping are interpreted according to their numeric values. When the terminating &lsquo;\0&rsquo; is encountered, the last value seen is assumed to repeat for the remainder of digits. If CHAR_MAX is encountered, no further digits are grouped. the typical grouping of three digits at a time is &quot;\003&quot;.
+The values of p_sep_by_space, n_sep_by_space, int_p_sep_by_space, int_n_sep_by_space are interpreted as follows:</p>
+<p>0 no space separates the currency symbol and the value
+1 sign sticks to the currency symbol, value is separated by a space
+2 sign sticks to the value. Currency symbol is separated by a space</p>
+<p>The values of p_sign_posn, n_sign_posn, int_p_sign_posn, int_n_sign_posn are interpreted as follows:</p>
+<p>0 parentheses around the value and the currency symbol are used to represent the sign
+1 sign before the value and the currency symbol
+2 sign after the value and the currency symbol
+3 sign before the currency symbol
+4 sign after the currency symbol</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;clocale&gt;
+#include &lt;iostream&gt;
+int main()
+{
+std::setlocale(LC_ALL, &quot;ja_JP.UTF-8&quot;);
+std::lconv *lc = std::localeconv();
+std::cout &lt;&lt; &quot;Japanese currency symbol: &quot; &lt;&lt; lc-&gt;currency_symbol
+&lt;&lt; &lsquo;(&rsquo; &lt;&lt; lc-&gt;int_curr_symbol &lt;&lt; &quot;)\n&quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Japanese currency symbol: ￥(JPY )</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> queries numeric and monetary formatting details of the current locale
+localeconv <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> defines numeric punctuation rules
+numpunct <i>(class template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> defines monetary formatting parameters used by std::money_get and std::money_put
+moneypunct <i>(class template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sasl_errors(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sasl_errors/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sasl_errors(3)</h1>
+
+
+
+
+
+<p>sasl_errors - SASL error codes</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;sasl/sasl.h&gt;</code></pre>
+<h2>Description</h2>
+<p>The following are the general error codes that may be returned by calls into the SASL library, and their meanings (that may vary slightly based on context):</p>
+<h2>Common Result Codes</h2>
+<dl><dt>SASL_OK
+</dt><dd>Success
+</dd><dt>SASL_CONTINUE
+</dt><dd>Another step is needed in authentication
+</dd><dt>SASL_FAIL
+</dt><dd>Generic Failure
+</dd><dt>SASL_NOMEM
+</dt><dd>Memory shortage failure
+</dd><dt>SASL_BUFOVER
+</dt><dd>Overflowed buffer
+</dd><dt>SASL_NOMECH
+</dt><dd>Mechanism not supported / No mechanisms matched requirements
+</dd><dt>SASL_BADPROT
+</dt><dd>Bad / Invalid Protocol or Protocol cancel
+</dd><dt>SASL_NOTDONE
+</dt><dd>Can't request information / Not applicable until later in exchange
+</dd><dt>SASL_BADPARAM
+</dt><dd>Invalid Parameter Supplied
+</dd><dt>SASL_TRYAGAIN
+</dt><dd>Transient Failure (e.g. weak key)
+</dd><dt>SASL_BADMAC
+</dt><dd>Integrity Check Failed
+</dd><dt>SASL_NOTINIT
+</dt><dd>SASL library not initialized 
+</dd></dl>
+<h2>Client-only Result Codes</h2>
+<dl><dt>SASL_INTERACT
+</dt><dd>Needs user interaction
+</dd><dt>SASL_BADSERV
+</dt><dd>Server failed mutual authentication step
+</dd><dt>SASL_WRONGMECH
+</dt><dd>Mechanism does not support requested feature 
+</dd></dl>
+<h2>Server-only Result Codes</h2>
+<dl><dt>SASL_BADAUTH
+</dt><dd>Authentication Failure
+</dd><dt>SASL_NOAUTHZ
+</dt><dd>Authorization Failure
+</dd><dt>SASL_TOOWEAK
+</dt><dd>Mechanism too weak for this user
+</dd><dt>SASL_ENCRYPT
+</dt><dd>Encryption needed to use mechanism
+</dd><dt>SASL_TRANS
+</dt><dd>One time use of a plaintext password will enable requested mechanism for user
+</dd><dt>SASL_EXPIRED
+</dt><dd>Passphrase expired, must be reset
+</dd><dt>SASL_DISABLED
+</dt><dd>Account Disabled
+</dd><dt>SASL_NOUSER
+</dt><dd>User Not Found
+</dd><dt>SASL_BADVERS
+</dt><dd>Version mismatch with plug-in
+</dd><dt>SASL_NOVERIFY
+</dt><dd>USer exists, but no verifier for user 
+</dd></dl>
+<h2>Password Setting Result Codes</h2>
+<dl><dt>SASL_PWLOCK
+</dt><dd>Passphrase locked
+</dd><dt>SASL_NOCHANGE
+</dt><dd>Requested change was not needed
+</dd><dt>SASL_WEAKPASS
+</dt><dd>Passphrase is too week for security policy.
+</dd><dt>SASL_NOUSERPASS
+</dt><dd>User supplied passwords are not permitted 
+</dd></dl>
+<h2>Conforming To</h2>
+<p>RFC 4422</p>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/3-sasl/">sasl</a>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hugeedit(8) · Linux Manual Pages</title>
+<meta name="description" content="hugeedit – Set default policy for backing text and data with hugepages">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-hugeedit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>hugeedit(8)</h1>
+
+
+
+
+
+<p>hugeedit &#8211; Set default policy for backing text and data with hugepages</p>
+<h2>Synopsis</h2>
+<p><code>hugeedit binary</code><br />
+ <code>hugeedit [options] binary</code></p>
+<h2>Description</h2>
+<p><code>hugectl</code> runs processes with a specific policy for backing memory regions with hugepages. Ordinarily when processes are relinked with <code>libhugetlbfs</code> using the recommended linking method, either <code>hugectl</code> is required on each execution or environment variables must be set for each execution. <code>hugeedit</code> can be used to set bits in the ELF header that determine if the text or data segments are backed by default without further intervention. If no arguments are specified, <code>hugeedit</code> will display what the current defaults for each segment in a binary are. The available options are</p>
+<dl>
+<dt><code>&#8211;text</code></dt>
+<dd>Back the text segments of the binary by default.</dd>
+<dt><code>&#8211;data</code></dt>
+<dd>Back the data segments of the binary by default</dd>
+<dt><code>&#8211;disable</code></dt>
+<dd>Back all segments using small pages by default </dd>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/1-oprofile/">oprofile</a>(1),</i> <i><a href="/docs/linux/man/7-libhugetlbfs/">libhugetlbfs</a>(7),</i> <i><a href="/docs/linux/man/8-hugectl/">hugectl</a>(8)</i></p>
+<h2>Authors</h2>
+<p>libhugetlbfs was written by various people on the libhugetlbfs-devel mailing list.</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

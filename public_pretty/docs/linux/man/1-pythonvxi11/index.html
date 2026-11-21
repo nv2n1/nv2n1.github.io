@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pythonvxi11(1) · Linux Manual Pages</title>
+<meta name="description" content="pythonvxi11 – Python VXI11 Documentation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pythonvxi11/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pythonvxi11(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> pythonvxi11 &#8211; Python VXI11 Documentation </p>
+<p> This Python package supports the VXI-11 Ethernet instrument control protocol for controlling VXI11 and LXI compatible instruments. </p>
+<p> See also:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> <i>Python VXI11 home page</i></dd>
+<dt>&bull;</dt>
+<dd> <i>GitHub repository</i> </dd>
+<p> Contents:</dl>
+<h2>INTRODUCTION TO PYTHON VXI11</h2>
+<h3>Overview</h3>
+<p> This Python package supports the VXI-11 Ethernet instrument control protocol for controlling VXI11 and LXI compatible instruments. The implementation is pure Python and highly portable. </p>
+<p> It is released under the MIT license, see <i>LICENSE</i> for more details. </p>
+<p> Copyright (C) 2012-2013 Alex Forencich &lt;<i>alex [at] alexforencich.com</i>&gt; </p>
+<p> See also:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> <i>Python VXI11 home page</i></dd>
+<dt>&bull;</dt>
+<dd> <i>GitHub repository</i></dd></dl>
+<h3>Features</h3>
+<dl>
+<dt>&bull;</dt>
+<dd> Supports Python 2 and Python 3</dd>
+<dt>&bull;</dt>
+<dd> Pure Python</dd>
+<dt>&bull;</dt>
+<dd> Highly portable</dd>
+<dt>&bull;</dt>
+<dd> Communicates with instruments over the VXI11 TCP/IP instrument control protocol</dd></dl>
+<h3>Requirements</h3>
+<dl>
+<dt>&bull;</dt>
+<dd> Python 2 or Python 3</dd></dl>
+<h3>Installation</h3>
+<p> To install the module for all users on the system, administrator rights (root) are required.</p>
+<h3>From source</h3>
+<p> Download the archive, extract, and run: </p>
+<pre>
+python setup.py install
+</pre>
+<h3>Packages</h3>
+<p> There are also packaged versions for some Linux distributions:</p>
+<dl>
+<dt><code>Arch Linux</code></dt>
+<dd> Python VXI11 is available under the name &quot;python-vxi11-git&quot; in the AUR.</dd></dl>
+<h2>PYTHON VXI11 EXAMPLES</h2>
+<h3>Opening a connection</h3>
+<p> Connect to an Agilent MSO7104A oscilloscope on IP address 192.168.1.104: </p>
+<pre>
+&gt;&gt;&gt; import vxi11
+&gt;&gt;&gt; instr =  vxi11.Instrument(&quot;192.168.1.104&quot;)
+&gt;&gt;&gt; print(instr.ask(&quot;*IDN?&quot;))
+'AGILENT TECHNOLOGIES,MSO7104A,MY********,06.16.0001'
+</pre>
+<p> Connect to an Agilent E3649A via an HP 2050A GPIB bridge: </p>
+<pre>
+&gt;&gt;&gt; import vxi11
+&gt;&gt;&gt; instr = vxi11.Instrument(&quot;192.168.1.105&quot;, &quot;gpib,5&quot;)
+&gt;&gt;&gt; print(instr.ask(&quot;*IDN?&quot;))
+'Agilent Technologies,E3649A,0,1.4-5.0-1.0'
+</pre>
+<h3>Configuring connections</h3>
+<p> Open a connection and set the timeout: </p>
+<pre>
+&gt;&gt;&gt; import vxi11
+&gt;&gt;&gt; instr = vxi11.Instrument(&quot;192.168.1.104&quot;)
+&gt;&gt;&gt; instr.timeout = 60*1000
+&gt;&gt;&gt; print(instr.ask(&quot;*TST?&quot;))
+'0'
+</pre>
+<h2>VXI11 &#8212; VXI11 DRIVER</h2>
+<p> This module provides a VXI11 TCP/IP instrument driver.</p>
+<h3>Functions and Exceptions</h3>
+<dl>
+<dt><code>exception vxi11.Vxi11Error</code></dt>
+<dd> Exception raised on various occasions; argument is a string describing what is wrong.</dd></dl>
+<h3><code>Instrument</code> class</h3>
+<dl>
+<dt><code>class vxi11.Instrument(host, name=None, client_id=None, term_char=None)</code></dt>
+<dd> VXI-11 instrument interface client</dd>
+<dt><code>abort()</code></dt>
+<dd> Asynchronous abort</dd>
+<dt><code>ask(message, num=-1, encoding=&#8217;utf-8&#8242;)</code></dt>
+<dd> Write then read string</dd>
+<dt><code>ask_raw(data, num=-1)</code></dt>
+<dd> Write then read binary data</dd>
+<dt><code>clear()</code></dt>
+<dd> Send clear command</dd>
+<dt><code>close()</code></dt>
+<dd> Close connection</dd>
+<dt><code>local()</code></dt>
+<dd> Send local command</dd>
+<dt><code>lock()</code></dt>
+<dd> Send lock command</dd>
+<dt><code>open()</code></dt>
+<dd> Open connection to VXI-11 instrument</dd>
+<dt><code>read(num=-1, encoding=&#8217;utf-8&#8242;)</code></dt>
+<dd> Read string from instrument</dd>
+<dt><code>read_raw(num=-1)</code></dt>
+<dd> Read binary data from instrument</dd>
+<dt><code>read_stb()</code></dt>
+<dd> Read status byte</dd>
+<dt><code>remote()</code></dt>
+<dd> Send remote command</dd>
+<dt><code>trigger()</code></dt>
+<dd> Send trigger command</dd>
+<dt><code>unlock()</code></dt>
+<dd> Send unlock command</dd>
+<dt><code>write(message, encoding=&#8217;utf-8&#8242;)</code></dt>
+<dd> Write string to instrument</dd>
+<dt><code>write_raw(data)</code></dt>
+<dd> Write binary data to instrument</dd></dl>
+<h2>APPENDIX</h2>
+<h3>License</h3>
+<p> Copyright (c) 2012-2014 Alex Forencich and Michael Walle </p>
+<p> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: </p>
+<p> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. </p>
+<p> THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<dl>
+<dt>&bull;</dt>
+<dd> <i>genindex</i></dd>
+<dt>&bull;</dt>
+<dd> <i>modindex</i></dd>
+<dt>&bull;</dt>
+<dd> <i>search</i></dd></dl>
+<h2>AUTHOR</h2>
+<p> Alex Forencich</p>
+<h2>COPYRIGHT</h2>
+<p> 2013, Alex Forencich </p>
+<h2>Index</h2>
+<dt><a href="#lbAP">APPENDIX</a></dt>
+<dd>
+</dd><dt><a href="#lbAR">AUTHOR</a></dt>
+<dd>
+</dd><dt><a href="#lbAS">COPYRIGHT</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

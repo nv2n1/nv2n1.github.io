@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xallowevents(3) · Linux Manual Pages</title>
+<meta name="description" content="XAllowEvents – release queued events">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xallowevents/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xallowevents(3)</h1>
+
+
+
+
+
+<p>XAllowEvents &#8211; release queued events </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>int XAllowEvents(Display *<i>display</i>, int <i>event_mode</i>, Time <i>time</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>event_mode</i></dt>
+<dd>Specifies the event mode. You can pass <code>AsyncPointer</code>, <code>SyncPointer</code>, <code>AsyncKeyboard</code>, <code>SyncKeyboard</code>, <code>ReplayPointer</code>, <code>ReplayKeyboard</code>, <code>AsyncBoth</code>, or <code>SyncBoth</code>.</dd>
+<dt><i>time</i></dt>
+<dd>Specifies the time. You can pass either a timestamp or <code>CurrentTime</code>.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XAllowEvents</code> function releases some queued events if the client has caused a device to freeze. It has no effect if the specified time is earlier than the last-grab time of the most recent active grab for the client or if the specified time is later than the current X server time. </p>
+<p> <code>XAllowEvents</code> can generate a <code>BadValue</code> error.</p>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
+<h2>See Also</h2>
+<p><i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

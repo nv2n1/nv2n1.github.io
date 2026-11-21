@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dat-conf(5) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-dat-conf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>dat-conf(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>dat.conf - configuration file for static registration of user-level DAT rdma providers</p>
+<h2>Description</h2>
+<p>The DAT (direct access transport) architecture supports the use of multiple DAT providers within a single consumer application. Consumers implicitly select a provider using the Interface Adapter name parameter passed to dat_ia_open(). The subsystem that maps Interface Adapter names to provider implementations is known as the DAT registry. When a consumer calls dat_ia_open(), the appropriate provider is found and notified of the consumer&rsquo;s request to access the IA. After this point, all DAT API calls acting on DAT objects are automatically directed to the appropriate provider entry points. A persistent, administratively configurable database is used to store mappings from IA names to provider information. This provider information includes: the file system path to the provider library object, version information, and thread safety information. The location and format of the registry is platform dependent. This database is known as the Static Registry (SR) and is provided via entries in the <i>dat.conf</i> file. The process of adding a provider entry is termed Static Registration.</p>
+<h2>Registry File Format</h2>
+<p>acters after # on a line are ignored (comments).
+ <wbr><em> <wbr>Lines on which there are no characters other than whitespace
+and comments are considered blank lines and are ignored.
+ <wbr></em> <wbr>Non-blank lines must have seven whitespace separated fields.
+These fields may contain whitespace if the field is quoted
+with double quotes. Within fields quoated with double quotes,
+the backslash or qoute are valid escape sequences:
+ <wbr>* <wbr>Each non-blank line will contain the following fields:
+ <wbr> <wbr>- The IA Name.
+ <wbr> <wbr>- The API version of the library:
+ <wbr> <wbr> <wbr> <wbr>[k|u]major.minor where <wbr>&quot;major&quot; <wbr>and <wbr>&quot;minor&quot; <wbr>are both integers
+ <wbr> <wbr> <wbr> <wbr>in decimal format. User-level examples: <wbr>&quot;u1.2&quot;, and <wbr>&quot;u2.0&quot;.
+ <wbr> <wbr>- Whether the library is thread-safe: <wbr>[threadsafe|nonthreadsafe]
+ <wbr> <wbr>- Whether this is the default section: <wbr>[default|nondefault]
+ <wbr> <wbr>- The library image, version included, to be loaded.
+ <wbr> <wbr>- The vendor id and version of DAPL provider: id.major.minor <wbr> <wbr>
+ <wbr> <wbr>- ia params, IA specific parameters - device name and port
+ <wbr> <wbr>- platform params, <wbr>(not used) <wbr></p>
+<h2>OpenFabrics RDMA providers:</h2>
+<p>ovider options for both 1.2 and 2.0, each using different CM services</p>
+<p> <wbr> <wbr>1. cma - OpenFabrics rdma_cm <wbr> <wbr> <wbr> <wbr>- uses rdma_cm services for connections
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>- requires IPoIB and SA/SM services for IB
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>- netdev used for device name, without port designation <wbr>(ia_params) <wbr>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>- Supports any transport rdma_cm supports including IB, iWARP, RoCEE
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>- libdaplcma.so <wbr>(1.2), libdaplofa <wbr>(2.0)</p>
+<p> <wbr> <wbr>2. scm - uDAPL socket based CM <wbr> <wbr>- exchanges CM information over sockets <wbr>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>- eliminates the need for rdma_cm, IPoIB, and SA for IB
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>- verbs device used for device name with port designation <wbr>(ia_param)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>- Supports IB, RoCEE. Doesn&rsquo;t support iWARP
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>- libdaplscm.so <wbr>(1.2), libdaploscm <wbr>(2.0)</p>
+<p> <wbr> <wbr>3. ucm - uDAPL unreliable IB CM - exchanges CM information via IB UD QP&rsquo;s
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>- eliminates the need for sockets or rdma_cm
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>- verbs device used for device name with port designation <wbr>(ia_param)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>- Supports IB only, no name service. <wbr>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>- libdaplucm.so <wbr>(1.2), libdaploucm <wbr>(2.0)</p>
+<h2>Example entries for each OpenFabrics provider</h2>
+<p>brics rdma_cm (v1.2 and v2.0 examples)</p>
+<p> <wbr> <wbr>OpenIB-cma u1.2 nonthreadsafe default libdaplcma.so.1 dapl.1.2 <wbr>&quot;ib0 0&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>ofa-v2-ib0 u2.0 nonthreadsafe default libdaplofa.so.2 dapl.2.0 <wbr>&quot;ib0 0&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>ofa-v2-iwarp u2.0 nonthreadsafe default libdaplofa.so.2 dapl.2.0 <wbr>&quot;eth2 0&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>ofa-v2-cma-roe-eth2 u2.0 nonthreadsafe default libdaplofa.so.2 dapl.2.0 <wbr>&quot;eth2 0&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>ofa-v2-cma-roe-eth3 u2.0 nonthreadsafe default libdaplofa.so.2 dapl.2.0 <wbr>&quot;eth3 0&quot; <wbr>&quot;&quot;</p>
+<p> <wbr> <wbr>NOTE: The OpenFabrics CMA providers use <wbr>&lt;ia_params&gt; <wbr>to specify the device with one of the following:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>network address, network hostname, or netdev name; <wbr>along with port number.</p>
+<p> <wbr> <wbr>2. scm - uDAPL socket based CM <wbr>(v1.2 and v2.0 examples)</p>
+<p> <wbr> <wbr>OpenIB-mlx4_0-1 u1.2 nonthreadsafe default libdaplscm.so.1 dapl.1.2 <wbr>&quot;mlx4_0 1&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>OpenIB-ipath0-1 u1.2 nonthreadsafe default libdaplscm.so.1 dapl.1.2 <wbr>&quot;ipath0 1&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>ofa-v2-mlx4_0-1 u2.0 nonthreadsafe default libdaploscm.so.2 dapl.2.0 <wbr>&quot;mlx4_0 1&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>ofa-v2-mlx4_0-2 u2.0 nonthreadsafe default libdaploscm.so.2 dapl.2.0 <wbr>&quot;mlx4_0 2&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>ofa-v2-mlx4_1-1 u2.0 nonthreadsafe default libdaploscm.so.2 dapl.2.0 <wbr>&quot;mlx4_1 1&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>ofa-v2-ehca0-1 u2.0 nonthreadsafe default libdaploscm.so.2 dapl.2.0 <wbr>&quot;ehca0 1&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>ofa-v2-scm-roe-mlx4_0-1 u2.0 nonthreadsafe default libdaploscm.so.2 dapl.2.0 <wbr>&quot;mlx4_0 1&quot; <wbr>&quot;&quot;</p>
+<p> <wbr> <wbr>3. ucm - uDAPL unreliable IB CM <wbr> <wbr>(not supported in 1.2, v2.0 examples)</p>
+<p> <wbr> <wbr>ofa-v2-mlx4_0-1u u2.0 nonthreadsafe default libdaploucm.so.2 dapl.2.0 <wbr>&quot;mlx4_0 1&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>ofa-v2-mlx4_0-2u u2.0 nonthreadsafe default libdaploucm.so.2 dapl.2.0 <wbr>&quot;mlx4_0 2&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>ofa-v2-ipath0-1u u2.0 nonthreadsafe default libdaploucm.so.2 dapl.2.0 <wbr>&quot;ipath0 1&quot; <wbr>&quot;&quot;
+ <wbr> <wbr>ofa-v2-ehca0-1u u2.0 nonthreadsafe default libdaploucm.so.2 dapl.2.0 <wbr>&quot;ehca0 1&quot; <wbr>&quot;&quot;</p>
+<p> <wbr> <wbr>Note: OpenIB- and ofa-v2- IA names are unique mappings, reserved for OpenFabrics providers.</p>
+<p>The default location for this configuration file is /etc/dat.conf.</p>
+<p>The file location may be overridden with the environment variable DAT_OVERRIDE=/your_own_directory/your_dat.conf.</p>
+<h2>SEE ALSO rdma_cm verbs socket</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proving Ownership of Bitcoin Multisig Addresses - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/proving-ownership-of-btc-multisig-addresses/">
+  <meta name="description" content="Proving ownership of a multisig address differs fundamentally from proving ownership of a standard single-key wallet. With multisig, there’s no single private …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Proving Ownership of Bitcoin Multisig Addresses">
+  <meta property="og:url" content="https://www.systutorials.com/proving-ownership-of-btc-multisig-addresses/">
+  <meta property="og:description" content="Proving ownership of a multisig address differs fundamentally from proving ownership of a standard single-key wallet. With multisig, there’s no single private …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/web3-crypto-academy/">Web3 &amp; Crypto Academy</a>
+          
+          &rsaquo; <a href="/category/self-custody-security/">Self-Custody &amp; Security</a>
+        </nav>
+        
+        <h1>Proving Ownership of Bitcoin Multisig Addresses</h1>
+        <time class="post-date" datetime="2024-09-14T07:22:04Z">September 14, 2024</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated May 17, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Proving ownership of a multisig address differs fundamentally from proving ownership of a standard single-key wallet. With multisig, there’s no single private key to demonstrate. Instead, you need to prove control over enough keys to satisfy the wallet’s m-of-n threshold (for example, 2-of-3 or 3-of-5).</p>
+<h2 id="the-core-challenge">The Core Challenge</h2>
+<p>In a 2-of-3 multisig setup, you might control keys A and B while a third party controls key C. You can’t simply sign a message with one key and claim ownership. Instead, you must demonstrate that you can coordinate signatures across the keys you control to create a valid transaction or message signature that meets the threshold requirement.</p>
+<p>The difficulty compounds when keys are distributed across multiple signers, devices, or geographic locations. You need a method that’s both cryptographically sound and practical to execute without exposing private keys or requiring all parties to be present simultaneously.</p>
+<h2 id="practical-methods-for-proving-multisig-ownership">Practical Methods for Proving Multisig Ownership</h2>
+<p><strong>Partially Signed Bitcoin Transactions (PSBTs)</strong></p>
+<p>A PSBT is the most straightforward way to prove multisig ownership. Create a PSBT, sign it with each key you control, and share the partially signed result. Each signature proves that:</p>
+<ol>
+<li>You had access to the private key</li>
+<li>You authorized that specific transaction</li>
+<li>When combined with other required signatures, the threshold is met</li>
+</ol>
+<!-- -->
+<pre><code># Create a PSBT
+bitcoin-cli createpsbt &quot;[{\&quot;txid\&quot;:\&quot;...\&quot;,\&quot;vout\&quot;:0}]&quot; &quot;[{\&quot;address\&quot;:\&quot;amount\&quot;}]&quot;
+
+# Sign with your key
+bitcoin-cli walletprocesspsbt &quot;base64_psbt&quot;
+
+# Share the hex output with other signers
+</code></pre>
+<p>Each signer adds their signature to the same PSBT. The final combined PSBT demonstrates that threshold participants approved the transaction.</p>
+<p><strong>Extended Public Keys (xPubs)</strong></p>
+<p>For custody verification and audits, share your extended public key (xPub) rather than any private key material. An auditor can:</p>
+<ol>
+<li>Derive all public keys your key generates</li>
+<li>Verify which addresses belong to your key</li>
+<li>Monitor blockchain activity on those addresses</li>
+<li>Confirm that expected funds are present</li>
+</ol>
+<p>This approach reveals nothing about your private keys. Tools like Specter or Casa use xPub-based verification as part of their audit workflows.</p>
+<pre><code># Export your xpub from hardware wallet or node
+bitcoin-cli getaddressinfo &lt;address&gt;
+# Look for 'pubkey' and trace to parent xpub if needed
+</code></pre>
+<p><strong>BIP-322 Message Signing</strong></p>
+<p>BIP-322 is the modern standard for proving message signatures across various address types, including multisig. It replaces the older BIP-191 (“signmessage”) standard, which doesn’t work cleanly with multisig.</p>
+<p>With BIP-322, you can sign a message with multiple keys, and verifiers can confirm that the required threshold was met without needing a full transaction:</p>
+<pre><code># Create a BIP-322 message proof (implementation varies by wallet/node)
+# This allows proof like: &quot;I control at least 2 of 3 keys in this address&quot;
+# without revealing which specific keys or broadcasting a transaction
+</code></pre>
+<p>This is especially useful for time-bound proofs, legal declarations, or audit documentation where creating an actual transaction is unnecessary.</p>
+<p><strong>Signature Aggregation with MuSig2</strong></p>
+<p>For multisig schemes using Taproot addresses, MuSig2 allows multiple signers to create a single aggregated signature that cryptographically proves all participants signed. This appears as a single signature on-chain but requires coordination from all m signers.</p>
+<p>The advantage: smaller on-chain footprint and cleaner proof structure. The drawback: requires all required signers to participate in the same signing round.</p>
+<h2 id="real-world-verification-scenarios">Real-World Verification Scenarios</h2>
+<p><strong>Regulatory Audits</strong></p>
+<p>Exchange custody and corporate treasuries must regularly prove to regulators that private keys remain under their control. Share a signed PSBT demonstrating a small test transaction, or provide xPubs with blockchain evidence of unspent UTXOs in the multisig address.</p>
+<p><strong>Proof of Reserve</strong></p>
+<p>Bitcoin ETF operators must verify they hold the exact amount of Bitcoin they claim. They typically:</p>
+<ol>
+<li>Share xPubs for each key they control</li>
+<li>Provide a PSBT signature proving they initiated a transaction (without broadcasting it)</li>
+<li>Include blockchain confirmations that UTXOs exist at the expected multisig address</li>
+</ol>
+<p><strong>Inheritance and Legal Transfer</strong></p>
+<p>Courts and legal frameworks increasingly accept cryptographic proofs instead of traditional key escrow. A multisig owner can demonstrate ownership via:</p>
+<ul>
+<li>A dated, signed BIP-322 message</li>
+<li>A PSBT showing control over the threshold</li>
+<li>xPub data proving continuous custody</li>
+</ul>
+<p>This avoids the security nightmare of handing keys to lawyers or escrow agents.</p>
+<h2 id="key-considerations">Key Considerations</h2>
+<p><strong>Never Combine All Keys for Proof</strong></p>
+<p>Avoid any method that requires gathering all private keys in one place, even temporarily. Use PSBTs and distributed signing workflows instead.</p>
+<p><strong>Timestamp Your Proofs</strong></p>
+<p>Include timestamps and nonce values in message signatures. This prevents replay attacks and proves the proof is current.</p>
+<p><strong>Verify Merkle Paths</strong></p>
+<p>When sharing blockchain evidence (like xPub derivation paths), confirm the exact UTXOs, amounts, and transaction IDs against multiple block explorers or your own node.</p>
+<p><strong>Plan for Key Rotation</strong></p>
+<p>Multisig setups often involve key rotation or replacement. Document which keys were used for each proof, especially for legal purposes.</p>
+<p>Multisig ownership proof is now standard practice in institutional custody, insurance claims, and estate planning. Use PSBTs for transaction-specific proof, xPubs for ongoing audit capability, and BIP-322 for message-based declarations.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

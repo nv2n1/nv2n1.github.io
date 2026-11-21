@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>docker-latest-version(1) · Linux Manual Pages</title>
+<meta name="description" content="docker-version – Show the Docker version information.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-docker-latest-version/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>docker-latest-version(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> docker-version &#8211; Show the Docker version information. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>docker version</code> [<code>&#8211;help</code>] [<code>-f</code>|<code>&#8211;format</code>[=<i>FORMAT</i>]] </p>
+<h2>DESCRIPTION</h2>
+<p> This command displays version information for both the Docker client and daemon. </p>
+<h2>OPTIONS</h2>
+<p> <code>&#8211;help</code><br />
+&nbsp;<wbr>Print usage statement </p>
+<p> <code>-f</code>, <code>&#8211;format</code>=&quot;&quot;<br />
+&nbsp;<wbr>Format the output using the given go template. </p>
+<h2>EXAMPLES</h2>
+<h2>Display Docker version information</h2>
+<p> The default output: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ docker version
+Client:
+ Version:      1.8.0
+ API version:  1.20
+ Go version:   go1.4.2
+ Git commit:   f5bae0a
+ Built:        Tue Jun 23 17:56:00 UTC 2015
+ OS/Arch:      linux/amd64
+Server:
+ Version:      1.8.0
+ API version:  1.20
+ Go version:   go1.4.2
+ Git commit:   f5bae0a
+ Built:        Tue Jun 23 17:56:00 UTC 2015
+ OS/Arch:      linux/amd64
+</pre>
+</dd></dl>
+<p> Get server version: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+$ docker version-- format '&#123;&#123;.Server.Version}}' 1.8.0
+</code></pre>
+</dd></dl>
+<p> Dump raw data: </p>
+<p> To view all available fields, you can use the format &#123;&#123;json .}}. </p>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+$ docker version-- format '&#123;&#123;json .}}'
+{
+    "Client" : {"Version" : "1.8.0", "ApiVersion" : "1.20", "GitCommit" : "f5bae0a", "GoVersion" : "go1.4.2", "Os" : "linux", "Arch" : "amd64", "BuildTime" : "Tue Jun 23 17:56:00 UTC 2015"}, "ServerOK" : true, "Server":
+    {
+        "Version" : "1.8.0", "ApiVersion" : "1.20", "GitCommit" : "f5bae0a", "GoVersion" : "go1.4.2", "Os" : "linux", "Arch" : "amd64", "KernelVersion" : "3.13.2-gentoo", "BuildTime" : "Tue Jun 23 17:56:00 UTC 2015"
+    }
+}
+</code></pre>
+</dd></dl>
+<h2>HISTORY</h2>
+<p> June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; June 2015, updated by John Howard &lt;jhoward [at] microsoft.com&gt; June 2015, updated by Patrick Hemmer &lt;patrick.hemmer [at] gmail.com </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdinvoke(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdinvoke/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdinvoke(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::invoke - std::invoke</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;functional&gt;
+template&lt; class F, class... Args&gt;                                                          (since C++17)
+std::invoke_result_t&lt;F, Args...&gt; invoke(F&amp;&amp; f, Args&amp;&amp;... args) noexcept(/* see below */);</code></pre> 
+<p>Invoke the Callable object f with the parameters args. As by INVOKE(std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)&hellip;).
+where INVOKE(f, t1, t2, &hellip;, tN) is defined as follows:</p>
+<ul>
+<li>If f is a pointer_to_member_function of class T:
+ <wbr> <wbr> <wbr> <wbr> <wbr> * If std::is_base_of&lt;T, std::decay_t&lt;decltype(t1)&gt;&gt;::value is true, then INVOKE(f, t1, t2, &hellip;, tN) is equivalent to (t1.<em>f)(t2, &hellip;, tN)
+ <wbr> <wbr> <wbr> <wbr> <wbr> </em> If std::decay_t&lt;decltype(t1)&gt; is a specialization of std::reference_wrapper, then INVOKE(f, t1, t2, &hellip;, tN) is equivalent to (t1.get().<em>f)(t2, &hellip;, tN)
+ <wbr> <wbr> <wbr> <wbr> <wbr> </em> If t1 does not satisfy the previous items, then INVOKE(f, t1, t2, &hellip;, tN) is equivalent to ((*t1).*f)(t2, &hellip;, tN).</li>
+<li>Otherwise, if N == 1 and f is a pointer_to_data_member of class T:
+ <wbr> <wbr> <wbr> <wbr> <wbr> * If std::is_base_of&lt;T, std::decay_t&lt;decltype(t1)&gt;&gt;::value is true, then INVOKE(f, t1) is equivalent to t1.<em>f
+ <wbr> <wbr> <wbr> <wbr> <wbr> </em> If std::decay_t&lt;decltype(t1)&gt; is a specialization of std::reference_wrapper, then INVOKE(f, t1) is equivalent to t1.get().<em>f
+ <wbr> <wbr> <wbr> <wbr> <wbr> </em> If t1 does not satisfy the previous items, then INVOKE(f, t1) is equivalent to (*t1).*f</li>
+<li>Otherwise, INVOKE(f, t1, t2, &hellip;, tN) is equivalent to f(t1, t2, &hellip;, tN) (that is, f is a FunctionObject)</li>
+</ul>
+<h2>Parameters</h2>
+<p>f - Callable object to be invoked
+args - arguments to pass to f</p>
+<h2>Exceptions</h2>
+<p>noexcept specification:
+noexcept(std::is_nothrow_invocable_v&lt;F, Args&hellip;&gt;)</p>
+<h2>Possible implementation</h2>
+<p> <wbr> namespace detail {
+ <wbr> template &lt;class T&gt;
+ <wbr> struct is_reference_wrapper : std::false_type {};
+ <wbr> template &lt;class U&gt;
+ <wbr> struct is_reference_wrapper&lt;std::reference_wrapper&lt;U&gt;&gt; : std::true_type {};
+ <wbr> template &lt;class T&gt;
+ <wbr> constexpr bool is_reference_wrapper_v = is_reference_wrapper&lt;T&gt;::value;</p>
+<p> <wbr> template &lt;class T, class Type, class T1, class&hellip; Args&gt;
+ <wbr> decltype(auto) INVOKE(Type T::* f, T1&amp;&amp; t1, Args&amp;&amp;&hellip; args)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> if constexpr (std::is_member_function_pointer_v&lt;decltype(f)&gt;) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if constexpr (std::is_base_of_v&lt;T, std::decay_t&lt;T1&gt;&gt;)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return (std::forward&lt;T1&gt;(t1).*f)(std::forward&lt;Args&gt;(args)&hellip;);
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> else if constexpr (is_reference_wrapper_v&lt;std::decay_t&lt;T1&gt;&gt;)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return (t1.get().*f)(std::forward&lt;Args&gt;(args)&hellip;);
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> else
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return ((*std::forward&lt;T1&gt;(t1)).*f)(std::forward&lt;Args&gt;(args)&hellip;);
+ <wbr> <wbr> <wbr> <wbr> <wbr> } else {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> static_assert(std::is_member_object_pointer_v&lt;decltype(f)&gt;);
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> static_assert(sizeof&hellip;(args) == 0);
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if constexpr (std::is_base_of_v&lt;T, std::decay_t&lt;T1&gt;&gt;)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return std::forward&lt;T1&gt;(t1).*f;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> else if constexpr (is_reference_wrapper_v&lt;std::decay_t&lt;T1&gt;&gt;)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return t1.get().*f;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> else
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return (*std::forward&lt;T1&gt;(t1)).*f;
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> }</p>
+<p> <wbr> template &lt;class F, class&hellip; Args&gt;
+ <wbr> decltype(auto) INVOKE(F&amp;&amp; f, Args&amp;&amp;&hellip; args)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> return std::forward&lt;F&gt;(f)(std::forward&lt;Args&gt;(args)&hellip;);
+ <wbr> }
+ <wbr> } // namespace detail</p>
+<p> <wbr> template&lt; class F, class&hellip; Args&gt;
+ <wbr> std::invoke_result_t&lt;F, Args&hellip;&gt; invoke(F&amp;&amp; f, Args&amp;&amp;&hellip; args)
+ <wbr> <wbr> <wbr> noexcept(std::is_nothrow_invocable_v&lt;F, Args&hellip;&gt;)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return detail::INVOKE(std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)&hellip;);
+ <wbr> }</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;functional&gt;
+#include &lt;iostream&gt;
+struct Foo {
+Foo(int num)
+: num_(num)
+{
+}
+void print_add(int i) const
+{
+std::cout &lt;&lt; num_ + i &lt;&lt; &lsquo;\n&rsquo;;
+}
+int num_;
+};
+void print_num(int i)
+{
+std::cout &lt;&lt; i &lt;&lt; &lsquo;\n&rsquo;;
+}
+struct PrintNum {
+void operator()(int i) const
+{
+std::cout &lt;&lt; i &lt;&lt; &lsquo;\n&rsquo;;
+}
+};
+int main()
+{
+// invoke a free function
+std::invoke(print_num, -9);
+// invoke a lambda
+std::invoke(<a href=""></a> { print_num(42); });
+// invoke a member function
+const Foo foo(314159);
+std::invoke(&amp;Foo::print_add, foo, 1);
+// invoke (access) a data member
+std::cout &lt;&lt; &quot;num_: &quot; &lt;&lt; std::invoke(&amp;Foo::num_, foo) &lt;&lt; &lsquo;\n&rsquo;;
+// invoke a function object
+std::invoke(PrintNum(), 18);
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> -9
+ <wbr> 42
+ <wbr> 314160
+ <wbr> num_: 314159
+ <wbr> 18</p>
+<h2>See also</h2>
+<p>mem_fn creates a function object out of a pointer to a member
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+result_of
+invoke_result deduces the result type of invoking a callable object with a set of arguments
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>(removed in C++20)
+<i>(C++17)</i>
+is_invocable
+is_invocable_r checks if a type can be invoked (as if by std::invoke) with the given argument types
+is_nothrow_invocable <i>(class template)</i>
+is_nothrow_invocable_r
+<i>(C++17)</i>
+apply calls a function with a tuple of arguments
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++17)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

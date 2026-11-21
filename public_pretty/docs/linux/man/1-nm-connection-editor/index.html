@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nm-connection-editor(1) · Linux Manual Pages</title>
+<meta name="description" content="nm-connection-editor – network connection editor for NetworkManager">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nm-connection-editor/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nm-connection-editor(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> nm-connection-editor &#8211; network connection editor for NetworkManager </p>
+<h2>SYNOPSIS</h2>
+<p> <code>nm-connection-editor</code> [ <i>OPTIONS</i> ] </p>
+<h2>DESCRIPTION</h2>
+<p> <code>nm-connection-editor</code> is a GTK-based application to add, remove, and modify network connections stored by NetworkManager. NetworkManager must be running for any network connections to be added, removed, or modified. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-t, &#8211;type=&lt;type&gt;</code></dt>
+<dd> Type of connection to create or show. Values are NetworkManager setting names, eg &quot;802-3-ethernet&quot;, &quot;802-11-wireless&quot;, &quot;bridge&quot;, &quot;bond&quot;, &quot;infiniband&quot;, &quot;vlan&quot;, etc. Does nothing if &#8211;create or &#8211;show is not given.</dd>
+<dt><code>-s, &#8211;show</code></dt>
+<dd> Expand or collapse the network list to highlight the network connection type given by &#8211;type.</dd>
+<dt><code>-c, &#8211;create</code></dt>
+<dd> Create a new connection of the type given by &#8211;type and allow the user to modify connection details.</dd>
+<dt><code>-e, &#8211;edit=&lt;uuid&gt;</code></dt>
+<dd> Show the network connection edit window for the connection of the given UUID. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-nmcli/">nmcli</a>(1),</code> <code><a href="/docs/linux/man/8-networkmanager/">NetworkManager</a>(8),</code> <code><a href="/docs/linux/man/1-nm-applet/">nm-applet</a>(1).</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

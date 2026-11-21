@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfunctionoperator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfunctionoperator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfunctionoperator(3)</h1>
+
+
+
+
+
+<p>std::function&lt;R(Args&hellip;)&gt;::operator= - std::function&lt;R(Args&hellip;)&gt;::operator=</p>
+<h2>Synopsis</h2>
+<pre><code>function &amp;operator=(const function &amp;other);
+(1)(since C++ 11)
+    function &amp;
+    operator=(function &amp;&amp;other);
+(2)(since C++ 11)
+    function &amp;
+    operator=(std::nullptr_t);
+(since C++ 11)(until C++ 17)
+    function &amp;
+    operator=(std::nullptr_t) noexcept;
+(since C++ 17)
+    template &lt;class F&gt;
+    (3)(4)(since C++ 11)
+        function &amp;
+        operator=(F &amp;&amp;f);
+template &lt;class F&gt;
+(5)(since C++ 11)
+    function &amp;
+    operator=(std::reference_wrapper&lt;F&gt; f) noexcept;
+Assigns a new target to std::function.
+1) Assigns a copy of target of other, as if by executing function(other).swap(*this);
+2) Moves the target of other to *this. other is in a valid state with an unspecified value.
+3) Drops the current target. *this is empty after the call.
+4) Sets the target of *this to the callable f, as if by executing function(std::forward&lt;F&gt;(f)).swap(*this);
+.
+    This
+    operator does not participate in overload resolution unless f is Callable for argument types Args... and
+    return type R.
+    (since C++ 14)
+        5) Sets the target of * this to a copy of f,
+    as if by executing function(f).swap(*this);
+</code></pre>
+<h2>Parameters</h2>
+<p>other - another std::function object to copy the target of
+f - a callable to initialize the target with</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<p>F must meet the requirements of Callable.</p>
+<h2>Return value</h2>
+<p>*this</p>
+<h2>Notes</h2>
+<p>Even before allocator support was removed from std::function in C++17, these assignment operators use the default allocator rather than the allocator of *this or the allocator of other (see LWG_#2386).</p>
+<h2>See also</h2>
+<p>assign assigns a new target
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i>
+<i>(until C++17)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

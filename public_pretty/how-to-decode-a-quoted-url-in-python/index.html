@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decoding URL-Encoded Strings in Python - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-decode-a-quoted-url-in-python/">
+  <meta name="description" content="URL encoding (percent-encoding) converts special characters into a format safe for transmission over HTTP. In Python, the urllib.parse module provides …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Decoding URL-Encoded Strings in Python">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-decode-a-quoted-url-in-python/">
+  <meta property="og:description" content="URL encoding (percent-encoding) converts special characters into a format safe for transmission over HTTP. In Python, the urllib.parse module provides …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Decoding URL-Encoded Strings in Python</h1>
+        <time class="post-date" datetime="2018-03-31T16:22:35Z">March 31, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>URL encoding (percent-encoding) converts special characters into a format safe for transmission over HTTP. In Python, the <code>urllib.parse</code> module provides straightforward functions for decoding these strings.</p>
+<h2 id="basic-decoding-with-unquote">Basic Decoding with unquote</h2>
+<p>The <code>unquote()</code> function is the standard approach:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">unquote</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">encoded_url</span> <span class="o">=</span> <span class="s2">&#34;https://example.com/search?q=hello%20world&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">decoded_url</span> <span class="o">=</span> <span class="n">unquote</span><span class="p">(</span><span class="n">encoded_url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">decoded_url</span><span class="p">)</span>  <span class="c1"># Output: https://example.com/search?q=hello world</span>
+</span></span></code></pre></div><p>This handles the most common case: decoding URL-encoded strings where spaces become <code>%20</code> and special characters are percent-encoded.</p>
+<h2 id="handling-different-encoding-standards">Handling Different Encoding Standards</h2>
+<p>By default, <code>unquote()</code> assumes UTF-8 encoding. If you’re dealing with different character encodings, specify the <code>encoding</code> parameter:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">unquote</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># UTF-8 (default)</span>
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">unquote</span><span class="p">(</span><span class="s2">&#34;caf%C3%A9&#34;</span><span class="p">)</span>  <span class="c1"># café</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Explicitly specify encoding</span>
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">unquote</span><span class="p">(</span><span class="s2">&#34;caf%C3%A9&#34;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="decoding-only-specific-parts">Decoding Only Specific Parts</h2>
+<p>For structured URLs, decode only the relevant component:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">unquote</span><span class="p">,</span> <span class="n">urlparse</span><span class="p">,</span> <span class="n">parse_qs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">url</span> <span class="o">=</span> <span class="s2">&#34;https://example.com/search?q=hello%20world&amp;filter=tech%26news&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">parsed</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Decode query parameters</span>
+</span></span><span class="line"><span class="cl"><span class="n">query_params</span> <span class="o">=</span> <span class="n">parse_qs</span><span class="p">(</span><span class="n">parsed</span><span class="o">.</span><span class="n">query</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">decoded_params</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">[</span><span class="n">unquote</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vals</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">vals</span> <span class="ow">in</span> <span class="n">query_params</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">decoded_params</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: {&#39;q&#39;: [&#39;hello world&#39;], &#39;filter&#39;: [&#39;tech&amp;news&#39;]}</span>
+</span></span></code></pre></div><p>This approach is safer than decoding the entire URL at once, since the scheme and domain shouldn’t contain encoded characters.</p>
+<h2 id="working-with-plus-signs">Working with Plus Signs</h2>
+<p>In application/x-www-form-urlencoded data (commonly used in form submissions), spaces are encoded as <code>+</code> rather than <code>%20</code>. Use <code>unquote_plus()</code> for this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">unquote_plus</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">form_data</span> <span class="o">=</span> <span class="s2">&#34;name=John+Doe&amp;email=john</span><span class="si">%40e</span><span class="s2">xample.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">decoded</span> <span class="o">=</span> <span class="n">unquote_plus</span><span class="p">(</span><span class="n">form_data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">decoded</span><span class="p">)</span>  <span class="c1"># Output: name=John Doe&amp;email=john@example.com</span>
+</span></span></code></pre></div><h2 id="modern-alternatives">Modern Alternatives</h2>
+<p>For async applications and complex URL handling, the <code>yarl</code> library provides a cleaner API:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">yarl</span> <span class="kn">import</span> <span class="n">URL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">url</span> <span class="o">=</span> <span class="n">URL</span><span class="p">(</span><span class="s2">&#34;https://example.com/search?q=hello%20world&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">query_string</span><span class="p">)</span>  <span class="c1"># hello%20world</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">query</span><span class="p">[</span><span class="s1">&#39;q&#39;</span><span class="p">])</span>    <span class="c1"># hello world (automatically decoded)</span>
+</span></span></code></pre></div><p>The <code>yarl</code> library integrates well with <code>aiohttp</code> and is the preferred choice for modern async frameworks.</p>
+<h2 id="security-considerations">Security Considerations</h2>
+<p>Be cautious when decoding URLs from untrusted sources. Decoded paths can enable path traversal attacks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">unquote</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Dangerous: user input decoded without validation</span>
+</span></span><span class="line"><span class="cl"><span class="n">user_path</span> <span class="o">=</span> <span class="n">unquote</span><span class="p">(</span><span class="n">request_param</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">file_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&#34;/var/www/documents&#34;</span><span class="p">)</span> <span class="o">/</span> <span class="n">user_path</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Safe: validate and normalize</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">user_path</span> <span class="o">=</span> <span class="n">unquote</span><span class="p">(</span><span class="n">request_param</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">base_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&#34;/var/www/documents&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">file_path</span> <span class="o">=</span> <span class="p">(</span><span class="n">base_dir</span> <span class="o">/</span> <span class="n">user_path</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Ensure the file is within the allowed directory</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="ow">not</span> <span class="nb">str</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">base_dir</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&#34;Path traversal attempted&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Always resolve paths to their canonical form and verify they remain within expected boundaries before filesystem operations.</p>
+<h2 id="common-pitfalls-and-best-practices">Common Pitfalls and Best Practices</h2>
+<p>When working with Python on Linux systems, keep these considerations in mind. Always use virtual environments to avoid polluting the system Python installation. Python 2 reached end-of-life in 2020, so ensure you are using Python 3 for all new projects.</p>
+<p>For system scripting, prefer the subprocess module over os.system for better control over process execution. Use pathlib instead of os.path for cleaner file path handling in modern Python.</p>
+<h2 id="related-commands-and-tools">Related Commands and Tools</h2>
+<p>These complementary Python tools and commands are useful for daily development workflows:</p>
+<ul>
+<li>python3 -m venv myenv – Create an isolated virtual environment</li>
+<li>pip list –outdated – Check which packages need updating</li>
+<li>python3 -m py_compile script.py – Check syntax without running</li>
+<li>black script.py – Auto-format code to PEP 8 standards</li>
+<li>mypy script.py – Static type checking for Python code</li>
+</ul>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

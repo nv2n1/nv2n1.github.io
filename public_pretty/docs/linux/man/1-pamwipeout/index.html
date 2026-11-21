@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pamwipeout(1) · Linux Manual Pages</title>
+<meta name="description" content="pamwipeout – replace detail with smooth gradient from one edge to the other">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pamwipeout/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pamwipeout(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pamwipeout &#8211; replace detail with smooth gradient from one edge to the other</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pamwipeout</code> {<code>-lr | -tb</code>} [<i>filename</i>] </p>
+<p> Minimum unique abbreviation of options is acceptable. You may use double hyphens instead of single hyphen to denote options. </p>
+<h2>DESCRIPTION</h2>
+<p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
+<p> The <code>pamwipeout</code> utility takes a Neptbm image as input and the uses two opposite edges of the image to wipe out anything in between. You can use it in combination with <code>pamcut</code> and <code>pnmpaste</code> / <code>pamcomp</code> to remove unwanted parts of a larger image. The program replaces the pixels in between the two edges with a gradient from one edge to the other. </p>
+<p> In <code>top-bottom</code> mode, the program reads the whole image into memory before it can start processing. In <code>left-right</code> it will read the image a row at the time, process that row and write it to the output file. Therefore, in case of very large images, it may be better to use instead of &quot;<code>pamwipeout -tb</code>&quot; a pipe of &quot;<code>pamflip -cw | pamwipeout -lr | pamflip -ccw</code>&quot;. </p>
+<p> In his blog at<br />
+&nbsp;<wbr> <a rel="nofollow" href="http://www.i-am.ws">www.i-am.ws</a> , the author wrote about a predecessor of &quot;pamwipeout&quot; at the time named &quot;pnmblend&quot;. It shows a good example of what can be accomplished with this utility. </p>
+<h2>PARAMETERS</h2>
+<p> <i>Filename</i> is the name of the input file. If you don&#8217;t specify this, <code>pamwipeout</code> reads the image from Standard Input. </p>
+<h2>OPTIONS</h2>
+<p> &lt;dl compact=&quot;compact&quot;&gt;</p>
+<dl>
+<dt><code>-tb</code> | <code>-lr</code></dt>
+<dd>
+<p> This option chooses between a vertical and a horizontal gradient. You must specify one of these, but not both. </p>
+</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code>pam</code>(1)<br />
+&nbsp;<wbr>and <code><a href="/docs/linux/man/1-pamflip/">pamflip</a></code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pamcomp/">pamcomp</a></code>(1) , <code><a href="/docs/linux/man/1-pnmpaste/">pnmpaste</a></code>(1) </p>
+<h2>HISTORY</h2>
+<p> <code>pamwipeout</code> was new in Netpbm 10.54 (March 2011). </p>
+<h2>AUTHORS</h2>
+<p> <i>Willem van Schaik</i> wrote this program in January 2011 and contributed it to Netpbm. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

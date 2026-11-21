@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dnsdist(1) · Linux Manual Pages</title>
+<meta name="description" content="dnsdist – tool to balance DNS queries over downstream servers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dnsdist/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dnsdist(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> dnsdist &#8211; tool to balance DNS queries over downstream servers</p>
+<h2>SYNOPSIS</h2>
+<p> dnsdist [OPTION]&#8230; ADDRESS&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> dnsdist receives DNS queries and relays them to one or more downstream servers. It subsequently sends back responses to the original requestor. </p>
+<p> dnsdist operates over TCP and UDP, and strives to deliver very high performance over both. </p>
+<p> Currently, queries are sent to the downstream server with the least outstanding queries. This effectively implies load balancing, making sure that slower servers get less queries. </p>
+<p> If a reply has not come in after a few seconds, it is removed from the queue, but in the short term, timeouts do cause a server to get less traffic. </p>
+<p> IPv4 and IPv6 operation can be mixed and matched, in other words, queries coming in over IPv6 could be forwarded to IPv4 and vice versa. </p>
+<p> dnsdist is scriptable in Lua, see the dnsdist documentation for more information on this.</p>
+<h2>SCOPE</h2>
+<p> dnsdist does not &#8216;think&#8217; about DNS, and does not perform any kind of caching, nor is it aware of the quality of the answers it is relaying. </p>
+<p> dnsdist assumes that each query leads to exactly one response, which is true for all DNS except for AXFR, which is therefore not supported. </p>
+<p> The goal for dnsdist is to remain simple. If more powerful loadbalancing is required, dedicated hardware or software is recommended. Linux Virtual Server for example is often mentioned.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-a,&#8211;acl </code>NETMASK</dt>
+<dd> Add NETMASK to the ACL.</dd>
+<dl>
+</dl>
+<dt><code>-C,&#8211;config </code>FILE</dt>
+<dd> Load configuration from FILE.</dd>
+<dl>
+</dl>
+<dt><code>&#8211;check-config</code></dt>
+<dd> Test the configuration file (which may be set with &#8211;config or -C) for errors. dnsdist will show the errors and exit with a non-zero exit-code when errors are found.</dd>
+<dl>
+</dl>
+<dt><code>-c,&#8211;client [</code>ADDRESS[:PORT]]</dt>
+<dd> Operate as a client, connect to dnsdist. This will read the dnsdist configuration for the controlSocket statement and connect to it. When ADDRESS (with optional PORT) is set, dnsdist will connect to that instead.</dd>
+<dl>
+</dl>
+<dt><code>-k,&#8211;setkey </code>KEY</dt>
+<dd> When operating as a client(-c, &#8211;client), use KEY as shared secret to connect to dnsdist. This should be the same key that is used on the server (set with setKey()). Note that this will leak the key into your shell&#8217;s history. Only available when dnsdist is compiled with libsodium support.</dd>
+<dl>
+</dl>
+<dt><code>-d,&#8211;daemon</code></dt>
+<dd> Operate as a daemon.</dd>
+<dl>
+</dl>
+<dt><code>-e,&#8211;execute </code>CMD</dt>
+<dd> Connect to dnsdist and execute CMD.</dd>
+<dl>
+</dl>
+<dt><code>-h,&#8211;help</code></dt>
+<dd> Display a helpful message and exit.</dd>
+<dl>
+</dl>
+<dt><code>-l,&#8211;local </code>ADDRESS</dt>
+<dd> Bind to ADDRESS, Supply as many addresses (using multiple &#8211;local statements) to listen on as required. Specify IPv4 as 0.0.0.0:53 and IPv6 as [::]:53.</dd>
+<dl>
+</dl>
+<dt><code>&#8211;supervised</code></dt>
+<dd> Run in foreground, but do not spawn a console. Use this switch to run dnsdist inside a supervisor (use with e.g. systemd and daemontools).</dd>
+<dl>
+</dl>
+<dt><code>&#8211;disable-syslog</code></dt>
+<dd> Disable logging to syslog. Use this when running inside a supervisor that handles logging (like systemd). Do not use in combination with &#8211;daemon.</dd>
+<dl>
+</dl>
+<dt><code>-p,&#8211;pidfile </code>FILE</dt>
+<dd> Write a pidfile to FILE, works only with &#8211;daemon.</dd>
+<dl>
+</dl>
+<dt><code>-u,&#8211;uid </code>UID</dt>
+<dd> Change the process user to UID after binding sockets. UID can be a name or number.</dd>
+<dl>
+</dl>
+<dt><code>-g,&#8211;gid </code>GID</dt>
+<dd> Change the process group to GID after binding sockets. GID Can be a name or number.</dd>
+<dl>
+</dl>
+<dt><code>-V,&#8211;version</code></dt>
+<dd> Show the dnsdist version and exit.</dd>
+<dl>
+</dl>
+<dt><code>ADDRESS</code></dt>
+<dd> Any number of downstream DNS servers, in the same syntax as used with &#8211;local. If the port is not specified, 53 is used.</dd>
+<dl>
+</dl>
+</dl>
+<h2>BUGS</h2>
+<p> Right now, the TCP support has some rather arbitrary limits.</p>
+<h2>RESOURCES</h2>
+<p> Website: <a rel="nofollow" href="http://dnsdist.org">http://dnsdist.org</a></p>
+<h2>AUTHORS</h2>
+<p> PowerDNS.com BV. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

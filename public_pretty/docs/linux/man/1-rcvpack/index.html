@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rcvpack(1) · Linux Manual Pages</title>
+<meta name="description" content="rcvpack – append message to file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rcvpack/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rcvpack(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> rcvpack &#8211; append message to file </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>/usr/libexec/nmh/rcvpack</code> <i>file</i> [<code>-mbox</code>] [<code>-mmdf</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>rcvpack</code> program will append a copy of the message to the file listed on its command line. </dd>
+<p> If the <code>-mbox</code> switch is given (the default), then the messages are separated using mbox (uucp) style delimiters. This is the format used by most mail clients (elm, mailx, etc.). </p>
+<p> If the <code>-mmdf</code> switch is given, then the messages are separated by mmdf style delimiters. Each message in the file is separated by four CTRL-A&#8217;s and a newline. </p>
+<p> <code>rcvpack</code> will correctly lock and unlock the file to serialize access to the file, when running multiple copies of <code>rcvpack</code>. </p>
+<p> In general, its use is obsoleted by the <code>file</code> action of <code>slocal</code>, although it might still have occasional uses in various shell scripts.</p>
+<h2>FILES</h2>
+<pre>
+^/etc/nmh/mts.conf~^nmh mts configuration file
+</pre>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-rcvdist/">rcvdist</a></i>(1), <i><a href="/docs/linux/man/1-rcvstore/">rcvstore</a></i>(1), <i><a href="/docs/linux/man/1-rcvtty/">rcvtty</a></i>(1), <i><a href="/docs/linux/man/1-slocal/">slocal</a></i>(1)</p>
+<h2>BUGS</h2>
+<p> Only two return codes are meaningful, others should be. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

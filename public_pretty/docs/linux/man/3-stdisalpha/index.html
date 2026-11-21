@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdisalpha(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdisalpha/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdisalpha(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::isalpha - std::isalpha</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cctype&gt;
+    int isalpha(int ch);</code></pre> 
+<p>Checks if the given character is an alphabetic character as classified by the currently installed C locale. In the default locale, the following characters are alphabetic:</p>
+<ul>
+<li>uppercase letters ABCDEFGHIJKLMNOPQRSTUVWXYZ</li>
+<li>lowercase letters abcdefghijklmnopqrstuvwxyz
+In locales other than &quot;C&quot;, an alphabetic character is a character for which std::isupper() or std::islower() returns non-zero or any other character considered alphabetic by the locale. In any case, std::iscntrl(), std::isdigit(), std::ispunct() and std::isspace() will return zero for this character.
+The behavior is undefined if the value of ch is not representable as unsigned char or is not equal to EOF.</li>
+</ul>
+<h2>Parameters</h2>
+<p>ch - character to classify</p>
+<h2>Return value</h2>
+<p>Non-zero value if the character is an alphabetic character, zero otherwise.</p>
+<h2>Notes</h2>
+<p>Like all other functions from &lt;cctype&gt;, the behavior of std::isalpha is undefined if the argument&rsquo;s value is neither representable as unsigned char nor equal to EOF. To use these functions safely with plain chars (or signed chars), the argument should first be converted to unsigned char: bool my_isalpha(char ch)</p>
+<p>{
+return std::isalpha(static_cast&lt;unsigned char&gt;(ch));
+}
+Similarly, they should not be directly used with standard algorithms when the iterator&rsquo;s value type is char or signed char. Instead, convert the value to unsigned char first: int count_alphas(const std::string &amp;s)</p>
+<p>{
+return std::count_if(s.begin(), s.end(),
+// static_cast&lt;int(*)(int)&gt;(std::isalpha)         // wrong
+// [](int c){ return std::isalpha(c); }           // wrong
+// [](char c){ return std::isalpha(c); }          // wrong
+[](unsigned char c) { return std::isalpha(c); } // correct
+);
+}</p>
+<h2>Example</h2>
+<p>Demonstrates the use of isalpha() with different locales (OS-specific).
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;cctype&gt;
+#include &lt;clocale&gt;
+int main()
+{
+unsigned char c = &lsquo;\xdf&rsquo;; // German letter ß in ISO-8859-1
+std::cout &lt;&lt; &quot;isalpha('\xdf', default C locale) returned &quot;
+&lt;&lt; std::boolalpha &lt;&lt; (bool)std::isalpha(c) &lt;&lt; &lsquo;\n&rsquo;;
+std::setlocale(LC_ALL, &quot;de_DE.iso88591&quot;);
+std::cout &lt;&lt; &quot;isalpha('\xdf', ISO-8859-1 locale) returned &quot;
+&lt;&lt; std::boolalpha &lt;&lt; (bool)std::isalpha(c) &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> isalpha(&rsquo;\xdf&rsquo;, default C locale) returned false
+ <wbr> isalpha(&rsquo;\xdf&rsquo;, ISO-8859-1 locale) returned true</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if a character is classified as alphabetic by a locale
+isalpha(std::locale) <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if a wide character is alphabetic
+iswalpha <i>(function)</i>
+ASCII values iscntrl isprint isspace isblank isgraph ispunct isalnum isalpha isupper islower isdigit isxdigit
+decimal hexadecimal octal characters iswcntrl iswprint iswspace iswblank iswgraph iswpunct iswalnum iswalpha iswupper iswlower iswdigit iswxdigit
+0–8 \x0–\x8 \0–\10 control codes (NUL, etc.) ≠0 0 0 0 0 0 0 0 0 0 0 0
+9 \x9 \11 tab (\t) ≠0 0 ≠0 ≠0 0 0 0 0 0 0 0 0
+10–13 \xA–\xD \12–\15 whitespaces (\n, \v, \f, \r) ≠0 0 ≠0 0 0 0 0 0 0 0 0 0
+14–31 \xE–\x1F \16–\37 control codes ≠0 0 0 0 0 0 0 0 0 0 0 0
+32 \x20 \40 space 0 ≠0 ≠0 ≠0 0 0 0 0 0 0 0 0
+33–47 \x21–\x2F \41–\57 !&quot;#$%&amp;&rsquo;()*+,-./ 0 ≠0 0 0 ≠0 ≠0 0 0 0 0 0 0
+48–57 \x30–\x39 \60–\71 0123456789 0 ≠0 0 0 ≠0 0 ≠0 0 0 0 ≠0 ≠0
+58–64 \x3A–\x40 \72–\100:;&lt;=&gt;?@ 0 ≠0 0 0 ≠0 ≠0 0 0 0 0 0 0
+65–70 \x41–\x46 \101–\10ABCDEF 0 ≠0 0 0 ≠0 0 ≠0 ≠0 ≠0 0 0 ≠0
+71–90 \x47–\x5A \107–\13GHIJKLMNOP 0 ≠0 0 0 ≠0 0 ≠0 ≠0 ≠0 0 0 0
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> QRSTUVWXYZ
+91–96 \x5B–\x60 \133–\14[]^_` 0 ≠0 0 0 ≠0 ≠0 0 0 0 0 0 0
+97–102\x61–\x66 \141–\14abcdef 0 ≠0 0 0 ≠0 0 ≠0 ≠0 0 ≠0 0 ≠0
+103–12\x67–\x7A \147–\17ghijklmnop 0 ≠0 0 0 ≠0 0 ≠0 ≠0 0 ≠0 0 0
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> qrstuvwxyz
+123–12\x7B–\x7E \172–\17{|}~ 0 ≠0 0 0 ≠0 ≠0 0 0 0 0 0 0
+127 \x7F \177 backspace character (DEL) ≠0 0 0 0 0 0 0 0 0 0 0 0</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

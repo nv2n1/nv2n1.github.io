@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ne_get_session_flag(3) · Linux Manual Pages</title>
+<meta name="description" content="ne_set_session_flag, ne_get_session_flag – set and retrieve session flags">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ne_get_session_flag/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ne_get_session_flag(3)</h1>
+
+
+
+
+
+<p>ne_set_session_flag, ne_get_session_flag &#8211; set and retrieve session flags</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;ne_request.h&gt;
+void ne_set_session_flag(ne_session *sess, ne_session_flag flag, int value);
+int ne_get_session_flag(ne_session *sess, ne_session_flag flag);</code></pre>
+<h2>Description</h2>
+<dd>The <code>ne_set_session_flag</code> function enables or disables a session flag. Passing a non-zero <i>value</i> argument enables the flag, and zero disables it. </dd>
+<p> The following flags are defined: </p>
+<p> <code>NE_SESSFLAG_PERSIST</code></p>
+<dl>
+<dd>disable this flag to prevent use of persistent connections</dd></dl>
+<p> <code>NE_SESSFLAG_ICYPROTO</code></p>
+<dl>
+<dd>enable this flag to enable support for non-HTTP ShoutCast-style &quot;ICY&quot; responses</dd></dl>
+<p> <code>NE_SESSFLAG_SSLv2</code></p>
+<dl>
+<dd>disable this flag to disable support for the SSLv2 protocol</dd></dl>
+<p> <code>NE_SESSFLAG_RFC4918</code></p>
+<dl>
+<dd>enable this flag to enable support for RFC4918-only WebDAV features; losing backwards-compatibility with RFC2518 servers</dd></dl>
+<p> <code>NE_SESSFLAG_CONNAUTH</code></p>
+<dl>
+<dd>enable this flag if an RFC-violating connection-based HTTP authentication scheme is in use</dd></dl>
+<p> <code>NE_SESSFLAG_TLS_SNI</code></p>
+<dl>
+<dd>disable this flag if a server is used which does not correctly support the TLS SNI extension</dd></dl>
+<p> <code>NE_SESSFLAG_EXPECT100</code></p>
+<dl>
+<dd>enable this flag to enable the request flag <code>NE_REQFLAG_EXPECT100</code> for new requests</dd></dl>
+<h2>Return Value</h2>
+<p>The <code>ne_get_session_flag</code> function returns zero if a flag is disabled, less than zero if the flag is not supported, or greater than zero if the flag is enabled.</p>
+<h2>See Also</h2>
+<p>ne_session_create, ne_set_request_flag.</p>
+<h2>Author</h2>
+<p><code>Joe Orton</code> &lt;neon [at] lists.manyfish.co.uk&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

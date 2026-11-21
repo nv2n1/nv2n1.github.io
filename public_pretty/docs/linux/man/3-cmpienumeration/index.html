@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cmpienumeration(3) · Linux Manual Pages</title>
+<meta name="description" content="CMPIEnumeration – CMPIEnumeration class implementation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-cmpienumeration/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>cmpienumeration(3)</h1>
+
+
+
+
+
+<p>CMPIEnumeration &#8211; CMPIEnumeration class implementation</p>
+<h2>Synopsis</h2>
+<h3>Public Attributes</h3>
+<p>int <code>void * hdl</code><br />
+ Opaque pointer to class instance data.<br />
+ <code>CMPIEnumerationFT</code> * <code>ft</code><br />
+ <i>Pointer to the Args Function Table. </i></p>
+<h2>Methods</h2>
+<p><code>CMPIStatus</code>(* <code>release</code> )(<code>CMPIEnumeration</code> *en)<br />
+ <i>The Enumeration object will not be used any further and may be freed by CMPI run time system. </i><br />
+ <code>CMPIEnumeration</code> *(* <code>clone</code> )(<code>CMPIEnumeration</code> *en, <code>CMPIStatus</code> *rc)<br />
+ <i>Create an independent copy of this Enumeration object. </i><br />
+ <code>CMPIData</code>(* <code>getNext</code> )(<code>CMPIEnumeration</code> *en, <code>CMPIStatus</code> *rc)<br />
+ <i>Get the next element of this Enumeration. </i><br />
+ <code>CMPIBoolean</code>(* <code>hasNext</code> )(<code>CMPIEnumeration</code> *en, <code>CMPIStatus</code> *rc)<br />
+ <i>Test for any elements left in this Enumeration. </i><br />
+ <code>CMPIArray</code> *(* <code>toArray</code> )(<code>CMPIEnumeration</code> *en, <code>CMPIStatus</code> *rc)<br />
+ <i>Convert this Enumeration into an Array. </i></p>
+<h2>Description</h2>
+<p>Native CMPIEnumeration implementation. </p>
+<p> This is the native CMPIEnumeration implementation as used for remote providers. It reflects the well-defined interface of a regular CMPIEnumeration, however, it works independently from the management broker. </p>
+<p> It is part of a native broker implementation that simulates CMPI data types rather than interacting with the entities in a full-grown CIMOM.</p>
+<h2>See Also</h2>
+<p>Common Manageability Programming Interface (CMPI) &#8211; OpenGroup</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

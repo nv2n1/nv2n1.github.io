@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rpmdb2solv(1) · Linux Manual Pages</title>
+<meta name="description" content="rpmdb2solv – convert the rpm database into a solv file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rpmdb2solv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rpmdb2solv(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> rpmdb2solv &#8211; convert the rpm database into a solv file </p>
+<h2>SYNOPSIS</h2>
+<p> <code>rpmdb2solv</code> [<i>OPTIONS</i>] [<i>REFFILE.solv</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> The rpmdb2solv tool reads rpm&#8217;s installed packages database and writes it in solv file format to standard output. You can make use of an old version of the database by specifying a <i>REFFILE.solv</i> file. </p>
+<p> <code>-o</code> <i>OUTFILE</i></p>
+<dl>
+<dt>
+</dt><dd> Write the generated solv to <i>OUTFILE</i> instead of standard output.</dd></dl>
+<p> <code>-P</code></p>
+<dl>
+<dt>
+</dt><dd> Print percentages as packages are being read in. The output format is like rpm&#8217;s &#8211;percent option.</dd></dl>
+<p> <code>-r</code> <i>ROOTDIR</i></p>
+<dl>
+<dt>
+</dt><dd> Use <i>ROOTDIR</i> as root directory.</dd></dl>
+<p> <code>-k</code></p>
+<dl>
+<dt>
+</dt><dd> Read pubkeys from the rpm database instead of installed packages. Note that many distributions stopped storing pubkeys in the database but use a directory like <code>/var/lib/rpm/pubkeys</code> instead.</dd></dl>
+<p> <code>-A</code></p>
+<dl>
+<dt>
+</dt><dd> Also scan the <code>/usr/share/appdata</code> for installed appdata files and create pseudo packages for each file.</dd></dl>
+<p> <code>-p</code> <i>PRODDIR</i></p>
+<dl>
+<dt>
+</dt><dd> Also read SUSE product files from directory <i>PRODDIR</i>. The standard directory is <code>/etc/products.d</code>.</dd></dl>
+<p> <code>-n</code></p>
+<dl>
+<dt>
+</dt><dd> Do not read any packages from the rpm database. This is useful together with <code>-p</code> to only convert SUSE products.</dd></dl>
+<p> <code>-X</code></p>
+<dl>
+<dt>
+</dt><dd> Autoexpand SUSE pattern and product provides into packages.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-rpms2solv/">rpms2solv</a>(1)</p>
+<h2>AUTHOR</h2>
+<p> Michael Schroeder &lt;mls [at] suse.de&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Managing Proxy Settings on Windows via Command Line - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/setproxy-%E4%B8%80%E4%B8%AA%E8%AE%BE%E7%BD%AEie%E4%BB%A3%E7%90%86%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/">
+  <meta name="description" content="Managing proxy settings through the GUI is tedious, especially when you need to switch between multiple proxy servers frequently. Rather than hunting through …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Managing Proxy Settings on Windows via Command Line">
+  <meta property="og:url" content="https://www.systutorials.com/setproxy-%E4%B8%80%E4%B8%AA%E8%AE%BE%E7%BD%AEie%E4%BB%A3%E7%90%86%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/">
+  <meta property="og:description" content="Managing proxy settings through the GUI is tedious, especially when you need to switch between multiple proxy servers frequently. Rather than hunting through …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/software-design/">Software Design</a>
+        </nav>
+        
+        <h1>Managing Proxy Settings on Windows via Command Line</h1>
+        <time class="post-date" datetime="2013-07-12T16:47:43Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Managing proxy settings through the GUI is tedious, especially when you need to switch between multiple proxy servers frequently. Rather than hunting through settings menus each time, command-line tools eliminate friction and enable scripted deployments across your infrastructure.</p>
+<p>The original SetProxy tool is outdated and incompatible with modern Windows versions. Use <code>netsh</code> or PowerShell instead—both are built-in with no compilation or installation required.</p>
+<h2 id="setting-winhttp-proxy-with-netsh">Setting WinHTTP Proxy with netsh</h2>
+<p>WinHTTP is the system-wide proxy layer used by most applications, including Edge, curl, and many CLI tools:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">netsh winhttp <span class="nb">set</span> proxy proxy-server<span class="o">=</span><span class="s2">&#34;http=192.168.1.100:8080;https=192.168.1.100:8080&#34;</span> bypass-list<span class="o">=</span><span class="s2">&#34;localhost;127.0.0.1;&lt;local&gt;&#34;</span>
+</span></span></code></pre></div><p>Breaking this down:</p>
+<ul>
+<li><code>proxy-server</code> accepts separate entries for HTTP and HTTPS</li>
+<li><code>bypass-list</code> specifies hosts that bypass the proxy</li>
+<li><code>&lt;local&gt;</code> is a built-in token that matches any single-label hostname</li>
+</ul>
+<p>View current settings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">netsh winhttp show proxy
+</span></span></code></pre></div><p>Clear the proxy entirely:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">netsh winhttp reset proxy
+</span></span></code></pre></div><h2 id="per-user-registry-proxy-legacy-applications">Per-User Registry Proxy (Legacy Applications)</h2>
+<p>Some older applications read proxy settings from the Registry instead of WinHTTP. This affects Internet Explorer and similar legacy tools:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$regPath</span> <span class="p">=</span> <span class="s2">&#34;HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="nv">$regPath</span> <span class="n">-Name</span> <span class="n">ProxyServer</span> <span class="n">-Value</span> <span class="s2">&#34;192.168.1.100:8080&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="nv">$regPath</span> <span class="n">-Name</span> <span class="n">ProxyEnable</span> <span class="n">-Value</span> <span class="mf">1</span>
+</span></span></code></pre></div><p>Disable it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="nv">$regPath</span> <span class="n">-Name</span> <span class="n">ProxyEnable</span> <span class="n">-Value</span> <span class="mf">0</span>
+</span></span></code></pre></div><p>If you need separate HTTP and HTTPS proxies, format them as a single value:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$regPath</span> <span class="p">=</span> <span class="s2">&#34;HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="nv">$regPath</span> <span class="n">-Name</span> <span class="n">ProxyServer</span> <span class="n">-Value</span> <span class="s2">&#34;http=192.168.1.100:8080;https=192.168.1.100:8443&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="nv">$regPath</span> <span class="n">-Name</span> <span class="n">ProxyEnable</span> <span class="n">-Value</span> <span class="mf">1</span>
+</span></span></code></pre></div><h2 id="batch-file-wrappers-for-quick-access">Batch File Wrappers for Quick Access</h2>
+<p>Create reusable batch files to toggle proxies without opening a terminal.</p>
+<p><strong>proxy-enable.bat:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl">netsh winhttp set proxy proxy-server=<span class="s2">&#34;http=192.168.1.100:8080;https=192.168.1.100:8080&#34;</span> bypass-list=<span class="s2">&#34;localhost;127.0.0.1;&lt;local&gt;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> Proxy enabled: 192.168.1.100:8080
+</span></span><span class="line"><span class="cl"><span class="k">pause</span>
+</span></span></code></pre></div><p><strong>proxy-disable.bat:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl">netsh winhttp reset proxy
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> Proxy disabled
+</span></span><span class="line"><span class="cl"><span class="k">pause</span>
+</span></span></code></pre></div><p>Save these to a folder on your PATH or create desktop shortcuts by right-clicking the batch file and selecting “Send to &gt; Desktop (create shortcut)”. Double-click to apply settings instantly.</p>
+<h2 id="automated-proxy-rotation">Automated Proxy Rotation</h2>
+<p>For environments requiring frequent proxy switches, rotate through a list randomly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$proxies</span> <span class="p">=</span> <span class="vm">@</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;proxy1.internal:8080&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;proxy2.internal:8080&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;proxy3.internal:8080&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$currentIndex</span> <span class="p">=</span> <span class="nb">Get-Random</span> <span class="n">-Minimum</span> <span class="mf">0</span> <span class="n">-Maximum</span> <span class="nv">$proxies</span><span class="p">.</span><span class="py">Length</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$proxy</span> <span class="p">=</span> <span class="nv">$proxies</span><span class="p">[</span><span class="nv">$currentIndex</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">netsh</span> <span class="n">winhttp</span> <span class="nb">set </span><span class="n">proxy</span> <span class="nb">proxy-server</span><span class="p">=</span><span class="s2">&#34;http=</span><span class="nv">$proxy</span><span class="s2">;https=</span><span class="nv">$proxy</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;Proxy set to: </span><span class="nv">$proxy</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>For sequential rotation with state persistence, use a configuration file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$configFile</span> <span class="p">=</span> <span class="s2">&#34;</span><span class="nv">$env:TEMP</span><span class="s2">\proxy-index.txt&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$lastIndex</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="nb">Test-Path</span> <span class="nv">$configFile</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="no">int</span><span class="p">](</span><span class="nb">Get-Content</span> <span class="nv">$configFile</span><span class="p">)</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="mf">0</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$proxies</span> <span class="p">=</span> <span class="vm">@</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;proxy1.internal:8080&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;proxy2.internal:8080&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;proxy3.internal:8080&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$nextIndex</span> <span class="p">=</span> <span class="p">(</span><span class="nv">$lastIndex</span> <span class="p">+</span> <span class="mf">1</span><span class="p">)</span> <span class="p">%</span> <span class="nv">$proxies</span><span class="p">.</span><span class="py">Length</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$proxy</span> <span class="p">=</span> <span class="nv">$proxies</span><span class="p">[</span><span class="nv">$nextIndex</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">netsh</span> <span class="n">winhttp</span> <span class="nb">set </span><span class="n">proxy</span> <span class="nb">proxy-server</span><span class="p">=</span><span class="s2">&#34;http=</span><span class="nv">$proxy</span><span class="s2">;https=</span><span class="nv">$proxy</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$nextIndex</span> <span class="p">|</span> <span class="nb">Set-Content</span> <span class="nv">$configFile</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;Proxy set to: </span><span class="nv">$proxy</span><span class="s2"> (index </span><span class="nv">$nextIndex</span><span class="s2">)&#34;</span>
+</span></span></code></pre></div><h2 id="applying-proxy-to-scheduled-tasks">Applying Proxy to Scheduled Tasks</h2>
+<p>When running applications or scripts as a service account, WinHTTP proxy settings are tied to the user context. If your task runs as SYSTEM, configure WinHTTP for that account:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># Run as Administrator</span>
+</span></span><span class="line"><span class="cl"><span class="c"># For SYSTEM context tasks, hardcode proxy in application config instead</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$regPath</span> <span class="p">=</span> <span class="s2">&#34;HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="nv">$regPath</span> <span class="n">-Name</span> <span class="n">ProxyServer</span> <span class="n">-Value</span> <span class="s2">&#34;192.168.1.100:8080&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="nv">$regPath</span> <span class="n">-Name</span> <span class="n">ProxyEnable</span> <span class="n">-Value</span> <span class="mf">1</span>
+</span></span></code></pre></div><p>Alternatively, hardcode the proxy in application configuration files or environment variables rather than relying on system-wide settings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">[</span><span class="no">Environment</span><span class="p">]::</span><span class="n">SetEnvironmentVariable</span><span class="p">(</span><span class="s2">&#34;HTTP_PROXY&#34;</span><span class="p">,</span> <span class="s2">&#34;http://192.168.1.100:8080&#34;</span><span class="p">,</span> <span class="s2">&#34;Machine&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="no">Environment</span><span class="p">]::</span><span class="n">SetEnvironmentVariable</span><span class="p">(</span><span class="s2">&#34;HTTPS_PROXY&#34;</span><span class="p">,</span> <span class="s2">&#34;http://192.168.1.100:8080&#34;</span><span class="p">,</span> <span class="s2">&#34;Machine&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="verifying-proxy-configuration">Verifying Proxy Configuration</h2>
+<p>Check what your system sees across different layers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># WinHTTP proxy (system-wide)</span>
+</span></span><span class="line"><span class="cl"><span class="n">netsh</span> <span class="n">winhttp</span> <span class="n">show</span> <span class="n">proxy</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># PowerShell&#39;s built-in proxy</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$env:HTTP_PROXY</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Internet Explorer / Legacy apps (Registry)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Get-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&#34;HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Machine-level environment variables</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="no">Environment</span><span class="p">]::</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s2">&#34;HTTP_PROXY&#34;</span><span class="p">,</span> <span class="s2">&#34;Machine&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Note that different components may use different proxy configurations. Applications that use WinHTTP see <code>netsh winhttp</code> settings, while older apps may only respect Registry settings. Language runtimes (Python, Node.js) typically respect <code>HTTP_PROXY</code> and <code>HTTPS_PROXY</code> environment variables.</p>
+<h2 id="socks-proxy-support">SOCKS Proxy Support</h2>
+<p>WinHTTP does not natively support SOCKS proxies. If you need SOCKS, use one of these approaches:</p>
+<ul>
+<li>Configure applications individually (<code>curl</code> via <code>--socks5</code>, <code>ssh</code> via <code>ProxyCommand</code>)</li>
+<li>Use a local HTTP-to-SOCKS converter like Privoxy or Tinyproxy</li>
+<li>Set environment variables for language-specific tools (Python, Node.js, Go, Rust) that understand SOCKS natively</li>
+</ul>
+<p>Example with Python:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">set</span> <span class="nv">HTTPS_PROXY</span><span class="o">=</span>socks5://localhost:1080
+</span></span><span class="line"><span class="cl">python script.py
+</span></span></code></pre></div><p>For persistent SOCKS support on Windows, consider running a local HTTP proxy that translates to SOCKS:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Install Privoxy, configure with SOCKS parent</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Edit privoxy config to forward to SOCKS5</span>
+</span></span><span class="line"><span class="cl">listen-address 127.0.0.1:8118
+</span></span><span class="line"><span class="cl">forward-socks5 / localhost:1080 .
+</span></span></code></pre></div><p>Then configure WinHTTP to use the local proxy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">netsh winhttp <span class="nb">set</span> proxy proxy-server<span class="o">=</span><span class="s2">&#34;http=127.0.0.1:8118;https=127.0.0.1:8118&#34;</span>
+</span></span></code></pre></div>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

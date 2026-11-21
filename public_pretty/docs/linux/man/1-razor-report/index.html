@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>razor-report(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-razor-report/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>razor-report(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>&quot;razor-report&quot; - Razor Reporting Agent</p>
+<h2>SYNOPSIS</h2>
+ <pre>
+    razor-report [options]  file_with_mail_in_rfc822_format
+    $ cat mail | razor-report
+    $ razor-report ./mail 
+    $ razor-report -d ./mail
+</pre>
+<h2>DESCRIPTION</h2>
+<p><tt>&quot;razor-report&quot;</tt> is the Razor Reporting Agent which is used for reporting spam messages to a Razor Nomination Server. <tt>&quot;razor-report&quot;</tt> should be generally called from a <font SIZE="-1">MUA,</font> although there are no restrictions on invoking it from the command-line. <tt>&quot;razor-report&quot;</tt> is a filter, which means that spam messages should be piped through it. By default, <tt>&quot;razor-report&quot;</tt> backgrounds and detaches itself from the control terminal at start-up.</p>
+<p>If <tt>&quot;razor-report&quot;</tt> is passed more than one mail, it will report each against the database. Please use this with caution, we don&rsquo;t want the database filled up with mails incorrectly identified as spam. <tt>&quot;razor-report&quot;</tt> supports mbox-formatted files with 1 or more mails in them as well as files containing a single <font SIZE="-1">RFC 822 </font>(non-mbox) mail. More than one file may be present on the command line, can be either a non-mbox or mbox in any order.</p>
+<p>However, more than one non-mbox mail cannot be read from stdin. Both <tt>&quot;razor-report&quot;</tt> and <i><a HREF="/docs/linux/man/1-razor-revoke/">razor-revoke</a></i>(1) require user authentication to work, see <i><a HREF="/docs/linux/man/1-razor-admin/">razor-admin</a></i>(1). This allows the Razor Nomination Server to keep track of how many messages a user reports and revokes. The more messages a user correctly reports and/or correctly revokes, the more trust the user earns. Likewise, when messages are incorrectly reported or revoked, the trust goes down for that user. Highly trusted users will have the most affect on the Razor Catalogue.</p>
+<h2>USAGE</h2>
+<p><tt>&quot;razor-report&quot;</tt> takes following arguments:</p>
+<dl>
+<dt>&quot;-h&quot;
+</dt><dd> Print a usage message and exit.
+</dd><dt>&quot;-v&quot;
+</dt><dd> Print the version number and exit.
+</dd><dt>&quot;-d | --verbose&quot;
+</dt><dd> Print debugging information to stdout.
+</dd><dt>&quot;-debuglevel=n | -dl=n&quot;
+</dt><dd> Set debug level to 'n'. Default is 3 without <tt>&quot;-d&quot;</tt> option, 9 with.
+</dd><dt>&quot;-whitelist=file&quot;
+</dt><dd> Specify file to use for whitelisting. Overrides 'whitelist' option in <tt>&quot;razor-agent.conf&quot;</tt>.
+</dd><dt>&quot;-s&quot;
+</dt><dd> Simulate a check. Do everything except talk to the server.
+</dd><dt>&quot;-conf=filename&quot;
+</dt><dd> Specifies an alternate configuration file. If not specified, it is computed, see <i>razor-agents</i>(1) manpage for details. See <i><a HREF="/docs/linux/man/5-razor-agent-conf/">razor-agent.conf</a></i>(5) manpage for various configuration options. The default is <tt>&quot;&lt;razorhome&gt;/razor-agent.conf&quot;</tt>.
+</dd><dt>&quot;-home=dir&quot;
+</dt><dd> Specify razorhome directory. This is where the configuration file, logfiles, identities, and server files live. If not specified, it is computed, see <i>razor-agents</i>(1) manpage for details.
+</dd><dt>&quot;-logfile=file&quot;
+</dt><dd> Specify file to log to instead of whats in configuration file. The default is <tt>&quot;&lt;razorhome&gt;/razor-agent.log&quot;</tt>.
+</dd><dt>&quot;-ident=filename&quot;
+</dt><dd> Specify an identify file to use for authenticating with Razor Servers. If not specified, <tt>&quot;&lt;razorhome&gt;/identity-&lt;user&gt;&quot;</tt> is used.
+</dd><dt>&quot;-rs=razor.server.com&quot;
+</dt><dd> Use this Razor Nomination Server instead of reading <tt>&quot;servers.nomination.lst&quot;</tt>.
+</dd><dt>&quot;-H&quot;
+</dt><dd> Compute and print the signature of the mail contents and exit. If <tt>&quot;-e=integer&quot;</tt> is not specified, all supported engines will be used.
+</dd><dt>&quot;-S=string&quot;
+</dt><dd> Accept a list of pre-computed (with <tt>&quot;-H&quot;</tt>) signatures on the command line, instead of computing one from mail content. Signatures can be submitted in hex or base64, but base64 is preferred. Requires <tt>&quot;-e=integer&quot;</tt>. Usage: 
+ razor-report -e 1 -S a8a3d545adb73f9733675571ffeaf10cba87745b
+</dd><dt>&quot;-e=integer&quot;
+</dt><dd> Specify engine used to create signatures. Must be 1, 2, 3, or 4 in this version. Engine 1, or <tt>&quot;-e=1&quot;</tt>, is used for Razor 1.x signatures. Used only with <tt>&quot;-S=string&quot;</tt> or <tt>&quot;-H&quot;</tt>.
+</dd><dt>&quot;-ep4=string&quot;
+</dt><dd> String used by engine 4 when computing signatures. Published by the Razor Nomination Servers and updated very frequently. Used only when <tt>&quot;-e=4&quot;</tt>.
+</dd><dt>&quot;-i=filename&quot;
+</dt><dd> Use identity from filename instead of reading &lt;razorhome&gt;/identity. Razor Servers compute trust for each unique identity. Razor Agents figure out the identity by a 2 step process. First, check if identity is specified via cmd-line (-i=file). If not there, then look in &lt;razorhome&gt; for identity file. If &lt;razorhome&gt; has no identity file, authentication will fail - you cannot report or revoke. See <i>razor-agents.conf</i>(5) for more on &lt;razorhome&gt;. ---fixme----
+</dd><dt>&quot;-a&quot;
+</dt><dd> Authenticate only. If authenticated, exit 0; if not, exit 1.
+</dd><dt>&quot;-f&quot;
+</dt><dd> Stay in foreground, do not detach and run in background.</dd></dl>
+<h2>INTEGRATION WITH MUTT</h2>
+<p>Add the following line to <tt>&quot;mutt.conf&quot;</tt></p>
+ <pre>
+     macro index S &quot;|/usr/bin/razor-report&quot;
+</pre> 
+<p>Then press S on the spam message in <tt>&quot;mutt&quot;</tt> to report it with <tt>&quot;razor-report&quot;</tt>. Since <tt>&quot;razor-report&quot;</tt> forks, the control will return immediately.</p>
+<h2>AUTHORS</h2>
+<p>Vipul Ved Prakash &lt;mail [at] vipul.net&gt;, and Chad Norwood &lt;chad [at] samo.org&gt;</p>
+<h2>SEE ALSO</h2>
+<p><i>razor-agents</i>(1), <i><a HREF="/docs/linux/man/5-razor-agent-conf/">razor-agent.conf</a></i>(5), <i><a HREF="/docs/linux/man/1-razor-check/">razor-check</a></i>(1), <i><a HREF="/docs/linux/man/1-razor-admin/">razor-admin</a></i>(1), <i><a HREF="/docs/linux/man/1-razor-revoke/">razor-revoke</a></i>(1), <i><a HREF="/docs/linux/man/5-razor-whitelist/">razor-whitelist</a></i>(5)</p>
+<h2>LICENSE</h2>
+<p>This is free software, distributed under the Artistic License 2.0.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>netplan-apply(8) · Linux Manual Pages</title>
+<meta name="description" content="netplan-apply – apply configuration from netplan YAML files to a running system">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-netplan-apply/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>netplan-apply(8)</h1>
+
+
+
+
+
+<p>netplan-apply &#8211; apply configuration from netplan YAML files to a running system</p>
+<h2>Synopsis</h2>
+<p>netplan [-debug] apply -h | -help </p>
+<p> netplan [-debug] apply</p>
+<h2>Description</h2>
+<p>netplan apply applies the current netplan configuration to a running system. </p>
+<p> The process works as follows:</p>
+<dl>
+<dt>1.</dt>
+<dd>The backend configuration is generated from netplan YAML files.</dd>
+<dt>2.</dt>
+<dd>The appropriate backends (<a href="/docs/linux/man/8-systemd-networkd/">systemd-networkd</a>(8) or <a href="/docs/linux/man/8-networkmanager/">NetworkManager</a>(8)) are invoked to bring up configured interfaces.</dd>
+<dt>3.</dt>
+<dd>netplan apply iterates through interfaces that are still down, unbinding them from their drivers, and rebinding them. This gives <a href="/docs/linux/man/7-udev/">udev</a>(7) renaming rules the opportunity to run.</dd>
+<dt>4.</dt>
+<dd>If any devices have been rebound, the appropriate backends are re-invoked in case more matches can be done.</dd></dl>
+<p> For information about the generation step, see <a href="/docs/linux/man/8-netplan-generate/">netplan-generate</a>(8). For details of the configuration file format, see <a href="/docs/linux/man/5-netplan/">netplan</a>(5).</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h, -help</code></dt>
+<dd>Print basic help.</dd>
+<dt><code>-debug</code></dt>
+<dd>Print debugging output during the process.</dd></dl>
+<h2>Known Issues</h2>
+<p>netplan apply will not remove virtual devices such as bridges and bonds that have been created, even if they are no longer described in the netplan configuration. </p>
+<p> This can be resolved by manually removing the virtual device (for example ip link delete dev bond0) and then running netplan apply, or by rebooting.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/5-netplan/">netplan</a>(5), <a href="/docs/linux/man/8-netplan-generate/">netplan-generate</a>(8), <a href="/docs/linux/man/8-netplan-try/">netplan-try</a>(8), <a href="/docs/linux/man/7-udev/">udev</a>(7), <a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a>(8), <a href="/docs/linux/man/8-networkmanager/">NetworkManager</a>(8)</p>
+<h2>Authors</h2>
+<p>Daniel Axtens (&lt;daniel.axtens [at] canonical.com&gt;).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

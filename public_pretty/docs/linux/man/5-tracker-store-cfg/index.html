@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tracker-store-cfg(5) · Linux Manual Pages</title>
+<meta name="description" content="tracker-store.cfg">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-tracker-store-cfg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>tracker-store-cfg(5)</h1>
+
+
+
+
+
+<p>tracker-store.cfg</p>
+<h2>Synopsis</h2>
+<p>$HOME/.config/tracker/tracker-store.cfg </p>
+<h2>Description</h2>
+<p>Tracker&#8217;s configuration is built on top of GSettings, part of GLib. This means that there is a proper schema for configurations and they can be viewed (normally) using the <code>dconf-editor</code> tool. Tracker also allows switching from the GSettings database, used by most (cross) desktop applications, to a key/value formatted files (like Microsoft&#8217;s INI format). To do this, the environment variable <code>TRACKER_USE_CONFIG_FILES</code> must be defined before running the application using that configuration. So where is this configuration? Well, normally they&#8217;re stored in <i>$HOME/.config/tracker/</i>, however, default values are not stored to config files, only <code>different</code> values are. This man page describes what keys and values can be used. See EXAMPLES for a general overview. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>verbosity</code>=&#8217;errors&#8217;</dt>
+<dd>
+<pre>Log verbosity.</pre>
+</dd><dt><code>graphupdated-delay</code>=1000</dt>
+<dd>
+<pre>Period in milliseconds between GraphUpdated signals being emitted when indexed data has changed inside the database.</pre>
+</dd></dl>
+<h2>Examples</h2>
+<p>The top level group is &quot;General&quot;. The default configuration (if saved to tracker-store.cfg), would look like: </p>
+<pre><code>[General]
+verbosity='errors';
+graphupdated-delay=1000;
+</code></pre>
+<h2>See Also</h2>
+<p><code>tracker-storefg</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

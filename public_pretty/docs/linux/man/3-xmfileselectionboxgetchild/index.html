@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmfileselectionboxgetchild(3) · Linux Manual Pages</title>
+<meta name="description" content="XmFileSelectionBoxGetChild — A FileSelectionBox function used to access a component">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmfileselectionboxgetchild/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmfileselectionboxgetchild(3)</h1>
+
+
+
+
+
+<p><code>XmFileSelectionBoxGetChild</code> &#8212; A FileSelectionBox function used to access a component</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/FileSB.h&gt;
+<code>Widget XmFileSelectionBoxGetChild</code>(
+<code>Widget widget</code>,
+<code>unsigned char child</code>);</pre>
+<h2>Description</h2>
+<p><code>XmFileSelectionBoxGetChild</code> is used to access a component within a FileSelectionBox. The parameters given to the function are the FileSelectionBox widget and a value indicating which component to access. </p>
+<p> NOTE: This routine is obsolete and exists for compatibility with previous releases. Instead of calling <code>XmFileSelectionBoxGetChild</code>, you should call <code>XtNameToWidget</code> as described in the <code><a href="/docs/linux/man/3-xmfileselectionbox/">XmFileSelectionBox</a></code>(3) reference page.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the FileSelectionBox widget ID.</dd>
+<dt><i>child</i></dt>
+<dd>Specifies a component within the FileSelectionBox. The following are legal values for this parameter:</dd>
+<dl COMPACT>
+<dd>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_APPLY_BUTTON</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_CANCEL_BUTTON</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_DEFAULT_BUTTON</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_DIR_LIST</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_DIR_LIST_LABEL</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_FILTER_LABEL</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_FILTER_TEXT</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_HELP_BUTTON</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_LIST</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_LIST_LABEL</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_OK_BUTTON</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_SELECTION_LABEL</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_SEPARATOR</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_TEXT</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmDIALOG_WORK_AREA</code></dd></dl>
+</dl>
+</dl>
+<p> For a complete definition of FileSelectionBox and its associated resources, see <code><a href="/docs/linux/man/3-xmfileselectionbox/">XmFileSelectionBox</a></code>(3).</p>
+<h2>Return</h2>
+<p>Returns the widget ID of the specified FileSelectionBox component. An application should not assume that the returned widget will be of any particular class.</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmfileselectionbox/">XmFileSelectionBox</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

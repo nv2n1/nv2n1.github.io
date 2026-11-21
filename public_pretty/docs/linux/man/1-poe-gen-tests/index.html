@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>poe-gen-tests(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-poe-gen-tests/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>poe-gen-tests(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>poe-gen-tests - generate standard POE tests for third-party modules</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+poe - gen - tests-- dirbase t / loops-- loop Glib-- loop Kqueue-- loop Event::Lib-- loop POE::XS::Loop::Poll
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>This program and the accompanying POE::Test::Loop::* modules make up <font SIZE="-1">POE</font>&rsquo;s tests for POE::Loop subclasses. These tests are designed to run identically regardless of the current event loop. <font SIZE="-1">POE</font> uses them to test the event loops it bundles:</p>
+ <pre>
+  POE::Loop::Gtk
+  POE::Loop::IO_Poll (--loop IO::Poll)
+  POE::Loop::Tk
+  POE::Loop::Event
+  POE::Loop::Select
+</pre> 
+<p>Developers of other POE::Loop modules are encouraged use this package to generate over 420 comprehensive tests for their own work.</p>
+<h2>USAGE</h2>
+<p>poe-gen-tests creates test files for one or more event loops beneath the directory specified in &ndash;dirbase. For example,</p>
+ <pre>
+  poe-gen-tests --dirbase t/loops --loop Select
+</pre> 
+<p>generates the following test files:</p>
+ <pre>
+  t/loops/select/all_errors.t
+  t/loops/select/comp_tcp.t
+  t/loops/select/comp_tcp_concurrent.t
+  t/loops/select/connect_errors.t
+  t/loops/select/k_alarms.t
+  t/loops/select/k_aliases.t
+  t/loops/select/k_detach.t
+  t/loops/select/k_selects.t
+  t/loops/select/k_sig_child.t
+  t/loops/select/k_signals.t
+  t/loops/select/k_signals_rerun.t
+  t/loops/select/sbk_signal_init.t
+  t/loops/select/ses_nfa.t
+  t/loops/select/ses_session.t
+  t/loops/select/wheel_accept.t
+  t/loops/select/wheel_curses.t
+  t/loops/select/wheel_readline.t
+  t/loops/select/wheel_readwrite.t
+  t/loops/select/wheel_run.t
+  t/loops/select/wheel_sf_ipv6.t
+  t/loops/select/wheel_sf_tcp.t
+  t/loops/select/wheel_sf_udp.t
+  t/loops/select/wheel_sf_unix.t
+  t/loops/select/wheel_tail.t
+</pre> 
+<p>The &ndash;loop parameter is either a POE::Loop::&hellip; class name or the event loop class that will complete the POE::Loop::&hellip; package name.</p>
+<p>poe - gen - tests&ndash; dirbase t / loops&ndash; loop Event::Lib poe - gen - tests&ndash; dirbase t / loops&ndash; loop POE::Loop::Event_Lib</p>
+<p>poe-gen-tests looks for a <code>=for poe_tests'' or </code>=begin poe_tests&rsquo;&rsquo; section within the POE::Loop class being tested. If defined, this section should include a single function, <i>skip_tests()</i>, that determines whether any given test should be skipped.</p>
+<p>Please see perlpod for syntax for <code>=for'' and </code>=begin&rsquo;&rsquo;. Also see <font SIZE="-1">PODDITIES</font> for notable differences between POE::Test::Loop&rsquo;s <font SIZE="-1">POD</font> support and the standard.</p>
+<p><i>skip_tests()</i> is called with one parameter, the base name of the test about to be executed. It returns false if the test should run, or a message that will be displayed to the user explaining why the test will be skipped. This message is passed directly to Test::More&rsquo;s <i>plan()</i> along with ``skip_all&rsquo;&rsquo;. The logic is essentially:</p>
+<p>if (my $why = skip_tests(&ldquo;k_signals_rerun&rdquo;)) {
+plan skip_all = &gt; $why;
+}</p>
+<p><i>skip_tests()</i> should load any modules required by the event loop. See most of the examples below.</p>
+<h3>Example poe_tests Directives</h3>
+<p>POE::Loop::Event checks whether the Event module exists and can be loaded, then whether specific tests can run under specific operating systems.</p>
+<p>=for poe_tests
+sub skip_tests
+{
+return &ldquo;Event tests require the Event module&rdquo; if (
+do { eval &ldquo;use Event&rdquo;; $@ });
+my $test_name = shift;
+if ($test_name eq &ldquo;k_signals_rerun&rdquo; and $ ^ O eq &ldquo;MSWin32&rdquo;) {
+return &ldquo;This test crashes Perl when run with Tk on $^O&rdquo;;
+}
+if ($test_name eq &ldquo;wheel_readline&rdquo; and $ ^ O eq &ldquo;darwin&rdquo;) {
+return &ldquo;Event skips two of its own tests for the same reason&rdquo;;
+}
+}</p>
+<p>POE::Loop::Gtk checks whether <font SIZE="-1">DISPLAY</font> is set, which implies that X is running. It then checks whether Gtk is available, loadable, and safely initializable before skipping specific tests.</p>
+<p>=for poe_tests
+sub skip_tests
+{
+my $test_name = shift;
+return &ldquo;Gtk needs a DISPLAY (set one today, okay?)&rdquo; unless(
+defined $ENV{DISPLAY} and length $ENV{DISPLAY});
+return &ldquo;Gtk tests require the Gtk module&rdquo; if do
+{
+eval &ldquo;use Gtk&rdquo;;
+$ @
+};
+return &ldquo;Gtk init failed.  Is DISPLAY valid?&rdquo; unless defined Gtk-&gt;init_check;
+if ($test_name eq &ldquo;z_rt39872_sigchld_stop&rdquo;) {
+return &ldquo;Gdk crashes&rdquo;;
+}
+return;
+}</p>
+<p>POE::Loop::IO_Poll checks for system compatibility before verifying that IO::Poll is available and loadable.</p>
+<p>=for poe_tests
+sub skip_tests
+{
+return &ldquo;IO::Poll is not 100% compatible with $^O&rdquo; if $ ^ O eq &ldquo;MSWin32&rdquo;;
+return &ldquo;IO::Poll tests require the IO::Poll module&rdquo; if (
+do { eval &ldquo;use IO::Poll&rdquo;; $@ });
+}</p>
+<p>POE::Loop::Select has no specific requirements.</p>
+<p>=for poe_tests
+sub skip_tests
+{
+return
+}</p>
+<p>POE::Loop::Tk needs an X display (except on Windows). Tk is not safe for <i>fork()</i>, so skip tests that require forking. And finally, check whether the Tk module is available, loadable, and runnable.</p>
+<p>=for poe_tests
+sub skip_tests
+{
+return &ldquo;Tk needs a DISPLAY (set one today, okay?)&rdquo; unless(
+(defined $ENV{DISPLAY} and length $ENV{DISPLAY}) or $ ^ O eq &ldquo;MSWin32&rdquo;);
+my $test_name = shift;
+if ($test_name eq &ldquo;k_signals_rerun&rdquo; and $ ^ O eq &ldquo;MSWin32&rdquo;) {
+return &ldquo;This test crashes Perl when run with Tk on $^O&rdquo;;
+}
+return &ldquo;Tk tests require the Tk module&rdquo; if do
+{
+eval &ldquo;use Tk&rdquo;;
+$ @
+};
+my $m = eval{Tk::MainWindow-&gt;new ()};
+if ($ @) {
+my $why = $ @;
+$why = ~s / at.* //;
+return &ldquo;Tk couldn&rsquo;t be initialized: $why&rdquo;;
+}
+return;
+}</p>
+<h2>INSTALL SCRIPT INTEGRATION</h2>
+<p>The POE::Loop tests started out as part of the <font SIZE="-1">POE</font> distribution. All the recommendations and examples that follow are written and tested against ExtUtils::MakeMaker because that&rsquo;s what <font SIZE="-1">POE</font> uses. Please adjust these recipes according to your taste and preference.</p>
+<h3>Calling the Test Generator</h3>
+<p>Tests need to be generated prior to the user or <font SIZE="-1">CPAN</font> shell running <code>make test''. A tidy way to do this might be to create a new Makefile target and include that as a dependency for </code>make test&rsquo;&rsquo;. <font SIZE="-1">POE</font> takes a simpler approach, calling the script from its Makefile.PL:</p>
+<p>system(
+$ ^ X, &ldquo;poe-gen-tests&rdquo;, &ldquo;&ndash;dirbase&rdquo;, &ldquo;t/30_loops&rdquo;,
+&ldquo;&ndash;loop&rdquo;, &ldquo;Event&rdquo;, &ldquo;&ndash;loop&rdquo;, &ldquo;Gtk&rdquo;, &ldquo;&ndash;loop&rdquo;, &ldquo;IO::Poll&rdquo;,
+&ldquo;&ndash;loop&rdquo;, &ldquo;Select&rdquo;, &ldquo;&ndash;loop&rdquo;, &ldquo;Tk&rdquo;, ) and
+die $ !;</p>
+<p>The previous approach generates tests at install time, so it&rsquo;s not necessary to include the generated files in the <font SIZE="-1">MANIFEST. </font> Test directories should also be excluded from the <font SIZE="-1">MANIFEST. </font> poe-gen-tests will create the necessary paths.</p>
+<p>It&rsquo;s also possible to generate the tests prior to ``make dist&rsquo;&rsquo;. The distribution&rsquo;s <font SIZE="-1">MANIFEST</font> must include the generated files in this case.</p>
+<p>Most people will not need to add the generated tests to their repositories.</p>
+<h2>Running the Tests</h2>
+<p>By default, ExtUtils::MakeMaker generates Makefiles that only run tests matching t/*.t. However authors are allowed to specify other test locations. Add the following parameter to <i>WriteMakefile()</i> so that the tests generated above will be executed:</p>
+ <pre>
+  tests =&gt; {
+    TESTS =&gt; &quot;t/*.t t/30_loops/*/*.t&quot;,
+  }
+</pre>
+<h2>CLEANING UP</h2>
+<p>Makefiles will not clean up files that aren&rsquo;t present in the <font SIZE="-1">MANIFEST.</font> This includes tests generated at install time. If this bothers you, you&rsquo;ll need to add directives to include the generated tests in the <code>clean'' and </code>distclean&rsquo;&rsquo; targets.</p>
+ <pre>
+  clean =&gt; {
+    FILES =&gt; &quot;t/30_loops/*/* t/30_loops/*&quot;,
+  }
+</pre> 
+<p>This assumes the ``t/30_loops&rsquo;&rsquo; directory contains only generated tests. It&rsquo;s recommended that generated and hand-coded tests not coexist in the same directory.</p>
+<p>It seems like a good idea to delete the deeper directories and files before their parents.</p>
+<h2>Skipping Network Tests</h2>
+<p>Some generated tests require a network to be present and accessible. Those tests will be skipped unless the file ``run_network_tests&rsquo;&rsquo; is present in the main distribution directory. You can include that file in your distribution&rsquo;s tarball, but it&rsquo;s better create it at install time after asking the user. Here&rsquo;s how <font SIZE="-1">POE</font> does it. Naturally you&rsquo;re free to do it some other way.</p>
+ <pre><code>
+#Switch to default behavior if STDIN isn't a tty.
+unless(-t STDIN)
+{
+    warn(
+        "\n",
+        "=============================================\n\n",
+        "STDIN is not a terminal.  Assuming --default.\n\n",
+        "=============================================\n\n", );
+    push @ARGV, "--default";
+}
+#Remind the user she can use-- default.
+unless(grep / ^--default$ /, @ARGV)
+{
+    warn(
+        "\n",
+        "================================================\n\n",
+        "Prompts may be bypassed with the --default flag.\n\n",
+        "================================================\n\n", );
+}
+#Should we run the network tests ?
+my $prompt = ("Some of POE's tests require a functional network.\n"."You can skip these tests if you'd like.\n\n"."Would you like to skip the network tests?");
+my $ret = "n";
+if (grep / ^--default$ /, @ARGV) {
+    print $prompt, " [$ret] $ret\n\n";
+} else {
+    $ret = prompt($prompt, "n");
+}
+my $marker = 'run_network_tests';
+unlink $marker;
+unless($ret = ~ / ^Y$ / i)
+{
+    open(TOUCH, "+&gt;$marker") and close TOUCH;
+}
+print "\n";
+</code></pre>
+<h2>Skipping Other Tests</h2>
+<p><font SIZE="-1">POE</font>&rsquo;s loop tests will enable or disable tests based on the event loop&rsquo;s capabilities. Distributions and event loops may set these variables to signal which tests are okay to run.</p>
+<h3><font SIZE="-1">POE_LOOP_USES_POLL</font></h3>
+<p>Some platforms do not support <i>poll()</i> on certain kinds of filehandles. Event loops that use <i>poll()</i> should set this environment variable to a true value. It will cause the tests to skip this troublesome combination.</p>
+<h3><font SIZE="-1">PODDITIES</font></h3>
+<p>Previous versions of POE::Test::Loops documented ``=for poe_tests&rsquo;&rsquo; sections terminated by =cut and containing blank lines. This is incorrect <font SIZE="-1">POD</font> syntax, and it&rsquo;s the reason the <i>skip_tests()</i> functions showed up in perldoc and on search.cpan.org. The following syntax is wrong and should not have been used. I&rsquo;m so sorry.</p>
+ <pre>
+  =for poe_tests
+  sub skip_tests { ... }
+  =cut
+</pre> 
+<p>The proper syntax is to terminate ``=for poe_tests&rsquo;&rsquo; with a blank line:</p>
+ <pre>
+  =for poe_tests
+  sub skip_tests {
+    ...
+  }
+</pre> 
+<p>Multi-line tests containing blank lines can be specified using <font SIZE="-1">POD</font>&rsquo;s <code>=begin poe_tests'' terminated by </code>=end poe_tests&rsquo;'.</p>
+ <pre>
+  =begin poe_tests
+  sub skip_tests {
+    ...
+  }
+  =end poe_tests
+</pre> 
+<p>All three syntaxes above are supported as of POE::Test::Loops version 1.034. The incorrect =for syntax is deprecated and will be removed in some future release.</p>
+<h2>SEE ALSO</h2>
+<p>POE::Test::Loops, POE::Loop, perlpod.</p>
+<h3><font SIZE="-1">BUG TRACKER</font></h3>
+<p><a rel="nofollow" HREF="https://rt.cpan.org/Dist/Display.html?Status=Active"><a href="https://rt.cpan.org/Dist/Display.html?Status=Active">https://rt.cpan.org/Dist/Display.html?Status=Active</a></a>&amp;Queue=POE-Test-Loops</p>
+<h3><font SIZE="-1">REPOSITORY</font></h3>
+<p><a rel="nofollow" HREF="https://poe.svn.sourceforge.net/svnroot/poe/trunk/poe-test-loops"><a href="https://poe.svn.sourceforge.net/svnroot/poe/trunk/poe-test-loops">https://poe.svn.sourceforge.net/svnroot/poe/trunk/poe-test-loops</a></a></p>
+<h3><font SIZE="-1">OTHER RESOURCES</font></h3>
+<p><a rel="nofollow" HREF="http://search.cpan.org/dist/POE-Test-Loops/"><a href="http://search.cpan.org/dist/POE-Test-Loops/">http://search.cpan.org/dist/POE-Test-Loops/</a></a></p>
+<h2>AUTHOR &amp; COPYRIGHT</h2>
+<p>Rocco Caputo &lt;rcaputo [at] cpan.org&gt;. Benjamin Smith &lt;bsmith [at] cpan.org&gt;. Countless other people.</p>
+<p>These tests are Copyright 1998-2013 by Rocco Caputo, Benjamin Smith, and countless contributors. All rights are reserved. These tests are free software; you may redistribute them and/or modify them under the same terms as Perl itself.</p>
+<p>Thanks to Martijn van Beers for beta testing and suggestions.</p>
+<h2>Index</h2>
+<dt><a HREF="#lbAO">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAS">AUTHOR &amp; COPYRIGHT</a>
+</dt><dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

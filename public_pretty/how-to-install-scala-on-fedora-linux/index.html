@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installing Scala on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-install-scala-on-fedora-linux/">
+  <meta name="description" content="Scala runs on the Java Virtual Machine, so you’ll need Java 11 or later installed first. Check your current version:
+java -version If you don’t have Java …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Installing Scala on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-install-scala-on-fedora-linux/">
+  <meta property="og:description" content="Scala runs on the Java Virtual Machine, so you’ll need Java 11 or later installed first. Check your current version:
+java -version If you don’t have Java …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/packages-desktop-applications/">Packages, Desktop &amp; Applications</a>
+        </nav>
+        
+        <h1>Installing Scala on Linux</h1>
+        <time class="post-date" datetime="2013-07-12T16:32:34Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Scala runs on the Java Virtual Machine, so you’ll need Java 11 or later installed first. Check your current version:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java -version
+</span></span></code></pre></div><p>If you don’t have Java installed, install it through your distribution’s package manager or use a tool like SDKMAN.</p>
+<h3 id="installing-via-sdkman-recommended">Installing via SDKMAN (Recommended)</h3>
+<p>SDKMAN is the most reliable way to manage Scala and other JVM tools. Install SDKMAN first if you haven’t:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -s <span class="s2">&#34;https://get.sdkman.io&#34;</span> <span class="p">|</span> bash
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.sdkman/bin/sdkman-init.sh&#34;</span>
+</span></span></code></pre></div><p>Then install Scala:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sdk install scala
+</span></span></code></pre></div><p>This installs the latest stable version. To install a specific version:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sdk install scala 3.3.1
+</span></span></code></pre></div><p>List available versions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sdk list scala
+</span></span></code></pre></div><p>Switch between installed versions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sdk use scala 3.3.1
+</span></span></code></pre></div><h3 id="installing-from-official-distribution">Installing from Official Distribution</h3>
+<p>Download the latest Scala release from <a href="https://www.scala-lang.org/download/" rel="nofollow noopener" target="_blank">scala-lang.org</a>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ~/Downloads
+</span></span><span class="line"><span class="cl">wget https://github.com/scala/scala/releases/download/v3.3.1/scala-3.3.1.tgz
+</span></span><span class="line"><span class="cl">tar -xzf scala-3.3.1.tgz
+</span></span><span class="line"><span class="cl">sudo mv scala-3.3.1 /opt/scala
+</span></span></code></pre></div><p>Add Scala to your PATH by editing <code>~/.bashrc</code> or <code>~/.zshrc</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;/opt/scala/bin:</span><span class="nv">$PATH</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>Reload your shell:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> ~/.bashrc
+</span></span></code></pre></div><p>Verify the installation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scala -version
+</span></span></code></pre></div><h3 id="installing-via-package-manager">Installing via Package Manager</h3>
+<p>Most distributions now carry reasonably current Scala packages:</p>
+<p><strong>Fedora/RHEL:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install scala
+</span></span></code></pre></div><p><strong>Debian/Ubuntu:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install scala
+</span></span></code></pre></div><p><strong>Arch:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S scala
+</span></span></code></pre></div><p>Check what version your distro offers before installing this way — sometimes it lags behind the latest releases. If you need a newer version, use SDKMAN or the official distribution method.</p>
+<h3 id="verification-and-basic-usage">Verification and Basic Usage</h3>
+<p>Verify installation worked:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scala -version
+</span></span><span class="line"><span class="cl">scala --version
+</span></span></code></pre></div><p>Launch the interactive REPL:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scala
+</span></span></code></pre></div><p>You’ll see the Scala prompt. Try a simple command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">scala</span><span class="o">&gt;</span> <span class="n">println</span><span class="o">(</span><span class="s">&#34;Hello, Scala&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nc">Hello</span><span class="o">,</span> <span class="nc">Scala</span>
+</span></span></code></pre></div><p>Exit with <code>Ctrl+D</code> or <code>:quit</code>.</p>
+<p>Create a simple Scala file to test compilation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &gt; HelloScala.scala <span class="s">&lt;&lt; &#39;EOF&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">object HelloScala {
+</span></span></span><span class="line"><span class="cl"><span class="s">  def main(args: Array[String]): Unit = {
+</span></span></span><span class="line"><span class="cl"><span class="s">    println(&#34;Hello from Scala!&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s">  }
+</span></span></span><span class="line"><span class="cl"><span class="s">}
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></div><p>Compile it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scalac HelloScala.scala
+</span></span></code></pre></div><p>Run it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scala HelloScala
+</span></span></code></pre></div><h3 id="troubleshooting">Troubleshooting</h3>
+<p>If <code>scala</code> command isn’t found after installation, verify the PATH is set correctly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl">which scala
+</span></span></code></pre></div><p>Ensure the directory containing the <code>scala</code> binary is in your PATH. If using the official distribution, double-check the <code>/opt/scala/bin</code> symlink exists:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -la /opt/scala/bin/scala
+</span></span></code></pre></div><p>If you’re behind a corporate proxy, configure it for SDKMAN:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SDKMAN_CURL_CONNECT_TIMEOUT</span><span class="o">=</span><span class="m">15</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SDKMAN_CURL_TIMEOUT</span><span class="o">=</span><span class="m">120</span>
+</span></span></code></pre></div><p>For build tools like sbt (Scala Build Tool), install it separately:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sdk install sbt
+</span></span></code></pre></div><p>Or via package manager:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install sbt        <span class="c1"># Fedora</span>
+</span></span><span class="line"><span class="cl">sudo apt install sbt        <span class="c1"># Debian/Ubuntu</span>
+</span></span></code></pre></div><p>SDKMAN remains the cleanest approach for development since it isolates versions per-user and doesn’t require sudo.</p>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<p>When encountering problems on Linux systems, follow a systematic approach. Check system logs first using journalctl for systemd-based distributions. Verify service status with systemctl before attempting restarts. For network issues, use ip addr and ss -tulpn to diagnose connectivity problems.</p>
+<p>Package management issues often stem from stale caches. Run dnf clean all on Fedora or apt clean on Ubuntu before retrying failed installations. If a package has unmet dependencies, try resolving them with dnf autoremove or apt autoremove.</p>
+<h2 id="related-system-commands">Related System Commands</h2>
+<p>These commands are frequently used alongside the tools discussed in this article:</p>
+<ul>
+<li>systemctl status service-name – Check if a service is running</li>
+<li>journalctl -u service-name -f – Follow service logs in real time</li>
+<li>rpm -qi package-name – Query installed package information</li>
+<li>dnf history – View package transaction history</li>
+<li>top or htop – Monitor system resource usage</li>
+</ul>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting Your Default Text Editor on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-change-the-default-text-editor-on-linux/">
+  <meta name="description" content="When you run crontab -e, git commit, visudo, or similar commands, Linux applications need to know which text editor to launch. This is controlled by environment …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Setting Your Default Text Editor on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-change-the-default-text-editor-on-linux/">
+  <meta property="og:description" content="When you run crontab -e, git commit, visudo, or similar commands, Linux applications need to know which text editor to launch. This is controlled by environment …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/command-line-text-tools/">Command Line &amp; Text Tools</a>
+        </nav>
+        
+        <h1>Setting Your Default Text Editor on Linux</h1>
+        <time class="post-date" datetime="2018-03-24T08:20:51Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When you run <code>crontab -e</code>, <code>git commit</code>, <code>visudo</code>, or similar commands, Linux applications need to know which text editor to launch. This is controlled by environment variables and system configuration, with several methods available depending on your needs.</p>
+<h2 id="understanding-editor-and-visual">Understanding EDITOR and VISUAL</h2>
+<p>The <code>EDITOR</code> environment variable tells applications which text editor to use. A related variable, <code>VISUAL</code>, takes precedence in many tools (git, less, man). If neither is set, most tools fall back to <code>vi</code> or <code>nano</code>.</p>
+<p>Check your current settings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$EDITOR</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$VISUAL</span>
+</span></span></code></pre></div><p>If nothing prints, no explicit default is set.</p>
+<h2 id="set-the-editor-for-your-current-session">Set the Editor for Your Current Session</h2>
+<p>For temporary changes that last only until you close the terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">EDITOR</span><span class="o">=</span>vim
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">VISUAL</span><span class="o">=</span>vim
+</span></span></code></pre></div><p>Replace <code>vim</code> with your preferred editor (<code>nano</code>, <code>emacs</code>, <code>code</code>, <code>neovim</code>, etc.).</p>
+<h2 id="set-the-editor-permanently-for-your-user">Set the Editor Permanently for Your User</h2>
+<p>Add the export lines to your shell configuration file. For bash:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export EDITOR=vim&#39;</span> &gt;&gt; ~/.bashrc
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export VISUAL=vim&#39;</span> &gt;&gt; ~/.bashrc
+</span></span></code></pre></div><p>For zsh (default on macOS and increasingly on Linux):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export EDITOR=vim&#39;</span> &gt;&gt; ~/.zshrc
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export VISUAL=vim&#39;</span> &gt;&gt; ~/.zshrc
+</span></span></code></pre></div><p>Reload your shell configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> ~/.bashrc
+</span></span><span class="line"><span class="cl"><span class="c1"># or</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> ~/.zshrc
+</span></span></code></pre></div><p>Or close and reopen your terminal.</p>
+<p>If you use fish shell:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">set</span> -Ux EDITOR vim
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -Ux VISUAL vim
+</span></span></code></pre></div><p>The <code>-U</code> flag makes it universal (persistent across sessions).</p>
+<h2 id="set-the-editor-system-wide">Set the Editor System-Wide</h2>
+<p>To set the default for all users, add it to <code>/etc/profile.d/</code> (the modular approach):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo tee /etc/profile.d/editor.sh &gt; /dev/null <span class="s">&lt;&lt; EOF
+</span></span></span><span class="line"><span class="cl"><span class="s">export EDITOR=vim
+</span></span></span><span class="line"><span class="cl"><span class="s">export VISUAL=vim
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></div><p>This is cleaner than editing <code>/etc/profile</code> or <code>/etc/bashrc</code> directly, as it isolates the setting and doesn’t interfere with distribution updates.</p>
+<h2 id="using-update-alternatives-debianubuntu">Using update-alternatives (Debian/Ubuntu)</h2>
+<p>Debian-based distributions provide <code>update-alternatives</code> for managing default programs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim <span class="m">100</span>
+</span></span><span class="line"><span class="cl">sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nano <span class="m">50</span>
+</span></span><span class="line"><span class="cl">sudo update-alternatives --install /usr/bin/editor editor /usr/bin/code <span class="m">90</span>
+</span></span></code></pre></div><p>The number at the end is the priority (higher wins in automatic mode). View the current selection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo update-alternatives --config editor
+</span></span></code></pre></div><p>This method is cleaner than environment variables for system-wide defaults and integrates with package management — if you remove a package, the alternative is automatically cleaned up.</p>
+<h2 id="override-the-editor-for-a-single-command">Override the Editor for a Single Command</h2>
+<p>Test a different editor without changing your configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">EDITOR</span><span class="o">=</span>nano crontab -e
+</span></span><span class="line"><span class="cl"><span class="nv">EDITOR</span><span class="o">=</span>code git commit
+</span></span></code></pre></div><p>This is useful for quick one-off changes or troubleshooting.</p>
+<h2 id="editors-that-need-additional-flags">Editors That Need Additional Flags</h2>
+<p>Some editors require flags to work correctly. VSCode and other GUI editors need the <code>--wait</code> flag to pause until you close the file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">EDITOR</span><span class="o">=</span><span class="s1">&#39;code --wait&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">VISUAL</span><span class="o">=</span><span class="s1">&#39;code --wait&#39;</span>
+</span></span></code></pre></div><p>Without <code>--wait</code>, the editor launches and immediately returns control, causing issues with tools like git that expect the editor to block until you’re done.</p>
+<p>For gedit:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">EDITOR</span><span class="o">=</span><span class="s1">&#39;gedit --standalone&#39;</span>
+</span></span></code></pre></div><p>For emacs in terminal mode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">EDITOR</span><span class="o">=</span><span class="s1">&#39;emacs -nw&#39;</span>
+</span></span></code></pre></div><h2 id="using-custom-or-non-standard-paths">Using Custom or Non-Standard Paths</h2>
+<p>If your editor isn’t in the system PATH, use the full path:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">EDITOR</span><span class="o">=</span>/opt/editors/myeditor/bin/editor
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">VISUAL</span><span class="o">=</span>/opt/editors/myeditor/bin/editor
+</span></span></code></pre></div><p>Verify the path exists:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">which vim
+</span></span><span class="line"><span class="cl"><span class="c1"># or</span>
+</span></span><span class="line"><span class="cl">ls -l /usr/bin/vim
+</span></span></code></pre></div><h2 id="common-editors-and-their-paths">Common Editors and Their Paths</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Editor</th>
+					<th>Path</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>vim</td>
+					<td><code>/usr/bin/vim</code></td>
+			</tr>
+			<tr>
+					<td>neovim</td>
+					<td><code>/usr/bin/nvim</code></td>
+			</tr>
+			<tr>
+					<td>nano</td>
+					<td><code>/usr/bin/nano</code></td>
+			</tr>
+			<tr>
+					<td>emacs</td>
+					<td><code>/usr/bin/emacs</code></td>
+			</tr>
+			<tr>
+					<td>gedit</td>
+					<td><code>/usr/bin/gedit</code></td>
+			</tr>
+			<tr>
+					<td>VS Code</td>
+					<td><code>/usr/bin/code</code></td>
+			</tr>
+			<tr>
+					<td>vi</td>
+					<td><code>/usr/bin/vi</code> (usually symlinked to vim)</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="setting-both-editor-and-visual">Setting Both EDITOR and VISUAL</h2>
+<p>For maximum compatibility, set both variables. Some tools check <code>VISUAL</code> first (git, less, man), while others check <code>EDITOR</code>. Setting both ensures you get your preferred editor regardless:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">VISUAL</span><span class="o">=</span>vim
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">EDITOR</span><span class="o">=</span>vim
+</span></span></code></pre></div><h2 id="debugging-editor-issues">Debugging Editor Issues</h2>
+<p>If your editor isn’t launching when expected:</p>
+<ol>
+<li>Verify the variable is set: <code>echo $EDITOR</code></li>
+<li>Test the editor directly with an empty file: <code>$EDITOR /tmp/test.txt</code></li>
+<li>Check that the path exists: <code>which $EDITOR</code> or <code>ls -l $(which $EDITOR)</code></li>
+<li>Try setting <code>VISUAL</code> explicitly if <code>EDITOR</code> doesn’t work</li>
+<li>Some tools (like git) read from config files instead — check <code>git config core.editor</code></li>
+</ol>
+<p>For git specifically, configure it directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global core.editor vim
+</span></span><span class="line"><span class="cl"><span class="c1"># or for a single repo</span>
+</span></span><span class="line"><span class="cl">git config core.editor vim
+</span></span></code></pre></div>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

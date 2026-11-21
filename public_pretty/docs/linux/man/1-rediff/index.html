@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rediff(1) · Linux Manual Pages</title>
+<meta name="description" content="rediff, editdiff – fix offsets and counts of a hand-edited diff">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rediff/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rediff(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> rediff, editdiff &#8211; fix offsets and counts of a hand-edited diff </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>rediff</code> <i>ORIGINAL</i> <i>EDITED</i></dt>
+<dt> <code>rediff</code> <i>EDITED</i></dt>
+<dt> <code>rediff</code> {[&#8211;help] | [&#8211;version]}</dt>
+<dt> <code>editdiff</code> <i>FILE</i></dt>
+<dt> <code>editdiff</code> {[&#8211;help] | [&#8211;version]}</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>You can use rediff to correct a hand-edited unified diff. Take a copy of the diff you want to edit, and edit it without changing any offsets or counts (the lines that begin &#8220;@@&#8221;). Then run rediff, telling it the name of the original diff file and the name of the one you have edited, and it will output the edited diff file but with corrected offsets and counts. </dd>
+<p> A small script, editdiff, is provided for editing a diff file in-place. </p>
+<p> The types of changes that are currently handled are: </p>
+<dl>
+<dt>
+</dt><dd> &bull; Modifying the text of any file content line (of course).</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; Adding new line insertions or deletions.</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; Adding, changing or removing context lines. Lines at the context horizon are dealt with by adjusting the offset and/or count.</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; Adding a single hunk (@@-prefixed section).</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; Removing multiple hunk (@@-prefixed sections).</dd></dl>
+<p> Alternatively, if only one argument is provided, it is taken to be the edited file and the counts and offsets are adjusted as appropriate. Some assumptions are made when used in this mode. See <code><a href="/docs/linux/man/1-recountdiff/">recountdiff</a></code>(1) for more information.</p>
+<h2>OPTIONS</h2>
+<p> <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Display a short usage message.</dd></dl>
+<p> <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Display the version number of rediff.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-interdiff/">interdiff</a></code>(1), <code><a href="/docs/linux/man/1-recountdiff/">recountdiff</a></code>(1)</p>
+<h2>AUTHOR</h2>
+<p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
+<dl>
+<dt>
+</dt><dd> Package maintainer</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

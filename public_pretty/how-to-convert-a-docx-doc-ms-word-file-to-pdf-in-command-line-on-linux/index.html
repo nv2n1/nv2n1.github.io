@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converting Word Documents to PDF on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-convert-a-docx-doc-ms-word-file-to-pdf-in-command-line-on-linux/">
+  <meta name="description" content="Several tools can convert .doc and .docx files to PDF from the command line. Here’s what works in practice.
+LibreOffice (most common approach) The standard …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Converting Word Documents to PDF on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-convert-a-docx-doc-ms-word-file-to-pdf-in-command-line-on-linux/">
+  <meta property="og:description" content="Several tools can convert .doc and .docx files to PDF from the command line. Here’s what works in practice.
+LibreOffice (most common approach) The standard …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>Converting Word Documents to PDF on Linux</h1>
+        <time class="post-date" datetime="2018-03-24T08:19:58Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Several tools can convert <code>.doc</code> and <code>.docx</code> files to PDF from the command line. Here’s what works in practice.</p>
+<h3 id="libreoffice-most-common-approach">LibreOffice (most common approach)</h3>
+<p>The standard command is:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">libreoffice --headless --convert-to pdf --outdir /path/to/output/ /path/to/file.docx
+</span></span></code></pre></div><p>This works well on systems with X11 available. However, on truly headless servers, <code>--headless</code> doesn’t fully suppress X11 requirements—LibreOffice will still fail without a display server, even though it won’t render anything visually.</p>
+<p>For headless environments, use <code>xvfb-run</code> to provide a virtual X server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xvfb-run -a libreoffice --headless --convert-to pdf --outdir /path/to/output/ /path/to/file.docx
+</span></span></code></pre></div><p>The <code>-a</code> flag tells xvfb-run to auto-select a display number. This works reliably in cron jobs and background processes.</p>
+<p><strong>Batch conversion example:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> file in *.docx<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  xvfb-run -a libreoffice --headless --convert-to pdf --outdir ./pdfs/ <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></div><p>LibreOffice handles most <code>.doc</code> and <code>.docx</code> files reasonably well, though complex formatting may not translate perfectly.</p>
+<h3 id="pandoc-lightweight-alternative">Pandoc (lightweight alternative)</h3>
+<p>For simpler documents, Pandoc offers a lighter-weight option:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pandoc input.docx -o output.pdf
+</span></span></code></pre></div><p>Pandoc requires a LaTeX installation for PDF output (<code>texlive-latex-base</code> on Debian/Ubuntu). It’s faster than LibreOffice for basic conversions but may drop some formatting.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt-get install pandoc texlive-latex-base texlive-latex-extra
+</span></span></code></pre></div><h3 id="unoconv-libreoffice-wrapper">Unoconv (LibreOffice wrapper)</h3>
+<p>Unoconv wraps LibreOffice with a simpler interface and can run a persistent server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">unoconv -f pdf input.docx
+</span></span></code></pre></div><p>For batch jobs, start the listener once:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">soffice --headless --accept<span class="o">=</span><span class="s2">&#34;socket,host=127.0.0.1,port=2002;urp;&#34;</span> <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">unoconv -s localhost:2002 -f pdf input.docx
+</span></span></code></pre></div><p>This avoids launching LibreOffice repeatedly.</p>
+<h3 id="libreoffice-with-timeout-production-consideration">Libreoffice with timeout (production consideration)</h3>
+<p>LibreOffice processes sometimes hang. Wrap conversions with a timeout:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">timeout <span class="m">30</span> xvfb-run -a libreoffice --headless --convert-to pdf <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --outdir /path/to/output/ /path/to/file.docx
+</span></span></code></pre></div><h3 id="python-automation">Python automation</h3>
+<p>For application integration, use <code>python-pptx</code> or <code>python-docx</code> libraries combined with conversion:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install python-docx
+</span></span></code></pre></div><p>Then script the conversion:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">subprocess</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">convert_docx_to_pdf</span><span class="p">(</span><span class="n">docx_path</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;xvfb-run&#39;</span><span class="p">,</span> <span class="s1">&#39;-a&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;libreoffice&#39;</span><span class="p">,</span> <span class="s1">&#39;--headless&#39;</span><span class="p">,</span> <span class="s1">&#39;--convert-to&#39;</span><span class="p">,</span> <span class="s1">&#39;pdf&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;--outdir&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">docx_path</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">convert_docx_to_pdf</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</span></span></code></pre></div><h3 id="comparison-summary">Comparison summary</h3>
+<table>
+	<thead>
+			<tr>
+					<th>Tool</th>
+					<th>Speed</th>
+					<th>Quality</th>
+					<th>Dependencies</th>
+					<th>Headless</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>LibreOffice</td>
+					<td>Slow</td>
+					<td>Good</td>
+					<td>Heavy</td>
+					<td>Needs xvfb</td>
+			</tr>
+			<tr>
+					<td>Pandoc</td>
+					<td>Fast</td>
+					<td>Basic</td>
+					<td>Medium</td>
+					<td>Yes</td>
+			</tr>
+			<tr>
+					<td>Unoconv</td>
+					<td>Medium</td>
+					<td>Good</td>
+					<td>Heavy</td>
+					<td>Yes (with server)</td>
+			</tr>
+	</tbody>
+</table>
+<p>For most Linux servers, LibreOffice + xvfb-run is the standard choice despite overhead. Pandoc works well for text-heavy documents. Always test with your specific document types before deploying to production.</p>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<p>When encountering problems on Linux systems, follow a systematic approach. Check system logs first using journalctl for systemd-based distributions. Verify service status with systemctl before attempting restarts. For network issues, use ip addr and ss -tulpn to diagnose connectivity problems.</p>
+<p>Package management issues often stem from stale caches. Run dnf clean all on Fedora or apt clean on Ubuntu before retrying failed installations. If a package has unmet dependencies, try resolving them with dnf autoremove or apt autoremove.</p>
+<h2 id="related-system-commands">Related System Commands</h2>
+<p>These commands are frequently used alongside the tools discussed in this article:</p>
+<ul>
+<li>systemctl status service-name – Check if a service is running</li>
+<li>journalctl -u service-name -f – Follow service logs in real time</li>
+<li>rpm -qi package-name – Query installed package information</li>
+<li>dnf history – View package transaction history</li>
+<li>top or htop – Monitor system resource usage</li>
+</ul>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

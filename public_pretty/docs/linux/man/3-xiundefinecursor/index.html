@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xiundefinecursor(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xiundefinecursor/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xiundefinecursor(3)</h1>
+
+
+
+
+
+<p>XIDefineCursor, XIUndefineCursor - define device cursors.</p>
+<h2>Synopsis</h2><pre>#include &lt;X11/extensions/XInput2.h&gt;</pre><pre>int XIDefineCursor( Display *display,
+ int deviceid,
+ Window win,
+ Cursor cursor);</pre><pre>int XIUndefineCursor( Display *display,
+ int deviceid,
+ Window win);</pre><pre>cursor
+ Specifies the cursor that is to be displayed or None.</pre><pre>deviceid
+ Specifies the device whose cursor is to change.</pre><pre>display
+ Specifies the connection to the X server.</pre><pre>win
+ Specifies the window.</pre><h2>Description</h2><dl COMPACT><dd><pre>If a cursor is set, it will be used when the device's pointer
+is in the window. If the cursor is None, it is equivalent to
+XIUndefineCursor.</pre></dd></dl><dl COMPACT><dd><pre>The deviceid must be a master pointer device or a BadDevice error is
+returned.</pre></dd></dl><dl COMPACT><dd><pre>XIDefineCursor can generate BadDevice, BadCursor and BadWindow.</pre></dd></dl><dl COMPACT><dd><pre>The XIUndefineCursor function undoes the effect of a previous
+XIDefineCursor for this window. When the pointer is in the
+window, the window's default cursor will now be used. If no
+default cursor is defined, the parent's cursor for this device
+will be used (if defined) or the parent's default cursor will
+be used.</pre></dd></dl><dl COMPACT><dd><pre>XIDefineCursor and XIUndefineCursor are identical to
+XDefineCursor and XUndefineCursor but specify the device
+explicitly.</pre></dd></dl><dl COMPACT><dd><pre>XIUndefineCursor can generate a BadDevice and a BadWindow
+error.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadCursor
+ A value for a cursor argument does not name a defined
+ cursor.</pre></dd></dl><dl COMPACT><dd><pre>BadDevice
+ An invalid device was specified. The device does not
+ exist or is not a pointer device.</pre></dd></dl><dl COMPACT><dd><pre>BadWindow
+ A value for a Window argument does not name a defined
+ window.</pre></dd></dl>
+<p>See also</p>
+<dl COMPACT><dd><pre>XDefineCursor, XUndefineCursor</pre></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

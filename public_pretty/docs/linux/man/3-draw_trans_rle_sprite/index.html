@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>draw_trans_rle_sprite(3) · Linux Manual Pages</title>
+<meta name="description" content="draw_trans_rle_sprite – Draws a translucent RLE sprite. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-draw_trans_rle_sprite/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>draw_trans_rle_sprite(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> draw_trans_rle_sprite &#8211; Draws a translucent RLE sprite. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>void draw_trans_rle_sprite(BITMAP *bmp, const RLE_SPRITE *sprite,</code> <code>int x, int y);</code></p>
+<h2>DESCRIPTION</h2>
+<p> Translucent version of draw_rle_sprite(). See the description of draw_trans_sprite(). This must only be used after you have set up the color mapping table (for 256-color modes) or blender functions (for truecolor modes). The bitmap and sprite must normally be in the same color depth, but as a special case you can draw 32-bit RGBA format sprites onto any hicolor or truecolor bitmap, as long as you call set_alpha_blender() first. Example: </p>
+<pre><code>
+/* Some one time initialisation code. */
+COLOR_MAP global_trans_table;
+create_trans_table(&amp;global_trans_table, my_palette,
+                   128, 128, 128, NULL);
+... if (get_color_depth() == 8)
+    color_map = &amp;global_trans_table;
+else set_trans_blender(128, 128, 128, 128);
+draw_trans_rle_sprite(buffer, rle_ghost_sprite, x, y);
+</code></pre>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-draw_rle_sprite/">draw_rle_sprite</a></code>(3), <code><a href="/docs/linux/man/3-draw_lit_rle_sprite/">draw_lit_rle_sprite</a></code>(3), <code><a href="/docs/linux/man/3-draw_trans_sprite/">draw_trans_sprite</a></code>(3), <code><a href="/docs/linux/man/3-color_map/">color_map</a></code>(3), <code><a href="/docs/linux/man/3-set_trans_blender/">set_trans_blender</a></code>(3), <code><a href="/docs/linux/man/3-set_alpha_blender/">set_alpha_blender</a></code>(3), <code><a href="/docs/linux/man/3-bitmap_mask_color/">bitmap_mask_color</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

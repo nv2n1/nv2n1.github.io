@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>x11perfcomp(1) · Linux Manual Pages</title>
+<meta name="description" content="x11perfcomp – X11 server performance comparison program">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-x11perfcomp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>x11perfcomp(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> x11perfcomp &#8211; X11 server performance comparison program </p>
+<h2>SYNTAX</h2>
+<p> <code>x11perfcomp</code> [ -r | -ro ] [ -l label_file ] files</p>
+<h2>DESCRIPTION</h2>
+<p> The <i>x11perfcomp</i> program merges the output of several <i><a href="/docs/linux/man/1-x11perf/">x11perf</a>(1)</i> runs into a nice tabular format. It takes the results in each file, fills in any missing test results if necessary, and for each test shows the objects/second rate of each server. If invoked with the -r or -ro options, it shows the relative performance of each server to the first server. </p>
+<p> Normally, <i>x11perfcomp</i> uses the first file specified to determine which specific tests it should report on. Some (non-DEC :) servers may fail to perform all tests. In this case, <i>x11perfcomp</i> automatically substitutes in a rate of 0.0 objects/second. Since the first file determines which tests to report on, this file must contain a superset of the tests reported in the other files, else <i>x11perfcomp</i> will fail. </p>
+<p> You can provide an explicit list of tests to report on by using the -l switch to specify a file of labels. You can create a label file by using the -label option in <i>x11perf.</i></p>
+<h2>OPTIONS</h2>
+<p> <i>x11perfcomp</i> accepts the options listed below:</p>
+<dl>
+<dt><code>-r</code></dt>
+<dd> Specifies that the output should also include relative server performance.</dd>
+<dt><code>-ro</code></dt>
+<dd> Specifies that the output should include only relative server performance.</dd>
+<dt><code>-l label_file</code></dt>
+<dd> Specifies a label file to use.</dd></dl>
+<h2>X DEFAULTS</h2>
+<p> There are no X defaults used by this program.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-x11perf/">x11perf</a>(1)</p>
+<h2>AUTHORS</h2>
+<p> Mark Moraes wrote the original scripts to compare servers.<br />
+ Joel McCormack just munged them together a bit. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

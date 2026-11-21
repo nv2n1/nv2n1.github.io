@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hwloc_const_nodeset_t(3) · Linux Manual Pages</title>
+<meta name="description" content="hwlocality_object_sets – Object Sets (hwloc_cpuset_t and hwloc_nodeset_t)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-hwloc_const_nodeset_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>hwloc_const_nodeset_t(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> hwlocality_object_sets &#8211; Object Sets (hwloc_cpuset_t and hwloc_nodeset_t) </p>
+<h3>Typedefs</h3>
+<p> typedef <code>hwloc_bitmap_t</code> <code>hwloc_cpuset_t</code> </p>
+<p> typedef <code>hwloc_const_bitmap_t</code> <code>hwloc_const_cpuset_t</code> </p>
+<p> typedef <code>hwloc_bitmap_t</code> <code>hwloc_nodeset_t</code> </p>
+<p> typedef <code>hwloc_const_bitmap_t</code> <code>hwloc_const_nodeset_t</code> </p>
+<h2>Detailed Description</h2>
+<p> Hwloc uses bitmaps to represent two distinct kinds of object sets: CPU sets (<code>hwloc_cpuset_t</code>) and NUMA node sets (<code>hwloc_nodeset_t</code>). These types are both typedefs to a common back end type (<code>hwloc_bitmap_t</code>), and therefore all the hwloc bitmap functions are applicable to both <code>hwloc_cpuset_t</code> and <code>hwloc_nodeset_t</code> (see <code>The bitmap API</code>). </p>
+<p> The rationale for having two different types is that even though the actions one wants to perform on these types are the same (e.g., enable and disable individual items in the set/mask), they&#8217;re used in very different contexts: one for specifying which processors to use and one for specifying which NUMA nodes to use. Hence, the name difference is really just to reflect the intent of where the type is used.</p>
+<h2>Typedef Documentation</h2>
+<h3>typedef <code>hwloc_const_bitmap_t</code> <code>hwloc_const_cpuset_t</code></h3>
+<p> A non-modifiable <code>hwloc_cpuset_t</code>.</p>
+<h3>typedef <code>hwloc_const_bitmap_t</code> <code>hwloc_const_nodeset_t</code></h3>
+<p> A non-modifiable <code>hwloc_nodeset_t</code>.</p>
+<h3>typedef <code>hwloc_bitmap_t</code> <code>hwloc_cpuset_t</code></h3>
+<p> A CPU set is a bitmap whose bits are set according to CPU physical OS indexes. It may be consulted and modified with the bitmap API as any <code>hwloc_bitmap_t</code> (see <code>hwloc/bitmap.h</code>). </p>
+<p> Each bit may be converted into a PU object using <code>hwloc_get_pu_obj_by_os_index()</code>.</p>
+<h3>typedef <code>hwloc_bitmap_t</code> <code>hwloc_nodeset_t</code></h3>
+<p> A node set is a bitmap whose bits are set according to NUMA memory node physical OS indexes. It may be consulted and modified with the bitmap API as any <code>hwloc_bitmap_t</code> (see <code>hwloc/bitmap.h</code>). Each bit may be converted into a NUMA node object using <code>hwloc_get_numanode_obj_by_os_index()</code>. </p>
+<p> When binding memory on a system without any NUMA node (when the whole memory is considered as a single memory bank), the nodeset may be either empty (no memory selected) or full (whole system memory selected). </p>
+<p> See also <code>Converting between CPU sets and node sets</code>.</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

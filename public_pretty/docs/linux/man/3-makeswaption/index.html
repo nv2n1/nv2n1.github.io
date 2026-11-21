@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>makeswaption(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::MakeSwaption – helper class">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-makeswaption/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>makeswaption(3)</h1>
+
+
+
+
+
+<p>QuantLib::MakeSwaption &#8211; helper class </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/instruments/makeswaption.hpp&gt; </p>
+<h3>Public Member Functions</h3>
+<p><code>MakeSwaption</code> (const boost::shared_ptr&lt; <code>SwapIndex</code> &gt; &amp;swapIndex, const <code>Period</code> &amp;optionTenor, <code>Rate</code> strike=<code>Null</code>&lt; <code>Rate</code> &gt;()) </p>
+<p> <code>operator Swaption</code> () const </p>
+<p> <code>operator boost::shared_ptr&lt; Swaption &gt;</code> () const </p>
+<p> <code>MakeSwaption</code> &amp; <code>withSettlementType</code> (Settlement::Type delivery) </p>
+<p> <code>MakeSwaption</code> &amp; <code>withOptionConvention</code> (<code>BusinessDayConvention</code> bdc) </p>
+<p> <code>MakeSwaption</code> &amp; <code>withExerciseDate</code> (const <code>Date</code> &amp;) </p>
+<p> <code>MakeSwaption</code> &amp; <code>withPricingEngine</code> (const boost::shared_ptr&lt; <code>PricingEngine</code> &gt; &amp;engine) </p>
+<h2>Detailed Description</h2>
+<p>helper class </p>
+<p> This class provides a more comfortable way to instantiate standard market swaption. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

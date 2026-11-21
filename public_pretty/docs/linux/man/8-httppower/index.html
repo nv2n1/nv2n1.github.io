@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>httppower(8) · Linux Manual Pages</title>
+<meta name="description" content="httppower – communicate with HTTP based power distribution units">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-httppower/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>httppower(8)</h1>
+
+
+
+
+
+<p>httppower &#8211; communicate with HTTP based power distribution units</p>
+<h2>Synopsis</h2>
+<p><code>httppower</code> <i>[&#8211;url URL]</i> </p>
+<h2>Description</h2>
+<p><code>httppower</code> is a helper program for <code>powerman</code> which enables it to communicate with HTTP based power distribution units. It is run interactively by the powerman daemon.</p>
+<h2>Options</h2>
+<dl>
+<dt><i>-u, &#8211;url URL</i></dt>
+<dd>Set the base URL.</dd></dl>
+<h2>Interactive Commands</h2>
+<p>The following commands are accepted at the httppower&gt; prompt:</p>
+<dl>
+<dt><i>auth user:pass</i></dt>
+<dd>Authenticate to the base URL with specified user and password, using &#8220;basic&#8221; HTTP authentication which sends the user and password over the network in plain text.</dd>
+<dt><i>seturl URL</i></dt>
+<dd>Set the base URL. Overrides the command line option.</dd>
+<dt><i>get [URL-suffix]</i></dt>
+<dd>Send an HTTP GET to the base URL with the optional URL-suffix appended.</dd>
+<dt><i>post [URL-suffix] key=val[&amp;key=val]&#8230;</i></dt>
+<dd>Send an HTTP POST to the base URL with the optional URL-suffix appended, and key-value pairs as argument. </dd>
+</dl>
+<h2>Files</h2>
+<p>/usr/sbin/httppower<br />
+ /etc/powerman/powerman.conf</p>
+<h2>Origin</h2>
+<p>PowerMan was originally developed by Andrew Uselton on LLNL&#8217;s Linux clusters. This software is open source and distributed under the terms of the GNU GPL.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-powerman/">powerman</a></code>(1), <code><a href="/docs/linux/man/8-powermand/">powermand</a></code>(8), <code><a href="/docs/linux/man/8-httppower/">httppower</a></code>(8), <code><a href="/docs/linux/man/8-plmpower/">plmpower</a></code>(8), <code><a href="/docs/linux/man/8-vpcd/">vpcd</a></code>(8), <code><a href="/docs/linux/man/5-powerman-conf/">powerman.conf</a></code>(5), <code><a href="/docs/linux/man/5-powerman-dev/">powerman.dev</a></code>(5). <code><a rel="nofollow" href="http://code.google.com/p/powerman">http://code.google.com/p/powerman</a></code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

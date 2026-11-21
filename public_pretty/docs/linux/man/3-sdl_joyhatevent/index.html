@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_joyhatevent(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_JoyHatEvent – Joystick hat position change event structure">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_joyhatevent/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_joyhatevent(3)</h1>
+
+
+
+
+
+<p>SDL_JoyHatEvent &#8211; Joystick hat position change event structure</p>
+<h2>Structure Definition</h2>
+<pre><tt>typedef struct{
+ Uint8 type;
+ Uint8 which;
+ Uint8 hat;
+ Uint8 value;
+} SDL_JoyHatEvent;</tt></pre>
+<h2>Structure Data</h2>
+<dl COMPACT>
+<dt><code>type</code></dt>
+<dd><code>SDL_JOY</code></dd>
+<dt><code>which</code></dt>
+<dd>Joystick device index</dd>
+<dt><code>hat</code></dt>
+<dd>Joystick hat index</dd>
+<dt><code>value</code></dt>
+<dd>Hat position</dd></dl>
+<h2>Description</h2>
+<p><code>SDL_JoyHatEvent</code> is a member of the <i></i><code>SDL_Event</code> union and is used when an event of type <code>SDL_JOYHATMOTION</code> is reported. </p>
+<p> A <code>SDL_JOYHATMOTION</code> event occurs when ever a user moves a hat on the joystick. The field <code>which</code> is the index of the joystick that reported the event and <code>hat</code> is the index of the hat (for a more detailed exlaination see the <i>Joystick section</i>). <code>value</code> is the current position of the hat. It is a logically OR&#8217;d combination of the following values (whose meanings should be pretty obvious:) :</p>
+<dl COMPACT>
+<dd><code>SDL_HAT_CENTERED</code></dd>
+<dd><code>SDL_HAT_UP</code></dd>
+<dd><code>SDL_HAT_RIGHT</code></dd>
+<dd><code>SDL_HAT_DOWN</code></dd>
+<dd><code>SDL_HAT_LEFT</code></dd></dl>
+<p> The following defines are also provided:</p>
+<dl COMPACT>
+<dd><code>SDL_HAT_RIGHTUP</code></dd>
+<dd><code>SDL_HAT_RIGHTDOWN</code></dd>
+<dd><code>SDL_HAT_LEFTUP</code></dd>
+<dd><code>SDL_HAT_LEFTDOWN</code></dd></dl>
+<h2>See Also</h2>
+<p><i></i><code>SDL_Event</code>, <i>Joystick Functions</i>, <i></i><code>SDL_JoystickEventState</code>, <i></i><code>SDL_JoystickGetHat</code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

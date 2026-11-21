@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iwspy(8) · Linux Manual Pages</title>
+<meta name="description" content="iwspy – Get wireless statistics from specific nodes">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-iwspy/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>iwspy(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>iwspy &#8211; Get wireless statistics from specific nodes</p>
+<h2>Synopsis</h2>
+<p><code>iwspy [</code><i>interface</i><code>]</code><br />
+ <code>iwspy </code><i>interface</i><code> [+] </code><i>DNSNAME</i><code> | </code><i>IPADDR</i><code> | </code><i>HWADDR</i><code> [&#8230;]</code><br />
+ <code>iwspy </code><i>interface</i><code> off</code><br />
+ <code>iwspy </code><i>interface</i><code> setthr </code><i>low high</i><br />
+ <code>iwspy </code><i>interface</i><code> getthr</code></p>
+<h2>Description</h2>
+<p><code>Iwspy</code> is used to set a list of addresses to monitor in a wireless network interface and to read back quality of link information for each of those. This information is the same as the one available in <i>/proc/net/wireless</i> : quality of the link, signal strength and noise level. </p>
+<p> This information is updated each time a new packet is received, so each address of the list adds some overhead in the driver. </p>
+<p> Note that this functionality works only for nodes part of the current wireless cell, you can not monitor Access Points you are not associated with (you can use Scanning for that) and nodes in other cells. In Managed mode, in most case packets are relayed by the Access Point, in this case you will get the signal strength of the Access Point. For those reasons this functionality is mostly useful in Ad-Hoc and Master mode.</p>
+<h2>Parameters</h2>
+<p>You may set any number of addresses up to 8.</p>
+<dl>
+<dt><code>DNSNAME</code> | <code>IPADDR</code></dt>
+<dd>Set an IP address, or in some cases a DNS name (using the name resolver). As the hardware works with hardware addresses, <code>iwspy</code> will translate this IP address through <i>ARP</i>. In some case, this address might not be in the ARP cache and <code>iwspy</code> will fail. In those case, <i><a href="/docs/linux/man/8-ping/">ping</a></i>(8) this name/address and retry.</dd>
+<dt><code>HWADDR</code></dt>
+<dd>Set a hardware (MAC) address (this address is not translated &amp; checked like the IP one). The address must contain a colon (<code>:</code>) to be recognised as a hardware address.</dd>
+<dt><code>+</code></dt>
+<dd>Add the new set of addresses at the end of the current list instead of replacing it. The address list is unique for each device, so each user should use this option to avoid conflicts.</dd>
+<dt><code>off</code></dt>
+<dd>Remove the current list of addresses and disable the spy functionality</dd>
+<dt><code>setthr</code></dt>
+<dd>Set the <i>low</i> and <i>high</i> signal strength threshold for the iwspy event (for drivers that support it).<br />
+ Every time the signal strength for any of the address monitored with iwspy goes lower than the low threshold or goes higher than the high threshold, a Wireless Event will be generated.<br />
+ This can be used to monitor link outages without having to run iwspy periodically.</dd>
+<dt><code>getthr</code></dt>
+<dd>Retrieve the current <i>low</i> and <i>high</i> signal strength threshold for the iwspy event.</dd></dl>
+<h2>Files</h2>
+<p><i>/proc/net/wireless</i></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-iwconfig/">iwconfig</a></code>(8), <code><a href="/docs/linux/man/8-iwlist/">iwlist</a></code>(8), <code><a href="/docs/linux/man/8-iwevent/">iwevent</a></code>(8), <code><a href="/docs/linux/man/8-iwpriv/">iwpriv</a></code>(8), <code><a href="/docs/linux/man/7-wireless/">wireless</a></code>(7). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparing Linux Hex Viewers: xxd, od, hexdump, and hd - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/printing-a-file-in-hexadecimal-format-of-all-content-on-linux/">
+  <meta name="description" content="Viewing file contents in hexadecimal is essential for debugging binaries, inspecting file headers, analyzing corrupted data, and understanding file formats. …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Comparing Linux Hex Viewers: xxd, od, hexdump, and hd">
+  <meta property="og:url" content="https://www.systutorials.com/printing-a-file-in-hexadecimal-format-of-all-content-on-linux/">
+  <meta property="og:description" content="Viewing file contents in hexadecimal is essential for debugging binaries, inspecting file headers, analyzing corrupted data, and understanding file formats. …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>Comparing Linux Hex Viewers: xxd, od, hexdump, and hd</h1>
+        <time class="post-date" datetime="2018-03-24T11:40:36Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Viewing file contents in hexadecimal is essential for debugging binaries, inspecting file headers, analyzing corrupted data, and understanding file formats. Linux provides several tools for this, each with different strengths.</p>
+<h2 id="xxd">xxd</h2>
+<p><code>xxd</code> is the most commonly used hex viewer. By default, it displays hex on the left and ASCII representation on the right:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd file.txt
+</span></span></code></pre></div><p>Output:</p>
+<pre><code>00000000: 4865 6c6c 6f20 576f 726c 6421 0a          Hello World!.
+</code></pre>
+<p>For plain hex without ASCII or addresses, use <code>-p</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd -p file.txt
+</span></span></code></pre></div><p>This outputs continuous hex—useful for piping to other tools or processing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd -p file.bin <span class="p">|</span> tr -d <span class="s1">&#39;\n&#39;</span>  <span class="c1"># Remove newlines for one long hex string</span>
+</span></span></code></pre></div><p>Limit output to specific byte ranges:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd -l <span class="m">256</span> file.txt          <span class="c1"># First 256 bytes</span>
+</span></span><span class="line"><span class="cl">xxd -s 0x100 file.txt        <span class="c1"># Start at offset 0x100</span>
+</span></span><span class="line"><span class="cl">xxd -s 0x100 -l <span class="m">256</span> file.txt <span class="c1"># From 0x100 for 256 bytes</span>
+</span></span></code></pre></div><p>View only specific columns:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd -c <span class="m">32</span> file.txt  <span class="c1"># Show 32 bytes per line instead of 16</span>
+</span></span></code></pre></div><p>Reverse hex dump back to binary:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd -r -p hexfile.txt &gt; binary.bin  <span class="c1"># Convert plain hex to binary</span>
+</span></span><span class="line"><span class="cl">xxd -r hexfile.txt &gt; binary.bin     <span class="c1"># Convert formatted hex to binary</span>
+</span></span></code></pre></div><h2 id="od-octal-dump">od (Octal Dump)</h2>
+<p><code>od</code> is a POSIX standard utility available on all Unix systems. For hexadecimal output, use <code>-A x</code> for hex addresses and <code>-t x1</code> for single-byte hex values:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">od -A x -t x1 file.txt
+</span></span></code></pre></div><p>Add <code>-v</code> to show all lines (without it, repeated patterns compress):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">od -A x -t x1 -v file.txt
+</span></span></code></pre></div><p>Show 32-bit values in hex:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">od -A x -t x4 file.txt
+</span></span></code></pre></div><h2 id="hexdump">hexdump</h2>
+<p><code>hexdump</code> offers clean, canonical formatting:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hexdump -C file.txt
+</span></span></code></pre></div><p>The <code>-C</code> flag provides hex+ASCII output similar to <code>xxd</code>. For custom output formats:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hexdump -e <span class="s1">&#39;16/1 &#34;%02x &#34; &#34;\n&#34;&#39;</span> file.txt  <span class="c1"># 16 bytes per line</span>
+</span></span><span class="line"><span class="cl">hexdump -e <span class="s1">&#39;8/1 &#34;%02x &#34; &#34;  &#34;&#39;</span> -e <span class="s1">&#39;8/1 &#34;%_p&#34; &#34;\n&#34;&#39;</span> file.txt  <span class="c1"># Two columns</span>
+</span></span></code></pre></div><h2 id="hd-hexdump-alias">hd (Hexdump Alias)</h2>
+<p>On most systems, <code>hd</code> is an alias for <code>hexdump -C</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hd file.txt
+</span></span></code></pre></div><p>It’s the quickest option if you want the default behavior.</p>
+<h2 id="practical-examples">Practical Examples</h2>
+<p>Compare changes in a binary file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd old.bin &gt; old.hex
+</span></span><span class="line"><span class="cl">xxd new.bin &gt; new.hex
+</span></span><span class="line"><span class="cl">diff -u old.hex new.hex
+</span></span></code></pre></div><p>View the first 512 bytes of a device (e.g., disk boot sector):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd -l <span class="m">512</span> /dev/sda
+</span></span></code></pre></div><p>View the first 4KB of a large file without loading it all:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">head -c <span class="m">4096</span> largefile.bin <span class="p">|</span> xxd
+</span></span></code></pre></div><p>Extract hex for a specific byte range in a file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd -s <span class="m">1024</span> -l <span class="m">256</span> file.bin <span class="p">|</span> xxd -r -p  <span class="c1"># Extract bytes 1024-1280</span>
+</span></span></code></pre></div><p>Convert plain hex string back to binary:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;48656c6c6f&#34;</span> <span class="p">|</span> xxd -r -p &gt; output.bin
+</span></span></code></pre></div><p>Search for a hex pattern in a binary file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd file.bin <span class="p">|</span> grep <span class="s2">&#34;4865 6c6c&#34;</span>  <span class="c1"># Search for &#34;Hell&#34;</span>
+</span></span></code></pre></div><p>Display file signature (magic bytes):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd -l <span class="m">16</span> file.bin  <span class="c1"># View first 16 bytes to identify file type</span>
+</span></span></code></pre></div><h2 id="performance-considerations">Performance Considerations</h2>
+<p>For large files, <code>xxd</code> and <code>hexdump</code> stream efficiently. Always use <code>-l</code> to avoid dumping gigabytes to your terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxd -l 1M /dev/sda  <span class="c1"># Safe: only 1 MB</span>
+</span></span></code></pre></div><p>When searching through massive files, pipe selectively:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">head -c 10M largefile.bin <span class="p">|</span> xxd <span class="p">|</span> grep <span class="s2">&#34;pattern&#34;</span>
+</span></span></code></pre></div><h2 id="which-tool-to-use">Which Tool to Use?</h2>
+<ul>
+<li><strong><code>xxd</code></strong>: Default choice for interactive use. Best readability, installed on nearly all Linux systems, excellent flag support.</li>
+<li><strong><code>hexdump -C</code> / <code>hd</code></strong>: Quick option with clean output, good for scripting.</li>
+<li><strong><code>od</code></strong>: POSIX standard, guaranteed to exist on any Unix system, useful for analyzing binary data structures with specific byte widths.</li>
+</ul>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

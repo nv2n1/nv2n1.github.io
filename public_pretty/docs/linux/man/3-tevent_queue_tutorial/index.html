@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tevent_queue_tutorial(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tevent_queue_tutorial/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tevent_queue_tutorial(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>tevent_queue_tutorial - The tevent_queue tutorial</p>
+<h2>Introduction</h2>
+<p>A tevent_queue is used to queue up async requests that must be serialized. For example writing buffers into a socket must be serialized. Writing a large lump of data into a socket can require multiple <a HREF="/docs/linux/man/2-write/">write</a>(2) or <a HREF="/docs/linux/man/2-send/">send</a>(2) system calls. If more than one async request is outstanding to write large buffers into a socket, every request must individually be completed before the next one begins, even if multiple syscalls are required.</p>
+<p>To do this, every socket gets assigned a tevent_queue struct.</p>
+<p>Creating a serialized async request follows the usual convention to return a tevent_req structure with an embedded state structure. To serialize the work the requests is about to so, instead of directly starting or doing that work, tevent_queue_add must be called. When it is time for the serialized async request to do its work, the trigger callback function tevent_queue_add was given is called. In the example of writing to a socket, the trigger is called when the write request can begin accessing the socket.</p>
+<p>How does this engine work behind the scenes? When the queue is empty, tevent_queue_add schedules an immediate call to the trigger callback. The trigger callback starts its work, likely by starting other async subrequests. While these async subrequests are working, more requests can accumulate in the queue by tevent_queue_add. While there is no function to explicitly trigger the next waiter in line, it still works: When the active request in the queue is done, it will be destroyed by talloc_free. Talloc_free of an serialized async request that had been added to a queue will trigger the next request in the queue via a talloc destructor attached to a child of the serialized request. This way the queue will be kept busy when an async request finishes.</p>
+<h2>Example</h2>
+<pre>* Metze: Please add a code example here.
+* </pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

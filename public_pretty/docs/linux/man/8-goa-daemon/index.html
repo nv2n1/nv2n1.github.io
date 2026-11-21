@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>goa-daemon(8) · Linux Manual Pages</title>
+<meta name="description" content="goa-daemon – GNOME Online Accounts Daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-goa-daemon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>goa-daemon(8)</h1>
+
+
+
+
+
+<p>goa-daemon &#8211; GNOME Online Accounts Daemon</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>goa-daemon</code> [<code>&#8211;help</code>] [<code>&#8211;replace</code>]</dt></dl>
+<h2>Description</h2>
+<dd>The <code>goa-daemon</code> program provides the <i>org.gnome.OnlineAccounts</i> name on the session message bus. Users or administrators should never need to start this daemon as it will be automatically started by <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1) whenever an application sends a D-Bus message to the <i>org.gnome.OnlineAccounts</i> name on the session bus.</dd>
+<h2>Configuration File</h2>
+<p>The <code>goa-daemon</code> program stores configuration in the $XDG_CONFIG_HOME/goa-1.0/accounts.conf (typically ~/.config/goa-1.0/accounts.conf) file. The format of this file is private and 3rd party programs or libraries should never read it. This file does not contain any passwords or secrets. </p>
+<p> See the m[blue]<code>XDG Base Directory Specification</code>m[]<font SIZE="-2">[1]</font> for more information about $XDG_CONFIG_HOME.</p>
+<h2>Secrets</h2>
+<p>The <code>goa-daemon</code> program stores secrets (such as OAuth tokens) in m[blue]<code>GNOME Keyring</code>m[]<font SIZE="-2">[2]</font>. The format of the stored secrets is private and 3rd party programs or libraries should never read, modify or delete these secrets.</p>
+<h2>Options</h2>
+<p><code>&#8211;replace</code></p>
+<dl>
+<dd>Replace existing instance.</dd></dl>
+<p> <code>&#8211;help</code></p>
+<dl>
+<dd>Show help options.</dd></dl>
+<h2>Author</h2>
+<p>Written by David Zeuthen &lt;zeuthen [at] gmail.com&gt; with a lot of help from many others.</p>
+<h2>Bugs</h2>
+<p>Please send bug reports to either the distribution bug tracker or the upstream bug tracker at m[blue]<code><a rel="nofollow" href="https://gitlab.gnome.org/GNOME/gnome-online-accounts/issues">https://gitlab.gnome.org/GNOME/gnome-online-accounts/issues</a></code>m[]. There are some debugging tips at m[blue]<code><a rel="nofollow" href="https://wiki.gnome.org/Projects/GnomeOnlineAccounts/Debugging">https://wiki.gnome.org/Projects/GnomeOnlineAccounts/Debugging</a></code>m[]</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1)</p>
+<h2>Notes</h2>
+<dl>
+<dt> 1.</dt>
+<dd>XDG Base Directory Specification</dd>
+<dl>
+<dd><a rel="nofollow" href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html</a></dd></dl>
+<dt> 2.</dt>
+<dd>GNOME Keyring</dd>
+<dl>
+<dd><a rel="nofollow" href="https://live.gnome.org/GnomeKeyring">https://live.gnome.org/GnomeKeyring</a></dd></dl>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

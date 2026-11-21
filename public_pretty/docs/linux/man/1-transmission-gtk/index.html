@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>transmission-gtk(1) · Linux Manual Pages</title>
+<meta name="description" content="transmission-gtk – a bittorrent client">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-transmission-gtk/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>transmission-gtk(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>transmission-gtk</code> &#8211; a bittorrent client </p>
+<h2>SYNOPSIS</h2>
+<p> <code>transmission-gtk</code> &#8211;<code>?</code><br />
+<code>transmission-gtk</code> [-<code>pqm</code> ] [<i>torrent-file &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>transmission-gtk</code> is a fast and easy BitTorrent client. </p>
+<p> BitTorrent is a peer-to-peer file transfer protocol which uses a metainfo file (usually with the .torrent file extension) and a central tracker to distribute file data amongst a group of peers. For more information on the BitTorrent protocol see <a rel="nofollow" href="http://www.bittorrent.org/">http://www.bittorrent.org/</a></p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-? &#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>-p &#8211;paused</code></dt>
+<dd> Start with all torrents paused</dd>
+<dt><code>-m &#8211;minimized</code></dt>
+<dd> Start minimized in notification area</dd>
+<dt><code>-g, &#8211;config-dir </code><i>directory</i></dt>
+<dd> Where to look for configuration files. This can be used to swap between using the cli, daemon, gtk, and qt clients. See <a rel="nofollow" href="https://github.com/transmission/transmission/wiki/Configuration-Files">https://github.com/transmission/transmission/wiki/Configuration-Files</a> for more information.</dd></dl>
+<p> Multiple .torrent files may be added at startup by appending them on the command line. If <code>transmission-gtk</code> is already running, the torrents will be added to the running instance.</p>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>TRANSMISSION_HOME</code></dt>
+<dd> Sets the default config-dir.</dd>
+<dt><code>http_proxy</code></dt>
+<dd> libcurl uses this environment variable when performing tracker announces. If set, this overrides the GNOME proxy preferences.</dd></dl>
+<h2>FILES</h2>
+<dl>
+<dt><code>~/.config/transmission</code></dt>
+<dd> The config-dir used when neither [<code>TRANSMISSION_HOME</code> ] nor [-<code>g</code> ] is specified.</dd></dl>
+<h2>AUTHORS</h2>
+<p> An -nosplit <code>transmission-gtk</code> was written by An Charles Kerr , An Josh Elsasser , An Eric Petit , An Mitchell Livingston , and An Mike Gelfand .</p>
+<h2>SEE ALSO</h2>
+<p> transmission-create1, transmission-daemon1, transmission-edit1, transmission-gtk1, transmission-qt1, transmission-remote1, transmission-show1 </p>
+<p> <a rel="nofollow" href="https://transmissionbt.com/">https://transmissionbt.com/</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

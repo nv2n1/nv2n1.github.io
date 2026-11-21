@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_fitgrid(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_fitgrid/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_fitgrid(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Fitgrid is a package for interpolating one dimensional and two dimensional data. The package has the following functionality:</p>
+<p>1.) Interpolating single-valued functions in one dimension.
+2.) Interpolating parametric curves in the plane.
+3.) Computing an interpolatory surface through a rectangular grid of functional values.
+4.) Interpolating periodic functions in one dimension.
+5.) Finding integrals and derivatives of interpolated functions.</p>
+<h2>Synopsis</h2>FORTRAN single precision 
+ ------------------------ 
+<p> <wbr>CURV1 <wbr> <wbr> <wbr>- <wbr> <wbr>does set-up for CURV2. <wbr></p>
+<p> <wbr>CURV2 <wbr> <wbr> <wbr>- <wbr> <wbr>1D interpolation for non-periodic functions.</p>
+<p> <wbr>CURVD <wbr> <wbr> <wbr>- <wbr> <wbr>derivatives for 1D functions.</p>
+<p> <wbr>CURVI <wbr> <wbr> <wbr>- <wbr> <wbr>integrals for 1D functions.</p>
+<p> <wbr>CURVP1 <wbr> <wbr>- <wbr> <wbr>does set-up for CURVP2 .</p>
+<p> <wbr>CURVP2 <wbr> <wbr>- <wbr> <wbr>1D interpolation for periodic functions.</p>
+<p> <wbr>CURVPI <wbr> <wbr>- <wbr> <wbr>integrals for periodic functions.</p>
+<p> <wbr>CURVS <wbr> <wbr> <wbr>- <wbr> <wbr>does smoothing and set-up for CURV2.</p>
+<p> <wbr>CURVPS <wbr> <wbr>- <wbr> <wbr>does smoothing for periodic functions.</p>
+<p> <wbr>KURV1 <wbr> <wbr> <wbr>- <wbr> <wbr>does set-up for KURV2.</p>
+<p> <wbr>KURV2 <wbr> <wbr> <wbr>- <wbr> <wbr>interpolation for parametric curves.</p>
+<p> <wbr>KURVD <wbr> <wbr> <wbr>- <wbr> <wbr>derivatives for parametric curves.</p>
+<p> <wbr>KURVP1 <wbr> <wbr>- <wbr> <wbr>set-up for KURVP2.</p>
+<p> <wbr>KURVP2 <wbr> <wbr>- <wbr> <wbr>interpolation for closed parametric curves.</p>
+<p> <wbr>KURVPD <wbr> <wbr>- <wbr> <wbr>derivatives for closed parametric curves.</p>
+<p> <wbr>SURF1 <wbr> <wbr> <wbr>- <wbr> <wbr>set-up for SURF2.</p>
+<p> <wbr>SURF2 <wbr> <wbr> <wbr>- <wbr> <wbr>2D interpolation for gridded data.</p>
+<h2 id="c-single-precision">C single precision:</h2>
+<p> <wbr>c_ftcurv <wbr> <wbr> <wbr> <wbr>- <wbr> <wbr>1D interpolation for non-periodic functions.</p>
+<p> <wbr>c_ftcurvd <wbr> <wbr> <wbr>- <wbr> <wbr>derivatives for 1D functions.</p>
+<p> <wbr>c_ftcurvi <wbr> <wbr> <wbr>- <wbr> <wbr>integrals for 1D functions.</p>
+<p> <wbr>c_ftcurvp <wbr> <wbr> <wbr>- <wbr> <wbr>1D interpolation for periodic functions.</p>
+<p> <wbr>c_ftcurvpi <wbr> <wbr>- <wbr> <wbr>integrals for periodic functions.</p>
+<p> <wbr>c_ftcurvs <wbr> <wbr> <wbr>- <wbr> <wbr>does smoothing for non-periodic functions.</p>
+<p> <wbr>c_ftcurvps <wbr> <wbr>- <wbr> <wbr>does smoothing for periodic functions.</p>
+<p> <wbr>c_ftkurv <wbr> <wbr> <wbr> <wbr>- <wbr> <wbr>interpolation for parametric curves.</p>
+<p> <wbr>c_ftkurvp <wbr> <wbr> <wbr>- <wbr> <wbr>interpolation for closed parametric curves.</p>
+<p> <wbr>c_ftkurvd <wbr> <wbr> <wbr>- <wbr> <wbr>derivatives for parametric curves.</p>
+<p> <wbr>c_ftkurvpd <wbr> <wbr>- <wbr> <wbr>interpolation for closed parametric curves.</p>
+<p> <wbr>c_ftsurf <wbr> <wbr> <wbr> <wbr>- <wbr> <wbr>2D interpolation for rectangular data.</p>
+<p> <wbr>c_ftseti <wbr> <wbr> <wbr> <wbr>- <wbr> <wbr>set values for int parameters.</p>
+<p> <wbr>c_ftgeti <wbr> <wbr> <wbr> <wbr>- <wbr> <wbr>get values for int parameters.</p>
+<p> <wbr>c_ftsetr <wbr> <wbr> <wbr> <wbr>- <wbr> <wbr>set values for float parameters.</p>
+<p> <wbr>c_ftgetr <wbr> <wbr> <wbr> <wbr>- <wbr> <wbr>get values for float parameters.</p>
+<p> <wbr>c_ftsetc <wbr> <wbr> <wbr> <wbr>- <wbr> <wbr>set values for string parameters.</p>
+<p> <wbr>c_ftgetc <wbr> <wbr> <wbr> <wbr>- <wbr> <wbr>get values for string parameters.</p>
+<p> <wbr>c_ftsetfa <wbr> <wbr> <wbr>- <wbr> <wbr>set values for float arrays.</p>
+<p> <wbr>c_ftgetfa_size <wbr> <wbr>- <wbr> <wbr>get array size of float array.</p>
+<p> <wbr>c_ftgetfa_data <wbr> <wbr>- <wbr> <wbr>get float array data.</p>
+<h2>Access</h2>To use fitgrid entries, load the NCAR Graphics library ngmath.
+<h2>See Also</h2>Individual entries, fitgrid_params 
+<p>Complete documentation for fitgrid is available at URL
+<a rel="nofollow" HREF="http://ngwww.ucar.edu/ngdoc/ng/ngmath/fitgrid/fithome.html"><a href="http://ngwww.ucar.edu/ngdoc/ng/ngmath/fitgrid/fithome.html">http://ngwww.ucar.edu/ngdoc/ng/ngmath/fitgrid/fithome.html</a></a></p>
+<h2>Copyright</h2>Copyright (C) 2000 
+ University Corporation for Atmospheric Research 
+<p>The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

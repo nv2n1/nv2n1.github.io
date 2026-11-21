@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ompi-ps(1) · Linux Manual Pages</title>
+<meta name="description" content="ompi-ps, orte-ps – Displays information about the active jobs and processes in Open MPI.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ompi-ps/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ompi-ps(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> ompi-ps, orte-ps &#8211; Displays information about the active jobs and processes in Open MPI. </p>
+<p> <code>NOTE:</code> <i>ompi-ps</i>, and <i>orte-ps</i> are exact synonyms for each other. Using any of the names will result in exactly identical behavior. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>ompi-ps</code> <code>[ options ]</code></p>
+<h2>Options</h2>
+<p> <i>ompi-ps</i> will display information about running job(s) in the current universe.</p>
+<dl>
+<dt><code>-h | &#8211;help</code></dt>
+<dd> Display help for this command</dd>
+<dt><code>-v | &#8211;verbose</code></dt>
+<dd> Enable verbose output for debugging</dd>
+<dt><code>&#8211;daemons</code></dt>
+<dd> Display daemon job information.</dd>
+<dt><code>-j | &#8211;jobid</code></dt>
+<dd> Display the state of a specific job in the universe. By default all jobs will be displayed.</dd>
+<dt><code>-p | &#8211;vpid</code></dt>
+<dd> Display the state of a specific vpid (process) in the universe. By default all vpids cooresponding to processes will be displayed. Must be used in conjunction with the <code>&#8211;jobid</code> option.</dd>
+<dt><code>-n | &#8211;nodes</code></dt>
+<dd> Display all of the allocated nodes, and their cooresponding states. By default this is disabled.</dd>
+<dt><code>-gmca | &#8211;gmca </code>&lt;key&gt; &lt;value&gt;</dt>
+<dd> Pass global MCA parameters that are applicable to all contexts. <i>&lt;key&gt;</i> is the parameter name; <i>&lt;value&gt;</i> is the parameter value.</dd>
+<dt><code>-mca | &#8211;mca &lt;key&gt; &lt;value&gt;</code></dt>
+<dd> Send arguments to various MCA modules.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> <i>ompi-ps</i> displays the state of jobs running inside an Open RTE universe.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-orterun/">orterun</a>(1), <a href="/docs/linux/man/1-orte-clean/">orte-clean</a>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_wasinit(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_wasinit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_wasinit(3)</h1>
+
+
+
+
+
+<p>SDL_WasInit - Check which subsystems are initialized</p>
+<h2>Synopsis</h2><b>#include &quot;SDL.h&quot; 
+<p>Uint32 SDL_WasInit</b>(<b>Uint32 flags</b>);</p>
+<h2>Description</h2><b>SDL_WasInit</b> allows you to see which SDL subsytems have been <i>initialized</i>. <b>flags</b> is a bitwise OR'd combination of the subsystems you wish to check (see <i></i><b>SDL_Init</b> for a list of subsystem flags).
+<h2>Return Value</h2><b>SDL_WasInit</b> returns a bitwised OR'd combination of the initialized subsystems.
+<h2>Examples</h2><pre><tt>
+/* Here are several ways you can use SDL_WasInit() */
+/* Get init data on all the subsystems */
+Uint32 subsystem_init;
+subsystem_init=SDL_WasInit(SDL_INIT_EVERYTHING);
+if(subsystem_init&amp;SDL_INIT_VIDEO)
+ printf(&quot;Video is initialized.
+&quot;);
+else
+ printf(&quot;Video is not initialized.
+&quot;);
+/* Just check for one specfic subsystem */
+if(SDL_WasInit(SDL_INIT_VIDEO)!=0)
+ printf(&quot;Video is initialized.
+&quot;);
+else
+ printf(&quot;Video is not initialized.
+&quot;);
+/* Check for two subsystems */
+Uint32 subsystem_mask=SDL_INIT_VIDEO|SDL_INIT_AUDIO;
+if(SDL_WasInit(subsystem_mask)==subsystem_mask)
+ printf(&quot;Video and Audio initialized.
+&quot;);
+else
+ printf(&quot;Video and Audio not initialized.
+&quot;);
+</tt></pre><h2>See Also</h2><i></i><b>SDL_Init</b>, <i></i><b>SDL_Subsystem</b>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

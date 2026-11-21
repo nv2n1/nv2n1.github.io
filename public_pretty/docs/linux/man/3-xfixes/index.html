@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xfixes(3) · Linux Manual Pages</title>
+<meta name="description" content="XFixes – Augmented versions of core protocol requests">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xfixes/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xfixes(3)</h1>
+
+
+
+
+
+<p>XFixes &#8211; Augmented versions of core protocol requests </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/extensions/Xfixes.h&gt; </p>
+<pre>Bool XFixesQueryExtension (Display *<i>dpy</i>,
+ int *<i>event_base_return</i>, int *<i>error_base_return</i>);
+Status XFixesQueryVersion (Display *<i>dpy</i>,
+ int *<i>major_version_return</i>,
+ int *<i>minor_version_return</i>);
+void XFixesChangeSaveSet (Display *dpy,
+ Window <i>window</i>,
+ int <i>mode</i>,
+ int <i>target</i>,
+ int <i>map</i>);</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>window</i></dt>
+<dd>Specifies which window.</dd>
+<dt><i>mode</i></dt>
+<dd>Specifies the save set operation (SetModeInsert/SetModeDelete).</dd>
+<dt><i>target</i></dt>
+<dd>Specifies the target when executing the save set (SaveSetNearest/SaveSetRoot). In SaveSetNearest mode, the save set member window will be reparented to the nearest window not owned by the save set client. In SaveSetRoot mode, the save set member window will be reparented to the root window.</dd>
+<dt><i>map</i></dt>
+<dd>Specifies the map mode (SaveSetMap/SaveSetUnmap) which selects whether the save setmember window will be mapped or unmapped during save set processing.</dd></dl>
+<h2>Description</h2>
+<p><code>Xfixes</code> is a simple library designed to interface the X Fixes Extension. This extension provides application with work arounds for various limitations in the core protocol.</p>
+<h2>Restrictions</h2>
+<p><code>Xfixes</code> will remain upward compatible after the 1.0 release.</p>
+<h2>Authors</h2>
+<p>Keith Packard, member of the XFree86 Project, Inc. and HP, Owen Taylor, member of the Gnome Foundation and Redhat, Inc.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

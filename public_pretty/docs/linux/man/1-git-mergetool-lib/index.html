@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-mergetool-lib(1) · Linux Manual Pages</title>
+<meta name="description" content="git-mergetool–lib – Common Git merge tool shell scriptlets">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-mergetool-lib/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-mergetool-lib(1)</h1>
+
+
+
+
+
+<p>git-mergetool&#8211;lib &#8211; Common Git merge tool shell scriptlets </p>
+<h2>Synopsis</h2>
+<pre><i>TOOL_MODE=(diff|merge) . &quot;$(git --exec-path)/git-mergetool--lib&quot;</i></pre>
+<h2>Description</h2>
+<p>This is not a command the end user would want to run. Ever. This documentation is meant for people who are studying the Porcelain-ish scripts and/or are writing new ones. </p>
+<p> The <i>git-mergetool&#8211;lib</i> scriptlet is designed to be sourced (using <code>.</code>) by other shell scripts to set up functions for working with Git merge tools. </p>
+<p> Before sourcing <i>git-mergetool&#8211;lib</i>, your script must set <code>TOOL_MODE</code> to define the operation mode for the functions listed below. <i>diff</i> and <i>merge</i> are valid values.</p>
+<h2>Functions</h2>
+<p>get_merge_tool</p>
+<dl>
+<dd>returns a merge tool. the return code is 1 if we returned a guessed merge tool, else 0. <i>$GIT_MERGETOOL_GUI</i> may be set to <i>true</i> to search for the appropriate guitool.</dd></dl>
+<p> get_merge_tool_cmd</p>
+<dl>
+<dd>returns the custom command for a merge tool.</dd></dl>
+<p> get_merge_tool_path</p>
+<dl>
+<dd>returns the custom path for a merge tool.</dd></dl>
+<p> initialize_merge_tool</p>
+<dl>
+<dd>bring merge tool specific functions into scope so they can be used or overridden.</dd></dl>
+<p> run_merge_tool</p>
+<dl>
+<dd>launches a merge tool given the tool name and a true/false flag to indicate whether a merge base is present. <i>$MERGED</i>, <i>$LOCAL</i>, <i>$REMOTE</i>, and <i>$BASE</i> must be defined for use by the merge tool.</dd></dl>
+<h2>Git</h2>
+<p>Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

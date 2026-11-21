@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmcontainergetitemchildren(3) · Linux Manual Pages</title>
+<meta name="description" content="XmContainerGetItemChildren — Container widget function to find all children of an item">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmcontainergetitemchildren/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmcontainergetitemchildren(3)</h1>
+
+
+
+
+
+<p><code>XmContainerGetItemChildren</code> &#8212; Container widget function to find all children of an item</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Container.h&gt;
+<code>int XmContainerGetItemChildren</code>(
+<code>Widget container</code>,
+<code>Widget item</code>,
+<code>WidgetList * item_children</code>);</pre>
+<h2>Description</h2>
+<p><code>XmContainerGetItemChildren</code> allocates a WidgetList and stores within it the widget IDs of all widgets that have <i>item</i> specified as the value of their <code>XmNentryParent</code> resource. The application programmer is responsible for freeing the allocated WidgetList using XtFree. The number of widget IDs returned in <i>item_children</i> is returned by the function. If no widgets specify <i>item</i> as the value of their <code>XmNentryParent</code> resource, the function returns zero and <i>item_children</i> is left unchanged.</p>
+<dl COMPACT>
+<dt><i>container</i></dt>
+<dd>Specifies the Container widget ID.</dd>
+<dt><i>item</i></dt>
+<dd>Specifies a widgetID within <i>container</i>.</dd>
+<dt><i>item_children</i></dt>
+<dd>Returned array of Widgets.</dd></dl>
+<p> For a complete definition of Container and its associated resources, see <code><a href="/docs/linux/man/3-xmcontainer/">XmContainer</a></code>(3).</p>
+<h2>Return</h2>
+<p>This function returns a count of all widgets that have <i>item</i> specified as the value of their <code>XmNentryParent</code> resource.</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmcontainer/">XmContainer</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

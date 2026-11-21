@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dnf-plugin-download(8) · Linux Manual Pages</title>
+<meta name="description" content="dnf.plugin.download – DNF download Plugin">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-dnf-plugin-download/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>dnf-plugin-download(8)</h1>
+
+
+
+
+
+<p>dnf.plugin.download &#8211; DNF download Plugin </p>
+<p> Download binary or source packages.</p>
+<h2>Synopsis</h2>
+<p><code>dnf download [options] &lt;pkg-spec&gt;&#8230;</code></p>
+<h2>Arguments</h2>
+<dl>
+<dt><code>&lt;pkg-spec&gt;</code></dt>
+<dd>Package specification for the package to download.</dd></dl>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;help-cmd</code></dt>
+<dd>Show this help.</dd>
+<dt><code>&#8211;source</code></dt>
+<dd>Download the source rpm. Enables source repositories of all enabled binary repositories.</dd>
+<dt><code>&#8211;destdir</code></dt>
+<dd>Download directory, default is the current directory (the directory must exist).</dd>
+<dt><code>&#8211;resolve</code></dt>
+<dd>Resolve and download dependencies, not installed on the local system.</dd></dl>
+<h2>Examples</h2>
+<dl>
+<dt><code>dnf download dnf</code></dt>
+<dd>Download the latest dnf package to the current directory.</dd>
+<dt><code>dnf download dnf &#8211;destdir /tmp/dnl</code></dt>
+<dd>Download the latest dnf package to the /tmp/dnl directory (the directory must exist).</dd>
+<dt><code>dnf download dnf &#8211;source</code></dt>
+<dd>Download the latest dnf source package to the current directory.</dd>
+<dt><code>dnf download btanks &#8211;resolve</code></dt>
+<dd>Download the latest btanks package and the uninstalled dependencies to the current directory.</dd></dl>
+<h2>Author</h2>
+<p>See AUTHORS in your Core DNF Plugins distribution</p>
+<h2>Copyright</h2>
+<p>2014, Red Hat, Licensed under GPLv2+</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

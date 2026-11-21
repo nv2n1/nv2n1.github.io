@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pnmtoxwd(1) · Linux Manual Pages</title>
+<meta name="description" content="pnmtoxwd – convert a portable anymap into an X11 window dump">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pnmtoxwd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pnmtoxwd(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pnmtoxwd &#8211; convert a portable anymap into an X11 window dump </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pnmtoxwd</code> [<code>-pseudodepth</code> <i>n</i>] [<code>-directcolor</code>] [<i>pnmfile</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> Reads a portable anymap as input. Produces an X11 window dump as output. This window dump can be displayed using the xwud tool. </p>
+<p> Normally, pnmtoxwd produces a StaticGray dump file for <i>pbm</i> and <i>pgm</i> files. For <i>ppm</i>, it writes a PseudoColor dump file if there are up to 256 colors in the input, and a DirectColor dump file otherwise. The <code>-directcolor</code> flag can be used to force a DirectColor dump. And the <code>-pseudodepth</code> flag can be used to change the depth of PseudoColor dumps from the default of 8 bits / 256 colors.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-xwdtopnm/">xwdtopnm</a>(1), <a href="/docs/linux/man/5-pnm/">pnm</a>(5), <a href="/docs/linux/man/1-xwud/">xwud</a>(1)</p>
+<h2>AUTHOR</h2>
+<p> Copyright (C) 1989, 1991 by Jef Poskanzer. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

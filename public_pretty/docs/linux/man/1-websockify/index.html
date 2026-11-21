@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>websockify(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-websockify/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>websockify(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>websockify - WebSockets to TCP socket bridge</p>
+<h2>SYNOPSIS</h2>
+<p> <wbr>websockify <wbr>[options] <wbr>[source_addr:]source_port target_addr:target_port
+ <wbr>websockify <wbr>[options] <wbr>[source_addr:]source_port &ndash; WRAP_COMMAND_LINE</p>
+<h2>OPTIONS</h2>
+<p> <wbr>-h, &ndash;help <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>show this help message and exit
+ <wbr>-v, &ndash;verbose <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>verbose messages and per frame traffic
+ <wbr>&ndash;record=FILE <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>record sessions to FILE.[session_number]
+ <wbr>-D, &ndash;daemon <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>become a daemon <wbr>(background process)
+ <wbr>&ndash;run-once <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>handle a single WebSocket connection and exit
+ <wbr>&ndash;timeout=TIMEOUT <wbr> <wbr>after TIMEOUT seconds exit when not connected
+ <wbr>&ndash;cert=CERT <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>SSL certificate file
+ <wbr>&ndash;key=KEY <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>SSL key file <wbr>(if separate from cert)
+ <wbr>&ndash;ssl-only <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>disallow non-encrypted connections
+ <wbr>&ndash;web=DIR <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>run webserver on same port. Serve files from DIR.
+ <wbr>&ndash;wrap-mode=MODE <wbr> <wbr> <wbr>action to take when the wrapped program exits or
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>daemonizes: exit <wbr>(default), ignore, respawn</p>
+<h2>DESCRIPTION</h2>
+<p>At the most basic level, websockify just translates WebSockets traffic to normal TCP socket traffic. Websockify accepts the WebSockets handshake, parses it, and then begins forwarding traffic between the client and the target in both directions.</p>
+<p>websockify was formerly named wsproxy and was part of the noVNC project.</p>
+<h2>NOTES</h2>
+<h3>WebSockets binary data</h3>
+<p>Websockify supports all versions of the WebSockets protocol (Hixie and HyBI). The older Hixie versions of the protocol only support UTF-8 text payloads. In order to transport binary data over UTF-8 an encoding must used to encapsulate the data within UTF-8. Websockify uses base64 to encode all traffic to and from the client. This does not affect the data between websockify and the server.</p>
+<h3>Encrypted WebSocket connections (<a HREF="wss://)">wss://)</a></h3>
+<p>To encrypt the traffic using the WebSocket &lsquo;<a HREF="wss://'">wss://&rsquo;</a> URI scheme you need to generate a certificate for websockify to load. By default websockify loads a certificate file name self.pem but the &ndash;cert=CERT option can override the file name. You can generate a self-signed certificate using openssl. When asked for the common name, use the hostname of the server where the proxy will be running:</p>
+<p>openssl req -new -x509 -days 365 -nodes -out self.pem -keyout self.pem</p>
+<h3>Websock Javascript library</h3>
+<p>The websock.js (see <a rel="nofollow" HREF="https://github.com/kanaka/websockify)"><a href="https://github.com/kanaka/websockify">https://github.com/kanaka/websockify</a>)</a> Javascript library library provides a Websock object that is similar to the standard WebSocket object but Websock enables communication with raw TCP sockets (i.e. the binary stream) via websockify. This is accomplished by base64 encoding the data stream between Websock and websockify.</p>
+<p>Websock has built-in receive queue buffering; the message event does not contain actual data but is simply a notification that there is new data available. Several rQ* methods are available to read binary data off of the receive queue.</p>
+<p>The Websock API is documented on the websock.js API wiki page:</p>
+<p><a rel="nofollow" HREF="https://github.com/kanaka/websockify/wiki/websock.js"><a href="https://github.com/kanaka/websockify/wiki/websock.js">https://github.com/kanaka/websockify/wiki/websock.js</a></a></p>
+<p>See the &quot;Wrap a Program&quot; section below for an example of using Websock and websockify as a browser telnet client (wstelnet.html).</p>
+<h3>Additional websockify features</h3>
+<p>These are not necessary for the basic operation.</p>
+<dl>
+<dt>*
+</dt><dd> Daemonizing: When the -D option is specified, websockify runs in the background as a daemon process. 
+</dd><dt>*
+</dt><dd> SSL (the wss:// WebSockets URI): This is detected automatically by websockify by sniffing the first byte sent from the client and then wrapping the socket if the data starts with '\x16' or '\x80' (indicating SSL). 
+</dd><dt>*
+</dt><dd> Flash security policy: websockify detects flash security policy requests (again by sniffing the first packet) and answers with an appropriate flash security policy response (and then closes the port). This means no separate flash security policy server is needed for supporting the flash WebSockets fallback emulator. 
+</dd><dt>*
+</dt><dd> Session recording: This feature that allows recording of the traffic sent and received from the client to a file using the --record option. 
+</dd><dt>*
+</dt><dd> Mini-webserver: websockify can detect and respond to normal web requests on the same port as the WebSockets proxy and Flash security policy. This functionality is activate with the --web DIR option where DIR is the root of the web directory to serve. 
+</dd><dt>*
+</dt><dd> Wrap a program: see the &quot;Wrap a Program&quot; section below. 
+</dd></dl>
+<h3>Wrap a Program</h3>
+<p>In addition to proxying from a source address to a target address (which may be on a different system), websockify has the ability to launch a program on the local system and proxy WebSockets traffic to a normal TCP port owned/bound by the program.</p>
+<p>The is accomplished with a small LD_PRELOAD library (rebind.so) which intercepts bind() system calls by the program. The specified port is moved to a new localhost/loopback free high port. websockify then proxies WebSockets traffic directed to the original port to the new (moved) port of the program.</p>
+<p>The program wrap mode is invoked by replacing the target with &ndash; followed by the program command line to wrap.</p>
+<p><code>./websockify 2023 -- PROGRAM ARGS</code></p>
+<p>The &ndash;wrap-mode option can be used to indicate what action to take when the wrapped program exits or daemonizes.</p>
+<p>Here is an example of using websockify to wrap the vncserver command (which backgrounds itself) for use with noVNC:</p>
+<p><code>./websockify 5901 --wrap-mode=ignore -- vncserver -geometry 1024x768 :1</code></p>
+<p>Here is an example of wrapping telnetd (from krb5-telnetd).telnetd exits after the connection closes so the wrap mode is set to respawn the command:</p>
+<p><code>sudo ./websockify 2023 --wrap-mode=respawn -- telnetd -debug 2023</code></p>
+<p>The wstelnet.html page demonstrates a simple WebSockets based telnet client.</p>
+<h2>AUTHOR</h2>
+<p>Joel Martin (github [at] martintribe.org)</p>
+<h2>SEE ALSO</h2>
+<p><a rel="nofollow" HREF="https://github.com/kanaka/websockify/"><a href="https://github.com/kanaka/websockify/">https://github.com/kanaka/websockify/</a></a></p>
+<p><a rel="nofollow" HREF="https://github.com/kanaka/websockify/wiki/"><a href="https://github.com/kanaka/websockify/wiki/">https://github.com/kanaka/websockify/wiki/</a></a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

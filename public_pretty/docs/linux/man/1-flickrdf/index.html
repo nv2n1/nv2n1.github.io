@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>flickrdf(1) · Linux Manual Pages</title>
+<meta name="description" content="flickrdf – call Flickr API">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-flickrdf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>flickrdf(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> flickrdf &#8211; call Flickr API</p>
+<h2>SYNOPSIS</h2>
+<p> <code>flickrdf</code> [<code>-d </code><i>DELAY</i>] [<code>-a </code><i>FROB</i>] [<code>-h</code>] [<code>-v</code>] </p>
+<h2>DESCRIPTION</h2>
+<p> <code>flickrdf</code> is a utility that uses the <i>photos.getInfo</i> API to interpret the description fields and the tags for a photo URI into RDF triples. If raptor is present, it will be used to provide proper serializing to RDF rather than the built in and hacky ntriples/turtle output. </p>
+<p> Machine tags when they are found are scanned for <i>xmlns:prefix=uri</i> and then all other machine tags with that prefix turn into triples. Several prefixes are also pre-defined by the library to automatically get turned into triples without an xmlns, such as <i>blue:</i>, <i>cell:</i>, <i>filter:</i> and <i>geo:</i>. Non-machine tags are not yet interpreted. </p>
+<h2>OPTIONS</h2>
+<p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options and exit.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Display the version of the program and exit.</dd>
+<dt><code>-d </code><i>DELAY</i>, &#8211;delay <i>DELAY</i></dt>
+<dd> Set delay between requests to <i>DELAY</i> milliseconds.</dd>
+<dt><code>-D, &#8211;debug</code></dt>
+<dd> Print lots of debugging output.</dd>
+<dt><code>-o, &#8211;output </code><i>FORMAT</i></dt>
+<dd> Set output format to <i>FORMAT</i>. <i>FORMAT</i> is one of:<br />
+<i>ntriples</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>N-Triples&nbsp;<wbr>(default)<br />
+<i>turtle</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Turtle<br />
+<i>rdfxml</i>-xmp&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RDF/XML&nbsp;<wbr>(XMP Profile)<br />
+<i>rdfxml</i>-abbrev&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RDF/XML&nbsp;<wbr>(Abbreviated)<br />
+<i>rdfxml</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RDF/XML<br />
+<i>rss-1.0</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>RSS 1.0<br />
+<i>dot</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>GraphViz DOT format The exact list depends on the version of Raptor that flickcurl is linked against.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-flickcurl/">flickcurl</a>(1),</code><a href="/docs/linux/man/3-libraptor/">libraptor</a>(3). </p>
+<h2>AUTHOR</h2>
+<p> flickrdf was written by David Beckett. </p>
+<p> This manual page was written by Kumar Appaiah &lt;akumar [at] ee.iitm.ac.in&gt;, for the Debian project (but may be used by others). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

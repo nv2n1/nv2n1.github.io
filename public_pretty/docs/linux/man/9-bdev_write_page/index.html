@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bdev_write_page(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-bdev_write_page/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>bdev_write_page(9)</h1>
+
+
+
+
+
+<p>bdev_write_page - Start writing a page to a block device</p>
+<h2>Synopsis</h2>
+<pre><code>int bdev_write_page(struct block_device *bdev, sector_t sector, struct page *page, struct writeback_control *wbc);</code></pre>
+<h2>Arguments</h2>
+<p><i>bdev</i></p>
+<dl><dd></dd><dd>The device to write the page to</dd></dl>
+<p><i>sector</i></p>
+<dl><dd>The offset on the device to write the page to (need not be aligned)</dd></dl>
+<p><i>page</i></p>
+<dl><dd>The page to write</dd></dl>
+<p><i>wbc</i></p>
+<dl><dd>The writeback_control for the write</dd></dl>
+<h2>Description</h2>
+<p>On entry, the page should be locked and not currently under writeback. On exit, if the write started successfully, the page will be unlocked and under writeback. If the write failed already (eg the driver failed to queue the page to the device), the page will still be locked. If the caller is a -&gt;writepage implementation, it will need to unlock the page.</p>
+<p>Errors returned by this function are usually &ldquo;soft&rdquo;, eg out of memory, or queue full; callers should try a different route to write this page rather than propagate an error back up the stack.</p>
+<h2>Return</h2>
+<p>negative errno if an error occurs, 0 if submission was successful.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

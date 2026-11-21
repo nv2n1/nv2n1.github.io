@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dblink_cancel_query(3) · Linux Manual Pages</title>
+<meta name="description" content="dblink_cancel_query – cancels any active query on the named connection">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dblink_cancel_query/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dblink_cancel_query(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> dblink_cancel_query &#8211; cancels any active query on the named connection </p>
+<h2>SYNOPSIS</h2>
+<pre>
+dblink_cancel_query(text connname) returns text
+</pre>
+<h2>DESCRIPTION</h2>
+<p> <code>dblink_cancel_query</code> attempts to cancel any query that is in progress on the named connection. Note that this is not certain to succeed (since, for example, the remote query might already have finished). A cancel request simply improves the odds that the query will fail soon. You must still complete the normal query protocol, for example by calling <code>dblink_get_result</code>.</p>
+<h2>ARGUMENTS</h2>
+<p> <i>connname</i></p>
+<dl>
+<dt>
+</dt><dd> Name of the connection to use.</dd></dl>
+<h2>RETURN VALUE</h2>
+<p> Returns OK if the cancel request has been sent, or the text of an error message on failure.</p>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+SELECT dblink_cancel_query('dtest1');
+</pre>
+</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

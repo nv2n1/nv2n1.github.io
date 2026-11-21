@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General System Administration</title>
+  <link rel="canonical" href="https://www.systutorials.com/category/general-system-administration/">
+  <meta name="description" content="Tutorials and Q&amp;A on Linux, systems, and software.">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="General System Administration">
+  <meta property="og:url" content="https://www.systutorials.com/category/general-system-administration/">
+  <meta property="og:description" content="Tutorials and Q&amp;A on Linux, systems, and software.">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin: 2.2rem 0 0.6rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      margin: 1.8rem 0 0.5rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: #555;
+    }
+    a {
+      color: #0a58ca;
+    }
+    .academies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .academy {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.1rem 1.2rem;
+      background: #fff;
+    }
+    .academy h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+    }
+    .academy p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .academy .paths {
+      color: #777;
+      font-size: 0.9rem;
+    }
+    .academy .explore {
+      margin-bottom: 0;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    ul.posts {
+      list-style: none;
+      padding-left: 0;
+    }
+    .recent-post {
+      margin-bottom: 1.2rem;
+    }
+    .recent-post h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.05rem;
+    }
+    .recent-post .meta {
+      margin: 0;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    ul.cat-grid {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 0.4rem 1.5rem;
+    }
+    ul.cat-grid span {
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .year-strip a {
+      margin-right: 0.9rem;
+      white-space: nowrap;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    ul.posts li {
+      margin-bottom: 0.45rem;
+    }
+    ul.posts time {
+      color: #888;
+      font-size: 0.9rem;
+      display: inline-block;
+      min-width: 5.5rem;
+    }
+    footer.site {
+      border-top: 1px solid #ddd;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    footer.site a {
+      margin-left: 1rem;
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">Recent</a>
+        <a href="/archive/">Archive</a><a href="/docs/linux/man/">Linux Manual Pages</a>
+      </nav>
+    </header>
+    
+
+
+
+<h1 id="general-system-administration">General System Administration</h1>
+
+
+
+  
+
+<p>Part of <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>.</p>
+
+<p>136 posts.</p>
+
+<ul class="posts">
+
+  <li><time>Jun 25, 2024</time> <a href="/making-linux-keyboard-similar-to-macos-keyboard/">Making Your Linux Keyboard Work Like macOS</a></li>
+
+  <li><time>Aug 8, 2020</time> <a href="/how-to-change-another-process-environment-variable-in-linux/">Modifying Another Process’s Environment Variables in Linux</a></li>
+
+  <li><time>Apr 5, 2020</time> <a href="/gcc-may-save-you-some-recursive-functions-calls-an-analysis-of-a-function-call-stack-length-example/">How GCC Inlines Recursive Functions at -O3</a></li>
+
+  <li><time>Mar 10, 2019</time> <a href="/how-to-limit-shared-aws-ec2-accounts-access-to-view-and-start-all-vms-yet-stop-only-certain-vms/">EC2 Instance Control with IAM Tags: Allowing Developers to Start Only Dev Instances</a></li>
+
+  <li><time>Sep 14, 2018</time> <a href="/how-to-get-date-and-time-using-date-command-from-another-timezone-in-linux-2/">Display Date and Time Across Multiple Timezones on Linux</a></li>
+
+  <li><time>Mar 31, 2018</time> <a href="/how-to-configure-dev-shm-size-of-linux/">Configuring /dev/shm Size on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/add-my-own-window-onload-safely-without-overwriting-old-ones/">Adding Multiple Window.onload Handlers Without Conflicts</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-list-and-delete-shared-memory-in-linux/">Working with Shared Memory in Linux: List and Delete</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-get-a-servers-serial-number-remotely/">Retrieve a Server’s Serial Number Remotely</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-set-linux-date-and-time-in-commands/">Setting Date and Time from the Linux Command Line</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-force-a-fsck-during-next-rebooting-of-linux/">How to Force fsck on Next Linux Reboot</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-pause-and-resume-the-execution-of-a-process-on-linux/">Pausing and Resuming Linux Processes with SIGSTOP and SIGCONT</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-get-the-highest-temperature-from-all-sensors-in-a-server-on-linux/">Querying Maximum Temperature Across Linux Server Sensors</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-get-hostname-in-python-on-linux/">Getting the Hostname in Python on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-use-ioprio_set-in-linux-c/">Using ioprio_set to Control I/O Priority in Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-get-the-cpu-temperatur-in-command-linux-on-linux/">How to Check CPU Temperature in Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-enable-natual-scroll-of-touchpad-in-mate-on-linux/">How to Enable Natural Scrolling on MATE Linux Touchpads</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-do-i-force-linux-to-unmount-a-filesystem/">Forcefully Unmount a Busy Filesystem in Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-sort-lines-by-length-in-linux/">Sort Lines by Length in Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-play-video-in-full-screen-and-keep-it-looping-with-mplayer/">Loop Videos in Fullscreen with mpv on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-use-the-xargs-argument-twice-in-the-command-on-linux/">Using xargs to Pass Arguments Multiple Times in One Command</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-manually-kill-hdfs-datanodes/">Safely Stopping Stray HDFS DataNode Processes on Multiple Nodes</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/ios-contacts-searching-does-not-work-showing-no-result/">iOS Contacts Search Broken After Updates: How to Fix</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/where-to-search-and-download-free-images/">Free Stock Images: Legal Sources and Best Practices</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-disable-laptops-internal-keyboard-on-linux/">Disabling Your Laptop’s Built-in Keyboard on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/free-vnc-server-software-on-windows/">Best Free VNC Servers for Windows in 2026</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/where-is-the-source-code-for-the-free-command-on-linux/">Locating procps Utilities Source Code</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-simulate-pressing-multiple-keys-together-on-linux/">Simulating Multiple Simultaneous Key Presses in Linux with xdotool</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-cut-by-multiple-spaces-in-linux/">Handling Variable Spacing in Linux Field Extraction</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-detect-whether-linux-runs-in-uefi-or-bios-mode-inside-the-linux/">How to Check If Linux Is Running in UEFI or BIOS Mode</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-force-a-usb-3-0-port-to-work-in-usb-2-0-mode-in-linux/">Force USB 3.0 Ports to USB 2.0 Mode on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-open-the-preferences-dialog-in-gthumb-3-4-on-linux/">Accessing Preferences in gThumb on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-configure-linux-to-use-the-scanner-in-an-hp-all-in-one-printer/">Setting Up HP Scanner on Linux with SANE</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-find-out-the-mx-record-for-a-domain-on-linux/">Querying MX Records on Linux with dig and host</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/good-free-images-hosting-services-on-the-web/">Image Hosting Services for Developers and Creators</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-put-adsense-ads-in-buysellads-without-iframe/">Implement AdSense Backfill in BuySellAds Without iFrames</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/whats-wrong-with-the-messages-like-unrecovdata-10b8b-badcrc-and-failed-command-read-fpdma-queued-on-linux/">Resolving UnrecovData 10B8B BadCRC and READ FPDMA QUEUED Errors</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-identify-a-certificated-lightning-cable-for-iphone-6/">How to Verify MFi-Certified Lightning Cables</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/implementation-of-strstr-in-glibc/">How glibc Implements strstr with the Two-Way Algorithm</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/max-number-of-emails-allowed-to-sent-from-gmail-smtp-per-day/">Gmail SMTP Rate Limits and Sending Quotas</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-find-which-program-or-process-is-listening-on-a-certain-port-in-linux/">Identifying Which Process Listens on a Port in Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-can-i-recover-deleted-photos-from-samsung/">Recovering Deleted Photos from Samsung Devices</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-resize-a-batch-of-images-on-linux/">Batch Resize Images on Linux with ImageMagick</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-detect-whether-an-image-is-almost-blank-on-linux/">Detecting Blank or Nearly Blank Images on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-add-a-status-bar-to-screen-on-linux/">Adding a Status Bar to GNU Screen on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-remove-specific-directories-recursively/">Find and Delete Directories Recursively</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-download-a-rtmp-stream-on-linux/">Capturing RTMP Streams on Linux: A Practical Guide</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-change-an-running-hdfs-clusters-replication-factor/">Adjusting HDFS Replication Factor on Live Clusters</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/what-is-the-design-of-snapshots-in-hdfs/">HDFS Snapshots: Architecture and Implementation Details</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-balance-datanode-storage-in-hdfs/">Balancing HDFS DataNode Storage</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/whats-the-difference-between-reliability-durability-and-availability-for-data-storage-system/">High Availability in Distributed Storage: RDA Fundamentals</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-get-logs-of-a-specific-time-range-on-linux/">Extract Linux Logs Within a Specific Time Range</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-read-email-in-maildir-on-linux/">Reading Emails from Maildir Format on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-capture-camera-photo-video-using-mplayer-on-linux/">Capturing Webcam Photos and Videos on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-backup-iphone-on-linux/">Backing Up Your iPhone on Linux Without iTunes</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-back-up-emails-from-the-email-server/">Backing Up Emails from IMAP and POP3 Servers</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/manage-linux-console-screen-by-commands/">Controlling Linux Console Blanking and Power Settings</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-un-trust-a-computer-that-i-have-trusted-with-ios-7-device/">Remove a Trusted Computer from Your iOS Device</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-rotate-a-mov-video-from-iphone-by-90-degree-on-linux/">How to Rotate iPhone MOV Videos with FFmpeg on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-run-programs-in-different-languages-from-windows-language/">Running Legacy Applications in Different Windows Locales</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-change-hostname-on-linux-mint/">How to Change Your Hostname on Linux Mint</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-jailbreak-ios-7-1-2/">Why iOS 7.1.2 Jailbreaking Isn’t Worth Your Time Anymore</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/x86-64-instructions-for-floating-point-comparisons/">x86-64 Floating-Point Comparisons with SSE and AVX</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-download-a-youtube-video-to-my-computer/">Download YouTube Videos with yt-dlp</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-import-a-cmake-project-into-eclipse-cdt/">Importing CMake Projects into Eclipse CDT</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/formatting-code-shortcuts-in-eclipse/">Eclipse Code Formatting: Shortcuts and Configuration</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-force-mplayer-to-start-a-video-at-the-center-of-the-screen/">Centering MPlayer and mpv Windows on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-map-win-key-to-ctrl-on-linux/">Remapping Windows Key to Ctrl on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-rearrange-alt-ctrl-and-win-keys-on-linux-win-as-alt-and-ctrl-alt-as-ctrl/">Remapping Modifier Keys on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-reset-the-keyboard-set-by-xmodmap-on-linux/">Resetting Your Linux Keyboard Layout with xmodmap and setxkbmap</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-turn-the-space-bar-to-another-ctrl-key/">Remap Space Bar to Ctrl with Tap-for-Space on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-detect-memory-leaks-of-c-programs-in-linux/">Memory Leak Detection Tools for C on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-resume-a-printing-job-on-hp-printer-if-the-paper-runs-out-on-linux/">Resuming Print Jobs on Linux After Paper Runs Out</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/linux-timer-sources/">Understanding Linux Timer Sources</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/utop-key-bindings-key-shortcuts/">UTop Keyboard Shortcuts and Keybindings</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/quick-method-to-sniff-the-data-left-on-a-linux-vm-in-the-public-cloud/">Recovering Data Left on Linux VMs in Public Clouds</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-count-the-number-of-page-view/">How to Count Page Views in Your Web Application</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-pipe-the-stderr-to-less/">Piping stderr to less: Redirect and view error streams</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-show-the-list-view-in-ios-7s-calendar/">iOS 7 Calendar: Switching to List View</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/g-sorry-unimplemented-non-trivial-designated-initializers-not-supported/">How to Work Around g&#43;&#43; Non-Trivial Designated Initializers</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-list-the-functions-in-a-a-library-on-linux/">How to List Functions in a Linux Static Library</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/broken-links-checker-for-sites/">Link Checker: Finding and Fixing Broken URLs</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-host-a-domain-registered-in-another-account-in-a-dreamhost-account/">Hosting a Domain from Another Account on Dreamhost</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/add-the-jane-street-opam-repository/">Using the Jane Street OPAM Repository</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/redis-architecture-consistency-model-etc/">Redis Architecture and Consistency Models Explained</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/find-out-the-number-of-cpu-cores-on-linux/">How to Check CPU Core Count on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-repair-tables-database-by-backup/">How to Repair Database Tables Using Backups</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-choose-the-number-of-mappers-and-reducers-in-hadoop/">Tuning MapReduce: Choosing Mapper and Reducer Counts</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/force-linux-to-reboot/">Force a System Reboot on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/cache-at-facebook/">Caching Strategies at Facebook</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/question2answer-show-excerpt-in-the-rss-feed/">Show Question Excerpts in Question2Answer RSS Feeds</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-change-the-position-of-y-axis-label-in-gnuplot/">Positioning Y-Axis Labels in Gnuplot</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-search-bad-blocks-on-a-device/">Detecting Bad Blocks on Storage Devices</a></li>
+
+  <li><time>May 21, 2016</time> <a href="/force-linux-unmount-filesystem-reporting-device-busy/">How to Unmount a Busy Filesystem in Linux</a></li>
+
+  <li><time>May 14, 2016</time> <a href="/how-to-disable-and-enable-laptop-keyboard-in-linux/">How to Enable and Disable Your Laptop Keyboard in Linux</a></li>
+
+  <li><time>Nov 29, 2015</time> <a href="/notes-software-development-linux-beginners/">Getting Started with Linux for Developers</a></li>
+
+  <li><time>Aug 22, 2015</time> <a href="/how-to-configure-scanner-in-a-hp-all-in-one-printer-on-linux/">Setting Up an HP Scanner on Linux with HPLIP and SANE</a></li>
+
+  <li><time>Mar 19, 2015</time> <a href="/changing-iphone-holiday-calendar-local-one/">Fix iPhone Holiday Calendar for Your Country Without Changing Language</a></li>
+
+  <li><time>Mar 16, 2015</time> <a href="/playing-youtube-video-background-iphone/">Background YouTube Playback on iPhone: What Actually Works</a></li>
+
+  <li><time>Mar 8, 2015</time> <a href="/what-is-the-name-of-the-linux-based-os-a-survey/">Understanding Linux Distribution Naming Conventions</a></li>
+
+  <li><time>Sep 27, 2014</time> <a href="/rotating-video-from-iphone-on-linux/">Rotating iPhone Videos with FFmpeg on Linux</a></li>
+
+  <li><time>Jan 1, 2014</time> <a href="/how-to-statically-link-c-and-c-programs-on-linux-with-gcc/">Static Linking C and C&#43;&#43; Programs with GCC on Linux</a></li>
+
+  <li><time>Nov 13, 2013</time> <a href="/how-to-find-out-failed-disks-sata-ports-in-linux/">Map Failed Disks to Physical SATA Ports in Linux</a></li>
+
+  <li><time>Oct 28, 2013</time> <a href="/sending-email-using-mailx-in-linux-through-internal-smtp/">Sending Email from Linux with mailx via Internal SMTP</a></li>
+
+  <li><time>Sep 5, 2013</time> <a href="/measuring-time-accurately-in-programs/">Choosing the Right Timer: clock_gettime vs TSC in Linux</a></li>
+
+  <li><time>Jul 17, 2013</time> <a href="/hadoop-mapreduce-tutorials/">Hadoop MapReduce: When to Use It and Deployment Strategies</a></li>
+
+  <li><time>Jul 15, 2013</time> <a href="/automatic-keyboard-presser-on-linux/">Automating Keyboard Input in Linux: xvkbd and Alternatives</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/playing-with-symbolic-links-on-linux/">Creating and Managing Symbolic Links in Linux</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/locking-iphone-screen-rotation/">Lock iPhone Screen Rotation: Control Center and Accessibility Settings</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/setting-up-pop3imap-email-box-on-nokia-e71/">Setting Up POP3 and IMAP on Nokia E71</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/gnu-c-reference-manual/">Using the GNU C Reference Manual: A Practical Guide</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/inline-assembly-with-gcc-on-linux/">GCC Inline Assembly on Linux: Extended Syntax and Examples</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/gnu-glibc-manual/">Understanding glibc: The Linux C Standard Library</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/generate-a-mixed-source-and-assembly-listing-using-gcc/">Generating Mixed C and Assembly Listings with GCC and objdump</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/diff-and-patch-generating-and-applying-patches/">Generating and Applying Patches with diff and patch</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/tutorials-for-linux-beginners/">Getting Started with Linux: A Beginner’s Guide</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/setting-touchpad-in-kde/">Configuring Touchpad Tap-to-Click in KDE</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/taking-screenshot-in-mplayer/">Taking Screenshots in MPlayer</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/how-to-find-out-linux-and-windows-uptime/">Checking System Uptime on Linux and Windows</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/pkill-and-pgrep-process-management-commands/">Mastering pkill and pgrep for Process Management</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/how-to-find-out-the-firmware-version-in-linux/">Checking Your Linux Firmware Version</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/linux-cluster-solutions/">Building Distributed Systems on Linux</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/jailbreaking-apple-ipod-touch-with-spirit-in-linux/">Jailbreaking an iPod Touch with Spirit on Linux</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/changing-mac-address-in-linux-aka-mac-spoofing/">Spoofing MAC Addresses in Linux</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/linux-setting-date-time-and-timezone/">Setting Date, Time, and Timezone in Linux</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/useful-mplayermencoder-commands/">Essential MPlayer and Mencoder Commands</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/using-google-apps-account-for-gtalk-in-pidgin/">Using Google Apps Accounts in Pidgin with GTalk</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/sending-email-from-mailx-command-in-linux-using-gmails-smtp/">Sending Gmail Emails via mailx on Linux</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/mplayer-startup-volume-and-postion/">MPlayer: Setting Startup Volume and Position</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/lftp-disable-ssl/">Disabling SSL in lftp: Configuration &amp; Security Considerations</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/mostly-used-mplayer-keyboard-control/">Essential MPlayer Keyboard Shortcuts</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/mplayer-chinese/">MPlayer 中文字幕显示配置指南</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/add-more-loop-device-on-linux/">Adding Loop Devices in Linux: A Practical Guide</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/configure-smobilenet-of-hkust-on-linux/">MobileNet Configuration on Linux: HKUST Setup Guide</a></li>
+
+  <li><time>Dec 11, 2012</time> <a href="/large-scale-data-storage-and-processing-system-in-datacenters/">Designing Scalable Data Storage and Processing Architectures</a></li>
+
+  <li><time>Jan 17, 2010</time> <a href="/mrcc-a-distributed-c-compiler-system-on-mapreduce/">mrcc – A Distributed C Compiler System on MapReduce (Archived 2010)</a></li>
+
+</ul>
+
+    <footer class="site">
+      <a href="/about/">About</a><a href="/authors/">Authors</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a><a href="/license/">License</a><a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">GitHub</a><a href="/linux-manual-pages/">Linux Manual Pages</a><a href="/tools/bbeditor/">BB Code Editor</a>
+    </footer>
+  </main>
+  
+  <script>
+  (function () {
+    var addr = ['con', 'tact', '@', 'systut', 'orials', '.', 'com'].join('');
+    document.querySelectorAll('.email-contact').forEach(function (el) {
+      var a = document.createElement('a');
+      a.href = 'mai' + 'lto:' + addr;
+      a.textContent = addr;
+      el.appendChild(a);
+    });
+  })();
+  </script>
+</body>
+</html>

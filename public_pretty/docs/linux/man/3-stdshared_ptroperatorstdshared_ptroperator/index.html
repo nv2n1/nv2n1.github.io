@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdshared_ptroperatorstdshared_ptroperator(3) · Linux Manual Pages</title>
+<meta name="description" content="std::shared_ptr&lt;T&gt;::operator*,std::shared_ptr&lt;T&gt;::operator-&gt; – std::shared_ptr&lt;T&gt;::operator*,std::shared_ptr&lt;T&gt;::operator-&gt;">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdshared_ptroperatorstdshared_ptroperator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdshared_ptroperatorstdshared_ptroperator(3)</h1>
+
+
+
+
+
+<p>std::shared_ptr&lt;T&gt;::operator*,std::shared_ptr&lt;T&gt;::operator-&gt; &#8211; std::shared_ptr&lt;T&gt;::operator*,std::shared_ptr&lt;T&gt;::operator-&gt;</p>
+<h2>Synopsis</h2>
+<p>T&amp; operator*() const noexcept; <code>(1)</code> <i>(since C++11)</i><br />
+T* operator-&gt;() const noexcept; <code>(2)</code> <i>(since C++11)</i><br />
+Dereferences the stored pointer. The behavior is undefined if the stored pointer is null. </p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>1) The result of dereferencing the stored pointer, i.e., *get()<br />
+2) The stored pointer, i.e., get()<br />
+Remarks<br />
+When T is a (possibly cv-qualified) void, it is unspecified whether function <code>(1)</code> is declared.<br />
+When T is an array type, it is unspecified whether these member functions are declared, and if they are, what their return type is, except that the declaration (not necessarily the definition) of these functions is well-formed. <i>(since C++17)</i><br />
+If either function is declared despite being unspecified, it is unspecified what its return type is, except that the declaration (although not necessarily the definition) of the function is guaranteed to be legal. This makes it possible to instantiate std::shared_ptr&lt;void&gt;. </p>
+<h2>Example</h2>
+<p>// Run this code </p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;memory&gt;
+struct Foo
+{
+    Foo(int in)
+        : a(in)
+    {
+    }
+    void print() const
+    {
+        std::cout &lt;&lt; &quot;a = &quot; &lt;&lt; a &lt;&lt; '
+';
+    }
+    int a;
+};
+int main()
+{
+    auto ptr = std::make_shared&lt;Foo&gt;(10);
+    ptr-&gt;print();
+    (*ptr).print();
+}
+</code></pre>
+<h2>Output:</h2>
+<p>&nbsp;<wbr>&nbsp;a = 10<br />
+&nbsp;<wbr>&nbsp;a = 10</p>
+<h2>See also</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;returns the stored pointer<br />
+get <i>(public member function)</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

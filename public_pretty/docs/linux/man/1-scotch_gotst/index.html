@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scotch_gotst(1) · Linux Manual Pages</title>
+<meta name="description" content="gomtst – compute statistics on sparse matrix orderings">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-scotch_gotst/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>scotch_gotst(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>gomtst </code>&#8211; compute statistics on sparse matrix orderings</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+gotst[options][gfile][ofile][lfile]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>gotst</code> program computes, in a sequential way, statistics on a sparse matrix ordering, such as fill-in, operation count, and separator tree parameters: minimum, maximum, average height and variance of its leaves. </p>
+<p> Source graph file <i>gfile</i> can only be a centralized graph file. File <i>ofile</i> represents the ordering of the symmetric sparse matrix the pattern of which is represented by <i>gfile</i>. The resulting statistics are stored in file <i>lfile</i>. When file names are not specified, data is read from standard input and written to standard output. Standard streams can also be explicitly represented by a dash &#8216;-&#8216;. </p>
+<p> When the proper libraries have been included at compile time, gtst can directly handle compressed graphs, both as input and output. A stream is treated as compressed whenever its name is postfixed with a compressed file extension, such as in &#8216;brol.grf.bz2&#8217; or &#8216;-.gz&#8217;. The compression formats which can be supported are the bzip2 format (&#8216;.bz2&#8217;), the gzip format (&#8216;.gz&#8217;), and the lzma format (&#8216;.lzma&#8217;, on input only). </p>
+<p> Since <code>gotst</code> performs sequentially the symbolic factorization of matrix <i>gfile</i> in order to compute fill-in and operation count numbers, this program can take a long time or even run out of memory, when applied to very large graphs.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h</code></dt>
+<dd> Display some help.</dd>
+<dt><code>-V</code></dt>
+<dd> Display program version and copyright.</dd></dl>
+<h2>EXAMPLE</h2>
+<p> Display statistics on ordering brol.ord of graph brol.grf: </p>
+<pre>
+    $ gotst brol.grf brol.ord
+</pre>
+<h2>SEE ALSO</h2>
+<p> <code>gord</code>(1), <code>gtst</code>(1), <code>dgord</code>(1). </p>
+<p> Scotch user&#8217;s manual.</p>
+<h2>AUTHOR</h2>
+<p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

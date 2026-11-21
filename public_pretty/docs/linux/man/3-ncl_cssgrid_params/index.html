@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_cssgrid_params(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_cssgrid_params/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_cssgrid_params(3)</h1>
+
+
+
+
+
+<p>cssgrid_params - This document briefly describes all the internal parameters of Cssgrid.</p>
+<h2>Description</h2>Each entry below includes the name of a parameter, its Fortran type (use the obvious equivalents for C), its default value, and a short description of the parameter.
+<dl COMPACT><dt>'SIG' - Real - computed
+</dt><dd>value of the tension factor for the splines
+</dd><dt>'TOL' - Real - 0.01
+</dt><dd>Tolerance to use in calculating gradient differences to terminate the iteration sequence when computing global gradients
+</dd><dt>'TTF' - Real - 0.01
+</dt><dd>Tolerance to use in determining how accurately each tension factor should be calculated to approximate its optimum value
+</dd><dt>'NLS' - Integer - 10
+</dt><dd>Number of nodes to use in the least squares fit.
+</dd><dt>'NSG' - Integer - 10
+</dt><dd>Maximum number of iterations to use in the algorithm for computing automatic tension factors
+</dd><dt>'ISG' - Integer - 0
+</dt><dd>Flag to revert to calculating automatic tension factors rather than use a constant tension. Using a constant tension is effected by setting a value for the control parameter sig. If isg is 0, then a tension array is used, otherwise a constant tension is used.
+</dd><dt>'IGR' - Integer - 1
+</dt><dd>Flags whether global or local gradients are used (1 implies global, anything else implies local).
+</dd><dt>'MVL' - Real - -8.
+</dt><dd>Fill value to use in returns for NCL functions. Used only if mvl has been changed from its default.</dd></dl><h2>See Also</h2>cssgrid, csstri, csvoro, css2c, csc2s, csseti, csgeti, cssetr, csgetr, cssetd, csgetd, cssgridd, csstrid, csvorod, css2cd, csc2sd, c_cssgrid, c_csstri, c_csvoro, c_css2c, c_csc2s, c_csseti, c_csgeti, c_cssetr, c_csgetr, c_cssetd, c_csgetd, c_cssgridd, c_csstrid, c_csvorod, c_css2cd, c_csc2sd. 
+<p>Complete documentation for Cssgrid is available at URL
+<a rel="nofollow" HREF="http://ngwww.ucar.edu/ngdoc/ng/ngmath/csgrid/cshome.html"><a href="http://ngwww.ucar.edu/ngdoc/ng/ngmath/csgrid/cshome.html">http://ngwww.ucar.edu/ngdoc/ng/ngmath/csgrid/cshome.html</a></a></p>
+<h2>Copyright</h2>Copyright (C) 2000 
+ University Corporation for Atmospheric Research 
+<p>The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

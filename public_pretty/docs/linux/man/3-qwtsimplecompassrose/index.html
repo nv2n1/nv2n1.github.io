@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qwtsimplecompassrose(3) · Linux Manual Pages</title>
+<meta name="description" content="QwtSimpleCompassRose –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-qwtsimplecompassrose/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>qwtsimplecompassrose(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QwtSimpleCompassRose &#8211; </p>
+<p> A simple rose for <code>QwtCompass</code>.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;qwt_compass_rose.h&gt; </p>
+<p> Inherits <code>QwtCompassRose</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>QwtSimpleCompassRose</code> (int <code>numThorns</code>=8, int <code>numThornLevels</code>=-1) </p>
+<p> virtual <code>~QwtSimpleCompassRose</code> ()<br />
+ <i>Destructor. </i><br />
+ void <code>setWidth</code> (double w) </p>
+<p> double <code>width</code> () const </p>
+<p> void <code>setNumThorns</code> (int count) </p>
+<p> int <code>numThorns</code> () const </p>
+<p> void <code>setNumThornLevels</code> (int count) </p>
+<p> int <code>numThornLevels</code> () const </p>
+<p> void <code>setShrinkFactor</code> (double factor) </p>
+<p> double <code>shrinkFactor</code> () const </p>
+<p> virtual void <code>draw</code> (QPainter *, const QPointF &amp;center, double radius, double north, QPalette::ColorGroup=QPalette::Active) const </p>
+<h3>Static Public Member Functions</h3>
+<p>static void <code>drawRose</code> (QPainter *, const QPalette &amp;, const QPointF &amp;center, double radius, double origin, double <code>width</code>, int <code>numThorns</code>, int <code>numThornLevels</code>, double <code>shrinkFactor</code>) </p>
+<h2>Detailed Description</h2>
+<p>A simple rose for <code>QwtCompass</code>.</p>
+<h2>Constructor &amp; Destructor Documentation</h2>
+<h3>QwtSimpleCompassRose::QwtSimpleCompassRose (intnumThorns = 8, intnumThornLevels = -1)</h3>
+<p>Constructor </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>numThorns</i> Number of thorns<br />
+ <i>numThornLevels</i> Number of thorn levels</dd></dl>
+<h2>Member Function Documentation</h2>
+<h3>void QwtSimpleCompassRose::draw (QPainter *painter, const QPointF &amp;center, doubleradius, doublenorth, QPalette::ColorGroupcg = QPalette::Active) const [virtual]</h3>
+<p>Draw the rose </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>painter</i> Painter<br />
+ <i>center</i> Center point<br />
+ <i>radius</i> Radius of the rose<br />
+ <i>north</i> Position<br />
+ <i>cg</i> Color group</dd></dl>
+<p> Implements <code>QwtCompassRose</code>.</p>
+<h3>void QwtSimpleCompassRose::drawRose (QPainter *painter, const QPalette &amp;palette, const QPointF &amp;center, doubleradius, doublenorth, doublewidth, intnumThorns, intnumThornLevels, doubleshrinkFactor) [static]</h3>
+<p>Draw the rose </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>painter</i> Painter<br />
+ <i>palette</i> Palette<br />
+ <i>center</i> Center of the rose<br />
+ <i>radius</i> Radius of the rose<br />
+ <i>north</i> Position pointing to north<br />
+ <i>width</i> Width of the rose<br />
+ <i>numThorns</i> Number of thorns<br />
+ <i>numThornLevels</i> Number of thorn levels<br />
+ <i>shrinkFactor</i> Factor to shrink the thorns with each level</dd></dl>
+<h3>int QwtSimpleCompassRose::numThornLevels () const</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>Number of thorn levels</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>setNumThorns()</code>, <code>setNumThornLevels()</code></dd></dl>
+<h3>int QwtSimpleCompassRose::numThorns () const</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>Number of thorns</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>setNumThorns()</code>, <code>setNumThornLevels()</code></dd></dl>
+<h3>void QwtSimpleCompassRose::setNumThornLevels (intnumThornLevels)</h3>
+<p>Set the of thorns levels </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>numThornLevels</i> Number of thorns levels</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>setNumThorns()</code>, <code>numThornLevels()</code></dd></dl>
+<h3>void QwtSimpleCompassRose::setNumThorns (intnumThorns)</h3>
+<p>Set the number of thorns on one level The number is aligned to a multiple of 4, with a minimum of 4 </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>numThorns</i> Number of thorns</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>numThorns()</code>, <code>setNumThornLevels()</code></dd></dl>
+<h3>void QwtSimpleCompassRose::setShrinkFactor (doublefactor)</h3>
+<p>Set the Factor how to shrink the thorns with each level The default value is 0.9. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>factor</i> Shrink factor</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>shrinkFactor()</code></dd></dl>
+<h3>void QwtSimpleCompassRose::setWidth (doublewidth)</h3>
+<p>Set the width of the rose heads. Lower value make thinner heads. The range is limited from 0.03 to 0.4. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>width</i> Width</dd></dl>
+<h3>double QwtSimpleCompassRose::shrinkFactor () const</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>Factor how to shrink the thorns with each level</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>setShrinkFactor()</code></dd></dl>
+<h3>double QwtSimpleCompassRose::width () const</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>Width of the rose</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>setWidth()</code></dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

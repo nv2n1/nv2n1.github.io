@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Linux Kernel Migration Threads Work - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/migration-thread-works-inside-linux-kernel/">
+  <meta name="description" content="In computer systems, resources must be balanced across available hardware to maximize performance. The Linux kernel runs migration threads as per-CPU daemons to …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How Linux Kernel Migration Threads Work">
+  <meta property="og:url" content="https://www.systutorials.com/migration-thread-works-inside-linux-kernel/">
+  <meta property="og:description" content="In computer systems, resources must be balanced across available hardware to maximize performance. The Linux kernel runs migration threads as per-CPU daemons to …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/kernel/">Kernel</a>
+        </nav>
+        
+        <h1>How Linux Kernel Migration Threads Work</h1>
+        <time class="post-date" datetime="2016-11-19T01:58:42Z">November 19, 2016</time> <span class="post-author">&middot; <a href="/author/harryxiyou/">Weiwei Jia</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>In computer systems, resources must be balanced across available hardware to maximize performance. The Linux kernel runs migration threads as per-CPU daemons to handle this work. These threads manage task migration between CPUs, CPU hotplug operations, and stop-machine synchronization.</p>
+<p>You can observe migration threads on any modern system:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ps aux <span class="p">|</span> grep migration
+</span></span><span class="line"><span class="cl">root         <span class="m">9</span>  0.0  0.0      <span class="m">0</span>     <span class="m">0</span> ?        S    Nov17   0:00 <span class="o">[</span>migration/0<span class="o">]</span>
+</span></span><span class="line"><span class="cl">root        <span class="m">15</span>  0.0  0.0      <span class="m">0</span>     <span class="m">0</span> ?        S    Nov17   0:00 <span class="o">[</span>migration/1<span class="o">]</span>
+</span></span><span class="line"><span class="cl">root        <span class="m">21</span>  0.0  0.0      <span class="m">0</span>     <span class="m">0</span> ?        S    Nov17   0:00 <span class="o">[</span>migration/2<span class="o">]</span>
+</span></span><span class="line"><span class="cl">root        <span class="m">27</span>  0.0  0.0      <span class="m">0</span>     <span class="m">0</span> ?        S    Nov17   0:00 <span class="o">[</span>migration/3<span class="o">]</span>
+</span></span><span class="line"><span class="cl">root        <span class="m">33</span>  0.0  0.0      <span class="m">0</span>     <span class="m">0</span> ?        S    Nov17   0:00 <span class="o">[</span>migration/4<span class="o">]</span>
+</span></span></code></pre></div><p>Each CPU gets one migration thread. There’s one <code>[migration/N]</code> thread per logical CPU on your system. These are kernel threads (notice the brackets in the COMM field and zero RSS).</p>
+<h2 id="how-migration-works">How Migration Works</h2>
+<p>The Linux kernel uses a layered approach to perform CPU migrations. When you call <code>sched_setaffinity()</code> to restrict a task to specific CPUs, or when the scheduler needs to move a running task, the kernel queues migration work to the appropriate CPU’s migration thread.</p>
+<h3 id="the-call-chain">The Call Chain</h3>
+<p>When a task needs to migrate (particularly if it’s currently running or in <code>TASK_WAKING</code> state), the kernel executes this call stack:</p>
+<pre><code>stop_one_cpu()
+  → cpu_stop_queue_work()
+    → __cpu_stop_queue_work()
+      → list_add_tail()         // Add work to queue
+      → wake_up_process()       // Wake the migration thread
+</code></pre>
+<p>The migration work gets packaged as a work item, added to the target CPU’s work queue, and the migration thread is awakened to process it.</p>
+<h3 id="practical-example">Practical Example</h3>
+<p>You can trigger migrations manually to observe this in action:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Restrict a process to CPU 0 only</span>
+</span></span><span class="line"><span class="cl">$ taskset -p -c <span class="m">0</span> &lt;pid&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Move an already-running process to CPUs 1-3</span>
+</span></span><span class="line"><span class="cl">$ taskset -p -c 1-3 &lt;pid&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Verify the change took effect</span>
+</span></span><span class="line"><span class="cl">$ taskset -cp &lt;pid&gt;
+</span></span></code></pre></div><p>When taskset executes, it calls <code>sched_setaffinity()</code>, which triggers the kernel’s migration path we just described.</p>
+<h2 id="kernel-implementation">Kernel Implementation</h2>
+<p>Migration threads are created as per-CPU kernel threads using the <code>smp_hotplug_thread</code> mechanism. Here’s how the kernel structures them:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">static</span> <span class="k">struct</span> <span class="n">smp_hotplug_thread</span> <span class="n">cpu_stop_threads</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">store</span>                  <span class="o">=</span> <span class="o">&amp;</span><span class="n">cpu_stopper</span><span class="p">.</span><span class="kr">thread</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">thread_should_run</span>      <span class="o">=</span> <span class="n">cpu_stop_should_run</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">thread_fn</span>              <span class="o">=</span> <span class="n">cpu_stopper_thread</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">thread_comm</span>            <span class="o">=</span> <span class="s">&#34;migration/%u&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">create</span>                 <span class="o">=</span> <span class="n">cpu_stop_create</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">park</span>                   <span class="o">=</span> <span class="n">cpu_stop_park</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="n">selfparking</span>            <span class="o">=</span> <span class="nb">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">int</span> <span class="n">__init</span> <span class="nf">cpu_stop_init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">cpu</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">for_each_possible_cpu</span><span class="p">(</span><span class="n">cpu</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">struct</span> <span class="n">cpu_stopper</span> <span class="o">*</span><span class="n">stopper</span> <span class="o">=</span> <span class="o">&amp;</span><span class="nf">per_cpu</span><span class="p">(</span><span class="n">cpu_stopper</span><span class="p">,</span> <span class="n">cpu</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nf">spin_lock_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">stopper</span><span class="o">-&gt;</span><span class="n">lock</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">INIT_LIST_HEAD</span><span class="p">(</span><span class="o">&amp;</span><span class="n">stopper</span><span class="o">-&gt;</span><span class="n">works</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">BUG_ON</span><span class="p">(</span><span class="nf">smpboot_register_percpu_thread</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cpu_stop_threads</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">stop_machine_unpark</span><span class="p">(</span><span class="nf">raw_smp_processor_id</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="n">stop_machine_initialized</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nf">early_initcall</span><span class="p">(</span><span class="n">cpu_stop_init</span><span class="p">);</span>
+</span></span></code></pre></div><p>Each CPU gets its own <code>cpu_stopper</code> structure containing a spinlock and a work queue (<code>works</code> list). The thread function <code>cpu_stopper_thread()</code> continuously processes items from this queue in a loop, checking <code>thread_should_run()</code> to determine if work is pending.</p>
+<p>The spinlock protecting each CPU’s work queue prevents concurrent modifications. When a CPU’s stopper thread runs, it acquires the lock, executes pending work items serially, then releases the lock and potentially sleeps until awakened again.</p>
+<h2 id="initialization-sequence">Initialization Sequence</h2>
+<p>Migration threads are initialized early during kernel boot as part of the <code>early_initcall</code> stage:</p>
+<pre><code>start_kernel()
+  → rest_init()
+    → kernel_init()
+      → kernel_init_freeable()
+        → do_pre_smp_initcalls()
+          → do_one_initcall()       // cpu_stop_init() runs here
+</code></pre>
+<p>The initialization order follows this sequence:</p>
+<ul>
+<li>early (cpu_stop_init runs here)</li>
+<li>core</li>
+<li>postcore</li>
+<li>arch</li>
+<li>subsys</li>
+<li>fs</li>
+<li>device</li>
+<li>late</li>
+</ul>
+<p>Migration thread initialization happens during the “early” phase, ensuring per-CPU threads are available before the scheduler becomes fully active. This ordering is critical because the scheduler and task migration depend on these threads being ready.</p>
+<h2 id="why-this-design">Why This Design</h2>
+<p>Using dedicated per-CPU migration threads provides several advantages:</p>
+<p><strong>Serialization</strong>: Each CPU’s migration thread is single-threaded, preventing race conditions when modifying a CPU’s task queue. Without this, concurrent migration requests could corrupt scheduler data structures.</p>
+<p><strong>Stop-machine safety</strong>: The migration mechanism integrates with stop-machine, allowing the kernel to halt all CPUs when needed. This is essential for CPU hotplug operations (disabling CPU cores), live patching, and other operations requiring atomic consistency across cores.</p>
+<p><strong>Deterministic execution</strong>: Migration work executes in a controlled context (the migration thread) rather than from arbitrary interrupt handlers or random scheduler paths. This makes timing more predictable and easier to debug.</p>
+<p><strong>Separation of concerns</strong>: Migration concerns are isolated from the general work queue system (kworker threads), giving them dedicated resources and priority handling.</p>
+<h2 id="monitoring-migration-activity">Monitoring Migration Activity</h2>
+<h3 id="direct-process-inspection">Direct Process Inspection</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check migration/0 thread details</span>
+</span></span><span class="line"><span class="cl">$ cat /proc/9/status
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># View scheduling class and priority</span>
+</span></span><span class="line"><span class="cl">$ ps -o pid,comm,cls,pri -p <span class="m">9</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Monitor CPU time spent in migration</span>
+</span></span><span class="line"><span class="cl">$ cat /proc/stat <span class="p">|</span> grep cpu0
+</span></span></code></pre></div><h3 id="using-tracepoints">Using Tracepoints</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Record all task migration events</span>
+</span></span><span class="line"><span class="cl">$ trace-cmd record -e sched_migrate_task sleep <span class="m">5</span>
+</span></span><span class="line"><span class="cl">$ trace-cmd report
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Look for patterns of migrations</span>
+</span></span><span class="line"><span class="cl">$ trace-cmd report <span class="p">|</span> grep sched_migrate_task
+</span></span></code></pre></div><h3 id="performance-tools">Performance Tools</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Monitor scheduling events with perf</span>
+</span></span><span class="line"><span class="cl">$ perf record -e sched:sched_migrate_task -a sleep <span class="m">10</span>
+</span></span><span class="line"><span class="cl">$ perf report
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Generate flame graph of scheduler activity</span>
+</span></span><span class="line"><span class="cl">$ perf record -e sched:sched_migrate_task -F <span class="m">99</span> -a sleep <span class="m">30</span>
+</span></span><span class="line"><span class="cl">$ perf script &gt; out.perf
+</span></span></code></pre></div><h3 id="checking-stopper-thread-load">Checking Stopper Thread Load</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># See recent CPU usage of migration threads</span>
+</span></span><span class="line"><span class="cl">$ ps aux <span class="p">|</span> grep migration <span class="p">|</span> grep -v grep
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Get per-thread CPU time</span>
+</span></span><span class="line"><span class="cl">$ cat /proc/&lt;pid&gt;/stat <span class="p">|</span> awk <span class="s1">&#39;{print $14, $15}&#39;</span> <span class="c1"># utime, stime in jiffies</span>
+</span></span></code></pre></div><p>High migration thread CPU usage often indicates the scheduler is frequently moving tasks between CPUs, which can signal:</p>
+<ul>
+<li>Uneven workload distribution</li>
+<li>CPU affinity settings that conflict with scheduler load balancing</li>
+<li>Too-frequent CPU hotplug operations</li>
+<li>Inefficient task placement in NUMA systems</li>
+</ul>
+<h2 id="related-mechanisms">Related Mechanisms</h2>
+<p>Other kernel daemon threads follow similar patterns. <code>softirqd</code>, <code>kworker</code>, and <code>ksoftirqd</code> all use <code>smp_hotplug_thread</code> registration to create per-CPU kernel threads that handle domain-specific work. Understanding migration threads gives you a template for how the kernel manages per-CPU coordination.</p>
+<p>The stopper thread also handles stop-machine work beyond just migration. When the kernel needs to synchronize all CPUs (for example, during live patching with kpatch or kgraft), work items are queued to each CPU’s stopper thread to ensure atomic execution across the system.</p>
+<h2 id="implementation-across-kernel-versions">Implementation Across Kernel Versions</h2>
+<p>The migration thread mechanism has remained largely stable from kernel 5.x through the current 6.x releases. Core concepts haven’t changed, though implementation details vary:</p>
+<ul>
+<li><strong>5.x kernels</strong>: Used the classic stop-machine implementation with direct work queueing</li>
+<li><strong>6.x kernels</strong>: Integrated better with the scheduler’s load-balancing framework</li>
+<li><strong>6.10+</strong>: Added further refinements to migration latency and CPU hotplug response times</li>
+</ul>
+<p>The fundamental architecture — per-CPU serialized work queues woken by the scheduler — remains consistent across all recent versions.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

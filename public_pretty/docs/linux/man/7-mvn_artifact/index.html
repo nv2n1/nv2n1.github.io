@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mvn_artifact(7) · Linux Manual Pages</title>
+<meta name="description" content="mvn_artifact – request installation of Maven artifact">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-mvn_artifact/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>mvn_artifact(7)</h1>
+
+
+
+
+
+<p>mvn_artifact &#8211; request installation of Maven artifact</p>
+<h2>Synopsis</h2>
+<p><code>%mvn_artifact</code> model [artifact-file] <code>%mvn_artifact</code> artifact-coordinates artifact-file</p>
+<h2>Description</h2>
+<p><code>mvn_artifact</code> macro marks specified Maven artifact to be installed by further call to <code>mvn_install</code>. Multiple calls to <code>mvn_artifact</code> and/or <code>mvn_build</code> can be made to request installation of multiple artifacts.</p>
+<h2>Operands</h2>
+<p><code>model</code></p>
+<dl>
+<dd>Path to raw project object model (POM) file to be associated and installed with artifact.</dd></dl>
+<p> <code>artifact-file</code></p>
+<dl>
+<dd>Path to file to be used as artifact file. If omitted then no artifact file is installed.</dd></dl>
+<p> <code>artifact-coordinates</code></p>
+<dl>
+<dd>Artifact coordinates specify artifact to be installed. If specified then no model file is installed with artifact. Coordinates are in format <code>groupId:artifactId[:extension[:classifier]]:version</code>. If extension is omitted then &quot;jar&quot; is used. If classifier is omitted then empty classifier is used. For more information see XMvn Configuration Reference.</dd></dl>
+<h2>Author</h2>
+<p>Written by Michal Srb.</p>
+<h2>Reporting Bugs</h2>
+<p>Bugs should be reported through Red Hat Bugzilla at m[blue]<code><a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a></code>m[].</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/7-mvn_build/">mvn_build</a></code>(7), <code><a href="/docs/linux/man/7-mvn_install/">mvn_install</a></code>(7). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

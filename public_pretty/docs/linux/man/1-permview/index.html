@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>permview(1) · Linux Manual Pages</title>
+<meta name="description" content="permview – Viewer for declarative security permission sets inside assemblies.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-permview/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>permview(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> permview &#8211; Viewer for declarative security permission sets inside assemblies.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>permview [options] assembly</code></p>
+<h2>DESCRIPTION</h2>
+<p> This tools allow to list the declarative security attributes present in an assembly. The security attributes are either found on the assembly level, on the classes and the methods. This tool is useful to diagnose why an assembly won&#8217;t load or why some class/method throws SecurityException.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><i>-output filename</i></dt>
+<dd> Output all declarative security attributes related informations into the specified file.</dd>
+<dt><i>-xml | &#8211;xml | /XML</i></dt>
+<dd> Output all declarative security attributes in an XML format.</dd>
+<dt><i>-decl | &#8211;decl | /DECL</i></dt>
+<dd> Show declarative security attributes on classes and methods. The default, without the <code>-decl</code> option, is to show only the assembly level permission sets.</dd>
+<dt><i>-? | /? | -h[elp] | /h[elp]</i></dt>
+<dd> Display help informations about the permview tool. </dd>
+</dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt><i>permview mscorlib.dll</i></dt>
+<dd> This will show the minimum, optional and refused permissions sets (i.e. the assembly level security actions) that are compiled inside the mscorlib assembly.</dd>
+<dt><i>permview -decl permview.exe</i></dt>
+<dd> This will show all (assembly, class or method level) declarative security attributes present in the permview.exe assembly. </dd>
+</dl>
+<h2>AUTHOR</h2>
+<p> Written by Sebastien Pouliot</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2004-2005 Novell, Inc (<a rel="nofollow" href="http://www.novell.com)">http://www.novell.com)</a></p>
+<h2>MAILING LISTS</h2>
+<p> Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-devel-list">http://lists.ximian.com/mailman/listinfo/mono-devel-list</a> for details.</p>
+<h2>WEB SITE</h2>
+<p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

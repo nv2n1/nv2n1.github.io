@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdstrstreambufstr(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdstrstreambufstr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdstrstreambufstr(3)</h1>
+
+
+
+
+
+<p>std::strstreambuf::str - std::strstreambuf::str</p>
+<h2>Synopsis</h2>
+<pre><code>char *str() const;</code></pre> 
+<p>Calls freeze(), then returns a copy of start pointer of the get area, std::streambuf::eback().
+The start of the get area, for all writeable std::strstreambuf objects constructed through the interface provided by std::strstream, is also the start of the put area.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>A copy of eback(), which may be a null pointer.</p>
+<h2>Notes</h2>
+<p>This function is typically called through the std::strstream interface.
+The call to freeze() guarantees that the returned pointer remains valid until the next explicit call to freeze(false): otherwise (on a dynamic buffer) any output operation could trigger buffer reallocation which would invalidate the pointer. It also causes a memory leak in the destructor of std::strstreambuf, unless freeze(false) is called before the buffer (or, more commonly, the std::strstream that manages it) is destroyed.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;strstream&gt;
+#include &lt;iostream&gt;
+int main()
+{
+std::strstream dyn; // dynamically-allocated read/write buffer
+dyn &lt;&lt; &quot;Test: &quot; &lt;&lt; 1.23 &lt;&lt; std::ends;
+std::strstreambuf *buf = dyn.rdbuf();
+std::cout &lt;&lt; &quot;R/W buffer holds &amp;quot;&quot; &lt;&lt; buf-&gt;str() // or dyn.str()
+&lt;&lt; &quot;&amp;quot;\n&quot;;
+dyn.freeze(false); // after calling .str() on a dynamic strstream
+char arr[10];
+std::ostrstream user(arr, 10); // fixed-size write-only buffer
+buf = user.rdbuf();
+user &lt;&lt; 1.23 &lt;&lt; std::ends;
+std::cout &lt;&lt; &quot;Write-only buffer holds &amp;quot;&quot; &lt;&lt; buf-&gt;str() // or user.str()
+&lt;&lt; &quot;&amp;quot;\n&quot;;
+std::istrstream lit(&quot;1 2 3&quot;); // fixed-size read-only buffer
+buf = lit.rdbuf();
+std::cout &lt;&lt; &quot;Read-only buffer holds &amp;quot;&quot; &lt;&lt; buf-&gt;str() // or lit.str()
+&lt;&lt; &quot;&amp;quot;\n&quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> R/W buffer holds &quot;Test: 1.23&quot;
+ <wbr> Write-only buffer holds &quot;1.23&quot;
+ <wbr> Read-only buffer holds &quot;1 2 31 2 3&quot;</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> accesses the output buffer
+str <i>(public member function of std::strstream)</i>
+ <wbr> <wbr> <wbr> accesses the output buffer
+str <i>(public member function of std::ostrstream)</i>
+ <wbr> <wbr> <wbr> accesses the output buffer
+str <i>(public member function of std::istrstream)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

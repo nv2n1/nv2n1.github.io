@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>enchant-2(1) · Linux Manual Pages</title>
+<meta name="description" content="Enchant – a spellchecker">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-enchant-2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>enchant-2(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> Enchant &#8211; a spellchecker </p>
+<h2>SYNOPSIS</h2>
+<p> <code>enchant-2</code> <code>-a</code>|<code>-l</code>|<code>-h</code>|<code>-v</code> [<code>-L</code>] [<code>-d</code> <i>DICTIONARY</i>] [<i>FILE</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> <code>Enchant</code> is an ispell-compatible spellchecker.</p>
+<dl>
+<dt><code>-d </code><i>DICTIONARY</i></dt>
+<dd> use the given dictionary</dd>
+<dt><code>-p </code><i>WORDLIST</i></dt>
+<dd> use the given personal wordlist</dd>
+<dt><code>-a</code></dt>
+<dd> list suggestions in ispell pipe mode format</dd>
+<dt><code>-l</code></dt>
+<dd> list only the misspellings</dd>
+<dt><code>-L</code></dt>
+<dd> display line numbers</dd>
+<dt><code>-h</code></dt>
+<dd> display help and exit</dd>
+<dt><code>-v</code></dt>
+<dd> display version information and exit</dd></dl>
+<h2>ENCHANT ORDERING FILE</h2>
+<p> Enchant uses global and per-user ordering files named <i>enchant.ordering</i> to decide which spelling provider to use for particular languages. The per-user file takes precedence. </p>
+<p> The ordering file takes the form <i>language_tag:&lt;comma-separated list of spelling providers&gt;</i>. The language tag is an IETF BCP 47 language tag, typically of the form <i>COUNTRY_LANGUAGE</i>. To see what dictionaries are available, run <i>enchant-lsmod-2</i>. &#8216;*&#8217; is used to mean &quot;use this ordering for all languages, unless instructed otherwise.&quot; For example: </p>
+<p> *:aspell,hunspell,nuspell<br />
+ en:aspell,hunspell,nuspell<br />
+ en_GB:hunspell,nuspell,aspell<br />
+ fr:hunspell,nuspell,aspell</p>
+<h2>FILES AND DIRECTORIES</h2>
+<p> Enchant looks in the following places for files, in decreasing order of precedence:</p>
+<dl>
+<dt><i>ENCHANT_CONFIG_DIR</i></dt>
+<dd> (If the environment variable is set.)</dd>
+<dt><i>XDG_CONFIG_HOME/enchant</i> (non-Windows systems)</dt>
+<dd> Default: <i>~/.config/enchant</i></dd>
+<dt><i>CSIDL_LOCAL_APPDATAnchant</i> (Windows systems)</dt>
+<dd> Default: <i>C:\Documents and Settings\</i>username<i>\Local Settings\Application Datanchant</dd>
+<dt>/usr/share/enchant</i></dt>
+<dd> (Or the equivalent location relative to the enchant library for a relocatable build.)</dd></dl>
+<p> Dictionaries are looked for in a subdirectory with the same name as the provider; for example, <i>/usr/share/enchant/hunspell</i> and <i>~/.config/enchant/hunspell</i>. </p>
+<p> Some providers may also look in a standard system directory for their dictionaries; the hunspell provider can be configured to do so at build time.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-aspell/">aspell</a></code>(1), <code><a href="/docs/linux/man/1-enchant-lsmod-2/">enchant-lsmod-2</a></code>(1)</p>
+<h2>AUTHOR</h2>
+<p> Written by Dom Lachowicz and Reuben Thomas. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

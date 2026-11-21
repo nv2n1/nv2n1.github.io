@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting Up a Git Server with SSH - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/set-up-git-server-through-ssh-connection/">
+  <meta name="description" content="Git and SSH integrate seamlessly for version control infrastructure. An SSH-based Git server works well for small teams where all members are trusted and have …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Setting Up a Git Server with SSH">
+  <meta property="og:url" content="https://www.systutorials.com/set-up-git-server-through-ssh-connection/">
+  <meta property="og:description" content="Git and SSH integrate seamlessly for version control infrastructure. An SSH-based Git server works well for small teams where all members are trusted and have …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>Setting Up a Git Server with SSH</h1>
+        <time class="post-date" datetime="2013-07-12T16:31:44Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Git and SSH integrate seamlessly for version control infrastructure. An SSH-based Git server works well for small teams where all members are trusted and have administrator-level access to all repositories. This approach is straightforward to deploy, but lacks fine-grained access control.</p>
+<p>For teams that need role-based repository access or audit trails, consider dedicated tools like Gitolite, Forgejo, or hosted solutions like GitHub/GitLab instead.</p>
+<h3 id="server-side-configuration">Server-Side Configuration</h3>
+<p>Log into your Git server with an account that has sudo/root privileges.</p>
+<p><strong>Install Git:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install git
+</span></span></code></pre></div><p><strong>Create a dedicated Git user:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo useradd -m -d /home/git -s /usr/sbin/nologin git
+</span></span></code></pre></div><p>Restrict the git user to Git operations only by setting the shell to <code>nologin</code> or <code>git-shell</code>. If using <code>git-shell</code>, add it to <code>/etc/shells</code> first to avoid “invalid shell” errors:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> /usr/bin/git-shell <span class="p">|</span> sudo tee -a /etc/shells
+</span></span><span class="line"><span class="cl">sudo usermod -s /usr/bin/git-shell git
+</span></span></code></pre></div><p><strong>Create the git-shell commands directory</strong> (required for git-shell to function):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /home/git/git-shell-commands
+</span></span><span class="line"><span class="cl">sudo chown git:git /home/git/git-shell-commands
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">755</span> /home/git/git-shell-commands
+</span></span></code></pre></div><p><strong>Set up SSH key access:</strong></p>
+<p>On your local machine, generate an SSH key if you don’t have one:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -C <span class="s2">&#34;your-email@example.com&#34;</span>
+</span></span></code></pre></div><p>Copy your public key to the server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-copy-id -i ~/.ssh/id_ed25519.pub git@example.org
+</span></span></code></pre></div><p>If <code>ssh-copy-id</code> isn’t available, manually append your key:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat ~/.ssh/id_ed25519.pub <span class="p">|</span> ssh username@example.org <span class="s2">&#34;sudo tee -a /home/git/.ssh/authorized_keys&#34;</span>
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">600</span> /home/git/.ssh/authorized_keys
+</span></span><span class="line"><span class="cl">sudo chown git:git /home/git/.ssh/authorized_keys
+</span></span></code></pre></div><h3 id="creating-repositories">Creating Repositories</h3>
+<p>On the server, create a bare repository (contains only version control data, no working directory):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo su - git -s /bin/bash
+</span></span><span class="line"><span class="cl">mkdir -p repos/myproject.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> repos/myproject.git
+</span></span><span class="line"><span class="cl">git init --bare
+</span></span></code></pre></div><p>The <code>--bare</code> flag creates a repository suitable for receiving pushes from multiple users.</p>
+<h3 id="initial-setup-on-client">Initial Setup on Client</h3>
+<p>On your local machine, initialize a new project:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir myproject
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> myproject
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">touch README.md
+</span></span><span class="line"><span class="cl">git add README.md
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Initial commit&#34;</span>
+</span></span><span class="line"><span class="cl">git remote add origin ssh://git@example.org/home/git/repos/myproject.git
+</span></span><span class="line"><span class="cl">git push -u origin main
+</span></span></code></pre></div><p>For subsequent work:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone ssh://git@example.org/home/git/repos/myproject.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> myproject
+</span></span><span class="line"><span class="cl">git pull
+</span></span><span class="line"><span class="cl"><span class="c1"># Make changes</span>
+</span></span><span class="line"><span class="cl">git commit -am <span class="s2">&#34;Update feature X&#34;</span>
+</span></span><span class="line"><span class="cl">git push
+</span></span></code></pre></div><h2 id="git-server-behind-a-gateway-port-forwarded">Git Server Behind a Gateway (Port-Forwarded)</h2>
+<p>When your Git server is inside a private network accessed through a gateway with port forwarding (e.g., port 22111 on <code>gate.example.org</code> forwards to <code>vm111:22</code>), the setup is nearly identical—only the SSH connection details change.</p>
+<p><strong>Server-side setup is unchanged</strong>, but configure using the gateway:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh username@gate.example.org -p <span class="m">22111</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Then follow the steps above identically</span>
+</span></span></code></pre></div><p><strong>On the client, use the gateway address and forwarded port in your remote URL:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote add origin ssh://git@gate.example.org:22111/home/git/repos/myproject.git
+</span></span><span class="line"><span class="cl">git push -u origin main
+</span></span></code></pre></div><p>When cloning:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone ssh://git@gate.example.org:22111/home/git/repos/myproject.git
+</span></span></code></pre></div><h3 id="important-considerations">Important Considerations</h3>
+<p><strong>SSH Key Types:</strong> Use Ed25519 keys (<code>ssh-keygen -t ed25519</code>) for better security and performance than older RSA keys. Ensure your SSH client supports them (all modern clients do).</p>
+<p><strong>Repository Paths:</strong> Use absolute paths in remote URLs (<code>/home/git/repos/myproject.git</code>) rather than tilde expansion (<code>~/repos/myproject.git</code>), which can cause confusion with different shell contexts.</p>
+<p><strong>File Permissions:</strong> Ensure the git user owns all repositories and the <code>.ssh</code> directory. Incorrect permissions will silently fail during push/pull operations.</p>
+<p><strong>Backup Keys:</strong> Keep your SSH private keys backed up securely. Loss of the key means loss of access.</p>
+<p><strong>Multiple Users:</strong> Each user adds their public key to <code>/home/git/.ssh/authorized_keys</code>. All users authenticate as the <code>git</code> system user but are differentiated by their SSH keys. For per-repository access control or user attribution, migrate to Gitolite or similar tools.</p>
+<p><strong>Monitoring:</strong> Enable SSH logging to audit repository access:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo journalctl -u sshd -f
+</span></span></code></pre></div><p>This basic SSH Git server works well for small teams or internal CI/CD systems but scales poorly beyond a handful of users. Plan migrations to more sophisticated tools as your infrastructure grows.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

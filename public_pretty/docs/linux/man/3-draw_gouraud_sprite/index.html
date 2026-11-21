@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>draw_gouraud_sprite(3) · Linux Manual Pages</title>
+<meta name="description" content="draw_gouraud_sprite – Draws a sprite with gouraud shading. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-draw_gouraud_sprite/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>draw_gouraud_sprite(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> draw_gouraud_sprite &#8211; Draws a sprite with gouraud shading. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>void draw_gouraud_sprite(BITMAP *bmp, BITMAP *sprite, int x, int y,</code> <code>int c1, int c2, int c3, int c4);</code></p>
+<h2>DESCRIPTION</h2>
+<p> More sophisticated version of draw_lit_sprite(): the &#8216;color&#8217; parameter is not constant across the sprite image anymore but interpolated between the four specified corner colors. The corner values passed to this function indicate the strength of the color applied on them, ranging from 0 (no strength) to 255 (full strength). Example: </p>
+<pre><code>
+/* Some one time initialisation code. */
+COLOR_MAP global_light_table;
+create_light_table(&amp;global_trans_table, my_palette,
+                   0, 0, 0, NULL);
+... if (get_color_depth() == 8)
+    color_map = &amp;global_light_table;
+else set_trans_blender(0, 0, 0, 128);
+/* Enemies are in shadow unless lit by torch. */
+draw_gouraud_sprite(buffer, menacing_spy, x, y,
+                    light_strength_on_corner_1,
+                    light_strength_on_corner_2,
+                    light_strength_on_corner_3,
+                    light_strength_on_corner_4);
+</code></pre>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-draw_sprite/">draw_sprite</a></code>(3), <code><a href="/docs/linux/man/3-draw_lit_sprite/">draw_lit_sprite</a></code>(3), <code><a href="/docs/linux/man/3-color_map/">color_map</a></code>(3), <code><a href="/docs/linux/man/3-set_trans_blender/">set_trans_blender</a></code>(3), <code><a href="/docs/linux/man/3-bitmap_mask_color/">bitmap_mask_color</a></code>(3), <code><a href="/docs/linux/man/3-exshade/">exshade</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

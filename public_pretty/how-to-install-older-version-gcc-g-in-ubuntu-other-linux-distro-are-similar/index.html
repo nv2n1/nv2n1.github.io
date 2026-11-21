@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Managing Multiple GCC Versions on Ubuntu - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-install-older-version-gcc-g-in-ubuntu-other-linux-distro-are-similar/">
+  <meta name="description" content="Many legacy projects require specific GCC versions that differ from your system default. Ubuntu makes this straightforward through the package manager and the …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Managing Multiple GCC Versions on Ubuntu">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-install-older-version-gcc-g-in-ubuntu-other-linux-distro-are-similar/">
+  <meta property="og:description" content="Many legacy projects require specific GCC versions that differ from your system default. Ubuntu makes this straightforward through the package manager and the …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/packages-desktop-applications/">Packages, Desktop &amp; Applications</a>
+        </nav>
+        
+        <h1>Managing Multiple GCC Versions on Ubuntu</h1>
+        <time class="post-date" datetime="2018-03-24T11:47:07Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/harryxiyou/">Weiwei Jia</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Many legacy projects require specific GCC versions that differ from your system default. Ubuntu makes this straightforward through the package manager and the <code>update-alternatives</code> system.</p>
+<h2 id="check-available-gcc-versions">Check available GCC versions</h2>
+<p>First, see what versions are available in your distribution’s repositories:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt-cache search ^gcc- <span class="p">|</span> grep -E <span class="s1">&#39;^\s*gcc-[0-9]&#39;</span>
+</span></span></code></pre></div><p>For Ubuntu 20.04 and later, you’ll typically find GCC 7 through the current version. Older versions like GCC 4.4 are no longer in standard repositories but may be available in the Ubuntu Toolchain Test PPA for some releases.</p>
+<h2 id="install-multiple-gcc-versions">Install multiple GCC versions</h2>
+<p>Install the specific versions you need alongside your current default:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install gcc-9 g++-9
+</span></span><span class="line"><span class="cl">sudo apt-get install gcc-11 g++-11
+</span></span></code></pre></div><p>You can install as many versions as needed. The <code>multilib</code> packages (<code>gcc-9-multilib</code>, <code>g++-9-multilib</code>) are only necessary if you need to compile for 32-bit targets on a 64-bit system.</p>
+<h2 id="register-versions-with-update-alternatives">Register versions with update-alternatives</h2>
+<p>Use <code>update-alternatives</code> to create a switchable set of symlinks. The priority number (last argument) determines which version is default—higher numbers take precedence:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 <span class="m">90</span>
+</span></span><span class="line"><span class="cl">sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 <span class="m">90</span>
+</span></span><span class="line"><span class="cl">sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 <span class="m">110</span>
+</span></span><span class="line"><span class="cl">sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 <span class="m">110</span>
+</span></span></code></pre></div><p>Notice the second argument to <code>--install</code> should match the target symlink name (<code>gcc</code> or <code>g++</code>), not include the version. Also register associated tools like <code>cc</code> and <code>c++</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo update-alternatives --install /usr/bin/cc cc /usr/bin/gcc <span class="m">30</span>
+</span></span><span class="line"><span class="cl">sudo update-alternatives --install /usr/bin/c++ c++ /usr/bin/g++ <span class="m">30</span>
+</span></span></code></pre></div><h2 id="switch-between-versions-interactively">Switch between versions interactively</h2>
+<p>Once registered, switch versions with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo update-alternatives --config gcc
+</span></span><span class="line"><span class="cl">sudo update-alternatives --config g++
+</span></span></code></pre></div><p>This opens a menu where you select which version to use. Your choice persists until changed again.</p>
+<h2 id="set-a-specific-version-programmatically">Set a specific version programmatically</h2>
+<p>To set a version without interaction:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo update-alternatives --set gcc /usr/bin/gcc-11
+</span></span><span class="line"><span class="cl">sudo update-alternatives --set g++ /usr/bin/g++-11
+</span></span></code></pre></div><h2 id="verify-your-selection">Verify your selection</h2>
+<p>Check which version is active:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc --version
+</span></span><span class="line"><span class="cl">g++ --version
+</span></span></code></pre></div><h2 id="using-older-gcc-versions-gcc-44-5-6-7">Using older GCC versions (GCC 4.4, 5, 6, 7)</h2>
+<p>For truly legacy versions no longer in standard repos, add the Ubuntu Toolchain Test PPA (use with caution on production systems):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+</span></span><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install gcc-7 g++-7
+</span></span></code></pre></div><p>Alternatively, compile GCC from source if the version isn’t packaged. Avoid creating manual symlinks in <code>/usr/bin</code> as shown in older guides—<code>update-alternatives</code> handles this correctly and tracks changes properly.</p>
+<h2 id="project-specific-approach">Project-specific approach</h2>
+<p>For a single project, avoid system-wide changes. Instead, export the compiler at build time:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">CC</span><span class="o">=</span>gcc-9 <span class="nv">CXX</span><span class="o">=</span>g++-9 ./configure
+</span></span><span class="line"><span class="cl">make
+</span></span></code></pre></div><p>Or with CMake:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cmake -DCMAKE_C_COMPILER<span class="o">=</span>gcc-9 -DCMAKE_CXX_COMPILER<span class="o">=</span>g++-9 ..
+</span></span></code></pre></div><p>This keeps different projects isolated and prevents accidental breakage of system tools that depend on specific compiler versions.</p>
+<h2 id="2026-best-practices-and-advanced-techniques">2026 Best Practices and Advanced Techniques</h2>
+<p>For Managing Multiple GCC Versions on Ubuntu, understanding both the fundamentals and modern practices ensures you can work efficiently and avoid common pitfalls. This guide extends the core article with practical advice for 2026 workflows.</p>
+<h2 id="troubleshooting-and-debugging">Troubleshooting and Debugging</h2>
+<p>When issues arise, a systematic approach saves time. Start by checking logs for error messages or warnings. Test individual components in isolation before integrating them. Use verbose modes and debug flags to gather more information when standard output is not enough to diagnose the problem.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor system resources to identify bottlenecks</li>
+<li>Use caching strategies to reduce redundant computation</li>
+<li>Keep software updated for security patches and performance improvements</li>
+<li>Profile code before applying optimizations</li>
+<li>Use connection pooling and keep-alive for network operations</li>
+</ul>
+<h2 id="security-considerations">Security Considerations</h2>
+<p>Security should be built into workflows from the start. Use strong authentication methods, encrypt sensitive data in transit, and follow the principle of least privilege for access controls. Regular security audits and penetration testing help maintain system integrity.</p>
+<h2 id="related-tools-and-commands">Related Tools and Commands</h2>
+<p>These complementary tools expand your capabilities:</p>
+<ul>
+<li>Monitoring: top, htop, iotop, vmstat for system resources</li>
+<li>Networking: ping, traceroute, ss, tcpdump for connectivity</li>
+<li>Files: find, locate, fd for searching; rsync for syncing</li>
+<li>Logs: journalctl, dmesg, tail -f for real-time monitoring</li>
+<li>Testing: curl for HTTP requests, nc for ports, openssl for crypto</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Consider automation and containerization for consistency across environments. Infrastructure as code tools enable reproducible deployments. CI/CD pipelines automate testing and deployment, reducing human error and speeding up delivery cycles.</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<p>This extended guide covers the topic beyond the original article scope. For specialized needs, refer to official documentation or community resources. Practice in test environments before production deployment.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

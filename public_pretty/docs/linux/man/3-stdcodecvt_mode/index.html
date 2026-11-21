@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdcodecvt_mode(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdcodecvt_mode/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdcodecvt_mode(3)</h1>
+
+
+
+
+
+<p>std::codecvt_mode - std::codecvt_mode</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;codecvt&gt;
+enum codecvt_mode {
+    consume_header = 4,          (since C++11)
+    generate_header = 2,         (deprecated in C++17)
+    little_endian = 1
+};</code></pre> 
+<p>The facets std::codecvt_utf8, std::codecvt_utf16, and std::codecvt_utf8_utf16 accept an optional value of type std::codecvt_mode as a template argument, which specifies optional features of the unicode string conversion.</p>
+<h2>Constants</h2>
+<p>Defined in header &lt;locale&gt;
+Value Meaning
+little_endian assume the input is in little-endian byte order (applies to UTF-16 input only, the default is big-endian)
+consume_header consume the byte order mark, if present at the start of input sequence, and (in case of UTF-16), rely on the byte order it specifies for decoding the rest of the input
+generate_header output the byte order mark at the start of the output sequence</p>
+<p>The recognized byte order marks are:</p>
+<p>0xfe 0xff UTF-16 big-endian
+0xff 0xfe UTF-16 little-endian
+0xef 0xbb 0xbf UTF-8 (no effect on endianness)</p>
+<p>If std::consume_header is not selected when reading a file beginning with byte order mark, the Unicode character U+FEFF (Zero width non-breaking space) will be read as the first character of the string content.</p>
+<h2>Example</h2>
+<p>The following example demonstrates consuming the UTF-8 BOM
+// Run this code <pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;locale&gt;
+#include &lt;codecvt&gt;
+int main()
+{
+// UTF-8 data with BOM
+std::ofstream(&quot;text.txt&quot;) &lt;&lt; u8&quot;\ufeffz\u6c34\U0001d10b&quot;;
+// read the UTF8 file, skipping the BOM
+std::wifstream fin(&quot;text.txt&quot;);
+fin.imbue(std::locale(fin.getloc(),
+new std::codecvt_utf8&lt;wchar_t, 0x10ffff, std::consume_header&gt;));
+for (wchar_t c; fin.get(c);)
+std::cout &lt;&lt; std::hex &lt;&lt; std::showbase &lt;&lt; c &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 0x7a
+ <wbr> 0x6c34
+ <wbr> 0x1d10b</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts between character encodings, including UTF-8, UTF-16, UTF-32
+codecvt <i>(class template)</i>
+codecvt_utf8 converts between UTF-8 and UCS2/UCS4
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+(deprecated in C++17)
+codecvt_utf16 converts between UTF-16 and UCS2/UCS4
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+(deprecated in C++17)
+codecvt_utf8_utf16 converts between UTF-8 and UTF-16
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+(deprecated in C++17)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

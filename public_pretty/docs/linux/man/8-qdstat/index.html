@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qdstat(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-qdstat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>qdstat(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>qdstat - dispatch router status</p>
+<h2>Synopsis</h2>
+<p>qdstat [options]</p>
+<h2>Description</h2>
+<p><i>qdstat</i> shows status information about networks of Dispatch routers. It can display connections, network nodes and links, and router stats such as memory use.</p>
+<h2>Options</h2>
+<p>-h, &ndash;help : show this help message and exit</p>
+<p>&ndash;version : Print version and exit.</p>
+<p>-g, &ndash;general : Show General Router Stats</p>
+<p>-c, &ndash;connections : Show Connections</p>
+<p>-l, &ndash;links : Show Router Links</p>
+<p>-n, &ndash;nodes : Show Router Nodes</p>
+<p>-a, &ndash;address : Show Router Addresses</p>
+<p>-m, &ndash;memory : Show Router Memory Stats</p>
+<p>&ndash;autolinks : Show Auto Links</p>
+<p>&ndash;linkroutes : Show Link Routes</p>
+<p>-v, &ndash;verbose : Show maximum detail</p>
+<p>&ndash;log : Show recent log entries</p>
+<p>&ndash;limit=LIMIT : Limit number of log entries</p>
+<h3>Connection Options</h3>
+<p>-b URL, &ndash;bus=URL : URL of the messaging bus to connect to (default</p>
+<p>-r ROUTER-ID, &ndash;router=ROUTER-ID : Router to be queried</p>
+<p>-t SECS, &ndash;timeout=SECS : Maximum time to wait for connection in seconds (default 5)</p>
+<p>&ndash;ssl-certificate=CERT : Client SSL certificate (PEM Format)</p>
+<p>&ndash;ssl-key=KEY : Client SSL private key (PEM Format)</p>
+<p>&ndash;ssl-trustfile=TRUSTED-CA-DB : Trusted Certificate Authority Database file (PEM Format)</p>
+<p>&ndash;ssl-password=PASSWORD : Certificate password, will be prompted if not specifed.</p>
+<h2>Output Columns</h2>
+<h3>qdstat -c</h3>
+<p>Id : Unique connection identifier</p>
+<p>host : The hostname or internet address of the remotely connected AMQP container</p>
+<p>container : The container-name of the remotely connected AMQP container</p>
+<p>role : The configured role of the connection</p>
+<dl><dt>&bull;
+</dt><dd>normal - Normal connections from client to router
+</dd><dt>&bull;
+</dt><dd>inter-router - Connection between routers to form a network
+</dd><dt>&bull;
+</dt><dd>route-container - Connection to/from a Broker or other host to receive link-routes and waypoints 
+ dir : The direction of connection establishment
+</dd><dt>&bull;
+</dt><dd>in - The connection was initiated by the remote container
+</dd><dt>&bull;
+</dt><dd>out - The connection was initiated by this router 
+ security : A description of the security/encryption in effect for this connection 
+ authentication : The method and user-id of the authenticated user for this connection</dd></dl>
+<h3>qdstat -l</h3>
+<p>type : Type of link</p>
+<dl><dt>&bull;
+</dt><dd>router-control - An inter-router link that is reserved for control messages exchanged between routers
+</dd><dt>&bull;
+</dt><dd>inter-router - An inter-router link that is used for normal message-routed deliveries
+</dd><dt>&bull;
+</dt><dd>endpoint - A normal link to an external endpoint container 
+ dir : The direction of message flow on the link
+</dd><dt>&bull;
+</dt><dd>in - Deliveries flow inbound to the router
+</dd><dt>&bull;
+</dt><dd>out - Deliveries flow outbound from the router 
+ conn id : Unique identifier of the connection over which this link is attached 
+ id : Unique identifier of this link 
+ peer : For link-routed links, the unique identifier of the peer link. In link routing, an inbound link is paired with an outbound link 
+ class : Class of the address bound to the link 
+ addr : The address bound to the link 
+ phs : The phase of the address bound to the link 
+ cap : The capacity, in deliveries, of the link 
+ undel : The number of undelivered messages stored on the link's FIFO 
+ unsettled : The number of unsettled deliveries being tracked by the link 
+ deliveries : The total number of deliveries that have transited this link 
+ admin : The administrative status of the link
+</dd><dt>&bull;
+</dt><dd>enabled - The link is enabled for normal operation
+</dd><dt>&bull;
+</dt><dd>disabled - The link is disabled and should be quiescing or stopped (not yet supported) 
+ oper : The operational status of the link
+</dd><dt>&bull;
+</dt><dd>up - The link is operational
+</dd><dt>&bull;
+</dt><dd>down - The link is not attached
+</dd><dt>&bull;
+</dt><dd>quiescing - The link is in the process of quiescing (not yet supported)
+</dd><dt>&bull;
+</dt><dd>idle - The link has completed quiescing and is idle (not yet supported) 
+ name : The link name (only shown if the -v option is provided)</dd></dl>
+<h3>qdstat -n</h3>
+<p>router-id : Identifier of the router</p>
+<p>next-hop : If this router is not a neighbor, identifies the next-hop neighbor used to reach this router</p>
+<p>link : Unique identifier of the link to the neighbor router</p>
+<p>cost : The topology cost to this remote router (with -v option only)</p>
+<p>neighbors : The list of neighbor routers (the router&rsquo;s link-state) (with -v option only)</p>
+<p>valid-origins : The list of origin routers for which the best path to the listed router passes through this router (with -v option only)</p>
+<h3>qdstat -a</h3>
+<p>class : The class of the listed address</p>
+<dl><dt>&bull;
+</dt><dd>local - Address that is local to this router
+</dd><dt>&bull;
+</dt><dd>topo - Topological address used for router control messages
+</dd><dt>&bull;
+</dt><dd>router - A summary router address used to route messages to a remote router's local addresses
+</dd><dt>&bull;
+</dt><dd>mobile - A mobile address for an attached consumer or producer 
+ addr : The address text 
+ phs : For mobile addresses only, the phase of the address. Direct addresses have only a phase 0. Waypoint addresses have multiple phases, normally 0 and 1. 
+ distrib : Distribution method used for this address
+</dd><dt>&bull;
+</dt><dd>multicast - A copy of each message is delivered once to each consumer for the address
+</dd><dt>&bull;
+</dt><dd>closest - Each message is delivered to only one consumer for the address. The closest (lowest cost) consumer will be chosen. If there are multiple lowest-cost consumers, deliveries will be spread across those consumers.
+</dd><dt>&bull;
+</dt><dd>balanced - Each message is delivered to only one consumer for the address. The consumer with the fewest outstanding (unsettled) deliveries will be chosen. The cost of the route to the consumer is a threshold for delivery (i.e. higher cost consumers will only receive deliveries if closer consumers are backed up).
+</dd><dt>&bull;
+</dt><dd>flood - Used only for router-control traffic. This is multicast without prevention of duplicate deliveries. 
+ in-proc : The number of in-process consumers for this address 
+ local : The number of local (on this router) consumers for this address 
+ remote : The number of remote routers that have at least one consumer for this address 
+ cntnr : The number of locally attached containers that are destinations for link-routes on this address 
+ in : The number of deliveries for this address that entered the network on this router 
+ out : The number of deliveries for this address that exited the network on this router 
+ thru : The number of deliveries for this address that were forwarded to other routers 
+ to-proc : The number of deliveries for this address that were delivered to an in-process consumer 
+ from-proc : The number of deliveries for this address that were received from an in-process producer</dd></dl>
+<h3>qdstat --linkroutes</h3>
+<p>prefix : The prefix for matching addresses of routed links</p>
+<p>dir : The direction (from the router&rsquo;s perspective) of matching links</p>
+<p>distrib : The distribution method used for routed links</p>
+<dl><dt>&bull;
+</dt><dd>linkBalanced - the only supported distribution for routed links 
+ status : Operational status of the link route
+</dd><dt>&bull;
+</dt><dd>active - Route is actively routing attaches (i.e. ready for use)
+</dd><dt>&bull;
+</dt><dd>inactive - Route is inactive because there is no local destination connected</dd></dl>
+<h3>qstat --autolinks</h3>
+<p>addr : The address of the auto link</p>
+<p>dir : The direction of message flow for the auto link</p>
+<dl><dt>&bull;
+</dt><dd>in - Messages flow in from the route-container to the router network
+</dd><dt>&bull;
+</dt><dd>out - Messages flow out to the route-container from the router network 
+ phs : Phase of the address for this auto link 
+ link : Unique identifier of the link managed by this auto link 
+ status : The operational status of this auto link
+</dd><dt>&bull;
+</dt><dd>inactive - There is no connected container for this auto link
+</dd><dt>&bull;
+</dt><dd>attaching - The link is attaching to the container
+</dd><dt>&bull;
+</dt><dd>failed - The link-attach failed
+</dd><dt>&bull;
+</dt><dd>active - The link is operational
+</dd><dt>&bull;
+</dt><dd>quiescing - The link is quiescing (not yet supported)
+</dd><dt>&bull;
+</dt><dd>idle - The link is idle (not yet supported) 
+ lastErr : The description of the last attach failure that occurred on this auto link</dd></dl>
+<h2>See Also</h2>
+<p><i><a HREF="/docs/linux/man/8-qdrouterd/">qdrouterd</a>(8)</i>, <i><a HREF="/docs/linux/man/8-qdmanage/">qdmanage</a>(8)</i>, <i><a HREF="/docs/linux/man/5-qdrouterd-conf/">qdrouterd.conf</a>(5)</i></p>
+<p><i><a rel="nofollow" HREF="http://qpid.apache.org/components/dispatch-router"><a href="http://qpid.apache.org/components/dispatch-router">http://qpid.apache.org/components/dispatch-router</a></a></i></p>
+<h2>Copyright</h2>
+<p>2013, Apache Qpid &lt;<a rel="nofollow" HREF="http://qpid.apache.org/"><a href="http://qpid.apache.org/">http://qpid.apache.org/</a></a>&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

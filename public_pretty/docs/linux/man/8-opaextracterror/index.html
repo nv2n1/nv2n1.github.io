@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>opaextracterror(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-opaextracterror/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>opaextracterror(8)</h1>
+
+
+
+
+
+<p>opaextracterror</p>
+<p>Produces a CSV file listing all or some of the errors in the current fabric. opaextracterror is a front end to the opareport tool. The output from this tool can be imported into a spreadsheet or parsed by other scripts.</p>
+<h2>Syntax</h2>
+<p>opaextracterror [&ndash;help] [opareport <i>options</i>]</p>
+<h2>Options</h2>
+<dl><dt>--help
+</dt><dd>Produces full help text. 
+</dd><dt>opareport <i>options</i>
+</dt><dd>Options are passed to opareport. See <i>opareport</i> for the full set of options. 
+</dd></dl>
+<h2>Examples</h2>
+<h1 id="list-all-the-link-errors-in-the-fabric">List all the link errors in the fabric:</h1>
+<p>opaextracterror</p>
+ <pre><code># List all the link errors related to a switch named &quot;OmniPth00117501ffffffff&quot;:
+opaextracterror -F &quot;node:OmniPth00117501ffffffff&quot;
+# List all the link errors for end-nodes:
+opaextracterror -F &quot;nodetype:FI&quot;</code></pre> 
+<h1 id="list-all-the-link-errors-on-the-2nd-hfis-fabric-of-a-multi-plane-fabric">List all the link errors on the 2nd HFI&rsquo;s fabric of a multi-plane fabric:</h1>
+<p>opaextracterror -h 2</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

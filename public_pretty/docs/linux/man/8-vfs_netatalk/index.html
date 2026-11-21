@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vfs_netatalk(8) · Linux Manual Pages</title>
+<meta name="description" content="vfs_netatalk – hide .AppleDouble files from CIFS clients">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-vfs_netatalk/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>vfs_netatalk(8)</h1>
+
+
+
+
+
+<p>vfs_netatalk &#8211; hide .AppleDouble files from CIFS clients</p>
+<h2>Synopsis</h2>
+<dl>
+<dd>vfs objects = netatalk</dd></dl>
+<h2>Description</h2>
+<p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
+<p> The vfs_netatalk VFS module dynamically hides .AppleDouble files, preventing spurious errors on some CIFS clients. .AppleDouble files may be created by historic implementations of AFP (Apple Filing Protocol) on servers. </p>
+<p> This module is stackable.</p>
+<h2>Examples</h2>
+<p>Hide .AppleDouble files on the [data] share: </p>
+<dl>
+<dd>
+<pre> <i>[data]</i>
+ m[blue]<code>vfs objects = netatalk</code>m[]</pre>
+</dd></dl>
+<h2>Caveats</h2>
+<p>This module is largely historic and unlikely to be of use in modern networks since current Apple systems are able to mount CIFS shares natively.</p>
+<h2>Version</h2>
+<p>This man page is correct for version 3.0.25 of the Samba suite.</p>
+<h2>Author</h2>
+<p>The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

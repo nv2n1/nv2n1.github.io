@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>make_services(1) · Linux Manual Pages</title>
+<meta name="description" content="make_services – generate GNUstep services info">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-make_services/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>make_services(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> make_services &#8211; generate GNUstep services info </p>
+<h2>SYNOPSIS</h2>
+<p> <code>make_services</code> [<code>&#8211;test</code> <i>filename</i> ] [<code>&#8211;verbose</code>|<code>&#8211;quiet</code>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>make_services</code> builds a validated cache of service information for use by programs that want to access the GNUstep services facility. Additionally, it builds a list of applications and service bundles found in the standard directories. This cache is usually stored in the file named <i>.GNUstepServices</i> in the user&#8217;s GNUstep directory. Most commonly, <i>make_services</i> is called from within the GNUstep.sh or GNUstep.csh script to update the service information everytime the GNUstep environmet is set up, i.e. in a login script. But of course it is possible to run <i>make_services</i> from the command line whenever you wish, for example after having installed a new application or service. </p>
+<p> The <i>Services</i> menu in an application&#8217;s mainmenu is usually updated automatically. However, it may be neccessary to close an open or torn off menu for the changes to appear. Also, the workspace manager may have to be closed and restarted for file association changes to take effect.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;test </code><i>filename</dt>
+<dd> check that property list filename</i> contains a valid service information.</dd>
+<dt><code>&#8211;quiet</dt>
+<dd> suppress warnings (not recommended but useful in login scripts).</dd>
+<dt>&#8211;verbose</dt>
+<dd> give verbose output.</dd>
+<dt>&#8211;help</dt>
+<dd> show small help screen.</dd></dl>
+<p> </code></p>
+<h2>EXAMPLES</h2>
+<p> Simply rebuild the cache of service information: </p>
+<p> <i>make_services</i> </p>
+<p> Check whether the file ServiceInfo.plist contains a valid service description: </p>
+<p> <i>make_services &#8211;test ServiceInfo.plist</i></p>
+<h2>NOTES</h2>
+<p> Giving both <i>&#8211;quiet</i> and <i>&#8211;verbose</i> on the command line will result in verbose output, ignoring the <i>&#8211;quiet</i> argument.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/7-gnustep/">GNUstep</a>(7), <a href="/docs/linux/man/1-gopen/">gopen</a>(1)</p>
+<h2>HISTORY</h2>
+<p> Work on <code>make_services</code> started November 1998. This manual page was first written October 2003.</p>
+<h2>AUTHORS</h2>
+<p> make_services was written by Richard Frith-Macdonald &lt;richard [at] brainstorm.co.uk&gt;. This man page was written by Martin Brecher &lt;martin [at] mb-itconsulting.com&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

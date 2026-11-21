@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdsort_heap(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdsort_heap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdsort_heap(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::sort_heap - std::sort_heap</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;algorithm&gt;
+    template &lt;class RandomIt&gt;
+    (until C++ 20)
+        void sort_heap(RandomIt first, RandomIt last);
+template &lt;class RandomIt&gt;
+(since C++ 20)
+    constexpr void sort_heap(RandomIt first, RandomIt last);
+(1)
+    template &lt;class RandomIt, class Compare&gt;
+    (until C++ 20)
+        void sort_heap(RandomIt first, RandomIt last, Compare comp);
+(2)
+    template &lt;class RandomIt, class Compare&gt;
+    (since C++ 20)
+        constexpr void sort_heap(RandomIt first, RandomIt last, Compare comp);</code></pre> 
+<p>Converts the max heap [first, last) into a sorted range in ascending order. The resulting range no longer has the heap property.
+The first version of the function uses operator&lt; to compare the elements, the second uses the given comparison function comp.</p>
+<h2>Parameters</h2>
+<p>first, last - the range of elements to sort
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> comparison function object (i.e. an object that satisfies the requirements of Compare) which returns true if the first argument is less than the second.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The signature of the comparison function should be equivalent to the following:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> bool cmp(const Type1 &amp;a, const Type2 &amp;b);
+comp - While the signature does not need to have const &amp;, the function must not modify the objects passed to it and must be able to accept all values of type (possibly const) Type1 and Type2 regardless of value_category (thus, Type1 &amp; is not allowed
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> , nor is Type1 unless for Type1 a move is equivalent to a copy
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(since C++11)</i>).
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The types Type1 and Type2 must be such that an object of type RandomIt can be dereferenced and then implicitly converted to both of them.</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="randomit-must-meet-the-requirements-of-valueswappable-and-legacyrandomaccessiterator">RandomIt must meet the requirements of ValueSwappable and LegacyRandomAccessIterator.</h2>
+<p>The type of dereferenced RandomIt must meet the requirements of MoveAssignable and MoveConstructible.</p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Complexity</h2>
+<p>At most 2×N×log(N) comparisons where N=std::distance(first, last).</p>
+<h2>Notes</h2>
+<p>A max heap is a range of elements [f,l) that has the following properties:
+Defect reports
+The following behavior-changing defect reports were applied retroactively to previously published C++ standards.
+DR Applied to Behavior as published Correct behavior
+LWG_2444 C++98 complexity requirement was wrong by a factor of 2 corrected</p>
+<h2>Possible implementation</h2>
+<h2>First version</h2>
+<p> <wbr> template&lt; class RandomIt &gt;
+ <wbr> void sort_heap( RandomIt first, RandomIt last )
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> while (first != last)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> std::pop_heap(first, last&ndash;);
+ <wbr> }</p>
+<h2>Second version</h2>
+<p> <wbr> template&lt; class RandomIt, class Compare &gt;
+ <wbr> void sort_heap( RandomIt first, RandomIt last, Compare comp )
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> while (first != last)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> std::pop_heap(first, last&ndash;, comp);
+ <wbr> }</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+int main()
+{
+std::vector&lt;int&gt; v = {3, 1, 4, 1, 5, 9};
+std::make_heap(v.begin(), v.end());
+std::cout &lt;&lt; &quot;heap:\t&quot;;
+for (const auto &amp;i : v) {
+std::cout &lt;&lt; i &lt;&lt; &rsquo; &lsquo;;
+}
+std::sort_heap(v.begin(), v.end());
+std::cout &lt;&lt; &quot;\nsorted:\t&quot;;
+for (const auto &amp;i : v) {
+std::cout &lt;&lt; i &lt;&lt; &rsquo; &lsquo;;
+}
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> heap: 9 4 5 1 1 3
+ <wbr> sorted: 1 1 3 4 5 9</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> creates a max heap out of a range of elements
+make_heap <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

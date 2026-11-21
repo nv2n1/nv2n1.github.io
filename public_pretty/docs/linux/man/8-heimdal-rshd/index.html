@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>heimdal-rshd(8) · Linux Manual Pages</title>
+<meta name="description" content="rshd – remote shell server">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-heimdal-rshd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>heimdal-rshd(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>rshd</code> &#8211; remote shell server</p>
+<h2>Synopsis</h2>
+<p>[-<code>aiklnvxPL</code> ] [-<code>p </code><i>port</i> ]</p>
+<h2>Description</h2>
+<p>is the server for the <a href="/docs/linux/man/1-rsh/">rsh</a>(1) program. It provides an authenticated remote command execution service. Supported options are:</p>
+<dl>
+<dt> &#8211;<code>n</code> &#8211;<code>-no-keepalive</code></dt>
+<dd>
+</dd><dd>Disables keep-alive messages. Keep-alives are packets sent at certain intervals to make sure that the client is still there, even when it doesn&#8217;t send any data.</dd>
+<dt> &#8211;<code>k</code> &#8211;<code>-kerberos</code></dt>
+<dd>
+</dd><dd>Assume that clients connecting to this server will use some form of Kerberos authentication. See the Sx EXAMPLES section for a sample inetd.conf5 configuration.</dd>
+<dt> &#8211;<code>x</code> &#8211;<code>-encrypt</code></dt>
+<dd>
+</dd><dd>For Kerberos 4 this means that the connections are encrypted. Kerberos 5 can negotiate encryption even without this option, but if it&#8217;s present will deny unencrypted connections. This option implies &#8211;<code>k</code></dd>
+<dt> &#8211;<code>v</code> &#8211;<code>-vacuous</code></dt>
+<dd>
+</dd><dd>If the connecting client does not use any Kerberised authentication, print a message that complains about this fact, and exit. This is helpful if you want to move away from old port-based authentication.</dd>
+<dt> &#8211;<code>P</code></dt>
+<dd>
+</dd><dd>When using the AFS filesystem, users&#8217; authentication tokens are put in something called a PAG (Process Authentication Group). Multiple processes can share a PAG, but normally each login session has its own PAG. This option disables the Fn setpag call, so all tokens will be put in the default (uid-based) PAG, making it possible to share tokens between sessions. This is only useful in peculiar environments, such as some batch systems.</dd>
+<dt> &#8211;<code>i</code> &#8211;<code>-no-inetd</code></dt>
+<dd>
+</dd><dd>The &#8211;<code>i</code> option will cause to create a socket, instead of assuming that its stdin came from inetd(8). This is mostly useful for debugging.</dd>
+<dt> &#8211;<code>p </code><i>port</i> &#8211;<code>-port= </code><i>port</i></dt>
+<dd>
+</dd><dd>Port to use with &#8211;<code>i</code></dd>
+<dt> &#8211;<code>a</code></dt>
+<dd>
+</dd><dd>This flag is for backwards compatibility only.</dd>
+<dt> &#8211;<code>L</code></dt>
+<dd>
+</dd><dd>This flag enables logging of connections to syslogd(8). This option is always on in this implementation.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><code>/etc/hosts.equiv </code></dt>
+<dd>
+</dd><dt><code>~/.rhosts </code></dt>
+<dd></dd></dl>
+<h2>Examples</h2>
+<p>The following can be used to enable Kerberised rsh in inetd.cond5, while disabling non-Kerberised connections: </p>
+<pre>shell stream tcp nowait root /usr/libexec/rshd rshd -v
+kshell stream tcp nowait root /usr/libexec/rshd rshd -k
+ekshell stream tcp nowait root /usr/libexec/rshd rshd -kx</pre>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/1-rsh/">rsh</a>(1), iruserok(3)</p>
+<h2>History</h2>
+<p>The command appeared in BSD 4.2</p>
+<h2>Authors</h2>
+<p>This implementation of was written as part of the Heimdal Kerberos 5 implementation.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

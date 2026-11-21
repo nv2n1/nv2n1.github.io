@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>list(3) · Linux Manual Pages</title>
+<meta name="description" content="list – list routines">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-list/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>list(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> list &#8211; list routines </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;inn/list.h&gt;
+struct node {
+    struct node *succ;
+    struct node *pred;
+};
+struct list {
+    struct node *head;
+    struct node *tail;
+    struct node *tailpred;
+};
+void list_new(struct list *list);
+struct node *list_addhead(struct list *list, struct node *node);
+struct node *list_addtail(struct list *list, struct node *node);
+struct node *list_head(struct list *list);
+struct node *list_tail(struct list *list);
+struct node *list_succ(struct node *node);
+struct node *list_pred(struct node *node);
+struct node *list_remhead(struct list *list);
+struct node *list_remtail(struct list *list);
+struct node *list_remove(struct node *node);
+struct node *list_insert(struct list *list, struct node *node, struct node *pred);
+bool list_isempty(struct list *list);
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> <code>list_new</code> initialises the list header <i>list</i> so as to create an empty list. </p>
+<p> <code>list_addhead</code> adds <i>node</i> to the head of <i>list</i>, returning the node just added. </p>
+<p> <code>list_addtail</code> adds <i>node</i> to the tail of <i>list</i>, returning the node just added. </p>
+<p> <code>list_head</code> returns a pointer to the the node at the head of <i>list</i> or <font SIZE="-1"><code>NULL</code></font> if the list is empty. </p>
+<p> <code>list_tail</code> returns a pointer to the the node at the tail of <i>list</i> or <font SIZE="-1"><code>NULL</code></font> if the list is empty. </p>
+<p> <code>list_succ</code> returns the next (successor) node on the list after <i>node</i> or <font SIZE="-1"><code>NULL</code></font> if <i>node</i> was the final node. </p>
+<p> <code>list_pred</code> returns the previous (predecessor) node on the list before <i>node</i> or <font SIZE="-1"><code>NULL</code></font> if <i>node</i> was the first node. </p>
+<p> <code>list_remhead</code> removes the first node from <i>list</i> and returns it to the caller. If the list is empty <font SIZE="-1"><code>NULL</code></font> is returned. </p>
+<p> <code>list_remtail</code> removes the last node from <i>list</i> and returns it to the caller. If the list is empty <font SIZE="-1"><code>NULL</code></font> is returned. </p>
+<p> <code>list_remove</code> removes <i>node</i> from the list it is on and returns it to the caller. </p>
+<p> <code>list_insert</code> inserts <i>node</i> onto <i>list</i> after the node <i>pred</i>. If <i>pred</i> is <font SIZE="-1"><code>NULL</code></font> then <i>node</i> is added to the head of <i>list</i>.</p>
+<h2>HISTORY</h2>
+<p> Written by Alex Kiernan &lt;alex.kiernan [at] thus.net&gt; for InterNetNews 2.4.0. </p>
+<p> <tt>$Id:</tt> list.pod 9074 2010-05-31 19:01:32Z iulius $ </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

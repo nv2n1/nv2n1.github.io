@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_plotchar_params(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_plotchar_params/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_plotchar_params(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Plotchar_params - This document briefly describes all the internal parameters of Plotchar.</p>
+<h2>Description</h2>
+<p>The following shows all of the internal parameters that affect the behavior of PCHIQU. Each entry includes the name of a parameter, its FORTRAN type, its default value, and a short description of the parameter.</p>
+<dl><dt>Internal Parameters of PCHIQU
+</dt><dd></dd><dl><dd></dd><dl><dt>'AS' - Real - 0.
+</dt><dd>When this parameter is nonzero, it forces extra space between characters. A negative value is interpreted in digitization units. A positive value is interpreted as a multiplier of the nominal character width specified by the argument SIZE (and, in the case of the PWRITX database, one of 'PW', 'IW', or 'CW', whichever is appropriate).
+</dd><dt>'BC' - Integer array - all -1's
+</dt><dd>An array of three &quot;box colors&quot;. Element 1 applies to the outline of the box, element 2 to fill of the box, and element 3 to fill of the box shadow. The value &quot;-1&quot; means &quot;unspecified&quot;; and a value greater than or equal to 0 selects a particular color index. To access element 1, use the parameter name '<a HREF="/docs/linux/man/1-bc/">BC</a>(1)'; to access element 2, use 'BC(2)'; etc. The name 'BC' by itself refers to element 1.
+</dd><dt>'BF' - Integer - 0
+</dt><dd>When this parameter is nonzero, it requests a box around each string of characters written by PCHIQU. The value is interpreted as a three-bit flag: Add 1 to the value to have the outline of the box drawn, 2 to have the box filled, and 4 to have its shadow drawn. (1 implies &quot;draw outline&quot;, 2 implies &quot;fill box&quot;, 3 implies &quot;fill box and draw outline&quot;, 4 implies &quot;fill shadow&quot;, 5 implies &quot;fill shadow and draw outline&quot;, 6 implies &quot;fill shadow and fill box&quot;, and 7 implies &quot;fill shadow, fill box, and draw outline&quot;.)
+</dd><dt>'BL' - Real - 0.
+</dt><dd>When this parameter is greater than zero, it specifies the line width to be used while drawing the box around a character string. A value less than or equal to zero means &quot;unspecified&quot;.
+</dd><dt>'BM' - Real - .15
+</dt><dd>The width of box margins (the space between the characters and the outline of the box), stated as a fraction of principal character height.
+</dd><dt>'BX' - Real - -.05
+</dt><dd>The X offset for box shadows, stated as a fraction of principal character height. This is actually an offset in the direction ANGD.
+</dd><dt>'BY' - Real - -.05
+</dt><dd>The Y offset for box shadows, stated as a fraction of principal character height. This is actually an offset in the direction ANGD+90.
+</dd><dt>'CC' - Integer array - all -1's
+</dt><dd>An array of color indices. Element 0 specifies the principal character color and elements 1 through 16 specify special colors to be used for certain characters. The value -1 means &quot;unspecified&quot;; a value greater than or equal to zero is a particular color index to be used. The routine PCDLSC may be called to define a standard default set of colors for elements 1 through 16. To access element 0, use the parameter name 'CC(0)'; to access element 1, use '<a HREF="/docs/linux/man/1-cc/">CC</a>(1)'; etc. The name 'CC' by itself refers to element 0.
+</dd><dt>'CD' - Integer - 0
+</dt><dd>The value 0 selects the complex dataset from the PWRITX database; 1 selects the duplex dataset.
+</dd><dt>'CE' - Integer - 0
+</dt><dd>The value 0 selects centering of strings as specified by the argument CNTR and 1 selects exact centering, using text-extent quantities. This works as desired only when 'QU' is zero.
+</dd><dt>'CH' - Real - 9.
+</dt><dd>Digitized cartographic height.
+</dd><dt>'CL' - Real - 0.
+</dt><dd>If greater than zero, this is the desired principal line width to be used while drawing characters. A value less than or equal to zero says that line width is unspecified.
+</dd><dt>'CS' - Real - 0.
+</dt><dd>Constant-spacing flag. The high-quality character sets normally have variable spacing when written &quot;across&quot; the frame. When this parameter is set nonzero, it forces the centers of the characters to be spaced a constant distance apart. If a negative value is used, its absolute value specifies the spacing in digitization units. If a positive value is used, it is interpreted as a multiplier of the nominal character width specified by the argument SIZE (and, in the case of the PWRITX database, one of 'PW', 'IW', or 'CW', whichever is appropriate). Medium- and low-quality characters are not affected by this parameter.
+</dd><dt>'CV' - Real - 14.
+</dt><dd>Digitized cartographic vertical spacing.
+</dd><dt>'CW' - Real - 8.
+</dt><dd>Digitized cartographic width.
+</dd><dt>'DB' - Real - none
+</dt><dd>Output only - distance from (XPOS,YPOS) to the bottom edge of the text-extent box for the last string drawn, in the fractional system.
+</dd><dt>'DL' - Real - none
+</dt><dd>Output only - distance from (XPOS,YPOS) to the left edge of the text-extent box for the last string drawn, in the fractional system.
+</dd><dt>'DO' - Integer - 1
+</dt><dd>The drawing order for the characters. If the value is positive, characters are drawn in the order in which they appear in the input character string; otherwise, they are drawn in the opposite order. If the absolute value is a 1, all shadows are drawn, followed by all character bodies, followed by all outlines. If the absolute value is 2 or greater, each character is drawn completely (including its shadow, its body, and its outline) before moving on to the next character; this can be used, together with 'SS', to &quot;stack&quot; characters so that they apparently overlap one another.
+</dd><dt>'DR' - Real - none
+</dt><dd>Output only - distance from (XPOS,YPOS) to the right edge of the text-extent box for the last string drawn, in the fractional system.
+</dd><dt>'DT' - Real - none
+</dt><dd>Output only - distance from (XPOS,YPOS) to the top edge of the text-extent box for the last string drawn, in the fractional system.
+</dd><dt>'FB' - Real - .00003
+</dt><dd>Fidelity parameter for Bezier curves used to draw the filled fonts. The value specifies how close the interpolated curve should be to the actual Bezier curve and is specified as a fraction of the height of the plotter frame.
+</dd><dt>'FC' - Character - ':'&nbsp;<wbr>(a colon)
+</dt><dd>Function-code character.
+</dd><dt>'FN' - Character or Integer - 0
+</dt><dd>Font number. The default value, 0, implies the use of the PWRITX database. Use a positive value &quot;n&quot; to force the use of fontcap database &quot;n&quot;. Use a character-string font name, as shown in table 2 in the programmer document for PLOTCHAR, in a call to PCSETC; a call to PCGETC will return one of these font names. The list of font names is also reproduced later in this man page.
+</dd><dt>'IH' - Real - 13.
+</dt><dd>Digitized indexical height.
+</dd><dt>'IS' - Real - 7.
+</dt><dd>Offset to be used when subscripting or superscripting a character of indexical size, in digitization units.
+</dd><dt>'IV' - Real - 20.
+</dt><dd>Digitized indexical vertical spacing.
+</dd><dt>'IW' - Real - 12.
+</dt><dd>Digitized indexical width.
+</dd><dt>'MA' - Integer - 0
+</dt><dd>The mapping flag. The value zero says that no mapping is to occur; nonzero values say that PCMPXY is to be called and select particular mappings.
+</dd><dt>'OC' - Integer - 1
+</dt><dd>The outline color specifier. The value &quot;-1&quot; says that outline color is unspecified; a value of 0 or greater selects a particular color index.
+</dd><dt>'OF' - Integer - 0
+</dt><dd>The outline flag. The value 0 says that outlines are not to be drawn; a nonzero value says that outlines are to be drawn.
+</dd><dt>'OL' - Real - 0.
+</dt><dd>The outline line width. A value less than or equal to zero says that outline width is unspecified; a value greater than zero is the desired line width, as a fraction of &quot;normal&quot;.
+</dd><dt>'OR' - Real - 0.
+</dt><dd>The out-of-range flag. The value 0. says that no values returned by the routine PCMPXY are &quot;out of range&quot;; any other value is the value to be used as an out-of-range signal, indicating that a point to be mapped is invisible under the current mapping.
+</dd><dt>'PH' - Real - 21.
+</dt><dd>Digitized principal height.
+</dd><dt>'PS' - Real - 10.
+</dt><dd>Offset to be used when subscripting or superscripting a character of principal size, in digitization units.
+</dd><dt>'PV' - Real - 32.
+</dt><dd>Digitized principal vertical spacing.
+</dd><dt>'PW' - Real - 16.
+</dt><dd>Digitized principal width.
+</dd><dt>'QU' - Integer - 0
+</dt><dd>Quality flag. The value 0 means to use the high-quality characters, 1 means to use the medium-quality characters of PCMEQU, and 2 means to use the &quot;low-quality&quot; characters of PCLOQU.
+</dd><dt>'SA' - Real - .88888888...
+</dt><dd>A multiplier for the sizes of all characters written directly by PCHIQU, introduced in version 3.2 of NCAR Graphics in order to make characters written by PCHIQU the same size as those written by PCMEQU. The default value is (16/21)(7/6). Those users who want PCHIQU to produce the same size characters that it did before may set 'SA' to 1., but this is not recommended.
+</dd><dt>'SC' - Integer - 0
+</dt><dd>The shadow color specifier. The value &quot;-1&quot; says that shadow color is unspecified; a value of 0 or greater selects a particular color index.
+</dd><dt>'SF' - Integer - 0
+</dt><dd>The shadow flag. The value 0 says that shadows are not to be drawn; a nonzero value says that shadows are to be drawn.
+</dd><dt>'SL' - Real - 0.
+</dt><dd>The shadow line width. A value less than or equal to zero says that shadow line width is unspecified; a value greater than zero is the desired line width, as a fraction of &quot;normal&quot;.
+</dd><dt>'SS' - Real - 0.
+</dt><dd>Subtract-space flag. When this parameter is nonzero, it reduces the space between characters. If a negative value is used, it is interpreted in digitization units. If a positive value is used, it is interpreted as a multiplier of the nominal character width specified by the argument SIZE (and, in the case of the PWRITX database, one of 'PW', 'IW', or 'CW', whichever is appropriate).
+</dd><dt>'SX' - Real - -.05
+</dt><dd>The X offset for character shadows, stated as a fraction of principal character height. This is actually an offset in the direction ANGD.
+</dd><dt>'SY' - Real - -.05
+</dt><dd>The Y offset for character shadows, stated as a fraction of principal character height. This is actually an offset in the direction ANGD+90.
+</dd><dt>'TE' - Integer - 0
+</dt><dd>The text-extent computation flag. Zero means do not compute text-extent quantities, nonzero means do compute them. If 'TE' is nonzero and the value of the argument ANGD, in a call to PCHIQU, is exactly 360. instead of 0., no characters are drawn, but the text-extent quantities are still computed. This provides a way to get these quantities prior to actually drawing a particular string.
+</dd><dt>'UN' - Integer - 3
+</dt><dd>This used to be the FORTRAN logical unit number to be used in reading the data defining the various character sets. It is no longer used for anything.
+</dd><dt>'XB' - Real - 0.
+</dt><dd>For retrieval only. The X position at the beginning of the last string written by PCHIQU, in the fractional system.
+</dd><dt>'XC' - Real - 0.
+</dt><dd>For retrieval only. The X position at the center of the last character written by PCHIQU, in the fractional system.
+</dd><dt>'XE' - Real - 0.
+</dt><dd>For retrieval only. The X position at the end of the last string written by PCHIQU, in the fractional system.
+</dd><dt>'YB' - Real - 0.
+</dt><dd>For retrieval only. The Y position at the beginning of the last string written by PCHIQU, in the fractional system.
+</dd><dt>'YC' - Real - 0.
+</dt><dd>For retrieval only. The Y position at the center of the last character written by PCHIQU, in the fractional system.
+</dd><dt>'YE' - Real - 0.
+</dt><dd>For retrieval only. The Y position at the end of the last string written by PCHIQU, in the fractional system.</dd></dl></dl><dt>Internal Parameters of PCMEQU
+</dt><dd>The internal parameter 'HW' specifies the desired ratio of the character height (the height of a capital) to the character width (excluding white space). The default value of 'HW' is 1.75, reflecting the fact that the capitals are digitized to be 7 units high and 4 units wide and 1.75 is therefore their natural aspect ratio. Negative values of 'HW' may be used. The absolute value will be used as the ratio, but, in addition, PCHIQU will be prohibited from changing 'HW' (which it otherwise does when the quality flag 'QU' is set to 1). 
+<p>PCMEQU reacts properly to nonzero values of &lsquo;MA&rsquo; and &lsquo;OR&rsquo;, which are used to request mapping of characters through the routine PCMPXY, as described for PCHIQU, above. Characters that are partly visible and partly invisible are clipped at the visible/invisible boundary.</p>
+</dd><dt>Internal Parameters of PCLOQU
+</dt><dd>PCLOQU reacts to nonzero values of 'MA' and 'OR', which are used to request mapping of characters through the routine PCMPXY, as described for PCHIQU, above. However, it doesn't react in quite the same way: Mapping will affect the position of the string written by a call to PCLOQU, the angle at which it is written, and the size of the characters used. The shape of the characters will not be affected (and cannot be, since the characters are drawn by calling the GKS routine GTX instead of GPL). If the point (XPOS,YPOS) is visible under the mapping, the whole string is considered to be visible; otherwise, the whole string is considered to be invisible. The results can be pretty crude; for that reason, mapping is not recommended. 
+</dd><dt>A List of Font Names for Use in Calls to PCSETC That Set 'FN'
+</dt><dd><pre> 0 'PWRITX DATABASE '
+ 1 'DEFAULT '
+ 2 'CARTOGRAPHIC_ROMAN'
+ 3 'CARTOGRAPHIC_GREEK'
+ 4 'SIMPLEX_ROMAN '
+ 5 'SIMPLEX_GREEK '
+ 6 'SIMPLEX_SCRIPT '
+ 7 'COMPLEX_ROMAN '
+ 8 'COMPLEX_GREEK '
+ 9 'COMPLEX_SCRIPT '
+ 10 'COMPLEX_ITALIC '
+ 11 'COMPLEX_CYRILLIC '
+ 12 'DUPLEX_ROMAN '
+ 13 'TRIPLEX_ROMAN '
+ 14 'TRIPLEX_ITALIC '
+ 15 'GOTHIC_GERMAN '
+ 16 'GOTHIC_ENGLISH '
+ 17 'GOTHIC_ITALIAN '
+ 18 'MATH_SYMBOLS '
+ 19 'SYMBOL_SET1 '
+ 20 'SYMBOL_SET2 '
+ 21 'HELVETICA '
+ 22 'HELVETICA-BOLD '
+ 25 'TIMES-ROMAN '
+ 26 'TIMES-BOLD '
+ 29 'COURIER '
+ 30 'COURIER-BOLD '
+ 33 'GREEK '
+ 34 'MATH-SYMBOLS '
+ 35 'TEXT-SYMBOLS '
+ 36 'WEATHER1 '
+ 37 'WEATHER2 '
+ 121 'O_HELVETICA '
+ 122 'O_HELVETICA-BOLD '
+ 125 'O_TIMES-ROMAN '
+ 126 'O_TIMES-BOLD '
+ 129 'O_COURIER '
+ 130 'O_COURIER-BOLD '
+ 133 'O_GREEK '
+ 134 'O_MATH-SYMBOLS '
+ 135 'O_TEXT-SYMBOLS '
+ 136 'O_WEATHER1 '
+ 137 'O_WEATHER2 '</pre></dd></dl>
+<h2>See Also</h2>
+<p>Online: pcdlsc, pcgetc, pcgeti, pcgetr, pcpnwi, pcrset, pcsetc, pcseti, pcsetr, ncarg_cbind.</p>
+<p>Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>
+<p>Copyright (C) 1987-2009
+University Corporation for Atmospheric Research
+The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>python-nitrate(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-python-nitrate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>python-nitrate(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p>python-nitrate - Python API for the Nitrate test case management system</p>
+<h2>DESCRIPTION</h2>
+<p>python-nitrate is a Python interface to the Nitrate test case management system. The package consists of a high-level Python module (provides natural object interface), a low-level driver (allows to directly access Nitrate&rsquo;s xmlrpc API) and a command line interpreter (useful for fast debugging and experimenting).</p>
+<h2>FEATURES</h2>
+<p>Among the most essential python-nitrate features are:</p>
+<dl>
+<dt>&bull;
+</dt><dd> Natural and concise Python interface
+</dd><dt>&bull;
+</dt><dd> Custom level of caching &amp; logging
+</dd><dt>&bull;
+</dt><dd> Automated status coloring
+</dd><dt>&bull;
+</dt><dd> Integrated test suite
+</dd><dt>&bull;
+</dt><dd> Utility functions 
+ The main motivation was to hide unnecessary implementation details wherever possible so that using the API is as concise as possible. 
+ Scripts importing python-nitrate can make use of several useful helper functions including info() for logging to stderr, listed() which converts list into nice human readable form, color() for coloring and of course log.{debug,info,warn,error} for logging.</dd></dl>
+<h2>EXAMPLES</h2>
+<p>Initialize or create an object:</p>
+ <pre>
+testcase = TestCase(1234)
+testrun = TestRun(testplan=&lt;plan&gt;, summary=&lt;summary&gt;)
+</pre> 
+<p>Default iterators provided for all container objects:</p>
+ <pre><code>
+for
+case in TestRun(1234):
+    if
+    case.automated:
+    case.status = Status("RUNNING") case.update()
+</code></pre> 
+<p>Linking case to a plan is as simple as adding an item to a set:</p>
+ <pre>
+testplan.testcases.add(testcase)
+testplan.update()
+</pre> 
+<p>However, it&rsquo;s still possible to use the low-level driver when a specific features is not implemented yet or not efficient enough:</p>
+ <pre>
+inject = Nitrate()._server.TestCase.get(46490)
+</pre> 
+<p>For a quick start you can get some inspiration in the examples directory. The &lsquo;matrix.py&rsquo; script demonstrates how to easily display a matrix view of the test run results for a specific test plan. The &lsquo;create.py&rsquo; script gives a broader overview covering object creation, attribute setting, adjusting logs and caching.</p>
+<h2>INSTALLATION</h2>
+<p>Install directly from Fedora/Copr repository using yum or dnf:</p>
+ <pre>
+yum install python-nitrate
+</pre> 
+<p>or use PIP (sudo required if not in a virtualenv):</p>
+ <pre>
+pip install nitrate
+</pre> 
+<p>Note that for successfull pip installation several extra dependencies are necessary:</p>
+ <pre>
+yum install gcc krb5-devel python-devel postgresql-devel
+</pre>
+<h2>CONFIGURATION</h2>
+<p>To be able to contact the Nitrate server a minimal user config file ~/.nitrate has to be provided in the user home directory:</p>
+ <pre>
+[nitrate]
+url = <a rel="nofollow" HREF="https://nitrate.server/xmlrpc/">https://nitrate.server/xmlrpc/</a>
+</pre>
+<h2>TEST SUITE</h2>
+<p>The high-level interface has an integrated test suite, which can be easily run against a stage server instance. For this a couple of objects needs to be prepared and already existing on the server so that we can check valid results. For detailed information about what data has to be prepared see the module documentation.</p>
+<h2>LINKS</h2>
+<p>Project page: <i><a rel="nofollow" HREF="https://github.com/psss/python-nitrate"><a href="https://github.com/psss/python-nitrate">https://github.com/psss/python-nitrate</a></a></i></p>
+<p>Download: <i><a rel="nofollow" HREF="https://github.com/psss/python-nitrate/releases"><a href="https://github.com/psss/python-nitrate/releases">https://github.com/psss/python-nitrate/releases</a></a></i></p>
+<p>Copr repo: <i><a rel="nofollow" HREF="http://copr.fedoraproject.org/coprs/psss/python-nitrate/"><a href="http://copr.fedoraproject.org/coprs/psss/python-nitrate/">http://copr.fedoraproject.org/coprs/psss/python-nitrate/</a></a></i></p>
+<p>PyPI: <i><a rel="nofollow" HREF="https://pypi.python.org/pypi/nitrate"><a href="https://pypi.python.org/pypi/nitrate">https://pypi.python.org/pypi/nitrate</a></a></i></p>
+<p>File bugs: <i><a rel="nofollow" HREF="https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora"><a href="https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora">https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora</a></a>&amp;component=python-nitrate</i></p>
+<p>Nitrate: <i><a rel="nofollow" HREF="https://fedorahosted.org/nitrate/"><a href="https://fedorahosted.org/nitrate/">https://fedorahosted.org/nitrate/</a></a></i></p>
+<h2>SEE ALSO</h2>
+<p>Manual pages covering command line interpreter and release notes:</p>
+ <pre>
+nitrate
+nitrate-notes
+</pre> 
+<p>For more detailed and most up-to-date description of all available nitrate module features see the Python online documentation:</p>
+ <pre>
+pydoc nitrate
+</pre> 
+<p>For area-specific details see respective module documentation:</p>
+ <pre>
+nitrate.base ......... Nitrate class, search support
+nitrate.cache ........ Persistent cache, multicall support
+nitrate.config ....... Configuration, logging, coloring, caching
+nitrate.containers ... Container classes implementation
+nitrate.immutable .... Immutable Nitrate objects
+nitrate.mutable ...... Mutable Nitrate objects
+nitrate.teiid ........ Teiid support
+nitrate.tests ........ Test suite
+nitrate.utils ........ Utilities
+nitrate.xmlrpc ....... XMLRPC driver
+</pre>
+<h2>AUTHORS</h2>
+<p>High-level Python module: Petr Šplíchal, Zbyšek Mráz, Martin Kyral, Lukáš Zachar, Filip Holec, Aleš Zelinka, Miroslav Vadkerti, Leoš Pol and Iveta Wiedermann.</p>
+<p>Low-level XMLRPC driver: Airald Hapairai, David Malcolm, Will Woods, Bill Peck, Chenxiong Qi, Tang Chaobin, Yuguang Wang and Xuqing Kuang.</p>
+<p>Hope, the library will save you time and bring some joy when writing scripts interacting with the Nitrate server. Looking forward to your feedback, comments, suggestions and patches ;-)</p>
+<p>Petr Šplíchal &lt;<i>psplicha [at] redhat.com</i>&gt;</p>
+<h2>COPYRIGHT</h2>
+<p>Copyright (c) 2012 Red Hat, Inc. All rights reserved.</p>
+<p>This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

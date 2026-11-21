@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xevie(3) · Linux Manual Pages</title>
+<meta name="description" content="Xevie – X Event Interception Extension (XEvIE)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xevie/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xevie(3)</h1>
+
+
+
+
+
+<p>Xevie &#8211; X Event Interception Extension (XEvIE) </p>
+<h2>Syntax</h2>
+<p>#include &lt;<a href="file:/usr/include/X11/extensions/Xevie.h">X11/extensions/Xevie.h</a>&gt; </p>
+<pre>Status XevieQueryVersion (Display *<i>dpy</i>,
+ int *<i>major_versionp</i>,
+ int *<i>minor_versionp</i>);
+Status XevieStart (Display *<i>dpy</i>);
+Status XevieSelectInput (Display *<i>dpy</i>,
+ long <i>event_mask</i>);
+Status XevieSendEvent (Display *<i>dpy</i>,
+ XEvent *<i>event</i>,
+ char *fIdataType);
+Status XevieEnd (Display *<i>dpy</i>);</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>event_mask</i></dt>
+<dd>Specifies the mask of events to redirect.</dd>
+<dt><i>datatype</i></dt>
+<dd>XEVIE_MODIFIED or XEVIE_UNMODIFIED &#8211; whether the Xevie client has changed or synthesised this event. </dd>
+</dl>
+<h2>Description</h2>
+<p><code>X Event Interception Extension (XEvIE) </code> is designed for users who need to intercept all the Keyboard and Mouse events. Programs can determine which events should be forwarded to other clients and modify the events if necessary. </p>
+<h2>Functions</h2>
+<p><code>XevieQueryVersion</code> The XevieQueryVersion function returns the major and minor protocol version numbers supported by the server. XevieQueryVersion returns True if success, otherwise, it returns False. </p>
+<p> <code>XevieStart</code> The XevieStart function requests that the X server enable the XEvIE extension. Once XEvIE is successfully enabled, all the XevieSelectInput specified events will be sent to the client which has enabled XEvIE. If XKB or AccessX is enabled, the events that are sent to the XEvIE clients are XKB/AccessX processed (filtered) ones. </p>
+<p> <code>XevieSendEvent</code> Events are sent back to the X server through XevieSendEvent. </p>
+<p> <code>XevieEnd</code> The XevieEnd function requests that the X server disables the XEvIE extension. Once XEvIE is disabled successfully, the X server stops sending events to the XEvIE client. </p>
+<p> <code>XevieSelectInput</code> The XevieSelectInput function requests that the X server reports the keyboard and pointer events associated with the specified event mask. By default, X will report KeyPress, KeyRelease, ButtonPress, ButtonRelease and MotionNotify events. </p>
+<h2>Restrictions</h2>
+<p><code>Xevie</code> will remain upward compatible after the current 1.0 release.</p>
+<h2>Authors</h2>
+<p>Derek Wang and Stuart Kreitman, Sun Microsystems, Inc.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

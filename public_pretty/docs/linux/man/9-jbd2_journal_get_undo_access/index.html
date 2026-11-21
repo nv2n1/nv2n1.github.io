@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jbd2_journal_get_undo_access(9) · Linux Manual Pages</title>
+<meta name="description" content="jbd2_journal_get_undo_access – Notify intent to modify metadata with non-rewindable consequences">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-jbd2_journal_get_undo_access/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>jbd2_journal_get_undo_access(9)</h1>
+
+
+
+
+
+<p>jbd2_journal_get_undo_access &#8211; Notify intent to modify metadata with non-rewindable consequences</p>
+<h2>Synopsis</h2>
+<pre><code>int jbd2_journal_get_undo_access(handle_t *handle, struct buffer_head *bh);</code></pre>
+<h2>Arguments</h2>
+<p><i>handle</i></p>
+<dl>
+<dd>
+</dd><dd>transaction</dd></dl>
+<p> <i>bh</i></p>
+<dl>
+<dd>buffer to undo</dd></dl>
+<h2>Description</h2>
+<p>Sometimes there is a need to distinguish between metadata which has been committed to disk and that which has not. The ext3fs code uses this for freeing and allocating space, we have to make sure that we do not reuse freed space until the deallocation has been committed, since if we overwrote that space we would make the delete un-rewindable in case of a crash. </p>
+<p> To deal with that, jbd2_journal_get_undo_access requests write access to a buffer for parts of non-rewindable operations such as delete operations on the bitmaps. The journaling code must keep a copy of the buffer&#8217;s contents prior to the undo_access call until such time as we know that the buffer has definitely been committed to disk. </p>
+<p> We never need to know which transaction the committed data is part of, buffers touched here are guaranteed to be dirtied later and so will be committed to a new transaction in due course, at which point we can discard the old committed data pointer. </p>
+<p> Returns error number or 0 on success.</p>
+<h2>Authors</h2>
+<p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

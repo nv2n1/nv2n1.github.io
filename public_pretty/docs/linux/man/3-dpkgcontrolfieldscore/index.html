@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dpkgcontrolfieldscore(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dpkgcontrolfieldscore/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dpkgcontrolfieldscore(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Dpkg::Control::FieldsCore - manage (list of official) control fields</p>
+<h2>Description</h2>The modules contains a list of fieldnames with associated meta-data explaining in which type of control information they are allowed. The types are the CTRL_* constants exported by Dpkg::Control.
+<h2>Functions</h2><dl COMPACT><dt>my $f = field_capitalize($field_name)
+</dt><dd>Returns the field name properly capitalized. All characters are lowercase, except the first of each word (words are separated by a hyphen in field names).
+</dd><dt>field_is_official($fname)
+</dt><dd>Returns true if the field is official and known.
+</dd><dt>field_is_allowed_in($fname, @types)
+</dt><dd>Returns true (1) if the field <tt>$fname</tt> is allowed in all the types listed in the list. Note that you can use type sets instead of individual types (ex: <font SIZE="-1">CTRL_FILE_CHANGES</font> | <font SIZE="-1">CTRL_CHANGELOG</font>). 
+ field_allowed_in(A|B, C) returns true only if the field is allowed in C and either A or B. 
+ Undef is returned for non-official fields.
+</dd><dt>field_transfer_single($from, $to, $field)
+</dt><dd>If appropriate, copy the value of the field named <tt>$field</tt> taken from the <tt>$from</tt> Dpkg::Control object to the <tt>$to</tt> Dpkg::Control object. 
+ Official fields are copied only if the field is allowed in both types of objects. Custom fields are treated in a specific manner. When the target is not among <font SIZE="-1">CTRL_PKG_SRC, CTRL_PKG_DEB</font> or <font SIZE="-1">CTRL_FILE_CHANGES,</font> then they are alway copied as is (the X- prefix is kept). Otherwise they are not copied except if the target object matches the target destination encoded in the field name. The initial X denoting custom fields can be followed by one or more letters among ``S'' (Source: corresponds to <font SIZE="-1">CTRL_PKG_SRC</font>), ``B'' (Binary: corresponds to <font SIZE="-1">CTRL_PKG_DEB</font>) or ``C'' (Changes: corresponds to <font SIZE="-1">CTRL_FILE_CHANGES</font>). 
+ Returns undef if nothing has been copied or the name of the new field added to <tt>$to</tt> otherwise.
+</dd><dt>field_transfer_all($from, $to)
+</dt><dd>Transfer all appropriate fields from <tt>$from</tt> to <tt>$to</tt>. Calls <i>field_transfer_single()</i> on all fields available in <tt>$from</tt>. 
+ Returns the list of fields that have been added to <tt>$to</tt>.
+</dd><dt>field_ordered_list($type)
+</dt><dd>Returns an ordered list of fields for a given type of control information. This list can be used to output the fields in a predictable order. The list might be empty for types where the order does not matter much.
+</dd><dt><i>field_list_src_dep()</i>
+</dt><dd>List of fields that contains dependencies-like information in a source Debian package.
+</dd><dt><i>field_list_pkg_dep()</i>
+</dt><dd>List of fields that contains dependencies-like information in a binary Debian package. The fields that express real dependencies are sorted from the stronger to the weaker.
+</dd><dt>field_get_dep_type($field)
+</dt><dd>Return the type of the dependency expressed by the given field. Can either be ``normal'' for a real dependency field (Pre-Depends, Depends, ...) or ``union'' for other relation fields sharing the same syntax (Conflicts, Breaks, ...). Returns undef for fields which are not dependencies.
+</dd><dt>field_get_sep_type($field)
+</dt><dd>Return the type of the field value separator. Can be one of <font SIZE="-1">FIELD_SEP_UNKNOWN, FIELD_SEP_SPACE, FIELD_SEP_COMMA</font> or <font SIZE="-1">FIELD_SEP_LINE.</font>
+</dd><dt>field_register($field, $allowed_types, %opts)
+</dt><dd>Register a new field as being allowed in control information of specified types. <tt>%opts</tt> is optional
+</dd><dt>field_insert_after($type, $ref, @fields)
+</dt><dd>Place field after another one ($ref) in output of control information of type <tt>$type</tt>.
+</dd><dt>field_insert_before($type, $ref, @fields)
+</dt><dd>Place field before another one ($ref) in output of control information of type <tt>$type</tt>.</dd></dl><h2>Changes</h2><h3>Version 1.00</h3>Mark the module as public.
+<h2>Author</h2>Raphaël Hertzog &lt;hertzog [at] debian.org&gt;.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

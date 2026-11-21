@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>textprintf_ex(3) · Linux Manual Pages</title>
+<meta name="description" content="textprintf_ex – Formatted output of a string. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-textprintf_ex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>textprintf_ex(3)</h1>
+
+
+
+
+
+<p>textprintf_ex &#8211; Formatted output of a string. Allegro game programming library.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;allegro.h&gt;
+void textprintf_ex(BITMAP *bmp, const FONT *f, int x, int y,
+                   int color, int bg, const char *fmt, ...);</code></pre>
+<h2>Description</h2>
+<p>Formatted text output, using a printf() style format string. Due to an internal limitation, this function can&#8217;t be used for extremely long texts. If you happen to reach this limit, you can work around it by using uszprintf() and textout_ex(), which don&#8217;t have any. Example: </p>
+<pre><code>int player_score;
+... textprintf_ex(screen, font, 10, 10, makecol(255, 100, 200),
+                  -1, &quot;Score: %d&quot;, player_score);
+</code></pre>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-font/">font</a></code>(3), <code><a href="/docs/linux/man/3-textout_ex/">textout_ex</a></code>(3), <code><a href="/docs/linux/man/3-textprintf_centre_ex/">textprintf_centre_ex</a></code>(3), <code><a href="/docs/linux/man/3-textprintf_right_ex/">textprintf_right_ex</a></code>(3), <code><a href="/docs/linux/man/3-textprintf_justify_ex/">textprintf_justify_ex</a></code>(3), <code><a href="/docs/linux/man/3-text_height/">text_height</a></code>(3), <code><a href="/docs/linux/man/3-text_length/">text_length</a></code>(3), <code><a href="/docs/linux/man/3-uszprintf/">uszprintf</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

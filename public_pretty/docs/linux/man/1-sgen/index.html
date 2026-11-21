@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sgen(1) · Linux Manual Pages</title>
+<meta name="description" content="sgen – Mono XML Serializer GENerator">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-sgen/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>sgen(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> sgen &#8211; Mono XML Serializer GENerator</p>
+<h2>SYNOPSIS</h2>
+<p> <code>sgen [options]</code></p>
+<h2>DESCRIPTION</h2>
+<p> Generates pre-compilable custom XML serializer classes for specific types.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><i>&#8211;assembly[:filename], -a</i></dt>
+<dd> Specifies the assembly filename to process.</dd>
+<dt><i>&#8211;type[:typefullname], -t</i></dt>
+<dd> Explicitly specifies the runtime type to process.</dd>
+<dt><i>&#8211;reference:[filename], -r</i></dt>
+<dd> Specifies an assembly filename, which is referenced by the target assembly and thus required to process it.</dd>
+<dt><i>&#8211;compiler:[options], -c</i></dt>
+<dd> Specifies compiler options.</dd>
+<dt><i>&#8211;proxytypes, -p</i></dt>
+<dd> (Not supported yet.)</dd>
+<dt><i>&#8211;debug, -d</i></dt>
+<dd> Indicates the compiler to generate debug information.</dd>
+<dt><i>&#8211;keep, -k</i></dt>
+<dd> Indicates the compiler to keep generated temporary source files.</dd>
+<dt><i>&#8211;force, -f</i></dt>
+<dd> Indicates the generator to force overwriting existing assembly.</dd>
+<dt><i>&#8211;out:[output-directory], -o</i></dt>
+<dd> Specifies the output directory for resulting files. By default, it is current directory.</dd>
+<dt><i>&#8211;nologo, -n</i></dt>
+<dd> Indicates to not print the logo for this tool.</dd>
+<dt><i>&#8211;silent, -s</i></dt>
+<dd> Indicates the tool to run silently.</dd>
+<dt><i>&#8211;verbose, -v</i></dt>
+<dd> Indicates the tool to be more verbose on its progress.</dd>
+<dt><i>&#8211;help, -?</i></dt>
+<dd> Display command line help.</dd></dl>
+<h2>FEATURES</h2>
+<dl>
+<dt>It generates a file which contains a set of classes for custom XML serialization. The resulting classes enable xml serialization faster since it does not have to generate serialization classes dynamically at run time.</dt>
+<dd></dd></dl>
+<p> Generated classes are supported only after 2.0 profile.</p>
+<h2>AUTHOR</h2>
+<p> Written by Lluis Sanchez Gual</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2006 Novell.</p>
+<h2>MAILING LISTS</h2>
+<p> Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-list">http://lists.ximian.com/mailman/listinfo/mono-list</a> for details.</p>
+<h2>WEB SITE</h2>
+<p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-xsd/">xsd</a>(1),<a href="/docs/linux/man/1-wsdl/">wsdl</a>(1),<a href="/docs/linux/man/1-genxs/">genxs</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

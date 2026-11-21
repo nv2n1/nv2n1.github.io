@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>makevanillaswap(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::MakeVanillaSwap – helper class">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-makevanillaswap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>makevanillaswap(3)</h1>
+
+
+
+
+
+<p>QuantLib::MakeVanillaSwap &#8211; helper class </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/instruments/makevanillaswap.hpp&gt; </p>
+<h3>Public Member Functions</h3>
+<p><code>MakeVanillaSwap</code> (const <code>Period</code> &amp;swapTenor, const boost::shared_ptr&lt; <code>IborIndex</code> &gt; &amp;iborIndex, <code>Rate</code> fixedRate=<code>Null</code>&lt; <code>Rate</code> &gt;(), const <code>Period</code> &amp;forwardStart=0 *Days) </p>
+<p> <code>operator VanillaSwap</code> () const </p>
+<p> <code>operator boost::shared_ptr&lt; VanillaSwap &gt;</code> () const </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>receiveFixed</code> (bool flag=true) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withType</code> (VanillaSwap::Type type) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withNominal</code> (<code>Real</code> n) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withEffectiveDate</code> (const <code>Date</code> &amp;) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withTerminationDate</code> (const <code>Date</code> &amp;) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withRule</code> (<code>DateGeneration::Rule</code> r) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFixedLegTenor</code> (const <code>Period</code> &amp;t) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFixedLegCalendar</code> (const <code>Calendar</code> &amp;cal) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFixedLegConvention</code> (<code>BusinessDayConvention</code> bdc) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFixedLegTerminationDateConvention</code> (<code>BusinessDayConvention</code> bdc) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFixedLegRule</code> (<code>DateGeneration::Rule</code> r) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFixedLegEndOfMonth</code> (bool flag=true) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFixedLegFirstDate</code> (const <code>Date</code> &amp;d) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFixedLegNextToLastDate</code> (const <code>Date</code> &amp;d) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFixedLegDayCount</code> (const <code>DayCounter</code> &amp;dc) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFloatingLegTenor</code> (const <code>Period</code> &amp;t) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFloatingLegCalendar</code> (const <code>Calendar</code> &amp;cal) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFloatingLegConvention</code> (<code>BusinessDayConvention</code> bdc) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFloatingLegTerminationDateConvention</code> (<code>BusinessDayConvention</code> bdc) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFloatingLegRule</code> (<code>DateGeneration::Rule</code> r) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFloatingLegEndOfMonth</code> (bool flag=true) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFloatingLegFirstDate</code> (const <code>Date</code> &amp;d) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFloatingLegNextToLastDate</code> (const <code>Date</code> &amp;d) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFloatingLegDayCount</code> (const <code>DayCounter</code> &amp;dc) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withFloatingLegSpread</code> (<code>Spread</code> sp) </p>
+<p> <code>MakeVanillaSwap</code> &amp; <code>withDiscountingTermStructure</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountingTermStructure) </p>
+<h2>Detailed Description</h2>
+<p>helper class </p>
+<p> This class provides a more comfortable way to instantiate standard market swap. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

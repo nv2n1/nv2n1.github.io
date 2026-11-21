@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ck_rwcohort_init(3) · Linux Manual Pages</title>
+<meta name="description" content="CK_RWCOHORT_INIT – initialize instance of a cohort-based reader-writer lock type">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ck_rwcohort_init/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ck_rwcohort_init(3)</h1>
+
+
+
+
+
+<p><code>CK_RWCOHORT_INIT</code> &#8211; initialize instance of a cohort-based reader-writer lock type</p>
+<h2>Library</h2>
+<p>Concurrency Kit (libck, -lck)</p>
+<h2>Synopsis</h2>
+<p>In ck_rwcohort.h Fn CK_RWCOHORT_NEUTRAL_INIT COHORT_NAME cohort_name LOCK *lock Fn CK_RWCOHORT_RP_INIT COHORT_NAME cohort_name LOCK *lock unsigned int wait_limit Fn CK_RWCOHORT_WP_INIT COHORT_NAME cohort_name LOCK *lock unsigned int wait_limit</p>
+<h2>Description</h2>
+<p>This macro initializes the lock instance pointed to by the Fa lock argument. Until a lock instance is initialized using the CK_RWCOHORT_INIT macro, any operations involving it will have undefined behavior. Note that the Fa wait_limit argument should only be used with reader-preference or writer-preference locks. For neutral locks, this argument should be excluded. If you are unsure of a value to use for the Fa wait_limit argument, you should use CK_RWCOHORT_STRATEGY_DEFAULT_LOCAL_WAIT_LIMIT.</p>
+<h2>See Also</h2>
+<p>ck_rwcohort3, CK_RWCOHORT_PROTOTYPE3, CK_RWCOHORT_TRYLOCK_PROTOTYPE3, CK_RWCOHORT_INSTANCE3, CK_RWCOHORT_INITIALIZER3, CK_RWCOHORT_LOCK3, CK_RWCOHORT_UNLOCK3, CK_RWCOHORT_LOCKED3, CK_RWCOHORT_TRYLOCK3, </p>
+<p> Additional information available at <a rel="nofollow" href="http://concurrencykit.org/">http://concurrencykit.org/</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

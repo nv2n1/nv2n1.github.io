@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdanyemplace(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdanyemplace/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdanyemplace(3)</h1>
+
+
+
+
+
+<p>std::any::emplace - std::any::emplace</p>
+<h2>Synopsis</h2>
+<pre><code>template&lt; class ValueType, class... Args &gt;                                       (1) (since C++17)
+std::decay_t&lt;ValueType&gt;&amp; emplace( Args&amp;&amp;... args );
+template&lt; class ValueType, class U, class... Args &gt;                              (2) (since C++17)
+std::decay_t&lt;ValueType&gt;&amp; emplace( std::initializer_list&lt;U&gt; il, Args&amp;&amp;... args );</code></pre> 
+<p>Changes the contained object to one of type std::decay_t&lt;ValueType&gt; constructed from the arguments.
+First destroys the current contained object (if any) by reset(), then:</p>
+<ol>
+<li>constructs an object of type std::decay_t&lt;ValueType&gt;, direct-non-list-initialized from std::forward&lt;Args&gt;(args)&hellip;, as the contained object. This overload only participates in overload resolution if std::is_constructible_v&lt;std::decay_t&lt;ValueType&gt;, Args&hellip;&gt; and std::is_copy_constructible_v&lt;std::decay_t&lt;ValueType&gt;&gt; are both true.</li>
+<li>constructs an object of type std::decay_t&lt;ValueType&gt;, direct-non-list-initialized from il, std::forward&lt;Args&gt;(args)&hellip;, as the contained object. This overload only participates in overload resolution if std::is_constructible_v&lt;std::decay_t&lt;ValueType&gt;, std::initializer_list&lt;U&gt;&amp;, Args&hellip;&gt; and std::is_copy_constructible_v&lt;std::decay_t&lt;ValueType&gt;&gt; are both true.</li>
+</ol>
+<h2>Template parameters</h2>
+<p>ValueType - contained value type</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<p>std::decay_t&lt;ValueType&gt; must meet the requirements of CopyConstructible.</p>
+<h2>Return value</h2>
+<p>A reference to the new contained object.</p>
+<h2>Exceptions</h2>
+<p>Throws any exception thrown by T&rsquo;s constructor. If an exception is thrown, the previously contained object (if any) has been destroyed, and *this does not contain a value.</p>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs an any object
+constructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> destroys contained object
+reset <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

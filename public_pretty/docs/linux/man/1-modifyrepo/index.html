@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>modifyrepo(1) · Linux Manual Pages</title>
+<meta name="description" content="modifyrepo – Modify a repomd (xml-rpm-metadata) repository">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-modifyrepo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>modifyrepo(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> modifyrepo &#8211; Modify a repomd (xml-rpm-metadata) repository</p>
+<h2>SYNOPSIS</h2>
+<p> <code>modifyrepo</code> [options] &lt;input metadata&gt; &lt;output repodata&gt; </p>
+<h2>DESCRIPTION</h2>
+<p> <code>modifyrepo</code> is a program that allows you to insert arbitrary metadata into a repomd (xml-based rpm metadata) repository. </p>
+<h2>EXAMPLES</h2>
+<p> $ <code>modifyrepo</code> &#8211;mdtype=newmd metadata.xml /repository/repodata<br />
+ Wrote: /repository/repodata/metadata.xml.gz<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>type&nbsp;<wbr>=&nbsp;<wbr>newmd<br />
+&nbsp;<wbr>location&nbsp;<wbr>=&nbsp;<wbr>repodata/metadata.xml.gz<br />
+&nbsp;<wbr>checksum&nbsp;<wbr>=&nbsp;<wbr>1d7ee93db2964e7f85e07ec19b3204591da1050c<br />
+timestamp&nbsp;<wbr>=&nbsp;<wbr>1196716296.0<br />
+&nbsp;<wbr>&nbsp;<wbr>open-checksum&nbsp;<wbr>=&nbsp;<wbr>824d936dc7dfff029379797b311af0cc66af4115<br />
+ Wrote: /repository/repodata/repomd.xml </p>
+<h2>SEE ALSO</h2>
+<p> <i>createrepo (8)</i> </p>
+<h2>AUTHORS</h2>
+<pre><code>
+Luke Macken&lt;lmacken[at] redhat.com&gt;
+    Seth Vidal&lt;skvidal[at] fedoraproject.org&gt;
+</code></pre>
+<h2>BUGS</h2>
+<p> Any bugs which are found should be emailed to the mailing list: rpm-metadata [at] lists.baseurl.org </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

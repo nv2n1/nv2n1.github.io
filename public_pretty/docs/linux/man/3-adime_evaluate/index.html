@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>adime_evaluate(3) · Linux Manual Pages</title>
+<meta name="description" content="adime_evaluate">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-adime_evaluate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>adime_evaluate(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> adime_evaluate</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/adime.h">adime.h</a>&gt;</code> </p>
+<p> <code>double adime_evaluate(const char *equation, int *error,</code> <code>double (*var)(const char *name));</code></p>
+<h2>DESCRIPTION</h2>
+<p> Helper function for evaluating arithmetic expressions, which may be useful in your programs even though it isn&#8217;t really logically connected to the other functions (i.e. it&#8217;s not a gui function). It evaluates the provided equation, returning the result, and storing a nonzero value in `error&#8217; if anything goes wrong. If the `var&#8217; function is not NULL, this will be called whenever a variable is encountered in the expression, allowing you to look up and return a suitable value for it. For more information on the expressions, see expressi.txt </p>
+<h2>SEE ALSO</h2>
+<p> <code>adime_uevaluate</code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

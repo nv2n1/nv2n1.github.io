@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_c_ftcurvpi(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_c_ftcurvpi/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_c_ftcurvpi(3)</h1>
+
+
+
+
+
+<p>c_ftcurvpi - calculate integrals for periodic functions</p>
+<h2>Function Prototype</h2>int c_ftcurvpi (float, float, float, int, float [], float [], float *);
+<h2>Synopsis</h2>int c_ftcurvpi (xl, xr, p, m, xi, yi, integral);
+<h2>Description</h2><dl COMPACT><dt>xl
+</dt><dd>The lower limit of the integration.
+</dd><dt>xr
+</dt><dd>The upper limit of the integration.
+</dd><dt>p
+</dt><dd>The period of the function; p must not be less than xi[n-1] - xi[0].
+</dd><dt>m
+</dt><dd>The number of input data points. (N &gt; 1)
+</dd><dt>xi
+</dt><dd>An array containing the abscissae for the input function.
+</dd><dt>yi
+</dt><dd>An array containing the functional values of the input function (y(k) is the functional value at x(k) for k=0,n).
+</dd><dt>integral
+</dt><dd>The integral of the function from xl to xr is given by *integral.</dd></dl><h2>Return Value</h2>c_ftcurvpi returns an error value as per: 
+<p>= 0 &ndash; no error.
+= 1 &ndash; if n is less than 2.
+= 2 &ndash; if the period is strictly less than the span of the abscissae.</p>
+<h2>Usage</h2>c_ftcurvpi is called after all of the desired values for control parameters have been set using the procedures c_ftseti, c_ftsetr, c_ftsetc. Control parameters that apply to c_ftcurvpi are: sig.
+<h2>Access</h2>To use c_ftcurvpi, load the NCAR Graphics library ngmath.
+<h2>See Also</h2>fitgrid_params, c_ftseti, c_ftsetr, c_ftsetc. 
+<p>Complete documentation for Fitgrid is available at URL
+<a rel="nofollow" HREF="http://ngwww.ucar.edu/ngdoc/ng/ngmath/fitgrid/fithome.html"><a href="http://ngwww.ucar.edu/ngdoc/ng/ngmath/fitgrid/fithome.html">http://ngwww.ucar.edu/ngdoc/ng/ngmath/fitgrid/fithome.html</a></a></p>
+<h2>Copyright</h2>Copyright (C) 2000 
+ University Corporation for Atmospheric Research 
+<p>The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalrangestagged_pair(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalrangestagged_pair/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalrangestagged_pair(3)</h1>
+
+
+
+
+
+<p>std::experimental::ranges::tagged_pair - std::experimental::ranges::tagged_pair</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;experimental/ranges/utility&gt;
+template&lt; TaggedType T1, TaggedType T2 &gt;         (ranges TS)
+using tagged_pair = /* see below */;</code></pre> 
+<p>Convenience alias template for naming a ranges::tagged wrapping a std::pair.
+A TaggedType is a function type S(T), where S is a TagSpecifier and T is the type of the element.
+tagged_pair&lt;S1(T1), S2(T2)&gt; is an alias for ranges::tagged&lt;std::pair&lt;T1, T2&gt;, S1, S2&gt;.</p>
+<h2>Notes</h2>
+<p>Because a function type is used to &quot;glue&quot; the tag specifier and the corresponding element type together, the usual parameter type adjustments apply. In particular, top-level cv-qualifiers are removed and array types are adjusted to pointers: tagged_pair&lt;tag::in(const int* const), tag::out(int[])&gt; is ranges::tagged&lt;std::pair&lt;const int*, int*&gt;, tag::in, tag::out&gt;.</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> specifies that a type represents a tag specifier and its element type
+TaggedType (concept)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> augument a tuple-like type with named accessors
+tagged <i>(class template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> convenience function for creating a tagged_pair
+make_tagged_pair <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> alias template for a tagged std::tuple
+tagged_tuple (alias template)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> convenience function for creating a tagged_tuple
+make_tagged_tuple <i>(function template)</i>
+in
+in1
+in2
+out
+out1 tag specifiers for use with ranges::tagged
+out2 <i>(class)</i>
+fun
+min
+max
+begin
+end</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

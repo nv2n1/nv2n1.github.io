@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choosing Stream Processing Tools Based on Latency Needs - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/do-big-data-stream-processing-in-the-stream-way/">
+  <meta name="description" content="The fundamental lesson from years of big data work is straightforward: solve problems with tools designed for those problems. Organizations routinely force …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Choosing Stream Processing Tools Based on Latency Needs">
+  <meta property="og:url" content="https://www.systutorials.com/do-big-data-stream-processing-in-the-stream-way/">
+  <meta property="og:description" content="The fundamental lesson from years of big data work is straightforward: solve problems with tools designed for those problems. Organizations routinely force …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/distributed-systems-academy/">Distributed Systems Academy</a>
+           &rsaquo; <a href="/advanced-systems-path/">Advanced Systems &amp; Architecture Path</a>
+          &rsaquo; <a href="/category/big-data-systems/">Big Data Systems</a>
+        </nav>
+        
+        <h1>Choosing Stream Processing Tools Based on Latency Needs</h1>
+        <time class="post-date" datetime="2018-11-27T15:05:37Z">November 27, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The fundamental lesson from years of big data work is straightforward: solve problems with tools designed for those problems. Organizations routinely force large-scale data through mismatched infrastructure — pushing streams through micro-batching systems, analyzing graphs as tables, handling real-time requirements with batch windows. Each mismatch adds latency, complexity, and operational burden.</p>
+<p>Stream processing deserves particular attention here. If your data arrives continuously, your processing engine should be built for continuous flows, not bolted onto batch infrastructure as an afterthought.</p>
+<h2 id="the-latency-problem-with-micro-batching">The Latency Problem with Micro-Batching</h2>
+<p>Micro-batching sounds reasonable in theory: collect stream data into small windows, process the batches, repeat. But every batch carries irreducible overhead — collection time, scheduling, serialization, state management. This cost remains roughly constant regardless of window size.</p>
+<p>Shrink the window to reduce latency, and overhead dominates. You pay a fixed penalty repeatedly rather than processing data as it arrives. This becomes painful immediately in production.</p>
+<p>Consider a practical case: a financial firm needs live aggregations over five-minute windows — current totals, anomalies, alerts. A micro-batch system still introduces a latency gap between data arrival and result availability. The workarounds are expensive: caching layers, dual systems, manual reconciliation, complex monitoring to detect staleness.</p>
+<p>The core question cuts through everything: if data is generated continuously, why shouldn’t it be processed continuously?</p>
+<h2 id="true-stream-processing-architecture">True Stream Processing Architecture</h2>
+<p>Purpose-built stream processors (Apache Flink, Kafka Streams, Spark Structured Streaming in continuous mode, or Pulsar Functions) treat streams as the fundamental abstraction, not batches. Four concepts form the building blocks:</p>
+<ul>
+<li><strong>Stream</strong> — data flowing continuously, not accumulated in windows</li>
+<li><strong>State</strong> — mutable information maintained across events (aggregates, joins, windowed results, session windows)</li>
+<li><strong>Time</strong> — event time vs. processing time, watermarks to handle out-of-order and late-arriving data</li>
+<li><strong>Snapshots</strong> — consistent checkpoints for fault tolerance and recovery without reprocessing</li>
+</ul>
+<p>With these primitives, you implement complex stateful analytics with millisecond to sub-second latency. Join multiple streams. Maintain windowed aggregations. Detect temporal patterns. Handle late arrivals and machine failures gracefully.</p>
+<p>A Flink job processing Kafka topics can maintain state larger than memory via RocksDB, checkpoint state consistently, and recover from failures without losing or duplicating events. Kafka Streams offers a lighter-weight option for JVM environments where you process data where it already lives. Pulsar Functions provides similar capabilities on Pulsar infrastructure.</p>
+<h2 id="when-micro-batching-still-makes-sense">When Micro-Batching Still Makes Sense</h2>
+<p>This isn’t an argument that micro-batching has no place. If latency tolerance is measured in minutes, a well-tuned Spark Streaming job (micro-batch mode) may be simpler operationally and cheaper than maintaining a separate stream processor. The decision hinges on matching latency requirements to tool capabilities.</p>
+<p>Consider these scenarios:</p>
+<ul>
+<li><strong>ETL pipelines refreshing data warehouses every 5-10 minutes</strong>: micro-batching is appropriate</li>
+<li><strong>User-facing dashboards requiring updates within seconds</strong>: true streaming needed</li>
+<li><strong>Fraud detection requiring millisecond responses</strong>: true streaming required</li>
+<li><strong>Log aggregation with per-minute statistics</strong>: either works; choose based on operational preference and existing infrastructure</li>
+<li><strong>Real-time anomaly detection in metrics</strong>: true streaming recommended</li>
+<li><strong>Batch model training jobs triggered periodically</strong>: micro-batching sufficient</li>
+</ul>
+<h2 id="practical-considerations-for-stream-processing">Practical Considerations for Stream Processing</h2>
+<p>If you decide true streaming is necessary, pay attention to these areas.</p>
+<h3 id="schema-management">Schema Management</h3>
+<p>Use Confluent Schema Registry, Pulsar Schema Registry, or similar to version and validate message schemas across producers and consumers. This prevents silent data corruption from schema mismatches. Store schemas centrally and enforce compatibility rules (backward, forward, or full compatibility depending on your deployment strategy).</p>
+<h3 id="state-backends-and-configuration">State Backends and Configuration</h3>
+<p>Flink and similar frameworks offer state options: RocksDB for larger-than-memory state with checkpointing for fault tolerance, or in-memory for speed with smaller state sets. RocksDB trades some throughput for scalability — state can grow to terabytes. Configure checkpoint intervals carefully; too frequent and overhead dominates, too infrequent and recovery takes longer. Test with your actual state sizes and event rates.</p>
+<h3 id="exactly-once-semantics">Exactly-Once Semantics</h3>
+<p>Ensure your framework and message broker support exactly-once delivery. This prevents both data loss and duplication during failures. Flink provides exactly-once with Kafka and Pulsar. Kafka Streams supports exactly-once with proper configuration. Verify end-to-end exactly-once semantics includes your sink system — idempotent writes to databases or deduplication logic downstream.</p>
+<h3 id="monitoring-and-alerting">Monitoring and Alerting</h3>
+<p>Stream processing introduces failure modes batch systems don’t have. Monitor:</p>
+<ul>
+<li><strong>Lag</strong>: how far behind real-time your processing is (per topic, per consumer group)</li>
+<li><strong>Checkpoint duration</strong>: long checkpoints indicate performance degradation or state size issues</li>
+<li><strong>State size</strong>: growing state signals potential memory leaks or missed cleanup logic</li>
+<li><strong>Record processing rate</strong>: detect when throughput drops unexpectedly</li>
+<li><strong>Error rates</strong>: track deserialization failures, processing exceptions, sink errors</li>
+</ul>
+<p>Set alerts on lag crossing thresholds. Lag that grows unbounded will eventually cause availability issues.</p>
+<h3 id="local-development-and-testing">Local Development and Testing</h3>
+<p>Test against real message shapes and volumes before production. Use testcontainers for Kafka or Pulsar in integration tests. Generate realistic data volumes and latency patterns. Test failure scenarios: brokers failing, network partitions, consumer lag spike from slow processing. Test state behavior: state size with peak traffic, state recovery after restart, handling of backpressure.</p>
+<h2 id="example-flink-stream-job">Example: Flink Stream Job</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">StreamExecutionEnvironment</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StreamExecutionEnvironment</span><span class="p">.</span><span class="na">getExecutionEnvironment</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">env</span><span class="p">.</span><span class="na">enableCheckpointing</span><span class="p">(</span><span class="n">5000</span><span class="p">);</span><span class="w"> </span><span class="c1">// checkpoint every 5 seconds</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">env</span><span class="p">.</span><span class="na">getCheckpointConfig</span><span class="p">().</span><span class="na">setCheckpointingMode</span><span class="p">(</span><span class="n">CheckpointingMode</span><span class="p">.</span><span class="na">EXACTLY_ONCE</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">FlinkKafkaConsumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">kafkaSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FlinkKafkaConsumer</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;input-topic&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">SimpleStringSchema</span><span class="p">(),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">properties</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">DataStream</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">env</span><span class="p">.</span><span class="na">addSource</span><span class="p">(</span><span class="n">kafkaSource</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">stream</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Event</span><span class="p">(</span><span class="n">value</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">assignTimestampsAndWatermarks</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">WatermarkStrategy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">.</span><span class="na">forBoundedOutOfOrderness</span><span class="p">(</span><span class="n">Duration</span><span class="p">.</span><span class="na">ofSeconds</span><span class="p">(</span><span class="n">30</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">.</span><span class="na">withTimestampAssigner</span><span class="p">((</span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">timestamp</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="na">getEventTime</span><span class="p">()))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">keyBy</span><span class="p">(</span><span class="n">Event</span><span class="p">::</span><span class="n">getUserId</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">window</span><span class="p">(</span><span class="n">TumblingEventTimeWindows</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">Time</span><span class="p">.</span><span class="na">minutes</span><span class="p">(</span><span class="n">5</span><span class="p">)))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">grace</span><span class="p">(</span><span class="n">Time</span><span class="p">.</span><span class="na">minutes</span><span class="p">(</span><span class="n">2</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">aggregate</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">CountAggregate</span><span class="p">(),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WindowFunction</span><span class="o">&lt;</span><span class="p">...</span><span class="o">&gt;</span><span class="p">(...))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">addSink</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FlinkKafkaProducer</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="s">&#34;output-topic&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">SimpleStringSchema</span><span class="p">(),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">sinkProperties</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">env</span><span class="p">.</span><span class="na">execute</span><span class="p">(</span><span class="s">&#34;Stream Processing Job&#34;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div><h2 id="example-kafka-streams-topology">Example: Kafka Streams Topology</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">StreamsBuilder</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StreamsBuilder</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">KStream</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">stream</span><span class="p">(</span><span class="s">&#34;input-topic&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">input</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">mapValues</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Event</span><span class="p">(</span><span class="n">value</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">groupByKey</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">windowedBy</span><span class="p">(</span><span class="n">TimeWindows</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">Duration</span><span class="p">.</span><span class="na">ofMinutes</span><span class="p">(</span><span class="n">5</span><span class="p">)).</span><span class="na">grace</span><span class="p">(</span><span class="n">Duration</span><span class="p">.</span><span class="na">ofMinutes</span><span class="p">(</span><span class="n">2</span><span class="p">)))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">aggregate</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">0L</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">agg</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">agg</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Materialized</span><span class="p">.</span><span class="na">as</span><span class="p">(</span><span class="s">&#34;event-count-store&#34;</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">toStream</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">to</span><span class="p">(</span><span class="s">&#34;output-topic&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">Produced</span><span class="p">.</span><span class="na">with</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Serdes</span><span class="p">.</span><span class="na">String</span><span class="p">(),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Serdes</span><span class="p">.</span><span class="na">Long</span><span class="p">()));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Topology</span><span class="w"> </span><span class="n">topology</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">KafkaStreams</span><span class="w"> </span><span class="n">streams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">KafkaStreams</span><span class="p">(</span><span class="n">topology</span><span class="p">,</span><span class="w"> </span><span class="n">streamsProperties</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">streams</span><span class="p">.</span><span class="na">start</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Runtime</span><span class="p">.</span><span class="na">getRuntime</span><span class="p">().</span><span class="na">addShutdownHook</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Thread</span><span class="p">(</span><span class="n">streams</span><span class="p">::</span><span class="n">close</span><span class="p">));</span><span class="w">
+</span></span></span></code></pre></div><h2 id="handling-late-data">Handling Late Data</h2>
+<p>Real streams don’t deliver events in perfect order. Events arrive late due to network delays, buffering, or clock skew. Define a grace period — how long after window close to accept late events. Flink and Kafka Streams both support grace periods:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="p">.</span><span class="na">window</span><span class="p">(</span><span class="n">TumblingEventTimeWindows</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">Time</span><span class="p">.</span><span class="na">minutes</span><span class="p">(</span><span class="n">5</span><span class="p">)))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">.</span><span class="na">grace</span><span class="p">(</span><span class="n">Time</span><span class="p">.</span><span class="na">minutes</span><span class="p">(</span><span class="n">2</span><span class="p">))</span><span class="w"> </span><span class="c1">// accept events up to 2 minutes late</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">.</span><span class="na">aggregate</span><span class="p">(...)</span><span class="w">
+</span></span></span></code></pre></div><p>Late events beyond the grace period can be sidecar-output to a separate topic for analysis or manual processing. Use watermarks to signal when windows should close. Watermarks represent the timestamp at which all events earlier than that timestamp have arrived:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">DataStream</span><span class="o">&lt;</span><span class="n">Event</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kafkaSource</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="na">assignTimestampsAndWatermarks</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">WatermarkStrategy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">.</span><span class="na">forBoundedOutOfOrderness</span><span class="p">(</span><span class="n">Duration</span><span class="p">.</span><span class="na">ofSeconds</span><span class="p">(</span><span class="n">30</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">.</span><span class="na">withTimestampAssigner</span><span class="p">((</span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">timestamp</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="na">getEventTime</span><span class="p">()));</span><span class="w">
+</span></span></span></code></pre></div><h2 id="choosing-your-framework">Choosing Your Framework</h2>
+<p><strong>Apache Flink</strong>: Most mature for complex stateful streaming, exactly-once semantics, and large-scale deployments. Strong state management, flexible windowing, and extensive ecosystem. Higher operational complexity. Good for organizations that can justify a dedicated streaming platform.</p>
+<p><strong>Kafka Streams</strong>: Simpler operational story if you’re already using Kafka. Lightweight, no separate cluster needed. Runs as a library in your application. Good for straightforward transformations, windowing, and joins. Limited compared to Flink for very complex state management.</p>
+<p><strong>Spark Structured Streaming</strong>: Unifies batch and stream via DataFrames. Good if you have existing Spark infrastructure and want a unified engine. Continuous mode provides lower latency than micro-batch but adds complexity.</p>
+<p><strong>Pulsar Functions</strong>: Lightweight compute directly on Pulsar infrastructure. Good for simple transformations and sinks. State management is simpler than Flink but more limited in capability.</p>
+<h2 id="the-real-tradeoff">The Real Tradeoff</h2>
+<p>Stream processing trades operational complexity for latency and result freshness. A micro-batch system may be operationally simpler if your latency requirements allow it. But trying to force sub-second latency out of a batch engine wastes engineering effort and operations budget.</p>
+<p>Understand your problem’s actual requirements — latency SLA, throughput, state size, failure tolerance — then choose the system built to solve that problem efficiently. The tool should match the problem, not the reverse.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

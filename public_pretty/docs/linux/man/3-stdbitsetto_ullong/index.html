@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdbitsetto_ullong(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdbitsetto_ullong/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdbitsetto_ullong(3)</h1>
+
+
+
+
+
+<p>std::bitset&lt;N&gt;::to_ullong - std::bitset&lt;N&gt;::to_ullong</p>
+<h2>Synopsis</h2>
+<pre><code>unsigned long long to_ullong() const  (since C++11)</code></pre> 
+<p>Converts the contents of the bitset to an unsigned long long integer.
+The first bit of the bitset corresponds to the least significant digit of the number and the last bit corresponds to the most significant digit.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>the converted integer</p>
+<h2>Exceptions</h2>
+<p>std::overflow_error if the value can not be represented in unsigned long long.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;bitset&gt;
+#include &lt;limits&gt;
+int main()
+{
+std::bitset&lt;std::numeric_limits&lt;unsigned long long&gt;::digits&gt; b(
+0x123456789abcdef0LL);
+std::cout &lt;&lt; b &lt;&lt; &quot;  &quot; &lt;&lt; std::hex &lt;&lt; b.to_ullong() &lt;&lt; &lsquo;\n&rsquo;;
+b.flip();
+std::cout &lt;&lt; b &lt;&lt; &quot;  &quot; &lt;&lt; b.to_ullong() &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 0001001000110100010101100111100010011010101111001101111011110000 123456789abcdef0
+ <wbr> 1110110111001011101010011000011101100101010000110010000100001111 edcba9876543210f</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns a string representation of the data
+to_string <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns an unsigned long integer representation of the data
+to_ulong <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

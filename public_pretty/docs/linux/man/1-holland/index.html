@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>holland(1) · Linux Manual Pages</title>
+<meta name="description" content="holland – pluggable database backup agent">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-holland/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>holland(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> holland &#8211; pluggable database backup agent </p>
+<h2>SYNOPSIS</h2>
+<p> holland [global-options] command [command-options] </p>
+<h2>DESCRIPTION</h2>
+<p> Holland provides a pluggable framework through which to perform database backups. </p>
+<p> This framework primarily targets MySQL, but there are plans to support other database platforms such as PostgreSQL in the future </p>
+<p> Holland supports three kinds of plugins currently: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> Backup plugins </dd>
+<dt>&bull;</dt>
+<dd> Command plugins </dd>
+<dt>&bull;</dt>
+<dd> Library plugins </dd>
+<p> Backup plugins are used for defined backup jobs in order to perform some task. The currently available backup plugins include: </p>
+<dt>&bull;</dt>
+<dd> mysqldump </dd>
+<dt>&bull;</dt>
+<dd> mysqlhotcopy (raw file backups for non-transactional tables) </dd>
+<dt>&bull;</dt>
+<dd> mysql-lvm (raw file backups using LVM filesystem snasphots) </dd>
+<dt>&bull;</dt>
+<dd> maatkit (mk-parallel-dump) </dd>
+<p> Command plugins are used to add additional commands to the holland shell. Currently available commands include: </p>
+<dt>&bull;</dt>
+<dd> backup &#8211; run one or more backup jobs </dd>
+<dt>&bull;</dt>
+<dd> list-plugins &#8211; show known plugins </dd>
+<dt>&bull;</dt>
+<dd> list-backups &#8211; show completed backup jobs </dd>
+<dt>&bull;</dt>
+<dd> mk-config &#8211; generate a job config for a given backup plugin </dd>
+<p> Library plugins simply provide support for other plugins. Currently available library plugins include: </p>
+<dt>&bull;</dt>
+<dd> holland.lib.mysql &#8211; Core MySQL support </dd>
+<dt>&bull;</dt>
+<dd> holland.lib.archive &#8211; Standardized access to multiple archive formats </dd>
+<dt>&bull;</dt>
+<dd> holland.lib.compression &#8211; Standardized access to compression streams </dd>
+</dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;config</code>=<i>&lt;file&gt;</i></dt>
+<dd> Read configuration settings from &lt;file&gt;, if it exists. </dd>
+<dt><code>bk &#8211;ry-run</code></dt>
+<dd> Performs a dry run of one of more backup jobs. </dd>
+<dt><code>&#8211;version , -V</code></dt>
+<dd> Show this program&#8217;s version number and exit. </dd>
+<dt><code>&#8211;help , -h</code></dt>
+<dd> Show this help message and exit. </dd>
+</dl>
+<h2>PROBLEMS</h2>
+<dl>
+<dt>1.</dt>
+<dd> restore is still a manual process </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> <i>Python Eggs &lt;<a rel="nofollow" href="http://peak.telecommunity.com/DevCenter/PythonEggs">http://peak.telecommunity.com/DevCenter/PythonEggs</a>&gt;</i> </dd>
+<dt>&bull;</dt>
+<dd> <i>pkg_resources &lt;<a rel="nofollow" href="http://peak.telecommunity.com/DevCenter/PkgResources">http://peak.telecommunity.com/DevCenter/PkgResources</a>&gt;</i> </dd>
+<dt>&bull;</dt>
+<dd> <i>Plugins Using Eggs &lt;<a rel="nofollow" href="http://ianbicking.org/docs/pycon2006/plugins.html">http://ianbicking.org/docs/pycon2006/plugins.html</a>&gt;</i> </dd>
+<dt>&bull;</dt>
+<dd> <code>man holland-mysqlhotcopy</code> </dd>
+<dt>&bull;</dt>
+<dd> <code>man holland-mysqldump</code> </dd>
+<dt>&bull;</dt>
+<dd> <code>man holland-mysqllvm</code> </dd>
+</dl>
+<h2>AUTHOR</h2>
+<p> Andrew Garner &lt;andrew.garner [at] rackspace.com&gt; </p>
+<h2>COPYRIGHT</h2>
+<p> Other/Proprietary </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

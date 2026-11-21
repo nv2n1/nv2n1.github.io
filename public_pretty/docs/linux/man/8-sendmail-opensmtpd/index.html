@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sendmail-opensmtpd(8) · Linux Manual Pages</title>
+<meta name="description" content="sendmail – a mail enqueuer for smtpd(8)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-sendmail-opensmtpd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>sendmail-opensmtpd(8)</h1>
+
+
+
+
+
+<p><code>sendmail</code> &#8211; a mail enqueuer for <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8)</p>
+<h2>Synopsis</h2>
+<p><code>sendmail</code> [<code>-tv</code>] [<code>-F</code> <i>name</i>] [<code>-f</code> <i>from</i>] <i>to</i> &#8230;</p>
+<h2>Description</h2>
+<p>The <code>sendmail</code> utility is a local enqueuer for the <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) daemon, compatible with <code>mailwrapper</code>(8). The message is read on standard input (stdin) until <code>sendmail</code> encounters an end-of-file. The <code>sendmail</code> enqueuer is not intended to be used directly to send mail, but rather via a frontend known as a mail user agent. </p>
+<p> Unless the optional <code>-t</code> flag is specified, one or more recipients must be specified on the command line. </p>
+<p> The options are as follows:</p>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>-F</code> <i>name</i></dt>
+<dd>Set the sender&#8217;s full name.</dd>
+<dt><code>-f</code> <i>from</i></dt>
+<dd>Set the sender&#8217;s address.</dd>
+<dt><code>-t</code></dt>
+<dd>Read the message&#8217;s To:, Cc:, and Bcc: fields for recipients. The Bcc: field will be deleted before sending.</dd>
+<dt><code>-v</code></dt>
+<dd>Enable verbose output.</dd></dl>
+</dl>
+<p> To maintain compatibility with Sendmail, Inc.&#8217;s implementation of <code>sendmail</code>, various other flags are accepted, but have no effect.</p>
+<h2>Exit Status</h2>
+<p>The <code>sendmail</code> utility exits 0 on success, and &gt;0 if an error occurs.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-smtpctl/">smtpctl</a></code>(8), <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8)</p>
+<h2>Authors</h2>
+<p><code>OpenSMTPD</code> is primarily developed by Gilles Chehade, Eric Faurot, and Charles Longeau, with contributions from various OpenBSD hackers. It is distributed under the ISC license. </p>
+<p> This manpage was written by Ryan Kavanagh &lt;Mt rak [at] debian.org&gt; for the Debian project and is distributed under the ISC license.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

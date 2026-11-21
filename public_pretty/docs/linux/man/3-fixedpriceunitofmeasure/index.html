@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fixedpriceunitofmeasure(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::EnergyVanillaSwap – Vanilla energy swap.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-fixedpriceunitofmeasure/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>fixedpriceunitofmeasure(3)</h1>
+
+
+
+
+
+<p>QuantLib::EnergyVanillaSwap &#8211; Vanilla energy swap. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/experimental/commodities/energyvanillaswap.hpp&gt; </p>
+<p> Inherits QuantLib::EnergySwap. </p>
+<h3>Public Member Functions</h3>
+<p><code>EnergyVanillaSwap</code> (bool payer, const <code>Calendar</code> &amp;calendar, const <code>Money</code> &amp;fixedPrice, const <code>UnitOfMeasure</code> &amp;fixedPriceUnitOfMeasure, const boost::shared_ptr&lt; <code>CommodityIndex</code> &gt; &amp;index, const <code>Currency</code> &amp;payCurrency, const <code>Currency</code> &amp;receiveCurrency, const PricingPeriods &amp;pricingPeriods, const <code>CommodityType</code> &amp;commodityType, const boost::shared_ptr&lt; SecondaryCosts &gt; &amp;secondaryCosts, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;payLegTermStructure, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;receiveLegTermStructure, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountTermStructure) </p>
+<p> bool <code>isExpired</code> () const<br />
+ <i>returns whether the instrument is still tradable. </i><br />
+ <code>Integer</code> <code>payReceive</code> () const </p>
+<p> const <code>Money</code> &amp; <code>fixedPrice</code> () const </p>
+<p> const <code>UnitOfMeasure</code> &amp; <code>fixedPriceUnitOfMeasure</code> () const </p>
+<p> const boost::shared_ptr&lt; <code>CommodityIndex</code> &gt; &amp; <code>index</code> () const </p>
+<h3>Protected Member Functions</h3>
+<p>void <code>performCalculations</code> () const </p>
+<h3>Protected Attributes</h3>
+<p><code>Integer</code> <code>payReceive_</code> </p>
+<p> <code>Money</code> <code>fixedPrice_</code> </p>
+<p> <code>UnitOfMeasure</code> <code>fixedPriceUnitOfMeasure_</code> </p>
+<p> boost::shared_ptr&lt; <code>CommodityIndex</code> &gt; <code>index_</code> </p>
+<p> <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>payLegTermStructure_</code> </p>
+<p> <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>receiveLegTermStructure_</code> </p>
+<p> <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; <code>discountTermStructure_</code> </p>
+<h2>Detailed Description</h2>
+<p>Vanilla energy swap.</p>
+<h2>Member Function Documentation</h2>
+<h3>void performCalculations () const [protected, virtual]</h3>
+<p>In case a pricing engine is <code>not</code> used, this method must be overridden to perform the actual calculations and set any needed results. In case a pricing engine is used, the default implementation can be used. </p>
+<p> Reimplemented from <code>Instrument</code>. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

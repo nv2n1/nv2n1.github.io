@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dgebak-f(3) · Linux Manual Pages</title>
+<meta name="description" content="dgebak.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dgebak-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dgebak-f(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>dgebak.f &#8211; </p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>dgebak</code> (JOB, SIDE, N, ILO, IHI, SCALE, M, V, LDV, INFO)<br />
+ <i></i><code>DGEBAK</code></p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine dgebak (characterJOB, characterSIDE, integerN, integerILO, integerIHI, double precision, dimension( * )SCALE, integerM, double precision, dimension( ldv, * )V, integerLDV, integerINFO)</h3>
+<p><code>DGEBAK</code> </p>
+<p> <code>Purpose: </code></p>
+<dl COMPACT>
+<dd>
+<pre> DGEBAK forms the right or left eigenvectors of a real general matrix
+ by backward transformation on the computed eigenvectors of the
+ balanced matrix output by DGEBAL.</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>JOB</i> </dd>
+<pre> JOB is CHARACTER*1
+ Specifies the type of backward transformation required:
+ = 'N', do nothing, return immediately;
+ = 'P', do backward transformation for permutation only;
+ = 'S', do backward transformation for scaling only;
+ = 'B', do backward transformations for both permutation and
+ scaling.
+ JOB must be the same as the argument JOB supplied to DGEBAL.</pre>
+<p><i>SIDE</i> </p>
+<pre> SIDE is CHARACTER*1
+ = 'R': V contains right eigenvectors;
+ = 'L': V contains left eigenvectors.</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ The number of rows of the matrix V. N &gt;= 0.</pre>
+<p><i>ILO</i> </p>
+<pre> ILO is INTEGER</pre>
+<p><i>IHI</i> </p>
+<pre> IHI is INTEGER
+ The integers ILO and IHI determined by DGEBAL.
+ 1 &lt;= ILO &lt;= IHI &lt;= N, if N &gt; 0; ILO=1 and IHI=0, if N=0.</pre>
+<p><i>SCALE</i> </p>
+<pre> SCALE is DOUBLE PRECISION array, dimension (N)
+ Details of the permutation and scaling factors, as returned
+ by DGEBAL.</pre>
+<p><i>M</i> </p>
+<pre> M is INTEGER
+ The number of columns of the matrix V. M &gt;= 0.</pre>
+<p><i>V</i> </p>
+<pre> V is DOUBLE PRECISION array, dimension (LDV,M)
+ On entry, the matrix of right or left eigenvectors to be
+ transformed, as returned by DHSEIN or DTREVC.
+ On exit, V is overwritten by the transformed eigenvectors.</pre>
+<p><i>LDV</i> </p>
+<pre> LDV is INTEGER
+ The leading dimension of the array V. LDV &gt;= max(1,N).</pre>
+<p><i>INFO</i> </p>
+<pre> INFO is INTEGER
+ = 0: successful exit
+ &lt; 0: if INFO = -i, the i-th argument had an illegal value.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl COMPACT>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl COMPACT>
+<dd>November 2011</dd></dl>
+<p> Definition at line 130 of file dgebak.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

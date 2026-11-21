@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nhlf90(1) · Linux Manual Pages</title>
+<meta name="description" content="nhlf90 – Command for compiling Fortran code that uses the NCAR Graphics high-level utilities.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nhlf90/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nhlf90(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> nhlf90 &#8211; Command for compiling Fortran code that uses the NCAR Graphics high-level utilities.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>nhlf90</code> [<code>-ngmath</code>] [<code>-ncarbd</code>] [<code>-ngmathbd</code>] [<code>-netcdf</code>] [<code>-hdf</code>] &#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <i>nhlf90</i> is a script that invokes the FORTRAN 90 compiler/linker with the proper NCAR Graphics LLU (low-level utility) and HLU (high-level utility) libraries. Arguments presented above are associated with NCAR Graphics. All other arguments and options are identical to the f90 command on your particular machine; arguments that include quoted strings may have to be enclosed in single quotes. </p>
+<p> In order to run <i>nhlf90</i>, you must have your NCARG_ROOT environment variable set to the directory pathname where the NCAR Graphics libraries, binaries, and include files were installed. If you are not sure what NCARG_ROOT should be set to, please check with your system administrator or the site representative for NCAR Graphics. If the NCAR Graphics libraries, binaries, and include files were not installed under one root directory, then you will need to set the environment variables NCARG_LIB, NCARG_BIN, and NCARG_INCLUDE instead. Please see &quot;man ncargintro&quot; for more information. </p>
+<p> Note that, on some systems, if you supply your own binary libraries in addition to the ones automatically referenced by <i>nhlf90</i>, all the libraries must have been created in a similar fashion. </p>
+<p> <i>OPTIONS</i></p>
+<dl>
+<dt>-ngmath</dt>
+<dd> Links in the NCAR Graphics ngmath library. </dd>
+<dt>-ncarbd</dt>
+<dd> Use this option for compilers that appear to be having trouble initializing blockdata variables. It will cause a small subroutine to be linked in that helps force the loading of blockdata initialization routines. </dd>
+<dt>-ngmathbd</dt>
+<dd> Just like with the <code>-ncarbd</code> option, use this option for compilers that appear to be having trouble initializing Ngmath-related blockdata variables. It will cause a small subroutine to be linked in that helps force the loading of Ngmath blockdata initialization routines. </dd>
+<p> Note: this option doesn&#8217;t need to be specified separately if you are already including the <code>-ncarbd</code> and <code>-ngmath</code> options. </p>
+<dt>-netcdf</dt>
+<dd> Links in the netCDF library. This library is not part of NCAR Graphics, so check with your system administrator if you need it installed. You can obtain a copy of it by doing an anonymous ftp to unidata.ucar.edu. </dd>
+<dt>-hdf</dt>
+<dd> Links in the HDF library. This library is not part of NCAR Graphics, so check with your system administrator if you need it installed. You can obtain a copy of it by doing an anonymous ftp to <a href="ftp://ftp.ncsa.uiuc.edu">ftp.ncsa.uiuc.edu</a>. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> Online: <code>nhlcc(1NCARG),</code> <code>ncargf90(1NCARG),</code> <code>ncargcc(1NCARG),</code> <code>ncargintro(5NCARG)</code> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2000<br />
+ University Corporation for Atmospheric Research<br />
+ The use of this Software is governed by a License Agreement. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

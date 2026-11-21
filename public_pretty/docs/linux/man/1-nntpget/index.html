@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nntpget(1) · Linux Manual Pages</title>
+<meta name="description" content="nntpget – get Usenet articles from a remote NNTP server">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nntpget/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nntpget(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> nntpget &#8211; get Usenet articles from a remote NNTP server</p>
+<h2>SYNOPSIS</h2>
+<p> <i>nntpget</i> [ <code>-d</code><i> dist</i> ] [ <code>-f</code><i> file</i> ] [ <code>-n</code><i> newsgroups</i> ] [ <code>-t</code><i> timestring</i> ] [ <code>-o</code> ] [ <code>-u</code><i> file</i> ] [ <code>-v</code> ] <i>host</i></p>
+<h2>DESCRIPTION</h2>
+<p> <i>Nntpget</i> connects to the NNTP server at the specified <i>host</i> and retrieves articles from it. The Message-ID&#8217;s of the desired articles are read from standard input. The articles are sent to standard output.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-o</code></dt>
+<dd> The &#8220;-o&#8221; option may be used only if the command is executed on the host where the <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8) server is running. If this option is used, <i>nntpget</i> connects to the specified remote <i>host</i> to retrieve articles. Any article not present in the local <i>history</i> database is then fetched from the remote site and offered to the local server.</dd>
+<dt><code>-v</code></dt>
+<dd> If the &#8220;<code>-v</code>&#8221; option is used with the &#8220;<code>-o</code>&#8221; option then the Message-ID of each article will be sent to standard output as it is processed.</dd>
+<dt><code>-f</code></dt>
+<dd> The list of article Message-ID&#8217;s is normally read from standard input. If the &#8220;<code>-f</code>&#8221; option is used, then a &#8220;newnews&#8221; command is used to retrieve all articles newer then the modification date of the specified <i>file</i>.</dd>
+<dt><code>-u</code></dt>
+<dd> The &#8220;<code>-u</code>&#8221; option is like &#8220;<code>-f</code>&#8221; except that if the transfer succeedes, the file will be updated with a statistics line, modifying its timestamp so that it can be used in later invocations.</dd>
+<dt><code>-t</code></dt>
+<dd> If the &#8220;-t&#8221; option is used, then the specified <i>timestring</i> is used as the time and date parameter to the &#8220;newnews&#8221; command.</dd>
+<dt><code>-n</code></dt>
+<dd> If either the &#8220;<code>-u</code>&#8221; or &#8220;<code>-f</code>&#8221; options are used, then the &#8220;<code>-n</code>&#8221; option may be used to specify a newsgroup list. The default is &#8220;*&#8221;.</dd>
+<dt><code>-d</code></dt>
+<dd> The &#8220;<code>-d</code>&#8221; option may be used to specify a distribution list when using the &#8220;<code>-u</code>&#8221; or &#8220;<code>-f</code>&#8221; options. The default is no distribution list.</dd></dl>
+<h2>HISTORY</h2>
+<p> Written by Rich $alz &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. This is revision 5909, dated 2002-12-03.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/8-innd/">innd</a>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

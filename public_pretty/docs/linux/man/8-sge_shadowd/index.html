@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sge_shadowd(8) · Linux Manual Pages</title>
+<meta name="description" content="xxqs_name_sxx_shadowd – xxQS_NAMExx shadow master daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-sge_shadowd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>sge_shadowd(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>xxqs_name_sxx_shadowd &#8211; xxQS_NAMExx shadow master daemon</p>
+<h2>Synopsis</h2>
+<p><code>xxqs_name_sxx_shadowd</code></p>
+<h2>Description</h2>
+<p><i>xxqs_name_sxx_shadowd</i> is a &quot;light weight&quot; process which can be run on so-called shadow master hosts in a xxQS_NAMExx cluster to detect failure of the current xxQS_NAMExx master daemon, and to start-up a new on the host on which the <i>xxqs_name_sxx_shadowd</i> runs. If multiple shadow daemons are active in a cluster, they run a protocol which ensures that only one of them will start-up a new master daemon. </p>
+<p> The hosts suitable as shadow master hosts must have shared root read/write access to the directory <i>$xxQS_NAME_Sxx_ROOT/$xxQS_NAME_Sxx_CELL/common</i>, as well as to the master daemon spool directory (by default <i>$xxQS_NAME_Sxx_ROOT/$xxQS_NAME_Sxx_CELL/spool/qmaster</i>). The names of the shadow master hosts need to be contained in the file <i>$xxQS_NAME_Sxx_ROOT/$xQS_NAME_Sxx_CELL/common/shadow_masters</i>.</p>
+<h2>Restrictions</h2>
+<p><i>xxqs_name_sxx_shadowd</i> may only be started by root.</p>
+<h2>Environment Variables</h2>
+<dl>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd>Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd>If set, specifies the default xxQS_NAMExx cell. To address a xxQS_NAMExx cell <i>xxqs_name_sxx_shadowd</i> uses (in order of precedence): </dd>
+<dl>
+<dd>
+</dd><dl>
+<dd>The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </dd>
+<p> The name of the default cell, i.e. <code>default</code>. </p>
+</dl>
+</dl>
+<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></dt>
+<dd>If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</dd>
+<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></dt>
+<dd>If set, specifies the TCP port on which is expected to listen for communication requests. Most installations will use a services map entry for the service &quot;sge_qmaster&quot; instead to define that port.</dd>
+<dt><code>xxQS_NAME_Sxx_DELAY_TIME</code></dt>
+<dd>This variable controls the time for which <i>xxqs_name_sxx_shadowd</i> pauses if a takeover bid fails. This value is used only when there are multiple <i>xxqs_name_sxx_shadowd</i> instances and they are contending to be the master. The default is 600 seconds.</dd>
+<dt><code>xxQS_NAME_Sxx_CHECK_INTERVAL</code></dt>
+<dd>This variable controls the interval between <i>xxqs_name_sxx_shadowd</i> checks of the heartbeat file (60 seconds by default).</dd>
+<dt><code>xxQS_NAME_Sxx_GET_ACTIVE_INTERVAL</code></dt>
+<dd>This variable controls the interval between attempts by a <i>xxqs_name_sxx_shadowd</i> instance to take over when the heartbeat file has not changed. The default is 240 seconds.</dd></dl>
+<h2>Files</h2>
+<pre><i>&lt;xxqs_name_sxx_root&gt;/&lt;cell&gt;/common</i>
+ Default configuration directory
+<i>&lt;xxqs_name_sxx_root&gt;/&lt;cell&gt;/common/shadow_masters</i>
+ Shadow master hostname file.
+<i>&lt;xxqs_name_sxx_root&gt;/&lt;cell&gt;/spool/qmaster</i>
+ Default master daemon spool directory
+<i>&lt;xxqs_name_sxx_root&gt;/&lt;cell&gt;/spool/qmaster/heartbeat</i>
+ The heartbeat file.</pre>
+<h2>See Also</h2>
+<h2>Copyright</h2>
+<p>See for a full statement of rights and permissions.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mailq-sendmail(1) · Linux Manual Pages</title>
+<meta name="description" content="mailq – print the mail queue">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mailq-sendmail/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mailq-sendmail(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>mailq &#8211; print the mail queue</p>
+<h2>Synopsis</h2>
+<p><code>mailq</code> [<code>-Ac</code>] [<code>-q&#8230;</code>] [<code>-v</code>]</p>
+<h2>Description</h2>
+<p><code>Mailq</code> prints a summary of the mail messages queued for future delivery. </p>
+<p> The first line printed for each message shows the internal identifier used on this host for the message with a possible status character, the size of the message in bytes, the date and time the message was accepted into the queue, and the envelope sender of the message. The second line shows the error message that caused this message to be retained in the queue; it will not be present if the message is being processed for the first time. The status characters are either <code>*</code> to indicate the job is being processed; <code>X</code> to indicate that the load is too high to process the job; and <code>&#8211;</code> to indicate that the job is too young to process. The following lines show message recipients, one per line. </p>
+<p> <code>Mailq</code> is identical to &#8220;sendmail -bp&#8221;. </p>
+<p> The relevant options are as follows:</p>
+<dl COMPACT>
+<dt><code>-Ac</code></dt>
+<dd>Show the mail submission queue specified in <i>/etc/mail/submit.cf</i> instead of the MTA queue specified in <i>/etc/mail/sendmail.cf</i>.</dd>
+<dt><code>-qL</code></dt>
+<dd>Show the &quot;lost&quot; items in the mail queue instead of the normal queue items.</dd>
+<dt><code>-qQ</code></dt>
+<dd>Show the quarantined items in the mail queue instead of the normal queue items.</dd>
+<dt><code>-q</code>[<i>!</i>]I substr</dt>
+<dd>Limit processed jobs to those containing <i>substr</i> as a substring of the queue id or not when <i>!</i> is specified.</dd>
+<dt><code>-q</code>[<i>!</i>]Q substr</dt>
+<dd>Limit processed jobs to quarantined jobs containing <i>substr</i> as a substring of the quarantine reason or not when <i>!</i> is specified.</dd>
+<dt><code>-q</code>[<i>!</i>]R substr</dt>
+<dd>Limit processed jobs to those containing <i>substr</i> as a substring of one of the recipients or not when <i>!</i> is specified.</dd>
+<dt><code>-q</code>[<i>!</i>]S substr</dt>
+<dd>Limit processed jobs to those containing <i>substr</i> as a substring of the sender or not when <i>!</i> is specified.</dd>
+<dt><code>-v</code></dt>
+<dd>Print verbose information. This adds the priority of the message and a single character indicator (&#8220;+&#8221; or blank) indicating whether a warning message has been sent on the first line of the message. Additionally, extra lines may be intermixed with the recipients indicating the &#8220;controlling user&#8221; information; this shows who will own any programs that are executed on behalf of this message and the name of the alias this command expanded from, if any. Moreover, status messages for each recipient are printed if available.</dd></dl>
+<p> Several sendmail.cf options influence the behavior of the <code>mailq</code> utility: The number of items printed per queue group is restricted by <code>MaxQueueRunSize</code> if that value is set. The status character <code>*</code> is not printed for some values of <code>QueueSortOrder,</code> e.g., filename, random, modification, and none, unless a <code>-q</code> option is used to limit the processed jobs. </p>
+<p> The <code>mailq</code> utility exits 0 on success, and &gt;0 if an error occurs.</p>
+<h2>See Also</h2>
+<p>sendmail(8)</p>
+<h2>History</h2>
+<p>The <code>mailq</code> command appeared in 4.0BSD.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

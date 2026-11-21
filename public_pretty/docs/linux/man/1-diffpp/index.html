@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>diffpp(1) · Linux Manual Pages</title>
+<meta name="description" content="diffpp – pretty-print diff outputs with GNU enscript">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-diffpp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>diffpp(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> diffpp &#8211; pretty-print diff outputs with GNU enscript</p>
+<h2>SYNOPSIS</h2>
+<p> <code>diffpp </code><i>currentfile</i> &lt; <i>diff-file</i> </p>
+<h2>DESCRIPTION</h2>
+<p> <code>Diffpp</code> converts <code><a href="/docs/linux/man/1-diff/">diff</a>(1)</code>-program&#8217;s output files to a format suitable to be printed with GNU <code><a href="/docs/linux/man/1-enscript/">enscript</a>(1)</code>. Program annotates the changes with enscript&#8217;s special escapes so enscript can highlight the modified portions of the file. All changed and added lines are printed with gray-background, deleted lines are marked with minus (`-&#8216;) characters; <code>diffpp</code> prints one minus character for each deleted line. </p>
+<h2>EXAMPLES</h2>
+<p> The easiest way to use <code>diffpp</code> is to use it as an input filter for enscript. If an input filter is specified for enscript it is used to pre-process the incoming data-stream. Filtering does not alter any header strings or file-timestamps which might be printed on enscript headers; only the incoming data is modified. </p>
+<dl>
+<dt><code>enscript -G2re &#8211;filter=&#8217;rcsdiff %s | diffpp %s&#8217; *.c *.h</code></dt>
+<dd> Print the changes between current source files and their latest RCS-versions.</dd>
+<dt><code>enscript -G2re &#8211;filter=&#8217;diff %s~ %s | diffpp %s&#8217; *.c *.h</code></dt>
+<dd> Print changes between source files and the corresponding backup-files. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-diff/">diff</a>(1), <a href="/docs/linux/man/1-enscript/">enscript</a>(1) </p>
+<h2>AUTHOR</h2>
+<p> Markku Rossi &lt;mtr [at] iki.fi&gt; &lt;<a rel="nofollow" href="http://www.iki.fi/~mtr/">http://www.iki.fi/~mtr/</a>&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ne_response_header_iterate(3) · Linux Manual Pages</title>
+<meta name="description" content="ne_get_response_header, ne_response_header_iterate – functions to access response headers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ne_response_header_iterate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ne_response_header_iterate(3)</h1>
+
+
+
+
+
+<p>ne_get_response_header, ne_response_header_iterate &#8211; functions to access response headers</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;ne_request.h&gt;
+const char *ne_get_response_header(ne_request *request, const char *name);
+void *ne_response_header_iterate(ne_request *request, void *cursor, const char **name, const char **value);</code></pre>
+<h2>Description</h2>
+<dd>To retrieve the value of a response header field, the <code>ne_get_response_header</code> function can be used, and is given the name of the header to return. </dd>
+<p> To iterate over all the response headers returned, the <code>ne_response_header_iterate</code> function can be used. This function takes a <i>cursor</i> parameter which should be NULL to retrieve the first header. The function stores the name and value of the next header header in the <i>name</i> and <i>value</i> parameters, and returns a new cursor pointer which can be passed to <code>ne_response_header_iterate</code> to retrieve the next header.</p>
+<h2>Return Value</h2>
+<p><code>ne_get_response_header</code> returns a string, or NULL if no header with that name was given. If used during request processing, the return value pointer is valid only until the next call to <code>ne_begin_request</code>, or else, until the request object is destroyed. </p>
+<p> Likewise, the cursor, names, and values returned by <code>ne_response_header_iterate</code> are only valid until the next call to <code>ne_begin_request</code> or until the request object is destroyed.</p>
+<h2>Examples</h2>
+<p>The following code will output the value of the Last-Modified header for a resource: </p>
+<pre><code>ne_request *req = ne_request_create(sess, &quot;GET&quot;, &quot;/foo.txt&quot;);
+if (ne_request_dispatch(req) == NE_OK) {
+    const char *mtime = ne_get_response_header(req, &quot;Last-Modified&quot;);
+    if (mtime) {
+        printf(&quot;/foo.txt has last-modified value %s
+&quot;, mtime);
+    }
+}
+ne_request_destroy(req);</code></pre>
+<h2>See Also</h2>
+<p>ne_request_create, ne_request_destroy.</p>
+<h2>Author</h2>
+<p><code>Joe Orton</code> &lt;neon [at] lists.manyfish.co.uk&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

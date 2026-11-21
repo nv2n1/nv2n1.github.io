@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>acpiexec(1) · Linux Manual Pages</title>
+<meta name="description" content="acpiexec – ACPI AML execution and debug utility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-acpiexec/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>acpiexec(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> acpiexec &#8211; ACPI AML execution and debug utility </p>
+<h2>SYNOPSIS</h2>
+<p> <code>acpiexec</code> [<i>&lt;option&gt;</i>&#8230;<i>]</i> &lt;aml-file&gt; <code>&#8230;</code> </p>
+<h2>DESCRIPTION</h2>
+<p> This manual page briefly documents the <code>acpiexec</code> command. The option list is taken from the acpiexec interactive help. </p>
+<p> <code>acpiexec</code> provides a simulated execution environment for AML code so that it can be more easily tested and debugged. </p>
+<p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-?</code></dt>
+<dd> Display the help message</dd>
+<dt><code>-b command-line</code></dt>
+<dd> Batch mode command line execution (cmd1;cmd2;&#8230;)</dd>
+<dt><code>-M [&lt;method&gt;]</code></dt>
+<dd> Batch mode method execution (Default: MAIN)</dd>
+<dt><code>-da</code></dt>
+<dd> Disable method abort on error</dd>
+<dt><code>-di</code></dt>
+<dd> Disable execution of _STA/_INI methods during init</dd>
+<dt><code>-do</code></dt>
+<dd> Disable Operation Region address simulation</dd>
+<dt><code>-dr</code></dt>
+<dd> Disable repair of method return values</dd>
+<dt><code>-dt</code></dt>
+<dd> Disable allocation tracking (performance)</dd>
+<dt><code>-ef</code></dt>
+<dd> Enable display of final memory statistics</dd>
+<dt><code>-ei</code></dt>
+<dd> Enable additional tests for ACPICA interfaces</dd>
+<dt><code>-em</code></dt>
+<dd> Enable interpreter Serialized mode</dd>
+<dt><code>-es</code></dt>
+<dd> Enable interpreter Slack mode</dd>
+<dt><code>-et</code></dt>
+<dd> Enable debug semaphore timeour</dd>
+<dt><code>-f &lt;value&gt;</code></dt>
+<dd> Operation Region initialization fill value</dd>
+<dt><code>-r</code></dt>
+<dd> Use hardware-reduced FADT V5</dd>
+<dt><code>-vi</code></dt>
+<dd> Verbose initialization output</dd>
+<dt><code>-vr</code></dt>
+<dd> Verbose region handler output</dd>
+<dt><code>-x &lt;debug-level&gt;</code></dt>
+<dd> Debug output level </dd>
+</dl>
+<h2>AUTHOR</h2>
+<p> acpiexec was written by Robert Moore &lt;robert.moore [at] intel.com&gt;. </p>
+<p> This manual page was written by Al Stone &lt;ahs3 [at] redhat.com&gt; for the Fedora project (but may be used by others). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

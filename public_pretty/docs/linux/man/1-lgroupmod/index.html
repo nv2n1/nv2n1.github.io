@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lgroupmod(1) · Linux Manual Pages</title>
+<meta name="description" content="lgroupmod – Modify an user group">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lgroupmod/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lgroupmod(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> lgroupmod &#8211; Modify an user group</p>
+<h2>SYNOPSIS</h2>
+<p> lgroupmod [<i>OPTION</i>]&#8230; <i>group</i> </p>
+<h2>DESCRIPTION</h2>
+<p> Modifies the user group with name <i>group</i>. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-A</code>, <code>&#8211;admin-add</code>=<i>list</i></dt>
+<dd> Add users in comma-separated <i>list</i> among <i>group</i>&#8216;s administrators. </dd>
+<dt><code>-a</code>, <code>&#8211;admin-remove</code>=<i>list</i></dt>
+<dd> Remove users in comma-separated <i>list</i> from <i>group</i>&#8216;s administrators. Removing users that are not currently among <i>group</i>&#8216;s administrators silently succeeds. </dd>
+<dt><code>-g</code>, <code>&#8211;gid</code>=<i>gid</i></dt>
+<dd> Change <i>group</i>&#8216;s group ID to <i>gid</i>. </dd>
+<dt><code>-i</code>, <code>&#8211;interactive</code></dt>
+<dd> Ask all questions when connecting to the user database, even if default answers are set up in <code>libuser</code> configuration. </dd>
+<dt><code>-L</code>, <code>&#8211;lock</code></dt>
+<dd> Lock <i>group</i>. This prevents users from using the group password with <code><a href="/docs/linux/man/1-newgrp/">newgrp</a></code>(1) to become a member of <i>group</i>. </dd>
+<dt><code>-M</code>, <code>&#8211;member-add</code>=<i>list</i></dt>
+<dd> Add users in comma-separated <i>list</i> among <i>group</i>&#8216;s members. </dd>
+<dt><code>-m</code>, <code>&#8211;member-remove</code>=<i>list</i></dt>
+<dd> Remove users in comma-separated <i>list</i> from <i>group</i>&#8216;s members. Removing users that are not currently among <i>group</i>&#8216;s members silently succeeds. </dd>
+<dt><code>-n</code>, <code>&#8211;name</code>=<i>name</i></dt>
+<dd> Rename <i>group</i> to <i>name</i>. </dd>
+<dt><code>-P</code>, <code>&#8211;plainpassword</code>=<i>password</i></dt>
+<dd> Set <i>group</i>&#8216;s password to <i>password</i>. Note that the password can be viewed while running <code>lgroupmod</code> using tools such as <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1). </dd>
+<dt><code>-p</code>, <code>&#8211;password</code>=<i>encrypted</i></dt>
+<dd> Set <i>group</i>&#8216;s password to the password represented by the hash <i>encrypted</i>. Note that the hash can be viewed while running <code>lgroupmod</code> using tools such as <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1). </dd>
+<dt><code>-U</code>, <code>&#8211;unlock</code></dt>
+<dd> Unlock <i>group</i>. </dd>
+</dl>
+<h2>EXIT STATUS</h2>
+<p> The exit status is 0 on success, nonzero on error. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

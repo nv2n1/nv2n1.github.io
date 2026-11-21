@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_net_manager_python(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_net_manager_python/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_net_manager_python(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>Python Module -</p>
+<p>Net Manager Python Module. Net Manager Python Module.</p>
+<p>The Net Manager Python module is an example module that provides basic Python language bindings to the Network Manager callout functionality. To use this example, define a python module that implements the some subset of the following functions:</p>
+ <pre><code>
+1 def pre_listen(task_id, transport, attrs) : 2 #return list of(scope, name, value)
+tuples or None 3 def post_listen(task_id, transport, local_contact, attrs) : 4 #return a tuple containing(local_contact_out, [ (scope, name, value), ... ]) 5 def end_listen(task_id, transport, local_contact, attrs) : 6 #return a list of(scope, name, value)
+tuples or None 7 def pre_accept(task_id, transport, local_contact, attrs) : 8 #return list of(scope, name, value)
+tuples or None 9 def post_accept(task_id, transport, local_contact, remote_contact, attrs) : 10 #return list of(scope, name, value)
+tuples or None 11 def pre_connect(task_id, transport, remote_contact, attrs) : 12 #return a tuple containing(remote_contact_out, [ (scope, name, value), ... ]) 13 def post_connect(task_id, transport, local_contact, remote_contact, attrs) : 14 #return list of(scope, name, value)
+tuples or None 15 def pre_close(task_id, transport, local_contact, remote_contact, attrs) : 16 #return None
+    17 def post_close(task_id, transport, local_contact, remote_contact, attrs) : 18 #return None
+</code></pre> 
+<p> <wbr>The <wbr><i>task_id</i>, <wbr><i>transport</i>, <wbr><i>local_contact</i>, and <wbr><i>remote_contact</i> <wbr>parameters to these functions are all string objects. The <wbr><i>attrs</i> <wbr>parameter to these functions are lists of 3-tuples <wbr>(scope, name, value).</p>
+<p>To use this with the GridFTP server, add a file containing the following to the GridFTP configuration directory /etc/grid</p>
+<p><a HREF="ftp://ftp.d">ftp.d</a>:</p>
+ <pre>
+$PYTHONPATH PATH
+xnetmgr &quot;manager=python;pymod=MODULE_NAME;&quot;
+</pre> 
+<p> <wbr>Where <wbr>&lsquo;PATH&rsquo; <wbr>is the directory containing your module and <wbr>&lsquo;MODULE_NAME&rsquo; <wbr>is the name of the python module that you would use to import it <wbr>(i.e. without the <wbr>&rsquo;.py&rsquo; <wbr>extension). So a module <wbr>&rsquo;/usr/local/globus/routeman.py&rsquo; <wbr>would require <wbr></p>
+ <pre>
+$PYTHONPATH /usr/local/globus
+xnetmgr &quot;manager=python;pymod=routeman;&quot;
+</pre> 
+<p>To use this with the XIO module directly, set the string options manager=python;pymod=routeman;. You&rsquo;ll need to set the PYTHONPATH environment variable elsewhere.</p>
+<p>To configure the network manager to use this module directly without XIO, set the &lsquo;pymod&rsquo; attribute in the &lsquo;python&rsquo; scope to the name of the python module to import and use. For example:</p>
+ <pre>
+globus_net_manager_attr_init(
+    &amp;attr,
+    &quot;python&quot;,
+    &quot;pymod&quot;,
+    &quot;routeman&quot;);
+</pre> 
+<p> <wbr>and pass this to the context functions. <wbr></p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for globus_net_manager from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

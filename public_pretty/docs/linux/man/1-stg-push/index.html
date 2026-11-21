@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stg-push(1) · Linux Manual Pages</title>
+<meta name="description" content="stg-push – Push one or more patches onto the stack">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-stg-push/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>stg-push(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> stg-push &#8211; Push one or more patches onto the stack </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+stg push[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4&gt;]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> Push one or more patches (defaulting to the first unapplied one) onto the stack. The <i>push</i> operation allows patch reordering by commuting them with the three-way merge algorithm. If there are conflicts while pushing a patch, those conflicts are written to the work tree, and the command halts. Conflicts raised during the push operation have to be fixed and the <i>git add &#8211;update</i> command run (alternatively, you may undo the conflicting push with <i>stg undo</i>). </p>
+<p> The command also notifies when the patch becomes empty (fully merged upstream) or is modified (three-way merged) by the <i>push</i> operation.</p>
+<h2>OPTIONS</h2>
+<p> -a, &#8211;all</p>
+<dl>
+<dt>
+</dt><dd> Push all the unapplied patches.</dd></dl>
+<p> -n NUMBER, &#8211;number NUMBER</p>
+<dl>
+<dt>
+</dt><dd> Push the specified number of patches. </dd>
+<p> With a negative number, push all but that many patches.</dl>
+<p> &#8211;reverse</p>
+<dl>
+<dt>
+</dt><dd> Push the patches in reverse order.</dd></dl>
+<p> &#8211;set-tree</p>
+<dl>
+<dt>
+</dt><dd> Push the patches, but don&#8217;t perform a merge. Instead, the resulting tree will be identical to the tree that the patch previously created. </dd>
+<p> This can be useful when splitting a patch by first popping the patch and creating a new patch with some of the changes. Pushing the original patch with <i>&#8211;set-tree</i> will avoid conflicts and only the remaining changes will be in the patch.</dl>
+<p> -k, &#8211;keep</p>
+<dl>
+<dt>
+</dt><dd> Keep the local changes.</dd></dl>
+<p> -m, &#8211;merged</p>
+<dl>
+<dt>
+</dt><dd> Check for patches merged upstream.</dd></dl>
+<h2>STGIT</h2>
+<p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

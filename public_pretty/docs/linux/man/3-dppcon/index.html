@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dppcon(3) · Linux Manual Pages</title>
+<meta name="description" content="dppcon.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dppcon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dppcon(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> dppcon.f &#8211; </p>
+<h2>SYNOPSIS</h2>
+<h3>Functions/Subroutines</h3>
+<p> subroutine <code>dppcon</code> (UPLO, N, AP, ANORM, RCOND, WORK, IWORK, INFO)<br />
+ <i></i><code>DPPCON</code></p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine dppcon (characterUPLO, integerN, double precision, dimension( * )AP, double precisionANORM, double precisionRCOND, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>
+<p> <code>DPPCON</code> </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+ DPPCON estimates the reciprocal of the condition number (in the
+ 1-norm) of a real symmetric positive definite packed matrix using
+ the Cholesky factorization A = U**T*U or A = L*L**T computed by
+ DPPTRF.
+ An estimate is obtained for norm(inv(A)), and the reciprocal of the
+ condition number is computed as RCOND = 1 / (ANORM * norm(inv(A))).
+</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>UPLO</i> </dd>
+<pre>
+          UPLO is CHARACTER*1
+          = 'U':  Upper triangle of A is stored;
+          = 'L':  Lower triangle of A is stored.
+</pre>
+<p> <i>N</i> </p>
+<pre>
+          N is INTEGER
+          The order of the matrix A.  N &gt;= 0.
+</pre>
+<p> <i>AP</i> </p>
+<pre><code>
+          AP is DOUBLE PRECISION array, dimension (N*(N+1)/2)
+          The triangular factor U or L from the Cholesky factorization
+          A = U**T*U or A = L*L**T, packed columnwise in a linear
+          array.  The j-th column of U or L is stored in the array AP
+          as follows:
+          if UPLO = 'U', AP(i + (j-1)*j/2) = U(i,j) for 1&lt;=i&lt;=j;
+          if UPLO = 'L', AP(i + (j-1)*(2n-j)/2) = L(i,j) for j&lt;=i&lt;=n.
+</code></pre>
+<p> <i>ANORM</i> </p>
+<pre>
+          ANORM is DOUBLE PRECISION
+          The 1-norm (or infinity-norm) of the symmetric matrix A.
+</pre>
+<p> <i>RCOND</i> </p>
+<pre>
+          RCOND is DOUBLE PRECISION
+          The reciprocal of the condition number of the matrix A,
+          computed as RCOND = 1/(ANORM * AINVNM), where AINVNM is an
+          estimate of the 1-norm of inv(A) computed in this routine.
+</pre>
+<p> <i>WORK</i> </p>
+<pre>
+          WORK is DOUBLE PRECISION array, dimension (3*N)
+</pre>
+<p> <i>IWORK</i> </p>
+<pre>
+          IWORK is INTEGER array, dimension (N)
+</pre>
+<p> <i>INFO</i> </p>
+<pre>
+          INFO is INTEGER
+          = 0:  successful exit
+          &lt; 0:  if INFO = -i, the i-th argument had an illegal value
+</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dt>
+</dt><dd> Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dt>
+</dt><dd> November 2011</dd></dl>
+<p> Definition at line 119 of file dppcon.f.</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for LAPACK from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>svn-bisect(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-svn-bisect/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>svn-bisect(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>svn-bisect</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+$ svn - bisect-- min 25000 --max 26000 start $ svn - bisect bad $ svn - bisect bad $ svn - bisect good[etc etc] $ svn - bisect reset
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>This tool&rsquo;s purpose is to help you determine which revision of a subversion repository contains a change. It does this by employing a binary search. It will manage the current revision of your checkout directory, and narrow in on the target revision, as you give it clues about the current revision such as <code>before'' (this revision is before the one you want) or </code>after&rsquo;&rsquo; (this revision is after the one you want).</p>
+<p>Start a bisect session with the <code>start'' command. Then, walk the binary tree by using the </code>before&rsquo;&rsquo; and ``after&rsquo;&rsquo; commands. When you are done, the tool will tell you the target revision.</p>
+<p>The most common usage scenario is finding out which rev a bug was introduced in. For this purpose, some command aliases have been added: if the current revision contains the bug, you can use the <code>bad'' command (meaning, this revision is </code>after&rsquo;&rsquo; the change you want to find), otherwise use the <code>good'' command (meaning, this revision is </code>before&rsquo;&rsquo; the change you want to find).</p>
+<p>All commands should be run from within a subversion checkout directory. After a ``svn-bisect start&rsquo;&rsquo;, all subsequent svn-bisect commands need to be run from that same directory.</p>
+<h2>OPTIONS</h2>
+<p>Options <font SIZE="-1">MUST</font> be specified before subcommands, on the command line. Options specified after the subcommand will be passed to the subcommand; this is currently only useful for the ``run&rsquo;&rsquo; subcommand.</p>
+<dl>
+<dt>--help
+</dt><dd> Use anywhere. Output a command list, or specific help for the given command.
+</dd><dt>--version
+</dt><dd> Use anywhere. Tells you my version number.
+</dd><dt>--verbose
+</dt><dd> Use anywhere. Enable some additional informational output.
+</dd><dt>--min
+</dt><dd> Use with ``start''. Specify the beginning revision of the range.
+</dd><dt>--max
+</dt><dd> Use with ``start''. Specify the ending revision of the range.
+</dd><dt>--back
+</dt><dd> Use with ``reset''. Restores the original repository version.</dd></dl>
+<h2>SUBCOMMANDS</h2>
+<h3>start</h3>
+<p>svn - bisect[&ndash;min M][&ndash;max N] start</p>
+<p>Start a new bisect session. If &ndash;min isn&rsquo;t specified, you can specify it later with the <code>good'' command. If --max isn't specified, you can specify it later with the </code>bad&rsquo;&rsquo; command.</p>
+<h3>after</h3>
+<p>svn - bisect after[revision] or : svn - bisect bad[revision]</p>
+<p>Inform svn-bisect that the specified revision is <em>after</em> the change we&rsquo;re looking for. If you don&rsquo;t specify a revision number, the current revision of the working tree is used. If you are looking for the rev which introduced a bug (which is the common case), the alias ``bad&rsquo;&rsquo; might be easier to remember.</p>
+<h3>before</h3>
+<p>svn - bisect before[revision] or : svn - bisect good[revision]</p>
+<p>Inform svn-bisect that the specified revision is <em>before</em> the change we&rsquo;re looking for. If you don&rsquo;t specify a revision number, the current revision of the working tree is used. If you are looking for the rev which introduced a bug (which is the common case), the alias ``good&rsquo;&rsquo; might be easier to remember.</p>
+<h3>skip</h3>
+<p>svn - bisect skip[&lt;rev&gt;[&lt;rev&gt;&hellip;]]</p>
+<p>Tell svn-bisect to skip the specified revision. If no revision is specified, the current version of the working tree is used. Do this if you can&rsquo;t determine whether the current revision is bad or good, if, for instance, some other issue prevents it from compiling successfully.</p>
+<p>You may specify more than one revision, and they will all be skipped.</p>
+<h3>unskip</h3>
+ <pre>
+    svn-bisect unskip &lt;rev&gt; [&lt;rev&gt;...]
+</pre> 
+<p>Tell svn-bisect to no longer skip the specified revision. You must specify at least one revision to unskip. If you specify more than one, they will all be unskipped.</p>
+<h3>run</h3>
+ <pre>
+    svn-bisect run &lt;command&gt; [arguments...]
+</pre> 
+<p>Runs a command repeatedly to automate the bisection process.</p>
+<p>Examples:</p>
+ <pre>
+    svn-bisect run ./mytest.sh
+    svn-bisect run test ! -f file
+</pre> 
+<p>We run the command and arguments until a conclusion is reached. The command (usually a shell script) tells us about the current revision by way of its return code. The following return codes are handled:</p>
+ <pre>
+    0: This revision is before the change we're looking for
+    1-124, 126-127: This revision includes the change we're looking for
+    125: This revision is untestable and should be skipped
+    any other value: The command failed to run, abort bisection.
+</pre> 
+<p>In other words, <code>run'' will automatically find the last revision for which the given command returns success. (Keep in mind that in the shell, </code>0&rsquo;&rsquo; means ``success&rsquo;&rsquo;.)</p>
+<p>The normal caveats apply. In particular, if your script makes any changes, don&rsquo;t forget to clean up afterwards.</p>
+<h3>reset</h3>
+ <pre>
+    svn-bisect reset
+</pre> 
+<p>Clean up after a bisect, and return the repository to the revision it was at before you started.</p>
+<h3>help</h3>
+ <pre>
+    svn-bisect help
+    svn-bisect help start
+</pre> 
+<p>Gives you some useful descriptions and usage information.</p>
+<h2>EXAMPLE</h2>
+<p>&hellip;Because, you know, no software documentation is complete without a flashy screenshot, these days.</p>
+<p>So, lets say you were wondering when the subversion project added the <code>Last Changed Rev:'' line to the output of </code>svn info&rsquo;&rsquo;. Determining the existence of this change is a straightforward matter of searching for the text string&hellip; if a result was found, the current revision is <code>after'', otherwise it was </code>before&rsquo;&rsquo;. So a bisect looks like this:</p>
+ <pre><code>
+    $ svn co http://svn.apache.org/repos/asf/subversion/trunk/subversion
+    [snip lots of subversion checkout spam]
+    Checked out revision 980012.
+    $ cd subversion
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    svn/info-cmd.c:362:    SVN_ERR(svn_cmdline_printf(pool, _("Last Changed Rev: %ld\n"),
+    tests/cmdline/depth_tests.py:2056:      'Last Changed Rev'   : '^1$',
+    tests/cmdline/upgrade_tests.py:387:      'Last Changed Rev' : '7'
+    tests/cmdline/upgrade_tests.py:396:      'Last Changed Rev' : '10'
+    $ date
+    Wed Jul 28 06:40:03 EDT 2010
+    $ svn-bisect --min 0 start
+    $ svn-bisect after
+    Fetching history from r0 to r980012; it may take a while.
+    There are 24349 revs left in the pool.  Choosing r862045.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    svn/info-cmd.c:348:    SVN_ERR(svn_cmdline_printf(pool, _("Last Changed Rev: %ld\n"),
+    $ svn-bisect after
+    There are 12174 revs left in the pool.  Choosing r845633.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    clients/cmdline/info-cmd.c:153:    printf ("Last Changed Rev: %" SVN_REVNUM_T_FMT "\n", entry-&gt;cmt_rev);
+    $ svn-bisect after
+    There are 6087 revs left in the pool.  Choosing r840416.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    $ svn-bisect before
+    There are 3043 revs left in the pool.  Choosing r842636.
+#ack-- nocolor-- nogroup 'Last Changed Rev'
+    clients/cmdline/info-cmd.c:153:    printf ("Last Changed Rev: %" SVN_REVNUM_T_FMT "\n", entry-&gt;cmt_rev);
+    $ svn-bisect after
+    There are 1521 revs left in the pool.  Choosing r841463.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    $ svn-bisect before
+    There are 760 revs left in the pool.  Choosing r841993.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    clients/cmdline/info-cmd.c:161:        printf ("Last Changed Rev: %" SVN_REVNUM_T_FMT "\n", entry-&gt;cmt_rev);
+    $ svn-bisect after
+    There are 380 revs left in the pool.  Choosing r841730.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    $ svn-bisect before
+    There are 189 revs left in the pool.  Choosing r841860.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    $ svn-bisect before
+    There are 94 revs left in the pool.  Choosing r841933.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    clients/cmdline/info-cmd.c:151:        printf ("Last Changed Rev: %" SVN_REVNUM_T_FMT "\n", entry-&gt;cmt_rev);
+    $ svn-bisect after
+    There are 47 revs left in the pool.  Choosing r841904.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    clients/cmdline/info-cmd.c:150:        printf ("Last Changed Rev: %ld\n", entry-&gt;cmt_rev);
+    $ svn-bisect after
+    There are 23 revs left in the pool.  Choosing r841880.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    $ svn-bisect before
+    There are 11 revs left in the pool.  Choosing r841890.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    clients/cmdline/info-cmd.c:153:            printf ("Last Changed Rev: %ld\n", entry-&gt;cmt_rev);
+    $ svn-bisect after
+    There are 5 revs left in the pool.  Choosing r841883.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    clients/cmdline/info-cmd.c:153:            printf ("Last Changed Rev: %ld\n", entry-&gt;cmt_rev);
+    $ svn-bisect after
+    There are 2 revs left in the pool.  Choosing r841882.
+    $ ack --nocolor --nogroup 'Last Changed Rev'
+    $ svn-bisect before
+    This is the end of the road!
+    The change occurred in r841883.
+    $ svn log -r841883
+    ------------------------------------------------------------------------
+    r841883 | rooneg | 2002-04-27 15:23:38 -0400 (Sat, 27 Apr 2002) | 30 lines
+    As requested by cmpilato in issue #676, add an 'svn info' command, which 
+    prints out the contents of the svn_wc_entry_t for a given versioned resource.
+    * CHANGES
+      note the addition of the 'svn info' command.
+    * subversion/clients/cmdline/cl.h
+      add declaration for svn_cl__info.
+    * subversion/clients/cmdline/info-cmd.c
+      new file implementing the info command.
+    * subversion/clients/cmdline/main.c
+      hook up the info command.
+    * subversion/clients/cmdline/man/svn.1
+      document the info command.
+    * subversion/tests/clients/cmdline/getopt_tests_data/svn--help_stdout
+      update for the addition of info command.
+    * subversion/tests/clients/cmdline/getopt_tests_data/svn_help_stdout
+      ditto.
+    * subversion/tests/clients/cmdline/getopt_tests_data/svn_stderr
+      ditto.
+    * tools/dev/bash_completion
+      add 'info' to the tab completion.
+    ------------------------------------------------------------------------
+    $ date
+    Wed Jul 28 06:45:27 EDT 2010
+</code></pre> 
+<p>So, there it is. In 5 minutes, we&rsquo;ve learned that <code>Last Changed Rev:'' has been in there since the inception of the </code>svn info&rsquo;&rsquo; command itself, back in 2002.</p>
+<p>You can also provide a script command to do all of the work for you:</p>
+ <pre>
+    $ svn-bisect --min 0 --max 980012 start
+    $ svn-bisect run '! grep -r &quot;Last Changed Rev&quot; .'
+</pre>
+<h2>REQUIREMENTS</h2>
+<p>This tool requires:</p>
+<ul>
+<li>
+<p>A computer</p>
+</li>
+<li>
+<p>A brain</p>
+</li>
+<li>
+<p>An installation of Perl, version 5.8 or above</p>
+</li>
+<li>
+<p>The IO::All module, installed from <font SIZE="-1">CPAN</font></p>
+</li>
+<li>
+<p>The YAML::Syck module, installed from <font SIZE="-1">CPAN</font></p>
+</li>
+<li>
+<p>The ``svn&rsquo;&rsquo; command somewhere in your <font SIZE="-1">PATH,</font> executable by the current user</p>
+</li>
+<li>
+<p>A svn checkout with some history to bisect.</p>
+</li>
+</ul>
+<h2>AUTHOR</h2>
+ <pre>
+    Mark Glines &lt;mark-cpan [at] glines.org&gt;
+</pre>
+<h2>REPOSITORY</h2>
+<p>Browser: &lt;<a rel="nofollow" HREF="http://github.com/Infinoid/svn-bisect/"><a href="http://github.com/Infinoid/svn-bisect/">http://github.com/Infinoid/svn-bisect/</a></a>&gt; Clone: &lt;<a HREF="git://github.com/Infinoid/svn-bisect.git">git://github.com/Infinoid/svn-bisect.git</a>&gt;</p>
+<h2>THANKS</h2>
+<ul>
+<li>
+<p>Thanks to the git-bisect author(s), for coming up with a user interface that
+ <wbr> <wbr>I actually like.</p>
+</li>
+<li>
+<p>Thanks to Will Coleda for inspiring me to actually write and release this.</p>
+</li>
+<li>
+<p>Thanks to the Parrot project for having so much random stuff going on as to
+ <wbr> <wbr>make a tool like this necessary.</p>
+</li>
+</ul>
+<h2>SEE ALSO</h2>
+<p>App::SVNBinarySearch by Will Coleda: &lt;<a rel="nofollow" HREF="http://search.cpan.org/dist/App-SVNBinarySearch/"><a href="http://search.cpan.org/dist/App-SVNBinarySearch/">http://search.cpan.org/dist/App-SVNBinarySearch/</a></a>&gt;</p>
+<h2>COPYRIGHT AND LICENSE</h2>
+<p>This software is copyright (c) 2008 Mark Glines.</p>
+<p>It is distributed under the terms of the Artistic License 2.0. For details, see the ``<font SIZE="-1">LICENSE&rsquo;&rsquo;</font> file packaged alongside this tool.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

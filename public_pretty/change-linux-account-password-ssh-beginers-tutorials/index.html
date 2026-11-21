@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changing Your Linux Password Over SSH - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/change-linux-account-password-ssh-beginers-tutorials/">
+  <meta name="description" content="Open a terminal and connect to the server:
+ssh USER@HOST Replace USER with your username and HOST with the server’s hostname or IP address.
+On first connection, …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Changing Your Linux Password Over SSH">
+  <meta property="og:url" content="https://www.systutorials.com/change-linux-account-password-ssh-beginers-tutorials/">
+  <meta property="og:description" content="Open a terminal and connect to the server:
+ssh USER@HOST Replace USER with your username and HOST with the server’s hostname or IP address.
+On first connection, …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>Changing Your Linux Password Over SSH</h1>
+        <time class="post-date" datetime="2016-08-07T02:00:53Z">August 7, 2016</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Open a terminal and connect to the server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh USER@HOST
+</span></span></code></pre></div><p>Replace <code>USER</code> with your username and <code>HOST</code> with the server’s hostname or IP address.</p>
+<p>On first connection, SSH will display the host key fingerprint:</p>
+<pre><code>The authenticity of host 'HOST (IP_ADDRESS)' can't be established.
+ECDSA key fingerprint is SHA256:xxxxxxxxxxxx.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+</code></pre>
+<p>Type <code>yes</code> and press Enter. SSH will then prompt for your password:</p>
+<pre><code>USER@HOST's password:
+</code></pre>
+<p>Enter your current password. Characters won’t display as you type — this is normal for security.</p>
+<h2 id="change-your-password-with-passwd">Change Your Password with passwd</h2>
+<p>Once logged in, run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">passwd
+</span></span></code></pre></div><p>The system will prompt for your current password:</p>
+<pre><code>(current) UNIX password:
+</code></pre>
+<p>Enter it (characters won’t display), then you’ll see:</p>
+<pre><code>New password:
+</code></pre>
+<p>Type your new password, then confirm it:</p>
+<pre><code>Retype new password:
+</code></pre>
+<p>If successful, you’ll see:</p>
+<pre><code>passwd: all authentication tokens updated successfully.
+</code></pre>
+<h2 id="strong-password-requirements">Strong Password Requirements</h2>
+<p>Most modern systems enforce password complexity. Aim for at least 12 characters mixing uppercase, lowercase, numbers, and symbols. If your password is too weak, <code>passwd</code> will reject it:</p>
+<pre><code>BAD PASSWORD: The password fails the dictionary check - too simplistic/systematic
+</code></pre>
+<p>Test your new password immediately by opening a new SSH session in another terminal before closing your original connection. This catches typos early — you can’t see what you’re typing, so mistakes are easy.</p>
+<h2 id="check-password-expiration">Check Password Expiration</h2>
+<p>Some systems require periodic password changes. View your current settings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chage -l
+</span></span></code></pre></div><p>This shows when your password will expire, when it was last changed, and the minimum days before it can be changed again.</p>
+<p>If you’re an administrator, check another user’s expiration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chage -l USERNAME
+</span></span></code></pre></div><p>Set maximum password age (example: 90 days):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chage -M <span class="m">90</span> USERNAME
+</span></span></code></pre></div><p>Force a user to change their password on next login:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chage -d <span class="m">0</span> USERNAME
+</span></span></code></pre></div><h2 id="prefer-ssh-key-authentication">Prefer SSH Key Authentication</h2>
+<p>Password authentication is less secure and requires regular changes. SSH key-based authentication is better — use Ed25519 keys (the modern standard):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t ed25519 -C <span class="s2">&#34;your_email@example.com&#34;</span>
+</span></span></code></pre></div><p>Copy your public key to the server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-copy-id -i ~/.ssh/id_ed25519.pub USER@HOST
+</span></span></code></pre></div><p>You’ll now connect without password prompts. Once you’ve verified key access works, disable password authentication on servers you manage by editing <code>/etc/ssh/sshd_config</code>:</p>
+<pre><code>PasswordAuthentication no
+</code></pre>
+<p>Reload SSH:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl reload ssh
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Password rejected as too similar to old one</strong></p>
+<p>PAM’s <code>pwhistory</code> module prevents reusing recent passwords. Choose a sufficiently different password.</p>
+<p><strong>Password change fails silently</strong></p>
+<p>Check <code>/var/log/auth.log</code> for details:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo tail -20 /var/log/auth.log
+</span></span></code></pre></div><p>Issues often relate to home directory permissions or authentication backend problems (LDAP, Active Directory, etc.).</p>
+<p><strong>Authentication token manipulation error</strong></p>
+<p>Your password has expired and you’re locked out. Contact your system administrator — they may need to temporarily reset your account or enable emergency access.</p>
+<p><strong>Reset another user’s password (admin only)</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo passwd USERNAME
+</span></span></code></pre></div><p>You won’t need the old password. Force them to change it on next login:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chage -d <span class="m">0</span> USERNAME
+</span></span></code></pre></div><h2 id="2026-comprehensive-guide-best-practices">2026 Comprehensive Guide: Best Practices</h2>
+<p>This extended guide covers Changing Your Linux Password Over SSH with advanced techniques and troubleshooting tips for 2026. Following modern best practices ensures reliable, maintainable, and secure systems.</p>
+<h2 id="advanced-implementation-strategies">Advanced Implementation Strategies</h2>
+<p>For complex deployments, consider these approaches: Infrastructure as Code for reproducible environments, container-based isolation for dependency management, and CI/CD pipelines for automated testing and deployment. Always document your custom configurations and maintain separate development, staging, and production environments.</p>
+<h2 id="security-and-hardening">Security and Hardening</h2>
+<p>Security is foundational to all system administration. Implement layered defense: network segmentation, host-based firewalls, intrusion detection, and regular security audits. Use SSH key-based authentication instead of passwords. Encrypt sensitive data at rest and in transit. Follow the principle of least privilege for access controls.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor resources continuously with tools like top, htop, iotop</li>
+<li>Profile application performance before and after optimizations</li>
+<li>Use caching strategically: application caches, database query caching, CDN for static assets</li>
+<li>Optimize database queries with proper indexing and query analysis</li>
+<li>Implement connection pooling for network services</li>
+</ul>
+<h2 id="troubleshooting-methodology">Troubleshooting Methodology</h2>
+<p>Follow a systematic approach to debugging: reproduce the issue, isolate variables, check logs, test fixes. Keep detailed logs and document solutions found. For intermittent issues, add monitoring and alerting. Use verbose modes and debug flags when needed.</p>
+<h2 id="related-tools-and-utilities">Related Tools and Utilities</h2>
+<p>These tools complement the techniques covered in this article:</p>
+<ul>
+<li>System monitoring: htop, vmstat, iostat, dstat for resource tracking</li>
+<li>Network analysis: tcpdump, wireshark, netstat, ss for connectivity debugging</li>
+<li>Log management: journalctl, tail, less for log analysis</li>
+<li>File operations: find, locate, fd, tree for efficient searching</li>
+<li>Package management: dnf, apt, rpm, zypper for package operations</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Modern operations emphasize automation, observability, and version control. Use orchestration tools like Ansible, Terraform, or Kubernetes for infrastructure. Implement centralized logging and metrics. Maintain comprehensive documentation for all systems and processes.</p>
+<h2 id="quick-reference-summary">Quick Reference Summary</h2>
+<p>This comprehensive guide provides extended knowledge for Changing Your Linux Password Over SSH. For specialized requirements, refer to official documentation. Practice in test environments before production deployment. Keep backups of critical configurations and data.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

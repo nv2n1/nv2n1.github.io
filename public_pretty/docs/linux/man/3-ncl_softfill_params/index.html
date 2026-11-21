@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_softfill_params(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_softfill_params/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_softfill_params(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Softfill_params - This document briefly describes all Softfill internal parameters.</p>
+<h2>Description</h2>
+<p>Softfill has six internal parameters. For details, see the descriptions of the routines that are used to set and retrieve them.</p>
+<p>Parameter descriptions, in alphabetical order, of all Softfill internal parameters follow. Each description begins with a line giving the parameter name and the intrinsic FORTRAN type of the parameter.</p>
+<dl><dt>'AN' - Integer or Real
+</dt><dd>Angle of fill lines, in degrees counterclockwise from horizontal. The default value is zero.
+</dd><dt>'CH' - Character or Integer
+</dt><dd>Character selector (-n =&gt; GKS polymarker n; 0 =&gt; dots; +n =&gt; CHAR(n)). The default value is 0.
+</dd><dt>'DO' - Integer
+</dt><dd>Dot fill selector (0 =&gt; line fill; 1 =&gt; dot fill). The default value is 0, which implies line fill.
+</dd><dt>'SP' - Real
+</dt><dd>Spacing of fill lines, in the fractional coordinate system. The default value is 0.00125.
+</dd><dt>'TY' - Integer
+</dt><dd>Type of fill to be used by SFSGFA (-1 to -4 =&gt; patterns using lines in 1 to 4 different directions and varying in density as the argument ICI varies; 0 =&gt; color fill, by calling GFA, with ICI specifying the color index; 1 =&gt; simulated color fill, using lines in one direction, with ICI specifying the color index; 2 =&gt; simulated color fill, using lines in two directions, with ICI specifying the color index). The default value is 0.
+</dd><dt>'LDP' - Integer
+</dt><dd>An 8x8 array of type INTEGER, containing nothing but 0s and 1s, describing the dot pattern to be used when 'DO' is set non-zero to select dot fill, rather than line fill. This internal parameter, unlike the others, is accessed using the routines SFGETP and SFSETP.</dd></dl>
+<h2>See Also</h2>
+<p>Online: sfgetc, sfgeti, sfgetp, sfgetr, sfsetc, sfseti, sfsetp, sfsetr</p>
+<p>Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>
+<p>Copyright (C) 1987-2009
+University Corporation for Atmospheric Research
+The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

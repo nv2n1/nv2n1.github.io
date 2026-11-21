@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuring Email Notifications for Git Push Events - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/setting-up-git-commit-email-notification/">
+  <meta name="description" content="Sending email notifications when commits are pushed to a central Git repository helps teams stay coordinated and maintains audit trails. This is handled through …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Configuring Email Notifications for Git Push Events">
+  <meta property="og:url" content="https://www.systutorials.com/setting-up-git-commit-email-notification/">
+  <meta property="og:description" content="Sending email notifications when commits are pushed to a central Git repository helps teams stay coordinated and maintains audit trails. This is handled through …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/scripting-automation/">Scripting &amp; Automation</a>
+        </nav>
+        
+        <h1>Configuring Email Notifications for Git Push Events</h1>
+        <time class="post-date" datetime="2014-03-07T10:09:09Z">March 7, 2014</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Sending email notifications when commits are pushed to a central Git repository helps teams stay coordinated and maintains audit trails. This is handled through Git hooks—scripts triggered by repository events.</p>
+<h2 id="how-post-receive-hooks-work">How Post-Receive Hooks Work</h2>
+<p>When a client pushes to your Git server, the <code>post-receive</code> hook executes automatically. This hook lives at <code>GIT_DIR/hooks/post-receive</code> in your bare repository. You place an executable script there that generates and sends notification emails containing commit details, diffs, and metadata.</p>
+<p>A typical notification email includes:</p>
+<ul>
+<li>Subject line with repository name, branch, and commit message</li>
+<li>Commit author, date, and message body</li>
+<li>List of changed files</li>
+<li>Full diff of the changes</li>
+</ul>
+<h2 id="installing-mail-dependencies">Installing Mail Dependencies</h2>
+<p>You need a mail transport agent to send emails. On modern systems, <code>heirloom-mailx</code> or <code>msmtp</code> provide the most reliable interface.</p>
+<p><strong>On Fedora/RHEL/CentOS 9+:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install heirloom-mailx
+</span></span></code></pre></div><p><strong>On Debian/Ubuntu:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install heirloom-mailx
+</span></span></code></pre></div><p>Use <code>heirloom-mailx</code> specifically—default alternatives lack options like <code>-r</code> (sender address) that hook scripts need.</p>
+<p>If you don’t have a local mail service running, the hook can use SMTP directly instead (covered in the SMTP section below).</p>
+<h2 id="creating-the-post-receive-hook">Creating the Post-Receive Hook</h2>
+<p>Git ships with a reference implementation. Find it on your system:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find /usr/share/git-core/contrib/hooks -name <span class="s2">&#34;post-receive.sample&#34;</span> 2&gt;/dev/null
+</span></span></code></pre></div><p>Or download the current version from the Git repository:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -o post-receive <span class="se">\
+</span></span></span><span class="line"><span class="cl">  https://raw.githubusercontent.com/git/git/master/contrib/hooks/post-receive.sample
+</span></span></code></pre></div><p>If you prefer to write your own minimal hook, here’s a practical example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Read configuration from repository config</span>
+</span></span><span class="line"><span class="cl"><span class="nv">REPO_NAME</span><span class="o">=</span><span class="k">$(</span>git rev-parse --absolute-git-dir <span class="p">|</span> xargs basename<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MAILINGLIST</span><span class="o">=</span><span class="k">$(</span>git config hooks.mailinglist<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">EMAILPREFIX</span><span class="o">=</span><span class="k">$(</span>git config hooks.emailprefix <span class="s2">&#34;[GIT]&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SENDEREMAIL</span><span class="o">=</span><span class="k">$(</span>git config hooks.senderEmail <span class="s2">&#34;git-notify@localhost&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Process each ref that was pushed</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="nb">read</span> oldrev newrev refname<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># Skip branch deletions</span>
+</span></span><span class="line"><span class="cl">  <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$newrev</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;0000000000000000000000000000000000000000&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nv">BRANCH</span><span class="o">=</span><span class="k">$(</span>basename <span class="s2">&#34;</span><span class="nv">$refname</span><span class="s2">&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">COMMIT_MSG</span><span class="o">=</span><span class="k">$(</span>git log -1 --format<span class="o">=</span>%s <span class="s2">&#34;</span><span class="nv">$newrev</span><span class="s2">&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">SUBJECT</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$EMAILPREFIX</span><span class="s2"> [</span><span class="nv">$REPO_NAME</span><span class="s2">:</span><span class="nv">$BRANCH</span><span class="s2">] </span><span class="nv">$COMMIT_MSG</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Build the email body</span>
+</span></span><span class="line"><span class="cl">  <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Repository: </span><span class="nv">$REPO_NAME</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Branch: </span><span class="nv">$BRANCH</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Pushed by: </span><span class="k">$(</span>git log -1 --format<span class="o">=</span>%an <span class="nv">$newrev</span><span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Commit: </span><span class="nv">$newrev</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Date: </span><span class="k">$(</span>git log -1 --format<span class="o">=</span>%aI <span class="nv">$newrev</span><span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;=== Commit Message ===&#34;</span>
+</span></span><span class="line"><span class="cl">    git log -1 --format<span class="o">=</span>%B <span class="s2">&#34;</span><span class="nv">$newrev</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;=== Files Changed ===&#34;</span>
+</span></span><span class="line"><span class="cl">    git diff-tree --name-status -r <span class="s2">&#34;</span><span class="nv">$oldrev</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$newrev</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;=== Diff ===&#34;</span>
+</span></span><span class="line"><span class="cl">    git diff-tree -p <span class="s2">&#34;</span><span class="nv">$oldrev</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$newrev</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span> <span class="p">|</span> mailx -s <span class="s2">&#34;</span><span class="nv">$SUBJECT</span><span class="s2">&#34;</span> -r <span class="s2">&#34;</span><span class="nv">$SENDEREMAIL</span><span class="s2">&#34;</span> <span class="nv">$MAILINGLIST</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></div><h2 id="installing-the-hook">Installing the Hook</h2>
+<p>Copy the hook to your bare repository and make it executable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp post-receive /path/to/repo.git/hooks/post-receive
+</span></span><span class="line"><span class="cl">chmod <span class="m">755</span> /path/to/repo.git/hooks/post-receive
+</span></span></code></pre></div><p>For managing hooks across multiple repositories, use symlinks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p /opt/git-hooks
+</span></span><span class="line"><span class="cl">cp post-receive /opt/git-hooks/post-receive
+</span></span><span class="line"><span class="cl">chmod <span class="m">755</span> /opt/git-hooks/post-receive
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Link to each repository</span>
+</span></span><span class="line"><span class="cl">ln -sf /opt/git-hooks/post-receive /path/to/repo.git/hooks/post-receive
+</span></span></code></pre></div><p>The script must be executable. If permissions are wrong, the hook silently fails—always test after installation.</p>
+<h2 id="configuring-repository-settings">Configuring Repository Settings</h2>
+<p>Store notification preferences in the repository config:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /path/to/repo.git
+</span></span><span class="line"><span class="cl">git config hooks.mailinglist <span class="s2">&#34;dev@example.com ops@example.com&#34;</span>
+</span></span><span class="line"><span class="cl">git config hooks.emailprefix <span class="s2">&#34;[DEPLOY]&#34;</span>
+</span></span><span class="line"><span class="cl">git config hooks.senderEmail <span class="s2">&#34;git-notify@example.com&#34;</span>
+</span></span><span class="line"><span class="cl">git config hooks.from <span class="s2">&#34;Git Notifications &lt;git-notify@example.com&gt;&#34;</span>
+</span></span></code></pre></div><p>Or edit the config file directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[hooks]</span>
+</span></span><span class="line"><span class="cl">    <span class="na">mailinglist</span> <span class="o">=</span> <span class="s">dev@example.com ops@example.com
+</span></span></span><span class="line"><span class="cl"><span class="s">    emailprefix = [DEPLOY]
+</span></span></span><span class="line"><span class="cl"><span class="s">    senderEmail = git-notify@example.com</span>
+</span></span></code></pre></div><p>Optionally, update the repository description (shown in email headers and gitweb):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;My Project Name&#34;</span> &gt; /path/to/repo.git/description
+</span></span></code></pre></div><h2 id="using-smtp-instead-of-local-mail">Using SMTP Instead of Local Mail</h2>
+<p>If you don’t have a mail daemon running, configure the hook to use SMTP directly. Modify the mailx command in your hook:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$email_body</span><span class="s2">&#34;</span> <span class="p">|</span> mailx <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -S <span class="nv">smtp</span><span class="o">=</span><span class="s2">&#34;smtps://smtp.gmail.com:465&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -S smtp-use-starttls<span class="o">=</span>no <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -S smtp-auth<span class="o">=</span><span class="s2">&#34;login&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -S smtp-auth-user<span class="o">=</span><span class="s2">&#34;your-email@gmail.com&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -S smtp-auth-password<span class="o">=</span><span class="s2">&#34;your-app-password&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -s <span class="s2">&#34;</span><span class="nv">$SUBJECT</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -r <span class="s2">&#34;</span><span class="nv">$SENDEREMAIL</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  <span class="nv">$MAILINGLIST</span>
+</span></span></code></pre></div><p><strong>For Gmail:</strong> Use an App Password instead of your account password. Store credentials in <code>~/.mailrc</code> with mode <code>600</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">account gmail <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">set</span> <span class="nv">smtp</span><span class="o">=</span><span class="s2">&#34;smtps://smtp.gmail.com:465&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">set</span> smtp-auth<span class="o">=</span><span class="s2">&#34;login&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">set</span> smtp-auth-user<span class="o">=</span><span class="s2">&#34;your-email@gmail.com&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">set</span> smtp-auth-password<span class="o">=</span><span class="s2">&#34;your-app-password&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>Then reference it in the hook:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$email_body</span><span class="s2">&#34;</span> <span class="p">|</span> mailx -A gmail -s <span class="s2">&#34;</span><span class="nv">$SUBJECT</span><span class="s2">&#34;</span> -r <span class="s2">&#34;</span><span class="nv">$SENDEREMAIL</span><span class="s2">&#34;</span> <span class="nv">$MAILINGLIST</span>
+</span></span></code></pre></div><p><strong>For msmtp:</strong> A cleaner alternative to mailx SMTP:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$email_body</span><span class="s2">&#34;</span> <span class="p">|</span> msmtp -a default -t
+</span></span></code></pre></div><p>Configure <code>~/.msmtprc</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">account default</span>
+</span></span><span class="line"><span class="cl"><span class="na">host smtp.gmail.com</span>
+</span></span><span class="line"><span class="cl"><span class="na">port 465</span>
+</span></span><span class="line"><span class="cl"><span class="na">security tls</span>
+</span></span><span class="line"><span class="cl"><span class="na">auth login</span>
+</span></span><span class="line"><span class="cl"><span class="na">user your-email@gmail.com</span>
+</span></span><span class="line"><span class="cl"><span class="na">password your-app-password</span>
+</span></span><span class="line"><span class="cl"><span class="na">from git-notify@example.com</span>
+</span></span></code></pre></div><h2 id="testing-the-hook">Testing the Hook</h2>
+<p>Push a test commit to verify the hook executes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /path/to/local/repo
+</span></span><span class="line"><span class="cl">git commit --allow-empty -m <span class="s2">&#34;Test notification hook&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></div><p>Check for errors in server logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Local mail service</span>
+</span></span><span class="line"><span class="cl">tail -f /var/log/mail.log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># systemd journal</span>
+</span></span><span class="line"><span class="cl">journalctl -u postfix -f
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Enable debug in mailx by adding -v flag to the hook command</span>
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Hook doesn’t execute:</strong></p>
+<ul>
+<li>Verify executable permissions: <code>ls -l /path/to/repo.git/hooks/post-receive</code></li>
+<li>Confirm the repository is bare (contains a <code>hooks/</code> directory)</li>
+<li>Check server Git logs or systemd journal for errors</li>
+<li>Test manually: <code>echo &quot;oldrev newrev refs/heads/main&quot; | /path/to/repo.git/hooks/post-receive</code></li>
+</ul>
+<p><strong>Emails not being sent:</strong></p>
+<ul>
+<li>Test mailx manually: <code>echo &quot;test body&quot; | mailx -s &quot;test&quot; user@example.com</code></li>
+<li>Verify mailing list config: <code>git config hooks.mailinglist</code></li>
+<li>Check mail service is running: <code>systemctl status postfix</code> or equivalent</li>
+<li>If using SMTP, test credentials separately outside the hook</li>
+<li>Review mail service logs for rejected recipients or authentication failures</li>
+</ul>
+<p><strong>Missing or incomplete commit details:</strong></p>
+<ul>
+<li>Ensure <code>oldrev</code> and <code>newrev</code> are being read correctly from stdin</li>
+<li>Verify git commands work as the Git system user: <code>sudo -u git git log -1</code></li>
+<li>Check that the repository path is absolute in the hook script</li>
+</ul>
+<p><strong>Permission denied when hook tries to access Git:</strong></p>
+<ul>
+<li>Run the hook as the Git repository owner</li>
+<li>If using systemd, ensure the Git service has appropriate permissions</li>
+<li>Verify <code>git config</code> values are readable by the hook user</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Keep hooks in version control separately (e.g., <code>/opt/git-hooks</code>) so updates apply across all repositories consistently</li>
+<li>Use a dedicated sender email address for Git notifications to avoid spoofing concerns</li>
+<li>Filter these notifications into a separate mailbox to prevent team inbox noise</li>
+<li>For large teams, use a mailing list service instead of individual email addresses</li>
+<li>Store SMTP credentials securely—never hardcode passwords in hook scripts; use <code>.mailrc</code> or environment variables</li>
+<li>Test hooks after any changes in a non-production repository first</li>
+<li>Log hook execution to syslog for audit purposes: <code>logger &quot;Git hook executed for $REPO_NAME&quot;</code></li>
+<li>Consider adding rate limiting if your team pushes very frequently to avoid notification spam</li>
+</ul>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

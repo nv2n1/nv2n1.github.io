@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zdiff(1) · Linux Manual Pages</title>
+<meta name="description" content="zcmp, zdiff – compare compressed files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-zdiff/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>zdiff(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> zcmp, zdiff &#8211; compare compressed files </p>
+<h2>SYNOPSIS</h2>
+<p> <code>zcmp</code> [ cmp_options ] file1 [ file2 ]<br />
+ <code>zdiff</code> [ diff_options ] file1 [ file2 ]</p>
+<h2>DESCRIPTION</h2>
+<p> <i>Zcmp</i> and <i>zdiff</i> are used to invoke the <i>cmp</i> or the <i>diff</i> program on files compressed via <i>gzip</i>. All options specified are passed directly to <i>cmp</i> or <i>diff</i>. If only <i>file1</i> is specified, it is compared to the uncompressed contents of <i>file1</i>.gz. If two files are specified, their contents (uncompressed if necessary) are fed to <i>cmp</i> or <i>diff</i>. The input files are not modified. The exit status from <i>cmp</i> or <i>diff</i> is preserved.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-cmp/">cmp</a>(1), <a href="/docs/linux/man/1-diff/">diff</a>(1), <a href="/docs/linux/man/1-zmore/">zmore</a>(1), <a href="/docs/linux/man/1-zgrep/">zgrep</a>(1), <a href="/docs/linux/man/1-znew/">znew</a>(1), <a href="/docs/linux/man/1-zforce/">zforce</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1), <a href="/docs/linux/man/1-gzexe/">gzexe</a>(1)</p>
+<h2>BUGS</h2>
+<p> Messages from the <i>cmp</i> or <i>diff</i> programs may refer to file names such as &quot;-&quot; instead of to the file names specified. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>irnetd(8) · Linux Manual Pages</title>
+<meta name="description" content="irnetd – Handle automatically incoming IrNET connections">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-irnetd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>irnetd(8)</h1>
+
+
+
+
+
+<p>irnetd &#8211; Handle automatically incoming IrNET connections</p>
+<h2>Synopsis</h2>
+<p><code>irnetd [</code><i>ppp-options</i><code>]</code></p>
+<h2>Description</h2>
+<p><code>Irnetd</code> is a very simple daemon automatically handling <i>incoming IrNET connections</i>. Every time a peer attempt to connect to the local computer, <code>irnetd</code> generates the relevant <i><a href="/docs/linux/man/8-pppd/">pppd</a></i>(8) command to starts an IrNET server handling this peer.</p>
+<h2>Parameters</h2>
+<dl>
+<dt><i>ppp-options</i></dt>
+<dd>Override the default <i><a href="/docs/linux/man/8-pppd/">pppd</a></i>(8) options. These options will just be passed on the command line of <i><a href="/docs/linux/man/8-pppd/">pppd</a></i>(8). The default options are <i>noauth nolock connect-delay 0 idle 10</i> which should fit most usages.</dd></dl>
+<h2>Author</h2>
+<p>Jean Tourrilhes &#8211; jt [at] hpl.hp.com</p>
+<h2>Files</h2>
+<p><i>/dev/irnet</i></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/7-irda/">irda</a></code>(7), <code><a href="/docs/linux/man/4-irnet/">irnet</a></code>(4), <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8), <code><a href="/docs/linux/man/8-irattach/">irattach</a></code>(8), <code><a href="/docs/linux/man/8-irdadump/">irdadump</a></code>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

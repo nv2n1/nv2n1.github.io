@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>texexpand(1) · Linux Manual Pages</title>
+<meta name="description" content="texexpand – expand \input and \include statements in a TeX file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-texexpand/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>texexpand(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> texexpand &#8211; expand \input and \include statements in a TeX file </p>
+<h2>DESCRIPTION</h2>
+<p> General translation mechanism: </p>
+<p> The main program latex2html calls texexpand with the document name in order to expand some of its \input and \include statements, here also called `merging&#8217;, and to write a list of sensitized style, class, input, or include file names. When texexpand has finished, all is contained in one file, TMP_foo. (assumed foo.tex is the name of the document to translate). </p>
+<p> In this version, texexpand cares for following environments that may span include files / section boundaries: a) egin{comment} b) <tt>%begin</tt>{comment} c) egin{any} introduced with xcludecomment d) <tt>%begin</tt>{any} e) egin{verbatim} f) egin{latexonly} g) <tt>%begin</tt>{latexonly} </p>
+<p> e) &#8211; g) prevent texexpand from expanding input files, but the environment content goes fully into the output file. </p>
+<p> Together with each merging of \input etc. there are so-called %%%texexpand markers accompanying the boundary. </p>
+<p> When latex2html reads in the output file, it uses these markers to write each part to a separate file, and process them further. </p>
+<p> <code>Detailed technical notes:</code> </p>
+<p> 1. <tt>%begin</tt>{latexonly} and <tt>%end</tt>{latexonly} have to be on a separate line. Anything between these tags (including the tags) is discarded. </p>
+<p> 2. egin{latexonly} and nd{latexonly} have to be on a separate line. Anything between these tags (including the tags) is not expanded. </p>
+<p> 3. [%\]begin{&quot;to exclude&quot;} and [%\]end{&quot;to exclude&quot;} have to be on a separate line. Anything between these tags (including the tags) is discarded. </p>
+<p> 4. egin{verbatim/verbatim*} and nd{verbatim/verbatim*} have to be on a separate line. Anything between these tags (including the tags) is not expanded. </p>
+<p> 5. The scope of any such tags may extend over several files. The opening tag for latexonly may occur on a different include level than the closing tag. The opening tag for verbatim/&quot;to exclude&#8221; must occur within the same file than the closing tag. </p>
+<p> 6. Warnings are printed when the document has been parsed and open tags remain. </p>
+<p> 7. When in a &#8220;to exclude&quot;/verbatim environment, texexpand won&#8217;t recognize <font SIZE="-1">ANY</font> command except the corresponding closing tag. There cannot be any nested constructions. This behaviour is identical to that of LaTeX. </p>
+<p> 8. egin{latexonly},nd{latexonly} may be nested, whereas <tt>%begin</tt>{latexonly},%end{latexonly} may not be nested. </p>
+<p> 9. A &#8220;%&#8221; tag cannot close a &#8220;\&#8221; tag, and vice versa. </p>
+<p> 10. Every \<i>document</i>(class|style), 
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

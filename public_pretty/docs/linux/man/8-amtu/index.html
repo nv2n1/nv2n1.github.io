@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>amtu(8) · Linux Manual Pages</title>
+<meta name="description" content="amtu – Abstract Machine Test Utility (AMTU)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-amtu/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>amtu(8)</h1>
+
+
+
+
+
+<p>amtu &#8211; Abstract Machine Test Utility (AMTU)</p>
+<h2>Synopsis</h2>
+<pre><code>amtu</code> [<code>-dmsinph</code>]</pre>
+<h2>Description</h2>
+<p>Abstract Machine Test Utility (AMTU) is an administrative utility that checks whether the underlying protection mechanisms of the hardware are being enforced. These checks are a requirement of the Controlled Access Protection Profile (CAPP) FPT_AMT.1 (see <a rel="nofollow" href="http://www.radium.ncsc.mil/tpep/library/protection_profiles/CAPP-1.d.pdf">http://www.radium.ncsc.mil/tpep/library/protection_profiles/CAPP-1.d.pdf</a>). AMTU executes the following tests:</p>
+<dl>
+<dt>* Memory</dt>
+<dd>Randomly writes to areas of memory, then reads the memory back to ensure the values written remain unchanged.</dd>
+<dt>* Memory Separation</dt>
+<dd>Ensures that user space programs cannot read and write to areas of memory utilized by items such as Video RAM and kernel code.</dd>
+<dt>* I/O Controller &#8211; Network</dt>
+<dd>Verifies random data transmitted is also the data received for each configured network device. Checks only Ethernet and token ring devices that are configured and up. Does not check async devices.</dd>
+<dt>* I/O Controller &#8211; Disk</dt>
+<dd>Verifies random data written to disks remains unchanged. Only IDE and SCI controllers that are associated with mounted file systems are checked. Disk controllers with read-only mounted file systems are not checked.</dd>
+<dt>* Supervisor Mode Instructions</dt>
+<dd>Ensures that the enforcement of the property that privileged instructions should only be in supervisor mode is still in effect. The set of privileged instructions tested to confirm this is architecture dependent. </dd>
+<h2>Options</h2>
+<p>Options available for the <code>amtu</code> command are the following: </p>
+<dl>
+<dt><code>-d</code></dt>
+<dd>Print debug messages. </dd>
+<dt><code>-m</code></dt>
+<dd>Execute Memory Test. </dd>
+<dt><code>-s</code></dt>
+<dd>Execute Memory Separation Test. </dd>
+<dt><code>-i</code></dt>
+<dd>Execute I/O Controller &#8211; Disk Test. </dd>
+<dt><code>-n</code></dt>
+<dd>Execute I/O Controller &#8211; Network Test </dd>
+<dt><code>-p</code></dt>
+<dd>Execute Supervisor Mode Instructions Test. </dd>
+<dt><code>-h</code></dt>
+<dd>Print help message. </dd>
+</dl>
+<h2>Return Codes</h2>
+<p>The <code>amtu</code> command issues the following return codes when executed: </p>
+<dl>
+<dt>-1</dt>
+<dd>Failure </dd>
+<dt>0</dt>
+<dd>Success. </dd>
+</dl>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to amtueal-devel [at] lists.sourceforge.net .</p>
+<h2>Author</h2>
+<p>Emily Ratliff, Joy Latten, and Kimberly Simon.</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

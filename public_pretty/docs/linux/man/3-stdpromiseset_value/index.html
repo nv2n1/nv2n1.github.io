@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdpromiseset_value(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdpromiseset_value/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdpromiseset_value(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::promise&lt;R&gt;::set_value - std::promise&lt;R&gt;::set_value</p>
+<h2>Synopsis</h2>
+<pre><code>void set_value(const R &amp;value);
+(1)(member only of generic promise template)(since C++ 11)
+    void set_value(R &amp;&amp;value);
+(2)(member only of generic promise template)(since C++ 11)
+    void set_value(R &amp;value);
+(3)(member only of promise&lt;R &amp;&gt; template specialization)(since C++ 11)
+    void set_value();
+(4)(member only of promise&lt;void&gt; template specialization)(since C++ 11)</code></pre> 
+<p>1-3) Atomically stores the value into the shared state and makes the state ready.
+4) Makes the state ready
+The operation behaves as though set_value, set_exception, set_value_at_thread_exit, and set_exception_at_thread_exit acquire a single mutex associated with the promise object while updating the promise object.
+An exception is thrown if there is no shared state or the shared state already stores a value or exception.
+Calls to this function do not introduce data races with calls to get_future (but they need not synchronize with each other).</p>
+<h2>Parameters</h2>
+<p>value - value to store in the shared state</p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Exceptions</h2>
+<p>std::future_error on the following conditions:</p>
+<ul>
+<li>
+<p>*this has no shared state. The error category is set to no_state.</p>
+</li>
+<li>
+<p>The shared state already stores a value or exception. The error category is set to promise_already_satisfied.</p>
+</li>
+</ul>
+<p>Additionally:
+1, 3) Any exception thrown by the copy constructor of value
+2) Any exception thrown by the move constructor of value</p>
+<h2>Example</h2>
+<p>This example shows how promise&lt;void&gt; can be used as signals between threads.
+// Run this code <pre><code>#include &lt;thread&gt;
+#include &lt;future&gt;
+#include &lt;cctype&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;iterator&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+int main()
+{
+std::istringstream iss_numbers{&quot;3 4 1 42 23 -23 93 2 -289 93&quot;};
+std::istringstream iss_letters{&quot; a 23 b,e a2 k k?a;si,ksa c&quot;};
+std::vector&lt;int&gt; numbers;
+std::vector&lt;char&gt; letters;
+std::promise&lt;void&gt; numbers_promise, letters_promise;
+auto numbers_ready = numbers_promise.get_future();
+auto letter_ready = letters_promise.get_future();
+std::thread value_reader([&amp;] {
+// I/O operations.
+std::copy(std::istream_iterator&lt;int&gt;{iss_numbers},
+std::istream_iterator&lt;int&gt;{},
+std::back_inserter(numbers));
+// Notify for numbers.
+numbers_promise.set_value();
+std::copy_if(std::istreambuf_iterator&lt;char&gt;{iss_letters},
+std::istreambuf_iterator&lt;char&gt;{},
+std::back_inserter(letters),
+::isalpha);
+// Notify for letters.
+letters_promise.set_value();
+});
+numbers_ready.wait();
+std::sort(numbers.begin(), numbers.end());
+if (letter_ready.wait_for(std::chrono::seconds(1)) ==
+std::future_status::timeout) {
+// output the numbers while letters are being obtained.
+for (int num : numbers)
+std::cout &lt;&lt; num &lt;&lt; &rsquo; &lsquo;;
+numbers.clear(); // Numbers were already printed.
+}
+letter_ready.wait();
+std::sort(letters.begin(), letters.end());
+// If numbers were already printed, it does nothing.
+for (int num : numbers)
+std::cout &lt;&lt; num &lt;&lt; &rsquo; &lsquo;;
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+for (char let : letters)
+std::cout &lt;&lt; let &lt;&lt; &rsquo; &lsquo;;
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+value_reader.join();
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> -289 -23 1 2 3 4 23 42 93 93
+ <wbr> a a a a b c e i k k k s s</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sets the result to indicate an exception
+set_exception <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

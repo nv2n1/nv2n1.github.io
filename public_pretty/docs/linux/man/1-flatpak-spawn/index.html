@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>flatpak-spawn(1) · Linux Manual Pages</title>
+<meta name="description" content="flatpak-spawn – Run commands in a sandbox">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-flatpak-spawn/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>flatpak-spawn(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> flatpak-spawn &#8211; Run commands in a sandbox </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>flatpak-spawn</code> [OPTION&#8230;] COMMAND [ARGUMENT&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>Unlike other flatpak commands, <code>flatpak-spawn</code> is available to applications inside the sandbox. It runs COMMAND outside the sandbox, either in another sandbox, or on the host. </dd>
+<p> <code>flatpak-spawn</code> uses the Flatpak portal to create a copy the sandbox it was called from, optionally using tighter permissions and the latest version of the app and runtime.</p>
+<h2>OPTIONS</h2>
+<p> The following options are understood: </p>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Show help options and exit.</dd></dl>
+<p> <code>-v</code>, <code>&#8211;verbose</code></p>
+<dl>
+<dt>
+</dt><dd> Print debug information</dd></dl>
+<p> <code>&#8211;forward-fd=FD</code></p>
+<dl>
+<dt>
+</dt><dd> Forward a file descriptor</dd></dl>
+<p> <code>&#8211;clear-env</code></p>
+<dl>
+<dt>
+</dt><dd> Run with a clean environment</dd></dl>
+<p> <code>&#8211;watch-bus</code></p>
+<dl>
+<dt>
+</dt><dd> Make the spawned command exit if we do</dd></dl>
+<p> <code>&#8211;env=VAR=VALUE</code></p>
+<dl>
+<dt>
+</dt><dd> Set an environment variable</dd></dl>
+<p> <code>&#8211;latest-version</code></p>
+<dl>
+<dt>
+</dt><dd> Use the latest version of the refs that are used to set up the sandbox</dd></dl>
+<p> <code>&#8211;no-network</code></p>
+<dl>
+<dt>
+</dt><dd> Run without network access</dd></dl>
+<p> <code>&#8211;sandbox</code></p>
+<dl>
+<dt>
+</dt><dd> Run fully sandboxed. </dd>
+<p> See the <code>&#8211;sandbox-expose</code> and <code>&#8211;sandbox-expose-ro</code> options for selective file access.</dl>
+<p> <code>&#8211;sandbox-expose=NAME</code></p>
+<dl>
+<dt>
+</dt><dd> Expose read-write access to a file in the sandbox. </dd>
+<p> Note that absolute paths or subdirectories are not allowed. The files must be in the sandbox subdirectory of the instance directory (i.e. ~/.var/app/$APP_ID/sandbox). </p>
+<p> This option is useful in combination with <code>&#8211;sandbox</code> (otherwise the instance directory is accessible anyway).</dl>
+<p> <code>&#8211;sandbox-expose-ro=NAME</code></p>
+<dl>
+<dt>
+</dt><dd> Expose readonly access to a file in the sandbox. </dd>
+<p> Note that absolute paths or subdirectories are not allowed. The files must be in the sandbox subdirectory of the instance directory (i.e. ~/.var/app/$APP_ID/sandbox). </p>
+<p> This option is useful in combination with <code>&#8211;sandbox</code> (otherwise the instance directory is accessible anyway).</dl>
+<p> <code>&#8211;host</code></p>
+<dl>
+<dt>
+</dt><dd> Run the command unsandboxed on the host. This requires access to the org.freedesktop.Flatpak D-Bus interface</dd></dl>
+<p> <code>&#8211;directory=DIR</code></p>
+<dl>
+<dt>
+</dt><dd> The working directory in which to run the command. </dd>
+<p> Note that the given directory must exist in the sandbox or, when used in conjunction with <code>&#8211;host</code>, on the host.</dl>
+<h2>EXAMPLES</h2>
+<p> <code>$ flatpak-spawn ls /var/run</code></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

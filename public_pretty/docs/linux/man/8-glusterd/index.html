@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glusterd(8) · Linux Manual Pages</title>
+<meta name="description" content="Glusterd – Gluster elastic volume management daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-glusterd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>glusterd(8)</h1>
+
+
+
+
+
+<p>Glusterd &#8211; Gluster elastic volume management daemon</p>
+<h2>Synopsis</h2>
+<p><code>glusterd</code> <i>[OPTION&#8230;]</i></p>
+<h2>Description</h2>
+<p>The glusterd daemon is used for elastic volume management. The daemon must be run on all export servers. </p>
+<h2>Options</h2>
+<h3>Basic options</h3>
+<dl>
+<dd><code>-l &lt;LOGFILE&gt;, &#8211;log-file=&lt;LOGFILE&gt;</code> File to use for logging.</dd>
+<dt><code>-L &lt;LOGLEVEL&gt;, &#8211;log-level=&lt;LOGLEVEL&gt;</code></dt>
+<dd>Logging severity. Valid options are TRACE, DEBUG, INFO, WARNING, ERROR and CRITICAL (the default is INFO).</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>Run the program in debug mode. This option sets <code>&#8211;no-daemon</code>, <code>&#8211;log-level</code> to DEBUG and <code>&#8211;log-file</code> to console.</dd>
+<dt><code>-N, &#8211;no-daemon</code></dt>
+<dd>Run the program in the foreground. </dd>
+</dl>
+<h3>Miscellaneous Options:</h3>
+<dl>
+<dt><code>-?, &#8211;help</code></dt>
+<dd>Display this help.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Display a short usage message.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Print the program version. </dd>
+</dl>
+<h2>Files</h2>
+<p>/var/lib/glusterd/*</p>
+<h2>See Also</h2>
+<pre><code><a href="//www.systutorials.com/docs/linux/man/1-fusermount/">fusermount</a></code>(1), <code>mount.glusterfs</code>(8), <code><a href="//www.systutorials.com/docs/linux/man/8-glusterfs/">glusterfs</a></code>(8), <code><a href="//www.systutorials.com/docs/linux/man/8-gluster/">gluster</a></code>(8)</pre>
+<h2>Copyright</h2>
+<pre>Copyright(c) 2006-2011 Gluster, Inc. &lt;<a rel="nofollow" href="http://www.gluster.com">http://www.gluster.com</a>&gt;</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

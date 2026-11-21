@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tsk_comparedir(1) · Linux Manual Pages</title>
+<meta name="description" content="tsk_comparedir – compare the contents of a directory with the contents of an image or local device.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tsk_comparedir/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tsk_comparedir(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> tsk_comparedir &#8211; compare the contents of a directory with the contents of an image or local device. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>tsk_comparedir [-vV] [-n</code> <i>start_inum</i> <code>] [ -f</code> <i>fstype</i> <code>] [ -i</code> <i>imgtype</i> <code>] [ -b</code> <i>dev_sector_size</i> <code>] [ -o</code> <i>sector_offset</i> <code>]</code> <i>image [images] comparison_directory</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>tsk_comparedir </code> compares the contents of <i>image</i> to the contents of <i>comparison_directory.</i> This can be useful for detecting rootkits and when testing. Rootkits can be detected by comparing the contents of a local directory and a local raw device. The rootkits typically don&#8217;t hide data when it is read directly from the raw device. </p>
+<p> The arguments are as follows:</p>
+<dl>
+<dt>-o sector_offset</dt>
+<dd> Sector offset for a partition in the image or device to compare with.</dd>
+<dt>-n start_inum</dt>
+<dd> Starting inum for a directory in the image to start the comparison at.</dd>
+<dt>-v</dt>
+<dd> verbose output to stderr</dd>
+<dt>-V</dt>
+<dd> Print version</dd>
+<dt>-f fstype</dt>
+<dd> Specify the file system type. Use &#8216;-f list&#8217; to list the supported file system types. If not given, autodetection methods are used.</dd>
+<dt>-i imgtype</dt>
+<dd> The format of the image file, such as raw. Use &#8216;-i list&#8217; to list the supported types. If not given, autodetection methods are used.</dd>
+<dt>-b dev_sector_size</dt>
+<dd> The size (in bytes) of the device sectors. If not given, autodetection methods are used.</dd>
+<dt>image [images]</dt>
+<dd> The disk or partition image to read, whose format is given with &#8216;-i&#8217;. Multiple image file names can be given if the image is split into multiple segments. If only one image file is given, and its name is the first in a sequence (e.g., as indicated by ending in &#8216;.001&#8217;), subsequent image segments will be included automatically. </dd>
+</dl>
+<h2>EXAMPLES</h2>
+<p> To compare the directories in image.dd to those in directory: </p>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt># tsk_comparedir ./image.dd ./directory</p>
+<h2>AUTHOR</h2>
+<p> Brian Carrier &lt;carrier at sleuthkit dot org&gt; </p>
+<p> Send documentation updates to &lt;doc-updates at sleuthkit dot org&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

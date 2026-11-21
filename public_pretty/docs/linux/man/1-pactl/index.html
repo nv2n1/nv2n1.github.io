@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pactl(1) · Linux Manual Pages</title>
+<meta name="description" content="pactl – Control a running PulseAudio sound server">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pactl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pactl(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pactl &#8211; Control a running PulseAudio sound server </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pactl [</code><i>options</i><code>] </code><i>COMMAND</i><code> [</code><i>ARGS &#8230;</i><code>] </p>
+<p> pactl &#8211;help </p>
+<p> pactl &#8211;version </code></p>
+<h2>DESCRIPTION</h2>
+<p> <i>pactl</i> can be used to issue control commands to the PulseAudio sound server. </p>
+<p> <i>pactl</i> only exposes a subset of the available operations. For the full set use the <code><a href="/docs/linux/man/1-pacmd/">pacmd</a>(1)</code>.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h | &#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version information.</dd>
+<dt><code>-s | &#8211;server</code><i>=SERVER</i></dt>
+<dd> Choose the server to connect to.</dd>
+<dt><code>-f | &#8211;format</code><i>=FORMAT</i></dt>
+<dd> Choose output format, available options are &quot;text&quot; or &quot;json&quot;.</dd>
+<dt><code>-n | &#8211;client-name</code><i>=NAME</i></dt>
+<dd> Specify the client name <i>pactl</i> shall pass to the server when connecting.</dd></dl>
+<h2>COMMANDS</h2>
+<p> When supplied as arguments to the commands below, the special names @DEFAULT_SINK@, @DEFAULT_SOURCE@ and @DEFAULT_MONITOR@ can be used to specify the default sink, source and monitor respectively.</p>
+<dl>
+<dt><code>stat</code></dt>
+<dd> Dump a few statistics about the memory usage of the PulseAudio daemon.</dd>
+<dt><code>info</code></dt>
+<dd> Dump some info about the PulseAudio daemon.</dd>
+<dt><code>list</code> [<i>short</i>] [<i>TYPE</i>]</dt>
+<dd> Dump all currently loaded modules, available sinks, sources, streams, etc. <i>TYPE</i> must be one of: modules, sinks, sources, sink-inputs, source-outputs, clients, samples, cards, message-handlers. If not specified, all info is listed with the exception of the message-handlers. If short is given, output is in a tabular format, for easy parsing by scripts.</dd>
+<dt><code>exit</code></dt>
+<dd> Asks the PulseAudio server to terminate.</dd>
+<dt><code>upload-sample</code> <i>FILENAME</i> [<i>NAME</i>]</dt>
+<dd> Upload a sound from the specified audio file into the sample cache. The file types supported are those understood by <i>libsndfile</i>. The sample in the cache is named after the audio file, unless the name is explicitly specified.</dd>
+<dt><code>play-sample</code> <i>NAME</i> [<i>SINK</i>]</dt>
+<dd> Play the specified sample from the sample cache. It is played on the default sink, unless the symbolic name or the numerical index of the sink to play it on is specified.</dd>
+<dt><code>remove-sample</code> <i>NAME</i></dt>
+<dd> Remove the specified sample from the sample cache.</dd>
+<dt><code>load-module</code> <i>NAME</i> [<i>ARGUMENTS &#8230;</i>]</dt>
+<dd> Load the specified module with the specified arguments into the running sound server. Prints the numeric index of the module just loaded to STDOUT. You can use it to unload the module later.</dd>
+<dt><code>unload-module</code> <i>ID|NAME</i></dt>
+<dd> Unload the module instance identified by the specified numeric index or unload all modules by the specified name.</dd>
+<dt><code>move-sink-input</code> <i>ID</i> <i>SINK</i></dt>
+<dd> Move the specified playback stream (identified by its numerical index) to the specified sink (identified by its symbolic name or numerical index).</dd>
+<dt><code>move-source-output</code> <i>ID</i> <i>SOURCE</i></dt>
+<dd> Move the specified recording stream (identified by its numerical index) to the specified source (identified by its symbolic name or numerical index).</dd>
+<dt><code>suspend-sink</code> <i>SINK</i> <i>true|false</i></dt>
+<dd> Suspend or resume the specified sink (which may be specified either by its symbolic name or numerical index), depending whether true (suspend) or false (resume) is passed as last argument. Suspending a sink will pause all playback. Depending on the module implementing the sink this might have the effect that the underlying device is closed, making it available for other applications to use. The exact behaviour depends on the module.</dd>
+<dt><code>suspend-source</code> <i>SOURCE</i> <i>true|false</i></dt>
+<dd> Suspend or resume the specified source (which may be specified either by its symbolic name or numerical index), depending whether true (suspend) or false (resume) is passed as last argument. Suspending a source will pause all capturing. Depending on the module implementing the source this might have the effect that the underlying device is closed, making it available for other applications to use. The exact behaviour depends on the module.</dd>
+<dt><code>set-card-profile</code> <i>CARD</i> <i>PROFILE</i></dt>
+<dd> Set the specified card (identified by its symbolic name or numerical index) to the specified profile (identified by its symbolic name).</dd>
+<dt><code>get-default-sink</code></dt>
+<dd> Returns the symbolic name of the default sink.</dd>
+<dt><code>set-default-sink</code> <i>SINK</i></dt>
+<dd> Make the specified sink (identified by its symbolic name or numerical index) the default sink.</dd>
+<dt><code>set-sink-port</code> <i>SINK</i> <i>PORT</i></dt>
+<dd> Set the specified sink (identified by its symbolic name or numerical index) to the specified port (identified by its symbolic name).</dd>
+<dt><code>get-default-source</code></dt>
+<dd> Returns the symbolic name of the default source.</dd>
+<dt><code>set-default-source</code> <i>SOURCE</i></dt>
+<dd> Make the specified source (identified by its symbolic name or numerical index) the default source.</dd>
+<dt><code>set-source-port</code> <i>SOURCE</i> <i>PORT</i></dt>
+<dd> Set the specified source (identified by its symbolic name or numerical index) to the specified port (identified by its symbolic name).</dd>
+<dt><code>set-port-latency-offset</code> <i>CARD</i> <i>PORT</i> <i>OFFSET</i></dt>
+<dd> Set a latency offset to a specified port (identified by its symbolic name) that belongs to a card (identified by its symbolic name or numerical index). <i>OFFSET</i> is a number which represents the latency offset in microseconds</dd>
+<dt><code>get-sink-volume</code> <i>SINK</i></dt>
+<dd> Get the volume of the specified sink (identified by its symbolic name or numerical index) displayed in the same format as the `info` command.</dd>
+<dt><code>set-sink-volume</code> <i>SINK</i> <i>VOLUME [VOLUME &#8230;]</i></dt>
+<dd> Set the volume of the specified sink (identified by its symbolic name or numerical index). <i>VOLUME</i> can be specified as an integer (e.g. 2000, 16384), a linear factor (e.g. 0.4, 1.100), a percentage (e.g. 10%, 100%) or a decibel value (e.g. 0dB, 20dB). If the volume specification start with a + or &#8211; the volume adjustment will be relative to the current sink volume. A single volume value affects all channels; if multiple volume values are given their number has to match the sink&#8217;s number of channels.</dd>
+<dt><code>get-source-volume</code> <i>SOURCE</i></dt>
+<dd> &#8220;` Get the volume of the specified source (identified by its symbolic name or numerical index) displayed in the same format as the `info` command.</dd>
+<dt><code>set-source-volume</code> <i>SOURCE</i> <i>VOLUME [VOLUME &#8230;]</i></dt>
+<dd> Set the volume of the specified source (identified by its symbolic name or numerical index). <i>VOLUME</i> can be specified as an integer (e.g. 2000, 16384), a linear factor (e.g. 0.4, 1.100), a percentage (e.g. 10%, 100%) or a decibel value (e.g. 0dB, 20dB). If the volume specification start with a + or &#8211; the volume adjustment will be relative to the current source volume. A single volume value affects all channels; if multiple volume values are given their number has to match the source&#8217;s number of channels.</dd>
+<dt><code>set-sink-input-volume</code> <i>INPUT</i> <i>VOLUME [VOLUME &#8230;]</i></dt>
+<dd> Set the volume of the specified sink input (identified by its numerical index). <i>VOLUME</i> can be specified as an integer (e.g. 2000, 16384), a linear factor (e.g. 0.4, 1.100), a percentage (e.g. 10%, 100%) or a decibel value (e.g. 0dB, 20dB). If the volume specification start with a + or &#8211; the volume adjustment will be relative to the current sink input volume. A single volume value affects all channels; if multiple volume values are given their number has to match the sink input&#8217;s number of channels.</dd>
+<dt><code>set-source-output-volume</code> <i>OUTPUT</i> <i>VOLUME [VOLUME &#8230;]</i></dt>
+<dd> Set the volume of the specified source output (identified by its numerical index). <i>VOLUME</i> can be specified as an integer (e.g. 2000, 16384), a linear factor (e.g. 0.4, 1.100), a percentage (e.g. 10%, 100%) or a decibel value (e.g. 0dB, 20dB). If the volume specification start with a + or &#8211; the volume adjustment will be relative to the current source output volume. A single volume value affects all channels; if multiple volume values are given their number has to match the source output&#8217;s number of channels.</dd>
+<dt><code>get-sink-mute</code> <i>SINK</i></dt>
+<dd> Get the mute status of the specified sink (identified by its symbolic name or numerical index).</dd>
+<dt><code>set-sink-mute</code> <i>SINK</i> <i>1|0|toggle</i></dt>
+<dd> Set the mute status of the specified sink (identified by its symbolic name or numerical index).</dd>
+<dt><code>get-source-mute</code> <i>SOURCE</i></dt>
+<dd> Get the mute status of the specified source (identified by its symbolic name or numerical index).</dd>
+<dt><code>set-source-mute</code> <i>SOURCE</i> <i>1|0|toggle</i></dt>
+<dd> Set the mute status of the specified source (identified by its symbolic name or numerical index).</dd>
+<dt><code>set-sink-input-mute</code> <i>INPUT</i> <i>1|0|toggle</i></dt>
+<dd> Set the mute status of the specified sink input (identified by its numerical index).</dd>
+<dt><code>set-source-output-mute</code> <i>OUTPUT</i> <i>1|0|toggle</i></dt>
+<dd> Set the mute status of the specified source output (identified by its numerical index).</dd>
+<dt><code>set-sink-formats</code> <i>SINK</i> <i>FORMATS</i></dt>
+<dd> Set the supported formats of the specified sink (identified by its numerical index) if supported by the sink. <i>FORMATS</i> is specified as a semi-colon (;) separated list of formats in the form &#8216;encoding[, key1=value1, key2=value2, &#8230;]&#8217; (for example, AC3 at 32000, 44100 and 48000 Hz would be specified as &#8216;ac3-iec61937, format.rate = &quot;[ 32000, 44100, 48000 ]&quot;&#8217;). See <a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/SupportedAudioFormats/">https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/SupportedAudioFormats/</a> for possible encodings.</dd>
+<dt><code>send-message</code> <i>RECIPIENT</i> <i>MESSAGE</i> <i>MESSAGE_PARAMETERS</i></dt>
+<dd> Send a message to the specified recipient object. If applicable an additional string containing message parameters can be specified. A string is returned as a response to the message. For available messages see <a rel="nofollow" href="https://cgit.freedesktop.org/pulseaudio/pulseaudio/tree/doc/messaging_api.txt.">https://cgit.freedesktop.org/pulseaudio/pulseaudio/tree/doc/messaging_api.txt.</a></dd>
+<dt><code>subscribe</code></dt>
+<dd> Subscribe to events, pactl does not exit by itself, but keeps waiting for new events.</dd></dl>
+<h2>AUTHORS</h2>
+<p> The PulseAudio Developers &lt;pulseaudio-discuss (at) lists (dot) freedesktop (dot) org&gt;; PulseAudio is available from <code><a rel="nofollow" href="http://pulseaudio.org/">http://pulseaudio.org/</a></code></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pulseaudio/">pulseaudio</a>(1)</code>, <code><a href="/docs/linux/man/1-pacmd/">pacmd</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

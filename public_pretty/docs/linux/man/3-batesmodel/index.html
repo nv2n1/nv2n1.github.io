@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>batesmodel(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::BatesModel – Bates stochastic-volatility model.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-batesmodel/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>batesmodel(3)</h1>
+
+
+
+
+
+<p>QuantLib::BatesModel &#8211; Bates stochastic-volatility model. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/models/equity/batesmodel.hpp&gt; </p>
+<p> Inherits <code>QuantLib::HestonModel</code>. </p>
+<p> Inherited by BatesDetJumpModel. </p>
+<h3>Public Member Functions</h3>
+<p><code>BatesModel</code> (const boost::shared_ptr&lt; <code>HestonProcess</code> &gt; &amp;process, <code>Real</code> lambda=0.1, <code>Real</code> nu=0.0, <code>Real</code> delta=0.1) </p>
+<p> <code>Real</code> <code>nu</code> () const </p>
+<p> <code>Real</code> <code>delta</code> () const </p>
+<p> <code>Real</code> <code>lambda</code> () const </p>
+<h2>Detailed Description</h2>
+<p>Bates stochastic-volatility model. </p>
+<p> extended versions of Heston model for the stochastic volatility of an asset including jumps. </p>
+<p> References: A. Sepp, Pricing European-Style Options under Jump Diffusion Processes with Stochastic Volatility: Applications of Fourier Transform (&lt;<a rel="nofollow" href="http://math.ut.ee/~spartak/papers/stochjumpvols.pdf">http://math.ut.ee/~spartak/papers/stochjumpvols.pdf</a>&gt;) </p>
+<p> <code>Tests</code></p>
+<dl COMPACT>
+<dd>calibration is tested against known values.</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

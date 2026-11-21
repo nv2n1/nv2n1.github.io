@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pnmindex(1) · Linux Manual Pages</title>
+<meta name="description" content="pnmindex – build a visual index of a bunch of anymaps">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pnmindex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pnmindex(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pnmindex &#8211; build a visual index of a bunch of anymaps </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pnmindex</code> [<code>-size</code> <i>N</i>] [<code>-across</code> <i>N</i>] [<code>-colors</code> <i>N</i>] [<code>-black</code>] [<code>-title</code> <i>T</i>] [<code>-quant</code>|<code>-noquant</code>] <i>pnmfile</i> &#8230; </p>
+<h2>DESCRIPTION</h2>
+<p> <code>pnmindex</code> creates an index image containing thumbnail (small) versions of a bunch of PNM files you supply. </p>
+<p> <code>pnmindex</code> labels each thumbnail and, optionally, contains a title. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-size </code><i>N</i></dt>
+<dd> The size of each thumbnail. The image is scaled to fit maximally inside a <i>N</i> x <i>N</i> pixel box without changing its aspect ratio. Default is 100.</dd>
+<dt><code>-across </code><i>N</i></dt>
+<dd> The number of thumbnails in each row. Default is 6.</dd>
+<dt><code>-colors </code><i>N</i></dt>
+<dd> The maximum number of colors allowed in the overall image. If it would otherwise have more colors than these, <code>pnmindex</code> quantizes the result. The default is 256. </dd>
+<p> However, this value is meaningless if you specify the <code>-noquant</code> option.</p>
+<dt><code>-black</code></dt>
+<dd> This controls the color of the padding between the images; normally it&#8217;s white and the labels are black lettering on white background, but the <code>-black</code> flag reverses this.</dd>
+<dt><code>-title </code><i>title</i></dt>
+<dd> Specifies a title top place at the top of the image. Default is no title.</dd>
+<dt><code>-quant</code></dt>
+<dd> Enables quanization (to the number of colors specified by <code>-colors</code> ). Quantization is on by default but you can disable it with <code>-noquant.</code></dd>
+<dt><code>-noquant</code></dt>
+<dd> See <code>-quant</code>. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pnmscale/">pnmscale</a></code>(1), <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1), <code><a href="/docs/linux/man/1-pbmtext/">pbmtext</a></code>(1), <code><a href="/docs/linux/man/1-ppmquant/">ppmquant</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
+<h2>AUTHOR</h2>
+<p> Copyright (C) 1991 by Jef Poskanzer. <code>-title</code> and <code>-noquant</code> added 2000 by John Heidemann. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

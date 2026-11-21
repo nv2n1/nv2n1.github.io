@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libssh2_session_methods(3) · Linux Manual Pages</title>
+<meta name="description" content="libssh2_session_methods – return the currently active algorithms">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-libssh2_session_methods/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>libssh2_session_methods(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> libssh2_session_methods &#8211; return the currently active algorithms</p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;libssh2.h&gt; </p>
+<p> const char * libssh2_session_methods(LIBSSH2_SESSION *session, int method_type); </p>
+<h2>DESCRIPTION</h2>
+<p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
+<p> <i>method_type</i> &#8211; one of the method type constants: LIBSSH2_METHOD_KEX, LIBSSH2_METHOD_HOSTKEY, LIBSSH2_METHOD_CRYPT_CS, LIBSSH2_METHOD_CRYPT_SC, LIBSSH2_METHOD_MAC_CS, LIBSSH2_METHOD_MAC_SC, LIBSSH2_METHOD_COMP_CS, LIBSSH2_METHOD_COMP_SC, LIBSSH2_METHOD_LANG_CS, LIBSSH2_METHOD_LANG_SC. </p>
+<p> Returns the actual method negotiated for a particular transport parameter.</p>
+<h2>RETURN VALUE</h2>
+<p> Negotiated method or NULL if the session has not yet been started.</p>
+<h2>ERRORS</h2>
+<p> <i>LIBSSH2_ERROR_INVAL</i> &#8211; The requested method type was invalid. </p>
+<p> <i>LIBSSH2_ERROR_METHOD_NONE</i> &#8211; no method has been set</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmtogglebuttonsetvalue(3) · Linux Manual Pages</title>
+<meta name="description" content="XmToggleButtonSetValue — A ToggleButton function that sets or changes the current state">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmtogglebuttonsetvalue/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmtogglebuttonsetvalue(3)</h1>
+
+
+
+
+
+<p><code>XmToggleButtonSetValue</code> &#8212; A ToggleButton function that sets or changes the current state</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/ToggleB.h&gt;
+<code>void XmToggleButtonSetValue</code>(
+<code>Widget widget</code>,
+<code>XmToggleButtonState state</code>,
+<code>Boolean notify</code>);</pre>
+<h2>Description</h2>
+<p><code>XmToggleButtonSetValue</code> sets or changes the ToggleButton&#8217;s current state.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the ToggleButton widget ID.</dd>
+<dt><i>state</i></dt>
+<dd>Specifies whether the ToggleButton state is selected or unselected. If the value is True, the button state is selected; if it is False, the button state is unselected, if it is <code>XmINDETERMINATE</code>, the button state is neither.</dd>
+<dt><i>notify</i></dt>
+<dd>Indicates whether <code>XmNvalueChangedCallback</code> is called; it can be either True or False. The <code>XmNvalueChangedCallback</code> is only called when this function changes the state of the ToggleButton. When this argument is True and the ToggleButton is a child of a RowColumn widget whose <code>XmNradioBehavior</code> is True, setting the ToggleButton causes other ToggleButton and ToggleButtonGadget children of the RowColumn to be unselected.</dd></dl>
+<p> For a complete definition of ToggleButton and its associated resources, see <code><a href="/docs/linux/man/3-xmtogglebutton/">XmToggleButton</a></code>(3).</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmtogglebutton/">XmToggleButton</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

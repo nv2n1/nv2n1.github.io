@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pfcat(1) · Linux Manual Pages</title>
+<meta name="description" content="pfcat – grep out function definitions from perlfunc">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pfcat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pfcat(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pfcat &#8211; grep out function definitions from perlfunc </p>
+<h2>DESCRIPTION</h2>
+<p> This program uses <i>podgrep</i> program to search your configuration&#8217;s perlfunc for function definitions. It honors a <code>-f</code> flag to format through <i>pod2text</i> and a <code>-p</code> flag to send the output through the pager. (Actually, it just passes these to <i>podgrep</i>.)</p>
+<h2>EXAMPLES</h2>
+<pre>
+    $ pfcat seek
+    (find all seek functions (including sysseek))
+    $ pfcat -pf sprintf
+    (sprintf function is formated and sent to pager)
+    $ pfcat -f 'int'
+    /usr/local/devperl/lib/5.00554/pod/perlfunc.pod chunk 506
+    int EXPR
+    int
+    Returns the integer portion of EXPR. If EXPR is omitted, uses
+    `$_'. You should not use this for rounding, because it truncates
+    towards `0', and because machine representations of floating point
+    numbers can sometimes produce counterintuitive results. Usually
+    `sprintf()' or `printf()', or the `POSIX::floor' or `POSIX::ceil'
+    functions, would serve you better.
+</pre>
+<p> You can also run this using alternate perl binaries, like so: </p>
+<pre>
+    $ oldperl -S pfcat open
+    ....
+</pre>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-podgrep/">podgrep</a></i>(1)</p>
+<h2>AUTHORS and COPYRIGHTS</h2>
+<p> Copyright (C) 1999 Tom Christiansen. </p>
+<p> Copyright (C) 2006-2014 Mark Leighton Fisher.</p>
+<h2>LICENSE</h2>
+<p> This is free software; you can redistribute it and/or modify it under the terms of either: (a) the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 1, or (at your option) any later version, or (b) the Perl &#8220;Artistic License&#8221;. (This is the Perl 5 licensing scheme.) </p>
+<p> Please note this is a change from the original pmtools-1.00 (still available on <font SIZE="-1">CPAN</font>), as pmtools-1.00 were licensed only under the Perl &#8220;Artistic License&#8221;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

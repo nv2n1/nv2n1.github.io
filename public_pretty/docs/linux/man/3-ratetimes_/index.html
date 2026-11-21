@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ratetimes_(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::CurveState – Curve state for market-model simulations">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ratetimes_/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ratetimes_(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::CurveState &#8211; Curve state for market-model simulations </p>
+<h2>Synopsis</h2>
+<pre><code>Size numberOfRates () const
+const std::vector&lt; Time &gt; &amp; rateTimes () const
+const std::vector&lt; Time &gt; &amp; rateTaus () const
+virtual Real discountRatio (Size i, Size j) const =0
+virtual Rate forwardRate (Size i) const =0
+virtual Rate coterminalSwapAnnuity (Size numeraire, Size i) const =0
+virtual Rate coterminalSwapRate (Size i) const =0
+virtual Rate cmSwapAnnuity (Size numeraire, Size i, Size spanningForwards) const =0
+virtual Rate cmSwapRate (Size i, Size spanningForwards) const =0
+virtual const std::vector&lt; Rate &gt; &amp; forwardRates () const =0
+virtual const std::vector&lt; Rate &gt; &amp; coterminalSwapRates () const =0
+virtual const std::vector&lt; Rate &gt; &amp; cmSwapRates (Size spanningForwards) const =0
+Rate swapRate (Size begin, Size end) const
+virtual std::auto_ptr&lt; CurveState &gt; clone () const =0
+Protected Attributes</code></pre>
+<p> Inherited by <code>CMSwapCurveState</code>, <code>CoterminalSwapCurveState</code>, and <code>LMMCurveState</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>CurveState</code> (const std::vector&lt; <code>Time</code> &gt; &amp;rateTimes)<br />
+ <code>Inspectors</code> </p>
+<pre><code>Size numberOfRates () const
+const std::vector&lt; Time &gt; &amp; rateTimes () const
+const std::vector&lt; Time &gt; &amp; rateTaus () const
+virtual Real discountRatio (Size i, Size j) const =0
+virtual Rate forwardRate (Size i) const =0
+virtual Rate coterminalSwapAnnuity (Size numeraire, Size i) const =0
+virtual Rate coterminalSwapRate (Size i) const =0
+virtual Rate cmSwapAnnuity (Size numeraire, Size i, Size spanningForwards) const =0
+virtual Rate cmSwapRate (Size i, Size spanningForwards) const =0
+virtual const std::vector&lt; Rate &gt; &amp; forwardRates () const =0
+virtual const std::vector&lt; Rate &gt; &amp; coterminalSwapRates () const =0
+virtual const std::vector&lt; Rate &gt; &amp; cmSwapRates (Size spanningForwards) const =0
+Rate swapRate (Size begin, Size end) const
+virtual std::auto_ptr&lt; CurveState &gt; clone () const =0
+Protected Attributes</code></pre>
+<p> Size <code>numberOfRates_</code> </p>
+<p> std::vector&lt; <code>Time</code> &gt; <code>rateTimes_</code> </p>
+<p> std::vector&lt; <code>Time</code> &gt; <code>rateTaus_</code></p>
+<h2>Detailed Description</h2>
+<p>Curve state for market-model simulations </p>
+<p> This class stores the state of the yield curve associated to the fixed calendar times within the simulation. This is the workhorse discounting object associated to the rate times of the simulation. It&#8217;s important to pass the rates via an object like this to the product rather than directly to make it easier to switch to other engines such as a coterminal swap rate engine. Many products will not need expired rates and others will only require the first rate.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

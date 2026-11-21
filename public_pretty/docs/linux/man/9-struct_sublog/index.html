@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_sublog(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_sublog – subchannel logout area">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_sublog/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_sublog(9)</h1>
+
+
+
+
+
+<p>struct_sublog &#8211; subchannel logout area</p>
+<h2>Synopsis</h2>
+<pre><code>struct sublog {
+    __u32 res0 : 1;
+    __u32 esf : 7;
+    __u32 lpum : 8;
+    __u32 arep : 1;
+    __u32 fvf : 5;
+    __u32 sacc : 2;
+    __u32 termc : 2;
+    __u32 devsc : 1;
+    __u32 serr : 1;
+    __u32 ioerr : 1;
+    __u32 seqc : 3;
+};</code></pre>
+<h2>Members</h2>
+<p>res0</p>
+<dl>
+<dd>reserved</dd></dl>
+<p> esf</p>
+<dl>
+<dd>extended status flags</dd></dl>
+<p> lpum</p>
+<dl>
+<dd>last path used mask</dd></dl>
+<p> arep</p>
+<dl>
+<dd>ancillary report</dd></dl>
+<p> fvf</p>
+<dl>
+<dd>field-validity flags</dd></dl>
+<p> sacc</p>
+<dl>
+<dd>storage access code</dd></dl>
+<p> termc</p>
+<dl>
+<dd>termination code</dd></dl>
+<p> devsc</p>
+<dl>
+<dd>device-status check</dd></dl>
+<p> serr</p>
+<dl>
+<dd>secondary error</dd></dl>
+<p> ioerr</p>
+<dl>
+<dd>i/o-error alert</dd></dl>
+<p> seqc</p>
+<dl>
+<dd>sequence code</dd></dl>
+<h2>Author</h2>
+<p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

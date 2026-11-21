@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ustrzncat(3) · Linux Manual Pages</title>
+<meta name="description" content="ustrzncat – Concatenates a string to another one, specifying size. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ustrzncat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ustrzncat(3)</h1>
+
+
+
+
+
+<p>ustrzncat &#8211; Concatenates a string to another one, specifying size. Allegro game programming library.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;allegro.h&gt;
+char *ustrzncat(char *dest, int size, const char *src, int n);</code></pre>
+<h2>Description</h2>
+<p>This function is like ustrzcat() except that no more than `n&#8217; characters from `src&#8217; are appended to the end of `dest&#8217;. If the terminating null character in `src&#8217; is reached before `n&#8217; characters have been written, the null character is copied, but no other characters are written. Note that `dest&#8217; is guaranteed to be null-terminated.</p>
+<h2>Return Value</h2>
+<p>The return value is the value of `dest&#8217;. </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-uconvert/">uconvert</a></code>(3), <code><a href="/docs/linux/man/3-ustrzcat/">ustrzcat</a></code>(3), <code><a href="/docs/linux/man/3-ustrncat/">ustrncat</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_volatilitytermstructure(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::VolatilityTermStructure – Volatility term structure.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_volatilitytermstructure/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_volatilitytermstructure(3)</h1>
+
+
+
+
+
+<p>QuantLib::VolatilityTermStructure &#8211; Volatility term structure. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/termstructures/voltermstructure.hpp&gt; </p>
+<p> Inherits <code>QuantLib::TermStructure</code>. </p>
+<p> Inherited by <code>BlackAtmVolCurve</code>, <code>BlackVolTermStructure</code>, <code>CapFloorTermVolatilityStructure</code>, <code>LocalVolTermStructure</code>, <code>OptionletVolatilityStructure</code>, and <code>SwaptionVolatilityStructure</code>. </p>
+<h3>Public Member Functions</h3>
+<p>virtual <code>BusinessDayConvention</code> <code>businessDayConvention</code> () const<br />
+ <i>the business day convention used in tenor to date conversion </i><br />
+ <code>Date</code> <code>optionDateFromTenor</code> (const <code>Period</code> &amp;) const<br />
+ <i>period/date conversion </i><br />
+ virtual <code>Rate</code> <code>minStrike</code> () const =0<br />
+ <i>the minimum strike for which the term structure can return vols </i><br />
+ virtual <code>Rate</code> <code>maxStrike</code> () const =0<br />
+ <i>the maximum strike for which the term structure can return vols </i> </p>
+<p> <code>Constructors</code><br />
+ See the <code>TermStructure</code> documentation for issues regarding constructors. </p>
+<p> <code>VolatilityTermStructure</code> (const <code>Calendar</code> &amp;cal, <code>BusinessDayConvention</code> bdc, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
+ <i>default constructor </i><br />
+ <code>VolatilityTermStructure</code> (const <code>Date</code> &amp;referenceDate, const <code>Calendar</code> &amp;cal, <code>BusinessDayConvention</code> bdc, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
+ <i>initialize with a fixed reference date </i><br />
+ <code>VolatilityTermStructure</code> (<code>Natural</code> settlementDays, const <code>Calendar</code> &amp;cal, <code>BusinessDayConvention</code> bdc, const <code>DayCounter</code> &amp;dc=<code>DayCounter</code>())<br />
+ <i>calculate the reference date based on the global evaluation date </i></p>
+<h3>Protected Member Functions</h3>
+<p>void <code>checkStrike</code> (<code>Rate</code> strike, bool extrapolate) const<br />
+ <i>strike-range check </i></p>
+<h2>Detailed Description</h2>
+<p>Volatility term structure. </p>
+<p> This abstract class defines the interface of concrete volatility structures which will be derived from this one.</p>
+<h2>Constructor &amp; Destructor Documentation</h2>
+<h3><code>VolatilityTermStructure</code> (const <code>Calendar</code> &amp; cal, <code>BusinessDayConvention</code> bdc, const <code>DayCounter</code> &amp; dc = <code>DayCounter</code>())</h3>
+<p>default constructor </p>
+<p> <code>Warning</code></p>
+<dl COMPACT>
+<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

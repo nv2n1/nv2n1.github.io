@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mongoc_read_prefs_t(3) · Linux Manual Pages</title>
+<meta name="description" content="mongoc_read_prefs_t – A read preference abstraction">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mongoc_read_prefs_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mongoc_read_prefs_t(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>mongoc_read_prefs_t &#8211; A read preference abstraction</p>
+<h2>Synopsis</h2>
+<p><code>mongoc_read_prefs_t</code> provides an abstraction on top of the MongoDB connection read prefences. It allows for hinting to the driver which nodes in a replica set should be accessed first. </p>
+<p> You can specify a read preference mode on connection objects, database objects, collection objects, or per-operation. Generally, it makes the most sense to stick with the global default, <code>MONGOC_READ_PRIMARY</code> \&amp;. All of the other modes come with caveats that won&#8217;t be covered in great detail here. </p>
+<h2>Read Modes</h2>
+<dl COMPACT>
+<dt><code>MONGOC_READ_PRIMARY</code></dt>
+<dd>Default mode. All operations read from the current replica set primary.</dd></dl>
+<dl COMPACT>
+<dt><code>MONGOC_READ_SECONDARY</code></dt>
+<dd>All operations read from among the nearest secondary members of the replica set.</dd></dl>
+<dl COMPACT>
+<dt><code>MONGOC_READ_PRIMARY_PREFERRED</code></dt>
+<dd>In most situations, operations read from the primary but if it is unavailable, operations read from secondary members.</dd></dl>
+<dl COMPACT>
+<dt><code>MONGOC_READ_SECONDARY_PREFERRED</code></dt>
+<dd>In most situations, operations read from among the nearest secondary members, but if no secondaries are available, operations read from the primary.</dd></dl>
+<dl COMPACT>
+<dt><code>MONGOC_READ_NEAREST</code></dt>
+<dd>Operations read from among the nearest members of the replica set, irrespective of the member’s type.</dd></dl>
+<h2>Tag Sets</h2>
+<p>Tag sets allow you to specify custom read preferences and write concerns so that your application can target operations to specific members. </p>
+<p> Custom read preferences and write concerns evaluate tags sets in different ways: read preferences consider the value of a tag when selecting a member to read from. while write concerns ignore the value of a tag to when selecting a member except to consider whether or not the value is unique. </p>
+<p> You can specify tag sets with the following read preference modes: </p>
+<dl COMPACT>
+<dt>\[bu]</dt>
+<dd>primaryPreferred</dd>
+<dt>\[bu]</dt>
+<dd>secondary</dd>
+<dt>\[bu]</dt>
+<dd>secondaryPreferred</dd>
+<dt>\[bu]</dt>
+<dd>nearest </dd>
+<p> Tags are not compatible with <code>MONGOC_READ_PRIMARY</code> and, in general, only apply when selecting a secondary member of a set for a read operation. However, the nearest read mode, when combined with a tag set will select the nearest member that matches the specified tag set, which may be a primary or secondary. </p>
+<p> All interfaces use the same member selection logic to choose the member to which to direct read operations, basing the choice on read preference mode and tag sets. </p>
+<p> <code></dl>
+<p> </code></p>
+<h2>Colophon</h2>
+<p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>confdb2ldif(8) · Linux Manual Pages</title>
+<meta name="description" content="confdb2ldif – Create an LDIF file from a cluster configuration">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-confdb2ldif/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>confdb2ldif(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>confdb2ldif &#8211; Create an LDIF file from a cluster configuration</p>
+<h2>Synopsis</h2>
+<p><code>confdb2ldap &lt;basedn&gt; [&lt;config object base&gt;]</code> </p>
+<h2>Description</h2>
+<p><code>confdb2ldif</code> reads the cluster configuration from the openais object database and generates an LDIF file suitable for importing into an LDAP database. The LDIF file is written to standard output. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>&lt;basedn&gt;</code></dt>
+<dd>This is the base DN of the LDAP server into which the configuration will be imported. confdb2ldif will create a &quot;cn=cluster&quot; object below this to contain the cluster configuration. The base DN is usually derived from the host&#8217;s domain name. So if the host is ldapsrv.mycorp.com then the base DN could be dc=mycorp,dc=com.</dd>
+<dt><code>[&lt;config object base&gt;]</code></dt>
+<dd>Configuration object in the objdb to start from. This defaults to &quot;cluster&quot; and there should rarely be any need to change it. </dd>
+</dl>
+<h2>Comments</h2>
+<p><code>confdb2ldif</code> uses the openais libconfdb to read the configuration. The default way to do this is run against a running aisexec to read the live configuration. It is possible to generate an LDIF file from a non-running system by using the standalone feature of openais&#8217;s libconfdb.<br />
+ eg to read the configuration from /etc/cluster/cluster.conf, use the following command: </p>
+<pre>OPENAIS_DEFAULT_CONFIG_IFACE=xmlconfig:cmanpreconfig confdb2ldif dc=mycompany,dc=com</pre>
+<p>or to do it from CCS </p>
+<pre>OPENAIS_DEFAULT_CONFIG_IFACE=ccsconfig:cmanpreconfig confdb2ldif dc=mycompany,dc=com</pre>
+<p>The LDIF file is written to stdout and so can be saved or piped straight into ldapmodify if required. </p>
+<p> It&#8217;s important that the 99cluster.ldif schema file has been loaded into the LDAP server before adding the contents of this generated LDIF file.</p>
+<h2>Example</h2>
+<pre>confdb2ldif dc=mycorp,dc=com | ldapmodify -x -a -D&quot;cn=Directory Manager&quot; -c -v -W</pre>
+<h2>Bugs</h2>
+<p><code>confdb2ldif</code> parses the cluster configuration without checking it against the loaded schema. So if there are attributes in the config file that are not known to the schema, parts of the load will fail. It is important to check the results of feeding the output into ldapmodify. In particular aisexec logging operations will not convert into LDIF because they rely on duplicate keys. </p>
+<h2>See Also</h2>
+<p>libconfdb(3), openais(8), cluster.conf(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

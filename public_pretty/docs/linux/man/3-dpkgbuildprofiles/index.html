@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dpkgbuildprofiles(3) · Linux Manual Pages</title>
+<meta name="description" content="Dpkg::BuildProfiles – handle build profiles">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dpkgbuildprofiles/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dpkgbuildprofiles(3)</h1>
+
+
+
+
+
+<p>Dpkg::BuildProfiles &#8211; handle build profiles </p>
+<h2>Description</h2>
+<p>The Dpkg::BuildProfiles module provides functions to handle the build profiles.</p>
+<h2>Functions</h2>
+<dl COMPACT>
+<dt>my @profiles = <i>get_build_profiles()</i></dt>
+<dd>Get an array with the currently active build profiles, taken from the environment variable <font SIZE="-1"><code>DEB_BUILD_PROFILES</code></font>.</dd>
+<dt>set_build_profiles(@profiles)</dt>
+<dd>Set <tt>@profiles</tt> as the current active build profiles, by setting the environment variable <font SIZE="-1"><code>DEB_BUILD_PROFILES</code></font>.</dd>
+<dt>my @profiles = parse_build_profiles($string)</dt>
+<dd>Parses a build profiles specification, into an array of array references.</dd>
+<dt>evaluate_restriction_formula(\@formula, \@profiles)</dt>
+<dd>Evaluate whether a restriction formula of the form &#8220;&lt;foo bar&gt; &lt;baz&gt;&#8221;, given as a nested array, is true or false, given the array of enabled build profiles.</dd></dl>
+<h2>Changes</h2>
+<h3>Version 1.00</h3>
+<p>Mark the module as public.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

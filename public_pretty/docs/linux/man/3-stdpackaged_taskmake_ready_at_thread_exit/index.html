@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdpackaged_taskmake_ready_at_thread_exit(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdpackaged_taskmake_ready_at_thread_exit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdpackaged_taskmake_ready_at_thread_exit(3)</h1>
+
+
+
+
+
+<p>std::packaged_task&lt;R(Args&hellip;)&gt;::make_ready_at_thread_exit - std::packaged_task&lt;R(Args&hellip;)&gt;::make_ready_at_thread_exit</p>
+<h2>Synopsis</h2>
+<pre><code>void make_ready_at_thread_exit(ArgTypes... args);
+(since C++ 11)</code></pre> 
+<p>Calls the stored task with forwarded args as the arguments. The return value of the task or any exception thrown by it is stored in the shared state of *this.
+The shared state is only made ready after the current thread exits and all objects of thread local storage duration are destroyed.</p>
+<h2>Parameters</h2>
+<p>args - the parameters to pass on invocation of the stored task</p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Exceptions</h2>
+<p>std::future_error on the following error conditions:</p>
+<ul>
+<li>The stored task has already been invoked. The error category is set to promise_already_satisfied.</li>
+<li>*this has no shared state. The error category is set to no_state.</li>
+</ul>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;future&gt;
+#include &lt;iostream&gt;
+#include &lt;chrono&gt;
+#include &lt;thread&gt;
+#include &lt;functional&gt;
+#include &lt;utility&gt;
+void worker(std::future&lt;void&gt; &amp;output)
+{
+std::packaged_task&lt;void(bool &amp;)&gt; my_task{[](bool &amp;done) { done = true; }};
+auto result = my_task.get_future();
+bool done = false;
+my_task.make_ready_at_thread_exit(done); // execute task right away
+std::cout &lt;&lt; &quot;worker: done = &quot; &lt;&lt; std::boolalpha &lt;&lt; done &lt;&lt; std::endl;
+auto status = result.wait_for(std::chrono::seconds(0));
+if (status == std::future_status::timeout)
+std::cout &lt;&lt; &quot;worker: result is not ready yet&quot; &lt;&lt; std::endl;
+output = std::move(result);
+}
+int main()
+{
+std::future&lt;void&gt; result;
+std::thread{worker, std::ref(result)}.join();
+auto status = result.wait_for(std::chrono::seconds(0));
+if (status == std::future_status::ready)
+std::cout &lt;&lt; &quot;main: result is ready&quot; &lt;&lt; std::endl;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> worker: done = true
+ <wbr> worker: result is not ready yet
+ <wbr> main: result is ready</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> executes the function
+operator() <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mispipe(1) · Linux Manual Pages</title>
+<meta name="description" content="mispipe – pipe two commands, returning the exit status of the first">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mispipe/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mispipe(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> mispipe &#8211; pipe two commands, returning the exit status of the first </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>mispipe</code> [<i>&quot;command1&quot;</i>] [<i>&quot;command2&quot;</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>mispipe</code></p>
+<dd>pipes two commands together like the shell does, but unlike piping in the shell, which returns the exit status of the last command; when using mispipe, the exit status of the first command is returned. </dd>
+<p> Note that some shells, notably <code>bash</code>, do offer a pipefail option, however, that option does not behave the same since it makes a failure of any command in the pipeline be returned, not just the exit status of the first.</p>
+<h2>EXIT STATUS</h2>
+<p> The exit status of the first command. If the process terminated abnormally (due to a signal), 128 will be added to its exit status.</p>
+<h2>AUTHOR</h2>
+<p> Nathanael Nerode </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

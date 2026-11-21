@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>flumotion-manager(1) · Linux Manual Pages</title>
+<meta name="description" content="flumotion-manager – streaming media server central management">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-flumotion-manager/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>flumotion-manager(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> flumotion-manager &#8211; streaming media server central management</p>
+<h2>SYNOPSIS</h2>
+<p> <code>flumotion-manager</code> [ <code>&#8211;</code> ] [ <code>&#8211;debug</code> <i>debug configuration</i> ] [ <code>-L</code> <i>logdir</i> ] [ <code>-R</code> <i>rundir</i> ] [ <code>-H</code> <i>host</i> ] [ <code>-P</code> <i>port</i> ] [ <code>-T</code> <i>protocol</i> ] [ <code>-C</code> <i>certificate</i> ] [ <code>-n</code> <i>name</i> ] [ <code>-s</code> <i>servicename</i> ] [ <code>-D</code> ] [ <code>&#8211;daemonize-to=directory</code> ] <i>manager.xml [flow1.xml flow2.xml &#8230;]</i> </p>
+<h2>DESCRIPTION</h2>
+<p> <code>flumotion-manager</code> is the central management component of the flumotion streaming server. <code>flumotion-manager</code> does not actually perform any streaming or encoding itself, it simply acts as a central point for <i>flumotion-worker</i> instances and <i>flumotion-admin</i> administration consoles to connect to. You need to start it before any other flumotion component. When starting flumotion-manager, you need only specify a <i>planet configuration file</i> , but it is frequently helpful to set other options from the command line. </p>
+<p> <code>flumotion-manager</code> can load other configuration files as well, if more than one is specified. These additional configuration files define <i>flows</i> that the manager will run on the workers. This allows you to define your manager configuration in the first configuration file, and your streaming configuration or configurations in one or more additional configurations files. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-h, &#8211;help</dt>
+<dd> Show a brief help message, then exit.</dd>
+<dt>&#8211;version</dt>
+<dd> Show the version number.</dd>
+<dt>-v, &#8211;verbose</dt>
+<dd> Be verbose in console output. This is equivalent to setting the debug level to 3, and will override any debug specifiers.</dd>
+<dt>-dDEBUG, &#8211;debug=DEBUG</dt>
+<dd> Set the debug configuration to the specified <code>debug</code> string. See the <i>Debugging</i> section for details of this.</dd>
+<dt>-L LOGDIR, &#8211;logdir=LOGDIR</dt>
+<dd> Specify the directory for logging output from the manager.</dd>
+<dt>-R RUNDIR, &#8211;rundir=RUNDIR</dt>
+<dd> Specify the directory for runtime files created by the manager.</dd>
+<dt>-HHOST, &#8211;hostname=HOST</dt>
+<dd> Specify the interface to bind to, either as a hostname or a numeric address. Usually, unless you have multiple network connections, you won&#8217;t want to set this at all. Defaults to binding to all interfaces.</dd>
+<dt>-PPORT, &#8211;port=PORT</dt>
+<dd> Set the port the manager should listen on. Default is 7531 if SSL is being used, or 8642 otherwise.</dd>
+<dt>-TTRANSPORT, &#8211;transport=TRANSPORT</dt>
+<dd> Set the transport protocol to use, either &#8216;tcp&#8217; or &#8216;ssl&#8217;. Default is &#8216;ssl&#8217;.</dd>
+<dt>-CCERTIFICATE, &#8211;certificate=CERTIFICATE</dt>
+<dd> Specify the PEM certificate file to use. This is required if you use SSL.</dd>
+<dt>-nNAME, &#8211;name=NAME</dt>
+<dd> Set the manager name.</dd>
+<dt>-sSERVICENAME, &#8211;service-name=SERVICENAME</dt>
+<dd> Set the name used for naming log and pid files when running as a daemon.</dd>
+<dt>-D, &#8211;daemonize</dt>
+<dd> Run in the background as a daemon.</dd>
+<dt>&#8211;daemonize-to=DAEMONIZETO</dt>
+<dd> Specify what directory to run from when daemonizing. </dd>
+</dl>
+<h2>DEBUGGING</h2>
+<p> In the unlikely event of something in flumotion not working, you might want to debug it. The flumotion tools ( <code>flumotion-worker</code> , <code>flumotion-admin</code> , and <code>flumotion-manager</code> ) all alow you to turn on debugging output in two different ways. </p>
+<p> Firstly, you can use an environment variable, FLU_DEBUG. Secondly, you can launch the program with a -d or &#8211;debug switch. Either approach allows you to specify a debug configuration string with the following syntax: </p>
+<dl>
+<dt>
+</dt><dd> <code>name1:n1,name2:n2,name3:n3</code></dd></dl>
+<p> In this syntax, the &#8216;name&#8217; variables can be replaced with the name of a particular module within flumotion (such as &#8216;admin&#8217;, &#8216;twisted&#8217;, etc.). You can also use &#8216;*&#8217; to specify all modules. The &#8216;n&#8217; variables are numbers from 1 to 5, larger numbers corresponding to more verbose output (ERROR, WARN, INFO, DEBUG, and LOG). At level 4, full debugging information is emitted. </p>
+<p> You can also use an abbreviated form where you just supply a single number, thisuses that debug level for all modules. Thus the simplest way to enable full debug output for all modules is to use &#8216;-d 4&#8217; on the command line. </p>
+<p> A more complex example would be &#8216;-d *:3,admin:4&#8217; to set the logging level for the admin module to DEBUG, and for all other modules to INFO. </p>
+<h2>EXAMPLES</h2>
+<p> Simple example, starting flumotion-manager using TCP, in verbose mode: </p>
+<dl>
+<dt>
+</dt><dd> flumotion-manager -v -T tcp conf/managers/default/planet.xml</dd></dl>
+<p> A slightly more complex example, using two different configuration files and running in the background: </p>
+<dl>
+<dt>
+</dt><dd> flumotion-manager -T tcp -D conf/managers/default/planet.xml conf/managers/mystream.xml </dd>
+</dl>
+<h2>BUGS</h2>
+<p> Hopefully none. If you find any bugs, please report them at <a rel="nofollow" href="https://core.fluendo.com/trac/cgi-bin/trac.cgi">https://core.fluendo.com/trac/cgi-bin/trac.cgi</a> </p>
+<h2>SEE ALSO</h2>
+<p> <code>flumotion(1),<a href="/docs/linux/man/1-flumotion-worker/">flumotion-worker</a>(1),<a href="/docs/linux/man/1-flumotion-admin/">flumotion-admin</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

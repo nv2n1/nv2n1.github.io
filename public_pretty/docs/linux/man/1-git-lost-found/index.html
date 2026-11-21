@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-lost-found(1) · Linux Manual Pages</title>
+<meta name="description" content="git-lost-found – Recover lost refs that luckily have not yet been pruned">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-lost-found/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-lost-found(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> git-lost-found &#8211; Recover lost refs that luckily have not yet been pruned </p>
+<h2>SYNOPSIS</h2>
+<pre>
+<i>git lost-found</i>
+</pre>
+<h2>DESCRIPTION</h2>
+<p> <code>NOTE</code>: this command is deprecated. Use <code><a href="/docs/linux/man/1-git-fsck/">git-fsck</a></code>(1) with the option <i>&#8211;lost-found</i> instead. </p>
+<p> Finds dangling commits and tags from the object database, and creates refs to them in the .git/lost-found/ directory. Commits and tags that dereference to commits are stored in .git/lost-found/commit, and other objects are stored in .git/lost-found/other.</p>
+<h2>OUTPUT</h2>
+<p> Prints to standard output the object names and one-line descriptions of any commits or tags found.</p>
+<h2>EXAMPLE</h2>
+<p> Suppose you run <i>git tag -f</i> and mistype the tag to overwrite. The ref to your tag is overwritten, but until you run <i>git prune</i>, the tag itself is still there. </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ git lost-found
+[1ef2b196d909eed523d4f3c9bf54b78cdd6843c6] GIT 0.99.9c
+...
+</pre>
+</dd></dl>
+<p> Also you can use gitk to browse how any tags found relate to each other. </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ gitk $(cd .git/lost-found/commit &amp;&amp; echo ??*)
+</pre>
+</dd></dl>
+<p> After making sure you know which the object is the tag you are looking for, you can reconnect it to your regular refs hierarchy by using the update-ref command. </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ git cat-file -t 1ef2b196
+tag
+$ git cat-file tag 1ef2b196
+object fa41bbce8e38c67a218415de6cfa510c7e50032a
+type commit
+tag v0.99.9c
+tagger Junio C Hamano &lt;junkio [at] cox.net&gt; 1131059594 -0800
+GIT 0.99.9c
+This contains the following changes from the &quot;master&quot; branch, since
+...
+$ git update-ref refs/tags/not-lost-anymore 1ef2b196
+$ git rev-parse not-lost-anymore
+1ef2b196d909eed523d4f3c9bf54b78cdd6843c6
+</pre>
+</dd></dl>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

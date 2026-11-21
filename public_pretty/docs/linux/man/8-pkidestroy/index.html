@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pkidestroy(8) · Linux Manual Pages</title>
+<meta name="description" content="pkidestroy – Removes a subsystem from an instance of Certificate Server.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pkidestroy/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pkidestroy(8)</h1>
+
+
+
+
+
+<p>pkidestroy &#8211; Removes a subsystem from an instance of Certificate Server.</p>
+<h2>Synopsis</h2>
+<p>pkidestroy -s &lt;subsystem&gt; -i &lt;instance&gt; [-u &lt;secutiry domain username&gt;] [-W &lt;security domain password file&gt;] [-h] [-v] [-p &lt;prefix&gt;] </p>
+<h2>Description</h2>
+<p>Removes a subsystem from an instance of Certificate Server. This utility removes any of the Java-based Certificate Server subsystems (CA, KRA, OCSP, and TKS). An instance can contain multiple subsystems, although it may contain at most one of each type of subsystem. So, for example, an instance could contain CA and KRA subsystems, but not two CA subsystems. If <code>pkidestroy</code> is invoked on the last subsystem in the instance, then that instance is removed. Typically, as subsystems need to contact the CA to update the security domain, the CA instance should be the last instance to be removed. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-s &lt;subsystem&gt;</code></dt>
+<dd>Specifies the subsystem to be removed, where &lt;subsystem&gt; is CA, KRA, OCSP, or TKS. If this option is not specified, <code>pkidestroy</code> will prompt for its value.</dd>
+<dt><code>-i &lt;instance&gt;</code></dt>
+<dd>Specifies the name of the instance from which the subsystem should be removed. The instance is located at /var/log/pki/&lt;instance&gt;. If this option is not specified, <code>pkidestroy</code> will prompt for its value.</dd>
+<dt><code>-u &lt;security domain username&gt; </code></dt>
+<dd>Specifies the username of the security domain of the subsystem. This is an <code>optional</code> parameter.</dd>
+<dt><code>-W &lt;security domain password file&gt; </code></dt>
+<dd>Specifies the file containing the password of the security domain of the subsystem. This is an <code>optional</code> parameter.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Prints additional help information.</dd>
+<dt><code>-v</code></dt>
+<dd>Displays verbose information about the installation. This flag can be provided multiple times to increase verbosity. See <code>pkidestroy -h </code> for details. </dd>
+</dl>
+<h2>Bugs</h2>
+<p>Report bugs to <a rel="nofollow" href="http://bugzilla.redhat.com.">http://bugzilla.redhat.com.</a> </p>
+<h2>Authors</h2>
+<p>Ade Lee &lt;alee [at] redhat.com&gt;. <code>pkidestroy</code> was written by the Certificate Server project.</p>
+<h2>Copyright</h2>
+<p>Copyright (c) 2012 Red Hat, Inc. This is licensed under the GNU General Public License, version 2 (GPLv2). A copy of this license is available at <a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.">http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.</a></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-pkispawn/">pkispawn</a>(8)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

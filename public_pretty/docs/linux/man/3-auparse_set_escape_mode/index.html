@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>auparse_set_escape_mode(3) · Linux Manual Pages</title>
+<meta name="description" content="auparse_set_escape_mode – choose escape method">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-auparse_set_escape_mode/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>auparse_set_escape_mode(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> auparse_set_escape_mode &#8211; choose escape method</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;auparse.h&gt;</code> </p>
+<p> void auparse_set_escape_mode(auparse_state_t *au, auparse_esc_t mode); </p>
+<h2>DESCRIPTION</h2>
+<p> auparse_set_escape_mode is used to set the escaping method that will be used to output interpretted text. The choices for the mode variable are: </p>
+<dl>
+<dl>
+<dt><code>AUPARSE_ESC_RAW</code></dt>
+<dd> No escaping of any kind is done.</dd>
+<dt><code>AUPARSE_ESC_TTY</code></dt>
+<dd> Escape TTY control characters so that they are harmless to display on a terminal. When any control character is found, they are displayed as octal numbers. This is the default mode that the auparse library is initialized with.</dd>
+<dt><code>AUPARSE_ESC_SHELL</code></dt>
+<dd> Besides escaping control characters, this will escape some characters that can cause problems when used with shell scripting. Any escaped control characters are displayed as octal numbers. Other escaped characters are proceeded with a backslash. The additional characters it escapes are: &quot; &#8216; ` $ \</dd>
+<dt><code>AUPARSE_ESC_SHELL_QUOTE</code></dt>
+<dd> Similar to <i>AUPARSE_ESC_SHELL</i> but expands the character set to include shell operators. Any escaped control characters are displayed as octal numbers. Other escaped characters are proceeded with a backslash. The additional characters it escapes include: ; &#8216; &nbsp;<wbr>&quot; ` # $ &amp; * ? [ ] &lt; &gt; { } \</dd></dl>
+</dl>
+<h2>RETURN VALUE</h2>
+<p> None </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-auparse_interpret_field/">auparse_interpret_field</a></code>(3). </p>
+<h2>AUTHOR</h2>
+<p> Steve Grubb </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

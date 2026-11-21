@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ppmtotga(1) · Linux Manual Pages</title>
+<meta name="description" content="ppmtotga – convert portable pixmap into a TrueVision Targa file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ppmtotga/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ppmtotga(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> ppmtotga &#8211; convert portable pixmap into a TrueVision Targa file </p>
+<h2>SYNOPSIS</h2>
+<p> <code>ppmtotga</code> [<code>-mono|-cmap|-rgb</code>] [<code>-norle</code>] [<i>ppmfile</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> Reads a portable pixmap as input. Produces a TrueVision Targa file as output.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-mono</code></dt>
+<dd> Forces Targa file to be of type 8 bit monochrome. Input must be a portable bitmap or a portable graymap.</dd>
+<dt><code>-cmap</code></dt>
+<dd> Forces Targa file to be of type 24 bit colormapped. Input must be a portable bitmap, a portable graymap or a portable pixmap containing no more than 256 distinct colors.</dd>
+<dt><code>-rgb</code></dt>
+<dd> Forces Targa file to be of type 24 bit unmapped color.</dd>
+<dt><code>-norle</code></dt>
+<dd> Disables run-length encoding, in case you have a Targa reader which can&#8217;t read run-length encoded files.</dd></dl>
+<p> All flags can be abbreviated to their shortest unique prefix. If no file type is specified the most highly constained compatible type is used, where monochrome is more constained than colormapped which is in turn more constained than unmapped.</p>
+<h2>BUGS</h2>
+<p> Does not support all possible Targa file types. Should really be in PNM, not PPM.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-tgatoppm/">tgatoppm</a>(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5)</p>
+<h2>AUTHOR</h2>
+<p> Copyright (C) 1989, 1991 by Mark Shand and Jef Poskanzer. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pst2ldif(1) · Linux Manual Pages</title>
+<meta name="description" content="pst2ldif – extract contacts from a MS Outlook .pst file in .ldif format">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pst2ldif/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pst2ldif(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pst2ldif &#8211; extract contacts from a MS Outlook .pst file in .ldif format </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>pst2ldif</code> [<code>-V</code>] [<code>-b&nbsp;<wbr></code><i>ldap-base</i>] [<code>-c&nbsp;<wbr></code><i>class</i>] [<code>-d&nbsp;<wbr></code><i>debug-file</i>] [<code>-l&nbsp;<wbr></code><i>extra-line</i>] [<code>-o</code>] [<code>-h</code>] pstfilename</dt></dl>
+<h2>OPTIONS</h2>
+<p> -V</p>
+<dl>
+<dd>Show program version. Subsequent options are then ignored.</dd></dl>
+<p> -b <i>ldap-base</i></p>
+<dl>
+<dt>
+</dt><dd> Sets the ldap base value used in the dn records. You probably want to use something like &quot;o=organization, c=US&quot;.</dd></dl>
+<p> -c <i>class</i></p>
+<dl>
+<dt>
+</dt><dd> Sets the objectClass values for the contact items. This class needs to be defined in the schema used by your LDAP server, and at a minimum it must contain the ldap attributes given below. This option may be specified multiple times to generate entries with multiple object classes.</dd></dl>
+<p> -d <i>debug-file</i></p>
+<dl>
+<dt>
+</dt><dd> Specify name of debug log file. The log file is now an ascii file, instead of the binary file used in previous versions.</dd></dl>
+<p> -l <i>extra-line</i></p>
+<dl>
+<dt>
+</dt><dd> Specify an extra line to be added to each ldap entry. This option may be specified multiple times to add multiple lines to each ldap entry.</dd></dl>
+<p> -o</p>
+<dl>
+<dt>
+</dt><dd> Use the old ldap schema, rather than the default new ldap schema. The old schema generates multiple postalAddress attributes for a single entry. The new schema generates a single postalAddress (and homePostalAddress when available) attribute with $ delimiters as specified in RFC4517. Using the old schema also generates two extra leading entries, one for &quot;dn:ldap base&quot;, and one for &quot;dn: cn=root, ldap base&quot;.</dd></dl>
+<p> -h</p>
+<dl>
+<dt>
+</dt><dd> Show summary of options. Subsequent options are then ignored.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>pst2ldif</code> reads the contact information from a MS Outlook .pst file and produces a .ldif file that may be used to import those contacts into an LDAP database. The following ldap attributes are generated for the old ldap schema:</p>
+<dl>
+<dt>
+</dt><dd> cn</dd></dl>
+<dl>
+<dt>
+</dt><dd> givenName</dd></dl>
+<dl>
+<dt>
+</dt><dd> sn</dd></dl>
+<dl>
+<dt>
+</dt><dd> personalTitle</dd></dl>
+<dl>
+<dt>
+</dt><dd> company</dd></dl>
+<dl>
+<dt>
+</dt><dd> mail</dd></dl>
+<dl>
+<dt>
+</dt><dd> postalAddress</dd></dl>
+<dl>
+<dt>
+</dt><dd> l</dd></dl>
+<dl>
+<dt>
+</dt><dd> st</dd></dl>
+<dl>
+<dt>
+</dt><dd> postalCode</dd></dl>
+<dl>
+<dt>
+</dt><dd> c</dd></dl>
+<dl>
+<dt>
+</dt><dd> homePhone</dd></dl>
+<dl>
+<dt>
+</dt><dd> telephoneNumber</dd></dl>
+<dl>
+<dt>
+</dt><dd> facsimileTelephoneNumber</dd></dl>
+<dl>
+<dt>
+</dt><dd> mobile</dd></dl>
+<dl>
+<dt>
+</dt><dd> description</dd></dl>
+<p> The following attributes are generated for the new ldap schema:</p>
+<dl>
+<dt>
+</dt><dd> cn</dd></dl>
+<dl>
+<dt>
+</dt><dd> givenName</dd></dl>
+<dl>
+<dt>
+</dt><dd> sn</dd></dl>
+<dl>
+<dt>
+</dt><dd> title</dd></dl>
+<dl>
+<dt>
+</dt><dd> o</dd></dl>
+<dl>
+<dt>
+</dt><dd> mail</dd></dl>
+<dl>
+<dt>
+</dt><dd> postalAddress</dd></dl>
+<dl>
+<dt>
+</dt><dd> homePostalAddress</dd></dl>
+<dl>
+<dt>
+</dt><dd> l</dd></dl>
+<dl>
+<dt>
+</dt><dd> st</dd></dl>
+<dl>
+<dt>
+</dt><dd> postalCode</dd></dl>
+<dl>
+<dt>
+</dt><dd> c</dd></dl>
+<dl>
+<dt>
+</dt><dd> homePhone</dd></dl>
+<dl>
+<dt>
+</dt><dd> telephoneNumber</dd></dl>
+<dl>
+<dt>
+</dt><dd> facsimileTelephoneNumber</dd></dl>
+<dl>
+<dt>
+</dt><dd> mobile</dd></dl>
+<dl>
+<dt>
+</dt><dd> description</dd></dl>
+<dl>
+<dt>
+</dt><dd> labeledURI</dd></dl>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2008 by 510 Software Group &lt;carl [at] five-ten-sg.com&gt; </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; see the file COPYING. If not, please write to the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.</p>
+<h2>VERSION</h2>
+<p> 0.6.59 </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

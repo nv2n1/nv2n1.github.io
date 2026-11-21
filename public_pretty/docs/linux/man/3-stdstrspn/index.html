@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdstrspn(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdstrspn/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdstrspn(3)</h1>
+
+
+
+
+
+<p>std::strspn - std::strspn</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstring&gt;
+    size_t strspn(const char *dest, const char *src);</code></pre> 
+<p>Returns the length of the maximum initial segment (span) of the byte string pointed to by dest, that consists of only the characters found in byte string pointed to by src.</p>
+<h2>Parameters</h2>
+<p>dest - pointer to the null-terminated byte string to be analyzed
+src - pointer to the null-terminated byte string that contains the characters to search for</p>
+<h2>Return value</h2>
+<p>The length of the maximum initial segment that contains only characters from byte string pointed to by src</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;cstring&gt;
+#include &lt;string&gt;
+#include &lt;iostream&gt;
+const char *low_alpha = &quot;qwertyuiopasdfghjklzxcvbnm&quot;;
+int main()
+{
+std::string s = &quot;abcde312$#@&quot;;
+std::size_t spnsz = std::strspn(s.c_str(), low_alpha);
+std::cout &lt;&lt; &quot;After skipping initial lowercase letters from &lsquo;&quot; &lt;&lt; s
+&lt;&lt; &quot;&rsquo;\nThe remainder is &lsquo;&quot; &lt;&lt; s.substr(spnsz) &lt;&lt; &quot;&rsquo;\n&quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> After skipping initial lowercase letters from &lsquo;abcde312$#@&rsquo;
+ <wbr> The remainder is &lsquo;312$#@&rsquo;</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the length of the maximum initial segment that consists
+strcspn of only the characters not found in another byte string
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the length of the maximum initial segment that consists
+wcsspn of only the wide characters found in another wide string
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> finds the first location of any character from a set of separators
+strpbrk <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

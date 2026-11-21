@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>varnish-cli(7) · Linux Manual Pages</title>
+<meta name="description" content="Varnish CLI – Varnish Command Line Interface">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-varnish-cli/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>varnish-cli(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Varnish CLI &#8211; Varnish Command Line Interface</p>
+<h2>Description</h2>
+<p>Varnish as a command line interface (CLI) which can control and change most of the operational parameters and the configuration of Varnish, without interrupting the running service. </p>
+<p> The CLI can be used for the following tasks:</p>
+<dl>
+<dt><code>configuration</code></dt>
+<dd>You can upload, change and delete VCL files from the CLI.</dd>
+<dt><code>parameters</code></dt>
+<dd>You can inspect and change the various parameters Varnish has available through the CLI. The individual parameters are documented in the <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1) man page.</dd>
+<dt><code>bans</code></dt>
+<dd>Bans are filters that are applied to keep Varnish from serving stale content. When you issue a ban Varnish will not serve any <i>banned</i> object from cache, but rather re-fetch it from its backend servers.</dd>
+<dt><code>process management</code></dt>
+<dd>You can stop and start the cache (child) process though the CLI. You can also retrieve the lastst stack trace if the child process has crashed. </dd>
+<p> If you invoke <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1) with -T, -M or -d the CLI will be available. In debug mode (-d) the CLI will be in the foreground, with -T you can connect to it with varnishadm or telnet and with -M varnishd will connect back to a listening service <i>pushing</i> the CLI to that service. Please see <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1) for details.</dl>
+<h3>Syntax</h3>
+<p>Commands are usually terminated with a newline. Long command can be entered using sh style <i>here documents</i>. The format of here-documents is: </p>
+<pre>&lt;&lt; word
+ here document
+word</pre>
+<p><i>word</i> can be any continuous string choosen to make sure it doesn&#8217;t appear naturally in the following <i>here document</i>. </p>
+<p> When using the here document style of input there are no restrictions on lenght. When using newline-terminated commands maximum lenght is limited by the varnishd parameter <i>cli_buffer</i>. </p>
+<p> When commands are newline terminated they get <i>tokenized</i> before parsing so if you have significant spaces enclose your strings in double quotes. Within the quotes you can escape characters with \. The n, r and t get translated to newlines, carrage returns and tabs. Double quotes themselves can be escaped with a backslash. </p>
+<p> To enter characters in octals use the 
+nn syntax. Hexadecimals can be entered with the 
+</p></p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

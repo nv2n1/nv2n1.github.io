@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controlling Linux Console Blanking and Power Settings - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/manage-linux-console-screen-by-commands/">
+  <meta name="description" content="Managing display power and screen blanking on Linux systems is essential for reducing power consumption on servers, headless machines, and workstations. Two …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Controlling Linux Console Blanking and Power Settings">
+  <meta property="og:url" content="https://www.systutorials.com/manage-linux-console-screen-by-commands/">
+  <meta property="og:description" content="Managing display power and screen blanking on Linux systems is essential for reducing power consumption on servers, headless machines, and workstations. Two …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/general-system-administration/">General System Administration</a>
+        </nav>
+        
+        <h1>Controlling Linux Console Blanking and Power Settings</h1>
+        <time class="post-date" datetime="2018-03-24T11:42:51Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Managing display power and screen blanking on Linux systems is essential for reducing power consumption on servers, headless machines, and workstations. Two primary tools handle this: <code>setterm</code> for software-based blanking and <code>vbetool</code> for hardware power management via VESA DPMS.</p>
+<h2 id="screen-blanking-with-setterm">Screen Blanking with setterm</h2>
+<p>The <code>setterm</code> command controls when and how the console screen blanks during periods of inactivity. This works on virtual consoles (TTY devices), not on graphical displays.</p>
+<h3 id="setting-blanking-timeout">Setting blanking timeout</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">setterm -blank <span class="m">10</span>
+</span></span></code></pre></div><p>This blanks the screen after 10 minutes of inactivity. The interval accepts values from 0 to 60 minutes. A value of 0 disables blanking entirely.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">setterm -blank force
+</span></span></code></pre></div><p>The <code>force</code> option keeps the screen blank even when keys are pressed, useful for preventing accidental input wake-ups.</p>
+<h3 id="unblanking-the-screen">Unblanking the screen</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">setterm -blank poke
+</span></span></code></pre></div><p>The <code>poke</code> option unblank the screen immediately, restoring display output.</p>
+<h3 id="checking-blank-status">Checking blank status</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">setterm -blank
+</span></span></code></pre></div><p>Running without arguments returns the current blanking state, showing which virtual terminal is blanked or zero if none are blanked.</p>
+<h2 id="hardware-power-management-with-vbetool">Hardware Power Management with vbetool</h2>
+<p>For systems supporting VESA DPMS (Display Power Management Signaling), <code>vbetool</code> provides direct control over monitor power states through VESA 0x4f10 extensions.</p>
+<h3 id="turning-off-monitor-power">Turning off monitor power</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vbetool dpms off
+</span></span></code></pre></div><p>This powers down the monitor completely, consuming minimal energy.</p>
+<h3 id="dpms-states">DPMS states</h3>
+<p><code>vbetool</code> accepts these power states:</p>
+<ul>
+<li><strong>on</strong> — Display fully powered and active</li>
+<li><strong>standby</strong> — Low power, quick resume (~1-2 seconds)</li>
+<li><strong>suspend</strong> — Deeper sleep state, slower resume (~3-10 seconds)</li>
+<li><strong>reduced</strong> — Minimal power reduction, display remains responsive</li>
+<li><strong>off</strong> — Complete power down</li>
+</ul>
+<p>Example setting monitor to standby:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vbetool dpms standby
+</span></span></code></pre></div><h2 id="practical-combined-approach">Practical combined approach</h2>
+<p>For integrated power management on servers, combine both tools:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Blank console after 5 minutes of inactivity</span>
+</span></span><span class="line"><span class="cl">setterm -blank <span class="m">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Power down monitor after 10 minutes (requires periodic script)</span>
+</span></span></code></pre></div><p>Note: <code>vbetool</code> requires root privileges and works primarily on systems with legacy BIOS. Modern systems using UEFI may need alternative approaches like <code>xset</code> (for X11) or <code>brightnessctl</code> for backlight control.</p>
+<h2 id="checking-tool-availability">Checking tool availability</h2>
+<p>Verify <code>setterm</code> is available (usually pre-installed):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">which setterm
+</span></span></code></pre></div><p>Check if <code>vbetool</code> is installed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">which vbetool
+</span></span></code></pre></div><p>If missing, install via your package manager:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Debian/Ubuntu</span>
+</span></span><span class="line"><span class="cl">sudo apt install vbetool
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># RHEL/CentOS/Fedora</span>
+</span></span><span class="line"><span class="cl">sudo dnf install vbetool
+</span></span></code></pre></div><h2 id="persistent-configuration">Persistent configuration</h2>
+<p>To apply settings across reboots, add commands to system initialization scripts or systemd units. For virtual consoles, modify <code>/etc/default/grub</code> or add settings to <code>.bashrc</code> for user-specific configurations.</p>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<p>When encountering problems on Linux systems, follow a systematic approach. Check system logs first using journalctl for systemd-based distributions. Verify service status with systemctl before attempting restarts. For network issues, use ip addr and ss -tulpn to diagnose connectivity problems.</p>
+<p>Package management issues often stem from stale caches. Run dnf clean all on Fedora or apt clean on Ubuntu before retrying failed installations. If a package has unmet dependencies, try resolving them with dnf autoremove or apt autoremove.</p>
+<h2 id="related-system-commands">Related System Commands</h2>
+<p>These commands are frequently used alongside the tools discussed in this article:</p>
+<ul>
+<li>systemctl status service-name – Check if a service is running</li>
+<li>journalctl -u service-name -f – Follow service logs in real time</li>
+<li>rpm -qi package-name – Query installed package information</li>
+<li>dnf history – View package transaction history</li>
+<li>top or htop – Monitor system resource usage</li>
+</ul>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>netsnmp_baby_steps(3) · Linux Manual Pages</title>
+<meta name="description" content="baby_steps – Calls your handler in baby_steps for set processing.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-netsnmp_baby_steps/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>netsnmp_baby_steps(3)</h1>
+
+
+
+
+
+<p>baby_steps &#8211; Calls your handler in baby_steps for set processing.</p>
+<h3>Modules</h3>
+<p><code>baby_steps_access_multiplexer: calls individual access methods based on baby_step mode.</code></p>
+<h3>Functions</h3>
+<p><code>netsnmp_mib_handler</code> * <code>netsnmp_baby_steps_handler_get</code> (u_long modes)<br />
+ <i>returns a baby_steps handler that can be injected into a given handler chain. </i><br />
+ void <code>netsnmp_baby_steps_handler_init</code> (void)<br />
+ <i>initializes the baby_steps helper which then registers a baby_steps handler as a run-time injectable handler for configuration file use. </i></p>
+<h2>Detailed Description</h2>
+<p>Calls your handler in baby_steps for set processing.</p>
+<h2>Function Documentation</h2>
+<h3><code>netsnmp_mib_handler</code>* netsnmp_baby_steps_handler_get (u_long modes)</h3>
+<p>returns a baby_steps handler that can be injected into a given handler chain. </p>
+<p> Definition at line 58 of file baby_steps.c. </p>
+<p> References netsnmp_mib_handler_s::myvoid, netsnmp_create_handler(), netsnmp_handler_free(), NULL, netsnmp_baby_steps_modes_s::registered, snmp_log(), and SNMP_MALLOC_TYPEDEF. </p>
+<p> Referenced by netsnmp_baby_steps_handler_init().</p>
+<h3>void netsnmp_baby_steps_handler_init (void)</h3>
+<p>initializes the baby_steps helper which then registers a baby_steps handler as a run-time injectable handler for configuration file use. </p>
+<p> Definition at line 319 of file baby_steps.c. </p>
+<p> References netsnmp_baby_steps_handler_get(), and netsnmp_register_handler_by_name().</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

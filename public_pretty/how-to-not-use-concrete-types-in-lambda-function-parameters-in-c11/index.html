@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Type Erasure in C&#43;&#43;11 Lambda Parameters - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-not-use-concrete-types-in-lambda-function-parameters-in-c11/">
+  <meta name="description" content="In C&#43;&#43;11, lambda parameters required concrete types. Creating a truly generic lambda meant wrapping the logic in a template struct — awkward and verbose. C&#43;&#43;14 …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Using Type Erasure in C&#43;&#43;11 Lambda Parameters">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-not-use-concrete-types-in-lambda-function-parameters-in-c11/">
+  <meta property="og:description" content="In C&#43;&#43;11, lambda parameters required concrete types. Creating a truly generic lambda meant wrapping the logic in a template struct — awkward and verbose. C&#43;&#43;14 …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Using Type Erasure in C&#43;&#43;11 Lambda Parameters</h1>
+        <time class="post-date" datetime="2018-03-24T11:55:24Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>In C++11, lambda parameters required concrete types. Creating a truly generic lambda meant wrapping the logic in a template struct — awkward and verbose. C++14 introduced generic lambdas using <code>auto</code> for parameter deduction, eliminating this friction entirely.</p>
+<h2 id="basic-generic-lambda-syntax">Basic Generic Lambda Syntax</h2>
+<p>The simplest approach uses <code>auto</code> in lambda parameters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">add</span> <span class="o">=</span> <span class="p">[](</span><span class="k">auto</span> <span class="n">a</span><span class="p">,</span> <span class="k">auto</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Works with integers
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">result1</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">// 8
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Works with floating point
+</span></span></span><span class="line"><span class="cl"><span class="kt">double</span> <span class="n">result2</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">);</span>  <span class="c1">// 6.2
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Works with std::string
+</span></span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">result3</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">),</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&#34; world&#34;</span><span class="p">));</span>  <span class="c1">// &#34;hello world&#34;
+</span></span></span></code></pre></div><p>The compiler generates specialized code for each type combination you actually use. This is zero-overhead abstraction — no virtual dispatch, no runtime penalty.</p>
+<h2 id="using-concepts-for-type-constraints-c20">Using Concepts for Type Constraints (C++20)</h2>
+<p>Generic lambdas become more powerful with Concepts, which let you constrain what types <code>auto</code> accepts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;concepts&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Only accept integral types
+</span></span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">integral_add</span> <span class="o">=</span> <span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">integral</span> <span class="k">auto</span> <span class="n">a</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">integral</span> <span class="k">auto</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// This works
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">integral_add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// This fails at compile time (preventing silent bugs)
+</span></span></span><span class="line"><span class="cl"><span class="c1">// double y = integral_add(1.5, 2.5);  // Error: double doesn&#39;t satisfy std::integral
+</span></span></span></code></pre></div><p>Custom concepts give you fine-grained control:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="k">concept</span> <span class="n">Addable</span> <span class="o">=</span> <span class="k">requires</span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="p">}</span> <span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">convertible_to</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">safe_add</span> <span class="o">=</span> <span class="p">[](</span><span class="n">Addable</span> <span class="k">auto</span> <span class="n">a</span><span class="p">,</span> <span class="n">Addable</span> <span class="k">auto</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><h2 id="multiple-type-parameters-with-constraints">Multiple Type Parameters with Constraints</h2>
+<p>When you need different types in different parameters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="k">concept</span> <span class="n">Numeric</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">integral</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">||</span> <span class="n">std</span><span class="o">::</span><span class="n">floating_point</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">multiply</span> <span class="o">=</span> <span class="p">[](</span><span class="n">Numeric</span> <span class="k">auto</span> <span class="n">x</span><span class="p">,</span> <span class="n">Numeric</span> <span class="k">auto</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>           <span class="c1">// 50
+</span></span></span><span class="line"><span class="cl"><span class="kt">double</span> <span class="n">b</span> <span class="o">=</span> <span class="n">multiply</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">);</span>     <span class="c1">// 10.0
+</span></span></span></code></pre></div><h2 id="deduction-guides-and-complex-scenarios">Deduction Guides and Complex Scenarios</h2>
+<p>For more complex scenarios, you might need explicit template parameters. While lambdas don’t support template parameters directly in older standards, you can use <code>std::function</code> or write a template wrapper:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// For C++23 and beyond, explicit lambda template parameters are available
+</span></span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">process</span> <span class="o">=</span> <span class="p">[]</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">T</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nf">constexpr</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">integral</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nf">constexpr</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">floating_point</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="mf">1.5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><h2 id="performance-characteristics">Performance Characteristics</h2>
+<p>Generic lambdas compile to the same machine code as hand-written template functions. The compiler specializes each instantiation:</p>
+<ul>
+<li>No virtual function overhead</li>
+<li>No type erasure penalty</li>
+<li>Monomorphization happens at compile time</li>
+<li>Binary size scales with the number of type combinations used</li>
+</ul>
+<h2 id="avoiding-common-pitfalls">Avoiding Common Pitfalls</h2>
+<p><strong>Type mismatch in parameters:</strong> When <code>auto a</code> and <code>auto b</code> have different types, operations might fail silently or produce unexpected results:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">generic_op</span> <span class="o">=</span> <span class="p">[](</span><span class="k">auto</span> <span class="n">a</span><span class="p">,</span> <span class="k">auto</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">// What if a is int and b is unsigned?
+</span></span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p>Concepts solve this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">safe_op</span> <span class="o">=</span> <span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">integral</span> <span class="k">auto</span> <span class="n">a</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">integral</span> <span class="k">auto</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p><strong>Lambda type identity:</strong> Each lambda expression has a unique, unnamed type. You can’t write it explicitly, but <code>auto</code> captures it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">lambda1</span> <span class="o">=</span> <span class="p">[](</span><span class="k">auto</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">lambda2</span> <span class="o">=</span> <span class="p">[](</span><span class="k">auto</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// lambda1 and lambda2 have different types, even though they&#39;re identical
+</span></span></span></code></pre></div><p>If you need to store different lambdas in a container, use <code>std::function</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">&gt;&gt;</span> <span class="n">operations</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">operations</span><span class="p">.</span><span class="n">push_back</span><span class="p">([](</span><span class="k">auto</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="n">operations</span><span class="p">.</span><span class="n">push_back</span><span class="p">([](</span><span class="k">auto</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span> <span class="p">});</span>
+</span></span></code></pre></div><h2 id="summary">Summary</h2>
+<p>Generic lambdas with <code>auto</code> are the standard approach in modern C++. Combine them with Concepts (C++20+) to enforce type safety at compile time. This gives you the flexibility of templates with the clarity of constraints, and you get peak performance with zero overhead.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

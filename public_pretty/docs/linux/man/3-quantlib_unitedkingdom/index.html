@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_unitedkingdom(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::UnitedKingdom – United Kingdom calendars.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_unitedkingdom/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_unitedkingdom(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::UnitedKingdom &#8211; United Kingdom calendars. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/time/calendars/unitedkingdom.hpp&gt; </p>
+<p> Inherits <code>QuantLib::Calendar</code>. </p>
+<h3>Public Types</h3>
+<p>enum <code>Market</code> { <code>Settlement</code>, <code>Exchange</code>, <code>Metals</code> }<br />
+ <i>UK calendars. </i></p>
+<h3>Public Member Functions</h3>
+<p><code>UnitedKingdom</code> (<code>Market</code> market=<code>Settlement</code>) </p>
+<h2>Detailed Description</h2>
+<p>United Kingdom calendars. </p>
+<p> Public holidays (data from <a rel="nofollow" href="http://www.dti.gov.uk/er/bankhol.htm">http://www.dti.gov.uk/er/bankhol.htm</a>): </p>
+<dl COMPACT>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s Day, January 1st (possibly moved to Monday)</dd>
+<dt>*</dt>
+<dd>Good Friday</dd>
+<dt>*</dt>
+<dd>Easter Monday</dd>
+<dt>*</dt>
+<dd>Early May Bank Holiday, first Monday of May</dd>
+<dt>*</dt>
+<dd>Spring Bank Holiday, last Monday of May</dd>
+<dt>*</dt>
+<dd>Summer Bank Holiday, last Monday of August</dd>
+<dt>*</dt>
+<dd>Christmas Day, December 25th (possibly moved to Monday or Tuesday)</dd>
+<dt>*</dt>
+<dd>Boxing Day, December 26th (possibly moved to Monday or Tuesday)</dd></dl>
+<p> Holidays for the stock exchange: </p>
+<dl COMPACT>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s Day, January 1st (possibly moved to Monday)</dd>
+<dt>*</dt>
+<dd>Good Friday</dd>
+<dt>*</dt>
+<dd>Easter Monday</dd>
+<dt>*</dt>
+<dd>Early May Bank Holiday, first Monday of May</dd>
+<dt>*</dt>
+<dd>Spring Bank Holiday, last Monday of May</dd>
+<dt>*</dt>
+<dd>Summer Bank Holiday, last Monday of August</dd>
+<dt>*</dt>
+<dd>Christmas Day, December 25th (possibly moved to Monday or Tuesday)</dd>
+<dt>*</dt>
+<dd>Boxing Day, December 26th (possibly moved to Monday or Tuesday)</dd></dl>
+<p> Holidays for the metals exchange: </p>
+<dl COMPACT>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s Day, January 1st (possibly moved to Monday)</dd>
+<dt>*</dt>
+<dd>Good Friday</dd>
+<dt>*</dt>
+<dd>Easter Monday</dd>
+<dt>*</dt>
+<dd>Early May Bank Holiday, first Monday of May</dd>
+<dt>*</dt>
+<dd>Spring Bank Holiday, last Monday of May</dd>
+<dt>*</dt>
+<dd>Summer Bank Holiday, last Monday of August</dd>
+<dt>*</dt>
+<dd>Christmas Day, December 25th (possibly moved to Monday or Tuesday)</dd>
+<dt>*</dt>
+<dd>Boxing Day, December 26th (possibly moved to Monday or Tuesday)</dd></dl>
+<p> <code>Possible enhancements</code></p>
+<dl COMPACT>
+<dd>add LIFFE</dd></dl>
+<p> <code>Tests</code></p>
+<dl COMPACT>
+<dd>the correctness of the returned results is tested against a list of known holidays.</dd></dl>
+<h2>Member Enumeration Documentation</h2>
+<h3>enum <code>Market</code></h3>
+<p>UK calendars. </p>
+<p> <code>Enumerator: </code></p>
+<dl COMPACT>
+<dt><i>Settlement </i></dt>
+<dd>generic settlement calendar</dd>
+<dt><i>Exchange </i></dt>
+<dd>London stock-exchange calendar. </dd>
+</dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

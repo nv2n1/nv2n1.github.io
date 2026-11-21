@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fcutf16len(3) · Linux Manual Pages</title>
+<meta name="description" content="FcUtf16Len – count UTF-16 encoded chars">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-fcutf16len/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>fcutf16len(3)</h1>
+
+
+
+
+
+<p>FcUtf16Len &#8211; count UTF-16 encoded chars </p>
+<h2>Synopsis</h2>
+<p><code>#include &lt;fontconfig/fontconfig.h&gt; </p>
+<p> FcBool FcUtf16Len (FcChar8 *</code><i>src</i><code>, FcEndian </code><i>endian</i><code>, int </code><i>len</i><code>, int *</code><i>nchar</i><code>, int *</code><i>wchar</i><code>); </code></p>
+<h2>Description</h2>
+<p>Counts the number of Unicode chars in <i>len</i> bytes of <i>src</i>. Bytes of <i>src</i> are combined into 16-bit units according to <i>endian</i>. Places that count in <i>nchar</i>. <i>wchar</i> contains 1, 2 or 4 depending on the number of bytes needed to hold the largest Unicode char counted. The return value indicates whether <i>string</i> is a well-formed UTF16 string.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

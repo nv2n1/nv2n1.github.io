@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gpsinit(8) · Linux Manual Pages</title>
+<meta name="description" content="gpsinit – initialize CAN kernel modules for GPSD">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-gpsinit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>gpsinit(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>gpsinit &#8211; initialize CAN kernel modules for GPSD</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>gpsinit</code> [-n&nbsp;<wbr><i>control</i>] [-s&nbsp;<wbr><i>speed</i>] <i>module_name</i> [<i>interface_name</i>]</dt>
+<dt> <code>gpsinit</code> -h</dt>
+<dt> <code>gpsinit</code> -v</dt></dl>
+<h2>Description</h2>
+<dd>gpsinit initializes whatever kernel-level modules are needed to enable special non-serial hardware to communicate with a gpsd instance. Note: it will need root permissions to load modules and perform other special operations, such as changing kernel-interface baudrates. </dd>
+<p> At present, all modes of this tool are concerned with setting up kernel-level interfaces to hardware on a CAN (Control Area Network) speaking NMEA2000. </p>
+<p> The program accepts the following options: </p>
+<p> -h</p>
+<dl>
+<dd>Display a brief help text.</dd></dl>
+<p> -v</p>
+<dl>
+<dd>Display the version of gpsinit.</dd></dl>
+<p> -n</p>
+<dl>
+<dd>Set the CAN network number. The default is 0.</dd></dl>
+<p> -s</p>
+<dl>
+<dd>Set the baudrate to be used to communicate over the serial line to the CAN hardware. The default is 38400 baud.</dd></dl>
+<p> The parameter <i>module_name</i> is mandatory. The socket CAN driver module <i>module_name</i>.ko will be loaded. <code>gpsinit</code> recognize the following module names: </p>
+<p> plx_pci, esd_usb2, vcan, slcan</p>
+<dl>
+<dd>The parameter <i>interface_name</i> and <i>-s </i><i>speed</i> can used here.</dd></dl>
+<p> beaglebone</p>
+<dl>
+<dd>The dcan module needed for the beaglebone is part of the Linux kernel, so no module is loaded in this case.</dd></dl>
+<p> The parameter <i>interface_name</i> is needed for slcan hardware only. It gives the name of the serial device to which the SL CAN hardware is connected. The default is /dev/ttyUSB0.</p>
+<h2>Examples</h2>
+<p><code>sudo gpsinit plx_pci</code></p>
+<dl>
+<dd>Attempt to load the module plx_pci and initialize net 0 for the connection to a NMEA2000 network. It will set the baudrate to 250kBits.</dd></dl>
+<p> <code>sudo gpsinit -n 1 plx_pci</code></p>
+<dl>
+<dd>As above, but use net 1.</dd></dl>
+<p> <code>sudo gpsinit -s 38400 slcan /dev/ttyUSB0</code></p>
+<dl>
+<dd>Attempt to load the module slcan and talk to the hardware at 38400 baud connected to port /dev/ttyUSB0.</dd></dl>
+<p> <code>gpsinit -h </code></p>
+<dl>
+<dd>Display a brief help message.</dd></dl>
+<p> <code>gpsinit -v </code></p>
+<dl>
+<dd>Display the version of gpsinit.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8), <code><a href="/docs/linux/man/1-gps/">gps</a></code>(1), <code><a href="/docs/linux/man/3-libgps/">libgps</a></code>(3), <code><a href="/docs/linux/man/3-libgpsd/">libgpsd</a></code>(3).</p>
+<h2>Author</h2>
+<p>Reinhard Arlt &lt;reinhard.arlt [at] t-online.de&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

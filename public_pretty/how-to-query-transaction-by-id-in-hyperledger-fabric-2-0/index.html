@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Query Transaction Details by ID in Hyperledger Fabric - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-query-transaction-by-id-in-hyperledger-fabric-2-0/">
+  <meta name="description" content="Querying transaction details from a Hyperledger Fabric ledger is critical for auditing, compliance verification, and debugging chaincode behavior. The QSCC …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Query Transaction Details by ID in Hyperledger Fabric">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-query-transaction-by-id-in-hyperledger-fabric-2-0/">
+  <meta property="og:description" content="Querying transaction details from a Hyperledger Fabric ledger is critical for auditing, compliance verification, and debugging chaincode behavior. The QSCC …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/distributed-systems-academy/">Distributed Systems Academy</a>
+           &rsaquo; <a href="/advanced-systems-path/">Advanced Systems &amp; Architecture Path</a>
+          &rsaquo; <a href="/category/engineering-lessons/">Engineering Lessons</a>
+        </nav>
+        
+        <h1>Query Transaction Details by ID in Hyperledger Fabric</h1>
+        <time class="post-date" datetime="2020-04-09T07:48:29Z">April 9, 2020</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Querying transaction details from a Hyperledger Fabric ledger is critical for auditing, compliance verification, and debugging chaincode behavior. The QSCC (Query System Chaincode) provides the <code>GetTransactionByID</code> function to retrieve complete transaction metadata including endorsements, read/write sets, and validation status.</p>
+<p>This guide uses Hyperledger Fabric 2.5+ on Ubuntu 24.04 LTS with the test-network from fabric-samples.</p>
+<h2 id="environment-setup">Environment Setup</h2>
+<p>Navigate to the test-network directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/hyperledger/fabric-samples/test-network
+</span></span></code></pre></div><p>Configure environment variables:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">FABRIC_CFG_PATH</span><span class="o">=</span>../config/
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> scripts/envVar.sh
+</span></span><span class="line"><span class="cl">setGlobals <span class="m">1</span>
+</span></span></code></pre></div><p>The <code>setGlobals</code> function sets peer connection variables for a specific organization. Verify the configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$CORE_PEER_ADDRESS</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$CORE_PEER_TLS_ROOTCERT_FILE</span>
+</span></span></code></pre></div><h2 id="create-a-transaction-to-query">Create a Transaction to Query</h2>
+<p>First, invoke a chaincode to generate a transaction. Using the fabcar example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">peer chaincode invoke <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -o localhost:7050 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --ordererTLSHostnameOverride orderer.example.com <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --tls <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --cafile <span class="s2">&#34;</span><span class="nv">$ORDERER_CA</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -C mychannel <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -n fabcar <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -c <span class="s1">&#39;{&#34;function&#34;:&#34;CreateCar&#34;,&#34;Args&#34;:[&#34;abc&#34;,&#34;makeM&#34;,&#34;modelX&#34;,&#34;red&#34;,&#34;ownerO&#34;]}&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --waitForEvent
+</span></span></code></pre></div><p>The output includes the transaction ID in the response:</p>
+<pre><code>2024-11-15 10:58:38.703 UTC [chaincodeCmd] ClientWait -&gt; INFO 001 txid [fa0f757bc278fdf6a32d00975602eb853e23a86a156781588d99ddef5b80720f] committed with status (VALID) at localhost:7051
+</code></pre>
+<p>Save the transaction ID (the 64-character hex string) for subsequent queries.</p>
+<h2 id="query-transaction-by-id">Query Transaction by ID</h2>
+<p>Use QSCC to retrieve the transaction details:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">peer chaincode invoke <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -o localhost:7050 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --ordererTLSHostnameOverride orderer.example.com <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --tls <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --cafile <span class="s2">&#34;</span><span class="nv">$ORDERER_CA</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -C mychannel <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -n qscc <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -c <span class="s1">&#39;{&#34;function&#34;:&#34;GetTransactionByID&#34;,&#34;Args&#34;:[&#34;mychannel&#34;,&#34;fa0f757bc278fdf6a32d00975602eb853e23a86a156781588d99ddef5b80720f&#34;]}&#39;</span>
+</span></span></code></pre></div><p>The response contains the transaction data as a serialized protobuf:</p>
+<pre><code>2024-11-15 10:06:46.297 UTC [chaincodeCmd] chaincodeInvokeOrQuery -&gt; INFO 001 Chaincode invoke successful. result: status:200 payload:&quot;...&quot;
+</code></pre>
+<h2 id="understanding-the-transaction-response">Understanding the Transaction Response</h2>
+<p>The <code>GetTransactionByID</code> function returns a <code>peer.ProcessedTransaction</code> protobuf containing:</p>
+<ul>
+<li><strong>Transaction ID</strong>: Unique 64-character hex identifier</li>
+<li><strong>Channel ID</strong>: Channel where the transaction committed</li>
+<li><strong>Endorsements</strong>: Digital signatures from endorsing peers</li>
+<li><strong>Read Set</strong>: Data items the transaction accessed</li>
+<li><strong>Write Set</strong>: Data items the transaction modified</li>
+<li><strong>Validation Code</strong>: Transaction status (VALID=0, INVALID_ENDORSEMENT_POLICY=12, UNKNOWN=255)</li>
+<li><strong>Timestamp</strong>: Block timestamp when committed</li>
+</ul>
+<h2 id="parse-the-transaction-payload">Parse the Transaction Payload</h2>
+<p>Extract the hex payload and deserialize it programmatically.</p>
+<h3 id="using-go">Using Go</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;encoding/hex&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;fmt&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;github.com/hyperledger/fabric-protos-go/peer&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;google.golang.org/protobuf/proto&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">parseTransaction</span><span class="p">(</span><span class="nx">payloadHex</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="nx">peer</span><span class="p">.</span><span class="nx">ProcessedTransaction</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">payloadBytes</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">hex</span><span class="p">.</span><span class="nf">DecodeString</span><span class="p">(</span><span class="nx">payloadHex</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Errorf</span><span class="p">(</span><span class="s">&#34;decode error: %w&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">tx</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">peer</span><span class="p">.</span><span class="nx">ProcessedTransaction</span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">proto</span><span class="p">.</span><span class="nf">Unmarshal</span><span class="p">(</span><span class="nx">payloadBytes</span><span class="p">,</span><span class="w"> </span><span class="nx">tx</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Errorf</span><span class="p">(</span><span class="s">&#34;unmarshal error: %w&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">tx</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// payloadHex from peer chaincode invoke response</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">tx</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">parseTransaction</span><span class="p">(</span><span class="nx">payloadHex</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Validation Code: %d\n&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">tx</span><span class="p">.</span><span class="nx">ValidationCode</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">tx</span><span class="p">.</span><span class="nx">TransactionEnvelope</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Transaction envelope present&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="using-python">Using Python</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">hyperledger_fabric_protos.peer</span> <span class="kn">import</span> <span class="n">transaction_pb2</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">binascii</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">parse_transaction</span><span class="p">(</span><span class="n">payload_hex</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">payload_bytes</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">unhexlify</span><span class="p">(</span><span class="n">payload_hex</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tx</span> <span class="o">=</span> <span class="n">transaction_pb2</span><span class="o">.</span><span class="n">ProcessedTransaction</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tx</span><span class="o">.</span><span class="n">ParseFromString</span><span class="p">(</span><span class="n">payload_bytes</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">tx</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Parse error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">extract_transaction_details</span><span class="p">(</span><span class="n">tx</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">tx</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Validation Code: </span><span class="si">{</span><span class="n">tx</span><span class="o">.</span><span class="n">validationCode</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">tx</span><span class="o">.</span><span class="n">transactionEnvelope</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Transaction envelope present&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># Process transaction further</span>
+</span></span></code></pre></div><h3 id="using-jq-and-command-line-tools">Using jq and Command Line Tools</h3>
+<p>Extract the payload hex and convert to binary:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">peer chaincode invoke <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -o localhost:7050 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --ordererTLSHostnameOverride orderer.example.com <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --tls <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --cafile <span class="s2">&#34;</span><span class="nv">$ORDERER_CA</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -C mychannel <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -n qscc <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -c <span class="s1">&#39;{&#34;function&#34;:&#34;GetTransactionByID&#34;,&#34;Args&#34;:[&#34;mychannel&#34;,&#34;&lt;TXID&gt;&#34;]}&#39;</span> <span class="p">|</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  jq -r <span class="s1">&#39;.payload&#39;</span> &gt; transaction.hex
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">xxd -r -p &lt; transaction.hex &gt; transaction.bin
+</span></span></code></pre></div><p>You can then inspect the binary file with a protobuf viewer or custom parsing logic.</p>
+<h2 id="query-across-multiple-organizations">Query Across Multiple Organizations</h2>
+<p>To verify transaction data consistency across organizations, query each peer separately:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Query from Org1</span>
+</span></span><span class="line"><span class="cl">setGlobals <span class="m">1</span>
+</span></span><span class="line"><span class="cl">peer chaincode invoke <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -o localhost:7050 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --ordererTLSHostnameOverride orderer.example.com <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --tls <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --cafile <span class="s2">&#34;</span><span class="nv">$ORDERER_CA</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -C mychannel <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -n qscc <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -c <span class="s1">&#39;{&#34;function&#34;:&#34;GetTransactionByID&#34;,&#34;Args&#34;:[&#34;mychannel&#34;,&#34;fa0f757bc278fdf6a32d00975602eb853e23a86a156781588d99ddef5b80720f&#34;]}&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Query from Org2</span>
+</span></span><span class="line"><span class="cl">setGlobals <span class="m">2</span>
+</span></span><span class="line"><span class="cl">peer chaincode invoke <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -o localhost:7050 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --ordererTLSHostnameOverride orderer.example.com <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --tls <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --cafile <span class="s2">&#34;</span><span class="nv">$ORDERER_CA</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -C mychannel <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -n qscc <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -c <span class="s1">&#39;{&#34;function&#34;:&#34;GetTransactionByID&#34;,&#34;Args&#34;:[&#34;mychannel&#34;,&#34;fa0f757bc278fdf6a32d00975602eb853e23a86a156781588d99ddef5b80720f&#34;]}&#39;</span>
+</span></span></code></pre></div><p>Transaction data is identical across all peers since the ledger is immutable. Endorsement signatures may differ depending on which peers endorsed the transaction, but the transaction content remains consistent.</p>
+<h2 id="automated-query-script">Automated Query Script</h2>
+<p>Here’s a production-ready bash script for querying transactions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">TXID</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">CHANNEL</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">2</span><span class="k">:-</span><span class="nv">mychannel</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ORDERER_HOST</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">3</span><span class="k">:-</span><span class="nv">localhost</span><span class="p">:</span><span class="nv">7050</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ORDERER_TLS_OVERRIDE</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">4</span><span class="k">:-</span><span class="nv">orderer</span><span class="p">.example.com</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$TXID</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Usage: </span><span class="nv">$0</span><span class="s2"> &lt;TXID&gt; [CHANNEL] [ORDERER_HOST] [ORDERER_TLS_OVERRIDE]&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Validate TXID format (64-character hex)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> ! <span class="o">[[</span> <span class="s2">&#34;</span><span class="nv">$TXID</span><span class="s2">&#34;</span> <span class="o">=</span>~ ^<span class="o">[</span>0-9a-f<span class="o">]{</span>64<span class="o">}</span>$ <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Error: Invalid transaction ID format. Expected 64-character lowercase hex string.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Got: </span><span class="nv">$TXID</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Querying transaction: </span><span class="nv">$TXID</span><span class="s2"> on channel: </span><span class="nv">$CHANNEL</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">RESPONSE</span><span class="o">=</span><span class="k">$(</span>peer chaincode invoke <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -o <span class="s2">&#34;</span><span class="nv">$ORDERER_HOST</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --ordererTLSHostnameOverride <span class="s2">&#34;</span><span class="nv">$ORDERER_TLS_OVERRIDE</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --tls <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --cafile <span class="s2">&#34;</span><span class="nv">$ORDERER_CA</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -C <span class="s2">&#34;</span><span class="nv">$CHANNEL</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -n qscc <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -c <span class="s2">&#34;{\&#34;function\&#34;:\&#34;GetTransactionByID\&#34;,\&#34;Args\&#34;:[\&#34;</span><span class="nv">$CHANNEL</span><span class="s2">\&#34;,\&#34;</span><span class="nv">$TXID</span><span class="s2">\&#34;]}&#34;</span> 2&gt;<span class="p">&amp;</span>1<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$RESPONSE</span><span class="s2">&#34;</span> <span class="p">|</span> jq <span class="s1">&#39;.&#39;</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$RESPONSE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Error querying transaction:&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$RESPONSE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>Usage:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./query_tx.sh fa0f757bc278fdf6a32d00975602eb853e23a86a156781588d99ddef5b80720f mychannel
+</span></span></code></pre></div><h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<p><strong>Invalid or Non-existent Transaction ID</strong></p>
+<p>The query returns an empty response or “not found” error. Verify the transaction ID is exactly 64 characters of lowercase hexadecimal. Transaction IDs are case-sensitive. Extract the txid from the original invoke command output exactly as displayed.</p>
+<p><strong>Ledger Not Synchronized</strong></p>
+<p>Peers haven’t yet committed the transaction when you query. Always use the <code>--waitForEvent</code> flag during the invoke command to ensure the transaction commits before querying:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">peer chaincode invoke ... --waitForEvent
+</span></span></code></pre></div><p>Alternatively, add a delay before querying:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sleep <span class="m">2</span>
+</span></span><span class="line"><span class="cl">peer chaincode invoke ... <span class="o">(</span>query <span class="nb">command</span><span class="o">)</span>
+</span></span></code></pre></div><p><strong>Empty or Minimal Payload</strong></p>
+<p>Read-only transactions or those with no write set generate minimal payloads. Verify the transaction actually modified ledger state. Check the write set to confirm state changes occurred.</p>
+<p><strong>TLS Certificate Errors</strong></p>
+<p>In production, always enable TLS. Ensure the <code>--cafile</code> path points to the correct orderer CA certificate. Verify the <code>--ordererTLSHostnameOverride</code> matches your orderer’s DNS name:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">ORDERER_CA</span><span class="o">=</span>../organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+</span></span></code></pre></div><p><strong>Large Transaction Payloads</strong></p>
+<p>Transactions with extensive read/write sets produce large serialized outputs. When parsing programmatically, extract only the fields you need rather than deserializing the entire structure to reduce memory usage.</p>
+<p><strong>Validation Code Interpretation</strong></p>
+<p>Parse the <code>validationCode</code> field to diagnose transaction issues:</p>
+<ul>
+<li><code>0 (VALID)</code>: Transaction successfully committed</li>
+<li><code>12 (INVALID_ENDORSEMENT_POLICY)</code>: Endorsement policy not satisfied</li>
+<li><code>13 (INVALID_COMMITMENT_CONFLICT)</code>: Write conflict with another transaction</li>
+<li><code>255 (UNKNOWN)</code>: Unexpected error or ledger inconsistency</li>
+</ul>
+<p>Filter responses by validation code in audit scripts to identify and isolate problematic transactions.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

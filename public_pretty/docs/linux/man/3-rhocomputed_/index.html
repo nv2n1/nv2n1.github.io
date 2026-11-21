@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rhocomputed_(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::SingleAssetOption – Black-Scholes-Merton option.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-rhocomputed_/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>rhocomputed_(3)</h1>
+
+
+
+
+
+<p>QuantLib::SingleAssetOption &#8211; Black-Scholes-Merton option. </p>
+<h2>Synopsis</h2>
+<pre><code>static const Real dVolMultiplier_
+static const Real dRMultiplier_
+Friends</code></pre>
+<p> Inherited by <code>DiscreteGeometricASO</code>.</p>
+<h3>Public Member Functions</h3>
+<p>static const Real dVolMultiplier_</p>
+<p>static const Real dRMultiplier_</p>
+<p>Friends<br />
+ Real <code>underlying_</code> </p>
+<p> <code>PlainVanillaPayoff</code> <code>payoff_</code> </p>
+<p> <code>Spread</code> <code>dividendYield_</code> </p>
+<p> <code>Rate</code> <code>riskFreeRate_</code> </p>
+<p> <code>Time</code> <code>residualTime_</code> </p>
+<p> <code>Volatility</code> <code>volatility_</code> </p>
+<p> bool <code>hasBeenCalculated_</code> </p>
+<p> Real <code>rho_</code> </p>
+<p> Real <code>dividendRho_</code> </p>
+<p> Real <code>vega_</code> </p>
+<p> Real <code>theta_</code> </p>
+<p> bool <code>rhoComputed_</code> </p>
+<p> bool <code>dividendRhoComputed_</code> </p>
+<p> bool <code>vegaComputed_</code> </p>
+<p> bool <code>thetaComputed_</code></p>
+<h3>Static Protected Attributes</h3>
+<pre><code>static const Real dVolMultiplier_
+static const Real dRMultiplier_
+Friends</code></pre>
+<p> class <code>VolatilityFunction</code> </p>
+<p> class <code>DivYieldFunction</code></p>
+<h2>Detailed Description</h2>
+<p>Black-Scholes-Merton option.</p>
+<h2>Member Function Documentation</h2>
+<h3><code>Volatility</code> impliedVolatility (Real targetValue, Real accuracy = 1e-4, Size maxEvaluations = 100, <code>Volatility</code> minVol = 1.0e-7, <code>Volatility</code> maxVol = 4.0) const</h3>
+<p><code>Warning</code></p>
+<dl>
+<dd>Options with a gamma that changes sign have values that are <code>not</code> monotonic in the volatility, e.g binary options. In these cases impliedVolatility can fail and in any case is meaningless. Another possible source of failure is to have a targetValue that is not attainable with any volatility, e.g. a targetValue lower than the intrinsic value in the case of American options.</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

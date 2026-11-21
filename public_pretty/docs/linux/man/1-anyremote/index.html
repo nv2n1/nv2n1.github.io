@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>anyremote(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-anyremote/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>anyremote(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>anyremote - control PC with Bluetooth cell phone</p>
+<h2>SYNOPSIS</h2>
+<p>anyremote [-f file] [-s connect string] [-log] [-a]</p>
+<p> <wbr> <wbr> <wbr> <wbr>[-fe port] <wbr>[-http] <wbr>[-u username] <wbr>[-name SDP service name] <wbr>[-password]</p>
+<p>anyremote -h|-v</p>
+<h2>DESCRIPTION</h2>
+<p>The overall goal of this project is to provide remote control service on Linux through Bluetooth, InfraRed, Wi-Fi or just TCP/IP connection.</p>
+<p>anyRemote supports wide range of modern cell phones like Nokia, SonyEricsson, Motorola and others.</p>
+<p>It was developed as thin &quot;communication&quot; layer between Bluetooth (IR, Wi-Fi)-capabled phone and Linux, and in theory could be configured to manage almost any software.</p>
+<p>anyRemote is console application, but in addition there are GUI front-ends for Gnome and KDE.</p>
+<h2>OPTIONS</h2>
+<h3>-h</h3>
+<p>print short help and exit</p>
+<h3>-v</h3>
+<p>print version number and exit</p>
+<h3>-f /path/to/configuration/file</h3>
+<p>By default anyremote will try to find and use $HOME/.anyremote.cfg, then ./.anyremote.cfg. It is possible to specify configuration file directly with -f option.</p>
+<h3>-s connect string</h3>
+<p>where connect string can be one of:</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>bluetooth:<em>channel</em> (Server mode - bluetooth connection)</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>socket:<em>port</em><tt> <wbr> <wbr> <wbr></tt> (Server mode - TCP/IP connection)</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>local:/dev/ircommX (Server mode - IR connection)</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>/dev/rfcomm#<tt> <wbr> <wbr> <wbr> <wbr></tt> (AT mode - bluetooth connection)</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>/dev/ttyACM#<tt> <wbr> <wbr> <wbr> <wbr></tt> (AT mode - cable connection)</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>/dev/ircomm#<tt> <wbr> <wbr> <wbr> <wbr></tt> (AT mode - IR connection)</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>ilirc:<em>AF_LOCAL socket file</em> (use with inputlircd)</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>stdin</p>
+<h3>-log</h3>
+<p>print verbose logging information to $HOME/.anyRemote/anyremote.log</p>
+<h3>-a</h3>
+<p>reconnect automatically in case of connection failure, used only in AT-mode</p>
+<h3>-fe _port_</h3>
+<p>Work as backend for GUI frontend. Use specified port to connect to frontend.</p>
+<h3>-http</h3>
+<p>Tune work with anyremote2html</p>
+<h3>-name SDP_service_name</h3>
+<p>if bluetooth connection is used, allows to specify SDP service name.</p>
+<p>Default value for SDP service name is &quot;anyRemote&quot;</p>
+<h3>-password</h3>
+<p>If this option is specified, then anyRemote will ask java client for password.</p>
+<p>Password phrase should be stored in $HOME/.anyRemote/password file in plain text.</p>
+<h3>-u|--user _username_</h3>
+<p>if started from root, allows to set effective user ID to specified user</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt></p>
+<h2>AUTHORS</h2>
+<p>Mikhail Fedotov <i>anyremote [at] mail.ru</i></p>
+<p><i><a rel="nofollow" HREF="http://anyremote.sf.net"><a href="http://anyremote.sf.net">http://anyremote.sf.net</a></a></i></p>
+<h2>BUGS</h2>
+<p>If you find any bugs, please report to <i>anyremote [at] mail.ru</i></p>
+<h2>LICENCE</h2>
+<p>This is free software. You may redistribute copies of it under the terms of the GNU General Public License <i><a rel="nofollow" HREF="http://www.gnu.org/licenses/gpl.html"><a href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a></a></i>. There is NO WARRANTY, to the extent permitted by law.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

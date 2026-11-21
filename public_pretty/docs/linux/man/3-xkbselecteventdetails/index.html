@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbselecteventdetails(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbSelectEventDetails – Selects or deselects for a specific Xkb event and optionally places conditions on when events of that type are reported to your client">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbselecteventdetails/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbselecteventdetails(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XkbSelectEventDetails &#8211; Selects or deselects for a specific Xkb event and optionally places conditions on when events of that type are reported to your client </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Bool XkbSelectEventDetails</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>event_type</i><code>,</code> <code>unsigned long int </code><i>bits_to_change</i><code>,</code> <code>unsigned long int </code><i>values_for_bits</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>
+</dd><dd>connection to the X server</dd>
+<dt><i>device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>event_type</i></dt>
+<dd>Xkb event type of interest</dd>
+<dt><i>bits_to_change</i></dt>
+<dd>determines events to be selected / deselected</dd>
+<dt><i>values_for_bits</i></dt>
+<dd>1=&gt;select, 0-&gt;deselect; for events in bits_to_change</dd></dl>
+<h2>Description</h2>
+<p>Xkb events are selected using an event mask, much the same as normal core X events are selected. However, unlike selecting core X events, where you must specify the selection status (on or off) for all possible event types whenever you wish to change the selection criteria for any one event, Xkb allows you to restrict the specification to only the event types you wish to change. This means that you do not need to remember the event selection values for all possible types each time you want to change one of them. </p>
+<p> Many Xkb event types are generated under several different circumstances. When selecting to receive an Xkb event, you may specify either that you want it delivered under all circumstances, or that you want it delivered only for a subset of the possible circumstances.<br />
+&nbsp; You can also deselect an event type that was previously selected for, using the same granularity. </p>
+<p> Xkb provides two functions to select and deselect delivery of Xkb events. <i>XkbSelectEvents </i> allows you to select or deselect delivery of more than one Xkb event type at once. Events selected using <i>XkbSelectEvents </i> are delivered to your program under all circumstances that generate the events. To restrict delivery of an event to a subset of the conditions under which it occurs, use <i>XkbSelectEventDetails. XkbSelectEventDetails </i> only allows you to change the selection conditions for a single event at a time, but it provides a means of fine-tuning the conditions under which the event is delivered. </p>
+<p> To select or deselect for a specific Xkb event and optionally place conditions on when events of that type are reported to your client, use <i>XkbSelectEventDetails. </i> This allows you to exercise a finer granularity of control over delivery of Xkb events with <i>XkbSelectEvents.</i> </p>
+<p> While <i>XkbSelectEvents </i> allows multiple events to be selected, <i>XkbSelectEventDetails </i> changes the selection criteria for a single type of Xkb event. The interpretation of the <i>bits_to_change </i> and <i>values_for_bits </i> masks depends on the event type in question.<br />
+&nbsp; <i>XkbSelectEventDetails </i> changes the Xkb event selection mask for the keyboard specified by <i>device_spec </i> and the Xkb event specified by <i>event_type. </i> To turn on event selection for an event detail, set the bit for the detail in the <i>bits_to_change </i> parameter and set the corresponding bit in the <i>values_for_bits </i> parameter. To turn off event detail selection for a detail, set the bit for the detail in the <i>bits_to_change </i> parameter and do not set the corresponding bit in the <i>values_for_bits </i> parameter. </p>
+<p> If an invalid event type is specified, a BadValue protocol error results. If a bit is not set in the <i>bits_to_change </i> parameter, but the corresponding bit is set in the <i>values_for_bits </i> parameter, a BadMatch protocol error results. If an undefined bit is set in either the <i>bits_to_change </i> or the <i>values_for_bits </i> parameter, a BadValue protocol error results. </p>
+<p> For each type of Xkb event, the legal event details that you can specify in the <i>XkbSelectEventDetails </i> request are listed in the chapters that describe each event in detail.</p>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><font SIZE="-1">BadMatch</font></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd>
+<dt><font SIZE="-1">BadValue</font></dt>
+<dd>An argument is out of range</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xkbselectevents/">XkbSelectEvents</a></code>(3), <code>XkbUseCoreKbd</code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

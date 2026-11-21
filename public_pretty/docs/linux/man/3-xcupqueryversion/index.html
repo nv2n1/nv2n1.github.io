@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xcupqueryversion(3) · Linux Manual Pages</title>
+<meta name="description" content="XcupQueryVersion – Returns TOG-CUP protocol version supported by the X server">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xcupqueryversion/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xcupqueryversion(3)</h1>
+
+
+
+
+
+<p>XcupQueryVersion &#8211; Returns TOG-CUP protocol version supported by the X server </p>
+<h2>Synopsis</h2>
+<pre><code>cc</code> [ <i>flag</i> ... ] <i>file</i> ... -<code>lXext</code> [ <i>library</i> ... ]
+#include &lt;X11/extensions/Xcup.h&gt;
+<dl COMPACT><dt></dt><dd>Status <code>XcupQueryVersion</code>(Display *<i>display</i>,
+int *<i>major_version_return</i>, int *<i>minor_version_return</i>);
+<br>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dd></dl></pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server</dd>
+<dt><i>major_version_return</i></dt>
+<dd>Returns the major version supported by the server</dd>
+<dt><i>minor_version_return</i></dt>
+<dd>Returns the minor version supported by the server</dd></dl>
+<h2>Description</h2>
+<p><i>XcupQueryVersion</i> sets <i>major_version_return</i> and <i>minor_version_return</i> to the major and minor TOG-CUP protocol version supported by the server. If the TOG-CUP library is compatible with the version returned by the server, it returns nonzero. If the server does not support the TOG-CUP extension, or if there was an error during communications with the server, or if the server and library protocol versions are incompatible, it returns zero. No other Xcup functions may be called before this function. If a client violates this rule, the effects of all subsequent Xcup calls that it makes are undefined. </p>
+<p> To get the list of reserved colormap entries, use <i>XcupGetReservedColormapEntries.</i> </p>
+<p> To allocate one or more read-only color cells with RGB values, use <i>XcupStoreColors.</i></p>
+<h2>See Also</h2>
+<p><code>XcupGetReservedColormapEntries</code>(3Xext), <code>XcupStoreColors</code>(3Xext),<br />
+ <i>Colormap Utilization Policy and Extension</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

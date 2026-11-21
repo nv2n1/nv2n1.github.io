@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>beesu(1) · Linux Manual Pages</title>
+<meta name="description" content="beesu – A wrapper for &#34;su&#34; that provides a graphical interface in Fedora.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-beesu/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>beesu(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> beesu &#8211; A wrapper for &quot;su&quot; that provides a graphical interface in Fedora.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>beesu [-P] [-v] [-l] [-m] [-f] [-s] [-c]</code> <i>COMMAND</i> <i>ARGs</i> <code>&#8230;</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>beesu</code> is a wrapper around <code><a href="/docs/linux/man/1-su/">su</a></code>(1) and works with <code><a href="/docs/linux/man/8-consolehelper/">consolehelper</a></code>(8) in Fedora to provide a graphical interface like gksu. </p>
+<p> <code>beesu</code> is dedicated to all the friends of honey bees!</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>&#8211;version</dt>
+<dd> display the software version and exit</dd>
+<dt>&#8211;print-conf</dt>
+<dd> display the configuration file contents and exit</dd>
+<dt>-P</dt>
+<dd> don&#8217;t join ARGs together</dd>
+<dt>-v</dt>
+<dd> verbose output</dd>
+<dt>-, -l, &#8211;login</dt>
+<dd> make the shell a login shell</dd>
+<dt>-c COMMAND</dt>
+<dd> pass a single COMMAND to the shell with -c</dd>
+<dt>-f, &#8211;fast</dt>
+<dd> pass -f to the shell (for csh or tcsh)</dd>
+<dt>-m, &#8211;preserve-environment</dt>
+<dd> do not reset environment variables</dd>
+<dt>-s SHELL</dt>
+<dd> run SHELL </dd>
+</dl>
+<h2>EXAMPLES</h2>
+<p> <code>beesu &#8211; nautilus</code> </p>
+<p> To start <code>nautilus</code> as root. </p>
+<p> <code>beesu -l -P whoami test</code> </p>
+<p> That will start <code>whoami</code> impersonating the user <code>test</code> (note that the root&#8217;s password is asked, and not test&#8217;s). Due to the <code>-P</code> switch, all parameters are directly passed to <code><a href="/docs/linux/man/1-su/">su</a></code>(1). Therefore, the command to execute must be single or double quoted <code>together</code> <code>with</code> <code>its</code> <code>arguments</code> (but in this case there isn&#8217;t anything to quote). </p>
+<h2>FILES</h2>
+<p> <i>/etc/beesu.conf</i></p>
+<dl>
+<dt>
+</dt><dd> This is the configuration file for beesu. This file allows you to restrict the usage of beesu to run only with a specified list of commands. This may prevent you to run commands that, because of your mistakes, can damage your system.</dd></dl>
+<h2>BUGS</h2>
+<p> The command name could be any command. Be careful to not type something that could wipe away your system.</p>
+<h2>AUTHOR</h2>
+<p> Bee &lt;<a rel="nofollow" href="http://honeybeenet.altervista.org">http://honeybeenet.altervista.org</a>&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-su/">su</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

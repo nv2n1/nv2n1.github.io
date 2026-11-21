@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Improving SSH Performance with Faster Ciphers - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/improving-sshscp-performance-by-choosing-ciphers/">
+  <meta name="description" content="SSH performance is constrained by cipher choice, especially for large file transfers over high-bandwidth links where CPU becomes the bottleneck. Selecting the …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Improving SSH Performance with Faster Ciphers">
+  <meta property="og:url" content="https://www.systutorials.com/improving-sshscp-performance-by-choosing-ciphers/">
+  <meta property="og:description" content="SSH performance is constrained by cipher choice, especially for large file transfers over high-bandwidth links where CPU becomes the bottleneck. Selecting the …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>Improving SSH Performance with Faster Ciphers</h1>
+        <time class="post-date" datetime="2014-04-24T13:39:43Z">April 24, 2014</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>SSH performance is constrained by cipher choice, especially for large file transfers over high-bandwidth links where CPU becomes the bottleneck. Selecting the right cipher, key exchange algorithm, and compression settings can yield substantial throughput improvements.</p>
+<h2 id="current-cipher-landscape">Current Cipher Landscape</h2>
+<p>Modern OpenSSH (7.4+) has deprecated or removed weak ciphers. Here’s what’s viable today:</p>
+<p><strong>Secure and performant:</strong></p>
+<ul>
+<li><code>chacha20-poly1305@openssh.com</code> — Best choice for most workloads. Software-based, no hardware dependency, ~400-600 MB/s on modern CPUs.</li>
+<li><code>aes256-gcm@openssh.com</code> / <code>aes128-gcm@openssh.com</code> — Hardware-accelerated via AES-NI when available, ~300-500 MB/s.</li>
+<li><code>aes256-ctr</code> / <code>aes128-ctr</code> — Fallback for systems without AES-NI support, slower but universally compatible.</li>
+</ul>
+<p><strong>Avoid entirely:</strong></p>
+<ul>
+<li><code>arcfour</code>, <code>rc4</code> — Cryptographically broken; removed from OpenSSH 7.4+.</li>
+<li><code>blowfish-cbc</code> — 64-bit block size, practical security weaknesses.</li>
+<li><code>3des</code> — Obsolete, too slow.</li>
+</ul>
+<h2 id="check-your-hardware">Check Your Hardware</h2>
+<p>Before configuring, verify AES-NI support on your CPU:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep aes /proc/cpuinfo
+</span></span></code></pre></div><p>If <code>aes</code> appears in the output, your CPU supports AES-NI, making GCM ciphers fast. On systems without it, chacha20-poly1305 or AES-CTR are better choices.</p>
+<h2 id="client-configuration">Client Configuration</h2>
+<p>Edit <code>~/.ssh/config</code>:</p>
+<pre><code>Host *
+    Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr
+    KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group16-sha512
+    HostKeyAlgorithms ecdsa-sha2-nistp256,rsa-sha2-512,rsa-sha2-256
+    Compression no
+</code></pre>
+<p>Modern key exchange and host key algorithms are equally important. Avoid <code>diffie-hellman-group1</code>, <code>group14</code>, and legacy RSA signatures.</p>
+<h2 id="server-configuration">Server Configuration</h2>
+<p>Edit <code>/etc/ssh/sshd_config</code>:</p>
+<pre><code>Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr
+KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group16-sha512
+HostKeyAlgorithms ecdsa-sha2-nistp256,rsa-sha2-512,rsa-sha2-256
+Compression no
+</code></pre>
+<p>Then reload SSH:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl reload sshd
+</span></span></code></pre></div><p>Verify the reload succeeds without breaking existing connections:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sshd -t <span class="o">&amp;&amp;</span> sudo systemctl reload sshd
+</span></span></code></pre></div><h2 id="compression-tuning">Compression Tuning</h2>
+<p>Compression helps on slow WAN links but wastes CPU on fast LANs. General rules:</p>
+<ul>
+<li><strong>Disable for LAN/datacenter transfers</strong> — Disk and network I/O will be the bottleneck, not encryption.</li>
+<li><strong>Enable selectively for slow links</strong> — Useful for high-latency or bandwidth-constrained connections.</li>
+</ul>
+<p>If enabling compression, set <code>CompressionLevel 6</code> for a reasonable compression-ratio-to-CPU tradeoff. Levels 7-9 add diminishing returns in compression with significant CPU cost.</p>
+<p>Host-specific tuning in <code>~/.ssh/config</code>:</p>
+<pre><code># Fast local cluster
+Host 10.0.*
+    Compression no
+    Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com
+
+# Slow remote link
+Host slow-remote.example.com
+    Compression yes
+    CompressionLevel 6
+</code></pre>
+<h2 id="verify-cipher-negotiation">Verify Cipher Negotiation</h2>
+<p>Check what cipher is actually negotiated:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -v user@host 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> grep <span class="s2">&#34;encrypt ciphers:&#34;</span>
+</span></span></code></pre></div><p>Output should show:</p>
+<pre><code>debug1: kex: encrypt ciphers: chacha20-poly1305@openssh.com
+</code></pre>
+<p>If an older cipher appears, check that neither client nor server config is forcing a legacy cipher, and that both have compatible algorithm lists.</p>
+<h2 id="benchmark-your-setup">Benchmark Your Setup</h2>
+<p>Test real-world performance with a large file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Compression disabled</span>
+</span></span><span class="line"><span class="cl"><span class="nb">time</span> scp largefile.bin user@host:/tmp/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># With rsync (allows resume and skipping unchanged files)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">time</span> rsync -avz --stats largefile.bin user@host:/tmp/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># SSH with verbose timing</span>
+</span></span><span class="line"><span class="cl">ssh user@host <span class="s2">&#34;dd if=/dev/zero bs=1M count=1000&#34;</span> <span class="p">|</span> md5sum
+</span></span></code></pre></div><p>On modern hardware with chacha20-poly1305 or AES-GCM, expect 300+ MB/s over gigabit links. Disk I/O, not encryption, typically becomes the limiting factor.</p>
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+<p><strong>Mismatched client and server ciphers</strong> — If the server doesn’t list a cipher the client prefers, SSH falls back to the next compatible option. Always ensure both sides have overlapping algorithm lists.</p>
+<p><strong>Compression enabled by default for all hosts</strong> — Legacy configurations sometimes enable global compression. Disable it and enable only where needed.</p>
+<p><strong>Using RSA key exchange</strong> — Older systems may default to <code>diffie-hellman-group14-sha1</code> or worse. Explicitly set <code>KexAlgorithms</code> to enforce modern alternatives.</p>
+<p><strong>ED25519 host keys</strong> — Faster and stronger than RSA for authentication. If your system supports it (OpenSSH 6.3+), consider switching:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ssh-keygen -A
+</span></span></code></pre></div><p>This generates ED25519 and other key types. Ensure <code>HostKeyAlgorithms</code> includes <code>ssh-ed25519</code> if available.</p>
+<h2 id="summary">Summary</h2>
+<p>Start with <code>chacha20-poly1305@openssh.com</code> as your primary cipher paired with modern key exchange algorithms. Disable compression globally and enable it only for high-latency links. Test in your environment—network conditions, hardware capabilities, and file sizes all affect real-world throughput. On current hardware, you should easily saturate gigabit links with encryption overhead below 10%.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

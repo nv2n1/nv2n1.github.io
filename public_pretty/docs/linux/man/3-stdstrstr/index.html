@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdstrstr(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdstrstr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdstrstr(3)</h1>
+
+
+
+
+
+<p>std::strstr - std::strstr</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstring&gt;
+    const char *strstr(const char *str, const char *target);
+char *strstr(char *str, const char *target);</code></pre> 
+<p>Finds the first occurrence of the byte string target in the byte string pointed to by str. The terminating null characters are not compared.</p>
+<h2>Parameters</h2>
+<p>str - pointer to the null-terminated byte string to examine
+target - pointer to the null-terminated byte string to search for</p>
+<h2>Return value</h2>
+<p>Pointer to the first character of the found substring in str, or NULL if no such character is found. If target points to an empty string, str is returned.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+int main()
+{
+const char *str = &quot;Try not. Do, or do not. There is no try.&quot;;
+const char *target = &quot;not&quot;;
+const char *result = str;
+while ((result = std::strstr(result, target)) != NULL) {
+std::cout &lt;&lt; &quot;Found &lsquo;&quot; &lt;&lt; target
+&lt;&lt; &quot;&rsquo; starting at &lsquo;&quot; &lt;&lt; result &lt;&lt; &quot;&rsquo;\n&quot;;
+// Increment result, otherwise we&rsquo;ll find target at the same location
+++result;
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Found &rsquo;not&rsquo; starting at &rsquo;not. Do, or do not. There is no try.&rsquo;
+ <wbr> Found &rsquo;not&rsquo; starting at &rsquo;not. There is no try.&rsquo;</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> find characters in the string
+find <i>(public member function of std::basic_string&lt;CharT,Traits,Allocator&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> finds the first occurrence of a wide string within another wide string
+wcsstr <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> finds the first occurrence of a character
+strchr <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> finds the last occurrence of a character
+strrchr <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

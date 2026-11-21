@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdthreadget_id(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdthreadget_id/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdthreadget_id(3)</h1>
+
+
+
+
+
+<p>std::thread::get_id - std::thread::get_id</p>
+<h2>Synopsis</h2>
+<p>std::thread::id get_id() const noexcept; <i>(since C++11)</i>
+Returns a value of std::thread::id identifying the thread associated with *this.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>A value of type std::thread::id identifying the thread associated with *this. If there is no thread associated, default constructed std::thread::id is returned.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;chrono&gt;
+void foo()
+{
+std::this_thread::sleep_for(std::chrono::seconds(1));
+}
+int main()
+{
+std::thread t1(foo);
+std::thread::id t1_id = t1.get_id();
+std::thread t2(foo);
+std::thread::id t2_id = t2.get_id();
+std::cout &lt;&lt; &quot;t1&rsquo;s id: &quot; &lt;&lt; t1_id &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;t2&rsquo;s id: &quot; &lt;&lt; t2_id &lt;&lt; &lsquo;\n&rsquo;;
+t1.join();
+t2.join();
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> t1&rsquo;s id: 0x35a7210f
+ <wbr> t2&rsquo;s id: 0x35a311c4</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> represents the id of a thread
+id <i>(public member class)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks whether the thread is joinable, i.e. potentially running in parallel context
+joinable <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

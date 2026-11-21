@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gdalmanage(1) · Linux Manual Pages</title>
+<meta name="description" content="gdalmanage – gdalmanage Identify, delete, rename and copy raster data files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gdalmanage/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gdalmanage(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> gdalmanage &#8211; gdalmanage Identify, delete, rename and copy raster data files </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+Usage : gdalmanage mode[-r][-u][-f format] datasetname[newdatasetname]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The gdalmanage program can perform various operations on raster data files, depending on the chosen <i>mode</i>. This includes identifying raster data types and deleting, renaming or copying the files. </p>
+<dl>
+<dt><i>mode</i>:</dt>
+<dd> Mode of operation</dd>
+<dt><code>identify</code> <i>datasetname</i>:</dt>
+<dd> List data format of file.</dd>
+<dt><code>copy</code> <i>datasetname newdatasetname</i>:</dt>
+<dd> Create a copy of the raster file with a new name.</dd>
+<dt><code>rename</code> <i>datasetname newdatasetname</i>:</dt>
+<dd> Change the name of the raster file.</dd>
+<dt><code>delete</code> <i>datasetname</i>:</dt>
+<dd> Delete raster file.</dd></dl>
+<dl>
+<dt><code>-r</code>:</dt>
+<dd> Recursively scan files/folders for raster files.</dd>
+<dt><code>-u</code>:</dt>
+<dd> Report failures if file type is unidentified.</dd>
+<dt><code>-f</code> <i>format</i>:</dt>
+<dd> Specify format of raster file if unknown by the application. Uses short data format name (e.g. <i>GTiff</i>).</dd></dl>
+<dl>
+<dt><i>datasetname</i>:</dt>
+<dd> Raster file to operate on.</dd>
+<dt><i>newdatasetname</i>:</dt>
+<dd> For copy and rename modes, you provide a <i>source</i> filename and a <i>target</i> filename, just like copy and move commands in an operating system.</dd></dl>
+<h2>EXAMPLES</h2>
+<h3>Using identify mode</h3>
+<p> Report the data format of the raster file by using the <i>identify</i> mode and specifying a data file name: </p>
+<pre>
+$ gdalmanage identify NE1_50M_SR_W.tif
+NE1_50M_SR_W.tif: GTiff
+</pre>
+<p> Recursive mode will scan subfolders and report the data format: </p>
+<pre>
+$ gdalmanage identify -r 50m_raster/
+NE1_50M_SR_W/ne1_50m.jpg: JPEG
+NE1_50M_SR_W/ne1_50m.png: PNG
+NE1_50M_SR_W/ne1_50m_20pct.tif: GTiff
+NE1_50M_SR_W/ne1_50m_band1.tif: GTiff
+NE1_50M_SR_W/ne1_50m_print.png: PNG
+NE1_50M_SR_W/NE1_50M_SR_W.aux: HFA
+NE1_50M_SR_W/NE1_50M_SR_W.tif: GTiff
+NE1_50M_SR_W/ne1_50m_sub.tif: GTiff
+NE1_50M_SR_W/ne1_50m_sub2.tif: GTiff.fi
+</pre>
+<h3>Using copy mode</h3>
+<p> Copy the raster data: </p>
+<pre>
+$ gdalmanage copy NE1_50M_SR_W.tif ne1_copy.tif
+</pre>
+<h3>Using rename mode</h3>
+<p> Rename raster data: </p>
+<pre>
+$ gdalmanage rename NE1_50M_SR_W.tif ne1_rename.tif
+</pre>
+<h3>Using delete mode</h3>
+<p> Delete the raster data: </p>
+<pre>
+gdalmanage delete NE1_50M_SR_W.tif
+</pre>
+<h2>AUTHORS</h2>
+<p> Tyler Mitchell spatialguru [at] shaw.ca </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

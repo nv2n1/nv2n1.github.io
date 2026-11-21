@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latency Numbers Every Systems Engineer Should Know - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/software-engineering-advice-from-building-large-scale-distributed-systems-by-jeff-dean/">
+  <meta name="description" content="Jeff Dean’s foundational work on large-scale distributed systems at Google established performance metrics that remain essential for making sound architectural …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Latency Numbers Every Systems Engineer Should Know">
+  <meta property="og:url" content="https://www.systutorials.com/software-engineering-advice-from-building-large-scale-distributed-systems-by-jeff-dean/">
+  <meta property="og:description" content="Jeff Dean’s foundational work on large-scale distributed systems at Google established performance metrics that remain essential for making sound architectural …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/distributed-systems-academy/">Distributed Systems Academy</a>
+           &rsaquo; <a href="/advanced-systems-path/">Advanced Systems &amp; Architecture Path</a>
+          &rsaquo; <a href="/category/engineering-lessons/">Engineering Lessons</a>
+        </nav>
+        
+        <h1>Latency Numbers Every Systems Engineer Should Know</h1>
+        <time class="post-date" datetime="2013-07-19T05:47:44Z">July 19, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Jeff Dean’s foundational work on large-scale distributed systems at Google established performance metrics that remain essential for making sound architectural decisions. While absolute numbers shift with hardware advances, the relative orders of magnitude have proven remarkably stable.</p>
+<p>These latency figures represent the raw cost of fundamental operations. Understanding them prevents decisions that seem reasonable in isolation but create cascading problems at scale.</p>
+<h2 id="current-latency-hierarchy">Current Latency Hierarchy</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Operation</th>
+					<th>Latency</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>L1 cache reference</td>
+					<td>0.5 ns</td>
+			</tr>
+			<tr>
+					<td>Branch mispredict</td>
+					<td>5 ns</td>
+			</tr>
+			<tr>
+					<td>L2 cache reference</td>
+					<td>7 ns</td>
+			</tr>
+			<tr>
+					<td>Mutex lock/unlock</td>
+					<td>100 ns</td>
+			</tr>
+			<tr>
+					<td>Main memory reference</td>
+					<td>100 ns</td>
+			</tr>
+			<tr>
+					<td>Compress 1K bytes with Zstd</td>
+					<td>1,000 ns</td>
+			</tr>
+			<tr>
+					<td>Send 2K bytes over 1 Gbps network</td>
+					<td>20,000 ns</td>
+			</tr>
+			<tr>
+					<td>Read 1 MB sequentially from memory</td>
+					<td>250,000 ns</td>
+			</tr>
+			<tr>
+					<td>Round trip within same datacenter</td>
+					<td>500,000 ns</td>
+			</tr>
+			<tr>
+					<td>Read 1 MB sequentially from SSD</td>
+					<td>1,000,000 ns</td>
+			</tr>
+			<tr>
+					<td>Disk seek (rotational)</td>
+					<td>10,000,000 ns</td>
+			</tr>
+			<tr>
+					<td>Read 1 MB sequentially from disk</td>
+					<td>30,000,000 ns</td>
+			</tr>
+			<tr>
+					<td>Read 1 MB sequentially over network</td>
+					<td>10,000,000 ns</td>
+			</tr>
+			<tr>
+					<td>Intercontinental round trip</td>
+					<td>150,000,000 ns</td>
+			</tr>
+	</tbody>
+</table>
+<p>Modern hardware has shifted absolute numbers—compression algorithms like Zstd outpace older options, and SSDs have become the standard storage tier. But the relative relationships between layers remain your actual guide for design decisions.</p>
+<h2 id="why-these-relationships-matter">Why These Relationships Matter</h2>
+<p><strong>Cache locality is non-negotiable.</strong> The 200x difference between L1 and main memory access means algorithmic efficiency measured in CPU cycles translates directly to wall-clock performance. A cache miss in a tight loop will outweigh algorithmic cleverness in most real workloads. This is why memory-efficient data structures and access patterns matter more than theoretical algorithm complexity at the CPU level.</p>
+<p><strong>Network I/O dominates system design.</strong> Once you cross the datacenter boundary, a single request costs as much as millions of CPU operations. This fundamental asymmetry drives distributed systems architecture entirely—batching, caching, connection pooling, and replication exist primarily to minimize network round trips. Even within a datacenter, that 500 microsecond round trip multiplies quickly. At 10,000 requests per second, you’re consuming 5 seconds of latency per second just on network overhead.</p>
+<p><strong>Disk seeks remain catastrophic.</strong> A rotational disk handles roughly 100 random I/O operations per second. This hasn’t changed materially in decades, which explains:</p>
+<ul>
+<li>Sequential disk I/O is 3000x faster than random I/O</li>
+<li>SSDs (1-2 ms latency) are now standard for any serious workload</li>
+<li>Write-ahead logs are sequential by design</li>
+<li>Database indices exist to eliminate seeks</li>
+</ul>
+<p><strong>Memory bandwidth is a real constraint.</strong> Reading 1 MB from memory takes 250 microseconds. This limits streaming throughput and explains why compression trades CPU cycles for reduced bandwidth—almost always a winning trade. You can compress data faster than you can move uncompressed data across the network or from slower storage.</p>
+<h2 id="practical-application">Practical Application</h2>
+<p>When designing a system, work through this decision tree:</p>
+<ol>
+<li>
+<p><strong>Can you avoid the operation?</strong> Caching, memoization, and prefetching turn expensive operations into cache hits. A value already in memory beats every alternative.</p>
+</li>
+<li>
+<p><strong>Can you batch the operation?</strong> Amortizing fixed overhead across multiple requests reduces per-request cost. Network requests, disk operations, and lock acquisitions all benefit from batching.</p>
+</li>
+<li>
+<p><strong>What’s the cheapest alternative?</strong> A local disk read (30ms) beats a network request to disk (40ms), but both beat doing it poorly in CPU with repeated work.</p>
+</li>
+</ol>
+<h2 id="compound-effects-at-scale">Compound Effects at Scale</h2>
+<p>These numbers compound dramatically. A service handling 100,000 requests per second that adds 100 microseconds of unnecessary latency through poor I/O is consuming 10 seconds of system resources per second. Across a fleet of 50 machines, that’s equivalent to idling 8+ additional servers doing nothing but burning through that one mistake.</p>
+<p>A single extra database round trip per request in a 1 million request-per-second system becomes 1,000 seconds of round-trip time happening simultaneously—enough latency overhead to require significant additional infrastructure.</p>
+<h2 id="modern-context-2026">Modern Context (2026)</h2>
+<p>The hierarchy remains stable, but implementation details have shifted:</p>
+<ul>
+<li><strong>NVMe SSDs</strong> are the baseline storage tier; rotational disks survive mainly in archive workloads and cold storage.</li>
+<li><strong>Compressed data formats</strong> (Zstd, LZ4) are standard in transit. Uncompressed network payloads are wasteful unless you have specific reasons to avoid CPU overhead.</li>
+<li><strong>Kernel bypass networking</strong> (DPDK, io_uring) has reduced some network latency for specialized workloads, but most systems remain bound by the hierarchy above.</li>
+<li><strong>Memory is cheaper</strong>, so trading memory for reduced I/O remains a sound default.</li>
+</ul>
+<p>Build systems around this hierarchy. The absolute values will shift as hardware evolves, but the relative relationships are your north star for sound architectural choices.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

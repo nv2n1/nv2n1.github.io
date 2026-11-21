@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quodlibet(1) · Linux Manual Pages</title>
+<meta name="description" content="quodlibet – audio library manager and player">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-quodlibet/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>quodlibet(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> quodlibet &#8211; audio library manager and player</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+quodlibet[--print - playing | control] exfalso[directory]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> Quod Libet is a music management program. It provides several different ways to view your audio library, as well as support for Internet radio and audio feeds. It has extremely flexible metadata tag editing and searching capabilities. </p>
+<p> This manual page is only a short reference for Quod Libet. Complete documentation is available at <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide">http://code.google.com/p/quodlibet/wiki/Guide</a></i>.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;enqueue filename|query</code></dt>
+<dd> Enqueue a filename or query results</dd>
+<dt><code>&#8211;filter tag=value</code></dt>
+<dd> Filter on a tag value</dd>
+<dt><code>&#8211;focus</code></dt>
+<dd> Focus the running player</dd>
+<dt><code>&#8211;hide-window</code></dt>
+<dd> Hide main window</dd>
+<dt><code>&#8211;next</code></dt>
+<dd> Jump to next song</dd>
+<dt><code>&#8211;list-browsers</code></dt>
+<dd> List available browsers</dd>
+<dt><code>&#8211;open-browser=</code><i>BrowserName</i></dt>
+<dd> Open a new browser</dd>
+<dt><code>&#8211;order=inorder|shuffle|weighted|onesong|toggle</code></dt>
+<dd> Set or toggle the playback order</dd>
+<dt><code>&#8211;pause</code></dt>
+<dd> Pause playback</dd>
+<dt><code>&#8211;play</code></dt>
+<dd> Start playback</dd>
+<dt><code>&#8211;play-file=</code><i>filename</i></dt>
+<dd> Play a file</dd>
+<dt><code>&#8211;play-pause</code></dt>
+<dd> Toggle play/pause mode</dd>
+<dt><code>&#8211;previous</code></dt>
+<dd> Jump to previous song or restart if near the beginning</dd>
+<dt><code>&#8211;force-previous</code></dt>
+<dd> Jump to previous song</dd>
+<dt><code>&#8211;print-playlist</code></dt>
+<dd> Print the current playlist</dd>
+<dt><code>&#8211;print-queue</code></dt>
+<dd> Print the contents of the queue</dd>
+<dt><code>&#8211;print-playing</code></dt>
+<dd> Print out information about the currently playing song. You may provide in a string like the kind described in the RENAMING FILES section below.</dd>
+<dt><code>&#8211;query=</code><i>search-string</i></dt>
+<dd> Search your audio library</dd>
+<dt><code>&#8211;quit</code></dt>
+<dd> Exit Quod Libet</dd>
+<dt><code>&#8211;random=</code><i>tag</i></dt>
+<dd> Filter on a random value</dd>
+<dt><code>&#8211;repeat=off|on|t</code></dt>
+<dd> Turn repeat off, on, or toggle</dd>
+<dt><code>&#8211;seek=[+|-][HH:]MM:SS</code></dt>
+<dd> Seek within the playing song</dd>
+<dt><code>&#8211;set-browser=</code><i>BrowserName</i></dt>
+<dd> Set the current browser</dd>
+<dt><code>&#8211;set-rating=0.0..1.0</code></dt>
+<dd> Rate the playing song</dd>
+<dt><code>&#8211;show-window</code></dt>
+<dd> Hide main window</dd>
+<dt><code>&#8211;start-playing</code></dt>
+<dd> Begin playing immediately</dd>
+<dt><code>&#8211;status</code></dt>
+<dd> Print playing status</dd>
+<dt><code>&#8211;toggle-window</code></dt>
+<dd> Toggle main window visibility</dd>
+<dt><code>&#8211;unfilter</code></dt>
+<dd> Remove active browser filters</dd>
+<dt><code>&#8211;unqueue=filename|query</code></dt>
+<dd> Unqueue a file or query</dd>
+<dt><code>&#8211;volume=(+|-|)0..100</code></dt>
+<dd> Set the volume</dd></dl>
+<h2>ALBUM COVERS</h2>
+<p> Album covers should be put in the same directory as the songs they apply to, and have &quot;folder&quot;, &quot;front&quot;, or &quot;cover&quot; in their filenames. If you want to store multiple albums in the same directory but keep distinct cover images, the name of the appropriate image file must contain the labelid tag value, e.g. COCX-32760 cover.jpg.</p>
+<h2>TIED TAGS</h2>
+<p> Many places in Quod Libet allow you to use &quot;tied tags&quot;. Tied tags are two tag names joined together with a &quot;~&quot; like &quot;title~version&quot; or &quot;album~part&quot;. Tied tags result in &quot;nice&quot; displays even when one of the tags is missing; for example, &quot;title~version&quot; will result in Title &#8211; Version when a version tag is present, but only Title when one isn&#8217;t. You can tie any number of tags together.</p>
+<h2>SEARCH SYNTAX</h2>
+<p> All of Quod Libet&#8217;s search boxes support advanced searches of the following forms: </p>
+<pre>
+tag = value
+tag = !value
+tag = &quot;value&quot;
+tag = /value/
+tag = &amp;(value1, value2)
+tag = |(value1, value2)
+!tag = value
+|(tag1 = value1, tag2 = value2)
+&amp;(tag1 = value1, tag2 = value2)
+#(numerictag &lt; value)
+#(numerictag = value)
+#(numerictag &gt; value)
+</pre>
+<p> The &#8216;c&#8217; postfix on strings or regular expressions makes the search case-sensitive. Numeric values may be given as integers, floating-point numbers, MM:SS format, or simple English, e.g. &quot;3 days&quot;, &quot;2 hours&quot;. </p>
+<p> See <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide_Searching">http://code.google.com/p/quodlibet/wiki/Guide_Searching</a></i>. </p>
+<p> All internal tags begin with a ~ character. Non-numeric internal tags are ~base‐ name, ~dirname, ~filename, ~format, ~length, ~people, and ~rating. Numeric internal tags are ~#added, ~#bitrate, ~#disc, ~#lastplayed, ~#laststarted, ~#length, ~#mtime, ~#playcount, ~#skipcount, and ~#track. </p>
+<p> See <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide_InternalTags">http://code.google.com/p/quodlibet/wiki/Guide_InternalTags</a></i>.</p>
+<h2>RENAMING FILES</h2>
+<p> Quod Libet allows you to rename files based on their tags. In some cases you may wish to alter the filename depending on whether some tags are present or missing, in addition to their values. A common pattern might be </p>
+<p> <code>&lt;tracknumber&gt;. &lt;title~version&gt;</code> </p>
+<p> You can use a &#8216;|&#8217; to only text when a tag is present: </p>
+<p> <code>&lt;tracknumber|&lt;tracknumber&gt;. &gt;&lt;title~version&gt;</code> </p>
+<p> You can also specify literal text to use if the tag is missing by adding another &#8216;|&#8217;: </p>
+<p> <code>&lt;album|&lt;album&gt;|No Album&gt; &#8211; &lt;title&gt;</code> </p>
+<p> See <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide_Renaming">http://code.google.com/p/quodlibet/wiki/Guide_Renaming</a></i>.</p>
+<h2>AUDIO BACKENDS</h2>
+<p> Quod Libet uses GStreamer for audio playback. It tries to read your GConf GStreamer configuration, but if that fails it falls back to osssink. You can change the pipeline option in ~/.quodlibet/config to use a different sink, or pass options to the sink. For example, you might use esdsink or alsasink device=hw:1. </p>
+<p> See <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide_AudioBackends">http://code.google.com/p/quodlibet/wiki/Guide_AudioBackends</a></i>.</p>
+<h2>FILES</h2>
+<dl>
+<dt><code>~/.quodlibet/songs</code></dt>
+<dd> A pickled Python dict of cached metadata. Deleting this file will remove all songs from your library.</dd>
+<dt><code>~/.quodlibet/config</code></dt>
+<dd> Quod Libet&#8217;s configuration file. This file is overwritten when Quod Libet exits.</dd>
+<dt><code>~/.quodlibet/current</code></dt>
+<dd> A &quot;key=value&quot; file containing information about the currently playing song.</dd>
+<dt><code>~/.quodlibet/control</code></dt>
+<dd> A FIFO connected to the most-recently-started instance of the program. &#8211;next, &#8211;previous, etc., use this to control the player.</dd>
+<dt><code>~/.quodlibet/plugins/</code></dt>
+<dd> Put plugins (from <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide_Plugins">http://code.google.com/p/quodlibet/wiki/Guide_Plugins</a></i>) here.</dd>
+<dt><code>~/.quodlibet/browsers/</code></dt>
+<dd> Put custom library browsers here. </dd>
+<p> See <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide_Extending">http://code.google.com/p/quodlibet/wiki/Guide_Extending</a></i>.</dl>
+<h2>BUGS</h2>
+<p> See <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/issues/list">http://code.google.com/p/quodlibet/issues/list</a></i> for a list of all currently open bugs and feature requests.</p>
+<h2>AUTHORS</h2>
+<p> Joe Wreschnig and Michael Urman are the primary authors of Quod Libet.</p>
+<h2>SEE ALSO</h2>
+<pre>
+<i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide">http://code.google.com/p/quodlibet/wiki/Guide</a></i>,
+<i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/FAQ">http://code.google.com/p/quodlibet/wiki/FAQ</a></i>,
+<code><a href="//www.systutorials.com/docs/linux/man/7-regex/">regex</a></code>(7), <code>gst-launch</code>(1)
+</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

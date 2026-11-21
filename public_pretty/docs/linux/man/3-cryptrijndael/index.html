@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cryptrijndael(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-cryptrijndael/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>cryptrijndael(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Crypt::Rijndael - Crypt::CBC compliant Rijndael encryption module</p>
+<h2>Synopsis</h2><pre> use Crypt::Rijndael;
+ # keysize() is 32, but 24 and 16 are also possible
+ # blocksize() is 16
+ $cipher = Crypt::Rijndael-&gt;new( &quot;a&quot; x 32, Crypt::Rijndael::MODE_CBC() );
+ $cipher-&gt;set_iv($iv);
+ $crypted = $cipher-&gt;encrypt($plaintext);
+ # - OR -
+ $plaintext = $cipher-&gt;decrypt($crypted);</pre><h2>Description</h2>This module implements the Rijndael cipher, which has just been selected as the Advanced Encryption Standard.
+<dl COMPACT><dt>keysize
+</dt><dd>Returns the keysize, which is 32 (bytes). The Rijndael cipher actually supports keylengths of 16, 24 or 32 bytes, but there is no way to communicate this to <tt>&quot;Crypt::CBC&quot;</tt>.
+</dd><dt>blocksize
+</dt><dd>The blocksize for Rijndael is 16 bytes (128 bits), although the algorithm actually supports any blocksize that is any multiple of our bytes. 128 bits, is however, the AES-specified block size, so this is all we support.
+</dd><dt>$cipher = Crypt::Rijndael-&gt;new( $key [, $mode] )
+</dt><dd>Create a new <tt>&quot;Crypt::Rijndael&quot;</tt> cipher object with the given key (which must be 128, 192 or 256 bits long). The additional <tt>$mode</tt> argument is the encryption mode, either <tt>&quot;MODE_ECB&quot;</tt> (electronic codebook mode, the default), <tt>&quot;MODE_CBC&quot;</tt> (cipher block chaining, the same that <tt>&quot;Crypt::CBC&quot;</tt> does), <tt>&quot;MODE_CFB&quot;</tt> (128-bit cipher feedback), <tt>&quot;MODE_OFB&quot;</tt> (128-bit output feedback), or <tt>&quot;MODE_CTR&quot;</tt> (counter mode). 
+ <font SIZE="-1">ECB</font> mode is very insecure (read a book on cryptography if you don't know why!), so you should probably use <font SIZE="-1">CBC</font> mode.
+</dd><dt>$cipher-&gt;set_iv($iv)
+</dt><dd>This allows you to change the initial value vector used by the chaining modes. It is not relevant for <font SIZE="-1">ECB</font> mode.
+</dd><dt>$cipher-&gt;encrypt($data)
+</dt><dd>Encrypt data. The size of <tt>$data</tt> must be a multiple of <tt>&quot;blocksize&quot;</tt> (16 bytes), otherwise this function will croak. Apart from that, it can be of (almost) any length.
+</dd><dt>$cipher-&gt;decrypt($data)
+</dt><dd>Decrypts <tt>$data</tt>.</dd></dl><h3>Encryption modes</h3>Use these constants to select the cipher type:
+<dl COMPACT><dt><font SIZE="-1">MODE_CBC -</font> Cipher Block Chaining
+</dt><dd></dd><dt><font SIZE="-1">MODE_CFB -</font> Cipher feedback
+</dt><dd></dd><dt><font SIZE="-1">MODE_CTR -</font> Counter mode
+</dt><dd></dd><dt><font SIZE="-1">MODE_ECB -</font> Electronic cookbook mode
+</dt><dd></dd><dt><font SIZE="-1">MODE_OFB -</font> Output feedback
+</dt><dd></dd><dt><font SIZE="-1">MODE_PCBC -</font> ignore this one for now :)
+</dt><dd></dd></dl><h2>See Also</h2>Crypt::CBC, <a rel="nofollow" HREF="http://www.csrc.nist.gov/encryption/aes/">http://www.csrc.nist.gov/encryption/aes/</a>
+<h2>Bugs</h2>Should <font SIZE="-1">EXPORT</font> or <font SIZE="-1">EXPORT_OK</font> the <font SIZE="-1">MODE</font> constants.
+<h2>Author</h2>Currently maintained by brian d foy, <tt>&quot;&lt;bdfoy [at] cpan.org&gt;&quot;</tt>. 
+<p>Original code by Rafael R. Sevilla.</p>
+<p>The Rijndael Algorithm was developed by Vincent Rijmen and Joan Daemen, and has been selected as the <font SIZE="-1">US</font> Government&rsquo;s Advanced Encryption Standard.</p>
+<h2>Source</h2>This code is in Github: 
+ <pre> <a HREF="git://github.com/briandfoy/crypt-rijndael.git">git://github.com/briandfoy/crypt-rijndael.git</a></pre><h2>License</h2>This software is licensed under the Lesser <font SIZE="-1">GNU</font> Public License v3 (29 June 2007). See the included <font SIZE="-1">COPYING</font> file for details.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

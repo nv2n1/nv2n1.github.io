@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hcd_buffer_create(9) · Linux Manual Pages</title>
+<meta name="description" content="hcd_buffer_create – initialize buffer pools">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-hcd_buffer_create/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>hcd_buffer_create(9)</h1>
+
+
+
+
+
+<p>hcd_buffer_create &#8211; initialize buffer pools</p>
+<h2>Synopsis</h2>
+<pre><code>int hcd_buffer_create(struct usb_hcd *hcd);</code></pre>
+<h2>Arguments</h2>
+<p><i>hcd</i></p>
+<dl>
+<dd>
+</dd><dd>the bus whose buffer pools are to be initialized</dd></dl>
+<h2>Context</h2>
+<p>!<code>in_interrupt</code></p>
+<h2>Description</h2>
+<p>Call this as part of initializing a host controller that uses the dma memory allocators. It initializes some pools of dma-coherent memory that will be shared by all drivers using that controller. </p>
+<p> Call <code>hcd_buffer_destroy</code> to clean up after using those pools.</p>
+<h2>Return</h2>
+<p>0 if successful. A negative errno value otherwise.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

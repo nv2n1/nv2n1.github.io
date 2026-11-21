@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>htsfile(1) · Linux Manual Pages</title>
+<meta name="description" content="htsfile – identify high-throughput sequencing data files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-htsfile/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>htsfile(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> htsfile &#8211; identify high-throughput sequencing data files </p>
+<h2>SYNOPSIS</h2>
+<p> <code>htsfile</code> [<code>-chHv</code>] <i>FILE</i>&#8230;<br />
+ <code>htsfile &#8211;copy</code> [<code>-v</code>] <i>FILE DESTFILE</i></p>
+<h2>DESCRIPTION</h2>
+<p> The <code>htsfile</code> utility attempts to identify what kind of high-throughput sequencing data files the specified files are, and provides minimal viewing capabilities for some kinds of data file. </p>
+<p> It can identify sequencing data files such as SAM, BAM, and CRAM; variant calling data files such as VCF and BCF; index files used to index these data files; and compressed versions of many of them. </p>
+<p> For each <i>FILE</i> given, <code>htsfile</code> prints a description of the file format determined, using similar keyword conventions to <code><a href="/docs/linux/man/1-file/">file</a></code>(1): &quot;text&quot; indicates a textual file that can probably be viewed on a terminal; &quot;data&quot; indicates binary data; &quot;sequence&quot;, &quot;variant calling&quot;, and &quot;index&quot; indicate different categories of data file. When it can be identified, the name of the particular file format (such as &quot;BAM&quot; or &quot;VCF&quot;) is printed at the start of the description. </p>
+<p> When used to view file contents as text, <code>htsfile</code> can optionally show only headers or only data records, but has no other filtering capabilities. Use <code>samtools</code> or <code>bcftools</code> if you need more extensive viewing or filtering capabilities. </p>
+<p> Alternatively, when <code>&#8211;copy</code> is used, <code>htsfile</code> takes exactly two arguments and performs a byte-for-byte copy from <i>FILE</i> to <i>DESTFILE</i>. This is similar to <code><a href="/docs/linux/man/1-cp/">cp</a></code>(1), but HTSlib&#8217;s remote file access facilities are available for both source and destination. </p>
+<p> The following options are accepted:</p>
+<dl>
+<dt><code>-c</code>, <code>&#8211;view</code></dt>
+<dd> Instead of identifying the specified files, display a textual representation of their contents on standard output.</dd>
+<dt>
+</dt><dd> By default, <code>&#8211;view</code> refuses to display files in unknown formats. When <code>&#8211;verbose</code> is also given, the raw contents of such files are displayed, with non-printable characters shown via C-style &quot;\x&quot; hexadecimal escape sequences.  </dd>
+<dt><code>-C</code>, <code>--copy</code> </dt>
+<dd>  Instead of identifying or displaying the specified files, copy the source <i>FILE</i> to the destination <i>DESTFILE</i>. Only <code>--verbose</code> may be used in conjunction with <code>--copy</code>.  </dd>
+<dt><code>-h</code>, <code>--header-only</code> </dt>
+<dd>  Display data file headers only. Implies <code>--view</code>.  </dd>
+<dt><code>-H</code>, <code>--no-header</code> </dt>
+<dd>  When viewing files, display data records only.  </dd>
+<dt><code>-v</code>, <code>--verbose</code> </dt>
+<dd>  Display additional warnings and diagnostic messages. Using <code>--verbose</code> repeatedly further raises the verbosity.  </dd></dl>
+ <h2>SEE ALSO</h2>
+ <i><a href="/docs/linux/man/1-bcftools/">bcftools</a></i>(1), <i><a href="/docs/linux/man/1-file/">file</a></i>(1), <i><a href="/docs/linux/man/1-samtools/">samtools</a></i>(1) 
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

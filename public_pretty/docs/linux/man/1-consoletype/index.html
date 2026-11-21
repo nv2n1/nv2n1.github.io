@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>consoletype(1) · Linux Manual Pages</title>
+<meta name="description" content="consoletype – print type of the console connected to standard input">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-consoletype/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>consoletype(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>consoletype &#8211; print type of the console connected to standard input </code></p>
+<h2>SYNOPSIS</h2>
+<p> <code>consoletype [</code><i>stdout</i>] [<i>fg</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>consoletype prints the type of console connected to standard input, and checks whether the console connected to standard input is the current foreground virtual console. With no arguments, it prints </code><i>vt</i> if console is a virtual terminal (/dev/tty* or /dev/console device if not on a serial console), <i>serial</i> if standard input is a serial console (/dev/console or /dev/ttyS*) and <i>pty</i> if standard input is a pseudo terminal.</p>
+<h2>RETURN VALUE</h2>
+<p> <code>consoletype when passed no arguments returns</p>
+<dl>
+<dt></code><i>0</dt>
+<dd> if on virtual terminal</dd>
+<dt>1</dt>
+<dd> if on serial console</dd>
+<dt>2</dt>
+<dd> if on a pseudo terminal.</dd>
+<dt>When passed the stdout</i> argument, <code>consoletype</code> returns</dt>
+<dd>
+</dd><dt><i>0</dt>
+<dd> in all cases, and prints the console type to stdout.</dd>
+<dt>When passed the fg</i> argument, <code>consoletype</code> returns</dt>
+<dd>
+</dd><dt><i>0</dt>
+<dd> if the console connected to standard input is the current virtual terminal</dd>
+<dt>1</dt>
+<dd> otherwise. </dd>
+</dl>
+<p> </i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

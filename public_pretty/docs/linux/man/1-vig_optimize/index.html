@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vig_optimize(1) · Linux Manual Pages</title>
+<meta name="description" content="vig_optimize – Optimise photometric parameters">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-vig_optimize/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>vig_optimize(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> vig_optimize &#8211; Optimise photometric parameters </p>
+<h2>SYNOPSIS</h2>
+<p> <code>vig_optimize</code> [options] <code>-o</code> <i>output.pto</i> <i>input.pto</i></p>
+<h2>DESCRIPTION</h2>
+<p> Photometric calculation can be performed on the command-line with the vig_optimize tool. This functionally is configured via &#8216;v&#8217; variable lines in the .pto project file in a similar way to the autooptimiser tool: </p>
+<p> The camera response curve is simplified using the EMoR sensor model which reduces the variation to five numbers, these are the Ra, Rb, Rc, Rd &amp; Re image (i) parameters (the default values of 0.0 are equivalent to an &#8216;average&#8217; generic sensor). </p>
+<p> The vignetting model is represented by a polynomial with four parameters: Va (this is always 1.0 and doesn&#8217;t need to be optimised) and Vb, Vc &amp; Vd (which default to 0.0 &#8211; equivalent to no vignetting). The vignetting centre can also be different from the geometrical centre, this is specified by Vx &amp; Vy (both default to 0.0). </p>
+<p> Exposure (<font SIZE="-1">EV</font>) is represented by a single value Ev (defaults 0.0, equivalent to no-change). </p>
+<p> The white balance is represented by multipliers for the red and blue channels Er and Eb (the defaults of 1.0 are equivalent to no-change). </p>
+<p> A typical &#8216;v&#8217; variable line configuration would look like this, i.e. optimise camera response curve and vignetting for image 0 and exposure for images 1, 2, 3 and 4: </p>
+<pre>
+  v Ra0 Rb0 Rc0 Rd0 Re0 Vb0 Vc0 Vd0
+  v Ev1 Ev2 Ev3 Ev4
+</pre>
+<p> (vignetting centre and white balance are left unchanged)</p>
+<h2>OPTIONS</h2>
+<p> General options:</p>
+<dl>
+<dt><code>-o</code> <i>file</i></dt>
+<dd> Write results to output project</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose, print progress messages</dd>
+<dt><code>-p</code> <i>n</i></dt>
+<dd> Number of points to extract</dd>
+<dt><code>-r</code></dt>
+<dd> Extract random point (faster, but less accurate)</dd>
+<dt><code>-s</code> <i>level</i></dt>
+<dd> Work on downscaled images, every step halves width and height</dd>
+<dt><code>-h</code></dt>
+<dd> Display help summary.</dd></dl>
+<p> Expert and debugging options:</p>
+<dl>
+<dt><code>-i</code> <i>file</i></dt>
+<dd> Read corresponding points from file</dd>
+<dt><code>-w</code> <i>file</i></dt>
+<dd> Dump corresponding points to file</dd></dl>
+<h2>AUTHORS</h2>
+<p> Written by Pablo d&#8217;Angelo. Also contains contributions from Douglas Wilkins, Ippei Ukai, Ed Halley, Bruno Postle, Gerry Patterson and Brent Townshend. </p>
+<p> This man page was written by Cyril Brulebois &lt;cyril.brulebois [at] enst-bretagne.fr&gt; and is licensed under the same terms as the hugin package itself. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

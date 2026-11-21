@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenLDAP and NFS for Centralized User Authentication - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/unified-linux-login-and-home-directory-using-openldap-and-nfsautomount/">
+  <meta name="description" content="This guide sets up OpenLDAP for centralized authentication and NFS with automount to provide unified home directories across a cluster. The setup uses modern …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="OpenLDAP and NFS for Centralized User Authentication">
+  <meta property="og:url" content="https://www.systutorials.com/unified-linux-login-and-home-directory-using-openldap-and-nfsautomount/">
+  <meta property="og:description" content="This guide sets up OpenLDAP for centralized authentication and NFS with automount to provide unified home directories across a cluster. The setup uses modern …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/storage-lvm/">Storage &amp; LVM</a>
+        </nav>
+        
+        <h1>OpenLDAP and NFS for Centralized User Authentication</h1>
+        <time class="post-date" datetime="2013-09-25T09:59:36Z">September 25, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>This guide sets up OpenLDAP for centralized authentication and NFS with automount to provide unified home directories across a cluster. The setup uses modern OpenLDAP backends and current NFS4 best practices.</p>
+<h2 id="system-environment">System Environment</h2>
+<p><strong>Server:</strong></p>
+<ul>
+<li>LDAP and NFS: 10.0.0.2, Fedora 41 x86_64</li>
+<li>Base DN: dc=lgcpu1</li>
+</ul>
+<p><strong>Clients:</strong></p>
+<ul>
+<li>Range: 10.0.0.1/24, Fedora 41 x86_64</li>
+</ul>
+<h2 id="ldap-server-setup">LDAP Server Setup</h2>
+<h3 id="package-installation">Package Installation</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install openldap-servers openldap-clients
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> slapd
+</span></span><span class="line"><span class="cl">sudo systemctl start slapd
+</span></span></code></pre></div><h3 id="configure-slapd">Configure slapd</h3>
+<p>Use dynamic configuration (cn=config) instead of static slapd.conf. This method allows configuration changes without restarting the daemon.</p>
+<p>First, generate a password hash for the LDAP admin account:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">slappasswd -s your_password
+</span></span></code></pre></div><p>Save the output (starts with <code>{SSHA}</code>). Create <code>/tmp/ldap-config.ldif</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo tee /tmp/ldap-config.ldif &gt; /dev/null <span class="s">&lt;&lt;&#39;EOF&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">dn: olcDatabase={2}mdb,cn=config
+</span></span></span><span class="line"><span class="cl"><span class="s">changetype: modify
+</span></span></span><span class="line"><span class="cl"><span class="s">replace: olcSuffix
+</span></span></span><span class="line"><span class="cl"><span class="s">olcSuffix: dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">-
+</span></span></span><span class="line"><span class="cl"><span class="s">replace: olcRootDN
+</span></span></span><span class="line"><span class="cl"><span class="s">olcRootDN: cn=manager,dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">-
+</span></span></span><span class="line"><span class="cl"><span class="s">add: olcRootPW
+</span></span></span><span class="line"><span class="cl"><span class="s">olcRootPW: {SSHA}your_hashed_password_here
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></div><p>Apply the configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ldapmodify -Y EXTERNAL -H ldapi:/// -f /tmp/ldap-config.ldif
+</span></span></code></pre></div><p>Note: The mdb backend is the modern default — it’s faster and more reliable than the older bdb backend.</p>
+<h3 id="create-directory-structure">Create Directory Structure</h3>
+<p>Create the LDAP tree structure with <code>top.ldif</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &gt; top.ldif <span class="s">&lt;&lt;&#39;EOF&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">dn: dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: dcObject
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: organization
+</span></span></span><span class="line"><span class="cl"><span class="s">o: lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">dc: lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">dn: cn=manager,dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: organizationalRole
+</span></span></span><span class="line"><span class="cl"><span class="s">cn: manager
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">dn: ou=people,dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: organizationalUnit
+</span></span></span><span class="line"><span class="cl"><span class="s">ou: people
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">dn: ou=group,dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: organizationalUnit
+</span></span></span><span class="line"><span class="cl"><span class="s">ou: group
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">dn: ou=auto.master,dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: automountMap
+</span></span></span><span class="line"><span class="cl"><span class="s">ou: auto.master
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">dn: cn=/home,ou=auto.master,dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: automount
+</span></span></span><span class="line"><span class="cl"><span class="s">automountInformation: ldap:ou=auto.home,dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">cn: /home
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">dn: ou=auto.home,dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: automountMap
+</span></span></span><span class="line"><span class="cl"><span class="s">ou: auto.home
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></div><p>Load the LDIF:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ldapadd -x -D <span class="s1">&#39;cn=manager,dc=lgcpu1&#39;</span> -W -f top.ldif
+</span></span></code></pre></div><p>Verify the structure loaded correctly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ldapsearch -x -D <span class="s1">&#39;cn=manager,dc=lgcpu1&#39;</span> -W -b <span class="nv">dc</span><span class="o">=</span>lgcpu1
+</span></span></code></pre></div><h3 id="migrate-existing-users">Migrate Existing Users</h3>
+<p>If migrating from local <code>/etc/passwd</code> and <code>/etc/group</code> files, install the migration tools:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install openldap-migration
+</span></span></code></pre></div><p>Export only regular users (UID ≥ 1000):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -E <span class="s1">&#39;:[0-9]{4,}:&#39;</span> /etc/passwd &gt; /tmp/passwd.export
+</span></span><span class="line"><span class="cl">grep -E <span class="s1">&#39;:[0-9]{4,}:&#39;</span> /etc/group &gt; /tmp/group.export
+</span></span></code></pre></div><p>Edit migration script variables in <code>/usr/share/openldap/migration/migrate_common.ph</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="nv">$DEFAULT_MAIL_DOMAIN</span> <span class="o">=</span> <span class="s">&#34;example.com&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$DEFAULT_BASE</span> <span class="o">=</span> <span class="s">&#34;dc=lgcpu1&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><p>Generate LDIF files from the exports:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/usr/share/openldap/migration/migrate_passwd.pl /tmp/passwd.export &gt; people.ldif
+</span></span><span class="line"><span class="cl">/usr/share/openldap/migration/migrate_group.pl /tmp/group.export &gt; groups.ldif
+</span></span></code></pre></div><p>Load them into LDAP:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ldapadd -x -D <span class="s1">&#39;cn=manager,dc=lgcpu1&#39;</span> -W -f people.ldif
+</span></span><span class="line"><span class="cl">ldapadd -x -D <span class="s1">&#39;cn=manager,dc=lgcpu1&#39;</span> -W -f groups.ldif
+</span></span></code></pre></div><h2 id="nfs-server-setup">NFS Server Setup</h2>
+<h3 id="export-configuration">Export Configuration</h3>
+<p>Edit <code>/etc/exports</code>:</p>
+<pre><code>/home 10.0.0.1/24(rw,sync,no_root_squash)
+</code></pre>
+<p><strong>Option reference:</strong></p>
+<ul>
+<li><code>rw</code> — read/write access</li>
+<li><code>sync</code> — writes are committed immediately (required for data consistency)</li>
+<li><code>no_root_squash</code> — allows root on clients to write as root on server</li>
+</ul>
+<p>For tighter security in production, use <code>root_squash</code> and add <code>anonuid=1000,anongid=1000</code> to map root requests to a regular unprivileged user instead.</p>
+<h3 id="enable-nfs-services">Enable NFS Services</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> nfs-server
+</span></span><span class="line"><span class="cl">sudo systemctl start nfs-server
+</span></span><span class="line"><span class="cl">sudo exportfs -a
+</span></span></code></pre></div><p>Verify the exports are available:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">showmount -e 10.0.0.2
+</span></span></code></pre></div><h2 id="client-configuration">Client Configuration</h2>
+<h3 id="package-installation-1">Package Installation</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install nss-pam-ldapd autofs nfs-utils
+</span></span></code></pre></div><p>On RHEL 9, the package is called <code>libnslcd</code> instead of <code>nss-pam-ldapd</code> (the naming changed between distributions).</p>
+<h3 id="ldap-authentication">LDAP Authentication</h3>
+<p>Create <code>/etc/nslcd.conf</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo tee /etc/nslcd.conf &gt; /dev/null <span class="s">&lt;&lt;&#39;EOF&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">uid nslcd
+</span></span></span><span class="line"><span class="cl"><span class="s">gid ldap
+</span></span></span><span class="line"><span class="cl"><span class="s">uri ldap://10.0.0.2/
+</span></span></span><span class="line"><span class="cl"><span class="s">base dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></div><p>Set appropriate permissions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chmod <span class="m">600</span> /etc/nslcd.conf
+</span></span></code></pre></div><p>Enable and start the nslcd service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> nslcd
+</span></span><span class="line"><span class="cl">sudo systemctl start nslcd
+</span></span></code></pre></div><p>Update <code>/etc/nsswitch.conf</code> to query LDAP for user and group information:</p>
+<pre><code>passwd:     files ldap
+group:      files ldap
+shadow:     files ldap
+</code></pre>
+<p>Test that NSS can resolve LDAP users:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">getent passwd sample
+</span></span><span class="line"><span class="cl">getent group sample
+</span></span></code></pre></div><p>If these commands return user/group information, LDAP resolution is working.</p>
+<h3 id="automount-configuration">Automount Configuration</h3>
+<p>Edit <code>/etc/auto.master</code> to add the home directory mount point:</p>
+<pre><code>/home ldap:ou=auto.home,dc=lgcpu1 --timeout=300
+</code></pre>
+<p>The <code>--timeout=300</code> unmounts idle mounts after 5 minutes, freeing system resources.</p>
+<p>Enable and start autofs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> autofs
+</span></span><span class="line"><span class="cl">sudo systemctl start autofs
+</span></span></code></pre></div><p>Test automounting by accessing a user’s home directory — it should mount on demand:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls /home/sample
+</span></span></code></pre></div><p>Monitor automount activity:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo journalctl -u autofs -f
+</span></span></code></pre></div><h2 id="adding-individual-users">Adding Individual Users</h2>
+<p>Each new user requires three LDAP entries: a user account, a group, and an automount entry.</p>
+<h3 id="user-account-entry">User Account Entry</h3>
+<p>Create <code>user-sample.ldif</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &gt; user-sample.ldif <span class="s">&lt;&lt;&#39;EOF&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">dn: uid=sample,ou=people,dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">uid: sample
+</span></span></span><span class="line"><span class="cl"><span class="s">cn: sample
+</span></span></span><span class="line"><span class="cl"><span class="s">sn: sample
+</span></span></span><span class="line"><span class="cl"><span class="s">mail: sample@example.com
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: inetOrgPerson
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: posixAccount
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: top
+</span></span></span><span class="line"><span class="cl"><span class="s">userPassword: {SSHA}hashed_password_here
+</span></span></span><span class="line"><span class="cl"><span class="s">loginShell: /bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="s">uidNumber: 1001
+</span></span></span><span class="line"><span class="cl"><span class="s">gidNumber: 1001
+</span></span></span><span class="line"><span class="cl"><span class="s">homeDirectory: /home/sample
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></div><p>Generate the password hash:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">slappasswd -s your_password
+</span></span></code></pre></div><p>Paste the output into the <code>userPassword</code> field. Assign unique <code>uidNumber</code> and <code>gidNumber</code> for each user, starting at 1001 and incrementing.</p>
+<h3 id="group-entry">Group Entry</h3>
+<p>Create <code>group-sample.ldif</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &gt; group-sample.ldif <span class="s">&lt;&lt;&#39;EOF&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">dn: cn=sample,ou=group,dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: posixGroup
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: top
+</span></span></span><span class="line"><span class="cl"><span class="s">cn: sample
+</span></span></span><span class="line"><span class="cl"><span class="s">gidNumber: 1001
+</span></span></span><span class="line"><span class="cl"><span class="s">memberUid: sample
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></div><p>The <code>gidNumber</code> must match the user’s <code>gidNumber</code>.</p>
+<h3 id="automount-entry">Automount Entry</h3>
+<p>Create <code>auto.home-sample.ldif</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &gt; auto.home-sample.ldif <span class="s">&lt;&lt;&#39;EOF&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">dn: cn=sample,ou=auto.home,dc=lgcpu1
+</span></span></span><span class="line"><span class="cl"><span class="s">objectClass: automount
+</span></span></span><span class="line"><span class="cl"><span class="s">automountInformation: -fstype=nfs4,rw,soft,intr 10.0.0.2:/home/sample
+</span></span></span><span class="line"><span class="cl"><span class="s">cn: sample
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></div><p>The <code>soft,intr</code> options allow automount to timeout gracefully if the NFS server is unreachable, rather than hanging indefinitely. NFS4 is preferred over NFSv3 for better security and performance.</p>
+<h3 id="load-all-entries">Load All Entries</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ldapadd -x -D <span class="s1">&#39;cn=manager,dc=lgcpu1&#39;</span> -W -f user-sample.ldif
+</span></span><span class="line"><span class="cl">ldapadd -x -D <span class="s1">&#39;cn=manager,dc=lgcpu1&#39;</span> -W -f group-sample.ldif
+</span></span><span class="line"><span class="cl">ldapadd -x -D <span class="s1">&#39;cn=manager,dc=lgcpu1&#39;</span> -W -f auto.home-sample.ldif
+</span></span></code></pre></div><h3 id="prepare-home-directory-on-nfs-server">Prepare Home Directory on NFS Server</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /home/sample
+</span></span><span class="line"><span class="cl">sudo cp -r /etc/skel/. /home/sample/
+</span></span><span class="line"><span class="cl">sudo chown -R 1001:1001 /home/sample
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">700</span> /home/sample
+</span></span></code></pre></div><h2 id="verification-and-troubleshooting">Verification and Troubleshooting</h2>
+<h3 id="test-client-login">Test Client Login</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh sample@10.0.0.1
+</span></span></code></pre></div><p>If login fails, verify LDAP connectivity:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ldapsearch -x -b <span class="nv">dc</span><span class="o">=</span>lgcpu1 <span class="nv">uid</span><span class="o">=</span>sample
+</span></span></code></pre></div><p>This confirms the user exists in LDAP.</p>
+<h3 id="check-service-status">Check Service Status</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl status nslcd
+</span></span><span class="line"><span class="cl">sudo systemctl status autofs
+</span></span><span class="line"><span class="cl">sudo systemctl status nfs-client.target
+</span></span></code></pre></div><h3 id="nfs-mounting-issues">NFS Mounting Issues</h3>
+<p>Ensure firewall rules allow NFS traffic (ports 111 for rpcbind, 2049 for NFS):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo firewall-cmd --permanent --add-service<span class="o">=</span>nfs
+</span></span><span class="line"><span class="cl">sudo firewall-cmd --permanent --add-service<span class="o">=</span>rpc-bind
+</span></span><span class="line"><span class="cl">sudo firewall-cmd --reload
+</span></span></code></pre></div><p>Check active NFS mounts on the client:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount <span class="p">|</span> grep nfs
+</span></span></code></pre></div><p>If a mount hangs, verify the server is running:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl status nfs-server
+</span></span><span class="line"><span class="cl">sudo exportfs -v
+</span></span></code></pre></div><h3 id="ldap-connection-debugging">LDAP Connection Debugging</h3>
+<p>Test LDAP connectivity directly from a client:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ldapwhoami -x -D <span class="s1">&#39;cn=manager,dc=lgcpu1&#39;</span> -W -H ldap://10.0.0.2/
+</span></span></code></pre></div><p>Check nslcd logs for authentication issues:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo journalctl -u nslcd -f
+</span></span></code></pre></div><h3 id="automount-debugging">Automount Debugging</h3>
+<p>Monitor automount in real time:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo journalctl -u autofs -f
+</span></span></code></pre></div><p>Verify the automount map is loaded correctly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ldapsearch -x -b <span class="s1">&#39;ou=auto.home,dc=lgcpu1&#39;</span>
+</span></span></code></pre></div><p>If automount times out, adjust the timeout in <code>/etc/auto.master</code> or increase it for slower networks. Common values are 300 seconds for local networks, 600+ for WAN connections.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

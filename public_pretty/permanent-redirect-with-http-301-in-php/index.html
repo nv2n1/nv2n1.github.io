@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting Up HTTP 301 Redirects in PHP - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/permanent-redirect-with-http-301-in-php/">
+  <meta name="description" content="HTTP 301 (Moved Permanently) redirects tell browsers and search engines that a resource has permanently moved to a new location. This preserves SEO value and …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Setting Up HTTP 301 Redirects in PHP">
+  <meta property="og:url" content="https://www.systutorials.com/permanent-redirect-with-http-301-in-php/">
+  <meta property="og:description" content="HTTP 301 (Moved Permanently) redirects tell browsers and search engines that a resource has permanently moved to a new location. This preserves SEO value and …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Setting Up HTTP 301 Redirects in PHP</h1>
+        <time class="post-date" datetime="2013-07-12T16:46:11Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>HTTP 301 (Moved Permanently) redirects tell browsers and search engines that a resource has permanently moved to a new location. This preserves SEO value and prevents broken links when restructuring your site or changing domains.</p>
+<h2 id="basic-implementation">Basic Implementation</h2>
+<p>The simplest approach uses PHP’s <code>header()</code> function with an explicit 301 status code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nx">header</span><span class="p">(</span><span class="s2">&#34;Location: /&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="mi">301</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">exit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>The <code>exit()</code> call is critical—it stops script execution immediately, preventing any additional output that could interfere with the HTTP response.</p>
+<p>For explicit control (useful in older PHP versions or debugging scenarios), set the status line first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nx">header</span><span class="p">(</span><span class="s2">&#34;HTTP/1.1 301 Moved Permanently&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">header</span><span class="p">(</span><span class="s2">&#34;Location: /&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">exit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>Order matters. Setting the status line first ensures PHP sends 301 instead of defaulting to 302 (temporary redirect), which search engines treat differently.</p>
+<h2 id="common-redirect-patterns">Common Redirect Patterns</h2>
+<p><strong>Preserve query strings and paths:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$redirect_url</span> <span class="o">=</span> <span class="s2">&#34;/&#34;</span> <span class="o">.</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_URI&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">header</span><span class="p">(</span><span class="s2">&#34;Location: &#34;</span> <span class="o">.</span> <span class="nv">$redirect_url</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="mi">301</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">exit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p><strong>Domain migration redirect:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;HTTP_HOST&#39;</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;old-domain.com&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">header</span><span class="p">(</span><span class="s2">&#34;Location: https://new-domain.com&#34;</span> <span class="o">.</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_URI&#39;</span><span class="p">],</span> <span class="k">true</span><span class="p">,</span> <span class="mi">301</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">exit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p><strong>Conditional redirect with fallback:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$new_url</span> <span class="o">=</span> <span class="nx">get_new_page_url</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;old_id&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$new_url</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">http_response_code</span><span class="p">(</span><span class="mi">410</span><span class="p">);</span> <span class="c1">// Gone
+</span></span></span><span class="line"><span class="cl">    <span class="k">exit</span><span class="p">(</span><span class="s2">&#34;Page not found&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">header</span><span class="p">(</span><span class="s2">&#34;Location: &#34;</span> <span class="o">.</span> <span class="nv">$new_url</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="mi">301</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">exit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p><strong>Redirect old numeric IDs to slugs:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">is_numeric</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;post_id&#39;</span><span class="p">]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$slug</span> <span class="o">=</span> <span class="nx">get_post_slug_by_id</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;post_id&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">header</span><span class="p">(</span><span class="s2">&#34;Location: /blog/</span><span class="si">{</span><span class="nv">$slug</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="mi">301</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">exit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h2 id="server-level-redirects-preferred-for-performance">Server-Level Redirects (Preferred for Performance)</h2>
+<p>PHP redirects execute after the server processes the request, adding latency. For high-traffic sites, use server configuration instead.</p>
+<p><strong>Apache with .htaccess:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="nb">RewriteEngine</span> <span class="k">On</span>
+</span></span><span class="line"><span class="cl"><span class="nb">RewriteCond</span> %{HTTPS} <span class="k">off</span>
+</span></span><span class="line"><span class="cl"><span class="nb">RewriteRule</span> ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">RewriteRule</span> ^old-page\.html$ <span class="sx">/new-page/</span> [R=301,L]
+</span></span><span class="line"><span class="cl"><span class="nb">RewriteRule</span> ^products/(.*)$ <span class="sx">/shop/</span>$1 [R=301,L]
+</span></span></code></pre></div><p><strong>Nginx:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$server_name$request_uri</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">location</span> <span class="s">/old-page</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">return</span> <span class="mi">301</span> <span class="s">/new-page</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">location</span> <span class="p">~</span> <span class="sr">^/products/(.*)$</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">return</span> <span class="mi">301</span> <span class="s">/shop/</span><span class="nv">$1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Server-level redirects are faster because they occur before your application runs. Use PHP redirects only when you need application logic to determine the target URL.</p>
+<h2 id="avoiding-common-pitfalls">Avoiding Common Pitfalls</h2>
+<p><strong>Header restrictions:</strong> The <code>header()</code> function must execute before any output. Common issues:</p>
+<ul>
+<li>Whitespace or newlines after <code>?&gt;</code></li>
+<li>UTF-8 BOM at file start (configure your editor to omit it)</li>
+<li>Output from included files</li>
+<li>HTML or spaces before <code>&lt;?php</code></li>
+</ul>
+<p>If you hit “headers already sent” errors, check these first.</p>
+<p><strong>Status code selection:</strong></p>
+<ul>
+<li><strong>301</strong>: Permanent redirect—use for restructured pages, domain migrations</li>
+<li><strong>302</strong>: Temporary redirect—use for maintenance or short-term changes</li>
+<li><strong>307/308</strong>: Preserve HTTP method on POST requests</li>
+<li><strong>410</strong>: Gone—signal that content was permanently deleted (no redirect)</li>
+</ul>
+<p><strong>HTTPS enforcement:</strong> Always redirect to HTTPS unless you have specific requirements otherwise. Modern browsers and search engines penalize HTTP-only sites.</p>
+<h2 id="testing-redirects">Testing Redirects</h2>
+<p>Verify the status code with <code>curl</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -I https://yoursite.com/old-page
+</span></span></code></pre></div><p>Expected output:</p>
+<pre><code>HTTP/2 301
+location: https://yoursite.com/new-page
+</code></pre>
+<p>Check the <code>location</code> header matches your target and the status is 301, not 302.</p>
+<p>For redirect chains (A→B→C), follow the full path:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -L -I https://yoursite.com/old-page
+</span></span></code></pre></div><p>The <code>-L</code> flag follows redirects. Chains should resolve in 2-3 hops maximum; anything longer indicates misconfiguration.</p>
+<h2 id="when-to-avoid-php-redirects">When to Avoid PHP Redirects</h2>
+<p>If your site handles significant traffic, move redirect logic to your web server. Use PHP redirects only when the redirect target requires database lookups, user context, or complex business logic. Otherwise, you’re wasting application resources on every request.</p>
+<p>For WordPress sites, use the Redirection plugin or built-in REST endpoint redirects rather than manual PHP code. They integrate with the admin interface and maintain redirect logs across updates.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>raise(3) · Linux Manual Pages</title>
+<meta name="description" content="raise – send a signal to the caller">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-raise/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>raise(3)</h1>
+
+
+
+
+
+<p>raise &#8211; send a signal to the caller</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;signal.h&gt;
+int raise(int sig);</code></pre>
+<h2>Description</h2>
+<p>The <code>raise</code>() function sends a signal to the calling process or thread. In a single-threaded program it is equivalent to </p>
+<p> kill(getpid(), sig); </p>
+<p> In a multithreaded program it is equivalent to </p>
+<p> pthread_kill(pthread_self(), sig); </p>
+<p> If the signal causes a handler to be called, <code>raise</code>() will return only after the signal handler has returned.</p>
+<h2>Return Value</h2>
+<p><code>raise</code>() returns 0 on success, and nonzero for failure.</p>
+<h2>Attributes</h2>
+<p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
+<table BORDER>
+<tr VALIGN=top>
+<td><code>Interface</code></td>
+<td><code>Attribute</code></td>
+<td><code>Value</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>raise</code>() </td>
+<td>Thread safety</td>
+<td>MT-Safe
+</td>
+</tr>
+</table>
+<h2>Conforming To</h2>
+<p>POSIX.1-2001, POSIX.1-2008, C89, C99.</p>
+<h2>Notes</h2>
+<p>Since version 2.3.3, glibc implements <code>raise</code>() by calling <code><a href="/docs/linux/man/2-tgkill/">tgkill</a></code>(2), if the kernel supports that system call. Older glibc versions implemented <code>raise</code>() using <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2).</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/2-getpid/">getpid</a></code>(2), <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2), <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2), <code><a href="/docs/linux/man/2-signal/">signal</a></code>(2), <code><a href="/docs/linux/man/3-pthread_kill/">pthread_kill</a></code>(3), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7)</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-mailsplit(1) · Linux Manual Pages</title>
+<meta name="description" content="git-mailsplit – Simple UNIX mbox splitter program">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-mailsplit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-mailsplit(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> git-mailsplit &#8211; Simple UNIX mbox splitter program </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+git mailsplit[-b][-f&lt;nn&gt;][-d&lt;prec&gt;][--keep - cr][--mboxrd] - o&lt;directory&gt;[--][(&lt;mbox&gt; | &lt;Maildir&gt;)...]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> Splits a mbox file or a Maildir into a list of files: &quot;0001&quot; &quot;0002&quot; .. in the specified directory so you can process them further from there. </p>
+<dl>
+<dt>
+</dt><dd>
+ <font SIZE="+1"> <code>Important</code> </font> </dd>
+<p> Maildir splitting relies upon filenames being sorted to output patches in the correct order. </p>
+</dl>
+<h2>OPTIONS</h2>
+<p> &lt;mbox&gt;</p>
+<dl>
+<dt>
+</dt><dd> Mbox file to split. If not given, the mbox is read from the standard input.</dd></dl>
+<p> &lt;Maildir&gt;</p>
+<dl>
+<dt>
+</dt><dd> Root of the Maildir to split. This directory should contain the cur, tmp and new subdirectories.</dd></dl>
+<p> -o&lt;directory&gt;</p>
+<dl>
+<dt>
+</dt><dd> Directory in which to place the individual messages.</dd></dl>
+<p> -b</p>
+<dl>
+<dt>
+</dt><dd> If any file doesn&#8217;t begin with a From line, assume it is a single mail message instead of signaling error.</dd></dl>
+<p> -d&lt;prec&gt;</p>
+<dl>
+<dt>
+</dt><dd> Instead of the default 4 digits with leading zeros, different precision can be specified for the generated filenames.</dd></dl>
+<p> -f&lt;nn&gt;</p>
+<dl>
+<dt>
+</dt><dd> Skip the first &lt;nn&gt; numbers, for example if -f3 is specified, start the numbering with 0004.</dd></dl>
+<p> &#8211;keep-cr</p>
+<dl>
+<dt>
+</dt><dd> Do not remove <code>
+</code> from lines ending with <code>
+</code>.</dd></dl>
+<p> &#8211;mboxrd</p>
+<dl>
+<dt>
+</dt><dd> Input is of the &quot;mboxrd&quot; format and &quot;^&gt;+From &quot; line escaping is reversed.</dd></dl>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>create_conversion(7) · Linux Manual Pages</title>
+<meta name="description" content="CREATE CONVERSION – define a new encoding conversion">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-create_conversion/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>create_conversion(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>CREATE CONVERSION &#8211; define a new encoding conversion </p>
+<h2>Synopsis</h2>
+<pre>CREATE [ DEFAULT ] CONVERSION <i>name</i>
+ FOR <i>source_encoding</i> TO <i>dest_encoding</i> FROM <i>funcname</i></pre>
+<h2>Description</h2>
+<p><code>CREATE CONVERSION</code> defines a new conversion between character set encodings. Also, conversions that are marked DEFAULT can be used for automatic encoding conversion between client and server. For this purpose, two conversions, from encoding A to B <code>and</code> from encoding B to A, must be defined. </p>
+<p> To be able to create a conversion, you must have EXECUTE privilege on the function and CREATE privilege on the destination schema.</p>
+<h2>Parameters</h2>
+<dl>
+<dt><code>DEFAULT</code></dt>
+<dd>The DEFAULT clause indicates that this conversion is the default for this particular source to destination encoding. There should be only one default encoding in a schema for the encoding pair.</dd>
+<dt><i>name</i></dt>
+<dd>The name of the conversion. The conversion name can be schema-qualified. If it is not, the conversion is defined in the current schema. The conversion name must be unique within a schema.</dd>
+<dt><i>source_encoding</i></dt>
+<dd>The source encoding name.</dd>
+<dt><i>dest_encoding</i></dt>
+<dd>The destination encoding name.</dd>
+<dt><i>funcname</i></dt>
+<dd>The function used to perform the conversion. The function name can be schema-qualified. If it is not, the function will be looked up in the path. </dd>
+<p> The function must have the following signature: </p>
+<pre>conv_proc(
+ integer, -- source encoding ID
+ integer, -- destination encoding ID
+ cstring, -- source string (null terminated C string)
+ internal, -- destination (fill with a null terminated C string)
+ integer -- source string length
+) RETURNS void;</pre>
+</dl>
+<h2>Notes</h2>
+<p>Use <code>DROP CONVERSION</code> to remove user-defined conversions. </p>
+<p> The privileges required to create a conversion might be changed in a future release.</p>
+<h2>Examples</h2>
+<p>To create a conversion from encoding UTF8 to LATIN1 using <code>myfunc</code>: </p>
+<pre>CREATE CONVERSION myconv FOR 'UTF8' TO 'LATIN1' FROM myfunc;</pre>
+<h2>Compatibility</h2>
+<p><code>CREATE CONVERSION</code> is a PostgreSQL extension. There is no <code>CREATE CONVERSION</code> statement in the SQL standard.</p>
+<h2>See Also</h2>
+<p>ALTER CONVERSION [<code><a href="/docs/linux/man/7-alter_conversion/">alter_conversion</a></code>(7)], CREATE FUNCTION [<code><a href="/docs/linux/man/7-create_function/">create_function</a></code>(7)], DROP CONVERSION [<code><a href="/docs/linux/man/7-drop_conversion/">drop_conversion</a></code>(7)] </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

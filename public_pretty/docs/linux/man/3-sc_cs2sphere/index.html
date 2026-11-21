@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_cs2sphere(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_cs2sphere/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_cs2sphere(3)</h1>
+
+
+
+
+
+<p>sc::CS2Sphere -</p>
+<h2>Synopsis</h2>
+<h3>Public Member Functions</h3>
+<pre><code>CS2Sphere (const SCVector3 &amp;v, double rad)
+CS2Sphere (double x, double y, double z, double rad)
+void initialize (SCVector3 &amp;v, double rad)
+CS2Sphere &amp; operator= (const CS2Sphere &amp;s)
+double distance (CS2Sphere &amp;asphere)
+double common_radius (CS2Sphere &amp;asphere)
+const SCVector3 &amp; center (void) const
+double x () const
+double y () const
+double z () const
+SCVector3 center_vec (const CS2Sphere &amp;asphere)
+double radius (void) const
+void recenter (const SCVector3 &amp;v)
+void print (std::ostream &amp;os=ExEnv::out0()) const
+int intersect (CS2Sphere *s, int n_spheres) const
+Static Public Member Functions
+static void print_counts (std::ostream &amp;=ExEnv::out0())
+Static Public Attributes
+static int n_no_spheres_
+static int n_probe_enclosed_by_a_sphere_
+static int n_probe_center_not_enclosed_
+static int n_surface_of_s0_not_covered_
+static int n_plane_totally_covered_
+static int n_internal_edge_not_covered_
+static int n_totally_covered_
+</code></pre>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

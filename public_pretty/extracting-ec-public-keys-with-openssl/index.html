@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extracting EC Public Keys from Certificates with OpenSSL - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/extracting-ec-public-keys-with-openssl/">
+  <meta name="description" content="Verification: You need the public key to verify digital signatures (e.g., in Bitcoin or TLS). Sharing: Public keys are meant to be shared, while the private key …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Extracting EC Public Keys from Certificates with OpenSSL">
+  <meta property="og:url" content="https://www.systutorials.com/extracting-ec-public-keys-with-openssl/">
+  <meta property="og:description" content="Verification: You need the public key to verify digital signatures (e.g., in Bitcoin or TLS). Sharing: Public keys are meant to be shared, while the private key …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/distributed-systems-academy/">Distributed Systems Academy</a>
+           &rsaquo; <a href="/security-cryptography-path/">Security &amp; Cryptography Path</a>
+          &rsaquo; <a href="/category/cryptography-keys/">Cryptography &amp; Keys</a>
+        </nav>
+        
+        <h1>Extracting EC Public Keys from Certificates with OpenSSL</h1>
+        <time class="post-date" datetime="2024-08-23T14:20:18Z">August 23, 2024</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated May 17, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Verification: You need the public key to verify digital signatures (e.g., in Bitcoin or TLS).
+Sharing: Public keys are meant to be shared, while the private key must remain secret.
+Conversion: Sometimes you need to convert a private key file into a public-only certificate for a web server or blockchain application.
+System Integration: Many tools require public keys in specific formats for authentication, encryption, or policy enforcement.</p>
+<h2 id="generate-and-extract-keys">Generate and Extract Keys</h2>
+<h3 id="generate-an-ec-private-key">Generate an EC private key</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl ecparam -genkey -name secp256k1 -noout -out private.pem
+</span></span></code></pre></div><p>This creates a secp256k1 key (Bitcoin/Ethereum standard). Substitute <code>prime256v1</code> for TLS/web applications or <code>P-384</code> for higher security margins.</p>
+<h3 id="extract-the-public-key">Extract the public key</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl ec -in private.pem -pubout -out public.pem
+</span></span></code></pre></div><p>The <code>-pubout</code> flag is essential — it outputs the public key in PKCS#8 format, compatible with most modern tools and libraries.</p>
+<h3 id="view-key-details">View key details</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl ec -in private.pem -text -noout
+</span></span></code></pre></div><p>This displays the curve parameters, key coordinates, and bit length. Useful for debugging key generation or verifying curve selection.</p>
+<h3 id="extract-public-key-in-different-formats">Extract public key in different formats</h3>
+<p>If you need the raw X and Y coordinates for blockchain addresses or custom implementations:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl ec -in private.pem -text -noout <span class="p">|</span> grep -A <span class="m">5</span> <span class="s2">&#34;pub:&#34;</span>
+</span></span></code></pre></div><p>For SEC1 format (without PKCS#8 wrapping):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl ec -in private.pem -pubout -outform PEM <span class="p">|</span> openssl pkey -pubin -inform PEM -text -noout
+</span></span></code></pre></div><h2 id="curve-selection-in-2026">Curve Selection in 2026</h2>
+<p><strong>secp256k1</strong>: The Bitcoin/Ethereum standard. Smaller keyspace than NIST curves; widely supported in blockchain libraries but consider it legacy for new TLS deployments.</p>
+<p><strong>P-256 (prime256v1)</strong>: NIST standard for TLS and government applications. Recommended for web servers and federal systems. Balances security and performance.</p>
+<p><strong>P-384 and P-521</strong>: Higher security margins. Use for long-term key material or when storing encrypted data that must remain secure beyond 2035.</p>
+<p><strong>Ed25519</strong>: Modern default for SSH, certificate signing, and crypto wallets. Faster than P-256, resistant to side-channel attacks, and increasingly standard in production. Generate with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl genpkey -algorithm ed25519 -out ed25519_key.pem
+</span></span><span class="line"><span class="cl">openssl pkey -in ed25519_key.pem -pubout -out ed25519_pub.pem
+</span></span></code></pre></div><h2 id="practical-workflows">Practical Workflows</h2>
+<h3 id="extract-public-key-for-tls-certificate-signing-request-csr">Extract public key for TLS certificate signing request (CSR)</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl ecparam -genkey -name prime256v1 -noout -out server.key
+</span></span><span class="line"><span class="cl">openssl req -new -key server.key -out server.csr
+</span></span><span class="line"><span class="cl">openssl ec -in server.key -pubout -out server.pub
+</span></span></code></pre></div><h3 id="convert-private-key-to-different-format">Convert private key to different format</h3>
+<p>Extract as SEC1 (traditional EC format):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl pkey -in private.pem -out private-sec1.pem
+</span></span></code></pre></div><p>Export in DER format for binary applications:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl ec -in private.pem -pubout -outform DER -out public.der
+</span></span></code></pre></div><h3 id="verify-a-signature-using-extracted-public-key">Verify a signature using extracted public key</h3>
+<p>After extracting the public key, verify a signature:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl dgst -sha256 -verify public.pem -signature signature.bin data.txt
+</span></span></code></pre></div><h2 id="file-permissions-and-hsm-storage">File Permissions and HSM Storage</h2>
+<p>Always secure private keys immediately after generation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">600</span> private.pem
+</span></span></code></pre></div><p>Only the owning user can read the file. No group or world permissions.</p>
+<p>In production environments, never store private keys on disk. Use:</p>
+<ul>
+<li><strong>Hardware Security Modules (HSM)</strong>: Thales Luna, Yubihsm, or cloud HSM services (AWS CloudHSM, Azure Key Vault)</li>
+<li><strong>Trusted Platform Module (TPM)</strong>: For local machine security; integrates with systemd and many modern Linux applications</li>
+<li><strong>Key Management Services (KMS)</strong>: AWS KMS, Google Cloud KMS, or HashiCorp Vault for distributed systems</li>
+</ul>
+<h2 id="verify-key-consistency">Verify Key Consistency</h2>
+<p>Confirm that the extracted public key matches your private key:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Extract public from private, then compare</span>
+</span></span><span class="line"><span class="cl">openssl ec -in private.pem -pubout <span class="p">|</span> openssl pkey -pubin -text -noout &gt; pub_from_priv.txt
+</span></span><span class="line"><span class="cl">openssl ec -in private.pem -pubout -out extracted.pem
+</span></span><span class="line"><span class="cl">openssl pkey -pubin -in extracted.pem -text -noout &gt; pub_extracted.txt
+</span></span><span class="line"><span class="cl">diff pub_from_priv.txt pub_extracted.txt
+</span></span></code></pre></div><p>No output means they match.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

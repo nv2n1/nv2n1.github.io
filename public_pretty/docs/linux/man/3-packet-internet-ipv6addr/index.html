@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>packet-internet-ipv6addr(3) · Linux Manual Pages</title>
+<meta name="description" content="packet.internet.ipv6addr – IPv6Addr module">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-packet-internet-ipv6addr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>packet-internet-ipv6addr(3)</h1>
+
+
+
+
+
+<p>packet.internet.ipv6addr &#8211; IPv6Addr module</p>
+<h2>Description</h2>
+<p>Create an object to represent an IPv6 address. An IPv6 address is given either by a series of hexadecimal numbers or using the &quot;:&quot; notation. It provides a mechanism for comparing this object with a regular string. It also takes care of &#8216;::&#8217; notation and leading zeroes.</p>
+<h2>Classes</h2>
+<h3>class IPv6Addr(__builtin__.str)</h3>
+<pre>IPv6Addr address object
+Usage:
+ from packet.internet.ipv6addr import IPv6Addr
+ ip = IPv6Addr('fe80000000000000020c29fffe5409ef')
+The following expressions are equivalent:
+ ip == 0xFE80000000000000020C29FFFE5409EF
+ ip == 0xfe80000000000000020c29fffe5409ef
+ ip == '0xFE80000000000000020C29FFFE5409EF'
+ ip == '0xfe80000000000000020c29fffe5409ef'
+ ip == 'FE80000000000000020C29FFFE5409EF'
+ ip == 'fe80000000000000020c29fffe5409ef'
+ ip == 'FE80:0000:0000:0000:020C:29FF:FE54:09EF'
+ ip == 'fe80:0000:0000:0000:020c:29ff:fe54:09ef'
+ ip == 'FE80::020C:29FF:FE54:09EF'
+ ip == 'fe80::020c:29ff:fe54:09ef'
+ ip == 'FE80::20C:29FF:FE54:9EF'
+ ip == 'fe80::20c:29ff:fe54:9ef'
+<code>Methods defined here:</code>
+---------------------
+<code>__eq__(self, other)</code>
+Compare two IPv6 addresses and return True if both are equal.
+<code>__ne__(self, other)</code>
+Compare two IPv6 addresses and return False if both are equal.
+<code>Static methods defined here:</code>
+----------------------------
+<code>__new__(cls, ip)</code>
+Create new instance by converting input int/string into a persistent
+representation of an IPv6 address.</pre>
+<h2>Bugs</h2>
+<p>No known bugs.</p>
+<h2>Author</h2>
+<p>Jorge Mora (mora [at] netapp.com)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

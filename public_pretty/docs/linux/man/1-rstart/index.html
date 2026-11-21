@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rstart(1) · Linux Manual Pages</title>
+<meta name="description" content="rstart – a sample implementation of a Remote Start client">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rstart/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rstart(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> rstart &#8211; a sample implementation of a Remote Start client </p>
+<h2>SYNOPSIS</h2>
+<p> <code>rstart</code> [-c <i>context</i>] [-g] [-l <i>username</i>] [-v] <i>hostname</i> <i>command args &#8230;</i></p>
+<h2>DESCRIPTION</h2>
+<p> <i>Rstart</i> is a simple implementation of a Remote Start client as defined in &quot;A Flexible Remote Execution Protocol Based on <code>rsh</code>&quot;. It uses <i>rsh</i> as its underlying remote execution mechanism.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-c </code><i>context</i></dt>
+<dd> This option specifies the <i>context</i> in which the command is to be run. A <i>context</i> specifies a general environment the program is to be run in. The details of this environment are host-specific; the intent is that the client need not know how the environment must be configured. If omitted, the context defaults to <code>X</code>. This should be suitable for running X programs from the host&#8217;s &quot;usual&quot; X installation.</dd>
+<dt><code>-g</code></dt>
+<dd> Interprets <i>command</i> as a <i>generic command</i>, as discussed in the protocol document. This is intended to allow common applications to be invoked without knowing what they are called on the remote system. Currently, the only generic commands defined are <code>Terminal</code>, <code>LoadMonitor</code>, <code>ListContexts</code>, and <code>ListGenericCommands</code>.</dd>
+<dt><code>-l </code><i>username</i></dt>
+<dd> This option is passed to the underlying <i>rsh</i>; it requests that the command be run as the specified user.</dd>
+<dt><code>-v</code></dt>
+<dd> This option requests that <i>rstart</i> be verbose in its operation. Without this option, <i>rstart</i> discards output from the remote&#8217;s <i>rstart</i> helper, and directs the <i>rstart</i> helper to detach the program from the <i>rsh</i> connection used to start it. With this option, responses from the helper are displayed and the resulting program is not detached from the connection.</dd></dl>
+<h2>NOTES</h2>
+<p> This is a trivial implementation. Far more sophisticated implementations are possible and should be developed. </p>
+<p> Error handling is nonexistent. Without <code>-v</code>, error reports from the remote are discarded silently. With <code>-v</code>, error reports are displayed. </p>
+<p> The $DISPLAY environment variable is passed. If it starts with a colon, the local hostname is prepended. The local domain name should be appended to unqualified host names, but isn&#8217;t. </p>
+<p> The $SESSION_MANAGER environment variable should be passed, but isn&#8217;t. </p>
+<p> X11 authority information is passed for the current display. </p>
+<p> ICE authority information should be passed, but isn&#8217;t. It isn&#8217;t completely clear how <i>rstart</i> should select what ICE authority information to pass. </p>
+<p> Even without <code>-v</code>, the sample <i>rstart</i> helper will leave a shell waiting for the program to complete. This causes no real harm and consumes relatively few resources, but if it is undesirable it can be avoided by explicitly specifying the &quot;exec&quot; command to the shell, eg </p>
+<pre>
+rstart somehost exec xterm
+</pre>
+<p> This is obviously dependent on the command interpreter being used on the remote system; the example given will work for the Bourne and C shells.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-rstartd/">rstartd</a>(1), <a href="/docs/linux/man/1-rsh/">rsh</a>(1), A Flexible Remote Execution Protocol Based on <code>rsh</code></p>
+<h2>AUTHOR</h2>
+<p> Jordan Brown, Quarterdeck Office Systems </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

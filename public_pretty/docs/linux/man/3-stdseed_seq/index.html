@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdseed_seq(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdseed_seq/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdseed_seq(3)</h1>
+
+
+
+
+
+<p>std::seed_seq - std::seed_seq</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;random&gt;
+class seed_seq; <i>(since C++11)</i>
+std::seed_seq consumes a sequence of integer-valued data and produces a requested number of unsigned integer values i, 0 ≤ i &lt; 232
+, based on the consumed data. The produced values are distributed over the entire 32-bit range even if the consumed values are close.
+It provides a way to seed a large number of random number engines or to seed a generator that requires a lot of entropy, given a small seed or a poorly distributed initial seed sequence.
+std::seed_seq meets the requirements of SeedSequence.</p>
+<h2>Member types</h2>
+<p>Member type Definition
+result_type std::uint_least32_t</p>
+<h2>Member functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs and seeds the std::seed_seq object
+constructor <i>(public member function)</i></p>
+<p>operator= not copy-assignable
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i>
+(deleted)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> calculates the bias-eliminated, evenly distributed 32-bit values
+generate <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> obtains the number of 32-bit values stored in std::seed_seq
+size <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> obtains the 32-bit values stored in std::seed_seq
+param <i>(public member function)</i></p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;random&gt;
+#include &lt;cstdint&gt;
+#include &lt;iostream&gt;
+int main()
+{
+std::seed_seq seq{1, 2, 3, 4, 5};
+std::vector&lt;std::uint32_t&gt; seeds(10);
+seq.generate(seeds.begin(), seeds.end());
+for (std::uint32_t n : seeds) {
+std::cout &lt;&lt; n &lt;&lt; &lsquo;\n&rsquo;;
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 4204997637
+ <wbr> 4246533866
+ <wbr> 1856049002
+ <wbr> 1129615051
+ <wbr> 690460811
+ <wbr> 1075771511
+ <wbr> 46783058
+ <wbr> 3904109078
+ <wbr> 1534123438
+ <wbr> 1495905678</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

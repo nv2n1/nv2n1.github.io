@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ocf_heartbeat_jboss(7) · Linux Manual Pages</title>
+<meta name="description" content="ocf_heartbeat_jboss – Manages a JBoss application server instance">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-ocf_heartbeat_jboss/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>ocf_heartbeat_jboss(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>ocf_heartbeat_jboss &#8211; Manages a JBoss application server instance</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>jboss</code> [start | stop | status | monitor | meta-data | validate-all]</dt></dl>
+<h2>Description</h2>
+<dd>Resource script for Jboss. It manages a Jboss instance as an HA resource.</dd>
+<h2>Supported Parameters</h2>
+<p><code>resource_name</code></p>
+<dl>
+<dd>The name of the resource. Defaults to the name of the resource instance. (optional, string, default default)</dd></dl>
+<p> <code>console</code></p>
+<dl>
+<dd>A destination of the log of jboss run and shutdown script. (optional, string, no default)</dd></dl>
+<p> <code>shutdown_timeout</code></p>
+<dl>
+<dd>Timeout for jboss bin/shutdown.sh. We wait for this timeout to expire, then send the TERM and QUIT signals. Finally, the KILL signal is used to terminate the jboss process. You should set the timeout for the stop operation to a value bigger than the sum of the timeout parameters. See also kill_timeout. (optional, integer, default 5)</dd></dl>
+<p> <code>kill_timeout</code></p>
+<dl>
+<dd>If bin/shutdown.sh doesn&#8217;t stop the jboss process, then we send it TERM and QUIT signals, intermittently and once a second. After this timeout expires, if the process is still live, we use the KILL signal. See also shutdown_timeout. (optional, integer, default 10)</dd></dl>
+<p> <code>user</code></p>
+<dl>
+<dd>A user name to start a JBoss. (optional, string, default root)</dd></dl>
+<p> <code>statusurl</code></p>
+<dl>
+<dd>URL to test in the monitor operation. (optional, string, default <a rel="nofollow" href="http://127.0.0.1:8080)">http://127.0.0.1:8080)</a></dd></dl>
+<p> <code>java_home</code></p>
+<dl>
+<dd>Home directory of Java. Defaults to the environment variable JAVA_HOME. If it is not set, then define this parameter. (optional, string, no default)</dd></dl>
+<p> <code>jboss_home</code></p>
+<dl>
+<dd>Home directory of Jboss. (required, string, no default)</dd></dl>
+<p> <code>pstring</code></p>
+<dl>
+<dd>With this string heartbeat matches for the right process to kill. (optional, string, default java -Dprogram.name=run.sh)</dd></dl>
+<p> <code>run_opts</code></p>
+<dl>
+<dd>Start options to start Jboss with, defaults are from the Jboss-Doku. (optional, string, default -c default -l lpg4j)</dd></dl>
+<p> <code>shutdown_opts</code></p>
+<dl>
+<dd>Stop options to stop Jboss with. (optional, string, default -s 127.0.0.1:1099)</dd></dl>
+<h2>Supported Actions</h2>
+<p>This resource agent supports the following actions (operations): </p>
+<p> <code>start</code></p>
+<dl>
+<dd>Starts the resource. Suggested minimum timeout: 60s.</dd></dl>
+<p> <code>stop</code></p>
+<dl>
+<dd>Stops the resource. Suggested minimum timeout: 120s.</dd></dl>
+<p> <code>status</code></p>
+<dl>
+<dd>Performs a status check. Suggested minimum timeout: 30s.</dd></dl>
+<p> <code>monitor</code></p>
+<dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 30s. Suggested interval: 10s.</dd></dl>
+<p> <code>meta-data</code></p>
+<dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5s.</dd></dl>
+<p> <code>validate-all</code></p>
+<dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dd></dl>
+<h2>Example</h2>
+<p>The following is an example configuration for a jboss resource using the <code>crm</code>(8) shell: </p>
+<pre><code>primitive example_jboss ocf:heartbeat:jboss \
+params \
+jboss_home=string \
+op monitor depth=&quot;0&quot; timeout=&quot;30s&quot; interval=&quot;10s&quot;</code></pre>
+<h2>See Also</h2>
+<p>m[blue]<code><a rel="nofollow" href="http://www.linux-ha.org/wiki/jboss_(resource_agent)">http://www.linux-ha.org/wiki/jboss_(resource_agent)</a></code>m[]</p>
+<h2>Author</h2>
+<p><code>Linux-HA contributors (see the resource agent source for information about individual authors)</code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

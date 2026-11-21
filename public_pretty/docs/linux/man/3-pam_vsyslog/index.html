@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pam_vsyslog(3) · Linux Manual Pages</title>
+<meta name="description" content="pam_syslog, pam_vsyslog – send messages to the system logger">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pam_vsyslog/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pam_vsyslog(3)</h1>
+
+
+
+
+
+<p>pam_syslog, pam_vsyslog &#8211; send messages to the system logger</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;security/pam_ext.h&gt;
+#include &lt;syslog.h&gt;
+void pam_syslog(pam_handle_t *pamh, int priority, const char *fmt, ...);
+void pam_vsyslog(pam_handle_t *pamh, int priority, const char *fmt, va_list args);</code></pre>
+<h2>Description</h2>
+<dd>The <code>pam_syslog</code> function logs messages using <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) and is intended for internal use by Linux-PAM and PAM service modules. The <i>priority</i> argument is formed by ORing the facility and the level values as documented in the <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) manual page. </dd>
+<p> The <code>pam_vsyslog</code> function performs the same task as <code>pam_syslog()</code> with the difference that it takes a set of arguments which have been obtained using the <code><a href="/docs/linux/man/3-stdarg/">stdarg</a></code>(3) variable argument list macros.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-pam/">pam</a></code>(8)</p>
+<h2>Standards</h2>
+<p>The <code>pam_syslog</code> and <code>pam_vsyslog</code> functions are Linux-PAM extensions.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

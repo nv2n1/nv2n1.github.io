@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rotctl(1) · Linux Manual Pages</title>
+<meta name="description" content="rotctl – control antenna rotators">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rotctl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rotctl(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> rotctl &#8211; control antenna rotators </p>
+<h2>SYNOPSIS</h2>
+<p> <code>rotctl</code> [<i>OPTION</i>]&#8230; [<i>COMMAND</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> Control antenna rotators. <code>rotctl</code> accepts <i>commands</i> from the command line as well as in interactive mode if none are provided on the command line. </p>
+<p> Keep in mind that <code>Hamlib</code> is BETA level software. While a lot of backend libraries lack complete rig support, the basic functions are usually well supported. The API may change without publicized notice, while an advancement of the minor version (e.g. 1.1.x to 1.2.x) indicates such a change. </p>
+<p> Please report bugs and provide feedback at the e-mail address given in the REPORTING BUGS section. Patches and code enhancements are also welcome.</p>
+<h2>OPTIONS</h2>
+<p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). </p>
+<p> Here is s summary of the supported options:</p>
+<dl>
+<dt><code>-m, &#8211;model=id</code></dt>
+<dd> Select rotator model number. See model list (use &#8216;rotctl -l&#8217;). </dd>
+<p> NB: <code>rotctl</code> (or third party software) will use rig model 1901 when using <code>rpc.rotd</code> or rig model 2 for NET rotctl (rotctld).</p>
+<dt><code>-r, &#8211;rot-file=device</code></dt>
+<dd> Use <i>device</i> as the file name of the port the rotator is connected. Often a serial port, but could be a USB to serial adapter or USB port device. Typically /dev/ttyS0, /dev/ttyS1, /dev/ttyUSB0, etc. on Linux or COM1, COM2, etc. on Win32. </dd>
+<p> Also used to specify the host and port to connect to a listening rotctld daemon on POSIX: </p>
+<p> -r localhost:4533 </p>
+<p> and on Win32: </p>
+<p> -r 127.0.0.1:4533</p>
+<dt><code>-s, &#8211;serial-speed=baud</code></dt>
+<dd> Set serial speed to <i>baud</i> rate. Uses maximum serial speed from rotator backend capabilities as default.</dd>
+<dt><code>-t, &#8211;send-cmd-term=char</code></dt>
+<dd> Change the termination <i>char</i> for text protocol when using the <i>send_cmd</i> command. The default value is &lt;CR&gt;. Non ASCII printable characters can be specified as an ASCII number, in hexadecimal format, prepended with 0x. You may pass an empty string for no termination char. The string -1 tells rotctl to switch to binary protocol. See the <i>send_cmd</i> command for further explanation.</dd>
+<dt><code>-L, &#8211;show-conf</code></dt>
+<dd> List all config parameters for the rotor defined with -m above.</dd>
+<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></dt>
+<dd> Set config parameter. e.g. &#8211;set_conf=stop_bits=2 </dd>
+<p> Use -L option for a list.</p>
+<dt><code>-u, &#8211;dump-caps</code></dt>
+<dd> Dump capabilities for the rotor defined with -m above and exit.</dd>
+<dt><code>-l, &#8211;list</code></dt>
+<dd> List all model numbers defined in <code>Hamlib</code> and exit. As of 1.2.15.1 the list is sorted by model number. </dd>
+<p> <code>N.B.</code> In Linux the list can be scrolled back using Shift-PageUp/ Shift-PageDown, or using the scrollbars of a virtual terminal in X or the cmd window in Windows. The output can be piped to &#8216;more&#8217; or &#8216;less&#8217;, e.g. &#8216;rotctl -l | more&#8217;.</p>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Set verbose mode, cumulative (see DIAGNOSTICS below).</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of these options and exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Show version of <code>rotctl</code> and exit.</dd></dl>
+<p> <code>N.B.</code> Some options may not be implemented by a given backend and will return an error. This is most likely to occur with the <i>&#8211;set-conf</i> and <i>&#8211;show-conf</i> options. </p>
+<p> Please note that the backend for the rotator to be controlled, or the rotator itself may not support some commands. In that case, the operation will fail with a <code>Hamlib</code> error code.</p>
+<h2>COMMANDS</h2>
+<p> Commands can be entered either as a single char, or as a long command name. Basically, the commands do not take a dash in front of them, as the options do. They may be typed in when in interactive mode or provided as argument(s) in command line interface mode. </p>
+<p> Since most of the <code>Hamlib</code> operations have a <i>set</i> and a <i>get</i> method, an upper case letter will be used for <i>set</i> method whereas the corresponding lower case letter refers to the <i>get</i> method. Each operation also has a long name; in interactive mode, prepend a backslash to enter a long command name. </p>
+<p> Example: Use &quot;\get_info&quot; to see the rotor&#8217;s info. </p>
+<p> Please note that the backend for the rotator to be controlled, or the rotator itself may not support some commands. In that case, the operation will fail with a <code>Hamlib</code> error message. </p>
+<p> A summary of commands is included below (In the case of &quot;set&quot; commands the quoted string is replaced by the value in the description. In the case of &quot;get&quot; commands the quoted string is the key name of the value returned.):</p>
+<dl>
+<dt><code>Q|q, exit rotctl</code></dt>
+<dd> Exit rotctl in interactive mode. </dd>
+<p> When rotctl is controlling the rotor directly, will close the rotor backend and port. When rotctl is connected to rotctld (rotor model 2), the TCP/IP connection to rotctld is closed and rotctld remains running, available for another TCP/IP network connection.</p>
+<dt><code>P, set_pos &#8216;Azimuth&#8217; &#8216;Elevation&#8217;</code></dt>
+<dd> Set position: Azimuth and Elevation as double precision floating point values.</dd>
+<dt><code>p, get_pos</code></dt>
+<dd> Get position: &#8216;Azimuth&#8217; and &#8216;Elevation&#8217; as double precision floating point values.</dd>
+<dt><code>M, move &#8216;Direction&#8217; &#8216;Speed&#8217;</code></dt>
+<dd> Move the rotator in a specific direction at the given rate. </dd>
+<p> Values are integers where Direction is defined as 2 = Up, 4 = Down, 8 = Left, and 16 = Right. Speed is an integer between 1 and 100. Not all backends that implement the move command use the Speed value. At this time only the gs232a utilizes the Speed parameter.</p>
+<dt><code>S, stop</code></dt>
+<dd> Stop the rotator.</dd>
+<dt><code>K, park</code></dt>
+<dd> Park the antenna.</dd>
+<dt><code>C, set_conf &#8216;Token&#8217; &#8216;Value&#8217;</code></dt>
+<dd> Set a configuration parameter. It is safe to give &quot;Token&quot; a value of &#8216;0&#8217; (zero). &quot;Value&quot; may be a string up to 20 characters.<br />
+ See -L output</dd>
+<dt><code>R, reset &#8216;Reset&#8217;</code></dt>
+<dd> Reset the rotator. </dd>
+<p> Integer value of &#8216;1&#8217; for Reset All.</p>
+<dt><code>_, get_info</code></dt>
+<dd> Get misc information on the rotator. </dd>
+<p> At the moment returns &#8216;Model Name&#8217;.</p>
+<dt><code>w, send_cmd &#8216;Cmd&#8217;</code></dt>
+<dd> Send raw command string to the rotator.<br />
+ &lt;CR&gt; (or send-cmd-term, see <i>-t</i> option) is appended automatically at the end of the command for text protocols. For binary protocols, enter values as ��</dd></dl>
+<p> <code>Locator Commands</code> </p>
+<p> These commands offer conversions of Degrees Minutes Seconds to other formats, Maidenhead square locator conversions and distance and azimuth conversions.</p>
+<dl>
+<dt><code>L, lonlat2loc &#8216;Longitude&#8217; &#8216;Latitude&#8217; &#8216;Loc Len [2-12]&#8217;</code></dt>
+<dd> Returns the Maidenhead locator for the given &#8216;Longitude&#8217; and &#8216;Latitude&#8217;. </dd>
+<p> Both are floating point values. The precision of the returned square is controlled by &#8216;Loc Len&#8217; which should be an even numbered integer value between 2 and 12. </p>
+<p> For example, &quot;+L -170.000000 -85.000000 12
+&quot; returns &quot;Locator: AA55AA00AA00
+&quot;.</p>
+<dt><code>l, loc2lonlat &#8216;Locator&#8217;</code></dt>
+<dd> Returns &#8216;Longitude&#8217; and &#8216;Latitude&#8217; in decimal degrees at the approximate center of the requested grid square (despite the use of double precision variables internally, some rounding error occurs). West longitude is expressed as a negative value. South latitude is expressed as a negative value. Locator can be from 2 to 12 characters in length. </dd>
+<p> For example, &quot;+l AA55AA00AA00
+&quot; returns &quot;Longitude: -169.999983
+Latitude: -84.999991
+&quot;.</p>
+<dt><code>D, dms2dec &#8216;Degrees&#8217; &#8216;Minutes&#8217; &#8216;Seconds&#8217; &#8216;S/W&#8217;</code></dt>
+<dd> Returns &#8216;Dec Degrees&#8217;, a signed floating point value. </dd>
+<p> Degrees and Minutes are integer values and Seconds is a floating point value. S/W is a flag with &#8216;1&#8217; indicating South latitude or West longitude and &#8216;0&#8217; North or East (the flag is needed as computers don&#8217;t recognize a signed zero even though only the Degrees value only is typically signed in DMS notation).</p>
+<dt><code>d, dec2dms &#8216;Dec Degrees&#8217;</code></dt>
+<dd> Returns &#8216;Degrees&#8217; &#8216;Minutes&#8217; &#8216;Seconds&#8217; &#8216;S/W&#8217;. </dd>
+<p> Values are as in dms2dec above.</p>
+<dt><code>E, dmmm2dec &#8216;Degrees&#8217; &#8216;Dec Minutes&#8217; &#8216;S/W&#8217;</code></dt>
+<dd> Returns &#8216;Dec Degrees&#8217;, a signed floating point value. </dd>
+<p> Degrees is an integer value and Minutes is a floating point value. S/W is a flag with &#8216;1&#8217; indicating South latitude or West longitude and &#8216;0&#8217; North or East (the flag is needed as computers don&#8217;t recognize a signed zero even though only the Degrees value only is typically signed in DMS notation).</p>
+<dt><code>e, dec2dmmm &#8216;Dec Deg&#8217;</code></dt>
+<dd> Returns &#8216;Degrees&#8217; &#8216;Minutes&#8217; &#8216;S/W&#8217;. </dd>
+<p> Values are as in dmmm2dec above.</p>
+<dt><code>B, qrb &#8216;Lon 1&#8217; &#8216;Lat 1&#8217; &#8216;Lon 2&#8217; &#8216;Lat 2&#8217;</code></dt>
+<dd> Returns &#8216;Distance&#8217; &#8216;Azimuth&#8217; where Distance is in km and Azimuth is in degrees. </dd>
+<p> All Lon/Lat values are signed floating point numbers.</p>
+<dt><code>A, a_sp2a_lp &#8216;Short Path Deg&#8217;</code></dt>
+<dd> Returns &#8216;Long Path Deg&#8217; or -RIG_EINVAL upon input error.. </dd>
+<p> Both are floating point values within the range 0.00 to 360.00.</p>
+<dt><code>a, d_sp2d_lp &#8216;Short Path km&#8217;</code></dt>
+<dd> Returns &#8216;Long Path km&#8217;. </dd>
+<p> Both are floating point values.</dl>
+<h2>EXAMPLES</h2>
+<p> Start <code>rotctl</code> for RotorEZ using the first serial port on Linux: </p>
+<p> $ rotctl -m 401 -r /dev/ttyS0 </p>
+<p> Start <code>rotctl</code> for RotorEZ using COM2 on Win32: </p>
+<p> C:\&gt; rotctl -m 401 -r COM2 </p>
+<p> Start <code>rotctl</code> using <code>rpc.rotd</code> and querying the position: </p>
+<p> $ rotctl -m 101 -r localhost \get_pos </p>
+<p> Connect to a running <code>rotctld</code> with rotor model 2 (&quot;NET rotctl&quot;) on the local host and specifying the TCP port on POSIX: </p>
+<p> $ rotctl -m 2 -r localhost:4533 </p>
+<p> and on Win32: </p>
+<p> C:\&gt; rotctl -m 2 -r 127.0.0.1:4533</p>
+<h2>DIAGNOSTICS</h2>
+<p> The <code>-v</code>, <code>&#8211;version</code> option allows different levels of diagnostics to be output to <code>stderr</code> and correspond to -v for BUG, -vv for ERR, -vvv for WARN, -vvvv for VERBOSE, or -vvvvv for TRACE. </p>
+<p> A given verbose level is useful for providing needed debugging information to the email address below. For example, TRACE output shows all of the values sent to and received from the radio which is very useful for radio backend library development and may be requested by the developers.</p>
+<h2>EXIT STATUS</h2>
+<p> <code>rotctl</code> exits with:<br />
+ 0 if all operations completed normally;<br />
+ 1 if there was an invalid command line option or argument;<br />
+ 2 if an error was returned by <code>Hamlib</code>.</p>
+<h2>BUGS</h2>
+<p> This suspiciously empty section&#8230;</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;hamlib-developer [at] lists.sourceforge.net&gt;. </p>
+<p> We are already aware of the bug in the previous section :-)</p>
+<h2>AUTHOR</h2>
+<p> Written by Stephane Fillod, Nate Bargmann, and the Hamlib Group </p>
+<p> &lt;<a rel="nofollow" href="http://www.hamlib.org">http://www.hamlib.org</a>&gt;.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2000-2010 Stephane Fillod<br />
+ Copyright &#169; 2011-2012 Nate Bargmann<br />
+ Copyright &#169; 2000-2010 the Hamlib Group </p>
+<p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+<h2>SEE ALSO</h2>
+<p> <code>hamlib</code>(3), <code><a href="/docs/linux/man/8-rpc-rotd/">rpc.rotd</a></code>(8) <code><a href="/docs/linux/man/8-rotctld/">rotctld</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

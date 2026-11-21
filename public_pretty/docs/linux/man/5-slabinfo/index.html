@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>slabinfo(5) · Linux Manual Pages</title>
+<meta name="description" content="slabinfo – kernel slab allocator statistics">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-slabinfo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>slabinfo(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>slabinfo &#8211; kernel slab allocator statistics</p>
+<h2>Synopsis</h2>
+<p><code>cat /proc/slabinfo</code></p>
+<h2>Description</h2>
+<p>Frequently used objects in the Linux kernel (buffer heads, inodes, dentries, etc.) have their own cache. The file <i>/proc/slabinfo</i> gives statistics on these caches. The following (edited) output shows an example of the contents of this file: </p>
+<p> $ <code>sudo cat /proc/slabinfo</code> slabinfo &#8211; version: 2.1 # name &lt;active_objs&gt; &lt;num_objs&gt; &lt;objsize&gt; &lt;objperslab&gt; &lt;pagesperslab&gt; &#8230; sigqueue 100 100 160 25 1 : tunables 0 0 0 : slabdata 4 4 0 sighand_cache 355 405 2112 15 8 : tunables 0 0 0 : slabdata 27 27 0 kmalloc-8192 96 96 8192 4 8 : tunables 0 0 0 : slabdata 24 24 0 &#8230; </p>
+<p> The first line of output includes a version number, which allows an application that is reading the file to handle changes in the file format. (See VERSIONS, below.) The next line lists the names of the columns in the remaining lines. </p>
+<p> Each of the remaining lines displays information about a specified cache. Following the cache name, the output shown in each line shows three components for each cache:</p>
+<dl>
+<dt>*</dt>
+<dd>statistics</dd>
+<dt>*</dt>
+<dd>tunables</dd>
+<dt>*</dt>
+<dd>slabdata</dd></dl>
+<p> The statistics are as follows:</p>
+<dl>
+<dt><i>active_objs</i></dt>
+<dd>The number of objects that are currently active (i.e., in use).</dd>
+<dt><i>num_objs</i></dt>
+<dd>The total number of allocated objects (i.e., objects that are both in use and not in use).</dd>
+<dt><i>objsize</i></dt>
+<dd>The size of objects in this slab, in bytes.</dd>
+<dt><i>objperslab</i></dt>
+<dd>The number of objects stored in each slab.</dd>
+<dt><i>pagesperslab</i></dt>
+<dd>The number of pages allocated for each slab.</dd></dl>
+<p> The <i>tunables</i> entries in each line show tunable parameters for the corresponding cache. When using the default SLUB allocator, there are no tunables, the <i>/proc/slabinfo</i> file is not writable, and the value 0 is shown in these fields. When using the older SLAB allocator, the tunables for a particular cache can be set by writing lines of the following form to <i>/proc/slabinfo</i>: </p>
+<p> # <code>echo &#8216;name limit batchcount sharedfactor&#8217; &gt; /proc/slabinfo</code> </p>
+<p> Here, <i>name</i> is the cache name, and <i>limit</i>, <i>batchcount</i>, and <i>sharedfactor</i> are integers defining new values for the corresponding tunables. The <i>limit</i> value should be a positive value, <i>batchcount</i> should be a positive value that is less than or equal to <i>limit</i>, and <i>sharedfactor</i> should be nonnegative. If any of the specified values is invalid, the cache settings are left unchanged. </p>
+<p> The <i>tunables</i> entries in each line contain the following fields:</p>
+<dl>
+<dt><i>limit</i></dt>
+<dd>The maximum number of objects that will be cached.</dd>
+<dt><i>batchcount</i></dt>
+<dd>On SMP systems, this specifies the number of objects to transfer at one time when refilling the available object list.</dd>
+<dt><i>sharedfactor</i></dt>
+<dd>[To be documented]</dd></dl>
+<p> The <i>slabdata</i> entries in each line contain the following fields:</p>
+<dl>
+<dt><i>active_slabs</i></dt>
+<dd>The number of active slabs.</dd>
+<dt><i>nums_slabs</i></dt>
+<dd>The total number of slabs.</dd>
+<dt><i>sharedavail</i></dt>
+<dd>[To be documented]</dd></dl>
+<p> Note that because of object alignment and slab cache overhead, objects are not normally packed tightly into pages. Pages with even one in-use object are considered in-use and cannot be freed. </p>
+<p> Kernels configured with <code>CONFIG_DEBUG_SLAB</code> will also have additional statistics fields in each line, and the first line of the file will contain the string &quot;(statistics)&quot;. The statistics field include : the high water mark of active objects; the number of times objects have been allocated; the number of times the cache has grown (new pages added to this cache); the number of times the cache has been reaped (unused pages removed from this cache); and the number of times there was an error allocating new pages to this cache.</p>
+<h2>Versions</h2>
+<p>The <i>/proc/slabinfo</i> file first appeared in Linux 2.1.23. The file is versioned, and over time there have been a number of versions with different layouts:</p>
+<dl>
+<dt>1.0</dt>
+<dd>Present throughout the Linux 2.2.x kernel series.</dd>
+<dt>1.1</dt>
+<dd>Present in the Linux 2.4.x kernel series.</dd>
+<dt>1.2</dt>
+<dd>A format that was briefly present in the Linux 2.5 development series.</dd>
+<dt>2.0</dt>
+<dd>Present in Linux 2.6.x kernels up to and including Linux 2.6.9.</dd>
+<dt>2.1</dt>
+<dd>The current format, which first appeared in Linux 2.6.10.</dd></dl>
+<h2>Notes</h2>
+<p>Only root can read and (if the kernel was configured with <code>CONFIG_SLAB</code>) write the <i>/proc/slabinfo</i> file. </p>
+<p> The total amount of memory allocated to the SLAB/SLUB cache is shown in the <i>Slab</i> field of <i>/proc/meminfo</i>.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-slabtop/">slabtop</a></code>(1) </p>
+<p> The kernel source file <i>Documentation/vm/slub.txt</i> and <i>tools/vm/slabinfo.c</i>.</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

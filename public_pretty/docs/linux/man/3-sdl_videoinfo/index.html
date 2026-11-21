@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_videoinfo(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_VideoInfo – Video Target information">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_videoinfo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_videoinfo(3)</h1>
+
+
+
+
+
+<p>SDL_VideoInfo &#8211; Video Target information</p>
+<h2>Structure Definition</h2>
+<pre><tt>typedef struct{
+ Uint32 hw_available:1;
+ Uint32 wm_available:1;
+ Uint32 blit_hw:1;
+ Uint32 blit_hw_CC:1;
+ Uint32 blit_hw_A:1;
+ Uint32 blit_sw:1;
+ Uint32 blit_sw_CC:1;
+ Uint32 blit_sw_A:1;
+ Uint32 blit_fill;
+ Uint32 video_mem;
+ SDL_PixelFormat *vfmt;
+} SDL_VideoInfo;</tt></pre>
+<h2>Structure Data</h2>
+<dl COMPACT>
+<dt><code>hw_available</code></dt>
+<dd>Is it possible to create hardware surfaces?</dd>
+<dt><code>wm_available</code></dt>
+<dd>Is there a window manager available</dd>
+<dt><code>blit_hw</code></dt>
+<dd>Are hardware to hardware blits accelerated?</dd>
+<dt><code>blit_hw_CC</code></dt>
+<dd>Are hardware to hardware colorkey blits accelerated?</dd>
+<dt><code>blit_hw_A</code></dt>
+<dd>Are hardware to hardware alpha blits accelerated?</dd>
+<dt><code>blit_sw</code></dt>
+<dd>Are software to hardware blits accelerated?</dd>
+<dt><code>blit_sw_CC</code></dt>
+<dd>Are software to hardware colorkey blits accelerated?</dd>
+<dt><code>blit_sw_A</code></dt>
+<dd>Are software to hardware alpha blits accelerated?</dd>
+<dt><code>blit_fill</code></dt>
+<dd>Are color fills accelerated?</dd>
+<dt><code>video_mem</code></dt>
+<dd>Total amount of video memory in Kilobytes</dd>
+<dt><code>vfmt</code></dt>
+<dd><i>Pixel format</i> of the video device</dd></dl>
+<h2>Description</h2>
+<p>This (read-only) structure is returned by <i></i><code>SDL_GetVideoInfo</code>. It contains information on either the &#8216;best&#8217; available mode (if called before <i></i><code>SDL_SetVideoMode</code>) or the current video mode.</p>
+<h2>See Also</h2>
+<p><i></i><code>SDL_PixelFormat</code>, <i></i><code>SDL_GetVideoInfo</code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

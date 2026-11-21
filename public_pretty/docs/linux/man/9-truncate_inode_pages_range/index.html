@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>truncate_inode_pages_range(9) · Linux Manual Pages</title>
+<meta name="description" content="truncate_inode_pages_range – truncate range of pages specified by start &amp; end byte offsets">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-truncate_inode_pages_range/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>truncate_inode_pages_range(9)</h1>
+
+
+
+
+
+<p>truncate_inode_pages_range &#8211; truncate range of pages specified by start &amp; end byte offsets</p>
+<h2>Synopsis</h2>
+<pre><code>void truncate_inode_pages_range(struct address_space *mapping, loff_t lstart, loff_t lend);</code></pre>
+<h2>Arguments</h2>
+<p><i>mapping</i></p>
+<dl>
+<dd>
+</dd><dd>mapping to truncate</dd></dl>
+<p> <i>lstart</i></p>
+<dl>
+<dd>offset from which to truncate</dd></dl>
+<p> <i>lend</i></p>
+<dl>
+<dd>offset to which to truncate (inclusive)</dd></dl>
+<h2>Description</h2>
+<p>Truncate the page cache, removing the pages that are between specified offsets (and zeroing out partial pages if lstart or lend + 1 is not page aligned). </p>
+<p> Truncate takes two passes &#8211; the first pass is nonblocking. It will not block on page locks and it will not block on writeback. The second pass will wait. This is to prevent as much IO as possible in the affected region. The first pass will remove most pages, so the search cost of the second pass is low. </p>
+<p> We pass down the cache-hot hint to the page freeing code. Even if the mapping is large, it is probably the case that the final pages are the most recently touched, and freeing happens in ascending file offset order. </p>
+<p> Note that since -&gt;<code>invalidatepage</code> accepts range to invalidate truncate_inode_pages_range is able to handle cases where lend + 1 is not page aligned properly.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

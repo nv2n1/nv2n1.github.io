@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>create_makefiles(1) · Linux Manual Pages</title>
+<meta name="description" content="create_makefiles – Recreates all Makefiles beneath a directory">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-create_makefiles/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>create_makefiles(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> create_makefiles &#8211; Recreates all Makefiles beneath a directory</p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>create_makefiles</code> [<i>dir</i>] </dt>
+</dl>
+<h2>DESCRIPTION</h2>
+<p> <code>create_makefiles</code> recreates all <i>Makefile</i>s in <i>dir</i> and its (recursed) subdirectories from the corresponding <i>Makefile.am</i> templates. </p>
+<dd>This script must be run from the toplevel directory (the one containing configure). This script saves time compared to re-running configure completely. </dd>
+<p> If the source directory is different from the build directory (see the environment variables below), it will be assumed that each <i>Makefile.am</i> and <i>Makefile.in</i> belongs beneath the source directory and that each <i>Makefile</i> belongs beneath the build directory. </p>
+<p> This utility is part of the KDE Software Development Kit. </p>
+<h2>ENVIRONMENT</h2>
+<p> One of the following variables (but not both) should be set if the source directory is different from the build directory. If the build directory is simply a subdirectory of the source directory, the simpler variable <code>OBJ_SUBDIR</code> should be used. </p>
+<dl>
+<dt><code>OBJ_SUBJDIR</code></dt>
+<dd> Indicates that the build directory is in the given subdirectory of the source directory. For instance, if the source directory is <i>kdesdk</i> and the build directory is <i>kdesdk/obj-i386-linux</i>, then <code>OBJ_SUBDIR</code> should be set to <i>obj-i386-linux</i>. </dd>
+<dt><code>OBJ_REPLACEMENT</code></dt>
+<dd> A <code>sed</code> expression that is used to transform the source directory into the build directory. For instance, if the source directory is <i>kdesdk/obj-i386-linux</i>, then <code>OBJ_REPLACEMENT</code> should be set to <i>s#kdesdk#kdesdk-obj#</i>. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-create_makefile/">create_makefile</a>(1) make(2) </p>
+<h2>AUTHORS</h2>
+<p> <code>create_makefiles</code> was written by David Faure &lt;faure [at] kde.org&gt;. </p>
+<p> This manual page was prepared by Ben Burton &lt;bab [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

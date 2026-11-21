@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>airmon-ng(8) · Linux Manual Pages</title>
+<meta name="description" content="airmon-ng – bash script designed to turn wireless cards into monitor mode.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-airmon-ng/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>airmon-ng(8)</h1>
+
+
+
+
+
+<p>airmon-ng &#8211; bash script designed to turn wireless cards into monitor mode.</p>
+<h2>Synopsis</h2>
+<p><code>airmon-ng</code> &lt;start|stop&gt; &lt;interface&gt; [channel] <code>airmon-ng</code> &lt;check&gt; [kill]</p>
+<h2>Description</h2>
+<p><code>airmon-ng</code> is script can be used to enable monitor mode on wireless interfaces. It may also be used to go back from monitor mode to managed mode. Entering the airmon-ng command without parameters will show the interfaces status. It can list/kill programs that can interfere with the wireless card and set the right sources in /etc/kismet/kismet.conf too.</p>
+<h2>Optional Parameters</h2>
+<dl>
+<dt><i>start &lt;interface&gt; [channel]</i></dt>
+<dd>Enable monitor mode on an interface (and specify a channel). Note: Madwifi-ng is a special case, &#8216;start&#8217; has to be used on wifi interfaces and &#8216;stop&#8217; on ath interfaces. <i>stop &lt;interface&gt;</i> Disable monitor mode and go back to managed mode (except for madwifi-ng where it kills the ath VAP).</dd>
+<dt><i>check [kill]</i></dt>
+<dd>List all possible programs that could interfere with the wireless card. If &#8216;kill&#8217; is specified, it will try to kill all of them.</dd></dl>
+<h2>Author</h2>
+<p>This manual page was written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Debian system (but may be used by others). And modified to fit airmon-ng by David Francos Cuartero &lt;xayon [at] xayon.net&gt;. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-airbase-ng/">airbase-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-aireplay-ng/">aireplay-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airodump-ng/">airodump-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airserv-ng/">airserv-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airtun-ng/">airtun-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-besside-ng/">besside-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-easside-ng/">easside-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-tkiptun-ng/">tkiptun-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-wesside-ng/">wesside-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-besside-ng-crawler/">besside-ng-crawler</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-wpaclean/">wpaclean</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

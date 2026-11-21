@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mongoc_client_get_database_names(3) · Linux Manual Pages</title>
+<meta name="description" content="mongoc_client_get_database_names() – None">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mongoc_client_get_database_names/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mongoc_client_get_database_names(3)</h1>
+
+
+
+
+
+<p>mongoc_client_get_database_names() &#8211; None</p>
+<h2>Synopsis</h2>
+<pre>char **
+mongoc_client_get_database_names (mongoc_client_t *client,
+ bson_error_t *error);</pre>
+<p>This function queries the MongoDB server for a list of known databases. </p>
+<h2>Parameters</h2>
+<dl COMPACT>
+<dt><code>client</code></dt>
+<dd>A <code>mongoc_client_t</code> \&amp;.</dd></dl>
+<dl COMPACT>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
+<h2>Errors</h2>
+<p>Errors are propagated via the <code>error</code> parameter. </p>
+<h2>Returns</h2>
+<p>A <code>NULL</code> terminated vector of <code>NULL-byte</code> terminated strings. The result should be freed with <code><a href="/docs/linux/man/3-bson_strfreev/">bson_strfreev</a>(3)</code> \&amp;. </p>
+<p> <code>NULL</code> is returned upon failure and <code>error</code> is set. </p>
+<h2>Examples</h2>
+<pre>{
+ bson_error_t error;
+ char **strv;
+ unsigned i;
+ if ((strv = mongoc_client_get_collection_names (client, &amp;error))) {
+ for (i = 0; strv [i]; i++)
+ printf (&quot;%s
+&quot;, strv [i]);
+ bson_strfreev (strv);
+ } else {
+ fprintf (stderr, &quot;Command failed: %s
+&quot;, error.message);
+ }
+}</pre>
+<h2>Colophon</h2>
+<p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

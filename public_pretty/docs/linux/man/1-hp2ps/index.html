@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hp2ps(1) · Linux Manual Pages</title>
+<meta name="description" content="hp2ps – convert a heap profile to a POSTSCRIPT graph">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-hp2ps/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>hp2ps(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> hp2ps &#8211; convert a heap profile to a P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> graph </p>
+<h2>SYNOPSIS</h2>
+<p> <code>hp2ps</code> [flags] [file][.hp]</p>
+<h2>DESCRIPTION</h2>
+<p> The program <code>hp2ps</code> converts a heap profile stored in <i>file</i> into a P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> graph, sending the result to <i>file.ps.</i> By convention, files to be processed by <code>hp2ps</code> have a <i>.hp</i> extension. However, for compatibility with older versions of <code>hp2ps, </code> this extension can be omitted. If <i>file</i> is omitted entirely, then the program behaves as a filter.</p>
+<h2>OPTIONS</h2>
+<p> The flags are:</p>
+<dl>
+<dt><code>-d</code></dt>
+<dd> In order to make graphs more readable, <code>hp2ps</code> sorts the shaded bands for each identifier. The default sort ordering is for the bands with the largest area to be stacked on top of the smaller ones. The <code>-d</code> option causes rougher bands (those reprsenting series of values with the largest standard deviations) to be stacked on top of smoother ones.</dd>
+<dt><code>-b</code></dt>
+<dd> Normally, <code>hp2ps</code> puts the title of the graph in a small box at the top of the page. However, if the JOB string is too long to fit in a small box (more than 35 characters), then <code>hp2ps</code> will choose to use a big box instead. The <code>-b</code> option forces <code>hp2ps</code> to use a big box.</dd>
+<dt><code>-e</code> <i>float</i>[in|mm|pt]</dt>
+<dd> Generate encapsulated P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> suitable for inclusion in LaTeX documents. Usually, the P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> graph is drawn in landscape mode in an area 9 inches wide by 6 inches high, and <code>hp2ps</code> arranges for this area to be approximately centered on a sheet of a4 paper. This format is convenient of studying the graph in detail, but it is unsuitable for inclusion in LaTeX documents. The <code>-e </code> option causes the graph to be drawn in portrait mode, with <i>float</i> specifying the width in inches, millimetres or points (the default). The resulting P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> file conforms to the <i>Encapsulated Post Script</i> (EPS) convention, and it can be included in a LaTeX document using Rokicki&#8217;s dvi-to-P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> converter <code>dvips.</code> <code>hp2ps</code> requires the width to exceed 2 inches.</dd>
+<dt><code>-g</code></dt>
+<dd> Create output suitable for the <code>gs</code> P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> previewer (or similar). In this case the graph is printed in portrait mode without scaling. The output is unsuitable for a laser printer.</dd>
+<dt><code>-p</code></dt>
+<dd> Use previous parameters. By default, the P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> graph is automatically scaled both horizontally and vertically so that it fills the page. However, when preparing a seires of graphs for use in a presentation, it is often useful to draw a new graph using the same scale, shading and ordering as a previous one. The <code>-p</code> flag causes the graph to be drawn using the parameters determined by a previous run of <code>hp2ps</code> on <i>file.</i></dd>
+<dt><code>-s</code></dt>
+<dd> Use a small box for the title.</dd>
+<dt><code>-y</code></dt>
+<dd> Draw the graph in the traditional York style, ignoring marks.</dd>
+<dt><code>-?</code></dt>
+<dd> Print out usage information.</dd></dl>
+<h2>INPUT FORMAT</h2>
+<p> The format of a heap profile is best described by example: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+JOB &quot;a.out -p&quot;
+DATE &quot;Fri Apr 17 11:43:45 1992&quot;
+SAMPLE_UNIT &quot;seconds&quot;
+VALUE_UNIT &quot;bytes&quot;
+BEGIN_SAMPLE 0.00
+  SYSTEM 24
+END_SAMPLE 0.00
+BEGIN_SAMPLE 1.00
+  elim 180
+  insert 24
+  intersect 12
+  disin 60
+  main 12
+  reduce 20
+  SYSTEM 12
+END_SAMPLE 1.00
+MARK 1.50
+MARK 1.75
+MARK 1.80
+BEGIN_SAMPLE 2.00
+  elim 192
+  insert 24
+  intersect 12
+  disin 84
+  main 12
+  SYSTEM 24
+END_SAMPLE 2.00
+BEGIN_SAMPLE 2.82 
+END_SAMPLE 2.82 
+</dd></dl>
+</pre>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-dvips/">dvips</a>(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), hbchp (1), lmlchp(1)<br />
+ C. Runciman and D. Wakeling, <i>Heap Profiling for Lazy Functional Languages, YCS-172, University of York, 1992</i></p>
+<h2>NOTES</h2>
+<p> P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> is a registered trademark of Adobe Systems Incorporated.</p>
+<h2>AUTHOR</h2>
+<p> David Wakeling of the University of York. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

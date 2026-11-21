@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>urifind(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-urifind/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>urifind(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>urifind - find URIs in a document and dump them to STDOUT.</p>
+<h2>SYNOPSIS</h2>
+ <pre>
+    $ urifind file
+</pre>
+<h2>DESCRIPTION</h2>
+<p><i>urifind</i> is a simple script that finds URIs in one or more files (using <tt>&quot;URI::Find&quot;</tt>), and outputs them to to <font SIZE="-1">STDOUT. </font> That&rsquo;s it.</p>
+<p>To find all the URIs in <i>file1</i>, use:</p>
+ <pre>
+    $ urifind file1
+</pre> 
+<p>To find the URIs in multiple files, simply list them as arguments:</p>
+ <pre>
+    $ urifind file1 file2 file3
+</pre> 
+<p><i>urifind</i> will read from <tt>&quot;STDIN&quot;</tt> if no files are given or if a filename of <tt>&quot;-&quot;</tt> is specified:</p>
+ <pre>
+    $ wget <a rel="nofollow" HREF="http://www.boston.com/">http://www.boston.com/</a> -O - | urifind
+</pre> 
+<p>When multiple files are listed, <i>urifind</i> prefixes each found <font SIZE="-1">URI</font> with the file from which it came:</p>
+ <pre>
+    $ urifind file1 file2
+    file1: <a rel="nofollow" HREF="http://www.boston.com/index.html">http://www.boston.com/index.html</a>
+    file2: <a rel="nofollow" HREF="http://use.perl.org/">http://use.perl.org/</a>
+</pre> 
+<p>This can be turned on for single files with the <tt>&quot;-p&quot;</tt> (``prefix&rsquo;&rsquo;) switch:</p>
+ <pre>
+    $urifind -p file3
+    file1: <a rel="nofollow" HREF="http://fsck.com/rt/">http://fsck.com/rt/</a>
+</pre> 
+<p>It can also be turned off for multiple files with the <tt>&quot;-n&quot;</tt> (``no prefix&rsquo;&rsquo;) switch:</p>
+ <pre>
+    $ urifind -n file1 file2
+    <a rel="nofollow" HREF="http://www.boston.com/index.html">http://www.boston.com/index.html</a>
+    <a rel="nofollow" HREF="http://use.perl.org/">http://use.perl.org/</a>
+</pre> 
+<p>By default, URIs will be displayed in the order found; to sort them ascii-betically, use the <tt>&quot;-s&quot;</tt> (<code>sort'') option. To reverse sort them, use the &lt;tt&gt;&amp;quot;-r&amp;quot;&lt;/tt&gt; (</code>reverse&rsquo;&rsquo;) flag (<tt>&quot;-r&quot;</tt> implies <tt>&quot;-s&quot;</tt>).</p>
+ <pre><code>
+$ urifind - s file1 file2 http :        // use.perl.org/
+                                 http : // www.boston.com/index.html
+                                        mailto : webmaster[at] boston.com $ urifind -
+    r file1 file2
+        mailto : webmaster[at] boston.com
+                     http :       // www.boston.com/index.html
+                            http: // use.perl.org/
+</code></pre> 
+<p>Finally, <i>urifind</i> supports limiting the returned URIs by scheme or by arbitrary pattern, using the <tt>&quot;-S&quot;</tt> option (for schemes) and the <tt>&quot;-P&quot;</tt> option. Both <tt>&quot;-S&quot;</tt> and <tt>&quot;-P&quot;</tt> can be specified multiple times:</p>
+ <pre><code>
+$ urifind - S mailto file1 mailto : webmaster[at] boston.com $ urifind - S mailto - S http file1 mailto : webmaster[at] boston.com http: // www.boston.com/index.html
+</code></pre> 
+<p><tt>&quot;-P&quot;</tt> takes an arbitrary Perl regex. It might need to be protected from the shell:</p>
+ <pre>
+    $ urifind -P 's?html?' file1
+    <a rel="nofollow" HREF="http://www.boston.com/index.html">http://www.boston.com/index.html</a>
+    $ urifind -P '\.org\b' -S http file4
+    <a rel="nofollow" HREF="http://www.gnu.org/software/wget/wget.html">http://www.gnu.org/software/wget/wget.html</a>
+</pre> 
+<p>Add a <tt>&quot;-d&quot;</tt> to have <i>urifind</i> dump the refexen generated from <tt>&quot;-S&quot;</tt> and <tt>&quot;-P&quot;</tt> to <tt>&quot;STDERR&quot;</tt>. <tt>&quot;-D&quot;</tt> does the same but exits immediately:</p>
+ <pre>
+    $ urifind -P '\.org\b' -S http -D 
+    $scheme = '^(\bhttp\b):'
+    @pats = ('^(\bhttp\b):', '\.org\b')
+</pre> 
+<p>To remove duplicates from the results, use the <tt>&quot;-u&quot;</tt> (``unique&rsquo;&rsquo;) switch.</p>
+<h2>OPTION SUMMARY</h2>
+<dl>
+<dt>-s
+</dt><dd> Sort results.
+</dd><dt>-r
+</dt><dd> Reverse sort results (implies -s).
+</dd><dt>-u
+</dt><dd> Return unique results only.
+</dd><dt>-n
+</dt><dd> Don't include filename in output.
+</dd><dt>-p
+</dt><dd> Include filename in output (0 by default, but 1 if multiple files are included on the command line).
+</dd><dt>-P $re
+</dt><dd> Print only lines matching regex '$re' (may be specified multiple times).
+</dd><dt>-S $scheme
+</dt><dd> Only this scheme (may be specified multiple times).
+</dd><dt>-h
+</dt><dd> Help summary.
+</dd><dt>-v
+</dt><dd> Display version and exit.
+</dd><dt>-d
+</dt><dd> Dump compiled regexes for <tt>&quot;-S&quot;</tt> and <tt>&quot;-P&quot;</tt> to <tt>&quot;STDERR&quot;</tt>.
+</dd><dt>-D
+</dt><dd> Same as <tt>&quot;-d&quot;</tt>, but exit after dumping.</dd></dl>
+<h2>AUTHOR</h2>
+<p>darren chamberlain &lt;darren [at] cpan.org&gt;</p>
+<h2>COPYRIGHT</h2>
+<p>(C) 2003 darren chamberlain</p>
+<p>This library is free software; you may distribute it and/or modify it under the same terms as Perl itself.</p>
+<h2>SEE ALSO</h2>
+<p>URI::Find</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

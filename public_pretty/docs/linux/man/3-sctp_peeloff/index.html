@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sctp_peeloff(3) · Linux Manual Pages</title>
+<meta name="description" content="sctp_peeloff – Branch off an association into a separate socket.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sctp_peeloff/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sctp_peeloff(3)</h1>
+
+
+
+
+
+<p>sctp_peeloff &#8211; Branch off an association into a separate socket.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;netinet/sctp.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/types.h&gt;
+int sctp_peeloff(int sd, sctp_assoc_t assoc_id);</code></pre>
+<h2>Description</h2>
+<p><code>sctp_peeloff</code> branches off an existing association <i>assoc_id</i> on a one-to-many style socket <i>sd</i> into a separate socket. The new socket is a one-to-one style socket. </p>
+<p> This is particularly desirable when, for instance, the application wishes to have a number of sporadic message senders/receivers remain under the original one-to-many style socket, but branch off those assocations carrying high volume data traffic into their own separate socket descriptors.</p>
+<h2>Return Value</h2>
+<p>On success, the new socket descriptor representing the branched-off asociation is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
+<h2>Errors</h2>
+<dl>
+<dt><code>EBADF</code></dt>
+<dd><i>sd</i> is not a valid descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>The assoc id passed is invalid or if the socket is a one-to-one style socket.</dd>
+<dt><code>ENOTSOCK</code></dt>
+<dd>Argument is a descriptor for a file, not a socket.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/7-sctp/">sctp</a></code>(7) <code><a href="/docs/linux/man/3-sctp_bindx/">sctp_bindx</a></code>(3), <code><a href="/docs/linux/man/3-sctp_connectx/">sctp_connectx</a></code>(3), <code><a href="/docs/linux/man/3-sctp_sendmsg/">sctp_sendmsg</a></code>(3), <code><a href="/docs/linux/man/3-sctp_send/">sctp_send</a></code>(3), <code><a href="/docs/linux/man/3-sctp_recvmsg/">sctp_recvmsg</a></code>(3), <code><a href="/docs/linux/man/3-sctp_getpaddrs/">sctp_getpaddrs</a></code>(3), <code><a href="/docs/linux/man/3-sctp_getladdrs/">sctp_getladdrs</a></code>(3), <code><a href="/docs/linux/man/3-sctp_opt_info/">sctp_opt_info</a></code>(3), </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

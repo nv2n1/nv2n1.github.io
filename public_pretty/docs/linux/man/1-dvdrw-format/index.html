@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dvdrw-format(1) · Linux Manual Pages</title>
+<meta name="description" content="dvd&#43;rw-format – format DVD&#43;-RW/-RAM disk">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dvdrw-format/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dvdrw-format(1)</h1>
+
+
+
+
+
+<p>dvd+rw-format &#8211; format DVD+-RW/-RAM disk</p>
+<h2>Synopsis</h2>
+<p><code>dvd+rw-format</code> [<code>-force[=full]</code>] [<code>-lead-out | -blank[=full]</code>] [<code>-ssa[=none | default | max]</code>] <i>/dev/dvd</i> </p>
+<h2>Description</h2>
+<p>The <code>dvd+rw-format</code> command formats dvd disk in the specified dvd drive (e.g. <i>/dev/dvd</i>). </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-force[=full]</code></dt>
+<dd>This forces to format dvd as new while wiping any existing data.</dd>
+<dt><code>-blank[=full]</code></dt>
+<dd>This blanks dvd while changing to sequential mode.</dd>
+<dt><code>-lead-out</code></dt>
+<dd>This relocates the lead-out next to outermost written sector as well as makes sure there is no virgin surface before it. Previously written data is not affected by this operation. Useful for addressing <code>DVD-ROM compatibility,</code> or playability of already recorded media in legacy units. </dd>
+</dl>
+<h2>See Also</h2>
+<p>Most up-to-date information on dvd+rw-tools is available at <a rel="nofollow" href="http://fy.chalmers.se/~appro/linux/DVD+RW/.">http://fy.chalmers.se/~appro/linux/DVD+RW/.</a> </p>
+<p> The manpage for <code>genisofs</code>(8), <code><a href="/docs/linux/man/1-growisofs/">growisofs</a></code>(1), <code>dvd+rw-mediainfo</code>(1), <code>dvd+rw-booktype</code>(1). </p>
+<h2>Author</h2>
+<p><code>dvd+rw-format</code> was written by Andy Polyakov &lt;appro [at] fy.chalmers.se&gt;. This manual page was written by Osamu Aoki &lt;osamu [at] debian.org&gt; for the Debian project.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sensors(1) · Linux Manual Pages</title>
+<meta name="description" content="sensors – print sensors information">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-sensors/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>sensors(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> sensors &#8211; print sensors information </p>
+<h2>SYNOPSIS</h2>
+<p> <code>sensors [</code> <i>options</i> <code>] [</code> <i>chips</i> <code>]</code><br />
+ <code>sensors -s [</code> <i>chips</i> <code>]</code><br />
+ <code>sensors &#8211;bus-list</code> </p>
+<h2>DESCRIPTION</h2>
+<p> <code>sensors</code> is used to show the current readings of all sensor chips.<br />
+ <code>sensors -s</code> is used to set all limits as specified in the configuration file.<br />
+ <code>sensors &#8211;bus-list</code> is used to generate bus statements suitable for the configuration file. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-c, &#8211;config-file config-file</dt>
+<dd> Specify a configuration file. If no file is specified, the libsensors default configuration file is used. Use `-c /dev/null&#8217; to temporarily disable this default configuration file.</dd>
+<dt>-h, &#8211;help</dt>
+<dd> Print a help text and exit.</dd>
+<dt>-s, &#8211;set</dt>
+<dd> Evaluate all `set&#8217; statements in the configuration file and exit. You must be `root&#8217; to do this. If this parameter is not specified, no `set&#8217; statement is evaluated.</dd>
+<dt>-A, &#8211;no-adapter</dt>
+<dd> Do not show the adapter for each chip.</dd>
+<dt>-u</dt>
+<dd> Raw output. This mode is suitable for debugging and for post-processing of the output by scripts. It is also useful when writing a configuration file because it shows the raw input names which must be referenced in the configuration file.</dd>
+<dt>-j</dt>
+<dd> Json output. This mode is suitable for post-processing of the output by scripts.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> Print the program version and exit.</dd>
+<dt>-f, &#8211;fahrenheit</dt>
+<dd> Print the temperatures in degrees Fahrenheit instead of Celsius.</dd>
+<dt>&#8211;bus-list</dt>
+<dd> Generate bus statements suitable for using in sensors.conf. Such bus statements are only needed if you have several chips sharing the same address on different buses of the same type. As bus numbers are usually not guaranteed to be stable over reboots, these statements let you refer to each bus by its name rather than numbers.</dd></dl>
+<h2>FILES</h2>
+<p> <i>/etc/sensors3.conf</i><br />
+ <i>/etc/sensors.conf</i></p>
+<dl>
+<dt>
+</dt><dd> The system wide configuration file. See <code><a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a></code>(5) for further details.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a>(5), <a href="/docs/linux/man/8-sensors-detect/">sensors-detect</a>(8). </p>
+<h2>AUTHOR</h2>
+<p> Frodo Looijaard and the lm_sensors group <a rel="nofollow" href="https://hwmon.wiki.kernel.org/lm_sensors">https://hwmon.wiki.kernel.org/lm_sensors</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

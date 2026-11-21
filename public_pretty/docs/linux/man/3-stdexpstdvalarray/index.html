@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexpstdvalarray(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexpstdvalarray/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexpstdvalarray(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::exp(std::valarray) - std::exp(std::valarray)</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;valarray&gt;
+    template &lt;class T&gt;
+    valarray&lt;T&gt; exp(const valarray&lt;T&gt; &amp;va);</code></pre> 
+<p>For each element in va computes e raised to the power equal to the value of the element.</p>
+<h2>Parameters</h2>
+<p>va - value array to apply the operation to</p>
+<h2>Return value</h2>
+<p>Value array containing e raised by the values in va.</p>
+<h2>Notes</h2>
+<p>Unqualified function (exp) is used to perform the computation. If such function is not available, std::exp is used due to argument dependent lookup.</p>
+<p>The function can be implemented with the return type different from std::valarray. In this case, the replacement type has the following properties:</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> * All const member functions of std::valarray are provided.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * std::valarray, std::slice_array, std::gslice_array, std::mask_array and std::indirect_array can be constructed from the replacement type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * All functions accepting an argument of type const std::valarray&amp;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> except begin() and end()
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(since C++11)</i> should also accept the replacement type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * All functions accepting two arguments of type const std::valarray&amp; should accept every combination of const std::valarray&amp; and the replacement type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * The return type does not add more than two levels of template nesting over the most deeply-nested argument type.</p>
+<h2>Possible implementation</h2>
+<p> <wbr> template&lt; class T &gt;
+ <wbr> valarray&lt;T&gt; exp( const valarray&lt;T&gt;&amp; va )
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> valarray&lt;T&gt; other = va;
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (T &amp;i : other) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> i = exp(i);
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return other; // proxy object may be returned
+ <wbr> }</p>
+<h2>Example</h2>
+<p>This example demonstrates the Euler&rsquo;s identity eiπ
+= -1 and the related exponents.
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;complex&gt;
+#include &lt;valarray&gt;
+int main()
+{
+const double pi = std::acos(-1);
+std::valarray&lt;std::complex&lt;double&gt;&gt; v = {
+{0, 0}, {0, pi / 2}, {0, pi}, {0, 3 * pi / 2}, {0, 2 * pi}};
+std::valarray&lt;std::complex&lt;double&gt;&gt; v2 = std::exp(v);
+for (auto n : v2) {
+std::cout &lt;&lt; std::fixed &lt;&lt; n &lt;&lt; &lsquo;\n&rsquo;;
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> (1.000000,0.000000)
+ <wbr> (0.000000,1.000000)
+ <wbr> (-1.000000,0.000000)
+ <wbr> (-0.000000,-1.000000)
+ <wbr> (1.000000,-0.000000)</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> applies the function std::log to each element of valarray
+log(std::valarray) <i>(function template)</i>
+exp
+expf
+expl returns e raised to the given power (ex)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> complex base e exponential
+exp(std::complex) <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

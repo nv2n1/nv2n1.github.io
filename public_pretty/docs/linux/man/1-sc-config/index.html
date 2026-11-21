@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc-config(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-sc-config/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>sc-config(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>sc-config - The sc-config program is used to obtain information about MPQC&rsquo;s compile time environment.</p>
+<h2>Synopsis</h2>
+ <pre><code>
+sc - config
+{
+    --prefix, --exec - prefix, --version, --so - version, --scdatadir, --buildid, --cppflags, --cflags, --cxxflags, --cc, --f77flags, --f77, f-- cxx, --libdir, --libs, --libtool, --ltlink, --ltlinklibopts, --ltlinkbinopts, --ltcomp, --ltinst
+}
+</code></pre> 
+<h2>Description</h2>
+<p>The sc-config program is used to obtain information about MPQC&rsquo;s compile time environment. It can be used to initialize variables in a makefile that will be used to compile programs that depend on MPQC. For example, the following makefile could be used to compile a program myprog, which depends on the MPQC libraries.</p>
+ <pre><code>
+SCCONFIG = / usr / local / mpqc / current / bin / sc - config
+                                                           CXX : = $(shell $(SCCONFIG)-- cxx)
+                                                                     CXXFLAGS : = $(shell $(SCCONFIG)-- cxxflags)
+                                                                                    CPPFLAGS : = $(shell $(SCCONFIG)-- cppflags)
+                                                                                                   LIBS : = $(shell $(SCCONFIG)-- libs)
+</code></pre> 
+ <pre>
+myprog: myprog.o
+        $(CXX) $(CXXFLAGS) -o $@ $^ $(LIBS)
+</pre> 
+<h2>Running sc-config</h2>
+<p>sc-config takes the following command line options:</p>
+<dl>
+<dt>--prefix
+</dt><dd> Print the installation prefix.
+</dd><dt>--exec-prefix
+</dt><dd> Print the executable installation prefix.
+</dd><dt>--version
+</dt><dd> Print the version number.
+</dd><dt>--so-version
+</dt><dd> Print the shared object version.
+</dd><dt>--scdatadir
+</dt><dd> Print the data installation directory.
+</dd><dt>--buildid
+</dt><dd> Print the build identifier.
+</dd><dt>--cppflags
+</dt><dd> Print the C preprocessor flags.
+</dd><dt>--cflags
+</dt><dd> Print the C flags.
+</dd><dt>--cxxflags
+</dt><dd> Print the C++ flags.
+</dd><dt>--cc
+</dt><dd> Print the C flags.
+</dd><dt>--f77flags
+</dt><dd> Print the FORTRAN 77 flags.
+</dd><dt>--f77
+</dt><dd> Print the FORTRAN 77 compiler.
+</dd><dt>--cxx
+</dt><dd> Print the C++ compiler.
+</dd><dt>--libdir
+</dt><dd> Print the library directories.
+</dd><dt>--libs
+</dt><dd> Print the libraries.
+</dd><dt>--libtool
+</dt><dd> Print the libtool executable.
+</dd><dt>--ltlink
+</dt><dd> Print the libtool link command.
+</dd><dt>--ltlinklibopts
+</dt><dd> Print the libtool library link options.
+</dd><dt>--ltlinkbinopts
+</dt><dd> Print the libtool binary link options.
+</dd><dt>--ltcomp
+</dt><dd> Print the libtool compile command.
+</dd><dt>--ltinst
+</dt><dd> Print the libtool install command.</dd></dl>
+<h2>License</h2>
+<p>sc-config is open-source software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<h2>Warranty</h2>
+<p>sc-config is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

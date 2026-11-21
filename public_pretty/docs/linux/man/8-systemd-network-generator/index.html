@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemd-network-generator(8) · Linux Manual Pages</title>
+<meta name="description" content="systemd-network-generator.service, systemd-network-generator – Generate network configuration from the kernel command line">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-systemd-network-generator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>systemd-network-generator(8)</h1>
+
+
+
+
+
+<p>systemd-network-generator.service, systemd-network-generator &#8211; Generate network configuration from the kernel command line</p>
+<h2>Synopsis</h2>
+<p>systemd-network-generator.service </p>
+<p> /lib/systemd/systemd-network-generator</p>
+<h2>Description</h2>
+<p>systemd-network-generator.service is a system service that translates <i>ip=</i> and the related settings on the kernel command line (see below) into <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5), <code><a href="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></code>(5), and <code><a href="/docs/linux/man/5-systemd-link/">systemd.link</a></code>(5) configuration files understood by <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) and <code><a href="/docs/linux/man/8-systemd-udevd-service/">systemd-udevd.service</a></code>(8). </p>
+<p> Files are generated in /run/systemd/network/.</p>
+<h2>Kernel Command Line Options</h2>
+<p>This tool understands the following options: </p>
+<p> <i>ip=</i>, <i>rd.route=</i>, <i>rd.peerdns=</i></p>
+<dl>
+<dd>&#8212; translated into <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5) files.</dd></dl>
+<p> <i>ifname=</i></p>
+<dl>
+<dd>&#8212; translated into <code><a href="/docs/linux/man/5-systemd-link/">systemd.link</a></code>(5) files.</dd></dl>
+<p> <i>vlan=</i>, <i>bond=</i>, <i>bridge=</i>, <i>bootdev=</i></p>
+<dl>
+<dd>&#8212; translated into <code><a href="/docs/linux/man/5-systemd-netdev/">systemd.netdev</a></code>(5) files.</dd></dl>
+<p> See <code>dracut.kernel</code>(7) for option syntax and details.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8), <code><a href="/docs/linux/man/8-dracut/">dracut</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

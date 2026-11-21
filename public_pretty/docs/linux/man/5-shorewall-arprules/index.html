@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shorewall-arprules(5) · Linux Manual Pages</title>
+<meta name="description" content="arprules – Shorewall ARP rules file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-shorewall-arprules/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>shorewall-arprules(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>arprules &#8211; Shorewall ARP rules file</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>/etc/shorewall/arprules</code></dt></dl>
+<h2>Description</h2>
+<dd>This file was added in Shorewall 4.5.12 and is used to describe low-level rules managed by arptables (8). These rules only affect Address Resolution Protocol (ARP), Reverse Address Resolution Protocol (RARP) and Dynamic Reverse Address Resolution Protocol (DRARP) frames. The columns in the file are as shown below. MAC addresses are specified normally (6 hexadecimal numbers separated by colons). <code>ACTION</code></dd>
+<dl>
+<dd>Describes the action to take when a frame matches the criteria in the other columns. Possible values are: <code>ACCEPT</code></dd>
+<dl>
+<dd>This is the default action if no rules matches a frame; it lets the frame go through.</dd></dl>
+<p> <code>DROP</code></p>
+<dl>
+<dd>Causes the frame to be dropped.</dd></dl>
+<p> <code>SNAT:</code><i>ip-address</i></p>
+<dl>
+<dd>Modifies the source IP address to the specified <i>ip-address</i>.</dd></dl>
+<p> <code>DNAT:</code><i>ip-address</i></p>
+<dl>
+<dd>Modifies the destination IP address to the specified <i>ip-address</i>.</dd></dl>
+<p> <code>SMAT:</code><i>mac-address</i></p>
+<dl>
+<dd>Modifies the source MAC address to the specified <i>mac-address</i>.</dd></dl>
+<p> <code>DMAT:</code><i>mac-address</i></p>
+<dl>
+<dd>Modifies the destination MAC address to the specified <i>mac-address</i>.</dd></dl>
+<p> <code>SNATC:</code><i>ip-address</i></p>
+<dl>
+<dd>Like SNAT except that the frame is then passed to the next rule.</dd></dl>
+<p> <code>DNATC:</code><i>ip-address</i></p>
+<dl>
+<dd>Like DNAT except that the frame is then passed to the next rule.</dd></dl>
+<p> <code>SMATC:</code><i>mac-address</i></p>
+<dl>
+<dd>Like SMAT except that the frame is then passed to the next rule.</dd></dl>
+<p> <code>DMATC:</code><i>mac-address</i></p>
+<dl>
+<dd>Like DMAT except that the frame is then passed to the next rule.</dd></dl>
+</dl>
+<p> <code>SOURCE</code> &#8211; <code>[</code><i>interface</i><code>[:[!]</code><i>ipaddress</i><code>[/ip</code><i>mask</i><code>][:[!]</code><i>macaddress</i><code>[/</code><i>macmask</i><code>]]]]</code></p>
+<dl>
+<dd>Where <i>interface</i></dd>
+<dl>
+<dd>Is an interface defined in <a href="/docs/linux/man/5-shorewall-interfaces/">shorewall-interfaces</a>(5).</dd></dl>
+<p> <i>ipaddress</i></p>
+<dl>
+<dd>is an IPv4 address. DNS names are not allowed.</dd></dl>
+<p> <i>ipmask</i></p>
+<dl>
+<dd>specifies a mask to be applied to <i>ipaddress</i>.</dd></dl>
+<p> <i>macaddress</i></p>
+<dl>
+<dd>The source MAC address.</dd></dl>
+<p> <i>macmask</i></p>
+<dl>
+<dd>Mask for MAC address; must be specified as 6 hexadecimal numbers separated by colons.</dd></dl>
+<p> When &#8216;!&#8217; is specified, the test is inverted. If not specified, matches only frames originating on the firewall itself.</p>
+<dl>
+<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+ Either SOURCE or DEST must be specified.  <code>DEST</code> &#8211; <code>[</code><i>interface</i><code>[:[!]</code><i>ipaddress</i><code>[/ip</code><i>mask</i><code>][:[!]</code><i>macaddress</i><code>[/</code><i>macmask</i><code>]]]]</code></dd>
+<dl>
+<dd>Where <i>interface</i></dd>
+<dl>
+<dd>Is an interface defined in <a href="/docs/linux/man/5-shorewall-interfaces/">shorewall-interfaces</a>(5).</dd></dl>
+<p> <i>ipaddress</i></p>
+<dl>
+<dd>is an IPv4 address. DNS Names are not allowed.</dd></dl>
+<p> <i>ipmask</i></p>
+<dl>
+<dd>specifies a mask to be applied to frame addresses.</dd></dl>
+<p> <i>macaddress</i></p>
+<dl>
+<dd>The destination MAC address.</dd></dl>
+<p> <i>macmask</i></p>
+<dl>
+<dd>Mask for MAC address; must be specified as 6 hexadecimal numbers separated by colons.</dd></dl>
+<p> When &#8216;!&#8217; is specified, the test is inverted and the rule matches frames which do not match the specified address/mask. If not specified, matches only frames originating on the firewall itself. If both SOURCE and DEST are specified, then both interfaces must be bridge ports on the same bridge.</p>
+<dl>
+<dd><font SIZE="+1"> <code>Caution</code> </font><br />
+ Either SOURCE or DEST must be specified.  OPCODE &#8211; [[!]<i>opcode</i>]</dd>
+<dl>
+<dd>Optional. Describes the type of frame. Possible <i>opcode</i> values are: 1</dd>
+<dl>
+<dd>ARP Request</dd></dl>
+<p> 2</p>
+<dl>
+<dd>ARP Reply</dd></dl>
+<p> 3</p>
+<dl>
+<dd>RARP Request</dd></dl>
+<p> 4</p>
+<dl>
+<dd>RARP Reply</dd></dl>
+<p> 5</p>
+<dl>
+<dd>Dynamic RARP Request</dd></dl>
+<p> 6</p>
+<dl>
+<dd>Dynamic RARP Reply</dd></dl>
+<p> 7</p>
+<dl>
+<dd>Dynamic RARP Error</dd></dl>
+<p> 8</p>
+<dl>
+<dd>InARP Request</dd></dl>
+<p> 9</p>
+<dl>
+<dd>ARP NAK</dd></dl>
+<p> When &#8216;!&#8217; is specified, the test is inverted and the rule matches frames which do not match the specified <i>opcode</i>.</dl>
+<h2>Example</h2>
+<p>The eth1 interface has both a public IP address and a private address (10.1.10.11/24). When sending ARP requests to 10.1.10.0/24, use the private address as the IP source: </p>
+<dl>
+<dd>
+<pre>#ACTION SOURCE DEST ARP OPCODE
+SNAT:10.1.10.11 - eth1:10.1.10.0/24 1</pre>
+</dd></dl>
+<h2>Files</h2>
+<p>/etc/shorewall/arprules</p>
+</dl></dl></dl></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

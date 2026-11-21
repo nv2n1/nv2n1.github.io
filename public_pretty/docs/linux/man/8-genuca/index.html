@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>genuca(8) · Linux Manual Pages</title>
+<meta name="description" content="genuca – create the UCA data table">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-genuca/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>genuca(8)</h1>
+
+
+
+
+
+<p><code>genuca</code> &#8211; create the UCA data table</p>
+<h2>Synopsis</h2>
+<p><code>genuca</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-V</code>, <code>&#8211;version</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> ] [ <code>-s</code>, <code>&#8211;sourcedir</code><i> source</i> ] [ <code>-d</code>, <code>&#8211;destdir</code><i> destination</i> ] [ <i>file</i> ]</p>
+<h2>Description</h2>
+<p><code>genuca</code> compiles the Unicode Collation Algorithm (UCA) data from <i>file</i> (or from <code>FractionalUCA.txt</code> if <i>file</i> is omitted) into its binary form, the files <code>ucadata.dat</code> and <code>invuca.dat</code>. These binary files can then be read directly by ICU, or used by <code>pkgdata</code>(8) for incorporation into a larger archive or library.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Print help about usage and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print the version of <code>genuca</code> and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Display extra informative messages during execution.</dd>
+<dt><code>-c</code>, <code>&#8211;copyright</code></dt>
+<dd>Include a copyright notice into the binary data.</dd>
+<dt><code>-s</code>, <code>&#8211;sourcedir</code><i> source</i></dt>
+<dd>Set the source directory to <i>source</i>. The default source directory is specified by the environment variable <code>ICU_DATA</code>.</dd>
+<dt><code>-d</code>, <code>&#8211;destdir</code><i> destination</i></dt>
+<dd>Set the destination directory to <i>destination</i>. The default destination directory is specified by the environment variable <code>ICU_DATA</code>.</dd></dl>
+<h2>Environment</h2>
+<dl>
+<dt><code>ICU_DATA</code></dt>
+<dd>Specifies the directory containing ICU data. Defaults to <code>/usr/share/icu/4.2.1/</code>. Some tools in ICU depend on the presence of the trailing slash. It is thus important to make sure that it is present if <code>ICU_DATA</code> is set.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><code>FractionalUCA.txt</code></dt>
+<dd>Machine-readable file containing data for the Unicode collation algorithm.</dd></dl>
+<h2>Version</h2>
+<p>4.2.1</p>
+<h2>Copyright</h2>
+<p>Copyright (C) 2001 IBM, Inc. and others.</p>
+<h2>See Also</h2>
+<p><code>pkgdata</code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

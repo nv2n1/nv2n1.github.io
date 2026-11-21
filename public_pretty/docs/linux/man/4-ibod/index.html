@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ibod(4) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/4-ibod/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/4/">Section 4</a></p>
+<article>
+<h1>ibod(4)</h1>
+
+
+
+
+
+<p>ibod.cf - configuration file for ibod (ISDN Bandwidth On Demand)</p>
+<h2>Description</h2>
+<p>This file contains the initial configuration values for the ibod daemon. Each line contains a keyword and a value. Boolean attributes are set with 0 or 1 which corresponds to false and true respectively. A boolean attribute not specified at all is always false. Lines beginning with # are treated as comments and will be ignored. IMPORTANT RULES!</p>
+<ol>
+<li>Keywords are case sensitive.</li>
+<li>Kewords must begin at the first column.</li>
+<li>Keywords and values must be separated by exactly one (1) space or tab character. This file is re-read every time ibod receives SIGHUP (1) signal.</li>
+</ol>
+<h3>Options</h3>
+<dl><dt><i>DEVICE &lt;name&gt;</i>
+</dt><dd>Name of ISDN PPP device. Default is ippp0.
+</dd><dt><i>ENABLE 1|0</i>
+</dt><dd>Enable/disable bandwidth-on-demand. Default is enable (1).
+</dd><dt><i>INTERVAL &lt;n&gt;</i>
+</dt><dd>Specify the sample time interval in ms. Default is 500 ms.
+</dd><dt><i>FILTER &lt;n&gt;</i>
+</dt><dd>Defines &quot;filtering factor&quot;. A value of 10 means that the average bytes/sec value measured over 10 intervals must pass the limit defined by LIMIT to bring up or down the slave link. Default is 5.
+</dd><dt><i>LIMIT &lt;n&gt;</i>
+</dt><dd>Transfer rate limit in bytes/sec for bringing up or down ISDN slave channel. Default is 7000.
+</dd><dt><i>STAYUP 0|1</i>
+</dt><dd>Enable/disable slave channel stay up function. If enabled, the 2:nd cannel (slave link) will stay up even if the average bytes/sec decrease the value defined by LIMIT. In this case the slave link will stay up until hangup time is reached. (Example: isdnctrl huptimeout ippp1 60) If disabled the slave link will be brought down in the same way it was brought up. Default is 0.
+</dd><dt><i>STAYUP_TIME &lt;n&gt;</i>
+</dt><dd>Defines the minimum time in seconds the 2:nd channel will unconditionally stay up after it has been brought up. Default value is 30. 
+<h2>See Also</h2>
+<a HREF="/docs/linux/man/1-ibod/">ibod</a>(1) and xibod(1) 
+<h2>Author</h2>
+Bjoern Smith, Smith [at] Compound.SE
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

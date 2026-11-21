@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>djvm(1) · Linux Manual Pages</title>
+<meta name="description" content="djvm – Manipulate bundled multi-page DjVu documents.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-djvm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>djvm(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> djvm &#8211; Manipulate bundled multi-page DjVu documents.</p>
+<h2>SYNOPSIS</h2>
+<h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Creating a bundled document:</h2>
+<p> <code>djvm -c[reate] </code><i>doc.djvu</i><i>page1.djvu</i><code> &#8230; </code><i>pageN.djvu</i></p>
+<h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Inserting:</h2>
+<p> <code>djvm -i[nsert] </code><i>doc.djvu</i><i>page.djvu</i><code> [</code><i>pagenum</i><code>]</code></p>
+<h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Removing:</h2>
+<p> <code>djvm -d[elete] </code><i>doc.djvu</i><i>pagenum</i></p>
+<h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Listing:</h2>
+<p> <code>djvm -l[ist] </code><i>doc.djvu</i> </p>
+<h2>DESCRIPTION</h2>
+<p> This program creates or modifies a bundled multi-page DjVu document. Multi-page bundled documents can be used directly or converted to indirect document using command <code>djvmcvt</code>. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-c[reate]</code></dt>
+<dd> Create a bundled DjVu document named <i>doc.djvu</i> by collecting files <i>page1.djvu</i> to <i>pageN.djvu</i>.</dd>
+<dt><code>-i[nsert]</code></dt>
+<dd> Modify the bundled DjVu document named <i>doc.djvu</i> by inserting file <i>page.djvu</i> as page <i>pagenum</i>. Omitting argument <i>pagenum</i> means that the page should be appended at the end of the document. File <i>page.djvu</i> also can be a multi-page DjVu document. All pages will be inserted at the specified location.</dd>
+<dt><code>-d[elete]</code></dt>
+<dd> Remove page <i>pagenum</i> from the bundled multi-page DjVu document <i>doc.djvu</i>.</dd>
+<dt><code>-l[ist]</code></dt>
+<dd> List all component files in the multi-page DjVu document <i>doc.djvu</i>. </dd>
+</dl>
+<h2>CREDITS</h2>
+<p> This program was initially written by Andrei Erofeev &lt;andrew_erofeev [at] yahoo.com&gt; and was improved by Bill Riemers &lt;docbill [at] sourceforge.net&gt; and many others. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-djvmcvt/">djvmcvt</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

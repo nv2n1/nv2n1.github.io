@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>getmails(1) · Linux Manual Pages</title>
+<meta name="description" content="getmails – wrapper for getmail to access multiple mailboxes">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-getmails/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>getmails(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> getmails &#8211; wrapper for getmail to access multiple mailboxes </p>
+<h2>SYNOPSIS</h2>
+<p> <code>getmails</code> [<code>-p</code>] [<i>OPTION</i>] &#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>getmails</code> is a wrapper script for <code>getmail </code> to retrieve messages with multiple independent configuration files <i>~/.getmail/config/*</i> instead of a single <i>~/.getmailrc</i> file. </p>
+<p> The configuration file name can be any arbitrary names. It&#8217;s good idea to use the corresponding email address as its name since it is the most intuitive choice. For example <i>~/.getmail/config/foo [at] example.org .</i> </p>
+<p> To disable operation for an email account temporary, rename its configuration file to the hidden file such as <i>~/.getmail/config/.foo [at] example.org .</i> Then, it is ignored as the configuration file. </p>
+<p> For the robust operation, the editor generated files such as <i>~/.getmail/config/foo~</i> , <i>~/.getmail/config/#foo#</i> , <i>~/.getmail/config/foo.swp</i> , and <i>~/.getmail/config/foo.bak</i> are also ignored as the configuration file. </p>
+<p> When there are multiple email configuration files, <code>getmails</code> retrieves mails sequentially. But adding an optional option <code>-p</code> before other options makes <code>getmails</code> to invoke <code>getmail</code> with each configuration file in parallel to retrieve mails. </p>
+<p> The option provided as <i>OPTION</i> is passed to <code>getmail</code> as is. The use of the <code>-r</code> option is not a good idea. </p>
+<p> The existence of <i>~/.getmail/stop </i> can prevent this wrapper script to execute <code>getmail</code>. </p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to the getmail debian package if bugs are in this wrapper script.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright 2011-2017 Osamu Aoki<br />
+ This is free software; see the file COPYING for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

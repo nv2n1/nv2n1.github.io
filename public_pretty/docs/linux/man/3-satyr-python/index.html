@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>satyr-python(3) · Linux Manual Pages</title>
+<meta name="description" content="satyr-python – satyr python API">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-satyr-python/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>satyr-python(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>satyr-python &#8211; satyr python API </p>
+<p> Contents:</p>
+<h2>Report</h2>
+<p>A <code>Report</code> object represents a single problem report in the <i>uReport format</i>.</p>
+<dl>
+<dt><code>class satyr.Report</code></dt>
+<dd>satyr.Report &#8211; report containing all data relevant to a software problem </dd>
+<p> Usage: </p>
+<p> satyr.Report() &#8211; creates an empty report object </p>
+<p> satyr.Report(json_string) &#8211; creates a report from its JSON representation</p>
+<dt><code>auth</code></dt>
+<dd>Dictinary of key/value pairs used for authentication</dd>
+<dt><code>component_name</code></dt>
+<dd>Name of the software component this report pertains to (string)</dd>
+<dt><code>operating_system</code></dt>
+<dd>Operating system (<code>OperatingSystem</code> object)</dd>
+<dt><code>packages</code></dt>
+<dd>List of packages (currently a list of <code>RpmPackage</code> objects)</dd>
+<dt><code>report_type</code></dt>
+<dd>Report type (string)</dd>
+<dt><code>report_version</code></dt>
+<dd>Version of the report (int)</dd>
+<dt><code>reporter_name</code></dt>
+<dd>Name of the reporting software (string)</dd>
+<dt><code>reporter_version</code></dt>
+<dd>Version of the reporting software (string)</dd>
+<dt><code>stacktrace</code></dt>
+<dd>Problem stacktrace (<code>SingleThreadStacktrace</code> or <code>MultiThreadStacktrace</code> object)</dd>
+<dt><code>to_json()</code></dt>
+<dd>Usage: report.to_json() </dd>
+<p> Returns: string &#8211; the report serialized as JSON</p>
+<dt><code>user_local</code></dt>
+<dd>Did the problem originate in a program executed by local user? (bool)</dd>
+<dt><code>user_root</code></dt>
+<dd>Did the problem originate in a program running as root? (bool)</dd></dl>
+<h3>Operating system</h3>
+<p>Data about operating system are stored in the <code>OperatingSystem</code> object.</p>
+<dl>
+<dt><code>class satyr.OperatingSystem</code></dt>
+<dd>satyr.OperatingSystem &#8211; describes an operating system </dd>
+<p> Usage: </p>
+<p> satyr.OperatingSystem() &#8211; creates an empty operating system object </p>
+<p> satyr.OperatingSystem(name, version, arch) &#8211; creates an operating system object with given properties (all arguments are strings or None)</p>
+<dt><code>architecture</code></dt>
+<dd>Architecture (string)</dd>
+<dt><code>cpe</code></dt>
+<dd>Common platform enumeration identifier (string)</dd>
+<dt><code>name</code></dt>
+<dd>Operating system name (string)</dd>
+<dt><code>uptime</code></dt>
+<dd>Machine uptime (long)</dd>
+<dt><code>version</code></dt>
+<dd>Version (string)</dd></dl>
+<h3>Package</h3>
+<p>The <code>Report</code> can contain a list of software packages. Currently, only <i>RPM</i> packages are supported.</p>
+<dl>
+<dt><code>class satyr.RpmPackage</code></dt>
+<dd>satyr.RpmPackage &#8211; RPM package representation </dd>
+<p> Usage: </p>
+<p> satyr.RpmPackage() &#8211; creates an empty RPM package object </p>
+<p> satyr.RpmPackage(name, epoch, version, release, arch) &#8211; creates RPM package object with given properties</p>
+<dt><code>architecture</code></dt>
+<dd>Architecture (string)</dd>
+<dt><code>epoch</code></dt>
+<dd>Epoch (int)</dd>
+<dt><code>install_time</code></dt>
+<dd>Time of installation (long)</dd>
+<dt><code>name</code></dt>
+<dd>Package name (string)</dd>
+<dt><code>release</code></dt>
+<dd>Release (string)</dd>
+<dt><code>role</code></dt>
+<dd>Role the package plays in the problem. Currently ROLE_UNKNOWN or ROLE_AFFECTED.</dd>
+<dt><code>version</code></dt>
+<dd>Version (string)</dd></dl>
+<h2>Stacktrace</h2>
+<p>Each problem has its own frame, stacktrace and thread type (for problems that can have multiple threads). </p>
+<p> <code>WARNING:</code> The <code>GdbFrame</code>, <code>GdbThread</code>, and <code>GdbStacktrace</code> have rather limited functionality, cannot be used in reports, and will probably be removed in the future.</p>
+<h3>Frame classes</h3>
+<p>Stack frame corresponds to a function invocation saved on the stack. All frame types are derived from the <code>BaseFrame</code>.</p>
+<h3>BaseFrame</h3>
+<dl>
+<dt><code>class satyr.BaseFrame</code></dt>
+<dd>satyr.BaseFrame &#8211; base class for call frames</dd>
+<dt><code>equals()</code></dt>
+<dd>Usage: frame.equals(otherframe) </dd>
+<p> Returns: bool &#8211; True if frame has attributes equal to otherframe</p>
+<dt><code>short_string()</code></dt>
+<dd>Usage: frame.short_string() </dd>
+<p> Returns: string &#8211; brief textual representation of the frame</dl>
+<h3>CoreFrame</h3>
+<dl>
+<dt><code>class satyr.CoreFrame</code></dt>
+<dd>satyr.CoreFrame &#8211; class representing a frame in a native executable </dd>
+<p> Usage: satyr.CoreFrame() &#8211; creates an empty frame</p>
+<dt><code>address</code></dt>
+<dd>Address of the machine code in memory (long)</dd>
+<dt><code>build_id</code></dt>
+<dd>Build ID of the ELF file (string)</dd>
+<dt><code>build_id_offset</code></dt>
+<dd>Offset of the instruction pointer from the start of the executable segment (long)</dd>
+<dt><code>dup()</code></dt>
+<dd>Usage: frame.dup() </dd>
+<p> Returns: satyr.CoreFrame &#8211; a new clone of the frame </p>
+<p> Clones the frame object. All new structures are independent of the original object.</p>
+<dt><code>file_name</code></dt>
+<dd>Name of the executable or shared library (string)</dd>
+<dt><code>fingerprint</code></dt>
+<dd>Fingerprint of the current function (string)</dd>
+<dt><code>fingerprint_hashed</code></dt>
+<dd>True if fingerprint is already hashed (bool)</dd>
+<dt><code>function_name</code></dt>
+<dd>Function name (string)</dd></dl>
+<h3>JavaFrame</h3>
+<dl>
+<dt><code>class satyr.JavaFrame</code></dt>
+<dd>satyr.JavaFrame &#8211; class representing a java frame </dd>
+<p> Usage: </p>
+<p> satyr.JavaFrame() &#8211; creates an empty frame </p>
+<p> satyr.JavaFrame(str) &#8211; parses str and fills the frame object</p>
+<dt><code>class_path</code></dt>
+<dd>Class path (string)</dd>
+<dt><code>dup()</code></dt>
+<dd>Usage: frame.dup() </dd>
+<p> Returns: satyr.JavaFrame &#8211; a new clone of frame </p>
+<p> Clones the frame object. All new structures are independent of the original object.</p>
+<dt><code>file_line</code></dt>
+<dd>File line (positive integer)</dd>
+<dt><code>file_name</code></dt>
+<dd>File name (string)</dd>
+<dt><code>is_exception</code></dt>
+<dd>True if frame is an exception frame (bool)</dd>
+<dt><code>is_native</code></dt>
+<dd>True if method is native, always false if frame is an exception (bool)</dd>
+<dt><code>message</code></dt>
+<dd>Exception message (string)</dd>
+<dt><code>name</code></dt>
+<dd>Fully qualified domain name (string)</dd></dl>
+<h3>KerneloopsFrame</h3>
+<dl>
+<dt><code>class satyr.KerneloopsFrame</code></dt>
+<dd>satyr.KerneloopsFrame &#8211; class representing a frame in a kerneloops </dd>
+<p> Usage: </p>
+<p> satyr.KerneloopsFrame() &#8211; creates an empty frame </p>
+<p> satyr.KerneloopsFrame(str) &#8211; parses str and fills the frame object</p>
+<dt><code>address</code></dt>
+<dd>Address of the current instruction (long)</dd>
+<dt><code>dup()</code></dt>
+<dd>Usage: frame.dup() </dd>
+<p> Returns: satyr.KerneloopsFrame &#8211; a new clone of frame </p>
+<p> Clones the frame object. All new structures are independent of the original object.</p>
+<dt><code>from_address</code></dt>
+<dd>Address of the caller&#8217;s instruction (long)</dd>
+<dt><code>from_function_length</code></dt>
+<dd>Caller function length (long)</dd>
+<dt><code>from_function_name</code></dt>
+<dd>Caller function name (string)</dd>
+<dt><code>from_function_offset</code></dt>
+<dd>Caller function offset (long)</dd>
+<dt><code>from_module_name</code></dt>
+<dd>Module owning the caller function (string)</dd>
+<dt><code>function_length</code></dt>
+<dd>Function length (long)</dd>
+<dt><code>function_name</code></dt>
+<dd>Function name (string)</dd>
+<dt><code>function_offset</code></dt>
+<dd>Function offset (long)</dd>
+<dt><code>module_name</code></dt>
+<dd>Module owning the function (string)</dd>
+<dt><code>reliable</code></dt>
+<dd>True if the the frame is guaranteed to be real (bool)</dd>
+<dt><code>special_stack</code></dt>
+<dd>Identifier of x86_64 kernel stack (string)</dd></dl>
+<h3>PythonFrame</h3>
+<dl>
+<dt><code>class satyr.PythonFrame</code></dt>
+<dd>satyr.PythonFrame &#8211; class representing a python frame </dd>
+<p> Usage: </p>
+<p> satyr.PythonFrame() &#8211; creates an empty frame </p>
+<p> satyr.PythonFrame(str) &#8211; parses str and fills the frame object</p>
+<dt><code>dup()</code></dt>
+<dd>Usage: frame.dup() </dd>
+<p> Returns: satyr.PythonFrame &#8211; a new clone of frame </p>
+<p> Clones the frame object. All new structures are independent of the original object.</p>
+<dt><code>file_line</code></dt>
+<dd>Source line number (positive integer)</dd>
+<dt><code>file_name</code></dt>
+<dd>Source file name (string)</dd>
+<dt><code>function_name</code></dt>
+<dd>Function name (string)</dd>
+<dt><code>line_contents</code></dt>
+<dd>Remaining line contents (string)</dd>
+<dt><code>special_file</code></dt>
+<dd>True if the frame is not a real file, like stdin or eval&#8217;d string (bool)</dd>
+<dt><code>special_function</code></dt>
+<dd>True if the frame doesn&#8217;t belong to a named function, e.g. lambda or a module</dd></dl>
+<h3>GdbFrame</h3>
+<dl>
+<dt><code>class satyr.GdbFrame</code></dt>
+<dd>satyr.GdbFrame &#8211; class representing a frame in a thread </dd>
+<p> Usage: </p>
+<p> satyr.GdbFrame() &#8211; creates an empty frame </p>
+<p> satyr.GdbFrame(str) &#8211; parses str and fills the frame object</p>
+<dt><code>address</code></dt>
+<dd>Address of the current instruction (long)</dd>
+<dt><code>calls_func()</code></dt>
+<dd>Usage: frame.calls_func(name) </dd>
+<p> name: string &#8211; function name </p>
+<p> Returns: integer &#8211; 0 = False, 1 = True </p>
+<p> Checks whether the frame represents a call to a function with given name.</p>
+<dt><code>calls_func_in_file()</code></dt>
+<dd>Usage: frame.calls_func_in_file(name, filename) </dd>
+<p> name: string &#8211; function name </p>
+<p> filename: string &#8211; file name </p>
+<p> Returns: integer &#8211; 0 = False, 1 = True </p>
+<p> Checks whether the frame represents a call to a function with given name from a given file.</p>
+<dt><code>dup()</code></dt>
+<dd>Usage: frame.dup() </dd>
+<p> Returns: satyr.GdbFrame &#8211; a new clone of the frame </p>
+<p> Clones the frame object. All new structures are independent of the original object.</p>
+<dt><code>function_name</code></dt>
+<dd>Function name (string)</dd>
+<dt><code>function_type</code></dt>
+<dd>Function type (string)</dd>
+<dt><code>library_name</code></dt>
+<dd>Executable file name (string)</dd>
+<dt><code>number</code></dt>
+<dd>Frame number (positive integer)</dd>
+<dt><code>signal_handler_called</code></dt>
+<dd>True if the frame is signal handler (bool)</dd>
+<dt><code>source_file</code></dt>
+<dd>Source file name (string)</dd>
+<dt><code>source_line</code></dt>
+<dd>Source line number (positive integer)</dd></dl>
+<h3>Thread classes</h3>
+<p>Thread classes are defined only for problems that can have multiple thread. They all have <code>BaseThread</code> as a base class.</p>
+<h3>BaseThread</h3>
+<dl>
+<dt><code>class satyr.BaseThread</code></dt>
+<dd>satyr.BaseThread &#8211; base class for threads</dd>
+<dt><code>distance()</code></dt>
+<dd>Usage: thread.distance(other, dist_type=DISTANCE_LEVENSHTEIN) </dd>
+<p> other: other thread </p>
+<p> dist_type (optional): one of DISTANCE_LEVENSHTEIN, DISTANCE_JARO_WINKLER, DISTANCE_JACCARD or DISTANCE_DAMERAU_LEVENSHTEIN </p>
+<p> Returns: positive float &#8211; distance between the two threads</p>
+<dt><code>equals()</code></dt>
+<dd>Usage: frame.equals(otherthread) </dd>
+<p> Returns: bool &#8211; True if thread has attributes equal to otherthread</p>
+<dt><code>frames</code></dt>
+<dd>A list containing objects representing frames in a thread.</dd>
+<dt><code>get_duphash()</code></dt>
+<dd>Usage: thread.get_duphash(frames=0, flags=DUPHASH_NORMAL, prefix=&#8221;) </dd>
+<p> Returns: string &#8211; thread&#8217;s duplication hash </p>
+<p> frames: integer &#8211; number of frames to use (default 0 means use all) </p>
+<p> flags: integer &#8211; bitwise sum of flags (DUPHASH_NORMAL, DUPHASH_NOHASH, DUPHASH_NONORMALIZE, DUPHASH_KOOPS_COMPAT) </p>
+<p> prefix: string &#8211; string to be prepended in front of the text before hashing</dl>
+<h3>CoreThread</h3>
+<dl>
+<dt><code>class satyr.CoreThread</code></dt>
+<dd>satyr.CoreThread &#8211; class representing a thread in a stacktrace </dd>
+<p> Usage: satyr.CoreThread() &#8211; creates an empty thread</p>
+<dt><code>dup()</code></dt>
+<dd>Usage: thread.dup() </dd>
+<p> Returns: satyr.CoreThread &#8211; a new clone of thread </p>
+<p> Clones the thread object. All new structures are independent of the original object.</dl>
+<h3>JavaThread</h3>
+<dl>
+<dt><code>class satyr.JavaThread</code></dt>
+<dd>satyr.JavaThread &#8211; class representing a thread in a stacktrace </dd>
+<p> Usage: </p>
+<p> satyr.JavaThread() &#8211; creates an empty thread </p>
+<p> satyr.JavaThread(str) &#8211; parses str and fills the thread object</p>
+<dt><code>dup()</code></dt>
+<dd>Usage: thread.dup() </dd>
+<p> Returns: satyr.JavaThread &#8211; a new clone of thread </p>
+<p> Clones the thread object. All new structures are independent of the original object.</p>
+<dt><code>format_funs()</code></dt>
+<dd>Usage: thread.format_funs() </dd>
+<p> Returns: string</p>
+<dt><code>name</code></dt>
+<dd>Thread name (string)</dd>
+<dt><code>quality()</code></dt>
+<dd>Usage: thread.quality() </dd>
+<p> Returns: float &#8211; 0..1, thread quality </p>
+<p> Computes the ratio #good / #all. See quality_counts method for more.</p>
+<dt><code>quality_counts()</code></dt>
+<dd>Usage: thread.quality_counts() </dd>
+<p> Returns: tuple (ok, all) &#8211; ok representing number of &#8216;good&#8217; frames, all representing total number of frames </p>
+<p> Counts the number of &#8216;good&#8217; frames and the number of all frames. &#8216;Good&#8217; means the function name is known (not just &#8216;??&#8217;).</dl>
+<h3>GdbThread</h3>
+<dl>
+<dt><code>class satyr.GdbThread</code></dt>
+<dd>satyr.GdbThread &#8211; class representing a thread in a stacktrace </dd>
+<p> Usage: </p>
+<p> satyr.GdbThread() &#8211; creates an empty thread </p>
+<p> satyr.GdbThread(str) &#8211; parses str and fills the thread object </p>
+<p> satyr.GdbThread(str, only_funs=True) &#8211; parses list of function names</p>
+<dt><code>dup()</code></dt>
+<dd>Usage: thread.dup() </dd>
+<p> Returns: satyr.GdbThread &#8211; a new clone of thread </p>
+<p> Clones the thread object. All new structures are independent of the original object.</p>
+<dt><code>format_funs()</code></dt>
+<dd>Usage: thread.format_funs() </dd>
+<p> Returns: string</p>
+<dt><code>number</code></dt>
+<dd>Thread number (positive integer)</dd>
+<dt><code>quality()</code></dt>
+<dd>Usage: thread.quality() </dd>
+<p> Returns: float &#8211; 0..1, thread quality </p>
+<p> Computes the ratio #good / #all. See quality_counts method for more.</p>
+<dt><code>quality_counts()</code></dt>
+<dd>Usage: thread.quality_counts() </dd>
+<p> Returns: tuple (ok, all) &#8211; ok representing number of &#8216;good&#8217; frames, all representing total number of frames </p>
+<p> Counts the number of &#8216;good&#8217; frames and the number of all frames. &#8216;Good&#8217; means the function name is known (not just &#8216;??&#8217;).</dl>
+<h3>Stacktrace classes</h3>
+<p>Single threaded stacktraces have <code>SingleThreadStacktrace</code> as their base class, which is in turn derived from <code>BaseThread</code>. This means that <code>SingleThreadStacktrace</code> can be treated as a thread:</p>
+<dl>
+<dt>&bull;</dt>
+<dd><code>Kerneloops</code></dd>
+<dt>&bull;</dt>
+<dd><code>PythonStacktrace</code> </dd>
+<p> Stacktrace types with the possibility of multiple threads are derived from <code>MultiThreadStacktrace</code>:</p>
+<dt>&bull;</dt>
+<dd><code>CoreStacktrace</code></dd>
+<dt>&bull;</dt>
+<dd><code>JavaStacktrace</code></dd>
+<dt>&bull;</dt>
+<dd><code>GdbStacktrace</code></dd></dl>
+<h3>SingleThreadStacktrace</h3>
+<dl>
+<dt><code>class satyr.SingleThreadStacktrace</code></dt>
+<dd>satyr.SingleThreadStacktrace &#8211; base class for stacktrace with single thread</dd>
+<dt><code>crash_thread</code></dt>
+<dd>Reference to the thread that caused the crash, if known</dd>
+<dt><code>static from_json()</code></dt>
+<dd>Usage: SomeStacktrace.from_json(json_string) (class method) </dd>
+<p> Returns: stacktrace (of SomeStacktrace class) deserialized from json_string </p>
+<p> json_string: string &#8211; json input</p>
+<dt><code>get_bthash()</code></dt>
+<dd>Usage: stacktrace.get_bthash([flags]) </dd>
+<p> Returns: string &#8211; hash of the stacktrace </p>
+<p> flags: integer &#8211; bitwise sum of flags (BTHASH_NORMAL, BTHASH_NOHASH)</p>
+<dt><code>to_short_text()</code></dt>
+<dd>Usage: stacktrace.to_short_text([max_frames]) </dd>
+<p> Returns short text representation of the stacktrace. If max_frames is specified, the result includes only that much topmost frames.</dl>
+<h3>MultiThreadStacktrace</h3>
+<dl>
+<dt><code>class satyr.MultiThreadStacktrace</code></dt>
+<dd>satyr.MultiThreadStacktrace &#8211; base class for stacktrace with multiple threads</dd>
+<dt><code>crash_thread</code></dt>
+<dd>Reference to the thread that caused the crash, if known</dd>
+<dt><code>static from_json()</code></dt>
+<dd>Usage: SomeStacktrace.from_json(json_string) (class method) </dd>
+<p> Returns: stacktrace (of SomeStacktrace class) deserialized from json_string </p>
+<p> json_string: string &#8211; json input</p>
+<dt><code>get_bthash()</code></dt>
+<dd>Usage: stacktrace.get_bthash([flags]) </dd>
+<p> Returns: string &#8211; hash of the stacktrace </p>
+<p> flags: integer &#8211; bitwise sum of flags (BTHASH_NORMAL, BTHASH_NOHASH)</p>
+<dt><code>threads</code></dt>
+<dd>A list containing the objects representing threads in the stacktrace.</dd>
+<dt><code>to_short_text()</code></dt>
+<dd>Usage: stacktrace.to_short_text([max_frames]) </dd>
+<p> Returns short text representation of the stacktrace. If max_frames is specified, the result includes only that much topmost frames.</dl>
+<h3>CoreStacktrace</h3>
+<dl>
+<dt><code>class satyr.CoreStacktrace</code></dt>
+<dd>satyr.CoreStacktrace &#8211; class representing a core stacktrace </dd>
+<p> Usage: </p>
+<p> satyr.CoreStacktrace() &#8211; creates an empty stacktrace </p>
+<p> satyr.CoreStacktrace(json) &#8211; creates stacktrace object from JSON string</p>
+<dt><code>dup()</code></dt>
+<dd>Usage: stacktrace.dup() </dd>
+<p> Returns: satyr.CoreStacktrace &#8211; a new clone of core stacktrace </p>
+<p> Clones the stacktrace object. All new structures are independent of the original object.</p>
+<dt><code>executable</code></dt>
+<dd>Name of the executable (string)</dd>
+<dt><code>signal</code></dt>
+<dd>Signal number (int)</dd></dl>
+<h3>JavaStacktrace</h3>
+<dl>
+<dt><code>class satyr.JavaStacktrace</code></dt>
+<dd>satyr.JavaStacktrace &#8211; class representing a java stacktrace </dd>
+<p> Usage: </p>
+<p> satyr.JavaStacktrace() &#8211; creates an empty stacktrace </p>
+<p> satyr.JavaStacktrace(str) &#8211; parses str and fills the stacktrace object</p>
+<dt><code>dup()</code></dt>
+<dd>Usage: stacktrace.dup() </dd>
+<p> Returns: satyr.JavaStacktrace &#8211; a new clone of java stacktrace </p>
+<p> Clones the stacktrace object. All new structures are independent of the original object.</dl>
+<h3>Kerneloops</h3>
+<dl>
+<dt><code>class satyr.Kerneloops</code></dt>
+<dd>satyr.Kerneloops &#8211; class representing a kerneloops stacktrace </dd>
+<p> Usage: </p>
+<p> satyr.Kerneloops() &#8211; creates an empty kerneloops stacktrace </p>
+<p> satyr.Kerneloops(str) &#8211; parses str and fills the kerneloops stacktrace object</p>
+<dt><code>dup()</code></dt>
+<dd>Usage: stacktrace.dup() </dd>
+<p> Returns: satyr.Kerneloops &#8211; a new clone of kerneloops stacktrace </p>
+<p> Clones the kerneloops object. All new structures are independent of the original object.</p>
+<dt><code>modules</code></dt>
+<dd>Modules loaded at the time of the event (list of strings)</dd>
+<dt><code>normalize()</code></dt>
+<dd>Usage: stacktrace.normalize() </dd>
+<p> Normalizes the stacktrace.</p>
+<dt><code>raw_oops</code></dt>
+<dd>Original text of the kerneloops (string)</dd>
+<dt><code>taint_flags</code></dt>
+<dd>Dictionary of kernel taint flags. Keys are the flag names, values are booleans indicating whether the flag is set.</dd>
+<dt><code>version</code></dt>
+<dd>Kernel version (string)</dd></dl>
+<h3>PythonStacktrace</h3>
+<dl>
+<dt><code>class satyr.PythonStacktrace</code></dt>
+<dd>satyr.PythonStacktrace &#8211; class representing a python stacktrace </dd>
+<p> Usage: </p>
+<p> satyr.PythonStacktrace() &#8211; creates an empty python stacktrace </p>
+<p> satyr.PythonStacktrace(str) &#8211; parses str and fills the python stacktrace object</p>
+<dt><code>dup()</code></dt>
+<dd>Usage: stacktrace.dup() </dd>
+<p> Returns: satyr.PythonStacktrace &#8211; a new clone of python stacktrace </p>
+<p> Clones the PythonStacktrace object. All new structures are independent of the original object.</p>
+<dt><code>exception_name</code></dt>
+<dd>Exception type (string)</dd></dl>
+<h3>GdbStacktrace</h3>
+<dl>
+<dt><code>class satyr.GdbStacktrace</code></dt>
+<dd>satyr.GdbStacktrace &#8211; class representing a stacktrace </dd>
+<p> Usage: </p>
+<p> satyr.GdbStacktrace() &#8211; creates an empty stacktrace </p>
+<p> satyr.GdbStacktrace(str) &#8211; parses str and fills the stacktrace object</p>
+<dt><code>crashframe</code></dt>
+<dd>Readonly. By default the field contains None. After calling the find_crash_frame method, a reference to satyr.Frame object is stored into the field.</dd>
+<dt><code>dup()</code></dt>
+<dd>Usage: stacktrace.dup() </dd>
+<p> Returns: satyr.GdbStacktrace &#8211; a new clone of stacktrace </p>
+<p> Clones the stacktrace object. All new structures are independent of the original object.</p>
+<dt><code>find_address()</code></dt>
+<dd>Usage: stacktrace.find_address(address) </dd>
+<p> address: long &#8211; address to find </p>
+<p> Returns: satyr.Sharedlib object or None if not found </p>
+<p> Looks whether the given address belongs to a shared library.</p>
+<dt><code>find_crash_frame()</code></dt>
+<dd>Usage: stacktrace.find_crash_frame() </dd>
+<p> Returns: satyr.Frame &#8211; crash frame </p>
+<p> Finds crash frame in the stacktrace. Also sets the stacktrace.crashframe field.</p>
+<dt><code>libs</code></dt>
+<dd>A list containing the satyr.Sharedlib objects representing shared libraries loaded at the moment of crash.</dd>
+<dt><code>limit_frame_depth()</code></dt>
+<dd>Usage: stacktrace.limit_frame_depth(N) </dd>
+<p> N: positive integer &#8211; frame depth </p>
+<p> Crops all threads to only contain first N frames.</p>
+<dt><code>normalize()</code></dt>
+<dd>Usage: stacktrace.normalize() </dd>
+<p> Normalizes all threads in the stacktrace.</p>
+<dt><code>quality_complex()</code></dt>
+<dd>Usage: stacktrace.quality_complex() </dd>
+<p> Returns: float &#8211; 0..1, stacktrace quality </p>
+<p> Computes the quality from stacktrace, crash thread and frames around the crash.</p>
+<dt><code>quality_simple()</code></dt>
+<dd>Usage: stacktrace.quality_simple() </dd>
+<p> Returns: float &#8211; 0..1, stacktrace quality </p>
+<p> Computes the quality from stacktrace itself.</p>
+<dt><code>set_libnames()</code></dt>
+<dd>Usage: stacktrace.set_libnames() </dd>
+<p> Sets library names according to sharedlibs data.</p>
+<dt><code>to_short_text()</code></dt>
+<dd>Usage: stacktrace.to_short_text([max_frames]) </dd>
+<p> Returns short text representation of the crash thread. If max_frames is specified, the result includes only that much topmost frames.</dl>
+<h2>Clustering</h2>
+<h3>Distance matrix</h3>
+<dl>
+<dt><code>class satyr.Distances</code></dt>
+<dd>satyr.Distances &#8211; class representing distances between objects </dd>
+<p> Usage: </p>
+<p> satyr.Distances(m, n) &#8211; creates an m-by-n distance matrix </p>
+<p> satyr.Distances([threads], m, dist_type=DISTANCE_LEVENSHTEIN) &#8211; compares first m threads with others </p>
+<p> dist_type (optional): DISTANCE_LEVENSHTEIN, DISTANCE_JACCARD or DISTANCE_DAMERAU_LEVENSHTEIN</p>
+<dt><code>dup()</code></dt>
+<dd>Usage: distances.dup() </dd>
+<p> Returns: satyr.Distances &#8211; a new clone of the distances </p>
+<p> Clones the distances object. All new structures are independent of the original object.</p>
+<dt><code>get_distance()</code></dt>
+<dd>Usage: distances.get_distance(i, j) </dd>
+<p> Returns: positive float &#8211; distance between objects i and j</p>
+<dt><code>get_size()</code></dt>
+<dd>Usage: distances.get_size() </dd>
+<p> Returns: (m, n) &#8211; size of the distance matrix</p>
+<dt><code>set_distance()</code></dt>
+<dd>Usage: distances.set_distance(i, j, d) </dd>
+<p> Sets distance between objects i and j to d</dl>
+<h3>Dendrogram</h3>
+<dl>
+<dt><code>class satyr.Dendrogram</code></dt>
+<dd>satyr.Dendrogram &#8211; a dendrogram created by clustering algorithm </dd>
+<p> Usage: satyr.Dendrogram(distances) &#8211; creates new dendrogram from a distance matrix</p>
+<dt><code>cut()</code></dt>
+<dd>Usage: dendrogram.cut(level, min_size) </dd>
+<p> Returns: list of clusters (lists of objects) which have at least min_size objects and which were merged at most at the specified distance</p>
+<dt><code>get_merge_level()</code></dt>
+<dd>Usage: dendrogram.get_merge_level(i) </dd>
+<p> Returns: float &#8211; merge level between clusters at positions i and i + 1</p>
+<dt><code>get_object()</code></dt>
+<dd>Usage: dendrogram.get_object(i) </dd>
+<p> Returns: integer &#8211; index of the object at position i</p>
+<dt><code>get_size()</code></dt>
+<dd>Usage: dendrogram.get_size() </dd>
+<p> Returns: integer &#8211; number of objects in the dendrogram</p>
+<dt>&bull;</dt>
+<dd><i>genindex</i></dd>
+<dt>&bull;</dt>
+<dd><i>modindex</i></dd>
+<dt>&bull;</dt>
+<dd><i>search</i></dd></dl>
+<h2>Author</h2>
+<p>Red Hat, Inc</p>
+<h2>Copyright</h2>
+<p>2013, Red Hat, Inc</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

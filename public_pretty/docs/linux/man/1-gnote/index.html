@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnote(1) · Linux Manual Pages</title>
+<meta name="description" content="gnote – A simple note-taking application for Gnome">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gnote/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gnote(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> gnote &#8211; A simple note-taking application for Gnome</p>
+<h2>SYNOPSIS</h2>
+<p> <code>gnote</code> <i>[OPTION] &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
+<p> This manual page documents briefly the <code>gnote</code> command. </p>
+<p> <code>Gnote</code> is a desktop note-taking application for Linux and Unix. Simple and easy to use, but with potential to help you organize the ideas and information you deal with every day. </p>
+<p> Gnote&#8217;s usefulness lies in the ability to relate notes and ideas together, using a WikiWiki-like linking system. </p>
+<p> When run without any options, either a Search All Notes window or the Gnote note menu appears in the notification tray area depending on configuration. Selecting a note from a list in Search All Notes or from the menu from notification area displays the note&#8217;s spatial window. </p>
+<p> Changes to notes are saved automatically. Links to URLs, files, and other notes are detected as you type. Rich editing such as highlighting, bold, italics, undo/redo, and variable font sizes are supported. </p>
+<p> Global keybindings exist to allow fast access to Gnote notes and dialogs. These keybindings are set in GSettings (see below) and may be activated from any application. </p>
+<h2>OPTIONS</h2>
+<p> The program follows the usual GNU command line syntax, with options starting with two dashes (`&#8211;&#8216;). A summary of options are included below.</p>
+<dl>
+<dt><code>&#8211;background</code></dt>
+<dd> Run Gnote in background.</dd>
+<dt><code>&#8211;note-path PATH</code></dt>
+<dd> Specify the path of the directory containing the notes.</dd>
+<dt><code>&#8211;new-note</code></dt>
+<dd> Create and display a new note.</dd>
+<dt><code>&#8211;new-note TITLE</code></dt>
+<dd> Create and display a new note with the title given.</dd>
+<dt><code>&#8211;open-note TITLE/URL</code></dt>
+<dd> Display the existing note matching TITLE or URL.</dd>
+<dt><code>&#8211;search</code></dt>
+<dd> Open the search all notes window with the search text.</dd>
+<dt><code>&#8211;start-here</code></dt>
+<dd> Display the &quot;Start Here&quot; note.</dd>
+<dt><code>&#8211;highlight-search TEXT</code></dt>
+<dd> Search and highlight TEXT in the opened note.</dd>
+<dt><code>&#8211;help<tt>&nbsp;<wbr>&nbsp;<wbr></tt></code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version of program. </dd>
+</dl>
+<h2>GSETTINGS SETTINGS</h2>
+<p> Gnote has several preference settings stored in GSettings. Changes to Settings are applied instantly to any running Gnote instance. A summary of the GConf settings and their purpose are described below.</p>
+<dl>
+<dt><code>org.gnome.gnote.global-keybindings</code></dt>
+<dd> A GSettings schema for key bindings. Keys are listed below.</dd>
+<dt><code>open-start-here</code></dt>
+<dd> Global X keybinding for displaying the &quot;Start Here&quot; note. The default keybinding is &lt;Alt&gt;F11.</dd>
+<dt><code>show-note-menu</code></dt>
+<dd> Global X keybinding for displaying the Gnote applet&#8217;s note menu. The default keybinding is &lt;Alt&gt;F12.</dd>
+<dt><code>create-new-note</code></dt>
+<dd> Global X keybinding for creating and displaying a new note.</dd>
+<dt><code>open-recent-changes</code></dt>
+<dd> Global X keybinding for opening the recent changes dialog.</dd>
+<dt><code>open-search</code></dt>
+<dd> Global X keybinding for opening the note search dialog. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <i><a rel="nofollow" href="http://live.gnome.org/Gnote/">http://live.gnome.org/Gnote/</a></i> </p>
+<h2>BUGS</h2>
+<p> Please enter bug reports in the Gnome Bugzilla bug tracker (<a rel="nofollow" href="http://bugzilla.gnome.org/enter_bug.cgi?product=Gnote">http://bugzilla.gnome.org/enter_bug.cgi?product=Gnote</a>). </p>
+<h2>AUTHORS</h2>
+<p> Hubert Figuiere &lt;hub [at] figuiere.net&gt;</p>
+<dl>
+<dt>Debarshi Ray &lt;debarshir [at] src.gnome.org&gt;</dt>
+<dd>
+</dd><dt>Aurimas Cernius &lt;aurisc4 [at] gmail.com&gt;</dt>
+<dd>
+<p> This manual page was originally written by Luca Capello &lt;luca [at] pca.it&gt;. Adapted to Gnote by Hubert Figuiere and Aurimas Cernius </p>
+</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdnumeric_limitsepsilon(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdnumeric_limitsepsilon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdnumeric_limitsepsilon(3)</h1>
+
+
+
+
+
+<p>std::numeric_limits&lt;T&gt;::epsilon - std::numeric_limits&lt;T&gt;::epsilon</p>
+<h2>Synopsis</h2>
+<pre><code>static T epsilon() throw();             (until C++11)
+static constexpr T epsilon() noexcept;  (since C++11)</code></pre> 
+<p>Returns the machine epsilon, that is, the difference between 1.0 and the next value representable by the floating-point type T. It is only meaningful if std::numeric_limits&lt;T&gt;::is_integer == false.</p>
+<h2>Return value</h2>
+<p>T std::numeric_limits&lt;T&gt;::epsilon()
+/* non-specialized */ T()
+bool false
+char 0
+signed char 0
+unsigned char 0
+wchar_t 0
+char8_t 0
+char16_t 0
+char32_t 0
+short 0
+unsigned short 0
+int 0
+unsigned int 0
+long 0
+unsigned long 0
+long long 0
+unsigned long long 0
+float FLT_EPSILON
+double DBL_EPSILON
+long double LDBL_EPSILON</p>
+<h2>Example</h2>
+<p>Demonstrates the use of machine epsilon to compare floating-point values for equality
+// Run this code <pre><code>#include &lt;cmath&gt;
+#include &lt;limits&gt;
+#include &lt;iomanip&gt;
+#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+#include &lt;algorithm&gt;
+template &lt;class T&gt;
+typename std::enable_if&lt;!std::numeric_limits&lt;T&gt;::is_integer, bool&gt;::type
+almost_equal(T x, T y, int ulp)
+{
+// the machine epsilon has to be scaled to the magnitude of the values used
+// and multiplied by the desired precision in ULPs (units in the last place)
+return std::abs(x - y) &lt;= std::numeric_limits&lt;T&gt;::epsilon() * std::abs(x + y) * ulp
+// unless the result is subnormal
+|| std::abs(x - y) &lt; std::numeric_limits&lt;T&gt;::min();
+}
+int main()
+{
+double d1 = 0.2;
+double d2 = 1 / std::sqrt(5) / std::sqrt(5);
+std::cout &lt;&lt; std::fixed &lt;&lt; std::setprecision(20)
+&lt;&lt; &quot;d1=&quot; &lt;&lt; d1 &lt;&lt; &quot;\nd2=&quot; &lt;&lt; d2 &lt;&lt; &lsquo;\n&rsquo;;
+if (d1 == d2)
+std::cout &lt;&lt; &quot;d1 == d2\n&quot;;
+else
+std::cout &lt;&lt; &quot;d1 != d2\n&quot;;
+if (almost_equal(d1, d2, 2))
+std::cout &lt;&lt; &quot;d1 almost equals d2\n&quot;;
+else
+std::cout &lt;&lt; &quot;d1 does not almost equal d2\n&quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> d1=0.20000000000000001110
+ <wbr> d2=0.19999999999999998335
+ <wbr> d1 != d2
+ <wbr> d1 almost equals d2</p>
+<h2>See also</h2>
+<p>nextafter
+nextafterf
+nextafterl
+nexttoward
+nexttowardf
+nexttowardl next representable floating point value towards the given value
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

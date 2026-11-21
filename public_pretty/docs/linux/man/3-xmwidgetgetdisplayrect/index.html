@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmwidgetgetdisplayrect(3) · Linux Manual Pages</title>
+<meta name="description" content="XmWidgetGetDisplayRect — Retrieves display rectangle information for a widget">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmwidgetgetdisplayrect/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmwidgetgetdisplayrect(3)</h1>
+
+
+
+
+
+<p><code>XmWidgetGetDisplayRect</code> &#8212; Retrieves display rectangle information for a widget</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Xm.h&gt;
+<code>Boolean XmWidgetGetDisplayRect</code>(
+<code>Widget widget</code>,
+<code>XRectangle *displayrect</code>);</pre>
+<h2>Description</h2>
+<p><code>XmWidgetGetDisplayRect</code> returns the width, height and the x and y-coordinates of the upper left corner of the display rectangle of the specified widget. The display rectangle is the smallest rectangle that encloses either a string or a pixmap. </p>
+<p> If the widget contains a string, the return values specify the x and y-coordinates of the upper left corner of the display rectangle relative to the origin of the widget and the width and height in pixels. </p>
+<p> In the case of a pixmap, the return values specify the x and y-coordinates of the upper left corner of the pixmap relative to the origin, and the width and height of the pixmap in pixels.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the widget ID</dd>
+<dt><i>displayrect</i></dt>
+<dd>Specifies a pointer to an XRectangle structure in which the x and y-coordinates, width and height of the display rectangle are returned</dd></dl>
+<h2>Return</h2>
+<p>Returns True if the specified widget has an associated display rectangle; otherwise, returns False.</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmwidgetgetbaselines/">XmWidgetGetBaselines</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

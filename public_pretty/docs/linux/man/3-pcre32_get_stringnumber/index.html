@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pcre32_get_stringnumber(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pcre32_get_stringnumber/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pcre32_get_stringnumber(3)</h1>
+
+
+
+
+
+<p>PCRE - Perl-compatible regular expressions</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;pcre.h&gt;
+int pcre_get_stringnumber(const pcre *code,
+                          const char *name);
+int pcre16_get_stringnumber(const pcre16 *code,
+                            PCRE_SPTR16 name);
+int pcre32_get_stringnumber(const pcre32 *code,
+                            PCRE_SPTR32 name);</code></pre>
+<h2>Description</h2>
+<p>This convenience function finds the number of a named substring capturing parenthesis in a compiled pattern. Its arguments are:
+ <wbr> <i>code</i> <wbr> <wbr> <wbr> Compiled regular expression
+ <wbr> <i>name</i> <wbr> <wbr> <wbr> Name whose number is required The yield of the function is the number of the parenthesis if the name is found, or PCRE_ERROR_NOSUBSTRING otherwise. When duplicate names are allowed (PCRE_DUPNAMES is set), it is not defined which of the numbers is returned by <b>pcre[16|32]_get_stringnumber()</b>. You can obtain the complete list by calling <b>pcre[16|32]_get_stringtable_entries()</b>. There is a complete description of the PCRE native API in the <b>pcreapi</b> page and a description of the POSIX API in the <b>pcreposix</b> page.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

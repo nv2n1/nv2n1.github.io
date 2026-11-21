@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tiffset(1) · Linux Manual Pages</title>
+<meta name="description" content="tiffset – set a field in a TIFF header">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tiffset/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tiffset(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> tiffset &#8211; set a field in a <font SIZE="-1">TIFF</font> header</p>
+<h2>SYNOPSIS</h2>
+<p> <code>tiffset</code> [ <i>options</i> ] <i>filename.tif</i></p>
+<h2>DESCRIPTION</h2>
+<p> <i>Tiffset</i> sets the value of a <font SIZE="-1">TIFF</font> header to a specified value.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-d</code><i> dirnumber</i></dt>
+<dd> change the current directory (starting at 0).</dd>
+<dt><code>-s</code><i> tagnumber</i> [<i> count</i> ]<i> value &#8230;</i></dt>
+<dd> Set the value of the named tag to the value or values specified.</dd>
+<dt><code>-sd</code><i> diroffset</i></dt>
+<dd> change the current directory by offset.</dd>
+<dt><code>-sf</code><i> tagnumber filename</i></dt>
+<dd> Set the value of the tag to the contents of filename. This option is supported for ASCII tags only.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> The following example sets the image description tag (270) of a.tif to the contents of the file descrip:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+tiffset -sf 270 descrip a.tif
+</pre>
+</dd></dl>
+<p> The following example sets the artist tag (315) of a.tif to the string &#8220;Anonymous&#8221;:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+tiffset -s 315 Anonymous a.tif
+</pre>
+</dd></dl>
+<p> This example sets the resolution of the file a.tif to 300 dpi:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+tiffset -s 296 2 a.tif
+tiffset -s 282 300.0 a.tif
+tiffset -s 283 300.0 a.tif
+</pre>
+</dd></dl>
+<p> Set the photometric interpretation of the third page of a.tif to min-is-black (ie. inverts it):</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+tiffset -d 2 -s 262 1 a.tif
+</pre>
+</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-tiffdump/">tiffdump</a></code>(1), <code><a href="/docs/linux/man/1-tiffinfo/">tiffinfo</a></code>(1), <code><a href="/docs/linux/man/1-tiffcp/">tiffcp</a></code>(1), <code>libtiff</code>(3TIFF) </p>
+<p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

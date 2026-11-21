@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentaldefault_searcherstdexperimentalmake_default_searcher(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentaldefault_searcherstdexperimentalmake_default_searcher/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentaldefault_searcherstdexperimentalmake_default_searcher(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::experimental::default_searcher,std::experimental::make_default_searcher - std::experimental::default_searcher,std::experimental::make_default_searcher</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;experimental/functional&gt;
+template&lt; class ForwardIterator1, class BinaryPredicate = std::equal_to&lt;&gt; &gt;  (library fundamentals TS)
+class default_searcher;</code></pre> 
+<p>A class suitable for use with std::experimental::search that delegates the search operation to the standard library&rsquo;s std::search.
+default_searcher is CopyConstructible and CopyAssignable.</p>
+<h2>Member functions</h2>
+<p> std::experimental::default_searcher::default_searcher</p>
+<p>default_searcher( ForwardIterator pat_first,
+ForwardIterator pat_last,
+BinaryPredicate pred = BinaryPredicate());</p>
+<p>Constructs a default_searcher by storing copies of pat_first, pat_last, and pred</p>
+<h2>Parameters</h2>
+<p>pat_first, pat_last - a pair of iterators designating the string to be searched for
+pred - a callable object used to determine equality</p>
+<h2>Exceptions</h2>
+<p>Any exceptions thrown by the copy constructors of BinaryPredicate or ForwardIterator.</p>
+<p> std::experimental::default_searcher::operator()</p>
+<p>template&lt; class ForwardIterator2 &gt; <i>(until C++17)</i>
+ForwardIterator2 operator()( ForwardIterator2 first, ForwardIterator2 last ) const;
+template&lt; class ForwardIterator2 &gt;
+std::pair&lt;ForwardIterator2, ForwardIterator2&gt; <i>(since C++17)</i>
+operator()( ForwardIterator2 first, ForwardIterator2 last ) const;</p>
+<p>The member function called by std::experimental::search to perform a search with this searcher.</p>
+<p>Equivalent to std::search(first, last, pat_first, pat_last, pred); <i>(until C++17)</i>
+Returns a pair of iterators i, j, where i is std::search(first, last, pat_first, pat_last, pred) and j is std::next(i, std::distance(pat_first, pat_last)) unless std::search returned last (no match), in which case j equals last as well <i>(until C++17)</i></p>
+<h2>Parameters</h2>
+<p>first, last - a pair of iterators designating the string to be examined</p>
+<h2>Return value</h2>
+<p>Iterator to the first position in [first, last) where a subsequence that compares equal to [pat_first, pat_last) as defined by pred is located, or a copy of last otherwise. <i>(until C++17)</i>
+A pair of iterators to the first and one past last positions in [first, last) where a subsequence that compares equal to [pat_first, pat_last) as defined by pred is located, or a pair of copies of last otherwise. <i>(since C++17)</i>
+Helper Functions template &lt;class ForwardIterator, class BinaryPredicate = std::equal_to&lt;&gt;&gt;</p>
+<p>default_searcher&lt;ForwardIterator, BinaryPredicate&gt; make_default_searcher(</p>
+<pre><code>ForwardIterator pat_first, (library fundamentals TS)
+
+                               ForwardIterator pat_last,
+
+BinaryPredicate pred = BinaryPredicate());
+</code></pre>
+<p>Helper function that constructs a std::experimental::default_searcher using template argument deduction.Equivalent to return default_searcher&lt;ForwardIterator, BinaryPredicate&gt;(pat_first, pat_last, pred);</p>
+<h2>Parameters</h2>
+<p>pat_first, pat_last - a pair of iterators designating the string to be searched for
+pred - a callable object used to determine equality</p>
+<h2>Return value</h2>
+<p>A default_searcher constructed with the arguments pat_first, pat_last, pred.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;experimental/algorithm&gt;
+#include &lt;experimental/functional&gt;
+int main()
+{
+std::string in = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit,&quot;
+&quot; sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&quot;;
+std::string needle = &quot;pisci&quot;;
+auto it = std::experimental::search(in.begin(), in.end(),
+std::experimental::make_default_searcher(
+needle.begin(), needle.end()));
+if (it != in.end())
+std::cout &lt;&lt; &quot;The string &quot; &lt;&lt; needle &lt;&lt; &quot; found at offset &quot;
+&lt;&lt; it - in.begin() &lt;&lt; &lsquo;\n&rsquo;;
+else
+std::cout &lt;&lt; &quot;The string &quot; &lt;&lt; needle &lt;&lt; &quot; not found\n&quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> The string pisci found at offset 43</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> searches for a range of elements
+search <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

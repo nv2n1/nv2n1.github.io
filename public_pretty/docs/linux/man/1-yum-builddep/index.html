@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yum-builddep(1) · Linux Manual Pages</title>
+<meta name="description" content="yum-builddep – install missing dependencies for building an RPM package">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-yum-builddep/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>yum-builddep(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> yum-builddep &#8211; install missing dependencies for building an RPM package</p>
+<h2>SYNOPSIS</h2>
+<p> <code>yum-builddep</code> package </p>
+<p> <code>yum-builddep</code> /path/to/local/package.src.rpm </p>
+<p> <code>yum-builddep</code> /path/to/local/package.spec</p>
+<h2>DESCRIPTION</h2>
+<p> <code>yum-builddep</code> is a program which installs the RPMs needed to build the specified package. The source RPM for the specified package must be available in a Yum repository (which will be automatically enabled, if it is disabled) or it can be a local source RPM or a spec file. </p>
+<p> Note, that only the BuildRequires information within the SRPM header information is used to determine build dependencies. This will specifically omit any dependencies that are required only for specific architectures. </p>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>Download and install all the RPMs needed to build the kernel RPM:</dt>
+<dd> <code>yumdownloader &#8211;source kernel &amp;&amp; rpm2cpio kernel*src.rpm | cpio -i kernel.spec &amp;&amp; \ </code><br />
+ <code>yum-builddep kernel.spec</code></dd></dl>
+<p> The kernel includes specific BuildRequires dependencies for different architectures. In order to make sure that those dependencies are downloaded and installed, the SRPM should be downloaded, the .spec file extracted from it and used to determine the full dependency list. </p>
+<h2>FILES</h2>
+<p> As yum-builddep uses YUM libraries for retrieving all the information, it relies on YUM configuration for its default values like which repositories to use. Consult YUM documentation for details: </p>
+<pre>
+/etc/yum.conf
+/etc/yum/repos.d/
+/var/cache/yum/
+</pre>
+<h2>SEE ALSO</h2>
+<pre>
+<i>yum.conf (5)</i>
+<a rel="nofollow" href="http://yum.baseurl.org/">http://yum.baseurl.org/</a>
+</pre>
+<h2>AUTHORS</h2>
+<pre>
+See the Authors file included with this program.
+</pre>
+<h2>BUGS</h2>
+<p> There are of course no bugs, but should you find any, you should first consult the FAQ section on <a rel="nofollow" href="http://yum.baseurl.org/wiki/Faq">http://yum.baseurl.org/wiki/Faq</a> and if unsuccessful in finding a resolution contact the mailing list: yum-devel [at] lists.baseurl.org. To file a bug use <a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a> for Fedora/RHEL/Centos related bugs and <a rel="nofollow" href="http://yum.baseurl.org/report">http://yum.baseurl.org/report</a> for all other bugs. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>psorder(1) · Linux Manual Pages</title>
+<meta name="description" content="psorder – PostScript pageorder filter">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-psorder/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>psorder(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> psorder &#8211; PostScript pageorder filter </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>psorder</code> [-duf] <i>sourcefile</i></dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>psorder</code></p>
+<dd>is a filter that re-orders the pages of a PostScript document. The result is written to the standard output. By default, documents are processed into ascending order (the lowest numbered page is printed first). Some PostScript documents specify that the order of their pages should never be changed; the default action of <code>psorder</code> is to follow this specification. </dd>
+<p> If no source file is given, or if <i>sourcefile</i> is `<code>&#8211;</code>&#8216;, <code>psorder</code> reads from the standard input file.</p>
+<h2>OPTIONS</h2>
+<p> <code>-d</code></p>
+<dl>
+<dt>
+</dt><dd> Re-order the pages of the document in downward or descending order. This is typically used to change the order of a document to be printed by a printer that stacks pages face-up, such as an Apple LaserWriter or LaserWriter Plus.</dd></dl>
+<p> <code>-u</code></p>
+<dl>
+<dt>
+</dt><dd> Specifies forward order, and is the default. It is used to try and ensure the correct ordering when a document will be printed by a printer that stacks the pages face-down.</dd></dl>
+<p> <code>-f</code></p>
+<dl>
+<dt>
+</dt><dd> Force <code>psorder</code> to re-order the pages, even if the document claims that its page order is not to be trifled with. This option should only be used experimentally, as it may cause documents to print incorrectly.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-psf/">psf</a></code>(8), <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

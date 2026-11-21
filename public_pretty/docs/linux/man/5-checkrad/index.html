@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>checkrad(5) · Linux Manual Pages</title>
+<meta name="description" content="checkrad — See if a user is (still) logged in on a certain port.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-checkrad/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>checkrad(5)</h1>
+
+
+
+
+
+<p>checkrad &#8212; See if a user is (still) logged in on a certain port.</p>
+<h2>Synopsis</h2>
+<p><code>checkrad</code> [<code>-d</code>] <i>nas-type nas-ip nas-port login session-id</i></p>
+<h2>Description</h2>
+<p><code>Checkrad</code> is used by the radius server to check if its idea of a user logged in on a certain port/NAS is correct if a double login is detected. Returns: 0 = no duplicate, 1 = duplicate, &gt;1 = error. </p>
+<h2>Options</h2>
+<dl>
+<dt>-d</dt>
+<dd>Enable printing of debugging informations. </dd>
+<dt>nas-type</dt>
+<dd>Type of port/NAS. Can be one of: </dd>
+<dl>
+<dd>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>ascend</dd>
+<dt>&bull;</dt>
+<dd>bay</dd>
+<dt>&bull;</dt>
+<dd>cisco</dd>
+<dt>&bull;</dt>
+<dd>cisco_l2tp</dd>
+<dt>&bull;</dt>
+<dd>computone</dd>
+<dt>&bull;</dt>
+<dd>cvx</dd>
+<dt>&bull;</dt>
+<dd>digitro</dd>
+<dt>&bull;</dt>
+<dd>dot1x</dd>
+<dt>&bull;</dt>
+<dd>livingston</dd>
+<dt>&bull;</dt>
+<dd>max40xx</dd>
+<dt>&bull;</dt>
+<dd>mikrotik</dd>
+<dt>&bull;</dt>
+<dd>mikrotik_snmp</dd>
+<dt>&bull;</dt>
+<dd>multitech</dd>
+<dt>&bull;</dt>
+<dd>netserver</dd>
+<dt>&bull;</dt>
+<dd>other</dd>
+<dt>&bull;</dt>
+<dd>pathras</dd>
+<dt>&bull;</dt>
+<dd>patton</dd>
+<dt>&bull;</dt>
+<dd>portslave</dd>
+<dt>&bull;</dt>
+<dd>pr3000</dd>
+<dt>&bull;</dt>
+<dd>pr4000</dd>
+<dt>&bull;</dt>
+<dd>redback</dd>
+<dt>&bull;</dt>
+<dd>tc</dd>
+<dt>&bull;</dt>
+<dd>usrhiper</dd>
+<dt>&bull;</dt>
+<dd>versanet</dd></dl>
+<p> The &quot;other&quot; type cause <code>checkrad</code> to skip any check and always returns 1.</dl>
+<dt>nas-ip</dt>
+<dd>IP address of the NAS to check. </dd>
+<dt>nas-port</dt>
+<dd>The NAS port to check (may be ignored by some nas-type). </dd>
+<dt>login</dt>
+<dd>The login name to check. </dd>
+<dt>session-id</dt>
+<dd>Session to check. (actually ignored by all nas-type) </dd>
+</dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-radiusd/">radiusd</a>(8) </p>
+<h2>Author</h2>
+<p>Written by Miquel van Smoorenburg, miquels [at] cistron.nl. </p>
+<p> This manual page was written by Marco Nenciarini &lt;mnencia [at] debian.org&gt; for the Debian project (but may be used by others).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

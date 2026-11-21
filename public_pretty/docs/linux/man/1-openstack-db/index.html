@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>openstack-db(1) · Linux Manual Pages</title>
+<meta name="description" content="openstack-db – Set up a local database for use with an OpenStack service">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-openstack-db/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>openstack-db(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> openstack-db &#8211; Set up a local database for use with an OpenStack service</p>
+<h2>SYNOPSIS</h2>
+<p> <code>openstack-db</code> <i>&#8211;service &lt;service&gt; &#8211;init|&#8211;drop </i>[<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> Set up a local database (MySQL) for use with openstack-&lt;service&gt;. This script will create a &#8216;&lt;service&gt;&#8217; database that is accessible only on localhost by user &#8216;&lt;service&gt;&#8217; with password &#8216;&lt;service&gt;&#8217;. The setup of a database with a multi-server OpenStack installation is outside of the scope of this simple helper script.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt> <code>&#8211;help</code> | <code>-h</code></dt>
+<dd>Print usage information.</dd>
+<dt> <code>&#8211;drop</code></dt>
+<dd>Drop the database.</dd>
+<dt> <code>&#8211;init</code></dt>
+<dd>Initialise the database.</dd>
+<dt> <code>&#8211;update</code></dt>
+<dd>Update an initialised database.</dd>
+<dt> <code>&#8211;password</code> &lt;pw&gt; | <code>-p</code> &lt;pw&gt;</dt>
+<dd>Specify the password for user that will be used to connect database for the service. By default the &lt;service&gt; parameter is used for the password.</dd>
+<dt> <code>&#8211;rootpw</code> &lt;pw&gt; | <code>-r</code> &lt;pw&gt;</dt>
+<dd>Specify the root database password. If the script installs the database server, it will set the root password to this value instead of prompting for a password. If the database server is already installed, this password will be used to connect to the database instead of having to prompt for it.</dd>
+<dt> <code>&#8211;service</code> &lt;service&gt;</dt>
+<dd>Specify the openstack service to manipulate the database for. This option is mandatory.</dd>
+<dt> <code>&#8211;yes</code> | <code>-y</code></dt>
+<dd>In cases where the script would normally ask for confirmation before doing something, such as installing the database server, just assume yes. This is useful if you want to run the script non-interactively. </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

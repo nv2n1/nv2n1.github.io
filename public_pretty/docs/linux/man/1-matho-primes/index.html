@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>matho-primes(1) · Linux Manual Pages</title>
+<meta name="description" content="matho-primes – generate consecutive prime numbers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-matho-primes/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>matho-primes(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> matho-primes &#8211; generate consecutive prime numbers</p>
+<h2>SYNOPSIS</h2>
+<p> <code>matho-primes</code> [start [stop]] [&quot;twin&quot;] [&quot;pal&quot; [base]]<br />
+ <code>matho-primes</code> [-t] [-p base] [start [stop]] </p>
+<h2>DESCRIPTION</h2>
+<p> This command line utility is optionally part of the <code><a href="/docs/linux/man/1-mathomatic/">mathomatic</a></code>(1) package. It quickly computes any number of consecutive prime numbers using a windowing, memory efficient sieve of Eratosthenes algorithm, dumping them to standard output. They are displayed one prime per line in ascending order, unless the &quot;twin&quot; option is specified, which displays only twin primes, two primes per line. </p>
+<p> Generates up to 18 decimal digit primes, or whatever is the number of digits of precision for a <code>long double</code> in the C compiler used to compile this utility. </p>
+<p> A range may be specified on the command line, otherwise the starting number and the number of primes to output is prompted for. The range is <code>start</code> to <code>stop</code> inclusive, and <code>stop</code> must be greater than or equal to <code>start.</code> </p>
+<p> If the &quot;-t&quot; or &quot;twin&quot; option is specified on the command line, only <code>twin primes</code> will be displayed. Twin primes are two primes that differ in value by 2. Each twin pair is displayed together on the same line separated by a space character. </p>
+<p> If the &quot;-p&quot; or &quot;pal&quot; option is specified on the command line, only <code>palindromic primes</code> are displayed. Palindromes are symmetrical, they read exactly the same forward and backward. The palindrome number <code>base</code> may be specified, the default is base 10. The <code>base</code> can be any integer greater than 1. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-mathomatic/">mathomatic</a></code>(1), <code><a href="/docs/linux/man/1-primorial/">primorial</a></code>(1), <code><a href="/docs/linux/man/1-matho-mult/">matho-mult</a></code>(1), <code><a href="/docs/linux/man/1-matho-sum/">matho-sum</a></code>(1) </p>
+<h2>AUTHOR</h2>
+<p> George Gesslein II (gesslein [at] linux.com) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

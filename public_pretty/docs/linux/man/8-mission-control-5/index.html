@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mission-control-5(8) · Linux Manual Pages</title>
+<meta name="description" content="mission-control-5 – Telepathy account manager/chanel dispatcher">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mission-control-5/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mission-control-5(8)</h1>
+
+
+
+
+
+<p>mission-control-5 &#8211; Telepathy account manager/chanel dispatcher</p>
+<h2>Synopsis</h2>
+<p><code>/usr/libexec/mission-control-5</code></p>
+<h2>Description</h2>
+<p>Mission Control 5 implements the AccountManager and ChannelDispatcher services described in the Telepathy D-Bus specification, allowing clients like <code><a href="/docs/linux/man/1-empathy/">empathy</a></code>(1) to store account details, connect to accounts, request communication channels, and have channels dispatched to them. </p>
+<p> It is a D-Bus service which runs on the session bus, and should usually be started automatically by D-Bus activation. However, it might be useful to start it manually for debugging.</p>
+<h2>Options</h2>
+<p>There are no command-line options.</p>
+<h2>Environment</h2>
+<dl>
+<dt><code>MC_DEBUG=all</code> or <code>MC_DEBUG=</code><i>category</i>[<code>,</code><i>category</i>&#8230;]</dt>
+<dd>May be set to &quot;all&quot; for full debug output from Mission Control and telepathy-glib, or various undocumented category names (which may change from release to release) to filter the output. See Mission Control and telepathy-glib source code for the available categories.</dd>
+<dt><code>MC_DEBUG=</code><i>level</i></dt>
+<dd>Set a numeric debug level for Mission Control itself (but not telepathy-glib). Level 0 logs nothing, level 1 logs most messages, and level 2 logs all messages.</dd>
+<dt><code>MC_TP_DEBUG</code>=<i>type</i></dt>
+<dd>May be set to &quot;all&quot; for full debug output from telepathy-glib, or various undocumented options (which may change from telepathy-glib release to release) to filter the output. See telepathy-glib source code for the available options.</dd></dl>
+<h2>See Also</h2>
+<p><i><a rel="nofollow" href="http://telepathy.freedesktop.org/">http://telepathy.freedesktop.org/</a></i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

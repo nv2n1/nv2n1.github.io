@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kwallet-query(1) · Linux Manual Pages</title>
+<meta name="description" content="kwallet-query – KDE Wallet command-line manipulation tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-kwallet-query/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>kwallet-query(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> kwallet-query &#8211; KDE Wallet command-line manipulation tool </p>
+<h2>SYNOPSIS</h2>
+<p> <code>kwallet-query</code> <i>OPTIONS</i> <i>wallet</i></p>
+<h2>DESCRIPTION</h2>
+<p> kwallet-query comes in handy when shell scripts need to read or update the KDE Wallet. It works by manipulating the entries displayed in the <code>KDE Wallet Manager</code> utility. It&#8217;s only parameter is the <i>wallet</i>name the tool should read or update. The operation mode is specified by the options.</p>
+<h2>OPTIONS</h2>
+<p> <code>-h,&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Display a short help message</dd></dl>
+<p> <code>-l,&#8211;list-entries</code></p>
+<dl>
+<dt>
+</dt><dd> List password entries. These are the folder names displayed in the <code>KDE Wallet Manager</code> utility. If the <code>-f</code> option is given, this will only display the subfolders of the specified folder.</dd></dl>
+<p> <code>-r,&#8211;read-password</code> <i>Entry</i></p>
+<dl>
+<dt>
+</dt><dd> Read the contents of the given <i>Entry</i> from the <code>Folder</code>section of the <i>wallet</i> and output it on the standard output. Maps are exported as JSON object.</dd></dl>
+<p> <code>-w,&#8211;write-password</code> <i>Entry</i></p>
+<dl>
+<dt>
+</dt><dd> Write secrets to the given <i>Entry</i> under the <code>Folder</code> section of the given <i>wallet</i>. The secrets are read from the standard input. Maps take in input a well-formed JSON object. <code>IMPORTANT</code> previous wallet entry value will be overwritten by this option, so be careful when using it!</dd></dl>
+<p> <code>-f,&#8211;folder</code> <i>Folder</i></p>
+<dl>
+<dt>
+</dt><dd> Set the <i>wallet</i> folder to <i>Folder</i> value. By default <code>Passwords</code> is used.</dd></dl>
+<p> <code>-v,&#8211;verbose</code></p>
+<dl>
+<dt>
+</dt><dd> Output more information when performing the operation, to help debugging.</dd></dl>
+<h2>EXIT STATUS</h2>
+<p> <code>0</code></p>
+<dl>
+<dt>
+</dt><dd> Success</dd></dl>
+<p> <code>1</code></p>
+<dl>
+<dt>
+</dt><dd> The wallet <i>wallet</i> was not found</dd></dl>
+<p> <code>2</code></p>
+<dl>
+<dt>
+</dt><dd> The wallet <i>wallet</i> could not be opened. For example, that would be an indication of a bad password entry or some other problem with the KDE Wallet system</dd></dl>
+<p> <code>3</code></p>
+<dl>
+<dt>
+</dt><dd> The <code>Folder</code> section was not found inside the wallet <i>wallet</i>. Perhaps the wallet file is corrupt?</dd></dl>
+<p> <code>4</code></p>
+<dl>
+<dt>
+</dt><dd> The read or write operation has failed for some reason.</dd></dl>
+<h2>BUGS</h2>
+<p> Please report all bugs on the KDE bug reporting website: bugs.kde.org. Be sure to select kwallet-query when submitting your bug-report.</p>
+<h2>AUTHOR</h2>
+<p> kwallet-query was originally written by Valentin Rusu and is part of KDE.</p>
+<h2>COPYING</h2>
+<p> Copyright (C) 2015 Valentin Rusu. Free use of this software is granted under the terms of the GNU General Public License (GPL).</p>
+<h2>AUTHOR</h2>
+<p> <code>Valentin Rusu</code> &lt;kde [at] rusu.info&gt;</p>
+<dl>
+<dt>
+</dt><dd> Original author</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

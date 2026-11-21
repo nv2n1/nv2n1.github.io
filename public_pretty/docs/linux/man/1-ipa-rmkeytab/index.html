@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ipa-rmkeytab(1) · Linux Manual Pages</title>
+<meta name="description" content="ipa-rmkeytab – Remove a kerberos principal from a keytab">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ipa-rmkeytab/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ipa-rmkeytab(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> ipa-rmkeytab &#8211; Remove a kerberos principal from a keytab</p>
+<h2>SYNOPSIS</h2>
+<p> ipa-rmkeytab [ <code>-p</code> principal-name ] [ <code>-k</code> keytab-file ] [ <code>-r</code> realm ] [ <code>-d</code> ] </p>
+<h2>DESCRIPTION</h2>
+<p> Removes a kerberos principal from a <i>keytab</i>. </p>
+<p> Kerberos keytabs are used for services (like sshd) to perform kerberos authentication. A keytab is a file with one or more secrets (or keys) for a kerberos principal. </p>
+<p> A kerberos service principal is a kerberos identity that can be used for authentication. Service principals contain the name of the service, the hostname of the server, and the realm name. </p>
+<p> ipa-rmkeytab provides two ways to remove principals. A specific principal can be removed or all principals for a given realm can be removed. </p>
+<p> All encryption types and versions of a principal are removed. </p>
+<p> The realm may be included when removing a specific principal but it is not required. </p>
+<p> <code>NOTE:</code> removing a principal from the keytab does not affect the Kerberos principal stored in the IPA server. It merely removes the entry from the local keytab.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-p principal-name</code></dt>
+<dd> The non-realm part of the full principal name.</dd>
+<dt><code>-k keytab-file</code></dt>
+<dd> The keytab file to remove the principal(s) from.</dd>
+<dt><code>-r realm</code></dt>
+<dd> A realm to remove all principals for.</dd>
+<dt><code>-d</code></dt>
+<dd> Debug mode. Additional information is displayed.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Remove the NFS service principal on the host foo.example.com from /tmp/nfs.keytab. </p>
+<p>#&nbsp;<wbr>ipa-rmkeytab -p nfs/foo.example.com -k&nbsp;<wbr>/tmp/nfs.keytab </p>
+<p> Remove the ldap service principal on the host foo.example.com from /etc/krb5.keytab. </p>
+<p>#&nbsp;<wbr>ipa-rmkeytab -p ldap/foo.example.com -k&nbsp;<wbr>/etc/krb5.keytab </p>
+<p> Remove all principals for the realm EXAMPLE.COM. </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>#&nbsp;<wbr>ipa-rmkeytab -r EXAMPLE.COM -k&nbsp;<wbr>/etc/krb5.keytab</p>
+<h2>EXIT STATUS</h2>
+<p> The exit status is 0 on success, nonzero on error. </p>
+<p> 1 Kerberos initialization failed </p>
+<p> 2 Memory allocation error </p>
+<p> 3 Unable to open keytab </p>
+<p> 4 Unable to parse the principal name </p>
+<p> 5 Principal name or realm not found in keytab </p>
+<p> 6 Unable to remove principal from keytab </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

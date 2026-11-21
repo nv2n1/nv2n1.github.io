@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>era_restore(8) · Linux Manual Pages</title>
+<meta name="description" content="era_restore – restore era metadata file to device or file.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-era_restore/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>era_restore(8)</h1>
+
+
+
+
+
+<p><code>era_restore </code>&#8211; restore era metadata file to device or file.</p>
+<h2>Synopsis</h2>
+<pre><code>era_restore</code> [<i>options</i>] <code>-i</code> {xml file} <code>-o</code> {device|file}</pre>
+<h2>Description</h2>
+<p><code>era_restore</code> restores era metadata created by the respective device-mapper target dumped into an XML formatted (see <code><a href="/docs/linux/man/8-era_dump/">era_dump</a></code>(8)) file, which optionally can be preprocessed before the restore to another device or file. If restored to a metadata device, the metadata can be processed by the device-mapper target. </p>
+<p> This tool cannot be run on live metadata.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Don&#8217;t print any output. Check the exit code to test for success.</dd>
+<dt><code>-i</code>, <code>&#8211;input</code> {xml file}</dt>
+<dd>Specify input file containing xml metadata.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> {device|file}</dt>
+<dd>Output device or file for restored binary metadata.</dd></dl>
+<pre> If a file is used, then it must be preallocated, and large enough to hold
+ the metadata.</pre>
+<h2>Example</h2>
+<p>Restores the XML formatted era metadata on file metadata to logical volume /dev/vg/metadata for further processing by the respective device-mapper target: </p>
+<pre> $ era_restore -i metadata -o /dev/vg/metadata</pre>
+<h2>Diagnostics</h2>
+<p><code>era_restore</code> returns an exit code of 0 for success or 1 for error.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-era_dump/">era_dump</a></code>(8), <code><a href="/docs/linux/man/8-era_check/">era_check</a></code>(8)</p>
+<h2>Author</h2>
+<p>Joe Thornber &lt;ejt [at] redhat.com&gt;, Heinz Mauelshagen &lt;HeinzM [at] RedHat.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

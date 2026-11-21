@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_psiuhf(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::PsiUHF –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_psiuhf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_psiuhf(3)</h1>
+
+
+
+
+
+<p>sc::PsiUHF &#8211; </p>
+<p> <code>PsiUHF</code> is a concrete implementation of Psi <code>UHF</code> wave function.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;psiwfn.h&gt;</code></pre>
+<p> Inherits <code>sc::PsiSCF</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>PsiUHF</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
+<p> <code>PsiUHF</code> (<code>StateIn</code> &amp;) </p>
+<p> void <code>write_basic_input</code> (int conv)<br />
+ <i>Writes out Psi input file entries specific to this </i><code>PsiWavefunction</code>.<br />
+ int <code>spin_polarized</code> ()<br />
+ <i>Return 1 if the alpha density is not equal to the beta density. </i><br />
+ int <code>gradient_implemented</code> () const </p>
+<p> PsiSCF::RefType <code>reftype</code> () const<br />
+ <i>Returns the PsiSCF::RefType of this particular Psi </i><code>SCF</code> wave function.</p>
+<h3>Protected Member Functions</h3>
+<p>void <code>write_input</code> (int conv)<br />
+ <i>Prepares a complete Psi input file. The input file is assumed to have been opened. </i></p>
+<h2>Detailed Description</h2>
+<p><code>PsiUHF</code> is a concrete implementation of Psi <code>UHF</code> wave function.</p>
+<h2>Member Function Documentation</h2>
+<h3>void sc::PsiUHF::write_basic_input (int conv) [virtual]</h3>
+<p>Writes out Psi input file entries specific to this <code>PsiWavefunction</code>. The input file is assumed to have been opened. </p>
+<p> Reimplemented from <code>sc::PsiWavefunction</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

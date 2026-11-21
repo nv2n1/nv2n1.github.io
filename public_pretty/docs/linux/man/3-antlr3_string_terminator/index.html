@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>antlr3_string_terminator(3) · Linux Manual Pages</title>
+<meta name="description" content="include/antlr3lexer.h –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-antlr3_string_terminator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>antlr3_string_terminator(3)</h1>
+
+
+
+
+
+<p>include/antlr3lexer.h &#8211; </p>
+<p> Base interface for any ANTLR3 lexer.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
+ #include &lt;<a href="file:/usr/include/antlr3input.h">antlr3input.h</a>&gt;<br />
+ #include &lt;<a href="file:/usr/include/antlr3commontoken.h">antlr3commontoken.h</a>&gt;<br />
+ #include &lt;<a href="file:/usr/include/antlr3tokenstream.h">antlr3tokenstream.h</a>&gt;<br />
+ #include &lt;<a href="file:/usr/include/antlr3baserecognizer.h">antlr3baserecognizer.h</a>&gt; </p>
+<h3>Data Structures</h3>
+<p>struct <code>ANTLR3_LEXER_struct</code> </p>
+<h3>Defines</h3>
+<p>#define <code>ANTLR3_STRING_TERMINATOR</code> 0xFFFFFFFF </p>
+<h3>Typedefs</h3>
+<p>typedef struct <code>ANTLR3_LEXER_struct</code> <code>ANTLR3_LEXER</code> </p>
+<h2>Detailed Description</h2>
+<p>Base interface for any ANTLR3 lexer. </p>
+<p> An ANLTR3 lexer builds from two sets of components: </p>
+<dl COMPACT>
+<dt>*</dt>
+<dd>The runtime components that provide common functionality such as traversing character streams, building tokens for output and so on.</dd>
+<dt>*</dt>
+<dd>The generated rules and struutre of the actual lexer, which call upon the runtime components.</dd></dl>
+<p> A lexer class contains a character input stream, a base recognizer interface (which it will normally implement) and a token source interface (which it also implements. The Tokensource interface is called by a token consumer (such as a parser, but in theory it can be anything that wants a set of abstract tokens in place of a raw character stream. </p>
+<p> So then, we set up a lexer in a sequence akin to: </p>
+<dl COMPACT>
+<dt>*</dt>
+<dd>Create a character stream (something which implements ANTLR3_INPUT_STREAM) and initialize it.</dd>
+<dt>*</dt>
+<dd>Create a lexer interface and tell it where it its input stream is. This will cause the creation of a base recognizer class, which it will override with its own implementations of some methods. The lexer creator can also then in turn override anything it likes.</dd>
+<dt>*</dt>
+<dd>The lexer token source interface is then passed to some interface that knows how to use it, byte calling for a next token.</dd>
+<dt>*</dt>
+<dd>When a next token is called, let ze lexing begin.</dd></dl>
+<h2>Define Documentation</h2>
+<h3>#define ANTLR3_STRING_TERMINATOR 0xFFFFFFFF</h3>
+<p>Referenced by matchs().</p>
+<h2>Typedef Documentation</h2>
+<h3>typedef struct <code>ANTLR3_LEXER_struct</code></h3>
+<p>&nbsp;<wbr>&nbsp;<wbr><code>ANTLR3_LEXER</code>&quot;</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for ANTLR3C from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

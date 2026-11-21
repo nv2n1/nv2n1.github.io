@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gshhs(1) · Linux Manual Pages</title>
+<meta name="description" content="gshhs – Extract ASCII listings from binary GSHHS or WDBII data files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gshhs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gshhs(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> gshhs &#8211; Extract ASCII listings from binary GSHHS or WDBII data files</p>
+<h2>SYNOPSIS</h2>
+<p> <code>gshhs</code> <i>binaryfile.b</i> [ <code>-I</code><i>id</i> ] [ <code>-L</code> ] [ <code>-M</code> ] &gt; <i>asciifile.txt</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>gshhs</code> reads the binary coastline (GSHHS) or political boundary or river (WDBII) files and extracts an ASCII listing. It automatically handles byte-swabbing between different architectures. Optionally, only segment header info can be displayed. The header info has the format <i>ID npoints hierarchical-level source area f_area west east south north container ancestor</i>, where hierarchical levels for coastline polygons go from 1 (shoreline) to 4 (lake inside island inside lake inside land). Source is either W (World Vector Shoreline) or C (CIA World Data Bank II); lower case is used if a lake is a river-lake. The <i>west east south north</i> is the enclosing rectangle, area is the polygon area in km^2 while f_area is the actual area of the ancestor polygon, container is the ID of the polygon that contains this polygon (-1 if none), and ancestor is the ID of the polygon in the full resolution set that was reduced to yield this polygon (-1 if full resolution). For line data the header is simply <i>ID npoints hierarchical-level source west east south north</i></p>
+<dl>
+<dt><i>binaryfile.b</i></dt>
+<dd> GSHHS or WDBII binary data file as distributed with the GSHHS data supplement. Any of the 5 standard resolutions (full, high, intermediate, low, crude) can be used.</dd>
+<dt><code>-I</code></dt>
+<dd> Only output information for the polygon that matches <i>id</i> [default outputs all polygons].</dd>
+<dt><code>-L</code></dt>
+<dd> Only output a listing of polygon or line segment headers [default outputs headers and data records].</dd>
+<dt><code>-M</code></dt>
+<dd> Start all header records with the GMT multiple segment indicator &#8216;&gt;&#8217; [Default uses P for polygons and L for lines].</dd></dl>
+<h2>EXAMPLES</h2>
+<p> To convert the entire intermediate GSHHS binary data to ASCII, run </p>
+<p> <code>gshhs</code> gshhs_i.b &gt; gshhs_i.txt </p>
+<p> To only get a listing of the headers for the river data set at full resolution, try </p>
+<p> <code>gshhs</code> wdb_rivers_f.b <code>-L</code> &gt; riverlisting.txt</p>
+<h2>BUGS</h2>
+<p> While the GSHHS data is organized as a set of closed polygons, the rivers and boundary data are just a set of line segments in no particular order. Thus, it is not possible to extract information pertaining to just one river or one country.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-gshhs_dp/">gshhs_dp</a></i>(1) <i><a href="/docs/linux/man/1-gshhstograss/">gshhstograss</a></i>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

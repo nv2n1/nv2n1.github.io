@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>devassistant(1) · Linux Manual Pages</title>
+<meta name="description" content="devassistant – setup development environment and create basic projects in various languages">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-devassistant/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>devassistant(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> devassistant &#8211; setup development environment and create basic projects in various languages </p>
+<h2>SYNOPSIS</h2>
+<p> <code>devassistant [&#8211;debug] [&#8211;no-cache] [ ASSISTANT_TYPE ] [ OPTIONS ] [[ SUBASSISTANT ] [OPTIONS] &#8230;] </p>
+<p> devassistant [&#8211;debug] [&#8211;no-cache] [ ACTION ] [ OPTIONS ] </p>
+<p> </code></p>
+<h2>DESCRIPTION</h2>
+<p> Please note that the <code>da</code> command is the recommended way of running DevAssistant (even though it works exactly the same). </p>
+<p> <code>devassistant</code> is the main command of DevAssistant. It is responsible for dispatching commandline calls to assistants or actions. It accepts some optional flags: </p>
+<dl>
+<dt><code>&#8211;debug</code></dt>
+<dd> makes DevAssistant log lots of debugging information</dd>
+<dt><code>&#8211;no-cache</code></dt>
+<dd> makes DevAssistant read all individual assistants and completely ignore cache </dd>
+</dl>
+<h2>DESCRIPTION &#8211; ASSISTANT_TYPE</h2>
+<p> DevAssistant can help you with various tasks during development. The tasks are carried out by so called &quot;assistants&quot; &#8211; there are four types of assistants: </p>
+<p> <code>create</code> &#8211; create new projects, install dependencies and setup environment<br />
+ <code>modify</code> &#8211; modify previously created projects (e.g. import them to Eclipse)<br />
+ <code>prepare</code> &#8211; prepare development environment for an upstream project<br />
+ <code>task</code> &#8211; carry out a custom task not related to a specific project </p>
+<p> You can shorten &quot;create&quot; to &quot;crt&quot;, &quot;modify&quot; to &quot;mod&quot; and &quot;prepare&quot; to &quot;prep&quot;. </p>
+<p> Each assistant type can have many associated assistants (e.g. python, ruby) and each assistant can have many associated subassistants (e.g. django, flask). You can display these (and also other options) by running e.g. <code>devassistant crt -h</code> and <code>devassistant crt python -h</code>. Once you select the desired assistant (and its subassistants), just run it, e.g. <code>devassistant crt python django -n newproject</code>. </p>
+<p> The list of assistants and their functionality may vary depending on your installation &#8211; just run help to see currently available assistants. </p>
+<h2>DESCRIPTION &#8211; ACTION</h2>
+<p> DevAssistant is designed to also provide custom functionality through so-called actions. Currently, these contain: </p>
+<p> <code>help</code> &#8211; display verbose help.<br />
+ <code>version</code> &#8211; display devassistant version. </p>
+<p> Again, to show options, just use <code>-h</code> with the action, e.g. <code>devassistant version -h</code>. </p>
+<h2>COMMON OPTIONS</h2>
+<p> There are some commonly used options shared among many assistants. Their usual meaning is explained below:</p>
+<dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd> print help for selected assistant.</dd>
+<dt><code>-n &#8211;name</code></dt>
+<dd> name of the project (relative or absolute path).</dd>
+<dt><code>-e &#8211;eclipse</code></dt>
+<dd> import project into <i>eclipse</i> environment. Uses ~/workspace workspace by default, can be overriden by specifying another path.</dd>
+<dt><code>-g &#8211;github &lt;username&gt;</code></dt>
+<dd> create a GitHub repo and push the initial sources there. Uses current system username as GitHub username, unless specified otherwise. The GitHub projectname is taken from the <code>name</code> parameter.</dd>
+<dt><code>-b &#8211;build</code></dt>
+<dd> generate a SPEC file, SRPM and mock-build RPM.</dd>
+<dt><code>-v &#8211;vim</code></dt>
+<dd> install vim settings specific for this language (backs up your original vim settings) </dd>
+</dl>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>DEVASSISTANT_PATH</code></dt>
+<dd> A colon-separated list of directories in which to search for assistants. Searched in before the standard paths. If multiple assistants with the same name are found only the first of them will be used. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-da/">da</a></code>(1) <code>da-gui</code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

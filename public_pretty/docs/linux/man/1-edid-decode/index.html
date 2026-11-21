@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>edid-decode(1) · Linux Manual Pages</title>
+<meta name="description" content="edid-decode – Decode EDID data in human-readable format">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-edid-decode/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>edid-decode(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> edid-decode &#8211; Decode EDID data in human-readable format</p>
+<h2>SYNOPSIS</h2>
+<p> <code>edid-decode [in] [out]</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>edid-decode</code> decodes EDID monitor description data in human-readable format. It takes zero, one, or two arguments. If invoked with no arguments it reads from standard input and writes to standard output. With one argument, the file named by the argument is read instead. With two arguments, normal output is suppressed, and the binary EDID blob is written to the file named by the second argument. </p>
+<p> Input files may be raw binaries or ASCII text. ASCII input is scanned for hex dumps; heuristics are included to search for hexdumps in <code><a href="/docs/linux/man/1-xrandr/">xrandr</a>(1)</code> property output and <code><a href="/docs/linux/man/1-xorg/">Xorg</a>(1)</code> log file formats, otherwise the data is treated as a raw hexdump. EDID blocks for connected monitors can be found in <code>/sys/class/drm/*/edid</code> on modern Linux systems with kernel modesetting support. </p>
+<h2>NOTES</h2>
+<p> Not all fields are decoded, or decoded completely. Some fields&#8217; decoding may appear to corrupt the output (for example, detailed string sections have their contents printed literally). <code>edid-decode</code> does attempt to validate its input against the relevant standards, but its opinions have not been double-checked with the relevant standards bodies, so they may be wrong. Do not rely on the output format, as it will likely change in future versions of the tool as additional fields and extensions are added.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/1-xrandr/">xrandr</a>(1)</p>
+<h2>AUTHORS</h2>
+<p> edid-decode was written by Adam Jackson, with contributions from Eric Anholt, Damien Lespiau, and others. For complete history and the latest version, see <code><a rel="nofollow" href="http://cgit.freedesktop.org/xorg/app/edid-decode/">http://cgit.freedesktop.org/xorg/app/edid-decode/</a></code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

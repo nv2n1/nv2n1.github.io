@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tunneling Git Traffic Through SSH Proxies - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/git-through-ssh-tunnel-as-proxy/">
+  <meta name="description" content="You often need to access a Git server that only accepts internal connections, but you have SSH access to an intermediate host that can reach it. This is common …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Tunneling Git Traffic Through SSH Proxies">
+  <meta property="og:url" content="https://www.systutorials.com/git-through-ssh-tunnel-as-proxy/">
+  <meta property="og:description" content="You often need to access a Git server that only accepts internal connections, but you have SSH access to an intermediate host that can reach it. This is common …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>Tunneling Git Traffic Through SSH Proxies</h1>
+        <time class="post-date" datetime="2014-05-21T14:55:13Z">May 21, 2014</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>You often need to access a Git server that only accepts internal connections, but you have SSH access to an intermediate host that can reach it. This is common in corporate environments where the Git server sits behind a firewall. You can tunnel Git traffic through the intermediate host without manually managing tunnels for each operation.</p>
+<p>The setup looks like this:</p>
+<pre><code>laptop --&gt; proxy --&gt; git-server
+</code></pre>
+<p>When you run <code>git push</code>, <code>git pull</code>, or any Git command, the connection automatically routes through the proxy to reach the Git server.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Ensure passwordless SSH authentication works from your local machine to the proxy host. This avoids repeated password prompts during Git operations.</p>
+<p>Generate or use an existing SSH key:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t ed25519 -C <span class="s2">&#34;your-email@example.com&#34;</span>
+</span></span><span class="line"><span class="cl">ssh-copy-id -i ~/.ssh/id_ed25519.pub user@proxy.example.com
+</span></span></code></pre></div><p>Verify passwordless login:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh user@proxy.example.com <span class="s2">&#34;echo &#39;Connection successful&#39;&#34;</span>
+</span></span></code></pre></div><p>If using the older <code>ProxyCommand</code> method (not recommended), confirm that netcat (<code>nc</code>) or <code>socat</code> is installed on the proxy host:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh user@proxy.example.com <span class="s2">&#34;which nc&#34;</span>
+</span></span></code></pre></div><h2 id="proxyjump-recommended-approach">ProxyJump (Recommended Approach)</h2>
+<p>SSH 7.3+ (released 2016) supports <code>ProxyJump</code>, which is the modern, recommended method. It’s simpler than <code>ProxyCommand</code> and doesn’t require netcat on the proxy.</p>
+<p>Add this to <code>~/.ssh/config</code> on your local machine:</p>
+<pre><code>Host git-server.example.com
+  User git
+  ProxyJump user@proxy.example.com
+  StrictHostKeyChecking accept-new
+</code></pre>
+<p>Replace:</p>
+<ul>
+<li><code>git-server.example.com</code> with your actual Git server hostname</li>
+<li><code>user</code> with your username on the proxy host</li>
+<li><code>git</code> with the username on the Git server (usually <code>git</code> for self-hosted setups)</li>
+</ul>
+<p>Clone a repository:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone ssh://git@git-server.example.com/path/to/repo.git
+</span></span></code></pre></div><p>Or use the shorthand syntax:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone git@git-server.example.com:path/to/repo.git
+</span></span></code></pre></div><p>All Git operations (<code>push</code>, <code>pull</code>, <code>fetch</code>) automatically use the SSH tunnel. The tunnel is transparent to Git — no special syntax needed.</p>
+<h2 id="chaining-multiple-proxies">Chaining Multiple Proxies</h2>
+<p>If you need to tunnel through multiple hosts:</p>
+<pre><code>Host git-server.example.com
+  User git
+  ProxyJump user@proxy1.example.com,user@proxy2.example.com
+  StrictHostKeyChecking accept-new
+</code></pre>
+<p>SSH chains the connections automatically in order.</p>
+<h2 id="legacy-method-proxycommand-with-netcat">Legacy Method: ProxyCommand with netcat</h2>
+<p>If you’re stuck with older SSH versions or need explicit control, use <code>ProxyCommand</code>:</p>
+<pre><code>Host git-server.example.com
+  User git
+  ProxyCommand ssh -q user@proxy.example.com nc %h %p
+  StrictHostKeyChecking accept-new
+</code></pre>
+<p>The <code>ProxyCommand</code> works as follows:</p>
+<ul>
+<li><code>ssh -q user@proxy.example.com</code> — connects to the proxy quietly</li>
+<li><code>nc %h %p</code> — uses netcat on the proxy to relay traffic to <code>%h</code> (the Git server) on port <code>%p</code> (22 for SSH)</li>
+</ul>
+<p>This method requires <code>nc</code> on the proxy. If it’s missing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh user@proxy.example.com <span class="s2">&#34;which nc || which ncat&#34;</span>
+</span></span></code></pre></div><p>Most distributions provide it as <code>netcat</code>, <code>ncat</code>, or <code>socat</code>.</p>
+<h2 id="non-standard-ssh-ports">Non-Standard SSH Ports</h2>
+<p>For production environments where the Git server runs SSH on a non-standard port:</p>
+<pre><code>Host git-server.example.com
+  User git
+  Port 2222
+  ProxyJump user@proxy.example.com
+</code></pre>
+<h2 id="ssh-config-best-practices">SSH Config Best Practices</h2>
+<p>Use specific host entries instead of wildcards to avoid unintended proxy routing:</p>
+<pre><code># Good — applies only to this server
+Host git-server.example.com
+  ProxyJump user@proxy.example.com
+
+# Avoid — applies to all hosts matching the pattern
+Host *.example.com
+  ProxyJump user@proxy.example.com
+</code></pre>
+<p>Control host key verification with <code>StrictHostKeyChecking</code> to handle first-time connections safely:</p>
+<pre><code>Host git-server.example.com
+  StrictHostKeyChecking accept-new
+  UserKnownHostsFile ~/.ssh/known_hosts
+</code></pre>
+<p>This accepts the server key on first connection and stores it, then enforces strict checking on subsequent connections.</p>
+<p>Ensure proper SSH key permissions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">700</span> ~/.ssh
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> ~/.ssh/id_ed25519
+</span></span><span class="line"><span class="cl">chmod <span class="m">644</span> ~/.ssh/id_ed25519.pub
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<p>If Git operations hang or fail, test the SSH connection directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -v git@git-server.example.com
+</span></span></code></pre></div><p>The <code>-v</code> flag shows detailed connection info. Each hop in the chain should succeed.</p>
+<p>Enable verbose Git output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GIT_SSH_COMMAND</span><span class="o">=</span><span class="s2">&#34;ssh -v&#34;</span> git clone git@git-server.example.com:repo.git
+</span></span></code></pre></div><p>If using <code>ProxyCommand</code> and netcat, verify it’s working on the proxy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh user@proxy.example.com <span class="s2">&#34;echo &#39;test&#39; | nc git-server.example.com 22&#34;</span>
+</span></span></code></pre></div><p>If <code>nc</code> isn’t available, switch to <code>ProxyJump</code> instead.</p>
+<p>Check that your proxy host can actually reach the Git server by hostname and port:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh user@proxy.example.com <span class="s2">&#34;ssh -v git@git-server.example.com&#34;</span>
+</span></span></code></pre></div><p>If the proxy can’t resolve the Git server’s hostname, ensure DNS is configured or add an entry to the proxy’s <code>/etc/hosts</code>.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

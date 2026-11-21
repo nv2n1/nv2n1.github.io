@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdmbsinit(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdmbsinit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdmbsinit(3)</h1>
+
+
+
+
+
+<p>std::mbsinit - std::mbsinit</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cwchar&gt;
+    int mbsinit(const std::mbstate_t *ps);</code></pre> 
+<p>If ps is not a null pointer, the mbsinit function determines whether the pointed-to std::mbstate_t object describes the initial conversion state.</p>
+<h2>Notes</h2>
+<p>Although a zero-initialized std::mbstate_t always represents the initial conversion state, there may be other values of std::mbstate_t that also represent the initial conversion state.</p>
+<h2>Parameters</h2>
+<p>ps - pointer to the std::mbstate_t object to examine</p>
+<h2>Return value</h2>
+<p>0 if ps is not a null pointer and does not represent the initial conversion state, nonzero value otherwise.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;clocale&gt;
+#include &lt;string&gt;
+#include &lt;iostream&gt;
+#include &lt;cwchar&gt;
+int main()
+{
+// allow mbrlen() to work with UTF-8 multibyte encoding
+std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
+// UTF-8 narrow multibyte encoding
+std::string str = u8&quot;水&quot;; // or u8&quot;\u6c34&quot; or &quot;\xe6\xb0\xb4&quot;
+std::mbstate_t mb = std::mbstate_t();
+(void)std::mbrlen(&amp;str[0], 1, &amp;mb);
+if (!std::mbsinit(&amp;mb)) {
+std::cout &lt;&lt; &quot;After processing the first 1 byte of &quot; &lt;&lt; str
+&lt;&lt; &quot; the conversion state is not initial\n&quot;;
+}
+(void)std::mbrlen(&amp;str[1], str.size() - 1, &amp;mb);
+if (std::mbsinit(&amp;mb)) {
+std::cout &lt;&lt; &quot;After processing the remaining 2 bytes of &quot; &lt;&lt; str
+&lt;&lt; &quot;, the conversion state is initial conversion state\n&quot;;
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> After processing the first 1 byte of 水 the conversion state is not initial
+ <wbr> After processing the remaining 2 bytes of 水, the conversion state is initial conversion state</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> conversion state information necessary to iterate multibyte character strings
+mbstate_t <i>(class)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

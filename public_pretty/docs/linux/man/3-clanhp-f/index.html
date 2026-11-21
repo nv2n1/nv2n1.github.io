@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>clanhp-f(3) · Linux Manual Pages</title>
+<meta name="description" content="clanhp.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-clanhp-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>clanhp-f(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>clanhp.f &#8211; </p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>REAL function <code>clanhp</code> (NORM, UPLO, N, AP, WORK)<br />
+ <i></i><code>CLANHP</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a complex Hermitian matrix supplied in packed form.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>REAL function clanhp (characterNORM, characterUPLO, integerN, complex, dimension( * )AP, real, dimension( * )WORK)</h3>
+<p><code>CLANHP</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a complex Hermitian matrix supplied in packed form. </p>
+<p> <code>Purpose: </code></p>
+<dl COMPACT>
+<dd>
+<pre> CLANHP returns the value of the one norm, or the Frobenius norm, or
+ the infinity norm, or the element of largest absolute value of a
+ complex hermitian matrix A, supplied in packed form.</pre>
+</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>CLANHP </dd>
+<pre> CLANHP = ( max(abs(A(i,j))), NORM = 'M' or 'm'
+ (
+ ( norm1(A), NORM = '1', 'O' or 'o'
+ (
+ ( normI(A), NORM = 'I' or 'i'
+ (
+ ( normF(A), NORM = 'F', 'f', 'E' or 'e'
+ where norm1 denotes the one norm of a matrix (maximum column sum),
+ normI denotes the infinity norm of a matrix (maximum row sum) and
+ normF denotes the Frobenius norm of a matrix (square root of sum of
+ squares). Note that max(abs(A(i,j))) is not a consistent matrix norm.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>NORM</i> </dd>
+<pre> NORM is CHARACTER*1
+ Specifies the value to be returned in CLANHP as described
+ above.</pre>
+<p><i>UPLO</i> </p>
+<pre> UPLO is CHARACTER*1
+ Specifies whether the upper or lower triangular part of the
+ hermitian matrix A is supplied.
+ = 'U': Upper triangular part of A is supplied
+ = 'L': Lower triangular part of A is supplied</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ The order of the matrix A. N &gt;= 0. When N = 0, CLANHP is
+ set to zero.</pre>
+<p><i>AP</i> </p>
+<pre> AP is COMPLEX array, dimension (N*(N+1)/2)
+ The upper or lower triangle of the hermitian matrix A, packed
+ columnwise in a linear array. The j-th column of A is stored
+ in the array AP as follows:
+ if UPLO = 'U', AP(i + (j-1)*j/2) = A(i,j) for 1&lt;=i&lt;=j;
+ if UPLO = 'L', AP(i + (j-1)*(2n-j)/2) = A(i,j) for j&lt;=i&lt;=n.
+ Note that the imaginary parts of the diagonal elements need
+ not be set and are assumed to be zero.</pre>
+<p><i>WORK</i> </p>
+<pre> WORK is REAL array, dimension (MAX(1,LWORK)),
+ where LWORK &gt;= N when NORM = 'I' or '1' or 'O'; otherwise,
+ WORK is not referenced.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl COMPACT>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl COMPACT>
+<dd>September 2012</dd></dl>
+<p> Definition at line 118 of file clanhp.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

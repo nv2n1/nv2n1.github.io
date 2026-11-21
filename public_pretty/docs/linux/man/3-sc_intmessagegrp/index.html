@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_intmessagegrp(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::intMessageGrp –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_intmessagegrp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_intmessagegrp(3)</h1>
+
+
+
+
+
+<p>sc::intMessageGrp &#8211; </p>
+<p> Uses integer message types to send and receive messages.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;message.h&gt;</code></pre>
+<p> Inherits <code>sc::MessageGrp</code>. Inherited by <code>sc::ShmMessageGrp</code>.</p>
+<h3>Public Member Functions</h3>
+<pre><code>void raw_send (int target, const void *data, int nbyte)
+void raw_recv (int sender, void *data, int nbyte)
+void raw_sendt (int target, int type, const void *data, int nbyte)
+void raw_recvt (int type, void *data, int nbyte)
+int probet (int)
+Ask if a given typed message has been received.
+int leftover_ctl_bits ()
+Protected Member Functions
+int msgtype_typ (int msgtype)
+int typ_msgtype (int usrtype)
+int seq_msgtype (int source, int seq)
+virtual void basic_send (int target, int type, const void *data, int nbyte)=0
+Must be implemented by specializations.
+virtual void basic_recv (int type, void *data, int nbyte)=0
+Must be implemented by specializations.
+virtual int basic_probe (int type)=0
+Must be implemented by specializations.
+intMessageGrp (const Ref&lt; KeyVal &gt; &amp;)
+void initialize (int me, int n, int nbits)
+Protected Attributes
+int msgtype_nbit
+int ctl_nbit
+int seq_nbit
+int typ_nbit
+int src_nbit
+int ctl_mask
+int seq_mask
+int typ_mask
+int src_mask
+int ctl_shift
+int seq_shift
+int typ_shift
+int src_shift
+int * source_seq
+int * target_seq</code></pre>
+<h2>Detailed Description</h2>
+<p>Uses integer message types to send and receive messages. </p>
+<p> Message group specializations that use the MPI library and the Paragon NX can be conveniently implemented in terms of this.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

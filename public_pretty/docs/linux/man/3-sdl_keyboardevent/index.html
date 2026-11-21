@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_keyboardevent(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_KeyboardEvent – Keyboard event structure">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_keyboardevent/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_keyboardevent(3)</h1>
+
+
+
+
+
+<p>SDL_KeyboardEvent &#8211; Keyboard event structure</p>
+<h2>Structure Definition</h2>
+<pre><tt>typedef struct{
+ Uint8 type;
+ Uint8 state;
+ SDL_keysym keysym;
+} SDL_KeyboardEvent;</tt></pre>
+<h2>Structure Data</h2>
+<dl COMPACT>
+<dt><code>type</code></dt>
+<dd><code>SDL_KEYDOWN</code> or <code>SDL_KEYUP</code></dd>
+<dt><code>state</code></dt>
+<dd><code>SDL_PRESSED</code> or <code>SDL_RELEASED</code></dd>
+<dt><code>keysym</code></dt>
+<dd>Contains key press information</dd></dl>
+<h2>Description</h2>
+<p><code>SDL_KeyboardEvent</code> is a member of the <i></i><code>SDL_Event</code> union and is used when an event of type <code>SDL_KEYDOWN</code> or <code>SDL_KEYUP</code> is reported. </p>
+<p> The <code>type</code> and <code>state</code> actually report the same information, they just use different values to do it! A keyboard event occurs when a key is released (<code>type</code>=<code>SDK_KEYUP</code> or <code>state</code>=<code>SDL_RELEASED</code>) and when a key is pressed (<code>type</code>=<code>SDL_KEYDOWN</code> or <code>state</code>=<code>SDL_PRESSED</code>). The information on what key was pressed or released is in the <i></i><code>keysym</code> structure. </p>
+<dl COMPACT>
+<dd><code>Note: </dd>
+<p> Repeating SDL_KEYDOWN</code> events will occur if key repeat is enabled (see <i></i><code>SDL_EnableKeyRepeat</code>).</dl>
+<h2>See Also</h2>
+<p><i></i><code>SDL_Event</code>, <i></i><code>SDL_keysym</code>, <i></i><code>SDL_EnableKeyRepeat</code>, <i></i><code>SDL_EnableUNICODE</code></p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

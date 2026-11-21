@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>audit_set_pid(3) · Linux Manual Pages</title>
+<meta name="description" content="audit_set_pid – Set audit daemon process ID">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-audit_set_pid/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>audit_set_pid(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> audit_set_pid &#8211; Set audit daemon process ID</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;libaudit.h&gt;</code> </p>
+<p> int audit_set_pid (int fd, int pid); </p>
+<h2>DESCRIPTION</h2>
+<p> audit_set_pid tells the kernel what the pid is of the audit daemon. When the pid is set to 0, the kernel will log all events to syslog. Otherwise it will try to send events to the netlink connection that has the same pid given by this function. If for some reason the process goes away, the kernel will automatically set the value to 0 itself. Usually this function is called by the audit daemon and not an external program. </p>
+<h2>RETURN VALUE</h2>
+<p> The return value is &lt;= 0 on error, otherwise it is the netlink sequence id number. This function can have any error that sendto would encounter. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-audit_open/">audit_open</a></code>(3), <code><a href="/docs/linux/man/8-auditd/">auditd</a></code>(8). </p>
+<h2>AUTHOR</h2>
+<p> Steve Grubb </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

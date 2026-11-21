@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sasl_server_new(3) · Linux Manual Pages</title>
+<meta name="description" content="sasl_server_new – Create a new server authentication object">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sasl_server_new/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sasl_server_new(3)</h1>
+
+
+
+
+
+<p>sasl_server_new &#8211; Create a new server authentication object </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;sasl/sasl.h&gt;
+int sasl_server_new(const char *service,
+                    const char *serverFQDN,
+                    const char *user_realm,
+                    const char *iplocalport,
+                    const char *ipremoteport,
+                    const sasl_callback_t *callbacks,
+                    unsigned flags,
+                    sasl_conn_t **pconn);</code></pre>
+<h2>Description</h2>
+<p><code>sasl_server_new()</code> creates a new SASL context. This context will be used for all SASL calls for one connection. It handles both authentication and integrity/encryption layers after authentication. <i>service</i> is the registered name of the service (usually the protocol name) using SASL (e.g. &quot;imap&quot;). <i>serverFQDN</i> is the fully qualified server domain name. NULL means use gethostname(). This is useful for multi-homed servers. <i>user_realm</i> is the domain of the user agent. This is usually not necessary (NULL is default) <i>iplocalport</i> is the IP and port of the local side of the connection, or NULL. If iplocalport is NULL it will disable mechanisms that require IP address information. This strings must be in one of the following formats: &quot;a.b.c.d;port&quot; (IPv4), &quot;e:f:g:h:i:j:k:l;port&quot; (IPv6), or &quot;e:f:g:h:i:j:a.b.c.d;port&quot; (IPv6) <i>ipremoteport</i> is the IP and port of the remote side of the connection, or NULL (see iplocalport) <i>flags</i> are connection flags (see below) <i>pconn</i> is a pointer to the connection context allocated by the library. This structure will be used for all future SASL calls for this connection. <code>Connection Flags</code></p>
+<dl>
+<dt><code>SASL_SUCCESS_DATA</code></dt>
+<dd>The protocol supports a server-last send</dd>
+<dt><code>SASL_NEED_PROXY</code></dt>
+<dd>Force the use of a mechanism that supports an authorization id that is not the authentication id. </dd>
+<h2>Return Value</h2>
+<p><code>sasl_server_new()</code> returns an integer which corresponds to one of the SASL error codes. SASL_OK is the only one that indicates success. All others indicate errors and should either be handled or the authentication session should be quit. </p>
+<h2>Conforming To</h2>
+<p>RFC 4422</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-sasl/">sasl</a>(3), <a href="/docs/linux/man/3-sasl_errors/">sasl_errors</a>(3), <a href="/docs/linux/man/3-sasl_server_init/">sasl_server_init</a>(3), <a href="/docs/linux/man/3-sasl_server_start/">sasl_server_start</a>(3), <a href="/docs/linux/man/3-sasl_server_step/">sasl_server_step</a>(3), <a href="/docs/linux/man/3-sasl_setprop/">sasl_setprop</a>(3) </p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

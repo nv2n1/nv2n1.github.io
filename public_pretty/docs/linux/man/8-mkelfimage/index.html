@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mkelfimage(8) · Linux Manual Pages</title>
+<meta name="description" content="mkelfImage – make an elf network bootable image for linux">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mkelfimage/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mkelfimage(8)</h1>
+
+
+
+
+
+<p>mkelfImage &#8211; make an elf network bootable image for linux</p>
+<h2>Synopsis</h2>
+<p><code>mkelfImage</code> [&#8211;command-line=<i>command line</i>] [&#8211;kernel=<i>path to vmlinux</i>] [&#8211;ramdisk=<i>path to ramdisk</i>] [&#8211;output=<i>file</i>] [&#8211;ramdisk-base=&lt;start addr&gt;]</p>
+<h2>Description</h2>
+<p><code>mkelfImage</code> is a program that makes a elf boot image for linux kernel images. The image should work with any i386 multiboot compliant boot loader, an <font SIZE="-1">ELF</font> bootloader that passes no options, a loader compliant with the linuxBIOS elf booting spec or with the linux kexec kernel patch. A key feature here is that nothing relies upon <font SIZE="-1">BIOS</font> calls, but they are made when necessary. This is useful for systems running linuxbios.</p>
+<h2>Bugs</h2>
+<p>Not all kernel parameters can be passed with the multiboot image format. ip configuration is not automatically passed to a node. The ramdisk base is hard coded to 8MB by default. This man page need to be updated.</p>
+<h2>See Also</h2>
+<p>The kexec kernel patch. LinuxBIOS. Etherboot. The multiboot standard.</p>
+<h2>Copyright</h2>
+<p>mkelfImage is under the <font SIZE="-1">GNU</font> Public License version 2</p>
+<h2>Author</h2>
+<p>Eric Biederman &lt;ebiederman [at] lnxi.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

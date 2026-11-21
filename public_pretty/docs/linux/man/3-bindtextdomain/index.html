@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bindtextdomain(3) · Linux Manual Pages</title>
+<meta name="description" content="bindtextdomain – set directory containing message catalogs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-bindtextdomain/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>bindtextdomain(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> bindtextdomain &#8211; set directory containing message catalogs </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;libintl.h&gt;
+char *bindtextdomain(const char *domainname, const char *dirname);
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>bindtextdomain</code> function sets the base directory of the hierarchy containing message catalogs for a given message domain. </p>
+<p> A message domain is a set of translatable <i>msgid</i> messages. Usually, every software package has its own message domain. The need for calling <code>bindtextdomain</code> arises because packages are not always installed with the same prefix as the &lt;libintl.h&gt; header and the libc/libintl libraries. </p>
+<p> Message catalogs will be expected at the pathnames <i>dirname</i>/<i>locale</i>/<i>category</i>/<i>domainname</i>.mo, where <i>locale</i> is a locale name and <i>category</i> is a locale facet such as <code>LC_MESSAGES</code>. </p>
+<p> <i>domainname</i> must be a non-empty string. </p>
+<p> If <i>dirname</i> is not NULL, the base directory for message catalogs belonging to domain <i>domainname</i> is set to <i>dirname</i>. The function makes copies of the argument strings as needed. If the program wishes to call the <code>chdir</code> function, it is important that <i>dirname</i> be an absolute pathname; otherwise it cannot be guaranteed that the message catalogs will be found. </p>
+<p> If <i>dirname</i> is NULL, the function returns the previously set base directory for domain <i>domainname</i>.</p>
+<h2>RETURN VALUE</h2>
+<p> If successful, the <code>bindtextdomain</code> function returns the current base directory for domain <i>domainname</i>, after possibly changing it. The resulting string is valid until the next <code>bindtextdomain</code> call for the same <i>domainname</i> and must not be modified or freed. If a memory allocation failure occurs, it sets <code>errno</code> to <code>ENOMEM</code> and returns NULL.</p>
+<h2>ERRORS</h2>
+<p> The following error can occur, among others:</p>
+<dl>
+<dt><code>ENOMEM</code></dt>
+<dd> Not enough memory available.</dd></dl>
+<h2>BUGS</h2>
+<p> The return type ought to be <code>const char *</code>, but is <code>char *</code> to avoid warnings in C code predating ANSI C.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-gettext/">gettext</a></code>(3), <code><a href="/docs/linux/man/3-dgettext/">dgettext</a></code>(3), <code><a href="/docs/linux/man/3-dcgettext/">dcgettext</a></code>(3), <code><a href="/docs/linux/man/3-ngettext/">ngettext</a></code>(3), <code><a href="/docs/linux/man/3-dngettext/">dngettext</a></code>(3), <code><a href="/docs/linux/man/3-dcngettext/">dcngettext</a></code>(3), <code><a href="/docs/linux/man/3-textdomain/">textdomain</a></code>(3), <code><a href="/docs/linux/man/3-realpath/">realpath</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

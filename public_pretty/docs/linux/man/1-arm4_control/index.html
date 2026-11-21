@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>arm4_control(1) · Linux Manual Pages</title>
+<meta name="description" content="arm4_control – ARM 4 agent control program">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-arm4_control/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>arm4_control(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> arm4_control &#8211; ARM 4 agent control program</p>
+<h2>SYNOPSIS</h2>
+<p> <code>arm4_control</code> <i>&#8211;help|-h</i><br />
+ <code>arm4_control</code> <i>&#8211;version|-V</i><br />
+ <code>arm4_control</code> [<i>&#8211;config|-C config_file</i>] [<i>commands&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>arm4_control</code> program controls the <code>arm4_daemon</code> program.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display the command line options.</dd>
+<dt><code>-V</code>, <code>&#8211;Version</code></dt>
+<dd> display the program version and exit.</dd>
+<dt><code>-C</code>, <code>&#8211;Config</code> <i>config_file</i></dt>
+<dd> specifies a configuration file for this instance instead of using the default configuration file. The default configuration file <i>/etc/arm4.conf</i> is used if none is specified.</dd></dl>
+<h2>COMMANDS</h2>
+<dl>
+<dt><code>help</code>, <code>help commands</code></dt>
+<dd> show all available commands.</dd>
+<dt><code>help &lt;command&gt;</code></dt>
+<dd> show options for the command.</dd>
+<dt><code>archive</code></dt>
+<dd> backup the current database to the backup directory. Unless specified in the configuration file, the main backup directory is <i>/var/lib/arm4/data/backup</i>.</dd>
+<dt><code>collect</code>, <code>collect status</code></dt>
+<dd> show the current collection state.</dd>
+<dt><code>collect yes</code>, <code>collect on</code></dt>
+<dd> turn collection on.</dd>
+<dt><code>collect no</code>, <code>collect off</code></dt>
+<dd> turn collection off.</dd>
+<dt><code>checkpoint</code></dt>
+<dd> perform a database checkpoint operation</dd>
+<dt><code>remove</code></dt>
+<dd> remove the shared memory regions and semaphores, but leave the databases intact. This is normally done when recovering from catastrophic failures.</dd>
+<dt><code>status</code></dt>
+<dd> show if an instance of the <code>arm4_daemon</code> is running.</dd>
+<dt><code>stop</code></dt>
+<dd> stop the current <code>arm4_daemon</code> instance.</dd>
+<dt><code>wipe</code></dt>
+<dd> remove the current database, shared memory regions, and semaphores. This is normally done when upgrading versions.</dd>
+<dt><code>application</code></dt>
+<dd> display currently defined applications with their application ids.</dd>
+<dt><code>application </code><i>app_id</i></dt>
+<dd> display collection parameters for the specified application.</dd>
+<dt><code>application </code><i>app_id</i><code> transactions</code></dt>
+<dd> displays the transactions definitions and corresponding transaction ids associated with the specified application.</dd>
+<dt><code>transaction</code></dt>
+<dd> displays the current transaction definitions.</dd>
+<dt><code>transaction </code><i>tran_id</i></dt>
+<dd> displays the configuration for a specific transaction id.</dd>
+<dt><code>transaction </code><i>tran_id</i><code> trace all</code></dt>
+<dd> trace all transaction instances.</dd>
+<dt><code>transaction </code><i>tran_id</i><code> trace none</code></dt>
+<dd> turn tracing off.</dd>
+<dt><code>transaction </code><i>tran_id</i><code> trace </code><i>n</i></dt>
+<dd> trace every <i>n</i>th transaction instance.</dd>
+<dt><code>transaction </code><i>tran_id</i><code> trace </code><i>n</i><code>[s|S]</code></dt>
+<dd> trace one transaction instance every <i>n</i> tenths of seconds.</dd>
+<dt><code>transaction </code><i>tran_id</i><code> trace application</code></dt>
+<dd> honor application trace requests.</dd>
+<dt><code>transaction </code><i>tran_id</i><code> trace noapplication</code></dt>
+<dd> ignore application trace requests.</dd>
+<dt><code>transaction </code><i>tran_id</i><code> trace default</code></dt>
+<dd> use application default settings.</dd>
+<dt><code>export definitions</code></dt>
+<dd> exports application, metric, and transaction definitions in xml format to stdout.</dd>
+<dt><code>export all</code></dt>
+<dd> exports the full database including definitions and instance data in xml format to stdout.</dd>
+<dt><code>import </code><i>filename</i></dt>
+<dd> imports an exported database in xml format from the file.</dd></dl>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs at &lt;<a rel="nofollow" href="http://www.arm4.org">http://www.arm4.org</a>&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2005-2008 David Carter &lt;dcarter [at] arm4.org&gt; and others. All rights reserved. This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at <a rel="nofollow" href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-arm4_daemon/">arm4_daemon</a></code>(1), <code><a href="/docs/linux/man/1-arm4_report/">arm4_report</a></code>(1), <code><a href="/docs/linux/man/1-arm4_dump/">arm4_dump</a></code>(1), <code>arm4.conf</code>(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

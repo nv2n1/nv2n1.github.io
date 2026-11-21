@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>euare-releaserole(1) · Linux Manual Pages</title>
+<meta name="description" content="euare-releaserole – Release IAM role credentials">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-euare-releaserole/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>euare-releaserole(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> euare-releaserole &#8211; Release IAM role credentials</p>
+<h2>SYNOPSIS</h2>
+<p> euare-releaserole [-c | <code>-s]</code> [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</p>
+<h2>DESCRIPTION</h2>
+<p> Release IAM role credentials</p>
+<h2>DESCRIPTION</h2>
+<p> The euare-releaserole utility removes the credentials created by euareassumerole(1) by outputting shellcode that deletes the environment variables it creates. Use it inside an eval command to make this process seamless:</p>
+<h2>DESCRIPTION</h2>
+<p> $ eval `euare-releaserole`</p>
+<h2>DESCRIPTION</h2>
+<p> Note that if the credentials used to initially assume the role were supplied in the form of environment variables those environment variables will need to be reset:</p>
+<h2>DESCRIPTION</h2>
+<p> $ source eucarc</p>
+<h3>optional arguments:</h3>
+<dl>
+<dt><code>-c</code></dt>
+<dd> generate C-shell commands on stdout (default if SHELL looks like a csh-style shell</dd>
+<dt><code>-s</code></dt>
+<dd> generate Bourne shell commands on stdout (default if SHELL does not look like a csh-style shell</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> show debugging output</dd>
+<dt><code>&#8211;debugger</code></dt>
+<dd> launch interactive debugger on error</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> show the program&#8217;s version and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help message and exit </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

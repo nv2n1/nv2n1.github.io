@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>umad_get_issm_path(3) · Linux Manual Pages</title>
+<meta name="description" content="umad_get_issm_path – get path of issm device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-umad_get_issm_path/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>umad_get_issm_path(3)</h1>
+
+
+
+
+
+<p>umad_get_issm_path &#8211; get path of issm device</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;infiniband/umad.h&gt;
+int umad_get_issm_path(char *ca_name, int portnum, char *path, intmax);</code></pre>
+<h2>Description</h2>
+<p><code>umad_get_issm_path()</code> resolves path to issm device (which used for setting/clearing PortInfo:CapMask IsSM bit) for <i>portnum</i> of the IB device <i>ca_name</i> , it stores resolved path in <i>path</i> array which cannot exceed <i>max</i> bytes in length (including NULL terminator). Opening issm device sets PortInfo:CapMask IsSM bit and closing clears it.</p>
+<h2>Return Value</h2>
+<p><code>umad_open_port()</code> returns 0 on success and a negative value on error as follows:<br />
+&nbsp;<wbr>-ENODEV IB device can&#8217;t be resolved<br />
+&nbsp;<wbr>-EINVAL port is not valid&nbsp;<wbr>(bad <i>portnum</i> or no umad device)</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-umad_open_port/">umad_open_port</a></code>(3), <code><a href="/docs/linux/man/3-umad_get_port/">umad_get_port</a></code>(3)</p>
+<h2>Author</h2>
+<dl>
+<dt>Sasha Khapyorsky &lt;sashak [at] voltaire.com&gt;</dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

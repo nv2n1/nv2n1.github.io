@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dnssec-revoke(8) · Linux Manual Pages</title>
+<meta name="description" content="dnssec-revoke – Set the REVOKED bit on a DNSSEC key">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-dnssec-revoke/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>dnssec-revoke(8)</h1>
+
+
+
+
+
+<p>dnssec-revoke &#8211; Set the REVOKED bit on a DNSSEC key</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>dnssec-revoke</code> [<code>-hr</code>] [<code>-v&nbsp;<wbr></code><i>level</i>] [<code>-K&nbsp;<wbr></code><i>directory</i>] [<code>-E&nbsp;<wbr></code><i>engine</i>] [<code>-f</code>] [<code>-R</code>] {keyfile}</dt></dl>
+<h2>Description</h2>
+<p><code>dnssec-revoke</code></p>
+<dd>reads a DNSSEC key file, sets the REVOKED bit on the key as defined in RFC 5011, and creates a new pair of key files containing the now-revoked key.</dd>
+<h2>Options</h2>
+<p>-h</p>
+<dl>
+<dd>Emit usage message and exit.</dd></dl>
+<p> -K <i>directory</i></p>
+<dl>
+<dd>Sets the directory in which the key files are to reside.</dd></dl>
+<p> -r</p>
+<dl>
+<dd>After writing the new keyset files remove the original keyset files.</dd></dl>
+<p> -v <i>level</i></p>
+<dl>
+<dd>Sets the debugging level.</dd></dl>
+<p> -E <i>engine</i></p>
+<dl>
+<dd>Use the given OpenSSL engine. When compiled with PKCS#11 support it defaults to pkcs11; the empty name resets it to no engine.</dd></dl>
+<p> -f</p>
+<dl>
+<dd>Force overwrite: Causes <code>dnssec-revoke</code> to write the new key pair even if a file already exists matching the algorithm and key ID of the revoked key.</dd></dl>
+<p> -R</p>
+<dl>
+<dd>Print the key tag of the key with the REVOKE bit set but do not revoke the key.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-dnssec-keygen/">dnssec-keygen</a></code>(8), BIND 9 Administrator Reference Manual, RFC 5011.</p>
+<h2>Author</h2>
+<p>Internet Systems Consortium</p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2009, 2011 Internet Systems Consortium, Inc. (&quot;ISC&quot;)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

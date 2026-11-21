@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>puppet-inspect(8) · Linux Manual Pages</title>
+<meta name="description" content="puppet-inspect – Send an inspection report">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-puppet-inspect/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>puppet-inspect(8)</h1>
+
+
+
+
+
+<p><code>puppet-inspect</code> &#8211; Send an inspection report</p>
+<h2>Synopsis</h2>
+<p>Prepares and submits an inspection report to the puppet master.</p>
+<h2>Usage</h2>
+<p>puppet inspect [&#8211;archive_files] [&#8211;archive_file_server]</p>
+<h2>Description</h2>
+<p>This command uses the cached catalog from the previous run of &#8216;puppet agent&#8217; to determine which attributes of which resources have been marked as auditable with the &#8216;audit&#8217; metaparameter. It then examines the current state of the system, writes the state of the specified resource attributes to a report, and submits the report to the puppet master. </p>
+<p> Puppet inspect does not run as a daemon, and must be run manually or from cron.</p>
+<h2>Options</h2>
+<p>Any configuration setting which is valid in the configuration file is also a valid long argument, e.g. &#8216;&#8211;server=master.domain.com&#8217;. See the configuration file documentation at <a rel="nofollow" href="http://docs.puppetlabs.com/references/latest/configuration.html">http://docs.puppetlabs.com/references/latest/configuration.html</a> for the full list of acceptable settings.</p>
+<dl>
+<dt>&#8211;archive_files</dt>
+<dd>During an inspect run, whether to archive files whose contents are audited to a file bucket.</dd>
+<dt>&#8211;archive_file_server</dt>
+<dd>During an inspect run, the file bucket server to archive files to if archive_files is set. The default value is &#8216;$server&#8217;.</dd></dl>
+<h2>Author</h2>
+<p>Puppet Labs</p>
+<h2>Copyright</h2>
+<p>Copyright (c) 2011 Puppet Labs, LLC Licensed under the Apache 2.0 License</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

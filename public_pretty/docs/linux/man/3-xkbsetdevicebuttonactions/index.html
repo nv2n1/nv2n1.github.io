@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbsetdevicebuttonactions(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbSetDeviceButtonActions – Change only the button actions for an input extension device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbsetdevicebuttonactions/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbsetdevicebuttonactions(3)</h1>
+
+
+
+
+
+<p>XkbSetDeviceButtonActions &#8211; Change only the button actions for an input extension device </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Bool XkbSetDeviceButtonActions</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDeviceInfoPtr </code><i>device</i><code>,</code> <code>unsigned int </code><i>first_button</i><code>,</code> <code>unsigned int </code><i>num_buttons</i><code>);</code></dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; dpy</i></dt>
+<dd>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; device</i></dt>
+<dd>structure defining the device and modifications</dd>
+<dt><i>&#8211; first_button</i></dt>
+<dd>number of first button to update, 0 relative</dd>
+<dt><i>&#8211; num_buttons</i></dt>
+<dd>number of buttons to update</dd></dl>
+<h2>Description</h2>
+<p><i>XkbSetDeviceButtonActions </i> assigns actions to the buttons of the device specified in <i>device_info-&gt;device_spec. </i> Actions are assigned to <i>num_buttons </i> buttons beginning with <i>first_button </i> and are taken from the actions specified in <i>device_info-&gt;btn_acts.</i> </p>
+<p> If the server does not support assignment of Xkb actions to extension device buttons, <i>XkbSetDeviceButtonActions </i> has no effect and returns False. If the device has no buttons or if <i>first_button </i> or <i>num_buttons </i> specify buttons outside of the valid range as determined by <i>device_info-&gt;num_btns, </i> the function has no effect and returns False. Otherwise, <i>XkbSetDeviceButtonActions </i> sends a request to the server to change the actions for the specified buttons and returns True. </p>
+<p> If the actual request sent to the server involved illegal button numbers, a BadValue protocol error is generated. If an invalid device identifier is specified in <i>device_info-&gt;device_spec, </i> a BadKeyboard protocol error results. If the actual device specified in <i>device_info-&gt;device_spec </i> does not contain buttons and a request affecting buttons is made, a BadMatch protocol error is generated.</p>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadKeyboard</code></dt>
+<dd>The device specified was not a valid core or input extension device</dd>
+<dt><code>BadMatch</code></dt>
+<dd>A compatible version of Xkb was not available in the server or an argument has correct type and range, but is otherwise invalid</dd>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

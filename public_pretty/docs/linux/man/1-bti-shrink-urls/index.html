@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bti-shrink-urls(1) · Linux Manual Pages</title>
+<meta name="description" content="bti-shrink-urls – convert URLs to a shorter form using a web service">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-bti-shrink-urls/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>bti-shrink-urls(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> bti-shrink-urls &#8211; convert URLs to a shorter form using a web service </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>bti</code> [<code>&#8211;escaped</code>] [<code>&#8211;help</code>] [<code>URL</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>bti-shrink-urls converts URLs to a shorter form using a web service. </dd>
+<p> Currently <a rel="nofollow" href="http://2tu.us/">http://2tu.us/</a> (default) and <a href="http://bit.ly">http://bit.ly</a> / <a href="http://j.mp">http://j.mp</a> are supported.</p>
+<h2>OPTIONS</h2>
+<p> <code>&#8211;escaped</code></p>
+<dl>
+<dt>
+</dt><dd> Don&#8217;t escape special characters in the URL any more, they are already percent encoded.</dd></dl>
+<p> <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Print help text.</dd></dl>
+<p> <code>URL</code></p>
+<dl>
+<dt>
+</dt><dd> Specify the URL to be converted. If no URL is given bti-shrink-urls waits for input on stdin.</dd></dl>
+<h2>CONFIGURATION</h2>
+<p> bti-shrink-urls is configured by setting some values in ~/.bti: </p>
+<p> <code>shrink_host</code></p>
+<dl>
+<dt>
+</dt><dd> Possible values: 2tu.us (default), bit.ly, j.mp</dd></dl>
+<p> <code>shrink_bitly_login</code></p>
+<dl>
+<dt>
+</dt><dd> API login for bit.ly, j.mp, required if shrink_host is set to bit.ly or j.mp. See <a rel="nofollow" href="https://code.google.com/p/bitly-api/wiki/ApiDocumentation">https://code.google.com/p/bitly-api/wiki/ApiDocumentation</a></dd></dl>
+<p> <code>shrink_bitly_key</code></p>
+<dl>
+<dt>
+</dt><dd> API key for bit.ly, j.mp, required if shrink_host is set to bit.ly or j.mp. See <a rel="nofollow" href="https://code.google.com/p/bitly-api/wiki/ApiDocumentation">https://code.google.com/p/bitly-api/wiki/ApiDocumentation</a></dd></dl>
+<h2>AUTHOR</h2>
+<p> Written by Bart Trojanowski bart [at] jukie.net.</p>
+<h2>COPYRIGHT AND LICENSE</h2>
+<p> Copyright (C) 2009 Bart Trojanowski bart [at] jukie.net. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation version 2 of the License. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

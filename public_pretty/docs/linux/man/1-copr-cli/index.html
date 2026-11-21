@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>copr-cli(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-copr-cli/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>copr-cli(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>copr-cli - command line interface for the Copr service</p>
+<h2>SYNOPSIS</h2>
+<p>copr-cli [-h] [&ndash;version] [&ndash;config CONFIG] {list,create,build} &hellip;</p>
+<h2>DESCRIPTION</h2>
+<p>This command allows you to interact with the Copr service from the command line.</p>
+<p>You need to generate an API key first (see the API KEY section below).</p>
+<h2>OPTIONS</h2>
+<p>-h, &ndash;help</p>
+<dl>
+<dt>
+</dt><dd> show this help message and exit</dd></dl>
+<p>&ndash;version</p>
+<dl>
+<dt>
+</dt><dd> show the program's version number and exit</dd></dl>
+<p>&ndash;config</p>
+<dl>
+<dt>
+</dt><dd> path to an alternative configuration file (default is ~/.config/copr).</dd></dl>
+<h2>ACTION LIST</h2>
+<p>list [username|@groupname]</p>
+<dl>
+<dt>
+</dt><dd> List all the projects of the provided username. If no username is provided, then your projects are listed.</dd></dl>
+<p>create</p>
+<dl>
+<dt>
+</dt><dd> Create a new project.</dd></dl>
+<p>delete</p>
+<dl>
+<dt>
+</dt><dd> Delete an entire project.</dd></dl>
+<p>build</p>
+<dl>
+<dt>
+</dt><dd> Build packages for a specified project.</dd></dl>
+<p>status</p>
+<dl>
+<dt>
+</dt><dd> Get the status of the build.</dd></dl>
+<p>cancel</p>
+<dl>
+<dt>
+</dt><dd> Cancel a build of given id.</dd></dl>
+<p>download-build</p>
+<dl>
+<dt>
+</dt><dd> Download a build to local directory.</dd></dl>
+<p>modify</p>
+<dl>
+<dt>
+</dt><dd> Modify existing copr</dd></dl>
+<p>add-package-*</p>
+<dl>
+<dt>
+</dt><dd> Add a new package of the specified source type (e.g. add-package-tito)</dd></dl>
+<p>edit-package-*</p>
+<dl>
+<dt>
+</dt><dd> Edit source definition and type of an existing package (e.g. edit-package-tito)</dd></dl>
+<p>list-packages</p>
+<dl>
+<dt>
+</dt><dd> List all packages from a copr in json format</dd></dl>
+<p>list-package-names</p>
+<dl>
+<dt>
+</dt><dd> Output just the package names from the given copr</dd></dl>
+<p>get-package</p>
+<dl>
+<dt>
+</dt><dd> Display details of a single package in json format</dd></dl>
+<p>delete-package</p>
+<dl>
+<dt>
+</dt><dd> Remove package from a copr and all its builds as well</dd></dl>
+<p>reset-package</p>
+<dl>
+<dt>
+</dt><dd> Clear source definition of a package and its source type</dd></dl>
+<p>build-package</p>
+<dl>
+<dt>
+</dt><dd> Build package from its source definition</dd></dl>
+<p>mock-config</p>
+<dl>
+<dt>
+</dt><dd> Get the mock profile (similar to koji mock-config)</dd></dl>
+<h2>PROJECT ACTIONS</h2>
+<h3>copr-cli create [options]</h3>
+<p>usage: copr-cli create [-h] &ndash;chroot CHROOTS [&ndash;repo REPOS] [&ndash;initial-pkgs PKGS] [&ndash;description DESCRIPTION] [&ndash;instructions INSTRUCTIONS] [&ndash;disable_createrepo DISABLE_CREATEREPO] [&ndash;enable-net {on,off}] [&ndash;unlisted-on-hp {on,off}] [&ndash;persistent] [&ndash;auto-prune {on,off}] name</p>
+<p>&ndash;chroot</p>
+<dl>
+<dt>
+</dt><dd> Chroot to use for this project. Can be specified multiple times, but at least one must be present.</dd></dl>
+<p>&ndash;repo</p>
+<dl>
+<dt>
+</dt><dd> Repository to add to this project. Can be specified multiple times.</dd></dl>
+<p>&ndash;initial-pkgs</p>
+<dl>
+<dt>
+</dt><dd> List of packages to build in this new project. Can be specified multiple times.</dd></dl>
+<p>&ndash;description</p>
+<dl>
+<dt>
+</dt><dd> Description of the project.</dd></dl>
+<p>&ndash;instructions</p>
+<dl>
+<dt>
+</dt><dd> Instructions for the project.</dd></dl>
+<p>&ndash;disable_createrepo</p>
+<dl>
+<dt>
+</dt><dd> Disables automatic repository metadata generation. Accepted values for DISABLE_CREATEREPO: true/false.</dd></dl>
+<p>&ndash;enable-net</p>
+<dl>
+<dt>
+</dt><dd> If net should be enabled for builds in this project.</dd></dl>
+<p>&ndash;unlisted-on-hp</p>
+<dl>
+<dt>
+</dt><dd> This project will not be listed on COPR home page.</dd></dl>
+<p>&ndash;persistent</p>
+<dl>
+<dt>
+</dt><dd> Project and its builds will be undeletable. This option can only be specified by a COPR admin.</dd></dl>
+<p>&ndash;auto-prune</p>
+<dl>
+<dt>
+</dt><dd> If backend auto-prunning script should be run for this project. This option can only be specified by a COPR admin.</dd></dl>
+<p>name</p>
+<dl>
+<dt>
+</dt><dd> Can be just name of the project or in form username/projectname or @groupname/projectname.</dd></dl>
+<h3>copr-cli modify [options]</h3>
+<p>usage: copr-cli modify [-h] [&ndash;repo REPOS] [&ndash;description DESCRIPTION] [&ndash;instructions INSTRUCTIONS] [&ndash;disable_createrepo DISABLE_CREATEREPO] [&ndash;enable-net {on,off}] [&ndash;unlisted-on-hp {on,off}] [&ndash;auto-prune {on,off}] name</p>
+<p>Alters only specified project property.</p>
+<p>&ndash;repo</p>
+<dl>
+<dt>
+</dt><dd> Repository to add to this project. Can be specified multiple times.</dd></dl>
+<p>&ndash;description</p>
+<dl>
+<dt>
+</dt><dd> Description of the project.</dd></dl>
+<p>&ndash;instructions</p>
+<dl>
+<dt>
+</dt><dd> Instructions for the project.</dd></dl>
+<p>&ndash;disable_createrepo</p>
+<dl>
+<dt>
+</dt><dd> Disables automatic repository metadata generation. Accepted values for DISABLE_CREATEREPO: true/false.</dd></dl>
+<p>&ndash;enable-net</p>
+<dl>
+<dt>
+</dt><dd> If net should be enabled for builds in this project.</dd></dl>
+<p>&ndash;unlisted-on-hp</p>
+<dl>
+<dt>
+</dt><dd> This project will not be listed on COPR home page.</dd></dl>
+<p>&ndash;auto-prune</p>
+<dl>
+<dt>
+</dt><dd> If backend auto-prunning script should be run for this project. This option can only be specified by a COPR admin.</dd></dl>
+<p>name</p>
+<dl>
+<dt>
+</dt><dd> Can be just name of the project or in form username/projectname or @groupname/projectname.</dd></dl>
+<h2>BUILD ACTIONS</h2>
+<h3>copr-cli build [options]</h3>
+<p>usage: copr-cli build [-h] [-r, &ndash;chroot CHROOTS] [&ndash;memory MEMORY] [&ndash;timeout TIMEOUT] [&ndash;nowait] [&ndash;background] project PKG [PKG &hellip;]</p>
+<p>-r, &ndash;chroot</p>
+<dl>
+<dt>
+</dt><dd> If you don't need this build for all the project's chroots. You can use it several times for each chroot you need.</dd></dl>
+<p>&ndash;memory</p>
+<dl>
+<dt>
+</dt><dd> Override memory for this build. This is actually not used and it have no effect.</dd></dl>
+<p>&ndash;timeout</p>
+<dl>
+<dt>
+</dt><dd> Override timeout for this build. This is actually not used and it have no effect.</dd></dl>
+<p>&ndash;nowait</p>
+<dl>
+<dt>
+</dt><dd> Don't wait for build completion.</dd></dl>
+<p>&ndash;background</p>
+<dl>
+<dt>
+</dt><dd> Run the build at a lower priority.</dd></dl>
+<p>project</p>
+<dl>
+<dt>
+</dt><dd> The project build the package in. This can be a simple name of some of your projects. Alternatively, you can specify it as username/project or @groupname/project. This way you can build into the project of another user or group, provided you have the permissions to do so.</dd></dl>
+<p>PKG</p>
+<dl>
+<dt>
+</dt><dd> This can be either file on your local workstation or URL of the package to build. When URL is used, then the package must be placed on a public web or ftp server. Note that you cannot combine local file paths and URLs in one command line and local-file builds are limited to the first specified PKG. This limitation comes from the COPR API.</dd></dl>
+<h3>copr-cli buildpypi [options]</h3>
+<p>usage: copr buildpypi [-h] [-r, &ndash;chroot CHROOTS] [&ndash;memory MEMORY] [&ndash;timeout TIMEOUT] [&ndash;nowait] [&ndash;background] [&ndash;pythonversions [VERSION [VERSION &hellip;]]] [&ndash;packageversion PYPIVERSION] &ndash;packagename PYPINAME project</p>
+<p>&ndash;pythonversions [VERSION [VERSION &hellip;]]</p>
+<dl>
+<dt>
+</dt><dd> For what Python versions to build (by default: 3 2)</dd></dl>
+<p>&ndash;packageversion PYPIVERSION</p>
+<dl>
+<dt>
+</dt><dd> Version of the PyPI package to be built (by default latest)</dd></dl>
+<p>&ndash;packagename PYPINAME</p>
+<dl>
+<dt>
+</dt><dd> Name of the PyPI package to be built, required.</dd></dl>
+<p>For the rest of the arguments, see copr-cli build command above.</p>
+<h3>copr-cli buildtito [options]</h3>
+<p>usage: copr buildtito [-h] [&ndash;memory MEMORY] [&ndash;timeout TIMEOUT] [&ndash;nowait] [&ndash;background] [-r CHROOTS] [&ndash;git-url URL] [&ndash;git-dir DIRECTORY] [&ndash;git-branch BRANCH] [&ndash;test] project</p>
+<p>&ndash;git-url URL</p>
+<dl>
+<dt>
+</dt><dd> Url to a project managed by Tito, required.</dd></dl>
+<p>&ndash;git-dir DIRECTORY</p>
+<dl>
+<dt>
+</dt><dd> Relative path from Git root to directory containing .spec file.</dd></dl>
+<p>&ndash;git-branch BRANCH</p>
+<dl>
+<dt>
+</dt><dd> Checokut specific branch on the repository.</dd></dl>
+<p>&ndash;test</p>
+<dl>
+<dt>
+</dt><dd> To build from the last commit instead of the last release tag.</dd></dl>
+<p>For the rest of the arguments, see copr-cli build command above.</p>
+<h3>copr-cli buildmock [options]</h3>
+<p>usage: copr buildmock [-h] [&ndash;memory MEMORY] [&ndash;timeout TIMEOUT] [&ndash;nowait] [&ndash;background] [-r CHROOTS] [&ndash;scm-type TYPE] [&ndash;scm-url URL] [&ndash;scm-branch BRANCH] [&ndash;spec FILE] project</p>
+<p>&ndash;scm-type TYPE</p>
+<dl>
+<dt>
+</dt><dd> Specify versioning tool, default is <i>git</i>.</dd></dl>
+<p>&ndash;scm-url URL</p>
+<dl>
+<dt>
+</dt><dd> Url to a project versioned by Git or SVN, required.</dd></dl>
+<p>&ndash;scm-branch BRANCH</p>
+<dl>
+<dt>
+</dt><dd> Checokut specific branch on the repository.</dd></dl>
+<p>&ndash;spec FILE</p>
+<dl>
+<dt>
+</dt><dd> Relative path from SCM root to .spec file, required.</dd></dl>
+<p>For the rest of the arguments, see copr-cli build command above.</p>
+<h3>copr-cli buildfedpkg [options]</h3>
+<p>usage: copr buildfedpkg [-h] [&ndash;memory MEMORY] [&ndash;timeout TIMEOUT] [&ndash;nowait] [&ndash;background] [-r CHROOTS] [&ndash;clone-url URL] [&ndash;branch BRANCH] project</p>
+<p>&ndash;clone-url URL</p>
+<dl>
+<dt>
+</dt><dd> Specify clone url to the dist-git project on pkgs.fedoraproject.org.</dd></dl>
+<p>&ndash;branch BRANCH</p>
+<dl>
+<dt>
+</dt><dd> Specify branch in the dist-git project to be be built from.</dd></dl>
+<p>For the rest of the arguments, see copr-cli build command above.</p>
+<h3>copr-cli download-build [options]</h3>
+<p>usage: copr-cli download-build [-h] [-d, &ndash;dest DESTINATION] [-r, &ndash;chroot CHROOT] build_id</p>
+<p>build_id</p>
+<dl>
+<dt>
+</dt><dd> Download built packages for build identified by build_id.</dd></dl>
+<p>-d, &ndash;dest, -r, &ndash;chroot</p>
+<dl>
+<dt>
+</dt><dd> Fetch only selected chroots. Can be specified multiple times.\</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>
+</dt><dd> <pre>
+copr-cli build myproject some.src.rpm
+copr-cli build someone_else/project some.src.rpm
+copr-cli build -r fedora-24-x86_64 -r fedora-24-i386 &quot;@somegroup/project&quot; some.src.rpm
+</pre></dd></dl>
+<h2>CHROOT ACTIONS</h2>
+<h3>copr-cli edit-chroot [options] coprchroot</h3>
+<p>usage: copr edit-chroot [-h] [&ndash;upload-comps FILEPATH | &ndash;delete-comps] [&ndash;packages PACKAGES] [&ndash;repos REPOS] coprchroot</p>
+<p>Edit the specified coprchroot.</p>
+<p>coprchroot</p>
+<dl>
+<dt>
+</dt><dd> Path to a project chroot as owner/project/chroot or project/chroot</dd></dl>
+<p>&ndash;upload-comps FILEPATH</p>
+<dl>
+<dt>
+</dt><dd> Filepath to the comps.xml file to be uploaded</dd></dl>
+<p>&ndash;delete-comps</p>
+<dl>
+<dt>
+</dt><dd> Deletes already existing comps.xml for the chroot</dd></dl>
+<p>&ndash;packages PACKAGES</p>
+<dl>
+<dt>
+</dt><dd> space separated string of package names to be added to buildroot (e.g. &quot;gcc ghc&quot;)</dd></dl>
+<p>&ndash;repos REPOS</p>
+<dl>
+<dt>
+</dt><dd> space separated string of additional repo urls for chroot (e.g. &quot;<a rel="nofollow" HREF="http://foo">http://foo</a> <a rel="nofollow" HREF="http://bar">http://bar</a>&quot;)</dd></dl>
+<h3>copr-cli get-chroot coprchroot</h3>
+<p>usage: copr get-chroot [-h] coprchroot</p>
+<p>Print info of the given chroot.</p>
+<p>coprchroot</p>
+<dl>
+<dt>
+</dt><dd> Path to a project chroot as owner/project/chroot or project/chroot</dd></dl>
+<h2>PACKAGE ACTIONS</h2>
+<h3>copr-cli add-package-tito [options]</h3>
+<p>usage: copr add-package-tito [-h] &ndash;git-url URL [&ndash;git-dir DIRECTORY] [&ndash;git-branch BRANCH] [&ndash;test {on,off}] &ndash;name PKGNAME [&ndash;webhook-rebuild {on,off}] project</p>
+<p>Add package of <i>Tito</i> source type.</p>
+<p>&ndash;git-url URL</p>
+<dl>
+<dt>
+</dt><dd> URL to a project managed by Tito</dd></dl>
+<p>&ndash;git-dir DIRECTORY</p>
+<dl>
+<dt>
+</dt><dd> Relative path from Git root to directory containing .spec file</dd></dl>
+<p>&ndash;git-branch BRANCH</p>
+<dl>
+<dt>
+</dt><dd> Git branch that you want to build from</dd></dl>
+<p>&ndash;test {on,off}</p>
+<dl>
+<dt>
+</dt><dd> Build the last commit instead of the last release tag</dd></dl>
+<p>&ndash;name PKGNAME</p>
+<dl>
+<dt>
+</dt><dd> Name of the package to be edited or created</dd></dl>
+<p>&ndash;webhook-rebuild {on,off}</p>
+<dl>
+<dt>
+</dt><dd> Enable auto-rebuilding.</dd></dl>
+<h3>copr-cli edit-package-tito [options]</h3>
+<p>usage: copr edit-package-tito [-h] &ndash;git-url URL [&ndash;git-dir DIRECTORY] [&ndash;git-branch BRANCH] [&ndash;test {on,off}] &ndash;name PKGNAME [&ndash;webhook-rebuild {on,off}] project</p>
+<p>Edit source definition and type of an existing package. Options are shared with add-package-tito.</p>
+<h3>copr-cli add-package-pypi [options]</h3>
+<p>usage: copr add-package-pypi [-h] [&ndash;pythonversions [VERSION [VERSION &hellip;]]] [&ndash;packageversion PYPIVERSION] &ndash;packagename PYPINAME &ndash;name PKGNAME [&ndash;webhook-rebuild {on,off}] project</p>
+<p>Add package of <i>PyPI</i> source type.</p>
+<p>&ndash;pythonversions [VERSION [VERSION &hellip;]]</p>
+<dl>
+<dt>
+</dt><dd> For what Python versions to build (by default: 3 2)</dd></dl>
+<p>&ndash;packageversion PYPIVERSION</p>
+<dl>
+<dt>
+</dt><dd> Version of the PyPI package to be built (by default latest)</dd></dl>
+<p>&ndash;packagename PYPINAME</p>
+<dl>
+<dt>
+</dt><dd> Name of the PyPI package to be built, required</dd></dl>
+<p>&ndash;name PKGNAME</p>
+<dl>
+<dt>
+</dt><dd> Name of the package to be edited or created</dd></dl>
+<p>&ndash;webhook-rebuild {on,off}</p>
+<dl>
+<dt>
+</dt><dd> Enable auto-rebuilding</dd></dl>
+<h3>copr-cli edit-package-pypi [options]</h3>
+<p>usage: copr edit-package-pypi [-h] [&ndash;pythonversions [VERSION [VERSION &hellip;]]] [&ndash;packageversion PYPIVERSION] &ndash;packagename PYPINAME &ndash;name PKGNAME [&ndash;webhook-rebuild {on,off}] project</p>
+<p>Edit source definition and type of an existing package. Options are shared with add-package-pypi.</p>
+<h3>copr-cli add-package-mockscm [options]</h3>
+<p>usage: copr add-package-mockscm [-h] [&ndash;scm-type TYPE] [&ndash;scm-url URL] [&ndash;scm-branch BRANCH] [&ndash;spec FILE] &ndash;name PKGNAME [&ndash;webhook-rebuild {on,off}] project</p>
+<p>Add package of <i>MockSCM</i> source type.</p>
+<p>&ndash;scm-type TYPE</p>
+<dl>
+<dt>
+</dt><dd> Specify versioning tool, default is <i>git</i></dd></dl>
+<p>&ndash;scm-url URL</p>
+<dl>
+<dt>
+</dt><dd> Url to a project versioned by Git or SVN, required</dd></dl>
+<p>&ndash;scm-branch BRANCH</p>
+<dl>
+<dt>
+</dt><dd> Branch in the target repository to build from</dd></dl>
+<p>&ndash;spec FILE</p>
+<dl>
+<dt>
+</dt><dd> Relative path from SCM root to .spec file, required</dd></dl>
+<p>&ndash;name PKGNAME</p>
+<dl>
+<dt>
+</dt><dd> Name of the package to be edited or created</dd></dl>
+<p>&ndash;webhook-rebuild {on,off}</p>
+<dl>
+<dt>
+</dt><dd> Enable auto-rebuilding</dd></dl>
+<h3>copr-cli edit-package-mockscm [options]</h3>
+<p>usage: copr edit-package-mockscm [-h] [&ndash;scm-type TYPE] [&ndash;scm-url URL] [&ndash;scm-branch BRANCH] [&ndash;spec FILE] &ndash;name PKGNAME [&ndash;webhook-rebuild {on,off}] project</p>
+<p>Edit source definition and type of an existing package. Options are shared with add-package-mockscm.</p>
+<h3>copr-cli add-package-rubygems [options]</h3>
+<p>usage: copr add-package-rubygems [-h] [&ndash;gem GEM] &ndash;name PKGNAME [&ndash;webhook-rebuild {on,off}] project</p>
+<p>Add package of <i>RubyGems</i> source type.</p>
+<p>&ndash;gem GEM</p>
+<dl>
+<dt>
+</dt><dd> Specify gem name</dd></dl>
+<p>&ndash;name PKGNAME</p>
+<dl>
+<dt>
+</dt><dd> Name of the package to be edited or created</dd></dl>
+<p>&ndash;webhook-rebuild {on,off}</p>
+<dl>
+<dt>
+</dt><dd> Enable auto-rebuilding</dd></dl>
+<h3>copr-cli edit-package-rubygems [options]</h3>
+<p>usage: copr edit-package-rubygems [-h] [&ndash;gem GEM] &ndash;name PKGNAME [&ndash;webhook-rebuild {on,off}] project</p>
+<p>Edit source definition and type of an existing package. Options are shared with add-package-rubygems.</p>
+<h3>copr-cli list-packages [options]</h3>
+<p>usage: copr list-packages [-h] [&ndash;with-latest-build] [&ndash;with-latest-succeeded-build] [&ndash;with-all-builds] project</p>
+<p>Lists all packages in the given project in json format.</p>
+<p>&ndash;with-latest-build</p>
+<dl>
+<dt>
+</dt><dd> Also display data related to the latest build for each package.</dd></dl>
+<p>&ndash;with-latest-succeeded-build</p>
+<dl>
+<dt>
+</dt><dd> Also display data related to the latest succeeded build for each package.</dd></dl>
+<p>&ndash;with-all-builds</p>
+<dl>
+<dt>
+</dt><dd> Also display data related to the builds for each package.</dd></dl>
+<h3>copr-cli list-package-names [options]</h3>
+<p>usage: copr list-package-names [-h] project</p>
+<p>Only list package names in the given project line by line.</p>
+<h3>copr-cli get-package [options]</h3>
+<p>usage: copr get-package [-h] &ndash;name PKGNAME [&ndash;with-latest-build] [&ndash;with-latest-succeeded-build] [&ndash;with-all-builds] project</p>
+<p>Similar to list-packages but returns just a single package directly as json structure (not wrapped in a list).</p>
+<h3>copr-cli delete-package [options]</h3>
+<p>usage: copr delete-package [-h] &ndash;name PKGNAME project</p>
+<p>Deletes package and all its builds from the given project.</p>
+<h3>copr-cli reset-package [options]</h3>
+<p>usage: copr reset-package [-h] &ndash;name PKGNAME project</p>
+<p>Clears default source of a package and its source type (all the package settings are lost after invoking this!).</p>
+<h3>copr-cli build-package [options]</h3>
+<p>usage: copr build-package [-h] [&ndash;memory MEMORY] [&ndash;timeout TIMEOUT] [&ndash;nowait] [-r CHROOTS] &ndash;name PKGNAME project</p>
+<p>Creates a new build of the given package from its source definition.</p>
+<p>&ndash;name PKGNAME</p>
+<dl>
+<dt>
+</dt><dd> Name of a package to be built</dd></dl>
+<p>For the rest of the arguments, see copr-cli build command above.</p>
+<h3>copr-cli mock-config [options]</h3>
+<p>usage: copr mock-config [-h] project chroot</p>
+<p>Get the mock profile (similar to koji mock-config), print it to standard output. The configuration can be slightly different from the real mock configuration used by Copr Builders, but should be similar enough for basic debugging (e.g. by mock &ndash;shell).</p>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>
+</dt><dd> <pre>
+copr-cli add-package-tito myproject --name pkgname --git-url <a rel="nofollow" HREF="http://github.com/clime/example.git">http://github.com/clime/example.git</a> --test on
+</pre></dd></dl>
+<dl>
+<dt>
+</dt><dd> <pre>
+copr-cli get-package myproject --name pkgname
+</pre></dd></dl>
+<dl>
+<dt>
+</dt><dd> <pre>
+copr-cli build-package myproject --name pkgname --nowait --timeout 10000 -r fedora-23-x86_64
+</pre></dd></dl>
+<dl>
+<dt>
+</dt><dd> <pre>
+copr-cli delete-package myproject --name pkgname
+</pre></dd></dl>
+<dl>
+<dt>
+</dt><dd> <pre>
+copr-cli mock-config myproject fedora-rawhide-x86_64
+</pre></dd></dl>
+<h2>EXIT STATUS</h2>
+<p>Normally, the exit code is 0 when everything goes well. But if not, we could get: 1 - Bad request like wrong project name, insufficient rights etc. Also might happen when user interrupts the operation when they shouldn&rsquo;t. 2 - Wrong arguments given. 3 - Bad or no configuration. 4 - Build fails when Cli is waiting for the result. 5 - Communication error between Cli and server. This issue probably means bug and should be reported.</p>
+<h2>API KEY</h2>
+<p>Visit the page <a rel="nofollow" HREF="https://copr.fedoraproject.org/api/"><a href="https://copr.fedoraproject.org/api/">https://copr.fedoraproject.org/api/</a></a> to obtain an API token. This token must be saved in the file ~/.config/copr in the following format:</p>
+<dl>
+<dt>
+</dt><dd> <pre>
+[copr-cli]
+username = msuchy
+login = Y57wcg==##fkfaxbkjhuoiebfafadl
+token = vbfseelqdebzedukgombekmuvbkqwo
+copr_url = <a rel="nofollow" HREF="https://copr.fedoraproject.org">https://copr.fedoraproject.org</a>
+</pre></dd></dl>
+<p>Be aware that API tokens have an expiration date. The expiration date for your token is listed on the /api page.</p>
+<h2>USING DIFFERENT COPR INSTANCE</h2>
+<p>If you plan to run copr client against non-default Copr instance, the API token is available on the <a rel="nofollow" HREF="http://YOUR.COPR.URL/api/">http://YOUR.COPR.URL/api/</a> page. You can either replace your default ~/.config/copr configuration file, or rather use alternative file with a shell alias</p>
+<dl>
+<dt>
+</dt><dd> <pre>
+alias your_copr='copr --config ~/.config/your-copr'
+</pre></dd></dl>
+<p>inserted into your profile.</p>
+<h2>AUTHORS</h2>
+<p>Miroslav Suchý &lt;msuchy [at] redhat.com&gt;, clime &lt;clime [at] redhat.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

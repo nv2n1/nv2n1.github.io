@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cert2spc(1) · Linux Manual Pages</title>
+<meta name="description" content="cert2spc – Transform multiple X.509 certificates to a Software Publisher Certificate">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-cert2spc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>cert2spc(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> cert2spc &#8211; Transform multiple X.509 certificates to a Software Publisher Certificate</p>
+<h2>SYNOPSIS</h2>
+<p> <code>cert2spc certificate|crl [certificate|crl &#8230;] outputfile.spc</code></p>
+<h2>DESCRIPTION</h2>
+<p> Combine a list of X.509 certificates or X.509 CRL (Certificate Revocation List) into a Software Publisher Certificate (PKCS#7 file). The SPC file is required for signing a PE file (like an assembly) using signcode.</p>
+<h2>PARAMETERS</h2>
+<dl>
+<dt><i>certificate</i></dt>
+<dd> One (or more) X.509 certificate to add (space separated).</dd>
+<dt><i>crl</i></dt>
+<dd> One (or more) X.509 CRL to add (space separated).</dd>
+<dt><i>output.spc</i></dt>
+<dd> Software Publisher Certificate to output. If the specified file exists it will be overwritten.</dd></dl>
+<h2>AUTHOR</h2>
+<p> Written by Sebastien Pouliot</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2002, 2003 Motus Technologies. Released under BSD license.</p>
+<h2>MAILING LISTS</h2>
+<p> Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-devel-list">http://lists.ximian.com/mailman/listinfo/mono-devel-list</a> for details.</p>
+<h2>WEB SITE</h2>
+<p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-makecert/">makecert</a>(1),</code><a href="/docs/linux/man/1-signcode/">signcode</a>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

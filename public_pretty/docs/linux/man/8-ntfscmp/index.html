@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ntfscmp(8) · Linux Manual Pages</title>
+<meta name="description" content="ntfscmp – compare two NTFS filesystems and tell the differences">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ntfscmp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ntfscmp(8)</h1>
+
+
+
+
+
+<p>ntfscmp &#8211; compare two NTFS filesystems and tell the differences</p>
+<h2>Synopsis</h2>
+<p><code>ntfscmp</code> [<i>OPTIONS</i>] <i>DEVICE1</i> <i>DEVICE2</i></p>
+<h2>Description</h2>
+<p>The <code>ntfscmp</code> program makes a comparison between two NTFS filesystems from all aspects and reports all variances it finds. The filesystems can be on block devices or images files. Ntfscmp can be used for volume verification however its primary purpose was to be an efficient development tool, used to quickly locate, identify and check the correctness of the metadata changes made to NTFS. </p>
+<p> If one is interested only in the NTFS metadata changes then it could be useful to compare the metadata images created by using the &#8211;metadata option of <code><a href="/docs/linux/man/8-ntfsclone/">ntfsclone</a></code>(8) to eliminate the usually uninteresting timestamp changes. </p>
+<p> The terse output of <code>ntfscmp</code> is intentional because the provided information is enough in each case to determine the exact differences. This can be achieved, for instance, if one compares the verbose outputs of <code><a href="/docs/linux/man/8-ntfsinfo/">ntfsinfo</a></code>(8) for each reported inodes by the <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1) utility.</p>
+<h2>Options</h2>
+<p>Below is a summary of the options that <code>ntfscmp</code> accepts.</p>
+<dl>
+<dt><code>-P</code>, <code>&#8211;no-progress-bar</code></dt>
+<dd>Don&#8217;t show progress bars.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>More informational output.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display help and exit.</dd></dl>
+<h2>Exit Codes</h2>
+<p>The exit code is 0 on success, non-zero otherwise.</p>
+<h2>Known Issues</h2>
+<p>No problem is known. If you would find otherwise then please send your report to the development team: ntfs-3g-devel [at] lists.sf.net</p>
+<h2>Author</h2>
+<p><code>ntfscmp</code> was written by Szabolcs Szakacsits. It was ported to ntfs-3g by Erik Larsson.</p>
+<h2>Availability</h2>
+<p><code>ntfscmp</code> is part of the <code>ntfs-3g</code> package and is available from:<br />
+ <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-ntfsinfo/">ntfsinfo</a></code>(8), <code><a href="/docs/linux/man/8-ntfscat/">ntfscat</a></code>(8), <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1), <code><a href="/docs/linux/man/8-ntfsclone/">ntfsclone</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

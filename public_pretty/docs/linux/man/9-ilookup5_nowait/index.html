@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ilookup5_nowait(9) · Linux Manual Pages</title>
+<meta name="description" content="ilookup5_nowait – search for an inode in the inode cache">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-ilookup5_nowait/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>ilookup5_nowait(9)</h1>
+
+
+
+
+
+<p>ilookup5_nowait &#8211; search for an inode in the inode cache</p>
+<h2>Synopsis</h2>
+<pre><code>struct inode *ilookup5_nowait(struct super_block *sb, unsigned long hashval, int (*test)(struct inode *, void *), void *data);</code></pre>
+<h2>Arguments</h2>
+<p><i>sb</i></p>
+<dl>
+<dd>
+</dd><dd>super block of file system to search</dd></dl>
+<p> <i>hashval</i></p>
+<dl>
+<dd>hash value (usually inode number) to search for</dd></dl>
+<p> <i>test</i></p>
+<dl>
+<dd>callback used for comparisons between inodes</dd></dl>
+<p> <i>data</i></p>
+<dl>
+<dd>opaque data pointer to pass to <i>test</i></dd></dl>
+<h2>Description</h2>
+<p>Search for the inode specified by <i>hashval</i> and <i>data</i> in the inode cache. If the inode is in the cache, the inode is returned with an incremented reference count.</p>
+<h2>Note</h2>
+<p>I_NEW is not waited upon so you have to be very careful what you do with the returned inode. You probably should be using <code>ilookup5</code> instead. </p>
+<p> Note2: <i>test</i> is called with the inode_hash_lock held, so can&#8217;t sleep.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>muscan(1) · Linux Manual Pages</title>
+<meta name="description" content="Muscan – File scanner for Museek">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-muscan/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>muscan(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> <code>Muscan</code> &#8211; File scanner for Museek</p>
+<h2>SYNOPSIS</h2>
+<p> <code>muscan</code> [-c &lt;<i>filename</i>&gt;] [&#8211;config &lt;<i>filename</i>&gt;] [-b] [&#8211;buddy] [-v] [&#8211;verbose] [-r] [&#8211;rescan] [-n] [&#8211;noscan] [-s &lt;<i>directory</i>&gt;] [&#8211;share &lt;<i>directory</i>&gt;] [-u &lt;<i>directory</i>&gt;] [&#8211;unshare &lt;<i>directory</i>&gt;] [-l] [&#8211;list] [-h] [&#8211;help]</p>
+<h2>DESCRIPTION</h2>
+<p> Muscan scans paths &amp; files to be shared by <i><a href="/docs/linux/man/1-museekd/">museekd</a></i>(1). It creates a database of files, with meta-data for MP3 and OGG Vorbis files, if Vorbis support was compiled in. There are two available shares databases, Normal and Buddies-Only. Buddies-Only is an optional shares database that, if enabled, is only accessable by the users you&#8217;ve chosen as &quot;Buddies&quot;. </p>
+<p> Before running muscan, you will need a configured museekd, which can be done with <i><a href="/docs/linux/man/1-musetup/">musetup</a></i>(1) or fI&gt;<a href="/docs/linux/man/1-musetup-gtk/">musetup-gtk</a>(1), and add some shared paths with either of the setup tools or with <i><a href="/docs/linux/man/1-muscan/">muscan</a></i>(1).</p>
+<h2>OPTIONS</h2>
+<p> Muscan accepts the following options:</p>
+<dl>
+<dt><code>-c &lt;</code><i>filename</i>&gt;, &#8211;config &lt;<i>filename</i>&gt;</dt>
+<dd> Use a different config file.</dd>
+<dt><code>-b, &#8211;buddy</code></dt>
+<dd> Select Buddy-Only Shares.</dd>
+<dt><code>-s &lt;</code><i>directory</i>&gt;, &#8211;share &lt;<i>directory</i>&gt;</dt>
+<dd> Add directory to shares.</dd>
+<dt><code>-u &lt;</code><i>directory</i>&gt;, &#8211;unshare &lt;<i>directory</i>&gt;</dt>
+<dd> Remove directory from shares.</dd>
+<dt><code>-r, &#8211;rescan</code></dt>
+<dd> Rescan shares.</dd>
+<dt><code>-n, &#8211;noscan</code></dt>
+<dd> Do not rescan shares.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Be verbose while scanning shares.</dd>
+<dt><code>-l, &#8211;list</code></dt>
+<dd> Display list of shared directories.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display Help, version and exit.</dd></dl>
+<h2>EXAMPLE</h2>
+<p> To run a quick shares update, run: </p>
+<p> <code>muscan</code> or <code>muscan -b</code> </p>
+<p> To rescan everything, run: </p>
+<p> <code>muscan -r</code> or <code>muscan -b -r</code> </p>
+<p> Alternatively you use a different config file with: </p>
+<p> <code>muscan &#8211;config config.xml</code> </p>
+<h2>FILES</h2>
+<dl>
+<dt>
+&nbsp;<wbr><i>~/.museekd/config.xml</i></dt>
+<dd> The default location for the <code>museekd</code> config file.</dd>
+<dt>
+&nbsp;<wbr><i>~/.museekd/config.shares</i></dt>
+<dd> The default location for the Normal shares database.</dd>
+<dt>
+&nbsp;<wbr><i>~/.museekd/config.shares.state</i></dt>
+<dd> The default location for the active Normal shares database.</dd>
+<dt>
+&nbsp;<wbr><i>~/.museekd/config.buddyshares</i></dt>
+<dd> The default location for the Buddy shares database.</dd>
+<dt>
+&nbsp;<wbr><i>~/.museekd/config.buddyshares.state</i></dt>
+<dd> The default location for the active Buddy shares database&#8217;s.</dd></dl>
+<h2>AUTHORS</h2>
+<p> Hyriand &lt;hyriand [at] thegraveyard.org&gt; </p>
+<p> daelstorm &lt;daelstorm [at] gmail.com&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-mucous/">mucous</a></i>(1) <i><a href="/docs/linux/man/1-mulog/">mulog</a></i>(1) <i><a href="/docs/linux/man/1-murmur/">murmur</a></i>(1) <i><a href="/docs/linux/man/1-muscand/">muscand</a></i>(1) <i><a href="/docs/linux/man/1-museekcontrol/">museekcontrol</a></i>(1) <i><a href="/docs/linux/man/1-museekd/">museekd</a></i>(1) <i><a href="/docs/linux/man/1-museeq/">museeq</a></i>(1) <i><a href="/docs/linux/man/1-musetup/">musetup</a></i>(1) <i><a href="/docs/linux/man/1-musetup-gtk/">musetup-gtk</a></i>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

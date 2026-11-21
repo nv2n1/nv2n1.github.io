@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BibTeX Web References in IEEE Format - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-generate-reference-of-web-pages-in-the-ieee-citation-format-with-bibtex/">
+  <meta name="description" content="IEEE requires a specific format for web citations, and BibTeX handles this cleanly with the @online entry type. Here’s how to get it right.
+IEEE Web Citation …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="BibTeX Web References in IEEE Format">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-generate-reference-of-web-pages-in-the-ieee-citation-format-with-bibtex/">
+  <meta property="og:description" content="IEEE requires a specific format for web citations, and BibTeX handles this cleanly with the @online entry type. Here’s how to get it right.
+IEEE Web Citation …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/web-development/">Web Development</a>
+        </nav>
+        
+        <h1>BibTeX Web References in IEEE Format</h1>
+        <time class="post-date" datetime="2018-03-24T08:22:44Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>IEEE requires a specific format for web citations, and BibTeX handles this cleanly with the <code>@online</code> entry type. Here’s how to get it right.</p>
+<h2 id="ieee-web-citation-format">IEEE Web Citation Format</h2>
+<p>IEEE specifies this pattern for online sources:</p>
+<pre><code>[#] Initial(s). Surname, &quot;Title [Online]. Available: URL. Accessed: Month Day, Year.&quot;
+</code></pre>
+<p>A complete example looks like:</p>
+<pre><code>[1] J. Jones, &quot;Networks (2nd ed.) [Online]. Available: https://www.atm.com. Accessed: May 10, 1991.
+</code></pre>
+<h2 id="using-online-entry-type">Using @online Entry Type</h2>
+<p>The <code>@online</code> entry type is the modern standard. Here’s the basic structure:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@online</span><span class="p">{</span><span class="nl">networks</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">author</span> <span class="p">=</span> <span class="s">&#34;J. Jones&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">title</span> <span class="p">=</span> <span class="s">&#34;{Networks (2nd ed.)}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">url</span> <span class="p">=</span> <span class="s">&#34;https://www.atm.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">year</span> <span class="p">=</span> <span class="s">&#34;1991&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">month</span> <span class="p">=</span> <span class="s">&#34;May&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">day</span> <span class="p">=</span> <span class="s">&#34;10&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>When you process this with the <code>IEEEtran</code> bibliography style, it automatically formats to IEEE standards.</p>
+<h2 id="practical-examples">Practical Examples</h2>
+<p><strong>Personal or individual author:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@online</span><span class="p">{</span><span class="nl">kernel_guide</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">author</span> <span class="p">=</span> <span class="s">&#34;Jane Smith&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">title</span> <span class="p">=</span> <span class="s">&#34;{Advanced Linux Kernel Programming}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">url</span> <span class="p">=</span> <span class="s">&#34;https://example.com/kernel-guide&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">year</span> <span class="p">=</span> <span class="s">&#34;2024&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">month</span> <span class="p">=</span> <span class="s">&#34;Mar&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">day</span> <span class="p">=</span> <span class="s">&#34;15&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>Organizational source (no individual author):</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@online</span><span class="p">{</span><span class="nl">kernel_dev</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">title</span> <span class="p">=</span> <span class="s">&#34;{Linux Kernel Development Guide}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">organization</span> <span class="p">=</span> <span class="s">&#34;The Linux Foundation&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">url</span> <span class="p">=</span> <span class="s">&#34;https://www.kernel.org/doc/html/latest/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">year</span> <span class="p">=</span> <span class="s">&#34;2024&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>Academic paper on a preprint server:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@online</span><span class="p">{</span><span class="nl">arxiv_paper</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">author</span> <span class="p">=</span> <span class="s">&#34;A. Brown and B. Green&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">title</span> <span class="p">=</span> <span class="s">&#34;{Distributed Systems Architecture}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">url</span> <span class="p">=</span> <span class="s">&#34;https://arxiv.org/abs/2401.12345&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">year</span> <span class="p">=</span> <span class="s">&#34;2024&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">month</span> <span class="p">=</span> <span class="s">&#34;Jan&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>Blog post or technical article with access date important:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@online</span><span class="p">{</span><span class="nl">tutorial</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">author</span> <span class="p">=</span> <span class="s">&#34;M. Rodriguez&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">title</span> <span class="p">=</span> <span class="s">&#34;{Setting up Kubernetes in Production}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">url</span> <span class="p">=</span> <span class="s">&#34;https://techblog.example.com/k8s-setup&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">year</span> <span class="p">=</span> <span class="s">&#34;2025&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">month</span> <span class="p">=</span> <span class="s">&#34;Feb&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">day</span> <span class="p">=</span> <span class="s">&#34;3&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">note</span> <span class="p">=</span> <span class="s">&#34;Accessed: Feb. 10, 2025&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="latex-document-setup">LaTeX Document Setup</h2>
+<p>Use this structure in your document:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="nb">{</span>cite<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Some cited content <span class="k">\cite</span><span class="nb">{</span>networks<span class="nb">}</span>.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">\bibliographystyle</span><span class="nb">{</span>IEEEtran<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\bibliography</span><span class="nb">{</span>references<span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</span></span></code></pre></div><p>Compile with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pdflatex document.tex
+</span></span><span class="line"><span class="cl">bibtex document.aux
+</span></span><span class="line"><span class="cl">pdflatex document.tex
+</span></span><span class="line"><span class="cl">pdflatex document.tex
+</span></span></code></pre></div><p>Or use <code>biber</code> as a modern alternative:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pdflatex document.tex
+</span></span><span class="line"><span class="cl">biber document.bcf
+</span></span><span class="line"><span class="cl">pdflatex document.tex
+</span></span></code></pre></div><h2 id="handling-edge-cases">Handling Edge Cases</h2>
+<p><strong>URLs with special characters:</strong></p>
+<p>Wrap the entire URL in the <code>url</code> field—BibTeX handles escaping automatically. If using <code>\url{}</code> in text, load the <code>hyperref</code> package:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="nb">{</span>hyperref<span class="nb">}</span>
+</span></span></code></pre></div><p><strong>Titles with symbols or math:</strong></p>
+<p>Use braces to protect them:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="c">title = &#34;{C++ Template Metaprogramming: An $O(1)$ Approach}&#34;</span>
+</span></span></code></pre></div><p><strong>No date available:</strong></p>
+<p>Omit <code>year</code>, <code>month</code>, and <code>day</code> fields. IEEE will render without them, but note that undated web sources are less credible:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@online</span><span class="p">{</span><span class="nl">undated</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">author</span> <span class="p">=</span> <span class="s">&#34;Anonymous&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">title</span> <span class="p">=</span> <span class="s">&#34;{Undated Resource}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">url</span> <span class="p">=</span> <span class="s">&#34;https://example.com/page&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">note</span> <span class="p">=</span> <span class="s">&#34;Accessed: Feb. 10, 2025&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>Multiple authors:</strong></p>
+<p>Separate with <code>and</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="c">author = &#34;First Author and Second Author and Third Author&#34;</span>
+</span></span></code></pre></div><h2 id="essential-guidelines">Essential Guidelines</h2>
+<ul>
+<li><strong>Use HTTPS URLs only</strong> — IEEE no longer accepts unsecured HTTP links</li>
+<li><strong>Don’t use URL shorteners</strong> — Always provide the full, canonical URL</li>
+<li><strong>Verify access dates</strong> — For volatile content (wikis, blogs), include the date you accessed it</li>
+<li><strong>Title capitalization</strong> — Use sentence case (capitalize only the first word and proper nouns)</li>
+<li><strong>Special characters</strong> — Escape dollar signs and underscores if not using braces: <code>\$</code> and <code>\_</code></li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If your citations don’t render correctly:</p>
+<ol>
+<li>Verify the <code>.bib</code> file is in the same directory or referenced with the full path</li>
+<li>Check that <code>IEEEtran.bst</code> is installed (part of most modern TeX distributions)</li>
+<li>Ensure you’re running the full compile cycle: pdflatex → bibtex/biber → pdflatex → pdflatex</li>
+<li>Look for warnings in the <code>.blg</code> file: <code>bibtex document.aux</code> will show issues</li>
+<li>Validate your BibTeX syntax with an online checker if entries are complex</li>
+</ol>
+<p>IEEE formatting is strict about punctuation and field order. When in doubt, check your compiled output against IEEE’s official style guide examples.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

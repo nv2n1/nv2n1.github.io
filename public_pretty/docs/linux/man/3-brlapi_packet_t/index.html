@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>brlapi_packet_t(3) · Linux Manual Pages</title>
+<meta name="description" content="brlapi_packet_t –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-brlapi_packet_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>brlapi_packet_t(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> brlapi_packet_t &#8211; </p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;brlapi_protocol.h&gt;</p>
+<h3>Data Fields</h3>
+<p> unsigned char <code>data</code> [<code>BRLAPI_MAXPACKETSIZE</code>] </p>
+<p> <code>brlapi_versionPacket_t</code> <code>version</code> </p>
+<p> <code>brlapi_authClientPacket_t</code> <code>authClient</code> </p>
+<p> <code>brlapi_authServerPacket_t</code> <code>authServer</code> </p>
+<p> <code>brlapi_errorPacket_t</code> <code>error</code> </p>
+<p> <code>brlapi_getDriverSpecificModePacket_t</code> <code>getDriverSpecificMode</code> </p>
+<p> <code>brlapi_writeArgumentsPacket_t</code> <code>writeArguments</code> </p>
+<p> uint32_t <code>uint32</code> </p>
+<h2>Detailed Description</h2>
+<p> Type for packets. Should be used instead of a mere char[], since it has correct alignment requirements.</p>
+<h2>Field Documentation</h2>
+<h3><code>brlapi_authClientPacket_t</code> brlapi_packet_t::authClient</h3>
+<h3><code>brlapi_authServerPacket_t</code> brlapi_packet_t::authServer</h3>
+<h3>unsigned char brlapi_packet_t::data[<code>BRLAPI_MAXPACKETSIZE</code>]</h3>
+<h3><code>brlapi_errorPacket_t</code> brlapi_packet_t::error</h3>
+<h3><code>brlapi_getDriverSpecificModePacket_t</code> brlapi_packet_t::getDriverSpecificMode</h3>
+<h3>uint32_t brlapi_packet_t::uint32</h3>
+<h3><code>brlapi_versionPacket_t</code> brlapi_packet_t::version</h3>
+<h3><code>brlapi_writeArgumentsPacket_t</code> brlapi_packet_t::writeArguments</h3>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAO">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

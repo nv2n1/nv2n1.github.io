@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>asip-status(1) · Linux Manual Pages</title>
+<meta name="description" content="asip-status.pl – Queries AFP servers for their capabilities">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-asip-status/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>asip-status(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> asip-status.pl &#8211; Queries AFP servers for their capabilities </p>
+<h2>SYNOPSIS</h2>
+<p> <code>/usr/bin/asip-status.pl</code> ADDRESS<i>:PORT</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>asip-status.pl</code> is a perl script that sends a FPGetSrvrInfo request to an AFP server at ADDRESS:PORT and displays the results, namely &quot;Machine type&quot;, the server&#8217;s name, supported AFP versions, UAMs and AFP flags, the &quot;server signature&quot; and the network addresses, the server provides AFP services on. </p>
+<p> When you don&#8217;t supply :PORT, then the default AFP port, 548, will be used.</p>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+<code>/usr/bin/asip-status.pl</code> 192.168.21.2
+AFP reply from 192.168.21.2:548
+Flags: 1  Cmd: 3  ID: 57005
+Reply: DSIGetStatus
+Request ID: 57005
+Machine type: Macintosh
+AFP versions: AFPVersion 1.1,AFPVersion 2.0,AFPVersion 2.1,AFP2.2
+UAMs: Cleartxt passwrd,Randnum exchange,2-Way Randnum exchange
+Flags: SupportsCopyFile,SupportsChgPwd,SupportsServerMessages,
+SupportsServerSignature,SupportsTCP/IP,SupportsSuperClient
+Server name: PowerMac 9600/200
+Signature:
+04 c1 6e 59 04 c1 6e 59 04 c1 6e 59 04 c1 6e 59  ..nY..nY..nY..nY
+Network address: 192.168.21.2:548 (tcp/ip address and port)
+Network address: 10.20 (ddp address)
+</pre>
+</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+<code>/usr/bin/asip-status.pl</code> 192.168.21.1:10548
+AFP reply from 192.168.21.1:10548
+Flags: 1  Cmd: 3  ID: 57005
+Reply: DSIGetStatus
+Request ID: 57005
+Machine type: Netatalk
+AFP versions: AFPVersion 1.1,AFPVersion 2.0,AFPVersion 2.1,AFP2.2,AFPX03,
+AFP3.1
+UAMs: Cleartxt passwrd,Randnum exchange,2-Way Randnum exchange,DHCAST128
+Flags: SupportsCopyFile,SupportsServerMessages,SupportsServerSignature,
+SupportsTCP/IP,SupportsSrvrNotifications,SupportsOpenDirectory,
+SupportsUTF8Servername,SupportsSuperClient
+Server name: Fire V480
+Signature:
+83 29 cc 60 83 29 cc 60 83 29 cc 60 83 29 cc 60  .).`.).`.).`.).`
+Network address: 192.168.21.1:10548 (TCP/IP address and port)
+Network address: 65282.142 (ddp address)
+UTF8 Servername: Fire V480
+</pre>
+</dd></dl>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to the Netatalk-devel list &lt;netatalk-devel [at] lists.sourceforge.net&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

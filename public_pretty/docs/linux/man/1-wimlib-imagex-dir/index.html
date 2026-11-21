@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wimlib-imagex-dir(1) · Linux Manual Pages</title>
+<meta name="description" content="wimlib-imagex-dir – Show the files contained in a WIM archive">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-wimlib-imagex-dir/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>wimlib-imagex-dir(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> wimlib-imagex-dir &#8211; Show the files contained in a WIM archive</p>
+<h2>SYNOPSIS</h2>
+<p> <code>wimlib-imagex dir</code> <i>WIMFILE</i> <i>IMAGE</i> [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> Lists the files and directories contained in the specified image of the Windows Imaging (WIM) file <i>WIMFILE</i>. This command is also available as simply <code>wimdir</code> if the appropriate hard link or batch file has been installed. </p>
+<p> <i>IMAGE</i> specifies the image in <i>WIMFILE</i> to show the files of. It may be a 1-based index of an image in <i>WIMFILE</i>, the name of an image in <i>WIMFILE</i>, or the keyword &quot;all&quot; to indicate that files from all images in <i>WIMFILE</i> are to be shown. Use the <code>wimlib-imagex info</code> (1) command to show what images a WIM file contains.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;path</code>=<i>PATH</i></dt>
+<dd> List the files recursively from the <i>PATH</i> directory instead of from the root directory.</dd>
+<dt><code>&#8211;detailed</code></dt>
+<dd> List detailed information about each file.</dd>
+<dt><code>&#8211;one-file-only</code></dt>
+<dd> Show information about one file only. Intended for use with both <code>&#8211;path</code> and <code>&#8211;detailed</code>.</dd>
+<dt><code>&#8211;ref</code>=&quot;<i>GLOB</i>&quot;</dt>
+<dd> File glob of additional WIMs or split WIM parts to reference resources from. This option can be specified multiple times. This option is only useful when <code>&#8211;detailed</code> is also specified.</dd></dl>
+<h2>NOTES</h2>
+<p> <code>wimlib-imagex dir</code> supports split WIMs, but it will only work on the first part of the split WIM. </p>
+<p> DOS names and alternate (named) data streams are not listed unless the <code>&#8211;detailed</code> mode is used.</p>
+<h2>EXAMPLES</h2>
+<p> List all files in the first image of &#8216;boot.wim&#8217;:</p>
+<dl>
+<dt>
+</dt><dd>
+<p> wimlib-imagex dir boot.wim 1</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-info/">wimlib-imagex-info</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

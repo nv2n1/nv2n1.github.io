@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ssh-sk-helper(8) · Linux Manual Pages</title>
+<meta name="description" content="ssh-sk-helper – OpenSSH helper for FIDO authenticator support">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ssh-sk-helper/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ssh-sk-helper(8)</h1>
+
+
+
+
+
+<p><code>ssh-sk-helper</code> &#8211; OpenSSH helper for FIDO authenticator support</p>
+<h2>Synopsis</h2>
+<p><code>ssh-sk-helper</code> [-<code>v</code> ]</p>
+<h2>Description</h2>
+<p><code>ssh-sk-helper</code> is used by ssh-agent1 to access keys provided by a FIDO authenticator. <code>ssh-sk-helper</code> is not intended to be invoked by the user, but from ssh-agent1. A single option is supported:</p>
+<dl>
+<dt><code>-v</code></dt>
+<dd>Verbose mode. Causes <code>ssh-sk-helper</code> to print debugging messages about its progress. This is helpful in debugging problems. Multiple &#8211;<code>v</code> options increase the verbosity. The maximum is 3. Note that ssh-agent1 will automatically pass the &#8211;<code>v</code> flag to <code>ssh-sk-helper</code> when it has itself been placed in debug mode.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-add1, ssh-agent1</p>
+<h2>History</h2>
+<p><code>ssh-sk-helper</code> first appeared in Ox 6.7 .</p>
+<h2>Authors</h2>
+<p>An Damien Miller Aq Mt djm [at] openbsd.org</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

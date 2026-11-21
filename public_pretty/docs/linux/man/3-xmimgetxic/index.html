@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmimgetxic(3) · Linux Manual Pages</title>
+<meta name="description" content="XmImGetXIC — An input manager function that obtains an XIC for a widget">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmimgetxic/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmimgetxic(3)</h1>
+
+
+
+
+
+<p><code>XmImGetXIC</code> &#8212; An input manager function that obtains an XIC for a widget</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/XmIm.h&gt;
+<code>XIC XmImGetXIC</code>(
+<code>Widget widget</code>,
+<code>XmInputPolicy input_policy</code>,
+<code>ArgList args</code>,
+<code>Cardinal num_args</code>);</pre>
+<h2>Description</h2>
+<p><code>XmImGetXIC</code> creates and registers an X Input Context (XIC) with the specified arguments for <i>widget</i>. If <code>XmINHERIT_POLICY</code> is specified for <i>input_policy</i>, a new XIC will be created only if required to by the arguments or by the <code>VendorShell</code> input policy. Any existing XIC registered with <i>widget</i> is unregistered. </p>
+<p> Refer to the <code>VendorShell</code> reference page for further details.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of a widget for which an Input Context is to be created.</dd>
+<dt><i>input_policy</i></dt>
+<dd>Specifies the type of input policy. It accepts the following values:</dd>
+<dl COMPACT>
+<dd>
+</dd><dl COMPACT>
+<dt><code>XmINHERIT_POLICY</code></dt>
+<dd>Inherits the policy from <code>VendorShell</code>.</dd>
+<dt><code>XmPER_WIDGET</code></dt>
+<dd>Creates a new XIC for this widget.</dd>
+<dt><code>XmPER_SHELL</code></dt>
+<dd>Creates a new XIC for the shell, if needed.</dd></dl>
+</dl>
+<dt><i>args</i></dt>
+<dd>Specifies an <code>XtArgList</code> parameter to use for creating the XIC.</dd>
+<dt><i>num_args</i></dt>
+<dd>Specifies the number of arguments in the <i>args</i> parameter.</dd></dl>
+<h2>Return</h2>
+<p>Returns the created XIC. The application is responsible for freeing the returned XIC by calling <code>XmImFreeXIC</code>.</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmimsetxic/">XmImSetXIC</a></code>(3) and <code><a href="/docs/linux/man/3-xmimfreexic/">XmImFreeXIC</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

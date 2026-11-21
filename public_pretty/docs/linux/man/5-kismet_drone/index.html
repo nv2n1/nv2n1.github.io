@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kismet_drone(5) · Linux Manual Pages</title>
+<meta name="description" content="kismet_drone.conf – Wireless sniffing and monitoring drone configuration file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-kismet_drone/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>kismet_drone(5)</h1>
+
+
+
+
+
+<p><code>kismet_drone.conf </code>&#8211; Wireless sniffing and monitoring drone configuration file</p>
+<h2>Description</h2>
+<p>kismet_drone uses a minimalized configuration file, similar in options to the main kismet server configuration file. By default, the drone config is in /usr/local/etc/kismet.conf. A default configuration is included with Kismet but it is likely you will need to modify it to suit your hardware and preferences.</p>
+<h2>Configuration File Format</h2>
+<p>All entries are of the format directive = value</p>
+<h2>Configuration Values</h2>
+<p>&quot;include&quot; (string) Include another config file. </p>
+<p> &quot;servername&quot; (string) Name of this Kismet drone server. This is purely for information in multiple server systems. </p>
+<p> &quot;suiduser&quot; (string) User to switch privileges to after binding to the capture. </p>
+<p> &quot;tcpport&quot; (int) Port to serve streamed packet data </p>
+<p> &quot;allowedhosts&quot; (string) Comma-separated list of IPs or network/mask pairs. Masks can be expressed as dotted quads (/255.255.255.0) or as numbers (/24) </p>
+<p> &quot;maxclient&quot; (int) Maximum number of simultaneously connected clients </p>
+<p> &quot;source&quot; (string) Comma-separated packet source (cardtype,interface,name). Multiple source lines can be defined, refer to the enablesources config line for more details. </p>
+<p> &quot;enablesources&quot; (string) Comma-separated list of source names (defined previously in the source lines) to enable. This is only needed if you wish to selectively enable multiple sources. For example:</p>
+<dl>
+<dd>enablesources=prism </dd>
+<p> enablesources=prism,cisco</dl>
+<h2>Card Types And Multiple Capture Sources</h2>
+<p>kismet_drone supports the same sources and options as the core Kismet server. For details on supported capture types and how to define multiple capture sources, see kismet.conf(5).</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-kismet_drone/">kismet_drone</a></code>(1), <code>kismet.conf</code>(5), <code>kismet_ui.conf</code>(5), <code>gpsmap</code>(1), <code><a href="/docs/linux/man/1-kismet/">kismet</a></code>(1) </p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

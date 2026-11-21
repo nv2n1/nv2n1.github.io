@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>get_constants(3) · Linux Manual Pages</title>
+<meta name="description" content="get_constants — retrieve a list of constant values from a dirfile">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-get_constants/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>get_constants(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> get_constants &#8212; retrieve a list of constant values from a dirfile</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
+<dl>
+<dt> <code>const void *get_constants(DIRFILE *</code><i>dirfile</i><code>, gd_type_t</code> <i>return_type</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>get_constants</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns a read-only list of values of the all <code>CONST</code> type fields defined in the database after type conversion to the data type specified by <i>return_type</i>. Notably, this list does not include /META subfields. For a list of valid symbols to use for <i>return_type</i>, see the <code><a href="/docs/linux/man/3-getdata/">getdata</a></code>(3) man page. </dd>
+<p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). </p>
+<p> The array returned will be de-allocated by a call to <code><a href="/docs/linux/man/3-dirfile_close/">dirfile_close</a></code>(3) and should not be de-allocated by the caller. The list returned should not be assumed to be in any particular order, although it is guaranteed to be in the same order as the list of <code>CONST</code> fields returned by <code><a href="/docs/linux/man/3-get_field_list_by_type/">get_field_list_by_type</a></code>(3). The array is unterminated. The number of values in the array can be obtained from a call to <code><a href="/docs/linux/man/3-get_nfields_by_type/">get_nfields_by_type</a></code>(3). </p>
+<p> The caller may not modify any values in the array, or the array itself. Doing so may cause database corruption. The pointer returned is guaranteed to be valid only until <code>get_constants</code>() is called again with the same arguments, or until the dirfile&#8217;s metadata is modified (by adding, modifying or deleting an entry), or until the array is deallocated by a call to <code><a href="/docs/linux/man/3-dirfile_close/">dirfile_close</a></code>(3). </p>
+<p> A corresponding list of names for these fields may be obtained by calling <code><a href="/docs/linux/man/3-get_field_list_by_type/">get_field_list_by_type</a></code>(3). </p>
+<h2>RETURN VALUE</h2>
+<p> Upon successful completion, <code>get_constants</code>() returns a pointer to an array of values containing the values of all the constants defined in the dirfile database. If no constants are defined in the database, NULL is returned. On error it returns NULL and sets the dirfile error to a non-zero error value. Possible error values are:</p>
+<dl>
+<dt><code>GD_E_ALLOC</code></dt>
+<dd> The library was unable to allocate memory.</dd>
+<dt><code>GD_E_BAD_DIRFILE</code></dt>
+<dd> The supplied dirfile was invalid.</dd>
+<dt><code>GD_E_BAD_TYPE</code></dt>
+<dd> The <i>return_type</i> specified was invalid. The dirfile error may be retrieved by calling <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3). A descriptive error string for the last error encountered can be obtained from a call to <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3).</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5), <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3), <code><a href="/docs/linux/man/3-get_constant/">get_constant</a></code>(3), <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3), <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3), <code><a href="/docs/linux/man/3-get_field_list_by_type/">get_field_list_by_type</a></code>(3), <code><a href="/docs/linux/man/3-get_nfields_by_type/">get_nfields_by_type</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

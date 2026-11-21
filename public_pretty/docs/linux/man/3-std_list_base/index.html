@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>std_list_base(3) · Linux Manual Pages</title>
+<meta name="description" content="std::_List_base&lt; _Tp, _Alloc &gt; –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-std_list_base/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>std_list_base(3)</h1>
+
+
+
+
+
+<p>std::_List_base&lt; _Tp, _Alloc &gt; &#8211;</p>
+<h2>Synopsis</h2>
+<p> Inherited by <code>std::list&lt; _Tp, _Alloc &gt;</code> [protected].</p>
+<h3>Public Types</h3>
+<p>typedef _Alloc <code>allocator_type</code></p>
+<h3>Public Member Functions</h3>
+<p><code>_List_base</code> (const _Node_alloc_type &amp;__a) </p>
+<p> <code>_List_base</code> (<code>_List_base</code> &amp;&amp;__x) </p>
+<p> void <code>_M_clear</code> () </p>
+<p> _Node_alloc_type &amp; <code>_M_get_Node_allocator</code> () noexcept </p>
+<p> const _Node_alloc_type &amp; <code>_M_get_Node_allocator</code> () const noexcept </p>
+<p> _Tp_alloc_type <code>_M_get_Tp_allocator</code> () const noexcept </p>
+<p> void <code>_M_init</code> () </p>
+<p> allocator_type <code>get_allocator</code> () const noexcept</p>
+<h3>Protected Types</h3>
+<p>typedef _Alloc::template<br />
+ rebind&lt; <code>_List_node</code>&lt; _Tp &gt; </p>
+<p>&nbsp;<wbr>&gt;::other&nbsp;<wbr><code>_Node_alloc_type</code>&quot; </p>
+<p> typedef _Alloc::template<br />
+ rebind&lt; _Tp &gt;::other <code>_Tp_alloc_type</code>&quot;</p>
+<h3>Protected Member Functions</h3>
+<p><code>_List_node</code>&lt; _Tp &gt; * <code>_M_get_node</code> () </p>
+<p> void <code>_M_put_node</code> (<code>_List_node</code>&lt; _Tp &gt; *__p)</p>
+<h3>Protected Attributes</h3>
+<p>_List_impl <code>_M_impl</code></p>
+<h2>Detailed Description</h2>
+<h3>template&lt;typename _Tp, typename _Alloc&gt;class std::_List_base&lt; _Tp, _Alloc &gt;</h3>
+<p>See bits/stl_deque.h&#8217;s _Deque_base for an explanation. </p>
+<p> Definition at line 289 of file stl_list.h.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for libstdc++ from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

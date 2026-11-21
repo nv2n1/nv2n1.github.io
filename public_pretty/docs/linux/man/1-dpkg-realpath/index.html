@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dpkg-realpath(1) · Linux Manual Pages</title>
+<meta name="description" content="dpkg-realpath – print the resolved pathname with DPKG_ROOT support">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dpkg-realpath/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dpkg-realpath(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> dpkg-realpath &#8211; print the resolved pathname with DPKG_ROOT support </p>
+<h2>SYNOPSIS</h2>
+<p> <code>dpkg-realpath</code> [<i>option</i>&#8230;] <i>pathname</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>dpkg-realpath</code> is a tool (since dpkg 1.20.1) to resolve a pathname, that takes the <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1) root directory into account, either implicitly from the <font SIZE="-1"><code>DPKG_ROOT</code></font> environment variable or from the command-line <code>&#8211;root</code> or <code>&#8211;instdir</code> options, and returns an absolute <i>pathname</i> relative to the root directory. The root directory must not be prefixed to the <i>pathname</i> to be resolved. </p>
+<p> This is intended to be used by other <code>dpkg</code> helpers, or by maintainer scripts instead of using <code><a href="/docs/linux/man/1-realpath/">realpath</a></code>(1) or <code><a href="/docs/linux/man/1-readlink/">readlink</a></code>(1) to canonicalize pathnames, as these latter commands do not support canonicalization relative to a different root than <i>/</i>.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-z</code>, <code>&#8211;zero</code></dt>
+<dd> Use a <font SIZE="-1">NUL</font> byte to end output lines instead of a new line character (since dpkg 1.20.6).</dd>
+<dt><code>&#8211;instdir</code> <i>directory</i></dt>
+<dd>
+</dd><dt><code>&#8211;root</code> <i>directory</i></dt>
+<dd> Set the root directory to <i>directory</i>, which is the base directory that pathnames get canonicalized against. Defaults to &laquo;<code>/</code>&raquo;.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Show the usage message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version and exit.</dd></dl>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><font SIZE="-1"><code>DPKG_ROOT</code></font></dt>
+<dd> If set and the <code>&#8211;instdir</code> or <code>&#8211;root</code> options have not been specified, it will be used as the filesystem root directory.</dd>
+<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dd> Sets the color mode. The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-realpath/">realpath</a></code>(1), <code><a href="/docs/linux/man/1-readlink/">readlink</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

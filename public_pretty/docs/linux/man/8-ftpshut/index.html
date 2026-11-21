@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ftpshut(8) · Linux Manual Pages</title>
+<meta name="description" content="ftpshut – shut down all proftpd servers at a given time">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ftpshut/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ftpshut(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>ftpshut &#8211; shut down all proftpd servers at a given time</p>
+<h2>Synopsis</h2>
+<p><code>ftpshut</code> [ <code>-R</code> ] [ <code>-l</code><i> min </i> ] [ <code>-d</code><i> min </i> ] <i>time</i> [ <i>warning-message </i> ]</p>
+<h2>Description</h2>
+<p>The <code>ftpshut</code> command provides an automated shutdown procedure that a superuser can use to automagically disconnect current proftpd connections, and deny new connections. The command creates a control file as <code>/etc/shutmsg</code> to inform proftpd processes about an impending shutdown.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>time</code></dt>
+<dd>The time at which the ftp servers will be brought down. It may be the word `now&#8217;, indicating an immediate shutdown, or a future time in one of two formats: <i>+number </i> or <i>HHMM. </i> The first form brings the servers down in <i>number</i> minutes, while the second form indicates an exact time of day, using a 24-hour clock format.</dd>
+<dt><code>-R</code></dt>
+<dd>Instructs ftpshut to <i>remove</i> the /etc/shutmsg file, restoring proftpd to its normal service. If this option is used, this will be the only operation performed by <i>ftpshut</i></dd>
+<dt><code>-l min</code></dt>
+<dd>Specifies the number of minutes before shutdown that new ftp access will be disabled. If the -l option is not specified, a default of 10 minutes (or immediately, if less than 10 minutes remains until shutdown) is used.</dd>
+<dt><code>-d min</code></dt>
+<dd>Specifies the number of minutes before shutdown that existing ftp connections will be disconnected. If the -d option is not specified, a default of 5 minutes (or immediately, if less than 5 minutes remains until shutdown) is used.</dd>
+<dt><code>warning-message</code></dt>
+<dd>Optionally provide a message which will be sent to new connections (if denied) and existing connections (when disconnected). The message can contain the following magic cookies, which will be replaced as follows before being sent to new or existing connections:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>%s</code></dt>
+<dd>time proftpd is being shut down</dd>
+<dt><code>%r</code></dt>
+<dd>time new connections will be denied</dd>
+<dt><code>%d</code></dt>
+<dd>time current connections will be dropped</dd>
+<dt><code>%C</code></dt>
+<dd>current working directory (where applicable)</dd>
+<dt><code>%L</code></dt>
+<dd>local host name (or virtualhost name)</dd>
+<dt><code>%R</code></dt>
+<dd>remote host name</dd>
+<dt><code>%T</code></dt>
+<dd>local time (format Thu Nov 15 17:12:42 1990)</dd>
+<dt><code>%U</code></dt>
+<dd>username given at login time</dd></dl>
+</dl>
+</dl>
+<h2>Caveats</h2>
+<p>Proftpd servers can only be shutdown via ftpshut if a master daemon is running in <i>standalone </i> mode. Servers running in <i>inetd </i> mode will honor the shutdown message file created by ftpshut, however currently running servers may be <a href="/docs/linux/man/2-chroot/">chroot</a>(2)ed, and unable to read the shutdown message control file. </p>
+<p> It is possible to set an absolute shutdown time which is <code>earlier </code> than the current time. If this is the case, proftpd will not shutdown until the indicated time on the following day.</p>
+<h2>Files</h2>
+<p><code>/usr/sbin/ftpshut</code><br />
+ <code>/etc/shutmsg</code></p>
+<h2>Authors</h2>
+<p>ProFTPD is written and maintained by a number of people, full credits can be found on <code><a rel="nofollow" href="http://www.proftpd.org/credits.html">http://www.proftpd.org/credits.html</a></code></p>
+<h2>See Also</h2>
+<p><code>inetd(8),</code><a href="/docs/linux/man/1-ftp/">ftp</a>(1),<code><a href="/docs/linux/man/8-proftpd/">proftpd</a>(8),</code><a href="/docs/linux/man/1-ftpwho/">ftpwho</a>(1),<code><a href="/docs/linux/man/1-ftpcount/">ftpcount</a>(1)</code> Full documentation on ProFTPD, including configuration and FAQs, is available at <code><a rel="nofollow" href="http://www.proftpd.org/">http://www.proftpd.org/</a></code> For help/support, try the ProFTPD mailing lists, detailed on <code><a rel="nofollow" href="http://www.proftpd.org/lists.html">http://www.proftpd.org/lists.html</a></code> Report bugs at <code><a rel="nofollow" href="http://bugs.proftpd.org/">http://bugs.proftpd.org/</a></code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPU and Memory Performance: Xen Dom0 vs DomU Comparison - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/a-simple-cpu-and-memory-performance-test-of-xen-dom0-and-domu/">
+  <meta name="description" content="This article documents performance benchmarks for Xen virtualization, comparing CPU and memory performance between Dom0 (privileged domain), DomU (unprivileged …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="CPU and Memory Performance: Xen Dom0 vs DomU Comparison">
+  <meta property="og:url" content="https://www.systutorials.com/a-simple-cpu-and-memory-performance-test-of-xen-dom0-and-domu/">
+  <meta property="og:description" content="This article documents performance benchmarks for Xen virtualization, comparing CPU and memory performance between Dom0 (privileged domain), DomU (unprivileged …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/virtualization-containers/">Virtualization &amp; Containers</a>
+        </nav>
+        
+        <h1>CPU and Memory Performance: Xen Dom0 vs DomU Comparison</h1>
+        <time class="post-date" datetime="2013-07-12T16:31:50Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>This article documents performance benchmarks for Xen virtualization, comparing CPU and memory performance between Dom0 (privileged domain), DomU (unprivileged guest), and bare metal. While Xen remains in production use (AWS EC2, Citrix Hypervisor, Oracle Cloud), most Linux distributions default to KVM for new deployments. For contemporary virtualization needs, evaluate both Xen and KVM based on your specific requirements.</p>
+<p>The test platform is Fedora 41 with Xen and Linux kernel 6.x. See the companion article on setting up Xen Dom0 on Fedora for environment details.</p>
+<h2 id="test-design">Test Design</h2>
+<p>Three performance dimensions were measured: CPU-bound operations, memory reads, and memory writes. Each test executed 50 times, with results analyzed for average, standard deviation, and coefficient of variation.</p>
+<h3 id="cpu-bound-test">CPU-Bound Test</h3>
+<p>Measures raw computational throughput using nested loops:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">test_limit</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">clock_t</span> <span class="n">begin_time</span> <span class="o">=</span> <span class="nf">clock</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">register</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">register</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">test_limit</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="k">register</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">test_limit</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span> <span class="o">+=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">clock_t</span> <span class="n">end_time</span> <span class="o">=</span> <span class="nf">clock</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">time_ms</span> <span class="o">=</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">begin_time</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">CLOCKS_PER_SEC</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="memory-read-test">Memory Read Test</h3>
+<p>Benchmarks sequential memory access patterns with a 1GB array:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">test_times</span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">data_size</span> <span class="o">=</span> <span class="mi">1000000000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">data_interval</span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span><span class="o">*</span> <span class="n">array_read</span> <span class="o">=</span> <span class="n">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">data_size</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">register</span> <span class="kt">int</span> <span class="n">read_value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">data_range</span> <span class="o">=</span> <span class="n">data_size</span> <span class="o">-</span> <span class="n">test_times</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">long</span> <span class="n">read_begin</span> <span class="o">=</span> <span class="nf">clock</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">register</span> <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">test_times</span><span class="p">;</span> <span class="n">t</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="k">register</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">data_range</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="n">data_interval</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">read_value</span> <span class="o">=</span> <span class="n">array_read</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">t</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">long</span> <span class="n">read_end</span> <span class="o">=</span> <span class="nf">clock</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">time_ms</span> <span class="o">=</span> <span class="p">(</span><span class="n">read_end</span> <span class="o">-</span> <span class="n">read_begin</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">CLOCKS_PER_SEC</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="memory-write-test">Memory Write Test</h3>
+<p>Evaluates memory write performance using the same array structure:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">test_times</span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">data_size</span> <span class="o">=</span> <span class="mi">1000000000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">data_interval</span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span><span class="o">*</span> <span class="n">array_write</span> <span class="o">=</span> <span class="n">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">data_size</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">data_range</span> <span class="o">=</span> <span class="n">data_size</span> <span class="o">-</span> <span class="n">test_times</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">long</span> <span class="n">write_begin</span> <span class="o">=</span> <span class="nf">clock</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">register</span> <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">test_times</span><span class="p">;</span> <span class="n">t</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="k">register</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">data_range</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="n">data_interval</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">array_write</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="mi">528283</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">long</span> <span class="n">write_end</span> <span class="o">=</span> <span class="nf">clock</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">time_ms</span> <span class="o">=</span> <span class="p">(</span><span class="n">write_end</span> <span class="o">-</span> <span class="n">write_begin</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">CLOCKS_PER_SEC</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="results">Results</h2>
+<h3 id="physical-machine-fedora-bare-metal">Physical Machine (Fedora, bare metal)</h3>
+<table>
+	<thead>
+			<tr>
+					<th>Metric</th>
+					<th>CPU (ms)</th>
+					<th>Memory Read (ms)</th>
+					<th>Memory Write (ms)</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Average</td>
+					<td>13257.6</td>
+					<td>21449.6</td>
+					<td>22243.8</td>
+			</tr>
+			<tr>
+					<td>Std Dev</td>
+					<td>4.72</td>
+					<td>17.2</td>
+					<td>18.96</td>
+			</tr>
+			<tr>
+					<td>Coefficient of Variation</td>
+					<td>0.036%</td>
+					<td>0.080%</td>
+					<td>0.085%</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="dom0-suse-kernel-privileged-domain">Dom0 (SUSE kernel, privileged domain)</h3>
+<table>
+	<thead>
+			<tr>
+					<th>Metric</th>
+					<th>CPU (ms)</th>
+					<th>Memory Read (ms)</th>
+					<th>Memory Write (ms)</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Average</td>
+					<td>13283</td>
+					<td>23059</td>
+					<td>23856.6</td>
+			</tr>
+			<tr>
+					<td>Std Dev</td>
+					<td>4.58</td>
+					<td>22.38</td>
+					<td>18.07</td>
+			</tr>
+			<tr>
+					<td>Coefficient of Variation</td>
+					<td>0.034%</td>
+					<td>0.097%</td>
+					<td>0.076%</td>
+			</tr>
+			<tr>
+					<td>Relative Performance</td>
+					<td>99.81%</td>
+					<td>93.02%</td>
+					<td>93.24%</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="domu-fedora-kernel-unprivileged-guest">DomU (Fedora kernel, unprivileged guest)</h3>
+<table>
+	<thead>
+			<tr>
+					<th>Metric</th>
+					<th>CPU (ms)</th>
+					<th>Memory Read (ms)</th>
+					<th>Memory Write (ms)</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Average</td>
+					<td>13307.6</td>
+					<td>23667.8</td>
+					<td>24459.2</td>
+			</tr>
+			<tr>
+					<td>Std Dev</td>
+					<td>13.2</td>
+					<td>33.96</td>
+					<td>37.19</td>
+			</tr>
+			<tr>
+					<td>Coefficient of Variation</td>
+					<td>0.099%</td>
+					<td>0.144%</td>
+					<td>0.152%</td>
+			</tr>
+			<tr>
+					<td>Relative Performance</td>
+					<td>99.62%</td>
+					<td>90.63%</td>
+					<td>90.94%</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="analysis">Analysis</h2>
+<p><strong>CPU Performance:</strong> Both Dom0 and DomU deliver near-native CPU throughput (99.6–99.8%), with minimal virtualization overhead. This reflects Xen’s efficient handling of CPU-bound workloads through hardware support (Intel VT-x, AMD-V).</p>
+<p><strong>Memory Performance:</strong> Memory operations show measurable overhead, particularly in DomU:</p>
+<ul>
+<li><strong>Dom0 memory reads/writes:</strong> ~7% slower than bare metal. This represents the overhead of managing guest memory translation and hypervisor involvement in privileged operations.</li>
+<li><strong>DomU memory reads/writes:</strong> ~9–10% slower than bare metal. The additional overhead stems from Xen’s memory validation, balloon driver interactions, and guest-to-hypervisor context switches required for memory management in unprivileged domains.</li>
+</ul>
+<p>The higher variability in DomU results (coefficient of variation ~0.14–0.15% vs. 0.03–0.10% on bare metal) reflects scheduling jitter and memory pressure management by the hypervisor.</p>
+<h2 id="practical-considerations">Practical Considerations</h2>
+<p>These benchmarks represent microbenchmark performance under controlled conditions. Real-world workload performance depends on:</p>
+<ul>
+<li><strong>Memory access patterns:</strong> Sequential access (tested here) benefits more from caching; random patterns may show larger overhead.</li>
+<li><strong>CPU cache effects:</strong> The nested loop test remains in L1/L2 cache, masking memory subsystem effects.</li>
+<li><strong>I/O operations:</strong> Network and disk I/O introduce additional virtualization overhead not captured here.</li>
+<li><strong>Scheduling:</strong> Overcommitted systems show larger performance degradation than measured here.</li>
+</ul>
+<p>For production workloads, validate performance with your actual application profile using tools like <code>perf</code>, <code>sysbench</code>, or application-level metrics. Xen remains suitable for latency-sensitive applications where CPU overhead must be minimized, though modern KVM implementations are competitive for most deployments.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

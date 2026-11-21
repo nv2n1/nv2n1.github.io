@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>e2label(8) · Linux Manual Pages</title>
+<meta name="description" content="e2label – Change the label on an ext2/ext3/ext4 file system">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-e2label/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>e2label(8)</h1>
+
+
+
+
+
+<p>e2label &#8211; Change the label on an ext2/ext3/ext4 file system</p>
+<h2>Synopsis</h2>
+<p><code>e2label</code> <i>device</i> [ <i>volume-label</i> ]</p>
+<h2>Description</h2>
+<p><code>e2label</code> will display or change the volume label on the ext2, ext3, or ext4 file system located on <i>device.</i> If the optional argument <i>volume-label</i> is not present, <code>e2label</code> will simply display the current volume label. If the optional argument <i>volume-label</i> is present, then <code>e2label</code> will set the volume label to be <i>volume-label</i>. Ext2 volume labels can be at most 16 characters long; if <i>volume-label</i> is longer than 16 characters, <code>e2label</code> will truncate it and print a warning message. It is also possible to set the volume label using the <code>-L</code> option of <code><a href="/docs/linux/man/8-tune2fs/">tune2fs</a></code>(8). </p>
+<h2>Author</h2>
+<p><code>e2label</code> was written by Theodore Ts&#8217;o (tytso [at] mit.edu).</p>
+<h2>Availability</h2>
+<p><code>e2label</code> is part of the e2fsprogs package and is available from <a rel="nofollow" href="http://e2fsprogs.sourceforge.net.">http://e2fsprogs.sourceforge.net.</a></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-mke2fs/">mke2fs</a></code>(8), <code><a href="/docs/linux/man/8-tune2fs/">tune2fs</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

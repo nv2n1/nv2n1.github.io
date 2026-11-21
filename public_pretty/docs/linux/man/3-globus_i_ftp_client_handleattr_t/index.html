@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_i_ftp_client_handleattr_t(3) · Linux Manual Pages</title>
+<meta name="description" content="globus_i_ftp_client_handleattr_t –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_i_ftp_client_handleattr_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_i_ftp_client_handleattr_t(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> globus_i_ftp_client_handleattr_t &#8211; </p>
+<p> Handle attributes.</p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;globus_i_ftp_client.h&gt;</p>
+<h3>Data Fields</h3>
+<p> globus_bool_t <code>cache_all</code> </p>
+<p> globus_bool_t <code>rfc1738_url</code> </p>
+<p> globus_bool_t <code>gridftp2</code> </p>
+<p> globus_list_t * <code>url_cache</code> </p>
+<p> globus_list_t * <code>plugins</code> </p>
+<h2>Detailed Description</h2>
+<p> Handle attributes. </p>
+<p> <code>Examples: </code> <code>globus_ftp_client_debug_plugin.example</code>, and <code>globus_ftp_client_restart_plugin.example</code>.</p>
+<h2>Field Documentation</h2>
+<h3>globus_bool_t globus_i_ftp_client_handleattr_t::cache_all</h3>
+<p> Cache all connections. </p>
+<p> This attribute is used to cause the ftp client library to keep all control (and where possible) data connections open between ftp operations.</p>
+<h3>globus_bool_t globus_i_ftp_client_handleattr_t::gridftp2</h3>
+<p> Use GRIDFTP2 if supported by the server</p>
+<h3>globus_list_t* globus_i_ftp_client_handleattr_t::plugins</h3>
+<p> List of plugin structures. </p>
+<p> This list contains all plugins which can be associated with an ftp client handle. These plugins will be notified when operations are done using a handle associated with them.</p>
+<h3>globus_bool_t globus_i_ftp_client_handleattr_t::rfc1738_url</h3>
+<p> parse all URLs for caching with RFC1738 compliant parser</p>
+<h3>globus_list_t* globus_i_ftp_client_handleattr_t::url_cache</h3>
+<p> List of cached URLs. </p>
+<p> This list is used to manage the URL cache which is manipulated by the user calling <code>globus_ftp_client_handle_cache_url_state()</code> and <code>globus_ftp_client_handle_flush_url_state()</code>. </p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

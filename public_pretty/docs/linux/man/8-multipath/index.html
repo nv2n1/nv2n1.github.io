@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>multipath(8) · Linux Manual Pages</title>
+<meta name="description" content="multipath – Device mapper target autoconfig">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-multipath/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>multipath(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>multipath &#8211; Device mapper target autoconfig</p>
+<h2>Synopsis</h2>
+<p><code>multipath</code> [<code>-v&nbsp;<wbr></code><i>verbosity</i>] [<code>-b&nbsp;<wbr></code><i>bindings_file</i>] [<code>-d</code>] [<code>-h</code>|<code>-l</code>|<code>-ll</code>|<code>-f</code>|<code>-t</code>|<code>-F</code>|<code>-B</code>|<code>-c</code>|<code>-q</code>|<code>-r</code>|<code>-r</code>|<code>-a</code>|<code>-A</code>|<code>-w</code>|<code>]</code> [<code>-p&nbsp;<wbr></code><code>failover</code>|<code>multibus</code>|<code>group_by_serial</code>|<code>group_by_prio</code>|<code>group_by_node_name</code>] [<code>device</code>]</p>
+<h2>Description</h2>
+<p><code>multipath</code> is used to detect multiple paths to devices for fail-over or performance reasons and coalesces them</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-v level</code></dt>
+<dd>verbosity, print all paths and multipaths</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>0</code></dt>
+<dd>no output</dd>
+<dt><code>1</code></dt>
+<dd>print the created or updated multipath names only, for use to feed other tools like kpartx</dd>
+<dt><code>2 +</code></dt>
+<dd>print all info : detected paths, coalesced paths (ie multipaths) and device maps</dd></dl>
+</dl>
+<dt><code>-h</code></dt>
+<dd>print usage text</dd>
+<dt><code>-d</code></dt>
+<dd>dry run, do not create or update devmaps</dd>
+<dt><code>-l</code></dt>
+<dd>show the current multipath topology from information fetched in sysfs and the device mapper</dd>
+<dt><code>-ll</code></dt>
+<dd>show the current multipath topology from all available information (sysfs, the device mapper, path checkers &#8230;)</dd>
+<dt><code>-f</code></dt>
+<dd>flush a multipath device map specified as parameter, if unused</dd>
+<dt><code>-F</code></dt>
+<dd>flush all unused multipath device maps</dd>
+<dt><code>-t</code></dt>
+<dd>print internal hardware table to stdout</dd>
+<dt><code>-r</code></dt>
+<dd>force devmap reload</dd>
+<dt><code>-i</code></dt>
+<dd>ignore wwids file when processing devices</dd>
+<dt><code>-B</code></dt>
+<dd>treat the bindings file as read only</dd>
+<dt><code>-b bindings_file</code></dt>
+<dd>set user_friendly_names bindings file location. The default is /etc/multipath/bindings</dd>
+<dt><code>-c</code></dt>
+<dd>check if a block device should be a path in a multipath device</dd>
+<dt><code>-q</code></dt>
+<dd>allow device tables with queue_if_no_path when multipathd is not running</dd>
+<dt><code>-a</code></dt>
+<dd>add the wwid for the specified device to the wwids file</dd>
+<dt><code>-A</code></dt>
+<dd>add wwids from any kernel command line mpath.wwid parameters to the wwids file</dd>
+<dt><code>-w</code></dt>
+<dd>remove the wwid for the specified device from the wwids file</dd>
+<dt><code>-W</code></dt>
+<dd>reset the wwids file to only include the current multipath devices</dd>
+<dt><code>-T tm:valid</code></dt>
+<dd>check if <i>tm</i> matches the multipathd configuration timestamp value from <i>/run/multipathd/timestamp</i> If so, return success if <i>valid</i> is 1. Otherwise, return failure. If the timestamp doesn&#8217;t match continue with multipath execution. This option is designed to be used with -c by the udev rules.</dd>
+<dt><code>-p</code><i> policy</i></dt>
+<dd>force new maps to use the specified policy:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>failover</code></dt>
+<dd>1 path per priority group</dd>
+<dt><code>multibus</code></dt>
+<dd>all paths in 1 priority group</dd>
+<dt><code>group_by_serial</code></dt>
+<dd>1 priority group per serial</dd>
+<dt><code>group_by_prio</code></dt>
+<dd>1 priority group per priority value. Priorities are determined by callout programs specified as a global, per-controller or per-multipath option in the configuration file</dd>
+<dt><code>group_by_node_name</code></dt>
+<dd>1 priority group per target node name. Target node names are fetched in /sys/class/fc_transport/target*/node_name.</dd>
+<dt></dt></dl>
+</dl>
+<dd>Existing maps are not modified.</dd>
+<dt><code>device</code></dt>
+<dd>update only the devmap the path pointed by <i>device</i> is in. <i>device</i> is in the /dev/sdb (as shown by udev in the $DEVNAME variable) or major:minor format. <i>device</i> may alternatively be a multipath mapname</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-multipathd/">multipathd</a></code>(8), <code><a href="/docs/linux/man/5-multipath-conf/">multipath.conf</a></code>(5), <code><a href="/docs/linux/man/8-kpartx/">kpartx</a></code>(8), <code>udev</code>(8), <code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8) <code>hotplug</code>(8)</p>
+<h2>Authors</h2>
+<p><code>multipath</code> was developed by Christophe Varoqui, &lt;christophe.varoqui [at] opensvc.com&gt; and others.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

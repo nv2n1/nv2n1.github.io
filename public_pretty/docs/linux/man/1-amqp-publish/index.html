@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>amqp-publish(1) · Linux Manual Pages</title>
+<meta name="description" content="amqp-publish – Publish a message on an AMQP server">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-amqp-publish/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>amqp-publish(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> amqp-publish &#8211; Publish a message on an AMQP server </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>amqp-publish</code> [<i>OPTION</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>Publishes a message to an exchange on an AMQP server. Options allow the various properties of the message and parameters of the AMQP <code>basic.publish</code> method to be specified. </dd>
+<p> By default, the message body is read from standard input. Alternatively, the <code>-b</code> option allows the message body to be provided as part of the command.</p>
+<h2>OPTIONS</h2>
+<p> <code>-e</code>, <code>&#8211;exchange</code>=<i>exchange name</i></p>
+<dl>
+<dt>
+</dt><dd> The name of the exchange to publish to. If omitted, the default exchange (also known as the nameless exchange) is used.</dd></dl>
+<p> <code>-r</code>, <code>&#8211;routing-key</code>=<i>routing key</i></p>
+<dl>
+<dt>
+</dt><dd> The routing key to publish with. If omitted, an empty routing key is assumed. A routing key must be specified when publishing to the default exchange; in that case, accoding to the AMQP specification, the routing key corresponds to a queue name.</dd></dl>
+<p> <code>-p</code>, <code>&#8211;persistent</code></p>
+<dl>
+<dt>
+</dt><dd> Use the persistent delivery mode. Without this option, non-persistent delivery is used.</dd></dl>
+<p> <code>-C</code>, <code>&#8211;content-type</code>=<i>MIME type</i></p>
+<dl>
+<dt>
+</dt><dd> Specifies the content-type property for the message. If omitted, the content-type property is not set on the message.</dd></dl>
+<p> <code>-E</code>, <code>&#8211;content-encoding</code>=<i>content coding</i></p>
+<dl>
+<dt>
+</dt><dd> Specifies the content-encoding property for the message. If omitted, the content-encoding property is not set on the message.</dd></dl>
+<p> <code>-b</code>, <code>&#8211;body</code>=<i>message body</i></p>
+<dl>
+<dt>
+</dt><dd> Specifies the message body. If omitted, the message body is read from standard input.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Send a short message, consisting of the word &#8220;Hello&#8221; to the queue &#8220;myqueue&#8221; via the default exchange:</p>
+<dl>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ <code>amqp-publish -r myqueue -b Hello</code>
+</pre>
+</dd></dl>
+</dl>
+<p> Send some XML data from a file to the exchange &#8220;events&#8221;, with persistent delivery mode, setting the content-type property on the message to make the data format explicit:</p>
+<dl>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ <code>amqp-publish -e events -p -C text/xml &lt;event.xml</code>
+</pre>
+</dd></dl>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/7-librabbitmq-tools/">librabbitmq-tools</a></code>(7) describes connection-related options common to all the RabbitMQ C Client tools.</p>
+<h2>AUTHOR</h2>
+<p> <code>The RabbitMQ Team &lt;</code><code>m[blue]&lt;info [at] rabbitmq.com&gt;</code>m[]<code>&gt;</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

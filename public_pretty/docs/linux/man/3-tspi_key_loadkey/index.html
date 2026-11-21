@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tspi_key_loadkey(3) · Linux Manual Pages</title>
+<meta name="description" content="Tspi_Key_LoadKey – load a key into the TPM">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tspi_key_loadkey/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tspi_key_loadkey(3)</h1>
+
+
+
+
+
+<p>TCG Software Stack Developer&#8217;s Reference<br />
+ </center></p>
+<h2>Name</h2>
+<p>Tspi_Key_LoadKey &#8211; load a key into the TPM </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tss/platform.h&gt;</code>
+<code>#include &lt;tss/tcpa_defines.h&gt;</code>
+<code>#include &lt;tss/tcpa_typedef.h&gt;</code>
+<code>#include &lt;tss/tcpa_struct.h&gt;</code>
+<code>#include &lt;tss/tss_typedef.h&gt;</code>
+<code>#include &lt;tss/tss_structs.h&gt;</code>
+<code>#include &lt;tss/tspi.h&gt;</code>
+<code>TSS_RESULT Tspi_Key_LoadKey(TSS_HKEY </code><i>hKey</i><code>, TSS_HKEY </code><i>hUnwrappingKey</i><code>);</code></pre>
+<h2>Description</h2>
+<p><code>Tspi_Key_LoadKey</code> loads the key referenced by <i>hKey</i> into the TPM. </p>
+<h2>Parameters</h2>
+<h3>hKey</h3>
+<p>The <i>hKey</i> parameter is the handle of the key object to load.</p>
+<h3>hUnwrappingKey</h3>
+<p>The <i>hUnwrappingKey</i> parameter is the handle of the key which should be used to unwrap the key addressed by <i>hKey</i>. </p>
+<h2>Return Codes</h2>
+<p><code>Tspi_Key_LoadKey</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
+<dl COMPACT>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd>Either <i>hKey</i> or <i>hUnwrappingKey</i> is not a valid handle. </dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An internal SW error has been detected. </dd>
+<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dd>One or more parameters is bad. </dd>
+</dl>
+<h2>Conforming To</h2>
+<p><code>Tspi_Key_LoadKey</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-tspi_key_unloadkey/">Tspi_Key_UnloadKey</a></code>(3), <code><a href="/docs/linux/man/3-tspi_key_getpubkey/">Tspi_Key_GetPubKey</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

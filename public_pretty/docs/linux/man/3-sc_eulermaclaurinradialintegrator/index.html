@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_eulermaclaurinradialintegrator(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::EulerMaclaurinRadialIntegrator –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_eulermaclaurinradialintegrator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_eulermaclaurinradialintegrator(3)</h1>
+
+
+
+
+
+<p>sc::EulerMaclaurinRadialIntegrator &#8211; </p>
+<p> An implementation of a radial integrator using the Euler-Maclaurin weights and grid points.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;integrator.h&gt;</code></pre>
+<p> Inherits <code>sc::RadialIntegrator</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>EulerMaclaurinRadialIntegrator</code> (int i) </p>
+<p> <code>EulerMaclaurinRadialIntegrator</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)<br />
+ <i>Constructs a </i><code>EulerMaclaurinRadialIntegrator</code> from <code>KeyVal</code> input.<br />
+ <code>EulerMaclaurinRadialIntegrator</code> (<code>StateIn</code> &amp;) </p>
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+ int <code>nr</code> () const </p>
+<p> double <code>radial_value</code> (int ir, int nr, double radii, double &amp;multiplier) </p>
+<p> void <code>print</code> (std::ostream &amp;=ExEnv::out0()) const<br />
+ <i>Print the object. </i></p>
+<h2>Detailed Description</h2>
+<p>An implementation of a radial integrator using the Euler-Maclaurin weights and grid points.</p>
+<h2>Constructor &amp; Destructor Documentation</h2>
+<h3>sc::EulerMaclaurinRadialIntegrator::EulerMaclaurinRadialIntegrator (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
+<p>Constructs a <code>EulerMaclaurinRadialIntegrator</code> from <code>KeyVal</code> input. The nr keyword gives the number of radial integration points. The default is 75.</p>
+<h2>Member Function Documentation</h2>
+<h3>void sc::EulerMaclaurinRadialIntegrator::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>
+<p>Save the base classes (with save_data_state) and the members in the same order that the <code>StateIn</code> CTOR initializes them. This must be implemented by the derived class if the class has data. </p>
+<p> Reimplemented from <code>sc::RadialIntegrator</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

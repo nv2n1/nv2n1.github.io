@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gpsdctl(8) · Linux Manual Pages</title>
+<meta name="description" content="gpsdctl – tool for sending commands to gpsd over its control socket">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-gpsdctl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>gpsdctl(8)</h1>
+
+
+
+
+
+<p>gpsdctl &#8211; tool for sending commands to gpsd over its control socket</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>gpdsctl</code> <i>action</i> <i>device</i></dt></dl>
+<h2>Description</h2>
+<dd>This is a tool for sending an instance of gpsd commands over its control socket to add or remove devices from the daemon&#8217;s device list. It is not intended to be called by users, but rather by the Linux hotplug system and similar facilities. </dd>
+<p> The action argument may be &quot;add&quot; or &quot;remove&quot;. If no daemon instance is running when an add is requested, this program will launch one. </p>
+<p> The &quot;device&quot; argument should be the pathname of a device. A device on the list will be opened to read sensor data whenever a client requests a watch. </p>
+<p> Two environment variables are interpreted. <code>GPSD_SOCKET</code> sets the location of the control socket. It defaults to /var/run/gpsd.sock if the effective user ID of this program is root, /tmp/gpsd.sock otherwise. </p>
+<p> <code>GPSD_OPTIONS</code> may be a list of options to be passed to gpsd when this tool launches it. It defaults to an empty string.</p>
+<h2>Return Values</h2>
+<p>1 if the action was unknown or the write to the control socket failed, 0 otherwise</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8), <code><a href="/docs/linux/man/1-gpsctl/">gpsctl</a></code>(1), <code><a href="/docs/linux/man/1-gps/">gps</a></code>(1), <code><a href="/docs/linux/man/3-libgps/">libgps</a></code>(3), <code><a href="/docs/linux/man/3-libgpsd/">libgpsd</a></code>(3), <code><a href="/docs/linux/man/1-gpsprof/">gpsprof</a></code>(1), <code><a href="/docs/linux/man/1-gpsfake/">gpsfake</a></code>(1).</p>
+<h2>Author</h2>
+<p>Eric S. Raymond &lt;esr [at] thyrsus.com&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

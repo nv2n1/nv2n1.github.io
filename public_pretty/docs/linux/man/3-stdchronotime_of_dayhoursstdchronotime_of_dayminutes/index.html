@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdchronotime_of_dayhoursstdchronotime_of_dayminutes(3) · Linux Manual Pages</title>
+<meta name="description" content="std::chrono::time_of_day&lt;Duration&gt;::hours,std::chrono::time_of_day&lt;Duration&gt;::minutes, – std::chrono::time_of_day&lt;Duration&gt;::hours,std::chrono::time_of_day&lt;Duration&gt;::minutes,">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdchronotime_of_dayhoursstdchronotime_of_dayminutes/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdchronotime_of_dayhoursstdchronotime_of_dayminutes(3)</h1>
+
+
+
+
+
+<p>std::chrono::time_of_day&lt;Duration&gt;::hours,std::chrono::time_of_day&lt;Duration&gt;::minutes, &#8211; std::chrono::time_of_day&lt;Duration&gt;::hours,std::chrono::time_of_day&lt;Duration&gt;::minutes,</p>
+<h2>Synopsis</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>std::chrono::time_of_day&lt;Duration&gt;::subseconds<br />
+member of all specializations<br />
+constexpr std::chrono::hours hours()&nbsp;<wbr>const noexcept;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>(1)</code><br />
+member of all specializations except time_of_day&lt;std::chrono::hours&gt;<br />
+constexpr std::chrono::minutes minutes()&nbsp;<wbr>const noexcept;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>(2)</code><br />
+member only of the time_of_day&lt;std::chrono::seconds&gt;&nbsp;<wbr>and<br />
+time_of_day&lt;std::chrono::duration&lt;Rep, Period&gt;&gt;&nbsp;<wbr>specializations<br />
+constexpr std::chrono::seconds seconds()&nbsp;<wbr>const noexcept;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>(3)</code><br />
+member only of the time_of_day&lt;std::chrono::duration&lt;Rep, Period&gt;&gt;&nbsp;<wbr>partial<br />
+specialization<br />
+constexpr precision subseconds()&nbsp;<wbr>const noexcept;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>(4)</code><br />
+Obtains the components of the stored&nbsp;<wbr>&quot;broken down&quot;&nbsp;<wbr>time. </p>
+<h2>Return value</h2>
+<p>Let since_midnight be the stored duration:<br />
+1)&nbsp;<wbr>the integral number of hours since_midnight is after 00:00:00.<br />
+2)&nbsp;<wbr>the integral number of minutes since_midnight is after&nbsp;<wbr>(00:00:00&nbsp;<wbr>+&nbsp;<wbr>hours()).<br />
+3)&nbsp;<wbr>the integral number of seconds since_midnight is after&nbsp;<wbr>(00:00:00&nbsp;<wbr>+&nbsp;<wbr>hours()&nbsp;<wbr>+<br />
+minutes()).<br />
+4)&nbsp;<wbr>the integral number of fractional seconds since_midnight is after&nbsp;<wbr>(00:00:00&nbsp;<wbr>+<br />
+hours()&nbsp;<wbr>+&nbsp;<wbr>minutes()&nbsp;<wbr>+&nbsp;<wbr>seconds()). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

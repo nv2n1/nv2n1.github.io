@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gpsctl(1) · Linux Manual Pages</title>
+<meta name="description" content="gpsctl – control the modes of a GPS">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gpsctl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gpsctl(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> gpsctl &#8211; control the modes of a GPS </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>gpsctl</code> [-h] [-b | -n] [-x&nbsp;<wbr><i>control</i>] [-e] [-f] [-l] [-s&nbsp;<wbr><i>speed</i>] [-t&nbsp;<wbr><i>devicetype</i>] [-D&nbsp;<wbr><i>debuglevel</i>] [-V] [<i>serial-port</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>gpsctl can switch a dual-mode GPS between NMEA and vendor-binary modes. It can also be used to set the device baudrate. Note: Not all devices have these capabilities. </dd>
+<p> If you have only one GPS attached to your machine, and gpsd is running, it is not necessary to specify the device; gpsctl does its work through gpsd, which will locate it for you. </p>
+<p> When gpsd is not running, the device specification is required, and you will need to be running as root or be a member of the device&#8217;s owning group in order to have write access to the device. On many Unix variants the owning group will be named &#8216;dialout&#8217;. </p>
+<p> The program accepts the following options: </p>
+<p> -b</p>
+<dl>
+<dt>
+</dt><dd> Put the GPS into native (binary) mode.</dd></dl>
+<p> -c</p>
+<dl>
+<dt>
+</dt><dd> Change the GPS&#8217;s cycle time. Units are seconds. Note, most GPSes have a fixed cycle time of 1 second.</dd></dl>
+<p> -e</p>
+<dl>
+<dt>
+</dt><dd> Generate the packet from any other arguments specified and ship it to standard output instead of the device. This switch can be used with the <code>-t</code> option without specifying a device. Note: the packet data for a binary prototype will be raw, not ASCII-ized in any way.</dd></dl>
+<p> -f</p>
+<dl>
+<dt>
+</dt><dd> Force low-level access (not through the daemon).</dd></dl>
+<p> -l</p>
+<dl>
+<dt>
+</dt><dd> List a table showing which option switches can be applied to which device types, and exit.</dd></dl>
+<p> -n</p>
+<dl>
+<dt>
+</dt><dd> Put GPS into NMEA mode.</dd></dl>
+<p> -s</p>
+<dl>
+<dt>
+</dt><dd> Set the baud rate at which the GPS emits packets. </dd>
+<p> Use this option with caution. On USB and Bluetooth GPSes it is also possible for serial mode setting to fail either because the serial adaptor chip does not support non-8N1 modes or because the device firmware does not properly synchronize the serial adaptor chip with the UART on the GPS chipset when the speed changes. These failures can hang your device, possibly requiring a GPS power cycle or (in extreme cases) physically disconnecting the NVRAM backup battery.</dl>
+<p> -t</p>
+<dl>
+<dt>
+</dt><dd> Force the device type.</dd></dl>
+<p> -x</p>
+<dl>
+<dt>
+</dt><dd> Send a specified control string to the GPS; gpsctl will provide packet headers and trailers and checksum as appropriate for binary packet types, and whatever checksum and trailer is required for text packet types. (You must include the leading $ for NMEA packets.) When sending to a UBX device, the first two bytes of the string supplied will become the message class and type, and the remainder the payload. When sending to a Navcom NCT or Trimble TSIP device, the first byte is interpreted as the command ID and the rest as payload. When sending to a Zodiac device, the first two bytes are used as a message ID of type little-endian short, and the remainder as payload in byte pairs interpreted as little-endian short. For all other supported binary GPSes (notably including SiRF) the string is taken as the entire message payload and wrapped with appropriate header, trailer and checksum bytes. C-style backslash escapes in the string, notably 
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_xio_gridftp_set_num_streams(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_xio_gridftp_set_num_streams/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_xio_gridftp_set_num_streams(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Globus XIO GRIDFTP Client Driver -</p>
+<h3>Typedefs</h3>typedef enum 
+ <b>globus_l_xio_gridftp_mode_e</b> <b>globus_l_xio_gridftp_mode_t</b>&quot; 
+<h3>Enumerations</h3>enum <b>globus_xio_gridftp_error_type_t</b> { <b>GLOBUS_XIO_GRIDFTP_ERROR_ATTR</b>, <b>GLOBUS_XIO_GRIDFTP_ERROR_SEEK</b>, <b>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_READ</b>, <b>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_WRITE</b>, <b>GLOBUS_XIO_GRIDFTP_ERROR_PENDING_READ</b>, <b>GLOBUS_XIO_GRIDFTP_ERROR_PENDING_WRITE</b>, <b>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_PARTIAL_XFER</b> } 
+<p>enum <b>globus_xio_gridftp_cmd_t</b> { <b>GLOBUS_XIO_GRIDFTP_SEEK</b>, <b>GLOBUS_XIO_GRIDFTP_SET_HANDLE</b>, <b>GLOBUS_XIO_GRIDFTP_GET_HANDLE</b>, <b>GLOBUS_XIO_GRIDFTP_SET_APPEND</b>, <b>GLOBUS_XIO_GRIDFTP_GET_APPEND</b>, <b>GLOBUS_XIO_GRIDFTP_SET_ERET</b>, <b>GLOBUS_XIO_GRIDFTP_GET_ERET</b>, <b>GLOBUS_XIO_GRIDFTP_SET_ESTO</b>, <b>GLOBUS_XIO_GRIDFTP_GET_ESTO</b>, <b>GLOBUS_XIO_GRIDFTP_SET_PARTIAL_TRANSFER</b>, <b>GLOBUS_XIO_GRIDFTP_GET_PARTIAL_TRANSFER</b>, <b>GLOBUS_XIO_GRIDFTP_SET_NUM_STREAMS</b>, <b>GLOBUS_XIO_GRIDFTP_GET_NUM_STREAMS</b>, <b>GLOBUS_XIO_GRIDFTP_SET_TCP_BUFFER</b>, <b>GLOBUS_XIO_GRIDFTP_GET_TCP_BUFFER</b>, <b>GLOBUS_XIO_GRIDFTP_SET_MODE</b>, <b>GLOBUS_XIO_GRIDFTP_GET_MODE</b>, <b>GLOBUS_XIO_GRIDFTP_SET_AUTH</b>, <b>GLOBUS_XIO_GRIDFTP_GET_AUTH</b>, <b>GLOBUS_XIO_GRIDFTP_SET_DCAU</b>, <b>GLOBUS_XIO_GRIDFTP_GET_DCAU</b>, <b>GLOBUS_XIO_GRIDFTP_SET_DATA_PROTECTION</b>, <b>GLOBUS_XIO_GRIDFTP_GET_DATA_PROTECTION</b>, <b>GLOBUS_XIO_GRIDFTP_SET_CONTROL_PROTECTION</b>, <b>GLOBUS_XIO_GRIDFTP_GET_CONTROL_PROTECTION</b> }</p>
+<p>enum <b>globus_l_xio_gridftp_mode_e</b></p>
+<h2>Detailed Description</h2><h2>Handles</h2>An XIO handle with the gridftp client driver can be created with globus_xio_handle_create() 
+<p>The GridFTP client driver makes use of globus ftp client library. globus_xio_register_open() call creates a new ftp client handle (unless one is set on the attr passed), establishes connection with the GridFTP server. The contact string must contain the scheme, host name, and the resource, optionally it might contain port and subject also.</p>
+<p>When the XIO handle is closed, the GridFTP driver will destroy its internal resources and the ftp client handle (unless this handle was set on an attr).</p>
+<h2>Reading/Writing</h2>The globus_xio_register_read() enforce that the waitforbytes parameter should be one. When multiple TCP streams are used between the client and the server, data might not be delivered in order. globus_xio_data_descriptor_cntl() can be used to get the offset of the data. 
+<p>globus_xio_register_write() does not enforce any restriction on the waitforbytes parameter.</p>
+<p>In any case, when an error or EOF occurs before the waitforbytes request has been met, the outgoing nbytes is set to the amount of data actually read/written before the error or EOF occurred.</p>
+<h2>Environment Variables</h2><dl COMPACT><dt>&bull;
+</dt><dd>GLOBUS_XIO_GRIDFTP_DEBUG Available if using a debug build. See globus_debug.h for format.</dd></dl><h2>Attributes and Cntls</h2>GridFTP driver specific attrs and cntls. 
+<p><b>See Also:</b></p>
+<dl COMPACT><dd>globus_xio_attr_cntl () 
+ globus_xio_handle_cntl () 
+ globus_xio_data_descriptor_cntl ()</dd></dl><h2>Types</h2>The errors reported by the GRIDFTP driver include GLOBUS_XIO_ERROR_EOF, GLOBUS_XIO_ERROR_CANCELED, <b>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_READ</b>, <b>GLOBUS_XIO_GRIDFTP_ERROR_SEEK</b>, <b>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_WRITE</b>, <b>GLOBUS_XIO_GRIDFTP_ERROR_PENDING_READ</b>, <b>GLOBUS_XIO_GRIDFTP_ERROR_PENDING_WRITE</b>, <b>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_PARTIAL_XFER</b> 
+<p><b>See Also:</b></p>
+<dl COMPACT><dd>globus_xio_driver_error_match() 
+ globus_error_errno_match()</dd></dl><h2>Typedef Documentation</h2><h3>typedef enum <b>globus_l_xio_gridftp_mode_e</b> <b>globus_l_xio_gridftp_mode_t</b></h3>GRIDFTP driver specific types
+<h2>Enumeration Type Documentation</h2><h3>enum <b>globus_l_xio_gridftp_mode_e</b></h3>GRIDFTP driver specific types
+<h3>enum <b>globus_xio_gridftp_cmd_t</b></h3>doxygen varargs filter stuff GRIDFTP driver specific cntls 
+<p><b>Enumerator</b></p>
+<dl COMPACT><dt><i>GLOBUS_XIO_GRIDFTP_SEEK </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_handle_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_SET_HANDLE </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_GET_HANDLE </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_SET_APPEND </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_GET_APPEND </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_SET_ERET </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_GET_ERET </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_SET_ESTO </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_GET_ESTO </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_SET_PARTIAL_TRANSFER </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_GET_PARTIAL_TRANSFER </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_SET_NUM_STREAMS </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_GET_NUM_STREAMS </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_SET_TCP_BUFFER </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_GET_TCP_BUFFER </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_SET_MODE </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_GET_MODE </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_SET_AUTH </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_GET_AUTH </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_SET_DCAU </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_GET_DCAU </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_SET_DATA_PROTECTION </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_GET_DATA_PROTECTION </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_SET_CONTROL_PROTECTION </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b>
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_GET_CONTROL_PROTECTION </i>
+</dt><dd>See usage for: <b>globus_xio_gridftp_attr_cntl </b></dd></dl><h3>enum <b>globus_xio_gridftp_error_type_t</b></h3>GridFTP driver specific error types 
+<p><b>Enumerator</b></p>
+<dl COMPACT><dt><i>GLOBUS_XIO_GRIDFTP_ERROR_ATTR </i>
+</dt><dd>Indicates that an error occurred in the attribute control
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_ERROR_SEEK </i>
+</dt><dd>Indicates that a seek has been called while there is an outstanding I/O
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_READ </i>
+</dt><dd>Indicates that a write has been called while there is an outstanding read
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_WRITE </i>
+</dt><dd>Indicates that a read has been called while there is an outstanding write
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_ERROR_PENDING_READ </i>
+</dt><dd>Indicates that a write has been called while there is a read pending
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_ERROR_PENDING_WRITE </i>
+</dt><dd>Indicates that a read has been called while there is a write pending
+</dd><dt><i>GLOBUS_XIO_GRIDFTP_ERROR_OUTSTANDING_PARTIAL_XFER </i>
+</dt><dd>Indicates that a second partial xfer has been initiated while the first one is still outstanding</dd></dl><h2>Author</h2>Generated automatically by Doxygen for globus_xio_gridftp_driver from the source code.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

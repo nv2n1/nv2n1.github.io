@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bgljfile(1) · Linux Manual Pages</title>
+<meta name="description" content="Bgljfile – a Jvm Access File Generator">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-bgljfile/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>bgljfile(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> Bgljfile &#8211; a Jvm Access File Generator</p>
+<h2>SYNOPSIS</h2>
+<p> <code>bgljfile</code> [ options ] <i>file &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
+<p> <code>Bgljfile</code> is a Jvm Access File generator. It produces file that suits Bigloo option <i>-bgljfile</i>. A Jvm Access File is a scheme list. Each elements of that list is a list of at least two elements: a module name, the Java class file that implements that module. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>
+</dt><dt><code>file</code></dt>
+<dd>
+</dd><dd> Is an file implementing a module. <code>Bgljfile</code> reads that file to discover the name of the implemented module. </dd>
+<dt><code>-base</code></dt>
+<dd> Set the Jvm base package. </dd>
+<dt><code>-o &lt;file&gt;</code></dt>
+<dd> Print Module Access File into <i>file</i>. The default is to print the list on the standard output device. </dd>
+<dt><code>-suffix &lt;suf&gt;</code></dt>
+<dd> Adds <i>suf</i> to the <code>bgljfile</code> source file suffixes list. Default suffixes are &quot;scm&quot;, &quot;sch&quot; and &quot;bgl&quot;. </dd>
+</dl>
+<h2>EXAMPLE</h2>
+<p> If the three files exists and contain legal Bigloo module clause, then: </p>
+<p>$&nbsp;<wbr>bgljfile foo.scm bar.scm gee.scm </p>
+<p> could print out a list like: </p>
+<p> ( </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>(foo&nbsp;<wbr>&quot;./foo&quot;) </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>(bar&nbsp;<wbr>&quot;./bar&quot;) </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>(gee&nbsp;<wbr>&quot;./gee&quot;) </p>
+<p> ) </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-bigloo/">bigloo</a>(1), <a href="/docs/linux/man/1-bgldepend/">bgldepend</a>(1), <a href="/docs/linux/man/1-bglmake/">bglmake</a>(1), <a href="/docs/linux/man/1-bglpp/">bglpp</a>(1), <a href="/docs/linux/man/1-bglprof/">bglprof</a>(1), <a href="/docs/linux/man/1-bgltags/">bgltags</a>(1) </p>
+<h2>AUTHOR</h2>
+<p> Manuel SERRANO, Manuel.Serrano [at] inria.fr </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

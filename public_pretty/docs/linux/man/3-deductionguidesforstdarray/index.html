@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>deductionguidesforstdarray(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-deductionguidesforstdarray/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>deductionguidesforstdarray(3)</h1>
+
+
+
+
+
+<p>deductionguidesforstd::array - deductionguidesforstd::array</p>
+<h2>Synopsis</h2>Defined in header &lt;array&gt; 
+template &lt;class T, class... U&gt; <i>(since C++17)</i> 
+array(T, U...) -&gt; array&lt;T, 1 + sizeof...(U)&gt;; 
+<p>One deduction_guide is provided for std::array to provide an equivalent of std::experimental::make_array for construction of std::array from a variadic parameter pack.
+The program is ill-formed if (std::is_same_v&lt;T, U&gt; &amp;&amp; &hellip;) is not true</p>
+<h2>Example</h2>// Run this code 
+<p> <wbr> #include &lt;array&gt;
+ <wbr> int main()
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> int const x = 10;
+ <wbr> <wbr> <wbr> <wbr> <wbr> std::array a{1, 2, 3, 5, x}; // OK, creates std::array&lt;int, 5&gt;</p>
+<p> <wbr> // std::array b{1, 2u}; // Error, all arguments must have same type
+ <wbr> }</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lintiancollectchanges(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-lintiancollectchanges/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>lintiancollectchanges(3)</h1>
+
+
+
+
+
+<p>Lintian::Collect::Changes - Lintian interface to .changes file data collection</p>
+<h2>Synopsis</h2><pre> my ($name, $type) = ('foobar_1.2_i386.changes', 'changes');
+ my $collect = Lintian::Collect-&gt;new($name, $type);
+ my $files = $collect-&gt;files;
+ foreach my $file (keys %{$files}) {
+ my $size = $files-&gt;{$file}{size};
+ print &quot;File $file has size $size\n&quot;;
+ }</pre><h2>Description</h2>Lintian::Collect::Changes provides an interface to data for .changes files. It implements data collection methods specific to .changes files.
+<h2>Class Methods</h2><dl COMPACT><dt>new (<font SIZE="-1">PACKAGE</font>)
+</dt><dd>Creates a new Lintian::Collect::Changes object. Currently, <font SIZE="-1">PACKAGE</font> is ignored. Normally, this method should not be called directly, only via the Lintian::Collect constructor.</dd></dl><h2>Instance Methods</h2>In addition to the instance methods listed below, all instance methods documented in the Lintian::Collect module are also available.
+<dl COMPACT><dt>files
+</dt><dd>Returns a reference to a hash containing information about files listed in the .changes file. Each hash may have the following keys:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>name
+</dt><dd>Name of the file.
+</dd><dt>size
+</dt><dd>The size of the file in bytes.
+</dd><dt>section
+</dt><dd>The archive section to which the file belongs.
+</dd><dt>priority
+</dt><dd>The priority of the file.
+</dd><dt>checksums
+</dt><dd>A hash with the keys being checksum algorithms and the values themselves being hashes containing
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>sum
+</dt><dd>The result of applying the given algorithm to the file.
+</dd><dt>filesize
+</dt><dd>The size of the file as given in the .changes section relating to the given checksum.</dd></dl></dl><dl COMPACT><dd></dd></dl></dl>
+</dl><dl COMPACT><dd>Needs-Info requirements for using <i>files</i>: ``field ([FIELD[, <font SIZE="-1">DEFAULT</font>]])'' in Lintian::Collect</dd></dl><dt>repacked
+</dt><dd>Returns true if the source package referenced in this changes file has been ``repacked'' and false otherwise. This is determined from the version name containing ``dfsg'' or similar. 
+<p>Needs-Info requirements for using <i>repacked</i>: Same as field</dd></dl><h2>Author</h2>Originally written by Adam D. Barratt &lt;adsb [at] debian.org&gt; for Lintian.</p>
+<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1), Lintian::Collect
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

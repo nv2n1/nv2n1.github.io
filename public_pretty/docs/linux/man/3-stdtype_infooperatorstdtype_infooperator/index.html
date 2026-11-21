@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdtype_infooperatorstdtype_infooperator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdtype_infooperatorstdtype_infooperator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdtype_infooperatorstdtype_infooperator(3)</h1>
+
+
+
+
+
+<p>std::type_info::operator==,std::type_info::operator!= - std::type_info::operator==,std::type_info::operator!=</p>
+<h2>Synopsis</h2>
+<pre><code>bool operator==(const type_info &amp;rhs) const;
+bool operator!=(const type_info &amp;rhs) const;</code></pre> 
+<p>Checks if the objects refer to the same types.</p>
+<h2>Parameters</h2>
+<p>rhs - another type information object to compare to</p>
+<h2>Return value</h2>
+<p>true if the comparison operation holds true, false otherwise</p>
+<h2>Example</h2>
+<p>// Run this code employee(std::string &amp;&amp;n, std::string &amp;&amp;p)
+: person(std::move(n)), _profession(std::move(p))
+{
+}
+const std::string &amp;profession() const
+{
+return _profession;
+}
+ <wbr> class person
+ <wbr> {
+ <wbr> <wbr> <wbr> public: std::string _profession;
+}
+;
+void somefunc(const person &amp;p)</p>
+<p>{
+if (typeid(employee) == typeid(p)) {
+std::cout &lt;&lt; p.name() &lt;&lt; &quot; is an employee &quot;;
+auto &amp;emp = dynamic_cast&lt;const employee &amp;&gt;(p);
+std::cout &lt;&lt; &quot;who works in &quot; &lt;&lt; emp.profession() &lt;&lt; &lsquo;\n&rsquo;;
+}
+}
+int main()</p>
+<p>{
+employee paul(&quot;Paul&quot;, &quot;Economics&quot;);
+somefunc(paul);
+}</p>
+<p> <wbr> <wbr> <wbr> private: std::string _name;</p>
+<p>};
+ <wbr> class employee : public person
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> public: employee(std::string &amp;&amp;n, std::string &amp;&amp;p)
+: person(std::move(n)), _profession(std::move(p))
+{
+}
+const std::string &amp;profession() const
+{
+return _profession;
+}
+ <wbr> <wbr> <wbr> <wbr> private: <pre><code>std::string _profession;
+}
+;
+void somefunc(const person &amp;p)
+{
+if (typeid(employee) == typeid(p)) {
+std::cout &lt;&lt; p.name() &lt;&lt; &quot; is an employee &quot;;
+auto &amp;emp = dynamic_cast&lt;const employee &amp;&gt;(p);
+std::cout &lt;&lt; &quot;who works in &quot; &lt;&lt; emp.profession() &lt;&lt; &lsquo;\n&rsquo;;
+}
+}
+int main()
+{
+employee paul(&quot;Paul&quot;, &quot;Economics&quot;);
+somefunc(paul);
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Paul is an employee who works in Economics</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks whether the referred type precedes referred type of another type_index
+before object in the implementation defined order, i.e. orders the referred types
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

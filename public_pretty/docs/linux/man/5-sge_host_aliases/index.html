@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sge_host_aliases(5) · Linux Manual Pages</title>
+<meta name="description" content="host_aliases – Grid Engine host aliases file format">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-sge_host_aliases/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>sge_host_aliases(5)</h1>
+
+
+
+
+
+<p>host_aliases &#8211; Grid Engine host aliases file format</p>
+<h2>Description</h2>
+<p>All Grid Engine components use a hostname resolving service provided by the communication library to identify hosts via a unique hostname. The communication library itself references standard UNIX directory services such as DNS, NIS and /etc/hosts to resolve hostnames. In rare cases these standard services cannot be setup cleanly and Grid Engine communication daemons running on different hosts are unable to automatically determine a unique hostname for one or all hosts which can be used on all hosts. In such situations a Grid Engine host aliases file can be used to provide the communication daemons with a private and consistent hostname resolution database. </p>
+<p> The location for the host aliases file is <i>&lt;ge_root&gt;/&lt;cell&gt;/common/host_aliases.</i></p>
+<h2>Format</h2>
+<p>For each host a single line must be provided with a blank, comma or semicolon separated list of hostname aliases. The first alias is defined to be the <code>unique</code> hostname which will be used by all Grid Engine components using the hostname aliasing service of the communication library.</p>
+<h2>See Also</h2>
+<h2>Copyright</h2>
+<p>See for a full statement of rights and permissions.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

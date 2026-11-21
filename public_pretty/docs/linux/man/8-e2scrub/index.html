@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>e2scrub(8) · Linux Manual Pages</title>
+<meta name="description" content="e2scrub – check the contents of a mounted ext[234] file system">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-e2scrub/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>e2scrub(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>e2scrub &#8211; check the contents of a mounted ext[234] file system</p>
+<h2>Synopsys</h2>
+<p><code>e2scrub [OPTION] MOUNTPOINT | DEVICE</code></p>
+<h2>Description</h2>
+<p><code>e2scrub</code> attempts to check (but not repair) all metadata in a mounted ext[234] file system if the file system resides on an LVM logical volume. The block device of the LVM logical volume can also be passed in. </p>
+<p> This program snapshots the volume and runs a file system check on the snapshot to look for corruption errors. The LVM volume group must have at least 256MiB of unallocated space to dedicate to the snapshot or the logical volume will be skipped. The snapshot will be named <i>lvname</i>.e2scrub and <code>udev</code> will not create symbolic links to it under <i>/dev/disk</i>. Every attempt will be made to remove the snapshots prior to running <code>e2scrub</code>, but in a dire situation it may be necessary to remove the snapshot manually. </p>
+<p> If no errors are found, <code>fstrim</code> can be called on the file system if it is mounted. If errors are found, the file system will be marked as having errors. The file system should be taken offline and <code>e2fsck</code> run as soon as possible, because <code>e2scrub</code> does not fix corruptions. If the file system is not repaired, <code>e2fsck</code> will be run before the next mount.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-n</code></dt>
+<dd>Print what commands <code>e2scrub</code> would execute to check the file system. (Note: the commands will not actually be executed; however, since <code>e2scrub</code> needs to run some commands to query the system to determine what commands would be executed, it still needs to be run as root.)</dd>
+<dt><code>-r</code></dt>
+<dd>Remove the e2scrub snapshot and exit without checking anything.</dd>
+<dt><code>-t</code></dt>
+<dd>Run <code>fstrim(1)</code> on the mounted file system if no errors are found.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version information and exit.</dd></dl>
+<h2>Exit Code</h2>
+<p>The exit codes are the same as in <code><a href="/docs/linux/man/8-e2fsck/">e2fsck</a></code>(8)</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-e2fsck/">e2fsck</a></code>(8)</p>
+<h2>Author</h2>
+<p>Darrick J. Wong &lt;darrick.wong [at] oracle.com&gt;</p>
+<h2>Copyright</h2>
+<p>Copyright &#169;2018 Oracle. License is GPLv2+. &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl-2.0.html">http://www.gnu.org/licenses/gpl-2.0.html</a>&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

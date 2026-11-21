@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_gscr(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_gscr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_gscr(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>GSCR (Set color representation) - associates a color value with a color index.</p>
+<h2>Synopsis</h2>CALL GSCR (WKID, CI, CR, CG, CB)
+<h2>C-Binding Synopsis</h2>#include &lt;ncarg/gks.h&gt; 
+<p>void gset_colr_rep(Gint ws_id, Gint colr_ind, const Gcolr_rep *colr_rep);</p>
+<h2>Description</h2><dl COMPACT><dt>WKID
+</dt><dd>(Integer, Input) - A workstation identifier. WKID must be the same as that used in some previous GOPWK call.
+</dd><dt>CI
+</dt><dd>(Integer, Input) - A color index.
+</dd><dt>CR
+</dt><dd>(Real, Input) - An intensity value for red between 0. and 1. inclusive.
+</dd><dt>CG
+</dt><dd>(Real, Input) - An intensity value for green between 0. and 1. inclusive.
+</dd><dt>CB
+</dt><dd>(Real, Input) - An intensity value for blue between 0. and 1. inclusive.</dd></dl><h2>Usage</h2>Color in GKS is &quot;indexed&quot;, i.e. color attributes are assigned to primitives by using a color index. The GKS function GSCR is used to associate a color value with color indices. 
+<p>It is recommended that all color indices used in a given job be defined prior to calling any output primitive. Since the result of a dynamic color change can be ambiguous, it is also recommended that GSCR not be called to change a color value after the original definitions.</p>
+<p>GSCR may be called after opening the workstation for which the color indices are to be defined, and not before that workstation is opened. Different color tables can be maintained for different workstations. For example, color index 2 for a CGM file may be associated with &quot;red&quot; while at the same time it may be associated with &quot;green&quot; for some X workstation.</p>
+<p>It is important to stress that color index 0 defines the background color. If any color indices are defined, then you should define the background color index 0. Otherwise you run the risk of having a user-defined color match the default background color.</p>
+<p>For all GKS output primitives, color is assigned by an indexing scheme. The indices run from 0 to 255, where 0 is the background color index and 1 is the foreground color index.</p>
+<h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+<h2>See Also</h2>Online: gqcr, gsplci, gspmci, gsfaci, gstxci, gqplci, gqpmci, gqfaci, gqtxci, gset_colr_rep 
+<p>Hardcopy: User&rsquo;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>Copyright (C) 1987-2009 
+ University Corporation for Atmospheric Research 
+ The use of this Software is governed by a License Agreement.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

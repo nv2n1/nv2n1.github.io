@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keyctl_set_timeout(3) · Linux Manual Pages</title>
+<meta name="description" content="keyctl_set_timeout – Set the expiration timer on a key">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-keyctl_set_timeout/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>keyctl_set_timeout(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> keyctl_set_timeout &#8211; Set the expiration timer on a key </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;keyutils.h&gt;
+long keyctl_set_timeout(key_serial_t key, unsigned timeout);
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> <code>keyctl_set_timeout</code>() sets the expiration timer on a key to <i>timeout</i> seconds into the future. Setting <i>timeout</i> to <code>zero</code> cancels the expiration, assuming the key hasn&#8217;t already expired. </p>
+<p> When the key expires, further attempts to access it will be met with error <code>EKEYEXPIRED</code>. </p>
+<p> The caller must have <code>setattr</code> permission on a key to be able change its permissions mask.</p>
+<h2>RETURN VALUE</h2>
+<p> On success <code>keyctl_set_timeout</code>() returns <code>0 .</code> On error, the value <code>-1</code> will be returned and errno will have been set to an appropriate error.</p>
+<h2>ERRORS</h2>
+<dl>
+<dt><code>ENOKEY</code></dt>
+<dd> The specified key does not exist.</dd>
+<dt><code>EKEYEXPIRED</code></dt>
+<dd> The specified key has already expired.</dd>
+<dt><code>EKEYREVOKED</code></dt>
+<dd> The specified key has been revoked.</dd>
+<dt><code>EACCES</code></dt>
+<dd> The named key exists, but does not grant <code>setattr</code> permission to the calling process.</dd></dl>
+<h2>LINKING</h2>
+<p> This is a library function that can be found in <i>libkeyutils</i>. When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1),<br />
+ <code><a href="/docs/linux/man/2-add_key/">add_key</a></code>(2),<br />
+ <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2),<br />
+ <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2),<br />
+ <code><a href="/docs/linux/man/3-keyctl/">keyctl</a></code>(3),<br />
+ <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

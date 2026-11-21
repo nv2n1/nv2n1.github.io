@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DDL vs DML: Key Differences in Database Commands - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/what-are-the-differences-between-database-ddl-and-dml/">
+  <meta name="description" content="Database commands fall into distinct categories based on what they do. The two most fundamental are DDL (Data Definition Language) and DML (Data Manipulation …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="DDL vs DML: Key Differences in Database Commands">
+  <meta property="og:url" content="https://www.systutorials.com/what-are-the-differences-between-database-ddl-and-dml/">
+  <meta property="og:description" content="Database commands fall into distinct categories based on what they do. The two most fundamental are DDL (Data Definition Language) and DML (Data Manipulation …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/distributed-systems-academy/">Distributed Systems Academy</a>
+           &rsaquo; <a href="/security-cryptography-path/">Security &amp; Cryptography Path</a>
+          &rsaquo; <a href="/category/cryptography-keys/">Cryptography &amp; Keys</a>
+        </nav>
+        
+        <h1>DDL vs DML: Key Differences in Database Commands</h1>
+        <time class="post-date" datetime="2018-03-24T11:44:30Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/harryxiyou/">Weiwei Jia</a> and Community</span> <span class="post-updated">&middot; updated May 17, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Database commands fall into distinct categories based on what they do. The two most fundamental are DDL (Data Definition Language) and DML (Data Manipulation Language). Understanding the difference is essential for anyone working with databases, from writing migrations to managing production systems.</p>
+<h2 id="ddl-data-definition-language">DDL: Data Definition Language</h2>
+<p>DDL statements define and modify the structure of your database schema itself. They create, alter, or remove the containers that hold data.</p>
+<p>Common DDL commands:</p>
+<ul>
+<li><code>CREATE TABLE</code> — defines a new table with columns and constraints</li>
+<li><code>ALTER TABLE</code> — modifies table structure (add/drop columns, constraints, indexes)</li>
+<li><code>DROP TABLE</code> — removes a table and its data</li>
+<li><code>CREATE INDEX</code> — creates an index for query optimization</li>
+<li><code>CREATE DATABASE</code> — creates a new database</li>
+<li><code>TRUNCATE TABLE</code> — removes all rows from a table (faster than DELETE, non-recoverable in most systems)</li>
+</ul>
+<p>DDL statements are <strong>auto-committed</strong> by default in most database systems — the changes take effect immediately and cannot be rolled back within a transaction. This is critical to understand when writing schema migration scripts.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">last_login</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><h2 id="dml-data-manipulation-language">DML: Data Manipulation Language</h2>
+<p>DML statements work with the data inside those structures. They insert, update, retrieve, or delete actual records.</p>
+<p>Common DML commands:</p>
+<ul>
+<li><code>SELECT</code> — retrieves data from one or more tables</li>
+<li><code>INSERT</code> — adds new rows to a table</li>
+<li><code>UPDATE</code> — modifies existing data</li>
+<li><code>DELETE</code> — removes specific rows</li>
+<li><code>MERGE</code> — combines INSERT and UPDATE operations (useful for upserts)</li>
+</ul>
+<p>Unlike DDL, DML statements <strong>are transactional</strong> — you can wrap them in a transaction, make changes, and rollback if something goes wrong.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">email</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;user@example.com&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">UPDATE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">last_login</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">created_at</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">NOW</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;7 days&#39;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><h2 id="key-differences">Key Differences</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Aspect</th>
+					<th>DDL</th>
+					<th>DML</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Purpose</td>
+					<td>Define/modify schema structure</td>
+					<td>Manipulate data within schema</td>
+			</tr>
+			<tr>
+					<td>Commits</td>
+					<td>Auto-committed, non-rollbackable</td>
+					<td>Transactional, can be rolled back</td>
+			</tr>
+			<tr>
+					<td>Examples</td>
+					<td>CREATE, ALTER, DROP</td>
+					<td>SELECT, INSERT, UPDATE, DELETE</td>
+			</tr>
+			<tr>
+					<td>Impact</td>
+					<td>Affects table definitions and metadata</td>
+					<td>Affects only the data</td>
+			</tr>
+			<tr>
+					<td>Lock behavior</td>
+					<td>May lock schema, blocking connections</td>
+					<td>Row/page locks depending on isolation level</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="practical-considerations">Practical Considerations</h2>
+<p>When running DDL in production, be aware that some operations (like <code>ALTER TABLE ADD COLUMN</code> without a default) can lock tables on certain database engines. PostgreSQL handles this better than older MySQL versions, but it’s still worth testing on non-production first.</p>
+<p>For DML, always use transactions when making related changes across multiple tables. A common pattern:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">BEGIN</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="p">.</span><span class="mi">99</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">order_items</span><span class="w"> </span><span class="p">(</span><span class="n">order_id</span><span class="p">,</span><span class="w"> </span><span class="n">product_id</span><span class="p">,</span><span class="w"> </span><span class="n">qty</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">LAST_INSERT_ID</span><span class="p">(),</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">COMMIT</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>If either statement fails, both are rolled back, keeping your data consistent.</p>
+<h2 id="related-dcl-and-tcl">Related: DCL and TCL</h2>
+<p>Two other command categories exist:</p>
+<ul>
+<li><strong>DCL (Data Control Language)</strong> — controls permissions: <code>GRANT</code>, <code>REVOKE</code></li>
+<li><strong>TCL (Transaction Control Language)</strong> — manages transactions: <code>COMMIT</code>, <code>ROLLBACK</code>, <code>SAVEPOINT</code></li>
+</ul>
+<p>Understanding these distinctions helps you write safer, more predictable database code and makes troubleshooting schema and data issues much easier.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

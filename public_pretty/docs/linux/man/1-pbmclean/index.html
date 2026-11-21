@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pbmclean(1) · Linux Manual Pages</title>
+<meta name="description" content="pbmclean – flip isolated pixels in portable bitmap">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pbmclean/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pbmclean(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pbmclean &#8211; flip isolated pixels in portable bitmap</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pbmclean </code> [<code>-minneighbors=</code><i>N</i>] [<code>-black</code>|<code>-white</code>] [<i>pbmfile</i>] </p>
+<p> You can use the minimum unique abbreviation of the options. You can use two hyphens instead of one. You can separate an option name from its value with white space instead of an equals sign. </p>
+<p> Before December 2001, <code>pbmclean</code> accepted <code>&#8211;</code><i>N</i> instead of <code>-minneighbors</code>. </p>
+<h2>DESCRIPTION</h2>
+<p> <code>pbmclean</code> cleans up a PBM image of random specs. It reads a PBM image as input and outputs a PBM that is the same as the input except with every pixel which has less than <i>N</i> identical neighbours inverted. </p>
+<p> The default for <i>N</i> is 1 &#8211; only completely isolated pixels are flipped. </p>
+<p> (A value of <i>N</i> greater than 8 generates a completely inverted image (but use <code>pnminvert</code> to do that) &#8212; or a completely white or completely black image with the <code>-black</code> or <code>-white</code> option). </p>
+<p> <code>pbmclean</code> considers the area beyond the edges of the image to be white. (This matters when you consider pixels right on the edge of the image). </p>
+<p> You can use <code>pbmclean </code> to clean up &quot;snow&quot; on bitmap images. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-black</code></dt>
+<dd>
+</dd><dt><code>-white</code></dt>
+<dd> Flip pixels of the specified color. By default, if you specify neither <code>-black</code> nor <code>-white</code>, <code>pbmclean</code> flips both black and white pixels which do not have sufficient identical neighbors. If you specify <code>-black</code>, <code>pbmclean</code> leaves the white pixels alone and just erases isolated black pixels. Vice versa for <code>-white</code>. You may specify both <code>-black</code> and <code>-white</code> to get the same as the default behavior. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5) </p>
+<h2>AUTHOR</h2>
+<p> Copyright (C) 1990 by Angus Duggan Copyright (C) 1989 by Jef Poskanzer. Copyright (C) 2001 by Michael Sternberg. </p>
+<p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. This software is provided &quot;as is&quot; without express or implied warranty. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>storaged(8) · Linux Manual Pages</title>
+<meta name="description" content="storaged – The storaged system daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-storaged/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>storaged(8)</h1>
+
+
+
+
+
+<p>storaged &#8211; The storaged system daemon</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>storaged</code> [<code>&#8211;help</code>] [<code>&#8211;replace</code>] [<code>&#8211;no-debug</code>] [<code>&#8211;no-sigint</code>] [<code>&#8211;force-load-modules</code>]</dt></dl>
+<h2>Description</h2>
+<dd>The <code>storaged</code> program provides the <i>org.storaged.Storaged</i> name on the system message bus. Users or administrators should never need to start this daemon as it will be automatically started by <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1) or <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) whenever an application tries to access its D-Bus interfaces. </dd>
+<p> See the <code><a href="/docs/linux/man/8-storaged/">storaged</a></code>(8) man page for more information.</p>
+<h2>Options</h2>
+<p><code>&#8211;help</code></p>
+<dl>
+<dd>Show help options.</dd></dl>
+<p> <code>&#8211;replace</code></p>
+<dl>
+<dd>Replace existing daemon.</dd></dl>
+<p> <code>&#8211;no-debug</code></p>
+<dl>
+<dd>Do not print debug or informational messages on stdout/stderr.</dd></dl>
+<p> <code>&#8211;no-sigint</code></p>
+<dl>
+<dd>Do not handle SIGINT for controlled shutdown.</dd></dl>
+<p> <code>&#8211;force-load-modules</code></p>
+<dl>
+<dd>Activate modules on startup</dd></dl>
+<h2>Author</h2>
+<p>This man page was originally written for UDisks2 by David Zeuthen &lt;zeuthen [at] gmail.com&gt; with a lot of help from many others.</p>
+<h2>Bugs</h2>
+<p>Please send bug reports to either the distribution bug tracker or the upstream bug tracker at m[blue]<code><a rel="nofollow" href="https://github.com/storaged-project/storaged/issues">https://github.com/storaged-project/storaged/issues</a></code>m[].</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-storaged/">storaged</a></code>(8), <code><a href="/docs/linux/man/1-storagectl/">storagectl</a></code>(1), <code><a href="/docs/linux/man/8-umount-storaged/">umount.storaged</a></code>(8), <code><a href="/docs/linux/man/8-polkit/">polkit</a></code>(8), <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

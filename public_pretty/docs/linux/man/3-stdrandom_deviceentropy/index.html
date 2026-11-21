@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdrandom_deviceentropy(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdrandom_deviceentropy/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdrandom_deviceentropy(3)</h1>
+
+
+
+
+
+<p>std::random_device::entropy - std::random_device::entropy</p>
+<h2>Synopsis</h2>
+<pre><code>double entropy() const noexcept;
+(since C++ 11)</code></pre> 
+<p>Obtains an estimate of the random number device entropy, which is a floating-point value between 0 and log
+2(max()+1) (which is equal to std::numeric_limits&lt;unsigned int&gt;::digits). If the device has n states whose individual probabilities are P
+0,&hellip;,P
+n-1, the device entropy S is defined as
+S = -Σn-1
+i=0P
+ilog(P
+i)
+A deterministic random number generator (e.g. a pseudo-random engine) has entropy zero.</p>
+<h2>Return value</h2>
+<p>The value of the device entropy, or zero if not applicable.</p>
+<h2>Notes</h2>
+<p>This function is not fully implemented in some standard libraries. For example, LLVM_libc++ always returns zero even though the device is non-deterministic. In comparison, Microsoft Visual C++ implementation always returns 32, and boost.random returns 10.
+The entropy of the Linux kernel device /dev/urandom may be obtained using ioctl_RNDGETENTCNT - that&rsquo;s what std::random_device::entropy() in GNU_libstdc++ uses as of version 8.1</p>
+<h2>Example</h2>
+<p>Example output on one of the implementations
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;random&gt;
+int main()
+{
+std::random_device rd;
+std::cout &lt;&lt; rd.entropy() &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> 32</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

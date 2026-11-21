@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdchronoyear_month_dayoperatorsys_daysstdchronoyear_month_dayoperator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdchronoyear_month_dayoperatorsys_daysstdchronoyear_month_dayoperator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdchronoyear_month_dayoperatorsys_daysstdchronoyear_month_dayoperator(3)</h1>
+
+
+
+
+
+<p>std::chrono::year_month_day::operatorsys_days,std::chrono::year_month_day::operator - std::chrono::year_month_day::operatorsys_days,std::chrono::year_month_day::operator</p>
+<h2>Synopsis</h2>
+<pre><code>constexpr operator std::chrono::sys_days() const noexcept;
+(1)(since C++ 20)
+    explicit constexpr
+    operator std::chrono::local_days() const(2)(since C++ 20)
+        noexcept;</code></pre> 
+<p>Converts <wbr>*this to a std::chrono::time_point representing the same date as this
+year_month_day. 1) If ok() is true, the return value holds a count of days from the</p>
+<p>std::chrono::system_clock epoch (1970-01-01) to *this. The result is negative if</p>
+<p>*this represent a date prior to it.</p>
+<p>Otherwise, if the stored year and month are valid (year().ok() &amp;&amp; month().ok() is</p>
+<p>true), then the returned value is sys_days(year()/month()/1d) + (day() - 1d).</p>
+<p>Otherwise (if year().ok() &amp;&amp; month().ok() is false), the return value is</p>
+<p>unspecified.</p>
+<p>A sys_days in the range [std::chrono::days{-12687428}, std::chrono::days{11248737}],</p>
+<p>when converted to year_month_day and back, yields the same value.</p>
+<ol start="2">
+<li>Same as (1) but returns local_days instead. Equivalent to return</li>
+</ol>
+<p>local_days(sys_days(*this).time_since_epoch());
+.</p>
+<h2>Notes</h2>
+<p>Converting to sys_days and back can be used to normalize a year_month_day that
+contains an invalid day but a valid year and month: using namespace std::chrono;</p>
+<p>auto ymd = 2017y/January/0;</p>
+<p>ymd = sys_days{ymd};</p>
+<p>// ymd is now 2016y/December/31
+Normalizing the year and month can be done by adding <wbr>(or subtracting) <wbr>zero
+std::chrono::months: <pre><code>using namespace std::chrono;
+constexpr year_month_day normalize(year_month_day ymd)
+{
+ymd += months{0};     // normalizes year and month
+return sys_days{ymd}; // normalizes day
+}
+static_assert(normalize(2017y / 33 / 59) == 2019y / 10 / 29);
+</code></pre></p>
+<h2>Example</h2>
+<p> <wbr>This section is incomplete
+ <wbr>Reason: no example</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

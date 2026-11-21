@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_stateoutfile(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::StateOutFile –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_stateoutfile/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_stateoutfile(3)</h1>
+
+
+
+
+
+<p>sc::StateOutFile &#8211; </p>
+<p> Writes state information to files.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;state_file.h&gt;</code></pre>
+<p> Inherits <code>sc::StateOut</code>. Inherited by <code>sc::StateOutBin</code>, and <code>sc::StateOutText</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>StateOutFile</code> ()<br />
+ <i>State information will be written to </i><code>ExEnv::outn()</code>.<br />
+ <code>StateOutFile</code> (std::ostream &amp;s)<br />
+ <i>State information will be written to s. </i><br />
+ <code>StateOutFile</code> (const char *name)<br />
+ <i>State information will be written to name. </i><br />
+ virtual int <code>open</code> (const char *name)<br />
+ <i>State information will be written to name. </i><br />
+ virtual void <code>flush</code> ()<br />
+ <i>Flush the output stream. </i><br />
+ virtual void <code>close</code> ()<br />
+ <i>Close the output stream. </i></p>
+<h3>Protected Attributes</h3>
+<pre><code>int opened_
+std::streambuf * buf_</code></pre>
+<h2>Detailed Description</h2>
+<p>Writes state information to files.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

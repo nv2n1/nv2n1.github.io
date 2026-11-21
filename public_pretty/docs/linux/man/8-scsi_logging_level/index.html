@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scsi_logging_level(8) · Linux Manual Pages</title>
+<meta name="description" content="scsi_logging_level – access Linux SCSI logging level information">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-scsi_logging_level/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>scsi_logging_level(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>scsi_logging_level &#8211; access Linux SCSI logging level information</p>
+<h2>Synopsis</h2>
+<p><code>scsi_logging_level</code> [<i>&#8211;all=LEV</i>] [<i>&#8211;create</i>] [<i>&#8211;error=LEV</i>] [<i>&#8211;get</i>] [<i>&#8211;help</i>] [<i>&#8211;highlevel=LEV</i>] [<i>&#8211;hlcomplete=LEV</i>] [<i>&#8211;hlqueue=LEV</i>] [<i>&#8211;ioctl=LEV</i>] [<i>&#8211;llcomplete=LEV</i>] [<i>&#8211;llqueue=LEV</i>] [<i>&#8211;lowlevel=LEV</i>] [<i>&#8211;midlevel=LEV</i>] [<i>&#8211;mlcomplete=LEV</i>] [<i>&#8211;mlqueue=LEV</i>] [<i>&#8211;scan=LEV</i>] [<i>&#8211;set</i>] [<i>&#8211;timeout=LEV</i>] [<i>&#8211;version</i>]</p>
+<h2>Description</h2>
+<p>This bash shell script accesses the Linux SCSI subsystem logging level. The current values can be shown (e.g. with <i>&#8211;get</i>) or changed (e.g. with <i>&#8211;set</i>). Superuser permissions will typically be required to set the logging level. </p>
+<p> One of these options: <i>&#8211;create</i>, <i>&#8211;get</i> or <i>&#8211;set</i> is required. Only one can be given.</p>
+<h2>Options</h2>
+<p>Arguments to long options are mandatory for short options as well.</p>
+<dl>
+<dt><code>-a</code>, <code>&#8211;all</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is used for all SCSI_LOG fields.</dd>
+<dt><code>-c</code>, <code>&#8211;create</code></dt>
+<dd>Options are parsed and placed in internal fields that are displayed but no logging levels are changed within the Linux kernel.</dd>
+<dt><code>-E</code>, <code>&#8211;error</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_ERROR field.</dd>
+<dt><code>-g</code>, <code>&#8211;get</code></dt>
+<dd>Fetches the current SCSI logging levels from the Linux kernel and displays them.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>print out the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;highlevel</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_HLQUEUE and SCSI_LOG_HLCOMPLETE fields.</dd>
+<dt><code>&#8211;hlcomplete</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_HLCOMPLETE field.</dd>
+<dt><code>&#8211;hlqueue</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_HLQUEUE field.</dd>
+<dt><code>-I</code>, <code>&#8211;ioctl</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_IOCTL field.</dd>
+<dt><code>&#8211;llcomplete</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_LLCOMPLETE field.</dd>
+<dt><code>&#8211;llqueue</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_LLQUEUE field.</dd>
+<dt><code>-L</code>, <code>&#8211;lowlevel</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_LLQUEUE and SCSI_LOG_LLCOMPLETE fields.</dd>
+<dt><code>-M</code>, <code>&#8211;midlevel</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_MLQUEUE and SCSI_LOG_MLCOMPLETE fields.</dd>
+<dt><code>&#8211;mlcomplete</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_MLCOMPLETE field.</dd>
+<dt><code>&#8211;mlqueue</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_MLQUEUE field.</dd>
+<dt><code>-S</code>, <code>&#8211;scan</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_SCAN field.</dd>
+<dt><code>-s</code>, <code>&#8211;set</code></dt>
+<dd>Uses the fields specified in this command&#8217;s options and attempts to apply them to the Linux SCSI subsystem logging levels. Typically superuser permissions will be required to do this.</dd>
+<dt><code>-T</code>, <code>&#8211;timeout</code>=<i>LEV</i></dt>
+<dd><i>LEV</i> is placed in the SCSI_LOG_TIMEOUT field.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Outputs the version information and then exits.</dd></dl>
+<h2>Notes</h2>
+<p>The <i>&#8211;get</i> and <i>&#8211;set</i> options access the /proc/sys/dev/scsi/logging_level pseudo file.</p>
+<h2>Exit Status</h2>
+<p>The exit status of this script is 0 when it is successful. Any other exit status indicates that an error has occurred.</p>
+<h2>Authors</h2>
+<p>Written by IBM. Small alterations by Douglas Gilbert.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
+<h2>Copyright</h2>
+<p>Copyright &#169; IBM Corp. 2006<br />
+ This software is distributed under the GPL version 2. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
+<p> The software was obtained from an IBM package called s390-tools-1.6.2 found on that company&#8217;s &quot;developerworks&quot; site. The most recent version of that package at this time is 1.8.3 .</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

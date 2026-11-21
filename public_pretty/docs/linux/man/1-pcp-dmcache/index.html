@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pcp-dmcache(1) · Linux Manual Pages</title>
+<meta name="description" content="pcp-dmcache, pcp-lvmcache – report on logical storage device caches">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pcp-dmcache/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pcp-dmcache(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>pcp-dmcache</code>, <code>pcp-lvmcache</code> &#8211; report on logical storage device caches</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pcp</code> [<i>pcp options</i>] <code>dmcache</code> [<code>-i</code>/<code>&#8211;iops</code>] [<code>-R</code>/<code>&#8211;repeat</code> <i>N</i>] [<i>device</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>pcp-dmcache</code> reports on the activity of any configured Device Mapper Cache targets. The reported information includes device IOPs, cache and metadata device utilization, as well as hit and miss rates and ratios for both reads and writes for each cache device. </p>
+<p> <code>pcp-lvmcache</code> (Logical Volume Manager cache) is an exact synonym for <code>pcp-dmcache</code> (Device Mapper cache). </p>
+<p> When invoked via the <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1) command, the <code>-h</code>/<code>&#8211;host</code>, <code>-a</code>/<code>&#8211;archive</code>, <code>-O</code>/<code>&#8211;origin</code>, <code>-s</code>/<code>&#8211;samples</code>, <code>-t</code>/<code>&#8211;interval</code>, <code>-Z</code>/<code>&#8211;timezone</code> and several other <i>pcp options</i> become indirectly available. </p>
+<p> By default, <code>pcp-dmcache</code> reports on all available cache target devices (one line each, per sample), but this can be restricted to specific devices on the command line.</p>
+<h2>OPTIONS</h2>
+<p> Additional options are available for changing the output displayed by <code>pcp-dmcache</code>. </p>
+<p> <code>-i</code>/<code>&#8211;iops</code> displays total read and write operations instead of the default cache hit ratio. </p>
+<p> <code>-R</code>/<code>&#8211;repeat</code> changes the frequency at which the column heading is displayed. By default, a header is displayed after every tenth sample.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1), <code><a href="/docs/linux/man/1-pmdadm/">pmdadm</a></code>(1), <code>dmsetup</code>(1), <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) and <code><a href="/docs/linux/man/7-lvmcache/">lvmcache</a></code>(7). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

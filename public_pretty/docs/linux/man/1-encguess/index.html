@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>encguess(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-encguess/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>encguess(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>encguess - guess character encodings of files</p>
+<h2>VERSION</h2>
+<p><tt>$Id:</tt> encguess,v 0.3 2020/12/02 01:28:17 dankogai Exp dankogai $</p>
+<h2>SYNOPSIS</h2>
+ <pre>
+  encguess [switches] filename...
+</pre>
+<h3><font SIZE="-1">SWITCHES</font></h3>
+<dl>
+<dt>-h
+</dt><dd> show this message and exit.
+</dd><dt>-s
+</dt><dd> specify a list of ``suspect encoding types'' to test, separated by either <tt>&quot;:&quot;</tt> or <tt>&quot;,&quot;</tt>
+</dd><dt>-S
+</dt><dd> output a list of all acceptable encoding types that can be used with the -s param
+</dd><dt>-u
+</dt><dd> suppress display of unidentified types</dd></dl>
+<h3><font SIZE="-1">EXAMPLES:</font></h3>
+<dl>
+<dt>&bull;
+</dt><dd> Guess encoding of a file named <tt>&quot;test.txt&quot;</tt>, using only the default suspect types. 
+ <pre>
+   encguess test.txt
+</pre>
+</dd><dt>&bull;
+</dt><dd> Guess the encoding type of a file named <tt>&quot;test.txt&quot;</tt>, using the suspect types <tt>&quot;euc-jp,shiftjis,7bit-jis&quot;</tt>. 
+ <pre>
+   encguess -s euc-jp,shiftjis,7bit-jis test.txt
+   encguess -s euc-jp:shiftjis:7bit-jis test.txt
+</pre>
+</dd><dt>&bull;
+</dt><dd> Guess the encoding type of several files, do not display results for unidentified files. 
+ <pre>
+   encguess -us euc-jp,shiftjis,7bit-jis test*.txt
+</pre></dd></dl>
+<h2>DESCRIPTION</h2>
+<p>The encoding identification is done by checking one encoding type at a time until all but the right type are eliminated. The set of encoding types to try is defined by the -s parameter and defaults to ascii, utf8 and <font SIZE="-1">UTF-16/32</font> with <font SIZE="-1">BOM.</font> This can be overridden by passing one or more encoding types via the -s parameter. If you need to pass in multiple suspect encoding types, use a quoted string with the a space separating each value.</p>
+<h2>SEE ALSO</h2>
+<p>Encode::Guess, Encode::Detect</p>
+<h2>LICENSE AND COPYRIGHT</h2>
+<p>Copyright 2015 Michael LaGrasta and Dan Kogai.</p>
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the the Artistic License (2.0). You may obtain a copy of the full license at:</p>
+<p>&lt;<a rel="nofollow" HREF="http://www.perlfoundation.org/artistic_license_2_0"><a href="http://www.perlfoundation.org/artistic_license_2_0">http://www.perlfoundation.org/artistic_license_2_0</a></a>&gt;</p>
+<h2>Index</h2>
+<dt><a HREF="#lbAG">DESCRIPTION</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAH">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAI">LICENSE AND COPYRIGHT</a>
+</dt><dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

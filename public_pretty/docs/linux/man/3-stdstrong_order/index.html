@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdstrong_order(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdstrong_order/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdstrong_order(3)</h1>
+
+
+
+
+
+<p>std::strong_order - std::strong_order</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;compare&gt;
+    template &lt;class T&gt;
+    (since C++ 20)
+        constexpr std::strong_ordering strong_order(const T &amp;a, const T &amp;b);</code></pre> 
+<p>Compares two values using 3-way comparison and produces a result of type std::strong_ordering
+Specifically,</p>
+<ul>
+<li>First, if std::numeric_limits&lt;T&gt;::is_iec559 is true, performs the ISO/IEC/IEEE 60559 totalOrder comparison of floating-point values and returns that result as a value of type std::strong_ordering (note: this comparison can distinguish between the positive and negative zero and between the NaNs with different representations)</li>
+<li>Otherwise, if the expression a &lt;=&gt; b is well-formed and its result is convertible to std::strong_ordering, returns that result.</li>
+<li>Otherwise, if the expression a &lt;=&gt; b is well-formed, but its result is not convertible to std::strong_ordering, then the function is defined as deleted.</li>
+<li>Otherwise, if the expression a &lt;=&gt; b is ill-formed, but the expressions a == b and a &lt; b are both well-formed and convertible to bool,
+ <wbr> <wbr> <wbr> <wbr> <wbr> * if a == b is true, returns std::strong_ordering::equal
+ <wbr> <wbr> <wbr> <wbr> <wbr> * otherwise, if a &lt; b is true, returns std::strong_ordering::less
+ <wbr> <wbr> <wbr> <wbr> <wbr> * otherwise, returns std::strong_ordering::greater</li>
+<li>Otherwise, the function is defined as deleted.</li>
+</ul>
+<h2>Parameters</h2>
+<p>a, b - values to compare</p>
+<h2>Return value</h2>
+<p>A value of type std::strong_ordering, as described above.</p>
+<h2>Notes</h2>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example</p>
+<h2>See also</h2>
+<p>strong_ordering the result type of 3-way comparison that supports all 6 operators and is substitutable
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+(C++20)
+weak_order performs 3-way comparison and produces a result of type std::weak_ordering
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+(C++20)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

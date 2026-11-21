@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdallocator_traitsselect_on_container_copy_construction(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdallocator_traitsselect_on_container_copy_construction/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdallocator_traitsselect_on_container_copy_construction(3)</h1>
+
+
+
+
+
+<p>std::allocator_traits&lt;Alloc&gt;::select_on_container_copy_construction - std::allocator_traits&lt;Alloc&gt;::select_on_container_copy_construction</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;memory&gt;
+static Alloc select_on_container_copy_construction( const Alloc&amp; a ); <i>(since C++11)</i>
+If possible, obtains the copy-constructed version of the allocator a, by calling a.select_on_container_copy_construction(). If the above is not possible (e.g. a does not have the member function select_on_container_copy_construction(), then returns a, unmodified.
+This function is called by the copy constructors of all standard library containers. It allows the allocator used by the constructor&rsquo;s argument to become aware that the container is being copied and modify state if necessary.</p>
+<h2>Parameters</h2>
+<p>a - allocator used by a standard container passed as an argument to a container copy constructor</p>
+<h2>Return value</h2>
+<p>The allocator to use by the copy-constructed standard containers.</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> copies the state of scoped_allocator_adaptor and all its allocators
+select_on_container_copy_construction <i>(public member function of std::scoped_allocator_adaptor&lt;OuterAlloc,InnerAlloc&hellip;&gt;)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

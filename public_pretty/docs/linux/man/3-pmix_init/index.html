@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pmix_init(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pmix_init/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pmix_init(3)</h1>
+
+
+
+
+
+<p>PMIx_Init - Initialize the PMIx Client</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;pmix.h&gt;
+pmix_status_t PMIx_Init(pmix_proc_t *proc);</code></pre>
+<h2>Arguments</h2>
+<p>proc : Pointer to a pmix_proc_t object in which the client&rsquo;s namespace and rank are to be returned.</p>
+<h2>Description</h2>
+<p>Initialize the PMIx client, returning the process identifier assigned to this client&rsquo;s application in the provided pmix_proc_t struct. Passing a parameter of NULL for this parameter is allowed if the user wishes solely to initialize the PMIx system and does not require return of the identifier at that time.</p>
+<p>When called, the PMIx client will check for the required connection information of the local PMIx server and will establish the connection. If the information is not found, or the server connection fails, then an appropriate error constant will be returned.</p>
+<p>If successful, the function will return PMIX_SUCCESS and will fill the provided structure with the server-assigned namespace and rank of the process within the application.</p>
+<p>Note that the PMIx client library is referenced counted, and so multiple calls to PMIx_Init are allowed. Thus, one way to obtain the namespace and rank of the process is to simply call PMIx_Init with a non-NULL parameter.</p>
+<h2>Return Value</h2>
+<p>Returns PMIX_SUCCESS on success. On error, a negative value corresponding to a PMIx errno is returned.</p>
+<h2>Errors</h2>
+<p>PMIx errno values are defined in pmix_common.h.</p>
+<h2>Notes</h2>
+<h2>See Also</h2>
+<h2>Authors</h2>
+<p>PMIx.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

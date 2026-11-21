@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_isosurface_params(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_isosurface_params/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_isosurface_params(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Isosurface_params - This document briefly describes all Isosurface internal parameters.</p>
+<h2>Description</h2>Parameter descriptions, in alphabetical order, of all Isosurface internal parameters follow. Each description begins with a line giving the parameter name and the intrinsic FORTRAN type of the parameter.
+<dl COMPACT><dt>'IU' - Integer
+</dt><dd>Number of extra slabs to be interpolated between each pair of slabs perpendicular to the U axis. Using a non-zero value takes longer, but makes a better picture. Negate the value to interpolate the extra slabs but not draw them, which has the effect of reducing errors due to being able to see between slabs. Attempting to give 'IU' a value less than -10 will give it the value -10; similarly, trying to give it a value greater than 10 will give it the value 10. The default value is 0.
+</dd><dt>'IV' - Integer
+</dt><dd>Like 'IU', but applies to extra slabs perpendicular to the V axis. The default value is 0.
+</dd><dt>'IW' - Integer
+</dt><dd>Like 'IU', but applies to extra slabs perpendicular to the W axis. The default value is 0.
+</dd><dt>'RF' - Integer
+</dt><dd>Controls drawing of reference planes and axes. Zero means &quot;don't draw them&quot;; non-zero means &quot;draw them&quot;. The default value is 1.
+</dd><dt>'RS' - Real
+</dt><dd>Zero turns off the &quot;relative size&quot; feature; the 3D grid box will be scaled to fill almost the entire plotter frame. Give 'RS' a non-zero value to turn on the &quot;relative size&quot; feature and to specify that distance from which the box, when viewed from the direction which makes its image largest, almost fills the frame. Views from closer in will give a bigger image and views from farther out will give a smaller image. This is useful when making movies with the &quot;camera&quot; flying around the box. The default value is 0.
+</dd><dt>'SL' - Real
+</dt><dd>Segment length. When contours are smoothed, this parameter specifies the approximate length of the line segments used to draw the smooth curves. Values outside the range from 0.0001 to 0.1 will be mapped to the nearer end of that range. The default value is 0.01.
+</dd><dt>'SM' - Integer
+</dt><dd>Screen model selector. Zero selects the coarse screen model (128 x 128); non-zero selects a finer screen model (256 x 256). Using the former is faster, but using the latter gives better pictures. The default value is 0.
+</dd><dt>'ST' - Real
+</dt><dd>Spline tension. If zero, turns off the smoothing of contours. If non-zero, turns the smoother on and determines the tension on the splines used to do the smoothing. Use of values greater than about 15. has been observed to cause overflow on some machines. The default value is 0.
+</dd><dt>'SV' - Integer
+</dt><dd>Special value. The value zero turns off the special-value feature. A non-zero value turns on the feature and specifies the special value itself. Regions filled with this value are treated as being outside the volume bounded by the isosurface. Preliminary experiments seem to indicate that sometimes the use of special values works well and sometimes it doesn't (depending on the pattern of the special values in the field). The default value is 0.
+</dd><dt>'VB' - Real
+</dt><dd>The position of the bottom edge of the viewport in which the isosurface is to be displayed, expressed as a fraction between 0 (the bottom edge of the frame) and 1 (the top edge of the frame). The default value is 0.
+</dd><dt>'VL' - Real
+</dt><dd>The position of the left edge of the viewport in which the isosurface is to be displayed, expressed as a fraction between 0 (the left edge of the frame) and 1 (the right edge of the frame). The default value is 0.
+</dd><dt>'VR' - Real
+</dt><dd>The position of the right edge of the viewport in which the isosurface is to be displayed, expressed as a fraction between 0 (the left edge of the frame) and 1 (the right edge of the frame). The default value is 1.
+</dd><dt>'VT' - Real
+</dt><dd>The position of the top edge of the viewport in which the isosurface is to be displayed, expressed as a fraction between 0 (the bottom of the frame) and 1 (the top edge of the frame). The default value is 1.</dd></dl><h2>See Also</h2>Online: isgeti, isgetr, isseti, issetr 
+<p>Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>Copyright (C) 1987-2009 
+ University Corporation for Atmospheric Research 
+ The use of this Software is governed by a License Agreement.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

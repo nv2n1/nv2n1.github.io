@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>obspectrophore(1) · Linux Manual Pages</title>
+<meta name="description" content="obspectrophore – SPECTROPHORE calculator">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-obspectrophore/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>obspectrophore(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> <code>obspectrophore</code> &#8211; SPECTROPHORE calculator</p>
+<h2>SYNOPSIS</h2>
+<p> [<i>options</i> ] &#8211;<code>i </code><i>input_file</i> </p>
+<p> [-<code>u | h</code> ]</p>
+<h2>DESCRIPTION</h2>
+<p> can be used to generate Spectrophores, which are one-dimensional descriptors generated from the property fields surrounding the molecules. This technology allows the accurate description of molecules in terms of their surface properties or fields. Comparison of molecules property fields provides a robust structure-independent method of aligning actives from different chemical classes. When applied to molecules such as ligands and drugs, Spectrophores can be used as powerful molecular descriptors in the fields of chemoinformatics, virtual screening, and QSAR modeling.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-i </code><i>file</i></dt>
+<dd> Specifies the molecular input file from which Spectrophores are to be calculated. The filetype is automatically detected from the file extension.</dd>
+<dt><code>-n </code><i>value</i></dt>
+<dd> Specifies the kind of normalization that should be performed. Valid values are (without quotes): <i>No</i> (default), <i>ZeroMean</i>, <i>UnitStd</i> and <i>ZeroMeanAndUnitStd</i>.</dd>
+<dt><code>-a </code><i>value</i></dt>
+<dd> Specifies the required accuracy expressed as the angular stepsize. Only the following discrete values are allowed: <i>1 | 2 | 5 | 10 | 15 | 20 </i><code>(default) | </code><i>30 | 36 | 45 | 60</i></dd>
+<dt><code>-s </code><i>value</i></dt>
+<dd> Specifies the kind of cages that should be used in terms of the underlying pointgroup: P1 or P-1. Valid values are (without quotes): <i>No</i> (default), <i>Unique</i>, <i>Mirror</i> and <i>All</i>.</dd>
+<dt><code>-r </code><i>value</i></dt>
+<dd> Specifies the required resolution expressed as a real positive number. The default value is <i>3.0</i> Angstrom. Negative values or a value equal to 0 generate an error message.</dd>
+<dt><code>-u</code></dt>
+<dd> Display implementation details.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help message.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-babel/">babel</a>(1). </p>
+<p> The web pages for Open Babel can be found at: &lt;<code><a rel="nofollow" href="http://openbabel.org/">http://openbabel.org/</a></code>&gt;</p>
+<h2>AUTHORS</h2>
+<p> An -nosplit Open Babel is developed by a cast of many, including currrent maintainers An Geoff Hutchison , An Chris Morley , An Michael Banck , and innumerable others who have contributed fixes and additions. For more contributors to Open Babel, see &lt;<code><a rel="nofollow" href="http://openbabel.org/wiki/THANKS">http://openbabel.org/wiki/THANKS</a></code>&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2005-2010 by Silicos NV </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation version 2 of the License. </p>
+<p> The algorithm in this software has been covered by patent WO2009146735. However, Silicos NV and the inventors of the above mentioned patent assure that no patent infringment claims will be issued against individuals or institutions that use this software under the GNU General Public License. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

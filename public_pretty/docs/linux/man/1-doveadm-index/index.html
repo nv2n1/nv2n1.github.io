@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>doveadm-index(1) · Linux Manual Pages</title>
+<meta name="description" content="doveadm-index – Index mailboxes">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-doveadm-index/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>doveadm-index(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> doveadm-index &#8211; Index mailboxes</p>
+<h2>SYNOPSIS</h2>
+<p> <code>doveadm</code> [<code>-Dv</code>] <code>index</code> [<code>-S</code> <i>socket_path</i>] [<code>-q</code>] [<code>-n</code> <i>max_recent</i>] <i>mailbox</i><br />
+ <code>doveadm</code> [<code>-Dv</code>] <code>index</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code> [<code>-q</code>] [<code>-n</code> <i>max_recent</i>] <i>mailbox</i><br />
+ <code>doveadm</code> [<code>-Dv</code>] <code>index</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i>&nbsp;<wbr>user</i> [<code>-q</code>] [<code>-n</code> <i>max_recent</i>] <i>mailbox</i></p>
+<h2>DESCRIPTION</h2>
+<p> Add unindexed messages in a mailbox into index/cache file. If full text search is enabled, also add unindexed messages to the fts database. </p>
+<p> The caching adds only the fields that were previously added to the mailbox&#8217;s caching decisions, so it won&#8217;t do anything useful for mailboxes that user&#8217;s client hasn&#8217;t accessed yet. You can use <code>doveadm dump</code> command to show a specific mailbox&#8217;s current caching decisions. </p>
+<p> Messages can also be added automatically to full text search index using: </p>
+<pre>
+plugin {
+  ...
+  fts_autoindex = yes
+}
+</pre>
+<p> in <i>/etc/dovecot/conf.d/90-plugin.conf</i>.</p>
+<h2>OPTIONS</h2>
+<p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
+<dl>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
+<p> Command specific <i>options</i>:</p>
+<dl>
+<dt><code>-A</code></dt>
+<dd> If the <code>-A</code> option is present, the <i>command</i> will be performed for all users. Using this option in combination with system users from <code>userdb { driver = passwd }</code> is not recommended, because it contains also users with a lower UID than the one configured with the <i>first_valid_uid</i> setting. </dd>
+<p> When the SQL userdb module is used make sure that the <i>iterate_query</i> setting in <i>/etc/dovecot/dovecot-sql.conf.ext</i> matches your database layout. When using the LDAP userdb module, make sure that the <i>iterate_attrs</i> and <i>iterate_filter</i> settings in <i>/etc/dovecot/dovecot-ldap.conf.ext</i> match your LDAP schema. Otherwise <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will be unable to iterate over all users.</p>
+<dt><code>-n</code><i>&nbsp;<wbr>max_recent</i></dt>
+<dd> An integer value, which specifies the maximum number of \Recent messages in mailboxes. If the mailbox contains more than <i>max_recent</i> messages with \Recent flag set, the mailbox will not be indexed. This may be useful to avoid unnecessary indexing for large mailboxes that are never opened.</dd>
+<dt><code>-q</code></dt>
+<dd> Queues the indexing to be run by indexer process. Without -q the indexing is done directly by the <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) process. Some backends like fts-lucene can&#8217;t handle multiple processes updating the indexes simultaneously, so -q should usually be used on production.</dd>
+<dt><code>-S&nbsp;<wbr></code><i>socket_path</i></dt>
+<dd> The option&#8217;s argument is either an absolute path to a local UNIX domain socket, or a hostname and port (<i>hostname</i>:<i>port</i>), in order to connect a remote host via a TCP socket. </dd>
+<p> This allows an administrator to execute <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) mail commands through the given socket.</p>
+<dt><code>-u&nbsp;<wbr></code><i>user/mask</i></dt>
+<dd> Run the <i>command</i> only for the given <i>user</i>. It&#8217;s also possible to use &#8216;<code>*</code>&#8216; and &#8216;<code>?</code>&#8216; wildcards (e.g. -u *@example.org).<br />
+ When neither the <code>-A</code> option nor <code>-u&nbsp;<wbr></code><i>user</i> was specified, the <i>command</i> will be executed with the environment of the currently logged in user.</dd></dl>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt><i>mailbox</i></dt>
+<dd> The name of the mailbox to index.</dd></dl>
+<h2>EXAMPLE</h2>
+<p> Index bob&#8217;s INBOX: </p>
+<pre>
+<code>doveadm index -u bob INBOX</code>
+</pre>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs, including <i>doveconf -n</i> output, to the Dovecot Mailing List &lt;dovecot [at] dovecot.org&gt;. Information about reporting bugs is available at: <a rel="nofollow" href="http://dovecot.org/bugreport.html">http://dovecot.org/bugreport.html</a></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

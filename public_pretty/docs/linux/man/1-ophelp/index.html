@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ophelp(1) · Linux Manual Pages</title>
+<meta name="description" content="ophelp – list OProfile events">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ophelp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ophelp(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> ophelp &#8211; list OProfile events </p>
+<h2>SYNOPSIS</h2>
+<p> <code>ophelp</code> [ <i>options</i> ] [event name]</p>
+<h2>DESCRIPTION</h2>
+<p> By default, <code>ophelp</code> lists the available performance counter options. If you give it a symbolic event name, it will return the hardware value (e.g. &quot;ophelp DATA_MEM_REFS&quot;). </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;cpu-type / -c</code></dt>
+<dd> Show the events for the given numerical CPU type. </dd>
+<dt><code>&#8211;get-cpu-type / -r</code></dt>
+<dd> Show the symbolic CPU name. </dd>
+<dt><code>&#8211;get-default-event / -d</code></dt>
+<dd>
+ Show the default event for the specified CPU type.</dd>
+<dt><code>&#8211;check-events / -e [events]</code></dt>
+<dd> Check the given space-separated event descriptions for validity. If the events are valid, show which pmu counter each event would be assigned to. </dd>
+<dt><code>&#8211;callgraph [callgraph_depth]</code></dt>
+<dd> Use the callgraph depth to compute the higher minimum sampling intervals for the events. </dd>
+<dt><code>&#8211;unit-mask / -u [event]</code></dt>
+<dd> Show the default unit mask for the given event. </dd>
+<dt><code>&#8211;symbolic-unit-mask / -U [event]</code></dt>
+<dd> Show the numerical unit and extra mask for given event. </dd>
+<dt><code>&#8211;extra-mask / -E [event]</code></dt>
+<dd> Show the extra unit mask for given event. </dd>
+<dt><code>&#8211;xml / -X</code></dt>
+<dd> List events in XML format. </dd>
+<dt><code>&#8211;help / -? / &#8211;usage</code></dt>
+<dd> Show help message. </dd>
+<dt><code>&#8211;version / -v</code></dt>
+<dd> Show version. </dd>
+</dl>
+<h2>ENVIRONMENT</h2>
+<p> No special environment variables are recognised by ophelp. </p>
+<h2>FILES</h2>
+<dl>
+<dt><i>$prefix/share/oprofile/</i></dt>
+<dd> Event description files used by OProfile.</dd>
+<dt><i>/var/lib/oprofile/samples/</i></dt>
+<dd> The location of the generated sample files. </dd>
+</dl>
+<h2>VERSION</h2>
+<dl>
+<dt>This man page is current for oprofile-0.9.9.</dt>
+<dd>
+</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code>/usr/share/doc/oprofile/,</code> <code><a href="/docs/linux/man/1-oprofile/">oprofile</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

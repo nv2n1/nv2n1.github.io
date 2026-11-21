@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>exit_group(2) · Linux Manual Pages</title>
+<meta name="description" content="exit_group – exit all threads in a process">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/2-exit_group/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/2/">Section 2</a></p>
+<article>
+<h1>exit_group(2)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> exit_group &#8211; exit all threads in a process </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;linux/unistd.h&gt;
+void exit_group(int status);
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> This system call is equivalent to <code>_exit</code>(2) except that it terminates not only the calling thread, but all threads in the calling process&#8217;s thread group.</p>
+<h2>RETURN VALUE</h2>
+<p> This system call does not return.</p>
+<h2>VERSIONS</h2>
+<p> This call is present since Linux 2.5.35.</p>
+<h2>CONFORMING TO</h2>
+<p> This call is Linux-specific.</p>
+<h2>NOTES</h2>
+<p> Since glibc 2.3, this is the system call invoked when the <code>_exit</code>(2) wrapper function is called.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-exit/">exit</a></code>(2)</p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

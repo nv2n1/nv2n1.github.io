@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aulastlog(8) · Linux Manual Pages</title>
+<meta name="description" content="aulastlog – a program similar to lastlog">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-aulastlog/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>aulastlog(8)</h1>
+
+
+
+
+
+<p>aulastlog &#8211; a program similar to lastlog</p>
+<h2>Synopsis</h2>
+<p><code>aulastlog [ options ]</code></p>
+<h2>Description</h2>
+<p><code>aulastlog</code> is a program that prints out the last login for all users of the <code>local</code> machine similar to the way lastlog does. The login-name, port, and last login time will be printed. If the user has never logged in, the message <code>** Never logged in**</code> will be displayed instead of the port and time. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-u, &#8211;user</code></dt>
+<dd>Print the lastlog record for user with specified LOGIN only.</dd>
+<dt><code>&#8211;stdin</code></dt>
+<dd>Use stdin as the source of audit records. The audit events must be in the raw format.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-lastlog/">lastlog</a></code>(8), <code><a href="/docs/linux/man/8-ausearch/">ausearch</a></code>(8), <code><a href="/docs/linux/man/8-aureport/">aureport</a></code>(8). </p>
+<h2>Author</h2>
+<p>Steve Grubb</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

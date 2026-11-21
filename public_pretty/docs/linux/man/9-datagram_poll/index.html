@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>datagram_poll(9) · Linux Manual Pages</title>
+<meta name="description" content="datagram_poll – generic datagram poll">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-datagram_poll/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>datagram_poll(9)</h1>
+
+
+
+
+
+<p>datagram_poll &#8211; generic datagram poll</p>
+<h2>Synopsis</h2>
+<pre><code>unsigned int datagram_poll(struct file *file, struct socket *sock, poll_table *wait);</code></pre>
+<h2>Arguments</h2>
+<p><i>file</i></p>
+<dl>
+<dd>
+</dd><dd>file struct</dd></dl>
+<p> <i>sock</i></p>
+<dl>
+<dd>socket</dd></dl>
+<p> <i>wait</i></p>
+<dl>
+<dd>poll table</dd></dl>
+<h2>Description</h2>
+<p>Datagram poll: Again totally generic. This also handles sequenced packet sockets providing the socket receive queue is only ever holding data ready to receive.</p>
+<h2>Note</h2>
+<p>when you _don&#8217;t_ use this routine for this protocol, and you use a different write policy from <code>sock_writeable</code> then please supply your own write_space callback.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

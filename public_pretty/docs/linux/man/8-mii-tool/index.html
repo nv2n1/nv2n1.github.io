@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mii-tool(8) · Linux Manual Pages</title>
+<meta name="description" content="mii-tool – view, manipulate media-independent interface status">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mii-tool/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mii-tool(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>mii-tool &#8211; view, manipulate media-independent interface status</p>
+<h2>Synopsis</h2>
+<p><code>mii-tool</code> [<code>-v</code>, <code>&#8211;verbose</code>] [<code>-V</code>, <code>&#8211;version</code>] [<code>-R</code>, <code>&#8211;reset</code>] [<code>-r</code>, <code>&#8211;restart</code>] [<code>-w</code>, <code>&#8211;watch</code>] [<code>-l</code>, <code>&#8211;log</code>] [<code>-A</code>, <code>&#8211;advertise=</code><i>media,&#8230;</i>] [<code>-F</code>, <code>&#8211;force=</code><i>media</i>] [<code>-p</code>, <code>&#8211;phy=</code><i>addr</i>] interface &#8230; </p>
+<h2>Description</h2>
+<p>This utility checks or sets the status of a network interface&#8217;s Media Independent Interface (MII) unit. Most fast ethernet adapters use an MII to autonegotiate link speed and duplex setting. </p>
+<p> Most intelligent network devices use an autonegotiation protocol to communicate what media technologies they support, and then select the fastest mutually supported media technology. The <code>-A</code> or <code>&#8211;advertise</code> options can be used to tell the MII to only advertise a subset of its capabilities. Some passive devices, such as single-speed hubs, are unable to autonegotiate. To handle such devices, the MII protocol also allows for establishing a link by simply detecting either a 10baseT or 100baseT link beat. The <code>-F</code> or <code>&#8211;force</code> options can be used to force the MII to operate in one mode, instead of autonegotiating. The <code>-A</code> and <code>-F</code> options are mutually exclusive. </p>
+<p> The default short output reports the negotiated link speed and link status for each interface.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Display more detailed MII status information. If used twice, also display raw MII register contents.<br />
+ <code>Alert:</code> If used three times, will force reading all MII registers, including non standard ones. It&#8217;s not guaranteed any valid answer from PHY while PHY communication can even hang. With driver e1000e will fail while reading register 0x07.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Display program version information.</dd>
+<dt><code>-R</code>, <code>&#8211;reset</code></dt>
+<dd>Reset the MII to its default configuration.</dd>
+<dt><code>-r</code>, <code>&#8211;restart</code></dt>
+<dd>Restart autonegotiation.</dd>
+<dt><code>-w</code>, <code>&#8211;watch</code></dt>
+<dd>Watch interface(s) and report changes in link status. The MII interfaces are polled at one second intervals.</dd>
+<dt><code>-l</code>, <code>&#8211;log</code></dt>
+<dd>Used with <code>-w</code>, records link status changes in the system log instead of printing on standard output.</dd>
+<dt><code>-F</code><i> media</i>, <code>&#8211;force=</code><i>media</i></dt>
+<dd>Disable autonegotiation, and force the MII to either <code>100baseTx-FD</code>, <code>100baseTx-HD</code>, <code>10baseT-FD</code>, or <code>10baseT-HD</code> operation.</dd>
+<dt><code>-A</code><i> media,&#8230;</i>, <code>&#8211;advertise=</code><i>media,&#8230;</i></dt>
+<dd>Enable and restart autonegotiation, and advertise only the specified media technologies. Multiple technologies should be separated by commas. Valid media are <code>100baseT4</code>, <code>100baseTx-FD</code>, <code>100baseTx-HD</code>, <code>10baseT-FD</code>, and <code>10baseT-HD</code>.</dd>
+<dt><code>-p</code><i> addr</i>, <code>&#8211;phy=</code><i>addr</i></dt>
+<dd>Override the MII address provided by kernel with value <code>addr</code>. </dd>
+</dl>
+<h2>Diagnostics</h2>
+<dl>
+<dt>SIOCGMIIPHY on &#8216;eth?&#8217; failed: Invalid argument</dt>
+<dd>If the interface is not running (up), kernel will refuse to report its link state.</dd>
+<dt>SIOCGMIIPHY on &#8216;eth?&#8217; failed: Operation not permitted</dt>
+<dd>Most kernels restrict access to root.</dd>
+<dt>SIOCGMIIPHY on &#8216;eth?&#8217; failed: No such device</dt>
+<dd>This error is shown, if the kernel does not know about the named device.</dd>
+<dt>SIOCGMIIPHY on &#8216;eth?&#8217; failed: Operation not supported</dt>
+<dd>The interface in question does not support MII queries. Most likely, it does not have MII transceivers, at all. </dd>
+</dl>
+<h2>Authors</h2>
+<p>David Hinds &#8211; dhinds [at] pcmcia.sourceforge.org<br />
+ Donald Becker &#8211; becker [at] scyld.com<br />
+ Bernd Eckenfels &#8211; net-tools [at] lina.inka.de</p>
+<h2>See Also</h2>
+<p><a rel="nofollow" href="http://net-tools.sourceforge.net">http://net-tools.sourceforge.net</a> &#8211; Homepage of the net-tools project </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

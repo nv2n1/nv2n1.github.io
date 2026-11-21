@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>setroubleshootd(8) · Linux Manual Pages</title>
+<meta name="description" content="setroubleshootd – setroubleshoot daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-setroubleshootd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>setroubleshootd(8)</h1>
+
+
+
+
+
+<p>setroubleshootd &#8211; setroubleshoot daemon </p>
+<h2>Synopsis</h2>
+<p><code>setroubleshootd</code> <i>[-d] [-f] [-h] [-c config]</i> </p>
+<h2>Description</h2>
+<p>This manual page describes the <code>setroubleshootd</code> program. setroubleshootd is the dbus service in the setroubleshoot system. setroubleshoot is used to diagnose SELinux denials and attempts to provide user friendly explanations for a SELinux denial (e.g. AVC) and recommendations for how one might adjust the system to prevent the denial in the future. In a standard configuration setroubleshoot is composed of two components, sealert and setroubleshootd. setroubleshootd is a system daemon which runs under setroubleshoot user and listens for audit events emitted from the kernel related to SELinux. When the setroubleshootd daemon sees an SELinux AVC denial it runs a series of analysis plugins which examines the audit data related to the AVC. It records the results of the analysis and signals any clients which have attached to the setroubleshootd daemon that a new alert has been seen. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-f &#8211;nofork</code></dt>
+<dd>Do not fork the daemon</dd>
+<dt><code>-d &#8211;debug</code></dt>
+<dd>Do not exit after 10 seconds</dd>
+<dt><code>-h &#8211;help </code></dt>
+<dd>Show this message</dd>
+<dt><code>-c &#8211;config</code></dt>
+<dd>section.option=value<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>set a configuration value</dd>
+</dl>
+<h2>Author</h2>
+<p>This man page was written by Dan Walsh &lt;dwalsh [at] redhat.com&gt;.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-sealert/">sealert</a>(8),</code><a href="/docs/linux/man/8-selinux/">selinux</a><code>(8)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

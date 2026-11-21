@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xtgetapplicationresources(3) · Linux Manual Pages</title>
+<meta name="description" content="XtGetApplicationResources, XtVaGetApplicationResources – obtain application resources">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xtgetapplicationresources/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xtgetapplicationresources(3)</h1>
+
+
+
+
+
+<p>XtGetApplicationResources, XtVaGetApplicationResources &#8211; obtain application resources </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/Intrinsic.h&gt;</p>
+<dl COMPACT>
+<dd>void XtGetApplicationResources(Widget <i>w</i>, XtPointer <i>base</i>, XtResourceList <i>resources</i>, Cardinal <i>num_resources</i>, ArgList <i>args</i>, Cardinal <i>num_args</i>);</dd>
+<dd>void XtVaGetApplicationResources(Widget <i>w</i>, XtPointer <i>base</i>, XtResourceList <i>resources</i>, Cardinal <i>num_resources</i>, &#8230;);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>args</i></dt>
+<dd>Specifies the argument list to override resources obtained from the resource database.</dd>
+<dt><i>base</i></dt>
+<dd>Specifies the base address of the subpart data structure where the resources should be written.</dd>
+<dt><i>num_args</i></dt>
+<dd>Specifies the number of arguments in the argument list.</dd>
+<dt><i>num_resources</i></dt>
+<dd>Specifies the number of resources in the resource list.</dd>
+<dt><i>resources</i></dt>
+<dd>Specifies the resource list for the subpart.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the widget that wants resources for a subpart or that identifies the resource database to search.</dd>
+<dt><i>&#8230;</i></dt>
+<dd>Specifies the variable arguments to override resources obtained from the resource database.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XtGetApplicationResources</code> function first uses the passed widget, which is usually an application shell, to construct a resource name and class list, Then, it retrieves the resources from the argument list, the resource database, or the resource list default values. After adding base to each address, <code>XtGetApplicationResources</code> copies the resources into the address given in the resource list. If args is NULL, num_args must be zero. However, if num_args is zero, the argument list is not referenced. The portable way to specify application resources is to declare them as members of a structure and pass the address of the structure as the base argument.</p>
+<h2>See Also</h2>
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dpkgchangelogdebian(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dpkgchangelogdebian/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dpkgchangelogdebian(3)</h1>
+
+
+
+
+
+<p>Dpkg::Changelog::Debian - parse Debian changelogs</p>
+<h2>Description</h2>Dpkg::Changelog::Debian parses Debian changelogs as described in the Debian policy (version 3.6.2.1 at the time of this writing). See section ``<font SIZE="-1">SEE ALSO''</font> for locations where to find this definition. 
+<p>The parser tries to ignore most cruft like # or /* */ style comments, <font SIZE="-1">CVS</font> comments, vim variables, emacs local variables and stuff from older changelogs with other formats at the end of the file. <font SIZE="-1">NOTE:</font> most of these are ignored silently currently, there is no parser error issued for them. This should become configurable in the future.</p>
+<h3><font SIZE="-1">METHODS</font></h3><dl COMPACT><dt>$c-&gt;parse($fh, $description)
+</dt><dd>Read the filehandle and parse a Debian changelog in it. Returns the number of changelog entries that have been parsed with success.</dd></dl><h2>See Also</h2>Dpkg::Changelog 
+<p>Description of the Debian changelog format in the Debian policy: &lt;<a rel="nofollow" HREF="https://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog"><a href="https://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog">https://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog</a></a>&gt;.</p>
+<h2>Changes</h2><h3>Version 1.00</h3>Mark the module as public.
+<h2>Authors</h2>Frank Lichtenheld, &lt;frank [at] lichtenheld.de&gt; Raphaël Hertzog, &lt;hertzog [at] debian.org&gt;
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

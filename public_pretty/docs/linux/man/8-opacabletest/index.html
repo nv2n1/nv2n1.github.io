@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>opacabletest(8) · Linux Manual Pages</title>
+<meta name="description" content="opacabletest">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-opacabletest/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>opacabletest(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>opacabletest </p>
+<p> <code>(Switch)</code> Initiates or stops Cable Bit Error Rate stress tests for Intel(R) Omni-Path Host Fabric Interface (HFI)-to-switch links and/or ISLs.</p>
+<h2>Syntax</h2>
+<p>opacabletest [-C|-A] [-c <i>file</i>] [-f <i>hostfile</i>] [-h <i>&#8216;hosts&#8217;</i>] [-n <i>numprocs</i>] [-t#8217#160; <i>portsfile</i>] [-p <i>ports</i>] [start|start_fi|start_isl|stop|stop_fi| stop_isl] &#8230;</p>
+<h2>Options</h2>
+<dl>
+<dt>&#8211;help</dt>
+<dd>Produces full help text. </dd>
+<dt>-C</dt>
+<dd>Clears error counters. </dd>
+<dt>-A</dt>
+<dd>Forces clear of hardware error counters. Implies -C. </dd>
+<dt>-c <i>file</i></dt>
+<dd>Error thresholds configuration file. Default is /etc/sysconfig/opa/opamon.si.conf file. Only used if -C or -A specified. </dd>
+<dt>-f <i>hostfile</i></dt>
+<dd>File with hosts to include in HFI -to-SW test. Default is /etc/sysconfig/opa/hosts file. </dd>
+<dt>-h <i>hosts</i></dt>
+<dd>List of hosts to include in HFI -SW test. </dd>
+<dt>-n <i>numprocs</i></dt>
+<dd>Number of processes per host for HFI -SW test. </dd>
+<dt>-t <i>portsfile</i></dt>
+<dd>File with list of local HFI ports used to access fabrics when clearing counters. Default is /etc/sysconfig/opa/ports file. </dd>
+<dt>-p <i>ports</i></dt>
+<dd>List of local HFI ports used to access fabrics for counter clear. Default is first active port. The first HFI in the system is 1. The first port on an HFI is 1. </dd>
+<dd>Uses the format hfi:port, for example:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dd>0:0 First active port in system. </dd>
+</dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>0:y Port <i>y</i> within system. </dd>
+</dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>x:0 First active port on HFI <i>x</i>. </dd>
+</dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>x:y HFI <i>x</i>, port <i>y</i>. </dd>
+</dl>
+</dl>
+<dt>start</dt>
+<dd>Starts the HFI -SW and ISL tests. </dd>
+<dt>start_fi</dt>
+<dd>Starts the HFI -SW test. </dd>
+<dt>start_isl</dt>
+<dd>Starts the ISL test. </dd>
+<dt>stop</dt>
+<dd>Stops the HFI -SW and ISL tests. </dd>
+<dt>stop_fi</dt>
+<dd>Stops the HFI -SW test. </dd>
+<dt>stop_isl</dt>
+<dd>Stops the ISL test. </dd>
+</dl>
+<p> The HFI -SW cable test requires that the <code>FF_MPI_APPS_DIR</code> is set, and it contains a pre-built copy of the mpi_apps for an appropriate message passing interface (MPI). </p>
+<p> The ISL cable test started by this tool assumes that the master Host Subnet Manager (HSM) is running on this host. If using the Embedded Subnet Manager (ESM), or if a different host is the master HSM, the ISL cable test must be controlled by the switch CLI, or by Intel(R) Omni-Path Fabric Suite FastFabric on the master HSM respectively.</p>
+<h2>Examples</h2>
+<p>opacabletest -A start<br />
+ opacabletest -f good -A start<br />
+ opacabletest -h &#8216;arwen elrond&#8217; start_fi<br />
+ HOSTS=&#8217;arwen elrond&#8217; opacabletest stop<br />
+ opacabletest -A</p>
+<h2>Environment Variables</h2>
+<p>The following environment variables are also used by this command:</p>
+<dl>
+<dt><code>HOSTS</code></dt>
+<dd>List of hosts, used if -h option not supplied. </dd>
+<dt><code>HOSTS_FILE</code></dt>
+<dd>File containing list of hosts, used in absence of -f and -h. </dd>
+<dt><code>PORTS</code></dt>
+<dd>List of ports, used in absence of -t and -p. </dd>
+<dt><code>PORTS_FILE</code></dt>
+<dd>File containing list of ports, used in absence of -t and -p. </dd>
+<dt><code>FF_MAX_PARALLEL</code></dt>
+<dd>Maximum concurrent operations. </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

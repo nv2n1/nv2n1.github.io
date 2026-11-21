@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kernel</title>
+  <link rel="canonical" href="https://www.systutorials.com/category/kernel/">
+  <meta name="description" content="Tutorials and Q&amp;A on Linux, systems, and software.">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kernel">
+  <meta property="og:url" content="https://www.systutorials.com/category/kernel/">
+  <meta property="og:description" content="Tutorials and Q&amp;A on Linux, systems, and software.">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin: 2.2rem 0 0.6rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      margin: 1.8rem 0 0.5rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: #555;
+    }
+    a {
+      color: #0a58ca;
+    }
+    .academies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .academy {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.1rem 1.2rem;
+      background: #fff;
+    }
+    .academy h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+    }
+    .academy p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .academy .paths {
+      color: #777;
+      font-size: 0.9rem;
+    }
+    .academy .explore {
+      margin-bottom: 0;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    ul.posts {
+      list-style: none;
+      padding-left: 0;
+    }
+    .recent-post {
+      margin-bottom: 1.2rem;
+    }
+    .recent-post h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.05rem;
+    }
+    .recent-post .meta {
+      margin: 0;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    ul.cat-grid {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 0.4rem 1.5rem;
+    }
+    ul.cat-grid span {
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .year-strip a {
+      margin-right: 0.9rem;
+      white-space: nowrap;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    ul.posts li {
+      margin-bottom: 0.45rem;
+    }
+    ul.posts time {
+      color: #888;
+      font-size: 0.9rem;
+      display: inline-block;
+      min-width: 5.5rem;
+    }
+    footer.site {
+      border-top: 1px solid #ddd;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    footer.site a {
+      margin-left: 1rem;
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">Recent</a>
+        <a href="/archive/">Archive</a><a href="/docs/linux/man/">Linux Manual Pages</a>
+      </nav>
+    </header>
+    
+
+
+
+<h1 id="kernel">Kernel</h1>
+
+
+
+  
+
+<p>Part of <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>.</p>
+
+<p>34 posts.</p>
+
+<ul class="posts">
+
+  <li><time>Dec 5, 2020</time> <a href="/linux-kernel-xt_quota-report-initial-quota-value-instead-of-current-value-to-userspace/">xt_quota: Report Initial Quota Value to Userspace</a></li>
+
+  <li><time>Oct 18, 2020</time> <a href="/linux-kernel-add-support-for-using-a-max3421e-chip-as-a-host-driver/">MAX3421E USB Host Driver for Linux Kernel</a></li>
+
+  <li><time>Oct 1, 2020</time> <a href="/linux-kernel-drm-i915-guc-dont-enable-guc-huc-in-auto-mode-on-pre-gen11/">Linux Kernel: Disable GuC/HuC Auto Mode on Pre-Gen11</a></li>
+
+  <li><time>Oct 1, 2020</time> <a href="/linux-kernel-pm-clk-fix-clock-error-check-in-__pm_clk_add/">Fix clock validation in __pm_clk_add()</a></li>
+
+  <li><time>Oct 1, 2020</time> <a href="/linux-kernel-netpoll-fix-netconsole-ipv6-setup/">Fix netconsole IPv6 configuration in Linux kernel netpoll</a></li>
+
+  <li><time>Oct 1, 2020</time> <a href="/linux-kernel-cifs-release-auth_key-response-for-reconnect/">Linux Kernel: Fix CIFS Auth Key Memory Leak on Reconnect</a></li>
+
+  <li><time>Sep 21, 2020</time> <a href="/linux-kernel-alsa-hda-realtek-fix-headphone-mic-doesnt-recording-for-alc256/">Fix Headphone Mic Recording Issue on ALC256</a></li>
+
+  <li><time>Sep 20, 2020</time> <a href="/fs-handle-seek_hole-seek_data-properly-in-all-fss-that-define-their-own-llseek/">Linux Kernel: Implement SEEK_HOLE/SEEK_DATA in Custom llseek Handlers</a></li>
+
+  <li><time>Jun 7, 2020</time> <a href="/how-to-make-grub2-boot-to-older-kernel-version-in-ubuntu-20-04/">Booting an Older Kernel Version with GRUB2 on Ubuntu 20.04</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-make-centos-linux-to-load-a-module-automatically-at-boot-time/">Loading a Kernel Module Automatically at Boot on CentOS</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-output-function-stack-in-linux-kernel/">How to Print the Function Call Stack in Linux Kernel</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-change-config_hz-parameter-for-linux-kernel/">Configuring CONFIG_HZ in the Linux Kernel</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-add-nomodeset-to-grub2-in-fedora-and-ubuntu/">Adding nomodeset to GRUB2 on Fedora and Ubuntu</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-make-linux-automatically-reboot-after-a-kernel-panic/">Enabling Automatic Reboot on Kernel Panic in Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-set-up-hp-printer-drivers-on-linux-mint/">Installing HP Printer Drivers on Linux Mint and Ubuntu</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-manually-set-the-boot-entry-for-windows-in-grub2/">Boot Windows from GRUB2 Command Line</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/grub2-how-to-boot-fedora-to-an-old-kernel/">Booting Fedora with an Old Kernel in GRUB2</a></li>
+
+  <li><time>Aug 27, 2017</time> <a href="/debug-linux-kernel-less-efforts/">Debugging Kernel Modules with Runtime Parameters</a></li>
+
+  <li><time>Apr 9, 2017</time> <a href="/usb-standards-supports-linux/">USB Standards in Linux: Speeds and Driver Troubleshooting</a></li>
+
+  <li><time>Mar 18, 2017</time> <a href="/compile-install-linux-kernel-source-code-existing-linux-os/">Building and Installing a Linux Kernel from Source</a></li>
+
+  <li><time>Feb 14, 2017</time> <a href="/linux-kernel-collect-task-stats-data/">Linux Kernel’s taskstats: Per-Task Performance Metrics</a></li>
+
+  <li><time>Dec 5, 2016</time> <a href="/length-timeslice-processes-cfs-process-scheduling-algorithm-linux-kernel/">Measuring CFS Scheduler Timeslices in Linux</a></li>
+
+  <li><time>Nov 19, 2016</time> <a href="/migration-thread-works-inside-linux-kernel/">How Linux Kernel Migration Threads Work</a></li>
+
+  <li><time>Nov 9, 2016</time> <a href="/sched_setaffinity-works-inside-of-linux-kernel/">How sched_setaffinity Works in the Linux Kernel</a></li>
+
+  <li><time>Apr 29, 2015</time> <a href="/how-to-regenerate-grub2-config-file-on-linux/">Regenerating GRUB2 Configuration Files on Linux</a></li>
+
+  <li><time>Feb 2, 2015</time> <a href="/lazy-linux-admins-going-to-server-rooms-less-forced-reboot-auto-reboot-after-kernel-panic-and-email-notification-after-reboot/">Automatic Server Recovery: Handling Reboots and Panic Detection</a></li>
+
+  <li><time>Sep 24, 2014</time> <a href="/configuration-of-linux-kernel-video-mode/">Configuring Video Modes on UEFI and Legacy BIOS Systems</a></li>
+
+  <li><time>May 29, 2014</time> <a href="/git-submodule-cheat-sheet/">Managing Git Submodules: Add, Update, and Remove</a></li>
+
+  <li><time>Sep 25, 2013</time> <a href="/install-ati-fglrx-driver-on-fedora/">Installing AMD GPU Drivers on Fedora: A Setup Guide</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/setting-default-entry-in-grub2-and-grub/">Setting the Default Boot Entry in GRUB2</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/disable-ipv6-on-linux/">Disabling IPv6 on Older Linux Kernels</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/nvidia-driver-in-linux-not-displaying-logo-during-booting/">NVIDIA Driver Logo Not Appearing on Linux Boot</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/installing-nvidia-driver-on-fedora/">Installing NVIDIA Drivers with Akmod on Fedora</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/install-nvidia-driver-on-fedora/">Installing NVIDIA Drivers on Fedora</a></li>
+
+</ul>
+
+    <footer class="site">
+      <a href="/about/">About</a><a href="/authors/">Authors</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a><a href="/license/">License</a><a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">GitHub</a><a href="/linux-manual-pages/">Linux Manual Pages</a><a href="/tools/bbeditor/">BB Code Editor</a>
+    </footer>
+  </main>
+  
+  <script>
+  (function () {
+    var addr = ['con', 'tact', '@', 'systut', 'orials', '.', 'com'].join('');
+    document.querySelectorAll('.email-contact').forEach(function (el) {
+      var a = document.createElement('a');
+      a.href = 'mai' + 'lto:' + addr;
+      a.textContent = addr;
+      el.appendChild(a);
+    });
+  })();
+  </script>
+</body>
+</html>

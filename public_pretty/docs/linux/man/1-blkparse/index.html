@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>blkparse(1) · Linux Manual Pages</title>
+<meta name="description" content="blkparse – produce formatted output of event streams of block devices">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-blkparse/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>blkparse(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> blkparse &#8211; produce formatted output of event streams of block devices </p>
+<h2>SYNOPSIS</h2>
+<p> <code>blkparse [ </code><i>options</i> ] </p>
+<h2>DESCRIPTION</h2>
+<p> The <i>blkparse</i> utility will attempt to combine streams of events for various devices on various CPUs, and produce a formatted output of the event information. Specifically, it will take the (machine-readable) output of the <i>blktrace</i> utility and convert it to a nicely formatted and human-readable form. </p>
+<p> As with <i>blktrace</i>, some details concerning <i>blkparse</i> will help in understanding the command line options presented below. </p>
+<dl>
+<dt>&#8211;</dt>
+<dd> By default, <i>blkparse</i> expects to run in a post-processing mode; one where the trace events have been saved by a previous run of blktrace, and blkparse is combining event streams and dumping formatted data. </dd>
+<p> blkparse may be run in a live manner concurrently with blktrace by specifying <code>-i &#8211;</code> to blkparse, and combining it with the live option for blktrace. An example would be: </p>
+<p>%&nbsp;<wbr>blktrace -d&nbsp;<wbr>/dev/sda -o &#8211; | blkparse -i &#8211; </p>
+<dt>&#8211;</dt>
+<dd> You can set how many blkparse batches event reads via the <code>-b</code> option, the default is to handle events in batches of 512. </dd>
+<dt>&#8211;</dt>
+<dd> If you have saved event traces in blktrace with different output names (via the <code>-o</code> option to blktrace), you must specify the same input name via the <code>-i</code> option. </dd>
+<dt>&#8211;</dt>
+<dd> The format of the output data can be controlled via the <code>-f</code> or <code>-F</code> options &#8212; see OUTPUT DESCRIPTION AND FORMATTING for details. </dd>
+</dl>
+<p> By default, blkparse sends formatted data to standard output. This may be changed via the <code>-o</code> option, or text output can be disabled via the <code>-O</code> option. A merged binary stream can be produced using the <code>-d</code> option. </p>
+<h2>OPTIONS</h2>
+<p> -A <i>hex-mask</i><br />
+ &#8211;set-mask=<i>hex-mask</i></p>
+<dl>
+<dt>
+</dt><dd> Set filter mask to <i>hex-mask</i>, see blktrace (8) for masks</dd></dl>
+<p> -a <i>mask</i><br />
+ &#8211;act-mask=<i>mask</i></p>
+<dl>
+<dt>
+</dt><dd> Add <i>mask</i> to current filter, see blktrace (8) for masks</dd></dl>
+<p> -D <i>dir</i><br />
+ &#8211;input-directory=<i>dir</i></p>
+<dl>
+<dt>
+</dt><dd> Prepend <i>dir</i> to input file names</dd></dl>
+<p> -b <i>batch</i><br />
+ &#8211;batch={batch}</p>
+<dl>
+<dt>
+</dt><dd> Standard input read batching</dd></dl>
+<p> -i <i>file</i><br />
+ &#8211;input=<i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Specifies base name for input files &#8212; default is <i>device</i>.blktrace.<i>cpu</i>. </dd>
+<p> As noted above, specifying <code>-i &#8211;</code> runs in live mode with blktrace (reading data from standard in).</dl>
+<p> -F <i>typ,fmt</i><br />
+ &#8211;format=<i>typ,fmt</i><br />
+ -f <i>fmt</i><br />
+ &#8211;format-spec=<i>fmt</i></p>
+<dl>
+<dt>
+</dt><dd> Sets output format (See OUTPUT DESCRIPTION AND FORMATTING for details.) </dd>
+<p> The -f form specifies a format for all events </p>
+<p> The -F form allows one to specify a format for a specific event type. The single-character <i>typ</i> field is one of the action specifiers described in ACTION IDENTIFIERS.</dl>
+<p> -M<br />
+ &#8211;no-msgs</p>
+<dl>
+<dt>
+</dt><dd> When -d is specified, this will stop messages from being output to the file. (Can seriously reduce the size of the resultant file when using the CFQ I/O scheduler.)</dd></dl>
+<p> -h<br />
+ &#8211;hash-by-name</p>
+<dl>
+<dt>
+</dt><dd> Hash processes by name, not by PID</dd></dl>
+<p> -o <i>file</i><br />
+ &#8211;output=<i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Output file</dd></dl>
+<p> -O<br />
+ &#8211;no-text-output</p>
+<dl>
+<dt>
+</dt><dd> Do <i>not</i> produce text output, used for binary (<code>-d</code>) only</dd></dl>
+<p> -d <i>file</i><br />
+ &#8211;dump-binary=<i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Binary output file</dd></dl>
+<p> -q<br />
+ &#8211;quiet</p>
+<dl>
+<dt>
+</dt><dd> Quiet mode</dd></dl>
+<p> -s<br />
+ &#8211;per-program-stats</p>
+<dl>
+<dt>
+</dt><dd> Displays data sorted by program</dd></dl>
+<p> -t<br />
+ &#8211;track-ios</p>
+<dl>
+<dt>
+</dt><dd> Display time deltas per IO</dd></dl>
+<p> -w <i>span</i><br />
+ &#8211;stopwatch=<i>span</i></p>
+<dl>
+<dt>
+</dt><dd> Display traces for the <i>span</i> specified &#8212; where span can be:<br />
+ <i>end-time</i> &#8212; Display traces from time 0 through <i>end-time</i> (in ns)<br />
+ or<br />
+ <i>start:end-time</i> &#8212; Display traces from time <i>start</i> through end-time (in ns).</dd></dl>
+<p> -v<br />
+ &#8211;verbose</p>
+<dl>
+<dt>
+</dt><dd> More verbose marginal on marginal errors</dd></dl>
+<p> -V<br />
+ &#8211;version</p>
+<dl>
+<dt>
+</dt><dd> Display version</dd></dl>
+<h2>TRACE ACTIONS</h2>
+<p> The following trace actions are recognised: </p>
+<dl>
+<dt> <code>C &#8212; complete</code></dt>
+<dd>A previously issued request has been completed. The output will detail the sector and size of that request, as well as the success or failure of it. </dd>
+<dt> <code>D &#8212; issued</code></dt>
+<dd>A request that previously resided on the block layer queue or in the i/o scheduler has been sent to the driver. </dd>
+<dt> <code>I &#8212; inserted</code></dt>
+<dd>A request is being sent to the i/o scheduler for addition to the internal queue and later service by the driver. The request is fully formed at this time. </dd>
+<dt> <code>Q &#8212; queued</code></dt>
+<dd>This notes intent to queue i/o at the given location. No real requests exists yet. </dd>
+<dt> <code>B &#8212; bounced</code></dt>
+<dd>The data pages attached to this <i>bio</i> are not reachable by the hardware and must be bounced to a lower memory location. This causes a big slowdown in i/o performance, since the data must be copied to/from kernel buffers. Usually this can be fixed with using better hardware &#8212; either a better i/o controller, or a platform with an IOMMU. </dd>
+<dt> <code>M &#8212; back merge</code></dt>
+<dd>A previously inserted request exists that ends on the boundary of where this i/o begins, so the i/o scheduler can merge them together. </dd>
+<dt> <code>F &#8212; front merge</code></dt>
+<dd>Same as the back merge, except this i/o ends where a previously inserted requests starts. </dd>
+<dt> <code>M &#8211;front or back merge</code></dt>
+<dd>One of the above </dd>
+<dt> <code>M &#8212; front or back merge</code></dt>
+<dd>One of the above. </dd>
+<dt> <code>G &#8212; get request</code></dt>
+<dd>To send any type of request to a block device, a <i>struct request</i> container must be allocated first. </dd>
+<dt> <code>S &#8212; sleep</code></dt>
+<dd>No available request structures were available, so the issuer has to wait for one to be freed. </dd>
+<dt> <code>P &#8212; plug</code></dt>
+<dd>When i/o is queued to a previously empty block device queue, Linux will plug the queue in anticipation of future ios being added before this data is needed. </dd>
+<dt> <code>U &#8212; unplug</code></dt>
+<dd>Some request data already queued in the device, start sending requests to the driver. This may happen automatically if a timeout period has passed (see next entry) or if a number of requests have been added to the queue. </dd>
+<dt> <code>T &#8212; unplug due to timer</code></dt>
+<dd>If nobody requests the i/o that was queued after plugging the queue, Linux will automatically unplug it after a defined period has passed. </dd>
+<dt> <code>X &#8212; split</code></dt>
+<dd>On raid or device mapper setups, an incoming i/o may straddle a device or internal zone and needs to be chopped up into smaller pieces for service. This may indicate a performance problem due to a bad setup of that raid/dm device, but may also just be part of normal boundary conditions. dm is notably bad at this and will clone lots of i/o. </dd>
+<dt> <code>A &#8212; remap</code></dt>
+<dd>For stacked devices, incoming i/o is remapped to device below it in the i/o stack. The remap action details what exactly is being remapped to what. </dd>
+</dl>
+<h2>OUTPUT DESCRIPTION AND FORMATTING</h2>
+<p> The output from blkparse can be tailored for specific use &#8212; in particular, to ease parsing of output, and/or limit output fields to those the user wants to see. The data for fields which can be output include: </p>
+<dl>
+<dt><code>a</code></dt>
+<dd> Action, a (small) string (1 or 2 characters) &#8212; see table below for more details </dd>
+<dt><code>c</code></dt>
+<dd> CPU id </dd>
+<dt><code>C</code></dt>
+<dd> Command </dd>
+<dt><code>d</code></dt>
+<dd> RWBS field, a (small) string (1-3 characters) &#8212; see section below for more details </dd>
+<dt><code>D</code></dt>
+<dd> 7-character string containing the major and minor numbers of the event&#8217;s device (separated by a comma). </dd>
+<dt><code>e</code></dt>
+<dd> Error value </dd>
+<dt><code>m</code></dt>
+<dd> Minor number of event&#8217;s device. </dd>
+<dt><code>M</code></dt>
+<dd> Major number of event&#8217;s device. </dd>
+<dt><code>n</code></dt>
+<dd> Number of blocks </dd>
+<dt><code>N</code></dt>
+<dd> Number of bytes </dd>
+<dt><code>p</code></dt>
+<dd> Process ID </dd>
+<dt><code>P</code></dt>
+<dd> Display packet data &#8212; series of hexadecimal values </dd>
+<dt><code>s</code></dt>
+<dd> Sequence numbers </dd>
+<dt><code>S</code></dt>
+<dd> Sector number </dd>
+<dt><code>t</code></dt>
+<dd> Time stamp (nanoseconds) </dd>
+<dt><code>T</code></dt>
+<dd> Time stamp (seconds) </dd>
+<dt><code>u</code></dt>
+<dd> Elapsed value in microseconds (<i>-t</i> command line option) </dd>
+<dt><code>U</code></dt>
+<dd> Payload unsigned integer </dd>
+</dl>
+<p> Note that the user can optionally specify field display width, and optionally a left-aligned specifier. These precede field specifiers, with a &#8216;%&#8217; character, followed by the optional left-alignment specifier (-) followed by the width (a decimal number) and then the field. </p>
+<p> Thus, to specify the command in a 12-character field that is left aligned: </p>
+<p>&nbsp;<wbr>-f&nbsp;<wbr>&quot;%-12C&quot; </p>
+<h2>ACTION IDENTIFIERS</h2>
+<p> The following table shows the various actions which may be output: </p>
+<dl>
+<dt>A</dt>
+<dd> IO was remapped to a different device </dd>
+<dt>B</dt>
+<dd> IO bounced </dd>
+<dt>C</dt>
+<dd> IO completion </dd>
+<dt>D</dt>
+<dd> IO issued to driver </dd>
+<dt>F</dt>
+<dd> IO front merged with request on queue </dd>
+<dt>G</dt>
+<dd> Get request </dd>
+<dt>I</dt>
+<dd> IO inserted onto request queue </dd>
+<dt>M</dt>
+<dd> IO back merged with request on queue </dd>
+<dt>P</dt>
+<dd> Plug request </dd>
+<dt>Q</dt>
+<dd> IO handled by request queue code </dd>
+<dt>S</dt>
+<dd> Sleep request </dd>
+<dt>T</dt>
+<dd> Unplug due to timeout </dd>
+<dt>U</dt>
+<dd> Unplug request </dd>
+<dt>X</dt>
+<dd> Split </dd>
+</dl>
+<h2>RWBS DESCRIPTION</h2>
+<p> This is a small string containing at least one character (&#8216;R&#8217; for read, &#8216;W&#8217; for write, or &#8216;D&#8217; for block discard operation), and optionally either a &#8216;B&#8217; (for barrier operations) or &#8216;S&#8217; (for synchronous operations). </p>
+<h2>DEFAULT OUTPUT</h2>
+<p> The standard header (or initial fields displayed) include: </p>
+<p>&nbsp;<wbr>&quot;%D&nbsp;<wbr>%2c&nbsp;<wbr>%8s&nbsp;<wbr>%5T.%9t&nbsp;<wbr>%5p&nbsp;<wbr>%2a&nbsp;<wbr>%3d&quot; </p>
+<p> Breaking this down: </p>
+<dl>
+<dt><code>%D</code></dt>
+<dd> Displays the event&#8217;s device major/minor as: %3d,%-3d. </dd>
+<dt><code>%2c</code></dt>
+<dd> CPU ID (2-character field). </dd>
+<dt><code>%8s</code></dt>
+<dd> Sequence number </dd>
+<dt><code>%5T.%9t</code></dt>
+<dd> 5-character field for the seconds portion of the time stamp and a 9-character field for the nanoseconds in the time stamp. </dd>
+<dt><code>%5p</code></dt>
+<dd> 5-character field for the process ID. </dd>
+<dt><code>%2a</code></dt>
+<dd> 2-character field for one of the actions. </dd>
+<dt><code>%3d</code></dt>
+<dd> 3-character field for the RWBS data. </dd>
+<p> Seeing this in action: </p>
+<p>&nbsp;<wbr>8,0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>3&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0.000000000&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>697&nbsp;<wbr>&nbsp;<wbr>G&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>W 223490&nbsp;<wbr>+&nbsp;<wbr>8&nbsp;<wbr>[kjournald] </p>
+<p> The header is the data in this line up to the 223490 (starting block). The default output for all event types includes this header. </p>
+</dl>
+<h2>DEFAULT OUTPUT PER ACTION</h2>
+<p> <code>C &#8212; complete</code></p>
+<dl>
+<dt>
+</dt><dd> If a payload is present, this is presented between parenthesis following the header, followed by the error value. </dd>
+<p> If no payload is present, the sector and number of blocks are presented (with an intervening plus (+) character). If the <code>-t</code> option was specified, then the elapsed time is presented. In either case, it is followed by the error value for the completion.</dl>
+<p> <code>B &#8212; bounced</code><br />
+ <code>D &#8212; issued</code><br />
+ <code>I &#8212; inserted</code><br />
+ <code>Q &#8212; queued</code></p>
+<dl>
+<dt>
+</dt><dd> If a payload is present, the number of payload bytes is output, followed by the payload in hexadecimal between parenthesis. </dd>
+<p> If no payload is present, the sector and number of blocks are presented (with an intervening plus (+) character). If the <code>-t</code> option was specified, then the elapsed time is presented (in parenthesis). In either case, it is followed by the command associated with the event (surrounded by square brackets).</dl>
+<p> <code>F &#8212; front merge</code><br />
+ <code>G &#8212; get request</code><br />
+ <code>M &#8212; back merge</code><br />
+ <code>S &#8212; sleep</code></p>
+<dl>
+<dt>
+</dt><dd> The starting sector and number of blocks is output (with an intervening plus (+) character), followed by the command associated with the event (surrounded by square brackets).</dd></dl>
+<p> <code>P &#8212; plug</code></p>
+<dl>
+<dt>
+</dt><dd> The command associated with the event (surrounded by square brackets) is output.</dd></dl>
+<p> <code>U &#8212; unplug</code><br />
+ <code>T &#8212; unplug due to timer</code></p>
+<dl>
+<dt>
+</dt><dd> The command associated with the event (surrounded by square brackets) is output, followed by the number of requests outstanding.</dd></dl>
+<p> <code>X &#8212; split</code></p>
+<dl>
+<dt>
+</dt><dd> The original starting sector followed by the new sector (separated by a slash (/) is output, followed by the command associated with the event (surrounded by square brackets).</dd></dl>
+<p> <code>A &#8212; remap</code></p>
+<dl>
+<dt>
+</dt><dd> Sector and length is output, along with the original device and sector offset.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> To trace the i/o on the device <i>/dev/hda</i><code> and parse the output to human readable form, use the following command: </p>
+<p>&nbsp;<wbr>%&nbsp;<wbr>blktrace -d&nbsp;<wbr>/dev/sda -o &#8211; | blkparse -i &#8211; </p>
+<p> (see </code><i>blktrace</i> (8) for more information). This same behaviour can be achieve with the convenience script <i>btrace</i>. The command </p>
+<p>&nbsp;<wbr>%&nbsp;<wbr>btrace&nbsp;<wbr>/dev/sda </p>
+<p> has exactly the same effect as the previous command. See <i>btrace</i> (8) for more information. </p>
+<p> To trace the i/o on a device and save the output for later processing with <i>blkparse</i>, use <i>blktrace</i> like this: </p>
+<p>&nbsp;<wbr>%&nbsp;<wbr>blktrace&nbsp;<wbr>/dev/sda&nbsp;<wbr>/dev/sdb </p>
+<p> This will trace i/o on the devices <i>/dev/sda</i> and <i>/dev/sdb</i> and save the recorded information in the files <i>sda</i> and <i>sdb</i> in the current directory, for the two different devices, respectively. This trace information can later be parsed by the <i>blkparse</i> utility: </p>
+<p>&nbsp;<wbr>%&nbsp;<wbr>blkparse sda sdb </p>
+<p> which will output the previously recorded tracing information in human readable form to stdout. </p>
+<h2>AUTHORS</h2>
+<p> <i>blkparse</i> was written by Jens Axboe, Alan D. Brunelle and Nathan Scott. This man page was created from the <i>blktrace</i> documentation by Bas Zoetekouw. </p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;linux-btrace [at] vger.kernel.org&gt; </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2006 Jens Axboe, Alan D. Brunelle and Nathan Scott.<br />
+ This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.<br />
+ This manual page was created for Debian by Bas Zoetekouw. It was derived from the documentation provided by the authors and it may be used, distributed and modified under the terms of the GNU General Public License, version 2.<br />
+ On Debian systems, the text of the GNU General Public License can be found in /usr/share/common-licenses/GPL-2. </p>
+<h2>SEE ALSO</h2>
+<p> btrace (8), blktrace (8), verify_blkparse (1), blkrawverify (1), btt (1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

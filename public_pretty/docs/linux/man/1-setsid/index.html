@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>setsid(1) · Linux Manual Pages</title>
+<meta name="description" content="setsid – run a program in a new session">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-setsid/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>setsid(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> setsid &#8211; run a program in a new session </p>
+<h2>SYNOPSIS</h2>
+<p> <code>setsid</code> [options] <i>program</i> [<i>arguments</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>setsid</code> runs a program in a new session. The command calls <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) if already a process group leader. Otherwise, it executes a program in the current process. This default behavior is possible to override by the <code>&#8211;fork</code> option.</p>
+<h2>OPTIONS</h2>
+<p> <code>-c</code>, <code>&#8211;ctty</code></p>
+<dl>
+<dt>
+</dt><dd> Set the controlling terminal to the current one.</dd></dl>
+<p> <code>-f</code>, <code>&#8211;fork</code></p>
+<dl>
+<dt>
+</dt><dd> Always create a new process.</dd></dl>
+<p> <code>-w</code>, <code>&#8211;wait</code></p>
+<dl>
+<dt>
+</dt><dd> Wait for the execution of the program to end, and return the exit status of this program as the exit status of <code>setsid</code>.</dd></dl>
+<p> <code>-V</code>, <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Display version information and exit.</dd></dl>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Display help text and exit.</dd></dl>
+<h2>AUTHORS</h2>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-setsid/">setsid</a></code>(2)</p>
+<h2>REPORTING BUGS</h2>
+<p> For bug reports, use the issue tracker at <i></i> &lt;<a rel="nofollow" href="https://github.com/karelzak/util-linux/issues">https://github.com/karelzak/util-linux/issues</a>&gt;.</p>
+<h2>AVAILABILITY</h2>
+<p> The <code>setsid</code> command is part of the util-linux package which can be downloaded from <i>Linux Kernel Archive</i> &lt;<a rel="nofollow" href="https://www.kernel.org/pub/linux/utils/util-linux/">https://www.kernel.org/pub/linux/utils/util-linux/</a>&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

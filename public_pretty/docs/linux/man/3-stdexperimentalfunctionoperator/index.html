@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalfunctionoperator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalfunctionoperator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalfunctionoperator(3)</h1>
+
+
+
+
+
+<p>std::experimental::function&lt;R(Args&hellip;)&gt;::operator= - std::experimental::function&lt;R(Args&hellip;)&gt;::operator=</p>
+<h2>Synopsis</h2>
+<pre><code>function &amp;operator=(const function &amp;other);
+(1)(library fundamentals TS)
+    function &amp;
+    operator=(function &amp;&amp;other);
+(2)(library fundamentals TS)
+    function &amp;
+    operator=(std::nullptr_t) noexcept;
+(3)(library fundamentals TS)
+    template &lt;class F&gt;
+    (4)(library fundamentals TS)
+        function &amp;
+        operator=(F &amp;&amp;f);
+template &lt;class F&gt;
+(5)(library fundamentals TS)
+    function &amp;
+    operator=(std::reference_wrapper&lt;F&gt; f);
+Assigns a new target to std::experimental::function.In the description below, let ALLOCATOR_OF(f) be the allocator specified in the construction of f, or the value of std::experimental::pmr::get_default_resource() at the time of construction if no allocator was specified.
+1) Assigns a copy of target of other, as if by executing function(std::allocator_arg, ALLOCATOR_OF(*this), other).swap(*this);
+2) Moves the target of other to *this, as if by executing function(std::allocator_arg, ALLOCATOR_OF(*this), std::move(other)).swap(*this);. other is in a valid state with an unspecified value.
+3) Destroys the target of *this. *this is empty after the call. The memory resource returned by get_memory_resource() after the assignment is equivalent to the memory resource before the assignment, but the address may change.
+4) Sets the target of *this to the callable f, as if by executing function(std::allocator_arg, ALLOCATOR_OF(*this),std::forward&lt;F&gt;(f)).swap(*this);
+.This operator does not participate in overload resolution unless f is Callable for argument types Args... and return type R.
+    5) Sets the target of * this to a copy of f,
+    as if by executing function(std::allocator_arg, ALLOCATOR_OF(*this), f).swap(*this);
+</code></pre>
+<h2>Parameters</h2>
+<p>other - another std::experimental::function object to copy or move from
+f - a callable to initialize the target with</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<p>F must meet the requirements of Callable.</p>
+<h2>Return value</h2>
+<p>*this</p>
+<h2>Exceptions</h2>
+<p>1-2,4-5) <i>(none)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

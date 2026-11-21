@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mkiss(8) · Linux Manual Pages</title>
+<meta name="description" content="mkiss – Attach a multi KISS interface">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mkiss/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mkiss(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>mkiss &#8211; Attach a multi KISS interface</p>
+<h2>Synopsis</h2>
+<p><code>mkiss [-c] [-f] [-h] [-l] [-s speed] [-p pollrate] [-v] [-x n_ptmx] ttyinterface pty ..</code></p>
+<h2>Description</h2>
+<p><code>Mkiss</code> allows dual port TNCs or multiple TNCs sharing the same serial port to be used with the Linux AX.25 kernel software. The AX.25 software has no support for dual port TNCs or multiple TNCs charing the same serial line. The different ports are addressed by encoding the port number in the control byte of every kiss frame. <code>Mkiss</code> watches a serial port, and routes kiss frames to/from the pseudo ttys. The other side of the pseudo ttys are then attached with <code>kissattach</code> as normal. </p>
+<p> Statistics about the operation of <code>mkiss</code> may be obtained by sending the SIGUSR1 signal to the running program. On reception of such a signal <code>mkiss</code> will print a set of statistics to the system log if logging has been enabled. </p>
+<p> Although mention is made of using pseudo ttys as the last arguments, these devices may be normal serial ports. However <code>mkiss</code> provides no way in which to set their speed, the speed must therefore be set by some other method.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-c</code></dt>
+<dd>This enables a one-byte checksum on each incoming and outgoing KISS frame on the serial port. This checksum is used by G8BPQ KISS roms to maintain the integrity of KISS frames.</dd>
+<dt><code>-f</code></dt>
+<dd>This enables a 16-bit checksum on each incoming and outgoing KISS frame on the serial port. This checksum is used by Flexnet Node and BayCom Mailbox to maintain the integrity of KISS frames.</dd>
+<dt><code>-h</code></dt>
+<dd>Enables hardware handshaking on the serial line to the TNC. The KISS specification states that no hardware flow control shall be used so the default is off. But some KISS implementations do use hardware flow control.</dd>
+<dt><code>-l</code></dt>
+<dd>Enables system logging, the default is off.</dd>
+<dt><code>-s speed</code></dt>
+<dd>Set the speed of the serial port.</dd>
+<dt><code>-p pollrate</code></dt>
+<dd>Enables polling. Polled mode is used by G8BPQ KISS roms to prevent contention on systems where multiple TNCs share the same serial line. Pollrate is interval between polls (in 100ms units).</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd>
+<dt><code>-x number</code></dt>
+<dd>This option is for Unix98 PTYs. It allocates &quot;number&quot; ptys; their names are written to stdout. When -x is used, the pty arguments are optional.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-kissattach/">kissattach</a></code>(8), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8), <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1).</p>
+<h2>Authors</h2>
+<p>Tomi Manninen OH2BNS &lt;oh2bns [at] sral.fi&gt;<br />
+ Jonathan Naylor G4KLX &lt;g4klx [at] g4klx.demon.co.uk&gt;<br />
+ Kevin Uhlir N0BEL &lt;kevinu [at] flochart.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

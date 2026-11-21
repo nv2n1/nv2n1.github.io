@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wcsrtombs(3) · Linux Manual Pages</title>
+<meta name="description" content="wcsrtombs – convert a wide-character string to a multibyte string">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-wcsrtombs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>wcsrtombs(3)</h1>
+
+
+
+
+
+<p>wcsrtombs &#8211; convert a wide-character string to a multibyte string</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;wchar.h&gt;
+size_t wcsrtombs(char *dest, const wchar_t **src,
+                 size_t len, mbstate_t *ps);</code></pre>
+<h2>Description</h2>
+<p>If <i>dest</i> is not NULL, the <code>wcsrtombs</code>() function converts the wide-character string <i>*src</i> to a multibyte string starting at <i>dest</i>. At most <i>len</i> bytes are written to <i>dest</i>. The shift state <i>*ps</i> is updated. The conversion is effectively performed by repeatedly calling <i>wcrtomb(dest, *src, ps)</i>, as long as this call succeeds, and then incrementing <i>dest</i> by the number of bytes written and <i>*src</i> by one. The conversion can stop for three reasons:</p>
+<dl>
+<dt>1.</dt>
+<dd>A wide character has been encountered that can not be represented as a multibyte sequence (according to the current locale). In this case, <i>*src</i> is left pointing to the invalid wide character, <i>(size_t)&nbsp;-1</i> is returned, and <i>errno</i> is set to <code>EILSEQ</code>.</dd>
+<dt>2.</dt>
+<dd>The length limit forces a stop. In this case, <i>*src</i> is left pointing to the next wide character to be converted, and the number of bytes written to <i>dest</i> is returned.</dd>
+<dt>3.</dt>
+<dd>The wide-character string has been completely converted, including the terminating null wide character (L&#8217;
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

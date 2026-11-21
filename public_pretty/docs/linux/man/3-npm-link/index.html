@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npm-link(3) · Linux Manual Pages</title>
+<meta name="description" content="npm-link — Symlink a package folder">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-npm-link/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>npm-link(3)</h1>
+
+
+
+
+
+<p><code>npm-link</code> &#8212; Symlink a package folder</p>
+<h2>Synopsis</h2>
+<pre>npm.command.link(callback)
+npm.command.link(packages, callback)</pre>
+<h2>Description</h2>
+<p>Package linking is a two-step process. Without parameters, link will create a globally-installed symbolic link from <code>prefix/package-name</code> to the current folder. With a parameters, link will create a symlink from the local <code>node_modules</code> folder to the global symlink. When creating tarballs for <code>npm publish</code>, the linked packages are &quot;snapshotted&quot; to their current state by resolving the symbolic links. This is handy for installing your own stuff, so that you can work on it and test it iteratively without having to continually rebuild. For example:</p>
+<dl>
+<dd>
+<pre>npm.commands.link(cb) # creates global link from the cwd
+ # (say redis package)
+npm.commands.link('redis', cb) # link-install the package</pre>
+</dd><dd></dd></dl>
+<p> Now, any changes to the redis package will be reflected in the package in the current working directory </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

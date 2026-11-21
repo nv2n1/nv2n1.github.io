@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>opashowallports(8) · Linux Manual Pages</title>
+<meta name="description" content="opashowallports (Switch and Host) Displays basic port state and statistics for all host nodes, chassis, or externally-managed switches. NOTE: opareport and opareports are more powerful Intel(R) Omn...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-opashowallports/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>opashowallports(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>opashowallports <code>(Switch and Host)</code> Displays basic port state and statistics for all host nodes, chassis, or externally-managed switches. <code>NOTE:</code> opareport and opareports are more powerful Intel(R) Omni-Path Fabric Suite FastFabric commands. For general fabric analysis, use opareport or opareports with options such as -o errors and -o slowlinks to perform an efficient analysis of link speeds and errors. </p>
+<h2>Syntax</h2>
+<p>opashowallports [-C] [-f <i>hostfile</i>] [-F <i>chassisfile</i>] [-h &#8216;<i>hosts</i>&#8216;]<br />
+ [-H &#8216;<i>chassis</i>&#8216;] [-S]</p>
+<h2>Options</h2>
+<dl>
+<dt>&#8211;help</dt>
+<dd>Produces full help text.</dd>
+<dt>-C</dt>
+<dd>Performs operation against chassis. Default = host.</dd>
+<dt>-f <i>hostfile</i></dt>
+<dd>File with list of hosts in cluster. Default is /etc/sysconfig/opa/hosts file.</dd>
+<dt>-F <i>chassisfile</i></dt>
+<dd>File with list of chassis in cluster. Default is /etc/sysconfig/opa/chassis file.</dd>
+<dt>-h <i>hosts</i></dt>
+<dd>List of hosts for which to show ports.</dd>
+<dt>-H <i>chassis</i></dt>
+<dd>List of chassis for which to show ports.</dd>
+<dt>-S</dt>
+<dd>Securely prompts for password for admin on chassis.</dd></dl>
+<h2>Environment Variables</h2>
+<p>The following environment variables are also used by this command:</p>
+<dl>
+<dt><code>HOSTS</code></dt>
+<dd>List of hosts, used if -h option not supplied. </dd>
+<dt><code>CHASSIS</code></dt>
+<dd>List of chassis, used if -C is used and -H and -F options not supplied. </dd>
+<dt><code>HOSTS_FILE</code></dt>
+<dd>File containing list of hosts, used in absence of -f and -h. </dd>
+<dt><code>CHASSIS_FILE</code></dt>
+<dd>File containing list of chassis, used in absence of -F and -H. </dd>
+<dt><code>FF_CHASSIS_LOGIN_METHOD</code></dt>
+<dd>How to log into chassis. Can be Telnet or SSH. </dd>
+<dt><code>FF_CHASSIS_ADMIN_PASSWORD</code></dt>
+<dd>Password for admin on all chassis. Used in absence of -S option. </dd>
+</dl>
+<h2>Example</h2>
+<p>opashowallports<br />
+ opashowallports -h &#8216;elrond arwen&#8217;<br />
+ HOSTS=&#8217;elrond arwen&#8217; opashowallports<br />
+ opashowallports -C<br />
+ opashowallports -H &#8216;chassis1 chassis2&#8242;<br />
+ CHASSIS=&#8217;chassis1 chasssi2&#8217; opashowallports</p>
+<h2>Notes</h2>
+<p>When performing opashowallports against hosts, internally SSH is used. The command opashowallports requires that password-less SSH be set up between the host running the Intel(R) Omni-Path Fabric Suite FastFabric Toolset and the hosts opashowallports is operating against. The opasetupssh FastFabric tool can aid in setting up password-less SSH. When performing operations against chassis, Intel recommends that you set up SSH keys (see <i>opasetupssh</i> ). If SSH keys are not set up, Intel recommends that you use the -S option, to avoid keeping the password in configuration files. When performing opashowallports against externally-managed switches, a node with Intel(R) Omni-Path Fabric Suite FastFabric Toolset installed is required. Typically, this is the node from which opashowallports is being run. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

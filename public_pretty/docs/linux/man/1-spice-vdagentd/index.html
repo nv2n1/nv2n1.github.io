@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>spice-vdagentd(1) · Linux Manual Pages</title>
+<meta name="description" content="spice-vdagentd – Spice guest agent daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-spice-vdagentd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>spice-vdagentd(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> spice-vdagentd &#8211; Spice guest agent daemon </p>
+<h2>SYNOPSIS</h2>
+<p> <code>spice-vdagent</code> [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> The spice guest agent for Linux consists of 2 parts, a system wide daemon <code>spice-vdagentd</code> and a X11 session agent <code>spice-vdagent</code> of which there is one per X11 session.<br />
+ <code>spice-vdagentd</code> gets started through a Sys-V initscript or a systemd unit.</p>
+<h2>FEATURES</h2>
+<p> The spice guest agent adds the following features to spice Linux guests: </p>
+<p> Client mouse mode (no need to grab mouse by client, no mouse lag) </p>
+<p> Automatic adjustment of the X11 session&#8217;s number of virtual monitors, and their resolution, to the number of client windows and their resolution </p>
+<p> Support of copy and paste (text and images) between the active X11 session and the client, this supports both the primary selection and the clipboard </p>
+<p> Support for transferring files from the client to the agent</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h</code></dt>
+<dd> Print a short description of all command line options</dd>
+<dt><code>-d</code></dt>
+<dd> Log debug messages (use twice for extra info)</dd>
+<dt><code>-f</code></dt>
+<dd> Treat uinput device as fake; no ioctls. This is useful in combination with Xspice.</dd>
+<dt><code>-o</code></dt>
+<dd> The daemon will exit after processing a single session.</dd>
+<dt><code>-s</code> <i>port</i></dt>
+<dd> Set virtio serial <i>port</i> (default: /dev/virtio-ports/com.redhat.spice.0)</dd>
+<dt><code>-u</code> <i>device</i></dt>
+<dd> Set uinput <i>device</i> (default: /dev/uinput)</dd>
+<dt><code>-x</code></dt>
+<dd> Don&#8217;t daemonize</dd>
+<dt><code>-X</code></dt>
+<dd> Disable session info usage, <code>spice-vdagentd</code> needs to know which <code>spice-vdagent</code> is in the currently active X11 session. <code>spice-vdagentd</code> uses console kit or systemd-logind (compile time option) for this; The <code>-X</code> option disables this, if no session info is available only one <code>spice-vdagent</code> is allowed</dd></dl>
+<h2>FILES</h2>
+<p> The Sys-V initscript or systemd unit parses the following files:</p>
+<dl>
+<dt>/etc/default/spice-vdagentd</dt>
+<dd> Default cmdline options can be passed to <code>spice-vdagentd</code> by setting them in the <i>SPICE_VDAGENTD_EXTRA_ARGS</i> variable in this file</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-spice-vdagent/">spice-vdagent</a></code>(1)</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright 2010-2013 Red Hat, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;.<br />
+ This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

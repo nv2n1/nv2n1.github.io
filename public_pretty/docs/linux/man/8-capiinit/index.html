@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>capiinit(8) · Linux Manual Pages</title>
+<meta name="description" content="capiinit – start or stop CAPI-capable ISDN cards">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-capiinit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>capiinit(8)</h1>
+
+
+
+
+
+<p>capiinit &#8211; start or stop CAPI-capable ISDN cards</p>
+<h2>Synopsis</h2>
+<p>capiinit [OPTIONS] start | stop | show | status | prepare | reload | activate | deactivate </p>
+<p> capiinit [OPTIONS] activate|deactivate cardname </p>
+<p> capiinit [OPTIONS] activate|deactivate driver [cardname]</p>
+<h2>Description</h2>
+<p><code>capiinit</code> is called with one of the following actions:</p>
+<dl>
+<dt><code>start</code></dt>
+<dd>Load all modules and initialize all cards (loading the firmware), which are configured in <i>/etc/isdn/capi.conf</i>.</dd>
+<dt><code>stop</code></dt>
+<dd>Reset all cards and unload modules.</dd>
+<dt><code>show</code></dt>
+<dd>Show the current configuration.</dd>
+<dt><code>status</code></dt>
+<dd>Show the current status.</dd>
+<dt><code>prepare</code></dt>
+<dd>Load all modules.</dd>
+<dt><code>activate</code></dt>
+<dd>Initialize all cards.</dd>
+<dt><code>activate</code> <i>cardname</i></dt>
+<dd>Initialize one card (i.e.: c4-ec00).</dd>
+<dt><code>activate</code> <i>driver</i> [<i>cardnumber</i>]</dt>
+<dd>Initialize one card.</dd>
+<dt><code>deactivate</code></dt>
+<dd>Reset all cards.</dd>
+<dt><code>deactivate</code> <i>cardname</i></dt>
+<dd>Reset one card (i.e.: c4-ec00).</dd>
+<dt><code>deactivate</code> <i>driver</i> [<i>cardnumber</i>]</dt>
+<dd>Reset one card.</dd>
+<dt><code>reload</code></dt>
+<dd>Reset all cards and initialize them again.</dd></dl>
+<p> Firmware files are searched in this order in the following directories: <i>/usr/share/isdn/`uname -r`</i>, <i>/usr/share/isdn</i>, <i>/usr/lib/isdn</i>, <i>/lib/isdn</i>. There is a sample config in /etc/isdn/capi.conf. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-c</code> <i>filename</i>, <code>&#8211;config</code> <i>filename</i></dt>
+<dd>Use <i>filename</i> as config file (default is /etc/isdn/capi.conf).</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>Save patch values for debugging purposes.</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code></dt>
+<dd>Don&#8217;t show status information.</dd></dl>
+<h2>Author</h2>
+<p>Manpage written from C source by Paul Slootman &lt;paul [at] debian.org&gt;, updated by Matthias Klose &lt;m@klose.in-berlin.de&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

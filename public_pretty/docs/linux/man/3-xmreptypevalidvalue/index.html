@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmreptypevalidvalue(3) · Linux Manual Pages</title>
+<meta name="description" content="XmRepTypeValidValue — A representation type manager function that tests the validity of a numerical value of a representation type resource">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmreptypevalidvalue/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmreptypevalidvalue(3)</h1>
+
+
+
+
+
+<p><code>XmRepTypeValidValue</code> &#8212; A representation type manager function that tests the validity of a numerical value of a representation type resource</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/RepType.h&gt;
+<code>Boolean XmRepTypeValidValue</code>(
+<code>XmRepTypeId rep_type_id</code>,
+<code>unsigned char test_value</code>,
+<code>Widget enable_default_warning</code>);</pre>
+<h2>Description</h2>
+<p><code>XmRepTypeValidValue</code> tests the validity of a numerical value for a given representation type resource. The function generates a default warning message if the value is invalid and the <i>enable_default_warning</i> argument is non-NULL.</p>
+<dl COMPACT>
+<dt><i>rep_type_id</i></dt>
+<dd>Specifies the identification number of the representation type.</dd>
+<dt><i>test_value</i></dt>
+<dd>Specifies the numerical value to test.</dd>
+<dt><i>enable_default_warning</i></dt>
+<dd>Specifies the ID of the widget that contains a default warning message. If this parameter is NULL, no default warning message is generated and the application must provide its own error handling.</dd></dl>
+<h2>Return</h2>
+<p>Returns True if the specified value is valid; otherwise, returns False.</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmreptypegetid/">XmRepTypeGetId</a></code>(3) and <code><a href="/docs/linux/man/3-xmreptyperegister/">XmRepTypeRegister</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

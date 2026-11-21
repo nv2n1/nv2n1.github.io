@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>paysatdefaulttime(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::CreditDefaultSwap – Credit default swap.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-paysatdefaulttime/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>paysatdefaulttime(3)</h1>
+
+
+
+
+
+<p>QuantLib::CreditDefaultSwap &#8211; Credit default swap. </p>
+<h2>Synopsis</h2>
+<pre><code>void setupExpired () const
+Protected Attributes</code></pre>
+<p> Inherits <code>QuantLib::Instrument</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>Constructors</code><br />
+ void setupExpired () const</p>
+<p>Protected Attributes <code>Instrument interface</code> </p>
+<p> bool <code>isExpired</code> () const<br />
+ <i>returns whether the instrument is still tradable. </i><br />
+ void <code>setupArguments</code> (PricingEngine::arguments *) const </p>
+<p> void <code>fetchResults</code> (const PricingEngine::results *) const<br />
+ <code>Inspectors</code> </p>
+<p> Protection::Side <code>side</code> () const </p>
+<p> Real <code>notional</code> () const </p>
+<p> <code>Rate</code> <code>spread</code> () const </p>
+<p> bool <code>settlesAccrual</code> () const </p>
+<p> bool <code>paysAtDefaultTime</code> () const </p>
+<p> const Leg &amp; <code>coupons</code> () const<br />
+ <code>Results</code><br />
+ void setupExpired () const</p>
+<p>Protected Attributes <code>Instrument interface</code> </p>
+<pre><code>void setupExpired () const
+Protected Attributes</code></pre>
+<p> Protection::Side <code>side_</code> </p>
+<p> Real <code>notional_</code> </p>
+<p> <code>Rate</code> <code>spread_</code> </p>
+<p> bool <code>settlesAccrual_</code> </p>
+<p> bool <code>paysAtDefaultTime_</code> </p>
+<p> boost::shared_ptr&lt; <code>Claim</code> &gt; <code>claim_</code> </p>
+<p> Leg <code>leg_</code> </p>
+<p> <code>Rate</code> <code>fairSpread_</code> </p>
+<p> Real <code>couponLegBPS_</code> </p>
+<p> Real <code>couponLegNPV_</code> </p>
+<p> Real <code>defaultLegNPV_</code></p>
+<h2>Detailed Description</h2>
+<p>Credit default swap. </p>
+<p> <code>Note:</code></p>
+<dl>
+<dd>This instrument currently assumes that the issuer did not default until today&#8217;s date.</dd></dl>
+<p> <code>Warning</code></p>
+<dl>
+<dd>if QL_TODAYS_PAYMENTS was defined (in userconfig.hpp or when calling ./configure; it is undefined by default) payments occurring at the settlement date of the swap are included in the NPV, and therefore affect the fair-spread calculation. This might not be what you want.</dd></dl>
+<p> <code>Examples: </code> </p>
+<p> <code>CDS.cpp</code>.</p>
+<h2>Member Function Documentation</h2>
+<h3>void setupArguments (PricingEngine::arguments *) const [virtual]</h3>
+<p>When a derived argument structure is defined for an instrument, this method should be overridden to fill it. This is mandatory in case a pricing engine is used. </p>
+<p> Reimplemented from <code>Instrument</code>.</p>
+<h3>void fetchResults (const PricingEngine::results * r) const [virtual]</h3>
+<p>When a derived result structure is defined for an instrument, this method should be overridden to read from it. This is mandatory in case a pricing engine is used. </p>
+<p> Reimplemented from <code>Instrument</code>.</p>
+<h3>void setupExpired () const [protected, virtual]</h3>
+<p>This method must leave the instrument in a consistent state when the expiration condition is met. </p>
+<p> Reimplemented from <code>Instrument</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

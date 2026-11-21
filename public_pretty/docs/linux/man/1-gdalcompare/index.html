@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gdalcompare(1) · Linux Manual Pages</title>
+<meta name="description" content="gdalcompare – gdalcompare.py compare two images">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gdalcompare/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gdalcompare(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> gdalcompare &#8211; gdalcompare.py compare two images </p>
+<h2>SYNOPSIS</h2>
+<pre>
+gdalcompare.py [-sds] golden_file new_file
+</pre>
+<h2>DESCRIPTION</h2>
+<p> The gdalcompare.py script compares two GDAL supported datasets and reports the differences. In addition to reporting differences to the standard out the script will also return the difference count in it&#8217;s exit value. </p>
+<p> Image pixels, and various metadata are checked. There is also a byte by byte comparison done which will count as one difference. So if it is only important that the GDAL visible data is identical a difference count of 1 (the binary difference) should be considered acceptable. </p>
+<dl>
+<dt><code>-sds</code>:</dt>
+<dd> If this flag is passed the script will compare all subdatasets that are part of the dataset, otherwise subdatasets are ignored.</dd></dl>
+<dl>
+<dt><i>golden_file</i>:</dt>
+<dd> The file that is considered correct, referred to as the golden file.</dd></dl>
+<dl>
+<dt><i>new_file</i>:</dt>
+<dd> The file being compared to the golden file, referred to as the new file.</dd></dl>
+<p> Note that the gdalcompare.py script can also be called as a library from python code though it is not typically in the python path for including. The primary entry point is gdalcompare.compare() which takes a golden gdal.Dataset and a new gdal.Dataset as arguments and returns a difference count (excluding the binary comparison). The gdalcompare.compare_sds() entry point can be used to compare subdatasets.</p>
+<h2>AUTHORS</h2>
+<p> Frank Warmerdam warmerdam [at] pobox.com </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

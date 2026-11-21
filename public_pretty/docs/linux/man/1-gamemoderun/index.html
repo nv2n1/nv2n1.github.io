@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gamemoderun(1) · Linux Manual Pages</title>
+<meta name="description" content="gamemoderun – invoke gamemode into any program">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gamemoderun/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gamemoderun(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> gamemoderun &#8211; invoke gamemode into any program </p>
+<h2>SYNOPSIS</h2>
+<p> <code>gamemoderun</code> PROGRAM</p>
+<h2>DESCRIPTION</h2>
+<p> <code>GameMode</code> is a daemon/lib combo for Linux that allows games to request a set of optimisations be temporarily applied to the host OS. </p>
+<p> The design has a clear cut abstraction between the host daemon and library (<code>gamemoded</code> and <code>libgamemode</code>), and the client loaders (<code>libgamemodeauto</code> and <code>gamemode_client.h</code>) that allows for safe usage without worrying about whether the daemon is installed or running. This design also means that while the host library currently relies on systemd for exchanging messages with the daemon, it&#8217;s entirely possible to implement other internals that still work with the same clients. </p>
+<p> <code>GameMode</code> was designed primarily as a stop-gap solution to problems with the Intel and AMD CPU powersave or ondemand governors, but is intended to be expanded beyond just CPU governor states, as there are a wealth of automation tasks one might want to apply. </p>
+<h2>USAGE</h2>
+<p> <code>libgamemodeauto.so.0</code> can be pre-loaded into any program to request <code>gamemoded</code> begin or end the mode, like so: </p>
+<dl>
+<dt>
+</dt><dd> gamemoderun ./game</dd></dl>
+<p> Or by setting the Steam launch options for a game: </p>
+<dl>
+<dt>
+</dt><dd> gamemoderun %command%</dd></dl>
+<p> The library can be manually preloaded if needed: </p>
+<dl>
+<dt>
+</dt><dd> LD_PRELOAD=$LD_PRELOAD:/usr/\$LIB/libgamemodeauto.so.0 ./game</dd></dl>
+<h2>CONFIG</h2>
+<p> It is possible to set additional start commands to gamemoderun by setting the environment variable: </p>
+<dl>
+<dt>
+</dt><dd> GAMEMODERUNEXEC=&quot;command&quot;</dd></dl>
+<p> When this is set, gamemoderun will execute the command given by that environment variable, and the command line passed to gamemoderun will be passed as arguments to that command. GameMode will not be applied to the wrapper command, just the game itself. </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/8-gamemoded/">gamemoded</a>(8) </p>
+<h2>ABOUT</h2>
+<p> GameMode source can be found at <i><a rel="nofollow" href="https://github.com/FeralInteractive/gamemode.git">https://github.com/FeralInteractive/gamemode.git</a></i> </p>
+<h2>AUTHOR</h2>
+<p> Feral Interactive (linux-contact [at] feralinteractive.com) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

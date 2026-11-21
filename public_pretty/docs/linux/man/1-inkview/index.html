@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>inkview(1) · Linux Manual Pages</title>
+<meta name="description" content="Inkview – an SVG viewer and slideshow program.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-inkview/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>inkview(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> Inkview &#8211; an SVG viewer and slideshow program. </p>
+<h2>SYNOPSIS</h2>
+<p> <tt>&quot;inkview [options] [filename ...]&quot;</tt> </p>
+<p> options: </p>
+<pre><code>
+- h, --help - V, --version - f, --fullscreen - r, --recursive - t, --timer = NUMBER - s, --scale = NUMBER - p, --preload
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> <code>Inkview</code> is an <code>Scalable Vector Graphics (</code><font SIZE="-1"><code>SVG</code></font><code>)</code> viewer that can also be used for slideshows or presentations. One or more <font SIZE="-1"><code>FILES</code></font> or <font SIZE="-1"><code>FOLDERS</code></font> can be specified on the command-line for opening. Inkview will display all <font SIZE="-1">SVG</font> files in the given order. Folders will be expanded to a list of contained <font SIZE="-1">SVG</font> files. </p>
+<p> You can also launch Inkview without any command-line arguments, which will bring up a file chooser that allows to select files and folders via a graphical user interface.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Show help options</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print Inkview version and build date (this is usually matches the Inkscape version).</dd>
+<dt><code>-f</code>, <code>&#8211;fullscreen</code></dt>
+<dd> Launch Inkview in fullscreen mode.</dd>
+<dt><code>-r</code>, <code>&#8211;recursive</code></dt>
+<dd> Search folders specified on the command line recursively for <font SIZE="-1">SVG</font> files. This means all <font SIZE="-1">SVG</font> files in all subfolders of the specified folder will be opened.</dd>
+<dt><code>-t</code>, <code>&#8211;timer=NUMBER</code></dt>
+<dd> Change to the next image every <font SIZE="-1">NUMBER</font> seconds</dd>
+<dt><code>-s</code>, <code>&#8211;scale=NUMBER</code></dt>
+<dd> Show image scaled by a factor of <font SIZE="-1">NUMBER</font> instead of using the file&#8217;s native size.</dd>
+<dt><code>-p</code>, <code>&#8211;preload</code></dt>
+<dd> Preloads all <font SIZE="-1">SVG</font> files. Inkview still needs to render images upon showing, however this option ensures all <font SIZE="-1">SVG</font> files are already parsed and loaded into memory. This option can also be used to verify if all files can be opened properly, without having to cycle through all files manually.</dd></dl>
+<h2>KEYBINDINGS</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> Left, Page Up, or Backspace: show previous image</dd>
+<dt>&bull;</dt>
+<dd> Right, Page Down, or Space: show next image</dd>
+<dt>&bull;</dt>
+<dd> Up, or Home: go to first image</dd>
+<dt>&bull;</dt>
+<dd> Down, or End: go to last image</dd>
+<dt>&bull;</dt>
+<dd> Return: show control window</dd>
+<dt>&bull;</dt>
+<dd> F11: toggle fullscreen mode</dd>
+<dt>&bull;</dt>
+<dd> Escape or Q: quit</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Open two <font SIZE="-1">SVG</font> files for viewing: </p>
+<pre>
+    inkview file1.svg file2.svg
+</pre>
+<p> Open all <font SIZE="-1">SVG</font> files in the examples folder shipped with Inkscape: </p>
+<pre>
+    inkview B&lt;/usr/share&gt;/inkscape/examples
+</pre>
+<p> Launch a fullscreen slideshow that automatically changes to the next image every 5 seconds: </p>
+<pre><code>
+inkview-- fullscreen-- timer = 5 [files / folders...]
+</code></pre>
+<h2>SEE ALSO</h2>
+<p> inkscape </p>
+<p> &lt;<a rel="nofollow" href="http://www.inkscape.org/">http://www.inkscape.org/</a>&gt;</p>
+<h2>AUTHORS</h2>
+<p> See <code><a href="/docs/linux/man/1-inkscape/">inkscape</a></code>(1)</p>
+<h2>COPYRIGHT AND LICENSE</h2>
+<p> <code>Copyright (C)</code> 1999-2020 by Authors. </p>
+<p> <code>Inkscape</code> is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GPL</font> version 3 or later. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

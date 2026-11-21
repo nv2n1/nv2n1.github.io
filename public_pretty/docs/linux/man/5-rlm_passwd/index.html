@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rlm_passwd(5) · Linux Manual Pages</title>
+<meta name="description" content="rlm_passwd – FreeRADIUS Module">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-rlm_passwd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>rlm_passwd(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>rlm_passwd &#8211; FreeRADIUS Module</p>
+<h2>Description</h2>
+<p>The <i>rlm_passwd</i> module provides authorization via files similar in format to /etc/passwd. The lm_passwd module allows you to retrieve any account information from any files with passwd-like format (/etc/passwd, /etc/group, smbpasswd, .htpasswd, etc). Every field of the file may be mapped to a RADIUS attribute, with one of the fields used as a key. The module reads the file when it initializes, and caches the data in memory. As a result, it does not support dynamic updates of the files (the server has to be HUP&#8217;d), but it is very fast, even for files with thousands of lines. The configuration item(s):</p>
+<dl>
+<dt>filename</dt>
+<dd>The path to the file.</dd>
+<dt>delimiter&nbsp;<wbr>=&nbsp;<wbr>:</dt>
+<dd>The character to use as a delimiter between fields. The default is &quot;:&quot;</dd>
+<dt>hash_size</dt>
+<dd>The size of the hashtable. If 0, then the passwords are not cached and the passwd file is parsed for every request. We do not recommend such a configuration. A larger hash_size means less probability of collision and faster search in hashtable. Having a hash_size in the range of 30-100% of the number of passwd file records is reasonable.</dd>
+<dt>allow_multiple_keys</dt>
+<dd>If set to &#8216;yes&#8217;, and more than one record in file matches the request, then the attributes from all records will be used. If set to &#8216;no&#8217; (the default) the module will warn about duplicated records.</dd>
+<dt>ignore_nislike</dt>
+<dd>If set to &#8216;yes&#8217;, then all records from the file beginning with the &#8216;+&#8217; sign will be ignored. The default is &#8216;no&#8217;.</dd>
+<dt>format</dt>
+<dd>The format of the fields in the file, given as an example line from the file, with the content of the fields as the RADIUS attributes which the fields map to. The fields are seperated by the &#8216;:&#8217; character.</dd></dl>
+<p> The key field is signified by being preceded with a &#8216;*&#8217; character, which indicates that the field has only one key, like the /etc/passwd file. The key field may instead be preceded with &#8216;*,&#8217;, which indicates that the field has multiple possible keys, like the /etc/group file. The other fields signify RADIUS attributes which, by default, are added to the configuration items for a request. To add an attribute to the request (as though it was sent by the NAS), prefix the attribute name in the &quot;format&quot; string with the &#8216;~&#8217; character. To add an attribute to the reply (to be sent back to the NAS) prefix the attribute name in the &quot;format&quot; string with the &#8216;=&#8217; character.</p>
+<dl>
+<dt>ignore_empty</dt>
+<dd>This configuration item defaults to &quot;yes&quot;. If there is no value for the attribute, then the attribute is not added. By setting this value to &quot;no&quot;, you can force the attribute to be added, even if there is no value. </dd>
+<h2>Examples</h2>
+<pre><code>format = &quot;~My-Group:::*,User-Name&quot;</code></pre>
+<dl>
+<dd>Parse a file similar to the /etc/group file. An entry matches a request when the name in a User-Name attribute exists in the comma-seperated list of a line in the file. When an entry matches, a &quot;My-Group&quot; attribute will be created and added to the configuration items for the request. The value of that attribute will be taken from the first field of the matching line in the file.</dd>
+<dd>The &quot;:::&quot; in the format string means that there are extra two fields in the line, in between the group name and list of user names. Those fields do not map to any RADIUS attribute, and are therefore ignored.</dd>
+<dd>For this example to work in practice, you will have to add the My-Group attribute to the dictionary file. See the dictionary manual page for details on how this may be done.</dd></dl>
+<pre><code>format = &quot;~My-Group:::*,User-Name&quot;</code></pre>
+<dl>
+<dd>Similar to the previous entry, except the My-Group attribute is added to the request, as though it was sent by the NAS.</dd></dl>
+<h2>Sections</h2>
+<p><code>authorize</code></p>
+<h2>Files</h2>
+<p><i>/etc/raddb/radiusd.conf</i></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-radiusd/">radiusd</a></code>(8), <code><a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a></code>(5) <code><a href="/docs/linux/man/5-dictionary/">dictionary</a></code>(5),</p>
+<h2>Author</h2>
+<p>Alan DeKok &lt;aland [at] freeradius.org&gt;</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

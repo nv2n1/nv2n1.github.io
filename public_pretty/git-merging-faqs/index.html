@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Merge vs. Rebase vs. Cherry-Pick: When to Use Each - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/git-merging-faqs/">
+  <meta name="description" content="git merge and git rebase both integrate changes from one branch into another, but they handle history differently.
+Merge creates a new commit that ties together …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Git Merge vs. Rebase vs. Cherry-Pick: When to Use Each">
+  <meta property="og:url" content="https://www.systutorials.com/git-merging-faqs/">
+  <meta property="og:description" content="git merge and git rebase both integrate changes from one branch into another, but they handle history differently.
+Merge creates a new commit that ties together …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/testing-devops/">Testing &amp; DevOps</a>
+        </nav>
+        
+        <h1>Git Merge vs. Rebase vs. Cherry-Pick: When to Use Each</h1>
+        <time class="post-date" datetime="2014-07-28T08:56:17Z">July 28, 2014</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p><code>git merge</code> and <code>git rebase</code> both integrate changes from one branch into another, but they handle history differently.</p>
+<p><strong>Merge</strong> creates a new commit that ties together the histories of both branches. Your feature branch history remains intact, and the main branch gains a merge commit. This is safer for shared branches because it doesn’t rewrite history.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout main
+</span></span><span class="line"><span class="cl">git merge feature-branch
+</span></span></code></pre></div><p><strong>Rebase</strong> replays your commits on top of the target branch, rewriting history. It produces a linear timeline but should only be used on branches you haven’t shared yet.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout feature-branch
+</span></span><span class="line"><span class="cl">git rebase main
+</span></span></code></pre></div><p><strong>When to use each:</strong></p>
+<ul>
+<li>Use <code>git merge</code> for shared branches and when merging to main/master</li>
+<li>Use <code>git rebase</code> on local branches before creating a pull request to clean up history</li>
+<li>Never rebase commits that others have already pulled</li>
+</ul>
+<h2 id="fast-forward-merges">Fast-Forward Merges</h2>
+<p>When your main branch hasn’t changed since you created your feature branch, Git can fast-forward — it simply moves the main branch pointer forward without creating a merge commit.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git merge feature-branch
+</span></span></code></pre></div><p>If main is a direct ancestor of feature-branch, this fast-forwards automatically. To disable this behavior and always create a merge commit:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git merge --no-ff feature-branch
+</span></span></code></pre></div><p>To only allow fast-forward merges (fails if not possible):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git merge --ff-only feature-branch
+</span></span></code></pre></div><p>For most teams, using <code>--no-ff</code> on main/master ensures every merge is visible in history, making it easier to track what was integrated and when.</p>
+<h2 id="handling-merge-conflicts">Handling Merge Conflicts</h2>
+<p>Conflicts occur when both branches modify the same lines. Git marks conflicted sections with these markers:</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+your current branch changes
+=======
+incoming branch changes
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name
+</code></pre>
+<h3 id="manual-resolution">Manual Resolution</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># View conflicted files</span>
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Edit the file to resolve conflicts</span>
+</span></span><span class="line"><span class="cl">vim conflicted-file.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Mark as resolved</span>
+</span></span><span class="line"><span class="cl">git add conflicted-file.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Complete the merge</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Resolve merge conflict&#34;</span>
+</span></span></code></pre></div><h3 id="using-merge-tools">Using Merge Tools</h3>
+<p>For a more visual approach, use your editor’s built-in merge tool:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Use VS Code, Neovim, or your configured merge tool</span>
+</span></span><span class="line"><span class="cl">git mergetool
+</span></span></code></pre></div><h3 id="examining-both-sides">Examining Both Sides</h3>
+<p>To see what changed on each side before resolving:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git diff --ours      <span class="c1"># your branch</span>
+</span></span><span class="line"><span class="cl">git diff --theirs    <span class="c1"># incoming branch</span>
+</span></span><span class="line"><span class="cl">git diff --base      <span class="c1"># common ancestor</span>
+</span></span></code></pre></div><h2 id="testing-a-merge-before-committing">Testing a Merge Before Committing</h2>
+<p>Preview merge results without immediately committing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create a temporary branch to test</span>
+</span></span><span class="line"><span class="cl">git checkout -b test-merge main
+</span></span><span class="line"><span class="cl">git merge feature-branch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Examine the result</span>
+</span></span><span class="line"><span class="cl">git diff main..test-merge
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># If it looks good, clean up and do the real merge</span>
+</span></span><span class="line"><span class="cl">git checkout main
+</span></span><span class="line"><span class="cl">git merge feature-branch
+</span></span><span class="line"><span class="cl">git branch -d test-merge
+</span></span></code></pre></div><p>Alternatively, use a dry-run approach:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git merge --no-commit --no-ff feature-branch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Review the changes</span>
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl">git diff --cached
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Abort if unhappy</span>
+</span></span><span class="line"><span class="cl">git merge --abort
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or complete it if satisfied</span>
+</span></span><span class="line"><span class="cl">git commit
+</span></span></code></pre></div><h2 id="undoing-a-merge">Undoing a Merge</h2>
+<p>If you’ve already merged but want to undo it, the approach depends on whether it’s been pushed.</p>
+<p><strong>For unpushed merges:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reset --hard HEAD~1
+</span></span></code></pre></div><p><strong>For already-public merges:</strong></p>
+<p>Create a revert commit instead:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Find the merge commit</span>
+</span></span><span class="line"><span class="cl">git log --oneline <span class="p">|</span> head -20
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Revert it (use -m 1 to specify which parent to keep)</span>
+</span></span><span class="line"><span class="cl">git revert -m <span class="m">1</span> &lt;merge-commit-hash&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Push the revert</span>
+</span></span><span class="line"><span class="cl">git push
+</span></span></code></pre></div><p>The <code>-m 1</code> flag tells Git to revert to the first parent (your main branch) and discard changes from the second parent (the merged branch).</p>
+<h2 id="selective-merging-with-cherry-pick">Selective Merging with Cherry-Pick</h2>
+<p>To merge only specific commits from another branch:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># List commits you want</span>
+</span></span><span class="line"><span class="cl">git log feature-branch --oneline
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Cherry-pick individual commits</span>
+</span></span><span class="line"><span class="cl">git cherry-pick &lt;commit-hash&gt;
+</span></span><span class="line"><span class="cl">git cherry-pick &lt;commit-hash-2&gt;
+</span></span></code></pre></div><p>To cherry-pick a range:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git cherry-pick commit1..commit2
+</span></span></code></pre></div><p>If conflicts occur during cherry-pick:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># After resolving conflicts</span>
+</span></span><span class="line"><span class="cl">git add resolved-file.txt
+</span></span><span class="line"><span class="cl">git cherry-pick --continue
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or abort the entire operation</span>
+</span></span><span class="line"><span class="cl">git cherry-pick --abort
+</span></span></code></pre></div><p>Cherry-pick is useful for backporting bug fixes, but avoid it for large feature branches — use merge instead. Overusing cherry-pick creates duplicate commits and makes history harder to follow.</p>
+<h2 id="replacing-an-entire-branch">Replacing an Entire Branch</h2>
+<p>To completely rewrite a branch with content from another:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Replace feature-branch with content from main</span>
+</span></span><span class="line"><span class="cl">git checkout feature-branch
+</span></span><span class="line"><span class="cl">git reset --hard main
+</span></span></code></pre></div><p>Or without checking out the branch:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch -f feature-branch main
+</span></span></code></pre></div><p>Force-push this change (only if you own the branch):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git push origin feature-branch --force-with-lease
+</span></span></code></pre></div><p>Always use <code>--force-with-lease</code> instead of <code>--force</code> — it’s safer because it checks that no one else pushed changes in the meantime.</p>
+<h2 id="practical-feature-branch-workflow">Practical Feature Branch Workflow</h2>
+<p>A typical feature branch workflow that keeps history clean:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create and work on feature branch</span>
+</span></span><span class="line"><span class="cl">git checkout -b feature/new-api
+</span></span><span class="line"><span class="cl"><span class="c1"># ... make commits and push ...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Before merging, fetch latest and rebase on main</span>
+</span></span><span class="line"><span class="cl">git fetch origin
+</span></span><span class="line"><span class="cl">git rebase origin/main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Resolve any conflicts that arise</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Test thoroughly with local builds/tests</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Switch to main and merge with a merge commit</span>
+</span></span><span class="line"><span class="cl">git checkout main
+</span></span><span class="line"><span class="cl">git pull origin main
+</span></span><span class="line"><span class="cl">git merge --no-ff feature/new-api
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Push and clean up</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span><span class="line"><span class="cl">git branch -d feature/new-api
+</span></span></code></pre></div><p>This approach keeps main’s history clean, makes bisecting easier with <code>git bisect</code>, and ensures every feature merge is explicitly documented in the log.</p>
+<h2 id="rebasing-multiple-commits-interactively">Rebasing Multiple Commits Interactively</h2>
+<p>To squash, reorder, or edit multiple commits before merging:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Rebase the last 3 commits</span>
+</span></span><span class="line"><span class="cl">git rebase -i HEAD~3
+</span></span></code></pre></div><p>This opens your editor with a list of commits. Common commands:</p>
+<ul>
+<li><code>pick</code> — use commit as-is</li>
+<li><code>squash</code> (or <code>s</code>) — merge commit into the previous one</li>
+<li><code>reword</code> (or <code>r</code>) — change commit message</li>
+<li><code>drop</code> (or <code>d</code>) — discard commit</li>
+<li><code>fixup</code> (or <code>f</code>) — like squash, but discard commit message</li>
+</ul>
+<p>After editing and saving, Git will reapply the commits in the new order. This is powerful for cleaning up local history before opening a pull request.</p>
+<h2 id="merge-strategies">Merge Strategies</h2>
+<p>By default, Git uses the <code>recursive</code> strategy for standard merges. Other strategies are available:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Resolve by preferring &#34;ours&#34; changes in conflicts</span>
+</span></span><span class="line"><span class="cl">git merge -X ours feature-branch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or prefer &#34;theirs&#34; changes</span>
+</span></span><span class="line"><span class="cl">git merge -X theirs feature-branch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use the resolve strategy (older, simpler algorithm)</span>
+</span></span><span class="line"><span class="cl">git merge -s resolve feature-branch
+</span></span></code></pre></div><p>These are rarely needed but useful when merging branches with known conflict patterns.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

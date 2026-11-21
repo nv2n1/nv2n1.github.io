@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sudo_sendlog(8) · Linux Manual Pages</title>
+<meta name="description" content="sudo_sendlog – send sudo I/O log to log server">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-sudo_sendlog/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>sudo_sendlog(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Sudo 1.9.9</p>
+<h2>Name</h2>
+<p><code>sudo_sendlog</code> &#8211; send sudo I/O log to log server</p>
+<h2>Synopsis</h2>
+<p><code>sudo_sendlog</code> [-<code>AnV</code> ] [-<code>b </code><i>ca_bundle</i> ] [-<code>c </code><i>cert_file</i> ] [-<code>h </code><i>host</i> ] [-<code>i </code><i>iolog-id</i> ] [-<code>k </code><i>key_file</i> ] [-<code>p </code><i>port</i> ] [-<code>r </code><i>restart-point</i> ] [-<code>R </code><i>reject-reason</i> ] [-<code>s </code><i>stop-point</i> ] [-<code>t </code><i>number</i> ] <i>path</i></p>
+<h2>Description</h2>
+<p><code>sudo_sendlog</code> can be used to send the existing <code>sudoers</code> I/O log <i>path</i> to a remote log server such as sudo_logsrvd8 for central storage. </p>
+<p> The options are as follows:</p>
+<dl>
+<dt><code>-A , -accept-only</code></dt>
+<dd>Only send the accept event, not the I/O associated with the log. This can be used to test the logging of accept events without any associated I/O.</dd>
+<dt><code>-b , -ca-bundle</code></dt>
+<dd>The path to a certificate authority bundle file, in PEM format, to use instead of the system&#8217;s default certificate authority database when authenticating the log server. The default is to use the system&#8217;s default certificate authority database.</dd>
+<dt><code>-c , -cert</code></dt>
+<dd>The path to the client&#8217;s certificate file in PEM format. This setting is required when the connection to the remote log server is secured with TLS.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Display a short help message to the standard output and exit.</dd>
+<dt><code>-h , -host</code></dt>
+<dd>Connect to the specified <i>host</i> instead of localhost.</dd>
+<dt><code>-i , -iolog-id</code></dt>
+<dd>Use the specified <i>iolog-id</i> when restarting a log transfer. The <i>iolog-id</i> is reported by the server when it creates the remote I/O log. This option may only be used in conjunction with the &#8211;<code>r</code> option.</dd>
+<dt><code>-k , -key</code></dt>
+<dd>The path to the client&#8217;s private key file in PEM format. This setting is required when the connection to the remote log server is secured with TLS.</dd>
+<dt><code>-n , -no-verify</code></dt>
+<dd>If specified, the server&#8217;s certificate will not be verified during the TLS handshake. By default, <code>sudo_sendlog</code> verifies that the server&#8217;s certificate is valid and that it contains either the server&#8217;s host name or its IP address. This setting is only supported when the connection to the remote log server is secured with TLS.</dd>
+<dt><code>-p , -port</code></dt>
+<dd>Use the specified network <i>port</i> when connecting to the log server instead of the default, port 30344.</dd>
+<dt><code>-r , -restart</code></dt>
+<dd>Restart an interrupted connection to the log server. The specified <i>restart-point</i> is used to tell the server the point in time at which to continue the log. The <i>restart-point</i> is specified in the form &#8220;seconds,nanoseconds&#8221; and is usually the last commit point received from the server. The &#8211;<code>i</code> option must also be specified when restarting a transfer.</dd>
+<dt><code>-R , -reject</code></dt>
+<dd>Send a reject event for the command using the specified <i>reject-reason</i> even though it was actually accepted locally. This can be used to test the logging of reject events; no I/O will be sent.</dd>
+<dt><code>-s , -stop-after</code></dt>
+<dd>Stop sending log records and close the connection when <i>stop-point</i> is reached. This can be used for testing purposes to send a partial I/O log to the server. Partial logs can be restarted using the &#8211;<code>r</code> option. The <i>stop-point</i> is an elapsed time specified in the form &#8220;seconds,nanoseconds&#8221;</dd>
+<dt><code>-t , -test</code></dt>
+<dd>Open <i>number</i> simultaneous connections to the log server and send the specified I/O log file on each one. This option is useful for performance testing.</dd>
+<dt><code>-V , -version</code></dt>
+<dd>Print the <code>sudo_sendlog</code> version and exit.</dd></dl>
+<h3>Debugging sendlog</h3>
+<p><code>sudo_sendlog</code> supports a flexible debugging framework that is configured via <code>Debug</code> lines in the sudo.conf5 file. </p>
+<p> For more information on configuring sudo.conf5, please refer to its manual.</p>
+<h2>Files</h2>
+<dl>
+<dt><code>/etc/sudo.conf </code></dt>
+<dd>Sudo front-end configuration</dd></dl>
+<h2>See Also</h2>
+<p>sudo.conf5, <a href="/docs/linux/man/8-sudo/">sudo</a>(8), sudo_logsrvd8</p>
+<h2>Authors</h2>
+<p>Many people have worked on <code>sudo</code> over the years; this version consists of code written primarily by: </p>
+<blockquote><p> An Todd C. Miller </p></blockquote>
+<p> See the CONTRIBUTORS file in the <code>sudo</code> distribution (<a rel="nofollow" href="https://www.sudo.ws/contributors.html)">https://www.sudo.ws/contributors.html)</a> for an exhaustive list of people who have contributed to <code>sudo</code></p>
+<h2>Bugs</h2>
+<p>If you feel you have found a bug in <code>sudo_sendlog,</code> please submit a bug report at <a rel="nofollow" href="https://bugzilla.sudo.ws/">https://bugzilla.sudo.ws/</a></p>
+<h2>Support</h2>
+<p>Limited free support is available via the sudo-users mailing list, see <a rel="nofollow" href="https://www.sudo.ws/mailman/listinfo/sudo-users">https://www.sudo.ws/mailman/listinfo/sudo-users</a> to subscribe or search the archives.</p>
+<h2>Disclaimer</h2>
+<p><code>sudo_sendlog</code> is provided &#8220;AS IS&#8221; and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. See the LICENSE file distributed with <code>sudo</code> or <a rel="nofollow" href="https://www.sudo.ws/license.html">https://www.sudo.ws/license.html</a> for complete details.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

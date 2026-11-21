@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nbplkup(1) · Linux Manual Pages</title>
+<meta name="description" content="nbp, nbplkup, nbprgstr, nbpunrgstr – access NBP database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nbplkup/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nbplkup(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> nbp, nbplkup, nbprgstr, nbpunrgstr &#8211; access NBP database </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>nbplkup</code> [-r&nbsp;<wbr><i>maxresponses</i>] [-A&nbsp;<wbr><i>address</i>] [-m&nbsp;<wbr><i>maccodepage</i>] <i>nbpname</i></dt>
+<dt> <code>nbprgstr</code> [-A&nbsp;<wbr><i>address</i>] [-p&nbsp;<wbr><i>port</i>] [-m&nbsp;<wbr><i>maccodepage</i>] <i>nbpname</i></dt>
+<dt> <code>nbpunrgstr</code> [-A&nbsp;<wbr><i>address</i>] [-m&nbsp;<wbr><i>maccodepage</i>] <i>nbpname</i></dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>nbprgstr</code></p>
+<dd>registers <i>nbpname</i> with <code><a href="/docs/linux/man/8-atalkd/">atalkd</a></code>(8), at the given <i>port</i>. <code>nbpunrgstr</code> informs <code>atalkd</code> that <i>nbpname</i> is no longer to be advertised. </dd>
+<p> <code>nbplkup</code> displays up to <i>maxresponses</i> (default 1000) entities registered on the AppleTalk internet. <i>nbpname</i> is parsed by <code><a href="/docs/linux/man/3-nbp_name/">nbp_name</a></code>(3). An `<code>=</code>&#8216; for the <i>object</i> or <i>type</i> matches anything, and an `<code>*</code>&#8216; for <i>zone</i> means the local zone. The default values are taken from the <code>NBPLKUP</code> environment variable, parsed as an <i>nbpname</i>.</p>
+<h2>ENVIRONMENT VARIABLES</h2>
+<p> NBPLKUP</p>
+<dl>
+<dt>
+</dt><dd> default nbpname for nbplkup</dd></dl>
+<p> ATALK_MAC_CHARSET</p>
+<dl>
+<dt>
+</dt><dd> the codepage used by the clients on the Appletalk network</dd></dl>
+<p> ATALK_UNIX_CHARSET</p>
+<dl>
+<dt>
+</dt><dd> the codepage used to display extended characters on this shell.</dd></dl>
+<h2>EXAMPLE</h2>
+<p> Find all devices of type <code>LaserWriter</code> in the local zone. </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+example% <code>nbplkup :LaserWriter</code>
+               Petoskey:LaserWriter        7942.129:218
+             Gloucester:LaserWriter        8200.188:186
+                 Rahway:LaserWriter        7942.2:138
+             517 Center:LaserWriter        7942.2:132
+                  ionia:LaserWriter        7942.2:136
+     Evil DEC from Hell:LaserWriter        7942.2:130
+              Hamtramck:LaserWriter        7942.2:134
+         Iron Mountain :LaserWriter        7942.128:250
+example%
+</pre>
+</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-nbp_name/">nbp_name</a></code>(3), <code><a href="/docs/linux/man/8-atalkd/">atalkd</a></code>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

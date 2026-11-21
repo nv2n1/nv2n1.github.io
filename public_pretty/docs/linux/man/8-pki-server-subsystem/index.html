@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pki-server-subsystem(8) · Linux Manual Pages</title>
+<meta name="description" content="pki-server-subsystem – Command-Line Interface for managing Certificate System subsystems.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pki-server-subsystem/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pki-server-subsystem(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>pki-server-subsystem &#8211; Command-Line Interface for managing Certificate System subsystems.</p>
+<h2>Synopsis</h2>
+<pre><code>pki-server [CLI options] subsystem</code>
+<code>pki-server [CLI options] subsystem-find</code> -i &lt;instance ID&gt;
+<code>pki-server [CLI options] subsystem-show</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt;
+<code>pki-server [CLI options] subsystem-enable</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt;
+<code>pki-server [CLI options] subsystem-disable</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt;
+<code>pki-server [CLI options] subsystem-cert-find</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt;
+<code>pki-server [CLI options] subsystem-cert-show</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt; &lt;cert ID&gt;
+<code>pki-server [CLI options] subsystem-cert-export</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt; &lt;cert ID&gt;
+<code>pki-server [CLI options] subsystem-cert-update</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt; &lt;cert ID&gt;</pre>
+<h2>Description</h2>
+<p>The <code>pki-server subsystem</code> commands provide command-line interfaces to manage Certificate Server (CS) subsystems. A Certificate Server instance consists of a single Apache Tomcat instance that contains one or more CS subsystems. Valid subsystem identifiers are &#8216;<code>ca</code>&#8216;, &#8216;<code>kra</code>&#8216;, &#8216;<code>tks</code>&#8216;, &#8216;<code>ocsp</code>&#8216; and &#8216;<code>tps</code>&#8216;. No instance may have more than one of each type of subsystem. <code>pki-server subsystem</code> commands perform operations on a specific subsystem within a CS instance. Consequently, all <code>pki-server subsystem</code> commands require specification of the instance ID to completely identify the target subsystem. Operations that are available include: listing subsystems in an instance; showing details about a subsystem; and enabling and disabling subsystems. <code>pki-server [CLI options] subsystem</code></p>
+<dl>
+<dd>This command is to list available subsystem commands.</dd></dl>
+<p> <code>pki-server [CLI options] subsystem-find</code> -i &lt;instance ID&gt;</p>
+<dl>
+<dd>This command is to list subsystems within a specific instance.</dd></dl>
+<p> <code>pki-server [CLI options] subsystem-show</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt;</p>
+<dl>
+<dd>This command is to view the details about a particular subsystem.</dd></dl>
+<p> <code>pki-server [CLI options] subsystem-enable</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt;</p>
+<dl>
+<dd>This command is to enable a particular subsystem. Each subsystem consists of a web application within the Apache Tomcat instance. Enabling a subsystem means deploying the web application so that the application initializes and is accessible via the HTTP and HTTPS ports for the Apache Tomcat instance. <code>Note:</code> Each subsystem runs a set of self-tests on startup. If these self-tests fail, the subsystem will be disabled by undeploying the web application. The deployment status (enabled/disabled) of the subsystem can be determined from the output of <code>pki-server subsystem-show</code>. Once the underlying problem is fixed, the subsystem should be re-enabled using <code>pki-server subsystem-enable</code>.</dd></dl>
+<p> <code>pki-server [CLI options] subsystem-disable</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt;</p>
+<dl>
+<dd>This command is to disable a subsystem by undeploying the web application corresponding to the subsystem. The subsystem will no longer be accessible through the web interfaces. This is useful when specific subsystems need to be made inaccessible for maintenance as Apache Tomcat allows web applications to be deployed/undeployed while the instance is still running (hot deployment).</dd></dl>
+<p> <code>pki-server [CLI options] subsystem-cert-find</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt;</p>
+<dl>
+<dd>This command is to list system certificates in a particular subsystem.</dd></dl>
+<p> <code>pki-server [CLI options] subsystem-cert-show</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt; &lt;cert ID&gt;</p>
+<dl>
+<dd>This command is to view the details about a system certificate in a particular subsystem.</dd></dl>
+<p> <code>pki-server [CLI options] subsystem-cert-export</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt; &lt;cert ID&gt;</p>
+<dl>
+<dd>This command is to export a system certificate in a particular subsystem.</dd></dl>
+<p> <code>pki-server [CLI options] subsystem-cert-update</code> -i &lt;instance ID&gt; &lt;subsystem ID&gt; &lt;cert ID&gt;</p>
+<dl>
+<dd>This command is to update a system certificate in a particular subsystem.</dd></dl>
+<h2>Options</h2>
+<p>The CLI options are described in <code><a href="/docs/linux/man/8-pki-server/">pki-server</a></code>(8).</p>
+<h2>Operations</h2>
+<p>To view available subsystem management commands, type <code>pki-server subsystem</code>. To view each command&#8217;s usage, type <code> pki-server subsystem-&lt;command&gt; &#8211;help</code>. </p>
+<p> All pki-server commands must be executed as the system administrator.</p>
+<h2>Authors</h2>
+<p>Ade Lee &lt;alee [at] redhat.com&gt;</p>
+<h2>Copyright</h2>
+<p>Copyright (c) 2015 Red Hat, Inc. This is licensed under the GNU General Public License, version 2 (GPLv2). A copy of this license is available at <a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.">http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

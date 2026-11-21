@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdcopy_backward(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdcopy_backward/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdcopy_backward(3)</h1>
+
+
+
+
+
+<p>std::copy_backward - std::copy_backward</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;algorithm&gt;
+template&lt; class BidirIt1, class BidirIt2 &gt;                                           (until C++20)
+BidirIt2 copy_backward( BidirIt1 first, BidirIt1 last, BidirIt2 d_last );
+template&lt; class BidirIt1, class BidirIt2 &gt;                                           (since C++20)
+constexpr BidirIt2 copy_backward( BidirIt1 first, BidirIt1 last, BidirIt2 d_last );</code></pre> 
+<p>Copies the elements from the range, defined by [first, last), to another range ending at d_last. The elements are copied in reverse order (the last element is copied first), but their relative order is preserved.
+The behavior is undefined if d_last is within (first, last]. std::copy must be used instead of std::copy_backward in that case.</p>
+<h2>Parameters</h2>
+<p>first, last - the range of the elements to copy
+d_last - end of the destination range..</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<p>BidirIt must meet the requirements of LegacyBidirectionalIterator.</p>
+<h2>Return value</h2>
+<p>iterator to the last element copied.</p>
+<h2>Complexity</h2>
+<p>Exactly last - first assignments.</p>
+<h2>Notes</h2>
+<p>When copying overlapping ranges, std::copy is appropriate when copying to the left (beginning of the destination range is outside the source range) while std::copy_backward is appropriate when copying to the right (end of the destination range is outside the source range).</p>
+<h2>Possible implementation</h2>
+<p> <wbr> template&lt; class BidirIt1, class BidirIt2 &gt;
+ <wbr> BidirIt2 copy_backward(BidirIt1 first, BidirIt1 last, BidirIt2 d_last)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> while (first != last) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> *(&ndash;d_last) = *(&ndash;last);
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return d_last;
+ <wbr> }</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+int main()
+{
+std::vector&lt;int&gt; from_vector;
+for (int i = 0; i &lt; 10; i++) {
+from_vector.push_back(i);
+}
+std::vector&lt;int&gt; to_vector(15);
+std::copy_backward(from_vector.begin(), from_vector.end(), to_vector.end());
+std::cout &lt;&lt; &quot;to_vector contains: &quot;;
+for (auto i : to_vector) {
+std::cout &lt;&lt; i &lt;&lt; &quot; &quot;;
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> to_vector contains: 0 0 0 0 0 0 1 2 3 4 5 6 7 8 9</p>
+<h2>See also</h2>
+<p>copy
+copy_if copies a range of elements to a new location
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

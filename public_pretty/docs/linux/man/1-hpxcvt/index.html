@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hpxcvt(1) · Linux Manual Pages</title>
+<meta name="description" content="HPXcvt – Reorganise HEALPix data into a 2-D FITS image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-hpxcvt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>hpxcvt(1)</h1>
+
+
+
+
+
+<p>HPXcvt &#8211; Reorganise HEALPix data into a 2-D FITS image</p>
+<h2>Synopsis</h2>
+<p><code>HPXcvt</code> [<i>-C&lt;col&gt;</i>] [<i>-c&lt;sys&gt;</i>] [<i>-n|-r</i>] [<i>-q&lt;quad&gt;</i>] [<i>-x&lt;n|s&gt;</i>]</p>
+<h2>Description</h2>
+<dl>
+<dd>[&lt;infile&gt; [&lt;outfile&gt;]]</dd></dl>
+<p> HPXcvt reorganises HEALPix data into a 2-D FITS image with HPX coordinate system. The input data may be stored in a FITS file as a primary image or image extension, or as a binary table extension. Both NESTED and RING pixel indices are supported. The input and output files may be omitted or specified as &quot;-&quot; to indicate stdin and stdout respectively.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-C</code>&lt;col&gt;</dt>
+<dd>Binary table column number from which to read data, default 1 (n.b. WMAP exclusion masks are in column 2).</dd>
+<dt><code>-c</code>&lt;sys&gt;</dt>
+<dd>Specify the coordinate system to be used to label the output map if the COORDSYS keyword is absent from the input FITS header. Recognised values are g (galactic), e (ecliptic) or q (equatorial).</dd>
+<dt><code>-n</code>|-r</dt>
+<dd>Assume n(ested) or r(ing) organization if the ORDERING keyword is absent from the input FITS header.</dd>
+<dt><code>-q</code>&lt;quad&gt;</dt>
+<dd>Recentre longitude at quad(mod 4) x 90 degrees, where quad(rant) is an integer.</dd>
+<dt><code>-x</code>&lt;n|s&gt;</dt>
+<dd>Use a north-polar or south-polar layout. </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xgetextensionversion(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xgetextensionversion/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xgetextensionversion(3)</h1>
+
+
+
+
+
+<p>XGetExtensionVersion - query the version of the input extension.</p>
+<h2>Synopsis</h2><pre>#include &lt;X11/extensions/XInput.h&gt;</pre><pre>XExtensionVersion *XGetExtensionVersion( Display *display,
+ char *name);</pre><pre>display
+ Specifies the connection to the X server.</pre><pre>name
+ Specifies the extension to be queried. The input
+ extension name is definedin the header file XI.h.</pre><h2>Description</h2><dl COMPACT><dd><pre>The XGetExtensionVersion request is deprecated and should not
+be used in XI2 applications. Clients issuing a XGetExtensionVersion
+request will not be able to use XI2 features.</pre></dd></dl><dl COMPACT><dd><pre>The XGetExtensionVersion request queries the version of the input
+extension, and returns an XExtensionVersion structure. This structure
+contains a major_version and minor_version number which can be compared
+with constants defined in XI.h. Support for additional protocol
+requests added to the input extension after its initial release
+is indicated by a version number corresponding to the added
+requests. Each version contains all the protocol requests
+contained by previous versions.</pre></dd></dl><dl COMPACT><dd><pre>You should use XFree to free the XExtensionVersion structure.</pre></dd></dl><h2>Structures</h2><dl COMPACT><dd><pre>This request returns an XExtensionVersion structure.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
+ int present;
+ short major_version;
+ short minor_version;
+} XExtensionVersion;</pre></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

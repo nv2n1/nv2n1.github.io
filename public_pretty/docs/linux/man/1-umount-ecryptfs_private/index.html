@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>umount-ecryptfs_private(1) · Linux Manual Pages</title>
+<meta name="description" content="umount.ecryptfs_private – eCryptfs private unmount helper.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-umount-ecryptfs_private/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>umount-ecryptfs_private(1)</h1>
+
+
+
+
+
+<p>umount.ecryptfs_private &#8211; eCryptfs private unmount helper.</p>
+<h2>Synopsis</h2>
+<p><code>umount.ecryptfs_private</code> [-f] </p>
+<p> <code>NOTE:</code> This program will <code>not</code> clear the relevant keys from the user&#8217;s keyring. For this reason, it is recommended that users use <code><a href="/docs/linux/man/1-ecryptfs-umount-private/">ecryptfs-umount-private</a></code>(1) instead! </p>
+<h2>Options</h2>
+<p>Options available for the <code>umount.ecryptfs_private</code> command:</p>
+<dl COMPACT>
+<dt><code>-f</code></dt>
+<dd>Force the unmount, ignoring the value of the mount counter in <i>/tmp/ecryptfs-USERNAME-Private</i> </dd>
+</dl>
+<h2>Description</h2>
+<p><code>umount.ecryptfs_private</code> is a mount helper utility for non-root users to unmount a cryptographically mounted private directory, ~/Private. </p>
+<p> If, and only if:<br />
+&nbsp;<wbr>&nbsp;&#8211; the private mount passphrase is in their kernel keyring, and<br />
+&nbsp;<wbr>&nbsp;&#8211; the current user owns both&nbsp;~/.Private and&nbsp;~/Private, and<br />
+&nbsp;<wbr>&nbsp;&#8211;&nbsp;~/.Private is currently mounted on&nbsp;~/Private<br />
+&nbsp;<wbr>&nbsp;&#8211; the mount counter is 0&nbsp;(counter is ignored if -f option is used) </p>
+<p> This program will:<br />
+&nbsp;<wbr>&nbsp;&#8211; unmount&nbsp;~/Private </p>
+<p> The only setuid operationis in this program are the call to <code>umount</code> and updating <code>/etc/mtab</code>. </p>
+<p> The system administrator can add the pam_ecryptfs.so module to the PAM stack and automatically perform the unmount on logout. See <code><a href="/docs/linux/man/8-pam_ecryptfs/">pam_ecryptfs</a></code>(8). </p>
+<h2>Files</h2>
+<p><i>~/.Private</i> &#8211; underlying directory containing encrypted data </p>
+<p> <i>~/Private</i> &#8211; mountpoint containing decrypted data (when mounted) </p>
+<p> <i>~/.ecryptfs/Private.sig</i> &#8211; file containing signature of mountpoint passphrase </p>
+<p> <i>/tmp/ecryptfs-USERNAME-Private</i> &#8211; file containing the mount counter, incremented on each mount, decremented on each unmount </p>
+<h2>See Also</h2>
+<dl COMPACT>
+<dt><code><a href="/docs/linux/man/7-ecryptfs/">ecryptfs</a></code>(7), <code><a href="/docs/linux/man/1-ecryptfs-setup-private/">ecryptfs-setup-private</a></code>(1), <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/1-mount-ecryptfs_private/">mount.ecryptfs_private</a></code>(1), <code><a href="/docs/linux/man/8-pam_ecryptfs/">pam_ecryptfs</a></code>(8)</dt>
+<dd>
+</dd><dt><i>/usr/share/doc/ecryptfs-utils/ecryptfs-faq.html</i></dt>
+<dd>
+</dd><dt><i><a rel="nofollow" href="http://ecryptfs.org/">http://ecryptfs.org/</a></i></dt>
+<dd></dd></dl>
+<h2>Author</h2>
+<p>This manpage and the <code>umount.ecryptfs_private</code> utility was written by Dustin Kirkland &lt;kirkland [at] ubuntu.com&gt; for Ubuntu systems (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>
+<p> On Debian and Ubuntu systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

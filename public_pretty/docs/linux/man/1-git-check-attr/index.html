@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-check-attr(1) · Linux Manual Pages</title>
+<meta name="description" content="git-check-attr – Display gitattributes information">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-check-attr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-check-attr(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> git-check-attr &#8211; Display gitattributes information </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+git check - attr[-a | --all | &lt;attr&gt;...][--]&lt;pathname&gt;... git check - attr-- stdin[-z][-a | --all | &lt;attr&gt;...]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> For every pathname, this command will list if each attribute is <i>unspecified</i>, <i>set</i>, or <i>unset</i> as a gitattribute on that pathname.</p>
+<h2>OPTIONS</h2>
+<p> -a, &#8211;all</p>
+<dl>
+<dt>
+</dt><dd> List all attributes that are associated with the specified paths. If this option is used, then <i>unspecified</i> attributes will not be included in the output.</dd></dl>
+<p> &#8211;cached</p>
+<dl>
+<dt>
+</dt><dd> Consider <code>.gitattributes</code> in the index only, ignoring the working tree.</dd></dl>
+<p> &#8211;stdin</p>
+<dl>
+<dt>
+</dt><dd> Read pathnames from the standard input, one per line, instead of from the command-line.</dd></dl>
+<p> -z</p>
+<dl>
+<dt>
+</dt><dd> The output format is modified to be machine-parsable. If <code>&#8211;stdin</code> is also given, input paths are separated with a NUL character instead of a linefeed character.</dd></dl>
+<p> &#8212;</p>
+<dl>
+<dt>
+</dt><dd> Interpret all preceding arguments as attributes and all following arguments as path names.</dd></dl>
+<p> If none of <code>&#8211;stdin</code>, <code>&#8211;all</code>, or <code>&#8212;</code> is used, the first argument will be treated as an attribute and the rest of the arguments as pathnames.</p>
+<h2>OUTPUT</h2>
+<p> The output is of the form: &lt;path&gt; COLON SP &lt;attribute&gt; COLON SP &lt;info&gt; LF </p>
+<p> unless <code>-z</code> is in effect, in which case NUL is used as delimiter: &lt;path&gt; NUL &lt;attribute&gt; NUL &lt;info&gt; NUL </p>
+<p> &lt;path&gt; is the path of a file being queried, &lt;attribute&gt; is an attribute being queried and &lt;info&gt; can be either: </p>
+<p> <i>unspecified</i></p>
+<dl>
+<dt>
+</dt><dd> when the attribute is not defined for the path.</dd></dl>
+<p> <i>unset</i></p>
+<dl>
+<dt>
+</dt><dd> when the attribute is defined as false.</dd></dl>
+<p> <i>set</i></p>
+<dl>
+<dt>
+</dt><dd> when the attribute is defined as true.</dd></dl>
+<p> &lt;value&gt;</p>
+<dl>
+<dt>
+</dt><dd> when a value has been assigned to the attribute.</dd></dl>
+<p> Buffering happens as documented under the <code>GIT_FLUSH</code> option in <code><a href="/docs/linux/man/1-git/">git</a></code>(1). The caller is responsible for avoiding deadlocks caused by overfilling an input buffer or reading from an empty output buffer.</p>
+<h2>EXAMPLES</h2>
+<p> In the examples, the following <i>.gitattributes</i> file is used: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+*.java diff=java -crlf myAttr
+NoMyAttr.java !myAttr
+README caveat=unspecified
+</pre>
+</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; Listing a single attribute:</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ git check-attr diff org/example/MyClass.java
+org/example/MyClass.java: diff: java
+</pre>
+</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; Listing multiple attributes for a file:</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ git check-attr crlf diff myAttr -- org/example/MyClass.java
+org/example/MyClass.java: crlf: unset
+org/example/MyClass.java: diff: java
+org/example/MyClass.java: myAttr: set
+</pre>
+</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; Listing all attributes for a file:</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ git check-attr --all -- org/example/MyClass.java
+org/example/MyClass.java: diff: java
+org/example/MyClass.java: myAttr: set
+</pre>
+</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; Listing an attribute for multiple files:</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ git check-attr myAttr -- org/example/MyClass.java org/example/NoMyAttr.java
+org/example/MyClass.java: myAttr: set
+org/example/NoMyAttr.java: myAttr: unspecified
+</pre>
+</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; Not all values are equally unambiguous:</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ git check-attr caveat README
+README: caveat: unspecified
+</pre>
+</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-gitattributes/">gitattributes</a></code>(5).</p>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

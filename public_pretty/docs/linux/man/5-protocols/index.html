@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>protocols(5) · Linux Manual Pages</title>
+<meta name="description" content="protocols – protocols definition file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-protocols/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>protocols(5)</h1>
+
+
+
+
+
+<p>protocols &#8211; protocols definition file</p>
+<h2>Description</h2>
+<p>This file is a plain ASCII file, describing the various DARPA internet protocols that are available from the TCP/IP subsystem. It should be consulted instead of using the numbers in the ARPA include files, or, even worse, just guessing them. These numbers will occur in the protocol field of any IP header. </p>
+<p> Keep this file untouched since changes would result in incorrect IP packages. Protocol numbers and names are specified by the IANA (Internet Assigned Numbers Authority). </p>
+<p> Each line is of the following format: </p>
+<dl>
+<dd><i>protocol number aliases &#8230;</i></dd></dl>
+<p> where the fields are delimited by spaces or tabs. Empty lines are ignored. If a line contains a hash mark (#), the hash mark and the part of the line following it are ignored. </p>
+<p> The field descriptions are:</p>
+<dl>
+<dt><i>protocol</i></dt>
+<dd>the native name for the protocol. For example <i>ip</i>, <i>tcp</i>, or <i>udp</i>.</dd>
+<dt><i>number</i></dt>
+<dd>the official number for this protocol as it will appear within the IP header.</dd>
+<dt><i>aliases</i></dt>
+<dd>optional aliases for the protocol.</dd></dl>
+<p> This file might be distributed over a network using a network-wide naming service like Yellow Pages/NIS or BIND/Hesiod.</p>
+<h2>Files</h2>
+<dl>
+<dt><i>/etc/protocols</i></dt>
+<dd>The protocols definition file.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-getprotoent/">getprotoent</a></code>(3) </p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

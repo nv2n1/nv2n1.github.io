@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hwlocality_myriexpress(3) · Linux Manual Pages</title>
+<meta name="description" content="hwlocality_myriexpress – Interoperability with Myrinet Express">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-hwlocality_myriexpress/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>hwlocality_myriexpress(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> hwlocality_myriexpress &#8211; Interoperability with Myrinet Express </p>
+<h3>Functions</h3>
+<p> static int <code>hwloc_mx_board_get_device_cpuset</code> (<code>hwloc_topology_t</code> topology, unsigned id, <code>hwloc_cpuset_t</code> set) </p>
+<p> static int <code>hwloc_mx_endpoint_get_device_cpuset</code> (<code>hwloc_topology_t</code> topology, mx_endpoint_t endpoint, <code>hwloc_cpuset_t</code> set) </p>
+<h2>Detailed Description</h2>
+<p> This interface offers ways to retrieve topology information about Myrinet Express hardware.</p>
+<h2>Function Documentation</h2>
+<h3>static int hwloc_mx_board_get_device_cpuset (<code>hwloc_topology_t</code> topology, unsigned id, <code>hwloc_cpuset_t</code> set) [inline], [static]</h3>
+<p> Get the CPU set of logical processors that are physically close the MX board id. Return the CPU set describing the locality of the Myrinet Express board whose index is id. </p>
+<p> Topology topology and device id must match the local machine. I/O devices detection is not needed in the topology. </p>
+<p> The function only returns the locality of the device. No additional information about the device is available.</p>
+<h3>static int hwloc_mx_endpoint_get_device_cpuset (<code>hwloc_topology_t</code> topology, mx_endpoint_t endpoint, <code>hwloc_cpuset_t</code> set) [inline], [static]</h3>
+<p> Get the CPU set of logical processors that are physically close the MX endpoint endpoint. Return the CPU set describing the locality of the Myrinet Express board that runs the MX endpoint endpoint. </p>
+<p> Topology topology and device id must match the local machine. I/O devices detection is not needed in the topology. </p>
+<p> The function only returns the locality of the endpoint. No additional information about the endpoint or device is available.</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAH">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

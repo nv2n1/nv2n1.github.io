@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdchronooperatorstdchronooperator-stdchronoyear_month_day_last(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdchronooperatorstdchronooperator-stdchronoyear_month_day_last/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdchronooperatorstdchronooperator-stdchronoyear_month_day_last(3)</h1>
+
+
+
+
+
+<p>std::chrono::operator+,std::chrono::operator-(std::chrono::year_month_day_last) - std::chrono::operator+,std::chrono::operator-(std::chrono::year_month_day_last)</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;chrono&gt;
+    constexpr std::chrono::year_month_day_last(since C++ 20)
+    operator+(const std::chrono::year_month_day_last &amp;ymdl, const std::chrono::months &amp;dm) noexcept;
+constexpr std::chrono::year_month_day_last(since C++ 20)
+operator+(const std::chrono::months &amp;dm, const std::chrono::year_month_day_last &amp;ymdl) noexcept;
+constexpr std::chrono::year_month_day_last(since C++ 20)
+operator+(const std::chrono::year_month_day_last &amp;ymdl, const std::chrono::years &amp;dy) noexcept;
+constexpr std::chrono::year_month_day_last(since C++ 20)
+operator+(const std::chrono::years &amp;dy, const std::chrono::year_month_day_last &amp;ymdl) noexcept;
+constexpr std::chrono::year_month_day_last(since C++ 20)
+operator-(const std::chrono::year_month_day_last &amp;ymdl, const std::chrono::months &amp;dm) noexcept;
+constexpr std::chrono::year_month_day_last(since C++ 20)
+operator-(const std::chrono::year_month_day_last &amp;ymdl, const std::chrono::years &amp;dy) noexcept;</code></pre> 
+<p>1-2) Adds dm.count() months to the date represented by ymdl. The result has the same year() and month() as std::chrono::year_month(ymdl.year(), ymdl.month()) + dm.
+3-4) Adds dy.count() years to the date represented by ymdl. The result is equivalent to std::chrono::year_month_day_last(ymdl.year() + dy, ymdl.month_day_last()).
+5) Subtracts dm.count() months from the date represented by ymdl. Equivalent to ymdl + -dm.
+6) Subtracts dy.count() years from the date represented by ymdl. Equivalent to ymdl + -dy.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

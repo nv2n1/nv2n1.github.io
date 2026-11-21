@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pmunpackeventrecords(3) · Linux Manual Pages</title>
+<meta name="description" content="pmUnpackEventRecords – unpack event records">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pmunpackeventrecords/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pmunpackeventrecords(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>pmUnpackEventRecords</code> &#8211; unpack event records</p>
+<h2>C Synopsis</h2>
+<p><code> #include &lt;pcp/pmapi.h&gt; </p>
+<p> int pmUnpackEventRecords(pmValueSet *</code><i>vsp</i>, int <i>idx</i>, pmResult ***<i>rap</i>); </p>
+<p> int pmUnpackHighResEventRecords(pmValueSet *<i>vsp</i>, int <i>idx</i>, pmHighResResult ***<i>hrap</i>); </p>
+<p> cc &#8230; -lpcp</p>
+<h2>Description</h2>
+<p>Event records are encoded as a packed array of records within a <i>pmResult</i> using a container metric with a value of type <code>PM_TYPE_EVENT ,</code> and a <i>pmHighResResult</i> when using a metric of type <code>PM_TYPE_HIGHRES_EVENT</code>. </p>
+<p> <code>pmUnpackEventRecords</code> and <code>pmUnpackHighResEventRecords</code> may be used to unpack event records from a metric value identified by <i>vsp</i> and <i>idx</i>. If the metric has a singular value, <i>idx</i> should be 0, else the ordinal instance value identified by <i>idx</i> will be unpacked, i.e. vsp-&gt;vlist[idx]. The unpacked records are turned into either <i>pmResult</i> or <i>pmHighResResult</i> structures, one per event record and one metric per event parameter, and <i>rap</i> is returned as a pointer to an array (NULL pointer terminated) of pointers to the result structures. </p>
+<p> The only difference between the two result types is the timestamp scale; the <i>pmHighResResult</i> allows for nanosecond precision, whereas <i>pmResult</i> allows for microsecond resolution. </p>
+<p> Some control information from the packed event records is unpacked into additional &#8220;anonymous&#8221; metrics as follows:</p>
+<dl>
+<dt>1.</dt>
+<dd>If the event record has a non-zero flags value, then the corresponding <i>pmResult</i>/<i>pmHighResResult</i> will have the flags value encoded with the additional metric <code>event.flags</code> that is inserted ahead of all other event parameters.</dd>
+<dt>2.</dt>
+<dd>If the event record flag is set to <code>PM_EVENT_FLAG_MISSED</code>, then the corresponding <i>pmResult</i>/<i>pmHighResResult</i> will have one metric <code>event.missed</code> with a value that equals the number of event records &#8220;missed&#8221; because either the PMDA could not keep up, or the PMAPI client did not collect the event records fast enough.</dd></dl>
+<p> <code>pmUnpackEventRecords</code> returns the number of <i>pmResult</i> structures as the return value, which is &gt;= 0 for success. Similarly, <code>pmUnpackHighResEventRecords</code> returns the number of <i>pmHighResResult</i> structures as the return value, which is &gt;= 0 for success. </p>
+<p> <i>rap</i> and the associated <i>pmResult</i> structures may be freed using the convenience function <code><a href="/docs/linux/man/3-pmfreeeventresult/">pmFreeEventResult</a></code>(3). </p>
+<p> Similarly, the <i>hrap</i> and the associated <i>pmHighResResult</i> structures may be freed using the convenience function <code>pmFreeHighResEventResult</code>.</p>
+<h2>Return Value</h2>
+<p>The following errors are possible:</p>
+<dl>
+<dt>PM_ERR_CONV</dt>
+<dd>The values associated with <i>vsp</i> are not encoded using the format PM_VAL_DPTR or PM_VAL_SPTR, or the flags at the head of the event record has an unexpected value.</dd>
+<dt>PM_ERR_INST</dt>
+<dd>The value associated with <i>vsp</i> is not singular as expected.</dd>
+<dt>PM_ERR_TYPE</dt>
+<dd><i>vsp</i> is not a value of type <code>PM_TYPE_EVENT</code>.</dd>
+<dt>PM_ERR_TOOSMALL</dt>
+<dd>The value identified by <i>vbp</i> is not legal because the value length is less than the minimum size, or the number of event records encoded in the (value header) <i>pmEventArray</i>/<i>pmEventHighResArray</i> structure is negative, or the number of missed event records in the array is negative.</dd>
+<dt>PM_ERR_TOOBIG</dt>
+<dd>Either <code>vsp</code> indicates more than one value is present (all the event records are expected to be packed in a single metric value), or when unpacking the event records, the processing continues past the end of the enclosing value. Indicates corruption of the packed event record.</dd>
+<dt>PM_ERR_TYPE</dt>
+<dd>Event parameters must have one of the arithmetic types, else <code>PM_TYPE_AGGREGATE</code>, <code>PM_TYPE_STRING</code> or <code>PM_TYPE_AGGREGATE_STATIC</code>.</dd>
+<dt>other values &lt; 0</dt>
+<dd>refer to <code><a href="/docs/linux/man/3-pmerrstr/">pmErrStr</a></code>(3).</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) and <code><a href="/docs/linux/man/3-pmfreeeventresult/">pmFreeEventResult</a></code>(3). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

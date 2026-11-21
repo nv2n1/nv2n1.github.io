@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fence_cpint(8) · Linux Manual Pages</title>
+<meta name="description" content="fence_cpint – I/O Fencing agent for GFS on s390 and zSeries VM clusters">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-fence_cpint/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>fence_cpint(8)</h1>
+
+
+
+
+
+<p>fence_cpint &#8211; I/O Fencing agent for GFS on s390 and zSeries VM clusters</p>
+<h2>Synopsis</h2>
+<p><code>fence_cpint</code> [<i>OPTION</i>]&#8230; </p>
+<h2>Description</h2>
+<p>fence_cpint is an I/O Fencing agent used on a virtual machine running GFS in a s390 or zSeries VM cluster. It uses the cpint package to send a CP LOGOFF command to the specified virtual machine. For fence_cpint to execute correctly, you must have the cpint module installed, and hcp in your PATH. <code>NOTE:</code> for fence_cpint to send a command to another virtual machine, the machine executing it must either be a privilege class C user or it must be the secondary user of the virtual machine to be fenced. This means that unless all of you GULM server nodes are privilege class C, fence_cpint can only be used with SLM. fence_cpint accepts options on the command line as well as from stdin. fence_node sends the options through stdin when it execs the agent. fence_cpint can be run by itself with command line options which is useful for testing. Vendor URL: <a rel="nofollow" href="http://www.ibm.com">http://www.ibm.com</a> </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h</code></dt>
+<dd>Print out a help message describing available options, then exit.</dd>
+<dt><code>-u</code> <i>userid</i></dt>
+<dd>userid of the virtual machine to fence (required).</dd>
+<dt><code>-q</code></dt>
+<dd>quiet mode, no output.</dd>
+<dt><code>-V</code></dt>
+<dd>Print out a version message, then exit. </dd>
+</dl>
+<h2>Stdin Parameters</h2>
+<dl>
+<dt><i>agent = &lt; param &gt;</i></dt>
+<dd>This option is used by <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8) and is ignored by fence_cpint.</dd>
+<dt><i>userid = &lt; parm &gt;</i></dt>
+<dd>userid of the virtual machine to fence (required). </dd>
+</dl>
+<h2>See Also</h2>
+<p>fence(8), <a href="/docs/linux/man/8-fence_node/">fence_node</a>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

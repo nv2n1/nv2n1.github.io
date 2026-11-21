@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wimax_msg_alloc(9) · Linux Manual Pages</title>
+<meta name="description" content="wimax_msg_alloc – Create a new skb for sending a message to userspace">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-wimax_msg_alloc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>wimax_msg_alloc(9)</h1>
+
+
+
+
+
+<p>wimax_msg_alloc &#8211; Create a new skb for sending a message to userspace</p>
+<h2>Synopsis</h2>
+<pre><code>struct sk_buff *wimax_msg_alloc(struct wimax_dev *wimax_dev, const char *pipe_name, const void *msg, size_t size, gfp_t gfp_flags);</code></pre>
+<h2>Arguments</h2>
+<p><i>wimax_dev</i></p>
+<dl>
+<dd>
+</dd><dd>WiMAX device descriptor</dd></dl>
+<p> <i>pipe_name</i></p>
+<dl>
+<dd>&quot;named pipe&quot; the message will be sent to</dd></dl>
+<p> <i>msg</i></p>
+<dl>
+<dd>pointer to the message data to send</dd></dl>
+<p> <i>size</i></p>
+<dl>
+<dd>size of the message to send (in bytes), including the header.</dd></dl>
+<p> <i>gfp_flags</i></p>
+<dl>
+<dd>flags for memory allocation.</dd></dl>
+<h2>Return</h2>
+<p><code>0</code> if ok, negative errno code on error</p>
+<h2>Description</h2>
+<p>Allocates an skb that will contain the message to send to user space over the messaging pipe and initializes it, copying the payload. </p>
+<p> Once this call is done, you can deliver it with <code>wimax_msg_send</code>. </p>
+<p> IMPORTANT: </p>
+<p> Don&#8217;t use <code>skb_push</code>/<code>skb_pull</code>/<code>skb_reserve</code> on the skb, as <code>wimax_msg_send</code> depends on skb-&gt;data being placed at the beginning of the user message. </p>
+<p> Unlike other WiMAX stack calls, this call can be used way early, even before <code>wimax_dev_add</code> is called, as long as the wimax_dev-&gt;net_dev pointer is set to point to a proper net_dev. This is so that drivers can use it early in case they need to send stuff around or communicate with user space.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

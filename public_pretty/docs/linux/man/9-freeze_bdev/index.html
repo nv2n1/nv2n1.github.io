@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>freeze_bdev(9) · Linux Manual Pages</title>
+<meta name="description" content="freeze_bdev – – lock a filesystem and force it into a consistent state">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-freeze_bdev/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>freeze_bdev(9)</h1>
+
+
+
+
+
+<p>freeze_bdev &#8211; &#8211; lock a filesystem and force it into a consistent state</p>
+<h2>Synopsis</h2>
+<pre><code>struct super_block *freeze_bdev(struct block_device *bdev);</code></pre>
+<h2>Arguments</h2>
+<p><i>bdev</i></p>
+<dl>
+<dd>
+</dd><dd>blockdevice to lock</dd></dl>
+<h2>Description</h2>
+<p>If a superblock is found on this device, we take the s_umount semaphore on it to make sure nobody unmounts until the snapshot creation is done. The reference counter (bd_fsfreeze_count) guarantees that only the last unfreeze process can unfreeze the frozen filesystem actually when multiple freeze requests arrive simultaneously. It counts up in <code>freeze_bdev</code> and count down in <code>thaw_bdev</code>. When it becomes 0, <code>thaw_bdev</code> will unfreeze actually.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

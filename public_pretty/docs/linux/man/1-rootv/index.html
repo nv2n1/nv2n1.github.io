@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rootv(1) · Linux Manual Pages</title>
+<meta name="description" content="rootv – display TV using the Xvideo extension">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rootv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rootv(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> rootv &#8211; display TV using the Xvideo extension</p>
+<h2>SYNOPSIS</h2>
+<p> <code>rootv [ options ]</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>rootv</code> puts a video to some window. By default it creates its own window, but you can also ask it to use the root window (thus the name) or any other window. <code>rootv</code> needs the Xvideo extension. </p>
+<p> <code>rootv</code> itself provides no way to control video/audio/tuner. You can use v4lctl to do this.</p>
+<h2>OPTIONS</h2>
+<p> <code>rootv</code> knows a number of command line options to modify the behaviour.</p>
+<dl>
+<dt><code>-help</code></dt>
+<dd> Print a short description of all command line options.</dd>
+<dt><code>-verbose</code></dt>
+<dd> Be verbose. That will dump some debug messages to stderr.</dd>
+<dt><code>-root</code></dt>
+<dd> Put the video onto the root window instead of creating a new window.</dd>
+<dt><code>-id &lt;win&gt;</code></dt>
+<dd> Put the video into the window &lt;win&gt; instead of creating a new window.</dd>
+<dt><code>-station &lt;st&gt;</code></dt>
+<dd> Tune station &lt;st&gt;. This just calls v4lctl, which in turn will look up the station in your ~/.xawtv config file.</dd>
+<dt><code>-no-mute</code></dt>
+<dd> Don&#8217;t toggle mute. By default rootv will unmute the TV card when it starts and mute it on exit. It does this using the XV_MUTE attribute (if available).</dd>
+<dt><code>-port &lt;n&gt;</code></dt>
+<dd> Use Xvideo port &lt;n&gt;. Try the -verbose switch if you want to know which ones are available.</dd>
+<dt><code>-bg</code></dt>
+<dd> Fork into background.</dd>
+<dt><code>-wm</code></dt>
+<dd> Print WindowMaker menu (set stations using v4lctl).</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-xawtv/">xawtv</a>(1), <a href="/docs/linux/man/1-fbtv/">fbtv</a>(1), <a href="/docs/linux/man/1-v4lctl/">v4lctl</a>(1)</p>
+<h2>AUTHOR</h2>
+<p> Gerd Knorr &lt;kraxel [at] bytesex.org&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2000-2002 Gerd Knorr &lt;kraxel [at] bytesex.org&gt; </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

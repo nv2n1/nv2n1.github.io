@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cs_register_esc_strfunc(3) · Linux Manual Pages</title>
+<meta name="description" content="cs_register_esc_strfunc – cs_register_strfunc with escaping context">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-cs_register_esc_strfunc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>cs_register_esc_strfunc(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> cs_register_esc_strfunc &#8211; cs_register_strfunc with escaping context </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;cs/cs.h&gt;
+</code></pre>
+<pre>
+NEOERR *cs_register_esc_strfunc(CSPARSE *parse, char *funcname,
+                                CSSTRFUNC str_func);
+</pre>
+<h2>ARGUMENTS</h2>
+<p> parse &#8211; a pointer to a CSPARSE structure initialized with cs_init()<br />
+ funcname &#8211; the name for the CS function call<br />
+ Note that registering a duplicate funcname will<br />
+ raise a NERR_DUPLICATE error<br />
+ str_func &#8211; a CSSTRFUNC not-callback </p>
+<h2>DESCRIPTION</h2>
+<p> cs_register_esc_strfunc functions exactly as cs_register_strfunc except that it changes the evaluation escaping context to disable default escaping. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-cs_dump/">cs_dump</a></code>(3), <a href="/docs/linux/man/3-cs_destroy/">cs_destroy</a><code>(3), <a href="/docs/linux/man/3-cs_render/">cs_render</a></code>(3), <a href="/docs/linux/man/3-cs_register_esc_strfunc/">cs_register_esc_strfunc</a><code>(3), cs_arg_parsev</code>(3), <a href="/docs/linux/man/3-cs_register_fileload/">cs_register_fileload</a><code>(3), <a href="/docs/linux/man/3-cs_init/">cs_init</a></code>(3), <a href="/docs/linux/man/3-cs_register_strfunc/">cs_register_strfunc</a><code>(3), cs_arg_parse</code>(3), <a href="/docs/linux/man/3-cs_parse_string/">cs_parse_string</a><code>(3), <a href="/docs/linux/man/3-cs_parse_file/">cs_parse_file</a></code>(3), =<code>(3), cs_register_function</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

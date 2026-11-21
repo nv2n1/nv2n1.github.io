@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>swapcontext(2) · Linux Manual Pages</title>
+<meta name="description" content="swapcontext – Swap out old context with new context">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/2-swapcontext/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/2/">Section 2</a></p>
+<article>
+<h1>swapcontext(2)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> swapcontext &#8211; Swap out old context with new context</p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt>
+</dt><dd>int&nbsp;<wbr><code>sys_swapcontext</code>&nbsp;<wbr>(struct ucontext&nbsp;<wbr><i>*old_ctx</i>, struct ucontext&nbsp;<wbr><i>*new_ctx</i>, int&nbsp;<wbr><i>r5</i>, int&nbsp;<wbr><i>r6</i>, int&nbsp;<wbr><i>r7</i>, int&nbsp;<wbr><i>r8</i>, struct pt_regs&nbsp;<wbr><i>*regs</i>); </dd>
+</dl>
+<h2>DESCRIPTION</h2>
+<p> <code>swapcontext</code> swaps out context <i>old_ctx</i> with new context <i>new_ctx</i>. The <i>int r#</i> values have no place in the system call functionality. The <i>regs</i> value indicates the current user register values from the user stack. </p>
+<h2>RETURN VALUE</h2>
+<p> <code>swapcontext</code> returns 0 on success; otherwise, <code>swapcontext</code> returns one of the errors listed in the &quot;Errors&quot; section. </p>
+<h2>ERRORS</h2>
+<dl>
+<dt>-EFAULT</dt>
+<dd> <i>swapcontext</i> could not verify that the memory area pointed to by <i>old_ctx</i> or <i>new_ctx</i> was accessible for the operation. </dd>
+<dt>-SIGSEGV</dt>
+<dd> A fault occurred when the context was being copied into the kernel&#8217;s image of the user&#8217;s registers. The should only occur in an out-of-memory situation. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-getcontext/">getcontext</a>(2),</code> <code><a href="/docs/linux/man/2-sigaction/">sigaction</a>(2),</code> <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a>(2),</code> <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a>(2)</code> </p>
+<h2>AUTHOR</h2>
+<p> Niki Rahimi </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

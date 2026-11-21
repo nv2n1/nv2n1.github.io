@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdrangesrange(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdrangesrange/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdrangesrange(3)</h1>
+
+
+
+
+
+<p>std::ranges::Range - std::ranges::Range</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;ranges&gt;
+    template &lt;class T&gt;
+    (1)
+        concept Range = __RangeImpl&lt;T &amp;&gt;; // exposition-only definition
+// exposition-only helper concept
+template &lt;class T&gt;
+concept __RangeImpl = requires(T &amp;&amp;t)
+{
+    (2)
+        ranges::begin(std::forward&lt;T&gt;(t)); // equality-preserving for forward iterators
+    ranges::end(std::forward&lt;T&gt;(t));
+};
+// exposition-only helper concept
+template &lt;class T&gt;
+(3)
+    concept __ForwardingRange = Range&lt;T&gt; &amp;&amp; __RangeImpl&lt;T&gt;;</code></pre> 
+<ol>
+<li>The Range concept defines the requirements of a type that allows iteration over its elements by providing an iterator and sentinel that denote the elements of the range.
+Formally, given an expression E such that decltype((E)) is T, T models Range only if</li>
+</ol>
+<ul>
+<li>[ranges::begin(E), ranges::end(E)) denotes a range, and</li>
+<li>both ranges::begin(E) and ranges::end(E) are amortized constant time and non-modifying, and</li>
+<li>if the type of ranges::begin(E) models ForwardIterator, ranges::begin(E) is equality-preserving (in other words, forward iterators support multi-pass algorithms)
+Note: In the exposition-only definition above, the required expressions ranges::begin(std::forward&lt;T&gt;(t)) and ranges::end(std::forward&lt;T&gt;(t)) do not require implicit_expression_variations.</li>
+</ul>
+<ol start="3">
+<li>The exposition-only concept __ForwardingRange defines the requirements of a range such that a function can take it by value and return iterators obtained from it without danger of dangling.
+Formally, given an expression E such that decltype((E)) is T and an lvalue t that denotes the same object as E, T models __ForwardingRange only if</li>
+</ol>
+<ul>
+<li>ranges::begin(E) and ranges::begin(t) are expression-equivalent (have the same effect when evaluated, and both or neither are potentially-throwing, both or neither are constant subexpressions), and</li>
+<li>ranges::end(E) and ranges::end(t) are expression-equivalent, and</li>
+<li>the validity of iterators obtained from the object denoted by E is not tied to the lifetime of that object.</li>
+</ul>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mongoc_stream_readv(3) · Linux Manual Pages</title>
+<meta name="description" content="mongoc_stream_readv() – This function is identical to mongoc_stream_read() except that it takes a mongoc_iovec_t to perform gathered I/O.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mongoc_stream_readv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mongoc_stream_readv(3)</h1>
+
+
+
+
+
+<p>mongoc_stream_readv() &#8211; This function is identical to mongoc_stream_read() except that it takes a mongoc_iovec_t to perform gathered I/O.</p>
+<h2>Synopsis</h2>
+<pre>ssize_t
+mongoc_stream_readv (mongoc_stream_t *stream,
+ mongoc_iovec_t *iov,
+ size_t iovcnt,
+ size_t min_bytes,
+ int32_t timeout_msec);</pre>
+<h2>Parameters</h2>
+<dl COMPACT>
+<dt><code>stream</code></dt>
+<dd>A <code>mongoc_stream_t</code> \&amp;.</dd></dl>
+<dl COMPACT>
+<dt><code>iov</code></dt>
+<dd>A vector of <code>mongoc_iovec_t</code> \&amp;.</dd></dl>
+<dl COMPACT>
+<dt><code>iovcnt</code></dt>
+<dd>The number of items in <code>iov</code> \&amp;.</dd></dl>
+<dl COMPACT>
+<dt><code>min_bytes</code></dt>
+<dd>The minimum number of bytes to read or failure will be indicated.</dd></dl>
+<dl COMPACT>
+<dt><code>timeout_msec</code></dt>
+<dd>A timeout in milliseconds, or 0 to indicate non-blocking. A negative value with use the default timeout.</dd></dl>
+<p> This function is identical to <code><a href="/docs/linux/man/3-mongoc_stream_read/">mongoc_stream_read</a>(3)</code> except that it takes a <code>mongoc_iovec_t</code> to perform gathered I/O. </p>
+<h2>Returns</h2>
+<p><code>&gt;= 0</code> on success, <code>-1</code> on failure and <code>errno</code> is set. </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-mongoc_stream_read/">mongoc_stream_read</a>(3)</code> </p>
+<p> <code><a href="/docs/linux/man/3-mongoc_stream_write/">mongoc_stream_write</a>(3)</code> </p>
+<p> <code><a href="/docs/linux/man/3-mongoc_stream_writev/">mongoc_stream_writev</a>(3)</code> </p>
+<h2>Colophon</h2>
+<p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>remctl_set_timeout(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-remctl_set_timeout/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>remctl_set_timeout(3)</h1>
+
+
+
+
+
+<p>remctl_set_timeout - Set timeout for subsequent remctl client operations</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;remctl.h&gt;
+int remctl_set_timeout(struct remctl *r, time_t timeout);</code></pre>
+<h2>Description</h2>
+<p><i>remctl_set_timeout()</i> sets the timeout for connections and commands to <i>timeout</i>, which should be an integer number of seconds. <i>timeout</i> may be 0 to clear a timeout that was previously set and restore the default behavior of having no timeout. All subsequent operations on the given struct remctl argument will be subject to this timeout, including <i>remctl_open()</i> if called prior to calling <i>remctl_open()</i>.</p>
+<p>The timeout is a timeout on network activity from the server, not on a complete operation. So, for example, a timeout of ten seconds just requires that the server send some data every ten seconds. If the server sends only tiny amounts of data at a time, the complete operation could take much longer than ten seconds without triggering the timeout.</p>
+<h2>Return Value</h2>
+<p><i>remctl_set_timeout()</i> returns true on success and false on failure. The only failure case is if <i>timeout</i> is negative. On failure, the caller should call <i>remctl_error()</i> to retrieve the error message.</p>
+<h2>Compatibility</h2>
+<p>This interface was added in version 3.1.</p>
+<h2>Author</h2>
+<p>Russ Allbery &lt;eagle [at] eyrie.org&gt;</p>
+<h2>Copyright And License</h2>
+<p>Copyright 2012, 2014 The Board of Trustees of the Leland Stanford Junior University</p>
+<p>Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved. This file is offered as-is, without any warranty.</p>
+<h2>See Also</h2>
+<p><i><a HREF="/docs/linux/man/3-remctl_new/">remctl_new</a></i>(3), <i><a HREF="/docs/linux/man/3-remctl_command/">remctl_command</a></i>(3), <i><a HREF="/docs/linux/man/3-remctl_open/">remctl_open</a></i>(3), <i><a HREF="/docs/linux/man/3-remctl_output/">remctl_output</a></i>(3), <i><a HREF="/docs/linux/man/3-remctl_error/">remctl_error</a></i>(3) The current version of the remctl library and complete details of the remctl protocol are available from its web page at &lt;<a rel="nofollow" HREF="http://www.eyrie.org/~eagle/software/remctl/"><a href="http://www.eyrie.org/~eagle/software/remctl/">http://www.eyrie.org/~eagle/software/remctl/</a></a>&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

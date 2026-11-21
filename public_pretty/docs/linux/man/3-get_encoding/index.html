@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>get_encoding(3) · Linux Manual Pages</title>
+<meta name="description" content="get_encoding — report the binary encoding of data in a dirfile">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-get_encoding/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>get_encoding(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> get_encoding &#8212; report the binary encoding of data in a dirfile</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
+<dl>
+<dt> <code>unsigned long get_encoding(DIRFILE *</code><i>dirfile</i><code>, int </code><i>fragment_index</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>get_encoding</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the binary encoding for the fragment indexed by <i>fragment_index</i>. The binary encoding of a fragment indicate the encoding of data stored in binary files associated with <code>RAW</code> fields defined in the specified fragment. The encoding of a fragment containing no <code>RAW</code> fields is ignored. </dd>
+<h2>RETURN VALUE</h2>
+<p> Upon successful completion, <code>get_encoding</code>() returns the binary encoding of the specified fragment, which will one of the following symbols:</p>
+<dl>
+<dt>
+</dt><dd> <code>GD_UNENCODED</code>,~<code>GD_TEXT_ENCODED</code>,~<code>GD_SLIM_ENCODED</code>,~ <code>GD_GZIP_ENCODED</code>,~<code>GD_BZIP2_ENCODED</code>,~<code>GD_LZMA_ENCODED</code>,~ <code>GD_ENC_UNSUPPORTED</code>. See <code><a href="/docs/linux/man/3-dirfile_cbopen/">dirfile_cbopen</a></code>(3) and <a href="/docs/linux/man/5-dirfile-encoding/">dirfile-encoding</a>(5) for the meanings of these symbols and details on the supported encoding schemes. If the encoding scheme specified in the dirfile metadata is unknown to GetData, <code>GD_ENC_UNSUPPORTED</code> will be returned. On error, it returns zero and sets the dirfile error to a non-zero error value. Possible error values are:</dd>
+<dt><code>GD_E_BAD_DIRFILE</code></dt>
+<dd> The supplied dirfile was invalid.</dd>
+<dt><code>GD_E_BAD_INDEX</code></dt>
+<dd> The supplied index was out of range. The dirfile error may be retrieved by calling <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3). A descriptive error string for the last error encountered can be obtained from a call to <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3).</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code>dirfile_alter_encoding</code>(3), <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3), <code><a href="/docs/linux/man/3-getdata/">getdata</a></code>(3), <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3), <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3), <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5), <code><a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a></code>(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

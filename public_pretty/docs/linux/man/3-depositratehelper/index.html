@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>depositratehelper(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::DepositRateHelper – Rate helper for bootstrapping over deposit rates.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-depositratehelper/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>depositratehelper(3)</h1>
+
+
+
+
+
+<p>QuantLib::DepositRateHelper &#8211; Rate helper for bootstrapping over deposit rates. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/termstructures/yield/ratehelpers.hpp&gt; </p>
+<p> Inherits <code>QuantLib::RelativeDateRateHelper</code>. </p>
+<h3>Public Member Functions</h3>
+<p><code>DepositRateHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;rate, const <code>Period</code> &amp;tenor, <code>Natural</code> fixingDays, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> convention, bool endOfMonth, const <code>DayCounter</code> &amp;dayCounter) </p>
+<p> <code>DepositRateHelper</code> (<code>Rate</code> rate, const <code>Period</code> &amp;tenor, <code>Natural</code> fixingDays, const <code>Calendar</code> &amp;calendar, <code>BusinessDayConvention</code> convention, bool endOfMonth, const <code>DayCounter</code> &amp;dayCounter) </p>
+<p> <code>DepositRateHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;rate, const boost::shared_ptr&lt; <code>IborIndex</code> &gt; &amp;iborIndex) </p>
+<p> <code>DepositRateHelper</code> (<code>Rate</code> rate, const boost::shared_ptr&lt; <code>IborIndex</code> &gt; &amp;iborIndex) </p>
+<p> <code>RateHelper interface</code> </p>
+<p> <code>Real</code> <code>impliedQuote</code> () const </p>
+<p> void <code>setTermStructure</code> (<code>YieldTermStructure</code> *) </p>
+<p> <code>Visitability</code> </p>
+<p> void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>
+<h2>Detailed Description</h2>
+<p>Rate helper for bootstrapping over deposit rates. </p>
+<p> <code>Examples: </code> </p>
+<p> <code>Bonds.cpp</code>, and <code>swapvaluation.cpp</code>. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

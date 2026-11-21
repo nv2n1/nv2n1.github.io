@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installing Hyperledger Fabric 2.5 on Ubuntu 24.04 LTS - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-install-hyperledger-fabric-2-0-in-ubuntu-18-04/">
+  <meta name="description" content="Hyperledger Fabric is a modular, enterprise-grade consortium blockchain platform. While its official documentation is comprehensive, deploying a test network …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Installing Hyperledger Fabric 2.5 on Ubuntu 24.04 LTS">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-install-hyperledger-fabric-2-0-in-ubuntu-18-04/">
+  <meta property="og:description" content="Hyperledger Fabric is a modular, enterprise-grade consortium blockchain platform. While its official documentation is comprehensive, deploying a test network …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/distributed-systems-academy/">Distributed Systems Academy</a>
+           &rsaquo; <a href="/advanced-systems-path/">Advanced Systems &amp; Architecture Path</a>
+          &rsaquo; <a href="/category/engineering-lessons/">Engineering Lessons</a>
+        </nav>
+        
+        <h1>Installing Hyperledger Fabric 2.5 on Ubuntu 24.04 LTS</h1>
+        <time class="post-date" datetime="2020-04-07T17:44:25Z">April 7, 2020</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Hyperledger Fabric is a modular, enterprise-grade consortium blockchain platform. While its official documentation is comprehensive, deploying a test network from scratch requires configuring multiple dependencies and tools—a process that’s time-consuming for new users. This guide covers both automated and manual setup approaches to get a working Fabric network running quickly.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>You’ll need:</p>
+<ul>
+<li>Ubuntu 24.04 LTS (or compatible Linux distribution)</li>
+<li>A user account with sudo privileges</li>
+<li>At least 8GB RAM and 20GB disk space</li>
+<li>Internet connectivity for downloading binaries and container images</li>
+</ul>
+<h2 id="quick-installation">Quick Installation</h2>
+<p>The fastest way to get started is using the official bootstrap script:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/hyperledger/fabric-samples
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> fabric-samples/test-network
+</span></span><span class="line"><span class="cl">curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh <span class="p">|</span> bash -s
+</span></span><span class="line"><span class="cl">./network.sh up
+</span></span></code></pre></div><p>If you prefer understanding each step or need to customize your installation, follow the manual steps below.</p>
+<h2 id="manual-installation-steps">Manual Installation Steps</h2>
+<h3 id="1-install-system-dependencies">1. Install System Dependencies</h3>
+<p>Update your system and install required packages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install -y git curl wget docker.io docker-compose nodejs npm build-essential python3
+</span></span></code></pre></div><p>Add your user to the Docker group to avoid needing sudo for every Docker command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo usermod -aG docker <span class="nv">$USER</span>
+</span></span><span class="line"><span class="cl">newgrp docker
+</span></span></code></pre></div><p>Alternatively, log out and log back in for the group change to take effect.</p>
+<h3 id="2-install-go">2. Install Go</h3>
+<p>Fabric requires Go 1.21 or later. Download and install the latest stable version:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://go.dev/dl/go1.23.linux-amd64.tar.gz
+</span></span><span class="line"><span class="cl">sudo rm -rf /usr/local/go
+</span></span><span class="line"><span class="cl">sudo tar -C /usr/local -xzf go1.23.linux-amd64.tar.gz
+</span></span><span class="line"><span class="cl">rm go1.23.linux-amd64.tar.gz
+</span></span></code></pre></div><p>Add Go to your PATH by appending to <code>~/.bashrc</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/go/bin
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/go
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$GOPATH</span>/bin:<span class="nv">$PATH</span>
+</span></span></code></pre></div><p>Reload your shell:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> ~/.bashrc
+</span></span></code></pre></div><p>Verify the installation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go version
+</span></span></code></pre></div><h3 id="3-clone-fabric-samples">3. Clone Fabric Samples</h3>
+<p>Create the directory structure and clone the repository:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p <span class="nv">$GOPATH</span>/src/github.com/hyperledger
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/hyperledger
+</span></span><span class="line"><span class="cl">git clone https://github.com/hyperledger/fabric-samples.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> fabric-samples
+</span></span><span class="line"><span class="cl">git checkout main
+</span></span></code></pre></div><p>To use a specific release tag instead of main (e.g., v2.5.0):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout v2.5.0
+</span></span></code></pre></div><h3 id="4-bootstrap-fabric-binaries-and-docker-images">4. Bootstrap Fabric Binaries and Docker Images</h3>
+<p>Navigate to the test-network directory and run the bootstrap script:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> test-network
+</span></span><span class="line"><span class="cl">curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh <span class="p">|</span> bash -s
+</span></span></code></pre></div><p>This downloads:</p>
+<ul>
+<li>Fabric peer, orderer, and CA binaries</li>
+<li>Fabric Docker images (peer, orderer, ccenv, baseos)</li>
+<li>Chaincode builder images</li>
+<li>Configuration tools (configtxgen, cryptogen, fabric-ca-client)</li>
+</ul>
+<p>Verify binaries are available:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls ../bin/
+</span></span></code></pre></div><p>You should see: <code>peer</code>, <code>orderer</code>, <code>fabric-ca-client</code>, <code>configtxgen</code>, <code>cryptogen</code>, and others.</p>
+<h3 id="5-start-the-test-network">5. Start the Test Network</h3>
+<p>In the test-network directory, bring up the network:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./network.sh up
+</span></span></code></pre></div><p>This command:</p>
+<ul>
+<li>Generates cryptographic material (certificates and keys)</li>
+<li>Creates orderer and peer containers</li>
+<li>Establishes the Fabric network with two organizations (Org1 and Org2)</li>
+<li>Sets up a basic channel infrastructure</li>
+</ul>
+<p>Verify the network is running:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker ps
+</span></span></code></pre></div><p>You should see three containers: one orderer node (<code>orderer.example.com</code>) and two peer nodes (<code>peer0.org1.example.com</code> and <code>peer0.org2.example.com</code>).</p>
+<h3 id="6-create-a-channel">6. Create a Channel</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./network.sh createChannel -c mychannel
+</span></span></code></pre></div><p>Wait for the output confirming “Channel ‘mychannel’ created.” Verify by checking the peer logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker logs peer0.org1.example.com
+</span></span></code></pre></div><h3 id="7-deploy-chaincode">7. Deploy Chaincode</h3>
+<p>Deploy the sample FabCar chaincode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./network.sh deployCC -l go -ccn fabcar -ccv <span class="m">1</span>
+</span></span></code></pre></div><p>Supported languages:</p>
+<ul>
+<li>Go: <code>-l go</code></li>
+<li>JavaScript: <code>-l javascript</code></li>
+<li>Java: <code>-l java</code></li>
+<li>TypeScript: <code>-l typescript</code></li>
+</ul>
+<p>The deployment process includes:</p>
+<ul>
+<li>Installing the chaincode on peer nodes</li>
+<li>Approving the chaincode definition per organization</li>
+<li>Committing the chaincode definition to the channel</li>
+<li>Invoking the init function</li>
+</ul>
+<p>This can take 1-2 minutes depending on system resources. Monitor progress with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker logs peer0.org1.example.com -f
+</span></span></code></pre></div><h3 id="8-interact-with-the-chaincode">8. Interact with the Chaincode</h3>
+<p>Before running peer commands, set environment variables to point to the correct organization:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>/../bin:<span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">FABRIC_CFG_PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>/../config
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CORE_PEER_TLS_ENABLED</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CORE_PEER_LOCALMSPID</span><span class="o">=</span>Org1MSP
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CORE_PEER_TLS_ROOTCERT_FILE</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CORE_PEER_MSPCONFIGPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CORE_PEER_ADDRESS</span><span class="o">=</span>localhost:7051
+</span></span></code></pre></div><p>Query the ledger:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">peer chaincode query -C mychannel -n fabcar -c <span class="s1">&#39;{&#34;Args&#34;:[&#34;queryAllCars&#34;]}&#39;</span>
+</span></span></code></pre></div><p>Expected output: a JSON array of cars (initially empty for a new chaincode).</p>
+<p>Invoke a transaction to create a new car:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">peer chaincode invoke -C mychannel -n fabcar <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -c <span class="s1">&#39;{&#34;Args&#34;:[&#34;createCar&#34;,&#34;CAR10&#34;,&#34;Honda&#34;,&#34;Civic&#34;,&#34;white&#34;,&#34;Alice&#34;]}&#39;</span>
+</span></span></code></pre></div><p>Query the car you just created:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">peer chaincode query -C mychannel -n fabcar <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -c <span class="s1">&#39;{&#34;Args&#34;:[&#34;queryCar&#34;,&#34;CAR10&#34;]}&#39;</span>
+</span></span></code></pre></div><p>To switch to Org2, update the environment variables:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CORE_PEER_LOCALMSPID</span><span class="o">=</span>Org2MSP
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CORE_PEER_TLS_ROOTCERT_FILE</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CORE_PEER_MSPCONFIGPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CORE_PEER_ADDRESS</span><span class="o">=</span>localhost:9051
+</span></span></code></pre></div><h2 id="stopping-and-cleaning-up">Stopping and Cleaning Up</h2>
+<p>To bring down the network without removing generated artifacts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./network.sh down
+</span></span></code></pre></div><p>To perform a complete cleanup, including removing generated certificates and channel artifacts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./network.sh down -c
+</span></span></code></pre></div><p>To remove all Docker containers and volumes associated with Fabric:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker-compose down -v
+</span></span><span class="line"><span class="cl">docker volume rm <span class="k">$(</span>docker volume ls -f <span class="nv">label</span><span class="o">=</span>com.docker.compose.project<span class="o">=</span>test-network -q<span class="k">)</span>
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="docker-permission-denied-errors">Docker permission denied errors</h3>
+<p>Ensure your user is in the docker group and you’ve relogged or run <code>newgrp docker</code>. Verify with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">groups <span class="nv">$USER</span>
+</span></span></code></pre></div><h3 id="port-already-in-use">Port already in use</h3>
+<p>If ports 7050, 7051, 9051, or 9052 are in use, either stop the conflicting services or modify the <code>docker-compose.yaml</code> file to use different ports. Check which process is using a port:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo lsof -i :7051
+</span></span></code></pre></div><h3 id="chaincode-installation-failures">Chaincode installation failures</h3>
+<p>Verify Go is properly installed and <code>$GOPATH</code> is set correctly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go env GOPATH
+</span></span><span class="line"><span class="cl">which peer
+</span></span></code></pre></div><p>Check that the chaincode directory structure is valid. For Go chaincodes, ensure <code>go.mod</code> exists in the chaincode directory and dependencies are resolvable.</p>
+<h3 id="container-startup-failures">Container startup failures</h3>
+<p>Review Docker logs to diagnose issues:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker logs orderer.example.com
+</span></span><span class="line"><span class="cl">docker logs peer0.org1.example.com
+</span></span></code></pre></div><p>Ensure you have sufficient disk space and RAM:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">df -h
+</span></span><span class="line"><span class="cl">free -h
+</span></span></code></pre></div><h3 id="module-resolution-errors-during-chaincode-deployment">Module resolution errors during chaincode deployment</h3>
+<p>When deploying Go chaincodes, verify <code>go.mod</code> exists in the chaincode directory and contains correct dependency versions. If using external modules, ensure they’re publicly accessible.</p>
+<h3 id="network-connectivity-issues">Network connectivity issues</h3>
+<p>If bootstrap fails, verify internet connectivity and that GitHub is accessible:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -I https://github.com
+</span></span></code></pre></div><h2 id="next-steps">Next Steps</h2>
+<ul>
+<li>Review the Fabric documentation for deeper configuration details</li>
+<li>Explore the FabCar chaincode implementation to understand Fabric contract patterns</li>
+<li>Deploy custom chaincode in your preferred language</li>
+<li>Set up additional organizations and configure custom endorsement policies</li>
+<li>Use Fabric SDKs (Go, Node.js, Java) to build client applications</li>
+<li>Configure CouchDB as the state database for more complex queries</li>
+<li>Implement access control using attributes in Fabric CA</li>
+</ul>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dahdi_hardware(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-dahdi_hardware/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>dahdi_hardware(8)</h1>
+
+
+
+
+
+<p>dahdi_hardware - Shows Dahdi hardware devices.</p>
+<h2>Synopsis</h2>
+<p>dahdi_hardware [-v][-x]</p>
+<h2>Options</h2>
+<dl><dt>-v
+</dt><dd>Verbose ouput - show spans used by each device etc. Currently only implemented for the Xorcom Astribank.
+</dd><dt>-x
+</dt><dd>Show disconnected Astribank unit, if any.</dd></dl>
+<h2>Description</h2>
+<p>Show all dahdi hardware devices. Devices are recognized according to lists of <font SIZE="-1">PCI</font> and <font SIZE="-1">USB</font> IDs in Dahdi::Hardware::PCI.pm and Dahdi::Hardware::USB.pm . For <font SIZE="-1">PCI</font> it is possible to detect by sub-vendor and sub-product <font SIZE="-1">ID</font> as well. The first output column is the connector: a bus specific field that shows where this device is. The second field shows which driver should handle the device. a <code>-'' sign marks that the device is not yet handled by this driver. A </code>+&rsquo;&rsquo; sign means that the device is handled by the driver. For the Xorcom Astribank (and in the future: for other Dahdi devices) some further information is provided from the driver. Those extra lines always begin with spaces. Example output: Without drivers loaded: <pre> usb:001/002 xpp_usb- e4e4:1152 Astribank-multi FPGA-firmware
+usb:001/003 xpp_usb- e4e4:1152 Astribank-multi FPGA-firmware
+pci:0000:01:0b.0 wctdm- e159:0001 Wildcard TDM400P REV H</pre>With drivers loaded, without -v:
+ <wbr> <wbr>usb:001/002 <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>xpp_usb+ <wbr> <wbr> <wbr> <wbr> <wbr>e4e4:1152 Astribank-multi FPGA-firmware
+ <wbr> <wbr>usb:001/003 <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>xpp_usb+ <wbr> <wbr> <wbr> <wbr> <wbr>e4e4:1152 Astribank-multi FPGA-firmware
+ <wbr> <wbr>pci:0000:01:0b.0 <wbr> <wbr> <wbr>wctdm+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>e159:0001 <wbr> <wbr>Wildcard <wbr><font SIZE="-1">TDM400P</font> <wbr><font SIZE="-1">REV</font> <wbr>E/F With drivers loaded, with -v:
+ <wbr> <wbr>usb:001/002 <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>xpp_usb+ <wbr> <wbr> <wbr> <wbr> <wbr>e4e4:1152 Astribank-multi FPGA-firmware
+LABEL=[usb:123] <wbr>CONNECTOR=usb-0000:00:1d.7-1 <wbr> <wbr>
+ <wbr> <wbr> <wbr> <wbr><font SIZE="-1">XBUS-00/XPD-00:</font> <wbr><font SIZE="-1">FXS</font> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>Span 2 <wbr>
+ <wbr> <wbr> <wbr> <wbr><font SIZE="-1">XBUS-00/XPD-10:</font> <wbr><font SIZE="-1">FXS</font> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>Span 3 <wbr>
+ <wbr> <wbr> <wbr> <wbr><font SIZE="-1">XBUS-00/XPD-20:</font> <wbr><font SIZE="-1">FXS</font> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>Span 4 <wbr>
+ <wbr> <wbr> <wbr> <wbr><font SIZE="-1">XBUS-00/XPD-30:</font> <wbr><font SIZE="-1">FXS</font> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>Span 5 <wbr>
+ <wbr> <wbr>usb:001/003 <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>xpp_usb+ <wbr> <wbr> <wbr> <wbr> <wbr>e4e4:1152 Astribank-multi FPGA-firmware
+LABEL=[usb:4567] <wbr>CONNECTOR=usb-0000:00:1d.7-4 <wbr> <wbr>
+ <wbr> <wbr> <wbr> <wbr><font SIZE="-1">XBUS-01/XPD-00:</font> <wbr><font SIZE="-1">FXS</font> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>Span 6 XPP-SYNC
+ <wbr> <wbr> <wbr> <wbr><font SIZE="-1">XBUS-01/XPD-10:</font> <wbr><font SIZE="-1">FXO</font> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>Span 7 <wbr>
+ <wbr> <wbr> <wbr> <wbr><font SIZE="-1">XBUS-01/XPD-20:</font> <wbr><font SIZE="-1">FXO</font> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>Span 8 <wbr>
+ <wbr> <wbr> <wbr> <wbr><font SIZE="-1">XBUS-01/XPD-30:</font> <wbr><font SIZE="-1">FXO</font> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>Span 9 <wbr>
+ <wbr> <wbr>pci:0000:01:0b.0 <wbr> <wbr> <wbr>wctdm+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>e159:0001 <wbr> <wbr>Wildcard <wbr><font SIZE="-1">TDM400P</font> <wbr><font SIZE="-1">REV</font> <wbr>E/F</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

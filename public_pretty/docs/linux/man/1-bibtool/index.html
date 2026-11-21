@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bibtool(1) · Linux Manual Pages</title>
+<meta name="description" content="BibTool – BibTeX file manipulation tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-bibtool/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>bibtool(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> BibTool &#8211; BibTeX file manipulation tool</p>
+<h2>SYNOPSIS</h2>
+<p> <code>bibtool</code> [options] [files]</p>
+<h2>DESCRIPTION</h2>
+<p> This manual is not meant to be exhaustive. The complete documentation for <code>BibTool</code> can be found in the <i>BibTool Manual</i>. BibTeX provides an easy to use means to integrate citations and bibliographies into LaTeX documents. But the user is left alone with the management of the BibTeX files. <code>BibTool</code> is intended to fill this gap. <code>BibTool</code> allows the manipulation of BibTeX files which goes beyond the possibilities &#8211; and intentions &#8211; of BibTeX. </p>
+<p> <code>BibTool</code> manipulates BibTeX database files through the command line front-end <code>bibtool</code> which accepts numerous options. Modifications are performed through resource instructions that allow the modification of the various internal parameters determining the behavior of <code>BibTool</code>; resource instructions can be grouped in resource files. The original <code>BibTool</code> distribution contains a sufficient set of resource file samples to perform basic, relevant manipulations.</p>
+<h2>OPTIONS</h2>
+<p> <code>bibtool</code> accepts the following options.</p>
+<h3>Resource files</h3>
+<dl>
+<dt><code>-R</code></dt>
+<dd> Immediately evaluate the instructions from the default resource file.</dd>
+<dt><code>-r&nbsp;<wbr></code><i>rsc_file</i></dt>
+<dd> Immediately evaluate the instructions from the resource file <i>rsc_file</i>.</dd>
+<dt><code>&#8212;&nbsp;<wbr></code><i>rsc_cmd</i></dt>
+<dd> Evaluate the resource instruction <i>rsc_cmd</i>.</dd></dl>
+<h3>Input file</h3>
+<dl>
+<dt><code>-i&nbsp;<wbr></code><i>bib_file</i></dt>
+<dd> Add the BibTeX database file <i>bib_file</i> to the list of input files. If <code>-i</code> omitted the file name may not start with a -. If absent stdin is taken to read from. Input files should follow the <code><a href="/docs/linux/man/1-bibtex/">bibtex</a></code>(1) conventions.</dd></dl>
+<h3>Output file</h3>
+<dl>
+<dt><code>-o&nbsp;<wbr></code><i>output_file</i></dt>
+<dd> Direct output to the file <i>output_file</i>. If absent the output is directed to stdout.</dd></dl>
+<h3>Status reporting</h3>
+<dl>
+<dt><code>-q</code></dt>
+<dd> Suppress warnings. Errors can not be suppressed.</dd>
+<dt><code>-v</code></dt>
+<dd> Enable informative messages on the activities of BibTool.</dd></dl>
+<h3>Sorting</h3>
+<dl>
+<dt><code>-s</code></dt>
+<dd> Enable sorting of entries.</dd>
+<dt><code>-S</code></dt>
+<dd> Enable sorting of entries in reverse order.</dd>
+<dt><code>-A&nbsp;<wbr></code><i>type</i></dt>
+<dd> Determine key disambuguation; <i>type</i> in 0, a, A.</dd></dl>
+<h3>Selecting items</h3>
+<dl>
+<dt><code>-x&nbsp;<wbr></code><i>aux_file</i></dt>
+<dd> Extract the entries from the auxiliary (<i>.aux</i>) LaTeX <i>aux_file</i> file.</dd>
+<dt><code>-X&nbsp;<wbr></code><i>regex</i></dt>
+<dd> Select certain entries according to the regular expression <i>regex</i>.</dd>
+<dt><code>-c</code></dt>
+<dd> Turn on the additional selection of crossreferenced entries.</dd></dl>
+<h3>Key generation</h3>
+<dl>
+<dt><code>-f&nbsp;<wbr></code><i>key_format</i></dt>
+<dd> Set the specification for key generation to <i>key_format</i>.</dd>
+<dt><code>-F</code></dt>
+<dd> Turn on key generation.</dd>
+<dt><code>-k</code></dt>
+<dd> Generate short format keys.</dd>
+<dt><code>-K</code></dt>
+<dd> Generate long format keys.</dd></dl>
+<h3>Semantic checks</h3>
+<dl>
+<dt><code>-d</code></dt>
+<dd> Find and mark (or delete) entries with identical sort keys.</dd></dl>
+<h3>Strings/Macros</h3>
+<dl>
+<dt><code>-m&nbsp;<wbr></code><i>mac_file</i></dt>
+<dd> Write the macro definitions to the file <i>mac_file</i> (- is stdout).</dd>
+<dt><code>-M&nbsp;<wbr></code><i>mac_file</i></dt>
+<dd> Write the used macro definitions to the file <i>mac_file</i> (- is stdout).</dd></dl>
+<h3>Getting help</h3>
+<dl>
+<dt><code>-h</code></dt>
+<dd> Print short help and exit.</dd>
+<dt><code>-V</code></dt>
+<dd> Print version and exit.</dd></dl>
+<h3>Statistics</h3>
+<dl>
+<dt><code>-#</code></dt>
+<dd> Print statistics about all known entry types (long).</dd>
+<dt><code>-@</code></dt>
+<dd> Print statistics about the used entry types only (short).</dd></dl>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>BIBINPUTS</code></dt>
+<dd> Search path for BibTeX database (<i>.bib</i>) files.</dd>
+<dt><code>BIBTOOL</code></dt>
+<dd> Search path for BibTool resource (<i>.rsc</i>) files.</dd>
+<dt><code>BIBTOOLRSC</code></dt>
+<dd> List of resource file names separated by colon.</dd></dl>
+<h2>FILES</h2>
+<dl>
+<dt><i>./.bibtoolrsc</i></dt>
+<dd> The default current directory <code>BibTool</code> resource file.</dd>
+<dt><i>~/.bibtoolrsc</i></dt>
+<dd> The default individual <code>BibTool</code> resource file.</dd>
+<dt><i>/usr/local/lib/BibTool/*.rsc</i></dt>
+<dd> The BibTool resource files included in the original distribution.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-bibtex/">bibtex</a></i>(1), <i><a href="/docs/linux/man/1-latex/">latex</a></i>(1), <i><a href="/docs/linux/man/1-tex/">tex</a></i>(1)<br />
+ The <i>BibTool Manual</i>.</p>
+<h2>BUGS</h2>
+<p> Some arrays are allocated statically which may result in an overflow.<br />
+ Most memory is allocated but not returned to the OS: A garbage collection algorithm might be integrated in a future release.<br />
+ This man page is updated only occasionally, so it is very likely out of date. For complete, current documentation, refer to the <i>BibTool Manual</i> which is distributed as LaTeX source file (<code>bibtool.tex</code>) in the original <code>BibTool</code> source distribution.</p>
+<h2>AUTHOR</h2>
+<p> BibTool is designed and maintained by Gerd Neugebauer. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

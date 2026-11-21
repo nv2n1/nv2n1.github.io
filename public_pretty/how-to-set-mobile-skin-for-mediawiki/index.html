@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device-Specific Skins in MediaWiki: Setup &amp; Configuration - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-set-mobile-skin-for-mediawiki/">
+  <meta name="description" content="Modern MediaWiki installations should prioritize responsive design, but you may still need explicit device-based skin switching for specific use cases. This …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Device-Specific Skins in MediaWiki: Setup &amp; Configuration">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-set-mobile-skin-for-mediawiki/">
+  <meta property="og:description" content="Modern MediaWiki installations should prioritize responsive design, but you may still need explicit device-based skin switching for specific use cases. This …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/testing-devops/">Testing &amp; DevOps</a>
+        </nav>
+        
+        <h1>Device-Specific Skins in MediaWiki: Setup &amp; Configuration</h1>
+        <time class="post-date" datetime="2013-07-15T12:57:49Z">July 15, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Modern MediaWiki installations should prioritize responsive design, but you may still need explicit device-based skin switching for specific use cases. This guide covers both approaches and how to implement them correctly.</p>
+<h2 id="responsive-skins-the-recommended-approach">Responsive Skins: The Recommended Approach</h2>
+<p>The default solution is using a responsive skin that adapts automatically to screen size without separate configuration. <strong>Vector 2022</strong> (default in MediaWiki 1.35+) and <strong>MinervaNeue</strong> (the official mobile skin) both handle this well.</p>
+<p>To enable MinervaNeue:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">wfLoadSkin</span><span class="p">(</span> <span class="s1">&#39;MinervaNeue&#39;</span> <span class="p">);</span>
+</span></span></code></pre></div><p>MinervaNeue auto-detects mobile browsers and adjusts the interface accordingly. This approach is superior to user-agent detection because it provides better UX and requires less maintenance.</p>
+<h2 id="device-based-skin-switching">Device-Based Skin Switching</h2>
+<p>If you need to assign different skins based on device type, use proper user-agent detection instead of fragile regex patterns. Add this function to <code>LocalSettings.php</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">isMobileDevice</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$userAgent</span> <span class="o">=</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;HTTP_USER_AGENT&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$mobilePatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;/iphone|ipod|ipad/i&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;/android/i&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;/windows phone/i&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;/webos/i&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;/opera mini/i&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;/mobile/i&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$mobilePatterns</span> <span class="k">as</span> <span class="nv">$pattern</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span> <span class="nx">preg_match</span><span class="p">(</span> <span class="nv">$pattern</span><span class="p">,</span> <span class="nv">$userAgent</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Set skin based on device type
+</span></span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span> <span class="nx">isMobileDevice</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$wgDefaultSkin</span> <span class="o">=</span> <span class="s1">&#39;MinervaNeue&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$wgDefaultSkin</span> <span class="o">=</span> <span class="s1">&#39;vector&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This is more maintainable than inline regex and easier to update as device identifiers change. Note that user-agent detection has inherent limitations—modern JavaScript detection or server-side analytics can be more accurate, but user-agent detection remains lightweight for most deployments.</p>
+<h2 id="let-users-override-device-detection">Let Users Override Device Detection</h2>
+<p>Allow users to force a specific skin via query parameter:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$forceDesktop</span> <span class="o">=</span> <span class="nx">isset</span><span class="p">(</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;mobilemode&#39;</span><span class="p">]</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;mobilemode&#39;</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;desktop&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$forceMobile</span> <span class="o">=</span> <span class="nx">isset</span><span class="p">(</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;mobilemode&#39;</span><span class="p">]</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;mobilemode&#39;</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;mobile&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span> <span class="nv">$forceMobile</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$wgDefaultSkin</span> <span class="o">=</span> <span class="s1">&#39;MinervaNeue&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span> <span class="nv">$forceDesktop</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$wgDefaultSkin</span> <span class="o">=</span> <span class="s1">&#39;vector&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span> <span class="nx">isMobileDevice</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$wgDefaultSkin</span> <span class="o">=</span> <span class="s1">&#39;MinervaNeue&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$wgDefaultSkin</span> <span class="o">=</span> <span class="s1">&#39;vector&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Users can append <code>?mobilemode=desktop</code> or <code>?mobilemode=mobile</code> to force a specific experience.</p>
+<h2 id="configure-logos-and-branding">Configure Logos and Branding</h2>
+<p>Set your site logo with DPI variants in <code>LocalSettings.php</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$wgLogos</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;1x&#39;</span> <span class="o">=&gt;</span> <span class="s2">&#34;</span><span class="si">$wgUploadDirectory</span><span class="s2">/logo.png&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;1.5x&#39;</span> <span class="o">=&gt;</span> <span class="s2">&#34;</span><span class="si">$wgUploadDirectory</span><span class="s2">/logo-1.5x.png&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;2x&#39;</span> <span class="o">=&gt;</span> <span class="s2">&#34;</span><span class="si">$wgUploadDirectory</span><span class="s2">/logo-2x.png&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;icon&#39;</span> <span class="o">=&gt;</span> <span class="s2">&#34;</span><span class="si">$wgUploadDirectory</span><span class="s2">/favicon.ico&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// For MinervaNeue mobile login
+</span></span></span><span class="line"><span class="cl"><span class="nv">$wgMFLogInEndpoint</span> <span class="o">=</span> <span class="s2">&#34;/Special:UserLogin&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$wgMFStubEnabledDevices</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;base&#39;</span><span class="p">,</span> <span class="s1">&#39;mobile&#39;</span> <span class="p">];</span>
+</span></span></code></pre></div><p>Use structured logo configuration with DPI variants (1x, 1.5x, 2x) instead of relying on root-level files. This ensures logos display correctly across different device densities.</p>
+<h2 id="cache-management-with-device-detection">Cache Management with Device Detection</h2>
+<p>File caching with device detection requires careful handling—mobile and desktop versions must be cached separately to avoid serving the wrong markup to users.</p>
+<p>The best approach is separate cache directories:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span> <span class="nx">isMobileDevice</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$wgFileCacheDirectory</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="si">{</span><span class="nv">$IP</span><span class="si">}</span><span class="s2">/cache/mobile&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$wgFileCacheDirectory</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="si">{</span><span class="nv">$IP</span><span class="si">}</span><span class="s2">/cache/desktop&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$wgUseFileCache</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$wgCachePages</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span></code></pre></div><p>Alternatively, disable caching for mobile if your server has sufficient resources:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span> <span class="nx">isMobileDevice</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$wgUseFileCache</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$wgUseFileCache</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$wgFileCacheDirectory</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="si">{</span><span class="nv">$IP</span><span class="si">}</span><span class="s2">/cache&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The separate directory approach is preferable for performance—it preserves caching benefits for all users.</p>
+<p>Create the cache directories with proper permissions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p <span class="nv">$MEDIAWIKI_ROOT</span>/cache/mobile
+</span></span><span class="line"><span class="cl">mkdir -p <span class="nv">$MEDIAWIKI_ROOT</span>/cache/desktop
+</span></span><span class="line"><span class="cl">chown www-data:www-data <span class="nv">$MEDIAWIKI_ROOT</span>/cache/mobile
+</span></span><span class="line"><span class="cl">chown www-data:www-data <span class="nv">$MEDIAWIKI_ROOT</span>/cache/desktop
+</span></span><span class="line"><span class="cl">chmod <span class="m">755</span> <span class="nv">$MEDIAWIKI_ROOT</span>/cache/mobile
+</span></span><span class="line"><span class="cl">chmod <span class="m">755</span> <span class="nv">$MEDIAWIKI_ROOT</span>/cache/desktop
+</span></span></code></pre></div><p>Replace <code>www-data</code> with your web server’s user (apache, nginx, _www, or other depending on your distribution).</p>
+<h2 id="test-your-configuration">Test Your Configuration</h2>
+<p>Test skin selection using curl with different user agents:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># iPhone user agent</span>
+</span></span><span class="line"><span class="cl">curl -H <span class="s2">&#34;User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15&#34;</span> http://yourwiki.local/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Android user agent</span>
+</span></span><span class="line"><span class="cl">curl -H <span class="s2">&#34;User-Agent: Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36&#34;</span> http://yourwiki.local/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Desktop user agent</span>
+</span></span><span class="line"><span class="cl">curl -H <span class="s2">&#34;User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36&#34;</span> http://yourwiki.local/
+</span></span></code></pre></div><p>Verify the response includes the correct skin files and markup for each device type.</p>
+<p>Use browser developer tools (press F12) to test responsive design without physical devices. Check the Network tab to confirm correct skin files are loading, and use device emulation mode to test at different viewport sizes.</p>
+<p>For debugging, temporarily add logging to <code>LocalSettings.php</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">error_log</span><span class="p">(</span> <span class="s2">&#34;Mobile: &#34;</span> <span class="o">.</span> <span class="p">(</span> <span class="nx">isMobileDevice</span><span class="p">()</span> <span class="o">?</span> <span class="s1">&#39;yes&#39;</span> <span class="o">:</span> <span class="s1">&#39;no&#39;</span> <span class="p">)</span> <span class="o">.</span> <span class="s2">&#34; | Skin: </span><span class="si">$wgDefaultSkin</span><span class="s2">&#34;</span> <span class="p">);</span>
+</span></span></code></pre></div><p>Monitor <code>debug.log</code> to verify skin selection logic is executing correctly, then remove the logging line for production.</p>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<p>For wikis with high traffic, consider using a reverse proxy (nginx, Varnish, or Cloudflare) to cache responses based on device detection headers. This offloads device detection from PHP and improves cache hit rates. Set appropriate cache keys that include device type in the cache key calculation.</p>
+<p>If you’re using Redis or Memcached, store device detection results briefly to reduce repeated user-agent parsing overhead.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

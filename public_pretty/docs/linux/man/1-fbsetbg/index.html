@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fbsetbg(1) · Linux Manual Pages</title>
+<meta name="description" content="fbsetbg – Set a background wallpaper or pattern">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-fbsetbg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>fbsetbg(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> fbsetbg &#8211; Set a background wallpaper or pattern </p>
+<h2>SYNOPSIS</h2>
+<p> <code>fbsetbg</code> [<code>-uU</code> <i>wallpapersetter</i>] [<code>-fFcCtTaA</code>] <i>wallpaper</i> </p>
+<p> <code>fbsetbg</code> [<code>-uU</code> <i>wallpapersetter</i>] <code>-rR</code> <i>path</i> </p>
+<p> <code>fbsetbg</code> <code>-bB</code> <i>fbsetrootoptions&#8230;</i> </p>
+<p> <code>fbsetbg</code> [-<code>l</code>|<code>h</code>|<code>i</code>|<code>p</code>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code><a href="/docs/linux/man/1-fbsetbg/">fbsetbg</a>(1)</code> is a wrapper that tries to find a suitable background-setting app and then tries to set the wallpaper using that app. You don&#8217;t have to configure fbsetbg. It just uses the first app it can find. </p>
+<p> Furthermore it supports remembering the last set wallpaper so you don&#8217;t have to edit the style or init-file to change the wallpaper. </p>
+<p> It aims to provide clear error messages in a window that make debugging problems easy.</p>
+<h2>OPTIONS</h2>
+<p> <code>-f</code> <i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Set fullscreen wallpaper.</dd></dl>
+<p> <code>-c</code> <i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Set centered wallpaper.</dd></dl>
+<p> <code>-t</code> <i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Set tiled wallpaper.</dd></dl>
+<p> <code>-a</code> <i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Set maximized wallpaper, preserving aspect (if your bgsetter doesn&#8217;t support this option fbsetbg falls back to <code>-f</code>).</dd></dl>
+<p> <code>-u</code> <i>wallpapersetter</i></p>
+<dl>
+<dt>
+</dt><dd> Use specified wallpapersetter, use no argument to forget.</dd></dl>
+<p> <code>-b</code> <i>fbsetrootoptions</i></p>
+<dl>
+<dt>
+</dt><dd> Forward the options to <code><a href="/docs/linux/man/1-fbsetroot/">fbsetroot</a>(1)</code>. These can be used to set a solid, pattern, or gradient background texture.</dd></dl>
+<p> <code>-r</code> <i>directory</i></p>
+<dl>
+<dt>
+</dt><dd> Set random wallpaper from a directory.</dd></dl>
+<p> <code>-F</code>, <code>-C</code>, <code>-T</code>, <code>-A</code>, <code>-U</code>, <code>-B</code>, <code>-R</code></p>
+<dl>
+<dt>
+</dt><dd> Same as the lowercase option but without remembering.</dd></dl>
+<p> <code>-l</code></p>
+<dl>
+<dt>
+</dt><dd> Set previous wallpaper. Or, if the random feature was last used, set another random wallpaper from the same directory.</dd></dl>
+<p> <code>-i</code></p>
+<dl>
+<dt>
+</dt><dd> Display useful information about best wallpapersetter found.</dd></dl>
+<p> <code>-p</code></p>
+<dl>
+<dt>
+</dt><dd> Display some useful tips.</dd></dl>
+<p> <code>-h</code></p>
+<dl>
+<dt>
+</dt><dd> Display a help message.</dd></dl>
+<h2>FILES</h2>
+<p> <code>~/.fluxbox/lastwallpaper</code></p>
+<dl>
+<dt>
+</dt><dd> In this file the wallpaper you set will be stored, for the <code>-l</code> option.</dd></dl>
+<h2>ENVIRONMENT</h2>
+<p> <code>wpsetters</code></p>
+<dl>
+<dt>
+</dt><dd> Wallpapersetters to use. This can be a space-delimited list of the applications to try, or just a single name.</dd></dl>
+<p> <code>DISPLAY</code></p>
+<dl>
+<dt>
+</dt><dd> The display you want to set the wallpaper on.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> To use <code><a href="/docs/linux/man/1-feh/">feh</a>(1)</code> as wallpapersetter and set <code>wallpapper.jpg</code> from the current directory as wallpaper. </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ wpsetters=feh fbsetbg wallpaper.jpg
+</pre>
+</dd></dl>
+<p> Recall the last set wallpaper on display <code>:0.0</code> with the stored options. </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ DISPLAY=:0.0 fbsetbg -l
+</pre>
+</dd></dl>
+<h2>BUGS</h2>
+<p> <code><a href="/docs/linux/man/1-fbsetbg/">fbsetbg</a>(1)</code> is not foolproof.</p>
+<h2>AUTHORS</h2>
+<p> The author of fbsetbg is Han Boetes &lt;han at fluxbox.org&gt; </p>
+<p> This manpage was converted to asciidoc format by Jim Ramsay &lt;i.am at jimramsay.com&gt; for fluxbox-1.1.2</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) <a href="/docs/linux/man/1-fbsetroot/">fbsetroot</a>(1)</p>
+<h2>AUTHOR</h2>
+<p> <code>Jim Ramsay</code> &lt;i.am [at] jimramsay.com&gt;</p>
+<dl>
+<dt>
+</dt><dd> Author.</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

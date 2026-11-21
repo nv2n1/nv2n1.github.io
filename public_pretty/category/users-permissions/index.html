@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users &amp; Permissions</title>
+  <link rel="canonical" href="https://www.systutorials.com/category/users-permissions/">
+  <meta name="description" content="Tutorials and Q&amp;A on Linux, systems, and software.">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Users &amp; Permissions">
+  <meta property="og:url" content="https://www.systutorials.com/category/users-permissions/">
+  <meta property="og:description" content="Tutorials and Q&amp;A on Linux, systems, and software.">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin: 2.2rem 0 0.6rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      margin: 1.8rem 0 0.5rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: #555;
+    }
+    a {
+      color: #0a58ca;
+    }
+    .academies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .academy {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.1rem 1.2rem;
+      background: #fff;
+    }
+    .academy h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+    }
+    .academy p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .academy .paths {
+      color: #777;
+      font-size: 0.9rem;
+    }
+    .academy .explore {
+      margin-bottom: 0;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    ul.posts {
+      list-style: none;
+      padding-left: 0;
+    }
+    .recent-post {
+      margin-bottom: 1.2rem;
+    }
+    .recent-post h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.05rem;
+    }
+    .recent-post .meta {
+      margin: 0;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    ul.cat-grid {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 0.4rem 1.5rem;
+    }
+    ul.cat-grid span {
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .year-strip a {
+      margin-right: 0.9rem;
+      white-space: nowrap;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    ul.posts li {
+      margin-bottom: 0.45rem;
+    }
+    ul.posts time {
+      color: #888;
+      font-size: 0.9rem;
+      display: inline-block;
+      min-width: 5.5rem;
+    }
+    footer.site {
+      border-top: 1px solid #ddd;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    footer.site a {
+      margin-left: 1rem;
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">Recent</a>
+        <a href="/archive/">Archive</a><a href="/docs/linux/man/">Linux Manual Pages</a>
+      </nav>
+    </header>
+    
+
+
+
+<h1 id="users-permissions">Users &amp; Permissions</h1>
+
+
+
+  
+
+<p>Part of <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>.</p>
+
+<p>27 posts.</p>
+
+<ul class="posts">
+
+  <li><time>Sep 13, 2020</time> <a href="/linux-user-group-management-and-operations/">Managing Linux Users and Groups Effectively</a></li>
+
+  <li><time>Apr 6, 2019</time> <a href="/how-to-write-to-remote-side-with-sudo-in-rsync/">Rsync with Sudo on Remote Systems</a></li>
+
+  <li><time>Sep 14, 2018</time> <a href="/how-to-enable-user-themes-in-ubuntu-18-04/">GNOME Shell Themes in Ubuntu: Setup and Management</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-generate-a-password-in-shell-on-linux/">Generate Passwords in Bash and Shell Scripts</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/in-python-os-makedirs-with-0777-mode-does-not-give-others-write-permission/">Python’s os.makedirs() with mode 0o777 doesn’t grant write permissions to others</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-limit-a-users-cpu-resources-in-linux-systems/">Limiting CPU Resources for Linux Users</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/cannot-make-directory-var-run-screen-s-apache-permission-denied/">How to Fix `/var/run/screen/S-apache` Permission Denied Error</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-effectively-disable-a-linux-user-account/">Disable a Linux User Account: Methods and Best Practices</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-allow-root-access-to-nfs/">Granting Root Access to NFS Shares</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-change-a-users-username-on-linux/">Changing a Linux Username: A Step-by-Step Guide</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-get-another-users-path-in-bash-on-linux/">How to Access Another User’s PATH in Bash</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-test-whether-a-user-already-exist-on-linux/">Checking if a User Exists on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-get-a-users-home-directory-from-the-username-in-a-variables-in-bash/">Getting a User’s Home Directory in Bash</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/linux-boots-failed-with-sulogin-can-not-open-password-database-while-the-etc-passwd-and-etc-shadow-files-look-fine/">Fix “sulogin: can not open password database” on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/is-firefox-sync-safe-that-is-could-someone-else-read-my-password-saved-in-firefox-without-my-password/">Can Firefox Sync Access Your Passwords Without Your Master Password?</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-export-google-chrome-password-on-linux/">Export Chrome Passwords to a Text File on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/git-push-error/">Resolving Git Push 403 Forbidden: Authentication and Permissions</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-run-screen-on-a-linux-host-reporting-cannot-make-directory-var-run-screen-permission-denied/">Using GNU Screen as a Non-Root User with SCREENDIR</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-kick-off-a-user-on-a-linux-box/">Forcing a User Logout on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-find-and-change-a-users-uid-on-linux/">How to Find and Change a User’s UID on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-change-my-linux-password/">Changing Your Linux Password: A Guide</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-delete-all-topics-and-posts-from-a-user-spammer-in-mybb/">Remove All Topics and Posts from a User in MyBB</a></li>
+
+  <li><time>Oct 22, 2016</time> <a href="/essential-gnome-shell-extensions-gnome-3-users/">GNOME Shell Extensions to Enhance GNOME 45</a></li>
+
+  <li><time>Feb 28, 2015</time> <a href="/openvpn-ovpn-spider-free-vpns-for-iphone-users/">Free VPNs for iPhone: OpenVPN Setup and App Options</a></li>
+
+  <li><time>Aug 25, 2013</time> <a href="/changing-linux-users-password-in-one-command-line/">Automating Password Changes on Linux: passwd, chpasswd, and Safer Methods</a></li>
+
+  <li><time>Aug 23, 2013</time> <a href="/enabling-root-on-ubuntu/">Using Root Access Safely on Ubuntu</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/howto-for-new-git-user/">Getting Started with Git: A Beginner’s Guide</a></li>
+
+</ul>
+
+    <footer class="site">
+      <a href="/about/">About</a><a href="/authors/">Authors</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a><a href="/license/">License</a><a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">GitHub</a><a href="/linux-manual-pages/">Linux Manual Pages</a><a href="/tools/bbeditor/">BB Code Editor</a>
+    </footer>
+  </main>
+  
+  <script>
+  (function () {
+    var addr = ['con', 'tact', '@', 'systut', 'orials', '.', 'com'].join('');
+    document.querySelectorAll('.email-contact').forEach(function (el) {
+      var a = document.createElement('a');
+      a.href = 'mai' + 'lto:' + addr;
+      a.textContent = addr;
+      el.appendChild(a);
+    });
+  })();
+  </script>
+</body>
+</html>

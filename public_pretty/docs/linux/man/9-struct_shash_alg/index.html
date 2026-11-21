@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_shash_alg(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_shash_alg – synchronous message digest definition">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_shash_alg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_shash_alg(9)</h1>
+
+
+
+
+
+<p>struct_shash_alg &#8211; synchronous message digest definition</p>
+<h2>Synopsis</h2>
+<pre><code>struct shash_alg {
+    int (*init)(struct shash_desc *desc);
+    int (*update)(struct shash_desc *desc, const u8 *data, unsigned int len);
+    int (*final)(struct shash_desc *desc, u8 *out);
+    int (*finup)(struct shash_desc *desc, const u8 *data, unsigned int len, u8 *out);
+    int (*digest)(struct shash_desc *desc, const u8 *data, unsigned int len, u8 *out);
+    int (*export)(struct shash_desc *desc, void *out);
+    int (*import)(struct shash_desc *desc, const void *in);
+    int (*setkey)(struct crypto_shash *tfm, const u8 *key, unsigned int keylen);
+    unsigned int descsize;
+    unsigned int digestsize;
+    unsigned int statesize;
+    struct crypto_alg base;
+};</code></pre>
+<h2>Members</h2>
+<p>init</p>
+<dl>
+<dd>see struct ahash_alg</dd></dl>
+<p> update</p>
+<dl>
+<dd>see struct ahash_alg</dd></dl>
+<p> final</p>
+<dl>
+<dd>see struct ahash_alg</dd></dl>
+<p> finup</p>
+<dl>
+<dd>see struct ahash_alg</dd></dl>
+<p> digest</p>
+<dl>
+<dd>see struct ahash_alg</dd></dl>
+<p> export</p>
+<dl>
+<dd>see struct ahash_alg</dd></dl>
+<p> import</p>
+<dl>
+<dd>see struct ahash_alg</dd></dl>
+<p> setkey</p>
+<dl>
+<dd>see struct ahash_alg</dd></dl>
+<p> descsize</p>
+<dl>
+<dd>Size of the operational state for the message digest. This state size is the memory size that needs to be allocated for shash_desc.__ctx</dd></dl>
+<p> digestsize</p>
+<dl>
+<dd>see struct ahash_alg</dd></dl>
+<p> statesize</p>
+<dl>
+<dd>see struct ahash_alg</dd></dl>
+<p> base</p>
+<dl>
+<dd>internally used</dd></dl>
+<h2>Authors</h2>
+<p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

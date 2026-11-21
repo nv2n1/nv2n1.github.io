@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dpmsinfo(3) · Linux Manual Pages</title>
+<meta name="description" content="DPMSInfo – returns information about the current DPMS state">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dpmsinfo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dpmsinfo(3)</h1>
+
+
+
+
+
+<p>DPMSInfo &#8211; returns information about the current DPMS state </p>
+<h2>Synopsis</h2>
+<pre><code>cc</code> [ <i>flag</i> ... ] <i>file</i> ... -<code>lXext</code> [ <i>library</i> ... ]
+#include &lt;X11/extensions/dpms.h&gt;
+<dl COMPACT><dt><code>Status DPMSInfo</code>
+(
+</dt><dd>Display <i>*display</i>,
+</dd><dd>CARD16 <i>*power_level</i>,
+</dd><dd>BOOL <i>*state</i>
+);
+<br>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dd></dl></pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>
+</dd><dd>Specifies the connection to the X server</dd>
+<dt><i>power_level</i></dt>
+<dd>Specifies the current power level</dd>
+<dt><i>state</i></dt>
+<dd>Specifies the current DPMS state</dd></dl>
+<h2>Description</h2>
+<p>The <i>DPMSInfo</i> function returns information about the current Display Power Management Signaling (DPMS) state. The <i>state</i> return parameter indicates whether or not DPMS is enabled (TRUE) or disabled (FALSE). The <i>power_level</i> return parameter indicates the current power level (one of DPMSModeOn, DPMSModeStandby, DPMSModeSuspend, or DPMSModeOff.)</p>
+<h2>Return Values</h2>
+<dl COMPACT>
+<dt>TRUE</dt>
+<dd>The <i>DPMSInfo</i> function returns TRUE, if values are returned.</dd>
+<dt>FALSE</dt>
+<dd>The <i>DPMSInfo</i> function returns FALSE, if no values are returned.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-dpmsenable/">DPMSEnable</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nsd-notify(8) · Linux Manual Pages</title>
+<meta name="description" content="nsd-notify – program to send NOTIFY’s to remote nameservers.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-nsd-notify/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>nsd-notify(8)</h1>
+
+
+
+
+
+<p><code>nsd-notify </code> &#8211; program to send NOTIFY&#8217;s to remote nameservers.</p>
+<h2>Synopsis</h2>
+<p><code>nsd-notify</code> [<code>-4</code>] [<code>-6</code>] [<code>-h</code>] [<code>-a</code> <i>address[@port]</i>] [<code>-p</code> <i>port</i>] [<code>-y</code> <i>key:secret[:algorithm]</i>] <code>-z</code> <i>zone servers</i></p>
+<h2>Description</h2>
+<p><code>Nsd-notify </code> is simple program to send NOTIFY&#8217;s to remoter nameservers. <code>NSD </code> is a complete implementation of an authoritative DNS nameserver.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-4</code></dt>
+<dd>Only send to IPv4 addresses.</dd>
+<dt><code>-6</code></dt>
+<dd>Only send to IPv6 addresses.</dd>
+<dt><code>-h</code></dt>
+<dd>Print help information and exit.</dd>
+<dt><code>-a</code><i> address[@port]</i></dt>
+<dd>Specify the source address (and port) to send from.</dd>
+<dt><code>-p</code><i> port</i></dt>
+<dd>Specify the port to send to.</dd>
+<dt><code>-y</code><i> key:secret[:algorithm]</i></dt>
+<dd>Specify a TSIG key and base64 encoded secret to sign the notification with. If the TSIG algorithm is not defined, MD5 is used.</dd>
+<dt><code>z</code><i> zone</i></dt>
+<dd>Specify the zone to notify about.</dd>
+<dt><i>servers</i></dt>
+<dd>List of nameservers to send to.</dd></dl>
+<h2>Examples</h2>
+<p>To run this program the standard way type: </p>
+<p> <code># nsd-notify -z foobar.cz 1.2.3.4</code></p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-nsd/">nsd</a>(8), <a href="/docs/linux/man/8-nsdc/">nsdc</a>(8), <a href="/docs/linux/man/5-nsd-conf/">nsd.conf</a>(5), <a href="/docs/linux/man/8-nsd-checkconf/">nsd-checkconf</a>(8), <a href="/docs/linux/man/8-nsd-patch/">nsd-patch</a>(8), <a href="/docs/linux/man/8-nsd-xfer/">nsd-xfer</a>(8), <a href="/docs/linux/man/8-zonec/">zonec</a>(8)</p>
+<h2>Authors</h2>
+<p><code>NSD</code> was written by NLnet Labs and RIPE NCC joint team. Please see CREDITS file in the distribution for further details.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

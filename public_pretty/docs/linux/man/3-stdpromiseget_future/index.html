@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdpromiseget_future(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdpromiseget_future/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdpromiseget_future(3)</h1>
+
+
+
+
+
+<p>std::promise&lt;R&gt;::get_future - std::promise&lt;R&gt;::get_future</p>
+<h2>Synopsis</h2>
+<p>std::future&lt;T&gt; get_future(); <i>(since C++11)</i>
+Returns a future object associated with the same shared state as *this.
+An exception is thrown if *this has no shared state or get_future has already been called. To get multiple &quot;pop&quot; ends of the promise-future communication channel, use std::future::share.
+Calls to this function do not introduce data races with calls to set_value, set_exception, set_value_at_thread_exit, or set_exception_at_thread_exit (but they need not synchronize with each other).</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>A future referring to the shared state of *this</p>
+<h2>Exceptions</h2>
+<p>std::future_error on the following conditions:</p>
+<ul>
+<li>
+<p>*this has no shared state. The error category is set to no_state.</p>
+</li>
+<li>
+<p>get_future() has already been called on a promise with the same shared state as *this. The error category is set to future_already_retrieved.</p>
+</li>
+</ul>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

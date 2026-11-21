@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fs(5) · Linux Manual Pages</title>
+<meta name="description" content="filesystems – Linux filesystem types: ext, ext2, ext3, ext4, hpfs, iso9660, JFS, minix, msdos, ncpfs nfs, ntfs, proc, Reiserfs, smb, sysv, umsdos, vfat, XFS, xiafs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-fs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>fs(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>filesystems &#8211; Linux filesystem types: ext, ext2, ext3, ext4, hpfs, iso9660, JFS, minix, msdos, ncpfs nfs, ntfs, proc, Reiserfs, smb, sysv, umsdos, vfat, XFS, xiafs</p>
+<h2>Description</h2>
+<p>When, as is customary, the <code>proc</code> filesystem is mounted on <i>/proc</i>, you can find in the file <i>/proc/filesystems</i> which filesystems your kernel currently supports; see <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5) for more details. There is also a legacy <code><a href="/docs/linux/man/2-sysfs/">sysfs</a></code>(2) system call (whose availability is controlled by the <code>CONFIG_SYSFS_SYSCALL</code> kernel build configuration option since Linux 3.15) that enables enumeration of the currently available filesystem types regardless of <i>/proc</i> availability and/or sanity. </p>
+<p> If you need a currently unsupported filesystem, insert the corresponding kernel module or recompile the kernel. </p>
+<p> In order to use a filesystem, you have to <i>mount</i> it; see <code><a href="/docs/linux/man/2-mount/">mount</a></code>(2) and <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8). </p>
+<p> The following list provides a short description of the available or historically available filesystems in the Linux kernel. See the kernel documentation for a comprehensive description of all options and limitations.</p>
+<dl>
+<dt><code>ext</code></dt>
+<dd>is an elaborate extension of the <code>minix</code> filesystem. It has been completely superseded by the second version of the extended filesystem (<code>ext2</code>) and has been removed from the kernel (in 2.1.21).</dd>
+<dt><code>ext2</code></dt>
+<dd>is the high performance disk filesystem used by Linux for fixed disks as well as removable media. The second extended filesystem was designed as an extension of the extended filesystem (<code>ext</code>). See <code><a href="/docs/linux/man/5-ext2/">ext2</a></code>(5).</dd>
+<dt><code>ext3</code></dt>
+<dd>is a journaling version of the <code>ext2</code> filesystem. It is easy to switch back and forth between <code>ext2</code> and <code>ext3</code>. See <code><a href="/docs/linux/man/5-ext3/">ext3</a></code>(5).</dd>
+<dt><code>ext4</code></dt>
+<dd>is a set of upgrades to <code>ext3</code> including substantial performance and reliability enhancements, plus large increases in volume, file, and directory size limits. See <code><a href="/docs/linux/man/5-ext4/">ext4</a></code>(5).</dd>
+<dt><code>hpfs</code></dt>
+<dd>is the High Performance Filesystem, used in OS/2. This filesystem is read-only under Linux due to the lack of available documentation.</dd>
+<dt><code>iso9660</code></dt>
+<dd>is a CD-ROM filesystem type conforming to the ISO 9660 standard.</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>High Sierra</code></dt>
+<dd>Linux supports High Sierra, the precursor to the ISO 9660 standard for CD-ROM filesystems. It is automatically recognized within the <code>iso9660</code> filesystem support under Linux.</dd>
+<dt><code>Rock Ridge</code></dt>
+<dd>Linux also supports the System Use Sharing Protocol records specified by the Rock Ridge Interchange Protocol. They are used to further describe the files in the <code>iso9660</code> filesystem to a UNIX host, and provide information such as long filenames, UID/GID, POSIX permissions, and devices. It is automatically recognized within the <code>iso9660</code> filesystem support under Linux.</dd></dl>
+</dl>
+<dt><code>JFS</code></dt>
+<dd>is a journaling filesystem, developed by IBM, that was integrated into Linux in kernel 2.4.24.</dd>
+<dt><code>minix</code></dt>
+<dd>is the filesystem used in the Minix operating system, the first to run under Linux. It has a number of shortcomings, including a 64 MB partition size limit, short filenames, and a single timestamp. It remains useful for floppies and RAM disks.</dd>
+<dt><code>msdos</code></dt>
+<dd>is the filesystem used by DOS, Windows, and some OS/2 computers. <code>msdos</code> filenames can be no longer than 8 characters, followed by an optional period and 3 character extension.</dd>
+<dt><code>ncpfs</code></dt>
+<dd>is a network filesystem that supports the NCP protocol, used by Novell NetWare. It was was removed from the kernel in 4.17.</dd>
+<dd>To use <code>ncpfs</code>, you need special programs, which can be found at</dd>
+<dt><code>nfs</code></dt>
+<dd>is the network filesystem used to access disks located on remote computers.</dd>
+<dt><code>ntfs</code></dt>
+<dd>is the filesystem native to Microsoft Windows NT, supporting features like ACLs, journaling, encryption, and so on.</dd>
+<dt><code>proc</code></dt>
+<dd>is a pseudo filesystem which is used as an interface to kernel data structures rather than reading and interpreting <i>/dev/kmem</i>. In particular, its files do not take disk space. See <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5).</dd>
+<dt><code>Reiserfs</code></dt>
+<dd>is a journaling filesystem, designed by Hans Reiser, that was integrated into Linux in kernel 2.4.1.</dd>
+<dt><code>smb</code></dt>
+<dd>is a network filesystem that supports the SMB protocol, used by Windows for Workgroups, Windows NT, and Lan Manager. See</dd>
+<dt><code>sysv</code></dt>
+<dd>is an implementation of the System V/Coherent filesystem for Linux. It implements all of Xenix FS, System V/386 FS, and Coherent FS.</dd>
+<dt><code>umsdos</code></dt>
+<dd>is an extended DOS filesystem used by Linux. It adds capability for long filenames, UID/GID, POSIX permissions, and special files (devices, named pipes, etc.) under the DOS filesystem, without sacrificing compatibility with DOS.</dd>
+<dt><code>tmpfs</code></dt>
+<dd>is a filesystem whose contents reside in virtual memory. Since the files on such filesystems typically reside in RAM, file access is extremely fast. See <code>tmpfs</code>(5).</dd>
+<dt><code>vfat</code></dt>
+<dd>is an extended FAT filesystem used by Microsoft Windows95 and Windows NT. <code>vfat</code> adds the capability to use long filenames under the MSDOS filesystem.</dd>
+<dt><code>XFS</code></dt>
+<dd>is a journaling filesystem, developed by SGI, that was integrated into Linux in kernel 2.4.20.</dd>
+<dt><code>xiafs</code></dt>
+<dd>was designed and implemented to be a stable, safe filesystem by extending the Minix filesystem code. It provides the basic most requested features without undue complexity. The <code>xiafs</code> filesystem is no longer actively developed or maintained. It was removed from the kernel in 2.1.21.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/4-fuse/">fuse</a></code>(4), <code><a href="/docs/linux/man/5-btrfs/">btrfs</a></code>(5), <code><a href="/docs/linux/man/5-ext2/">ext2</a></code>(5), <code><a href="/docs/linux/man/5-ext3/">ext3</a></code>(5), <code><a href="/docs/linux/man/5-ext4/">ext4</a></code>(5), <code><a href="/docs/linux/man/5-nfs/">nfs</a></code>(5), <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5), <code><a href="/docs/linux/man/5-sysfs/">sysfs</a></code>(5), <code>tmpfs</code>(5), <code><a href="/docs/linux/man/5-xfs/">xfs</a></code>(5), <code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8)</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>opaextractstat2(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-opaextractstat2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>opaextractstat2(8)</h1>
+
+
+
+
+
+<p>opaextractstat2</p>
+<p>Performs an error analysis of a fabric and provides augmented information from a topology_file including all error counters. The output is in a CSV format suitable for importing into a spreadsheet or parsed by other scripts. opaextractstat2 is a front end to the opareport and opaxmlextract tools.</p>
+<h2>Syntax</h2>
+<p>opaextractstat2 topology_file [ <i>opareport options</i>]</p>
+<h2>Options</h2>
+<dl><dt>--help
+</dt><dd>Produces full help text. 
+</dd><dt>topology_file
+</dt><dd>Specifies topology_file to use. 
+</dd><dt>
+&nbsp;<wbr><i>opareport options</i>&nbsp;<wbr>
+</dt><dd>&nbsp;<wbr><i>options</i>&nbsp;<wbr>are passed to opareport. See&nbsp;<wbr> <i>opareport</i> for the full set of options.</dd></dl>
+<p>The portion of the script that calls opareport and opaxmlextract follows:opareport -x -d 10 -s -o errors -T $@ | opaxmlextract -d ;
+-e Rate -e MTU -e Internal -e LinkDetails -e CableLength -e CableLabel
+-e CableDetails -e Port.NodeGUID -e Port.PortGUID -e Port.PortNum
+-e Port.PortType -e Port.NodeDesc -e Port.PortDetails
+-e PortXmitData.Value -e PortXmitPkts.Value -e PortRcvData.Value
+-e PortRcvPkts.Value -e SymbolErrors.Value -e LinkErrorRecovery.Value
+-e LinkDowned.Value -e PortRcvErrors.Value
+-e PortRcvRemotePhysicalErrors.Value -e PortRcvSwitchRelayErrors.Value
+-e PortXmitConstraintErrors.Value -e PortRcvConstraintErrors.Value
+-e LocalLinkIntegrityErrors.Value -e ExcessiveBufferOverrunErrors.Value</p>
+<h2>Example</h2>
+<p>opaextractstat2 topology_file</p>
+<p>opaextractstat2 topology_file -c my_opamon.conf</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

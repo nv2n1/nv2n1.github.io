@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ragrep(1) · Linux Manual Pages</title>
+<meta name="description" content="ragrep – grep argus(8) user captured data.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ragrep/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ragrep(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> <code>ragrep</code> &#8211; grep <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> user captured data.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>ragrep</code> [<code>options</code>] <code>-e</code> <i>pattern</i> [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]<br />
+ <code>ragrep</code> [<code>options</code>] <code>-f file</code> [<code>raoptions</code>] [<code>&#8211;</code> <i>filter-expression</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>Ragrep</code> reads <code>argus</code> data from an <i>argus-data</i> source, greps the records based on the regexp specified on the command line, and outputs a valid <i>argus-stream</i>. </p>
+<p> Ragrep works only on the fields for user captured data. Argus must be started with the configration option <code>ARGUS_CAPTURE_DATA_LEN</code> set to a value greater than 0, to have these data captured. See <code><a href="/docs/linux/man/5-argus-conf/">argus.conf</a>(5)</code> for detail. </p>
+<p> Ragrep is based on GNU <code><a href="/docs/linux/man/1-grep/">grep</a>(1)</code>, so the <i>regexp</i> syntax is the same as for <code><a href="/docs/linux/man/1-grep/">grep</a>(1)</code>.</p>
+<h2>OPTIONS</h2>
+<p> Ragrep, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. <code><a href="/docs/linux/man/1-ragrep/">ragrep</a>(1)</code> specific options are: </p>
+<dl>
+<dt><code>-c</code></dt>
+<dd> Suppress normal output; instead print a count of matching lines for each input file. With the <code>-v</code>, <code>&#8211;invert-match</code> option (see below), count non-matching lines. </dd>
+<dt><code>-e &lt;regex&gt;</code></dt>
+<dd> Match regular expression in flow user data fields. Prepend the regex with either &quot;s:&quot; or &quot;d:&quot; to limit the match to either the source or destination user data fields. Examples include: </dd>
+<pre>
+   &quot;^SSH-&quot;           - Look for ssh connections on any port.
+   &quot;s:^GET&quot;          - Look for HTTP GET requests in the source buffer.
+   &quot;d:^HTTP.*Unauth&quot; - Find unauthorized http response.
+</pre>
+<dt><code>-f</code><i> FILE</i></dt>
+<dd> Obtain patterns from <i>FILE</i>, one per line. The empty file contains zero patterns, and therefore matches nothing. </dd>
+<dt><code>-i</code></dt>
+<dd> Ignore case distinctions in both the <i>PATTERN</i> and the input files. </dd>
+<dt><code>-L</code></dt>
+<dd> Suppress normal output; instead print the name of each input file from which no output would normally have been printed. The scanning will stop on the first match. </dd>
+<dt><code>-l</code></dt>
+<dd> Suppress normal output; instead print the name of each input file from which output would normally have been printed. The scanning will stop on the first match. </dd>
+<dt><code>-q</code></dt>
+<dd> Quiet; do not write anything to standard output. Exit immediately with zero status if any match is found, even if an error was detected. </dd>
+<dt><code>-R</code></dt>
+<dd> Read all files under each directory, recursively; this is equivalent to the <code>-d recurse</code> option. </dd>
+<dt><code>-v</code></dt>
+<dd> Reverse the expression matching logic. </dd>
+</dl>
+<h2>DIAGNOSTICS</h2>
+<p> Normally, exit status is 0 if selected records are found and 1 otherwise. But the exit status is 2 if an error occurred, unless the <code>-q</code> option is used and a selected line is found. </p>
+<h2>INVOCATION</h2>
+<p> A sample invocation of <code><a href="/docs/linux/man/1-ragrep/">ragrep</a>(1)</code>. This call reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from <code>inputfile</code> and greps all http transactions that generated a &quot;404 Not Found&quot; error. </p>
+<dl>
+<dt><code>ragrep</code> -r inputfile -e &quot;HTTP.*404&quot;</dt>
+<dd>
+</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-ra/">ra</a>(1),</code> <code><a href="/docs/linux/man/5-rarc/">rarc</a>(5),</code> <code><a href="/docs/linux/man/8-argus/">argus</a>(8),</code> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 2000-2016 QoSient. All rights reserved.</p>
+<h2>AUTHORS</h2>
+<pre>
+Carter Bullard (carter [at] qosient.com).
+</pre>
+<h2>BUGS</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

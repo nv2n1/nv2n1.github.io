@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>playdv(1) · Linux Manual Pages</title>
+<meta name="description" content="playdv – display digital video streams on screen">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-playdv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>playdv(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> playdv &#8211; display digital video streams on screen</p>
+<h2>SYNOPSIS</h2>
+<p> <code>playdv</code> [ <code>options</code> ] <i>file</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>playdv</code> reads in DV-encoded video data from <i>file</i> and displays it on screen.</p>
+<dl>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> show playdv version number.</dd>
+<dt><code>&#8211;disable-audio</code></dt>
+<dd> skip audio decoding.</dd>
+<dt><code>&#8211;disable-video</code></dt>
+<dd> skip video decoding.</dd>
+<dt><code>-n</code>, <code>&#8211;num-frames</code>=<i>count</i></dt>
+<dd> stop playing after <i>count</i> frames.</dd>
+<dt><code>&#8211;dump-frames</code>=<i>pattern</i></dt>
+<dd> save a PPM image of each frame to an individual file. <i>pattern</i> determines the file names and may be given in <i>printf</i>-style taking one numeric argument that gets replaced with the current frame number. Like capture%05d.ppm for files capture00001.ppm, capture00002.ppm, etc. Use <i>&#8211;</i> to stream the frames to stdout.</dd>
+<dt><code>&#8211;no-mmap</code></dt>
+<dd> don&#8217;t use mmap for reading (useful for pipes).</dd>
+<dt><code>-l</code>, <code>&#8211;loop-count</code>=<i>count</i></dt>
+<dd> loop playback <i>count=</i> times, 0 for infinite.</dd></dl>
+<p> Audio Output Options</p>
+<dl>
+<dt><code>&#8211;audio-device</code>=<i>devicename</i></dt>
+<dd> target audio device; e.g. /dev/dsp, which is also the default.</dd>
+<dt><code>&#8211;audio-file</code>=<i>file</i></dt>
+<dd> send raw decoded audio stream to <i>file</i>, skipping audio ioctls.</dd>
+<dt><code>&#8211;audio-mix</code>=<i>(-16 .. 16)</i></dt>
+<dd> mixing level of 4 channel audio for 32KHz 12bit. 0 [default]. -16 selects second channel, 16 selects first channel.</dd></dl>
+<p> Video Output Options</p>
+<dl>
+<dt><code>-d</code>, <code>&#8211;display=</code>(0|1|2|3)</dt>
+<dd> method used to display video data on screen: 0=autoselect [default], 1=gtk, 2=Xv, 3=SDL. Xv is usually the fastest but requires XFree86 version 4.0 or higher with XVideo extensions.</dd>
+<dt><code>&#8211;aspect</code>=(n|w|normal|wide)</dt>
+<dd> video display aspect ratio (for Xv only): n=normal 4:3, w=wide 16:9 . Not all window manager support resizing at fixed aspect ratio. If they do, resizing is done at fixed aspect ratio.</dd>
+<dt><code>&#8211;size</code>=(10 .. 100)</dt>
+<dd> initial scaleing percentage (for Xv only): 10 &lt;= n &lt;= 100.</dd></dl>
+<p> Decoder Options</p>
+<dl>
+<dt><code>-V</code>, <code>&#8211;video-system</code>=(0|1|2|3)</dt>
+<dd> sets the video standard of the incoming DV data: 0=autoselect [default], 1=525/60 4:1:1 (NTSC), 2=625/50 4:2:0 (PAL,IEC 61834 DV), 3=625/50 4:1:1 (PAL,SMPTE 314M DV). Autoselect usually works fine. Only use this option if you know what you are doing.</dd></dl>
+<p> Video Decode Options</p>
+<dl>
+<dt><code>-q</code>, <code>&#8211;quality=</code>(1|2|3)</dt>
+<dd> quality level of desired video decoding. The process of decoding DV data is split into several steps. Each additional step enhances output quality, but of course also slows down decoding. If your machine is too slow to keep up an interactive frame rate, you might want to decrease this number: 1=DC and no ACs, 2=DC and single-pass for ACs, 3=DC and multi-pass for ACs [default].</dd>
+<dt><code>-m</code>, <code>&#8211;monochrome</code></dt>
+<dd> skip decoding of color blocks. Another way to speed up the decoding process.</dd></dl>
+<p> Audio Decode Options</p>
+<dl>
+<dt><code>-f</code>, <code>&#8211;frequency=</code>(0|1|2|3)</dt>
+<dd> frequency of audio data in the input stream: 0=autodetect [default], 1=32 kHz, 2=44.1 kHz, 3=48 kHz.</dd>
+<dt><code>-Q</code>, <code>&#8211;quantization=</code>(0|1|2)</dt>
+<dd> dynamic range of audio data in the input stream: 0=autodetect [default], 1=12 bit, 2=16bit.</dd>
+<dt><code>-e</code>, <code>&#8211;emphasis=</code>(0|1|2)</dt>
+<dd> first-order preemphasis of 50/15 us: 0=autodetect [default], 1=on, 2=off.</dd></dl>
+<p> Help Options</p>
+<dl>
+<dt>&#8211;<code>?</code>, <code>&#8211;help</code></dt>
+<dd> Show help message. Use this command to get a brief description of available options.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display brief usage message.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-dvconnect/">dvconnect</a></code>(1),<code><a href="/docs/linux/man/1-dubdv/">dubdv</a></code>(1),<code><a href="/docs/linux/man/1-encodedv/">encodedv</a></code>(1).</p>
+<h2>AVAILABILITY</h2>
+<p> See <a rel="nofollow" href="http://libdv.sourceforge.net/">http://libdv.sourceforge.net/</a> for the latest version.</p>
+<h2>AUTHORS</h2>
+<p> <code>playdv</code> was written by Charles &#8216;Buck&#8217; Krasic &lt;krasic [at] acm.org&gt; and Erik Walthinsen &lt;omega [at] cse.ogi.edu&gt;. </p>
+<p> This manual page is based on playdv&#8217;s help message and was written by Daniel Kobras &lt;kobras [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

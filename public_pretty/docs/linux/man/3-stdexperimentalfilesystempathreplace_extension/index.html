@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalfilesystempathreplace_extension(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalfilesystempathreplace_extension/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalfilesystempathreplace_extension(3)</h1>
+
+
+
+
+
+<p>std::experimental::filesystem::path::replace_extension - std::experimental::filesystem::path::replace_extension</p>
+<h2>Synopsis</h2>
+<pre><code>path &amp;replace_extension(const path &amp;replacement = path());
+(1)(filesystem TS)</code></pre> 
+<p>Replaces the extension with replacement or removes it when the default value of replacement is used.
+Firstly, if this path has an extension(), it is removed.
+Then, a dot character is appended if replacement is not empty or does not begin with a dot character.
+Then replacement is appended to the path.</p>
+<h2>Parameters</h2>
+<p>replacement - the extension to replace with</p>
+<h2>Return value</h2>
+<p>*this</p>
+<h2>Exceptions</h2>
+<p><i>(none)</i></p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;experimental/filesystem&gt;
+namespace fs = std::experimental::filesystem;
+int main()
+{
+fs::path p = &quot;/foo/bar.jpeg&quot;;
+std::cout &lt;&lt; &quot;Was: &quot; &lt;&lt; p &lt;&lt; &lsquo;\n&rsquo;;
+p.replace_extension(&quot;.jpg&quot;);
+std::cout &lt;&lt; &quot;Now: &quot; &lt;&lt; p.replace_extension(&quot;.jpg&quot;) &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Was: &quot;/foo/bar.jpeg&quot;
+ <wbr> Now: &quot;/foo/bar.jpg&quot;</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the file extension path component
+extension <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the filename path component
+filename <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the stem path component
+stem <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if the corresponding path element is not empty
+has_extension <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

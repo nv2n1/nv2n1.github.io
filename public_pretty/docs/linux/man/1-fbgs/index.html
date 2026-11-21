@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fbgs(1) · Linux Manual Pages</title>
+<meta name="description" content="fbgs – Poor man’s PostScript/pdf viewer for the linux framebuffer console. # #">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-fbgs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>fbgs(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>#</p>
+<h2 class="name">NAME</h2>
+<p> fbgs &#8211; Poor man&#8217;s PostScript/pdf viewer for the linux framebuffer console. # # </p>
+<h2>SYNOPSIS</h2>
+<p> <code>fbgs</code><br />
+&nbsp;<wbr>[<code>-l</code>|<code>-xl</code>|<code>-xxl</code>|<code>-r</code>&nbsp;<wbr><i>n</i>]&nbsp;<wbr>[<code>-c</code>]&nbsp;<wbr>[<code>-b</code>]&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr><i>password</i>]&nbsp;<wbr>[<code>&#8211;fp</code>&nbsp;<wbr><i>number</i>]&nbsp;<wbr>[<code>&#8211;lp</code>&nbsp;<wbr><i>number</i>]&nbsp;<wbr>[<i>fbi options</i>]&nbsp;<wbr><i>file</i> # #</p>
+<h2>DESCRIPTION</h2>
+<p> <code>Fbgs</code> is a simple wrapper script which takes a <i>PostScript</i> (PS) or <i>Portable Document Format</i> (PDF) file as input, renders the pages using <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) &#8211; GhostScript &#8211; into a temporary directory and finally calls <code><a href="/docs/linux/man/1-fbi/">fbi</a></code>(1) to display them.</p>
+<h2>OPTIONS</h2>
+<p> <code>Fbgs</code> understands all <code><a href="/docs/linux/man/1-fbi/">fbi</a></code>(1) options (they are passed through), except: store, list, text, (no)comments, e, (no)edit, (no)backup, (no)preserve, (no)readahead, cachemem, blend. </p>
+<p> Additionally you can specify:</p>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print usage info (overwrites fbi option).</dd>
+<dt><code>-b, &#8211;bell</code></dt>
+<dd> Emit a beep when the document is ready.</dd>
+<dt><code>-c, &#8211;color</code></dt>
+<dd> To render the pages in color (default is N&amp;B).</dd>
+<dt><code>-l</code></dt>
+<dd> To get the pages rendered with 100 dpi (default is 75).</dd>
+<dt><code>-xl</code></dt>
+<dd> To get the pages rendered with 120 dpi.</dd>
+<dt><code>-xxl</code></dt>
+<dd> To get the pages rendered with 150 dpi.</dd>
+<dt><code>-r</code><i>&nbsp;<wbr>n</i><code>, &#8211;resolution</code><i>&nbsp;<wbr>n</i></dt>
+<dd> To get the pages rendered with <i>n</i> dpi (overwrites fbi option).</dd>
+<dt><code>-fp</code><i>&nbsp;<wbr>number</i><code>, &#8211;firstpage</code><i>&nbsp;<wbr>number</i></dt>
+<dd> Begins interpreting on the designated page of the document.</dd>
+<dt><code>-lp</code><i>&nbsp;<wbr>number</i><code>, &#8211;lastpage</code><i>&nbsp;<wbr>number</i></dt>
+<dd> Stops interpreting after the designated page of the document.</dd>
+<dt><code>-p</code><i>&nbsp;<wbr>password</i><code>, &#8211;password</code><i>&nbsp;<wbr>password</i></dt>
+<dd> You can use this option if your PDF file requires a <i>password</i>. # #</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-fbi/">fbi</a></code>(1), <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) # #</p>
+<h2>AUTHOR</h2>
+<p> Gerd Hoffmann <code>&lt;gerd [at] kraxel.org&gt;</code> # #</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 1999-2012 Gerd Hoffmann &lt;gerd [at] kraxel.org&gt; </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

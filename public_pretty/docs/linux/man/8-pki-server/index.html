@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pki-server(8) · Linux Manual Pages</title>
+<meta name="description" content="pki-server – Command-Line Interface for performing administrative tasks on Certificate System subsystems.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pki-server/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pki-server(8)</h1>
+
+
+
+
+
+<p>pki-server &#8211; Command-Line Interface for performing administrative tasks on Certificate System subsystems.</p>
+<h2>Synopsis</h2>
+<p><code>pki-server</code> [CLI options] &lt;command&gt; [command arguments] </p>
+<h2>Description</h2>
+<p>The <code>pki-server</code> command provides a command-line interface allowing administrators to perform various administrative operations on the Certificate System instances. These services include starting/stopping instances, enabling/disabling subsystems, performing certain migrations and enabling/disabling startup using <code>nuxwdog</code>. Operations are performed using file system utilities, and can only be performed by an administrative user on the local host. This utility does not connect to any of the subsystem&#8217;s WEB or REST interfaces. </p>
+<h2>Cli Options</h2>
+<p><code>&#8211;help</code> Prints additional help information.</p>
+<dl>
+<dt><code>-d</code></dt>
+<dd>Displays debug information.</dd>
+<dt><code>-v</code></dt>
+<dd>Displays verbose information. </dd>
+</dl>
+<h2>Operations</h2>
+<p>To view available commands and options, simply type <code>pki-server</code>. </p>
+<p> Some commands have sub-commands. To view the sub-commands, type <code>pki-server &lt;command&gt;</code>. To view each command&#8217;s usage, type <code> pki-server &lt;command&gt; &#8211;help</code>.</p>
+<h2>Files</h2>
+<p><i>/usr/sbin/pki-server</i></p>
+<h2>See Also</h2>
+<p><code>pki-server-instance</code>(1)</p>
+<dl>
+<dd>Certificate Server instance management commands</dd></dl>
+<p> <code>pki-server-subsystem</code>(1)</p>
+<dl>
+<dd>Certificate Server subsystem management commands</dd></dl>
+<p> <code>pki-server-migrate</code>(1)</p>
+<dl>
+<dd>Certificate server migration script management commands</dd></dl>
+<p> <code>pki-server-nuxwdog</code>(1)</p>
+<dl>
+<dd>Commands to enable/disable startup using <code>nuxwdog</code>.</dd></dl>
+<h2>Authors</h2>
+<p>Ade Lee &lt;alee [at] redhat.com&gt;.</p>
+<h2>Copyright</h2>
+<p>Copyright (c) 2015 Red Hat, Inc. This is licensed under the GNU General Public License, version 2 (GPLv2). A copy of this license is available at <a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.">http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_gstxp(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_gstxp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_gstxp(3)</h1>
+
+
+
+
+
+<p>GSTXP (Set text path) - sets the text paths or directions in which text is to be drawn.</p>
+<h2>Synopsis</h2>CALL GSTXP (TXP)
+<h2>C-Binding Synopsis</h2>#include &lt;ncarg/gks.h&gt; 
+<p>void gset_text_path(Gtext_path text_path);</p>
+<h2>Description</h2><dl COMPACT><dt>TXP
+</dt><dd>(Integer, Input) - Gives the direction in which a character string is to be drawn. Options are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Draw successive characters in the string such that character n+l appears to the right of character n. This is text path &quot;right&quot; and is the default.
+</dd><dt>1
+</dt><dd>Draw character n+1 to the left of character n. This is text path &quot;left&quot;.
+</dd><dt>2
+</dt><dd>Draw character n+1 above character n. This is text path &quot;up&quot;.
+</dd><dt>3
+</dt><dd>Draw character n+1 below character n. This is text path &quot;down&quot;.</dd></dl>
+<p>The right, left, up, and down directions are relative to the character up vector. The right text path direction is perpendicular to the up vector direction. Thus, to draw a text string at a 45 degree angle the character up vector would be (-1,1), and the text path would be right .</dl></dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.</p>
+<h2>See Also</h2>Online: gtx, gstxal, gstxfp, gschh, gschsp, gschup, gschxp, gscr, gstxci, gqtxp, gqtxal, gqtxfp, gqchh, gqchsp, gqchup, gqchxp, plotchar, gset_text_path 
+<p>Hardcopy: User&rsquo;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>Copyright (C) 1987-2009 
+ University Corporation for Atmospheric Research 
+ The use of this Software is governed by a License Agreement.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

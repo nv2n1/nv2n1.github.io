@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wavemonrc(5) · Linux Manual Pages</title>
+<meta name="description" content="$HOME/.wavemonrc – wavemon configuration file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-wavemonrc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>wavemonrc(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>$HOME/.wavemonrc &#8211; wavemon configuration file</p>
+<h2>Description</h2>
+<p><i>wavemonrc</i> is the per-user configuration file for <code><a href="/docs/linux/man/1-wavemon/">wavemon</a></code>(1). This page describes its individual configuration options. Each corresponds to a configuration item of the <i>Preferences</i> screen (F7 key), whose on-screen name is shown in parentheses. </p>
+<p> <code>interface = &lt;ifname&gt;</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Interface)</p>
+<dl>
+<dd>Selects the wireless interface to use. </dd>
+</dl>
+<p> <code>cisco_mac = (on|off)</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Cisco-style MAC addresses)</p>
+<dl>
+<dd>If enabled, display MAC addresses using lower-case hex digits separated by dots rather than colons. </dd>
+</dl>
+<p> <code>sort_order = (channel|essid|signal|open|chan/sig|open/sig)</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Scan sort type)</p>
+<dl>
+<dd>Determines the ordering used in the scan window: <i>channel</i> sorts by channel number, <i>essid</i> by access point name, <i>signal</i> by signal strength, and <i>open</i> by openness. The combined variants <i>chan/sig</i> and <i>open/sig</i> sort first by channel/openness and then by signal strength. It also affects the status line at the bottom: normally the most crowded channels are listed, sorting by <i>channel</i> in descending order switches to least crowded ones instead. </dd>
+</dl>
+<p> <code>sort_ascending = (on|off)</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Scan sort direction)</p>
+<dl>
+<dd>Sets the direction of the <i>sort_order</i>: ascending (on) or descending (off). </dd>
+</dl>
+<p> <code>stat_updates = &lt;n&gt;</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Statistics updates)</p>
+<dl>
+<dd>Time interval for polling new statistics (including scan refresh). Range: 10..4000ms. </dd>
+</dl>
+<p> <code>lhist_slot_size = &lt;n&gt;</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Histogram update cycles)</p>
+<dl>
+<dd>Number of samples used per each histogram slot. For example, if the stat_updates interval is 500ms and the histogram slot size is 4, the histogram is moved one slot further every 2 seconds. Range: 1..64. </dd>
+</dl>
+<p> <code>meter_smoothness = &lt;n&gt;</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Level meter smoothness)</p>
+<dl>
+<dd>Determines the responsiveness of level meters, tracking the moving average rather than following each new sample. The given value specifies the percentage of the history (the &#8216;inertia&#8217;) of preceding samples. A value of 0 disables this option. Range: 0..99%. </dd>
+</dl>
+<p> <code>info_updates = &lt;n&gt;</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Dynamic info updates)</p>
+<dl>
+<dd>Sets refresh rate for dynamic device parameters (e.g. bitrate) and the refresh interval for the Scan window (F3). Range: 1..60s. </dd>
+</dl>
+<p> <code>override_auto_scale = (on|off)</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Override scale autodetect)</p>
+<dl>
+<dd>Override the auto-scaling of the bar graphs and histogram, allowing you to set your own scales. </dd>
+</dl>
+<p> <code>min_signal_level, max_signal_level = &lt;n&gt;</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Minimum signal level, Maximum signal level)</p>
+<dl>
+<dd>Set the left and right boundaries of the signal level scales. Ranges: -128..-60dBm (minimum) and -59..120dBm (maximum). </dd>
+</dl>
+<p> <code>min_noise_level, max_noise_level = &lt;n&gt;</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Minimum noise level, Maximum noise level)</p>
+<dl>
+<dd>These work similar to the signal boundary settings. Ranges: -128..-60dBm (minimum) and -60..120dBm (maximum). </dd>
+</dl>
+<p> <code>random = (on|off)</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Random signals)</p>
+<dl>
+<dd>Switches on a fancy random generator for testing. </dd>
+</dl>
+<p> <code>lo_threshold_action = (disabled|beep|flash|beep+flash)</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Low threshold action)</p>
+<dl>
+<dd>Issue a warning at a given threshold at the lower end of the signal scale. It is meant for alarming you when a signal appears at the receiver. </dd>
+</dl>
+<p> <code>lo_threshold = &lt;n&gt;</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Low threshold)</p>
+<dl>
+<dd>Sets the threshold value for the &#8216;Low threshold action&#8217;. Range: -120..-60dBm. </dd>
+</dl>
+<p> <code>hi_threshold_action = (disabled|beep|flash|beep+flash)</code></p>
+<dl>
+<dd></dd></dl>
+<p> (High threshold action)</p>
+<dl>
+<dd>Analogous to lo_threshold_action, only this time the threshold is at the upper end of the scale and the action is performed when the signal level drops below it. The acoustic signal is also different in order to be easily distinguishable from the lower one. Correctly adjusted, this little fellow will tell you when you should move closer to the base station. </dd>
+</dl>
+<p> <code>hi_threshold = &lt;n&gt;</code></p>
+<dl>
+<dd></dd></dl>
+<p> (High threshold)</p>
+<dl>
+<dd>Sets the threshold for the &#8216;High threshold action&#8217;. Range: -59..120dBm. </dd>
+</dl>
+<p> <code>startup_screen = (info|histogram|scan window)</code></p>
+<dl>
+<dd></dd></dl>
+<p> (Startup screen)</p>
+<dl>
+<dd>Which of the screens appears at program startup.</dd></dl>
+<h2>Author</h2>
+<p>Written by Jan Morgenstern &lt;jan [at] jm-music.de&gt;.</p>
+<h2>Reporting Bugs</h2>
+<p>Send bug reports and/or suggestions to Gerrit Renker &lt;gerrit [at] erg.abdn.ac.uk&gt;.</p>
+<h2>Copyright</h2>
+<p>This is free software with ABSOLUTELY NO WARRANTY. See file COPYING for details.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

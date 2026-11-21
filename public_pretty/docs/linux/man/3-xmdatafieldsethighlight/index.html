@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmdatafieldsethighlight(3) · Linux Manual Pages</title>
+<meta name="description" content="XmDataFieldSetHighlight — A DataField function that highlights text">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmdatafieldsethighlight/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmdatafieldsethighlight(3)</h1>
+
+
+
+
+
+<p><code>XmDataFieldSetHighlight</code> &#8212; A DataField function that highlights text</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/DataF.h&gt;
+<code>void XmDataFieldSetHighlight</code>(
+<code>Widget widget</code>,
+<code>XmTextPosition left</code>,
+<code>XmTextPosition right</code>,
+<code>XmHighlightMode mode</code>);</pre>
+<h2>Description</h2>
+<p><code>XmDataFieldSetHighlight</code> highlights text between the two specified character positions. The <i>mode</i> parameter determines the type of highlighting. Highlighting text merely changes the visual appearance of the text; it does not set the selection.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the DataField widget ID</dd>
+<dt><i>left</i></dt>
+<dd>Specifies the position of the left boundary of text to be highlighted. This is an integer number of characters from the beginning of the text buffer. The first character position is 0 (zero).</dd>
+<dt><i>right</i></dt>
+<dd>Specifies the position of the right boundary of text to be highlighted. This is an integer number of characters from the beginning of the text buffer. The first character position is 0 (zero).</dd>
+<dt><i>mode</i></dt>
+<dd>Specifies the type of highlighting to be done. A value of <code>XmHIGHLIGHT_NORMAL</code> removes highlighting. A value of <code>XmHIGHLIGHT_SELECTED</code> highlights the test using reverse video. A value of <code>XmHIGHLIGHT_SECONDARY_SELECTED</code> highlights the text using underlining.</dd></dl>
+<p> For a complete definition of DataField and its associated resources, see <code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3).</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

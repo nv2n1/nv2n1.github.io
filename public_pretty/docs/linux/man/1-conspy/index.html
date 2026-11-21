@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>conspy(1) · Linux Manual Pages</title>
+<meta name="description" content="conspy – virtual console spy tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-conspy/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>conspy(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> conspy &#8211; virtual console spy tool</p>
+<h2>SYNOPSIS</h2>
+<p> <code>conspy</code> [ options ] [ <i>console</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <i>Conspy</i> allows the user to take control of a Linux virtual console. The user can see what is displayed on the console and their keystrokes are sent to it. </p>
+<p> To exit from <i>conspy</i> press the escape key three times in quick succession. </p>
+<h2>COMMAND LINE</h2>
+<dl>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Print the program&#8217;s version and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;viewonly</code></dt>
+<dd> Don&#8217;t send keystrokes to the virtual console.</dd>
+<dt><i>console</i></dt>
+<dd> If supplied, <i>console</i> must be a number in the range 1 .. 63, corresponding to the virtual console device /dev/tty1 .. /dev/tty63. If not supplied the currently active virtual console is opened and tracked.</dd></dl>
+<h2>LIMITATIONS</h2>
+<p> <i>Conspy</i> will not pass keystrokes to a virtual console whose keyboard is configured to send scan codes. X configures its keyboard like this. If the terminal does not have at least 64 colours no colour will be displayed. <i>Conspy</i> ignores the mouse. <i>Conspy</i> may display some non-ASCII characters incorrectly. <i>Conspy</i> does not handle displays larger than 16000 characters (eg 200 rows x 80 columns). </p>
+<p> <i>Conspy</i> depends on terminfo and curses working correctly for your terminal, and sometimes they don&#8217;t. Konsole is/was one example of where they don&#8217;t. Typing control-L will redraw the screen, which usually fixes the mess created. It also sends a control-L to the virtual console, of course.</p>
+<h2>FILES</h2>
+<dl>
+<dt><code>/dev/ttyX</code>, <code>/dev/vc/X</code></dt>
+<dd> The characters typed are sent to this device. The latter is for devfs. It is only used if the former does not exist.</dd>
+<dt><code>/dev/vcsaX</code>, <code>/dev/vcc/aX</code></dt>
+<dd> The display of the virtual console is read from here. The latter is for devfs. It is only used if the former does not exist.</dd></dl>
+<h2>AUTHOR</h2>
+<p> Russell Stuart, &lt;russell-conspy [at] stuart.id.au&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

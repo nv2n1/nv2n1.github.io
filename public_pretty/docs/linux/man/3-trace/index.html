@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>trace(3) · Linux Manual Pages</title>
+<meta name="description" content="TRACE – Debugging helper macro to trace messages. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-trace/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>trace(3)</h1>
+
+
+
+
+
+<p>TRACE &#8211; Debugging helper macro to trace messages. Allegro game programming library.</p>
+<h2>Synopsis</h2>
+<p><code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>void TRACE(char *msg, &#8230;);</code></p>
+<h2>Description</h2>
+<p>Debugging helper macro. Normally compiles away to nothing, but if you defined the preprocessor symbol DEBUGMODE before including Allegro headers, it passes the supplied message given in ASCII format to al_trace(). Example: </p>
+<pre> #define DEBUGMODE
+ #include 
+ ...
+ void my_blitter(BITMAP *source, int flags)
+ {
+ static int count_call = 0;
+ TRACE(&quot;my_blitter() called %d times.
+&quot;, count_call++);
+ ...
+ }</pre>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-al_trace/">al_trace</a></code>(3), <code><a href="/docs/linux/man/3-assert/">ASSERT</a></code>(3), <code><a href="/docs/linux/man/3-register_trace_handler/">register_trace_handler</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

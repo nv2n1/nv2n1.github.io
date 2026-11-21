@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sequence Points in C: Understanding Evaluation Order and Side Effects - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/which-are-sequence-points-in-c/">
+  <meta name="description" content="A sequence point is a point in execution where all side effects from previous evaluations are guaranteed to be complete and visible. Understanding sequence …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Sequence Points in C: Understanding Evaluation Order and Side Effects">
+  <meta property="og:url" content="https://www.systutorials.com/which-are-sequence-points-in-c/">
+  <meta property="og:description" content="A sequence point is a point in execution where all side effects from previous evaluations are guaranteed to be complete and visible. Understanding sequence …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/software-design/">Software Design</a>
+        </nav>
+        
+        <h1>Sequence Points in C: Understanding Evaluation Order and Side Effects</h1>
+        <time class="post-date" datetime="2018-03-24T11:44:26Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>A sequence point is a point in execution where all side effects from previous evaluations are guaranteed to be complete and visible. Understanding sequence points is critical for writing correct C code, especially when dealing with expressions that modify variables.</p>
+<p>The C standard defines side effects as changes to the state of the execution environment (variable modifications, I/O operations, etc.). Between sequence points, the order in which side effects occur is undefined, which can lead to unpredictable behavior if you’re not careful.</p>
+<h2 id="where-sequence-points-occur">Where Sequence Points Occur</h2>
+<p>The C standard guarantees sequence points at these locations:</p>
+<ol>
+<li>
+<p><strong>End of a full expression</strong> — An expression statement like <code>x = 5;</code> or the expression in <code>if (x &gt; 10)</code>. Subexpressions within a larger expression do not have sequence points between them.</p>
+</li>
+<li>
+<p><strong>Logical operators</strong> — After evaluating the left operand of <code>&amp;&amp;</code>, <code>||</code>, and the ternary operator <code>?:</code></p>
+</li>
+<li>
+<p><strong>Comma operator</strong> — After the left operand of <code>,</code></p>
+</li>
+<li>
+<p><strong>Function calls</strong> — After all arguments are evaluated and before the function executes</p>
+</li>
+</ol>
+<h2 id="the-critical-rule">The Critical Rule</h2>
+<p>Between consecutive sequence points, an object’s stored value can be modified at most once by a single expression. Furthermore, if you access a variable’s value between modifications (within the same sequence point), that access must be to determine what value to store—not for some other purpose.</p>
+<h2 id="examples-of-undefined-behavior">Examples of Undefined Behavior</h2>
+<p>These are classic mistakes that violate sequence point rules:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// Undefined behavior: i is modified twice between sequence points
+</span></span></span><span class="line"><span class="cl"><span class="n">i</span> <span class="o">=</span> <span class="o">++</span><span class="n">i</span> <span class="o">+</span> <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+</span></span></code></pre></div><p>Here, <code>++i</code> modifies <code>i</code>, then <code>i++</code> modifies it again, and the order is unspecified. The result is unpredictable.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// Undefined behavior: accessing i for both reading and modification
+</span></span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+</span></span></code></pre></div><p>The increment happens, but whether <code>a[i]</code> uses the old or new value of <code>i</code> is undefined.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// Undefined behavior: multiple increments without sequence points
+</span></span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span><span class="p">);</span>
+</span></span></code></pre></div><p>The order in which the two <code>i++</code> operations execute is not guaranteed.</p>
+<h2 id="safe-alternatives">Safe Alternatives</h2>
+<p>When you need to modify a variable multiple times or use its value, separate operations with sequence points:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// Safe: separate statements create sequence points
+</span></span></span><span class="line"><span class="cl"><span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Safe: comma operator provides a sequence point
+</span></span></span><span class="line"><span class="cl"><span class="n">i</span> <span class="o">=</span> <span class="o">++</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// i incremented, then separate expression
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Safe: use temporary variables
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="n">temp</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="practical-impact">Practical Impact</h2>
+<p>In modern C code (C99 and later), compilers are often smart enough to warn about these violations if you enable warnings (<code>-Wall -Wextra</code>). GCC and Clang will flag obvious cases like <code>i = ++i + i++</code>.</p>
+<p>However, some violations are subtle and may only manifest on certain architectures or optimization levels. The safest approach is to <strong>never modify a variable and read it in the same statement</strong>. Keep your expressions simple and let the compiler optimize—don’t try to be too clever.</p>
+<p>The sequence point rules exist because C compilers have significant freedom in how they schedule operations for performance. Relying on undefined behavior might work on your machine today but fail on another compiler, architecture, or after a compiler upgrade.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

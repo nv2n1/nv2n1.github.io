@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started with Linux for Developers - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/notes-software-development-linux-beginners/">
+  <meta name="description" content="Before writing code, get comfortable with fundamental Linux commands. You’ll use these daily:
+File operations: ls, cd, cat, less Text search: grep, ripgrep (rg) …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Getting Started with Linux for Developers">
+  <meta property="og:url" content="https://www.systutorials.com/notes-software-development-linux-beginners/">
+  <meta property="og:description" content="Before writing code, get comfortable with fundamental Linux commands. You’ll use these daily:
+File operations: ls, cd, cat, less Text search: grep, ripgrep (rg) …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/general-system-administration/">General System Administration</a>
+        </nav>
+        
+        <h1>Getting Started with Linux for Developers</h1>
+        <time class="post-date" datetime="2015-11-29T02:20:05Z">November 29, 2015</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Before writing code, get comfortable with fundamental Linux commands. You’ll use these daily:</p>
+<ul>
+<li><strong>File operations</strong>: <code>ls</code>, <code>cd</code>, <code>cat</code>, <code>less</code></li>
+<li><strong>Text search</strong>: <code>grep</code>, <code>ripgrep</code> (rg)</li>
+<li><strong>Remote access</strong>: <code>ssh</code>, <code>scp</code>, <code>rsync</code></li>
+<li><strong>Session management</strong>: <code>tmux</code> or <code>screen</code> for persistent terminal sessions</li>
+<li><strong>Shell</strong>: <code>bash</code> (default on most distributions), though <code>zsh</code> and <code>fish</code> are popular alternatives</li>
+</ul>
+<p>Start with built-in documentation. Man pages are your primary reference:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">man ls
+</span></span><span class="line"><span class="cl">man ssh
+</span></span><span class="line"><span class="cl">man grep
+</span></span></code></pre></div><p>Use <code>--help</code> flags for quick syntax reminders, and leverage online resources when offline docs aren’t enough.</p>
+<p>Essential commands to bookmark early:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">man -k keyword           <span class="c1"># Search man pages by topic</span>
+</span></span><span class="line"><span class="cl">which <span class="nb">command</span>            <span class="c1"># Find the full path of a command</span>
+</span></span><span class="line"><span class="cl"><span class="nb">type</span> <span class="nb">command</span>             <span class="c1"># Determine if command is built-in or external</span>
+</span></span><span class="line"><span class="cl"><span class="nb">history</span>                  <span class="c1"># View your command history</span>
+</span></span><span class="line"><span class="cl">Ctrl+R                   <span class="c1"># Reverse search through history (in bash/zsh)</span>
+</span></span></code></pre></div><h2 id="package-management-for-your-distribution">Package Management for Your Distribution</h2>
+<p>Each Linux distribution uses a different package manager. Learn the one for your chosen distro:</p>
+<p><strong>Debian/Ubuntu (apt)</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt update
+</span></span><span class="line"><span class="cl">apt install git
+</span></span><span class="line"><span class="cl">apt search package-name
+</span></span><span class="line"><span class="cl">apt remove package-name
+</span></span></code></pre></div><p><strong>RHEL/CentOS/Fedora (dnf)</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dnf install git
+</span></span><span class="line"><span class="cl">dnf search package-name
+</span></span><span class="line"><span class="cl">dnf remove package-name
+</span></span></code></pre></div><p><strong>Arch Linux (pacman)</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S git
+</span></span><span class="line"><span class="cl">pacman -Ss package-name
+</span></span><span class="line"><span class="cl">pacman -R package-name
+</span></span></code></pre></div><p><strong>openSUSE (zypper)</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">zypper install git
+</span></span><span class="line"><span class="cl">zypper search package-name
+</span></span><span class="line"><span class="cl">zypper remove package-name
+</span></span></code></pre></div><p>Modern distributions also support <code>flatpak</code> and <code>snap</code> for containerized packages, but avoid these initially for development tools — native packages integrate better with build systems.</p>
+<h3 id="building-software-from-source">Building Software from Source</h3>
+<p>When a package isn’t available in your distro’s repository, you’ll compile from source. Check the project’s README first, then follow these typical steps:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar xzf project.tar.gz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> project
+</span></span><span class="line"><span class="cl">./configure
+</span></span><span class="line"><span class="cl">make
+</span></span><span class="line"><span class="cl">sudo make install
+</span></span></code></pre></div><p>Modern projects use different build systems:</p>
+<ul>
+<li><strong>CMake</strong>: <code>mkdir build &amp;&amp; cd build &amp;&amp; cmake .. &amp;&amp; make &amp;&amp; sudo make install</code></li>
+<li><strong>Meson</strong>: <code>meson setup builddir &amp;&amp; meson compile -C builddir &amp;&amp; sudo meson install -C builddir</code></li>
+<li><strong>Language-specific tools</strong>: <code>cargo build --release</code> (Rust), <code>go build</code> (Go), <code>python -m build</code> (Python)</li>
+</ul>
+<p>Always check the project documentation before building — the specific steps matter.</p>
+<h2 id="text-editors-and-development-environments">Text Editors and Development Environments</h2>
+<p>Your choice of editor significantly impacts workflow. Options range from simple to complex:</p>
+<p><strong>Beginner-friendly</strong></p>
+<ul>
+<li><code>nano</code> — minimal learning curve, suitable for quick edits</li>
+<li><code>gedit</code> / <code>kate</code> — GUI editors with basic features</li>
+<li><strong>VS Code</strong> — install via your package manager, highly configurable</li>
+</ul>
+<p><strong>Intermediate to advanced</strong></p>
+<ul>
+<li><code>vim</code> — powerful but steep learning curve; start with <code>vimtutor</code></li>
+<li><code>emacs</code> — extensible and powerful; significant investment to learn</li>
+<li><strong>JetBrains IDEs</strong> — feature-rich but resource-intensive</li>
+<li><strong>Helix</strong> — modern Rust-written editor gaining traction</li>
+</ul>
+<p>Start simple. Master one editor rather than jumping between them. If vim seems overwhelming, use nano or VS Code until you’re ready to invest time in deeper editor mastery.</p>
+<h2 id="build-systems-and-compilation">Build Systems and Compilation</h2>
+<p><strong>C/C++ development</strong></p>
+<ul>
+<li><strong>Compilers</strong>: <code>gcc</code> and <code>clang</code> are the standards</li>
+<li><strong>Debugging</strong>: <code>gdb</code> for stepping through code, or use <code>valgrind</code> for memory debugging</li>
+<li><strong>Build tool</strong>: <code>make</code> with <code>Makefile</code> is traditional; <code>cmake</code> is modern</li>
+</ul>
+<p><strong>Language-specific tools</strong></p>
+<ul>
+<li><strong>Rust</strong>: <code>cargo</code> handles everything (build, test, package)</li>
+<li><strong>Go</strong>: <code>go build</code>, <code>go test</code>, <code>go run</code></li>
+<li><strong>Python</strong>: <code>python -m venv</code> for virtual environments, <code>pip</code> for packages</li>
+<li><strong>Node.js</strong>: <code>npm</code> or <code>yarn</code> for JavaScript projects</li>
+</ul>
+<h2 id="practical-development-workflow">Practical Development Workflow</h2>
+<p>A typical code-test-debug cycle looks like this:</p>
+<ol>
+<li>Edit code locally in your editor</li>
+<li>Run locally to catch syntax errors and obvious bugs</li>
+<li>Compile or test: <code>make</code>, <code>cargo build</code>, <code>python -m pytest</code>, <code>go test</code></li>
+<li>Review output and logs</li>
+<li>Iterate until working</li>
+</ol>
+<h3 id="remote-development">Remote Development</h3>
+<p>When you need to test on a server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Sync local changes to remote</span>
+</span></span><span class="line"><span class="cl">rsync -avz --delete src/ user@server:/app/src/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Execute build on remote</span>
+</span></span><span class="line"><span class="cl">ssh user@server <span class="s2">&#34;cd /app &amp;&amp; make&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or use version control</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span><span class="line"><span class="cl">ssh user@server <span class="s2">&#34;cd /app &amp;&amp; git pull &amp;&amp; make&#34;</span>
+</span></span></code></pre></div><p>For longer sessions, use <code>tmux</code> on the remote server to maintain persistent environments that survive disconnects:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh user@server
+</span></span><span class="line"><span class="cl">tmux new-session -s dev
+</span></span><span class="line"><span class="cl"><span class="c1"># Now run long processes; disconnect with Ctrl+B then D</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Reconnect later with: tmux attach-session -t dev</span>
+</span></span></code></pre></div><h2 id="debugging-and-logging">Debugging and Logging</h2>
+<p>Early debugging often means reading error messages carefully and using print statements. As you advance:</p>
+<ul>
+<li><strong>System-level tracing</strong>: <code>strace</code> shows system calls; <code>ltrace</code> shows library calls</li>
+<li><strong>Performance analysis</strong>: <code>perf</code> identifies bottlenecks</li>
+<li><strong>Log review</strong>: <code>journalctl</code> reads systemd logs; grep through application logs</li>
+<li><strong>Structured logging</strong>: Write logs to stdout/stderr in a parseable format (JSON works well), then use tools like <code>jq</code> to filter and analyze</li>
+</ul>
+<p>Avoid ad-hoc debugging in production. Implement proper logging from the start.</p>
+<h2 id="getting-started-in-practice">Getting Started in Practice</h2>
+<p>You don’t need to master everything immediately. Follow this path:</p>
+<ol>
+<li>Install a Linux distribution you’re comfortable with</li>
+<li>Learn your distro’s package manager — install a few packages to practice</li>
+<li>Choose a simple editor (nano is fine to start)</li>
+<li>Build something small — a shell script, a simple C program, a Python script</li>
+<li>Deploy it to a test environment and run it</li>
+</ol>
+<p>Within a few weeks of regular work, core commands become muscle memory. The shell feels less intimidating. You’ll develop habits that make Linux development fast and productive.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

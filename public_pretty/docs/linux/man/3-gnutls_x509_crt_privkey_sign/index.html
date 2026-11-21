@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnutls_x509_crt_privkey_sign(3) · Linux Manual Pages</title>
+<meta name="description" content="gnutls_x509_crt_privkey_sign – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gnutls_x509_crt_privkey_sign/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gnutls_x509_crt_privkey_sign(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> gnutls_x509_crt_privkey_sign &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
+<p> <code>int gnutls_x509_crt_privkey_sign(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_x509_crt_t </code><i>issuer</i><code>, gnutls_privkey_t </code><i>issuer_key</i><code>, gnutls_digest_algorithm_t </code><i>dig</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
+<dt>gnutls_x509_crt_t issuer</dt>
+<dd> is the certificate of the certificate issuer</dd>
+<dt>gnutls_privkey_t issuer_key</dt>
+<dd> holds the issuer&#8217;s private key</dd>
+<dt>gnutls_digest_algorithm_t dig</dt>
+<dd> The message digest to use, <code>GNUTLS_DIG_SHA1</code> is a safe choice</dd>
+<dt>unsigned int flags</dt>
+<dd> must be 0</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> This function will sign the certificate with the issuer&#8217;s private key, and will copy the issuer&#8217;s information into the certificate. </p>
+<p> This must be the last step in a certificate generation since all the previously set parameters are now signed.</p>
+<h2>RETURNS</h2>
+<p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+ Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
+<dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

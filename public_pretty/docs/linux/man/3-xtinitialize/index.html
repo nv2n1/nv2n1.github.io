@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xtinitialize(3) · Linux Manual Pages</title>
+<meta name="description" content="XtInitialize – initialize">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xtinitialize/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xtinitialize(3)</h1>
+
+
+
+
+
+<p>XtInitialize &#8211; initialize </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/Intrinsic.h&gt;</p>
+<dl COMPACT>
+<dd>Widget XtInitialize(const char *<i>shell_name</i>, const char *<i>application_class</i>, XrmOptionDescRec* <i>options</i>, Cardinal <i>num_options</i>, int* <i>argc</i>, char** <i>argv</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>shell_name</i></dt>
+<dd>Specifies the name of the created shell widget.</dd>
+<dt><i>application_class</i></dt>
+<dd>Specifies the class name of this application, which usually is the generic name for all instances of this application.</dd>
+<dt><i>options</i></dt>
+<dd>Specifies how to parse the command line for any application-specific resources. The options argument is passed as a parameter to <code>XrmParseCommand</code>. For further information, see <i>Xlib &#8211; C Language X Interface</i>.</dd>
+<dt><i>num_options</i></dt>
+<dd>Specifies the number of entries in the options list.</dd>
+<dt><i>argc</i></dt>
+<dd>Specifies a pointer to the number of command line parameters.</dd>
+<dt><i>argv</i></dt>
+<dd>Specifies the command line parameters.</dd></dl>
+<h2>Description</h2>
+<p><code>XtInitialize</code> calls <code>XtToolkitInitialize</code> followed by <code>XtOpenDisplay</code> with <i>display_string</i> NULL and <i>application_name</i> NULL, and finally calls <code>XtAppCreateShell</code> with <i>application_name</i> NULL, <i>widget_class</i> <code>applicationShellWidgetClass</code>, and the specified <i>args</i> and <i>num_args</i> and returns the created shell. The semantics of calling <code>XtInitialize</code> more than once are undefined. This routine has been replaced by <code>XtAppInitialize</code>.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xtappinitialize/">XtAppInitialize</a></code>(3)<br />
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

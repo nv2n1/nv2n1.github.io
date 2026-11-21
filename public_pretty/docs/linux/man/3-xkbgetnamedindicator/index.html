@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbgetnamedindicator(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbGetNamedIndicator – Look up the indicator map and other information for an indicator by name">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbgetnamedindicator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbgetnamedindicator(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XkbGetNamedIndicator &#8211; Look up the indicator map and other information for an indicator by name </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Bool XkbGetNamedDeviceIndicator</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>dev_spec</i><code>,</code> <code>unsigned int </code><i>led_class</i><code>,</code> <code>unsigned int </code><i>led_id</i><code>,</code> <code>Atom </code><i>name</i><code>,</code> <code>int *</code><i>ndx_rtrn</i><code>,</code> <code>Bool *</code><i>state_rtrn</i><code>,</code> <code>XkbIndicatorMapPtr </code><i>map_rtrn</i><code>,</code> <code>Bool *</code><i>real_rtrn</i><code>);</code></dt>
+<dt> <code>Bool XkbGetNamedIndicator</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>Atom </code><i>name</i><code>,</code> <code>int *</code><i>ndx_rtrn</i><code>,</code> <code>Bool *</code><i>state_rtrn</i><code>,</code> <code>XkbIndicatorMapPtr </code><i>map_rtrn</i><code>,</code> <code>Bool *</code><i>real_rtrn</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; dpy</i></dt>
+<dd>
+</dd><dd>connection to the X server</dd>
+<dt><i>&#8211; dev_spec</i></dt>
+<dd>keyboard device ID, or XkbUseCoreKbd</dd>
+<dt><i>&#8211; led_class</i></dt>
+<dd>feedback class, or XkbDfltXIClass</dd>
+<dt><i>&#8211; led_id</i></dt>
+<dd>feedback ID, or XkbDfltXIId</dd>
+<dt><i>&#8211; name</i></dt>
+<dd>name of the indicator to be retrieved</dd>
+<dt><i>&#8211; ndx_rtrn</i></dt>
+<dd>backfilled with the index of the retrieved indicator</dd>
+<dt><i>&#8211; state_rtrn</i></dt>
+<dd>backfilled with the current state of the retrieved indicator</dd>
+<dt><i>&#8211; map_rtrn</i></dt>
+<dd>&nbsp;backfilled with the mapping for the retrieved indicator&nbsp;</dd>
+<dt><i>&#8211; real_rtrn</i></dt>
+<dd>backfilled with True if the named indicator is real (physical)</dd></dl>
+<h2>Description</h2>
+<p>Xkb also allows applications to refer to indicators by name. Use <i>XkbGetNames </i> to get the indicator names. Using names eliminates the need for hard-coding bitmask values for particular keyboards. For example, instead of using vendor-specific constants such as WSKBLed_ScrollLock mask on Digital workstations or XLED_SCROLL_LOCK on Sun workstations, you can instead use <i>XkbGetNamedDeviceIndicator</i> to look up information on the indicator named &quot;Scroll Lock.&quot; </p>
+<p> If the device specified by <i>device_spec </i> has an indicator named <i>name</i>, <i>XkbGetNamedDeviceIndicator</i> returns True and populates the rest of the parameters with information about the indicator. Otherwise, <i>XkbGetNamedDeviceIndicator</i> returns False. </p>
+<p> The <i>ndx_rtrn </i> field returns the zero-based index of the named indicator. This index is the bit position to use in any function call that requires a mask of indicator bits, as well as the indicator&#8217;s index into the XkbIndicatorRec array of indicator maps. <i>state_rtrn </i> returns the current state of the named indicator (True = on, False = off). <i>map_rtrn </i> returns the indicator map for the named indicator. In addition, if the indicator is mapped to a physical LED, the <i>real_rtrn </i> parameter is set to True. </p>
+<p> Each of the &quot; <i>_rtrn</i> &quot; arguments is optional; you can pass NULL for any unneeded &quot; <i>_rtrn</i> &quot; arguments. </p>
+<p> <i>XkbGetNamedIndicator</i> is a convenience function that calls <i>XkbGetNamedDeviceIndicator</i> with a <i>device_spec</i> of <code>XkbUseCoreKbd</code>, a <i>led_class</i> of <code>XkbDfltXIClass</code>, and a <i>led_id</i> of <code>XkbDfltXIId</code>. It returns the return value from <i>XkbGetNamedDeviceIndicator</i>. </p>
+<h2>Return Values</h2>
+<dl COMPACT>
+<dt>True</dt>
+<dd>The <i>XkbGetNamedIndicator</i> and <i>XkbGetNamedDeviceIndicator</i> functions return True if the device specified by <i>device_spec </i> has an indicator named <i>name</i>.</dd>
+<dt>False</dt>
+<dd>The <i>XkbGetNamedIndicator</i> and <i>XkbGetNamedDeviceIndicator</i> functions return False if the device specified by <i>device_spec </i> does not have an indicator named <i>name</i>.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xkbgetnames/">XkbGetNames</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

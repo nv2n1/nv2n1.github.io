@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Xen’s Codebase Architecture - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/a-introduction-to-xen-source-code-structure-and-disk-in-xen/">
+  <meta name="description" content="Xen remains a production hypervisor used by Citrix Hypervisor, XCP-ng, and other clouds (and historically by AWS EC2, which has moved to its KVM-based Nitro …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Understanding Xen’s Codebase Architecture">
+  <meta property="og:url" content="https://www.systutorials.com/a-introduction-to-xen-source-code-structure-and-disk-in-xen/">
+  <meta property="og:description" content="Xen remains a production hypervisor used by Citrix Hypervisor, XCP-ng, and other clouds (and historically by AWS EC2, which has moved to its KVM-based Nitro …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/virtualization-containers/">Virtualization &amp; Containers</a>
+        </nav>
+        
+        <h1>Understanding Xen’s Codebase Architecture</h1>
+        <time class="post-date" datetime="2013-07-12T16:32:18Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Xen remains a production hypervisor used by Citrix Hypervisor, XCP-ng, and other clouds (and historically by AWS EC2, which has moved to its KVM-based Nitro system), though most general-purpose Linux distributions have shifted toward KVM as their default. If you’re working with Xen in production or developing drivers, understanding its source code layout is essential.</p>
+<h2 id="top-level-directory-structure">Top-Level Directory Structure</h2>
+<p>The Xen source repository (hosted on xenbits.xen.org) is organized into these primary directories:</p>
+<p><strong>docs/</strong> — Documentation, man pages, and design specifications. These have evolved significantly; modern docs cover PVH (Paravirtualized with Hardware extensions) mode and newer security features.</p>
+<p><strong>tools/</strong> — Management utilities including <code>xl</code> (the modern tool replacing deprecated <code>xm</code>), <code>xentop</code> for monitoring, libxl for domain management, and libxenstore for configuration store access.</p>
+<p><strong>xen/</strong> — The hypervisor core, written primarily in C with assembly for architecture-specific operations.</p>
+<p>Paravirtualized Linux kernels live in the separate Linux source tree (early Xen kernels as linux-2.6.x-xen patches, modern ones in mainline); the xen tree itself contains no kernel.</p>
+<p><strong>extras/</strong> — Optional utilities and experimental features.</p>
+<p><strong>stubdom/</strong> — Stub domain implementations for enhanced isolation (e.g., MiniOS-based domains providing backend services).</p>
+<h2 id="core-hypervisor-layout-xen">Core Hypervisor Layout (xen/)</h2>
+<p>Inside the hypervisor source directory:</p>
+<p><strong>common/</strong> — Shared hypervisor functionality: domain management, scheduler, memory management, event channels, and grant tables. Code here runs in the Xen runtime context.</p>
+<p><strong>arch/</strong> — Architecture-specific implementations for x86, x86-64, and ARM64. Includes boot code, paging, interrupt handlers, and CPU features detection.</p>
+<p><strong>drivers/</strong> — Hypervisor device support such as IOMMU/VFIO management and the console. The PV disk and network backends (blkback, netback) are Linux dom0 kernel drivers, not part of this tree.</p>
+<p><strong>xsm/</strong> — Xen Security Modules implementing mandatory access control (MAC). The FLASK security policy engine is the primary implementation; others include dummy (no policy) and ACM (deprecated).</p>
+<p><strong>include/</strong> — Header files defining interfaces between hypervisor components and between hypervisor and guest kernels.</p>
+<p><strong>tools/</strong> — Hypervisor build utilities only (for example <code>symbols</code>); the user-facing tools such as <code>xenstore-clients</code> live under the top-level tools/ directory.</p>
+<h2 id="backend-and-frontend-driver-architecture">Backend and Frontend Driver Architecture</h2>
+<p>The split-driver model is Xen’s mechanism for safe device virtualization. Frontend and backend drivers communicate through shared memory, eliminating the need for hypervisor involvement in data-path operations.</p>
+<p><strong>Backend drivers</strong> run in dom0 (Domain 0, the management domain) and provide access to real hardware:</p>
+<ul>
+<li>Implemented as Linux kernel modules or as stub domains</li>
+<li>Handle physical disk, network, USB, and other I/O devices</li>
+<li>Expose a virtual interface through XenBus</li>
+<li>Manage grant tables and shared ring buffers for data transfer</li>
+</ul>
+<p><strong>Frontend drivers</strong> run in guest domains (domU) and interface with virtual devices:</p>
+<ul>
+<li>Implemented as drivers in the guest OS kernel, or in userspace</li>
+<li>Present standard block/net device abstractions to guest applications</li>
+<li>Use xenstore for configuration and XenBus for initialization</li>
+<li>Access shared memory via grant references without hypervisor mediation</li>
+</ul>
+<p><strong>XenBus</strong> is the out-of-band control path—a shared memory region and event channel mechanism allowing frontend/backend negotiation. State machines govern device initialization: Initialising → InitWait → Initialised → Connected.</p>
+<p><strong>XenStore</strong> is a key-value database accessible from all domains, storing device configuration, domain metadata, and runtime parameters. The <code>xenstored</code> daemon serves it, and the <code>xenstore-read</code>/<code>xenstore-write</code> client tools allow query access.</p>
+<p><strong>Grant tables</strong> allow domains to grant other domains access to specific memory pages without copying. Backend drivers use grants to safely read/write guest buffers.</p>
+<h2 id="practical-development-workflow">Practical Development Workflow</h2>
+<p>When modifying Xen:</p>
+<ul>
+<li>Edit hypervisor code in <code>xen/arch</code> or <code>xen/common</code></li>
+<li>Build with <code>./configure &amp;&amp; make world</code></li>
+<li>For backend drivers, kernel modules go in dom0’s Linux kernel tree</li>
+<li>For frontend drivers, integrate into guest kernel or implement in userspace via <code>libxenlight</code></li>
+<li>Test using <code>xl create</code> to start domains and monitor with <code>xl list</code> and <code>/proc/xen</code> interfaces</li>
+</ul>
+<p>Modern Xen prefers PVH (Paravirtualized with Hardware extensions) mode, reducing code surface and improving compatibility. MiniOS stub domains isolate backend drivers from dom0 kernel, enhancing security—check <code>stubdom/</code> for examples.</p>
+<p>For ongoing development, monitor the <code>xen-devel</code> mailing list and the Xen Project GitHub repository, as the codebase has modernized considerably since 2013.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>optionprocess(3) · Linux Manual Pages</title>
+<meta name="description" content="optionProcess – this is the main option processing routine">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-optionprocess/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>optionprocess(3)</h1>
+
+
+
+
+
+<p>optionProcess &#8211; this is the main option processing routine</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;your-opts.h&gt;
+cc[...] - o outfile infile.c - lopts[...] int optionProcess(tOptions *opts, int a_ct, char **a_v);
+</code></pre>
+<h2>Description</h2>
+<p>This is the main entry point for processing options. It is intended that this procedure be called once at the beginning of the execution of a program. Depending on options selected earlier, it is sometimes necessary to stop and restart option processing, or to select completely different sets of options. This can be done easily, but you generally do not want to do this. The number of arguments processed always includes the program name. If one of the arguments is &quot;&#8211;&quot;, then it is counted and the processing stops. If an error was encountered and errors are to be tolerated, then the returned value is the index of the argument causing the error. A hyphen by itself (&quot;-&quot;) will also cause processing to stop and will <i>not</i> be counted among the processed arguments. A hyphen by itself is treated as an operand. Encountering an operand stops option processing.</p>
+<dl>
+<dt><i>opts</i></dt>
+<dd>program options descriptor</dd>
+<dt><i>a_ct</i></dt>
+<dd>program arg count</dd>
+<dt><i>a_v</i></dt>
+<dd>program arg vector </dd>
+<h2>Return Value</h2>
+<p>the count of the arguments processed </p>
+<h2>Errors</h2>
+<p>Errors will cause diagnostics to be printed. <code><a href="/docs/linux/man/3-exit/">exit</a>(3)</code> may or may not be called. It depends upon whether or not the options were generated with the &quot;allow-errors&quot; attribute, or if the ERRSKIP_OPTERR or ERRSTOP_OPTERR macros were invoked.</p>
+<h2>See Also</h2>
+<p>The <i>info</i> documentation for the -l<i>opts</i> library.<br />
+ <a href="/docs/linux/man/3-ao_string_tokenize/">ao_string_tokenize</a>(3), configFileLoad(3), <a href="/docs/linux/man/3-optionfileload/">optionFileLoad</a>(3), <a href="/docs/linux/man/3-optionfindnextvalue/">optionFindNextValue</a>(3), <a href="/docs/linux/man/3-optionfindvalue/">optionFindValue</a>(3), <a href="/docs/linux/man/3-optionfree/">optionFree</a>(3), <a href="/docs/linux/man/3-optiongetvalue/">optionGetValue</a>(3), <a href="/docs/linux/man/3-optionloadline/">optionLoadLine</a>(3), <a href="/docs/linux/man/3-optionmemberlist/">optionMemberList</a>(3), <a href="/docs/linux/man/3-optionnextvalue/">optionNextValue</a>(3), <a href="/docs/linux/man/3-optiononlyusage/">optionOnlyUsage</a>(3), <a href="/docs/linux/man/3-optionrestore/">optionRestore</a>(3), <a href="/docs/linux/man/3-optionsavefile/">optionSaveFile</a>(3), <a href="/docs/linux/man/3-optionsavestate/">optionSaveState</a>(3), <a href="/docs/linux/man/3-optionunloadnested/">optionUnloadNested</a>(3), <a href="/docs/linux/man/3-optionversion/">optionVersion</a>(3), <a href="/docs/linux/man/3-strequate/">strequate</a>(3), <a href="/docs/linux/man/3-streqvcmp/">streqvcmp</a>(3), <a href="/docs/linux/man/3-streqvmap/">streqvmap</a>(3), <a href="/docs/linux/man/3-strneqvcmp/">strneqvcmp</a>(3), <a href="/docs/linux/man/3-strtransform/">strtransform</a>(3), </p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

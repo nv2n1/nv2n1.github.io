@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xtremoveinput(3) · Linux Manual Pages</title>
+<meta name="description" content="XtAppAddInput, XtRemoveInput – register and remove an input source">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xtremoveinput/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xtremoveinput(3)</h1>
+
+
+
+
+
+<p>XtAppAddInput, XtRemoveInput &#8211; register and remove an input source </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/Intrinsic.h&gt;</p>
+<dl COMPACT>
+<dd>XtInputId XtAppAddInput(XtAppContext <i>app_context</i>, int <i>source</i>, XtPointer <i>condition</i>, XtInputCallbackProc <i>proc</i>, XtPointer <i>client_data</i>);</dd>
+<dd>void XtRemoveInput(XtInputId <i>id</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>app_context</i></dt>
+<dd>Specifies the application context that identifies the application.</dd>
+<dt><i>client_data</i></dt>
+<dd>Specifies the argument that is to be passed to the specified procedure when input is available.</dd>
+<dt><i>condition</i></dt>
+<dd>Specifies the mask that indicates a read, write, or exception condition or some operating system dependent condition.</dd>
+<dt><i>id</i></dt>
+<dd>Specifies the ID returned from the corresponding <code>XtAppAddInput</code> call.</dd>
+<dt><i>proc</i></dt>
+<dd>Specifies the procedure that is to be called when input is available.</dd>
+<dt><i>source</i></dt>
+<dd>Specifies the source file descriptor on a UNIX-based system or other operating system dependent device specification.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XtAppAddInput</code> function registers with the Intrinsics read routine a new source of events, which is usually file input but can also be file output. Note that file should be loosely interpreted to mean any sink or source of data. <code>XtAppAddInput</code> also specifies the conditions under which the source can generate events. When input is pending on this source, the callback procedure is called. </p>
+<p> The legal values for the condition argument are operating-system dependent. On a UNIX-based system, the condition is some union of <code>XtInputReadMask</code>, <code>XtInputWriteMask</code>, and <code>XtInputExceptMask</code>. The <code>XtRemoveInput</code> function causes the Intrinsics read routine to stop watching for input from the input source.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xtappaddtimeout/">XtAppAddTimeOut</a>(3),<a href="/docs/linux/man/3-xtappaddsignal/">XtAppAddSignal</a>(3)<br />
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+ <i>Xlib &#8211; C Language X Interface</i> </p>
+<h2>Bugs</h2>
+<p>In ANSI C it is necessary to cast the condition to an XtPointer, e.g.:</p>
+<dl COMPACT>
+<dd>XtAppAddInput(app_context,</dd>
+<dl COMPACT>
+<dd>source,<br />
+ <code>(XtPointer)</code> (XtInputReadMask | XtInputWriteMask),<br />
+ proc,<br />
+ client_data);</dd></dl>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

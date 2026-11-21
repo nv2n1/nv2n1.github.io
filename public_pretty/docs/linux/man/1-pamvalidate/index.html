@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pamvalidate(1) · Linux Manual Pages</title>
+<meta name="description" content="pamvalidate – validate Netpbm image format">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pamvalidate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pamvalidate(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pamvalidate &#8211; validate Netpbm image format</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pamvalidate</code> </p>
+<h2>DESCRIPTION</h2>
+<p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
+<p> <code>pamvalidate</code> copies a Netpbm image from Standard Input to Standard Output, except that if there are certain violations of the image format in the input, <code>pamvalidate</code> fails <i>without producing any output</i>. </p>
+<p> This is most useful in a pipeline, before a stage you don&#8217;t want to start working on Netpbm input until it knows it can get all the way through it. For example, assume you are converting PPM images to PNG and you don&#8217;t want to produce a partial PNG file under any circumstance. If you just use <code>pnmtopng</code>, and the PPM input is truncated halfway through the raster, <code>pnmtopng</code> fails, but also produces about half of a PNG file. To prevent that, pass your PPM input through <code>pamvalidate</code> on its way to <code>pnmtopng</code>. Then, <code>pamvalidate</code> will fail, and consequently the pipeline will fail, before <code>pnmtopng</code> has seen any input and therefore before <code>pnmtopng</code> has produced any output. </p>
+<p> These are the kinds of format violations <code>pamvalidate</code> detects: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> A purported sample value exceeds the declared maxval.</dd>
+<dt>&bull;</dt>
+<dd> The stream ends prematurely. </dd>
+</dl>
+<p> This program works on multi-image streams, producing a corresponding output stream. </p>
+<p> See <code>pamfix</code> for a way to salvage an invalid Netpbm image stream. </p>
+<h2>OPTIONS</h2>
+<p> None. </p>
+<h2>SEE ALSO</h2>
+<p> <code>pam</code>(1) </p>
+<p> <code>pnm</code>(1) </p>
+<p> <code><a href="/docs/linux/man/1-pamfix/">pamfix</a></code>(1) </p>
+<h2>HISTORY</h2>
+<p> <code>pamvalidate</code> was new in Netpbm 10.66 (March 2014). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

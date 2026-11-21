@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>antlr3-initial_call_stack_size(3) · Linux Manual Pages</title>
+<meta name="description" content="include/antlr3commontreenodestream.h –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-antlr3-initial_call_stack_size/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>antlr3-initial_call_stack_size(3)</h1>
+
+
+
+
+
+<p>include/antlr3commontreenodestream.h &#8211; </p>
+<p> Definition of the ANTLR3 common tree node stream.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
+ #include &lt;<a href="file:/usr/include/antlr3commontreeadaptor.h">antlr3commontreeadaptor.h</a>&gt;<br />
+ #include &lt;<a href="file:/usr/include/antlr3commontree.h">antlr3commontree.h</a>&gt;<br />
+ #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;<br />
+ #include &lt;<a href="file:/usr/include/antlr3intstream.h">antlr3intstream.h</a>&gt;<br />
+ #include &lt;<a href="file:/usr/include/antlr3string.h">antlr3string.h</a>&gt; </p>
+<h3>Data Structures</h3>
+<p>struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> </p>
+<p> struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> </p>
+<p> struct <code>ANTLR3_TREE_WALK_STATE_struct</code><br />
+ <i>This structure is used to save the state information in the treenodestream when walking ahead with cyclic DFA or for syntactic predicates, we need to record the state of the tree node stream. </i></p>
+<h3>Defines</h3>
+<p>#define <code>DEFAULT_INITIAL_BUFFER_SIZE</code> 100<br />
+ <i>Token buffer initial size settings ( will auto increase). </i><br />
+ #define <code>INITIAL_CALL_STACK_SIZE</code> 10 </p>
+<h3>Typedefs</h3>
+<p>typedef struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> <code>ANTLR3_COMMON_TREE_NODE_STREAM</code> </p>
+<p> typedef struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> <code>ANTLR3_TREE_NODE_STREAM</code> </p>
+<p> typedef struct <code>ANTLR3_TREE_WALK_STATE_struct</code> <code>ANTLR3_TREE_WALK_STATE</code><br />
+ <i>This structure is used to save the state information in the treenodestream when walking ahead with cyclic DFA or for syntactic predicates, we need to record the state of the tree node stream. </i></p>
+<h2>Detailed Description</h2>
+<p>Definition of the ANTLR3 common tree node stream. </p>
+<h2>Define Documentation</h2>
+<h3>#define DEFAULT_INITIAL_BUFFER_SIZE 100</h3>
+<p>Token buffer initial size settings ( will auto increase). </p>
+<p> Referenced by antlr3CommonTreeNodeStreamNew(), and antlr3CommonTreeNodeStreamNewStream().</p>
+<h3>#define INITIAL_CALL_STACK_SIZE 10</h3>
+<p>Referenced by antlr3CommonTreeNodeStreamNew(), and reset().</p>
+<h2>Typedef Documentation</h2>
+<h3>typedef struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code></h3>
+<p>&nbsp;<wbr>&nbsp;<wbr><code>ANTLR3_COMMON_TREE_NODE_STREAM</code>&quot;</p>
+<h3>typedef struct <code>ANTLR3_TREE_NODE_STREAM_struct</code></h3>
+<p>&nbsp;<wbr>&nbsp;<wbr><code>ANTLR3_TREE_NODE_STREAM</code>&quot;</p>
+<h3>typedef struct <code>ANTLR3_TREE_WALK_STATE_struct</code></h3>
+<p>&nbsp;<wbr>&nbsp;<wbr><code>ANTLR3_TREE_WALK_STATE</code>&quot; </p>
+<p> This structure is used to save the state information in the treenodestream when walking ahead with cyclic DFA or for syntactic predicates, we need to record the state of the tree node stream. This class wraps up the current state of the CommonTreeNodeStream. Calling <code>mark()</code> will push another of these on the markers stack.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for ANTLR3C from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sasl_setpass(3) · Linux Manual Pages</title>
+<meta name="description" content="sasl_setpass – Check a plaintext password">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sasl_setpass/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sasl_setpass(3)</h1>
+
+
+
+
+
+<p>sasl_setpass &#8211; Check a plaintext password</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;sasl/sasl.h&gt;
+int sasl_setpass(sasl_conn_t *conn,
+const char *user,
+const char *pass, unsigned passlen,
+const char *oldpass, unsigned oldpasslen,
+unsigned flags)</code></pre>
+<h2>Description</h2>
+<p><code>sasl_setpass</code> will set passwords in the sasldb, and trigger the setpass callbacks for all available mechanisms. <i>user</i> is the username to set the password for. <i>pass</i> and <i>passlen</i> are the password to set and its length <i>oldpass</i> and <i>oldpasslen</i> are the old password &amp; its length (and are optional) <i>flags</i> Are flags including SASL_SET_CREATE and SASL_SET_DISABLE (to cause the creating of nonexistent accounts and the disabling of an account, respectively) </p>
+<h2>Notes</h2>
+<p><i>oldpass</i> and <i>oldpasslen</i> are unused in the Cyrus SASL implementation, though are passed on to any mechanisms that may require them. </p>
+<h2>Return Value</h2>
+<p>Returns SASL_OK on success. SASL error code on failure. </p>
+<h2>Conforming To</h2>
+<p>RFC 4422</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-sasl/">sasl</a>(3), <a href="/docs/linux/man/3-sasl_errors/">sasl_errors</a>(3), <a href="/docs/linux/man/3-sasl_checkpass/">sasl_checkpass</a>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

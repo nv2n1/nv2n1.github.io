@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_twobodymointstransform_ikjy(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::TwoBodyMOIntsTransform_ikjy –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_twobodymointstransform_ikjy/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_twobodymointstransform_ikjy(3)</h1>
+
+
+
+
+
+<p>sc::TwoBodyMOIntsTransform_ikjy &#8211; </p>
+<p> <code>TwoBodyMOIntsTransform_ikjy</code> computes (ik|jy) integrals using parallel integrals-direct AO-&gt;MO transformation.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;transform_ikjy.h&gt;</code></pre>
+<p> Inherits <code>sc::TwoBodyMOIntsTransform</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>TwoBodyMOIntsTransform_ikjy</code> (<code>StateIn</code> &amp;) </p>
+<p> <code>TwoBodyMOIntsTransform_ikjy</code> (const std::string &amp;name, const <code>Ref</code>&lt; <code>MOIntsTransformFactory</code> &gt; &amp;factory, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space1, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space2, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space3, const <code>Ref</code>&lt; <code>MOIndexSpace</code> &gt; &amp;space4) </p>
+<p> void <code>save_data_state</code> (<code>StateOut</code> &amp;)<br />
+ <i>Save the base classes (with save_data_state) and the members in the same order that the </i><code>StateIn</code> CTOR initializes them.<br />
+ std::string <code>type</code> () const<br />
+ <i>Implementation of </i><code>TwoBodyMOIntsTransform::type()</code>.<br />
+ const size_t <code>memgrp_blksize</code> () const<br />
+ <i>Returns the number of bytes allocated for each ij-block of integrals of one type in </i><code>MemoryGrp</code>.<br />
+ void <code>compute</code> ()<br />
+ <i>Computes transformed integrals. </i><br />
+ void <code>check_int_symm</code> (double threshold=<code>TwoBodyMOIntsTransform::zero_integral</code>) const throw (ProgrammingError)<br />
+ <i>Check symmetry of transformed integrals. </i></p>
+<h2>Detailed Description</h2>
+<p><code>TwoBodyMOIntsTransform_ikjy</code> computes (ik|jy) integrals using parallel integrals-direct AO-&gt;MO transformation.</p>
+<h2>Member Function Documentation</h2>
+<h3>void sc::TwoBodyMOIntsTransform_ikjy::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>
+<p>Save the base classes (with save_data_state) and the members in the same order that the <code>StateIn</code> CTOR initializes them. This must be implemented by the derived class if the class has data. </p>
+<p> Reimplemented from <code>sc::TwoBodyMOIntsTransform</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

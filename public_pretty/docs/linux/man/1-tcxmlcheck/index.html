@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcxmlcheck(1) · Linux Manual Pages</title>
+<meta name="description" content="tcxmlcheck – Check information in smil input file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tcxmlcheck/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tcxmlcheck(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> tcxmlcheck &#8211; Check information in smil input file</p>
+<h2>SYNOPSIS</h2>
+<p> <code>tcxmlcheck</code> [ <code>options</code> ] [ <code>&#8211;</code> ]</p>
+<h2>COPYRIGHT</h2>
+<p> <code>tcxmlcheck</code> is Copyright (C) by Malanchini Marzio</p>
+<h2>DESCRIPTION</h2>
+<p> <code>tcxmlcheck</code> Check a smil input file. Most of the options are used by transcode at run time.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-i</code> <i>name</i></dt>
+<dd> Specify the name of the input video/audio smil file [stdin].</dd>
+<dt><code>-p</code> <i>name</i></dt>
+<dd> Specify the name of the ausiliary audio smil file [none]</dd>
+<dt><code>-B</code></dt>
+<dd> Binary output to stdout (used by transcode) [off] Force to print to stdout the vob structure of the smil file</dd>
+<dt><code>-S</code></dt>
+<dd> Write stdin into shared memory (used by transcode)[off]. This is used by transcode at run time to store the vob information that will be modified by calling <code>tcxmlcheck</code> with the -V or -A options.</dd>
+<dt><code>-V</code></dt>
+<dd> Check only video smil file [off]. This is used by transcode at run time: it read the smil file to override some information in the vob structure.</dd>
+<dt><code>-A</code></dt>
+<dd> Check only ausiliary audio smil file [off]. This is used by transcode at run time: it read the smil file to override some information in the vob structure.</dd>
+<dt><code>-v</code></dt>
+<dd> Print the version</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Command: </p>
+<p> <code>tcxmlcheck -i filename.smil</code> </p>
+<p> Return <code>0</code> if the input file is correct, <code>1</code> with an error message in the other cases. </p>
+<p> <code>tcxmlcheck -i filename.smil -S -B -V</code> </p>
+<p> Analyze the <code>filename.smil</code> and store the vob structure into share memory (used only by transcode at run time). </p>
+<p> <code>tcxmlcheck -i filename.smil -B -V</code> </p>
+<p> Retrive the content from the share memory related to <code>filename.smil</code> (used only by transcode at run time). </p>
+<h2>AUTHORS</h2>
+<p> <code>tcxmlcheck</code> was written by Marzio Malanchini<br />
+ &lt;marzio_malanchini [at] vodafone.it&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

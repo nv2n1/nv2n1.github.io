@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rpms2solv(1) · Linux Manual Pages</title>
+<meta name="description" content="rpms2solv – convert one or more rpms into a solv file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rpms2solv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rpms2solv(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> rpms2solv &#8211; convert one or more rpms into a solv file </p>
+<h2>SYNOPSIS</h2>
+<p> <code>rpms2solv</code> [<i>OPTIONS</i>] <i>RPM1.rpm</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> The rpms2solv tool converts the header data from one or more rpms into the solv file written to standard output. </p>
+<p> <code>-m</code> <i>MANIFESTFILE</i></p>
+<dl>
+<dt>
+</dt><dd> Read the rpm file names from the specified <i>MANIFESTFILE</i>. You can use <code>&#8211;</code> to read the manifest from standard input.</dd></dl>
+<p> <code>-0</code></p>
+<dl>
+<dt>
+</dt><dd> Use a null byte as line terminator for manifest files instead of a newline. This is useful if the file names can contain newlines. See also the <code>-print0</code> option in <code>find</code>.</dd></dl>
+<p> <code>-F</code></p>
+<dl>
+<dt>
+</dt><dd> Do not put all files from the headers into the file list, but instead use the filtering also found in <code>createrepo</code>.</dd></dl>
+<p> <code>-k</code></p>
+<dl>
+<dt>
+</dt><dd> Read pubkeys instead of rpms.</dd></dl>
+<p> <code>-K</code></p>
+<dl>
+<dt>
+</dt><dd> Read pubkey keyrings instead of rpms.</dd></dl>
+<p> <code>-X</code></p>
+<dl>
+<dt>
+</dt><dd> Autoexpand SUSE pattern and product provides into packages.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-rpmdb2solv/">rpmdb2solv</a>(1)</p>
+<h2>AUTHOR</h2>
+<p> Michael Schroeder &lt;mls [at] suse.de&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

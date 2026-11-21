@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pptpsetup(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pptpsetup/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pptpsetup(8)</h1>
+
+
+
+
+
+<p>pptpsetup - Point-to-Point Tunneling Protocol setup</p>
+<h2>Synopsis</h2>
+<pre> pptpsetup --create &lt;TUNNEL&gt; --server &lt;SERVER&gt; [--domain &lt;DOMAIN&gt;]
+ --username &lt;USERNAME&gt; [--password &lt;PASSWORD&gt;]
+ [--encrypt] [--start]
+ pptpsetup --delete &lt;TUNNEL&gt;</pre>
+<h2>Description</h2>
+<p><font SIZE="-1">PPTP</font> Client is a Linux, FreeBSD, NetBSD and OpenBSD client for the proprietary Microsoft Point-to-Point Tunneling Protocol, <font SIZE="-1">PPTP.</font></p>
+<p>This script configures <font SIZE="-1">PPTP</font> Client on Linux.</p>
+<h2>Options</h2>
+<dl><dt>--create <font SIZE="-1">TUNNEL</font>
+</dt><dd>create a tunnel named <font SIZE="-1">TUNNEL</font>
+</dd><dt>--delete <font SIZE="-1">TUNNEL</font>
+</dt><dd>delete the file /etc/ppp/peers/TUNNEL and any lines from /etc/ppp/chap-secrets that contains ``<font SIZE="-1">TUNNEL''</font> as a single word
+</dd><dt>--server <font SIZE="-1">SERVER</font>
+</dt><dd>the <font SIZE="-1">IP</font> address or host name of the server
+</dd><dt>--domain <font SIZE="-1">DOMAIN</font>
+</dt><dd>the authentication domain name (optional)
+</dd><dt>--username <font SIZE="-1">USERNAME</font>
+</dt><dd>the username you are to use
+</dd><dt>--password <font SIZE="-1">PASSWORD</font>
+</dt><dd>the password you are to use. If you don't specify a password, pptpsetup will ask for one.
+</dd><dt>--encrypt
+</dt><dd>whether encryption is required
+</dd><dt>--start
+</dt><dd>whether the connection should be started after configuration.</dd></dl>
+<h2>Author</h2>
+<p>Nelson Ferraz &lt;nferraz at gmail.com&gt;, based on James Cameron&rsquo;s <font SIZE="-1">PPTP</font> Client Debian <font SIZE="-1">HOWTO.</font></p>
+<h2>See Also</h2>
+<dl><dt><font SIZE="-1">PPTP</font> Client Debian <font SIZE="-1">HOWTO</font>
+</dt><dd><a rel="nofollow" HREF="http://pptpclient.sourceforge.net/howto-debian.phtml">http://pptpclient.sourceforge.net/howto-debian.phtml</a>
+</dd><dt><font SIZE="-1">PPTP</font> Client Diagnosis <font SIZE="-1">HOWTO</font>
+</dt><dd><a rel="nofollow" HREF="http://pptpclient.sourceforge.net/howto-diagnosis.phtml">http://pptpclient.sourceforge.net/howto-diagnosis.phtml</a></dd></dl>
+<h2>Copyright</h2>
+<p>pptpsetup - Point-to-Point Tunneling Protocol setup</p>
+<p>Copyright (C) 2006 Nelson Ferraz</p>
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> See the <font SIZE="-1">GNU</font> General Public License for more details.</p>
+<p>You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, <font SIZE="-1">MA</font> 02110-1301 <font SIZE="-1">USA</font></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

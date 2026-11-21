@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>seusers(5) · Linux Manual Pages</title>
+<meta name="description" content="seusers – The SELinux GNU/Linux user to SELinux user mapping configuration file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-seusers/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>seusers(5)</h1>
+
+
+
+
+
+<p>seusers &#8211; The SELinux GNU/Linux user to SELinux user mapping configuration file</p>
+<h2>Description</h2>
+<p>The <i>seusers</i> file contains a list GNU/Linux user to SELinux user mapping for use by SELinux-aware login applications such as <code><a href="/docs/linux/man/8-pam/">PAM</a></code>(8). </p>
+<p> <code><a href="/docs/linux/man/3-selinux_usersconf_path/">selinux_usersconf_path</a></code>(3) will return the active policy path to this file. The default SELinux users mapping file is located at:</p>
+<dl>
+<dd><i>/etc/selinux/{SELINUXTYPE}/seusers</i></dd></dl>
+<p> Where <i>{SELINUXTYPE}</i> is the entry from the selinux configuration file <i>config</i> (see <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5)). </p>
+<p> <code><a href="/docs/linux/man/3-getseuserbyname/">getseuserbyname</a></code>(3) reads this file to map a GNU/Linux user or group to an SELinux user.</p>
+<h2>File Format</h2>
+<p>Each line of the <i>seusers</i> configuration file consists of the following: </p>
+<dl>
+<dd>[<code>%</code><i>group_id</i>]|[<i>user_id</i>]<code>:</code><i>seuser_id</i>[<code>:</code><i>range</i>]</dd></dl>
+<p> Where:</p>
+<dl>
+<dd><i>group_id</i>|<i>user_id</dd>
+<dl>
+<dd></i>The GNU/Linux user id, or if preceded by the percentage (<code>%</code>) symbol, then a GNU/Linux group id.<br />
+ An optional entry set to <code>__default__</code> can be provided as a fall back if required.</dd></dl>
+<p> <i>seuser_id</i></p>
+<dl>
+<dd>The SELinux user identity.</dd></dl>
+<p> <i>range</i></p>
+<dl>
+<dd>The optional level or range for an MLS/MCS policy.</dd></dl>
+</dl>
+<h2>Example</h2>
+<p># ./seusers<br />
+ system_u:system_u:s0-s15:c0.c255<br />
+ root:root:s0-s15:c0.c255<br />
+ fred:user_u:s0<br />
+ __default__:user_u:s0<br />
+ %user_group:user_u:s0</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/8-pam/">PAM</a></code>(8), <code><a href="/docs/linux/man/3-selinux_usersconf_path/">selinux_usersconf_path</a></code>(3), <code><a href="/docs/linux/man/3-getseuserbyname/">getseuserbyname</a></code>(3), <code><a href="/docs/linux/man/5-selinux_config/">selinux_config</a></code>(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

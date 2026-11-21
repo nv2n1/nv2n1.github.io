@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glite-lb-msg-brokers(8) · Linux Manual Pages</title>
+<meta name="description" content="glite-lb-msg-brokers – manipulate messaging brokers information">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-glite-lb-msg-brokers/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>glite-lb-msg-brokers(8)</h1>
+
+
+
+
+
+<p>glite-lb-msg-brokers &#8211; manipulate messaging brokers information</p>
+<h2>Synopsis</h2>
+<p><code>glite-lb-msg-brokers</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] <code>find</code>|<code>list</code></p>
+<h2>Description</h2>
+<p><code>glite-lb-msg-brokers</code> has two different modes of operation. In all cases, it manipulates information about messaging brokers and reports a (possibly empty) list of broker URIs, one per line.</p>
+<dl>
+<dt><code>list</code></dt>
+<dd>list all the URIs declared in the <font SIZE="-1">BDII,</font> optionally filtered by network</dd>
+<dt><code>find</code></dt>
+<dd>the <code>list</code> functionality described above plus filter by GlueServiceStatus</dd></dl>
+<p> A fatal error (e.g. cannot contact the <font SIZE="-1">BDII</font>) will halt the program. A warning (e.g. a given <font SIZE="-1">URI</font> cannot be contacted) will be reported unless <code>&#8211;quiet</code> is used. Both will be sent to <font SIZE="-1">STDERR.</font> </p>
+<p> The exit status will be 0 on success (with or without warnings) or different from 0 in case of a fatal error.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;bdii</code> <i>string</i></dt>
+<dd>specify the <i>name</i> or <i>name</i>:<i>port</i> of the <font SIZE="-1">BDII</font> to contact; this can also be a list, separated by commas or semicolons; if not set, it defaults to <tt>$LCG_GFAL_INFOSYS</tt></dd>
+<dt><code>&#8211;cache</code> <i>path</i></dt>
+<dd>specify the path of a file to update with the list of URIs; if this is set, nothing will be printed on <font SIZE="-1">STDOUT</font>; note: if the list is empty, the file will <i>not</i> be updated</dd>
+<dt><code>&#8211;debug</code>, <code>-d</code></dt>
+<dd>report debugging information; can be used multiple times for increased verbosity</dd>
+<dt><code>&#8211;help</code>, <code>-h</code>, <code>-?</code></dt>
+<dd>show some help</dd>
+<dt><code>&#8211;manual</code>, <code>-m</code></dt>
+<dd>show the complete man page</dd>
+<dt><code>&#8211;network</code> <i>string</i></dt>
+<dd>consider only the brokers for this network (for example <font SIZE="-1">PROD</font> or TEST-NWOB)</dd>
+<dt><code>&#8211;quiet</code>, <code>-q</code></dt>
+<dd>suppress the printing of warnings</dd>
+<dt><code>&#8211;sort</code>, <code>-s</code></dt>
+<dd>sort the brokers per elapsed time to perform the test</dd></dl>
+<h2>Environment</h2>
+<dl>
+<dt><font SIZE="-1"><code>LCG_GFAL_INFOSYS</code></font></dt>
+<dd><i>host</i>[:<i>port</i>] of the <font SIZE="-1">BDII</font> to contact</dd></dl>
+<h2>Bugs</h2>
+<p>Please report all bugs to <font SIZE="-1">CESNET</font> gLite L&amp;B issue tracker available at <i><a rel="nofollow" href="https://github.com/CESNET/glite-lb/issues">https://github.com/CESNET/glite-lb/issues</a></i></p>
+<h2>Authors</h2>
+<p>Lionel Cons &lt;<a rel="nofollow" href="http://cern.ch/lionel.cons">http://cern.ch/lionel.cons</a>&gt; </p>
+<p> L&amp;B Product Team, <font SIZE="-1">CESNET </font>&lt;<a rel="nofollow" href="http://cesnet.cz">http://cesnet.cz</a>&gt;</p>
+<h2>See Also</h2>
+<p>Net::STOMP::Client </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

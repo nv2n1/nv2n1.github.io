@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>paths_(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::LongstaffSchwartzPathPricer – Longstaff-Schwarz path pricer for early exercise options.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-paths_/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>paths_(3)</h1>
+
+
+
+
+
+<p>QuantLib::LongstaffSchwartzPathPricer &#8211; Longstaff-Schwarz path pricer for early exercise options. </p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;ql/methods/montecarlo/longstaffschwartzpathpricer.hpp&gt;</code></pre>
+<p> Inherits <code>PathPricer&lt; PathType &gt;</code>.</p>
+<h3>Public Types</h3>
+<p>typedef EarlyExerciseTraits&lt; PathType &gt;::StateType <code>StateType</code></p>
+<h3>Public Member Functions</h3>
+<p><code>LongstaffSchwartzPathPricer</code> (const <code>TimeGrid</code> &amp;times, const boost::shared_ptr&lt; <code>EarlyExercisePathPricer</code>&lt; PathType &gt; &gt; &amp;, const boost::shared_ptr&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure) </p>
+<p> <code>Real</code> <code>operator()</code> (const PathType &amp;path) const </p>
+<p> virtual void <code>calibrate</code> ()</p>
+<h3>Protected Attributes</h3>
+<p>bool <code>calibrationPhase_</code> </p>
+<p> const boost::shared_ptr&lt; <code>EarlyExercisePathPricer</code>&lt; PathType &gt; &gt; <code>pathPricer_</code> </p>
+<p> boost::scoped_array&lt; <code>Array</code> &gt; <code>coeff_</code> </p>
+<p> boost::scoped_array&lt; <code>DiscountFactor</code> &gt; <code>dF_</code> </p>
+<p> std::vector&lt; PathType &gt; <code>paths_</code> </p>
+<p> const std::vector&lt; boost::function1&lt; <code>Real</code>, StateType &gt; &gt; <code>v_</code></p>
+<h2>Detailed Description</h2>
+<h3>template&lt;class PathType&gt; class QuantLib::LongstaffSchwartzPathPricer&lt; PathType &gt;</h3>
+<p>Longstaff-Schwarz path pricer for early exercise options. </p>
+<p> References: </p>
+<p> Francis Longstaff, Eduardo Schwartz, 2001. Valuing American Options by Simulation: A Simple Least-Squares Approach, The Review of Financial Studies, Volume 14, No. 1, 113-147 </p>
+<p> <code>Tests</code></p>
+<dl>
+<dd>the correctness of the returned value is tested by reproducing results available in web/literature</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

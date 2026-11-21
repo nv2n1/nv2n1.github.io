@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>udp_driver_errors(3) · Linux Manual Pages</title>
+<meta name="description" content="Error Types – The UDP driver is very close to the system code, so most errors reported by it are converted from the system errno.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-udp_driver_errors/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>udp_driver_errors(3)</h1>
+
+
+
+
+
+<p>Error Types &#8211; The UDP driver is very close to the system code, so most errors reported by it are converted from the system errno.</p>
+<h3>Enumerations</h3>
+<pre><code>enum globus_xio_udp_error_type_t { GLOBUS_XIO_UDP_ERROR_NO_ADDRS, GLOBUS_XIO_UDP_ERROR_SHORT_WRITE }</code></pre>
+<h2>Detailed Description</h2>
+<p>The UDP driver is very close to the system code, so most errors reported by it are converted from the system errno. </p>
+<p> A few of the exceptions are GLOBUS_XIO_ERROR_COMMAND, GLOBUS_XIO_ERROR_CONTACT_STRING, GLOBUS_XIO_ERROR_CANCELED, <code>GLOBUS_XIO_UDP_ERROR_NO_ADDRS</code>, and <code>GLOBUS_XIO_UDP_ERROR_SHORT_WRITE</code> </p>
+<p> <code>See also:</code></p>
+<dl>
+<dd>globus_xio_driver_error_match() </dd>
+<p> globus_error_errno_match()</dl>
+<h2>Enumeration Type Documentation</h2>
+<h3>enum <code>globus_xio_udp_error_type_t</code></h3>
+<p>UDP driver specific error types. </p>
+<p> <code>Enumerator: </code></p>
+<dl>
+<dt><i>GLOBUS_XIO_UDP_ERROR_NO_ADDRS </i></dt>
+<dd>Indicates that no IPv4/6 compatible sockets could be resolved for the specified hostname.</dd>
+<dt><i>GLOBUS_XIO_UDP_ERROR_SHORT_WRITE </i></dt>
+<dd>Indicates that a write of the full buffer failed. Possibly need to increase the send buffer size.</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for globus xio from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

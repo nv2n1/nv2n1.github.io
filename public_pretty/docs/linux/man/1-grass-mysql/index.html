@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grass-mysql(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-grass-mysql/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>grass-mysql(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>MySQL database driver in GRASS enables GRASS to store vector attributes in MySQL server.</p>
+<p>Because vector attribute tables are created automaticaly when a new vector is written and the name of the table is the same as the name of the vector it is good practice to create a new database for each GRASS mapset.</p>
+<h2>Creating a MySQL database</h2>
+<p>A new database is created within MySQL:
+mysql&gt; CREATE DATABASE mydb;
+See the MySQL manual for details.</p>
+<h2>Driver and database name</h2>
+<p>GRASS modules require 2 parameters to connect to a database. Those parameters are &lsquo;driver&rsquo; and &lsquo;database&rsquo;. For MySQL driver the parameter &lsquo;driver&rsquo; should be set to value &lsquo;mysql&rsquo;. The parameter &lsquo;database&rsquo; can be given in two formats:</p>
+<dl>
+<dl>
+<dt>
+</dt><dd> 
+&nbsp;<wbr>Database name - in case of connection from localhost
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>String of comma separated list of kye=value options.&nbsp;<wbr> Supported options are:
+</dd><dl>
+<dl>
+<dt>
+</dt><dd> 
+&nbsp;<wbr>dbname - database name
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>host - host name or IP address
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>port - server port number&nbsp;<wbr></dd></dl>
+</dl>
+</dl>
+</dl>
+ Examples of connection parameters: 
+<p> <wbr> <wbr>db.connect driver=mysql database=mytest</p>
+<p> <wbr> <wbr>db.connect driver=mysql database=&lsquo;dbname=mytest,host=test.grass.org&rsquo;</p>
+<h2>Data types</h2>
+<p>GRASS supports almost all MySQL data types with following limitations:</p>
+<dl>
+<dl>
+<dt>
+</dt><dd> 
+&nbsp;<wbr>Binary columns&nbsp;<wbr>(BINARY, VARBINARY, TINYBLOB, MEDIUMBLOB, BLOB, LONGBLOB) are not not supported. If a table with binary column(s) is used in GRASS a warning is printed and only the supported columns are returned in query results.
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>Columns of type SET and ENUM are represented as string&nbsp;<wbr>(VARCHAR).&nbsp;<wbr>
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>Very large integers in columns of type BIGINT can be lost&nbsp;<wbr> or corrupted because GRASS does not support 64 bin integeres on most platforms.
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>GRASS does not currently distinguish types TIMESTAMP and&nbsp;<wbr> DATETIME. Both types are in GRASS interpreted as TIMESTAMP.</dd></dl>
+</dl>
+<h2>Indexes</h2>
+<p>GRASS modules automaticaly create index on key column of vector attributes table. The index on key column is important for performance of modules which update the attribute table, for example v.to.db, v.distance and v.what.rast.</p>
+<h2>Privileges</h2>
+<p>Because MySQL does not support groups of users and because only MySQL &lsquo;root&rsquo; can grant privileges to other users GRASS cannot automaticaly grant select privileges on created tables to group of users.</p>
+<p>If you want to give privilege to read data from your mapset to other users you have to ask your MySQL server administrator to grant select privilege to them on the MySQL database used for that mapset. For example, to allow everybody to read data in from your database &lsquo;mydb&rsquo;:</p>
+<p>shell&gt; mysql &ndash;user=root mysql
+mysql&gt; GRANT SELECT ON mydb.* TO &lsquo;&rsquo;@&rsquo;%&rsquo;;</p>
+<h2>Schemas</h2>
+<p>Because MySQL does not support database schemas the parameter cqschema&rsquo; of module db.connect should never be set to any value. If you set that parameter for MySQL driver GRASS will try to write tables to the specified schema which will result in errors.</p>
+<h2>Groups</h2>
+<p>MySQL does not support user groups. Any settings specified by &lsquo;group&rsquo; parameter of module db.connect are ignored by GRASS for MySQL driver.</p>
+<h2>SEE ALSO</h2>
+<p><i> db.connect, SQL support in GRASS GIS</i></p>
+<h2>Credits</h2>
+<p>Development of the driver was sponsored by Faunalia (Italy) as part of a project for ATAC.</p>
+<h2>AUTHOR</h2>
+<p>Radim Blazek</p>
+<p><i>Last changed: $Date: 2007-10-28 22:04:00 +0100 (Sun, 28 Oct 2007) $</i>
+Help Index</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

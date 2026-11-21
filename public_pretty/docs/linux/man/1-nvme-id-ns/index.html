@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nvme-id-ns(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nvme-id-ns/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nvme-id-ns(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>nvme-id-ns - Send NVMe Identify Namespace, return result and structure</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+nvme id - ns&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
+                    [--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;][-f | --force]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>For the NVMe device given, sends an identify namespace command and provides the result and returned structure.</p>
+<p>The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1). If the character device is given, the &lsquo;&ndash;namespace-id&rsquo; option is mandatory, otherwise it will use the ns-id of the namespace for the block device you opened. For block devices, the ns-id used can be overridden with the same option.</p>
+<p>On success, the structure may be returned in one of several ways depending on the option flags; the structure may be parsed by the program or the raw buffer may be printed to stdout.</p>
+<h2>OPTIONS</h2>
+<p>-n &lt;nsid&gt;, &ndash;namespace-id=&lt;nsid&gt;</p>
+<dl>
+<dt>
+</dt><dd> Retrieve the identify namespace structure for the given nsid. This is required for the character devices, or overrides the block nsid if given.</dd></dl>
+<p>-f, &ndash;force</p>
+<dl>
+<dt>
+</dt><dd> Request controller return the indentify namespace structure even if the namespace is not attached to the controller. This is valid only for controllers at or newer than revision 1.2. Controllers at revision lower than this may interpret the command incorrectly.</dd></dl>
+<p>-b, &ndash;raw-binary</p>
+<dl>
+<dt>
+</dt><dd> Print the raw buffer to stdout. Structure is not parsed by program. This overrides the vendor specific and human readable options.</dd></dl>
+<p>-v, &ndash;vendor-specific</p>
+<dl>
+<dt>
+</dt><dd> In addition to parsing known fields, this option will dump the vendor specific region of the structure in hex with ascii interpretation.</dd></dl>
+<p>-H, &ndash;human-readable</p>
+<dl>
+<dt>
+</dt><dd> This option will parse and format many of the bit fields into human-readable formats.</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>
+</dt><dd> &bull; Has the program interpret the returned buffer and display the known fields in a human readable format: 
+</dd><dl>
+<dt>
+</dt><dd> <pre>
+# nvme id-ns /dev/nvme0n1
+</pre></dd></dl>
+</dl>
+<dl>
+<dt>
+</dt><dd> &bull; If using the character device or overriding namespace id: 
+</dd><dl>
+<dt>
+</dt><dd> <pre>
+# nvme id-ns /dev/nvme0 -n 1
+# nvme id-ns /dev/nvme0n1 -n 1
+# nvme id-ns /dev/nvme0 --namespace-id=1
+</pre></dd></dl>
+</dl>
+<dl>
+<dt>
+</dt><dd> &bull; In addition to showing the known fields, have the program to display the vendor unique field: 
+</dd><dl>
+<dt>
+</dt><dd> <pre>
+# nvme id-ns /dev/nvme0n1 --vendor-specific
+# nvme id-ns /dev/nvme0n1 -v
+</pre></dd></dl>
+<p>The above will dump the &lsquo;vs&rsquo; buffer in hex since it doesn&rsquo;t know how to interpret it.</dl></p>
+<dl>
+<dt>
+</dt><dd> &bull; Have the program return the raw structure in binary: 
+</dd><dl>
+<dt>
+</dt><dd> <pre>
+# nvme id-ns /dev/nvme0n1 --raw-binary &gt; id_ns.raw
+# nvme id-ns /dev/nvme0n1 -b &gt; id_ns.raw
+</pre></dd></dl>
+<p>It is probably a bad idea to not redirect stdout when using this mode.</dl></p>
+<dl>
+<dt>
+</dt><dd> &bull; Alternatively you may want to send the data to another program that can parse the raw buffer. 
+</dd><dl>
+<dt>
+</dt><dd> <pre>
+# nvme id-ns /dev/nvme0n1 --raw-binary | nvme_parse_id_ns
+</pre></dd></dl>
+<p>The parse program in the above example can be a program that shows the structure in a way you like. The following program is such an example that will parse it and can accept the output through a pipe, &lsquo;|&rsquo;, as shown in the above example, or you can &lsquo;cat&rsquo; a saved output buffer to it.</dl></p>
+<dl>
+<dt>
+</dt><dd> <pre><code>
+/* File: nvme_parse_id_ns.c */
+#include &lt;linux/nvme.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+int main(int argc, char **argv)
+{
+    unsigned char buf[sizeof(struct nvme_id_ns)];
+    struct nvme_id_ns *ns = (struct nvme_id_ns *)buf;
+    if (read(STDIN_FILENO, buf, sizeof(buf)))
+        return 1;
+    printf("nsze : %#llx\n", ns-&gt;nsze);
+    printf("ncap : %#llx\n", ns-&gt;ncap);
+    return 0;
+}
+</code></pre></dd></dl>
+<h2>NVME</h2>
+<p>Part of the nvme-user suite</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

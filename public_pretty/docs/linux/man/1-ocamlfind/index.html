@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ocamlfind(1) · Linux Manual Pages</title>
+<meta name="description" content="ocamlfind – [Command-line interface of the Package manager]">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ocamlfind/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ocamlfind(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> ocamlfind &#8211; [Command-line interface of the Package manager]</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+ocamlfind query &amp;nbsp;
+[-help | other options] &amp; nbsp;
+package_name &amp;nbsp;
+...
+    &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind ocamlc &amp;nbsp;
+[-help | other options] &amp; nbsp;
+file &amp;nbsp;
+...
+    &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind ocamlcp &amp;nbsp;
+[-help | other options] &amp; nbsp;
+file &amp;nbsp;
+...
+    &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind ocamlmktop &amp;nbsp;
+[-help | other options] &amp; nbsp;
+file &amp;nbsp;
+...
+    &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind ocamlopt &amp;nbsp;
+[-help | other options] &amp; nbsp;
+file &amp;nbsp;
+...
+    &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind ocamldoc &amp;nbsp;
+[-help | other options] &amp; nbsp;
+file &amp;nbsp;
+...
+    &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind ocamldep &amp;nbsp;
+[-help | other options] &amp; nbsp;
+file &amp;nbsp;
+...
+    &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind ocamlmklib &amp;nbsp;
+[-help | other options] &amp; nbsp;
+file &amp;nbsp;
+...
+    &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind ocamlbrowser &amp;nbsp;
+[-help | other options]
+    &amp; nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind install &amp;nbsp;
+[-help | other options] &amp; nbsp;
+package_name &amp;nbsp;
+file &amp;nbsp;
+...
+    &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind remove &amp;nbsp;
+[-help | other options] &amp; nbsp;
+package_name
+    &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind list &amp;nbsp;
+[-describe]
+    &amp; nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind printconf &amp;nbsp;
+[&amp;nbsp; variable &amp; nbsp;]
+    &amp; nbsp;
+&amp;nbsp;
+&amp;nbsp;
+or : ocamlfind &amp;nbsp;
+package / command &amp;nbsp;
+arg &amp;nbsp;
+...
+    Optional toolchain selection by :
+    &amp;nbsp;
+&amp;nbsp;
+ocamlfind - toolchain &amp;nbsp;
+name &amp;nbsp;
+...</code></pre>
+<h2>THE &#8216;query&#8217; SUBCOMMAND</h2>
+<h3>Synopsis</h3>
+<pre> ocamlfind query&nbsp;<wbr>[&nbsp;<wbr>-predicates&nbsp;<wbr><i>p</i><code>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-format&nbsp;<wbr></code><i>f</i><code>&nbsp;<wbr>|<br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-long-format | -l |<br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-i-format |<br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-l-format |&nbsp;<wbr><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-a-format |<br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-o-format |&nbsp;<wbr><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-p-format |
+</code></pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

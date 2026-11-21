@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_cdstatus(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_CDStatus – Returns the current status of the given drive.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_cdstatus/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_cdstatus(3)</h1>
+
+
+
+
+
+<p>SDL_CDStatus &#8211; Returns the current status of the given drive.</p>
+<h2>Synopsis</h2>
+<p><code>#include &quot;SDL.h&quot; </p>
+<p> CDstatus SDL_CDStatus</code>(<code>SDL_CD *cdrom</code>); <code>/* Given a status, returns true if there&#8217;s a disk in the drive */ #define CD_INDRIVE(status) ((int)status &gt; 0) </code></p>
+<h2>Description</h2>
+<p>This function returns the current status of the given drive. Status is described like so: </p>
+<pre><tt>typedef enum {
+ CD_TRAYEMPTY,
+ CD_STOPPED,
+ CD_PLAYING,
+ CD_PAUSED,
+ CD_ERROR = -1
+} CDstatus;</tt></pre>
+<p>If the drive has a CD in it, the table of contents of the CD and current play position of the CD will be stored in the SDL_CD structure. </p>
+<p> The macro <code>CD_INDRIVE</code> is provided for convenience, and given a status returns true if there&#8217;s a disk in the drive. </p>
+<dl COMPACT>
+<dd><code>Note: </dd>
+<p> SDL_CDStatus</code> also updates the <i></i><code>SDL_CD</code> structure passed to it.</dl>
+<h2>Example</h2>
+<pre><tt>int playTrack(int track)
+{
+ int playing = 0;
+ if ( CD_INDRIVE(SDL_CDStatus(cdrom)) ) {
+ /* clamp to the actual number of tracks on the CD */
+ if (track &gt;= cdrom-&gt;numtracks) {
+ track = cdrom-&gt;numtracks-1;
+ }
+ if ( SDL_CDPlayTracks(cdrom, track, 0, 1, 0) == 0 ) {
+ playing = 1;
+ }
+ }
+ return playing;
+}</tt></pre>
+<h2>See Also</h2>
+<p><i></i><code>SDL_CD</code></p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

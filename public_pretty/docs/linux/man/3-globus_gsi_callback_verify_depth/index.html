@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_gsi_callback_verify_depth(3) · Linux Manual Pages</title>
+<meta name="description" content="globus_gsi_callback_constants.h –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_gsi_callback_verify_depth/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_gsi_callback_verify_depth(3)</h1>
+
+
+
+
+
+<p>globus_gsi_callback_constants.h &#8211; </p>
+<p> Globus GSI Callback.</p>
+<h2>Synopsis</h2>
+<h3>Macros</h3>
+<p>#define <code>GLOBUS_GSI_CALLBACK_VERIFY_DEPTH</code> 100 </p>
+<h3>Enumerations</h3>
+<p>enum <code>globus_gsi_callback_error_t</code> { <code>GLOBUS_GSI_CALLBACK_ERROR_SUCCESS</code> = 0, <code>GLOBUS_GSI_CALLBACK_ERROR_VERIFY_CRED</code> = 1, <code>GLOBUS_GSI_CALLBACK_ERROR_CERT_NOT_YET_VALID</code> = 2, <code>GLOBUS_GSI_CALLBACK_ERROR_CANT_GET_LOCAL_CA_CERT</code> = 3, <code>GLOBUS_GSI_CALLBACK_ERROR_CERT_HAS_EXPIRED</code> = 4, <code>GLOBUS_GSI_CALLBACK_ERROR_INVALID_PROXY</code> = 5, <code>GLOBUS_GSI_CALLBACK_ERROR_LIMITED_PROXY</code> = 6, <code>GLOBUS_GSI_CALLBACK_ERROR_INVALID_CRL</code> = 7, <code>GLOBUS_GSI_CALLBACK_ERROR_REVOKED_CERT</code> = 8, <code>GLOBUS_GSI_CALLBACK_ERROR_MIXING_DIFFERENT_PROXY_TYPES</code> = 9, <code>GLOBUS_GSI_CALLBACK_ERROR_WITH_SIGNING_POLICY</code> = 10, <code>GLOBUS_GSI_CALLBACK_ERROR_OLD_GAA</code> = 11, <code>GLOBUS_GSI_CALLBACK_ERROR_CALLBACK_DATA</code> = 12, <code>GLOBUS_GSI_CALLBACK_ERROR_ERRNO</code> = 13, <code>GLOBUS_GSI_CALLBACK_ERROR_CERT_CHAIN</code> = 14, <code>GLOBUS_GSI_CALLBACK_ERROR_WITH_CALLBACK_DATA_INDEX</code> = 15, <code>GLOBUS_GSI_CALLBACK_ERROR_PROXY_PATH_LENGTH_EXCEEDED</code> = 16, <code>GLOBUS_GSI_CALLBACK_ERROR_LAST</code> = 18 } </p>
+<h2>Detailed Description</h2>
+<p>Globus GSI Callback. </p>
+<p> <code>Author:</code></p>
+<dl COMPACT>
+<dd>Sam Meder, Sam Lang</dd></dl>
+<h2>Macro Definition Documentation</h2>
+<h3>#define GLOBUS_GSI_CALLBACK_VERIFY_DEPTH 100</h3>
+<p>Constant passed to SSL_CTX_set_verify_depth() and SSL_set_verify_depth() to increase allowed certificate depth to 100 rather than the OpenSSL default of 9. 100 is an arbitrarily chosen large value.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for globus_gsi_callback from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

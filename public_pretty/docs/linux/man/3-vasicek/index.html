@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vasicek(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::Vasicek – Vasicek model class">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-vasicek/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>vasicek(3)</h1>
+
+
+
+
+
+<p>QuantLib::Vasicek &#8211; Vasicek model class </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/models/shortrate/onefactormodels/vasicek.hpp&gt; </p>
+<p> Inherits <code>QuantLib::OneFactorAffineModel</code>. </p>
+<p> Inherited by <code>HullWhite</code>. </p>
+<h3>Classes</h3>
+<p>class <code>Dynamics</code><br />
+ <i>Short-rate dynamics in the Vasicek model. </i></p>
+<h3>Public Member Functions</h3>
+<p><code>Vasicek</code> (<code>Rate</code> r0=0.05, Real a=0.1, Real b=0.05, Real sigma=0.01, Real lambda=0.0) </p>
+<p> virtual Real <code>discountBondOption</code> (Option::Type type, Real strike, Time maturity, Time bondMaturity) const </p>
+<p> virtual boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; <code>dynamics</code> () const<br />
+ <i>returns the short-rate dynamics </i></p>
+<h3>Protected Member Functions</h3>
+<p>virtual Real <code>A</code> (Time t, Time T) const </p>
+<p> virtual Real <code>B</code> (Time t, Time T) const </p>
+<p> Real <code>a</code> () const </p>
+<p> Real <code>b</code> () const </p>
+<p> Real <code>lambda</code> () const </p>
+<p> Real <code>sigma</code> () const </p>
+<h3>Protected Attributes</h3>
+<p>Real <code>r0_</code> </p>
+<p> <code>Parameter</code> &amp; <code>a_</code> </p>
+<p> <code>Parameter</code> &amp; <code>b_</code> </p>
+<p> <code>Parameter</code> &amp; <code>sigma_</code> </p>
+<p> <code>Parameter</code> &amp; <code>lambda_</code> </p>
+<h2>Detailed Description</h2>
+<p>Vasicek model class </p>
+<p> This class implements the <code>Vasicek</code> model defined by [ dr_t = a(b &#8211; r_t)dt + igma dW_t , ] where $ a $, $ b $ and $ igma $ are constants; a risk premium $ </p>
+<hr>
+<p> $ can also be specified. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

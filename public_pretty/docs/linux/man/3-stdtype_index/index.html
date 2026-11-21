@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdtype_index(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdtype_index/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdtype_index(3)</h1>
+
+
+
+
+
+<p>std::type_index - std::type_index</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;typeindex&gt;
+class type_index; <i>(since C++11)</i>
+The type_index class is a wrapper class around a std::type_info object, that can be used as index in associative and unordered associative containers. The relationship with type_info object is maintained through a pointer, therefore type_index is CopyConstructible and CopyAssignable.</p>
+<h2>Member functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs the object
+constructor <i>(public member function)</i></p>
+<p>destructor destroys the type_index object
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i>
+(implicitly declared)</p>
+<p>operator= assigns a type_index object
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i>
+(implicitly declared)</p>
+<p>operator==
+operator!= compares the underlying std::type_info objects
+operator&lt; <i>(public member function)</i>
+operator&lt;=
+operator&gt;
+operator&gt;=
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns hashed code
+hash_code <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns implementation defined name of the type,
+name associated with underlying type_info object
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i></p>
+<h2>Helper classes</h2>
+<p>std::hash&lt;std::type_index&gt; hash support for std::type_index
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template specialization)</i>
+<i>(C++11)</i></p>
+<h2>Example</h2>
+<p>The following program is an example of an efficient type-value mapping.
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;typeinfo&gt;
+#include &lt;typeindex&gt;
+#include &lt;unordered_map&gt;
+#include &lt;string&gt;
+#include &lt;memory&gt;
+struct A {
+virtual ~A()
+{
+}
+};
+struct B : A {
+};
+struct C : A {
+};
+int main()
+{
+std::unordered_map&lt;std::type_index, std::string&gt; type_names;
+type_names[std::type_index(typeid(int))] = &quot;int&quot;;
+type_names[std::type_index(typeid(double))] = &quot;double&quot;;
+type_names[std::type_index(typeid(A))] = &quot;A&quot;;
+type_names[std::type_index(typeid(B))] = &quot;B&quot;;
+type_names[std::type_index(typeid(C))] = &quot;C&quot;;
+int i;
+double d;
+A a;
+// note that we&rsquo;re storing pointer to type A
+std::unique_ptr&lt;A&gt; b(new B);
+std::unique_ptr&lt;A&gt; c(new C);
+std::cout &lt;&lt; &quot;i is &quot; &lt;&lt; type_names[std::type_index(typeid(i))] &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;d is &quot; &lt;&lt; type_names[std::type_index(typeid(d))] &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;a is &quot; &lt;&lt; type_names[std::type_index(typeid(a))] &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;b is &quot; &lt;&lt; type_names[std::type_index(typeid(*b))] &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;c is &quot; &lt;&lt; type_names[std::type_index(typeid(*c))] &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> i is int
+ <wbr> d is double
+ <wbr> a is A
+ <wbr> b is B
+ <wbr> c is C</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> contains some type&rsquo;s information, generated by the implementation.
+type_info This is the class returned by the typeid operator.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>airdecloak-ng(1) · Linux Manual Pages</title>
+<meta name="description" content="airuncloak-ng – Removes wep cloaked framed from a pcap file.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-airdecloak-ng/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>airdecloak-ng(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> airuncloak-ng &#8211; Removes wep cloaked framed from a pcap file. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>airuncloak-ng</code> &lt;options&gt;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>airuncloak-ng</code> is a tool that removes wep cloaking from a pcap file. Some WIPS (actually one) can actively &quot;prevent&quot; cracking a WEP key by inserting chaff (fake wep frames) in the air to fool aircrack-ng. In some rare cases, cloaking fails and the key can be recovered without removing this chaff. In the cases where the key cannot be recovered, use this tool to filter out chaff. </p>
+<p> The program works by reading the input file and selecting packets from a specific network. Each selected packet is put into a list and classified (default status is &quot;unknown&quot;). Filters are then applied (in the order specified by the user) on this list. They will change the status of the packets (unknown, uncloaked, potentially cloaked or cloaked). The order of the filters is really important since each filter will base its analysis amongst other things on the status of the packets and different orders will give different results. </p>
+<p> Important requirement: The pcap file needs to have all packets (including beacons and all other &quot;useless&quot; packets) for the analysis (and if possible, prism/radiotap headers).</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><i>-h, &#8211;help</i></dt>
+<dd> Shows the help screen.</dd>
+<dt><i>-i &lt;file&gt;</i></dt>
+<dd> Path to the capture file.</dd>
+<dt><i>&#8211;ssid &lt;ESSID&gt;</i></dt>
+<dd> Essid of the network (not yet implemented) to filter.</dd>
+<dt><i>&#8211;bssid &lt;BSSID&gt;</i></dt>
+<dd> BSSID of the network to filter.</dd>
+<dt><i>&#8211;null-packets</i></dt>
+<dd> Assume that null packets can be cloaked.</dd>
+<dt><i>&#8211;disable-base-filter</i></dt>
+<dd> Do not apply base filter.</dd>
+<dt><i>&#8211;drop-frag</i></dt>
+<dd> Drop fragmented packets.</dd>
+<dt><i>&#8211;filters &lt;filters&gt;</i></dt>
+<dd> Apply different filters (separated by a comma). See below.</dd></dl>
+<h2>FILTERS</h2>
+<dl>
+<dt><i>signal</i></dt>
+<dd> Try to filter based on signal (prism or radiotap headers in the pcap file).</dd>
+<dt><i>duplicate_sn</i></dt>
+<dd> Remove all duplicate sequence numbers for both the AP and the client (that are close to each other).</dd>
+<dt><i>duplicate_sn_ap</i></dt>
+<dd> Remove duplicate sequence number for the AP only (that are close to each other).</dd>
+<dt><i>duplicate_sn_client</i></dt>
+<dd> Remove duplicate sequence number for the client only (that are close to each other).</dd>
+<dt><i>consecutive_sn</i></dt>
+<dd> Filter based on the fact that IV should be consecutive (only for AP).</dd>
+<dt><i>duplicate_iv</i></dt>
+<dd> Filter out all duplicate IV.</dd>
+<dt><i>signal_dup_consec_sn</i></dt>
+<dd> Use signal (if available), duplicate and consecutive sequence number (filtering is much more precise than using all these filters one by one).</dd></dl>
+<h2>AUTHOR</h2>
+<p> This manual page was written by Thomas d&#8217;Otreppe. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-airbase-ng/">airbase-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-aireplay-ng/">aireplay-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airmon-ng/">airmon-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airodump-ng/">airodump-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airserv-ng/">airserv-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airtun-ng/">airtun-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-besside-ng/">besside-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-easside-ng/">easside-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-tkiptun-ng/">tkiptun-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-wesside-ng/">wesside-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-besside-ng-crawler/">besside-ng-crawler</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-wpaclean/">wpaclean</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

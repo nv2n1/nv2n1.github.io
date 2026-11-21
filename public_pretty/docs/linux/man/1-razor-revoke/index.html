@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>razor-revoke(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-razor-revoke/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>razor-revoke(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>&quot;razor-revoke&quot; - Razor Revoking Agent</p>
+<h2>SYNOPSIS</h2>
+ <pre>
+    razor-revoke [options]  file_with_mail_in_rfc822_format
+    $ cat mail | razor-revoke
+    $ razor-revoke ./mail 
+    $ razor-revoke -d ./mail
+</pre>
+<h2>DESCRIPTION</h2>
+<p><tt>&quot;razor-revoke&quot;</tt> is the Razor Revoking Agent which is used for reporting messages as <font SIZE="-1">NOT</font> spam to a Razor Nomination Server. For instance, it can be invoked if a check incorrectly marked a message as spam or after a message was incorrectly reported as spam. <tt>&quot;razor-revoke&quot;</tt> should be generally called from a <font SIZE="-1">MUA,</font> although there are no restrictions on invoking it from the command-line. <tt>&quot;razor-revoke&quot;</tt> is a filter, which means that spam messages should be piped through it. By default, <tt>&quot;razor-revoke&quot;</tt> backgrounds and detaches itself from the control terminal at start-up.</p>
+<p>If <tt>&quot;razor-revoke&quot;</tt> is passed more than one mail, it will revoke each against the database. Please use this with caution, we don&rsquo;t want the database to have inaccurate information. <tt>&quot;razor-revoke&quot;</tt> supports mbox-formatted files with 1 or more mails in them as well as files containing a single <font SIZE="-1">RFC 822 </font>(non-mbox) mail. More than one file may be present on the command line, can be either a non-mbox or mbox in any order. However, more than one non-mbox mail cannot be read from stdin.</p>
+<p>Both <i><a HREF="/docs/linux/man/1-razor-report/">razor-report</a></i>(1) and <tt>&quot;razor-revoke&quot;</tt> require user authentication to work, see <i><a HREF="/docs/linux/man/1-razor-admin/">razor-admin</a></i>(1). This allows the Razor Nomination Server to keep track of how many messages a user reports and revokes. The more messages a user correctly reports and/or correctly revokes, the more trust the user earns. Likewise, when messages are incorrectly reported or revoked, the trust goes down for that user. Highly trusted users will have the most affect on the Razor database.</p>
+<p>Note that even after a successful revoke, a mail might still be considered spam in the Razor Catalogue. For instance, this can occur if more trusted users consider the mail spam than not spam.</p>
+<h2>USAGE</h2>
+<p><tt>&quot;razor-revoke&quot;</tt> takes following arguments:</p>
+<dl>
+<dt>&quot;-h&quot;
+</dt><dd> Print a usage message and exit.
+</dd><dt>&quot;-v&quot;
+</dt><dd> Print the version number and exit.
+</dd><dt>&quot;-d | --verbose&quot;
+</dt><dd> Print debugging information.
+</dd><dt>&quot;-debuglevel=n | -dl=n&quot;
+</dt><dd> Set debug level to 'n'. Default is 3 without <tt>&quot;-d&quot;</tt> option, 9 with.
+</dd><dt>&quot;-whitelist=file&quot;
+</dt><dd> Specify file to use for whitelisting. Overrides 'whitelist' option in <tt>&quot;razor-agent.conf&quot;</tt>.
+</dd><dt>&quot;-s&quot;
+</dt><dd> Simulate a check. Do everything except talk to the server.
+</dd><dt>&quot;-conf=filename&quot;
+</dt><dd> Specifies an alternate configuration file. If not specified, it is computed, see <i>razor-agents</i>(1) manpage for details. See <i><a HREF="/docs/linux/man/5-razor-agent-conf/">razor-agent.conf</a></i>(5) manpage for various configuration options. The default is <tt>&quot;&lt;razorhome&gt;/razor-agent.conf&quot;</tt>.
+</dd><dt>&quot;-home=dir&quot;
+</dt><dd> Specify razorhome directory. This is where the configuration file, logfiles, identities, and server files live. If not specified, it is computed, see <i>razor-agents</i>(1) manpage for details.
+</dd><dt>&quot;-logfile=file&quot;
+</dt><dd> Specify file to log to instead of whats in configuration file. The default is <tt>&quot;&lt;razorhome&gt;/razor-agent.log&quot;</tt>.
+</dd><dt>&quot;-ident=filename&quot;
+</dt><dd> Specify an identify file to use for authenticating with Razor Servers. If not specified, <tt>&quot;&lt;razorhome&gt;/identity-&lt;user&gt;&quot;</tt> is used.
+</dd><dt>&quot;-rs=razor.server.com&quot;
+</dt><dd> Use this Razor Nomination Server instead of reading <tt>&quot;servers.nomination.lst&quot;</tt>.
+</dd><dt>&quot;-M | --mbox&quot;
+</dt><dd> Accept a mailbox name on the command line and revoke every mail in the mailbox against the database. If in foreground, <tt>&quot;-f&quot;</tt>, <tt>&quot;razor-revoke&quot;</tt> will print out the mail number of every mail that was accepted by the Catalogue server. 
+ <pre>
+ C&lt;razor-revoke -f -M ~/Mail/incorrectly-marked-spam&gt;
+</pre>
+</dd><dt>&quot;-i=filename&quot;
+</dt><dd> Used identity from filename instead of reading &lt;razorhome&gt;/identity.
+</dd><dt>&quot;-a&quot;
+</dt><dd> Authenticate only. If authenticated, exit 0; if not, exit 1.
+</dd><dt>&quot;-f&quot;
+</dt><dd> Stay in foreground, do not detach and run in background.</dd></dl>
+<h2>INTEGRATION WITH MUTT</h2>
+<p>Add the following line to <tt>&quot;mutt.conf&quot;</tt></p>
+ <pre>
+     macro index R &quot;|/usr/bin/razor-revoke&quot;
+</pre> 
+<p>Then press R on the spam message in <tt>&quot;mutt&quot;</tt> to report it with <tt>&quot;razor-revoke&quot;</tt>. Since <tt>&quot;razor-revoke&quot;</tt> forks, the control will return immediately.</p>
+<h2>AUTHORS</h2>
+<p>Vipul Ved Prakash &lt;mail [at] vipul.net&gt;, and Chad Norwood &lt;chad [at] samo.org&gt;</p>
+<h2>SEE ALSO</h2>
+<p><i>razor-agents</i>(1), <i><a HREF="/docs/linux/man/5-razor-agent-conf/">razor-agent.conf</a></i>(5), <i><a HREF="/docs/linux/man/1-razor-check/">razor-check</a></i>(1), <i><a HREF="/docs/linux/man/1-razor-admin/">razor-admin</a></i>(1), <i><a HREF="/docs/linux/man/1-razor-report/">razor-report</a></i>(1), <i><a HREF="/docs/linux/man/5-razor-whitelist/">razor-whitelist</a></i>(5)</p>
+<h2>LICENSE</h2>
+<p>This is free software, distributed under the Artistic License 2.0.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

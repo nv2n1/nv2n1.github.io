@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npm-help-search(3) · Linux Manual Pages</title>
+<meta name="description" content="npm-help-search — Search the help pages">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-npm-help-search/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>npm-help-search(3)</h1>
+
+
+
+
+
+<p><code>npm-help-search</code> &#8212; Search the help pages</p>
+<h2>Synopsis</h2>
+<pre>npm.commands.helpSearch(args, [silent,] callback)</pre>
+<h2>Description</h2>
+<p>This command is rarely useful, but it exists in the rare case that it is. This command takes an array of search terms and returns the help pages that match in order of best match. If there is only one match, then npm displays that help section. If there are multiple results, the results are printed to the screen formatted and the array of results is returned. Each result is an object with these properties:</p>
+<dl>
+<dt>&bull;</dt>
+<dd>hits: A map of args to number of hits on that arg. For example, {&quot;npm&quot;: 3}</dd>
+<dt>&bull;</dt>
+<dd>found: Total number of unique args that matched.</dd>
+<dt>&bull;</dt>
+<dd>totalHits: Total number of hits.</dd>
+<dt>&bull;</dt>
+<dd>lines: An array of all matching lines (and some adjacent lines).</dd>
+<dt>&bull;</dt>
+<dd>file: Name of the file that matched</dd>
+<dd></dd></dl>
+<p> The silent parameter is not neccessary not used, but it may in the future. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

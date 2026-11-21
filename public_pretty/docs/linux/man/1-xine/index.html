@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xine(1) · Linux Manual Pages</title>
+<meta name="description" content="xine – a free video player">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-xine/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>xine(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> xine &#8211; a free video player </p>
+<h2>SYNOPSIS</h2>
+<p> <code>xine</code> <i>[options] [MRL] &#8230;</i></p>
+<h2>DESCRIPTION</h2>
+<p> This manual page documents briefly the <code>xine</code> audio/video player. </p>
+<p> <code>xine</code> plays MPEG system (audio and video) streams, mpeg elementary streams (e.g. .mp3 or .mpv files), mpeg transport streams, ogg files, avi files, asf files, quicktime files, (S)VCDs and DVDs and many more.</p>
+<h2>OPTIONS</h2>
+<p> The programs follow the usual GNU command line syntax, with long options starting with two dashes (`&#8211;&#8216;). A summary of options are included below. For a complete description, see <i>README</i> and <i>FAQ</i> in <i>/usr/share/doc/xine-ui-0.99.9</i> or on the xine home page.</p>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options and available output drivers (plugins).</dd>
+<dt><code>&#8211;verbose</code><i>[=level]</i></dt>
+<dd> Set verbose level.</dd>
+<dt><code>-c, &#8211;config&nbsp;<wbr></code><i>&lt;file&gt;</i></dt>
+<dd> Use <code>config</code> file instead of default one.</dd>
+<dt><code>-a, &#8211;audio-channel&nbsp;<wbr></code><i>&lt;num&gt;</i></dt>
+<dd> Select the given audio channel. <i>&lt;num&gt;</i> is the audio channel number, default is <code>0</code>.<br />
+ xine 0.5 and newer tries its best to collect all valid audio channels (ac3, mpeg audio, avi audio, &#8230;) from the stream and maps them to &quot;virtual channels&quot; with channel numbers starting at <code>0</code>.</dd>
+<dt><code>-V, &#8211;video-driver&nbsp;<wbr></code><i>&lt;drv&gt;</i></dt>
+<dd> Select video driver. Check out <i>xine &#8211;help</i> for a list of available video output plugins on your system. This selection is stored automatically in your <i>~/.xine/config</i> so you&#8217;ll have to specify the video driver only once.</dd>
+<dt><code>-A, &#8211;audio-driver&nbsp;<wbr></code><i>&lt;drv&gt;</i></dt>
+<dd> Select audio driver. Check out <i>xine &#8211;help</i> for a list of available audio output plugins on your system. This selection is stored automatically in your <i>~/.xine/config</i> so you&#8217;ll have to specify the audio driver only once.</dd>
+<dt><code>-u, &#8211;spu-channel&nbsp;<wbr></code><i>&lt;num&gt;</i></dt>
+<dd> Select subpicture (subtitle) channel. <i>&lt;num&gt;</i> is the subpicture channel id, default is no subtitle (<code>-1</code>).</dd>
+<dt><code>-p, &#8211;auto-play=</code><i>[f][F][h][w][q][d][v]</i></dt>
+<dd> Start playing immediately after start. Can be followed by:<br />
+ `<i>f</i>&#8216; in fullscreen mode,<br />
+ `<i>F</i>&#8216; in xinerama fullscreen mode,<br />
+ `<i>h</i>&#8216; hide GUI (main panel, etc&#8230;),<br />
+ `<i>w</i>&#8216; hide video output window,<br />
+ `<i>q</i>&#8216; for quitting after playback,<br />
+ It is also possible to request the playlist from DVD `<i>d</i>&#8216;, or VCD `<i>v</i>&#8216;. There is now a more generic option, <i>&#8211;auto-scan</i>, for that (see below).</dd>
+<dt><code>-s, &#8211;auto-scan&nbsp;<wbr></code><i>&lt;plugin&gt;</i></dt>
+<dd> Auto-scan playlist from named input plugin. Many plugins allow to read a default playlist, in order to play <code>everything</code>. This works fine for DVDs or VCDs, for example. Giving this option has the same effect as pressing the according button on xine&#8217;s main panel. </dd>
+<p> This option is especially useful in combination with auto-play. You could start <i>xine~&#8211;auto-play~&#8211;auto-scan~dvd</i> in order to play a whole DVD without having to press any additional buttons. This also works for plugins that are not supplied with xine, just give the name of the button that the desired plugin adds to the xine panel!</p>
+<dt><code>-f, &#8211;fullscreen</code></dt>
+<dd> Switch xine to fullscreen mode on start (just like pressing `<code>f</code>&#8216;)</dd>
+<dt><code>-F, &#8211;xineramafull</code></dt>
+<dd> Switch xine to xinerama fullscreen mode on start (just like pressing `<code>F</code>&#8216;). That is to say, try to expand display on several screens. Screens to use are defined in config file.</dd>
+<dt><code>-g, &#8211;hide-gui</code></dt>
+<dd> Hide all GUI windows (except the video window) on start. This is the same as pressing `<code>G</code>&#8216; within xine.</dd>
+<dt><code>-H, &#8211;hide-video</code></dt>
+<dd> Hide video output window.</dd>
+<dt><code>-L, &#8211;no-lirc</code></dt>
+<dd> Turn off LIRC support. This option is <i>only~available</i> if xine has been compiled with LIRC support.</dd>
+<dt><code>&#8211;visual&nbsp;<wbr></code><i>&lt;visual-class-or-id&gt;</i></dt>
+<dd> Try to use a specific X11 server visual for xine windows. The <i>&lt;visual-class-or-id&gt;</i> parameter is either the name of an X11 visual class (<code>StaticGray</code>, <code>GrayScale</code>, <code>StaticColor</code>, <code>PseudoColor</code>, <code>TrueColor</code> or <code>DirectColor</code>) or the <code>hexadecimal</code> value for a specific X11 visual. </dd>
+<p> When used with a visual class name, xine tries to find such a visual with depth <code>15</code> or <code>16</code>, <code>24</code>, <code>32</code> or <code>8</code> (in that order). The default visual class used by xine in absence of a <i>&#8211;visual</i> option is <code>TrueColor</code>. </p>
+<p> If no usable visual is found, xine falls back to the default visual used on the X11 server&#8217;s root window.</p>
+<dt><code>&#8211;install</code></dt>
+<dd> When using an X11 visual with changeable colors (colormaps), install a private colormap for xine. With a private colormap, xine can allocate more colors so that video output may look better.</dd>
+<dt><code>&#8211;keymap&nbsp;<wbr></code><i>[=option]</i></dt>
+<dd> Display keymap. Option are:<br />
+ `<code>default</code>&#8216; display default keymap table,<br />
+ `<code>lirc</code>&#8216; display draft of a <i>~/.lircrc</i> config file,<br />
+ `<code>remapped</code>&#8216; user remapped keymap table,<br />
+ `<code>file:&lt;file&gt;</code>&#8216; use <code>file</code> as keymap table,<br />
+ If no option is given, `<code>default</code>&#8216; is selected.</dd>
+<dt><code>-n, &#8211;network</code></dt>
+<dd> Enable network remote control server. To use network remote control server, a password file is required. If xine cannot find it, the server is stopped. The syntax of the password file follows the (familiar) scheme &lt;<i>identification</i>&gt;:&lt;<i>password</i>&gt;. Since cryptography is subject to legal issues in some countries, the password is not encrypted and also transmitted unencrypted, so take care with remote connections. Two (optional) generic rules are available as well (one at a time) </dd>
+<pre>
+<code>ALL:ALLOW</code> or <code>ALL:DENY</code>
+</pre>
+<p> In the first case, all clients are allowed to execute all available commands, without restriction. In the second case, no-one is allowed to execute any commands, except identified users (using &#8216;identify&#8217; command). </p>
+<p> If a password entry begins with an asterisk `<code>*</code>&#8216;, the user is blocked. If a password entry is empty, the full entry is ignored. Here is an example of a small <i>~/.xine/passwd</i> file: </p>
+<pre>
+ALL:DENY
+daniel:mypasswd
+foo:*
+</pre>
+<p> This will allow only &#8216;daniel&#8217; to execute commands, after a successfully identifying stage. </p>
+<p> The default port of the server is <code>6789</code>, this number is totally arbitrary. You can connect the server using a simple <i>telnet</i> command: </p>
+<pre>
+<code>telnet~localhost~6789</code>
+</pre>
+<p> To change the default port, you can (as root) edit your <i>/etc/services</i>, and add an entry like this: </p>
+<pre>
+xinectl    7890/tcp        # xine control
+</pre>
+<p> This will change the default port from 6789 to 7890, and create a &quot;human&quot; service called <i>xinectl</i>. </p>
+<p> The server itself offers command help/syntax:<br />
+ <code>help&nbsp;<wbr></code><i>[command]</i><br />
+ Without <i>command</i> specified, all available commands will be displayed. If a command is specified, short text about the command functionality will be given.<br />
+ <code>syntax&nbsp;<wbr></code><i>&lt;command&gt;</i><br />
+ Display the <i>command</i> syntax.</p>
+<dt><code>-R, &#8211;root</code></dt>
+<dd> Use root window as video window.</dd>
+<dt><code>-G, &#8211;geometry&nbsp;<wbr></code><i>&lt;WxH[+X+Y]&gt;</i></dt>
+<dd> You can set video output size and position using the X like geometry (see <code><a href="/docs/linux/man/7-x/">X</a></code>(7)). <code>X</code> and <code>Y</code> offset are optional.</dd>
+<dt><code>-B, &#8211;borderless</code></dt>
+<dd> Remove borders of video output window, in windowed mode.</dd>
+<dt><code>-N, &#8211;animation&nbsp;<wbr></code><i>&lt;mrl&gt;</i></dt>
+<dd> Specify one or more mrl to play with audio only streams.</dd>
+<dt><code>-P, &#8211;playlist&nbsp;<wbr></code><i>&lt;filename&gt;</i></dt>
+<dd> Use file as playlist. Known formats are: asx, toxine, m3u, pls, sfv and raw text file.</dd>
+<dt><code>-l, &#8211;loop&nbsp;<wbr></code><i>[=mode]</i></dt>
+<dd> Set playlist loop mode. If mode isn&#8217;t specified, mode <code>loop</code> is used. Possible modes are:<br />
+ <code>loop</code>: loop entire playlist.<br />
+ <code>repeat</code>: repeat current playlist entry.<br />
+ <code>shuffle</code>: select randomly an entry in playlist from those not yet played.<br />
+ <code>shuffle+</code>: same as shuffle, but indefinitely replay the playlist.</dd>
+<dt><code>&#8211;skin-server-url&nbsp;<wbr></code><i>&lt;url&gt;</i></dt>
+<dd> Define the skin server url.</dd>
+<dt><code>&#8211;enqueue&nbsp;<wbr></code><i>&lt;mrl&gt;</i><code>&#8230;</code></dt>
+<dd>
+ Enqueue one or more mrl in a running session (session 0).<br />
+ If you want to specify another session, use <code>-S session=</code><i>x</i> option.</dd>
+<dt><code>-S, &#8211;session&nbsp;<wbr></code><i>&lt;option1,option2,&#8230;&gt;</i></dt>
+<dd>
+ Session managements. All options can be used more than one time, except <code>session</code>.<br />
+ Options are:<br />
+ <code>session=</code><i>n</i> specify session &lt;<i>n</i>&gt; number,<br />
+ <code>mrl=</code><i>m</i> add mrl &lt;<i>m</i>&gt; to the playlist,<br />
+ <code>audio=</code><i>c</i> select audio channel (&lt;<i>c</i>&gt;: <code>next</code> or <code>prev</code>),<br />
+ <code>spu=</code><i>c</i> select spu channel (&lt;<i>c</i>&gt;: <code>next</code> or <code>prev</code>),<br />
+ <code>volume=</code><i>v</i> set audio volume (&lt;<i>v</i>&gt;: 0 to 100),<br />
+ <code>amp=</code><i>v</i> set audio amplification of instance (&lt;<i>v</i>&gt;: 0 to 200),<br />
+ <code>loop=</code><i>m</i> set loop mode (&lt;<i>m</i>&gt;: <code>none</code> <code>loop</code> <code>repeat</code> <code>shuffle</code> or <code>shuffle+</code>),<br />
+ <code>get_speed</code> get current speed status. Return values are:<br />
+&nbsp;<wbr>&#8211; 1: error<br />
+&nbsp;<wbr>&#8211; 2: stop<br />
+&nbsp;<wbr>&#8211; 3: play<br />
+&nbsp;<wbr>&#8211; 4: pause<br />
+&nbsp;<wbr>&#8211; 5: slow4<br />
+&nbsp;<wbr>&#8211; 6: slow2<br />
+&nbsp;<wbr>&#8211; 7: fast2<br />
+&nbsp;<wbr>&#8211; 8: fast4<br />
+ <code>get_time[=p|pos]</code> get current position status in seconds, or in position in stream (0..65535).<br />
+ (<code>playlist</code>|<code>pl</code>)<code>=</code><i>p</i> </dd>
+<p>&nbsp;<wbr>&nbsp;<wbr>&lt;<i>p</i>&gt;&nbsp;<wbr>can be: </p>
+<p>&nbsp;<wbr><code>clear</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>clear the playlist,<br />
+&nbsp;<wbr><code>first</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>play first entry in the playlist,<br />
+&nbsp;<wbr><code>prev</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>play previous playlist entry,<br />
+&nbsp;<wbr><code>next</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>play next playlist entry,<br />
+&nbsp;<wbr><code>last</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>play last entry in the playlist,<br />
+&nbsp;<wbr><code>load:</code><i>s</i>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>load playlist file&nbsp;<wbr>&lt;<i>s</i>&gt;,<br />
+&nbsp;<wbr><code>stop</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>stop playback at the end of the current playback,<br />
+&nbsp;<wbr><code>cont</code>:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>continue playback at the end of current playback.<br />
+ There are also some self explanatory options.<br />
+&nbsp;<wbr><code>play</code>,&nbsp;<wbr><code>slow2</code>,&nbsp;<wbr><code>slow4</code>,&nbsp;<wbr><code>pause</code>,&nbsp;<wbr><code>fast2</code>,&nbsp;<wbr><code>fast4</code>,&nbsp;<wbr><code>stop</code>,&nbsp;<wbr><code>quit</code>,&nbsp;<wbr><code>fullscreen</code>,&nbsp;<wbr><code>eject</code>.</p>
+<dt><code>-Z</code></dt>
+<dd> Don&#8217;t automatically start playback, affect only auto-start when smart mode is used.</dd>
+<dt><code>-D, &#8211;deinterlace&nbsp;<wbr></code><i>[post[:..][;]]</i></dt>
+<dd> Deinterlace video output. You can override configuration option of post(s) used to deinterlace the output picture. See <i>&#8211;post</i> for syntax.</dd>
+<dt><code>-r, &#8211;aspect-ratio&nbsp;<wbr></code><i>&lt;mode&gt;</i></dt>
+<dd> Set aspect ratio of video output. &lt;<i>mode</i>&gt; can be: <code>auto</code>, <code>square</code>, <code>4:3</code>, <code>anamorphic</code>, <code>dvb</code>.</dd>
+<dt><code>&#8211;broadcast-port&nbsp;<wbr></code><i>&lt;port&gt;</i></dt>
+<dd> Set port of xine broadcaster (master side), slave is started with &#8216;xine <a href="slave://address:port'">slave://address:port&#8217;</a></dd>
+<dt><code>&#8211;no-logo</code></dt>
+<dd> Don&#8217;t display the logo.</dd>
+<dt><code>-E, &#8211;no-reload</code></dt>
+<dd> Don&#8217;t reload old playlist. Playlist is saved when you leave xine, then it is reloaded and played the next time you lanch xine. This feature can be disabled via setup window.</dd>
+<dt><code>&#8211;post&nbsp;<wbr></code><i>&lt;plugin&gt;[:parameter=value][,&#8230;][;&#8230;]</i></dt>
+<dd> Load one or more post plugin(s). Parameters are comma separated. This option can be used more than one time to chain two or more video postprocess plugins. You can specify two or more plugin, which may be separated by a semi-colon &#8216;;&#8217;.</dd>
+<dt><code>&#8211;disable-post</code></dt>
+<dd> Don&#8217;t enable post plugin(s). This way, you can specify one more plugin to use, using the &#8211;post command line option, but don&#8217;t enable those effects.</dd>
+<dt><code>&#8211;no-splash</code></dt>
+<dd> Don&#8217;t display the splash screen.</dd>
+<dt><code>&#8211;stdctl</code></dt>
+<dd> Turn on controlling xine over STDIN.</dd>
+<dt><code>-T, &#8211;tvout</code><i>&lt;backend&gt;</i></dt>
+<dd> Turn on TVout support. &lt;<i>backend</i>&gt; can be: nvtv, ati.</dd>
+<dt><code>&#8211;list-plugins</code><i>[=type]</i></dt>
+<dd> Display the list of available plugins. Optional &lt;<i>type</i>&gt; can be: audio_out, video_out, demux, input, sub, post, audio_decoder, video_decoder</dd>
+<dt><code>&#8211;bug-report</code><i>[=mrl]</i></dt>
+<dd> Enable bug report mode. This turns verbosity on, gathers all output messages and writes them to a file named BUG-REPORT.TXT. If &lt;<i>mrl</i>&gt; is given, xine will play that mrl then quit (like -pq does).
+</dd></dl>
+<p> If you don&#8217;t specify any MRL, you&#8217;ll have to select a file by drag and drop. Dragging files from the <code>GNOME~Midnight~Commander</code> (gmc), <code>Nautilus</code> or <code>Konqueror</code> is known to work. </p>
+<h2>MRL (media resource locator)</h2>
+<p> MRLs are similar to URLs in your web browser. They describe the media to read from. <code><a href="/docs/linux/man/5-xine/">xine</a></code>(5) describes them in some detail. xine extends the syntax as follows:</p>
+<dl>
+<dt><code>&lt;mrl&gt;::&lt;subtitlefile&gt;</code></dt>
+<dd> This is the xine-ui specific way to define the subtitle file to use. The filename will be extracted by the frontend, that permit to change it, save it in a playlist, etc&#8230;
+</dd></dl>
+<h2>STREAM OPTIONS</h2>
+<p> After a delimiting <code>#</code> you can add several stream parameters:</p>
+<dl>
+<dt><code>novideo</code></dt>
+<dd> video will be ignored</dd>
+<dt><code>noaudio</code></dt>
+<dd> audio will be ignored</dd>
+<dt><code>nospu</code></dt>
+<dd> subpictures will be ignored</dd>
+<dt><code>demux:</code><i>&lt;demux name&gt;</i></dt>
+<dd> specify the demux plugin to use</dd>
+<dt><code>volume:</code><i>&lt;level&gt;</i></dt>
+<dd> set audio volume</dd>
+<dt><code>compression:</code><i>&lt;level&gt;</i></dt>
+<dd> set audio dynamic range compression</dd>
+<dt><code>&lt;config entry&gt;</code><i>:</i><code>&lt;config value&gt;</code></dt>
+<dd> assign a new value to any config entry</dd>
+<dt><code>change configuration option &#8216;on the fly&#8217;:</code></dt>
+<dd>
+ You can change a configuration option at anytime, using the special cfg:/ mrl style. The syntax is:<br />
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>cfg:/&lt;config entry&gt; : &lt;config value&gt;</dd>
+<p> Unlike stream config option, you can change anything <i>before</i> playing the stream.</dl>
+<h2>CONTROL KEYS</h2>
+<p> Many features can be controlled by pressing control keys. `<code>M-</code>&#8216; is the Meta key (`<code>Alt</code>&#8216; key on PC keyboard), `<code>C-</code>&#8216; is the Control `<code>CTRL</code>&#8216; key, other special keys are delimited by `<code>&lt;</code>&#8216; and `<code>&gt;</code>&#8216; characters, e.g. the `<code>HOME</code>&#8216; key is displayed as <code>&lt;home&gt;</code>. The default key bindings are:</p>
+<dl>
+<dt><code>&lt;Return&gt;</code></dt>
+<dd> Start playback</dd>
+<dt><code>&lt;space&gt;</code></dt>
+<dd> Playback pause toggle</dd>
+<dt><code>S</code></dt>
+<dd> Stop playback</dd>
+<dt><code>t</code></dt>
+<dd> Take a snapshot</dd>
+<dt><code>e</code></dt>
+<dd> Eject the current medium</dd>
+<dt><code>&lt;Next&gt;</code></dt>
+<dd> Select and play next MRL in the playlist</dd>
+<dt><code>&lt;Prior&gt;</code></dt>
+<dd> Select and play previous MRL in the playlist</dd>
+<dt><code>l</code></dt>
+<dd> Loop mode toggle</dd>
+<dt><code>C</code>&#8211;<code>s</code></dt>
+<dd> Scan playlist to grab stream infos</dd>
+<dt><code>C</code>&#8211;<code>a</code></dt>
+<dd> Add a mediamark from current playback</dd>
+<dt><code>C</code>&#8211;<code>e</code></dt>
+<dd> Edit selected mediamark</dd>
+<dt><code>&lt;Left&gt;</code></dt>
+<dd> Set position to -60 seconds in current stream</dd>
+<dt><code>&lt;Right&gt;</code></dt>
+<dd> Set position to +60 seconds in current stream</dd>
+<dt><code>M</code>&#8211;<code>&lt;Left&gt;</code></dt>
+<dd> Set position to -30 seconds in current stream</dd>
+<dt><code>M</code>&#8211;<code>&lt;Right&gt;</code></dt>
+<dd> Set position to +30 seconds in current stream</dd>
+<dt><code>C</code>&#8211;<code>&lt;Left&gt;</code></dt>
+<dd> Set position to -15 seconds in current stream</dd>
+<dt><code>C</code>&#8211;<code>&lt;Right&gt;</code></dt>
+<dd> Set position to +15 seconds in current stream</dd>
+<dt><code>M3</code>&#8211;<code>&lt;Left&gt;</code></dt>
+<dd> Set position to -7 seconds in current stream</dd>
+<dt><code>M3</code>&#8211;<code>&lt;Right&gt;</code></dt>
+<dd> Set position to +7 seconds in current stream</dd>
+<dt><code>C</code>&#8211;<code>0</code></dt>
+<dd> Set position to beginning of current stream</dd>
+<dt><code>C</code>&#8211;<code>1</code></dt>
+<dd> Set position to 10% of current stream</dd>
+<dt><code>C</code>&#8211;<code>2</code></dt>
+<dd> Set position to 20% of current stream</dd>
+<dt><code>C</code>&#8211;<code>3</code></dt>
+<dd> Set position to 30% of current stream</dd>
+<dt><code>C</code>&#8211;<code>4</code></dt>
+<dd> Set position to 40% of current stream</dd>
+<dt><code>C</code>&#8211;<code>5</code></dt>
+<dd> Set position to 50% of current stream</dd>
+<dt><code>C</code>&#8211;<code>6</code></dt>
+<dd> Set position to 60% of current stream</dd>
+<dt><code>C</code>&#8211;<code>7</code></dt>
+<dd> Set position to 70% of current stream</dd>
+<dt><code>C</code>&#8211;<code>8</code></dt>
+<dd> Set position to 80% of current stream</dd>
+<dt><code>C</code>&#8211;<code>9</code></dt>
+<dd> Set position to 90% of current stream</dd>
+<dt><code>&lt;Up&gt;</code></dt>
+<dd> Increment playback speed</dd>
+<dt><code>&lt;Down&gt;</code></dt>
+<dd> Decrement playback speed</dd>
+<dt><code>M</code>&#8211;<code>&lt;Down&gt;</code></dt>
+<dd> Reset playback speed</dd>
+<dt><code>V</code></dt>
+<dd> Increment audio volume</dd>
+<dt><code>v</code></dt>
+<dd> Decrement audio volume</dd>
+<dt><code>C</code>&#8211;<code>V</code></dt>
+<dd> Increment amplification level</dd>
+<dt><code>C</code>&#8211;<code>v</code></dt>
+<dd> Decrement amplification level</dd>
+<dt><code>C</code>&#8211;<code>A</code></dt>
+<dd> Reset amplification to default value</dd>
+<dt><code>C</code>&#8211;<code>m</code></dt>
+<dd> Audio muting toggle</dd>
+<dt><code>&lt;plus&gt;</code></dt>
+<dd> Select next audio channel</dd>
+<dt><code>&lt;minus&gt;</code></dt>
+<dd> Select previous audio channel</dd>
+<dt><code>&lt;period&gt;</code></dt>
+<dd> Select next sub picture (subtitle) channel</dd>
+<dt><code>&lt;comma&gt;</code></dt>
+<dd> Select previous sub picture (subtitle) channel</dd>
+<dt><code>i</code></dt>
+<dd> Interlaced mode toggle</dd>
+<dt><code>a</code></dt>
+<dd> Cycle aspect ratio values</dd>
+<dt><code>&lt;less&gt;</code></dt>
+<dd> Reduce the output window size by factor 1.2</dd>
+<dt><code>&lt;greater&gt;</code></dt>
+<dd> Enlarge the output window size by factor 1.2</dd>
+<dt><code>M</code>&#8211;<code>1</code></dt>
+<dd> Set video output window to 50%</dd>
+<dt><code>M</code>&#8211;<code>2</code></dt>
+<dd> Set video output window to 100%</dd>
+<dt><code>M</code>&#8211;<code>3</code></dt>
+<dd> Set video output window to 200%</dd>
+<dt><code>z</code></dt>
+<dd> Zoom in</dd>
+<dt><code>Z</code></dt>
+<dd> Zoom out</dd>
+<dt><code>C</code>&#8211;<code>z</code></dt>
+<dd> Zoom in horizontally</dd>
+<dt><code>C</code>&#8211;<code>Z</code></dt>
+<dd> Zoom out horizontally</dd>
+<dt><code>M</code>&#8211;<code>z</code></dt>
+<dd> Zoom in vertically</dd>
+<dt><code>M</code>&#8211;<code>Z</code></dt>
+<dd> Zoom out vertically</dd>
+<dt><code>C</code>&#8211;<code>M</code>&#8211;<code>z</code></dt>
+<dd> Reset zooming</dd>
+<dt><code>s</code></dt>
+<dd> Resize output window to stream size</dd>
+<dt><code>f</code></dt>
+<dd> Fullscreen toggle</dd>
+<dt><code>F</code></dt>
+<dd> Xinerama fullscreen toggle</dd>
+<dt><code>b</code></dt>
+<dd> Video window borders appearance toggle</dd>
+<dt><code>&lt;Escape&gt;</code></dt>
+<dd> Jump to media Menu</dd>
+<dt><code>&lt;F1&gt;</code></dt>
+<dd> Jump to Title Menu</dd>
+<dt><code>&lt;F2&gt;</code></dt>
+<dd> Jump to Root Menu</dd>
+<dt><code>&lt;F3&gt;</code></dt>
+<dd> Jump to Subpicture Menu</dd>
+<dt><code>&lt;F4&gt;</code></dt>
+<dd> Jump to Audio Menu</dd>
+<dt><code>&lt;F5&gt;</code></dt>
+<dd> Jump to Angle Menu</dd>
+<dt><code>&lt;F6&gt;</code></dt>
+<dd> Jump to Part Menu</dd>
+<dt><code>&lt;Keypad Up&gt;</code></dt>
+<dd> Menu navigate up</dd>
+<dt><code>&lt;Keypad Down&gt;</code></dt>
+<dd> Menu navigate down</dd>
+<dt><code>&lt;Keypad Left&gt;</code></dt>
+<dd> Menu navigate left</dd>
+<dt><code>&lt;Keypad Right&gt;</code></dt>
+<dd> Menu navigate right</dd>
+<dt><code>&lt;Keypad Enter&gt;</code></dt>
+<dd> Menu select</dd>
+<dt><code>&lt;Keypad Next&gt;</code></dt>
+<dd> Jump to next chapter</dd>
+<dt><code>&lt;Keypad Prior&gt;</code></dt>
+<dd> Jump to previous chapter</dd>
+<dt><code>&lt;Keypad Home&gt;</code></dt>
+<dd> Select next angle</dd>
+<dt><code>&lt;Keypad End&gt;</code></dt>
+<dd> Select previous angle</dd>
+<dt><code>M</code>&#8211;<code>h</code></dt>
+<dd> Visibility toggle of help window</dd>
+<dt><code>M</code>&#8211;<code>P</code></dt>
+<dd> Visibility toggle of video post effect window</dd>
+<dt><code>C</code>&#8211;<code>M</code>&#8211;<code>P</code></dt>
+<dd> Toggle post effect usage</dd>
+<dt><code>h</code></dt>
+<dd> Visibility toggle of output window</dd>
+<dt><code>g</code></dt>
+<dd> Visibility toggle of UI windows</dd>
+<dt><code>M</code>&#8211;<code>c</code></dt>
+<dd> Visibility toggle of control window</dd>
+<dt><code>M</code>&#8211;<code>m</code></dt>
+<dd> Visibility toggle of mrl browser window</dd>
+<dt><code>M</code>&#8211;<code>p</code></dt>
+<dd> Visibility toggle of playlist editor window</dd>
+<dt><code>M</code>&#8211;<code>s</code></dt>
+<dd> Visibility toggle of the setup window</dd>
+<dt><code>M</code>&#8211;<code>e</code></dt>
+<dd> Visibility toggle of the event sender window</dd>
+<dt><code>M</code>&#8211;<code>t</code></dt>
+<dd> Visibility toggle of analog TV window</dd>
+<dt><code>M</code>&#8211;<code>l</code></dt>
+<dd> Visibility toggle of log viewer</dd>
+<dt><code>M</code>&#8211;<code>i</code></dt>
+<dd> Visibility toggle of stream info window</dd>
+<dt><code>C</code>&#8211;<code>i</code></dt>
+<dd> Display stream information using OSD</dd>
+<dt><code>M</code>&#8211;<code>k</code></dt>
+<dd> Enter key binding editor</dd>
+<dt><code>C</code>&#8211;<code>o</code></dt>
+<dd> Open file selector</dd>
+<dt><code>C</code>&#8211;<code>S</code></dt>
+<dd> Select a subtitle file</dd>
+<dt><code>C</code>&#8211;<code>d</code></dt>
+<dd> Download a skin from the skin server</dd>
+<dt><code>C</code>&#8211;<code>t</code></dt>
+<dd> Display MRL/Ident toggle</dd>
+<dt><code>&lt;Insert&gt;</code></dt>
+<dd> Grab pointer toggle</dd>
+<dt><code>0</code></dt>
+<dd> Enter the number 0</dd>
+<dt><code>1</code></dt>
+<dd> Enter the number 1</dd>
+<dt><code>2</code></dt>
+<dd> Enter the number 2</dd>
+<dt><code>3</code></dt>
+<dd> Enter the number 3</dd>
+<dt><code>4</code></dt>
+<dd> Enter the number 4</dd>
+<dt><code>5</code></dt>
+<dd> Enter the number 5</dd>
+<dt><code>6</code></dt>
+<dd> Enter the number 6</dd>
+<dt><code>7</code></dt>
+<dd> Enter the number 7</dd>
+<dt><code>8</code></dt>
+<dd> Enter the number 8</dd>
+<dt><code>9</code></dt>
+<dd> Enter the number 9</dd>
+<dt><code>M3</code>&#8211;<code>&lt;plus&gt;</code></dt>
+<dd> Add 10 to the next entered number</dd>
+<dt><code>&lt;slash&gt;</code></dt>
+<dd> Set position in current stream to numeric percentage See the section on &quot;Numeric Input&quot; below.</dd>
+<dt><code>M</code>&#8211;<code>&lt;Up&gt;</code></dt>
+<dd> Set position forward by numeric argument in current stream</dd>
+<dt><code>M3</code>&#8211;<code>&lt;Up&gt;</code></dt>
+<dd> Set position back by numeric argument in current stream</dd>
+<dt><code>m</code></dt>
+<dd> Change audio video syncing (delay video)</dd>
+<dt><code>n</code></dt>
+<dd> Change audio video syncing (delay audio)</dd>
+<dt><code>&lt;Home&gt;</code></dt>
+<dd> Reset audio video syncing offset</dd>
+<dt><code>M</code></dt>
+<dd> Change subtitle syncing (delay video)</dd>
+<dt><code>N</code></dt>
+<dd> Change subtitle syncing (delay subtitles)</dd>
+<dt><code>C</code>&#8211;<code>M</code>&#8211;<code>o</code></dt>
+<dd> Toggle TV modes (on the DXR3)</dd>
+<dt><code>d</code></dt>
+<dd> Switch Monitor to DPMS standby mode</dd>
+<dt><code>C</code>&#8211;<code>l</code></dt>
+<dd> Stop playback after played stream</dd>
+<dt><code>q</code></dt>
+<dd> Quit the program
+</dd></dl>
+<h3>Third party plugins</h3>
+<p> Following shortcuts are used by third party plugins, generally for DVD navigation:</p>
+<dl>
+<dt><code>&lt;KeyPad Up&gt;</code></dt>
+<dd> Up event.</dd>
+<dt><code>&lt;KeyPad Down&gt;</code></dt>
+<dd> Down event.</dd>
+<dt><code>&lt;KeyPad Left&gt;</code></dt>
+<dd> Left event.</dd>
+<dt><code>&lt;KeyPad Right&gt;</code></dt>
+<dd> Right event.</dd>
+<dt><code>&lt;KeyPad Prior&gt;</code></dt>
+<dd> Prior event.</dd>
+<dt><code>&lt;KeyPad Next&gt;</code></dt>
+<dd> Next event.</dd>
+<dt><code>&lt;KeyPad End&gt;</code></dt>
+<dd> Previous angle event.</dd>
+<dt><code>&lt;KeyPad Home&gt;</code></dt>
+<dd> Next angle event.</dd>
+<dt><code>&lt;KeyPad Enter&gt;</code></dt>
+<dd> Select event </dd>
+</dl>
+<h3>Synchronization fine tuning</h3>
+<p> Some streams have bad timestamps, so synchronization fails. This can be tweaked using these keys:</p>
+<dl>
+<dt>n</dt>
+<dd> press if video lags behind audio</dd>
+<dt>m</dt>
+<dd> press if video runs ahead of audio</dd>
+<dt><code>&lt;home&gt;</code></dt>
+<dd> press to reset audio/video offset to <code>0</code>, so stream timestamps are unchanged. </dd>
+</dl>
+<h3>Subtitle synchronization</h3>
+<p> You can adjust subtitle synchronization by using these keys:</p>
+<dl>
+<dt>M / N</dt>
+<dd>
+</dd></dl>
+<h3>Numeric Input</h3>
+<p> You can specify a numeric argument to be applied to a command typing in a number and then entering a function key. For example entering &quot;99/&quot;, that is, the number-9 key twice and then the slash key, you should seek 99% of the current stream. </p>
+<p> The new VCD/SVCD plugin allows some numeric input. Entering a number followed by the &quot;Select event&quot; (by default the keypad enter), one can go to a specific &quot;Chapter&quot; (track or entry) or selection number. As this is a relatively new feature, perhaps over time more plugins will make use of numeric selection. </p>
+<p> Other commands that can be numeric prefaced by a numeric argument are next/previous MRL (<code>MRL_NEXT</code>, <code>MRL_PRIOR</code>), next/previous subtitle (<code>SPU_NEXT</code>, <code>SPU_PRIOR</code>), and next/previous audio channel (<code>AUDIOCHAN_NEXT</code>, <code>AUDIOCHAN_PRIOR</code>). With a numeric prefix, it is as though one entered that command the number of times. Here, the argument 0, since it would otherwise meaningless, is interpreted here to be 1 instead. </p>
+<p> Admittedly the use of numeric input here is of limited value. Over time perhaps more useful commands like specifying a specific or absolute MRL, subtitle or audio channel number will be implemented. </p>
+<h2>FILES</h2>
+<dl>
+<dt>~/.xine/config</dt>
+<dd> Main config file</dd>
+<dt>~/.xine/keymap</dt>
+<dd> Key bindings for xine-ui</dd>
+<dt>~/.xine/passwd</dt>
+<dd> Passwords file xine-ui</dd>
+<dt>~/.xine/xinerc</dt>
+<dd> Additional command line arguments<br />
+ Each line specifies an additional command line argument (one argument per line): </dd>
+<pre>
+--geometry 720x576+0+0
+--network
+-s DVD
+-p
+</pre>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-xine-remote/">xine-remote</a></code>(1)<br />
+ <code><a href="/docs/linux/man/5-xine/">xine</a></code>(5) for details of the MRL syntax </p>
+<p> The programs are documented fully on the xine home page: <i><a rel="nofollow" href="http://www.xine-project.org/">http://www.xine-project.org/</a></i></p>
+<h2>AUTHOR</h2>
+<p> This manual page was written by Siggi Langauf &lt;siggi [at] debian.org&gt;, for the xine project. Lots of additions by Guenter Bartsch &lt;guenter [at] users.sourceforge.net&gt;, Daniel Caujolle-Bert &lt;f1rmb [at] users.sourceforge.net&gt;, Rocky Bernstein &lt;rocky [at] panix.com&gt;, and Philipp Hahn &lt;pmhahn [at] users.sourceforge.net&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

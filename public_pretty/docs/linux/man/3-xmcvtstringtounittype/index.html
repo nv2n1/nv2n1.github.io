@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmcvtstringtounittype(3) · Linux Manual Pages</title>
+<meta name="description" content="XmCvtStringToUnitType — A function that converts a string to a unit-type value">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmcvtstringtounittype/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmcvtstringtounittype(3)</h1>
+
+
+
+
+
+<p><code>XmCvtStringToUnitType</code> &#8212; A function that converts a string to a unit-type value</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Xm.h&gt;
+<code>void XmCvtStringToUnitType</code>(
+<code>XrmValuePtr args</code>,
+<code>Cardinal * num_args</code>,
+<code>XrmValue * from_val</code>,
+<code>XrmValue * to_val</code>);</pre>
+<h2>Description</h2>
+<p><code>XmCvtStringToUnitType</code> converts a string to a unit type. Refer to the reference pages for <code>XmGadget</code>, <code>XmManager</code>, or <code>XmPrimitive</code> for a description of the valid unit types. Use of this function as a resource converter is obsolete. It has been replaced by a new resource converter that uses the RepType facility.</p>
+<dl COMPACT>
+<dt><i>args</i></dt>
+<dd>Specifies a list of additional <code>XrmValue</code> arguments to the converter if additional context is needed to perform the conversion. For example, the string-to-font converter needs the widget&#8217;s screen and the string-to-pixel converter needs the widget&#8217;s screen and color map. This argument is often NULL.</dd>
+<dt><i>num_args</i></dt>
+<dd>Specifies the number of additional <code>XrmValue</code> arguments. This argument is often zero.</dd>
+<dt><i>from_val</i></dt>
+<dd>Specifies the value to convert</dd>
+<dt><i>to_val</i></dt>
+<dd>Specifies the descriptor to use to return the converted value</dd></dl>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmgadget/">XmGadget</a></code>(3), <code><a href="/docs/linux/man/3-xmmanager/">XmManager</a></code>(3), and <code><a href="/docs/linux/man/3-xmprimitive/">XmPrimitive</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

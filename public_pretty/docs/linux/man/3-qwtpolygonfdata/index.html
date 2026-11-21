@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qwtpolygonfdata(3) · Linux Manual Pages</title>
+<meta name="description" content="QwtPolygonFData – Data class containing a single QwtArray&lt;QwtDoublePoint&gt; object.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-qwtpolygonfdata/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>qwtpolygonfdata(3)</h1>
+
+
+
+
+
+<p>QwtPolygonFData &#8211; Data class containing a single QwtArray&lt;QwtDoublePoint&gt; object. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;<a href="file:/usr/include/qwt_data.h">qwt_data.h</a>&gt; </p>
+<p> Inherits <code>QwtData</code>. </p>
+<h3>Public Member Functions</h3>
+<p><code>QwtPolygonFData</code> (const QPolygonF &amp;) </p>
+<p> <code>QwtPolygonFData</code> &amp; <code>operator=</code> (const <code>QwtPolygonFData</code> &amp;) </p>
+<p> virtual <code>QwtData</code> * <code>copy</code> () const </p>
+<p> virtual size_t <code>size</code> () const </p>
+<p> virtual double <code>x</code> (size_t i) const </p>
+<p> virtual double <code>y</code> (size_t i) const </p>
+<p> const QPolygonF &amp; <code>data</code> () const </p>
+<h2>Detailed Description</h2>
+<p>Data class containing a single QwtArray&lt;QwtDoublePoint&gt; object.</p>
+<h2>Constructor &amp; Destructor Documentation</h2>
+<h3>QwtPolygonFData::QwtPolygonFData (const QPolygonF &amp; polygon)</h3>
+<p>Constructor </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>polygon</i> Polygon data</dd></dl>
+<p> <code>See also:</code></p>
+<dl COMPACT>
+<dd><code>QwtPlotCurve::setData()</code></dd></dl>
+<h2>Member Function Documentation</h2>
+<h3><code>QwtData</code> * QwtPolygonFData::copy () const [virtual]</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>Pointer to a copy (virtual copy constructor)</dd></dl>
+<p> Implements <code>QwtData</code>.</p>
+<h3>const QPolygonF &amp; QwtPolygonFData::data () const</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>Point array</dd></dl>
+<h3><code>QwtPolygonFData</code> &amp; QwtPolygonFData::operator= (const <code>QwtPolygonFData</code> &amp; data)</h3>
+<p>Assignment. </p>
+<h3>size_t QwtPolygonFData::size () const [virtual]</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>Size of the data set</dd></dl>
+<p> Implements <code>QwtData</code>.</p>
+<h3>double QwtPolygonFData::x (size_t i) const [virtual]</h3>
+<p>Return the x value of data point i </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>i</i> Index</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>x X value of data point i</dd></dl>
+<p> Implements <code>QwtData</code>.</p>
+<h3>double QwtPolygonFData::y (size_t i) const [virtual]</h3>
+<p>Return the y value of data point i </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>i</i> Index</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>y Y value of data point i</dd></dl>
+<p> Implements <code>QwtData</code>. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

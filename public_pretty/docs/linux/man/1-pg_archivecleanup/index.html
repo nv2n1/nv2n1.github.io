@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pg_archivecleanup(1) · Linux Manual Pages</title>
+<meta name="description" content="pg_archivecleanup – clean up PostgreSQL WAL archive files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pg_archivecleanup/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pg_archivecleanup(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pg_archivecleanup &#8211; clean up PostgreSQL WAL archive files </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>pg_archivecleanup</code> [<i>option</i>&#8230;] <i>archivelocation</i> <i>oldestkeptwalfile</i></dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>pg_archivecleanup is designed to be used as an archive_cleanup_command to clean up WAL file archives when running as a standby server (see Section 25.2, &#8220;Log-Shipping Standby Servers&#8221;, in the documentation). pg_archivecleanup can also be used as a standalone program to clean WAL file archives. </dd>
+<p> To configure a standby server to use pg_archivecleanup, put this into its recovery.conf configuration file: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+archive_cleanup_command = 'pg_archivecleanup <i>archivelocation</i> %r'
+</pre>
+</dd></dl>
+<p> where <i>archivelocation</i> is the directory from which WAL segment files should be removed. </p>
+<p> When used within archive_cleanup_command, all WAL files logically preceding the value of the %r argument will be removed from <i>archivelocation</i>. This minimizes the number of files that need to be retained, while preserving crash-restart capability. Use of this parameter is appropriate if the <i>archivelocation</i> is a transient staging area for this particular standby server, but <i>not</i> when the <i>archivelocation</i> is intended as a long-term WAL archive area, or when multiple standby servers are recovering from the same archive location. </p>
+<p> When used as a standalone program all WAL files logically preceding the <i>oldestkeptwalfile</i> will be removed from <i>archivelocation</i>. In this mode, if you specify a .backup file name, then only the file prefix will be used as the <i>oldestkeptwalfile</i>. This allows you to remove all WAL files archived prior to a specific base backup without error. For example, the following example will remove all files older than WAL file name 000000010000003700000010: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+pg_archivecleanup -d archive 000000010000003700000010.00000020.backup
+pg_archivecleanup:  keep WAL file &quot;archive/000000010000003700000010&quot; and later
+pg_archivecleanup:  removing file &quot;archive/00000001000000370000000F&quot;
+pg_archivecleanup:  removing file &quot;archive/00000001000000370000000E&quot;
+</pre>
+</dd></dl>
+<p> pg_archivecleanup assumes that <i>archivelocation</i> is a directory readable and writable by the server-owning user.</p>
+<h2>OPTIONS</h2>
+<p> pg_archivecleanup accepts the following command-line arguments: </p>
+<p> <code>-d</code></p>
+<dl>
+<dt>
+</dt><dd> Print lots of debug logging output on stderr.</dd></dl>
+<p> <code>-n</code></p>
+<dl>
+<dt>
+</dt><dd> Print the names of the files that would have been removed on stdout (performs a dry run).</dd></dl>
+<p> <code>-V</code>, <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Print the pg_archivecleanup version and exit.</dd></dl>
+<p> <code>-x</code> <i>extension</i></p>
+<dl>
+<dt>
+</dt><dd> When using the program as a standalone utility, provide an extension that will be stripped from all file names before deciding if they should be deleted. This is typically useful for cleaning up archives that have been compressed during storage, and therefore have had an extension added by the compression program. For example: -x .gz.</dd></dl>
+<p> <code>-?</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Show help about pg_archivecleanup command line arguments, and exit.</dd></dl>
+<h2>NOTES</h2>
+<p> pg_archivecleanup is designed to work with PostgreSQL 8.0 and later when used as a standalone utility, or with PostgreSQL 9.0 and later when used as an archive cleanup command. </p>
+<p> pg_archivecleanup is written in C and has an easy-to-modify source code, with specifically designated sections to modify for your own needs</p>
+<h2>EXAMPLES</h2>
+<p> On Linux or Unix systems, you might use: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+archive_cleanup_command = 'pg_archivecleanup -d /mnt/standby/archive %r 2&gt;&gt;cleanup.log'
+</pre>
+</dd></dl>
+<p> where the archive directory is physically located on the standby server, so that the <i>archive_command</i> is accessing it across NFS, but the files are local to the standby. This will: </p>
+<dl>
+<dt>
+</dt><dd> &bull; produce debugging output in cleanup.log</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; remove no-longer-needed files from the archive directory</dd></dl>
+<h2>AUTHOR</h2>
+<p> Simon Riggs &lt;simon [at] 2ndquadrant.com&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pg_standby/">pg_standby</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>env(1) · Linux Manual Pages</title>
+<meta name="description" content="env – run a program in a modified environment">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-env/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>env(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> env &#8211; run a program in a modified environment </p>
+<h2>SYNOPSIS</h2>
+<p> <code>env</code> [<i>,OPTION/</i>]&#8230; [<i>,-/</i>] [<i>,NAME=VALUE/</i>]&#8230; [<i>,COMMAND /</i>[<i>,ARG/</i>]&#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> Set each NAME to VALUE in the environment and run COMMAND. </p>
+<p> Mandatory arguments to long options are mandatory for short options too.</p>
+<dl>
+<dt><code>-i</code>, <code>&#8211;ignore-environment</code></dt>
+<dd> start with an empty environment</dd>
+<dt><code>-0</code>, <code>&#8211;null</code></dt>
+<dd> end each output line with NUL, not newline</dd>
+<dt><code>-u</code>, <code>&#8211;unset</code>=<i>,NAME/</i></dt>
+<dd> remove variable from the environment</dd>
+<dt><code>-C</code>, <code>&#8211;chdir</code>=<i>,DIR/</i></dt>
+<dd> change working directory to DIR</dd>
+<dt><code>-S</code>, <code>&#8211;split-string</code>=<i>,S/</i></dt>
+<dd> process and split S into separate arguments; used to pass multiple arguments on shebang lines</dd>
+<dt><code>&#8211;block-signal</code>[=<i>,SIG/</i>]</dt>
+<dd> block delivery of SIG signal(s) to COMMAND</dd>
+<dt><code>&#8211;default-signal</code>[=<i>,SIG/</i>]</dt>
+<dd> reset handling of SIG signal(s) to the default</dd>
+<dt><code>&#8211;ignore-signal</code>[=<i>,SIG/</i>]</dt>
+<dd> set handling of SIG signals(s) to do nothing</dd>
+<dt><code>&#8211;list-signal-handling</code></dt>
+<dd> list non default signal handling to stderr</dd>
+<dt><code>-v</code>, <code>&#8211;debug</code></dt>
+<dd> print verbose information for each processing step</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
+<p> A mere &#8211; implies <code>-i</code>. If no COMMAND, print the resulting environment. </p>
+<p> SIG may be a signal name like &#8216;PIPE&#8217;, or a signal number like &#8217;13&#8217;. Without SIG, all known signals are included. Multiple signals can be comma-separated.</p>
+<h2>OPTIONS</h2>
+<h3>-S/&#8211;split-string usage in scripts</h3>
+<p> The <code>-S</code> option allows specifying multiple parameters in a script. Running a script named <code>1.pl</code> containing the following first line: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+#!/usr/bin/env -S perl -w -T
+...
+</pre>
+</dd></dl>
+<p> Will execute <code>perl -w -T 1.pl.</code> </p>
+<p> Without the <code>&#8216;-S&#8217;</code> parameter the script will likely fail with: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+/usr/bin/env: 'perl -w -T': No such file or directory
+</pre>
+</dd></dl>
+<p> See the full documentation for more details. </p>
+<h3>&#8211;default-signal[=SIG] usage</h3>
+<p> This option allows setting a signal handler to its default action, which is not possible using the traditional shell trap command. The following example ensures that seq will be terminated by SIGPIPE no matter how this signal is being handled in the process invoking the command. </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+sh -c 'env --default-signal=PIPE seq inf | head -n1'
+</pre>
+</dd></dl>
+<h2>NOTES</h2>
+<p> POSIX&#8217;s exec(2) pages says:</p>
+<dl>
+<dt>
+</dt><dd> &quot;many existing applications wrongly assume that they start with certain signals set to the default action and/or unblocked&#8230;. Therefore, it is best not to block or ignore signals across execs without explicit reason to do so, and especially not to block signals across execs of arbitrary (not closely cooperating) programs.&quot;</dd></dl>
+<h2>AUTHOR</h2>
+<p> Written by Richard Mlynarik, David MacKenzie, and Assaf Gordon.</p>
+<h2>REPORTING BUGS</h2>
+<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+ Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+ This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/2-sigaction/">sigaction</a>(2), <a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a>(2), <a href="/docs/linux/man/7-signal/">signal</a>(7) </p>
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/env">https://www.gnu.org/software/coreutils/env</a>&gt;<br />
+ or available locally via: info &#8216;(coreutils) env invocation&#8217; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

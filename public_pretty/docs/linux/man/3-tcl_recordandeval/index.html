@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcl_recordandeval(3) · Linux Manual Pages</title>
+<meta name="description" content="Tcl_RecordAndEval – save command on history list before evaluating">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tcl_recordandeval/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tcl_recordandeval(3)</h1>
+
+
+
+
+
+<p>Tcl_RecordAndEval &#8211; save command on history list before evaluating </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tcl.h&gt;</code>
+int
+<code>Tcl_RecordAndEval</code>(<i>interp, cmd, flags</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>Tcl_Interp <i>*interp</i> (in) Tcl interpreter in which to evaluate command.</dd>
+<dd>const char <i>*cmd</i> (in) Command (or sequence of commands) to execute.</dd>
+<dd>int <i>flags</i> (in) An OR&#8217;ed combination of flag bits. <code>TCL_NO_EVAL</code> means record the command but do not evaluate it. <code>TCL_EVAL_GLOBAL</code> means evaluate the command at global level instead of the current stack level. </dd>
+</dl>
+<h2>Description</h2>
+<p><code>Tcl_RecordAndEval</code> is invoked to record a command as an event on the history list and then execute it using <code>Tcl_Eval</code> (or <code>Tcl_GlobalEval</code> if the <code>TCL_EVAL_GLOBAL</code> bit is set in <i>flags</i>). It returns a completion code such as <code>TCL_OK</code> just like <code>Tcl_Eval</code> and it leaves information in the interpreter&#8217;s result. If you do not want the command recorded on the history list then you should invoke <code>Tcl_Eval</code> instead of <code>Tcl_RecordAndEval</code>. Normally <code>Tcl_RecordAndEval</code> is only called with top-level commands typed by the user, since the purpose of history is to allow the user to re-issue recently-invoked commands. If the <i>flags</i> argument contains the <code>TCL_NO_EVAL</code> bit then the command is recorded without being evaluated. </p>
+<p> Note that <code>Tcl_RecordAndEval</code> has been largely replaced by the object-based procedure <code>Tcl_RecordAndEvalObj</code>. That object-based procedure records and optionally executes a command held in a Tcl object instead of a string. </p>
+<h2>See Also</h2>
+<p>Tcl_RecordAndEvalObj </p>
+<h2>Keywords</h2>
+<p>command, event, execute, history, interpreter, record</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

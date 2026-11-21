@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>path_pricer_type(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::MCPathBasketEngine – Pricing engine for path dependent basket options using Monte Carlo simulation.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-path_pricer_type/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>path_pricer_type(3)</h1>
+
+
+
+
+
+<p>QuantLib::MCPathBasketEngine &#8211; Pricing engine for path dependent basket options using Monte Carlo simulation. </p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;ql/experimental/mcbasket/mcpathbasketengine.hpp&gt;</code></pre>
+<p> Inherits QuantLib::PathMultiAssetOption::engine, and <code>McSimulation&lt; MultiVariate, RNG, S &gt;</code>.</p>
+<h3>Public Types</h3>
+<p>typedef <code>McSimulation</code>&lt; <code>MultiVariate</code>, RNG, S &gt;::path_generator_type <code>path_generator_type</code> </p>
+<p> typedef <code>McSimulation</code>&lt; <code>MultiVariate</code>, RNG, S &gt;::path_pricer_type <code>path_pricer_type</code> </p>
+<p> typedef <code>McSimulation</code>&lt; <code>MultiVariate</code>, RNG, S &gt;::stats_type <code>stats_type</code></p>
+<h3>Public Member Functions</h3>
+<p><code>MCPathBasketEngine</code> (Size timeSteps, bool brownianBridge, bool antitheticVariate, bool controlVariate, Size requiredSamples, Real requiredTolerance, Size maxSamples, BigNatural seed) </p>
+<p> void <code>calculate</code> () const</p>
+<h3>Protected Member Functions</h3>
+<p><code>TimeGrid</code> <code>timeGrid</code> () const </p>
+<p> boost::shared_ptr&lt; path_generator_type &gt; <code>pathGenerator</code> () const </p>
+<p> boost::shared_ptr&lt; path_pricer_type &gt; <code>pathPricer</code> () const</p>
+<h3>Protected Attributes</h3>
+<p>Size <code>timeSteps_</code> </p>
+<p> Size <code>requiredSamples_</code> </p>
+<p> Size <code>maxSamples_</code> </p>
+<p> Real <code>requiredTolerance_</code> </p>
+<p> bool <code>brownianBridge_</code> </p>
+<p> BigNatural <code>seed_</code></p>
+<h2>Detailed Description</h2>
+<h3>template&lt;class RNG = PseudoRandom, class S = Statistics&gt; class QuantLib::MCPathBasketEngine&lt; RNG, S &gt;</h3>
+<p>Pricing engine for path dependent basket options using Monte Carlo simulation.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>operatorstdnormal_distribution(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-operatorstdnormal_distribution/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>operatorstdnormal_distribution(3)</h1>
+
+
+
+
+
+<p>operator&lt;&lt;,&gt;&gt;(std::normal_distribution) - operator&lt;&lt;,&gt;&gt;(std::normal_distribution)</p>
+<h2>Synopsis</h2>
+<pre><code>template &lt;class CharT, class Traits, class ResultType&gt;
+std::basic_ostream&lt;CharT, Traits&gt; &amp;operator&lt;&lt;(std::basic_ostream&lt;CharT, Traits&gt; &amp;ost, (1)
+                                                                                          const normal_distribution&lt;ResultType&gt; &amp;d);
+template &lt;class CharT, class Traits, class ResultType&gt;
+std::basic_istream&lt;CharT, Traits&gt; &amp;operator&gt;&gt;(std::basic_istream&lt;CharT, Traits&gt; &amp;ist, (2)
+                                                                                          normal_distribution&lt;ResultType&gt; &amp;d);</code></pre> 
+<p>Performs stream input and output operations on pseudo-random number distribution d.</p>
+<ol>
+<li>Writes a textual representation of the distribution parameters and internal state to ost as textual representation. The formatting flags and fill character of ost are unchanged.</li>
+<li>Restores the distribution parameters and internal state with data read from ist. The formatting flags of ist are unchanged. The data must have been written using a stream with the same locale, CharT and Traits template parameters, otherwise the behavior is undefined. If bad input is encountered, ist.setstate(std::ios::failbit) is called, which may throw std::ios_base::failure. d is unchanged in that case.</li>
+</ol>
+<h2>Parameters</h2>
+<p>ost - output stream to insert the data to
+ist - input stream to extract the data from
+d - pseudo-random number distribution</p>
+<h2>Return value</h2>
+<ol>
+<li>ost</li>
+<li>ist</li>
+</ol>
+<h2>Exceptions</h2>
+<ol>
+<li><i>(none)</i></li>
+<li>may throw std::ios_base::failure on bad input.</li>
+</ol>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

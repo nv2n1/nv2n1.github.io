@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>make_strings(1) · Linux Manual Pages</title>
+<meta name="description" content="make_strings – tool to build lists of localizable strings from Objective-C files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-make_strings/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>make_strings(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> make_strings &#8211; tool to build lists of localizable strings from Objective-C files</p>
+<h2>SYNOPSIS</h2>
+<p> <code>make_strings</code> [<code>&#8211;help</code>] [<code>&#8211;verbose</code>] [<code>&#8211;aggresive-import</code>] [<code>&#8211;aggressive-match</code>] [<code>&#8211;aggressive-remove</code>] [<code>-L</code> <i>languages</i>] <i>files.[hmc&#8230;]</i> </p>
+<h2>DESCRIPTION</h2>
+<p> <code>make_strings</code> parses Objective-C files and builds lists of localizable strings. It then creates new <i>.strings</i> files or merges the strings with existing <i>.strings</i> files. It&#8217;s fairly intelligent when matching old and new strings, and produces <i>.strings</i> files that are (supposed to be) easy for a translator to work with. </p>
+<p> <code>make_strings</code> accepts the following options: </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints a short list of available options.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Prints additional information while processing.</dd>
+<dt><code>-L</code><i> languages</i></dt>
+<dd> Specify which languages to process. Multuple <code>-L</code> options are accepted, or multiple <i>languages</i> defined in one <code>-L</code> flag.</dd>
+<dt><code>&#8211;aggressive-import</code></dt>
+<dd> Activates <code>&#8211;aggresive-match</code> and automatically removes &quot;dummy&quot; entries that are added by importing <i>.strings</i> files which were not created by <code>make_strings</code> program. This option is suitable when <code>make_strings</code> is run for the first time and there is an existing <i>.strings</i> file which contains a fairly accurate translation.</dd>
+<dt><code>&#8211;aggressive-match</code></dt>
+<dd> This option will make <code>make_strings</code> assume that matching keys should have matching translations. This can save lots of work, but it increases the risk of erroneous translation.</dd>
+<dt><code>&#8211;aggressive-remove</code></dt>
+<dd> Removes obsolete strings/keys. </dd>
+</dl>
+<h2>EXAMPLES</h2>
+<p> make_strings -L &quot;English Swedish Russian&quot; *.[hm] </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/7-gnustep/">GNUstep</a></code>(7). </p>
+<h2>AUTHORS</h2>
+<p> <code>make_strings</code> was written Alexander Malmberg &lt;alexander [at] malmberg.org&gt;. </p>
+<p> This manual page was added by Yavor Doganov &lt;yavor [at] gnu.org&gt;. </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2009 Free Software Foundation, Inc. </p>
+<p> Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

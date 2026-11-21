@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ata_mselect_control(9) · Linux Manual Pages</title>
+<meta name="description" content="ata_mselect_control – Simulate MODE SELECT for control page">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-ata_mselect_control/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>ata_mselect_control(9)</h1>
+
+
+
+
+
+<p>ata_mselect_control &#8211; Simulate MODE SELECT for control page</p>
+<h2>Synopsis</h2>
+<pre><code>int ata_mselect_control(struct ata_queued_cmd *qc, const u8 *buf, int len, u16 *fp);</code></pre>
+<h2>Arguments</h2>
+<p><i>qc</i></p>
+<dl>
+<dd>
+</dd><dd>Storage for translated ATA taskfile</dd></dl>
+<p> <i>buf</i></p>
+<dl>
+<dd>input buffer</dd></dl>
+<p> <i>len</i></p>
+<dl>
+<dd>number of valid bytes in the input buffer</dd></dl>
+<p> <i>fp</i></p>
+<dl>
+<dd>out parameter for the failed field on error</dd></dl>
+<h2>Description</h2>
+<p>Prepare a taskfile to modify caching information for the device. </p>
+<p> LOCKING: None.</p>
+<h2>Author</h2>
+<p><code>Jeff Garzik</code></p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

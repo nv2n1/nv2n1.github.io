@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ppmcolors(1) · Linux Manual Pages</title>
+<meta name="description" content="ppmcolors – generate a color map of all colors of a certain maxval">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ppmcolors/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ppmcolors(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> ppmcolors &#8211; generate a color map of all colors of a certain maxval</p>
+<h2>SYNOPSIS</h2>
+<p> <code>ppmcolors</code> [<code>-maxval=</code><i>maxval</i>] </p>
+<p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
+<h2>DESCRIPTION</h2>
+<p> <code>ppmcolors</code> generates a PPM color map containing all the colors representable with a certain maxval. </p>
+<p> A PPM color map is a regular PPM image that is used by some programs to define a set of colors. </p>
+<p> <code>ppmcolors</code> generates a one row PPM image that contains one pixel of each color representable by the maxval you choose. The maxval of the PPM image is that maxval. Note that you can change the maxval of the color map by running the output of <code>ppmcolors</code> through <code>pnmdepth</code>. As long as the new maxval is a multiple of the original, the resulting set of colors will be identical. If the new maxval is not a multiple, the resulting set of colors will be slightly different. </p>
+<p> When you select a maxval of 5 (which is the default), you get a color map of the set of &quot;web safe&quot; colors as defined by Netscape. Most web browsers guarantee that they can produce at least these 216 colors (215 plus black). </p>
+<p> <code>pnmcolormap</code> is another program to generate a color map. It chooses a set of colors designed to represent the colors in a specified image (or simply the set of all the colors in that image, if you choose). </p>
+<p> <code>pgmramp</code> performs a similar function for PGM images. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-maxval=</code><i>maxval</i></dt>
+<dd> This is the maxval of the generated color map. Default is 5. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pnmdepth/">pnmdepth</a></code>(1), <code><a href="/docs/linux/man/1-pnmcolormap/">pnmcolormap</a></code>(1), <code><a href="/docs/linux/man/1-ppmcie/">ppmcie</a></code>(1), <code><a href="/docs/linux/man/1-ppmrainbow/">ppmrainbow</a></code>(1), <code><a href="/docs/linux/man/1-pgmramp/">pgmramp</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
+<h2>AUTHOR</h2>
+<p> By Bryan Henderson, December 2001. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

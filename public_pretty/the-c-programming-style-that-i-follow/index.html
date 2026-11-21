@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Code Organization: Structuring Headers and Source Files - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/the-c-programming-style-that-i-follow/">
+  <meta name="description" content="C allows flexibility in coding style, but discipline matters. Consistent structure makes code readable, maintainable, and less prone to bugs. Here’s a practical …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="C Code Organization: Structuring Headers and Source Files">
+  <meta property="og:url" content="https://www.systutorials.com/the-c-programming-style-that-i-follow/">
+  <meta property="og:description" content="C allows flexibility in coding style, but discipline matters. Consistent structure makes code readable, maintainable, and less prone to bugs. Here’s a practical …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>C Code Organization: Structuring Headers and Source Files</h1>
+        <time class="post-date" datetime="2013-07-12T16:47:45Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>C allows flexibility in coding style, but discipline matters. Consistent structure makes code readable, maintainable, and less prone to bugs. Here’s a practical approach that scales from small utilities to large projects.</p>
+<h2 id="one-header-per-source-file">One Header Per Source File</h2>
+<p>Pair each source file (<em>.c) with a corresponding header file (</em>.h). The header serves as the module’s public interface, declaring what’s available to other compilation units.</p>
+<pre><code>math_utils.h
+math_utils.c
+</code></pre>
+<p>This 1:1 mapping makes dependencies clear and keeps related declarations and definitions grouped logically. It also simplifies build systems and makes it obvious which headers export which functionality.</p>
+<h2 id="header-guards-and-pragma-once">Header Guards and Pragma Once</h2>
+<p>Always prevent multiple inclusion. Use the standard <code>#ifndef</code> pattern:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#ifndef MATH_UTILS_H
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define MATH_UTILS_H
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// declarations here
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#endif </span><span class="c1">// MATH_UTILS_H
+</span></span></span></code></pre></div><p>Avoid leading underscores in guard names — identifiers starting with underscore followed by an uppercase letter are reserved by the C standard. Use <code>MATH_UTILS_H</code> instead of <code>_MATH_UTILS_H</code>.</p>
+<p>Modern alternative: <code>#pragma once</code> is non-standard but supported by all major compilers (GCC, Clang, MSVC). It’s simpler and avoids naming collisions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#pragma once
+</span></span></span></code></pre></div><p>Choose one consistently across your codebase. For new projects without legacy compatibility requirements, <code>#pragma once</code> is reasonable. For projects targeting embedded systems or unusual platforms, stick with <code>#ifndef</code>.</p>
+<h2 id="minimize-header-dependencies">Minimize Header Dependencies</h2>
+<p>Only include headers in .c files. Headers should almost never include other headers except when a type definition is genuinely necessary for your public interface.</p>
+<p><strong>Bad:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// config.h
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;database.h&#34;  // unnecessary</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">AppState</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Database</span> <span class="o">*</span><span class="n">db</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p><strong>Better:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// config.h
+</span></span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">Database</span><span class="p">;</span>  <span class="c1">// forward declaration
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">AppState</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">Database</span> <span class="o">*</span><span class="n">db</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// config.c
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;config.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;database.h&#34;  // include here</span><span class="cp">
+</span></span></span></code></pre></div><p>Forward declarations eliminate circular dependencies and keep header dependency chains shallow. This reduces compilation time and makes the dependency graph easier to reason about.</p>
+<h2 id="declarations-only-in-headers">Declarations Only in Headers</h2>
+<p>Headers contain declarations: function prototypes, type definitions (structs, enums, unions), and extern variable declarations. Never define functions or allocate storage in headers.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// math_utils.h
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">);</span>  <span class="c1">// declaration only
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// math_utils.c
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;math_utils.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// definition
+</span></span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>Exception:</strong> <code>static inline</code> functions can live in headers since each translation unit gets its own copy. Use them for performance-critical code only:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// math_utils.h
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kr">inline</span> <span class="kt">int</span> <span class="nf">square</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Mark them <code>static inline</code> to avoid ODR (One Definition Rule) violations and to signal intent that this is an optimization.</p>
+<h2 id="global-variables-minimize-and-document">Global Variables: Minimize and Document</h2>
+<p>If a module must export a variable, declare it as <code>extern</code> in the header:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// config.h
+</span></span></span><span class="line"><span class="cl"><span class="k">extern</span> <span class="kt">int</span> <span class="n">max_connections</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// config.c
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;config.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">max_connections</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+</span></span></code></pre></div><p>Global variables are a code smell — they complicate testing, threading, and reasoning about program state. Prefer passing data through function parameters or returning values. When globals are unavoidable (configuration constants, logging state), keep them limited, document their purpose clearly, and consider wrapping them in accessor functions for thread safety.</p>
+<h2 id="include-order-convention">Include Order Convention</h2>
+<p>In .c files, follow this include order to catch missing dependencies early:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// network.c
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;network.h&#34;      // validate module completeness first</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;        // standard library headers next</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;config.h&#34;       // project-local headers last</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;logging.h&#34;</span><span class="cp">
+</span></span></span></code></pre></div><p>This order ensures your module’s header is self-contained and catches missing includes before compilation spreads to other files.</p>
+<h2 id="const-correctness">Const Correctness</h2>
+<p>Use <code>const</code> for immutable parameters and return values:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// string_utils.h
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">string_length</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="nf">get_error_message</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">process_config</span><span class="p">(</span><span class="k">const</span> <span class="k">struct</span> <span class="n">Config</span> <span class="o">*</span><span class="n">cfg</span><span class="p">);</span>
+</span></span></code></pre></div><p>Const annotations document intent, prevent accidental modifications, and let the compiler catch bugs.</p>
+<h2 id="document-public-interfaces">Document Public Interfaces</h2>
+<p>Add brief comments to public declarations, especially non-obvious behavior:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// Returns non-zero if file exists, zero otherwise.
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Sets errno on I/O errors.
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">file_exists</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Caller must free returned memory.
+</span></span></span><span class="line"><span class="cl"><span class="kt">char</span><span class="o">*</span> <span class="nf">read_file_contents</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">);</span>
+</span></span></code></pre></div><p>Clear documentation reduces confusion during code review and helps new developers understand module contracts.</p>
+<h2 id="practical-example-module-template">Practical Example: Module Template</h2>
+<p>Here’s a complete minimal module:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// vector.h
+</span></span></span><span class="line"><span class="cl"><span class="cp">#pragma once
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="o">*</span><span class="n">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">size_t</span> <span class="n">capacity</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">size_t</span> <span class="n">size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="n">IntVector</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">IntVector</span><span class="o">*</span> <span class="nf">vector_create</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">initial_capacity</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">vector_destroy</span><span class="p">(</span><span class="n">IntVector</span> <span class="o">*</span><span class="n">v</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">vector_push</span><span class="p">(</span><span class="n">IntVector</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">vector_get</span><span class="p">(</span><span class="k">const</span> <span class="n">IntVector</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">index</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">size_t</span> <span class="nf">vector_size</span><span class="p">(</span><span class="k">const</span> <span class="n">IntVector</span> <span class="o">*</span><span class="n">v</span><span class="p">);</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// vector.c
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;vector.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">IntVector</span><span class="o">*</span> <span class="nf">vector_create</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">initial_capacity</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">IntVector</span> <span class="o">*</span><span class="n">v</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">IntVector</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">)</span> <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">v</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="n">initial_capacity</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">v</span><span class="o">-&gt;</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">initial_capacity</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">v</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">v</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">vector_destroy</span><span class="p">(</span><span class="n">IntVector</span> <span class="o">*</span><span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">v</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">vector_push</span><span class="p">(</span><span class="n">IntVector</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">v</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">&gt;=</span> <span class="n">v</span><span class="o">-&gt;</span><span class="n">capacity</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">v</span><span class="o">-&gt;</span><span class="n">capacity</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">v</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="nf">realloc</span><span class="p">(</span><span class="n">v</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">,</span> <span class="n">v</span><span class="o">-&gt;</span><span class="n">capacity</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">v</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">v</span><span class="o">-&gt;</span><span class="n">size</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">vector_get</span><span class="p">(</span><span class="k">const</span> <span class="n">IntVector</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">v</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">size_t</span> <span class="nf">vector_size</span><span class="p">(</span><span class="k">const</span> <span class="n">IntVector</span> <span class="o">*</span><span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">v</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This discipline scales across projects. Consistent structure makes code reviews faster, reduces build times through minimal dependencies, and makes onboarding new developers straightforward.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pic(1) · Linux Manual Pages</title>
+<meta name="description" content="pic – compile pictures for troff or TeX">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pic/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pic(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pic &#8211; compile pictures for troff or TeX </p>
+<h2>SYNOPSIS</h2>
+<p> [ <code>-nvCSU</code> ] [<i>file</i> &#8230;] <code>-t</code> [ <code>-cvzCSU</code> ] [<i>file</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> This manual page describes the GNU version of <code>pic</code>, which is part of the groff document formatting system. <code>pic</code> compiles descriptions of pictures embedded within <code>troff</code> or TeX input files into commands that are understood by TeX or <code>troff</code>. Each picture starts with a line beginning with <code>.PS</code> and ends with a line beginning with <code>.PE</code>. Anything outside of <code>.PS</code> and <code>.PE</code> is passed through without change. </p>
+<p> It is the user&#8217;s responsibility to provide appropriate definitions of the <code>PS</code> and <code>PE</code> macros. When the macro package being used does not supply such definitions (for example, old versions of -ms), appropriate definitions can be obtained with <code>-mpic</code>: These will center each picture.</p>
+<h2>OPTIONS</h2>
+<p> Options that do not take arguments may be grouped behind a single <code>&#8211;</code>. The special option <code>&#8212;</code> can be used to mark the end of the options. A filename of <code>&#8211;</code> refers to the standard input.</p>
+<dl>
+<dt><code>-C</code></dt>
+<dd> Recognize <code>.PS</code> and <code>.PE</code> even when followed by a character other than space or newline.</dd>
+<dt><code>-S</code></dt>
+<dd> Safer mode; do not execute <code>sh</code> commands. This can be useful when operating on untrustworthy input (enabled by default).</dd>
+<dt><code>-U</code></dt>
+<dd> Unsafe mode; revert the default option <code>-S</code>.</dd>
+<dt><code>-n</code></dt>
+<dd> Don&#8217;t use the groff extensions to the troff drawing commands. You should use this if you are using a postprocessor that doesn&#8217;t support these extensions. The extensions are described in <code><a href="/docs/linux/man/5-groff_out/">groff_out</a></code>(5). The <code>-n</code> option also causes <code>pic</code> not to use zero-length lines to draw dots in troff mode.</dd>
+<dt><code>-t</code></dt>
+<dd> TeX mode.</dd>
+<dt><code>-c</code></dt>
+<dd> Be more compatible with <code>tpic</code>. Implies <code>-t</code>. Lines beginning with <code>\</code> are not passed through transparently. Lines beginning with <code>.</code> are passed through with the initial <code>.</code> changed to <code>\</code>. A line beginning with <code>.ps</code> is given special treatment: it takes an optional integer argument specifying the line thickness (pen size) in milliinches; a missing argument restores the previous line thickness; the default line thickness is 8 milliinches. The line thickness thus specified takes effect only when a non-negative line thickness has not been specified by use of the <code>thickness</code> attribute or by setting the <code>linethick</code> variable.</dd>
+<dt><code>-v</code></dt>
+<dd> Print the version number.</dd>
+<dt><code>-z</code></dt>
+<dd> In TeX mode draw dots using zero-length lines.</dd></dl>
+<p> The following options supported by other versions of <code>pic</code> are ignored:</p>
+<dl>
+<dt><code>-D</code></dt>
+<dd> Draw all lines using the \D escape sequence. <code>pic</code> always does this.</dd>
+<dt><code>-T</code><i>&nbsp;dev</i></dt>
+<dd> Generate output for the <code>troff</code> device <i>dev</i>. This is unnecessary because the <code>troff</code> output generated by <code>pic</code> is device-independent.</dd></dl>
+<h2>USAGE</h2>
+<p> This section describes only the differences between GNU <code>pic</code> and the original version of <code>pic</code>. Many of these differences also apply to newer versions of Unix <code>pic</code>. A complete documentation is available in the file </p>
+<dl>
+<dt>
+</dt><dd> <i>/usr/share/doc/groff-base/pic.ms.gz</i></dd></dl>
+<h3>TeX mode</h3>
+<p> TeX mode is enabled by the <code>-t</code> option. In TeX mode, <code>pic</code> will define a vbox called <code>\graph</code> for each picture. Use the <code>figname</code> command to change the name of the vbox. You must yourself print that vbox using, for example, the command</p>
+<dl>
+<dt>
+</dt><dd>
+<p> <code></code> </p>
+<dl>
+<dd> <p> <code>\centerline{\box\graph}</code> </p>
+ </dd></dl>
+<p> Actually, since the vbox has a height of zero (it is defined with \vtop) this will produce slightly more vertical space above the picture than below it; </p>
+<dl>
+<dd> <p> <code>\centerline{\raise 1em\box\graph}</code> </p>
+ </dd></dl>
+<p> would avoid this. </p>
+<p> To make the vbox having a positive height and a depth of zero (as used e.g. by LaTeX&#8217;s <code>graphics.sty</code>), define the following macro in your document: </p>
+<dl>
+<dd> <p> <code>\def\gpicbox#1{%</code> <br />
+ <code> \vbox{\unvbox\csname #1\endcsname\kern 0pt}}</code> </p>
+ </dd></dl>
+<p> Now you can simply say <code>\gpicbox{graph}</code> instead of \box\graph. </p>
+<p> You must use a TeX driver that supports the <code>tpic</code> specials, version 2. </p>
+<p> Lines beginning with <code>\</code> are passed through transparently; a <code>%</code> is added to the end of the line to avoid unwanted spaces. You can safely use this feature to change fonts or to change the value of <code>\baselineskip</code>. Anything else may well produce undesirable results; use at your own risk. Lines beginning with a period are not given any special treatment.  </p>
+<h3>Commands</h3>
+<dl>
+<dt><code>for</code><i>variable</i><code>=</code><i>expr1</i><code>to</code><i>expr2</i> [<code>by</code> [<code>*</code>],<i>expr3/</i>] <code>do</code><i>X</i><i>body</i><i>X</i></dt>
+<dd> <p> Set <i>variable</i> to <i>expr1</i>. While the value of <i>variable</i> is less than or equal to <i>expr2</i>, do <i>body</i> and increment <i>variable</i> by <i>expr3</i>; if <code>by</code> is not given, increment <i>variable</i> by 1. If <i>expr3</i> is prefixed by <code>*</code> then <i>variable</i> will instead be multiplied by <i>expr3</i>. The value of <i>expr3</i> can be negative for the additive case; <i>variable</i> is then tested whether it is greater than or equal to <i>expr2</i>. For the multiplicative case, <i>expr3</i> must be greater than zero. If the constraints aren&#8217;t met, the loop isn&#8217;t executed. <i>X</i> can be any character not occurring in <i>body</i>. </p>
+ </dd>
+<dt><code>if</code><i>expr</i><code>then</code><i>X</i><i>if-true</i><i>X</i> [<code>else</code><i>Y</i><i>if-false</i><i>Y</i>]</dt>
+<dd> <p> Evaluate <i>expr</i>; if it is non-zero then do <i>if-true</i>, otherwise do <i>if-false</i>. <i>X</i> can be any character not occurring in <i>if-true</i>. <i>Y</i> can be any character not occurring in <i>if-false</i>. </p>
+ </dd>
+<dt><code>print</code><i>arg</i>...</dt>
+<dd> <p> Concatenate the arguments and print as a line on stderr. Each <i>arg</i> must be an expression, a position, or text. This is useful for debugging. </p>
+ </dd>
+<dt><code>command</code><i>arg</i>...</dt>
+<dd> <p> Concatenate the arguments and pass them through as a line to troff or TeX. Each <i>arg</i> must be an expression, a position, or text. This has a similar effect to a line beginning with <code>.</code> or <code>\</code>, but allows the values of variables to be passed through. For example, </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dd> <pre><code>.PS
+x = 14
+command &quot;.ds string x is &quot; x &quot;.&quot;
+.PE
+\*[string]
+</code></pre>
+ </dd></dl>
+</dl>
+<dd> <p> prints </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dd> <p> <code>x is 14.</code> </p>
+ </dd></dl>
+</dl>
+<dt><code>sh</code><i>X</i><i>command</i><i>X</i></dt>
+<dd> <p> Pass <i>command</i> to a shell. <i>X</i> can be any character not occurring in <i>command</i>. </p>
+ </dd>
+<dt><code>copy</code><code>&quot;,</code><i>filename/</i><code>&quot;</code></dt>
+<dd> <p> Include <i>filename</i> at this point in the file. </p>
+ </dd>
+<dt><code>copy</code> [<code>&quot;,</code><i>filename/</i><code>&quot;</code>] <code>thru</code><i>X</i><i>body</i><i>X</i> [<code>until</code><code>&quot;,</code><i>word</i><code>&quot;</code>]</dt>
+<dd>  </dd>
+<dt><code>copy</code> [<code>&quot;,</code><i>filename/</i><code>&quot;</code>] <code>thru</code><i>macro</i> [<code>until</code><code>&quot;,</code><i>word</i><code>&quot;</code>]</dt>
+<dd> <p> This construct does <i>body</i> once for each line of <i>filename</i>; the line is split into blank-delimited words, and occurrences of <code>$</code><i>i</i> in <i>body</i>, for <i>i</i> between 1 and 9, are replaced by the <i>i</i>-th word of the line. If <i>filename</i> is not given, lines are taken from the current input up to <code>.PE</code>. If an <code>until</code> clause is specified, lines will be read only until a line the first word of which is <i>word</i>; that line will then be discarded. <i>X</i> can be any character not occurring in <i>body</i>. For example, </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dd> <pre><code>.PS
+copy thru % circle at ($1,$2) % until &quot;END&quot;
+1 2
+3 4
+5 6
+END
+box
+.PE
+</code></pre>
+ </dd></dl>
+</dl>
+<dd> <p> is equivalent to </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dd> <pre><code>.PS
+circle at (1,2)
+circle at (3,4)
+circle at (5,6)
+box
+.PE
+</code></pre>
+ </dd></dl>
+</dl>
+<dd> <p> The commands to be performed for each line can also be taken from a macro defined earlier by giving the name of the macro as the argument to <code>thru</code>. </p>
+ </dd></dl>
+<p> <code>reset</code> <br />
+ </p>
+<dl>
+<dt><code>reset</code><i> variable1/</i>[<code>,</code>]<i> variable2 ...</dt>
+<dd> <p> Reset pre-defined variables variable1</i>, <i>variable2</i> ... to their default values. If no arguments are given, reset all pre-defined variables to their default values. Note that assigning a value to <code>scale</code> also causes all pre-defined variables that control dimensions to be reset to their default values times the new value of scale. </p>
+ </dd>
+<dt><code>plot</code><i>expr</i> [<code>&quot;,</code><i>text</i><code>&quot;</code>]</dt>
+<dd> <p> This is a text object which is constructed by using <i>text</i> as a format string for sprintf with an argument of <i>expr</i>. If <i>text</i> is omitted a format string of <code>s%gs</code> is used. Attributes can be specified in the same way as for a normal text object. Be very careful that you specify an appropriate format string; <code>pic</code> does only very limited checking of the string. This is deprecated in favour of <code>sprintf</code>. </p>
+ </dd>
+<dt><i>variable&nbsp;</i><code>:=</code><i>&nbsp;expr</i></dt>
+<dd> <p> This is similar to <code>=</code> except <i>variable</i> must already be defined, and <i>expr</i> will be assigned to <i>variable</i> without creating a variable local to the current block. (By contrast, <code>=</code> defines the variable in the current block if it is not already defined there, and then changes the value in the current block only.) For example, the following: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dd> <pre><code>.PS
+x = 3
+y = 3
+[
+  x := 5
+  y = 5
+]
+print x &quot; &quot; y
+.PE
+</code></pre>
+ </dd></dl>
+</dl>
+<dd> <p> prints </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dd> <p> <code>5 3</code> </p>
+ </dd></dl>
+</dl>
+</dl>
+<p> Arguments of the form </p>
+<dl>
+<dd> <p> <i>X anything X</i> </p>
+ </dd></dl>
+<p> are also allowed to be of the form </p>
+<dl>
+<dd> <p> <code>{&nbsp;</code><i>anything&nbsp;</i><code>}</code> </p>
+ </dd></dl>
+<p> In this case <i>anything</i> can contain balanced occurrences of <code>{</code> and <code>}</code>. Strings may contain <i>X</i> or imbalanced occurrences of <code>{</code> and <code>}</code>.  </p>
+<h3>Expressions</h3>
+<p> The syntax for expressions has been significantly extended: </p>
+<p> <i>x&nbsp;</i><code>^&nbsp;</code><i>y</i> (exponentiation) <br />
+ <code>sin(</code><i>x</i><code>)</code> <br />
+ <code>cos(</code><i>x</i><code>)</code> <br />
+ <code>atan2(</code><i>y</i><code>,</code><i>&nbsp;x</i><code>)</code> <br />
+ <code>log(</code><i>x</i><code>)</code> (base 10) <br />
+ <code>exp(</code><i>x</i><code>)</code> (base 10, i.e. 10^<i>x</i>) <br />
+ <code>sqrt(</code><i>x</i><code>)</code> <br />
+ <code>int(</code><i>x</i><code>)</code> <br />
+ <code>rand()</code> (return a random number between 0 and 1) <br />
+ <code>rand(</code><i>x</i><code>)</code> (return a random number between 1 and <i>x</i>; deprecated) <br />
+ <code>srand(</code><i>x</i><code>)</code> (set the random number seed) <br />
+ <code>max(</code><i>e1</i><code>,</code><i>&nbsp;e2</i><code>)</code> <br />
+ <code>min(</code><i>e1</i><code>,</code><i>&nbsp;e2</i><code>)</code> <br />
+ <code>!</code><i>e</i> <br />
+ <i>e1</i><code> &amp;&amp; </code><i>e2</i> <br />
+ <i>e1</i><code> || </code><i>e2</i> <br />
+ <i>e1</i><code> == </code><i>e2</i> <br />
+ <i>e1</i><code> != </code><i>e2</i> <br />
+ <i>e1</i><code> &gt;= </code><i>e2</i> <br />
+ <i>e1</i><code> &gt; </code><i>e2</i> <br />
+ <i>e1</i><code> &lt;= </code><i>e2</i> <br />
+ <i>e1</i><code> &lt; </code><i>e2</i> <br />
+ <code>&quot;,</code><i>str1</i><code>&quot; == &quot;,</code><i>str2</i><code>&quot;</code> <br />
+ <code>&quot;,</code><i>str1</i><code>&quot; != &quot;,</code><i>str2</i><code>&quot;</code> <br />
+ </p>
+<p> String comparison expressions must be parenthesised in some contexts to avoid ambiguity.  </p>
+<h3>Other Changes</h3>
+<p> A bare expression, <i>expr</i>, is acceptable as an attribute; it is equivalent to <i>dir expr</i>, where <i>dir</i> is the current direction. For example </p>
+<dl>
+<dd> <p> <code>line 2i</code> </p>
+ </dd></dl>
+<p> means draw a line 2 inches long in the current direction. The &#8216;i&#8217; (or &#8216;I&#8217;) character is ignored; to use another measurement unit, set the <i>scale</i> variable to an appropriate value. </p>
+<p> The maximum width and height of the picture are taken from the variables <code>maxpswid</code> and <code>maxpsht</code>. Initially these have values 8.5 and 11. </p>
+<p> Scientific notation is allowed for numbers. For example </p>
+<dl>
+<dd> <p> <code>x = 5e-2</code> </p>
+ </dd></dl>
+<p> Text attributes can be compounded. For example, </p>
+<dl>
+<dd> <p> <code>&quot;foo&quot; above ljust</code> </p>
+ </dd></dl>
+<p> is valid. </p>
+<p> There is no limit to the depth to which blocks can be examined. For example, </p>
+<dl>
+<dd> <p> <code>[A: [B: [C: box ]]] with .A.B.C.sw at 1,2</code> <br />
+ <code>circle at last [].A.B.C</code> </p>
+ </dd></dl>
+<p> is acceptable. </p>
+<p> Arcs now have compass points determined by the circle of which the arc is a part. </p>
+<p> Circles, ellipses, and arcs can be dotted or dashed. In TeX mode splines can be dotted or dashed also. </p>
+<p> Boxes can have rounded corners. The <code>rad</code> attribute specifies the radius of the quarter-circles at each corner. If no <code>rad</code> or <code>diam</code> attribute is given, a radius of <code>boxrad</code> is used. Initially, <code>boxrad</code> has a value of 0. A box with rounded corners can be dotted or dashed. </p>
+<p> Boxes can have slanted sides. This effectively changes the shape of a box from a rectangle to an arbitrary parallelogram. The <code>xslanted</code> and <code>yslanted</code> attributes specify the x and y~offset of the box&#8217;s upper right corner from its default position. </p>
+<p> The <code>.PS</code> line can have a second argument specifying a maximum height for the picture. If the width of zero is specified the width will be ignored in computing the scaling factor for the picture. Note that GNU <code>pic</code> will always scale a picture by the same amount vertically as well as horizontally. This is different from the DWB 2.0 <code>pic</code> which may scale a picture by a different amount vertically than horizontally if a height is specified. </p>
+<p> Each text object has an invisible box associated with it. The compass points of a text object are determined by this box. The implicit motion associated with the object is also determined by this box. The dimensions of this box are taken from the width and height attributes; if the width attribute is not supplied then the width will be taken to be <code>textwid</code>; if the height attribute is not supplied then the height will be taken to be the number of text strings associated with the object times <code>textht</code>. Initially <code>textwid</code> and <code>textht</code> have a value of 0. </p>
+<p> In (almost all) places where a quoted text string can be used, an expression of the form </p>
+<dl>
+<dd> <p> <code>sprintf(s</code><i>format</i><code>s,&nbsp;</code><i>arg</i><code>,</code>...<code>)</code> </p>
+ </dd></dl>
+<p> can also be used; this will produce the arguments formatted according to <i>format</i>, which should be a string as described in <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3) appropriate for the number of arguments supplied. </p>
+<p> The thickness of the lines used to draw objects is controlled by the <code>linethick</code> variable. This gives the thickness of lines in points. A negative value means use the default thickness: in TeX output mode, this means use a thickness of 8 milliinches; in TeX output mode with the <code>-c</code> option, this means use the line thickness specified by <code>.ps</code> lines; in troff output mode, this means use a thickness proportional to the pointsize. A zero value means draw the thinnest possible line supported by the output device. Initially it has a value of -1. There is also a <code>thick</code>[<code>ness</code>] attribute. For example, </p>
+<dl>
+<dd> <p> <code>circle thickness 1.5</code> </p>
+ </dd></dl>
+<p> would draw a circle using a line with a thickness of 1.5 points. The thickness of lines is not affected by the value of the <code>scale</code> variable, nor by the width or height given in the <code>.PS</code> line. </p>
+<p> Boxes (including boxes with rounded corners or slanted sides), circles and ellipses can be filled by giving them an attribute of <code>fill</code>[<code>ed</code>]. This takes an optional argument of an expression with a value between 0 and 1; 0 will fill it with white, 1 with black, values in between with a proportionally gray shade. A value greater than 1 can also be used: this means fill with the shade of gray that is currently being used for text and lines. Normally this will be black, but output devices may provide a mechanism for changing this. Without an argument, then the value of the variable <code>fillval</code> will be used. Initially this has a value of 0.5. The invisible attribute does not affect the filling of objects. Any text associated with a filled object will be added after the object has been filled, so that the text will not be obscured by the filling. </p>
+<p> Three additional modifiers are available to specify colored objects: <code>outline</code>[<code>d</code>] sets the color of the outline, <code>shaded</code> the fill color, and <code>colo</code>[u]r[ed] sets both. All three keywords expect a suffix specifying the color, for example </p>
+<dl>
+<dd> <p> <code>circle shaded green outline black</code> </p>
+ </dd></dl>
+<p> Currently, color support isn&#8217;t available in TeX mode. Predefined color names for <code>groff</code> are in the device macro files, for example <code>ps.tmac</code>; additional colors can be defined with the <code>.defcolor</code> request (see the manual page of <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1) for more details). </p>
+<p> To change the name of the vbox in TeX mode, set the pseudo-variable <code>figname</code> (which is actually a specially parsed command) within a picture. Example: </p>
+<dl>
+<dd> <p> <code>.PS</code> <br />
+ <code>figname = foobar;</code> <br />
+ <code>...</code> <br />
+ <code>.PE</code> </p>
+ </dd></dl>
+<p> The picture is then available in the box <code>\foobar</code>. </p>
+<p> <code>pic</code> assumes that at the beginning of a picture both glyph and fill color are set to the default value. </p>
+<p> Arrow heads will be drawn as solid triangles if the variable <code>arrowhead</code> is non-zero and either TeX mode is enabled or the <code>-n</code> option has not been given. Initially <code>arrowhead</code> has a value of 1. Note that solid arrow heads are always filled with the current outline color. </p>
+<p> The troff output of <code>pic</code> is device-independent. The <code>-T</code> option is therefore redundant. All numbers are taken to be in inches; numbers are never interpreted to be in troff machine units. </p>
+<p> Objects can have an <code>aligned</code> attribute. This will only work if the postprocessor is <code>grops</code>, or <code>gropdf</code>. Any text associated with an object having the <code>aligned</code> attribute will be rotated about the center of the object so that it is aligned in the direction from the start point to the end point of the object. Note that this attribute will have no effect for objects whose start and end points are coincident. </p>
+<p> In places where <i>n</i><code>th</code> is allowed <code>&#8216;</code><i>expr</i><code>&#8216;th</code> is also allowed. Note that <code>&#8216;th</code> is a single token: no space is allowed between the <code>&#8216;</code> and the <code>th</code>. For example, </p>
+<dl>
+<dd> <pre><code>for i = 1 to 4 do {
+   line from 'i'th box.nw to 'i+1'th box.se
+}
+</code></pre>
+ </dd></dl>
+<h2>CONVERSION</h2>
+<p> To obtain a stand-alone picture from a <code>pic</code> file, enclose your <code>pic</code> code with <code>.PS</code> and <code>.PE</code> requests; <code>roff</code> configuration commands may be added at the beginning of the file, but no <code>roff</code> text. </p>
+<p> It is necessary to feed this file into <code>groff</code> without adding any page information, so you must check which <code>.PS</code> and <code>.PE</code> requests are actually called. For example, the mm macro package adds a page number, which is very annoying. At the moment, calling standard <code>groff</code> without any macro package works. Alternatively, you can define your own requests, e.g. to do nothing: </p>
+<dl>
+<dd> <pre><code>
+ .de PS
+..
+.de PE
+..
+ </code></pre>
+ </dd></dl>
+<p> <code>groff</code> itself does not provide direct conversion into other graphics file formats. But there are lots of possibilities if you first transform your picture into PostScript&#174; format using the <code>groff</code> option <code>-Tps</code>. Since this <i>ps</i>-file lacks BoundingBox information it is not very useful by itself, but it may be fed into other conversion programs, usually named <code>ps2</code><i>other</i> or <code>psto</code><i>other</i> or the like. Moreover, the PostScript interpreter <code>ghostscript</code> (<code>gs</code>) has built-in graphics conversion devices that are called with the option </p>
+<dl>
+<dd> <p> <code>gs -sDEVICE=</code><i>&lt;devname&gt;</i> </p>
+ </dd></dl>
+<p> Call </p>
+<dl>
+<dd> <p> <code>gs --help</code> </p>
+ </dd></dl>
+<p> for a list of the available devices. </p>
+<p> An alternative may be to use the <code>-Tpdf</code> option to convert your picture directly into <code>PDF</code> format. The MediaBox of the file produced can be controlled by passing a <code>-P-p</code> papersize to groff. </p>
+<p> As the Encapsulated PostScript File Format <code>EPS</code> is getting more and more important, and the conversion wasn&#8217;t regarded trivial in the past you might be interested to know that there is a conversion tool named <code>ps2eps</code> which does the right job. It is much better than the tool <code>ps2epsi</code> packaged with <code>gs</code>. </p>
+<p> For bitmapped graphic formats, you should use <code>pstopnm</code>; the resulting (intermediate) <code>PNM</code> file can be then converted to virtually any graphics format using the tools of the <code>netpbm</code> package.  </p>
+<h2>FILES</h2>
+<dl>
+<dt><i>/usr/share/groff/1.22.4/tmac/pic.tmac</i></dt>
+<dd> <p> Example definitions of the <code>PS</code> and <code>PE</code> macros. </p>
+ </dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1), <code><a href="/docs/linux/man/5-groff_out/">groff_out</a></code>(5), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), <code><a href="/docs/linux/man/1-ps2eps/">ps2eps</a></code>(1), <code><a href="/docs/linux/man/1-pstopnm/">pstopnm</a></code>(1), <code><a href="/docs/linux/man/1-ps2epsi/">ps2epsi</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
+<p> Eric S. Raymond, <i>Making Pictures With GNU PIC.</i> <br />
+ <i>/usr/share/doc/groff-base/pic.ps</i> (this file, together with its source file, pic.ms, is part of the groff documentation) </p>
+<p> Tpic: Pic for TeX </p>
+<p> Brian W. Kernighan, <i>PIC --- A Graphics Language for Typesetting (User Manual)</i> AT&amp;T Bell Laboratories, Computing Science Technical Report No. 116 (revised May, 1991). </p>
+<p> <code>ps2eps</code> is available from CTAN mirrors, e.g. </p>
+<p> W. Richard Stevens, <i>Turning PIC into HTML</i> </p>
+<p> W. Richard Stevens, <i>Examples of </i>pic <i> Macros</i>  </p>
+<h2>BUGS</h2>
+<p> Input characters that are invalid for <code>groff</code> (i.e., those with ASCII code 0, or 013 octal, or between 015 and 037 octal, or between 0200 and 0237 octal) are rejected even in TeX mode. </p>
+<p> The interpretation of <code>fillval</code> is incompatible with the pic in 10th edition Unix, which interprets 0 as black and 1 as white. </p>
+<p> PostScript&#174; is a registered trademark of Adobe Systems Incorporation. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

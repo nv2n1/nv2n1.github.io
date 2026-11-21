@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tracker-writeback(1) · Linux Manual Pages</title>
+<meta name="description" content="tracker-writeback – Used to write metadata set in Tracker back to physical files.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tracker-writeback/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tracker-writeback(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> tracker-writeback &#8211; Used to write metadata set in Tracker back to physical files.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>tracker-writeback</code> [<i>OPTION</i>&#8230;] </p>
+<h2>DESCRIPTION</h2>
+<p> <code>tracker-writeback</code> is not supposed to be run by the user since it is started by its .desktop file when the user logs in. It can also be started manually of course for debugging purposes. You can not run more than one instance of this at the same time. </p>
+<p> <code>tracker-writeback</code> writes metadata from the Tracker database back into files only. Currently support is limited to XMP metadata (which covers PNG, JPEG, TIFF, MP4 and 3GPP formats), play lists (which covers MPEGURL, SCPLS and IRIVER formats) and taglib supported mime types (which covers MP3, MP4, OGG, WAV, FLAC and some Windows media formats). </p>
+<p> Data is only written back if write-back is enabled in the tracker-miner-fs configuration. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Returns the version of this binary.</dd>
+<dt><code>-v, &#8211;verbosity={0|1|2|3}</code></dt>
+<dd> Sets the logging level, 0=errors, 1=minimal, 2=detailed, 3=debug.</dd>
+<dt><code>-d, &#8211;disable-shutdown</code></dt>
+<dd> Disable shutting down after 30 seconds of inactivity. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-tracker-store/">tracker-store</a></code>(1), <code><a href="/docs/linux/man/1-tracker-miner-fs/">tracker-miner-fs</a></code>(1). <code><a href="/docs/linux/man/1-tracker-extract/">tracker-extract</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

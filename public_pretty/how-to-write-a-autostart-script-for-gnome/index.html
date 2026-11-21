@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Create an Autostart Script for GNOME - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-write-a-autostart-script-for-gnome/">
+  <meta name="description" content="GNOME uses .desktop files in ~/.config/autostart/ to launch applications when you log in. This mechanism works across GNOME, XFCE, KDE, and most other modern …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Create an Autostart Script for GNOME">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-write-a-autostart-script-for-gnome/">
+  <meta property="og:description" content="GNOME uses .desktop files in ~/.config/autostart/ to launch applications when you log in. This mechanism works across GNOME, XFCE, KDE, and most other modern …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/software-design/">Software Design</a>
+        </nav>
+        
+        <h1>How to Create an Autostart Script for GNOME</h1>
+        <time class="post-date" datetime="2018-03-24T08:14:04Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>GNOME uses <code>.desktop</code> files in <code>~/.config/autostart/</code> to launch applications when you log in. This mechanism works across GNOME, XFCE, KDE, and most other modern desktop environments.</p>
+<h3 id="basic-setup">Basic Setup</h3>
+<p>Create a <code>.desktop</code> file in <code>~/.config/autostart/</code>. Here’s a minimal example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Desktop Entry]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">Application</span>
+</span></span><span class="line"><span class="cl"><span class="na">Name</span><span class="o">=</span><span class="s">My Autostart Script</span>
+</span></span><span class="line"><span class="cl"><span class="na">Exec</span><span class="o">=</span><span class="s">/home/user/bin/myscript.sh</span>
+</span></span></code></pre></div><p>Save this as <code>~/.config/autostart/myscript.desktop</code> and it will run on your next login.</p>
+<h3 id="real-world-example">Real-World Example</h3>
+<p>Here’s a practical <code>.desktop</code> file for starting a Python daemon:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Desktop Entry]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">Application</span>
+</span></span><span class="line"><span class="cl"><span class="na">Name</span><span class="o">=</span><span class="s">Dropbox</span>
+</span></span><span class="line"><span class="cl"><span class="na">Comment</span><span class="o">=</span><span class="s">Dropbox file synchronization</span>
+</span></span><span class="line"><span class="cl"><span class="na">Exec</span><span class="o">=</span><span class="s">/home/zma/bin/dropbox.py start</span>
+</span></span><span class="line"><span class="cl"><span class="na">Icon</span><span class="o">=</span><span class="s">system-run</span>
+</span></span><span class="line"><span class="cl"><span class="na">Terminal</span><span class="o">=</span><span class="s">false</span>
+</span></span><span class="line"><span class="cl"><span class="na">StartupNotify</span><span class="o">=</span><span class="s">true</span>
+</span></span></code></pre></div><p>Key fields explained:</p>
+<ul>
+<li><strong>Type</strong>: Always <code>Application</code> for executable scripts</li>
+<li><strong>Name</strong>: Display name shown in GNOME settings</li>
+<li><strong>Exec</strong>: Full path to your script or command. Use absolute paths only</li>
+<li><strong>Icon</strong>: Icon name from your system’s icon theme (optional)</li>
+<li><strong>Terminal</strong>: Set to <code>true</code> if your script needs a terminal window; <code>false</code> to run silently</li>
+<li><strong>StartupNotify</strong>: Shows a loading indicator while the app starts</li>
+<li><strong>Comment</strong>: Brief description (optional)</li>
+</ul>
+<h3 id="practical-examples">Practical Examples</h3>
+<p><strong>Running a shell script:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Desktop Entry]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">Application</span>
+</span></span><span class="line"><span class="cl"><span class="na">Name</span><span class="o">=</span><span class="s">System Backup</span>
+</span></span><span class="line"><span class="cl"><span class="na">Exec</span><span class="o">=</span><span class="s">/usr/local/bin/backup-daily.sh</span>
+</span></span><span class="line"><span class="cl"><span class="na">Terminal</span><span class="o">=</span><span class="s">false</span>
+</span></span><span class="line"><span class="cl"><span class="na">StartupNotify</span><span class="o">=</span><span class="s">true</span>
+</span></span></code></pre></div><p><strong>Running a Python script with delay:</strong></p>
+<p>If your service takes time to initialize, add a delay:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Desktop Entry]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">Application</span>
+</span></span><span class="line"><span class="cl"><span class="na">Name</span><span class="o">=</span><span class="s">VPN Connection</span>
+</span></span><span class="line"><span class="cl"><span class="na">Exec</span><span class="o">=</span><span class="s">bash -c &#34;sleep 5 &amp;&amp; /usr/local/bin/start-vpn.py&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="na">Terminal</span><span class="o">=</span><span class="s">false</span>
+</span></span></code></pre></div><p><strong>Running a command that needs output:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Desktop Entry]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">Application</span>
+</span></span><span class="line"><span class="cl"><span class="na">Name</span><span class="o">=</span><span class="s">System Monitor</span>
+</span></span><span class="line"><span class="cl"><span class="na">Exec</span><span class="o">=</span><span class="s">gnome-system-monitor</span>
+</span></span><span class="line"><span class="cl"><span class="na">Terminal</span><span class="o">=</span><span class="s">false</span>
+</span></span></code></pre></div><h3 id="important-considerations">Important Considerations</h3>
+<p><strong>Use absolute paths</strong>: Never use relative paths or <code>~</code> in the <code>Exec</code> field. Always write out <code>/home/username/bin/script.sh</code>.</p>
+<p><strong>Make scripts executable</strong>: Ensure your script has execute permissions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x /home/user/bin/myscript.sh
+</span></span></code></pre></div><p><strong>Use proper shebangs</strong>: Start shell scripts with <code>#!/bin/bash</code> or <code>#!/usr/bin/env python3</code> so the system knows how to execute them.</p>
+<p><strong>Logging for debugging</strong>: Autostart scripts run without a terminal, so redirect output to a log file if needed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">Exec</span><span class="o">=</span><span class="s">bash -c &#34;/usr/local/bin/myscript.sh &gt;&gt; /tmp/autostart.log 2&gt;&amp;1&#34;</span>
+</span></span></code></pre></div><p><strong>Environment variables</strong>: If your script needs environment variables, set them in the Exec line:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">Exec</span><span class="o">=</span><span class="s">bash -c &#34;export PATH=/custom/bin:$PATH &amp;&amp; /usr/local/bin/myscript.sh&#34;</span>
+</span></span></code></pre></div><h3 id="managing-autostart-entries">Managing Autostart Entries</h3>
+<p>List all autostart applications:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls ~/.config/autostart/
+</span></span></code></pre></div><p>View an existing entry:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat ~/.config/autostart/example.desktop
+</span></span></code></pre></div><p>Remove an entry:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm ~/.config/autostart/example.desktop
+</span></span></code></pre></div><p>GNOME Settings also provides a UI to manage startup applications, though it’s typically limited. The command-line approach via <code>.desktop</code> files gives you more control.</p>
+<h3 id="testing-before-adding-to-autostart">Testing Before Adding to Autostart</h3>
+<p>Always test your script manually first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/home/user/bin/myscript.sh
+</span></span></code></pre></div><p>Once confirmed working, create the <code>.desktop</code> file and log out/in to verify it starts automatically.</p>
+<h3 id="system-wide-autostart">System-Wide Autostart</h3>
+<p>For scripts that should run for all users, place <code>.desktop</code> files in <code>/etc/xdg/autostart/</code> instead (requires root). This is useful for system services or managed deployments.</p>
+<h2 id="additional-tips-and-best-practices">Additional Tips and Best Practices</h2>
+<p>When implementing the techniques described in this article, consider these best practices for production environments. Always test changes in a non-production environment first. Document your configuration changes so team members can understand what was modified and why.</p>
+<p>Keep your system updated regularly to benefit from security patches and bug fixes. Use package managers rather than manual installations when possible, as they handle dependencies and updates automatically. For critical systems, maintain backups before making any significant changes.</p>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

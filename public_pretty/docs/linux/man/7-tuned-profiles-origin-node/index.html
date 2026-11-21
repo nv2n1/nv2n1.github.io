@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tuned-profiles-origin-node(7) · Linux Manual Pages</title>
+<meta name="description" content="tuned-profiles-origin-node – description of profiles provided for OpenShift">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-tuned-profiles-origin-node/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>tuned-profiles-origin-node(7)</h1>
+
+
+
+
+
+<p>tuned-profiles-origin-node &#8211; description of profiles provided for OpenShift </p>
+<h2>Description</h2>
+<p>These profiles are provided for OpenShift nodes. They provide performance optimizations for OpenShift Nodes running on either bare metal (origin-node-host) or virtual machines (origin-node-guest). </p>
+<h2>Profiles</h2>
+<p>The following profiles are provided: </p>
+<dl>
+<dt><code>origin-node-host</code></dt>
+<dd>Profile optimized for OpenShift hosts (bare metal). It is based on throughput-performance profile. It additionally increases SELinux AVC cache, PID limit and tunes netfilter connections tracking. </dd>
+<dt><code>origin-node-guest</code></dt>
+<dd>Profile optimized for virtual OpenShift guests. It is based on virtual-guest profile. It additionally increases SELinux AVC cache, PID limit and tunes netfilter connections tracking. </dd>
+</dl>
+<h2>Files</h2>
+<p><i>/etc/tuned/*</i> <i>/usr/lib/tuned/*</i></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-tuned/">tuned</a></code>(8) <code><a href="/docs/linux/man/8-tuned-adm/">tuned-adm</a></code>(8) <code><a href="/docs/linux/man/7-tuned-profiles/">tuned-profiles</a></code>(7) <code>tuned-profiles-sap</code>(7) <code>tuned-profiles-sap-hana</code>(7) <code><a href="/docs/linux/man/7-tuned-profiles-compat/">tuned-profiles-compat</a></code>(7)</p>
+<h2>Author</h2>
+<p>Scott Dodson &lt;sdodson [at] redhat.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_softfill(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_softfill/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_softfill(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Softfill - Fills a polygonal subset of the plotter frame.</p>
+<h2>Synopsis</h2>
+<p>SFSGFA - Can be made to fill polygons by calling the GKS routine GFA or by calling the lower-level Softfill routines SFWRLD and SFNORM.</p>
+<p>SFWRLD - Fills polygons with parallel lines or with dots, polymarkers, or selected characters arrayed in a regular rectangular pattern.</p>
+<p>SFNORM - Fills polygons with parallel lines or with dots, polymarkers, or selected characters arrayed in a regular rectangular pattern.</p>
+<p>SFGETC - Retrieves the current character value of a specified internal parameter.</p>
+<p>SFGETI - Retrieves the current integer value of a specified internal parameter.</p>
+<p>SFGETP - Retrieves the current value of the dot pattern.</p>
+<p>SFGETR - Retrieves the current real value of a specified internal parameter.</p>
+<p>SFSETC - Sets the new character value of a specified internal parameter.</p>
+<p>SFSETI - Sets the new integer value of a specified internal parameter.</p>
+<p>SFSETP - Sets the new value of the dot pattern.</p>
+<p>SFSETR - Sets the new real value of a specified internal parameter.</p>
+<h2>C-Binding Synopsis</h2>
+<p>c_sfsgfa
+c_sfwrld
+c_sfnorm
+c_sfgetc
+c_sfgeti
+c_sfgetp
+c_sfgetr
+c_sfsetc
+c_sfseti
+c_sfsetp
+c_sfsetr</p>
+<h2>User-Modifiable Internal Routines</h2>
+<p>None</p>
+<h2>Messages</h2>
+<p>Various error conditions can occur in Softfill. Each of these results in a call to the error-handling routine SETER, with a final argument indicating that the error is recoverable; by default, an error message is printed and execution is terminated, but, if you turn on error recovery (as described in the &quot;man&quot; page for &quot;error_handling&quot;), you can get control back.</p>
+<p>The error messages are as follows; all should be more or less self-explanatory.</p>
+<p>SFGETC - PARAMETER NAME NOT KNOWN - X
+SFGETC - PARAMETER NAME TOO SHORT - X
+SFGETC - UNCLEARED PRIOR ERROR
+SFGETI - UNCLEARED PRIOR ERROR
+SFGETP - UNCLEARED PRIOR ERROR
+SFGETR - PARAMETER NAME NOT KNOWN - X
+SFGETR - PARAMETER NAME TOO SHORT - X
+SFGETR - UNCLEARED PRIOR ERROR
+SFNORM - ARRAY DST IS TOO SMALL
+SFNORM - ARRAY IND IS TOO SMALL
+SFNORM - COORDINATE ARRAYS TOO SMALL
+SFNORM - LOGIC ERROR - SEE SPECIALIST
+SFNORM - UNCLEARED PRIOR ERROR
+SFSETC - PARAMETER NAME NOT KNOWN - X
+SFSETC - PARAMETER NAME TOO SHORT - X
+SFSETC - UNCLEARED PRIOR ERROR
+SFSETI - UNCLEARED PRIOR ERROR
+SFSETP - UNCLEARED PRIOR ERROR
+SFSETR - PARAMETER NAME NOT KNOWN - X
+SFSETR - PARAMETER NAME TOO SHORT - X
+SFSETR - UNCLEARED PRIOR ERROR
+SFSGFA - ERROR EXIT FROM GQFACI
+SFSGFA - ERROR EXIT FROM GQPLCI
+SFSGFA - UNCLEARED PRIOR ERROR
+SFWRLD - UNCLEARED PRIOR ERROR</p>
+<p>The &quot;LOGIC ERROR&quot; in SFNORM should never occur; if it does, it indicates a compiler problem or some sort of tampering with the code of the package. Error messages that complain of an error exit from a GKS routine probably imply that GKS has somehow been put in the wrong state. In the messages that result from using an incorrect internal-parameter name in a call to one of the parameter-access routines, the &quot;X&quot; will be replaced by the offending name.</p>
+<h2>See Also</h2>
+<p>Online: softfill_params, sfgetc, sfgeti, sfgetp, sfgetr, sfsetc, sfseti, sfsetp, sfsetr, sfsgfa, sfwrld, ncarg_cbind</p>
+<p>Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>
+<p>Copyright (C) 1987-2009
+University Corporation for Atmospheric Research
+The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

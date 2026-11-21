@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>drop_operator_class(7) · Linux Manual Pages</title>
+<meta name="description" content="DROP OPERATOR CLASS – remove an operator class">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-drop_operator_class/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>drop_operator_class(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>DROP OPERATOR CLASS &#8211; remove an operator class </p>
+<h2>Synopsis</h2>
+<pre>DROP OPERATOR CLASS [ IF EXISTS ] <i>name</i> USING <i>index_method</i> [ CASCADE | RESTRICT ]</pre>
+<h2>Description</h2>
+<p><code>DROP OPERATOR CLASS</code> drops an existing operator class. To execute this command you must be the owner of the operator class. </p>
+<p> <code>DROP OPERATOR CLASS</code> does not drop any of the operators or functions referenced by the class. If there are any indexes depending on the operator class, you will need to specify CASCADE for the drop to complete.</p>
+<h2>Parameters</h2>
+<dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the operator class does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing operator class.</dd>
+<dt><i>index_method</i></dt>
+<dd>The name of the index access method the operator class is for.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the operator class.</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the operator class if any objects depend on it. This is the default.</dd></dl>
+<h2>Notes</h2>
+<p><code>DROP OPERATOR CLASS</code> will not drop the operator family containing the class, even if there is nothing else left in the family (in particular, in the case where the family was implicitly created by <code>CREATE OPERATOR CLASS</code>). An empty operator family is harmless, but for the sake of tidiness you might wish to remove the family with <code>DROP OPERATOR FAMILY</code>; or perhaps better, use <code>DROP OPERATOR FAMILY</code> in the first place.</p>
+<h2>Examples</h2>
+<p>Remove the B-tree operator class widget_ops: </p>
+<pre>DROP OPERATOR CLASS widget_ops USING btree;</pre>
+<p>This command will not succeed if there are any existing indexes that use the operator class. Add CASCADE to drop such indexes along with the operator class.</p>
+<h2>Compatibility</h2>
+<p>There is no <code>DROP OPERATOR CLASS</code> statement in the SQL standard.</p>
+<h2>See Also</h2>
+<p>ALTER OPERATOR CLASS [<code><a href="/docs/linux/man/7-alter_operator_class/">alter_operator_class</a></code>(7)], CREATE OPERATOR CLASS [<code><a href="/docs/linux/man/7-create_operator_class/">create_operator_class</a></code>(7)], DROP OPERATOR FAMILY [<code><a href="/docs/linux/man/7-drop_operator_family/">drop_operator_family</a></code>(7)] </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

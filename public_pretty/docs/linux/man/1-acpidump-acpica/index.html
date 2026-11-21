@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>acpidump-acpica(1) · Linux Manual Pages</title>
+<meta name="description" content="acpidump – ACPI table dump utility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-acpidump-acpica/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>acpidump-acpica(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> acpidump &#8211; ACPI table dump utility </p>
+<h2>SYNOPSIS</h2>
+<p> <code>acpidump</code> [<i>&lt;option&gt;</i>&#8230;<i>]</i> </p>
+<h2>DESCRIPTION</h2>
+<p> This manual page briefly documents the <code>acpidump</code> command. The option list is taken from the interactive help. </p>
+<p> The <code>acpidump</code> command extracts the ACPI tables currently in use from the running kernel in a form usable for later processing by the <code>acpixtract</code> command. </p>
+<p> Invocation of <code>acpidump</code> without parameters will dump all available ACPI tables. Multiple mixed instances of the <code>-a</code> , <code>-f</code> , and <code>-n</code> parameters can be used. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-b</code></dt>
+<dd> Dump tables in binary format (versus the default human-readable form). </dd>
+</dl>
+<dl>
+<dt><code>-h | -?</code></dt>
+<dd> Display this help message. </dd>
+</dl>
+<dl>
+<dt><code>-o &lt;file&gt;</code></dt>
+<dd> Redirect output to a file. This file can be used later by <code>acpixtract</code> to examine the contents of the ACPI tables. </dd>
+</dl>
+<dl>
+<dt><code>-r &lt;address&gt;</code></dt>
+<dd> Dump tables from specified RSDP. </dd>
+</dl>
+<dl>
+<dt><code>-s</code></dt>
+<dd> Print table summaries only. </dd>
+</dl>
+<dl>
+<dt><code>-v</code></dt>
+<dd> Print the version of this utility. </dd>
+</dl>
+<dl>
+<dt><code>-z</code></dt>
+<dd> Verbose mode. </dd>
+</dl>
+<h2>TABLE OPTIONS</h2>
+<dl>
+<dt><code>-a &lt;address&gt;</code></dt>
+<dd> Get a table from a physical address (must be superuser and you must be careful which address you use &#8212; dmesg will typically report the addresses for the various tables). </dd>
+</dl>
+<dl>
+<dt><code>-c &lt;on|off&gt;</code></dt>
+<dd> Turn on/off customized table dumping. If turned on, tables are dumped from /sys/firmware/acpi/tables. If turned off, tables are dumped from /dev/mem. The default is on. </dd>
+</dl>
+<dl>
+<dt><code>-f &lt;binary-file&gt;</code></dt>
+<dd> Get a table from a binary file (see the <code>-b</code> option). </dd>
+</dl>
+<dl>
+<dt><code>-n &lt;signature&gt;</code></dt>
+<dd> Get a table via it&#8217;s name or signature (e.g., MADT or SSDT). </dd>
+</dl>
+<dl>
+<dt><code>-x</code></dt>
+<dd> Do not use but dump XSDT. </dd>
+</dl>
+<dl>
+<dt><code>-x -x</code></dt>
+<dd> Do not use or dump XSDT. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code>acpixtract(1)</code> </p>
+<h2>AUTHOR</h2>
+<p> acpidump was written by Robert Moore &lt;robert.moore [at] intel.com&gt; and Chao Guan &lt;chao.guan [at] intel.com&gt;. </p>
+<p> This manual page was written by Al Stone &lt;ahs3 [at] redhat.com&gt; for the Fedora project (but may be used by others). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

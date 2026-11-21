@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pumount(1) · Linux Manual Pages</title>
+<meta name="description" content="pumount – umount arbitrary hotpluggable devices as normal user">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pumount/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pumount(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pumount &#8211; umount arbitrary hotpluggable devices as normal user</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pumount</code> [ <i>options</i> ] <i>device</i> </p>
+<h2>DESCRIPTION</h2>
+<p> pumount is a wrapper around the standard umount program which permits normal users to umount removable devices without a matching /etc/fstab entry. </p>
+<p> pumount also supports encrypted devices which use dm-crypt and have LUKS metadata. If a LUKS-capable <code>cryptsetup</code> is installed, pumount will umount the mapped device instead and call cryptsetup to close the decrypted device afterwards. </p>
+<p> <code>pumount</code> expects the <i>device</i> as its only argument. This will umount <i>device</i> from a directory below /media if policy is met (see below). </p>
+<p> Please note that, as with <code>pmount</code>, you can use labels and uuids as described in <code>fstab</code> (5) for devices present in <i>/etc/fstab</i>. In this case, the device name need to match exactly the corresponding entry in <i>/etc/fstab</i>, including the <i>LABEL=</i> or <i>UUID=</i> part. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-l, &#8211;lazy</code></dt>
+<dd> Lazy unmount. Detach the filesystem from the filesystem hierarchy now, and cleanup all references to the filesystem as soon as it is not busy anymore. (Requires kernel 2.4.11 or later.) <code>IMPORTANT NOTES</code> This option should not be used unless you <code>really</code> know what you are doing, as chances are high that it will result in data loss on the removable drive. Please run <code>pumount</code> manually and wait until it finishes. In addition, <code>pumount</code> will not <i>luksClose</i> a device which was unmounted lazily. </dd>
+<dt><code>&#8211;luks-force</code></dt>
+<dd> Normally, <code>pumount</code> will not <i>luksClose</i> (see <i>cryptsetup</i>(1)) a device <code>pmount</code> did not open. However, you can bypass this restriction with this flag. You probably will need it if you did mess around with the <i>/var/lock/pmount_luks</i> directory. </dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print a help message and exit successfully. </dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> Enable verbose debug messages. </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the current version number and exit successfully. </dd>
+</dl>
+<h2>POLICY</h2>
+<p> The umount will succeed if all of the following conditions are met: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <i>device</i> is a block device in /dev/ (it does not need to exist if <code>-l</code> is supplied)</dd>
+<dt>&bull;</dt>
+<dd> <i>device</i> is not in /etc/fstab (if it is, pmount executes <code> umount </code><i> device</i> as the calling user to handle this transparently)</dd>
+<dt>&bull;</dt>
+<dd> <i>device</i> is mounted according to /etc/mtab and /proc/mounts with the calling user&#8217;s uid</dd>
+<dt>&bull;</dt>
+<dd> mount point is in /media </dd>
+</dl>
+<h2>PUMOUNT AND MISSING DEVICES</h2>
+<p> <code>pumount</code> now supports unmounting devices that have gone missing for some reason, such as a brutal removal of the device, or a kernel/hardware problem. Just specify the mount point as argument for <code>pumount</code>. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pmount/">pmount</a></code>(1), <code>cryptsetup</code>(1), <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) </p>
+<h2>AUTHOR</h2>
+<p> <code>pmount</code> is developed by Martin Pitt &lt;martin.pitt [at] canonical.com&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

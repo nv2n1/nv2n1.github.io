@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perllol(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perllol/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perllol(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>perllol - Manipulating Arrays of Arrays in Perl</p>
+<h2>DESCRIPTION</h2>
+<h3>Declaration and Access of Arrays of Arrays</h3>
+<p>The simplest two-level data structure to build in Perl is an array of arrays, sometimes casually called a list of lists. It&rsquo;s reasonably easy to understand, and almost everything that applies here will also be applicable later on with the fancier data structures.</p>
+<p>An array of an array is just a regular old array <tt>@AoA</tt> that you can get at with two subscripts, like <tt>$AoA[3][2]</tt>. Here&rsquo;s a declaration of the array:</p>
+ <pre><code>
+use 5.010;
+#so we can use say()
+#assign to our array, an array of array references
+    @AoA = ([
+        "fred",
+        "barney",
+        "pebbles",
+        "bambam",
+        "dino",
+    ],
+            [
+                "george",
+                "jane",
+                "elroy",
+                "judy",
+            ],
+            [
+                "homer",
+                "bart",
+                "marge",
+                "maggie",
+            ], );
+say $AoA[2][1];
+bart
+</code></pre> 
+<p>Now you should be very careful that the outer bracket type is a round one, that is, a parenthesis. That&rsquo;s because you&rsquo;re assigning to an <tt>@array</tt>, so you need parentheses. If you wanted there <i>not</i> to be an <tt>@AoA</tt>, but rather just a reference to it, you could do something more like this:</p>
+<p>#assign a reference to array of array references
+$ref_to_AoA = [
+[
+&ldquo;fred&rdquo;,
+&ldquo;barney&rdquo;,
+&ldquo;pebbles&rdquo;,
+&ldquo;bambam&rdquo;,
+&ldquo;dino&rdquo;,
+],
+[
+&ldquo;george&rdquo;,
+&ldquo;jane&rdquo;,
+&ldquo;elroy&rdquo;,
+&ldquo;judy&rdquo;,
+],
+[
+&ldquo;homer&rdquo;,
+&ldquo;bart&rdquo;,
+&ldquo;marge&rdquo;,
+&ldquo;maggie&rdquo;,
+],
+];
+say $ref_to_AoA-&gt;[2][1];
+bart</p>
+<p>Notice that the outer bracket type has changed, and so our access syntax has also changed. That&rsquo;s because unlike C, in perl you can&rsquo;t freely interchange arrays and references thereto. <tt>$ref_to_AoA</tt> is a reference to an array, whereas <tt>@AoA</tt> is an array proper. Likewise, <tt>$AoA[2]</tt> is not an array, but an array ref. So how come you can write these:</p>
+<p>$AoA[2][2] $ref_to_AoA-&gt;[2][2]</p>
+<p>instead of having to write these:</p>
+<p>$AoA[2]-&gt;[2] $ref_to_AoA -&gt; [2] -&gt; [2]</p>
+<p>Well, that&rsquo;s because the rule is that on adjacent brackets only (whether square or curly), you are free to omit the pointer dereferencing arrow. But you cannot do so for the very first one if it&rsquo;s a scalar containing a reference, which means that <tt>$ref_to_AoA</tt> always needs it.</p>
+<h3>Growing Your Own</h3>
+<p>That&rsquo;s all well and good for declaration of a fixed data structure, but what if you wanted to add new elements on the fly, or build it up entirely from scratch?</p>
+<p>First, let&rsquo;s look at reading it in from a file. This is something like adding a row at a time. We&rsquo;ll assume that there&rsquo;s a flat file in which each line is a row and each word an element. If you&rsquo;re trying to develop an <tt>@AoA</tt> array containing all these, here&rsquo;s the right way to do that:</p>
+<p>while (&lt;&gt;) {
+@tmp = split;
+push @AoA, [@tmp];
+}</p>
+<p>You might also have loaded that from a function:</p>
+<pre><code>for
+    $i(1..10)
+    {
+        $AoA[$i] = [somefunc($i)];
+    }
+</code></pre>
+<p>Or you might have had a temporary variable sitting around with the array in it.</p>
+<pre><code>for
+    $i(1..10)
+    {
+        @tmp = somefunc($i);
+        $AoA[$i] = [@tmp];
+    }
+</code></pre>
+<p>It&rsquo;s important you make sure to use the <tt>&quot;[ ]&quot;</tt> array reference constructor. That&rsquo;s because this wouldn&rsquo;t work:</p>
+ <pre>
+    $AoA[$i] = @tmp;   # WRONG!
+</pre> 
+<p>The reason that doesn&rsquo;t do what you want is because assigning a named array like that to a scalar is taking an array in scalar context, which means just counts the number of elements in <tt>@tmp</tt>.</p>
+<p>If you are running under <tt>&quot;use strict&quot;</tt> (and if you aren&rsquo;t, why in the world aren&rsquo;t you?), you&rsquo;ll have to add some declarations to make it happy:</p>
+<p>use strict;
+my(@AoA, @tmp);
+while (&lt;&gt;) {
+@tmp = split;
+push @AoA, [@tmp];
+}</p>
+<p>Of course, you don&rsquo;t need the temporary array to have a name at all:</p>
+<p>while (&lt;&gt;) {
+push @AoA, [split];
+}</p>
+<p>You also don&rsquo;t have to use <b>push()</b>. You could just make a direct assignment if you knew where you wanted to put it:</p>
+<p>my(@AoA, $i, $line);
+for
+$i(0..10)
+{
+$line = &lt;&gt;;
+$AoA[$i] = [ split &quot; &ldquo;, $line ];
+}</p>
+<p>or even just</p>
+<p>my(@AoA, $i);
+for
+$i(0..10)
+{
+$AoA[$i] = [ split &quot; &ldquo;, &lt;&gt; ];
+}</p>
+<p>You should in general be leery of using functions that could potentially return lists in scalar context without explicitly stating such. This would be clearer to the casual reader:</p>
+<p>my(@AoA, $i);
+for
+$i(0..10)
+{
+$AoA[$i] = [ split &quot; &ldquo;, scalar(&lt;&gt;) ];
+}</p>
+<p>If you wanted to have a <tt>$ref_to_AoA</tt> variable as a reference to an array, you&rsquo;d have to do something like this:</p>
+<p>while (&lt;&gt;) {
+push @$ref_to_AoA, [split];
+}</p>
+<p>Now you can add new rows. What about adding new columns? If you&rsquo;re dealing with just matrices, it&rsquo;s often easiest to use simple assignment:</p>
+<pre><code>for
+    $x(1..10)
+    {
+    for
+        $y(1..10)
+        {
+            $AoA[$x][$y] = func($x, $y);
+        }
+    }
+for
+    $x(3, 7, 9)
+    {
+        $AoA[$x][20] += func2($x);
+    }
+</code></pre>
+<p>It doesn&rsquo;t matter whether those elements are already there or not: it&rsquo;ll gladly create them for you, setting intervening elements to <tt>&quot;undef&quot;</tt> as need be.</p>
+<p>If you wanted just to append to a row, you&rsquo;d have to do something a bit funnier looking:</p>
+<p>#add new columns to an existing row
+push @{$AoA[0]}, &ldquo;wilma&rdquo;, &ldquo;betty&rdquo;;
+#explicit deref</p>
+<h3>Access and Printing</h3>
+<p>Now it&rsquo;s time to print your data structure out. How are you going to do that? Well, if you want only one of the elements, it&rsquo;s trivial:</p>
+<p>print $AoA[0][0];</p>
+<p>If you want to print the whole thing, though, you can&rsquo;t say</p>
+ <pre>
+    print @AoA;         # WRONG
+</pre> 
+<p>because you&rsquo;ll get just references listed, and perl will never automatically dereference things for you. Instead, you have to roll yourself a loop or two. This prints the whole structure, using the shell-style <b>for()</b> construct to loop across the outer set of subscripts.</p>
+<pre><code>for
+    $aref(@AoA)
+    {
+        say &quot;\t [ @$aref ],&quot;;
+    }
+</code></pre>
+<p>If you wanted to keep track of subscripts, you might do this:</p>
+<pre><code>for
+    $i(0..$ #AoA)
+    {
+        say &quot;\t elt $i is [ @{$AoA[$i]} ],&quot;;
+    }
+</code></pre>
+<p>or maybe even this. Notice the inner loop.</p>
+<pre><code>for
+    $i(0..$ #AoA)
+    {
+    for
+        $j(0..$ #{$AoA[$i]})
+        {
+            say &quot;elt $i $j is $AoA[$i][$j]&quot;;
+        }
+    }
+</code></pre>
+<p>As you can see, it&rsquo;s getting a bit complicated. That&rsquo;s why sometimes is easier to take a temporary on your way through:</p>
+<pre><code>for
+    $i(0..$ #AoA)
+    {
+        $aref = $AoA[$i];
+    for
+        $j(0..$ #{$aref})
+        {
+            say &quot;elt $i $j is $AoA[$i][$j]&quot;;
+        }
+    }
+</code></pre>
+<p>Hmm&hellip; that&rsquo;s still a bit ugly. How about this:</p>
+<pre><code>for
+    $i(0..$ #AoA)
+    {
+        $aref = $AoA[$i];
+        $n = @$aref - 1;
+    for
+        $j(0..$n)
+        {
+            say &quot;elt $i $j is $AoA[$i][$j]&quot;;
+        }
+    }
+</code></pre>
+<p>When you get tired of writing a custom print for your data structures, you might look at the standard Dumpvalue or Data::Dumper modules. The former is what the Perl debugger uses, while the latter generates parsable Perl code. For example:</p>
+<p>use v5 .14;
+#using the + prototype, new to v5 .14 sub show(+)
+{
+require Dumpvalue;
+state $prettily = new Dumpvalue::
+tick        =&gt; q(&rdquo;),
+compactDump =&gt; 1,  # comment these two lines
+#out
+veryCompact =&gt; 1,  # if you want a bigger
+#dump
+;
+dumpValue $prettily @_;
+}
+#Assign a list of array references to an array.
+my @AoA = ([ &ldquo;fred&rdquo;, &ldquo;barney&rdquo; ],
+[ &ldquo;george&rdquo;, &ldquo;jane&rdquo;, &ldquo;elroy&rdquo; ],
+[ &ldquo;homer&rdquo;, &ldquo;marge&rdquo;, &ldquo;bart&rdquo; ], );
+push @{$AoA[0]}, &ldquo;wilma&rdquo;, &ldquo;betty&rdquo;;
+show @AoA;</p>
+<p>will print out:</p>
+ <pre>
+    0  0..3  &quot;fred&quot; &quot;barney&quot; &quot;wilma&quot; &quot;betty&quot;
+    1  0..2  &quot;george&quot; &quot;jane&quot; &quot;elroy&quot;
+    2  0..2  &quot;homer&quot; &quot;marge&quot; &quot;bart&quot;
+</pre> 
+<p>Whereas if you comment out the two lines I said you might wish to, then it shows it to you this way instead:</p>
+ <pre>
+    0  ARRAY(0x8031d0)
+       0  &quot;fred&quot;
+       1  &quot;barney&quot;
+       2  &quot;wilma&quot;
+       3  &quot;betty&quot;
+    1  ARRAY(0x803d40)
+       0  &quot;george&quot;
+       1  &quot;jane&quot;
+       2  &quot;elroy&quot;
+    2  ARRAY(0x803e10)
+       0  &quot;homer&quot;
+       1  &quot;marge&quot;
+       2  &quot;bart&quot;
+</pre>
+<h3>Slices</h3>
+<p>If you want to get at a slice (part of a row) in a multidimensional array, you&rsquo;re going to have to do some fancy subscripting. That&rsquo;s because while we have a nice synonym for single elements via the pointer arrow for dereferencing, no such convenience exists for slices.</p>
+<p>Here&rsquo;s how to do one operation using a loop. We&rsquo;ll assume an <tt>@AoA</tt> variable as before.</p>
+<p>@part = ();
+$x = 4;
+for ($y = 7; $y &lt; 13; $y++) {
+push @part, $AoA[$x][$y];
+}</p>
+<p>That same loop could be replaced with a slice operation:</p>
+<p>@part = @{$AoA[4]}[7..12];</p>
+<p>or spaced out a bit:</p>
+<p>@part = @{$AoA[4]}[7..12];</p>
+<p>But as you might well imagine, this can get pretty rough on the reader.</p>
+<p>Ah, but what if you wanted a <i>two-dimensional slice</i>, such as having <tt>$x</tt> run from 4..8 and <tt>$y</tt> run from 7 to 12? Hmm&hellip; here&rsquo;s the simple way:</p>
+<p>@newAoA = ();
+for ($startx = $x = 4; $x &lt;= 8; $x++) {
+for ($starty = $y = 7; $y &lt;= 12; $y++) {
+$newAoA[$x - $startx][$y - $starty] = $AoA[$x][$y];
+}
+}</p>
+<p>We can reduce some of the looping through slices</p>
+<p>for ($x = 4; $x &lt;= 8; $x++) {
+push @newAoA, [@{$AoA[$x]}[7..12]];
+}</p>
+<p>If you were into Schwartzian Transforms, you would probably have selected map for that</p>
+<p>@newAoA = map
+{
+[@{$AoA[$_]}[7..12]]
+}
+4..8;</p>
+<p>Although if your manager accused you of seeking job security (or rapid insecurity) through inscrutable code, it would be hard to argue. :-) If I were you, I&rsquo;d put that in a function:</p>
+ <pre><code>
+@newAoA = splice_2D( \@AoA, 4 = &gt; 8, 7 = &gt; 12);
+sub splice_2D
+{
+    my $lrr = shift;
+#ref to array of array refs !my($x_lo, $x_hi,
+                                    $y_lo, $y_hi) = @_;
+    return map
+    {
+        [@{$lrr-&gt;[$_]}[$y_lo..$y_hi]]
+    }
+    $x_lo..$x_hi;
+}
+</code></pre>
+<h2>SEE ALSO</h2>
+<p>perldata, perlref, perldsc</p>
+<h2>AUTHOR</h2>
+<p>Tom Christiansen &lt;<i>tchrist [at] perl.com</i>&gt;</p>
+<p>Last update: Tue Apr 26 18:30:55 <font SIZE="-1">MDT 2011</font></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

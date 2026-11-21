@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vfs_shell_snap(8) · Linux Manual Pages</title>
+<meta name="description" content="vfs_shell_snap – Shell script callouts for snapshot creation and deletion">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-vfs_shell_snap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>vfs_shell_snap(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>vfs_shell_snap &#8211; Shell script callouts for snapshot creation and deletion</p>
+<h2>Synopsis</h2>
+<dl>
+<dd>vfs objects = shell_snap</dd></dl>
+<h2>Description</h2>
+<p>This VFS module is part of the <code><a href="/docs/linux/man/8-samba/">samba</a></code>(8) suite. </p>
+<p> The vfs_shell_snap VFS provides shell-script callouts for snapshot creation and deletion operations issued by remote clients using the File Server Remote VSS Protocol (FSRVP). </p>
+<p> The following shell callouts may be configured in smb.conf: </p>
+<p> m[blue]<code>shell_snap:check path command</code>m[] </p>
+<dl>
+<dd>&bull; Called when an FSRVP client wishes to check whether a given share supports snapshot create/delete requests.</dd></dl>
+<dl>
+<dd>&bull; The command is called with a single <i>share_path</i> argument.</dd></dl>
+<dl>
+<dd>&bull; The command must return 0 if <i>share_path</i> is capable of being snapshotted.</dd></dl>
+<p> m[blue]<code>shell_snap:create command</code>m[] </p>
+<dl>
+<dd>&bull; Called when an FSRVP client wishes to create a snapshot.</dd></dl>
+<dl>
+<dd>&bull; The command is called with a single <i>share_path</i> argument.</dd></dl>
+<dl>
+<dd>&bull; The command must return 0 status if the snapshot was successfully taken.</dd></dl>
+<dl>
+<dd>&bull; The command must output the path of the newly created snapshot to stdout.</dd></dl>
+<p> m[blue]<code>shell_snap:delete command</code>m[] </p>
+<dl>
+<dd>&bull; Called when an FSRVP client wishes to delete a snapshot.</dd></dl>
+<dl>
+<dd>&bull; The command is called with <i>base_share_path</i> and <i>snapshot_share_path</i> arguments.</dd></dl>
+<dl>
+<dd>&bull; The command must return 0 status if the snapshot was successfully removed.</dd></dl>
+<p> All commands are executed as the authenticated FSRVP client user. </p>
+<p> This module is stackable.</p>
+<h2>Configuration</h2>
+<dl>
+<dd>
+<pre> <i>[share]</i>
+ m[blue]<code>vfs objects = shell_snap</code>m[]
+ m[blue]<code>shell_snap:check path command = snap_check_path.sh</code>m[]
+ m[blue]<code>shell_snap:create command = snap_create.sh</code>m[]
+ m[blue]<code>shell_snap:delete command = snap_delete.sh</code>m[]</pre>
+</dd></dl>
+<p> Samba&#8217;s FSRVP server must be configured in the [global] section: </p>
+<dl>
+<dd>
+<pre> <i>[global]</i>
+ m[blue]<code>rpc_daemon:fssd = fork</code>m[]
+ m[blue]<code>registry shares = yes</code>m[]
+ m[blue]<code>include = registry</code>m[]</pre>
+</dd></dl>
+<h2>Version</h2>
+<p>This man page is correct for version 4.2.0 of the Samba suite.</p>
+<h2>Author</h2>
+<p>The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

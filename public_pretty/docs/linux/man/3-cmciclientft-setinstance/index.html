@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cmciclientft-setinstance(3) · Linux Manual Pages</title>
+<meta name="description" content="CMCIClientFT.setInstance() – Replace class instance">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-cmciclientft-setinstance/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>cmciclientft-setinstance(3)</h1>
+
+
+
+
+
+<p>CMCIClientFT.setInstance() &#8211; Replace class instance</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;cmci.h&gt;</code>
+<code>CMPIStatus</code><i>*</i>
+<code>CMCIClientFT.setInstance</code><i>(CMCIClient*</i><code>cl,</code>
+<br>
+<code>CMPIObjectPath*</code><i>op,</i>
+<br>
+<code>CMPIFlags</code><i>flags,</i>
+<br>
+<code>char**</code><i>properties,</i>
+<br>
+<code>CMPIStatus*</code><i>rc);</i>
+<br></pre>
+<h2>Description</h2>
+<p>Replace a class instance with <i>inst</i> using <i>op</i> as reference. The content of the returned class instance structure can be controled using the <i>flags</i> parameter. </p>
+<p> Arguments are the client object pointer <i>cl</i>, an ObjectPath object pointer <i>op</i> that contains namespace and classname components, <i>flags</i> to affect the returned class instance structure content,<br />
+&nbsp;<wbr><i>properties</i>&nbsp;<wbr>array, and&nbsp;<wbr><i>rc</i>&nbsp;<wbr>which returns the operation status&nbsp;<wbr> (suppressed when NULL). </p>
+<p> The <i>flags</i> argument is a bit mask that can contain the following flag &#8211; <i>CMPI_FLAG_IncludeQualifiers</i>. </p>
+<p> The <i>properties</i> array defines what properties should be returned for the class. If this argument is not NULL, only the class properties in the list are returned. If it&#8217;s NULL all class properties are returned. </p>
+<h2>Return Value</h2>
+<p>When successful the <code>CMCIClientFT.setInstance()</code> function returns a CMPIStatus object with a successful operation status code. When unsuccessful it returns the operation error code and corresponding error string.</p>
+<h2>Errors</h2>
+<h2>Examples</h2>
+<h2>Conforming To</h2>
+<h2>See Also</h2>
+<p>Common Manageability Programming Interface (CMPI) &#8211; OpenGroup,<br />
+ <a href="/docs/linux/man/3-cmciclient/">CMCIClient</a>(3), <a href="/docs/linux/man/3-cmpistatus/">CMPIStatus</a>(3), <a href="/docs/linux/man/3-cmpiobjectpath/">CMPIObjectPath</a>(3), CMPIFlags(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

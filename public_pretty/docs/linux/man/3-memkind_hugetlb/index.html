@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>memkind_hugetlb(3) · Linux Manual Pages</title>
+<meta name="description" content="memkind_hugetlb.h – hugetlb memory memkind operations. Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or re...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-memkind_hugetlb/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>memkind_hugetlb(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> memkind_hugetlb.h &#8211; hugetlb memory memkind operations.<br />
+ Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;memkind/internal/memkind_hugetlb.h&gt;
+Link with - lmemkind int memkind_hugetlb_check_available_2mb(struct memkind *kind);
+int memkind_hugetlb_check_available_1gb(struct memkind *kind);
+int memkind_hugetlb_get_mmap_flags(struct memkind *kind, int *flags);
+void memkind_hugetlb_init_once(void);
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The hugetlb memory memkind operations enable memory kinds which use the Linux hugetlbfs file system. For more information about the hugetlbfs see link below.<br />
+ <i><a rel="nofollow" href="https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt">https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt</a></i> </p>
+<p> <code>memkind_hugetlb_check_available_2mb</code>() Check if there are 2MB pages reserved in the default hugetlbfs. If the kind implements ops.get_mbind_nodemask(), then only the NUMA nodes set by the nodemask are checked, otherwise every NUMA node is checked. </p>
+<p> <code>memkind_hugetlb_check_available_1gb</code>() Similar to memkind_hugetlb_check_available_2mb() except that the check is for 1GB pages instead of 2MB pages. </p>
+<p> <code>memkind_hugetlb_get_mmap_flags</code>() Sets the flags for the <code>mmap</code>() system call such that the hugetlbfs is utilized for allocations. </p>
+<p> <code>memkind_hugetlb_init_once</code>() This function initializes MEMKIND_HUGETLB kind and it should not be called more than once. <code>Note:</code> <code>memkind_hugetlb_init_once</code>() may reserve some extra memory.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2014 &#8211; 2016 Intel Corporation. All rights reserved.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-memkind/">memkind</a></code>(3), <code><a href="/docs/linux/man/3-memkind_arena/">memkind_arena</a></code>(3), <code><a href="/docs/linux/man/3-memkind_default/">memkind_default</a></code>(3), <code><a href="/docs/linux/man/3-memkind_gbtlb/">memkind_gbtlb</a></code>(3), <code><a href="/docs/linux/man/3-memkind_hbw/">memkind_hbw</a></code>(3), <code><a href="/docs/linux/man/3-memkind_pmem/">memkind_pmem</a></code>(3), <code><a href="/docs/linux/man/3-jemalloc/">jemalloc</a></code>(3), <code><a href="/docs/linux/man/2-mbind/">mbind</a></code>(2), <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

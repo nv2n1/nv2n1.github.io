@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdcondition_variable_anycondition_variable_any(3) · Linux Manual Pages</title>
+<meta name="description" content="std::condition_variable_any::~condition_variable_any – std::condition_variable_any::~condition_variable_any">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdcondition_variable_anycondition_variable_any/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdcondition_variable_anycondition_variable_any(3)</h1>
+
+
+
+
+
+<p>std::condition_variable_any::~condition_variable_any &#8211; std::condition_variable_any::~condition_variable_any</p>
+<h2>Synopsis</h2>
+<p>~condition_variable_any(); <code>(1)</code> <i>(since C++11)</i><br />
+Destroys the object of type std::condition_variable_any<br />
+It is only safe to invoke the destructor if all threads have been notified. It is not required that they have exited their respective wait functions: some threads may still be waiting to reacquire the associated lock, or may be waiting to be scheduled to run after reacquiring it.<br />
+The programmer must ensure that no threads attempt to wait on *this once the destructor has been started, especially when the waiting threads are calling the wait functions in a loop or are using the overloads of the wait functions that take a predicate. </p>
+<h2>Exceptions</h2>
+<p><i>(none)</i></p>
+<h2>See also</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

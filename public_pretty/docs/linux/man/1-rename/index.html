@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rename(1) · Linux Manual Pages</title>
+<meta name="description" content="rename – rename files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rename/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rename(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> rename &#8211; rename files</p>
+<h2>SYNOPSIS</h2>
+<p> <code>rename</code> [<i>options</i>]<i> expression replacement file</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>rename</code> will rename the specified files by replacing the first occurrence of <i>expression</i> in their name by <i>replacement</i>.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Give visual feedback which files where renamed, if any.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd>
+<dt><code>-s</code>, <code>&#8211;symlink</code></dt>
+<dd> Peform rename on symlink target</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help text and exit.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Given the files <i>foo1</i>, &#8230;, <i>foo9</i>, <i>foo10</i>, &#8230;, <i>foo278</i>, the commands</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+rename foo foo0 foo?
+rename foo foo0 foo??
+</pre>
+</dd></dl>
+<p> will turn them into <i>foo001</i>, &#8230;, <i>foo009</i>, <i>foo010</i>, &#8230;, <i>foo278</i>. And</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+rename .htm .html *.htm
+</pre>
+</dd></dl>
+<p> will fix the extension of your html files.</p>
+<h2>WARNING</h2>
+<p> The renaming has no safeguards. If the user has permission to rewrite file names, the command will perform the action without any questions. For example, the result can be quite drastic when the command is run as root in the /lib directory. Always make a backup before running the command, unless you truly know what you are doing.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-mmv/">mmv</a></code>(1), <code><a href="/docs/linux/man/1-mv/">mv</a></code>(1)</p>
+<h2>AVAILABILITY</h2>
+<p> The rename command is part of the util-linux package and is available from <a href="ftp://ftp.kernel.org/pub/linux/utils/util-linux/.">ftp://ftp.kernel.org/pub/linux/utils/util-linux/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdreverse_iteratorbase(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdreverse_iteratorbase/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdreverse_iteratorbase(3)</h1>
+
+
+
+
+
+<p>std::reverse_iterator&lt;Iter&gt;::base - std::reverse_iterator&lt;Iter&gt;::base</p>
+<h2>Synopsis</h2>
+<p>iterator_type base() const; <i>(until C++17)</i>
+constexpr iterator_type base() const; <i>(since C++17)</i>
+Returns the underlying base iterator. That is std::reverse_iterator(it).base() == it.
+The base iterator refers to the element that is next (from the std::reverse_iterator::iterator_type perspective) to the element the reverse_iterator is currently pointing to. That is &amp;*(rit.base() - 1) == &amp;*rit.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>The underlying iterator.</p>
+<h2>Exceptions</h2>
+<p><i>(none)</i></p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;iterator&gt;
+#include &lt;vector&gt;
+int main()
+{
+std::vector&lt;int&gt; v = {0, 1, 2, 3, 4, 5};
+using RevIt = std::reverse_iterator&lt;std::vector&lt;int&gt;::iterator&gt;;
+{
+const auto it = v.begin() + 3;
+RevIt r_it(it);
+std::cout &lt;&lt; &quot;*it == &quot; &lt;&lt; *it &lt;&lt; &quot;, *r_it.base() == &quot; &lt;&lt; *r_it.base()
+&lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;*r_it == &quot; &lt;&lt; *r_it &lt;&lt; &quot;, *(r_it.base()-1) == &quot; &lt;&lt; *(r_it.base() - 1) &lt;&lt; &quot;\n&quot;;
+}
+{
+RevIt r_end(v.begin());
+RevIt r_begin(v.end());
+for (auto it = r_end.base(); it != r_begin.base(); ++it) {
+std::cout &lt;&lt; *it &lt;&lt; &quot; &quot;;
+}
+std::cout &lt;&lt; &quot;\n&quot;;
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> *it == 3, *r_it.base() == 3
+ <wbr> *r_it == 2, *(r_it.base()-1) == 2
+ <wbr> 0 1 2 3 4 5</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> accesses the pointed-to element
+operator* <i>(public member function)</i>
+operator-&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

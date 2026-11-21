@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dirfile-format(5) · Linux Manual Pages</title>
+<meta name="description" content="dirfile-format — the dirfile database format specification file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-dirfile-format/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>dirfile-format(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>dirfile-format &#8212; the dirfile database format specification file</p>
+<h2>Description</h2>
+<p>The <i>dirfile format</i> file fully specifies the raw and derived time streams and auxiliary information for a <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5) database. The format file is a case sensitive text file called <code>format</code> located in the dirfile directory. The explicit text encoding of the file is not specified by these standards, but must be 7-bit ASCII compatible. Examples of acceptable character encodings include all the ISO~8859 character sets (<i>i.e.</i> Latin-1 through Latin-10, among others), as well as the UTF-8 encoding of Unicode and UCS. </p>
+<h2>Syntax</h2>
+<p>The format file is composed of field specification lines and directive lines, optionally separated by blank lines or lines containing only whitespace. Lines are separated by the line-feed character (0x0A). Unless escaped (see below), the hash mark (<code>#</code>) is the comment delimiter; the comment delimiter, and any text following it to the end of the line, is ignored.</p>
+<h3>Tokens</h3>
+<p>Both field specification lines and directive lines consist of several tokens separated by whitespace. Whitespace consists of one or more whitespace characters. These are: space (0x20), horizontal tab (0x09), vertical tab (0x0B), form-feed (0x0C), and carriage return (0x0D). The first token of a directive line is always a <i>reserved word</i>. The first token of a field specification line is never a reserved word. Any amount of whitespace may precede the first token on a line. </p>
+<p> Since tokens are separated by whitespace, to include a whitespace character in a token, it must either escaped by preceding it by a backslash character (<code>\</code>), or be replaced by a <i>character escape sequence</i> (see below), or else the token must be enclosed in quotation marks (). The quotation marks themselves will be stripped from the token. The <i>null-token</i> (that is, the token consisting of zero characters) may be specified by a pair of quotation marks with nothing between them (). To include a literal quotation mark in a token, it must be escaped (<code>\ ).</code> Similarly, a hash mark may be included in a token by including it in a quoted token or else by escaping it (<code>\#</code>), otherwise the hash mark will be understood as the comment delimiter. </p>
+<p> It is a syntax error to have a line which contains unmatched quotation marks, or in which the last character is the backslash character. </p>
+<p> Several characters when escaped by a preceding backslash character are interpreted as special characters in tokens. The character escape sequences are:</p>
+<dl>
+<dd>
+</dd><dl>
+<dt><code></code></dt>
+<dd>an alert (bell) character (ASCII 0x07 / U+0007)</dd>
+<dt><code></code></dt>
+<dd>a backspace character (ASCII 0x08 / U+0008)</dd>
+<dt><code></code></dt>
+<dd>an escape character (ASCII 0x1B / U+001B)</dd>
+<dt><code></code></dt>
+<dd>a form-feed character (ASCII 0x0C / U+000C)</dd>
+<dt><code>
+</code></dt>
+<dd>a line-feed character (ASCII 0x0A / U+000A)</dd>
+<dt><code>
+</code></dt>
+<dd>a carriage return character (ASCII 0x0D / U+000D)</dd>
+<dt><code>	</code></dt>
+<dd>a horizontal tab character (ASCII 0x09 / U+0009)</dd>
+<dt><code></code></dt>
+<dd>a vertical tab character (ASCII 0x0B / U+000B)</dd>
+<dt><code>\</code></dt>
+<dd>a backslash character (ASCII 0x5C / U+005C)</dd>
+<dt><code>\</code><i>ooo</i></dt>
+<dd>the single byte given by the octal number <i>ooo</i>.</dd>
+<dt><code>
+</dt></dl></dl>
+</code>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

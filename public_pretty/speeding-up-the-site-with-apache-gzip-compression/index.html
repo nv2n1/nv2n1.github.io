@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apache GZIP vs. Brotli: Setup and Testing Guide - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/speeding-up-the-site-with-apache-gzip-compression/">
+  <meta name="description" content="HTTP compression reduces bandwidth usage and improves load times for clients. Apache’s mod_deflate and mod_brotli handle this transparently—the server …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Apache GZIP vs. Brotli: Setup and Testing Guide">
+  <meta property="og:url" content="https://www.systutorials.com/speeding-up-the-site-with-apache-gzip-compression/">
+  <meta property="og:description" content="HTTP compression reduces bandwidth usage and improves load times for clients. Apache’s mod_deflate and mod_brotli handle this transparently—the server …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>Apache GZIP vs. Brotli: Setup and Testing Guide</h1>
+        <time class="post-date" datetime="2013-07-12T16:46:13Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>HTTP compression reduces bandwidth usage and improves load times for clients. Apache’s mod_deflate and mod_brotli handle this transparently—the server compresses content before sending it, and modern browsers decompress it automatically.</p>
+<h2 id="enabling-compression-via-htaccess">Enabling Compression via .htaccess</h2>
+<p>Add this to your <code>.htaccess</code> file in the website root:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="c"># Enable DEFLATE compression</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;IfModule</span> <span class="s">mod_deflate.c</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">AddOutputFilterByType</span> DEFLATE text/plain text/html text/xml text/css
+</span></span><span class="line"><span class="cl">  <span class="nb">AddOutputFilterByType</span> DEFLATE application/xml application/xhtml+xml application/rss+xml
+</span></span><span class="line"><span class="cl">  <span class="nb">AddOutputFilterByType</span> DEFLATE application/javascript application/json
+</span></span><span class="line"><span class="cl">  <span class="nb">AddOutputFilterByType</span> DEFLATE text/javascript
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># Exclude already-compressed formats (images, fonts, archives)</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">SetEnvIfNoCase</span> Request_URI \.(?:gif|jpe?g|png|svg|woff2|woff|zip|gz|br)$ no-gzip dont-vary
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/IfModule&gt;</span>
+</span></span></code></pre></div><p>The <code>SetEnvIfNoCase</code> line prevents double-compression of already-compressed formats like images, WOFF2 fonts, and Brotli-encoded assets, which wastes CPU cycles and provides no benefit.</p>
+<h2 id="enabling-via-apache-virtual-host-configuration">Enabling via Apache Virtual Host Configuration</h2>
+<p>If <code>.htaccess</code> isn’t available or <code>AllowOverride</code> is disabled, edit your virtual host configuration in <code>/etc/apache2/sites-available/</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="nt">&lt;Directory</span> <span class="s">/var/www/yoursite</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;IfModule</span> <span class="s">mod_deflate.c</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">AddOutputFilterByType</span> DEFLATE text/plain text/html text/xml text/css
+</span></span><span class="line"><span class="cl">    <span class="nb">AddOutputFilterByType</span> DEFLATE application/xml application/xhtml+xml application/rss+xml
+</span></span><span class="line"><span class="cl">    <span class="nb">AddOutputFilterByType</span> DEFLATE application/javascript application/json text/javascript
+</span></span><span class="line"><span class="cl">    <span class="nb">SetEnvIfNoCase</span> Request_URI \.(?:gif|jpe?g|png|svg|woff2|woff|zip|gz|br)$ no-gzip dont-vary
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/IfModule&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/Directory&gt;</span>
+</span></span></code></pre></div><p>Reload Apache after editing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl reload apache2
+</span></span></code></pre></div><h2 id="configuring-compression-level">Configuring Compression Level</h2>
+<p>By default, mod_deflate uses compression level 6. Adjust this in your configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="nt">&lt;IfModule</span> <span class="s">mod_deflate.c</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">DeflateCompressionLevel</span> <span class="m">6</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">AddOutputFilterByType</span> DEFLATE text/html text/plain text/css application/javascript
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/IfModule&gt;</span>
+</span></span></code></pre></div><p>Compression levels range from 1 (fastest, larger output) to 9 (slowest, smallest output). Level 6 provides a good balance for most workloads:</p>
+<ul>
+<li><strong>Level 5</strong>: For CPU-constrained or high-traffic sites; reduces compression overhead by ~10-15% while maintaining reasonable compression ratios</li>
+<li><strong>Level 6</strong>: Default; suitable for most workloads</li>
+<li><strong>Level 7-8</strong>: For low-traffic sites where bandwidth savings justify higher CPU usage</li>
+</ul>
+<p>Monitor Apache CPU usage under load to test the impact on your specific workload:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">top -p <span class="k">$(</span>pgrep -d <span class="s1">&#39;,&#39;</span> apache2<span class="k">)</span>
+</span></span></code></pre></div><h2 id="excluding-specific-urls-from-compression">Excluding Specific URLs from Compression</h2>
+<p>Exclude endpoints that shouldn’t be compressed (pre-compressed content, streaming, large downloads):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="nb">SetEnvIfNoCase</span> Request_URI ^/api/download no-gzip
+</span></span><span class="line"><span class="cl"><span class="nb">SetEnvIfNoCase</span> Request_URI ^/stream/ no-gzip
+</span></span><span class="line"><span class="cl"><span class="nb">SetEnvIfNoCase</span> Request_URI ^/media/videos/ no-gzip
+</span></span></code></pre></div><h2 id="brotli-compression-modern-alternative">Brotli Compression: Modern Alternative</h2>
+<p>Brotli (mod_brotli) offers better compression ratios than gzip and is supported by all modern browsers. Install it on Debian/Ubuntu:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install libbrotli1 mod-brotli
+</span></span><span class="line"><span class="cl">sudo a2enmod brotli
+</span></span><span class="line"><span class="cl">sudo systemctl reload apache2
+</span></span></code></pre></div><p>Configure Brotli alongside gzip for maximum compatibility:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="nt">&lt;IfModule</span> <span class="s">mod_brotli.c</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">AddOutputFilterByType</span> BROTLI_COMPRESS text/html text/plain text/xml text/css
+</span></span><span class="line"><span class="cl">  <span class="nb">AddOutputFilterByType</span> BROTLI_COMPRESS text/javascript application/javascript application/json
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/IfModule&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;IfModule</span> <span class="s">mod_deflate.c</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">AddOutputFilterByType</span> DEFLATE text/html text/plain text/xml text/css
+</span></span><span class="line"><span class="cl">  <span class="nb">AddOutputFilterByType</span> DEFLATE text/javascript application/javascript application/json
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/IfModule&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">SetEnvIfNoCase</span> Request_URI \.(?:gif|jpe?g|png|svg|woff2|woff|zip|gz|br)$ no-gzip dont-vary
+</span></span></code></pre></div><p>Apache will use Brotli if the client supports it, falling back to gzip otherwise.</p>
+<h2 id="verifying-compression">Verifying Compression</h2>
+<p>Check response headers with curl:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -I -H <span class="s2">&#34;Accept-Encoding: gzip, deflate&#34;</span> https://example.com
+</span></span></code></pre></div><p>You should see <code>Content-Encoding: gzip</code> or <code>Content-Encoding: br</code> in the response headers. To see actual compression in action and inspect decompressed content:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -s -H <span class="s2">&#34;Accept-Encoding: gzip&#34;</span> https://example.com <span class="p">|</span> gunzip <span class="p">|</span> head -n <span class="m">20</span>
+</span></span></code></pre></div><p>For detailed diagnostics including transfer size comparisons:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -s -w <span class="s2">&#34;\nUncompressed size: %{size_download}\nCompressed size: %{size_request}\n&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Accept-Encoding: gzip&#34;</span> https://example.com &gt; /tmp/response.gz
+</span></span></code></pre></div><p>Compare response sizes without compression vs. with compression:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Request without compression</span>
+</span></span><span class="line"><span class="cl">curl -I -H <span class="s2">&#34;Accept-Encoding: &#34;</span> https://example.com <span class="p">|</span> grep -i content-length
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Request with compression</span>
+</span></span><span class="line"><span class="cl">curl -I -H <span class="s2">&#34;Accept-Encoding: gzip&#34;</span> https://example.com <span class="p">|</span> grep -i content-length
+</span></span></code></pre></div><h2 id="measuring-compression-impact">Measuring Compression Impact</h2>
+<p>Most sites see 60-80% reduction in HTML, CSS, and JavaScript transfer sizes. Monitor live impact by calculating average response sizes from Apache access logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">awk <span class="s1">&#39;{sum+=$10; count++} END {print &#34;Average response size: &#34; int(sum/count) &#34; bytes&#34;}&#39;</span> /var/log/apache2/access.log
+</span></span></code></pre></div><p>Enable mod_logio for more accurate metrics of transferred (compressed) vs. actual content size:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo a2enmod logio
+</span></span></code></pre></div><p>Update your log format in <code>/etc/apache2/apache2.conf</code> or virtual host configuration to include <code>%I</code> (bytes received) and <code>%O</code> (bytes sent):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="nb">LogFormat</span> <span class="s2">&#34;%h %l %u %t \&#34;%r\&#34; %&gt;s %O \&#34;%{Referer}i\&#34; \&#34;%{User-Agent}i\&#34; %I&#34;</span> combined_io
+</span></span><span class="line"><span class="cl"><span class="nb">CustomLog</span> ${APACHE_LOG_DIR}/access.log combined_io
+</span></span></code></pre></div><p>Then reload Apache and check the difference between <code>%I</code> and <code>%O</code> to see actual compression gains in production traffic.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

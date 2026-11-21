@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>afslog(1) · Linux Manual Pages</title>
+<meta name="description" content="afslog – obtain AFS tokens">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-afslog/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>afslog(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> <code>afslog</code> &#8211; obtain AFS tokens </p>
+<h2>SYNOPSIS</h2>
+<p> [-<code>h | &#8211;help</code> ] [-<code>-no-v4</code> ] [-<code>-no-v5</code> ] [-<code>u | &#8211;unlog</code> ] [-<code>v | &#8211;verbose</code> ] [-<code>-version</code> ] [-<code>c </code><i>cell | </i> &#8211;<code>-cell= </code><i>cell</i> ] [-<code>k </code><i>realm | </i> &#8211;<code>-realm= </code><i>realm</i> ] [-<code>P </code><i>principal | </i> &#8211;<code>-principal= </code><i>principal</i> ] -words [-<code>p </code><i>path | </i> &#8211;<code>-file= </code><i>path</i> ] [<i>cell | path &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> obtains AFS tokens for a number of cells. What cells to get tokens for can either be specified as an explicit list, as file paths to get tokens for, or be left unspecified, in which case will use whatever magic krb_afslog3 decides upon. </p>
+<p> Supported options:</p>
+<dl>
+<dt><code>&#8211;no-v4</code></dt>
+<dd> This makes not try using Kerberos 4.</dd>
+<dt><code>&#8211;no-v5</code></dt>
+<dd> This makes not try using Kerberos 5.</dd>
+<dt> &#8211;<code>P </code><i>principal</i> &#8211;<code>-principal </code><i>principal</i></dt>
+<dd>
+</dd><dd>select what Kerberos 5 principal to use.</dd>
+<dt><code>&#8211;cache </code><i>cache</i></dt>
+<dd> select what Kerberos 5 credential cache to use. &#8211;<code>-principal</code> overrides this option.</dd>
+<dt> &#8211;<code>u</code> &#8211;<code>-unlog</code></dt>
+<dd>
+</dd><dd>Destroy tokens instead of obtaining new. If this is specified, all other options are ignored (except for &#8211;<code>-help</code> and &#8211;<code>-version</code></dd>
+<dt> &#8211;<code>v</code> &#8211;<code>-verbose</code></dt>
+<dd>
+</dd><dd>Adds more verbosity for what is actually going on.</dd>
+<dt> &#8211;<code>c </code><i>cell,</i> &#8211;<code>-cell= </code><i>cell</i></dt>
+<dd>
+</dd><dd>This specified one or more cell names to get tokens for.</dd>
+<dt> &#8211;<code>k </code><i>realm</i> &#8211;<code>-realm= </code><i>realm</i></dt>
+<dd>
+</dd><dd>This is the Kerberos realm the AFS servers live in, this should normally not be specified.</dd>
+<dt> &#8211;<code>p </code><i>path</i> &#8211;<code>-file= </code><i>path</i></dt>
+<dd>
+</dd><dd>This specified one or more file paths for which tokens should be obtained.</dd></dl>
+<p> Instead of using &#8211;<code>c</code> and &#8211;<code>p</code> you may also pass a list of cells and file paths after any other options. These arguments are considered files if they are either the strings Do . Dc or &#8220;..&#8221; or they contain a slash, or if there exists a file by that name.</p>
+<h2>EXAMPLES</h2>
+<p> Assuming that there is no file called &#8220;openafs.org&#8221; in the current directory, and that /afs/openafs.org points to that cell, the follwing should be identical: </p>
+<blockquote>
+<pre>
+$ afslog -c openafs.org
+$ afslog openafs.org
+$ afslog /afs/openafs.org/some/file
+</pre>
+</blockquote>
+<h2>SEE ALSO</h2>
+<p> krb_afslog3 </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

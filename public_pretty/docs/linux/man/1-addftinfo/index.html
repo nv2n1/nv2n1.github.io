@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>addftinfo(1) · Linux Manual Pages</title>
+<meta name="description" content="addftinfo – add information to troff font files for use with groff">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-addftinfo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>addftinfo(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> addftinfo &#8211; add information to troff font files for use with groff </p>
+<h2>SYNOPSIS</h2>
+<p> [ <code>-asc-height </code><i>n</i> ] [ <code>-body-depth </code><i>n</i> ] [ <code>-body-height </code><i>n</i> ] [ <code>-cap-height </code><i>n</i> ] [ <code>-comma-depth </code><i>n</i> ] [ <code>-desc-depth </code><i>n</i> ] [ <code>-fig-height </code><i>n</i> ] [ <code>-x-height </code><i>n</i> ] <i>res</i> <i>unitwidth</i> <i>font</i> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>addftinfo</code> reads a troff font file and adds some additional font-metric information that is used by the groff system. The font file with the information added is written on the standard output. The information added is guessed using some parametric information about the font and assumptions about the traditional troff names for characters. The main information added is the heights and depths of characters. The <i>res</i> and <i>unitwidth</i> arguments should be the same as the corresponding parameters in the DESC file; <i>font</i> is the name of the file describing the font; if <i>font</i> ends with <code>I</code> the font will be assumed to be italic.</p>
+<h2>OPTIONS</h2>
+<p> <code>-v</code> prints the version number. </p>
+<p> All other options change one of the parameters that are used to derive the heights and depths. Like the existing quantities in the font file, each <i>value</i> is in inches/<i>res</i> for a font whose point size is <i>unitwidth</i>. <i>param-option</i> must be one of:</p>
+<dl>
+<dt><code>-x-height</code></dt>
+<dd> The height of lowercase letters without ascenders such as x.</dd>
+<dt><code>-fig-height</code></dt>
+<dd> The height of figures (digits).</dd>
+<dt><code>-asc-height</code></dt>
+<dd> The height of characters with ascenders, such as b, d or l.</dd>
+<dt><code>-body-height</code></dt>
+<dd> The height of characters such as parentheses.</dd>
+<dt><code>-cap-height</code></dt>
+<dd> The height of uppercase letters such as A.</dd>
+<dt><code>-comma-depth</code></dt>
+<dd> The depth of a comma.</dd>
+<dt><code>-desc-depth</code></dt>
+<dd> The depth of characters with descenders, such as p, q, or y.</dd>
+<dt><code>-body-depth</code></dt>
+<dd> The depth of characters such as parentheses.</dd></dl>
+<p> <code>addftinfo</code> makes no attempt to use the specified parameters to guess the unspecified parameters. If a parameter is not specified the default will be used. The defaults are chosen to have the reasonable values for a Times font.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5), <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/7-groff_char/">groff_char</a></code>(7) </p>
+<p> You can view a man page <i>name</i><code>(</code><i>n</i><code>)</code> with</p>
+<dl>
+<dt>
+</dt><dd> <code>man</code><i> n name</i></dd></dl>
+<p> in text mode and with</p>
+<dl>
+<dt>
+</dt><dd> <code>groffer</code><i> n name</i></dd></dl>
+<p> in graphical mode (PDF, etc.). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

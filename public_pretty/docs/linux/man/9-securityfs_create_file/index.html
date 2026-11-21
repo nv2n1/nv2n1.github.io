@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>securityfs_create_file(9) · Linux Manual Pages</title>
+<meta name="description" content="securityfs_create_file – create a file in the securityfs filesystem">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-securityfs_create_file/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>securityfs_create_file(9)</h1>
+
+
+
+
+
+<p>securityfs_create_file &#8211; create a file in the securityfs filesystem</p>
+<h2>Synopsis</h2>
+<pre><code>struct dentry *securityfs_create_file(const char *name, umode_t mode, struct dentry *parent, void *data, const struct file_operations *fops);</code></pre>
+<h2>Arguments</h2>
+<p><i>name</i></p>
+<dl>
+<dd>
+</dd><dd>a pointer to a string containing the name of the file to create.</dd></dl>
+<p> <i>mode</i></p>
+<dl>
+<dd>the permission that the file should have</dd></dl>
+<p> <i>parent</i></p>
+<dl>
+<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is <code>NULL</code>, then the file will be created in the root of the securityfs filesystem.</dd></dl>
+<p> <i>data</i></p>
+<dl>
+<dd>a pointer to something that the caller will want to get to later on. The inode.i_private pointer will point to this value on the <code>open</code> call.</dd></dl>
+<p> <i>fops</i></p>
+<dl>
+<dd>a pointer to a struct file_operations that should be used for this file.</dd></dl>
+<h2>Description</h2>
+<p>This is the basic &#8220;create a file&#8221; function for securityfs. It allows for a wide range of flexibility in creating a file, or a directory (if you want to create a directory, the <code>securityfs_create_dir</code> function is recommended to be used instead). </p>
+<p> This function returns a pointer to a dentry if it succeeds. This pointer must be passed to the <code>securityfs_remove</code> function when the file is to be removed (no automatic cleanup happens if your module is unloaded, you are responsible here). If an error occurs, the function will return the error value (via ERR_PTR). </p>
+<p> If securityfs is not enabled in the kernel, the value <code>-ENODEV</code> is returned.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

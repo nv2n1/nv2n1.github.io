@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbgetautorepeatrate(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbGetAutoRepeatRate – Gets the current attributes of the RepeatKeys control for a keyboard device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbgetautorepeatrate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbgetautorepeatrate(3)</h1>
+
+
+
+
+
+<p>XkbGetAutoRepeatRate &#8211; Gets the current attributes of the RepeatKeys control for a keyboard device </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Bool XkbGetAutoRepeatRate</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int *</code><i>timeout_rtrn</i><code>,</code> <code>unsigned int *</code><i>interval_rtrn</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; display</i></dt>
+<dd>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>desired device ID, or XkbUseCoreKbd</dd>
+<dt><i>&#8211; timeout_rtrn</i></dt>
+<dd>backfilled with initial repeat delay, ms</dd>
+<dt><i>&#8211; interval_rtrn</i></dt>
+<dd>backfilled with subsequent repeat delay, ms</dd></dl>
+<h2>Description</h2>
+<p>The core protocol allows only control over whether or not the entire keyboard or individual keys should auto-repeat when held down. RepeatKeys is a boolean control that extends this capability by adding control over the delay until a key begins to repeat and the rate at which it repeats. RepeatKeys is coupled with the core auto-repeat control: when RepeatKeys is enabled or disabled, the core auto-repeat is enabled or disabled and vice versa. </p>
+<p> Auto-repeating keys are controlled by two attributes. The first, <i>timeout, </i> is the delay after the initial press of an auto-repeating key and the first generated repeat event. The second, <i>interval, </i> is the delay between all subsequent generated repeat events. As with all boolean controls, configuring the attributes that determine how the control operates does not automatically enable the control as a whole. </p>
+<p> <i>XkbGetAutoRepeatRate </i> queries the server for the current values of the RepeatControls control attributes, backfills <i>timeout_rtrn </i> and <i>interval_rtrn </i> with them, and returns True. If a compatible version of the Xkb extension is not available in the server <i>XkbGetAutoRepeatRate </i> returns False.</p>
+<h2>Return Values</h2>
+<dl COMPACT>
+<dt>True</dt>
+<dd>The XkbGetAutoRepeatRate function returns True if a compatible version of the Xkb extension is available in the server.</dd>
+<dt>False</dt>
+<dd>The XkbGetAutoRepeatRate function returns False if a compatible version of the Xkb extension is not available in the server. </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mono-service(1) · Linux Manual Pages</title>
+<meta name="description" content="mono-service, mono-service2 – Mono ServiceProcess host">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mono-service/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mono-service(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> mono-service, mono-service2 &#8211; Mono ServiceProcess host</p>
+<h2>SYNOPSIS</h2>
+<p> <code>mono-service [options] program.exe</code></p>
+<h2>DESCRIPTION</h2>
+<p> The <i>mono-service</i> is a host to run services built with the ServiceProcess assembly. </p>
+<p> Use <i>mono-service</i> to run services that use the 1.0 assemblies and use <i>mono-service2</i> to run services that use the 2.0 assemblies. </p>
+<p> Services can be paused by sending the SIGUSR1 signal to the process, and execution can be resumed by sending the SIGUSR2 signal. The service can be cleanly shutdown by sending the SIGTERM signal to the process. </p>
+<p> Mono programs started with mono-service run with the <code>MONO_DISABLE_SHM</code> variable set. This means that certain Mono features that depend on it are not available to services. </p>
+<p> The following options can be used to control the service:</p>
+<dl>
+<dt><i>-d:DIRECTORY</i></dt>
+<dd> Use this option to specify the working directory for the service. The default is the current directory.</dd>
+<dt><i>-l:LOCKFILE</i></dt>
+<dd> Specifies the file to use for locking, the default is a filename constructed in /tmp based on the name of the program that hosts the service.</dd>
+<dt><i>-m:MESSAGE</i></dt>
+<dd> Name to show in the syslog.</dd>
+<dt><i>-n:NAME</i></dt>
+<dd> Use this to specify the service to be launched (if the program contains more than one service). The default is to run the first defined service.</dd>
+<dt><i>&#8211;debug</i></dt>
+<dd> Use this option to prevent mono-service from redirecting stdin and stdout and prevent the program to be sent to the background. Equivalent to &#8211;no-daemon</dd>
+<dt><i>&#8211;no-daemon</i></dt>
+<dd> Use this option to prevent mono-service from redirecting stdin and stdout and prevent the program to be sent to the background. Equivalent to &#8211;debug.</dd></dl>
+<h2>CONTROL</h2>
+<p> You can control the service by sending signals to the process, you can use the following commands:</p>
+<dl>
+<dt>Pausing service:</dt>
+<dd>
+<pre>
+        kill -USR1 `cat &lt;lock file&gt;`
+</pre>
+</dd><dt>Resuming service:</dt>
+<dd>
+<pre>
+        kill -USR2 `cat &lt;lock file&gt;`
+</pre>
+</dd><dt>Stopping the service:</dt>
+<dd>
+<pre>
+        kill `cat &lt;lock file&gt;`
+</pre>
+</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Start the MyService.exe assembly, with a lock in /root/service-lock: </p>
+<pre>
+        mono-service -l:/root/service-lock MyService.exe
+</pre>
+<h2>DEBUGGING</h2>
+<p> Messages produced by the service are logged on syslog.</p>
+<h2>MAILING LISTS</h2>
+<p> Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-list">http://lists.ximian.com/mailman/listinfo/mono-list</a> for details.</p>
+<h2>WEB SITE</h2>
+<p> Visit: <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-mono/">mono</a>(1)</code> </p>
+<p> <code>N:System.ServiceProcess</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

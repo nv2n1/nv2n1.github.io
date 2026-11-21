@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevent Firefox from Closing When Last Tab Closes - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/keep-firefox-open-after-closing-the-last-tab/">
+  <meta name="description" content="By default, Firefox closes the entire window when you close the last tab. This can be annoying if you’re used to keeping the browser window open. Here’s how to …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Prevent Firefox from Closing When Last Tab Closes">
+  <meta property="og:url" content="https://www.systutorials.com/keep-firefox-open-after-closing-the-last-tab/">
+  <meta property="og:description" content="By default, Firefox closes the entire window when you close the last tab. This can be annoying if you’re used to keeping the browser window open. Here’s how to …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/software-design/">Software Design</a>
+        </nav>
+        
+        <h1>Prevent Firefox from Closing When Last Tab Closes</h1>
+        <time class="post-date" datetime="2013-07-12T16:54:48Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>By default, Firefox closes the entire window when you close the last tab. This can be annoying if you’re used to keeping the browser window open. Here’s how to change this behavior and other useful tab management tips.</p>
+<h2 id="prevent-firefox-from-closing-aboutconfig">Prevent Firefox from Closing: about:config</h2>
+<ol>
+<li>Open a new tab and type <code>about:config</code> in the address bar</li>
+<li>Click “Accept the Risk and Continue”</li>
+<li>In the search box, type <code>browser.tabs.closeWindowWithLastTab</code></li>
+<li>Double-click the entry to change it from <code>true</code> to <code>false</code></li>
+</ol>
+<p>Now when you close the last tab, Firefox opens a new blank tab instead of closing the entire window. The change takes effect immediately.</p>
+<h2 id="why-firefox-does-this-by-default">Why Firefox Does This by Default</h2>
+<p>The behavior matches how most desktop applications work: closing the last document or item closes the application window. For casual users, this feels natural. Power users who manage many tabs throughout the day often prefer the window to stay open, which is why this preference exists.</p>
+<h2 id="alternative-userjs-for-persistent-configuration">Alternative: user.js for Persistent Configuration</h2>
+<p>If you want this setting to persist across Firefox updates and profile resets, add it to a <code>user.js</code> file:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">// In your Firefox profile directory
+// Find it: about:support → Profile Directory → Open Directory
+// Create or edit: user.js
+
+user_pref(&#34;browser.tabs.closeWindowWithLastTab&#34;, false);
+</code></pre><p>The <code>user.js</code> file is read on every Firefox startup and overrides any changes made through about:config. This is useful for managed environments or when you want to ensure your preferences survive profile resets.</p>
+<h2 id="other-essential-tab-preferences">Other Essential Tab Preferences</h2>
+<p>While you’re in about:config, these related settings improve tab management:</p>
+<p><strong>Move new tabs next to the current tab (instead of at the end):</strong></p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">browser.tabs.insertRelatedAfterCurrent = true
+</code></pre><p><strong>Warn when closing a window with multiple tabs:</strong></p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">browser.tabs.warnOnClose = true
+browser.tabs.warnOnCloseOtherTabs = true
+</code></pre><p><strong>Enable tab previews on hover:</strong></p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">browser.tabs.cardPreview.enabled = true
+browser.tabs.cardPreview.delayMs = 500
+</code></pre><p><strong>Control where new windows open:</strong></p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">browser.link.open_newwindow.restriction = 0
+</code></pre><h2 id="keyboard-shortcuts-for-tab-power-users">Keyboard Shortcuts for Tab Power Users</h2>
+<p>Master these shortcuts to manage tabs efficiently:</p>
+<ul>
+<li><code>Ctrl+T</code> — New tab</li>
+<li><code>Ctrl+W</code> — Close current tab</li>
+<li><code>Ctrl+Shift+T</code> — Reopen last closed tab (works multiple times!)</li>
+<li><code>Ctrl+Tab</code> — Switch to next tab</li>
+<li><code>Ctrl+Shift+Tab</code> — Switch to previous tab</li>
+<li><code>Ctrl+1</code> through <code>Ctrl+9</code> — Switch to specific tab by position (9 goes to last tab)</li>
+<li><code>Ctrl+L</code> — Focus address bar</li>
+<li><code>Alt+Enter</code> — Open address bar content in new tab</li>
+<li><code>Middle-click</code> on a tab — Close it</li>
+<li><code>Middle-click</code> on a link — Open in new tab</li>
+<li><code>Ctrl+click</code> on a link — Open in new tab (foreground)</li>
+<li><code>Ctrl+Shift+click</code> on a link — Open in new tab and switch to it</li>
+</ul>
+<h2 id="tab-management-extensions">Tab Management Extensions</h2>
+<p>Firefox extensions that enhance tab handling:</p>
+<ul>
+<li><strong>Tab Session Manager</strong> — Save and restore tab sessions across restarts</li>
+<li><strong>OneTab</strong> — Convert all open tabs into a shareable list to save memory</li>
+<li><strong>Tree Style Tab</strong> — Display tabs in a vertical tree hierarchy in the sidebar</li>
+<li><strong>Sidebery</strong> — Modern vertical tab bar with bookmarks and containers</li>
+<li><strong>Multi-account Containers</strong> — Mozilla’s official extension for isolating tabs by context (work, personal, banking)</li>
+</ul>
+<h2 id="firefox-container-tabs">Firefox Container Tabs</h2>
+<p>Containers are a built-in Firefox feature (enhanced by the extension) that let you separate browsing contexts:</p>
+<ul>
+<li>Each container has its own cookies, storage, and login state</li>
+<li>Log into the same site with different accounts in different containers</li>
+<li>Keep work browsing separate from personal</li>
+<li>Isolate banking and shopping from regular browsing</li>
+</ul>
+<p>Right-click the New Tab button or use the Containers extension to open a tab in a specific container.</p>
+<h2 id="memory-management-with-many-tabs">Memory Management with Many Tabs</h2>
+<p>If you tend to accumulate tabs, Firefox has built-in memory management:</p>
+<ul>
+<li><strong>Tab unload</strong> — Firefox automatically unloads tabs you haven’t viewed recently, freeing memory while keeping them visible</li>
+<li><strong>about:unloads</strong> — Manually see which tabs are loaded and unload specific ones</li>
+<li><strong>about:performance</strong> — See which tabs and extensions are using the most resources</li>
+</ul>
+<p>For extreme tab hoarders (100+ tabs), consider using bookmarks instead. <code>Ctrl+D</code> bookmarks the current tab, and you can organize bookmarks into folders for later access.</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<ul>
+<li><code>about:config</code> → <code>browser.tabs.closeWindowWithLastTab</code> → <code>false</code> — Prevent close</li>
+<li><code>Ctrl+Shift+T</code> — Undo close tab</li>
+<li><code>Ctrl+W</code> — Close tab</li>
+<li><code>about:performance</code> — Check tab resource usage</li>
+<li><code>user.js</code> — Persist settings across restarts</li>
+</ul>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

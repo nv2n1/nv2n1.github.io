@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_xio_http_driver_server(3) · Linux Manual Pages</title>
+<meta name="description" content="Server – The globus_xio_server_create() causes a new transport-specific listener socket to be created to handle new HTTP connections. globus_xio_server_register_accept() will accept a new connectio...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_xio_http_driver_server/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_xio_http_driver_server(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> Server &#8211; The <code>globus_xio_server_create()</code> causes a new transport-specific listener socket to be created to handle new HTTP connections. <code>globus_xio_server_register_accept()</code> will accept a new connection for processing. <code>globus_xio_server_register_close()</code> cleans up the internal resources associated with the http server and calls close on the listener. </p>
+<p> Multiple HTTP requests may be read in sequence from an HTTP server. After each request is processed and the response is sent (either by writing the entire entity body as specified by the Content-Length header or by using the GLOBUS_XIO_HTTP_HANDLE_SET_END_OF_ENTITY handle cntl), the next read will contain the metadata related to the next operation. Only one request will be in process at once&#8211;the previous request must have sent or received and EOF (whichever is applicable to the request type). </p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus_xio from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

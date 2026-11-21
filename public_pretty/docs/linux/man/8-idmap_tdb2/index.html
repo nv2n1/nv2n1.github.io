@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>idmap_tdb2(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-idmap_tdb2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>idmap_tdb2(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>idmap_tdb2 - Samba&rsquo;s idmap_tdb2 Backend for Winbind</p>
+<h2>Description</h2>
+<p>The idmap_tdb2 plugin is a substitute for the default idmap_tdb backend used by winbindd for storing SID/uid/gid mapping tables in clustered environments with Samba and CTDB.</p>
+<p>In contrast to read only backends like idmap_rid, it is an allocating backend: This means that it needs to allocate new user and group IDs in order to create new mappings.</p>
+<h2>Idmap Options</h2>
+<p>range = low - high</p>
+<dl><dd>Defines the available matching uid and gid range for which the backend is authoritative.</dd></dl>
+<p>script</p>
+<dl><dd>This option can be used to configure an external program for performing id mappings instead of using the tdb counter. The mappings are then stored int tdb2 idmap database. For details see the section on IDMAP SCRIPT below.</dd></dl>
+<h2>Idmap Script</h2>
+<p>The tdb2 idmap backend supports an external program for performing id mappings through the smb.conf option <i>idmap config * : script</i> or its deprecated legacy form <i>idmap : script</i>.</p>
+<p>The mappings obtained by the script are then stored in the idmap tdb2 database instead of mappings created by the incrementing id counters. It is therefore important that the script covers the complete range of SIDs that can be passed in for SID to Unix ID mapping, since otherwise SIDs unmapped by the script might get mapped to IDs that had previously been mapped by the script.</p>
+<p>The script should accept the following command line options.</p>
+<dl><dd><pre> SIDTOID S-1-xxxx
+ IDTOSID UID xxxx
+ IDTOSID GID xxxx</pre></dd></dl>
+<p>And it should return one of the following responses as a single line of text.</p>
+<dl><dd><pre> UID:yyyy
+ GID:yyyy
+ SID:yyyy
+ ERR:yyyy</pre></dd></dl>
+<h2>Examples</h2>
+<p>This example shows how tdb2 is used as a the default idmap backend.</p>
+<dl><dd><pre> [global]
+ idmap config * : backend = tdb2
+ idmap config * : range = 1000000-2000000</pre></dd></dl>
+<p>This example shows how tdb2 is used as a the default idmap backend using an external program via the script parameter:</p>
+<dl><dd><pre> [global]
+ idmap config * : backend = tdb2
+ idmap config * : range = 1000000-2000000
+ idmap config * : script = /usr/local/samba/bin/idmap_script.sh</pre></dd></dl>
+<h2>Author</h2>
+<p>The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

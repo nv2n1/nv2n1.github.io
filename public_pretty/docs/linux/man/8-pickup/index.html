@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pickup(8) · Linux Manual Pages</title>
+<meta name="description" content="pickup – Postfix local mail pickup">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pickup/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pickup(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>pickup &#8211; Postfix local mail pickup</p>
+<h2>Synopsis</h2>
+<pre><code>pickup</code> [generic Postfix daemon options]</pre>
+<h2>Description</h2>
+<p>The <code><a href="/docs/linux/man/8-pickup/">pickup</a></code>(8) daemon waits for hints that new mail has been dropped into the <code>maildrop</code> directory, and feeds it into the <code><a href="/docs/linux/man/8-cleanup/">cleanup</a></code>(8) daemon. Ill-formatted files are deleted without notifying the originator. This program expects to be run from the <code><a href="/docs/linux/man/8-master/">master</a></code>(8) process manager.</p>
+<h2>Standards</h2>
+<p>None. The <code><a href="/docs/linux/man/8-pickup/">pickup</a></code>(8) daemon does not interact with the outside world.</p>
+<h2>Security</h2>
+<p>The <code><a href="/docs/linux/man/8-pickup/">pickup</a></code>(8) daemon is moderately security sensitive. It runs with fixed low privilege and can run in a chrooted environment. However, the program reads files from potentially hostile users. The <code><a href="/docs/linux/man/8-pickup/">pickup</a></code>(8) daemon opens no files for writing, is careful about what files it opens for reading, and does not actually touch any data that is sent to its public service endpoint.</p>
+<h2>Diagnostics</h2>
+<p>Problems and transactions are logged to <code>syslogd</code>(8).</p>
+<h2>Bugs</h2>
+<p>The <code><a href="/docs/linux/man/8-pickup/">pickup</a></code>(8) daemon copies mail from file to the <code><a href="/docs/linux/man/8-cleanup/">cleanup</a></code>(8) daemon. It could avoid message copying overhead by sending a file descriptor instead of file data, but then the already complex <code><a href="/docs/linux/man/8-cleanup/">cleanup</a></code>(8) daemon would have to deal with unfiltered user data.</p>
+<h2>Configuration Parameters</h2>
+<p>As the <code><a href="/docs/linux/man/8-pickup/">pickup</a></code>(8) daemon is a relatively long-running process, up to an hour may pass before a <code>main.cf</code> change takes effect. Use the command &quot;<code>postfix reload</code>&quot; command to speed up a change. </p>
+<p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
+<h2>Content Inspection Controls</h2>
+<dl>
+<dt><code>content_filter (empty)</code></dt>
+<dd>After the message is queued, send the entire message to the specified <i>transport:destination</i>.</dd>
+<dt><code>receive_override_options (empty)</code></dt>
+<dd>Enable or disable recipient validation, built-in content filtering, or address mapping.</dd></dl>
+<h2>Miscellaneous Controls</h2>
+<dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>ipc_timeout (3600s)</code></dt>
+<dd>The time limit for sending or receiving information over an internal communication channel.</dd>
+<dt><code>line_length_limit (2048)</code></dt>
+<dd>Upon input, long lines are chopped up into pieces of at most this length; upon delivery, long lines are reconstructed.</dd>
+<dt><code>max_idle (100s)</code></dt>
+<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</dd>
+<dt><code>max_use (100)</code></dt>
+<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</dd>
+<dt><code>process_id (read-only)</code></dt>
+<dd>The process ID of a Postfix command or daemon process.</dd>
+<dt><code>process_name (read-only)</code></dt>
+<dd>The process name of a Postfix command or daemon process.</dd>
+<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The location of the Postfix top-level queue directory.</dd>
+<dt><code>syslog_facility (mail)</code></dt>
+<dd>The syslog facility of Postfix logging.</dd>
+<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dd></dl>
+<h2>See Also</h2>
+<pre><a href="//www.systutorials.com/docs/linux/man/8-cleanup/">cleanup</a>(8), message canonicalization
+<a href="//www.systutorials.com/docs/linux/man/1-sendmail/">sendmail</a>(1), Sendmail-compatible interface
+<a href="//www.systutorials.com/docs/linux/man/1-postdrop/">postdrop</a>(1), mail posting agent
+<a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
+<a href="//www.systutorials.com/docs/linux/man/5-master/">master</a>(5), generic daemon options
+<a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
+syslogd(8), system logging</pre>
+<h2>License</h2>
+<p>The Secure Mailer license must be distributed with this software.</p>
+<h2>Author(S)</h2>
+<pre>Wietse Venema
+IBM T.J. Watson Research
+P.O. Box 704
+Yorktown Heights, NY 10598, USA</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

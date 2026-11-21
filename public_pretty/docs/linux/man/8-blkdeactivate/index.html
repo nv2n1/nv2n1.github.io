@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>blkdeactivate(8) · Linux Manual Pages</title>
+<meta name="description" content="blkdeactivate — utility to deactivate block devices">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-blkdeactivate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>blkdeactivate(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>blkdeactivate &#8212; utility to deactivate block devices</p>
+<h2>Synopsis</h2>
+<p><code>blkdeactivate</code> [<code>-d</code>&nbsp;<i>dm_options</i>] [<code>-e</code>] [<code>-h</code>] [<code>-l</code>&nbsp;<i>lvm_options</i>] [<code>-m</code>&nbsp;<i>mpath_options</i>] [<code>-r</code>&nbsp;<i>mdraid_options</i>] [<code>-o</code>&nbsp;<i>vdo_options</i>] [<code>-u</code>] [<code>-v</code>] [<i>device</i>]</p>
+<h2>Description</h2>
+<p>The blkdeactivate utility deactivates block devices. For mounted block devices, it attempts to unmount it automatically before trying to deactivate. The utility currently supports device-mapper devices (DM), including LVM volumes and software RAID MD devices. LVM volumes are handled directly using the <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) command, the rest of device-mapper based devices are handled using the <code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8) command. MD devices are handled using the <code><a href="/docs/linux/man/8-mdadm/">mdadm</a></code>(8) command.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-d</code>, <code>&#8211;dmoptions</code>&nbsp;<i>dm_options</i></dt>
+<dd>Comma separated list of device-mapper specific options. Accepted <code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8) options are:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><i>retry</i></dt>
+<dd>Retry removal several times in case of failure.</dd>
+<dt><i>force</i></dt>
+<dd>Force device removal.</dd></dl>
+</dl>
+<dt><code>-e</code>, <code>&#8211;errors</code></dt>
+<dd>Show errors reported from tools called by <code>blkdeactivate</code>. Without this option, any error messages from these external tools are suppressed and the <code>blkdeactivate</code> itself provides only a summary message to indicate the device was skipped.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display the help text.</dd>
+<dt><code>-l</code>, <code>&#8211;lvmoptions</code>&nbsp;<i>lvm_options</i></dt>
+<dd>Comma-separated list of LVM specific options:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><i>retry</i></dt>
+<dd>Retry removal several times in case of failure.</dd>
+<dt><i>wholevg</i></dt>
+<dd>Deactivate the whole LVM Volume Group when processing a Logical Volume. Deactivating the Volume Group as a whole is quicker than deactivating each Logical Volume separately.</dd></dl>
+</dl>
+<dt><code>-m</code>, <code>&#8211;mpathoptions</code>&nbsp;<i>mpath_options</i></dt>
+<dd>Comma-separated list of device-mapper multipath specific options:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><i>disablequeueing</i></dt>
+<dd>Disable queueing on all multipath devices before deactivation. This avoids a situation where blkdeactivate may end up waiting if all the paths are unavailable for any underlying device-mapper multipath device.</dd></dl>
+</dl>
+<dt><code>-r</code>, <code>&#8211;mdraidoptions</code>&nbsp;<i>mdraid_options</i></dt>
+<dd>Comma-separated list of MD RAID specific options:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><i>wait</i></dt>
+<dd>Wait MD device&#8217;s resync, recovery or reshape action to complete before deactivation.</dd></dl>
+</dl>
+<dt><code>-o</code>, <code>&#8211;vdooptions</code>&nbsp;<i>vdo_options</i></dt>
+<dd>Comma-separated list of VDO specific options:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><i>configfile=file</i></dt>
+<dd>Use specified VDO configuration file.</dd></dl>
+</dl>
+<dt><code>-u</code>, <code>&#8211;umount</code></dt>
+<dd>Unmount a mounted device before trying to deactivate it. Without this option used, a device that is mounted is not deactivated.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Run in verbose mode. Use &#8211;vv for even more verbose mode.</dd></dl>
+<h2>Examples</h2>
+<p>Deactivate all supported block devices found in the system, skipping mounted devices. # <code>blkdeactivate</code> </p>
+<p> Deactivate all supported block devices found in the system, unmounting any mounted devices first, if possible. # <code>blkdeactivate -u</code> </p>
+<p> Deactivate the device /dev/vg/lvol0 together with all its holders, unmounting any mounted devices first, if possible. # <code>blkdeactivate -u /dev/vg/lvol0</code> </p>
+<p> Deactivate all supported block devices found in the system. If the deactivation of a device-mapper device fails, retry it. Deactivate the whole Volume Group at once when processing an LVM Logical Volume. # <code>blkdeactivate -u -d retry -l wholevg</code> </p>
+<p> Deactivate all supported block devices found in the system. If the deactivation of a device-mapper device fails, retry it and force removal. # <code>blkdeactivate -d force,retry</code></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8), <code><a href="/docs/linux/man/8-lsblk/">lsblk</a></code>(8), <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8), <code><a href="/docs/linux/man/8-mdadm/">mdadm</a></code>(8), <code><a href="/docs/linux/man/8-multipathd/">multipathd</a></code>(8), <code>vdo</code>(8), <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

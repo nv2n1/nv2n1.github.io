@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>postcat(1) · Linux Manual Pages</title>
+<meta name="description" content="postcat – show Postfix queue file contents">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-postcat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>postcat(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> postcat &#8211; show Postfix queue file contents </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+postcat[-bdehnoqv][-c config_dir][files...]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code><a href="/docs/linux/man/1-postcat/">postcat</a></code>(1) command prints the contents of the named <i>files</i> in human-readable form. The files are expected to be in Postfix queue file format. If no <i>files</i> are specified on the command line, the program reads from standard input. </p>
+<p> By default, <code><a href="/docs/linux/man/1-postcat/">postcat</a></code>(1) shows the envelope and message content, as if the options <code>-beh</code> were specified. To view message content only, specify <code>-bh</code> (Postfix 2.7 and later). </p>
+<p> Options:</p>
+<dl>
+<dt><code>-b</code></dt>
+<dd> Show body content. The <code>-b</code> option starts producing output at the first non-header line, and stops when the end of the message is reached. </dd>
+<p> This feature is available in Postfix 2.7 and later.</p>
+<dt><code>-c </code><i>config_dir</i></dt>
+<dd> The <code>main.cf</code> configuration file is in the named directory instead of the default configuration directory.</dd>
+<dt><code>-d</code></dt>
+<dd> Print the decimal type of each record.</dd>
+<dt><code>-e</code></dt>
+<dd> Show message envelope content. </dd>
+<p> This feature is available in Postfix 2.7 and later.</p>
+<dt><code>-h</code></dt>
+<dd> Show message header content. The <code>-h</code> option produces output from the beginning of the message up to, but not including, the first non-header line. </dd>
+<p> This feature is available in Postfix 2.7 and later.</p>
+<dt><code>-o</code></dt>
+<dd> Print the queue file offset of each record.</dd>
+<dt><code>-q</code></dt>
+<dd> Search the Postfix queue for the named <i>files</i> instead of taking the names literally. </dd>
+<p> This feature is available in Postfix 2.0 and later.</p>
+<dt><code>-v</code></dt>
+<dd> Enable verbose logging for debugging purposes. Multiple <code>-v</code> options make the software increasingly verbose.</dd></dl>
+<h2>DIAGNOSTICS</h2>
+<p> Problems are reported to the standard error stream.</p>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>MAIL_CONFIG</code></dt>
+<dd> Directory with Postfix configuration files.</dd></dl>
+<h2>CONFIGURATION PARAMETERS</h2>
+<p> The following <code>main.cf</code> parameters are especially relevant to this program. </p>
+<p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
+<dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd> The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>import_environment (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd> The list of environment parameters that a privileged Postfix process will import from a non-Postfix parent process, or name=value environment overrides.</dd>
+<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd> The location of the Postfix top-level queue directory.</dd></dl>
+<h2>FILES</h2>
+<pre>
+/var/spool/postfix, Postfix queue directory
+</pre>
+<h2>SEE ALSO</h2>
+<pre>
+<a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), Postfix configuration
+</pre>
+<h2>LICENSE</h2>
+<p> The Secure Mailer license must be distributed with this software.</p>
+<h2>AUTHOR(S)</h2>
+<pre>
+Wietse Venema
+IBM T.J. Watson Research
+P.O. Box 704
+Yorktown Heights, NY 10598, USA
+Wietse Venema
+Google, Inc.
+111 8th Avenue
+New York, NY 10011, USA
+</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

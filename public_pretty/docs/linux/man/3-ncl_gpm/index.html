@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_gpm(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_gpm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_gpm(3)</h1>
+
+
+
+
+
+<p>GPM (Polymarker) - the polymarker output primitive draws selected symmetric symbols to mark user-specified coordinate positions.</p>
+<h2>Synopsis</h2>CALL GPM (N, X, Y)
+<h2>C-Binding Synopsis</h2>#include &lt;ncarg/gks.h&gt; 
+<p>void gpolymarker(const Gpoint_list *point_list);</p>
+<h2>Description</h2><dl COMPACT><dt>N
+</dt><dd>(Integer, Input) - The number of markers to be drawn. N must be greater than zero.
+</dd><dt>X (N)
+</dt><dd>(Real Array, Input) - The X coordinates of the N markers to be drawn, in world coordinates.
+</dd><dt>Y (N)
+</dt><dd>(Real Array, Input) - The Y coordinates of the N markers to be drawn, in world coordinates.</dd></dl><h2>Usage</h2>By default, the polymarker type is an asterisk. To select other polymarker types and attributes, see the man page for gsmk. 
+<p>Note that the coordinate pairs must be in world coordinates and not user coordinates. Among other things, this means that the log scaling and mirror-imaging features available via the SET call and the SPPS functions for drawing dots and markers are not applicable here.</p>
+<h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+<h2>See Also</h2>Online: gsmk, gsmksc, gscr, gspmci, gqmk, gqmksc, gqpmci, point, points, ngdots, gpolymarker 
+<p>Hardcopy: User&rsquo;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>Copyright (C) 1987-2009 
+ University Corporation for Atmospheric Research 
+ The use of this Software is governed by a License Agreement.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

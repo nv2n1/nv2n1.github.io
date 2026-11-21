@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benchmarking SSD Performance on Shared Hosting Without Root - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/ssd-enabled-for-dreamhost-shared-hosting-performance-measurement/">
+  <meta name="description" content="SSD storage is standard across modern hosting providers. DreamHost and competitors have shifted entirely to SSD-backed shared hosting. The marketing claim of …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Benchmarking SSD Performance on Shared Hosting Without Root">
+  <meta property="og:url" content="https://www.systutorials.com/ssd-enabled-for-dreamhost-shared-hosting-performance-measurement/">
+  <meta property="og:description" content="SSD storage is standard across modern hosting providers. DreamHost and competitors have shifted entirely to SSD-backed shared hosting. The marketing claim of …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/performance/">Performance</a>
+        </nav>
+        
+        <h1>Benchmarking SSD Performance on Shared Hosting Without Root</h1>
+        <time class="post-date" datetime="2015-03-06T11:02:22Z">March 6, 2015</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>SSD storage is standard across modern hosting providers. DreamHost and competitors have shifted entirely to SSD-backed shared hosting. The marketing claim of “200% faster page loads” deserves skepticism, but SSD-backed hosting does deliver measurable I/O improvements for realistic workloads.</p>
+<p>This post covers practical performance measurement techniques on a shared hosting account where you lack root access — the actual constraint most shared hosting users face.</p>
+<h2 id="testing-constraints-on-shared-hosting">Testing Constraints on Shared Hosting</h2>
+<p>Testing I/O on shared hosting differs fundamentally from testing on dedicated hardware or a VPS. You cannot:</p>
+<ul>
+<li>Flush kernel buffers or drop caches</li>
+<li>Isolate your workload from concurrent user activity</li>
+<li>Control system load or I/O contention</li>
+<li>Run privileged monitoring tools</li>
+</ul>
+<p>These tests should be treated as baseline measurements, not definitive performance claims. Shared hosting servers run dozens or hundreds of sites simultaneously, and I/O contention varies throughout the day. Morning performance differs from evening performance.</p>
+<h2 id="testing-small-file-io-performance">Testing Small File I/O Performance</h2>
+<p>Moving files between disk and RAM (<code>/dev/shm/</code>) isolates sequential read/write performance:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ls -lha 49MBfile.pdf
+</span></span><span class="line"><span class="cl">-rwxr-xr-x <span class="m">1</span> <span class="nb">test</span> pg000000 49M Mar  <span class="m">5</span> 23:23 49MBfile.pdf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">time</span> mv ./49MBfile.pdf /dev/shm/
+</span></span><span class="line"><span class="cl">real    0m0.602s
+</span></span><span class="line"><span class="cl">user    0m0.012s
+</span></span><span class="line"><span class="cl">sys     0m0.176s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">time</span> mv /dev/shm/49MBfile.pdf ./
+</span></span><span class="line"><span class="cl">real    0m0.307s
+</span></span><span class="line"><span class="cl">user    0m0.008s
+</span></span><span class="line"><span class="cl">sys     0m0.216s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">time</span> mv ./49MBfile.pdf /dev/shm/
+</span></span><span class="line"><span class="cl">real    0m0.291s
+</span></span><span class="line"><span class="cl">user    0m0.016s
+</span></span><span class="line"><span class="cl">sys     0m0.172s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">time</span> mv /dev/shm/49MBfile.pdf ./
+</span></span><span class="line"><span class="cl">real    0m0.225s
+</span></span><span class="line"><span class="cl">user    0m0.000s
+</span></span><span class="line"><span class="cl">sys     0m0.208s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">time</span> mv ./49MBfile.pdf /dev/shm/
+</span></span><span class="line"><span class="cl">real    0m0.331s
+</span></span><span class="line"><span class="cl">user    0m0.000s
+</span></span><span class="line"><span class="cl">sys     0m0.188s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">time</span> mv /dev/shm/49MBfile.pdf ./
+</span></span><span class="line"><span class="cl">real    0m0.262s
+</span></span><span class="line"><span class="cl">user    0m0.000s
+</span></span><span class="line"><span class="cl">sys     0m0.216s
+</span></span></code></pre></div><p>The initial move (0.602s) yields approximately 81.4 MB/s. Subsequent runs stabilize around 250-300ms, indicating kernel cache warmth improves performance. The <code>sys</code> time dominates because <code>mv</code> on the same filesystem is a metadata operation, not a full data copy.</p>
+<h2 id="sequential-write-throughput-with-direct-io">Sequential Write Throughput with Direct I/O</h2>
+<p>Using <code>dd</code> with the <code>oflag=direct</code> flag bypasses the page cache and measures actual disk write speed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>./testfile <span class="nv">bs</span><span class="o">=</span>512M <span class="nv">count</span><span class="o">=</span><span class="m">1</span> <span class="nv">oflag</span><span class="o">=</span>direct
+</span></span><span class="line"><span class="cl">1+0 records in
+</span></span><span class="line"><span class="cl">1+0 records out
+</span></span><span class="line"><span class="cl"><span class="m">536870912</span> bytes <span class="o">(</span><span class="m">537</span> MB<span class="o">)</span> copied, 9.26255 s, 58.0 MB/s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">time</span> mv testfile /dev/shm/
+</span></span><span class="line"><span class="cl">real    0m4.802s
+</span></span><span class="line"><span class="cl">user    0m0.052s
+</span></span><span class="line"><span class="cl">sys     0m2.148s
+</span></span></code></pre></div><p>This produces:</p>
+<ul>
+<li><strong>Write throughput</strong>: 58.0 MB/s (via <code>dd</code> with <code>oflag=direct</code>)</li>
+<li><strong>Read throughput</strong>: 111.8 MB/s (537 MB ÷ 4.802s)</li>
+</ul>
+<p>The <code>oflag=direct</code> flag forces unbuffered I/O, so 58 MB/s represents actual SSD write speed under contention on a shared system. The higher read speed reflects cached performance — the kernel buffers recently written data in memory.</p>
+<h2 id="testing-random-io-performance">Testing Random I/O Performance</h2>
+<p>Database workloads depend more on random I/O than sequential throughput. Test random read latency without requiring root:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ dd <span class="k">if</span><span class="o">=</span>./testfile <span class="nv">of</span><span class="o">=</span>/dev/null <span class="nv">bs</span><span class="o">=</span>4K <span class="nv">skip</span><span class="o">=</span><span class="k">$((</span>RANDOM <span class="o">%</span> <span class="m">131072</span><span class="k">))</span> <span class="nv">count</span><span class="o">=</span><span class="m">1000</span> <span class="nv">iflag</span><span class="o">=</span>direct
+</span></span><span class="line"><span class="cl">1000+0 records in
+</span></span><span class="line"><span class="cl">1000+0 records out
+</span></span><span class="line"><span class="cl"><span class="m">4096000</span> bytes <span class="o">(</span>4.1 MB<span class="o">)</span> copied, 0.087234 s, 46.9 MB/s
+</span></span></code></pre></div><p>For smaller random reads:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">time</span> <span class="k">for</span> i in <span class="o">{</span>1..100<span class="o">}</span><span class="p">;</span> <span class="k">do</span> dd <span class="k">if</span><span class="o">=</span>./testfile <span class="nv">of</span><span class="o">=</span>/dev/null <span class="nv">bs</span><span class="o">=</span>4K <span class="nv">count</span><span class="o">=</span><span class="m">1</span> <span class="nv">iflag</span><span class="o">=</span>direct 2&gt;/dev/null<span class="p">;</span> <span class="k">done</span>
+</span></span><span class="line"><span class="cl">real    0m0.543s
+</span></span></code></pre></div><p>This suggests ~5.4ms average latency per random 4KB read — acceptable for shared hosting but much slower than NVMe-backed systems (&lt; 0.5ms).</p>
+<h2 id="interpreting-the-numbers">Interpreting the Numbers</h2>
+<p>For shared hosting workloads (WordPress, static sites, small applications):</p>
+<ul>
+<li><strong>58 MB/s sustained writes</strong>: Adequate for log rotation, backup operations, and user uploads</li>
+<li><strong>100+ MB/s cached reads</strong>: Covers typical PHP/Python application code and asset serving</li>
+<li><strong>Millisecond-scale operation times</strong>: Indicates responsive disk I/O for typical requests</li>
+</ul>
+<p>Comparison points:</p>
+<ul>
+<li>HDD-based shared hosting: 10–20 MB/s</li>
+<li>SSD shared hosting: 50–100 MB/s (what you’re testing)</li>
+<li>NVMe VPS: 500+ MB/s (different price tier)</li>
+<li>Local SSD laptop: 400–600 MB/s</li>
+</ul>
+<h2 id="what-these-results-mean-for-your-application">What These Results Mean for Your Application</h2>
+<p>SSD-backed shared hosting performs well for:</p>
+<ul>
+<li><strong>Database query caching</strong>: MySQL and PostgreSQL benefit significantly from faster random I/O and lower latency</li>
+<li><strong>Static asset serving</strong>: Images, CSS, and JavaScript load measurably faster</li>
+<li><strong>Application code loading</strong>: PHP opcode caches and Python bytecode compilation work better with responsive disk I/O</li>
+<li><strong>Log aggregation</strong>: Web server and application logs flush to disk faster</li>
+</ul>
+<p>Where you’ll still hit limits:</p>
+<ul>
+<li><strong>Bulk file operations</strong>: Migrations and backups still require time proportional to data size</li>
+<li><strong>High concurrency</strong>: Thousands of simultaneous requests will saturate I/O regardless of SSD speed</li>
+<li><strong>Heavy database workloads</strong>: Optimization queries and indexes matter more than raw I/O speed</li>
+</ul>
+<h2 id="practical-testing-recommendations">Practical Testing Recommendations</h2>
+<p>Run tests at different times of day — shared hosting I/O performance varies with overall server load. Early morning typically shows higher throughput than peak hours.</p>
+<p>Test your own application under realistic load instead of relying on synthetic benchmarks. Profile your actual PHP/Node.js/Python application with tools like <code>strace</code>, <code>py-spy</code>, or <code>perf</code> (if available) to identify actual bottlenecks.</p>
+<p>For most shared hosting users, SSD adoption eliminated the obvious storage performance problem. If your site is still slow, look at database query optimization, inefficient application code, and excessive third-party API calls before blaming disk I/O.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

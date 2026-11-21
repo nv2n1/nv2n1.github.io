@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>blackiborcouponpricer(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::BlackIborCouponPricer – Black-formula pricer for capped/floored Ibor coupons.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-blackiborcouponpricer/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>blackiborcouponpricer(3)</h1>
+
+
+
+
+
+<p>QuantLib::BlackIborCouponPricer &#8211; Black-formula pricer for capped/floored Ibor coupons. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/cashflows/couponpricer.hpp&gt; </p>
+<p> Inherits <code>QuantLib::IborCouponPricer</code>. </p>
+<p> Inherited by BlackIborQuantoCouponPricer. </p>
+<h3>Public Member Functions</h3>
+<p><code>BlackIborCouponPricer</code> (const <code>Handle</code>&lt; <code>OptionletVolatilityStructure</code> &gt; &amp;v=<code>Handle</code>&lt; <code>OptionletVolatilityStructure</code> &gt;()) </p>
+<p> virtual void <code>initialize</code> (const <code>FloatingRateCoupon</code> &amp;coupon) </p>
+<p> Real <code>swapletPrice</code> () const </p>
+<p> Rate <code>swapletRate</code> () const </p>
+<p> Real <code>capletPrice</code> (Rate effectiveCap) const </p>
+<p> Rate <code>capletRate</code> (Rate effectiveCap) const </p>
+<p> Real <code>floorletPrice</code> (Rate effectiveFloor) const </p>
+<p> Rate <code>floorletRate</code> (Rate effectiveFloor) const </p>
+<h3>Protected Member Functions</h3>
+<p>Real <code>optionletPrice</code> (Option::Type optionType, Real effStrike) const </p>
+<p> virtual Rate <code>adjustedFixing</code> (Rate fixing=<code>Null</code>&lt; Rate &gt;()) const </p>
+<h3>Protected Attributes</h3>
+<p>const <code>IborCoupon</code> * <code>coupon_</code> </p>
+<p> Real <code>discount_</code> </p>
+<p> Real <code>gearing_</code> </p>
+<p> <code>Spread</code> <code>spread_</code> </p>
+<p> Real <code>spreadLegValue_</code> </p>
+<h2>Detailed Description</h2>
+<p>Black-formula pricer for capped/floored Ibor coupons. </p>
+<p> <code>Examples: </code> </p>
+<p> <code>Bonds.cpp</code>. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

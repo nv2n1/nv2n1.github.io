@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rigsmtr(1) · Linux Manual Pages</title>
+<meta name="description" content="rigsmtr – measure S-Meter vs azimuth using Hamlib">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rigsmtr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rigsmtr(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> rigsmtr &#8211; measure S-Meter vs azimuth using Hamlib </p>
+<h2>SYNOPSIS</h2>
+<p> <code>rigsmtr</code> [<i>OPTION</i>]&#8230; [time_step]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>rigsmtr</code> uses Hamlib to control a rig to measure S-Meter vs azimuth:<br />
+ It rotates the antenna from minimum azimuth to maximum azimuth. Every second or <i>time_step</i> if specified in seconds, it retrieves the signal strength.<br />
+ Azimuth in degree and corresponding S-Meter level in dB relative to S9 are then printed on stdout.<br />
+ To work correctly, rigsmtr needs a rig that could measure S-Meter and a Hamlib backend that is able to get it, mounted on a Hamlib supported rotator. </p>
+<p> Keep in mind that <code>Hamlib</code> is still BETA level software. A lof of stuff hasn&#8217;t been tested thoroughly, and the API may change without publicised notice. Please report bugs and feedback at the e-mail address given in the REPORTING BUGS section.</p>
+<h2>OPTIONS</h2>
+<p> This program follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
+<dl>
+<dt><code>-m, &#8211;model=id</code></dt>
+<dd> Select radio model number. See model list provided by rigctl.</dd>
+<dt><code>-r, &#8211;rig-file=device</code></dt>
+<dd> Use <code>device</code> as the file name of the radio to operate on.</dd>
+<dt><code>-s, &#8211;serial-speed=baud</code></dt>
+<dd> Set radio serial speed to <code>baud</code> rate. Uses maximal rig speed as default.</dd>
+<dt><code>-c, &#8211;civaddr=id</code></dt>
+<dd> Use <code>id</code> as the CI-V address to communicate with the rig. Only for Icom rigs. NB: the id is in decimal, unless prefixed by <code>0x</code>, in which case it is hexadecimal.</dd>
+<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></dt>
+<dd> Set radio config parameter. See -L option of rigctl for a list.</dd>
+<dt><code>-M, &#8211;rot-model=id</code></dt>
+<dd> Select radio model number. See model list provided by rotctl.</dd>
+<dt><code>-R, &#8211;rot-file=device</code></dt>
+<dd> Use <code>device</code> as the file name of the rotator to operate on.</dd>
+<dt><code>-S, &#8211;rot-serial-speed=baud</code></dt>
+<dd> Set rotator serial speed to <code>baud</code> rate. Uses maximal speed as default.</dd>
+<dt><code>-N, &#8211;rot-set-conf=parm=val[,parm=val]*</code></dt>
+<dd> Set rotator config parameter. See -L option of rotctl for a list.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Set verbose mode, cumulative (BUG, ERR, WARN, VERBOSE, TRACE).</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options and exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Show version of program and exit. </dd>
+</dl>
+<h2>RETURN VALUE</h2>
+<p> rigsmtr exits with: 0 if all operations went fine; 1 if there was an invalid command line option or arg; 2 if an error was returned by Hamlib; 3 if the rig doesn&#8217;t have the required capabilities. </p>
+<h2>EXAMPLE</h2>
+<p> rigsmtr -m 209 -r /dev/ttyS1 -M 202 &gt; csmtr </p>
+<p> Collect S-Meter readings on a TS850 while an EasycommII rotator makes a full 360&#176;, and record measurements in file csmtr.<br />
+ After completion, csmtr file contains for example the following lines : </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>0 -47 </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>30 -40&nbsp;<wbr> </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>60 -22 </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>90 -3&nbsp;<wbr> </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>120 10&nbsp;<wbr> </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>150 1&nbsp;<wbr> </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>180 -11&nbsp;<wbr> </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>210 -24&nbsp;<wbr> </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>240 -35&nbsp;<wbr> </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>270 -42&nbsp;<wbr> </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>300 -48&nbsp;<wbr> </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>330 -51&nbsp;<wbr> </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>360 -49&nbsp;<wbr> </p>
+<dl>
+<dt>Result could then be ploted with gnuplot:</dt>
+<dd>
+ gnuplot<br />
+ set angles degrees<br />
+ set polar<br />
+ set grid polar 15.<br />
+ unset border<br />
+ unset param<br />
+ set style data line<br />
+ set rrange [-60:60]<br />
+ set xrange [-60:60]<br />
+ set yrange [-60:60]<br />
+ plot &quot;csmtr&quot;</dd></dl>
+<h2>AUTHOR</h2>
+<p> Man page written by Stephane Fillod.</p>
+<h2>BUGS</h2>
+<p> Need more testing. Reports are welcome.</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;hamlib-developer [at] users.sourceforge.net&gt;.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2004-2009 Thierry Leconte &amp; Stephane Fillod<br />
+ This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+<h2>SEE ALSO</h2>
+<p> <code>hamlib</code>(3),<code><a href="/docs/linux/man/1-rigctl/">rigctl</a></code>(1),<code><a href="/docs/linux/man/1-rotctl/">rotctl</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

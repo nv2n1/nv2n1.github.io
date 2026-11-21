@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xcmscieluvquerymaxc(3) · Linux Manual Pages</title>
+<meta name="description" content="XcmsCIELuvQueryMaxC, XcmsCIELuvQueryMaxL, XcmsCIELuvQueryMaxLC, XcmsCIELuvQueryMinL – obtain the CIE L*u*v* coordinates">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xcmscieluvquerymaxc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xcmscieluvquerymaxc(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XcmsCIELuvQueryMaxC, XcmsCIELuvQueryMaxL, XcmsCIELuvQueryMaxLC, XcmsCIELuvQueryMinL &#8211; obtain the CIE L*u*v* coordinates </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>Status XcmsCIELuvQueryMaxC(XcmsCCC <i>ccc</i>, XcmsFloat <i>hue_angle</i>, XcmsFloat <i>L_star</i>, XcmsColor *<i>color_return</i>);</dd>
+<dd>Status XcmsCIELuvQueryMaxL(XcmsCCC <i>ccc</i>, XcmsFloat <i>hue_angle</i>, XcmsFloat <i>chroma</i>, XcmsColor *<i>color_return</i>);</dd>
+<dd>Status XcmsCIELuvQueryMaxLC(XcmsCCC <i>ccc</i>, XcmsFloat <i>hue_angle</i>, XcmsColor *<i>color_return</i>);</dd>
+<dd>Status XcmsCIELuvQueryMinL(XcmsCCC <i>ccc</i>, XcmsFloat <i>hue_angle</i>, XcmsFloat <i>chroma</i>, XcmsColor *<i>color_return</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>ccc</i></dt>
+<dd>Specifies the CCC. Note that the CCC&#8217;s Client White Point and White Point Adjustment procedures are ignored.</dd>
+<dt><i>chroma</i></dt>
+<dd>Specifies the chroma at which to find maximum lightness (MaxL) or minimum lightness (MinL).</dd>
+<dt><i>color_return</i></dt>
+<dd>Returns the CIE L*u*v* coordinates of maximum chroma (MaxC and MaxLC), maximum lightness (MaxL), or minimum lightness (MinL) displayable by the screen for the given hue angle and lightness (MaxC), hue angle and chroma (MaxL and MinL), or hue angle (MaxLC). The white point associated with the returned color specification is the Screen White Point. The value returned in the pixel member is undefined.</dd>
+<dt><i>hue_angle</i></dt>
+<dd>Specifies the hue angle (in degrees) at which to find maximum chroma (MaxC and MaxLC), maximum lightness (MaxL), or minimum lightness (MinL).</dd>
+<dt><i>L_star</i></dt>
+<dd>Specifies the lightness (L*) at which to find maximum chroma (MaxC) or maximum lightness (MaxL).</dd></dl>
+<h2>Description</h2>
+<p>The <code>XcmsCIELuvQueryMaxC</code> function, given a hue angle and lightness, finds the point of maximum chroma displayable by the screen. It returns this point in CIE L*u*v* coordinates. </p>
+<p> The <code>XcmsCIELuvQueryMaxL</code> function, given a hue angle and chroma, finds the point in CIE L*u*v* color space of maximum lightness (L*) displayable by the screen. It returns this point in CIE L*u*v* coordinates. An <code>XcmsFailure</code> return value usually indicates that the given chroma is beyond maximum for the given hue angle. </p>
+<p> The <code>XcmsCIELuvQueryMaxLC</code> function, given a hue angle, finds the point of maximum chroma displayable by the screen. It returns this point in CIE L*u*v* coordinates. </p>
+<p> The <code>XcmsCIELuvQueryMinL</code> function, given a hue angle and chroma, finds the point of minimum lightness (L*) displayable by the screen. It returns this point in CIE L*u*v* coordinates. An <code>XcmsFailure</code> return value usually indicates that the given chroma is beyond maximum for the given hue angle.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xcmscielabquerymaxc/">XcmsCIELabQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmstekhvcquerymaxc/">XcmsTekHVCQueryMaxC</a>(3), <a href="/docs/linux/man/3-xcmsqueryblack/">XcmsQueryBlack</a>(3)<br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

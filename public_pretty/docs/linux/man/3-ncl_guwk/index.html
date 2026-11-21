@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_guwk(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_guwk/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_guwk(3)</h1>
+
+
+
+
+
+<p>GUWK (Update workstation) - Insures that the workstation is current and reflects all requests that have been made.</p>
+<h2>Synopsis</h2>CALL GUWK(WKID,REGFL)
+<h2>C-Binding Synopsis</h2>#include &lt;ncarg/gks.h&gt; 
+<p>void gupd_ws(Gint ws_id, Gupd_regen_flag upd_regen_flag);</p>
+<h2>Description</h2><dl COMPACT><dt>WKID
+</dt><dd>(Integer, Input) - A number identifying the workstation to be updated. WKID must be the same as that used in some previous GOPWK call.
+</dd><dt>REGFL
+</dt><dd>(Integer, Input) - A flag to specify if the current picture should be regenerated. The possible values for this are &quot;0&quot; for postpone, and &quot;1&quot; for perform. For the workstation types supported in NCAR GKS, this flag should always be set to &quot;0&quot;.</dd></dl><h2>Usage</h2>A call to GUWK flushes all GKS buffers to bring the workstation up to date. GUWK does not flush any NCAR Graphics buffers that sit above GKS such as the pen-move buffer in SPPS (see the man page for plotif).
+<h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+<h2>See Also</h2>Online: sflush, plotif, gupd_ws 
+<p>Hardcopy: User&rsquo;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>Copyright (C) 1987-2009 
+ University Corporation for Atmospheric Research 
+ The use of this Software is governed by a License Agreement.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

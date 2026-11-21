@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>urxvt-eval(1) · Linux Manual Pages</title>
+<meta name="description" content="eval – evaluate arbitrary perl code using actions">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-urxvt-eval/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>urxvt-eval(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> eval &#8211; evaluate arbitrary perl code using actions </p>
+<h2>EXAMPLES</h2>
+<pre>
+  URxvt.keysym.M-c: eval:selection_to_clipboard
+  URxvt.keysym.M-v: eval:paste_clipboard
+  URxvt.keysym.M-V: eval:paste_primary
+  URxvt.keysym.M-Up: eval:scroll_up 1
+  URxvt.keysym.M-Down: eval:scroll_down 1
+  URxvt.keysym.M-Home: eval:scroll_to_top
+  URxvt.keysym.M-End:  eval:scroll_to_bottom
+</pre>
+<h2>DESCRIPTION</h2>
+<p> Add support for evaluating arbitrary perl code using actions in keysym resources. If a keysym <i>action</i> takes the form <tt>&quot;eval:STRING&quot;</tt>, the specified <font SIZE="-1"><code>STRING</code></font> is evaluated as a Perl expression. While the full urxvt <font SIZE="-1">API</font> is available, the following methods are also provided for users&#8217; convenience, as they implement basic actions:</p>
+<dl>
+<dt>scroll_up $count</dt>
+<dd>
+</dd><dt>scroll_up_pages $count</dt>
+<dd>
+</dd><dt>scroll_down $count</dt>
+<dd>
+</dd><dt>scroll_down_pages $count</dt>
+<dd> Scroll up or down by <tt>$count</tt> lines or pages.</dd>
+<dt>scroll_to_top</dt>
+<dd>
+</dd><dt>scroll_to_bottom</dt>
+<dd> Scroll to the top or bottom of the scrollback.</dd>
+<dt>selection_to_clipboard</dt>
+<dd> Copy the selection to the <font SIZE="-1">CLIPBOARD.</font></dd>
+<dt>paste_primary</dt>
+<dd>
+</dd><dt>paste_clipboard</dt>
+<dd> Paste the value of the <font SIZE="-1">PRIMARY</font> or <font SIZE="-1">CLIPBOARD</font> selection. </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

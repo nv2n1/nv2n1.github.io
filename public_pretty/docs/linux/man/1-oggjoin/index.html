@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>oggjoin(1) · Linux Manual Pages</title>
+<meta name="description" content="oggJOIN – multiplexes ogg streams (.ogv, .ogg or oga)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-oggjoin/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>oggjoin(1)</h1>
+
+
+
+
+
+<p>oggJOIN &#8211; multiplexes ogg streams (.ogv, .ogg or oga)</p>
+<h2>Synopsis</h2>
+<p><code>oggJoin outfile.ogv file1.ogv file2.ogg</code></p>
+<h2>Description</h2>
+<p><code>oggJoin</code> merges ogg audio (vorbis) and ogg video (theora) files into one single ogg file. This is often also called multiplexing. </p>
+<p> The first file given with the command is the output file. The following files are the files (usually a video and an audio stream) that should be placed into the new file as parallel streams. This is done on a per page basis and is very efficient and fast. </p>
+<p> As oggJoin uses it&#8217;s own timestamp creation method, both streams start exactly at start time &#8216;0&#8217;. This is always the case even if the original files started at a different time (due to internal timing information). So the video and audio streams are always synchronized. This helps using files from different live stream sources or cuted material. </p>
+<p> In case of unknown stream types (other than theora or vorbis), there is actually (as of version 0.8) no timing interpreter available. So you can not use these streams for multiplexing. </p>
+<h2>Author</h2>
+<p>Joern Seger &lt;yorn at gmx dot net&gt;</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-oggcut/">oggCut</a></code>(1), <code><a href="/docs/linux/man/1-oggcat/">oggCat</a></code>(1), <code><a href="/docs/linux/man/1-oggsplit/">oggSplit</a></code>(1), <code><a href="/docs/linux/man/1-oggresize/">oggResize</a></code>(1), <code><a href="/docs/linux/man/1-oggslideshow/">oggSlideshow</a></code>(1), <code><a href="/docs/linux/man/1-oggthumb/">oggThumb</a></code>(1), <code><a href="/docs/linux/man/1-oggsilence/">oggSilence</a></code>(1)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

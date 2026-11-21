@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shtoolize(1) · Linux Manual Pages</title>
+<meta name="description" content="shtoolize – Build individual GNU shtool scripts">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-shtoolize/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>shtoolize(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> shtoolize &#8211; Build individual GNU shtool scripts </p>
+<h2>VERSION</h2>
+<p> <font SIZE="-1">GNU</font> shtool <font SIZE="-1">2.0.8 (18-Jul-2008)</font></p>
+<h2>SYNOPSIS</h2>
+<p> <code>shtoolize</code> [<code>-h</code>] [<code>-v</code>] [<code>-q</code>] [<code>-o</code> <i>script</i>] <i>module</i> [ <i>module</i> &#8230; ]</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>shtoolize</code> program builds individual <font SIZE="-1">GNU </font><code>shtool</code> scripts (written to the default output file <tt>&quot;shtool&quot;</tt> or to the specified <i>script</i>) out of one or more <code>shtool</code> ingredient <i>module</i>s. Available <i>module</i>s are: </p>
+<pre>
+ echo       Print string with optional construct expansion
+ mdate      Pretty-print modification time of a file or dir
+ table      Pretty print a field-separated list as a table
+ prop       Display progress with a running propeller
+ move       Move files with simultan substitution
+ install    Install a program, script or datafile
+ mkdir      Make one or more directories
+ mkln       Make link with calculation of relative paths
+ mkshadow   Make a shadow tree
+ fixperm    Fix file permissions inside a source tree
+ rotate     Rotate a logfile
+ tarball    Roll distribution tarballs
+ subst      Apply <a href="//www.systutorials.com/docs/linux/man/1-sed/">sed</a>(1) substitution operations
+ platform   Platform identification utility
+ arx        Extended archive command
+ slo        Separate linker options by library class
+ scpp       Sharing C Pre-Processor
+ version    Generate and maintain a version information file
+ path       Deal with program paths
+</pre>
+<p> Additionally there is a pseudo-module &#8220;<tt>&quot;all&quot;</tt>&#8221; which can be used as a short-hand for &#8220;<tt>&quot;echo mdate table prop move install mkdir mkln mkshadow fixperm platform arx slo scpp version path&quot;</tt>&#8221;, i.e. to build a <code>shtool</code> script with all modules in the standard order. An installed <code>shtool</code> is usually built this way via &#8220;<tt>&quot;shtoolize -o shtool all&quot;</tt>&#8221;. </p>
+<p> Use the <code>shtoolize</code> program to build individual <code>shtool</code> scripts in case you want a smaller sized script and you don&#8217;t need all of the available <code>shtool</code> functionality. For instance for the classical <code>Autoconf</code> based free software package a <tt>&quot;shtool&quot;</tt> script build via &#8220;<tt>&quot;shtoolize -o shtool install mkdir&quot;</tt>&#8221; might be sufficient.</p>
+<h2>OPTIONS</h2>
+<p> The following command line options exist:</p>
+<dl>
+<dt><code>-h</code></dt>
+<dd> Displays a short help page describing the usage of <code>shtoolize</code>.</dd>
+<dt><code>-v</code></dt>
+<dd> Displays the version number of <code>shtoolize</code>/<code>shtool</code>.</dd>
+<dt><code>-q</code></dt>
+<dd> Displays no processing information.</dd>
+<dt><code>-o</code> <i>script</i></dt>
+<dd> Writes the output to file <i>script</i> instead to file &#8220;<tt>&quot;shtool&quot;</tt>&#8221;.</dd></dl>
+<h2>EXAMPLE</h2>
+<p> The typical free software package which is based on <font SIZE="-1">GNU </font><code>libtool</code> and <font SIZE="-1">GNU </font><code>shtool</code> one uses a <tt>&quot;Makefile&quot;</tt> entry like the following: </p>
+<pre>
+ #   Makefile entry for upgrading GNU tools
+ upgrade-tools:
+     libtoolize -f -c
+     shtoolize -q all
+</pre>
+<p> This upgrades the three files <tt>&quot;ltmain.sh&quot;</tt>, <tt>&quot;ltconfig&quot;</tt> and <tt>&quot;shtool&quot;</tt> in the current source tree to the latest versions.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1).</p>
+<h2>AUTHOR</h2>
+<pre>
+ Ralf S. Engelschall
+ rse [at] engelschall.com
+ <a rel="nofollow" href="http://www.engelschall.com">www.engelschall.com</a>
+</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

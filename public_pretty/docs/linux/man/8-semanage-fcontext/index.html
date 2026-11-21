@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>semanage-fcontext(8) · Linux Manual Pages</title>
+<meta name="description" content="semanage-fcontext – SELinux Policy Management file context tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-semanage-fcontext/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>semanage-fcontext(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>semanage-fcontext &#8211; SELinux Policy Management file context tool </p>
+<h2>Synopsis</h2>
+<p><code>semanage fcontext [-h] [-n] [-N] [-S STORE] [ &#8211;add ( -t TYPE -f FTYPE -r RANGE -s SEUSER | -e EQUAL ) FILE_SPEC ) | &#8211;delete ( -t TYPE -f FTYPE | -e EQUAL ) FILE_SPEC ) | &#8211;deleteall | &#8211;extract | &#8211;list [-C] | &#8211;modify ( -t TYPE -f FTYPE -r RANGE -s SEUSER | -e EQUAL ) FILE_SPEC ) ]</code> </p>
+<h2>Description</h2>
+<p>semanage is used to configure certain elements of SELinux policy without requiring modification to or recompilation from policy sources. semanage fcontext is used to manage the default file system labeling on an SELinux system. This command maps file paths using regular expressions to SELinux labels. </p>
+<h2>Options</h2>
+<dl>
+<dt><i>-h, &#8211;help</i></dt>
+<dd>show this help message and exit</dd>
+<dt><i>-n, &#8211;noheading</i></dt>
+<dd>Do not print heading when listing the specified object type</dd>
+<dt><i>-N, &#8211;noreload</i></dt>
+<dd>Do not reload policy after commit</dd>
+<dt><i>-C, &#8211;locallist</i></dt>
+<dd>List local customizations</dd>
+<dt><i>-S STORE, &#8211;store STORE</i></dt>
+<dd>Select an alternate SELinux Policy Store to manage</dd>
+<dt><i>-a, &#8211;add</i></dt>
+<dd>Add a record of the specified object type</dd>
+<dt><i>-d, &#8211;delete</i></dt>
+<dd>Delete a record of the specified object type</dd>
+<dt><i>-m, &#8211;modify</i></dt>
+<dd>Modify a record of the specified object type</dd>
+<dt><i>-l, &#8211;list</i></dt>
+<dd>List records of the specified object type</dd>
+<dt><i>-E, &#8211;extract</i></dt>
+<dd>Extract customizable commands, for use within a transaction</dd>
+<dt><i>-D, &#8211;deleteall</i></dt>
+<dd>Remove all local customizations</dd>
+<dt><i>-e EQUAL, &#8211;equal EQUAL</i></dt>
+<dd>Substitute target path with sourcepath when generating default label. This is used with fcontext. Requires source and target path arguments. The context labeling for the target subtree is made equivalent to that defined for the source.</dd>
+<dt><i>-f [{a,f,d,c,b,s,l,p}], &#8211;ftype [{a,f,d,c,b,s,l,p}]</i></dt>
+<dd>File Type. This is used with fcontext. Requires a file type as shown in the mode field by ls, e.g. use &#8216;d&#8217; to match only directories or &#8216;f&#8217; to match only regular files. The following file type options can be passed: f (regular file),d (directory),c (character device), b (block device),s (socket),l (symbolic link),p (named pipe). If you do not specify a file type, the file type will default to &quot;all files&quot;. </dd>
+<dt><i>-s SEUSER, &#8211;seuser SEUSER</i></dt>
+<dd>SELinux user name</dd>
+<dt><i>-t TYPE, &#8211;type TYPE</i></dt>
+<dd>SELinux Type for the object</dd>
+<dt><i>-r RANGE, &#8211;range RANGE</i></dt>
+<dd>MLS/MCS Security Range (MLS/MCS Systems only) SELinux Range for SELinux login mapping defaults to the SELinux user record range. SELinux Range for SELinux user defaults to s0. </dd>
+</dl>
+<h2>Example</h2>
+<pre><i>remember to run restorecon after you set the file context</i>
+Add file-context for everything under /web
+# semanage fcontext -a -t httpd_sys_content_t &quot;/web(/.*)?&quot;
+# restorecon -R -v /web
+Substitute /home1 with /home when setting file context
+# semanage fcontext -a -e /home /home1
+# restorecon -R -v /home1
+For home directories under top level directory, for example /disk6/home,
+execute the following commands.
+# semanage fcontext -a -t home_root_t &quot;/disk6&quot;
+# semanage fcontext -a -e /home /disk6/home
+# restorecon -R -v /disk6</pre>
+<h2>See Also</h2>
+<p><code>selinux (8),</code> <code>semanage (8)</code> </p>
+<h2>Author</h2>
+<p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

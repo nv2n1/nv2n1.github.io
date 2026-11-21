@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ecore_data_hash_adt_creation_group(3) · Linux Manual Pages</title>
+<meta name="description" content="Hash Creation Functions – Functions that create hash tables.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ecore_data_hash_adt_creation_group/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ecore_data_hash_adt_creation_group(3)</h1>
+
+
+
+
+
+<p>Hash Creation Functions &#8211; Functions that create hash tables. </p>
+<h3>Functions</h3>
+<p>EAPI Ecore_Hash * <code>ecore_hash_new</code> (Ecore_Hash_Cb hash_func, Ecore_Compare_Cb compare)<br />
+ <i>Creates and initializes a new hash. </i><br />
+ EAPI int <code>ecore_hash_init</code> (Ecore_Hash *hash, Ecore_Hash_Cb hash_func, Ecore_Compare_Cb compare)<br />
+ <i>Initializes the given hash. </i></p>
+<h2>Detailed Description</h2>
+<p>Functions that create hash tables.</p>
+<h2>Function Documentation</h2>
+<h3>EAPI int ecore_hash_init (Ecore_Hash * hash, Ecore_Hash_Cb hash_func, Ecore_Compare_Cb compare)</h3>
+<p>Initializes the given hash. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>hash</i> The given hash.<br />
+ <i>hash_func</i> The function used for hashing node keys.<br />
+ <i>compare</i> The function used for comparing node keys.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>TRUE on success, FALSE on an error.</dd></dl>
+<p> Referenced by ecore_hash_hash_set(), and ecore_hash_new().</p>
+<h3>EAPI Ecore_Hash* ecore_hash_new (Ecore_Hash_Cb hash_func, Ecore_Compare_Cb compare)</h3>
+<p>Creates and initializes a new hash. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>hash_func</i> The function for determining hash position.<br />
+ <i>compare</i> The function for comparing node keys.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>NULL on error, a new hash on success.</dd></dl>
+<p> References ecore_hash_init(). </p>
+<p> Referenced by ecore_plugin_available_get(), ecore_string_init(), and ecore_x_netwm_init().</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Ecore from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

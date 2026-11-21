@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdlock(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdlock/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdlock(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::lock - std::lock</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;mutex&gt;
+    template &lt;class Lockable1, class Lockable2, class... LockableN&gt;
+    (since C++ 11)
+        void lock(Lockable1 &amp;lock1, Lockable2 &amp;lock2, LockableN &amp;...lockn);</code></pre> 
+<p>Locks the given Lockable objects lock1, lock2, &hellip;, lockn using a deadlock avoidance algorithm to avoid deadlock.
+The objects are locked by an unspecified series of calls to lock, try_lock, and unlock. If a call to lock or unlock results in an exception, unlock is called for any locked objects before rethrowing.</p>
+<h2>Parameters</h2>
+<p>lock1, lock2, &hellip; , lockn - the Lockable objects to lock</p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Notes</h2>
+<p>Boost_provides_a_version_of_this_function that takes a sequence of Lockable objects defined by a pair of iterators.
+std::scoped_lock offers a RAII wrapper for this function, and is generally preferred to a naked call to std::lock.</p>
+<h2>Example</h2>
+<p>The following example uses std::lock to lock pairs of mutexes without deadlock.
+// Run this code <pre><code>#include &lt;mutex&gt;
+#include &lt;thread&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;functional&gt;
+#include &lt;chrono&gt;
+#include &lt;string&gt;
+struct Employee {
+Employee(std::string id)
+: id(id)
+{
+}
+std::string id;
+std::vector&lt;std::string&gt; lunch_partners;
+std::mutex m;
+std::string output() const
+{
+std::string ret = &quot;Employee &quot; + id + &quot; has lunch partners: &quot;;
+for (const auto &amp;partner : lunch_partners)
+ret += partner + &quot; &quot;;
+return ret;
+}
+};
+void send_mail(Employee &amp;, Employee &amp;)
+{
+// simulate a time-consuming messaging operation
+std::this_thread::sleep_for(std::chrono::seconds(1));
+}
+void assign_lunch_partner(Employee &amp;e1, Employee &amp;e2)
+{
+static std::mutex io_mutex;
+{
+std::lock_guard&lt;std::mutex&gt; lk(io_mutex);
+std::cout &lt;&lt; e1.id &lt;&lt; &quot; and &quot; &lt;&lt; e2.id &lt;&lt; &quot; are waiting for locks&quot; &lt;&lt; std::endl;
+}
+// use std::lock to acquire two locks without worrying about
+// other calls to assign_lunch_partner deadlocking us
+{
+std::lock(e1.m, e2.m);
+std::lock_guard&lt;std::mutex&gt; lk1(e1.m, std::adopt_lock);
+std::lock_guard&lt;std::mutex&gt; lk2(e2.m, std::adopt_lock);
+// Equivalent code (if unique_locks are needed, e.g. for condition variables)
+//        std::unique_lock&lt;std::mutex&gt; lk1(e1.m, std::defer_lock);
+//        std::unique_lock&lt;std::mutex&gt; lk2(e2.m, std::defer_lock);
+//        std::lock(lk1, lk2);
+// Superior solution available in C++17
+//        std::scoped_lock lk(e1.m, e2.m);
+{
+std::lock_guard&lt;std::mutex&gt; lk(io_mutex);
+std::cout &lt;&lt; e1.id &lt;&lt; &quot; and &quot; &lt;&lt; e2.id &lt;&lt; &quot; got locks&quot; &lt;&lt; std::endl;
+}
+e1.lunch_partners.push_back(e2.id);
+e2.lunch_partners.push_back(e1.id);
+}
+send_mail(e1, e2);
+send_mail(e2, e1);
+}
+int main()
+{
+Employee alice(&quot;alice&quot;), bob(&quot;bob&quot;), christina(&quot;christina&quot;), dave(&quot;dave&quot;);
+// assign in parallel threads because mailing users about lunch assignments
+// takes a long time
+std::vector&lt;std::thread&gt; threads;
+threads.emplace_back(assign_lunch_partner, std::ref(alice), std::ref(bob));
+threads.emplace_back(assign_lunch_partner, std::ref(christina), std::ref(bob));
+threads.emplace_back(assign_lunch_partner, std::ref(christina), std::ref(alice));
+threads.emplace_back(assign_lunch_partner, std::ref(dave), std::ref(bob));
+for (auto &amp;thread : threads)
+thread.join();
+std::cout &lt;&lt; alice.output() &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; bob.output() &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; christina.output() &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; dave.output() &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> alice and bob are waiting for locks
+ <wbr> alice and bob got locks
+ <wbr> christina and bob are waiting for locks
+ <wbr> christina and bob got locks
+ <wbr> christina and alice are waiting for locks
+ <wbr> christina and alice got locks
+ <wbr> dave and bob are waiting for locks
+ <wbr> dave and bob got locks
+ <wbr> Employee alice has lunch partners: bob christina
+ <wbr> Employee bob has lunch partners: alice christina dave
+ <wbr> Employee christina has lunch partners: bob alice
+ <wbr> Employee dave has lunch partners: bob</p>
+<h2>See also</h2>
+<p>try_lock attempts to obtain ownership of mutexes via repeated calls to try_lock
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+scoped_lock deadlock-avoiding RAII wrapper for multiple mutexes
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++17)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

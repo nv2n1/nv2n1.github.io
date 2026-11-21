@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fc-list(1) · Linux Manual Pages</title>
+<meta name="description" content="fc-list – list available fonts">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-fc-list/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>fc-list(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> fc-list &#8211; list available fonts </p>
+<h2>SYNOPSIS</h2>
+<p> <code>fc-list</code> [ <code>-vVh</code> ] [ <code>&#8211;verbose</code> ] [ <code> [ -f </code><i>format</i><code> ] [ &#8211;format </code><i>format</i><code> ] </code> ] [ <code> [ -q ] [ &#8211;quiet ] </code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;help</code> ] </p>
+<p>&nbsp;[&nbsp;<i>pattern</i><code>&nbsp;<wbr>&nbsp;[&nbsp;</code><i>element</i><i>&#8230;</i><code>&nbsp;]&nbsp;<wbr>&nbsp;</code>&nbsp;]&nbsp;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>fc-list</code> lists fonts and styles available on the system for applications using fontconfig. If any elements are specified, only those are printed. Otherwise family and style are printed, unless verbose output is requested.</p>
+<h2>OPTIONS</h2>
+<p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
+<dl>
+<dt><code>-v</code></dt>
+<dd> Print verbose output of the whole font pattern for each match, or <i>element</i>s if any is provided.</dd>
+<dt><code>-f</code></dt>
+<dd> Format output according to the format specifier <i>format</i>.</dd>
+<dt><code>-q</code></dt>
+<dd> Suppress all normal output. returns 1 as the error code if no fonts matched.</dd>
+<dt><code>-V</code></dt>
+<dd> Show version of the program and exit.</dd>
+<dt><code>-h</code></dt>
+<dd> Show summary of options.</dd>
+<dt><i>pattern</i></dt>
+<dd> If this argument is set, only fonts matching <i>pattern</i> are displayed.</dd>
+<dt><i>element</i></dt>
+<dd> If set, the <i>element</i> property is displayed for matching fonts.</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt><code>fc-list</code></dt>
+<dd> Lists all font faces.</dd>
+<dt><code>fc-list :lang=hi</code></dt>
+<dd> Lists font faces that cover Hindi.</dd>
+<dt><code>fc-list : family style file spacing</code></dt>
+<dd> Lists the filename and spacing value for each font face. &#8220;:&#8221; is an empty pattern that matches all fonts.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-fc-match/">fc-match</a></code>(1) <code><a href="/docs/linux/man/3-fcfontlist/">FcFontList</a></code>(3) <code><a href="/docs/linux/man/3-fcpatternformat/">FcPatternFormat</a></code>(3) <code><a href="/docs/linux/man/1-fc-cat/">fc-cat</a></code>(1) <code><a href="/docs/linux/man/1-fc-cache/">fc-cache</a></code>(1) <code><a href="/docs/linux/man/1-fc-pattern/">fc-pattern</a></code>(1) <code><a href="/docs/linux/man/1-fc-query/">fc-query</a></code>(1) <code><a href="/docs/linux/man/1-fc-scan/">fc-scan</a></code>(1) </p>
+<p> The fontconfig user&#8217;s guide, in HTML format: <i>/usr/share/doc/fontconfig/fontconfig-user.html</i>.</p>
+<h2>AUTHOR</h2>
+<p> This manual page was written by Keith Packard &lt;keithp [at] keithp.com&gt; and Josselin Mouette &lt;joss [at] debian.org&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

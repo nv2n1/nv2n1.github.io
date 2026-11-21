@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>abrt-conf(5) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-abrt-conf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>abrt-conf(5)</h1>
+
+
+
+
+
+<p>abrt.conf - Configuration file for abrt.</p>
+<h2>Description</h2>
+<p><i>abrt</i> is a daemon that watches for application crashes. When a crash occurs, it collects the problem data and takes action according to its configuration. This document describes abrt&rsquo;s configuration file.</p>
+<p>The configuration file consists of items in the format &quot;Option = Value&quot;. A description of each item follows:</p>
+<p>DumpLocation = <i>directory</i></p>
+<dl><dd>The directory where should <i>abrt</i> store coredumps and all files which are needed for reporting. The default is /var/tmp/abrt.</dd></dl>
+<p>MaxCrashReportsSize = <i>number</i></p>
+<dl><dd>The maximum disk space (specified in megabytes) that <i>abrt</i> will use for all the crash dumps. Specify a value here to ensure that the crash dumps will not fill all available storage space. The default is 1000.</dd></dl>
+<p>WatchCrashdumpArchiveDir = <i>directory</i></p>
+<dl><dd>The daemon will watch this directory and call <i>abrt-handle-upload</i> on files which appear there. This is used to auto-unpack crashdump tarballs uploaded via ftp, scp, etc. The directory must exist and be writable for <i>abrt</i>. There is no default.</dd></dl>
+<p>DeleteUploaded = <i>yes/no</i></p>
+<dl><dd>The daemon will delete an uploaded crashdump archive after an atempt to unpack it. An archive will be delete whether unpacking finishes successfully or not. The default value is <i>no</i>.</dd></dl>
+<p>DebugLevel = <i>0-100</i>: Allows ABRT tools to detect problems in ABRT itself. By increasing the value you can force ABRT to detect, process and report problems in ABRT. You have to bare in mind that ABRT might fall into an infinite loop when handling problems caused by itself. The default is 0 (non debug mode).</p>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/8-abrtd/">abrtd</a>(8) <a HREF="/docs/linux/man/5-abrt-action-save-package-data-conf/">abrt-action-save-package-data.conf</a>(5) <a HREF="/docs/linux/man/1-abrt-handle-upload/">abrt-handle-upload</a>(1)</p>
+<h2>Authors</h2>
+<dl><dd>&bull; ABRT team</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

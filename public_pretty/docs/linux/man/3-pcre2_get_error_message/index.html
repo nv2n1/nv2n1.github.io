@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pcre2_get_error_message(3) · Linux Manual Pages</title>
+<meta name="description" content="PCRE2 – Perl-compatible regular expressions (revised API)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pcre2_get_error_message/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pcre2_get_error_message(3)</h1>
+
+
+
+
+
+<p>PCRE2 &#8211; Perl-compatible regular expressions (revised API)</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;pcre2.h&gt;
+int pcre2_get_error_message(int errorcode, PCRE2_UCHAR *buffer,
+                            PCRE2_SIZE bufflen);</code></pre>
+<h2>Description</h2>
+<p>This function provides a textual error message for each PCRE2 error code. Compilation errors are positive numbers; UTF formatting errors and matching errors are negative numbers. The arguments are:<br />
+&nbsp;<wbr>&nbsp;<i>errorcode</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;an error code&nbsp;(positive or negative)<br />
+&nbsp;<wbr>&nbsp;<i>buffer</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;where to put the message<br />
+&nbsp;<wbr>&nbsp;<i>bufflen</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the length of the buffer&nbsp;(code units) The function returns the length of the message in code units, excluding the trailing zero, or the negative error code PCRE2_ERROR_NOMEMORY if the buffer is too small. In this case, the returned message is truncated (but still with a trailing zero). If <i>errorcode</i> does not contain a recognized error code number, the negative value PCRE2_ERROR_BADDATA is returned. There is a complete description of the PCRE2 native API in the <code>pcre2api</code> page and a description of the POSIX API in the <code>pcre2posix</code> page. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

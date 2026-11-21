@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lastvalue(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::NonLinearLeastSquare – Non-linear least-square method.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-lastvalue/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>lastvalue(3)</h1>
+
+
+
+
+
+<p>QuantLib::NonLinearLeastSquare &#8211; Non-linear least-square method. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/math/optimization/leastsquare.hpp&gt; </p>
+<h3>Public Member Functions</h3>
+<p><code>NonLinearLeastSquare</code> (<code>Constraint</code> &amp;c, <code>Real</code> accuracy=1e-4, Size maxiter=100)<br />
+ <i>Default constructor. </i><br />
+ <code>NonLinearLeastSquare</code> (<code>Constraint</code> &amp;c, <code>Real</code> accuracy, Size maxiter, boost::shared_ptr&lt; <code>OptimizationMethod</code> &gt; om)<br />
+ <i>Default constructor. </i><br />
+ <code>~NonLinearLeastSquare</code> ()<br />
+ <i>Destructor. </i><br />
+ <code>Array</code> &amp; <code>perform</code> (<code>LeastSquareProblem</code> &amp;lsProblem)<br />
+ <i>Solve least square problem using numerix solver. </i><br />
+ void <code>setInitialValue</code> (const <code>Array</code> &amp;initialValue) </p>
+<p> <code>Array</code> &amp; <code>results</code> ()<br />
+ <i>return the results </i><br />
+ <code>Real</code> <code>residualNorm</code> ()<br />
+ <i>return the least square residual norm </i><br />
+ <code>Real</code> <code>lastValue</code> ()<br />
+ <i>return last function value </i><br />
+ <code>Integer</code> <code>exitFlag</code> ()<br />
+ <i>return exit flag </i><br />
+ <code>Integer</code> <code>iterationsNumber</code> ()<br />
+ <i>return the performed number of iterations </i></p>
+<h2>Detailed Description</h2>
+<p>Non-linear least-square method. </p>
+<p> Using a given optimization algorithm (default is conjugate gradient), </p>
+<p> [ min r(x) : x in R^n ].PP where $ r(x) = |f(x)|^2 $ is the Euclidean norm of $ f(x) $ for some vector-valued function $ f $ from $ R^n $ to $ R^m $, [ f = (f_1, &#8230;, f_m) ] with $ f_i(x) = b_i &#8211;<br />
+ hi(x,t_i) $ where $ b $ is the vector of target data and $ phi $ is a scalar function. </p>
+<p> Assuming the differentiability of $ f $, the gradient of $ r $ is defined by [ grad r(x) = f'(x)^t.f(x) ] </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

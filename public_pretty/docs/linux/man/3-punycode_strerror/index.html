@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>punycode_strerror(3) · Linux Manual Pages</title>
+<meta name="description" content="punycode_strerror – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-punycode_strerror/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>punycode_strerror(3)</h1>
+
+
+
+
+
+<p>punycode_strerror &#8211; API function</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;punycode.h&gt;
+const char *punycode_strerror(Punycode_status rc);</code></pre>
+<h2>Arguments</h2>
+<dl>
+<dt>Punycode_status rc</dt>
+<dd>an <code>Punycode_status</code> return code.</dd></dl>
+<h2>Description</h2>
+<p>Convert a return code integer to a text string. This string can be used to output a diagnostic message to the user.</p>
+<h2>Punycode_Success</h2>
+<p>Successful operation. This value is guaranteed to always be zero, the remaining ones are only guaranteed to hold non-zero values, for logical comparison purposes.</p>
+<h2>Punycode_Bad_Input</h2>
+<p>Input is invalid.</p>
+<h2>Punycode_Big_Output</h2>
+<p>Output would exceed the space provided.</p>
+<h2>Punycode_Overflow</h2>
+<p>Input needs wider integers to process.</p>
+<h2>Return Value</h2>
+<p>Returns a pointer to a statically allocated string containing a description of the error with the return code <i>rc</i>.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;bug-libidn [at] gnu.org&gt;. GNU Libidn home page: <a rel="nofollow" href="http://www.gnu.org/software/libidn/">http://www.gnu.org/software/libidn/</a> General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a></p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2002-2013 Simon Josefsson.<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>See Also</h2>
+<p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
+<dl>
+<dd><code>info libidn</code></dd></dl>
+<p> should give you access to the complete manual. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

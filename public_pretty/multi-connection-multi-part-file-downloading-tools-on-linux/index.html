@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallel Download Tools for Linux: aria2, axel, and curl - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/multi-connection-multi-part-file-downloading-tools-on-linux/">
+  <meta name="description" content="When you need to download large files faster, parallelizing across multiple connections can significantly improve throughput. Standard tools like wget and curl …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Parallel Download Tools for Linux: aria2, axel, and curl">
+  <meta property="og:url" content="https://www.systutorials.com/multi-connection-multi-part-file-downloading-tools-on-linux/">
+  <meta property="og:description" content="When you need to download large files faster, parallelizing across multiple connections can significantly improve throughput. Standard tools like wget and curl …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>Parallel Download Tools for Linux: aria2, axel, and curl</h1>
+        <time class="post-date" datetime="2018-03-24T08:21:21Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When you need to download large files faster, parallelizing across multiple connections can significantly improve throughput. Standard tools like <code>wget</code> and <code>curl</code> use single connections by default, but several alternatives support multi-connection downloads that can achieve 3-5x speedups on capable networks.</p>
+<h2 id="aria2c">aria2c</h2>
+<p>aria2 is the most powerful option. It handles HTTP, HTTPS, FTP, BitTorrent, and Metalink protocols, supports multiple simultaneous sources, and offers granular control over connection behavior.</p>
+<p>Basic multi-connection download:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aria2c -x <span class="m">10</span> -s <span class="m">10</span> -k 1M http://example.com/largefile.iso
+</span></span></code></pre></div><p>Flag breakdown:</p>
+<ul>
+<li><code>-x 10</code> — maximum 10 connections per host</li>
+<li><code>-s 10</code> — split file into 10 segments</li>
+<li><code>-k 1M</code> — minimum 1MB per segment (prevents excessive fragmentation)</li>
+</ul>
+<p>With custom output directory and filename:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aria2c -x <span class="m">10</span> -s <span class="m">10</span> -k 1M -d /path/to/dir/ -o custom_name.iso http://example.com/largefile.iso
+</span></span></code></pre></div><p>For resumable downloads with crash recovery:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aria2c -x <span class="m">10</span> -s <span class="m">10</span> -k 1M --continue<span class="o">=</span><span class="nb">true</span> --allow-overwrite<span class="o">=</span><span class="nb">false</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -d /downloads/ http://example.com/file.iso
+</span></span></code></pre></div><p>When downloading multiple files concurrently:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aria2c -x <span class="m">5</span> -s <span class="m">5</span> -j <span class="m">3</span> http://example.com/file1.iso http://example.com/file2.iso http://example.com/file3.iso
+</span></span></code></pre></div><p>The <code>-j 3</code> flag processes 3 files in parallel. When running multiple concurrent downloads, reduce <code>-x</code> to avoid overwhelming the server — 5 connections per file across 3 parallel jobs is typically safe.</p>
+<p>aria2 also maintains a session file, which is useful for resuming interrupted batch downloads:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aria2c --save-session<span class="o">=</span>/tmp/session.txt -x <span class="m">5</span> -s <span class="m">5</span> http://example.com/file1.iso http://example.com/file2.iso
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Resume later with:</span>
+</span></span><span class="line"><span class="cl">aria2c --load-session<span class="o">=</span>/tmp/session.txt
+</span></span></code></pre></div><h2 id="axel">axel</h2>
+<p>axel is lightweight and straightforward for simple HTTP/HTTPS downloads. It has minimal dependencies and lower memory overhead than aria2, making it suitable for resource-constrained systems or quick one-off downloads.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">axel -n <span class="m">10</span> http://example.com/largefile.zip
+</span></span></code></pre></div><p>The <code>-n 10</code> flag opens 10 parallel connections. axel automatically handles reassembly, so there’s no manual cleanup needed. It also supports resume with <code>-a</code> flag:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">axel -n <span class="m">10</span> -a http://example.com/largefile.zip
+</span></span></code></pre></div><h2 id="curl-with-gnu-parallel">curl with GNU Parallel</h2>
+<p>For integration into shell scripts or pipelines, combine <code>curl</code> with GNU Parallel. This approach offers flexibility but requires manual file size calculation and range header setup.</p>
+<p>First, determine file size:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -sI http://example.com/file <span class="p">|</span> grep -i content-length
+</span></span></code></pre></div><p>Then split and download:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">FILESIZE</span><span class="o">=</span><span class="m">1073741824</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PARTS</span><span class="o">=</span><span class="m">10</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PARTSIZE</span><span class="o">=</span><span class="k">$((</span>FILESIZE <span class="o">/</span> PARTS<span class="k">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">seq <span class="m">0</span> <span class="k">$((</span>PARTS <span class="o">-</span> <span class="m">1</span><span class="k">))</span> <span class="p">|</span> parallel -j <span class="m">10</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  <span class="s2">&#34;curl -r \$(({}*PARTSIZE))-\$((({} + 1)*PARTSIZE - 1)) \
+</span></span></span><span class="line"><span class="cl"><span class="s2">  http://example.com/file -o file.part.{}&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat file.part.* &gt; file <span class="o">&amp;&amp;</span> rm file.part.*
+</span></span></code></pre></div><p>This approach works well when you need to integrate downloads into larger automation workflows, but it’s more verbose than dedicated tools.</p>
+<h2 id="choosing-the-right-tool">Choosing the Right Tool</h2>
+<p><strong>aria2c</strong>: Use for complex scenarios, multiple file downloads, BitTorrent support, or when you need session persistence and metadata handling. Best for production automation and large-scale batch operations.</p>
+<p><strong>axel</strong>: Pick for straightforward HTTP/HTTPS downloads on systems with tight resource constraints. Ideal for shell scripts and embedded environments.</p>
+<p><strong>curl + parallel</strong>: Useful for custom pipelines where you need full control over the download logic or must integrate with existing curl-based workflows.</p>
+<h2 id="server-compatibility">Server Compatibility</h2>
+<p>Not all servers support multi-connection downloads. Check before attempting:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -I http://example.com/file <span class="p">|</span> grep -i accept-ranges
+</span></span></code></pre></div><p>If the response shows <code>Accept-Ranges: bytes</code>, the server supports range requests. If it’s absent or shows <code>Accept-Ranges: none</code>, multi-connection downloads won’t help — you’ll receive the full file from each connection.</p>
+<h2 id="connection-limits-and-rate-limiting">Connection Limits and Rate Limiting</h2>
+<p>Most servers limit concurrent connections per client to prevent abuse. Start conservative:</p>
+<ul>
+<li>Use <code>-x 5</code> or <code>-x 10</code> initially</li>
+<li>If you receive <code>429 Too Many Requests</code> responses, reduce connection count</li>
+<li>Respect <code>Retry-After</code> headers in server responses</li>
+<li>Add delays between requests if the server rate-limits aggressively</li>
+</ul>
+<p>For aria2, configure a global connection limit to avoid accidental DOS-like behavior:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aria2c -x <span class="m">5</span> -s <span class="m">5</span> --max-overall-download-limit<span class="o">=</span>10M http://example.com/file
+</span></span></code></pre></div><h2 id="performance-expectations">Performance Expectations</h2>
+<p>On modern broadband with cooperative servers, multi-connection downloads typically provide 3-5x speedup over single-connection transfers. Actual gains depend on:</p>
+<ul>
+<li>Server bandwidth capacity</li>
+<li>Network latency and stability</li>
+<li>Number of available connections allowed</li>
+<li>File size (larger files benefit more from parallelization)</li>
+</ul>
+<p>For files under 100MB, single-connection downloads are often sufficient. Multi-connection approaches shine with files in the gigabyte range or when bandwidth is shared across many competing transfers.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

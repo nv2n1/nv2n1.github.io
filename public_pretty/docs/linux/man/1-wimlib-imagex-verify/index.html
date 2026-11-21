@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wimlib-imagex-verify(1) · Linux Manual Pages</title>
+<meta name="description" content="wimlib-imagex-verify – Verify a WIM file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-wimlib-imagex-verify/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>wimlib-imagex-verify(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> wimlib-imagex-verify &#8211; Verify a WIM file</p>
+<h2>SYNOPSIS</h2>
+<p> <code>wimlib-imagex verify</code> <i>WIMFILE</i> [<i>OPTION</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>wimlib-imagex verify</code> checks the validity of the specified WIM archive. This command is also available as simply <code>wimverify</code> if the appropriate hard link or batch file has been installed. </p>
+<p> Specifically, this command performs the following verifications on the WIM archive:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> Verify that the WIM file can be successfully opened, which involves parsing the header, blob table, and XML data.</dd>
+<dt>&bull;</dt>
+<dd> If the WIM archive contains an integrity table, verify the integrity of the entire WIM archive. Otherwise, print a warning.</dd>
+<dt>&bull;</dt>
+<dd> Verify that the metadata for each image in the WIM archive can be successfully parsed.</dd>
+<dt>&bull;</dt>
+<dd> Verify that all files needed by each image are actually contained in the WIM archive or in one of the WIM archives referenced by the <code>&#8211;ref</code> option.</dd>
+<dt>&bull;</dt>
+<dd> Verify that all files contained in the WIM archive can be successfully decompressed, with matching cryptographic checksums.</dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;ref</code>=&quot;<i>GLOB</i>&quot;</dt>
+<dd> File glob of additional WIMs or split WIM parts to reference resources from. This option can be specified multiple times. Note: <i>GLOB</i> is listed in quotes because it is interpreted by <code>wimlib-imagex</code> and may need to be quoted to protect against shell expansion.</dd>
+<dt><code>&#8211;nocheck</code></dt>
+<dd> Do not check the WIM file&#8217;s contents against its integrity table (if it has one).</dd></dl>
+<h2>NOTES</h2>
+<p> This is a read-only command. It will never modify the WIM file. </p>
+<p> In the future, this command might do more thorough verifications than it does now.</p>
+<h2>EXAMPLES</h2>
+<p> Verify the WIM file &#8216;boot.wim&#8217;:</p>
+<dl>
+<dt>
+</dt><dd>
+<p> wimverify boot.wim</dd></dl>
+<p> Verify the split WIM file consisting of &#8216;boot.swm&#8217;, &#8216;boot2.swm&#8217;, &#8216;boot3.swm&#8217;, &#8230;:</p>
+<dl>
+<dt>
+</dt><dd>
+<p> wimverify boot.swm &#8211;ref=&quot;boot*.swm&quot;</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-optimize/">wimlib-imagex-optimize</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

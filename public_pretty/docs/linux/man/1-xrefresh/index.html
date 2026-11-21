@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xrefresh(1) · Linux Manual Pages</title>
+<meta name="description" content="xrefresh – refresh all or part of an X screen">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-xrefresh/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>xrefresh(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> xrefresh &#8211; refresh all or part of an X screen </p>
+<h2>SYNOPSIS</h2>
+<p> <code>xrefresh</code> [-option &#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> <i>Xrefresh</i> is a simple X program that causes all or part of your screen to be repainted. This is useful when system messages have messed up your screen. <i>Xrefresh</i> maps a window on top of the desired area of the screen and then immediately unmaps it, causing refresh events to be sent to all applications. By default, a window with no background is used, causing all applications to repaint &#8220;smoothly.&#8221; However, the various options can be used to indicate that a solid background (of any color) or the root window background should be used instead.</p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt><code>-white</code></dt>
+<dd> Use a white background. The screen just appears to flash quickly, and then repaint.</dd></dl>
+<dl>
+<dt><code>-black</code></dt>
+<dd> Use a black background (in effect, turning off all of the electron guns to the tube). This can be somewhat disorienting as everything goes black for a moment.</dd></dl>
+<dl>
+<dt><code>-solid </code><i>color</i></dt>
+<dd> Use a solid background of the specified color. Try green.</dd></dl>
+<dl>
+<dt><code>-root</code></dt>
+<dd> Use the root window background.</dd></dl>
+<dl>
+<dt><code>-none</code></dt>
+<dd> This is the default. All of the windows simply repaint.</dd></dl>
+<dl>
+<dt><code>-geometry </code><i>WxH+X+Y</i></dt>
+<dd> Specifies the portion of the screen to be repainted; see <i><a href="/docs/linux/man/7-x/">X</a>(7)</i>.</dd></dl>
+<dl>
+<dt><code>-display </code><i>display</i></dt>
+<dd> This argument allows you to specify the server and screen to refresh; see <i><a href="/docs/linux/man/7-x/">X</a>(7)</i>.</dd></dl>
+<dl>
+<dt><code>-version</code></dt>
+<dd> This argument prints the program version and exits.</dd></dl>
+<h2>X DEFAULTS</h2>
+<p> The <i>xrefresh</i> program uses the routine <i>XGetDefault(3)</i> to read defaults, so its resource names are all capitalized. </p>
+<dl>
+<dt><code>Black</code>, <code>White</code>, <code>Solid</code>, <code>None</code>, <code>Root</code></dt>
+<dd> Determines what sort of window background to use.</dd></dl>
+<dl>
+<dt><code>Geometry</code></dt>
+<dd> Determines the area to refresh. Not very useful.</dd></dl>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt>DISPLAY &#8211; To get default host and display number.</dt>
+<dd></dd></dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/7-x/">X</a>(7)</p>
+<h2>BUGS</h2>
+<p> It should have just one default type for the background.</p>
+<h2>AUTHORS</h2>
+<p> Jim Gettys, Digital Equipment Corp., MIT Project Athena </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

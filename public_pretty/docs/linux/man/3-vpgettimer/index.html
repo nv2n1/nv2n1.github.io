@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vpgettimer(3) · Linux Manual Pages</title>
+<meta name="description" content="vpGetTimer, vpClearTimer – interval timer facility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-vpgettimer/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>vpgettimer(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>vpGetTimer, vpClearTimer &#8211; interval timer facility</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;volpack.h&gt;
+</code></pre>
+<p> vpResult</p>
+<dl>
+<dt> <code>vpGetTimer(</code><i>vpc, option, iptr</i><code>)</code></dt>
+<dd>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>option;</i></dd>
+<dd>int *<i>iptr;</i>;  vpResult</dd>
+<dl>
+<dt> <code>vpClearTimer(</code><i>vpc, option</i><code>)</code></dt>
+<dd>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>option;</i></dd></dl>
+<h2>Arguments</h2>
+<dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>option</i></dt>
+<dd>Constant that specifies a particular timer.</dd>
+<dt><i>iptr</i></dt>
+<dd>Location for storing the timer value.</dd></dl>
+<h2>Description</h2>
+<p>These functions are used for measuring the performance of the VolPack library. To use them, the library must be compiled with a special flag: either -DHAVE_LORES_TIMER (for machine that support the gettimeofday C library call) or -DHAVE_HIRES_TIMER (for SGI machines that support high-resolution memory-mapped I/O timers; on a Challenge or ONYX, the -DHAVE_64BIT_TIMER must also be specified). If one of these flags is specified at compile time then VolPack maintains a table recording the accumulated time spent in various operations. Note that some of the operations can only be timed with a high-resolution timer; time values will not be recorded and will appear to be zero if a low resolution timer is specified at compile time. </p>
+<p> <code>vpGetTimer</code> retrieves the accumulated time for a particular operation. The <i>option</i> argument specifies which operation:</p>
+<dl>
+<dt>VPTIMER_SHADE</dt>
+<dd>Time the routine that computes the contents of the shading lookup table.</dd>
+<dt>VPTIMER_RENDER</dt>
+<dd>Time the routine that renders a volume (includes VPTIMER_CLSFY_OCTREE, VPTIMER_COMPOSITE, VPTIMER_DEPTHCUE, and VPTIMER_WARP).</dd>
+<dt>VPTIMER_COMPOSITE</dt>
+<dd>Time the routine that computes the intermediate image from the volume (includes VPTIMER_CLEAR, VPTIMER_TRAVERSE_OCTREE, VPTIMER_ERT, VPTIMER_TRAVERSE_RUNS, and VPTIMER_PROCESS_VOXELS).</dd>
+<dt>VPTIMER_DEPTHCUE</dt>
+<dd>Time the routine that performs the depth cueing fixup on the intermediate image.</dd>
+<dt>VPTIMER_WARP</dt>
+<dd>Time the routine that warps the intermediate image into the final image.</dd>
+<dt>VPTIMER_TRAVERSE_RUNS</dt>
+<dd>Time the portion of the compositing routine devoted to traversing the volume data structures.</dd>
+<dt>VPTIMER_PROCESS_VOXELS</dt>
+<dd>Time the portion of the compositing routine devoted to compositing voxels into the intermediate image.</dd>
+<dt>VPTIMER_ERT</dt>
+<dd>Time the early-ray termination checks during compositing.</dd>
+<dt>VPTIMER_CLSFY_OCTREE</dt>
+<dd>Time the octree classification stage.</dd>
+<dt>VPTIMER_TRAVERSE_OCTREE</dt>
+<dd>Time the portion of the compositing routine devoted to traversing the octree.</dd>
+<dt>VPTIMER_CLEAR</dt>
+<dd>Time the routine that clears the intermediate image at the beginning of compositing.</dd></dl>
+<p> The routine stores the accumulated time since the last call to <i>vpClearTimer</i> (or since the beginning of the program) in the location specified by <i>iptr.</i> The units of the value are microseconds. </p>
+<p> <i>vpClearTimer</i> sets the specified timer value back to zero.</p>
+<h2>Errors</h2>
+<p>The normal return value is VP_OK. The following error return value is possible:</p>
+<dl>
+<dt>VPERROR_BAD_OPTION</dt>
+<dd>The <i>option</i> argument is invalid.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3) </p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

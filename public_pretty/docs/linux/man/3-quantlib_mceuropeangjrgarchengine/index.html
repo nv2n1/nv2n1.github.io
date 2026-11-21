@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_mceuropeangjrgarchengine(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::MCEuropeanGJRGARCHEngine – Monte Carlo GJR-GARCH-model engine for European options.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_mceuropeangjrgarchengine/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_mceuropeangjrgarchengine(3)</h1>
+
+
+
+
+
+<p>QuantLib::MCEuropeanGJRGARCHEngine &#8211; Monte Carlo GJR-GARCH-model engine for European options. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/pricingengines/vanilla/mceuropeangjrgarchengine.hpp&gt; </p>
+<p> Inherits <code>MCVanillaEngine&lt; MultiVariate, RNG, S &gt;</code>. </p>
+<h3>Public Types</h3>
+<p>typedef <code>MCVanillaEngine</code>&lt; <code>MultiVariate</code>, RNG, S &gt;::path_pricer_type <code>path_pricer_type</code> </p>
+<h3>Public Member Functions</h3>
+<p><code>MCEuropeanGJRGARCHEngine</code> (const boost::shared_ptr&lt; <code>GJRGARCHProcess</code> &gt; &amp;, Size timeSteps, Size timeStepsPerYear, bool antitheticVariate, Size requiredSamples, Real requiredTolerance, Size maxSamples, BigNatural seed) </p>
+<h3>Protected Member Functions</h3>
+<p>boost::shared_ptr&lt; path_pricer_type &gt; <code>pathPricer</code> () const </p>
+<h2>Detailed Description</h2>
+<h3>template&lt;class RNG = PseudoRandom, class S = Statistics&gt; class QuantLib::MCEuropeanGJRGARCHEngine&lt; RNG, S &gt;</h3>
+<p>Monte Carlo GJR-GARCH-model engine for European options. </p>
+<p> <code>Tests</code></p>
+<dl COMPACT>
+<dd>the correctness of the returned value is tested by reproducing results available in web/literature</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

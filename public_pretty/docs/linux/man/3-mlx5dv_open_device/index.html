@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mlx5dv_open_device(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mlx5dv_open_device/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mlx5dv_open_device(3)</h1>
+
+
+
+
+
+<p>mlx5dv_open_device - Open an RDMA device context for the mlx5 provider</p>
+<h2>Synopsis</h2><dl COMPACT><dd><pre>#include &lt;infiniband/mlx5dv.h&gt;
+struct ibv_context *
+mlx5dv_open_device(struct ibv_device *device, struct mlx5dv_context_attr *attr);</pre></dd></dl><h2>Description</h2>Open an RDMA device context with specific mlx5 provider attributes.
+<h2>Arguments</h2><dl COMPACT><dt>device
+</dt><dd>RDMA device to open.</dd></dl><h3>attr argument</h3><dl COMPACT><dd><pre>struct mlx5dv_context_attr {
+ uint32_t flags;
+ uint64_t comp_mask;
+};</pre></dd><dt>flags
+</dt><dd></dd><dd><pre>A bitwise OR of the various values described below.
+*MLX5DV_CONTEXT_FLAGS_DEVX*:
+Allocate a DEVX context</pre></dd><dt>comp_mask
+</dt><dd></dd><dd><pre>Bitmask specifying what fields in the structure are valid</pre></dd></dl><h2>Return Value</h2>Returns a pointer to the allocated device context, or NULL if the request fails.
+<h2>See Also</h2>ibv_open_device(3)
+<h2>Author</h2>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

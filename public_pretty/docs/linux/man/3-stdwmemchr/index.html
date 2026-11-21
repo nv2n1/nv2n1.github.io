@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdwmemchr(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdwmemchr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdwmemchr(3)</h1>
+
+
+
+
+
+<p>std::wmemchr - std::wmemchr</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cwchar&gt;
+    const wchar_t *wmemchr(const wchar_t *ptr, wchar_t ch, std::size_t count);
+wchar_t *wmemchr(wchar_t *ptr, wchar_t ch, std::size_t count);</code></pre> 
+<p>Locates the first occurrence of wide character ch in the initial count wide characters of the wide character array pointed to by ptr.
+If count is zero, the function returns a null pointer.</p>
+<h2>Parameters</h2>
+<p>ptr - pointer to the wide character array to be examined
+ch - wide character to search for
+count - number of wide characters to examine</p>
+<h2>Return value</h2>
+<p>Pointer to the location of the wide character, or a null pointer if no such character is found.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;cwchar&gt;
+#include &lt;clocale&gt;
+#include &lt;locale&gt;
+int main()
+{
+const wchar_t str[] = L&quot;诺不轻信，故人不负我\0诺不轻许，故我不负人。&quot;;
+wchar_t target = L&rsquo;许&rsquo;;
+const std::size_t sz = sizeof str / sizeof *str;
+if (const wchar_t *result = std::wmemchr(str, target, sz)) {
+std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
+std::wcout.imbue(std::locale(&quot;en_US.utf8&quot;));
+std::wcout &lt;&lt; &quot;Found &lsquo;&quot; &lt;&lt; target
+&lt;&lt; &quot;&rsquo; at position &quot; &lt;&lt; result - str &lt;&lt; &quot;\n&quot;;
+}
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> Found &lsquo;许&rsquo; at position 14</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> searches an array for the first occurrence of a character
+memchr <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> finds the first occurrence of a character
+strchr <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> finds the first occurrence of a wide character in a wide string
+wcschr <i>(function)</i>
+find
+find_if
+find_if_not finds the first element satisfying specific criteria
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

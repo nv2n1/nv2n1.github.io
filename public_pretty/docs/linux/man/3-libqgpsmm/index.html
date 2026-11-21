@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libqgpsmm(3) · Linux Manual Pages</title>
+<meta name="description" content="libgpsmm, libQgpsmm – C&#43;&#43; and QT class wrapper for the GPS daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-libqgpsmm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>libqgpsmm(3)</h1>
+
+
+
+
+
+<p>libgpsmm, libQgpsmm &#8211; C++ and QT class wrapper for the GPS daemon </p>
+<h2>Synopsis</h2>
+<pre>C++:
+#include &lt;libgpsmm&gt;</pre>
+<dl COMPACT>
+<dt> <code>struct gps_data_t *open(char&nbsp;<wbr>*</code><i>host</i><code>, char&nbsp;<wbr>*</code><i>port</i><code>);</code></dt>
+<dt> <code>struct gps_data_t *open(void);</code></dt>
+<dt> <code>struct gps_data_t *send(char&nbsp;<wbr>*</code><i>request</i><code>);</code></dt>
+<dt> <code>struct gps_data_t *read(void);</code></dt>
+<dt> <code>struct gps_data_t *waiting(int);</code></dt>
+<dt> <code>struct gps_data_t *stream(unsigned int</code><i>flags</i><code>);</code></dt></dl>
+<h2>Description</h2>
+<p><code>libgpsmm and libQgpsmm</code></p>
+<dd>are mere wrappers over <code>libgps</code>. The important difference between the libraries is that libgpsmm is targeted at C++ applications and contained in <code>libgps</code>, while libQgpsmm is platform independent by using QTcpSocket to connect to <code>gpsd</code> and shipped as an additional library due to the necessary linking to QT. Method names are the same as the analogue C functions. For a detailed description of the functions please read <code><a href="/docs/linux/man/3-libgps/">libgps</a></code>(3). <code>open()</code> must be called after class constructor and before any other method (<code>open()</code> is not inside the constructor since it may fail, however constructors have no return value). The analogue of the C function <code>gps_close()</code> is in the destructor.</dd>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8), <code><a href="/docs/linux/man/1-gps/">gps</a></code>(1), <code><a href="/docs/linux/man/3-libgps/">libgps</a></code>(3).</p>
+<h2>Author</h2>
+<p>Alfredo Pironti &lt;alfredio [at] users.sourceforge.net&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

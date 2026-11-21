@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vtysh(1) · Linux Manual Pages</title>
+<meta name="description" content="vtysh – a integrated shell for Quagga routing software">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-vtysh/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>vtysh(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> vtysh &#8211; a integrated shell for Quagga routing software</p>
+<h2>SYNOPSIS</h2>
+<p> <code>vtysh</code> [ <code>-b</code> ]<br />
+ <code>vtysh</code> [ <code>-E</code> ] [ <code>-d</code> <i>daemon</i> ] ] [ <code>-c</code> <i>command</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>vtysh</code> is a integrated shell for <code>Quagga</code> routing engine.</p>
+<h2>OPTIONS</h2>
+<p> Options available for the <code>vtysh</code> command:</p>
+<dl>
+<dt><code>-b, &#8211;boot</code></dt>
+<dd> Execute boot startup configuration. It makes sense only if integrated config file is in use (not default in Quagga). See Info file <code>Quagga</code> for more info.</dd>
+<dt><code>-c, &#8211;command </code><i>command</i></dt>
+<dd> Specify command to be executed under batch mode. It behaves like -c option in any other shell &#8211; <i>command</i> is executed and <code>vtysh</code> exits. </dd>
+<p> It&#8217;s useful for gathering info from Quagga routing software or reconfiguring daemons from inside shell scripts, etc. Note that multiple commands may be executed by using more than one -c option and/or embedding linefeed characters inside the <i>command</i> string.</p>
+<dt><code>-d, &#8211;daemon </code><i>daemon_name</i></dt>
+<dd> Specify which daemon to connect to. By default, <code>vtysh</code> attempts to connect to all Quagga daemons running on the system. With this flag, one can specify a single daemon to connect to instead. For example, specifying &#8216;-d ospfd&#8217; will connect only to ospfd. This can be particularly useful inside scripts with -c where the command is targeted for a single daemon.</dd>
+<dt><code>-e, &#8211;execute </code><i>command</i></dt>
+<dd> Alias for -c. It&#8217;s here only for compatibility with Zebra routing software and older Quagga versions. This will be removed in future.</dd>
+<dt><code>-E, &#8211;echo</code></dt>
+<dd> When the -c option is being used, this flag will cause the standard <code>vtysh</code> prompt and command to be echoed prior to displaying the results. This is particularly useful to separate the results when executing multiple commands.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a usage message on standard output and exit.</dd></dl>
+<h2>ENVIRONMENT VARIABLES</h2>
+<dl>
+<dt><code>VTYSH_PAGER</code></dt>
+<dd> This should be the name of the pager to use. Default is <code>more</code>.</dd></dl>
+<h2>FILES</h2>
+<dl>
+<dt><code>/usr/local/etc/vtysh.conf</code></dt>
+<dd> The default location of the <code>vtysh</code> config file.</dd>
+<dt><code>/usr/local/etc/Quagga.conf</code></dt>
+<dd> The default location of the integrated Quagga routing engine config file if integrated config file is in use (not default).</dd></dl>
+<h2>WARNING</h2>
+<p> This man page is intended to be a quick reference for command line options. The definitive document is the Info file <code>Quagga</code>.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-bgpd/">bgpd</a></code>(8), <code><a href="/docs/linux/man/8-ripd/">ripd</a></code>(8), <code><a href="/docs/linux/man/8-ripngd/">ripngd</a></code>(8), <code><a href="/docs/linux/man/8-ospfd/">ospfd</a></code>(8), <code><a href="/docs/linux/man/8-ospf6d/">ospf6d</a></code>(8), <code><a href="/docs/linux/man/8-isisd/">isisd</a></code>(8), <code><a href="/docs/linux/man/8-zebra/">zebra</a></code>(8)</p>
+<h2>BUGS</h2>
+<p> <code>vtysh</code> eats bugs for breakfast. If you have food for the maintainers try <code><a rel="nofollow" href="http://bugzilla.quagga.net">http://bugzilla.quagga.net</a></code></p>
+<h2>AUTHORS</h2>
+<p> See <code><a rel="nofollow" href="http://www.zebra.org">http://www.zebra.org</a></code> and <code><a rel="nofollow" href="http://www.quagga.net">http://www.quagga.net</a></code> or the Info file for an accurate list of authors. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

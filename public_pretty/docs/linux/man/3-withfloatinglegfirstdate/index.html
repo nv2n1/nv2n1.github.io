@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>withfloatinglegfirstdate(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-withfloatinglegfirstdate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>withfloatinglegfirstdate(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::MakeCms - helper class for instantiating CMS</p>
+<h2>Synopsis</h2>
+<pre><code>MakeCms (const Period &amp;swapTenor, const boost::shared_ptr&lt; SwapIndex &gt; &amp;swapIndex, const boost::shared_ptr&lt; IborIndex &gt; &amp;iborIndex, Spread iborSpread=0.0, const Period &amp;forwardStart=0 *Days)
+MakeCms (const Period &amp;swapTenor, const boost::shared_ptr&lt; SwapIndex &gt; &amp;swapIndex, Spread iborSpread=0.0, const Period &amp;forwardStart=0 *Days)
+operator Swap () const
+operator boost::shared_ptr&lt; Swap &gt; () const
+MakeCms &amp; receiveCms (bool flag=true)
+MakeCms &amp; withNominal (Real n)
+MakeCms &amp; withEffectiveDate (const Date &amp;)
+MakeCms &amp; withCmsLegTenor (const Period &amp;t)
+MakeCms &amp; withCmsLegCalendar (const Calendar &amp;cal)
+MakeCms &amp; withCmsLegConvention (BusinessDayConvention bdc)
+MakeCms &amp; withCmsLegTerminationDateConvention (BusinessDayConvention)
+MakeCms &amp; withCmsLegRule (DateGeneration::Rule r)
+MakeCms &amp; withCmsLegEndOfMonth (bool flag=true)
+MakeCms &amp; withCmsLegFirstDate (const Date &amp;d)
+MakeCms &amp; withCmsLegNextToLastDate (const Date &amp;d)
+MakeCms &amp; withCmsLegDayCount (const DayCounter &amp;dc)
+MakeCms &amp; withFloatingLegTenor (const Period &amp;t)
+MakeCms &amp; withFloatingLegCalendar (const Calendar &amp;cal)
+MakeCms &amp; withFloatingLegConvention (BusinessDayConvention bdc)
+MakeCms &amp; withFloatingLegTerminationDateConvention (BusinessDayConvention bdc)
+MakeCms &amp; withFloatingLegRule (DateGeneration::Rule r)
+MakeCms &amp; withFloatingLegEndOfMonth (bool flag=true)
+MakeCms &amp; withFloatingLegFirstDate (const Date &amp;d)
+MakeCms &amp; withFloatingLegNextToLastDate (const Date &amp;d)
+MakeCms &amp; withFloatingLegDayCount (const DayCounter &amp;dc)
+MakeCms &amp; withAtmSpread (bool flag=true)
+MakeCms &amp; withDiscountingTermStructure (const Handle&lt; YieldTermStructure &gt; &amp;discountingTermStructure)
+MakeCms &amp; withCmsCouponPricer (const boost::shared_ptr&lt; CmsCouponPricer &gt; &amp;couponPricer)</code></pre>
+<h3>Public Member Functions</h3>
+<pre><code>MakeCms (const Period &amp;swapTenor, const boost::shared_ptr&lt; SwapIndex &gt; &amp;swapIndex, const boost::shared_ptr&lt; IborIndex &gt; &amp;iborIndex, Spread iborSpread=0.0, const Period &amp;forwardStart=0 *Days)
+MakeCms (const Period &amp;swapTenor, const boost::shared_ptr&lt; SwapIndex &gt; &amp;swapIndex, Spread iborSpread=0.0, const Period &amp;forwardStart=0 *Days)
+operator Swap () const
+operator boost::shared_ptr&lt; Swap &gt; () const
+MakeCms &amp; receiveCms (bool flag=true)
+MakeCms &amp; withNominal (Real n)
+MakeCms &amp; withEffectiveDate (const Date &amp;)
+MakeCms &amp; withCmsLegTenor (const Period &amp;t)
+MakeCms &amp; withCmsLegCalendar (const Calendar &amp;cal)
+MakeCms &amp; withCmsLegConvention (BusinessDayConvention bdc)
+MakeCms &amp; withCmsLegTerminationDateConvention (BusinessDayConvention)
+MakeCms &amp; withCmsLegRule (DateGeneration::Rule r)
+MakeCms &amp; withCmsLegEndOfMonth (bool flag=true)
+MakeCms &amp; withCmsLegFirstDate (const Date &amp;d)
+MakeCms &amp; withCmsLegNextToLastDate (const Date &amp;d)
+MakeCms &amp; withCmsLegDayCount (const DayCounter &amp;dc)
+MakeCms &amp; withFloatingLegTenor (const Period &amp;t)
+MakeCms &amp; withFloatingLegCalendar (const Calendar &amp;cal)
+MakeCms &amp; withFloatingLegConvention (BusinessDayConvention bdc)
+MakeCms &amp; withFloatingLegTerminationDateConvention (BusinessDayConvention bdc)
+MakeCms &amp; withFloatingLegRule (DateGeneration::Rule r)
+MakeCms &amp; withFloatingLegEndOfMonth (bool flag=true)
+MakeCms &amp; withFloatingLegFirstDate (const Date &amp;d)
+MakeCms &amp; withFloatingLegNextToLastDate (const Date &amp;d)
+MakeCms &amp; withFloatingLegDayCount (const DayCounter &amp;dc)
+MakeCms &amp; withAtmSpread (bool flag=true)
+MakeCms &amp; withDiscountingTermStructure (const Handle&lt; YieldTermStructure &gt; &amp;discountingTermStructure)
+MakeCms &amp; withCmsCouponPricer (const boost::shared_ptr&lt; CmsCouponPricer &gt; &amp;couponPricer)</code></pre>
+<h2>Detailed Description</h2>
+<p>helper class for instantiating CMS</p>
+<p>This class provides a more comfortable way to instantiate standard market constant maturity swap.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

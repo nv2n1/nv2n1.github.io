@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mountstats(8) · Linux Manual Pages</title>
+<meta name="description" content="mountstats – Displays various NFS client per-mount statistics">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mountstats/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mountstats(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>mountstats &#8211; Displays various NFS client per-mount statistics</p>
+<h2>Synopsis</h2>
+<p><code>mountstats</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;version</code>] [<code>-f</code>|<code>&#8211;file</code> <i>infile</i>] [<code>-S</code>|<code>&#8211;since</code> <i>sincefile</i>] [ [<code>-n</code>|<code>&#8211;nfs</code>] | [<code>-r</code>|<code>&#8211;rpc</code>] | [<code>-R</code>|<code>&#8211;raw</code>] ] [<i>mountpoint</i>]<i>&#8230;</i> <code>mountstats iostat</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;version</code>] [<code>-f</code>|<code>&#8211;file</code> <i>infile</i>] [<code>-S</code>|<code>&#8211;since</code> <i>sincefile</i>] [<i>interval</i>] [<i>count</i>] [<i>mountpoint</i>]<i>&#8230;</i> <code>mounstats nfsstat</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;version</code>] [<code>-f</code>|<code>&#8211;file</code> <i>infile</i>] [<code>-S</code>|<code>&#8211;since</code> <i>sincefile</i>] [<code>-3</code>] [<code>-4</code>] [<i>mountpoint</i>]<i>&#8230;</i> </p>
+<h2>Description</h2>
+<p>The <code>mountstats</code> command displays various NFS client statisitics for each given <i>mountpoint</i>. </p>
+<p> If no <i>mountpoint</i> is given, statistics will be displayed for all NFS mountpoints on the client.</p>
+<h3>Sub-commands</h3>
+<p>Valid <code><a href="/docs/linux/man/8-mountstats/">mountstats</a></code>(8) subcommands are:</p>
+<dl>
+<dt><code>mountstats</code></dt>
+<dd>Display a combination of per-op RPC statistics, NFS event counts, and NFS byte counts. This is the default sub-command that will be executed if no sub-command is given.</dd>
+<dt><code>iostat</code></dt>
+<dd>Display iostat-like statistics.</dd>
+<dt><code>nfsstat</code></dt>
+<dd>Display nfsstat-like statistics.</dd></dl>
+<h2>Options</h2>
+<h3>Options valid for all sub-commands</h3>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>show the help message and exit</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>show program&#8217;s version number and exit</dd>
+<dt><code>-f </code><i>infile</i>, <code>&#8211;file </code><i>infile</dt>
+<dd>Read stats from infile</i> instead of <i>/proc/self/mountstats</i>. <i>infile</i> must be in the same format as <i>/proc/self/mountstats</i>. This may be used with the <code>-S</code>|<code>&#8211;since</code> options to display the delta between two different points in time. This may not be used with the <i>interval</i> or <i>count</i> options of the <code>iostat</code> sub-command.</dd>
+<dt><code>-S </code><i>sincefile</i>, <code>&#8211;since </code><i>sincefile</dt>
+<dd>Show difference between current stats and those in sincefile</i>. <i>sincefile</i> must be in the same format as <i>/proc/self/mountstats</i>. This may be used with the <code>-f</code>|<code>&#8211;file</code> options to display the delta between two different points in time. This may not be used with the <i>interval</i> or <i>count</i> options of the <code>iostat</code> sub-command.</dd></dl>
+<h3>Options specific to the mountstats sub-command</h3>
+<p><code>-n, &#8211;nfs</code> Display only the NFS statistics</p>
+<dl>
+<dt><code>-r, &#8211;rpc</code></dt>
+<dd>Display only the RPC statistics</dd>
+<dt><code>-R, &#8211;raw</code></dt>
+<dd>Display only the raw statistics. This is intended for use with the <code>-f</code>|<code>&#8211;file</code> and <code>-S</code>|<code>&#8211;since</code> options.</dd></dl>
+<h3>Options specific to the iostat sub-command</h3>
+<dl>
+<dt><i>interval</i></dt>
+<dd>Specifies the amount of time in seconds between each report. The first report contains statistics for the time since each file system was mounted. Each subsequent report contains statistics collected during the interval since the previous report. This may not be used with the <code>-f</code>|<code>&#8211;file</code> or <code>-S</code>|<code>&#8211;since</code> options.</dd></dl>
+<dl>
+<dt><i>count</i></dt>
+<dd>Determines the number of reports generated at <i>interval</i> seconds apart. If the <i>interval</i> parameter is specified without the <i>count</i> parameter, the command generates reports continuously. This may not be used with the <code>-f</code>|<code>&#8211;file</code> or <code>-S</code>|<code>&#8211;since</code> options.</dd></dl>
+<h3>Options specific to the nfsstat sub-command</h3>
+<dl>
+<dt><code>-3</code></dt>
+<dd>Show only NFS version 3 statistics. The default is to show both version 3 and version 4 statistics.</dd>
+<dt><code>-4</code></dt>
+<dd>Show only NFS version 4 statistics. The default is to show both version 3 and version 4 statistics.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><code>/proc/self/mountstats</code></dt>
+<dd></dd></dl>
+<h2>See Also</h2>
+<p><code>iostat</code>(8), <code><a href="/docs/linux/man/8-nfsiostat/">nfsiostat</a></code>(8), <code><a href="/docs/linux/man/8-nfsstat/">nfsstat</a></code>(8)</p>
+<h2>Author</h2>
+<p>Chuck Lever &lt;chuck.lever [at] oracle.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

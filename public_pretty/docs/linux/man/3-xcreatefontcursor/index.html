@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xcreatefontcursor(3) · Linux Manual Pages</title>
+<meta name="description" content="XCreateFontCursor, XCreatePixmapCursor, XCreateGlyphCursor – create cursors">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xcreatefontcursor/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xcreatefontcursor(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XCreateFontCursor, XCreatePixmapCursor, XCreateGlyphCursor &#8211; create cursors </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/cursorfont.h&gt;</p>
+<dl COMPACT>
+<dd>Cursor XCreateFontCursor(Display *<i>display</i>, unsigned int <i>shape</i>);</dd>
+<dd>Cursor XCreatePixmapCursor(Display *<i>display</i>, Pixmap <i>source</i>, Pixmap <i>mask</i>, XColor *<i>foreground_color</i>, XColor *<i>background_color</i>, unsigned int <i>x</i>, unsigned int <i>y</i>);</dd>
+<dd>Cursor XCreateGlyphCursor(Display *<i>display</i>, Font <i>source_font</i>, Font <i>mask_font</i>, unsigned int <i>source_char</i>, unsigned int <i>mask_char</i>, XColor *<i>foreground_color</i>, XColor *<i>background_color</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>background_color</i></dt>
+<dd>Specifies the RGB values for the background of the source.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>foreground_color</i></dt>
+<dd>Specifies the RGB values for the foreground of the source.</dd>
+<dt><i>mask</i></dt>
+<dd>Specifies the cursor&#8217;s source bits to be displayed or <code>None</code>.</dd>
+<dt><i>mask_char</i></dt>
+<dd>Specifies the glyph character for the mask.</dd>
+<dt><i>mask_font</i></dt>
+<dd>Specifies the font for the mask glyph or <code>None</code>.</dd>
+<dt><i>shape</i></dt>
+<dd>Specifies the shape of the cursor.</dd>
+<dt><i>source</i></dt>
+<dd>Specifies the shape of the source cursor.</dd>
+<dt><i>source_char</i></dt>
+<dd>Specifies the character glyph for the source.</dd>
+<dt><i>source_font</i></dt>
+<dd>Specifies the font for the source glyph.</dd>
+<dt><i>x</i></dt>
+<dd>
+</dd><dt><i>y</i></dt>
+<dd>Specify the x and y coordinates, which indicate the hotspot relative to the source&#8217;s origin.</dd></dl>
+<h2>Description</h2>
+<p>X provides a set of standard cursor shapes in a special font named cursor. Applications are encouraged to use this interface for their cursors because the font can be customized for the individual display type. The shape argument specifies which glyph of the standard fonts to use. </p>
+<p> The hotspot comes from the information stored in the cursor font. The initial colors of a cursor are a black foreground and a white background (see <code>XRecolorCursor</code>). </p>
+<p> <code>XCreateFontCursor</code> can generate <code>BadAlloc</code> and <code>BadValue</code> errors. </p>
+<p> The <code>XCreatePixmapCursor</code> function creates a cursor and returns the cursor ID associated with it. The foreground and background RGB values must be specified using foreground_color and background_color, even if the X server only has a <code>StaticGray</code> or <code>GrayScale</code> screen. The foreground color is used for the pixels set to 1 in the source, and the background color is used for the pixels set to 0. Both source and mask, if specified, must have depth one (or a <code>BadMatch</code> error results) but can have any root. The mask argument defines the shape of the cursor. The pixels set to 1 in the mask define which source pixels are displayed, and the pixels set to 0 define which pixels are ignored. If no mask is given, all pixels of the source are displayed. The mask, if present, must be the same size as the pixmap defined by the source argument, or a <code>BadMatch</code> error results. The hotspot must be a point within the source, or a <code>BadMatch</code> error results. </p>
+<p> The components of the cursor can be transformed arbitrarily to meet display limitations. The pixmaps can be freed immediately if no further explicit references to them are to be made. Subsequent drawing in the source or mask pixmap has an undefined effect on the cursor. The X server might or might not make a copy of the pixmap. </p>
+<p> <code>XCreatePixmapCursor</code> can generate <code>BadAlloc</code> and <code>BadPixmap</code> errors. </p>
+<p> The <code>XCreateGlyphCursor</code> function is similar to <code>XCreatePixmapCursor</code> except that the source and mask bitmaps are obtained from the specified font glyphs. The source_char must be a defined glyph in source_font, or a <code>BadValue</code> error results. If mask_font is given, mask_char must be a defined glyph in mask_font, or a <code>BadValue</code> error results. The mask_font and character are optional. The origins of the source_char and mask_char (if defined) glyphs are positioned coincidently and define the hotspot. The source_char and mask_char need not have the same bounding box metrics, and there is no restriction on the placement of the hotspot relative to the bounding boxes. If no mask_char is given, all pixels of the source are displayed. You can free the fonts immediately by calling <code>XFreeFont</code> if no further explicit references to them are to be made. </p>
+<p> For 2-byte matrix fonts, the 16-bit value should be formed with the byte1 member in the most significant byte and the byte2 member in the least significant byte. </p>
+<p> <code>XCreateGlyphCursor</code> can generate <code>BadAlloc</code>, <code>BadFont</code>, and <code>BadValue</code> errors.</p>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadFont</code></dt>
+<dd>A value for a Font or GContext argument does not name a defined Font.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd>
+<dt><code>BadPixmap</code></dt>
+<dd>A value for a Pixmap argument does not name a defined Pixmap.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xdefinecursor/">XDefineCursor</a>(3), <a href="/docs/linux/man/3-xloadfont/">XLoadFont</a>(3), <a href="/docs/linux/man/3-xrecolorcursor/">XRecolorCursor</a>(3)<br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

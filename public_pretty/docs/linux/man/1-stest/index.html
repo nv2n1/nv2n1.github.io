@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stest(1) · Linux Manual Pages</title>
+<meta name="description" content="stest – filter a list of files by properties">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-stest/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>stest(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> stest &#8211; filter a list of files by properties</p>
+<h2>SYNOPSIS</h2>
+<p> <code>stest</code> [<code>-abcdefghlpqrsuwx</code>] [<code>-n</code> <i>file</i>] [<code>-o</code> <i>file</i>] [<i>file</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>stest</code> takes a list of files and filters by the files&#8217; properties, analogous to <i><a href="/docs/linux/man/1-test/">test</a></i>(1). Files which pass all tests are printed to stdout. If no files are given, stest reads files from stdin.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-a</code></dt>
+<dd> Test hidden files.</dd>
+<dt><code>-b</code></dt>
+<dd> Test that files are block specials.</dd>
+<dt><code>-c</code></dt>
+<dd> Test that files are character specials.</dd>
+<dt><code>-d</code></dt>
+<dd> Test that files are directories.</dd>
+<dt><code>-e</code></dt>
+<dd> Test that files exist.</dd>
+<dt><code>-f</code></dt>
+<dd> Test that files are regular files.</dd>
+<dt><code>-g</code></dt>
+<dd> Test that files have their set-group-ID flag set.</dd>
+<dt><code>-h</code></dt>
+<dd> Test that files are symbolic links.</dd>
+<dt><code>-l</code></dt>
+<dd> Test the contents of a directory given as an argument.</dd>
+<dt><code>-n</code><i> file</i></dt>
+<dd> Test that files are newer than <i>file</i>.</dd>
+<dt><code>-o</code><i> file</i></dt>
+<dd> Test that files are older than <i>file</i>.</dd>
+<dt><code>-p</code></dt>
+<dd> Test that files are named pipes.</dd>
+<dt><code>-q</code></dt>
+<dd> No files are printed, only the exit status is returned.</dd>
+<dt><code>-r</code></dt>
+<dd> Test that files are readable.</dd>
+<dt><code>-s</code></dt>
+<dd> Test that files are not empty.</dd>
+<dt><code>-u</code></dt>
+<dd> Test that files have their set-user-ID flag set.</dd>
+<dt><code>-v</code></dt>
+<dd> Invert the sense of tests, only failing files pass.</dd>
+<dt><code>-w</code></dt>
+<dd> Test that files are writable.</dd>
+<dt><code>-x</code></dt>
+<dd> Test that files are executable.</dd></dl>
+<h2>EXIT STATUS</h2>
+<dl>
+<dt><code>0</code></dt>
+<dd> At least one file passed all tests.</dd>
+<dt><code>1</code></dt>
+<dd> No files passed all tests.</dd>
+<dt><code>2</code></dt>
+<dd> An error occurred.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-dmenu/">dmenu</a></i>(1), <i><a href="/docs/linux/man/1-test/">test</a></i>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

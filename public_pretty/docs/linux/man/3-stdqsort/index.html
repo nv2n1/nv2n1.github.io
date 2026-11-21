@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdqsort(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdqsort/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdqsort(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::qsort - std::qsort</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstdlib&gt;
+    void qsort(void *ptr, std::size_t count, std::size_t size, /*compare-pred*/ *comp);
+(1)
+    void qsort(void *ptr, std::size_t count, std::size_t size, /*c-compare-pred*/ *comp);
+extern &quot;C++&quot; using /*compare-pred*/ = int(const void *, const void *); // exposition-only (2)
+extern &quot;C&quot; using /*c-compare-pred*/ = int(const void *, const void *); // exposition-only</code></pre> 
+<p>Sorts the given array pointed to by ptr in ascending order. The array contains count elements of size bytes. Function pointed to by comp is used for object comparison.
+If comp indicates two elements as equivalent, their order is unspecified.</p>
+<h2>Parameters</h2>
+<p>ptr - pointer to the array to sort
+count - number of elements in the array
+size - size of each element in the array in bytes
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> comparison function which returns a negative integer value if the first argument is less than the second,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> a positive integer value if the first argument is greater than the second and zero if the arguments are equal.
+comp - The signature of the comparison function should be equivalent to the following:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> int cmp(const void *a, const void *b);
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The function must not modify the objects passed to it and must return consistent results when called for the same objects, regardless of their positions in the array.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> </p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Notes</h2>
+<p>Despite the name, C++, C, and POSIX standards do not require this function to be implemented using quicksort or make any complexity or stability guarantees.
+The type of the elements of the array must be a TrivialType, otherwise the behavior is undefined.
+The two overloads provided by the C++ standard library are distinct because the types of the parameter comp are distinct (language_linkage is part of its type)</p>
+<h2>Example</h2>
+<p>The following code sorts an array of integers using qsort().
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;cstdlib&gt;
+#include &lt;climits&gt;
+int main()
+{
+int a[] = {-2, 99, 0, -743, 2, INT_MIN, 4};
+constexpr std::size_t size = sizeof a / sizeof *a;
+std::qsort(a, size, sizeof *a, [](const void *a, const void *b) {
+int arg1 = *static_cast&lt;const int *&gt;(a);
+int arg2 = *static_cast&lt;const int *&gt;(b);
+if (arg1 &lt; arg2)
+return -1;
+if (arg1 &gt; arg2)
+return 1;
+return 0;
+//  return (arg1 &gt; arg2) - (arg1 &lt; arg2); // possible shortcut
+//  return arg1 - arg2; // erroneous shortcut (fails if INT_MIN is present)
+});
+for (int ai : a)
+std::cout &lt;&lt; ai &lt;&lt; &rsquo; &lsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> -2147483648 -743 -2 0 2 4 99</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> searches an array for an element of unspecified type
+bsearch <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sorts a range into ascending order
+sort <i>(function template)</i>
+is_trivial checks if a type is trivial
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

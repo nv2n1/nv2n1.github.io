@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tracker-daemon(1) · Linux Manual Pages</title>
+<meta name="description" content="tracker-daemon – Start, stop, restart and list daemons responsible for indexing content">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tracker-daemon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tracker-daemon(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> tracker-daemon &#8211; Start, stop, restart and list daemons responsible for indexing content</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+tracker daemon [options...]
+tracker daemon -s | -t [daemons] | -k [daemons] | -l
+tracker daemon -f | -w [ontology]
+tracker daemon --miner &lt;miner&gt; --pause[-for-process] &lt;reason&gt;
+tracker daemon --miner &lt;miner&gt; --resume &lt;cookie&gt;
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> Tracker has many components to it including a &quot;store&quot; for handling data set updates and &quot;miners&quot; for handling data mining in their respective areas. </p>
+<p> The <code>tracker daemon</code> command allows for control of these components. This ranges from starting, stopping and killing processes to pausing and resuming them. </p>
+<p> In addition to all this, there are ways to change the log verbsity for all processes that generate logs and to follow or watch what is happening in real time from a top level and right down where the SPARQL commits are happening too. </p>
+<p> If no arguments are provided this command will show the current status of all Tracker entities (store and all available data miners). </p>
+<p> For <code>tracker-store</code>, the status is always &quot;Idle&quot; unless it is restoring a backup and/or replaying a journal (see also <code>tracker reset &#8211;soft</code>). For a list of common statuses, see <code>&#8211;list-common-statuses</code>. </p>
+<p> The data miners can be paused or resumed using this command and you can also list miners running and available. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-p, &#8211;list-processes</code></dt>
+<dd> This lists all Tracker processes in the system.</dd>
+<dt><code>-k, &#8211;kill</code>=[<i>daemons</i>]</dt>
+<dd> This uses SIGKILL to stop all Tracker processes found matching the parameter, if no extra parameter is passed, &quot;all&quot; will be assumed. This is not advised unless you are having problems stopping Tracker in the first place. This <code>GUARANTEES</code> death. </dd>
+<p> The possible <i>daemons</i> options are: </p>
+<dl>
+<dt>
+</dt><dd> &bull; <i>all</i> &#8211; All daemons. </dd>
+<p> &bull; <i>store</i> &#8211; Only the <code>tracker-store</code>. </p>
+<p> &bull; <i>miners</i> &#8211; Only data miners. </p>
+</dl>
+<dt><code>-t, &#8211;terminate</code>=[daemons]</dt>
+<dd> This uses SIGTERM to stop all Tracker processes found matching the parameter, if no extra parameter is passed, &quot;all&quot; will be assumed. This is recommended over &#8211;kill because it gives the processes time to shutdown cleanly. </dd>
+<p> For a list of possible <i>daemons</i>, see &#8211;kill.</p>
+<dt><code>-s, &#8211;start</code></dt>
+<dd> Starts all miners. This indirectly starts <code>tracker-store</code> too because it is needed for miners to operate properly. The store is started from D-Bus.</dd>
+<dt><code>&#8211;get-log-verbosity</code></dt>
+<dd> This displays the log verbosity for ALL components using GSettings for this configuration. For possible values, see <code>&#8211;set-log-verbosity.</code></dd>
+<dt><code>&#8211;set-log-verbosity</code>=&lt;<i>verbosity</i>&gt;</dt>
+<dd> This sets the log verbosity for ALL daemons using GSettings to store their &quot;verbosity&quot; configuration. </dd>
+<p> The possible <i>verbosity</i> options are: </p>
+<dl>
+<dt>
+</dt><dd> &bull; <i>debug</i> &#8211; Show EVERYTHING, from debug messages to errors. This often includes actual SQL being executed. </dd>
+<p> &bull; <i>detailed</i> &#8211; Show enough detail to understand what is happening. </p>
+<p> &bull; <i>minimal</i> &#8211; Show an overview of what is going on, e.g. stats and when things start or stop. </p>
+<p> &bull; <i>errors</i> &#8211; Show only warnings, criticals, errors or fatal events.</dl>
+<dt><code>-f, &#8211;follow</code></dt>
+<dd> Follow status changes to daemons as they happen. This is a top level view of what is happening. You will see the name for each daemon and a state with the progress in that state. </dd>
+<p> This requires Ctrl+C to stop and return to the command line. Each new status is put on a new line. </p>
+<dt><code>-w, &#8211;watch</code>=[<i>ontology</i>]</dt>
+<dd> Watch changes that happen to the database in real time. This requires Ctrl+C to stop and return to the command line. </dd>
+<p> If <i>ontology</i> is unspecified, all updates are shown. The <i>ontology</i> can be a comma separated list of shorthand or long hand ontology properties. For example: </p>
+<pre>
+    $ tracker-control -w nie:url,nie:mimeType,nfo:fileSize,nie:dataSource
+    Now listening for resource updates to the database
+    All nie:plainTextContent properties are omitted
+    Press Ctrl+C to stop
+    'nfo:Document'
+       'nfo:fileSize' = '1770'
+       'nie:dataSource' = '<a rel="nofollow" href="http://www.tracker-project.org/ontologies/tracker#extractor-data-source'">http://www.tracker-project.org/ontologies/tracker#extractor-data-source'</a>
+       'nie:mimeType' = 'text/plain'
+       'nie:url' = 'file:///home/martyn/.bash_aliases'
+    'nfo:Document'
+       'nie:dataSource' = '<a rel="nofollow" href="http://www.tracker-project.org/ontologies/tracker#extractor-data-source'">http://www.tracker-project.org/ontologies/tracker#extractor-data-source'</a>
+    ...
+</pre>
+<dt><code>&#8211;list-common-statuses</code></dt>
+<dd> This will list statuses most commonly produced by miners and the store. These statuses are not translated when sent over D-Bus and should be translated by each application. These are not considered static and are subject to change at any point. </dd>
+<p> Additionally, these statuses are not the only ones which may be reported by a miner. There may be other states pertaining to the specific roles of the miner in question.</p>
+<dt><code>&#8211;list-miners-running</code></dt>
+<dd> This will list all miners which have responded to a D-Bus call. Sometimes it is helpful to use this command with <code>&#8211;list-miners-available.</code></dd>
+<dt><code>&#8211;list-miners-available</code></dt>
+<dd> This will list all miners which are available even if they are not running at the moment.</dd>
+<dt><code>&#8211;pause-details</code></dt>
+<dd> For listing all miners which are paused and the reasons for being paused, you can use this. It will also display the application that requested the pause too.</dd>
+<dt><code>&#8211;miner</code>=&lt;<i>miner</i>&gt;</dt>
+<dd> This argument is used with <code>&#8211;pause</code> or <code>&#8211;resume</code> to say which miner you want to pause or resume. You can use the full D-Bus name, e.g. &quot;org.freedesktop.Tracker1.Miner.Files&quot; OR you can use the suffix, e.g. &quot;Files&quot;.</dd>
+<dt><code>&#8211;pause</code>=&lt;<i>reason</i>&gt;</dt>
+<dd> The <i>reason</i> here is useful to know WHY the miner should be paused. A miner can be paused many times by multiple applications. Only when all pauses have been resumed will it continue. If successful, a cookie will be given to uniquely identify the request. This cookie is used to resume the pause at a later stage.</dd>
+<dt><code>&#8211;pause-for-process</code>=&lt;<i>reason</i>&gt;</dt>
+<dd> This works exactly the same way as <code>&#8211;pause</code> with the exception that it only keeps the pause active while the calling process is alive. As soon as you press Ctrl+C the pause is resumed automatically.</dd>
+<dt><code>&#8211;resume</code>=&lt;<i>cookie</i>&gt;</dt>
+<dd> The <i>cookie</i> is given by a successful <code>&#8211;pause</code> command. It is a number which identifies each pause request. When all pauses have been resumed, the miner will resume working. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-tracker-store/">tracker-store</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

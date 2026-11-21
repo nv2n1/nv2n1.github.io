@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tspi_key_wrapkey(3) · Linux Manual Pages</title>
+<meta name="description" content="Tspi_Key_WrapKey – wrap a key with the key addressed by hWrappingKey.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tspi_key_wrapkey/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tspi_key_wrapkey(3)</h1>
+
+
+
+
+
+<p>Tspi_Key_WrapKey &#8211; wrap a key with the key addressed by hWrappingKey.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tss/platform.h&gt;</code>
+<code>#include &lt;tss/tcpa_defines.h&gt;</code>
+<code>#include &lt;tss/tcpa_typedef.h&gt;</code>
+<code>#include &lt;tss/tcpa_struct.h&gt;</code>
+<code>#include &lt;tss/tss_typedef.h&gt;</code>
+<code>#include &lt;tss/tss_structs.h&gt;</code>
+<code>#include &lt;tss/tspi.h&gt;</code>
+<code>TSS_RESULT Tspi_Key_WrapKey(TSS_HKEY </code><i>hKey</i><code>, TSS_HKEY </code><i>hWrappingKey</i><code>,</code>
+<code> TSS_HPCRS </code><i>hPcrComposite</i><code>);</code></pre>
+<h2>Description</h2>
+<p><code>TSS_Key_WrapKey</code> wraps the private key <i>hKey</i> using the public key addressed by <i>hWrappingKey</i>. If hPcrComposite is not set to NULL (0), the created key blob is bound to its PCR values. The key object addressed by <i>hKey</i> must contain the key information needed for the creation. On successful return from this call, <i>hKey</i> can be loaded into a TPM. <i>hKey</i> must have been created as a migratable key and should have its usage and migrations secrets set using <code><a href="/docs/linux/man/3-tspi_policy_setsecret/">Tspi_Policy_SetSecret</a>(3)</code>. Also, <i>hKey</i> should have had its private key set to either RSA private component, p or q.</p>
+<h2>Parameters</h2>
+<h3>hKey</h3>
+<p>The handle of the key object that is wrapped. </p>
+<h3>hWrappingKey</h3>
+<p>The handle to the key used to wrap the newly created key. </p>
+<h3>hPcrComposite</h3>
+<p>The handle to an object, if the value of the handle doesn&#8217;t equal NULL, the newly create key will be bound ot the PCR values described with this object. </p>
+<h2>Return Codes</h2>
+<p><code>Tspi_Key_WrapKey</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
+<dl COMPACT>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; Either <i>hKey</i>, <i>hWrappingKey</i> or <i>hPcrComposite</i> are invalid handles.</font></dt>
+<dd>
+</dd><dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></dt>
+<dd></dd></dl>
+<h2>Conforming To</h2>
+<p><code>Tspi_Key_WrapKey</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-tspi_key_createkey/">Tspi_Key_CreateKey</a></code>(3), <code><a href="/docs/linux/man/3-tspi_key_certifykey/">Tspi_Key_CertifyKey</a></code>(3), <code>Tspi_Key_RegisterKey</code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

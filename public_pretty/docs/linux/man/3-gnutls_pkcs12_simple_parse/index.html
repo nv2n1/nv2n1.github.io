@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnutls_pkcs12_simple_parse(3) · Linux Manual Pages</title>
+<meta name="description" content="gnutls_pkcs12_simple_parse – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gnutls_pkcs12_simple_parse/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gnutls_pkcs12_simple_parse(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> gnutls_pkcs12_simple_parse &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>
+<p> <code>int gnutls_pkcs12_simple_parse(gnutls_pkcs12_t </code><i>p12</i><code>, const char * </code><i>password</i><code>, gnutls_x509_privkey_t * </code><i>key</i><code>, gnutls_x509_crt_t ** </code><i>chain</i><code>, unsigned int * </code><i>chain_len</i><code>, gnutls_x509_crt_t ** </code><i>extra_certs</i><code>, unsigned int * </code><i>extra_certs_len</i><code>, gnutls_x509_crl_t * </code><i>crl</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>gnutls_pkcs12_t p12</dt>
+<dd> should contain a gnutls_pkcs12_t structure</dd>
+<dt>const char * password</dt>
+<dd> optional password used to decrypt the structure, bags and keys.</dd>
+<dt>gnutls_x509_privkey_t * key</dt>
+<dd> a structure to store the parsed private key.</dd>
+<dt>gnutls_x509_crt_t ** chain</dt>
+<dd> the corresponding to key certificate chain (may be <code>NULL</code>)</dd>
+<dt>unsigned int * chain_len</dt>
+<dd> will be updated with the number of additional (may be <code>NULL</code>)</dd>
+<dt>gnutls_x509_crt_t ** extra_certs</dt>
+<dd> optional pointer to receive an array of additional certificates found in the PKCS12 structure (may be <code>NULL</code>).</dd>
+<dt>unsigned int * extra_certs_len</dt>
+<dd> will be updated with the number of additional certs (may be <code>NULL</code>).</dd>
+<dt>gnutls_x509_crl_t * crl</dt>
+<dd> an optional structure to store the parsed CRL (may be <code>NULL</code>).</dd>
+<dt>unsigned int flags</dt>
+<dd> should be zero or one of GNUTLS_PKCS12_SP_*</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> This function parses a PKCS12 structure in <i>pkcs12</i> and extracts the private key, the corresponding certificate chain, any additional certificates and a CRL. </p>
+<p> The <i>extra_certs</i> and <i>extra_certs_len</i> parameters are optional and both may be set to <code>NULL</code>. If either is non-<code>NULL</code>, then both must be set. The value for <i>extra_certs</i> is allocated using <code>gnutls_malloc()</code>. </p>
+<p> Encrypted PKCS12 bags and PKCS8 private keys are supported, but only with password based security and the same password for all operations. </p>
+<p> Note that a PKCS12 structure may contain many keys and/or certificates, and there is no way to identify which key/certificate pair you want. For this reason this function is useful for PKCS12 files that contain only one key/certificate pair and/or one CRL. </p>
+<p> If the provided structure has encrypted fields but no password is provided then this function returns <code>GNUTLS_E_DECRYPTION_FAILED</code>. </p>
+<p> Note that normally the chain constructed does not include self signed certificates, to comply with TLS&#8217; requirements. If, however, the flag <code>GNUTLS_PKCS12_SP_INCLUDE_SELF_SIGNED</code> is specified then self signed certificates will be included in the chain. </p>
+<p> Prior to using this function the PKCS <code>12</code> structure integrity must be verified using <code>gnutls_pkcs12_verify_mac()</code>.</p>
+<h2>RETURNS</h2>
+<p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>
+<h2>SINCE</h2>
+<p> 3.1.0</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+ Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
+<dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

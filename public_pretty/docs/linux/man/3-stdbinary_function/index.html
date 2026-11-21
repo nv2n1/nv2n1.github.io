@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdbinary_function(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdbinary_function/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdbinary_function(3)</h1>
+
+
+
+
+
+<p>std::binary_function - std::binary_function</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;functional&gt;
+    template &lt;
+        class Arg1, (deprecated in C++ 11)
+                        class Arg2,
+        (removed in C++ 17)
+            class Result
+        &gt;
+    struct binary_function;</code></pre> 
+<p>binary_function is a base class for creating function objects with two arguments.
+binary_function does not define operator(); it is expected that derived classes will define this. binary_function provides only three types - first_argument_type, second_argument_type and result_type - defined by the template parameters.
+Some standard library function object adaptors, such as std::not2, require the function objects they adapt to have certain types defined; std::not2 requires the function object being adapted to have two types named first_argument_type and second_argument_type. Deriving function objects that take two arguments from binary_function is an easy way to make them compatible with those adaptors.
+binary_function is deprecated in C++11 and removed in C++17.</p>
+<h2>Member types</h2>
+<p>Type Definition
+first_argument_type Arg1
+second_argument_type Arg2
+result_type Result</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;algorithm&gt;
+#include &lt;functional&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+struct same : std::binary_function&lt;int, int, bool&gt;
+{
+bool operator()(int a, int b) const
+{
+return a == b;
+}
+};
+int main()
+{
+std::vector&lt;int&gt; v1{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+std::vector&lt;int&gt; v2{10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+std::vector&lt;bool&gt; v3(v1.size());
+std::transform(v1.begin(), v1.end(), v2.begin(), v3.begin(), std::not2(same()));
+std::cout &lt;&lt; std::boolalpha;
+for (std::size_t i = 0; i &lt; v1.size(); ++i)
+std::cout &lt;&lt; v1[i] &lt;&lt; &rsquo; &rsquo; &lt;&lt; v2[i] &lt;&lt; &rsquo; &rsquo; &lt;&lt; v3[i] &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 0 10 true
+ <wbr> 1 9 true
+ <wbr> 2 8 true
+ <wbr> 3 7 true
+ <wbr> 4 6 true
+ <wbr> 5 5 false
+ <wbr> 6 4 true
+ <wbr> 7 3 true
+ <wbr> 8 2 true
+ <wbr> 9 1 true
+ <wbr> 10 0 true</p>
+<h2>See also</h2>
+<p>function wraps callable object of any type with specified function call signature
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+ptr_fun creates an adaptor-compatible function object wrapper from a pointer to function
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+(deprecated in C++11)
+(removed in C++17)
+pointer_to_binary_function adaptor-compatible wrapper for a pointer to binary function
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+(deprecated in C++11)
+(removed in C++17)
+unary_function adaptor-compatible unary function base class
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+(deprecated in C++11)
+(removed in C++17)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

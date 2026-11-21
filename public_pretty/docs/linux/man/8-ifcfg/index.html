@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ifcfg(8) · Linux Manual Pages</title>
+<meta name="description" content="ifcfg – simplistic script which replaces ifconfig IP management">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ifcfg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ifcfg(8)</h1>
+
+
+
+
+
+<p>ifcfg &#8211; simplistic script which replaces ifconfig IP management</p>
+<h2>Synopsis</h2>
+<p><code>ifcfg</code> [ <i>DEVICE</i> ] [ <i>command</i> ] <i>ADDRESS</i> [ <i>PEER</i> ] </p>
+<h2>Description</h2>
+<p>This manual page documents briefly the <code>ifcfg</code> command. This is a simplistic script replacing one option of <code>ifconfig</code> , namely, IP address management. It not only adds addresses, but also carries out Duplicate Address Detection RFC-DHCP, sends unsolicited ARP to update the caches of other hosts sharing the interface, adds some control routes and restarts Router Discovery when it is necessary. </p>
+<h2>Ifconfig &#8211; Command Syntax</h2>
+<h3>
+<dt><code>DEVICE</code></dt>
+<dd></h3>
+<p>&#8211; it may have alias, suffix, separated by colon. </p>
+</dd><dt><code>command</code></dt>
+<dd>&#8211; add, delete or stop. </dd>
+<dt><code>ADDRESS</code></dt>
+<dd>&#8211; optionally followed by prefix length. </dd>
+<dt><code>peer</code></dt>
+<dd>&#8211; optional peer address for pointpoint interfaces. </dd>
+</dl>
+<h2>Notes</h2>
+<p>This script is not suitable for use with IPv6. </p>
+<h2>See Also</h2>
+<p>IP Command reference <code>ip-cref.ps</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

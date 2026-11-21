@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemd-remount-fs-service(8) · Linux Manual Pages</title>
+<meta name="description" content="systemd-remount-fs.service, systemd-remount-fs – Remount root and kernel file systems">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-systemd-remount-fs-service/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>systemd-remount-fs-service(8)</h1>
+
+
+
+
+
+<p>systemd-remount-fs.service, systemd-remount-fs &#8211; Remount root and kernel file systems</p>
+<h2>Synopsis</h2>
+<p>systemd-remount-fs.service </p>
+<p> /lib/systemd/systemd-remount-fs</p>
+<h2>Description</h2>
+<p>systemd-remount-fs.service is an early boot service that applies mount options listed in <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5), or gathered from the partition table (when <code><a href="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></code>(8) is active) to the root file system, the /usr/ file system, and the kernel API file systems. This is required so that the mount options of these file systems &#8212; which are pre-mounted by the kernel, the initial RAM disk, container environments or system manager code &#8212; are updated to those configured in /etc/fstab and the other sources. This service ignores normal file systems and only changes the root file system (i.e. /), /usr/, and the virtual kernel API file systems such as /proc/, /sys/ or /dev/. This service executes no operation if no configuration is found (/etc/fstab does not exist or lists no entries for the mentioned file systems, or the partition table does not contain relevant entries). </p>
+<p> For a longer discussion of kernel API file systems see m[blue]<code>API File Systems</code>m[]<font SIZE="-2">[1]</font>. </p>
+<p> Note: systemd-remount-fs.service is usually pulled in by <code><a href="/docs/linux/man/8-systemd-fstab-generator/">systemd-fstab-generator</a></code>(8), hence it is also affected by the kernel command line option <i>fstab=</i>, which may be used to disable the generator. It may also pulled in by <code><a href="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></code>(8), which is affected by <i>systemd.gpt_auto</i> and other options.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8), <code><a href="/docs/linux/man/8-systemd-fstab-generator/">systemd-fstab-generator</a></code>(8), <code><a href="/docs/linux/man/8-systemd-gpt-auto-generator/">systemd-gpt-auto-generator</a></code>(8)</p>
+<h2>Notes</h2>
+<dl>
+<dt> 1.</dt>
+<dd>API File Systems</dd>
+<dl>
+<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/APIFileSystems">https://www.freedesktop.org/wiki/Software/systemd/APIFileSystems</a></dd></dl>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

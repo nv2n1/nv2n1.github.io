@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cinnamon-settings-daemon(1) · Linux Manual Pages</title>
+<meta name="description" content="cinnamon-settings-daemon – Cinnamon settings daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-cinnamon-settings-daemon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>cinnamon-settings-daemon(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> cinnamon-settings-daemon &#8211; Cinnamon settings daemon </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>cinnamon-settings-daemon </code><code>[OPTION&#8230;]</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>cinnamon-settings-daemon</code></p>
+<dd>provides many session-wide services and functions that require a long-running process. Among the services implemented by cinnamon-settings-daemon are an XSettings manager, which provides theming, font and other settings to GTK+ applications, and a clipboard manager, which preserves clipboard contents when an application exits. Many user interface elements of <code>cinnamon</code> and <code>cinnamon-settings</code> rely on cinnamon-settings-daemon for their functionality. </dd>
+<p> The internal architecture of cinnamon-settings-daemon consists of a number of plugins, which provide functionality such as printer notifications, software update monitoring, background changing, etc. For debugging purposes, these plugins can be individually disabled by changing the gsettings key org.cinnamon.settings-daemon.plugins.<i>plugin-name</i>.active, where <i>plugin-name</i> is the name of the plugin. To see a list of all plugins, use the command <code> gsettings list-children org.cinnamon.settings-daemon.plugins </code> </p>
+<p> cinnamon-settings-daemon takes the name org.cinnamon.SettingsDaemon on the session bus to ensure that only one instance is running. Some plugins export objects under this name to make their functionality available to other applications. The interfaces of these objects should generally be considered private and unstable. </p>
+<p> cinnamon-settings-daemon is a required component of the Cinnamon desktop, i.e. it is listed in the RequiredComponents field of /usr/share/cinnamon-session/sessions/cinnamon.session. It is started in the initialization phase of the session, and <code>cinnamon-session</code> will restart it if it crashes.</p>
+<h2>OPTIONS</h2>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Prints a short help text and exits.</dd></dl>
+<p> <code>&#8211;debug</code></p>
+<dl>
+<dt>
+</dt><dd> Enables debugging code.</dd></dl>
+<p> <code>&#8211;timed-exit</code></p>
+<dl>
+<dt>
+</dt><dd> Exits after a timeout (30 seconds) for debugging.</dd></dl>
+<h2>FILES</h2>
+<p> /usr/share/cinnamon-session/sessions/cinnamon.session</p>
+<dl>
+<dt>
+</dt><dd> GNOME session definition file where cinnamon-settings-daemon is listed as a required component.</dd></dl>
+<p> /etc/xdg/autostart/cinnamon-settings-daemon.desktop</p>
+<dl>
+<dt>
+</dt><dd> Autostart file for cinnamon-settings-daemon, where its autostart phase is set.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-cinnamon/">cinnamon</a></code>(1), <code><a href="/docs/linux/man/1-cinnamon-settings/">cinnamon-settings</a></code>(1), <code><a href="/docs/linux/man/1-cinnamon-session/">cinnamon-session</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

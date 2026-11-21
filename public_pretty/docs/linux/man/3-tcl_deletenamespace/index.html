@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcl_deletenamespace(3) · Linux Manual Pages</title>
+<meta name="description" content="Tcl_AppendExportList, Tcl_CreateNamespace, Tcl_DeleteNamespace, Tcl_Export, Tcl_FindCommand, Tcl_FindNamespace, Tcl_ForgetImport, Tcl_GetCurrentNamespace, Tcl_GetGlobalNamespace, Tcl_GetNamespaceUn...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tcl_deletenamespace/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tcl_deletenamespace(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Tcl_AppendExportList, Tcl_CreateNamespace, Tcl_DeleteNamespace, Tcl_Export, Tcl_FindCommand, Tcl_FindNamespace, Tcl_ForgetImport, Tcl_GetCurrentNamespace, Tcl_GetGlobalNamespace, Tcl_GetNamespaceUnknownHandler, Tcl_Import, Tcl_SetNamespaceUnknownHandler &#8211; manipulate namespaces </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tcl.h&gt;</code>
+Tcl_Namespace *
+<code>Tcl_CreateNamespace</code>(<i>interp, name, clientData, deleteProc</i>)
+<code>Tcl_DeleteNamespace</code>(<i>nsPtr</i>)
+int
+<code>Tcl_AppendExportList</code>(<i>interp, nsPtr, objPtr</i>)
+int
+<code>Tcl_Export</code>(<i>interp, nsPtr, pattern, resetListFirst</i>)
+int
+<code>Tcl_Import</code>(<i>interp, nsPtr, pattern, allowOverwrite</i>)
+int
+<code>Tcl_ForgetImport</code>(<i>interp, nsPtr, pattern</i>)
+Tcl_Namespace *
+<code>Tcl_GetCurrentNamespace</code>(<i>interp</i>)
+Tcl_Namespace *
+<code>Tcl_GetGlobalNamespace</code>(<i>interp</i>)
+Tcl_Namespace *
+<code>Tcl_FindNamespace</code>(<i>interp, name, contextNsPtr, flags</i>)
+Tcl_Command
+<code>Tcl_FindCommand</code>(<i>interp, name, contextNsPtr, flags</i>)
+Tcl_Obj *
+<code>Tcl_GetNamespaceUnknownHandler(</code><i>interp, nsPtr</i>)
+int
+<code>Tcl_SetNamespaceUnknownHandler(</code><i>interp, nsPtr, handlerPtr</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>Tcl_Interp <i>*interp</i> (in/out) The interpreter in which the namespace exists and where name lookups are performed. Also where error result messages are written.</dd>
+<dd>const char <i>*name</i> (in) The name of the namespace or command to be created or accessed.</dd>
+<dd>ClientData <i>clientData</i> (in) A context pointer by the creator of the namespace. Not interpreted by Tcl at all.</dd>
+<dd>Tcl_NamespaceDeleteProc <i>*deleteProc</i> (in) A pointer to function to call when the namespace is deleted, or NULL if no such callback is to be performed.</dd>
+<dd>Tcl_Namespace <i>*nsPtr</i> (in) The namespace to be manipulated, or NULL (for other than <code>Tcl_DeleteNamespace</code>) to manipulate the current namespace.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (out) A reference to an unshared object to which the function output will be written.</dd>
+<dd>const char <i>*pattern</i> (in) The glob-style pattern (see <code>Tcl_StringMatch</code>) that describes the commands to be imported or exported.</dd>
+<dd>int <i>resetListFirst</i> (in) Whether the list of export patterns should be reset before adding the current pattern to it.</dd>
+<dd>int <i>allowOverwrite</i> (in) Whether new commands created by this import action can overwrite existing commands.</dd>
+<dd>Tcl_Namespace <i>*contextNsPtr</i> (in) The location in the namespace hierarchy where the search for a namespace or command should be conducted relative to when the search term is not rooted at the global namespace. NULL indicates the current namespace.</dd>
+<dd>int <i>flags</i> (in) OR-ed combination of bits controlling how the search is to be performed. The following flags are supported: <code>TCL_GLOBAL_ONLY</code> (indicates that the search is always to be conducted relative to the global namespace), <code>TCL_NAMESPACE_ONLY</code> (just for <code>Tcl_FindCommand</code>; indicates that the search is always to be conducted relative to the context namespace), and <code>TCL_LEAVE_ERR_MSG</code> (indicates that an error message should be left in the interpreter if the search fails.)</dd>
+<dd>Tcl_Obj <i>*handlerPtr</i> (in) A script fragment to be installed as the unknown command handler for the namespace, or NULL to reset the handler to its default. </dd>
+</dl>
+<h2>Description</h2>
+<p>Namespaces are hierarchic naming contexts that can contain commands and variables. They also maintain a list of patterns that describes what commands are exported, and can import commands that have been exported by other namespaces. Namespaces can also be manipulated through the Tcl command <code>namespace</code>. </p>
+<p> The <i>Tcl_Namespace</i> structure encapsulates a namespace, and is guaranteed to have the following fields in it: <i>name</i> (the local name of the namespace, with no namespace separator characters in it, with empty denoting the global namespace), <i>fullName</i> (the fully specified name of the namespace), <i>clientData</i>, <i>deleteProc</i> (the values specified in the call to <code>Tcl_CreateNamespace</code>), and <i>parentPtr</i> (a pointer to the containing namespace, or NULL for the global namespace.) </p>
+<p> <code>Tcl_CreateNamespace</code> creates a new namespace. The <i>deleteProc</i> will have the following type signature:</p>
+<dl COMPACT>
+<dd>
+<pre>typedef void (Tcl_NamespaceDeleteProc) (ClientData clientData);</pre>
+</dd></dl>
+<p> <code>Tcl_DeleteNamespace</code> deletes a namespace. </p>
+<p> <code>Tcl_AppendExportList</code> retrieves the export patterns for a namespace given namespace and appends them (as list items) to <i>objPtr</i>. </p>
+<p> <code>Tcl_Export</code> sets and appends to the export patterns for a namespace. Patterns are appended unless the <i>resetListFirst</i> flag is true. </p>
+<p> <code>Tcl_Import</code> imports commands matching a pattern into a namespace. Note that the pattern must include the name of the namespace to import from. This function returns an error if an attempt to import a command over an existing command is made, unless the <i>allowOverwrite</i> flag has been set. </p>
+<p> <code>Tcl_ForgetImport</code> removes imports matching a pattern. </p>
+<p> <code>Tcl_GetCurrentNamespace</code> returns the current namespace for an interpreter. </p>
+<p> <code>Tcl_GetGlobalNamespace</code> returns the global namespace for an interpreter. </p>
+<p> <code>Tcl_FindNamespace</code> searches for a namespace named <i>name</i> within the context of the namespace <i>contextNsPtr</i>. If the namespace cannot be found, NULL is returned. </p>
+<p> <code>Tcl_FindCommand</code> searches for a command named <i>name</i> within the context of the namespace <i>contextNsPtr</i>. If the command cannot be found, NULL is returned. </p>
+<p> <code>Tcl_GetNamespaceUnknownHandler</code> returns the unknown command handler for the namespace, or NULL if none is set. </p>
+<p> <code>Tcl_SetNamespaceUnknownHandler</code> sets the unknown command handler for the namespace. If <i>handlerPtr</i> is NULL, then the handler is reset to its default. </p>
+<h2>See Also</h2>
+<p>Tcl_CreateCommand, Tcl_ListObjAppendElements, Tcl_SetVar </p>
+<h2>Keywords</h2>
+<p>namespace, command</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

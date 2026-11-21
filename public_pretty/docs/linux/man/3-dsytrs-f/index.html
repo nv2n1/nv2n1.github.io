@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dsytrs-f(3) · Linux Manual Pages</title>
+<meta name="description" content="dsytrs.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dsytrs-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dsytrs-f(3)</h1>
+
+
+
+
+
+<p>dsytrs.f &#8211; </p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>dsytrs</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
+ <i></i><code>DSYTRS</code></p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine dsytrs (characterUPLO, integerN, integerNRHS, double precision, dimension( lda, * )A, integerLDA, integer, dimension( * )IPIV, double precision, dimension( ldb, * )B, integerLDB, integerINFO)</h3>
+<p><code>DSYTRS</code> </p>
+<p> <code>Purpose: </code></p>
+<dl COMPACT>
+<dd>
+<pre> DSYTRS solves a system of linear equations A*X = B with a real
+ symmetric matrix A using the factorization A = U*D*U**T or
+ A = L*D*L**T computed by DSYTRF.</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>UPLO</i> </dd>
+<pre> UPLO is CHARACTER*1
+ Specifies whether the details of the factorization are stored
+ as an upper or lower triangular matrix.
+ = 'U': Upper triangular, form is A = U*D*U**T;
+ = 'L': Lower triangular, form is A = L*D*L**T.</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ The order of the matrix A. N &gt;= 0.</pre>
+<p><i>NRHS</i> </p>
+<pre> NRHS is INTEGER
+ The number of right hand sides, i.e., the number of columns
+ of the matrix B. NRHS &gt;= 0.</pre>
+<p><i>A</i> </p>
+<pre> A is DOUBLE PRECISION array, dimension (LDA,N)
+ The block diagonal matrix D and the multipliers used to
+ obtain the factor U or L as computed by DSYTRF.</pre>
+<p><i>LDA</i> </p>
+<pre> LDA is INTEGER
+ The leading dimension of the array A. LDA &gt;= max(1,N).</pre>
+<p><i>IPIV</i> </p>
+<pre> IPIV is INTEGER array, dimension (N)
+ Details of the interchanges and the block structure of D
+ as determined by DSYTRF.</pre>
+<p><i>B</i> </p>
+<pre> B is DOUBLE PRECISION array, dimension (LDB,NRHS)
+ On entry, the right hand side matrix B.
+ On exit, the solution matrix X.</pre>
+<p><i>LDB</i> </p>
+<pre> LDB is INTEGER
+ The leading dimension of the array B. LDB &gt;= max(1,N).</pre>
+<p><i>INFO</i> </p>
+<pre> INFO is INTEGER
+ = 0: successful exit
+ &lt; 0: if INFO = -i, the i-th argument had an illegal value</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl COMPACT>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl COMPACT>
+<dd>November 2011</dd></dl>
+<p> Definition at line 121 of file dsytrs.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

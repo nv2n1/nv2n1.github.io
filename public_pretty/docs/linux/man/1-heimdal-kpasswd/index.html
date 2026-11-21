@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>heimdal-kpasswd(1) · Linux Manual Pages</title>
+<meta name="description" content="kpasswd – Kerberos 5 password changing program">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-heimdal-kpasswd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>heimdal-kpasswd(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>kpasswd</code> &#8211; Kerberos 5 password changing program </p>
+<h2>SYNOPSIS</h2>
+<p> [-<code>-admin-principal= </code><i>principal</i> ] [-<code>c </code><i>cache | </i> &#8211;<code>-cache= </code><i>cache</i> ] [<i>principal &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> is the client for changing passwords. </p>
+<p> If administrator principal is given that principal is used to change the password. </p>
+<p> Multiple passwords for different users can be changed at the same time, then the administrator principal will be used. If the administrator isn&#8217;t specified on the command prompt, the principal of the default credential cache will be used. </p>
+<p> If a credential cache is given, the &#8211;<code>-admin-principal</code> flag is ignored and use the default name of the credential cache is used instead.</p>
+<h2>DIAGNOSTICS</h2>
+<p> If the password quality check fails or some other error occurs, an explanation is printed.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/8-kpasswdd/">kpasswdd</a>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

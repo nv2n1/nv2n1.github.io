@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mlx5dv_alloc_var(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mlx5dv_alloc_var/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mlx5dv_alloc_var(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>mlx5dv_alloc_var - Allocates a VAR</p>
+<p>mlx5dv_free_var - Frees a VAR</p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt>
+</dt><dd> <pre><code>
+#include &lt;infiniband/mlx5dv.h&gt;
+struct mlx5dv_var *
+mlx5dv_alloc_var(struct ibv_context *context, uint32_t flags);
+void mlx5dv_free_var(struct mlx5dv_var *dv_var);
+</code></pre></dd></dl>
+<h2>DESCRIPTION</h2>
+<p>Create / free a VAR which can be used for some device commands over the DEVX interface.</p>
+<p>The DEVX API enables direct access from the user space area to the mlx5 device driver, the VAR information is needed for few commands related to Virtio.</p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>context
+</dt><dd> RDMA device context to work on.
+</dd><dt>flags
+</dt><dd> Allocation flags for the UAR.</dd></dl>
+<h3>dv_var</h3>
+<dl>
+<dt>
+</dt><dd> <pre><code>
+struct mlx5dv_var {
+    uint32_t page_id;
+    uint32_t length;
+    off_t mmap_off;
+    uint64_t comp_mask;
+};
+</code></pre>
+</dd><dt>page_id
+</dt><dd> The device page id to be used.
+</dd><dt>length
+</dt><dd> The mmap length parameter to be used for mapping a VA to the allocated VAR entry.
+</dd><dt>mmap_off
+</dt><dd> The mmap offset parameter to be used for mapping a VA to the allocated VAR entry.</dd></dl>
+<h2>RETURN VALUE</h2>
+<p>Upon success mlx5dv_alloc_var returns a pointer to the created VAR ,on error NULL will be returned and errno will be set.</p>
+<h2>SEE ALSO</h2>
+<p>mlx5dv_open_device, mlx5dv_devx_obj_create</p>
+<h2>AUTHOR</h2>
+<p>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

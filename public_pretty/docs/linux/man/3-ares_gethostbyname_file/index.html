@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ares_gethostbyname_file(3) · Linux Manual Pages</title>
+<meta name="description" content="ares_gethostbyname_file – Lookup a name in the system’s hosts file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ares_gethostbyname_file/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ares_gethostbyname_file(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> ares_gethostbyname_file &#8211; Lookup a name in the system&#8217;s hosts file</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;ares.h&gt;
+int ares_gethostbyname_file(ares_channel channel, const char *name,
+                            int family, struct hostent **host)
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>ares_gethostbyname_file</code> function performs a host lookup by name against the system&#8217;s hosts file (or equivalent local hostname database). The <i>channel</i> parameter is required, but no asynchronous queries are performed. Instead, the lookup is done via the same mechanism used to perform &#8216;f&#8217; lookups (see the <i>lookups</i> options field in <i><a href="/docs/linux/man/3-ares_init_options/">ares_init_options</a>(3)</i>). The parameter <i>name</i> gives the hostname as a NUL-terminated C string, and <i>family</i> gives the desired type of address for the resulting host entry. </p>
+<p> The return value indicates whether the query succeeded and, if not, how it failed. It may have any of the following values:</p>
+<dl>
+<dt><code>ARES_SUCCESS</code></dt>
+<dd> The host lookup completed successfully and <i>host</i> now points to the result (and must be freed with <i><a href="/docs/linux/man/3-ares_free_hostent/">ares_free_hostent</a>(3)</i>).</dd>
+<dt><code>ARES_ENOTFOUND</code></dt>
+<dd> The hostname <i>name</i> was not found.</dd>
+<dt><code>ARES_EFILE</code></dt>
+<dd> There was a file I/O error while performing the lookup.</dd>
+<dt><code>ARES_ENOMEM</code></dt>
+<dd> Memory was exhausted.</dd></dl>
+<p> On successful completion of the query, the pointer pointed to by <i>host</i> points to a <code>struct hostent</code> containing the address of the host returned by the lookup. The user must free the memory pointed to by <i>host</i> when finished with it by calling <i><a href="/docs/linux/man/3-ares_free_hostent/">ares_free_hostent</a>(3)</i>. If the lookup did not complete successfully, <i>host</i> will be <code>NULL</code>.</p>
+<h2>AVAILABILITY</h2>
+<p> Added in c-ares 1.5.4</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-ares_gethostbyname/">ares_gethostbyname</a></code>(3), <code><a href="/docs/linux/man/3-ares_free_hostent/">ares_free_hostent</a></code>(3), <code><a href="/docs/linux/man/3-ares_init_options/">ares_init_options</a></code>(3)</p>
+<h2>AUTHOR</h2>
+<p> Brad Spencer<br />
+ Copyright 1998 by the Massachusetts Institute of Technology. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

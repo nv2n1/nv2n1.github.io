@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sg_read_block_limits(8) · Linux Manual Pages</title>
+<meta name="description" content="sg_read_block_limits – send SCSI READ BLOCK LIMITS command">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-sg_read_block_limits/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>sg_read_block_limits(8)</h1>
+
+
+
+
+
+<p>sg_read_block_limits &#8211; send SCSI READ BLOCK LIMITS command</p>
+<h2>Synopsis</h2>
+<p><code>sg_read_block_limits</code> [<i>&#8211;help</i>] [<i>&#8211;hex</i>] [<i>&#8211;raw</i>] [<i>&#8211;verbose</i>] [<i>&#8211;version</i>] <i>DEVICE</i></p>
+<h2>Description</h2>
+<p>Send a SCSI READ BLOCK LIMITS command to <i>DEVICE</i> and outputs the response. This command is defined for tape (drives) and its description is found in the SSC documents at <a rel="nofollow" href="http://www.t10.org">http://www.t10.org</a> .</p>
+<h2>Options</h2>
+<p>Arguments to long options are mandatory for short options as well.</p>
+<dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hex</code></dt>
+<dd>output response in hex (rather than decode it).</dd>
+<dt><code>-r</code>, <code>&#8211;raw</code></dt>
+<dd>output response in binary to stdout.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
+<h2>Exit Status</h2>
+<p>The exit status of sg_read_block_limits is 0 when it is successful. Otherwise see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>
+<h2>Examples</h2>
+<p>It is usually okay to use no options. Here is an invocation (on the first line following the &quot;#&quot; command prompt) followed by some typical output: </p>
+<p>#&nbsp;<wbr>sg_read_block_limits&nbsp;<wbr>/dev/st0<br />
+ Read Block Limits results: </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>Minimum block size: 1 byte(s) </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>Maximum block size: 16777215 byte(s), 16383 KB, 15 MB</p>
+<h2>Authors</h2>
+<p>Written by Douglas Gilbert.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2009-2012 Douglas Gilbert<br />
+ This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+<h2>See Also</h2>
+<p><code>sg3_utils(sg3_utils)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

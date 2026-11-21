@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ccrewrite(1) · Linux Manual Pages</title>
+<meta name="description" content="ccrewrite – Rewrite CLR assemblies for runtime code contract verification.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ccrewrite/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ccrewrite(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> ccrewrite &#8211; Rewrite CLR assemblies for runtime code contract verification.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>ccrewrite &#8211;assembly=&lt;assembly&gt; [options]</code></p>
+<h2>DESCRIPTION</h2>
+<p> Rewrite CLR assemblies to convert calls into the System.Diagnostics.Contracts namespace to perform runtime contract verification. This includes contract inheritance for virtual methods. </p>
+<p> The assembly must have been built with the symbol CONTRACTS_FULL defined, otherwise the calls to the contract methods will have been removed by the compiler. </p>
+<p> Currently only pre-conditions are supported, using the Contract.Requires() method. Contract inheritance for virtual methods is supported. Only a limited range of operations and types can be used within a pre-condition, an error message will be shown if ccrewrite is unable to process the specified assembly.</p>
+<h2>CONFIGURATION OPTIONS</h2>
+<dl>
+<dt><i>&#8211;assembly &lt;assembly-name&gt;</i></dt>
+<dd> The assembly to rewrite. If no &#8211;output option is specified, then this file overwritten with the rewritten version.</dd>
+<dt><i>&#8211;debug</i></dt>
+<dd> Use debug information if available to improve the usefulness of contract failure messages.</dd>
+<dt><i>&#8211;help</i></dt>
+<dd> Show help for ccrewrite, listing configuration options.</dd>
+<dt><i>&#8211;level &lt;level&gt; (default=4)</i></dt>
+<dd> Set the which contract types are present in rewritten assembly: 0 = No contracts; 1 = Release requires; 2 = Requires; 3 = Ensures; 4 = Invariants; (Each level includes all previous levels)</dd>
+<dt><i>&#8211;output &lt;file-name&gt;</i></dt>
+<dd> Write the rewritten assembly to the specified file. If this is not present then the input assembly file is overwritten with the rewritten version.</dd>
+<dt><i>&#8211;rewrite (default=true)</i></dt>
+<dd> Rewrite the assembly. If false, then nothing is done.</dd>
+<dt><i>&#8211;throwOnFailure (default=false)</i></dt>
+<dd> Throw a ContractException on unhandled contract failure. The default behaviour is to Assert. </dd>
+</dl>
+<h2>AUTHOR</h2>
+<p> Written by Chris Bacon</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2010 Chris Bacon. Released under MIT license.</p>
+<h2>WEB SITE</h2>
+<p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

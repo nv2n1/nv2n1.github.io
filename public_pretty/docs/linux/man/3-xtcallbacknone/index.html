@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xtcallbacknone(3) · Linux Manual Pages</title>
+<meta name="description" content="XtPopup, XtPopupSpringLoaded, XtCallbackNone, XtCallbackNonexclusive, XtCallbackExclusive – map a pop-up">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xtcallbacknone/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xtcallbacknone(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XtPopup, XtPopupSpringLoaded, XtCallbackNone, XtCallbackNonexclusive, XtCallbackExclusive &#8211; map a pop-up </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/Intrinsic.h&gt;</p>
+<dl COMPACT>
+<dd>void XtPopup(Widget <i>popup_shell</i>, XtGrabKind <i>grab_kind</i>);</dd>
+<dd>void XtPopupSpringLoaded(Widget <i>popup_shell</i>);</dd>
+<dd>void XtCallbackNone(Widget <i>w</i>, XtPointer <i>client_data</i>, XtPointer <i>call_data</i>);</dd>
+<dd>void XtCallbackNonexclusive(Widget <i>w</i>, XtPointer <i>client_data</i>, XtPointer <i>call_data</i>);</dd>
+<dd>void XtCallbackExclusive(Widget <i>w</i>, XtPointer <i>client_data</i>, XtPointer <i>call_data</i>);</dd></dl>
+<h2>Actions</h2>
+<dl COMPACT>
+<dd>void XtMenuPopup(String <i>shell_name</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>call_data</i></dt>
+<dd>Specifies the callback data, which is not used by this procedure.</dd>
+<dt><i>client_data</i></dt>
+<dd>Specifies the pop-up shell.</dd>
+<dt><i>grab_kind</i></dt>
+<dd>Specifies the way in which user events should be constrained.</dd>
+<dt><i>popup_shell</i></dt>
+<dd>Specifies the widget shell.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XtPopup</code> function performs the following:</p>
+<dl COMPACT>
+<dt>&bull;</dt>
+<dd>Calls <code>XtCheckSubclass</code> to ensure popup_shell is a subclass of <code>Shell</code>.</dd>
+<dt>&bull;</dt>
+<dd>Generates an error if the shell&#8217;s popped_up field is already <code>True</code>.</dd>
+<dt>&bull;</dt>
+<dd>Calls the callback procedures on the shell&#8217;s popup_callback list.</dd>
+<dt>&bull;</dt>
+<dd>Sets the shell popped_up field to <code>True</code>, the shell spring_loaded field to <code>False</code>, and the shell grab_kind field from grab_kind.</dd>
+<dt>&bull;</dt>
+<dd>If the shell&#8217;s create_popup_child field is non-NULL, <code>XtPopup</code> calls it with popup_shell as the parameter.</dd>
+<dt>&bull;</dt>
+<dd>If grab_kind is either <code>XtGrabNonexclusive</code> or <code>XtGrabExclusive</code>, it calls:</dd></dl>
+<dl COMPACT>
+<dd>
+<pre>XtAddGrab(popup_shell, (grab_kind == XtGrabExclusive), False)</pre>
+</dd></dl>
+<dl COMPACT>
+<dt>&bull;</dt>
+<dd>Calls <code>XtRealizeWidget</code> with popup_shell specified.</dd>
+<dt>&bull;</dt>
+<dd>Calls <code>XMapWindow</code> with popup_shell specified.</dd></dl>
+<p> The <code>XtPopupSpringLoaded</code> function performs exactly as <code>XtPopup</code> except that it sets the shell <i>spring_loaded</i> field to <code>True</code> and always calls <code>XtAddGrab</code> with <i>exclusive</i> <code>True</code> and <i>spring_loaded</i> <code>True</code>. </p>
+<p> The <code>XtCallbackNone</code>, <code>XtCallbackNonexclusive</code>, and <code>XtCallbackExclusive</code> functions call <code>XtPopup</code> with the shell specified by the client data argument and grab_kind set as the name specifies. <code>XtCallbackNone</code>, <code>XtCallbackNonexclusive</code>, and <code>XtCallbackExclusive</code> specify <code>XtGrabNone</code>, <code>XtGrabNonexclusive</code>, and <code>XtGrabExclusive</code>, respectively. Each function then sets the widget that executed the callback list to be insensitive by using <code>XtSetSensitive</code>. Using these functions in callbacks is not required. In particular, an application must provide customized code for callbacks that create pop-up shells dynamically or that must do more than desensitizing the button. </p>
+<p> <code>XtMenuPopup</code> is known to the translation manager, which must perform special actions for spring-loaded pop-ups. Calls to <code>XtMenuPopup</code> in a translation specification are mapped into calls to a nonexported action procedure, and the translation manager fills in parameters based on the event specified on the left-hand side of a translation. </p>
+<p> If <code>XtMenuPopup</code> is invoked on <code>ButtonPress</code> (possibly with modifiers), the translation manager pops up the shell with grab_kind set to <code>XtGrabExclusive</code> and spring_loaded set to <code>True</code>. If <code>XtMenuPopup</code> is invoked on <code>EnterWindow</code> (possibly with modifiers), the translation manager pops up the shell with grab_kind set to <code>XtGrabNonexclusive</code> and spring_loaded set to <code>False</code>. Otherwise, the translation manager generates an error. When the widget is popped up, the following actions occur:</p>
+<dl COMPACT>
+<dt>&bull;</dt>
+<dd>Calls <code>XtCheckSubclass</code> to ensure popup_shell is a subclass of <code>Shell</code>.</dd>
+<dt>&bull;</dt>
+<dd>Generates an error if the shell&#8217;s popped_up field is already <code>True</code>.</dd>
+<dt>&bull;</dt>
+<dd>Calls the callback procedures on the shell&#8217;s popup_callback list.</dd>
+<dt>&bull;</dt>
+<dd>Sets the shell popped_up field to <code>True</code> and the shell grab_kind and spring_loaded fields appropriately.</dd>
+<dt>&bull;</dt>
+<dd>If the shell&#8217;s create_popup_child field is non-NULL, it is called with popup_shell as the parameter.</dd>
+<dt>&bull;</dt>
+<dd>Calls:</dd></dl>
+<dl COMPACT>
+<dd>
+<pre>XtAddGrab(popup_shell, (grab_kind == XtGrabExclusive), spring_loaded)</pre>
+</dd></dl>
+<dl COMPACT>
+<dt>&bull;</dt>
+<dd>Calls <code>XtRealizeWidget</code> with popup_shell specified.</dd>
+<dt>&bull;</dt>
+<dd>Calls <code>XMapWindow</code> with popup_shell specified.</dd></dl>
+<p> (Note that these actions are the same as those for <code>XtPopup</code>.) <code>XtMenuPopup</code> tries to find the shell by searching the widget tree starting at the parent of the widget in which it is invoked. If it finds a shell with the specified name in the pop-up children of that parent, it pops up the shell with the appropriate parameters. Otherwise, it moves up the parent chain as needed. If <code>XtMenuPopup</code> gets to the application widget and cannot find a matching shell, it generates an error.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xtcreatepopupshell/">XtCreatePopupShell</a>(3), <a href="/docs/linux/man/3-xtpopdown/">XtPopdown</a>(3)<br />
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

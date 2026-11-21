@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rpmrebuild(1) · Linux Manual Pages</title>
+<meta name="description" content="rpmrebuild – a tool to build an rpm package from an installed package">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rpmrebuild/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rpmrebuild(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> rpmrebuild &#8211; a tool to build an rpm package from an installed package </p>
+<h2>SYNOPSIS</h2>
+<p> rpmrebuild [<i>option</i>] &lt;<i>packagename</i>&gt; </p>
+<h2>DESCRIPTION</h2>
+<p> rpmrebuild is a tool to build easily rpm package. it can be used to build an rpm file from an installed package (lost rpm) or to quickly make change to a package: just have your change on installed files and call rpmrebuild. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-5 &#8211;md5-compat-digest</code></dt>
+<dd> use rpm 4.4 compatible digest (md5)</dd>
+<dt><code>-a, &#8211;additional</code>=&lt;<i>flags</i>&gt;</dt>
+<dd> pass additional flags to <code>rpmbuild</code></dd>
+<dt><code>-b, &#8211;batch</code></dt>
+<dd> work in batch mode (no interactive query if files change)</dd>
+<dt><code>&#8211;cap-from-db (default)</code></dt>
+<dd> set files posix capabilities as saved in rpm database</dd>
+<dt><code>&#8211;cap-from-fs</code></dt>
+<dd> set files posix capabilities as installed files (do not force to original capabilities, saved in rpm database)</dd>
+<dt><code>-c, &#8211;comment-missing</code>=&lt;<i>yes</i>|<i>no</i>&gt;</dt>
+<dd> comment out in the specfile missing files. Default: <code>no</code>.</dd>
+<dt><code>-D, &#8211;define</code>=&lt;<i>defines</i>&gt;</dt>
+<dd> defines to be passed to rpmbuild.</dd>
+<dt><code>-d, &#8211;directory</code>=&lt;<i>directory</i>&gt;</dt>
+<dd> rpm package result will be written in <i>directory</i>.</dd>
+<dt><code>-e, &#8211;edit-spec</code></dt>
+<dd> alias to &#8211;edit-whole.</dd>
+<dt><code>-f, &#8211;filter</code>=&lt;<i>command</i>&gt;</dt>
+<dd> alias for <code>&#8211;change-spec-whole</code></dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> output help information about all, but plugins option and exit.</dd>
+<dt><code>&#8211;help-plugins</code></dt>
+<dd> output help information about plugins options and exit.</dd>
+<dt><code>-i, &#8211;include</code>=&lt;<i>file</i>&gt;</dt>
+<dd> read more options from the file &#8216;file&#8217;.</dd>
+<dt><code>-I, &#8211;install&gt;</dt>
+<dd> install the created package</dd>
+<dt>-k, &#8211;keep-perm</dt>
+<dd> alias to &#8211;pug-from-fs</code></dd>
+<dt><code>-l, &#8211;list-plugin</code></dt>
+<dd> list installed plugins</dd>
+<dt><code>-m, &#8211;modify</code>=&lt;<i>command</i>&gt;</dt>
+<dd> alias to <code>&#8211;change-files</dd>
+<dt>-n, &#8211;notest-install </code></dt>
+<dd> do not test install at end of rpm building</dd>
+<dt><code>-p, &#8211;package</code></dt>
+<dd> use package file, not installed rpm (this option is like rpm&#8217;s -p option)</dd>
+<dt><code>&#8211;pug-from-db (default)</code></dt>
+<dd> set files permission, uid and gid as saved in rpm database</dd>
+<dt><code>&#8211;pug-from-fs</code></dt>
+<dd> keep installed files permission, uid and gid (do not force to original files permission, uid and gid saved in rpm database)</dd>
+<dt><code>-P, &#8211;autoprovide</code></dt>
+<dd> use rpm scripts to compute provides</dd>
+<dt><code>-R, &#8211;autorequire</code></dt>
+<dd> use rpm scripts to compute requires</dd>
+<dt><code>-r, &#8211;release</code>=&lt;<i>version</i>&gt;</dt>
+<dd> specify a release</dd>
+<dt><code>-s, &#8211;spec-only</code>=&lt;<i>specfile</i>&gt;</dt>
+<dd> do not rebuild package, only generate specfile. Can&#8217;t be used with <code>&#8211;change-files</code>.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> verbose output</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> for debugging purposes : do not remove temporary files at end of work</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> output version information and exit.</dd>
+<dt><code>-w, &#8211;warning</code></dt>
+<dd> display some warnings if it detects a potential problem (for example, spec file which contains filename with globbing char).</dd>
+<dt><code>-y, &#8211;verify</code>=&lt;<i>yes</i>|<i>no</i>&gt;</dt>
+<dd> Turn on/off package verifying before processing. Default: <code>yes</code>. Can be turn off to get better performance.</dd></dl>
+<p> PLUGINS OPTION </p>
+<p> rpmrebuild use may be extended with plugins. Plugins are searched in <code>/usr/lib/rpmrebuild/plugins</code> and then in $PATH</p>
+<dl>
+<dt><code>&#8211;change-files</code>=&lt;<i>command</i>&gt;</dt>
+<dd> Invoke plugin which change package&#8217;s files. Note, that these files are copied before to the temporary location, so installed package&#8217;s files not changed.<br />
+ Can&#8217;t be used with <code>&#8211;spec-only</code></dd></dl>
+<p> <code>&#8211;change-spec-whole</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-whole</p>
+<dl>
+<dt>
+</dt><dd> Invoke plugin or editor to change specfile.</dd></dl>
+<p> &#8211;change-spec-preamble</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-preamble </p>
+<p> &#8211;change-spec-conflicts</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-conflicts </p>
+<p> &#8211;change-spec-obsoletes</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-obsoletes </p>
+<p> &#8211;change-spec-provides</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-provides </p>
+<p> &#8211;change-spec-requires</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-requires </p>
+<p> &#8211;change-spec-suggests</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-suggests </p>
+<p> &#8211;change-spec-enhances</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-enhances </p>
+<p> &#8211;change-spec-description</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-description </p>
+<p> &#8211;change-spec-files</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-files </p>
+<p> &#8211;change-spec-triggers</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-triggers </p>
+<p> &#8211;change-spec-pre</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-pre </p>
+<p> &#8211;change-spec-post</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-post </p>
+<p> &#8211;change-spec-preun</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-preun </p>
+<p> &#8211;change-spec-postun</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-postun </p>
+<p> &#8211;change-spec-pretrans</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-postrans </p>
+<p> &#8211;change-spec-postrans</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-postrans </p>
+<p> &#8211;change-spec-verifyscript</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-verifyscript </p>
+<p> &#8211;change-spec-changelog</code>=&lt;<i>command</i>&gt;<br />
+ <code>&#8211;edit-changelog </p>
+<dl>
+<dt>
+</dt><dd> Invoke plugin or editor to change preamble, conflicts, obsoletes, provides, requires, description, files, triggers, preinstall, postinstall, preuninstall, postuninstall, verifyscript or changelog.<br />
+ None of these options can be specified after &#8211;change-spec-whole</code> or <code>&#8211;edit-whole</code>. </dd>
+</dl>
+<h2>INCLUDE FILES</h2>
+<p> Any of the rpmrebuild&#8217;s LONG option can be specified on the command line or in the include file (file specified with -i/&#8211;include option). </p>
+<p> Include files are also searched in the <code>/usr/lib/rpmrebuild/plugins</code> directory. </p>
+<p> Include file has following syntax.</p>
+<dl>
+<dt><code>comments</code></dt>
+<dd> Any line begin with &#8216;#&#8217; or some number of whitespace and &#8216;#&#8217;.</dd>
+<dt><code>empty line</code></dt>
+<dd> empty line are ignored.</dd>
+<dt><code>option line</code></dt>
+<dd> option line is very similar to the option written on the command line. the limitation of the option line in the file are:</dd>
+<dl>
+<dl>
+<dt>long option</dt>
+<dd> should be used ONLY long options WITHOUT leading &#8211;.</dd>
+<dt>option&#8217;s argument</dt>
+<dd> option&#8217;s argument should not be quoted.</dd>
+<dt>separator</dt>
+<dd> option&#8217;s argument should be separated from option by spaces or tabs, not by equal (&#8216;=&#8217;) sign.</dd>
+<dt>non-optional argument(s)</dt>
+<dd> package name (non-optional argument) shouldn&#8217;t be specified in the include file.</dd></dl>
+</dl>
+</dl>
+<p> For example, if command line looks like:</p>
+<dl>
+<dt>
+</dt><dd> rpmrebuild &#8211;change-files=&quot;pgm1 a b c&quot; &#8211;change-spec-pre=&quot;pgm2 bb&quot; pkg</dd></dl>
+<p> Then include file should be written like:</p>
+<dl>
+<dt>
+</dt><dd> change-files pgm1 a b c<br />
+ change-spec-pre pgm2 bb
+</dd></dl>
+<h2>FILES</h2>
+<dl>
+<dt><code>~/.rpmmacros</code></dt>
+<dd> is used by rpm when building packages (macros)</dd>
+<dt><code>$RPMREBUILD_TMPDIR/work</code></dt>
+<dd> directory where rpmrebuild put temporary files. </dd>
+</dl>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>RPMREBUILD_TMPDIR</code></dt>
+<dd> Directory for temporal files. If not set ~/.tmp/rpmrebuild.$$ is used.</dd>
+<dt><code>RPMREBUILD_OPTS</code></dt>
+<dd> This is another way to pass options to rpmrebuild (to use with care). It allows to change the default options on a host. For example to activate the un_prelink plugin, just set RPMREBUILD_OPTS=&quot;&#8211;include un_prelink.plug&quot;</dd>
+<dt><code>VISUAL</code></dt>
+<dd> used to specify an editor for specfile. if not set <code>EDITOR</code> variable examined.</dd>
+<dt><code>EDITOR</code></dt>
+<dd> used to specify an editor for specfile. if not set <code>vi</code> used. </dd>
+</dl>
+<h2>EXAMPLES</h2>
+<p> Build an rpm package as closed as possible to original one: </p>
+<p> <code>rpmrebuild &#8211;batch package</code> </p>
+<p> Build a modified package: </p>
+<p> <code>rpmrebuild &#8211;keep-perm package</code> </p>
+<p> Build a rpm from another rpm file: </p>
+<p> <code>rpmrebuild &#8211;package &#8211;filter filter /usr/src/redhat/i386/package-i386.rpm</code> </p>
+<p> rebuild and sign the bash package </p>
+<p> <code>rpmrebuild &#8211;additional &quot;&#8211;sign&quot; bash</code> </p>
+<p> Rebuild rpm as legacy (rpm[23]) package: </p>
+<p> <code>rpmrebuild &#8211;additional &quot;&#8211;nodirtokens&quot; bash</code> </p>
+<p> Specify generated rpm name: </p>
+<p> <code>rpmrebuild &#8211;define &quot;_rpmfilename %%{NAME}.rpm&quot; bash</code> </p>
+<p> Change package interactive </p>
+<p> <code>rpmrebuild &#8211;package &#8211;change-files &quot;/bin/bash&quot; /some/place/bash.rpm</code> </p>
+<p> Change package non-interactive </p>
+<p> <code>rpmrebuild &#8211;package &#8211;change-files &quot;a.sh &amp;&amp; b.sh&quot; /some/place/bash.rpm</code> </p>
+<p> if you have problem with rpm building, and if you know specfile syntax, you can also edit it: </p>
+<p> <code>rpmrebuild &#8211;edit-whole package</code> </p>
+<p> batch change of version tag </p>
+<p> <code>rpmrebuild &#8211;change-spec-preamble=&#8217;sed -e &quot;s/^Version:.*/Version: YourVersion/&quot;&#8217; YourPackage</code> </p>
+<h2>AUTHORS</h2>
+<p> Eric Gerbier &lt;gerbier [at] users.sourceforge.net&gt;<br />
+ Valery Reznic &lt;valery_reznic [at] users.sourceforge.net&gt;</p>
+<dl>
+<dt>See &lt;URL:<a rel="nofollow" href="http://rpmrebuild.sourceforge.net/">http://rpmrebuild.sourceforge.net/</a>&gt;.</dt>
+<dd>
+</dd></dl>
+<h2>NOTES</h2>
+<dl>
+<dt>rpmrebuild can not reproduce exactly a package, so</dt>
+<dd>
+ &#8211; md5 checksum will not match original ones.<br />
+ &#8211; gpg or pgp signatures are lost</dd>
+<dt>packages which contains file with globbing characters (* .. ? ) will not build</dt>
+<dd>
+</dd></dl>
+<h2>COPYRIGHT</h2>
+<p> rpmrebuild is copyright (C) 2002 by Eric Gerbier.<br />
+ this program is distributed under GNU General Public License<br />
+ It is provided &quot;as is&quot;, without any express or implied warranties.<br />
+ See the file COPYING for details. </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/8-rpm/">rpm</a>(8), <a href="/docs/linux/man/8-rpmbuild/">rpmbuild</a>(8), <a href="/docs/linux/man/1-rpmrebuild_plugins/">rpmrebuild_plugins</a>(1), &#8216;man -k rrp&#8217; for plugins specific manpages. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

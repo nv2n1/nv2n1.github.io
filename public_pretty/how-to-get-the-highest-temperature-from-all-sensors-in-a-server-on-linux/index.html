@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Querying Maximum Temperature Across Linux Server Sensors - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-get-the-highest-temperature-from-all-sensors-in-a-server-on-linux/">
+  <meta name="description" content="Monitoring server temperatures is essential for preventing hardware damage and maintaining system stability. Linux provides several tools to query thermal …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Querying Maximum Temperature Across Linux Server Sensors">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-get-the-highest-temperature-from-all-sensors-in-a-server-on-linux/">
+  <meta property="og:description" content="Monitoring server temperatures is essential for preventing hardware damage and maintaining system stability. Linux provides several tools to query thermal …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/general-system-administration/">General System Administration</a>
+        </nav>
+        
+        <h1>Querying Maximum Temperature Across Linux Server Sensors</h1>
+        <time class="post-date" datetime="2018-03-24T11:53:32Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Monitoring server temperatures is essential for preventing hardware damage and maintaining system stability. Linux provides several tools to query thermal sensors and identify which components are running hot.</p>
+<h2 id="using-lm-sensors">Using lm-sensors</h2>
+<p>The most reliable approach is <code>lm-sensors</code>, a userspace tool that reads temperature data from kernel drivers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Install lm-sensors</span>
+</span></span><span class="line"><span class="cl">sudo apt install lm-sensors    <span class="c1"># Debian/Ubuntu</span>
+</span></span><span class="line"><span class="cl">sudo dnf install lm-sensors    <span class="c1"># Fedora/RHEL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Initialize and detect sensors</span>
+</span></span><span class="line"><span class="cl">sudo sensors-detect
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># List all sensor readings</span>
+</span></span><span class="line"><span class="cl">sensors
+</span></span></code></pre></div><p>The <code>sensors</code> command displays raw output from all detected thermal zones and their current temperatures.</p>
+<h2 id="extracting-the-highest-temperature">Extracting the Highest Temperature</h2>
+<p>To get just the maximum temperature across all sensors:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sensors <span class="p">|</span> grep -oE <span class="s1">&#39;[0-9]+\.[0-9]+°C&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/°C//&#39;</span> <span class="p">|</span> sort -rn <span class="p">|</span> head -1
+</span></span></code></pre></div><p>This pipeline extracts temperature values, removes the degree symbol, sorts numerically in descending order, and returns the highest value.</p>
+<p>For a more robust approach using <code>awk</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sensors <span class="p">|</span> awk <span class="s1">&#39;/Core|Package|Temp/ {gsub(/[^0-9.]/,&#34;&#34;,$NF); print $NF}&#39;</span> <span class="p">|</span> sort -rn <span class="p">|</span> head -1
+</span></span></code></pre></div><h2 id="using-the-sysfs-interface">Using the sysfs Interface</h2>
+<p>Temperatures are also exposed directly in sysfs without requiring additional tools:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># List all thermal zones</span>
+</span></span><span class="line"><span class="cl">ls /sys/class/thermal/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Read specific zone temperature (in millidegrees Celsius)</span>
+</span></span><span class="line"><span class="cl">cat /sys/class/thermal/thermal_zone0/temp
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Get highest temperature from all zones</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> zone in /sys/class/thermal/thermal_zone*/temp<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;scale=1; </span><span class="k">$(</span>cat <span class="nv">$zone</span><span class="k">)</span><span class="s2"> / 1000&#34;</span> <span class="p">|</span> bc
+</span></span><span class="line"><span class="cl"><span class="k">done</span> <span class="p">|</span> sort -rn <span class="p">|</span> head -1
+</span></span></code></pre></div><h2 id="checking-hwmon-interface">Checking hwmon Interface</h2>
+<p>Many modern sensors report through hwmon:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Find all hwmon devices</span>
+</span></span><span class="line"><span class="cl">find /sys/class/hwmon -name <span class="s2">&#34;temp*_input&#34;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> f<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="k">$(</span>basename <span class="nv">$f</span><span class="k">)</span><span class="s2">: </span><span class="k">$(</span>cat <span class="nv">$f</span><span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></div><p>Divide by 1000 to convert millidegrees to Celsius.</p>
+<h2 id="real-time-monitoring-with-acpi">Real-time Monitoring with acpi</h2>
+<p>For quick checks without installing extra packages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># View thermal zone information</span>
+</span></span><span class="line"><span class="cl">cat /proc/acpi/thermal_cooling/THM0/temperature
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or use acpi tool if available</span>
+</span></span><span class="line"><span class="cl">acpi -t
+</span></span></code></pre></div><h2 id="creating-a-monitoring-script">Creating a Monitoring Script</h2>
+<p>Combine these approaches into a practical script:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Get max temperature from lm-sensors</span>
+</span></span><span class="line"><span class="cl">get_max_temp<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="nb">command</span> -v sensors <span class="p">&amp;</span>&gt;/dev/null<span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    sensors <span class="p">|</span> grep -oE <span class="s1">&#39;[0-9]+\.[0-9]+°C&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/°C//&#39;</span> <span class="p">|</span> sort -rn <span class="p">|</span> head -1
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Fallback to sysfs</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> zone in /sys/class/thermal/thermal_zone*/temp<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">echo</span> <span class="s2">&#34;scale=1; </span><span class="k">$(</span>cat <span class="nv">$zone</span><span class="k">)</span><span class="s2"> / 1000&#34;</span> <span class="p">|</span> bc
+</span></span><span class="line"><span class="cl">    <span class="k">done</span> <span class="p">|</span> sort -rn <span class="p">|</span> head -1
+</span></span><span class="line"><span class="cl">  <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">max_temp</span><span class="o">=</span><span class="k">$(</span>get_max_temp<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Maximum temperature: </span><span class="si">${</span><span class="nv">max_temp</span><span class="si">}</span><span class="s2">°C&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Optional: Alert if exceeds threshold</span>
+</span></span><span class="line"><span class="cl"><span class="nv">threshold</span><span class="o">=</span><span class="m">85</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">((</span> <span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$max_temp</span><span class="s2"> &gt; </span><span class="nv">$threshold</span><span class="s2">&#34;</span> <span class="p">|</span> bc -l<span class="k">)</span> <span class="o">))</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;WARNING: Temperature above </span><span class="si">${</span><span class="nv">threshold</span><span class="si">}</span><span class="s2">°C&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><h2 id="integration-with-monitoring-systems">Integration with Monitoring Systems</h2>
+<p>For continuous monitoring in production environments:</p>
+<ul>
+<li><strong>Prometheus</strong>: Use textfile collectors to expose temperature metrics from a cron job</li>
+<li><strong>Telegraf</strong>: Built-in <code>inputs.exec</code> plugin can run temperature scripts</li>
+<li><strong>systemd timer</strong>: Replace cron with a systemd timer for better integration</li>
+</ul>
+<p>Example Prometheus exporter script:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="nv">max_temp</span><span class="o">=</span><span class="k">$(</span>sensors <span class="p">|</span> grep -oE <span class="s1">&#39;[0-9]+\.[0-9]+°C&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/°C//&#39;</span> <span class="p">|</span> sort -rn <span class="p">|</span> head -1<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;node_thermal_max_celsius </span><span class="nv">$max_temp</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><h2 id="important-considerations">Important Considerations</h2>
+<ul>
+<li><strong>Permissions</strong>: Reading sysfs directly may require root; configure sudo rules if scripting</li>
+<li><strong>Sensor accuracy</strong>: Not all sensors are equally reliable; cross-reference multiple readings</li>
+<li><strong>Thresholds</strong>: Check your hardware documentation for safe operating temperatures (typically 80-95°C for CPUs)</li>
+<li><strong>Cooling verification</strong>: High sustained temperatures indicate cooling issues; check for dust, thermal paste degradation, or fan failures</li>
+</ul>
+<p>Always validate temperature readings match your system’s actual load and ambient conditions.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

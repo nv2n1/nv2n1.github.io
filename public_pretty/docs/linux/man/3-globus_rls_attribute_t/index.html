@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_rls_attribute_t(3) · Linux Manual Pages</title>
+<meta name="description" content="globus_rls_attribute_t –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_rls_attribute_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_rls_attribute_t(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> globus_rls_attribute_t &#8211; </p>
+<p> Object (LFN or PFN) attribute type.</p>
+<h2>SYNOPSIS</h2>
+<h3>Data Fields</h3>
+<p> char * <code>name</code> </p>
+<p> <code>globus_rls_obj_type_t</code> <code>objtype</code> </p>
+<p> <code>globus_rls_attr_type_t</code> <code>type</code> </p>
+<p> union { </p>
+<p> time_t <code>t</code> </p>
+<p> double <code>d</code> </p>
+<p> int <code>i</code> </p>
+<p> char * <code>s</code> </p>
+<p> } <code>val</code> </p>
+<h2>Detailed Description</h2>
+<p> Object (LFN or PFN) attribute type.</p>
+<h2>Field Documentation</h2>
+<h3>char* <code>globus_rls_attribute_t::name</code></h3>
+<p> Attribute name.</p>
+<h3><code>globus_rls_obj_type_t</code> <code>globus_rls_attribute_t::objtype</code></h3>
+<p> Object type.</p>
+<h3><code>globus_rls_attr_type_t</code> <code>globus_rls_attribute_t::type</code></h3>
+<p> Attribute value type.</p>
+<h3>time_t <code>globus_rls_attribute_t::t</code></h3>
+<p> Date value (unix time).</p>
+<h3>double <code>globus_rls_attribute_t::d</code></h3>
+<p> Floating point value.</p>
+<h3>int <code>globus_rls_attribute_t::i</code></h3>
+<p> Integer value.</p>
+<h3>char* <code>globus_rls_attribute_t::s</code></h3>
+<p> String value.</p>
+<h3>union { &#8230; } <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> <code>globus_rls_attribute_t::val</code></h3>
+<p> Value of attribute (depends on type). </p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus rls client from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAO">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>passwd(5) · Linux Manual Pages</title>
+<meta name="description" content="passwd – the password file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-passwd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>passwd(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>passwd &#8211; the password file</p>
+<h2>Description</h2>
+<p>/etc/passwd contains one line for each user account, with seven fields delimited by colons (&#8220;:&#8221;). These fields are: </p>
+<dl>
+<dd>&bull; login name</dd></dl>
+<dl>
+<dd>&bull; optional encrypted password</dd></dl>
+<dl>
+<dd>&bull; numerical user ID</dd></dl>
+<dl>
+<dd>&bull; numerical group ID</dd></dl>
+<dl>
+<dd>&bull; user name or comment field</dd></dl>
+<dl>
+<dd>&bull; user home directory</dd></dl>
+<dl>
+<dd>&bull; optional user command interpreter</dd></dl>
+<p> If the <i>password</i> field is a lower-case &#8220;x&#8221;, then the encrypted password is actually stored in the <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5) file instead; there <i>must</i> be a corresponding line in the /etc/shadow file, or else the user account is invalid. </p>
+<p> The encrypted <i>password</i> field may be empty, in which case no password is required to authenticate as the specified login name. However, some applications which read the /etc/passwd file may decide not to permit <i>any</i> access at all if the <i>password</i> field is blank. </p>
+<p> A <i>password</i> field which starts with an exclamation mark means that the password is locked. The remaining characters on the line represent the <i>password</i> field before the password was locked. </p>
+<p> Refer to <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) for details on how this string is interpreted. </p>
+<p> If the password field contains some string that is not a valid result of <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3), for instance ! or *, the user will not be able to use a unix password to log in (but the user may log in the system by other means). </p>
+<p> The comment field is used by various system utilities, such as <code><a href="/docs/linux/man/1-finger/">finger</a></code>(1). </p>
+<p> The home directory field provides the name of the initial working directory. The <code>login</code> program uses this information to set the value of the <code>$HOME</code> environmental variable. </p>
+<p> The command interpreter field provides the name of the user&#8217;s command language interpreter, or the name of the initial program to execute. The <code>login</code> program uses this information to set the value of the <code>$SHELL</code> environmental variable. If this field is empty, it defaults to the value /bin/sh.</p>
+<h2>Files</h2>
+<p>/etc/passwd</p>
+<dl>
+<dd>User account information.</dd></dl>
+<p> /etc/shadow</p>
+<dl>
+<dd>optional encrypted password file</dd></dl>
+<p> /etc/passwd-</p>
+<dl>
+<dd>Backup file for /etc/passwd. </dd>
+<p> Note that this file is used by the tools of the shadow toolsuite, but not by all user and password management tools.</dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3), <code><a href="/docs/linux/man/1-getent/">getent</a></code>(1), <code><a href="/docs/linux/man/3-getpwnam/">getpwnam</a></code>(3), <code><a href="/docs/linux/man/1-login/">login</a></code>(1), <code><a href="/docs/linux/man/1-passwd/">passwd</a></code>(1), <code><a href="/docs/linux/man/8-pwck/">pwck</a></code>(8), <code><a href="/docs/linux/man/8-pwconv/">pwconv</a></code>(8), <code><a href="/docs/linux/man/8-pwunconv/">pwunconv</a></code>(8), <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5), <code><a href="/docs/linux/man/1-su/">su</a></code>(1), <code><a href="/docs/linux/man/8-sulogin/">sulogin</a></code>(8). </p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

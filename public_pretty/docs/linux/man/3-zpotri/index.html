@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zpotri(3) · Linux Manual Pages</title>
+<meta name="description" content="zpotri.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-zpotri/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>zpotri(3)</h1>
+
+
+
+
+
+<p>zpotri.f &#8211;</p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>zpotri</code> (UPLO, N, A, LDA, INFO)<br />
+ <i></i><code>ZPOTRI</code></p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine zpotri (characterUPLO, integerN, complex*16, dimension( lda, * )A, integerLDA, integerINFO)</h3>
+<p><code>ZPOTRI</code> </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dd>
+<pre> ZPOTRI computes the inverse of a complex Hermitian positive definite
+ matrix A using the Cholesky factorization A = U**H*U or A = L*L**H
+ computed by ZPOTRF.</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>UPLO</i> </dd>
+<pre> UPLO is CHARACTER*1
+ = 'U': Upper triangle of A is stored;
+ = 'L': Lower triangle of A is stored.</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ The order of the matrix A. N &gt;= 0.</pre>
+<p><i>A</i> </p>
+<pre> A is COMPLEX*16 array, dimension (LDA,N)
+ On entry, the triangular factor U or L from the Cholesky
+ factorization A = U**H*U or A = L*L**H, as computed by
+ ZPOTRF.
+ On exit, the upper or lower triangle of the (Hermitian)
+ inverse of A, overwriting the input factor U or L.</pre>
+<p><i>LDA</i> </p>
+<pre> LDA is INTEGER
+ The leading dimension of the array A. LDA &gt;= max(1,N).</pre>
+<p><i>INFO</i> </p>
+<pre> INFO is INTEGER
+ = 0: successful exit
+ &lt; 0: if INFO = -i, the i-th argument had an illegal value
+ &gt; 0: if INFO = i, the (i,i) element of the factor U or L is
+ zero, and the inverse could not be computed.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dd>November 2011</dd></dl>
+<p> Definition at line 96 of file zpotri.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

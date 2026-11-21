@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pnmcat(1) · Linux Manual Pages</title>
+<meta name="description" content="pnmcat – concatenate portable anymaps">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pnmcat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pnmcat(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pnmcat &#8211; concatenate portable anymaps </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pnmcat</code> [<code>-white</code>|<code>-black</code>] <code>-leftright</code>|<code>-lr</code> [<code>-jtop</code>|<code>-jbottom</code>] <i>pnmfile pnmfile</i> &#8230;<br />
+ <code>pnmcat</code> [<code>-white</code>|<code>-black</code>] <code>-topbottom</code>|<code>-tb</code> [<code>-jleft</code>|<code>-jright</code>] <i>pnmfile pnmfile</i> &#8230; </p>
+<h2>DESCRIPTION</h2>
+<p> Reads portable anymaps as input. Concatenates them either left to right or top to bottom, and produces a portable anymap as output. </p>
+<p> <code>pamdice</code> splits an image up into smaller ones. </p>
+<p> <code>pnmtile</code> concatenates a single input image to itself repeatedly. </p>
+<h2>OPTIONS</h2>
+<p> If the anymaps are not all the same height (left-right) or width (top-bottom), the smaller ones have to be justified with the largest. By default, they get centered, but you can specify one side or the other with one of the -j* flags. So, <code>-topbottom -jleft</code> would stack the anymaps on top of each other, flush with the left edge. </p>
+<p> The <code>-white</code> and <code>-black</code> flags specify what color to use to fill in the extra space when doing this justification. If neither is specified, the program makes a guess. </p>
+<p> All flags can be abbreviated to their shortest unique prefix. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pamdice/">pamdice</a></code>(1), <code><a href="/docs/linux/man/1-pnmtile/">pnmtile</a></code>(1), <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
+<h2>AUTHOR</h2>
+<p> Copyright (C) 1989 by Jef Poskanzer. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

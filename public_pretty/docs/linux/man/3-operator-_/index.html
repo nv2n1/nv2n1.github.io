@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>operator-_(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::Handle – Shared handle to an observable.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-operator-_/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>operator-_(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::Handle &#8211; Shared handle to an observable. </p>
+<h2>Synopsis</h2>
+<pre><code>Handle (const boost::shared_ptr&lt; T &gt; &amp;h=boost::shared_ptr&lt; T &gt;(), bool registerAsObserver=true)
+const boost::shared_ptr&lt; T &gt; &amp; currentLink () const
+dereferencing
+const boost::shared_ptr&lt; T &gt; &amp; operator-&gt; () const
+const boost::shared_ptr&lt; T &gt; &amp; operator* () const
+bool empty () const
+checks if the contained shared pointer points to anything
+operator boost::shared_ptr&lt; Observable &gt; () const
+allows registration as observable
+template&lt;class U &gt; bool operator== (const Handle&lt; U &gt; &amp;other)
+equality test
+template&lt;class U &gt; bool operator!= (const Handle&lt; U &gt; &amp;other)
+disequality test
+template&lt;class U &gt; bool operator&lt; (const Handle&lt; U &gt; &amp;other)
+strict weak ordering
+Protected Attributes</code></pre>
+<h3>Public Member Functions</h3>
+<pre><code>Handle (const boost::shared_ptr&lt; T &gt; &amp;h=boost::shared_ptr&lt; T &gt;(), bool registerAsObserver=true)
+const boost::shared_ptr&lt; T &gt; &amp; currentLink () const
+dereferencing
+const boost::shared_ptr&lt; T &gt; &amp; operator-&gt; () const
+const boost::shared_ptr&lt; T &gt; &amp; operator* () const
+bool empty () const
+checks if the contained shared pointer points to anything
+operator boost::shared_ptr&lt; Observable &gt; () const
+allows registration as observable
+template&lt;class U &gt; bool operator== (const Handle&lt; U &gt; &amp;other)
+equality test
+template&lt;class U &gt; bool operator!= (const Handle&lt; U &gt; &amp;other)
+disequality test
+template&lt;class U &gt; bool operator&lt; (const Handle&lt; U &gt; &amp;other)
+strict weak ordering
+Protected Attributes</code></pre>
+<p> boost::shared_ptr&lt; Link &gt; <code>link_</code></p>
+<h2>Detailed Description</h2>
+<h3>template&lt;class T&gt; class QuantLib::Handle&lt; T &gt;</h3>
+<p>Shared handle to an observable. </p>
+<p> All copies of an instance of this class refer to the same observable by means of a relinkable smart pointer. When such pointer is relinked to another observable, the change will be propagated to all the copies. </p>
+<p> <code>Precondition:</code></p>
+<dl>
+<dd>Class T must inherit from <code>Observable</code></dd></dl>
+<h2>Constructor &amp; Destructor Documentation</h2>
+<h3><code>Handle</code> (const boost::shared_ptr&lt; T &gt; &amp; h = boost::shared_ptr&lt;T&gt;(), bool registerAsObserver = true) [explicit]</h3>
+<p><code>Warning</code></p>
+<dl>
+<dd>registerAsObserver is left as a backdoor in case the programmer cannot guarantee that the object pointed to will remain alive for the whole lifetime of the handle&#8212;namely, it should be set to false when the passed shared pointer does not own the pointee (this should only happen in a controlled environment, so that the programmer is aware of it). Failure to do so can very likely result in a program crash. If the programmer does want the handle to register as observer of such a shared pointer, it is his responsibility to ensure that the handle gets destroyed before the pointed object does.</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

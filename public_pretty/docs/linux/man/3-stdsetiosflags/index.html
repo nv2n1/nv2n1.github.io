@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdsetiosflags(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdsetiosflags/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdsetiosflags(3)</h1>
+
+
+
+
+
+<p>std::setiosflags - std::setiosflags</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;iomanip&gt;
+/*unspecified*/ setiosflags( std::ios_base::fmtflags mask );</code></pre> 
+<p>When used in an expression out &lt;&lt; setiosflags(mask) or in &gt;&gt; setiosflags(mask), sets all format flags of the stream out or in as specified by the mask.</p>
+<h2>Parameters</h2>
+<p>mask - bitmask of the flags to set</p>
+<h2>Return value</h2>
+<p>Returns an object of unspecified type such that if str is the name of a stream of type std::basic_ostream&lt;CharT, Traits&gt; or std::basic_istream&lt;CharT, Traits&gt;, then the expression str &lt;&lt; setiosflags(mask) or str &gt;&gt; setiosflags(mask) behaves as if the following code was executed :</p>
+<pre><code>str.setf(mask);
+</code></pre>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+int main()
+{
+std::cout &lt;&lt; std::resetiosflags(std::ios_base::dec)
+&lt;&lt; std::setiosflags(std::ios_base::hex | std::ios_base::uppercase | std::ios_base::showbase) &lt;&lt; 42 &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 0X2A</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sets specific format flag
+setf <i>(public member function of std::ios_base)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> clears the specified ios_base flags
+resetiosflags <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

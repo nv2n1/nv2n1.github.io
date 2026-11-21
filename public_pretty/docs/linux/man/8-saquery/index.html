@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>saquery(8) · Linux Manual Pages</title>
+<meta name="description" content="SAQUERY –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-saquery/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>saquery(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>SAQUERY &#8211;</p>
+<h2>Query Infiniband Subnet Administration Attributes</h2>
+<h3>Synopsis</h3>
+<p>saquery [options] [&lt;name&gt; | &lt;lid&gt; | &lt;guid&gt;]</p>
+<h3>Description</h3>
+<p>saquery issues the selected SA query. Node records are queried by default.</p>
+<h3>Options</h3>
+<dl>
+<dt><code>-p</code></dt>
+<dd>get PathRecord info</dd>
+<dt><code>-N</code></dt>
+<dd>get NodeRecord info</dd>
+<dt><code>-D, &#8211;list</code></dt>
+<dd>get NodeDescriptions of CAs only</dd>
+<dt><code>-S</code></dt>
+<dd>get ServiceRecord info</dd>
+<dt><code>-I</code></dt>
+<dd>get InformInfoRecord (subscription) info</dd>
+<dt><code>-L</code></dt>
+<dd>return the Lids of the name specified</dd>
+<dt><code>-l</code></dt>
+<dd>return the unique Lid of the name specified</dd>
+<dt><code>-G</code></dt>
+<dd>return the Guids of the name specified</dd>
+<dt><code>-O</code></dt>
+<dd>return the name for the Lid specified</dd>
+<dt><code>-U</code></dt>
+<dd>return the name for the Guid specified</dd>
+<dt><code>-c</code></dt>
+<dd>get the SA&#8217;s class port info</dd>
+<dt><code>-s</code></dt>
+<dd>return the PortInfoRecords with isSM or isSMdisabled capability mask bit on</dd>
+<dt><code>-g</code></dt>
+<dd>get multicast group info</dd>
+<dt><code>-m</code></dt>
+<dd>get multicast member info. If a group is specified, limit the output to the group specified and print one line containing only the GUID and node description for each entry. Example: saquery -m 0xc000</dd>
+<dt><code>-x</code></dt>
+<dd>get LinkRecord info</dd>
+<dt><code>&#8211;src-to-dst &lt;src:dst&gt;</code></dt>
+<dd>get a PathRecord for &lt;src:dst&gt; where src and dst are either node names or LIDs</dd>
+<dt><code>&#8211;sgid-to-dgid &lt;sgid:dgid&gt;</code></dt>
+<dd>get a PathRecord for <code>sgid</code> to <code>dgid</code> where both GIDs are in an IPv6 format acceptable to <code>inet_pton (3)</code></dd>
+<dt><code>&#8211;smkey &lt;val&gt;</code></dt>
+<dd>use SM_Key value for the query. Will be used only with &quot;trusted&quot; queries. If non-numeric value (like &#8216;x&#8217;) is specified then saquery will prompt for a value. Default (when not specified here or in /etc/infiniband-diags/ibdiag.conf) is to use SM_Key == 0 (or &quot;untrusted&quot;)</dd>
+<dt><code>-K, &#8211;show_keys</code></dt>
+<dd>show security keys (mkey, smkey, etc.) associated with the request. </dd>
+<p> <code>&#8211;slid &lt;lid&gt;</code> Source LID (PathRecord) </p>
+<p> <code>&#8211;dlid &lt;lid&gt;</code> Destination LID (PathRecord) </p>
+<p> <code>&#8211;mlid &lt;lid&gt;</code> Multicast LID (MCMemberRecord) </p>
+<p> <code>&#8211;sgid &lt;gid&gt;</code> Source GID (IPv6 format) (PathRecord) </p>
+<p> <code>&#8211;dgid &lt;gid&gt;</code> Destination GID (IPv6 format) (PathRecord) </p>
+<p> <code>&#8211;gid &lt;gid&gt;</code> Port GID (MCMemberRecord) </p>
+<p> <code>&#8211;mgid &lt;gid&gt;</code> Multicast GID (MCMemberRecord) </p>
+<p> <code>&#8211;reversible</code> Reversible path (PathRecord) </p>
+<p> <code>&#8211;numb_path</code> Number of paths (PathRecord)</p>
+<dt><code>&#8211;pkey</code> P_Key (PathRecord, MCMemberRecord). If non-numeric value (like &#8216;x&#8217;)</dt>
+<dd>is specified then saquery will prompt for a value </dd>
+<p> <code>&#8211;qos_class</code> QoS Class (PathRecord) </p>
+<p> <code>&#8211;sl</code> Service level (PathRecord, MCMemberRecord) </p>
+<p> <code>&#8211;mtu</code> MTU and selector (PathRecord, MCMemberRecord) </p>
+<p> <code>&#8211;rate</code> Rate and selector (PathRecord, MCMemberRecord) </p>
+<p> <code>&#8211;pkt_lifetime</code> Packet lifetime and selector (PathRecord, MCMemberRecord)</p>
+<dt><code>&#8211;qkey</code> Q_Key (MCMemberRecord). If non-numeric value (like &#8216;x&#8217;) is specified</dt>
+<dd>then saquery will prompt for a value </dd>
+<p> <code>&#8211;tclass</code> Traffic Class (PathRecord, MCMemberRecord) </p>
+<p> <code>&#8211;flow_label</code> Flow Label (PathRecord, MCMemberRecord) </p>
+<p> <code>&#8211;hop_limit</code> Hop limit (PathRecord, MCMemberRecord) </p>
+<p> <code>&#8211;scope</code> Scope (MCMemberRecord) </p>
+<p> <code>&#8211;join_state</code> Join state (MCMemberRecord) </p>
+<p> <code>&#8211;proxy_join</code> Proxy join (MCMemberRecord) </p>
+<p> <code>&#8211;service_id</code> ServiceID (PathRecord) </p>
+<p> Supported query names (and aliases): </p>
+<pre>ClassPortInfo (CPI)
+NodeRecord (NR) [lid]
+PortInfoRecord (PIR) [[lid]/[port]/[options]]
+SL2VLTableRecord (SL2VL) [[lid]/[in_port]/[out_port]]
+PKeyTableRecord (PKTR) [[lid]/[port]/[block]]
+VLArbitrationTableRecord (VLAR) [[lid]/[port]/[block]]
+InformInfoRecord (IIR)
+LinkRecord (LR) [[from_lid]/[from_port]] [[to_lid]/[to_port]]
+ServiceRecord (SR)
+PathRecord (PR)
+MCMemberRecord (MCMR)
+LFTRecord (LFTR) [[lid]/[block]]
+MFTRecord (MFTR) [[mlid]/[position]/[block]]
+GUIDInfoRecord (GIR) [[lid]/[block]]
+SwitchInfoRecord (SWIR) [lid]
+SMInfoRecord (SMIR) [lid]</pre>
+</dl>
+<h3>Port Selection flags</h3>
+<p><code>-C, &#8211;Ca &lt;ca_name&gt;</code> use the specified ca_name. </p>
+<p> <code>-P, &#8211;Port &lt;ca_port&gt;</code> use the specified ca_port.</p>
+<h3>Local port Selection</h3>
+<p>Multiple port/Multiple CA support: when no IB device or port is specified (see the &quot;local umad parameters&quot; below), the libibumad library selects the port to use by the following criteria:</p>
+<dl>
+<dt>1.</dt>
+<dd>the first port that is ACTIVE.</dd>
+<dt>2.</dt>
+<dd>if not found, the first port that is UP (physical link up). </dd>
+<p> If a port and/or CA name is specified, the libibumad library attempts to fulfill the user request, and will fail if it is not possible. </p>
+<p> For example: </p>
+<pre>ibaddr # use the first port (criteria #1 above)
+ibaddr -C mthca1 # pick the best port from &quot;mthca1&quot; only.
+ibaddr -P 2 # use the second (active/up) port from the first available IB device.
+ibaddr -C mthca0 -P 2 # use the specified port only.</pre>
+</dl>
+<h3>Debugging flags</h3>
+<dl>
+<dt><code>-d</code></dt>
+<dd>raise the IB debugging level. May be used several times (-ddd or -d -d -d).</dd>
+<dt><code>-e</code></dt>
+<dd>show send and receive errors (timeouts and others) </dd>
+<p> <code>-h, &#8211;help</code> show the usage message</p>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>increase the application verbosity level. May be used several times (-vv or -v -v -v) </dd>
+<p> <code>-V, &#8211;version</code> show the version info.</dl>
+<h3>Configuration flags</h3>
+<p><code>-t, &#8211;timeout &lt;timeout_ms&gt;</code> override the default timeout for the solicited mads.</p>
+<dl>
+<dt><code>&#8211;outstanding_smps, -o &lt;val&gt;</code></dt>
+<dd>Specify the number of outstanding SMP&#8217;s which should be issued during the scan </dd>
+<p> Default: 2 </p>
+<p> <code>&#8211;node-name-map &lt;node-name-map&gt;</code> Specify a node name map. This file maps GUIDs to more user friendly names. See FILES section. </p>
+<p> <code>&#8211;config, -z &lt;config_file&gt;</code> Specify alternate config file. Default: /etc/infiniband-diags/ibdiag.conf</dl>
+<h3>Common Files</h3>
+<h3>Config File</h3>
+<p>/etc/infiniband-diags/ibdiag.conf </p>
+<p> A global config file is provided to set some of the common options for all tools. See supplied config file for details.</p>
+<h3>Node Name Map File Format</h3>
+<p>The node name map is used to specify user friendly names for nodes in the output. GUIDs are used to perform the lookup. </p>
+<p> This functionality is provided by the opensm-libs package. See <code>opensm(8)</code> for the file location for your installation. </p>
+<p> <code>Generically:</code> </p>
+<pre># comment
+&lt;guid&gt; &quot;&lt;name&gt;&quot;</pre>
+<p><code>Example:</code> </p>
+<pre># IB1
+# Line cards
+0x0008f104003f125c &quot;IB1 (Rack 11 slot 1 ) ISR9288/ISR9096 Voltaire sLB-24D&quot;
+0x0008f104003f125d &quot;IB1 (Rack 11 slot 1 ) ISR9288/ISR9096 Voltaire sLB-24D&quot;
+0x0008f104003f10d2 &quot;IB1 (Rack 11 slot 2 ) ISR9288/ISR9096 Voltaire sLB-24D&quot;
+0x0008f104003f10d3 &quot;IB1 (Rack 11 slot 2 ) ISR9288/ISR9096 Voltaire sLB-24D&quot;
+0x0008f104003f10bf &quot;IB1 (Rack 11 slot 12 ) ISR9288/ISR9096 Voltaire sLB-24D&quot;
+# Spines
+0x0008f10400400e2d &quot;IB1 (Rack 11 spine 1 ) ISR9288 Voltaire sFB-12D&quot;
+0x0008f10400400e2e &quot;IB1 (Rack 11 spine 1 ) ISR9288 Voltaire sFB-12D&quot;
+0x0008f10400400e2f &quot;IB1 (Rack 11 spine 1 ) ISR9288 Voltaire sFB-12D&quot;
+0x0008f10400400e31 &quot;IB1 (Rack 11 spine 2 ) ISR9288 Voltaire sFB-12D&quot;
+0x0008f10400400e32 &quot;IB1 (Rack 11 spine 2 ) ISR9288 Voltaire sFB-12D&quot;
+# GUID Node Name
+0x0008f10400411a08 &quot;SW1 (Rack 3) ISR9024 Voltaire 9024D&quot;
+0x0008f10400411a28 &quot;SW2 (Rack 3) ISR9024 Voltaire 9024D&quot;
+0x0008f10400411a34 &quot;SW3 (Rack 3) ISR9024 Voltaire 9024D&quot;
+0x0008f104004119d0 &quot;SW4 (Rack 3) ISR9024 Voltaire 9024D&quot;</pre>
+<h3>Dependencies</h3>
+<p>OpenSM (or other running SM/SA), libosmcomp, libibumad, libibmad</p>
+<h3>Authors</h3>
+<dl>
+<dt><code>Ira Weiny</code></dt>
+<dd>&lt; <i>ira.weiny [at] intel.com</i> &gt;</dd>
+<dt><code>Hal Rosenstock</code></dt>
+<dd>&lt; <i>halr [at] mellanox.com</i> &gt; </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

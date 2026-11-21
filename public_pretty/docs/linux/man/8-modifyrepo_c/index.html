@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>modifyrepo_c(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-modifyrepo_c/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>modifyrepo_c(8)</h1>
+
+
+
+
+
+<p>modifyrepo_c - Modify a repomd.xml of rpm-md format repository</p>
+<h2>Synopsis</h2>
+<p>modifyrepo_c [options] &lt;input metadata&gt; &lt;output repodata&gt;</p>
+<p>modifyrepo_c &ndash;remove &lt;metadata type&gt; &lt;output repodata&gt;</p>
+<p>modifyrepo_c [options] &ndash;batchfile &lt;batch file&gt; &lt;output repodata&gt;</p>
+<h2>Options</h2>
+<h3>--version</h3>
+<p>Show program&rsquo;s version number and exit.</p>
+<h3>--mdtype MDTYPE</h3>
+<p>Specific datatype of the metadata, will be derived from the filename if not specified.</p>
+<h3>--remove</h3>
+<p>Remove specified file from repodata.</p>
+<h3>--compress</h3>
+<p>Compress the new repodata before adding it to the repo. (default)</p>
+<h3>--no-compress</h3>
+<p>Do not compress the new repodata before adding it to the repo.</p>
+<h3>--compress-type COMPRESS_TYPE</h3>
+<p>Compression format to use.</p>
+<h3>-s --checksum SUMTYPE</h3>
+<p>Specify the checksum type to use. (default: sha256)</p>
+<h3>--unique-md-filenames</h3>
+<p>Include the file&rsquo;s checksum in the filename, helps with proxies. (default)</p>
+<h3>--simple-md-filenames</h3>
+<p>Do not include the file&rsquo;s checksum in the filename.</p>
+<h3>--verbose</h3>
+<p>Verbose output.</p>
+<h3>-f --batchfile BATCHFILE</h3>
+<p>Batch file.</p>
+<h3>--new-name NEWFILENAME</h3>
+<p>New filename for the file</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nand_scan_ident(9) · Linux Manual Pages</title>
+<meta name="description" content="nand_scan_ident – [NAND Interface] Scan for the NAND device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-nand_scan_ident/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>nand_scan_ident(9)</h1>
+
+
+
+
+
+<p>nand_scan_ident &#8211; [NAND Interface] Scan for the NAND device</p>
+<h2>Synopsis</h2>
+<pre><code>int nand_scan_ident(struct mtd_info *mtd, int maxchips, struct nand_flash_dev *table);</code></pre>
+<h2>Arguments</h2>
+<p><i>mtd</i></p>
+<dl>
+<dd>
+</dd><dd>MTD device structure</dd></dl>
+<p> <i>maxchips</i></p>
+<dl>
+<dd>number of chips to scan for</dd></dl>
+<p> <i>table</i></p>
+<dl>
+<dd>alternative NAND ID table</dd></dl>
+<h2>Description</h2>
+<p>This is the first phase of the normal <code>nand_scan</code> function. It reads the flash ID and sets up MTD fields accordingly.</p>
+<h2>Author</h2>
+<p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

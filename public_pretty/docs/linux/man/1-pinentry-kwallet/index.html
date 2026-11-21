@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pinentry-kwallet(1) · Linux Manual Pages</title>
+<meta name="description" content="pinentry-kwallet – kwallet-based pass-phrase dialog for use with GnuPG">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pinentry-kwallet/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pinentry-kwallet(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> <code>pinentry-kwallet</code> &#8211; kwallet-based pass-phrase dialog for use with GnuPG</p>
+<h2>SYNOPSIS</h2>
+<p> [-<code>q</code> ] [<i>options</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> is a kwallet- and pinentry-based pass-phrase dialog for use with GnuPG. It is intended to be called from the gpg-agent1 daemon and not invoked directly. </p>
+<p> replaces the regular <code>pinentry-program</code> stanza set in ~/.gnupg/gpg-agent.conf and looks up the passphrases requested in the KWallet first, falling back to <code>pinentry</code> only if not found. The user is given the option to store it in the KWallet afterwards. Negative answers to this are also stored in the KWallet to avoid asking each time. </p>
+<p> (like other pinentry variants) talks a simplified subset of the regular Assuan protocol on stdio; all commands, even unknown ones, are passed through to a <code>pinentry</code> co-process during run-time, even if the latter is never used. It accepts the same options as <code>pinentry</code> even unknown ones, because it is designed to plug in. As an exception, &#8211;<code>q</code> makes more quiet (suppress warnings on stderr), and &#8211;<code>V</code> displays the version on stderr (unless &#8211;<code>q )</code> </p>
+<p> attempts sophisticated error handling: if an error dialogue is displayed, an internal counter is increased. If the counter reaches 2, the value stored in the KWallet is ignored, and the user is asked anew. The counter is stored in the KWallet, which is suboptimal but necessary, because <a href="/docs/linux/man/1-gpg2/">gpg2</a>(1) does not re-use the Assuan sessions, instead spawning a new each time a passphrase is required (rather stupid). Error counters are valid for 15 seconds since their last increasement.</p>
+<h2>RETURN VALUES</h2>
+<p> exits 1 if it is called recursively, 0 if help or version information are requested, and return codes do not matter in any other cases because errors are signalled in-band. It will exit 0 after the Assuan session is terminated.</p>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>DISPLAY</code></dt>
+<dd> The X11 display to use for child processes. If not set, will immediately replace itself with the slave <code>PINENTRY</code> programme to use.</dd>
+<dt><code>GPG_TERM</code></dt>
+<dd> Terminal type of the current tty.</dd>
+<dt><code>GPG_TTY</code></dt>
+<dd> The current terminal.</dd>
+<dt><code>PINENTRY</code></dt>
+<dd> The <code>pinentry</code> programme to use. Default: &#8220;pinentry&#8221;</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-date/">date</a>(1), gpg-agent1, <a href="/docs/linux/man/1-gpg2/">gpg2</a>(1), <a href="/docs/linux/man/1-kwalletcli/">kwalletcli</a>(1), kwalletcli_getpin1, <a href="/docs/linux/man/1-mksh/">mksh</a>(1), pinentry-curses1, pinentry-gtk-21, pinentry-qt1, pinentry-x111</p>
+<h2>AUTHORS</h2>
+<p> was written by An mirabilos Aq m@mirbsd.org mostly for tarent solutions GmbH.</p>
+<h2>CAVEATS</h2>
+<p> Some newer pinentry features, such as three-button operation, are not supported yet. </p>
+<p> Some commands, such as version inquiry, as passed through to the pinentry coprocess indiscriminately, which may lead to strange results, should the protocol change or extend. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hosts-conf(5) · Linux Manual Pages</title>
+<meta name="description" content="hosts.conf – Access control for Network UPS Tools CGI programs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-hosts-conf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>hosts-conf(5)</h1>
+
+
+
+
+
+<p>hosts.conf &#8211; Access control for Network UPS Tools CGI programs</p>
+<h2>Description</h2>
+<p>The CGI programs (<code><a href="/docs/linux/man/8-upsset-cgi/">upsset.cgi</a></code>(8), <code><a href="/docs/linux/man/8-upsstats-cgi/">upsstats.cgi</a></code>(8), <code><a href="/docs/linux/man/8-upsimage-cgi/">upsimage.cgi</a></code>(8)) use this file to determine if they are allowed to talk to a host. This keeps random visitors from using your web server to annoy others by creating outgoing connections.</p>
+<h2>Directives</h2>
+<p><code>MONITOR</code> <i>ups</i> <i>description</i></p>
+<dl>
+<dd>The <i>ups</i> element is in the form upsname[@hostname[:port]]. To allow connections to a UPS called &quot;snoopy&quot; on a system called &quot;doghouse&quot; that runs upsd on port 7877, it would look like this: </dd>
+<dl>
+<dd>
+<pre>MONITOR snoopy [at] doghouse:7877 &quot;Joe Cool&quot;</pre>
+</dd></dl>
+<p> The description must be one element, so if it has spaces, then it must be wrapped with quotes as shown above. The default hostname is &quot;localhost&quot;.</dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-upsset-cgi/">upsset.cgi</a></code>(8), <code><a href="/docs/linux/man/8-upsstats-cgi/">upsstats.cgi</a></code>(8), <code><a href="/docs/linux/man/8-upsimage-cgi/">upsimage.cgi</a></code>(8)</p>
+<h3>Internet resources:</h3>
+<p>The NUT (Network UPS Tools) home page: <a rel="nofollow" href="http://www.networkupstools.org/">http://www.networkupstools.org/</a> </p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

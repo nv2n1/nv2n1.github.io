@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>selabel_stats(3) · Linux Manual Pages</title>
+<meta name="description" content="selabel_stats – obtain SELinux labeling statistics">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-selabel_stats/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>selabel_stats(3)</h1>
+
+
+
+
+
+<p>selabel_stats &#8211; obtain SELinux labeling statistics</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;selinux/selinux.h&gt;
+#include &lt;selinux/label.h&gt;
+void selabel_stats(struct selabel_handle *hnd);</code></pre>
+<h2>Description</h2>
+<p><code>selabel_stats</code>() causes zero or more messages to be printed containing backend-specific information about number of queries performed, number of unused entries, or other operational information. </p>
+<p> The messages are printed to standard error by default; a custom logging function can be provided via <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3).</p>
+<h2>Return Value</h2>
+<p>None.</p>
+<h2>Errors</h2>
+<p>None.</p>
+<h2>Author</h2>
+<p>Eamon Walsh &lt;ewalsh [at] tycho.nsa.gov&gt;</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3), <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3), <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3), <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

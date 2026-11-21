@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdistreambuf_iterator(3) · Linux Manual Pages</title>
+<meta name="description" content="std::istreambuf_iterator&lt;CharT,Traits&gt;::operator&#43;&#43;,operator&#43;&#43;(int) – std::istreambuf_iterator&lt;CharT,Traits&gt;::operator&#43;&#43;,operator&#43;&#43;(int)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdistreambuf_iterator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdistreambuf_iterator(3)</h1>
+
+
+
+
+
+<p>std::istreambuf_iterator&lt;CharT,Traits&gt;::operator++,operator++(int) &#8211; std::istreambuf_iterator&lt;CharT,Traits&gt;::operator++,operator++(int)</p>
+<h2>Synopsis</h2>
+<p>istreambuf_iterator&amp; operator++(); <code>(1)</code><br />
+/* proxy */ operator++(int); <code>(2)</code><br />
+Advances the iterator by calling sbuf_-&gt;sbumpc() where sbuf_ is the stored pointer to the stream buffer.<br />
+The behavior is undefined if the iterator is end-of-stream iterator. </p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>1) *this.<br />
+2) A proxy object holding the current character obtained via operator*() and the sbuf_ pointer. Dereferencing a proxy object with operator* yields the stored character.<br />
+The name proxy is for exposition only. </p>
+<h2>Exceptions</h2>
+<p><i>(none)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bro-cut(1) · Linux Manual Pages</title>
+<meta name="description" content="bro-cut – parse Bro logs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-bro-cut/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>bro-cut(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> bro-cut &#8211; parse Bro logs</p>
+<h2>SYNOPSIS</h2>
+<p> <code>bro-cut</code> [<i>options</i>] [<i>columns</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> Extracts the given columns from ASCII Bro logs on standard input, and outputs them to standard output. If no columns are given, all are selected. By default, <code>bro-cut</code> does not include format header blocks in the output. </p>
+<p> Columns are specified as a list of space-separated field names. The order of field names given to <code>bro-cut</code> determines the output order, which means <code>bro-cut</code> can be used to reorder columns. </p>
+<p> The ASCII Bro logs read on standard input must have intact format header blocks because <code>bro-cut</code> needs this information to correctly interpret the log file format. In fact, <code>bro-cut</code> can process the concatenation of multiple ASCII log files that have different column layouts.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-c</code></dt>
+<dd> Include the first format header block into the output.</dd>
+<dt><code>-C</code></dt>
+<dd> Include all format header blocks into the output.</dd>
+<dt><code>-d</code></dt>
+<dd> Convert time values into human-readable format.</dd>
+<dt> <code>-D</code> &lt;fmt&gt; Like <code>-d</code>, but specify format for time (see <a href="/docs/linux/man/3-strftime/">strftime</a>(3) for syntax).</dt>
+<dt> <code>-F</code> &lt;ofs&gt; Sets a different output field separator.</dt>
+<dt><code>-n</code></dt>
+<dd>
+</dd><dd>Print all fields except those specified.</dd>
+<dt><code>-u</code></dt>
+<dd> Like <code>-d</code>, but print timestamps in UTC instead of local time.</dd>
+<dt> <code>-U</code> &lt;fmt&gt; Like <code>-D</code>, but print timestamps in UTC instead of local time.</dt></dl>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>BRO_CUT_TIMEFMT</code></dt>
+<dd>
+</dd><dd>For time conversion option <code>-d</code> or <code>-u</code>, the format string can be specified by setting this environment variable.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Output three columns and convert time values:<br />
+ cat conn.log | bro-cut -d ts id.orig_h id.orig_p </p>
+<p> Output all columns and convert time values with a custom format string:<br />
+ cat conn.log | bro-cut -D &quot;%Y-%m-%d %H:%M:%S&quot;</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/3-strftime/">strftime</a>(3)</p>
+<h2>AUTHOR</h2>
+<p> <code>bro-cut</code> was written by The Bro Project &lt;info [at] bro.org&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

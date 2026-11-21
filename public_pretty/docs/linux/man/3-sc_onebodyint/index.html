@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_onebodyint(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::OneBodyInt –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_onebodyint/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_onebodyint(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>sc::OneBodyInt &#8211; </p>
+<p> <code>OneBodyInt</code> is an abstract base class for objects that compute integrals between two basis functions.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;obint.h&gt;</code></pre>
+<p> Inherits <code>sc::RefCount</code>. Inherited by <code>sc::DipoleIntV3</code>, <code>sc::EfieldDotVectorIntV3</code>, <code>sc::OneBodyIntCCA</code>, <code>sc::OneBodyIntCints</code>, <code>sc::OneBodyIntV3</code>, and <code>sc::PointChargeIntV3</code>.</p>
+<h3>Public Member Functions</h3>
+<pre><code>int nbasis () const
+Returns the number of basis functions on center one.
+int nbasis1 () const
+Returns the number of basis functions on the center one.
+int nbasis2 () const
+Returns the number of basis functions on the center two.
+int nshell () const
+Return the number of shells on center one.
+int nshell1 () const
+Return the number of shells on the center one.
+int nshell2 () const
+Return the number of shells on the center two.
+Ref&lt; GaussianBasisSet &gt; basis ()
+Return the basis set on center one.
+Ref&lt; GaussianBasisSet &gt; basis1 ()
+Return the basis set on the center one.
+Ref&lt; GaussianBasisSet &gt; basis2 ()
+Return the basis set on the center two.
+const double * buffer () const
+Returns the buffer where the integrals are placed.
+virtual void compute_shell (int, int)=0
+Computes the integrals between basis functions in the given shell pair.
+virtual void reinitialize ()
+This is called for one body integrals that take data to let them know that the data they reference has changed.
+virtual bool cloneable ()
+Return true if the clone member can be called.
+virtual Ref&lt; OneBodyInt &gt; clone ()
+Returns a clone of this.
+Integral * integral () const
+Protected Member Functions
+OneBodyInt (Integral *integral, const Ref&lt; GaussianBasisSet &gt; &amp;b1, const Ref&lt; GaussianBasisSet &gt; &amp;b2=0)
+Protected Attributes</code></pre>
+<p> <code>Integral</code> * <code>integral_</code> </p>
+<p> <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; <code>bs1_</code> </p>
+<p> <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; <code>bs2_</code> </p>
+<p> double * <code>buffer_</code></p>
+<h2>Detailed Description</h2>
+<p><code>OneBodyInt</code> is an abstract base class for objects that compute integrals between two basis functions.</p>
+<h2>Member Function Documentation</h2>
+<h3>virtual <code>Ref</code>&lt;<code>OneBodyInt</code>&gt; sc::OneBodyInt::clone () [virtual]</h3>
+<p>Returns a clone of this. The default implementation throws an exception. </p>
+<p> Reimplemented in <code>sc::OneBodyIntCints</code>, <code>sc::OneBodyIntCCA</code>, and <code>sc::OneBodyIntV3</code>.</p>
+<h3>virtual bool sc::OneBodyInt::cloneable () [virtual]</h3>
+<p>Return true if the clone member can be called. The default implementation returns false. </p>
+<p> Reimplemented in <code>sc::OneBodyIntCints</code>, <code>sc::OneBodyIntCCA</code>, and <code>sc::OneBodyIntV3</code>.</p>
+<h3>virtual void sc::OneBodyInt::compute_shell (int, int) [pure virtual]</h3>
+<p>Computes the integrals between basis functions in the given shell pair. </p>
+<p> Implemented in <code>sc::OneBodyIntCints</code>, <code>sc::OneBodyIntCCA</code>, <code>sc::OneBodyIntV3</code>, <code>sc::PointChargeIntV3</code>, <code>sc::EfieldDotVectorIntV3</code>, and <code>sc::DipoleIntV3</code>.</p>
+<h3>virtual void sc::OneBodyInt::reinitialize () [virtual]</h3>
+<p>This is called for one body integrals that take data to let them know that the data they reference has changed.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

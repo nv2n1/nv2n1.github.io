@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lispmtopgm(1) · Linux Manual Pages</title>
+<meta name="description" content="lispmtopgm – convert a Lisp Machine bitmap file into pgm format">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lispmtopgm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lispmtopgm(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> lispmtopgm &#8211; convert a Lisp Machine bitmap file into pgm format </p>
+<h2>SYNOPSIS</h2>
+<p> <code>lispmtopgm</code> [<i>lispmfile</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> Reads a Lisp Machine bitmap as input. Produces a portable graymap as output. </p>
+<p> This is the file format written by the tv:write-bit-array-file function on TI Explorer and Symbolics lisp machines. </p>
+<p> Multi-plane bitmaps on lisp machines are color; but the lispm image file format does not include a color map, so we must treat it as a graymap instead. This is unfortunate.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-pgmtolispm/">pgmtolispm</a>(1), <a href="/docs/linux/man/5-pgm/">pgm</a>(5)</p>
+<h2>BUGS</h2>
+<p> The Lispm bitmap file format is a bit quirky; Usually the image in the file has its width rounded up to the next higher multiple of 32, but not always. If the width is not a multiple of 32, we don&#8217;t deal with it properly, but because of the Lispm microcode, such arrays are probably not image data anyway. </p>
+<p> Also, the lispm code for saving bitmaps has a bug, in that if you are writing a bitmap which is not mod32 across, the file may be up to 7 bits too short! They round down instead of up, and we don&#8217;t handle this bug gracefully. </p>
+<p> No color.</p>
+<h2>AUTHOR</h2>
+<p> Copyright (C) 1991 by Jamie Zawinski and Jef Poskanzer. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

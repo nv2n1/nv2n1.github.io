@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wngroups(7) · Linux Manual Pages</title>
+<meta name="description" content="wngroups – discussion of WordNet search code to group similar verb senses">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-wngroups/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>wngroups(7)</h1>
+
+
+
+
+
+<p>wngroups &#8211; discussion of WordNet search code to group similar verb senses</p>
+<h2>Description</h2>
+<p>Some similar senses of verbs have been grouped by the lexicographers. This grouping is done statically in the lexicographer source files using the semantic <i>pointer_symbol</i> <code>$</code>. Transitivity is used to combine groups of overlapping senses into the largest sense groups possible.</p>
+<h2>Notes</h2>
+<p>Coverage of verb groups is incomplete.</p>
+<h2>Environment Variables (Unix)</h2>
+<dl>
+<dt><code>WNHOME</code></dt>
+<dd>Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</dd>
+<dt><code>WNSEARCHDIR</code></dt>
+<dd>Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dd></dl>
+<h2>Registry (Windows)</h2>
+<dl>
+<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></dt>
+<dd>Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><code>sentidx.vrb</code></dt>
+<dd>verb sense keys and sentence frame numbers</dd>
+<dt><code>sents.vrb</code></dt>
+<dd>example sentence frames</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-wn/">wn</a></code>(1), <code><a href="/docs/linux/man/1-wnb/">wnb</a></code>(1), <code><a href="/docs/linux/man/5-senseidx/">senseidx</a></code>(5), <code><a href="/docs/linux/man/3-wnsearch/">wnsearch</a></code>(3), <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code><a href="/docs/linux/man/7-wnintro/">wnintro</a></code>(7). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

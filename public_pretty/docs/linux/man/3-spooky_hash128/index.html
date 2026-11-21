@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>spooky_hash128(3) · Linux Manual Pages</title>
+<meta name="description" content="spooky_hash128 – generate a &#34;spooky&#34; hash of an arbitrary blob of data">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-spooky_hash128/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>spooky_hash128(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>spooky_hash128 &#8211; generate a &quot;spooky&quot; hash of an arbitrary blob of data</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;spooky-c.h&gt;
+void spooky_hash128(const void *message, size_t len, uint64_t *hash1, uint64_t *hash2);</code></pre>
+<p> uint64_t spooky_hash64(const void *message, size_t len, uint64_t seed); uint32_t spooky_hash32(const void *message, size_t len, uint32_t seed);</p>
+<h2>Description</h2>
+<p>Quoting from Bob Jenkins&#8217; web page (inventor of the spooky hash function): </p>
+<p> &#8220;SpookyHash is a public domain noncryptographic hash function producing well-distributed 128-bit hash values for byte arrays of any length.&#8221; </p>
+<p> It can also produce 64-bit and 32-bit hash values too, by simply discarding the upper bits of the returned hash value. <code>spooky_hash32</code> and <code>spooky_hash64</code> are wrappers around <code>spooky_hash128</code> that do this discarding. </p>
+<p> The <code>message</code> is a pointer to the stream of bytes to be hashed. <code>len</code> is the length of <code>message</code>. <code>seed</code> allows the function to generate different hashes for the same key. </p>
+<p> <code>spooky_hash128</code> also accepts seed values in <code>hash1</code> and <code>hash2</code>. Those values will be overwritten with the actual hash results on return.</p>
+<h2>Return Value</h2>
+<p><code>spooky_hash64</code> and <code>spooky_hash32</code> return the hash value directly. <code>spooky_hash128</code> is a void return function. It overwrites the two 64-bit integers that <code>hash1</code> and <code>hash2</code> on return. These functions never return errors, only hash values.</p>
+<h2>Notes</h2>
+<p>The original code was written in C<font SIZE="-2">++</font>. The spooky-c library is a reimplementation of the hash function in C. It&#8217;s quite fast on 64-bit hardware. </p>
+<p> There are some caveats with the SpookyHash function:</p>
+<dl>
+<dt>&bull;</dt>
+<dd>It was written for little-endian machines. It will run and work on big-endian machines as well, but it will produce different results. Do not use these functions if you plan to distribute these hashes in a mixed endianness environment.</dd>
+<dt>&bull;</dt>
+<dd>It is optimized for 64-bit machines that can do unaligned reads. It will work on 32-bit hardware and on machines that require aligned reads, but it won&#8217;t perform as well on that hardware. You may want to consider a different hash function in that situation.</dd></dl>
+<h2>See Also</h2>
+<p>Bob Jenkins&#8217; webpage on SpookyHash: &lt;<a rel="nofollow" href="http://www.burtleburtle.net/bob/hash/spooky.html">http://www.burtleburtle.net/bob/hash/spooky.html</a>&gt;</p>
+<h2>Authors</h2>
+<p>Bob Jenkins &lt;bob_jenkins [at] burtleburtle.net&gt; invented the SpookyHash algorithm and wrote the original C<font SIZE="-2">++</font> implementation. The C implementation (spooky-c) was written by Andi Kleen &lt;andi [at] firstfloor.org&gt;. This manpage was authored by Jeff Layton &lt;jlayton [at] poochiereds.net&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

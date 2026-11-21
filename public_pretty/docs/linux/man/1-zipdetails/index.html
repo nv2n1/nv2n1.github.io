@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zipdetails(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-zipdetails/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>zipdetails(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>zipdetails - display the internal structure of zip files</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+zipdetails[-v][--scan] zipfile.zip
+        zipdetails -
+    h
+        zipdetails-- version
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>Zipdetails displays information about the internal record structure of zip files. It is not concerned with displaying any details of the compressed data stored in the zip file.</p>
+<p>The program assumes prior understanding of the internal structure of a Zip file. You should have a copy of the Zip <font SIZE="-1">APPNOTE</font> file at hand to help understand the output from this program (``<font SIZE="-1">SEE ALSO&rsquo;&rsquo;</font> for details).</p>
+<h3>Default Behaviour</h3>
+<p>By default the program expects to be given a well-formed zip file. It will navigate the Zip file by first parsing the zip central directory at the end of the file. If that is found, it will then walk through the zip records starting at the beginning of the file. Any badly formed zip data structures encountered are likely to terminate the program.</p>
+<p>If the program finds any structural problems with the zip file it will print a summary at the end of the output report. The set of error cases reported is very much a work in progress, so don&rsquo;t rely on this feature to find all the possible errors in a zip file. If you have suggestions for use-cases where this could be enhanced please consider creating an enhancement request (see ``<font SIZE="-1">SUPPORT&rsquo;&rsquo;</font>).</p>
+<h3>Scan-Mode</h3>
+<p>If you do have a potentially corrupt zip file, particulatly where the central directory at the end of the file is absent/incomplete, you can try usng the <tt>&quot;&ndash;scan&quot;</tt> option to search for zip records that are still present.</p>
+<p>When Scan-mode is enabled, the program will walk the zip file from the start blindly looking for the 4-byte signatures that preceed each of the zip data structures. If it finds any of the recognised signatures it will attempt to dump the associated zip record. For very large zip files, this operation can take a long time to run.</p>
+<p>Note that the 4-byte signatures used in zip files can sometimes match with random data stored in the zip file, so care is needed interpreting the results.</p>
+<h3><font SIZE="-1">OPTIONS</font></h3>
+<dl>
+<dt>-h
+</dt><dd> Display help
+</dd><dt>--scan
+</dt><dd> Walk the zip file loking for possible zip records. Can be error-prone. See ``Scan-Mode''
+</dd><dt>-v
+</dt><dd> Enable Verbose mode. See ``Verbose Output''.
+</dd><dt>--version
+</dt><dd> Display version number of the program and exit.</dd></dl>
+<h3>Default Output</h3>
+<p>By default zipdetails will output the details of the zip file in three columns.</p>
+<dl>
+<dt>Column 1
+</dt><dd> This contains the offset from the start of the file in hex.
+</dd><dt>Column 2
+</dt><dd> This contains a textual description of the field.
+</dd><dt>Column 3
+</dt><dd> If the field contains a numeric value it will be displayed in hex. Zip stores most numbers in little-endian format - the value displayed will have the little-endian encoding removed. 
+ Next, is an optional description of what the value means.</dd></dl>
+<h3>Verbose Output</h3>
+<p>If the <tt>&quot;-v&quot;</tt> option is present, column 1 is expanded to include</p>
+<dl>
+<dt>&bull;
+</dt><dd> The offset from the start of the file in hex.
+</dd><dt>&bull;
+</dt><dd> The length of the field in hex.
+</dd><dt>&bull;
+</dt><dd> A hex dump of the bytes in field in the order they are stored in the zip file.</dd></dl>
+<h2>LIMITATIONS</h2>
+<p>The following zip file features are not supported by this program:</p>
+<dl>
+<dt>&bull;
+</dt><dd> Multi-part archives.
+</dd><dt>&bull;
+</dt><dd> The strong encryption features defined in the ``<font SIZE="-1">APPNOTE''</font> document.</dd></dl>
+<h2>TODO</h2>
+<p>Error handling is a work in progress. If the program encounters a problem reading a zip file it is likely to terminate with an unhelpful error message.</p>
+<h2>SUPPORT</h2>
+<p>General feedback/questions/bug reports should be sent to &lt;<a rel="nofollow" HREF="https://github.com/pmqs/IO-Compress/issues"><a href="https://github.com/pmqs/IO-Compress/issues">https://github.com/pmqs/IO-Compress/issues</a></a>&gt; (preferred) or &lt;<a rel="nofollow" HREF="https://rt.cpan.org/Public/Dist/Display.html?Name=IO-Compress"><a href="https://rt.cpan.org/Public/Dist/Display.html?Name=IO-Compress">https://rt.cpan.org/Public/Dist/Display.html?Name=IO-Compress</a></a>&gt;.</p>
+<h2>SEE ALSO</h2>
+<p>The primary reference for Zip files is the ``<font SIZE="-1">APPNOTE&rsquo;&rsquo;</font> document available at &lt;<a rel="nofollow" HREF="http://www.pkware.com/documents/casestudies/APPNOTE.TXT"><a href="http://www.pkware.com/documents/casestudies/APPNOTE.TXT">http://www.pkware.com/documents/casestudies/APPNOTE.TXT</a></a>&gt;.</p>
+<p>An alternative reference is the Info-Zip appnote. This is available from &lt;<a HREF="ftp://ftp.info-zip.org/pub/infozip/doc/"><a href="ftp://ftp.info-zip.org/pub/infozip/doc/">ftp://ftp.info-zip.org/pub/infozip/doc/</a></a>&gt;</p>
+<p>The <tt>&quot;zipinfo&quot;</tt> program that comes with the info-zip distribution (&lt;<a rel="nofollow" HREF="http://www.info-zip.org/"><a href="http://www.info-zip.org/">http://www.info-zip.org/</a></a>&gt;) can also display details of the structure of a zip file.</p>
+<p>See also Archive::Zip::SimpleZip, IO::Compress::Zip, IO::Uncompress::Unzip.</p>
+<h2>AUTHOR</h2>
+<p>Paul Marquess <i>pmqs [at] cpan.org</i>.</p>
+<h2>COPYRIGHT</h2>
+<p>Copyright (c) 2011-2021 Paul Marquess. All rights reserved.</p>
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+<h2>Index</h2>
+<dt><a HREF="#lbAJ">LIMITATIONS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">TODO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAL">SUPPORT</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAM">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAN">AUTHOR</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAO">COPYRIGHT</a>
+</dt><dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

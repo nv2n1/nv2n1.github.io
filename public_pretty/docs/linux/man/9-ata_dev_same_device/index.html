@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ata_dev_same_device(9) · Linux Manual Pages</title>
+<meta name="description" content="ata_dev_same_device – Determine whether new ID matches configured device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-ata_dev_same_device/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>ata_dev_same_device(9)</h1>
+
+
+
+
+
+<p>ata_dev_same_device &#8211; Determine whether new ID matches configured device</p>
+<h2>Synopsis</h2>
+<pre><code>int ata_dev_same_device(struct ata_device *dev, unsigned int new_class, const u16 *new_id);</code></pre>
+<h2>Arguments</h2>
+<p><i>dev</i></p>
+<dl>
+<dd>
+</dd><dd>device to compare against</dd></dl>
+<p> <i>new_class</i></p>
+<dl>
+<dd>class of the new device</dd></dl>
+<p> <i>new_id</i></p>
+<dl>
+<dd>IDENTIFY page of the new device</dd></dl>
+<h2>Description</h2>
+<p>Compare <i>new_class</i> and <i>new_id</i> against <i>dev</i> and determine whether <i>dev</i> is the device indicated by <i>new_class</i> and <i>new_id</i>. </p>
+<p> LOCKING: None.</p>
+<h2>Return</h2>
+<p>1 if <i>dev</i> matches <i>new_class</i> and <i>new_id</i>, 0 otherwise.</p>
+<h2>Author</h2>
+<p><code>Jeff Garzik</code></p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

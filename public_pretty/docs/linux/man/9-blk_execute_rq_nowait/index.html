@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>blk_execute_rq_nowait(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-blk_execute_rq_nowait/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>blk_execute_rq_nowait(9)</h1>
+
+
+
+
+
+<p>blk_execute_rq_nowait - insert a request into queue for execution</p>
+<h2>Synopsis</h2>
+<pre><code>void blk_execute_rq_nowait(struct request_queue *q, struct gendisk *bd_disk, struct request *rq, int at_head, rq_end_io_fn *done);</code></pre>
+<h2>Arguments</h2>
+<p><i>q</i></p>
+<dl><dd></dd><dd>queue to insert the request in</dd></dl>
+<p><i>bd_disk</i></p>
+<dl><dd>matching gendisk</dd></dl>
+<p><i>rq</i></p>
+<dl><dd>request to insert</dd></dl>
+<p><i>at_head</i></p>
+<dl><dd>insert request at head or tail of queue</dd></dl>
+<p><i>done</i></p>
+<dl><dd>I/O completion handler</dd></dl>
+<h2>Description</h2>
+<p>Insert a fully prepared request at the back of the I/O scheduler queue for execution. Don&rsquo;t wait for completion.</p>
+<h2>Note</h2>
+<p>This function will invoke <i>done</i> directly if the queue is dead.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

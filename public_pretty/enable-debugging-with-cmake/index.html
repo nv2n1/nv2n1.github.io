@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debugging C&#43;&#43; Projects with CMake - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/enable-debugging-with-cmake/">
+  <meta name="description" content="To enable debugging, configure your CMake build with CMAKE_BUILD_TYPE set to Debug. This tells CMake to invoke the compiler with the -g flag, generating debug …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Debugging C&#43;&#43; Projects with CMake">
+  <meta property="og:url" content="https://www.systutorials.com/enable-debugging-with-cmake/">
+  <meta property="og:description" content="To enable debugging, configure your CMake build with CMAKE_BUILD_TYPE set to Debug. This tells CMake to invoke the compiler with the -g flag, generating debug …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Debugging C&#43;&#43; Projects with CMake</h1>
+        <time class="post-date" datetime="2018-03-24T08:13:44Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/ethan-ainsworth/">Ethan Ainsworth</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>To enable debugging, configure your CMake build with <code>CMAKE_BUILD_TYPE</code> set to <code>Debug</code>. This tells CMake to invoke the compiler with the <code>-g</code> flag, generating debug symbols that tools like gdb and lldb need. From your project’s root directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Debug -B build
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl">make
+</span></span></code></pre></div><p>The <code>-B build</code> flag creates a separate build directory, which is standard practice and keeps your source tree clean.</p>
+<p>If you’re using Ninja instead of Make (faster incremental builds):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Debug -B build -G Ninja
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl">ninja
+</span></span></code></pre></div><p>For multi-configuration generators like Visual Studio or Xcode, <code>CMAKE_BUILD_TYPE</code> doesn’t apply. Instead, specify the config during the build step:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cmake -B build -G <span class="s2">&#34;Visual Studio 17 2022&#34;</span>
+</span></span><span class="line"><span class="cl">cmake --build build --config Debug
+</span></span></code></pre></div><h2 id="optimize-debug-symbols-without-sacrificing-performance">Optimize Debug Symbols Without Sacrificing Performance</h2>
+<p>By default, Debug builds disable optimizations (<code>-O0</code>), which can make execution slow. For large projects, you might want debug symbols with light optimization:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>RelWithDebInfo -B build
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl">make
+</span></span></code></pre></div><p>This uses <code>-O2</code> optimization with <code>-g</code> flags, giving you debuggable code that runs at closer to release speed. It’s a good middle ground for debugging complex issues in realistic conditions.</p>
+<h2 id="starting-a-debugging-session">Starting a Debugging Session</h2>
+<p>Once built, launch gdb:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gdb ./build/your_binary
+</span></span></code></pre></div><p>Or with arguments:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gdb --args ./build/your_binary arg1 arg2
+</span></span></code></pre></div><p>For lldb (LLVM’s debugger, standard on macOS):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lldb ./build/your_binary
+</span></span></code></pre></div><h2 id="essential-debugging-commands">Essential Debugging Commands</h2>
+<p><strong>Breakpoints and execution:</strong></p>
+<ul>
+<li><code>break function_name</code> or <code>b main</code> — set a breakpoint</li>
+<li><code>break file.cpp:42</code> — break at a specific line</li>
+<li><code>run</code> or <code>r</code> — start execution</li>
+<li><code>continue</code> or <code>c</code> — resume until next breakpoint</li>
+<li><code>next</code> or <code>n</code> — execute next line (doesn’t step into functions)</li>
+<li><code>step</code> or <code>s</code> — step into the next function call</li>
+<li><code>finish</code> — execute until current function returns</li>
+</ul>
+<p><strong>Inspecting state:</strong></p>
+<ul>
+<li><code>print variable_name</code> or <code>p var</code> — display variable value</li>
+<li><code>print *pointer</code> — dereference and display pointer</li>
+<li><code>print array@10</code> — print first 10 elements of array</li>
+<li><code>watch variable_name</code> — pause when variable changes</li>
+<li><code>info locals</code> — show all local variables in current frame</li>
+<li><code>backtrace</code> or <code>bt</code> — print call stack</li>
+</ul>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li><code>frame N</code> — switch to stack frame N</li>
+<li><code>list</code> or <code>l</code> — show source code around current line</li>
+<li><code>quit</code> or <code>q</code> — exit debugger</li>
+</ul>
+<h2 id="enabling-core-dumps">Enabling Core Dumps</h2>
+<p>If your program crashes, core dumps provide a snapshot of memory at the time of the crash. Enable them:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">ulimit</span> -c unlimited
+</span></span><span class="line"><span class="cl">./build/your_binary
+</span></span></code></pre></div><p>If a crash occurs, debug the core file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gdb ./build/your_binary core
+</span></span></code></pre></div><p>Then use <code>backtrace</code> to see where the crash happened.</p>
+<h2 id="cmakeliststxt-configuration">CMakeLists.txt Configuration</h2>
+<p>For consistent debug builds across your team, set defaults in <code>CMakeLists.txt</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="nb">if</span><span class="p">(</span><span class="s">NOT</span> <span class="s">CMAKE_BUILD_TYPE</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl">    <span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_BUILD_TYPE</span> <span class="s">Debug</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&#34;Build type&#34;</span> <span class="s">FORCE</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="nb">endif</span><span class="p">()</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="c"># Optional: add custom debug flags
+</span></span></span><span class="line"><span class="cl"><span class="nb">if</span><span class="p">(</span><span class="s">CMAKE_BUILD_TYPE</span> <span class="s">MATCHES</span> <span class="s">Debug</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl">    <span class="nb">if</span><span class="p">(</span><span class="s">MSVC</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl">        <span class="nb">add_compile_options</span><span class="p">(</span><span class="s">/Zi</span> <span class="s">/Od</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl">    <span class="nb">else</span><span class="p">()</span><span class="err">
+</span></span></span><span class="line"><span class="cl">        <span class="nb">add_compile_options</span><span class="p">(</span><span class="s">-g</span> <span class="s">-O0</span> <span class="s">-Wall</span> <span class="s">-Wextra</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl">    <span class="nb">endif</span><span class="p">()</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="nb">endif</span><span class="p">()</span><span class="err">
+</span></span></span></code></pre></div><p>This ensures new developers get a debuggable build by default.</p>
+<h2 id="remote-debugging">Remote Debugging</h2>
+<p>For debugging on another machine, use gdb’s remote protocol:</p>
+<p>On the target machine (your server):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gdbserver localhost:2345 ./your_binary
+</span></span></code></pre></div><p>On your local machine:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gdb ./your_binary
+</span></span><span class="line"><span class="cl"><span class="o">(</span>gdb<span class="o">)</span> target remote your.server.com:2345
+</span></span><span class="line"><span class="cl"><span class="o">(</span>gdb<span class="o">)</span> <span class="k">continue</span>
+</span></span></code></pre></div><p>This is essential for embedded systems and server-side debugging where you can’t easily run a graphical debugger.</p>
+<h2 id="2026-comprehensive-guide-best-practices">2026 Comprehensive Guide: Best Practices</h2>
+<p>This extended guide covers Debugging C++ Projects with CMake with advanced techniques and troubleshooting tips for 2026. Following modern best practices ensures reliable, maintainable, and secure systems.</p>
+<h2 id="advanced-implementation-strategies">Advanced Implementation Strategies</h2>
+<p>For complex deployments, consider these approaches: Infrastructure as Code for reproducible environments, container-based isolation for dependency management, and CI/CD pipelines for automated testing and deployment. Always document your custom configurations and maintain separate development, staging, and production environments.</p>
+<h2 id="security-and-hardening">Security and Hardening</h2>
+<p>Security is foundational to all system administration. Implement layered defense: network segmentation, host-based firewalls, intrusion detection, and regular security audits. Use SSH key-based authentication instead of passwords. Encrypt sensitive data at rest and in transit. Follow the principle of least privilege for access controls.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor resources continuously with tools like top, htop, iotop</li>
+<li>Profile application performance before and after optimizations</li>
+<li>Use caching strategically: application caches, database query caching, CDN for static assets</li>
+<li>Optimize database queries with proper indexing and query analysis</li>
+<li>Implement connection pooling for network services</li>
+</ul>
+<h2 id="troubleshooting-methodology">Troubleshooting Methodology</h2>
+<p>Follow a systematic approach to debugging: reproduce the issue, isolate variables, check logs, test fixes. Keep detailed logs and document solutions found. For intermittent issues, add monitoring and alerting. Use verbose modes and debug flags when needed.</p>
+<h2 id="related-tools-and-utilities">Related Tools and Utilities</h2>
+<p>These tools complement the techniques covered in this article:</p>
+<ul>
+<li>System monitoring: htop, vmstat, iostat, dstat for resource tracking</li>
+<li>Network analysis: tcpdump, wireshark, netstat, ss for connectivity debugging</li>
+<li>Log management: journalctl, tail, less for log analysis</li>
+<li>File operations: find, locate, fd, tree for efficient searching</li>
+<li>Package management: dnf, apt, rpm, zypper for package operations</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Modern operations emphasize automation, observability, and version control. Use orchestration tools like Ansible, Terraform, or Kubernetes for infrastructure. Implement centralized logging and metrics. Maintain comprehensive documentation for all systems and processes.</p>
+<h2 id="quick-reference-summary">Quick Reference Summary</h2>
+<p>This comprehensive guide provides extended knowledge for Debugging C++ Projects with CMake. For specialized requirements, refer to official documentation. Practice in test environments before production deployment. Keep backups of critical configurations and data.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tpm_selftest(8) · Linux Manual Pages</title>
+<meta name="description" content="tpm_selftest – request TPM perform selftest and report">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-tpm_selftest/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>tpm_selftest(8)</h1>
+
+
+
+
+
+<p>TPM Management &#8211; tpm_selftest<br />
+ </center></p>
+<h2>Name</h2>
+<p>tpm_selftest &#8211; request TPM perform selftest and report</p>
+<h2>Synopsis</h2>
+<p><code>tpm_selftest</code> [<code>OPTION</code>] </p>
+<h2>Description</h2>
+<p><code>tpm_selftest</code> requests that the system&#8217;s TPM perform a self test (via the TPM_SelfTestFull API) and report the results. The <code>&#8211;results</code> option reports the outcome of the last self test operation without requesting that another test be executed. If the TPM fails the self test, it enters failure mode where no commands are accepted. The results are reported in a manufacturer specific format. The TPM&#8217;s self test is always executed automatically at every boot.</p>
+<dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display command usage info.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Display command version info.</dd>
+<dt><code>-l</code>, <code>&#8211;log</code> [none|error|info|debug]</dt>
+<dd>Set logging level.</dd>
+<dt><code>-r</code>, <code>&#8211;results</code></dt>
+<dd>Report results only. </dd>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-tpm_version/">tpm_version</a></code>(1), <code><a href="/docs/linux/man/8-tpm_takeownership/">tpm_takeownership</a></code>(8), <code><a href="/docs/linux/man/8-tpm_setownable/">tpm_setownable</a></code>(8), <code><a href="/docs/linux/man/8-tcsd/">tcsd</a></code>(8) </p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;trousers-users [at] lists.sourceforge.net&gt;</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

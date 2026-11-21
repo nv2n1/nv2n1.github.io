@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>update-python-modules(8) · Linux Manual Pages</title>
+<meta name="description" content="update-python-modules – byte-compile python modules">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-update-python-modules/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>update-python-modules(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>update-python-modules &#8211; byte-compile python modules</p>
+<h2>Synopsis</h2>
+<p><code>update-python-modules</code> [<i>options</i>] [<i>package.public</i> [&#8230;]]</p>
+<h2>Description</h2>
+<p>The <code>update-python-modules</code> command is part of the <code>python-support</code> bundle. </p>
+<p> <code>update-python-modules</code> is responsible for the byte-compilation of python modules. When used in byte-compilation mode, it will byte-compile modules references in the files given on the command line. When used in installation mode, it will byte-compile them once for each installed python version, and will make them available for all of them. </p>
+<p> At each invocation, with or without arguments, <code>update-python-modules</code> will check for installed python versions, and will build or remove modules according to new or removed versions since the last time it was run.</p>
+<h2>Arguments</h2>
+<p>Arguments must be files or directories located in the <i>/usr/share/python-support</i> directory. Depending on their extension, they are treated differently.</p>
+<dl>
+<dt><i>package</i>.public</dt>
+<dd>A file listing public modules to install for each version. These modules must lie in <i>/usr/share/pyshared</i> or <i>/usr/lib/pyshared</i>.</dd>
+<dt><i>package</i>.private</dt>
+<dd>A file listing private modules to byte-compile for one Python version.</dd>
+<dt><i>package</i>/</dt>
+<dd>A legacy directory hierarchy of public modules. The C extensions and portions that change with the Python version are to be found in <i>/usr/lib/python-support/python</i>X.Y<i>/</i>package<i>/</i>.</dd>
+<dt><i>package.dirs</i></dt>
+<dd>A legacy file listing directories where to find private modules.</dd></dl>
+<h2>Options</h2>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Detail all actions while they are performed.</dd>
+<dt><code>-b, &#8211;bytecompile</code></dt>
+<dd>Only accept to work on private modules. When given this option, <code>update-python-modules</code> will fail if passed references to public modules.</dd>
+<dt><code>-i, &#8211;install</code></dt>
+<dd>Only accept to work on public modules. When given this option, <code>update-python-modules</code> will fail if passed references to public modules.</dd>
+<dt><code>-c, &#8211;clean</code></dt>
+<dd>Clean modules instead of installing them.</dd>
+<dt><code>-a, &#8211;rebuild-all</code></dt>
+<dd>Rebuild all private modules. This is necessary when the default python version was changed, for example. .TP <code>-f, &#8211;force-rebuild-all</code> Clean all modules (public and private), and rebuild them.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><i>/usr/lib/pymodules/python</i>X.Y<i>/</i></dt>
+<dd>These directories contain the byte-compiled modules for version python<i>X.Y</i>.</dd></dl>
+<h2>See Also</h2>
+<p>/usr/share/doc/python-support/README.gz</p>
+<h2>Author</h2>
+<p>Josselin Mouette &lt;joss [at] debian.org&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

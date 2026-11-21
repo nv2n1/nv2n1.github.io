@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shtool-tarball(1) · Linux Manual Pages</title>
+<meta name="description" content="shtool tarball – GNU shtool command for rolling standardized tarballs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-shtool-tarball/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>shtool-tarball(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> shtool tarball &#8211; GNU shtool command for rolling standardized tarballs </p>
+<h2>SYNOPSIS</h2>
+<p> <code>shtool tarball</code> [<code>-t</code>|<code>&#8211;trace</code>] [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-o</code>|<code>&#8211;output</code> <i>tarball</i>] [<code>-c</code>|<code>&#8211;compress</code> <i>prog</i>] [<code>-d</code>|<code>&#8211;directory</code> <i>directory</i>] [<code>-u</code>|<code>&#8211;user</code> <i>user</i>] [<code>-g</code>|<code>&#8211;group</code> <i>group</i>] [<code>-e</code>|<code>&#8211;exclude</code> <i>pattern</i>] <i>path</i> [<i>path</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> This command is for rolling input files under <i>path</i> into a distribution tarballs which can be extracted by <i><a href="/docs/linux/man/1-tar/">tar</a></i>(1). </p>
+<p> The four important aspects of good open source software tarballs are: (1) unpack into a single top-level directory, (2) top-level directory corresponds to the tarball filename, (3) tarball files should be sorted and (4) arbitrary names for file owner and group.</p>
+<h2>OPTIONS</h2>
+<p> The following command line options are available.</p>
+<dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display some processing information.</dd>
+<dt><code>-t</code>, <code>&#8211;trace</code></dt>
+<dd> Enable the output of the essential shell commands which are executed.</dd>
+<dt><code>-o</code>, <code>&#8211;output</code> <i>tarball</i></dt>
+<dd> Output tarball to file <i>tarball</i>.</dd>
+<dt><code>-c</code>, <code>&#8211;compress</code> <i>prog</i></dt>
+<dd> Pipe resulting tarball through compression program <i>prog</i>.</dd>
+<dt><code>-d</code>, <code>&#8211;directory</code> <i>directory</i></dt>
+<dd> Sets the top-level directory into which the tarball unpacks. By default it is <i>tarball</i> without the trailing <tt>&quot;.tar.*&quot;</tt> extension.</dd>
+<dt><code>-u</code>, <code>&#8211;user</code> <i>user</i></dt>
+<dd> The user (owner) of files and directories in the tarball to <i>user</i>.</dd>
+<dt><code>-g</code>, <code>&#8211;group</code> <i>group</i></dt>
+<dd> The group of files and directories in the tarball to <i>group</i>.</dd>
+<dt><code>-e</code>, <code>&#8211;exclude</code> <i>pattern</i></dt>
+<dd> Exclude files and directories matching comma-separated list of regex <i>pattern</i> from the tarball. Directories are expanded before the filtering takes place. The default filter pattern is &quot;<tt>&quot;CVS,\.cvsignore,\.svn,\.[oa]\$&quot;</tt>&quot;.</dd></dl>
+<h2>EXAMPLE</h2>
+<pre>
+ #   Makefile.in
+ dist:
+     ...
+     V=`shtool version -d short ...`; \
+     shtool tarball -o foobar-$$V.tar.gz -c 'gzip -9' \
+                    -u bar -g gnu -e 'CVS,\.cvsignore' .
+</pre>
+<h2>HISTORY</h2>
+<p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>tarball</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1999 for <font SIZE="-1"><code>GNU</code></font><code> shtool</code>.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-tar/">tar</a></i>(1), <i><a href="/docs/linux/man/1-compress/">compress</a></i>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

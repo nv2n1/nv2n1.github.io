@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>popt(3) · Linux Manual Pages</title>
+<meta name="description" content="popt – Parse command line options">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-popt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>popt(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>popt &#8211; Parse command line options</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;popt.h&gt;
+poptContext poptGetContext(const char *name, int argc,
+                           const char **argv,
+                           const struct poptOption *options,
+                           int flags);
+void poptFreeContext(poptContext con);
+void poptResetContext(poptContext con);
+int poptGetNextOpt(poptContext con);
+const char *poptGetOptArg(poptContext con);
+const char *poptGetArg(poptContext con);
+const char *poptPeekArg(poptContext con);
+const char **poptGetArgs(poptContext con);
+const char *const poptStrerror(const int error);
+const char *poptBadOption(poptContext con, int flags);
+int poptReadDefaultConfig(poptContext con, int flags);
+int poptReadConfigFile(poptContext con, char *fn);
+int poptAddAlias(poptContext con, struct poptAlias alias,
+                 int flags);
+int poptParseArgvString(char *s, int *argcPtr,
+                        const char ***argvPtr);
+int poptDupArgv(int argc, const char **argv, int *argcPtr,
+                const char ***argvPtr);
+int poptStuffArgs(poptContext con, const char **argv);</code></pre>
+<h2>Description</h2>
+<p>The popt library exists essentially for parsing command-line options. It is found superior in many ways when compared to parsing the argv array by hand or using the getopt functions <code>getopt()</code> and <code>getopt_long()</code> [see <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3)]. Some specific advantages of popt are: it does not utilize global variables, thus enabling multiple passes in parsing <i>argv</i> ; it can parse an arbitrary array of <i>argv</i>-style elements, allowing parsing of command-line-strings from any source; it provides a standard method of option aliasing (to be discussed at length below.); it can exec external option filters; and, finally, it can automatically generate help and usage messages for the application. </p>
+<p> Like <code>getopt_long()</code>, the popt library supports short and long style options. Recall that a <code>short option</code> consists of a &#8211; character followed by a single alphanumeric character. A <code>long option</code>, common in GNU utilities, consists of two &#8211; characters followed by a string made up of letters, numbers and hyphens. Long options are optionally allowed to begin with a single -, primarily to allow command-line compatibility between popt applications and X toolkit applications. Either type of option may be followed by an argument. A space separates a short option from its arguments; either a space or an = separates a long option from an argument. </p>
+<p> The popt library is highly portable and should work on any POSIX platform. The latest version is distributed with rpm and is always available from: <a href="ftp://ftp.rpm.org/pub/rpm/dist.">ftp://ftp.rpm.org/pub/rpm/dist.</a> </p>
+<p> It may be redistributed under the X consortium license, see the file COPYING in the popt source distribution for details.</p>
+<h2>Basic Popt Usage</h2>
+<h3>1. The Option Table</h3>
+<p>Applications provide popt with information on their command-line options by means of an &quot;option table,&quot; i.e., an array of <code>struct poptOption </code> structures: </p>
+<p> #include &lt;popt.h&gt; </p>
+<pre>struct poptOption {
+ const char * longName; /* may be NULL */
+ char shortName; /* may be '
+</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

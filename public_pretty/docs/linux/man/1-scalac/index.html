@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scalac(1) · Linux Manual Pages</title>
+<meta name="description" content="scalac – Compiler for the Scala 2 language">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-scalac/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>scalac(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> <code>scalac</code> &#8211; Compiler for the Scala 2 language </p>
+<h2>SYNOPSIS</h2>
+<p> <code>scalac</code> [ &lt;<i>options</i>&gt; ] &lt;<i>source files</i>&gt;</p>
+<h2>PARAMETERS</h2>
+<dl>
+<dt>&lt;<i>options</i>&gt;</dt>
+<dd> Command line options. See <code>OPTIONS</code> below.</dd>
+<dt>&lt;<i>source files</i>&gt;</dt>
+<dd> One or more source files to be compiled (such as MyClass.scala).</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> The <code>scalac</code> tool reads class and object definitions, written in the Scala programming language, and compiles them into bytecode class files. </p>
+<p> By default, the compiler puts each class file in the same directory as its source file. You can specify a separate destination directory with -d (see <code>OPTIONS</code>, below).</p>
+<h2>OPTIONS</h2>
+<p> The compiler has a set of standard options that are supported on the current development environment and will be supported in future releases. An additional set of non-standard options are specific to the current virtual machine implementation and are subject to change in the future. Non-standard options begin with <code>-X</code>.</p>
+<h3>Standard Options</h3>
+<dl>
+<dt><code>-D</code>property=value</dt>
+<dd> Pass <code>-D</code>property=value directly to the runtime system.</dd>
+<dt><code>-J</code>&lt;<i>flag</i>&gt;</dt>
+<dd> Pass &lt;<i>flag</i>&gt; directly to the runtime system.</dd>
+<dt><code>-P:</code>&lt;<i>plugin:opt</i>&gt;</dt>
+<dd> Pass an option to a plugin</dd>
+<dt><code>-X</code></dt>
+<dd> Print a synopsis of advanced options.</dd>
+<dt><code>-bootclasspath</code> &lt;<i>path</i>&gt;</dt>
+<dd> Override location of bootstrap class files (where to find the standard built-in classes, such as &quot;scala.List&quot;).</dd>
+<dt><code>-classpath</code> &lt;<i>path</i>&gt;</dt>
+<dd> Specify where to find user class files (on Unix-based systems a colon-separated list of paths, on Windows-based systems, a semicolon-separate list of paths). This does not override the built-in (&quot;boot&quot;) search path.</dd>
+<dt>
+</dt><dd> The default class path is the current directory. Setting the CLASSPATH variable or using the -classpath command-line option overrides that default, so if you want to include the current directory in the search path, you must include &quot;.&quot; in the new settings.</dd>
+<dt><code>-d</code> &lt;<i>directory|jar</i>&gt;</dt>
+<dd> Specify where to place generated class files.</dd>
+<dt><code>-deprecation</code></dt>
+<dd> Emit warning and location for usages of deprecated APIs.</dd>
+<dt>
+</dt><dd> Available since Scala version 2.2.1</dd>
+<dt><code>-encoding</code> &lt;<i>encoding</i>&gt;</dt>
+<dd> Specify character encoding used by source files.</dd>
+<dt>
+</dt><dd> The default value is platform-specific (Linux: &quot;UTF8&quot;, Windows: &quot;Cp1252&quot;). Executing the following code in the Scala interpreter will return the default value on your system:</dd>
+<dt>
+</dt><dd> <code> scala&gt; </code>new java.io.InputStreamReader(System.in).getEncoding</dd>
+<dt><code>-explaintypes</code></dt>
+<dd> Explain type errors in more detail.</dd>
+<dt><code>-extdirs</code> &lt;<i>dirs</i>&gt;</dt>
+<dd> Override location of installed extensions.</dd>
+<dt><code>-g:</code>{none,source,line,vars,notailcalls}</dt>
+<dd> &quot;none&quot; generates no debugging info,</dd>
+<dt>
+</dt><dd> &quot;source&quot; generates only the source file attribute,</dd>
+<dt>
+</dt><dd> &quot;line&quot; generates source and line number information,</dd>
+<dt>
+</dt><dd> &quot;vars&quot; generates source, line number and local variable information,</dd>
+<dt>
+</dt><dd> &quot;notailcalls&quot; generates all of the above and <i>will not</i> perform tail call optimization.</dd>
+<dt><code>-help</code></dt>
+<dd> Print a synopsis of standard options.</dd>
+<dt><code>-javabootclasspath</code> &lt;<i>path</i>&gt;</dt>
+<dd> Override Java boot classpath.</dd>
+<dt><code>-javaextdirs</code> &lt;<i>path</i>&gt;</dt>
+<dd> Override Java extdirs classpath.</dd>
+<dt><code>-no-specialization</code></dt>
+<dd> Ignore <i>@specialize</i> annotations.</dd>
+<dt><code>-nobootcp</code></dt>
+<dd> Do not use the boot classpath for the Scala jar files.</dd>
+<dt><code>-nowarn</code></dt>
+<dd> Generate no warnings</dd>
+<dt><code>-optimise</code></dt>
+<dd> Generates faster bytecode by applying optimisations to the program.</dd>
+<dt><code>-print</code></dt>
+<dd> Print program with all Scala-specific features removed.</dd>
+<dt><code>-sourcepath</code> &lt;<i>path</i>&gt;</dt>
+<dd> Specify location(s) of source files.</dd>
+<dt><code>-target:</code>&lt;<i>target</i>&gt;</dt>
+<dd> Specify which backend to use (jvm-1.5,msil).</dd>
+<dt>
+</dt><dd> The default value is &quot;jvm-1.5&quot; (was &quot;jvm-1.4&quot; up to Scala version 2.6.1).</dd>
+<dt><code>-toolcp</code> &lt;<i>path</i>&gt;</dt>
+<dd> Add to the runner classpath.</dd>
+<dt><code>-unchecked</code></dt>
+<dd> Enable detailed unchecked (erasure) warnings</dd>
+<dt>
+</dt><dd> Non variable type-arguments in type patterns are unchecked since they are eliminated by erasure</dd>
+<dt>
+</dt><dd> Available since Scala version 2.3.0</dd>
+<dt><code>-uniqid</code></dt>
+<dd> Uniquely tag all identifiers in debugging output.</dd>
+<dt><code>-verbose</code></dt>
+<dd> Output messages about what the compiler is doing</dd>
+<dt><code>-version</code></dt>
+<dd> Print product version and exit.</dd>
+<dt><code>@</code>&lt;<i>file</i>&gt;</dt>
+<dd> A text file containing compiler arguments (options and source files)</dd></dl>
+<h3>Advanced Options</h3>
+<dl>
+<dt><code>-Xassem-extdirs</code> &lt;<i>dirs</i>&gt;</dt>
+<dd> (Requires -target:msil) List of directories containing assemblies. default:lib.</dd>
+<dt><code>-Xassem-name</code> &lt;<i>file</i>&gt;</dt>
+<dd> (Requires -target:msil) Name of the output assembly.</dd>
+<dt><code>-Xassem-path</code> &lt;<i>path</i>&gt;</dt>
+<dd> (Requires -target:msil) List of assemblies referenced by the program.</dd>
+<dt><code>-Xcheck-null</code></dt>
+<dd> Warn upon selection of nullable reference</dd>
+<dt><code>-Xcheckinit</code></dt>
+<dd> Wrap field accessors to throw an exception on uninitialized access.</dd>
+<dt><code>-Xdisable-assertions</code></dt>
+<dd> Generate no assertions and assumptions</dd>
+<dt><code>-Xelide-below</code> &lt;<i>n</i>&gt;</dt>
+<dd> Calls to <i>@elidable</i> methods are omitted if method priority is lower than argument.</dd>
+<dt><code>-Xexperimental</code></dt>
+<dd> Enable experimental extensions</dd>
+<dt><code>-Xfatal-warnings</code></dt>
+<dd> Fail the compilation if there are any warnings.</dd>
+<dt><code>-Xfuture</code></dt>
+<dd> Turn on future language features.</dd>
+<dt><code>-Xgenerate-phase-graph</code> &lt;<i>file</i>&gt;</dt>
+<dd> Generate the phase graphs (outputs .dot files) to fileX.dot.</dd>
+<dt><code>-Xlint</code></dt>
+<dd> Enable recommended additional warnings.</dd>
+<dt><code>-Xlog-implicits</code></dt>
+<dd> Show more detail on why some implicits are not applicable.</dd>
+<dt><code>-Xmax-classfile-name</code> &lt;<i>n</i>&gt;</dt>
+<dd> Maximum filename length for generated classes.</dd>
+<dt><code>-Xmigration</code></dt>
+<dd> Warn about constructs whose behavior may have changed between 2.7 and 2.8.</dd>
+<dt><code>-Xno-forwarders</code></dt>
+<dd> Do not generate static forwarders in mirror classes.</dd>
+<dt><code>-Xno-uescape</code></dt>
+<dd> Disable handling of 
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

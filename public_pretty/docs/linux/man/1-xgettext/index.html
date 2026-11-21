@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xgettext(1) · Linux Manual Pages</title>
+<meta name="description" content="xgettext – extract gettext strings from source">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-xgettext/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>xgettext(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> xgettext &#8211; extract gettext strings from source </p>
+<h2>SYNOPSIS</h2>
+<p> <code>xgettext</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> Extract translatable strings from given input files. </p>
+<p> Mandatory arguments to long options are mandatory for short options too. Similarly for optional arguments.</p>
+<h3>Input file location:</h3>
+<dl>
+<dt>INPUTFILE &#8230;</dt>
+<dd> input files</dd>
+<dt><code>-f</code>, <code>&#8211;files-from</code>=<i>FILE</i></dt>
+<dd> get list of input files from FILE</dd>
+<dt><code>-D</code>, <code>&#8211;directory</code>=<i>DIRECTORY</i></dt>
+<dd> add DIRECTORY to list for input files search</dd></dl>
+<p> If input file is -, standard input is read.</p>
+<h3>Output file location:</h3>
+<dl>
+<dt><code>-d</code>, <code>&#8211;default-domain</code>=<i>NAME</i></dt>
+<dd> use NAME.po for output (instead of messages.po)</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></dt>
+<dd> write output to specified file</dd>
+<dt><code>-p</code>, <code>&#8211;output-dir</code>=<i>DIR</i></dt>
+<dd> output files will be placed in directory DIR</dd></dl>
+<p> If output file is -, output is written to standard output.</p>
+<h3>Choice of input file language:</h3>
+<dl>
+<dt><code>-L</code>, <code>&#8211;language</code>=<i>NAME</i></dt>
+<dd> recognise the specified language (C, C++, ObjectiveC, PO, Shell, Python, Lisp, EmacsLisp, librep, Scheme, Smalltalk, Java, JavaProperties, C#, awk, YCP, Tcl, Perl, PHP, GCC-source, NXStringTable, RST, Glade, Lua, JavaScript, Vala, Desktop)</dd>
+<dt><code>-C</code>, <code>&#8211;c</code>++</dt>
+<dd> shorthand for <code>&#8211;language</code>=<i>C</i>++</dd></dl>
+<p> By default the language is guessed depending on the input file name extension.</p>
+<h3>Input file interpretation:</h3>
+<dl>
+<dt><code>&#8211;from-code</code>=<i>NAME</i></dt>
+<dd> encoding of input files (except for Python, Tcl, Glade)</dd></dl>
+<p> By default the input files are assumed to be in ASCII.</p>
+<h3>Operation mode:</h3>
+<dl>
+<dt><code>-j</code>, <code>&#8211;join-existing</code></dt>
+<dd> join messages with existing file</dd>
+<dt><code>-x</code>, <code>&#8211;exclude-file</code>=<i>FILE</i>.po</dt>
+<dd> entries from FILE.po are not extracted</dd>
+<dt><code>-cTAG</code>, <code>&#8211;add-comments</code>=<i>TAG</i></dt>
+<dd> place comment blocks starting with TAG and preceding keyword lines in output file</dd>
+<dt><code>-c</code>, <code>&#8211;add-comments</code></dt>
+<dd> place all comment blocks preceding keyword lines in output file</dd>
+<dt><code>&#8211;check</code>=<i>NAME</i></dt>
+<dd> perform syntax check on messages (ellipsis-unicode, space-ellipsis,</dd>
+<dt>
+</dt><dd> quote-unicode, bullet-unicode)</dd>
+<dt><code>&#8211;sentence-end</code>=<i>TYPE</i></dt>
+<dd> type describing the end of sentence (single-space, which is the default,</dd>
+<dt>
+</dt><dd> or double-space)</dd></dl>
+<h3>Language specific options:</h3>
+<dl>
+<dt><code>-a</code>, <code>&#8211;extract-all</code></dt>
+<dd> extract all strings (only languages C, C++, ObjectiveC, Shell, Python, Lisp, EmacsLisp, librep, Scheme, Java, C#, awk, Tcl, Perl, PHP, GCC-source, Glade, Lua, JavaScript, Vala)</dd>
+<dt><code>-kWORD</code>, <code>&#8211;keyword</code>=<i>WORD</i></dt>
+<dd> look for WORD as an additional keyword</dd>
+<dt><code>-k</code>, <code>&#8211;keyword</code></dt>
+<dd> do not to use default keywords (only languages C, C++, ObjectiveC, Shell, Python, Lisp, EmacsLisp, librep, Scheme, Java, C#, awk, Tcl, Perl, PHP, GCC-source, Glade, Lua, JavaScript, Vala, Desktop)</dd>
+<dt><code>&#8211;flag</code>=<i>WORD</i>:ARG:FLAG</dt>
+<dd> additional flag for strings inside the argument number ARG of keyword WORD</dd>
+<dt>
+</dt><dd> (only languages C, C++, ObjectiveC, Shell, Python, Lisp, EmacsLisp, librep, Scheme, Java, C#, awk, YCP, Tcl, Perl, PHP, GCC-source, Lua, JavaScript, Vala)</dd>
+<dt><code>-T</code>, <code>&#8211;trigraphs</code></dt>
+<dd> understand ANSI C trigraphs for input (only languages C, C++, ObjectiveC)</dd>
+<dt><code>&#8211;its</code>=<i>FILE</i></dt>
+<dd> apply ITS rules from FILE (only XML based languages)</dd>
+<dt><code>&#8211;qt</code></dt>
+<dd> recognize Qt format strings (only language C++)</dd>
+<dt><code>&#8211;kde</code></dt>
+<dd> recognize KDE 4 format strings (only language C++)</dd>
+<dt><code>&#8211;boost</code></dt>
+<dd> recognize Boost format strings (only language C++)</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> more detailed formatstring recognition result</dd></dl>
+<h3>Output details:</h3>
+<dl>
+<dt><code>&#8211;color</code></dt>
+<dd> use colors and other text attributes always</dd>
+<dt><code>&#8211;color</code>=<i>WHEN</i></dt>
+<dd> use colors and other text attributes if WHEN. WHEN may be &#8216;always&#8217;, &#8216;never&#8217;, &#8216;auto&#8217;, or &#8216;html&#8217;.</dd>
+<dt><code>&#8211;style</code>=<i>STYLEFILE</i></dt>
+<dd> specify CSS style rule file for <code>&#8211;color</code></dd>
+<dt><code>-e</code>, <code>&#8211;no-escape</code></dt>
+<dd> do not use C escapes in output (default)</dd>
+<dt><code>-E</code>, <code>&#8211;escape</code></dt>
+<dd> use C escapes in output, no extended chars</dd>
+<dt><code>&#8211;force-po</code></dt>
+<dd> write PO file even if empty</dd>
+<dt><code>-i</code>, <code>&#8211;indent</code></dt>
+<dd> write the .po file using indented style</dd>
+<dt><code>&#8211;no-location</code></dt>
+<dd> do not write &#8216;#: filename:line&#8217; lines</dd>
+<dt><code>-n</code>, <code>&#8211;add-location</code></dt>
+<dd> generate &#8216;#: filename:line&#8217; lines (default)</dd>
+<dt><code>&#8211;strict</code></dt>
+<dd> write out strict Uniforum conforming .po file</dd>
+<dt><code>&#8211;properties-output</code></dt>
+<dd> write out a Java .properties file</dd>
+<dt><code>&#8211;stringtable-output</code></dt>
+<dd> write out a NeXTstep/GNUstep .strings file</dd>
+<dt><code>&#8211;itstool</code></dt>
+<dd> write out itstool comments</dd>
+<dt><code>-w</code>, <code>&#8211;width</code>=<i>NUMBER</i></dt>
+<dd> set output page width</dd>
+<dt><code>&#8211;no-wrap</code></dt>
+<dd> do not break long message lines, longer than the output page width, into several lines</dd>
+<dt><code>-s</code>, <code>&#8211;sort-output</code></dt>
+<dd> generate sorted output</dd>
+<dt><code>-F</code>, <code>&#8211;sort-by-file</code></dt>
+<dd> sort output by file location</dd>
+<dt><code>&#8211;omit-header</code></dt>
+<dd> don&#8217;t write header with &#8216;msgid &quot;&quot;&#8217; entry</dd>
+<dt><code>&#8211;copyright-holder</code>=<i>STRING</i></dt>
+<dd> set copyright holder in output</dd>
+<dt><code>&#8211;foreign-user</code></dt>
+<dd> omit FSF copyright in output for foreign user</dd>
+<dt><code>&#8211;package-name</code>=<i>PACKAGE</i></dt>
+<dd> set package name in output</dd>
+<dt><code>&#8211;package-version</code>=<i>VERSION</i></dt>
+<dd> set package version in output</dd>
+<dt><code>&#8211;msgid-bugs-address</code>=<i>EMAIL</i>@ADDRESS</dt>
+<dd> set report address for msgid bugs</dd>
+<dt><code>-m[STRING]</code>, <code>&#8211;msgstr-prefix</code>[=<i>STRING</i>]</dt>
+<dd> use STRING or &quot;&quot; as prefix for msgstr values</dd>
+<dt><code>-M[STRING]</code>, <code>&#8211;msgstr-suffix</code>[=<i>STRING</i>]</dt>
+<dd> use STRING or &quot;&quot; as suffix for msgstr values</dd></dl>
+<h3>Informative output:</h3>
+<dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
+<h2>AUTHOR</h2>
+<p> Written by Ulrich Drepper.</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bug-gnu-gettext [at] gnu.org&gt;.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 1995-1998, 2000-2016 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;<br />
+ This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>xgettext</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>xgettext</code> programs are properly installed at your site, the command</p>
+<dl>
+<dt>
+</dt><dd> <code>info xgettext</code></dd></dl>
+<p> should give you access to the complete manual. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

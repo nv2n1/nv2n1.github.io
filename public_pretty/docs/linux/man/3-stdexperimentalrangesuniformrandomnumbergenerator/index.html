@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalrangesuniformrandomnumbergenerator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalrangesuniformrandomnumbergenerator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalrangesuniformrandomnumbergenerator(3)</h1>
+
+
+
+
+
+<p>std::experimental::ranges::UniformRandomNumberGenerator - std::experimental::ranges::UniformRandomNumberGenerator</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;experimental/ranges/random&gt;
+template &lt;class G&gt;
+concept bool UniformRandomNumberGenerator =
+Invocable&lt;G&amp;&gt; &amp;&amp;
+UnsignedIntegral&lt;std::result_of_t&lt;G&amp;()&gt;&gt; &amp;&amp;      (ranges TS)
+requires {
+    { G::min() } -&gt; Same&lt;std::result_of_t&lt;G&amp;()&gt;&gt;&amp;&amp;;
+    { G::max() } -&gt; Same&lt;std::result_of_t&lt;G&amp;()&gt;&gt;&amp;&amp;;
+};</code></pre> 
+<p>The concept UniformRandomNumberGenerator&lt;G&gt; specifies that G is the type of a uniform random number generator, that is, objects of type G is a function object returning unsigned integer values such that each value in the range of possible results has (ideally) equal probability of being returned.
+UniformRandomNumberGenerator&lt;G&gt; is satisfied only if, given any object g of type G:</p>
+<ul>
+<li>G::min() and G::max() are prvalue constant expressions;</li>
+<li>G::min() &lt; G::max()</li>
+<li>g() is in the range [G::min(), G::max()]</li>
+<li>g() has amortized constant complexity.</li>
+</ul>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

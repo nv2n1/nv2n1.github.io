@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wesside-ng(8) · Linux Manual Pages</title>
+<meta name="description" content="wesside-ng – crack a WEP key of an open network without user intervention">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-wesside-ng/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>wesside-ng(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>wesside-ng &#8211; crack a WEP key of an open network without user intervention</p>
+<h2>Synopsis</h2>
+<p><code>wesside-ng</code> &lt;options&gt;</p>
+<h2>Description</h2>
+<p><code>wesside-ng</code> is an auto-magic tool which incorporates a number of techniques to seamlessly obtain a WEP key in minutes. It first identifies a network, then proceeds to associate with it, obtain PRGA (pseudo random generation algorithm) xor data, determine the network IP scheme, reinject ARP requests and finally determine the WEP key. All this is done without your intervention.</p>
+<h2>Options</h2>
+<dl>
+<dt><i>-h</i></dt>
+<dd>Shows the help screen.</dd>
+<dt><i>-i &lt;iface&gt;</i></dt>
+<dd>Wireless interface name. (Mandatory)</dd>
+<dt><i>-n &lt;network ip&gt;</i></dt>
+<dd>Network IP as in &#8216;who has destination IP (netip) tell source IP (myip)&#8217;. Defaults to the source IP on the ARP request which is captured and decrypted. (Optional)</dd>
+<dt><i>-m &lt;my ip&gt;</i></dt>
+<dd>\(aqwho has destination IP (netip) tell source IP (myip)\(aq. Defaults to the network.123 on the ARP request captured (Optional).</dd>
+<dt><i>-a &lt;source mac&gt;</i></dt>
+<dd>Source MAC address (Optional)</dd>
+<dt><i>-c</i></dt>
+<dd>Do not crack the key. Simply capture the packets until control-C is hit to stop the program! (Optional)</dd>
+<dt><i>-p &lt;min PRGA&gt;</i></dt>
+<dd>Determines the minimum number of bytes of PRGA which is gathered. Defaults to 128 bytes. (Optional).</dd>
+<dt><i>-v &lt;victim MAC&gt;</i></dt>
+<dd>Wireless access point MAC address (Optional).</dd>
+<dt><i>-t &lt;threshold&gt;</i></dt>
+<dd>For each number of IVs specified, restart the airecrack-ng PTW engine (Optional). It will restart PTW every &lt;threshold&gt; IVs.</dd>
+<dt><i>-f &lt;channel&gt;</i></dt>
+<dd>Allows the highest channel for scanning to be defined. Defaults to channel 11 (Optional).</dd></dl>
+<h2>Author</h2>
+<p>This manual page was written by Thomas d&#8217;Otreppe. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-airbase-ng/">airbase-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-aireplay-ng/">aireplay-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airmon-ng/">airmon-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airodump-ng/">airodump-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airserv-ng/">airserv-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airtun-ng/">airtun-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-besside-ng/">besside-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-easside-ng/">easside-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-tkiptun-ng/">tkiptun-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/1-aircrack-ng/">aircrack-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-besside-ng-crawler/">besside-ng-crawler</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-wpaclean/">wpaclean</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

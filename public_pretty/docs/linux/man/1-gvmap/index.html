@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gvmap(1) · Linux Manual Pages</title>
+<meta name="description" content="gvmap – find clusters and create a geographical map highlighting clusters.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gvmap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gvmap(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> gvmap &#8211; find clusters and create a geographical map highlighting clusters. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>gvmap</code> [ <i>options</i> ] [ <code>-o</code> <i>outfile</i> ] [ <i>files</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>gvmap</code> takes as input a graph in DOT format, finds node clusters and produces a rendering of the graph as a geographic-style map, with clusters highlighted as countries, in xdot format. </p>
+<p> In the input graph, each node must have position, width and height information (pos, width and height attributes, respectively) defined, and nodes must not overlap. </p>
+<p> By default, <code>gvmap</code> will generate the clusters from the data. If desired, the input graph can specify cluster information by giving every node a <i>cluster</i> attribute whose value is a small positive integer. (It is works best if <i>cluster</i> values are all integers in the interval [1,K] for some K. Nodes sharing the same <i>cluster</i> attribute value will be put into the same cluster. <code>N.B.</code> For the <i>cluster</i> attribute to be used, all nodes must have a valid value. </p>
+<p> If the <i>-D</i> flag is used, <code>gvmap</code> will use the top-level cluster subgraphs to determine the clustering. Any nodes not in such a cluster will be put into a single catch-all cluster. </p>
+<p> If the input specifies the desired clustering as described above, it can also specify a desired coloring by having some node in each cluster provide a <i>clustercolor</i> attribute. <code>N.B.</code> Unless one specifies <i>-c0</i>, only the <i>clustercolor</i> of the last node in a cluster has an effect. In addition, unless one uses <i>-O</i>, <code>gvmap</code> may permute the given colors.</p>
+<h2>OPTIONS</h2>
+<p> The following options are supported:</p>
+<dl>
+<dt><code>-a</code><i> k</i></dt>
+<dd> The integer k specifies the average number of artificial points added along the bounding box of the labels. Such artificial points are added to avoid a country boundary cutting through the boundary box of the labels. Computing time is proportional to k; hence, for large graphs, a small value of k is suggested. If k = -1, a suitable value of k is automatically selected based on the graph size. By default k = -1.</dd>
+<dt><code>-b</code><i> v</i></dt>
+<dd> The real number v specifies the line width used to draw the polygon boundaries, with v &lt; 0 for no line. By default v = 0.</dd>
+<dt><code>-c</code><i> k</i></dt>
+<dd> The integer k specifies color scheme used to color the countries. By default k = 1.</dd>
+<dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;Acceptable values are:</dt>
+<dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 : no polygons<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 : pastel<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 : blue to yellow<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;3 : white to red<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;4 : light grey to red<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;5 : primary colors<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;6 : sequential single hue red<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;7 : sequential single hue lighter red<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;8 : light grey</dd>
+<dt><code>-c_opacity=</code><i>xy</i></dt>
+<dd> Specifies a two-character hexadecimal string specifying the opacity of the polygons.</dd>
+<dt><code>-C</code><i> d</i></dt>
+<dd> The integer d specifies the maximum number of clusters (countries) allowed. By default d = 0, which means that there is no limit.</dd>
+<dt><code>-d</code><i> d</i></dt>
+<dd> The integer d specifies the random seed used during color assignment optimization that maximize color difference between neighboring countries.</dd>
+<dt><code>-D</code></dt>
+<dd> If specified, the graph&#8217;s cluster subgraphs are used to specify the clustering.</dd>
+<dt><code>-e</code></dt>
+<dd> If specified, edges will be included in the final output.</dd>
+<dt><code>-g</code><i> c</i></dt>
+<dd> Specifies the bounding box color. If not specified, a bounding box is not drawn.</dd>
+<dt><code>-h</code><i> k</i></dt>
+<dd> The number of artificial points added to maintain a bridge between endpoints. By default, this is zero.</dd>
+<dt><code>-highlight=</code><i>k</i></dt>
+<dd> Only draw cluster <i>k</i>. By default, all clusters are drawn.</dd>
+<dt><code>-k</code></dt>
+<dd> If specified, increases the randomness of outer boundary.</dd>
+<dt><code>-l</code><i> s</i></dt>
+<dd> Use the string <i>s</i> as a label for the drawing.</dd>
+<dt><code>-m</code><i> v</i></dt>
+<dd> Generate a margin of <i>v</i> points around the drawing. By default, this is determined by <code>gvmap</code>.</dd>
+<dt><code>-O</code></dt>
+<dd> Do NOT do color assignment optimization that maximizes color differences between neighboring countries</dd>
+<dt><code>-o</code><i>&lt;file&gt;</i></dt>
+<dd> Put output in &lt;file&gt;. Default output is stdout</dd>
+<dt><code>-p</code><i> k</i></dt>
+<dd> Indicates what level of points should be shown. By default, no points are shown.</dd>
+<dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;Acceptable values are:</dt>
+<dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;0 : no points<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 : all points<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;2 : label points<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;3 : random/artificial points</dd>
+<dt><code>-Q</code></dt>
+<dd> Use modularity quality for clustering rather than the default modularity clustering.</dd>
+<dt><code>-r</code><i> k</i></dt>
+<dd> The number of random points k (integer) used to define sea and lake boundaries. If 0, auto assigned. By default v = 0</dd>
+<dt><code>-s</code><i> v</i></dt>
+<dd> The real number v specifies the depth of the sea and lake shores in points. If 0, auto assigned. By default v = 0.</dd>
+<dt><code>-t</code><i> n</i></dt>
+<dd> Make <i>n</i> attempts to improve cluster contiguity.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode.</dd>
+<dt><code>-z</code><i> c</i></dt>
+<dd> Specified the polygon line color. Default is black.</dd>
+<dt><code>-?</code></dt>
+<dd> Print usage and exit.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Given a graph foo.gv, one way to generate a layout and highlight the clusters is to first select a layout engine with a suitable overlap removal method, then feed the output to gvmap, and finally render the map using specific graphics format. For example, the following pipeline creates a map with edges in semi-transparent light gray and nodes laid out using sfdp: </p>
+<p> sfdp -Goverlap=prism foo.gv | gvmap -e | neato -n2 -Ecolor=#55555522 -Tpng &gt; foo.png </p>
+<p> The shell script gvmap.sh provides a shorthand for such pipelines. For example, the above pipeline can be achieved using </p>
+<p> gvmap.sh -Ae -Ecolor=#55555522 -Tpng foo.gv &gt; foo.png </p>
+<h2>AUTHOR</h2>
+<p> Yifan Hu &lt;yifanhu [at] yahoo.com&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-gvmap-sh/">gvmap.sh</a>(1), <a href="/docs/linux/man/1-sfdp/">sfdp</a>(1), <a href="/docs/linux/man/1-neato/">neato</a>(1), <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1) </p>
+<p> E. R. Gansner, Y. Hu, S. G. Kobourov, &quot;GMap: Visualizing graphs and clusters as maps,&quot; Proc. Pacific Vis. 2010, pp. 201-208. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

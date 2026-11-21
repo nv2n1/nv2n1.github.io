@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdvisit(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdvisit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdvisit(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::visit - std::visit</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;variant&gt;
+template &lt;class Visitor, class... Variants&gt;                       (1) (since C++17)
+constexpr /*see below*/ visit(Visitor&amp;&amp; vis, Variants&amp;&amp;... vars);
+template &lt;class R, class Visitor, class... Variants&gt;              (2) (since C++20)
+constexpr R visit(Visitor&amp;&amp;, Variants&amp;&amp;...);</code></pre> 
+<p>Applies the visitor vis to the variants vars
+Effectively returns
+std::invoke(std::forward&lt;Visitor&gt;(vis), std::get&lt;is&gt;(std::forward&lt;Variants&gt;(vars))&hellip;)
+, where is&hellip; is vars.index()&hellip;.</p>
+<ol>
+<li>The return type is deduced from the returned expression as if by decltype. The call is ill-formed if the invocation above is not a valid expression of the same type and value category, for all combinations of alternative types of all variants.</li>
+<li>The return type is R. If R is (possibly cv-qualified) void, the result of the invoke expression is discarded.</li>
+</ol>
+<h2>Parameters</h2>
+<p>vis - a Callable that accepts every possible alternative from every variant
+vars - list of variants to pass to the visitor</p>
+<h2>Return value</h2>
+<ol>
+<li>The value returned by the selected invocation of the visitor.</li>
+<li>Nothing if R is (possibly cv-qualified) void; otherwise the value returned by the selected invocation of the visitor, implicitly converted to R.</li>
+</ol>
+<h2>Exceptions</h2>
+<p>Throws std::bad_variant_access if any variant in vars is valueless_by_exception.</p>
+<h2>Complexity</h2>
+<p>When the number of variants is zero or one, the invocation of the callable object is implemented in constant time, i.e. it does not depend on sizeof&hellip;(Types).
+If the number of variants is larger than 1, the invocation of the callable object has no complexity requirements.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iomanip&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;type_traits&gt;
+#include &lt;variant&gt;
+#include &lt;vector&gt;
+// the variant to visit
+using var_t = std::variant&lt;int, long, double, std::string&gt;;
+// helper type for the visitor #3
+template &lt;class T&gt;
+struct always_false : std::false_type {
+};
+// helper type for the visitor #4
+template &lt;class&hellip; Ts&gt;
+struct overloaded : Ts&hellip; {
+using Ts::operator()&hellip;;
+};
+template &lt;class&hellip; Ts&gt;
+overloaded(Ts&hellip;) -&gt; overloaded&lt;Ts&hellip;&gt;;
+int main()
+{
+std::vector&lt;var_t&gt; vec = {10, 15l, 1.5, &quot;hello&quot;};
+for (auto &amp;v : vec) {
+// 1. void visitor, only called for side-effects (here, for I/O)
+std::visit([](auto &amp;&amp;arg) { std::cout &lt;&lt; arg; }, v);
+// 2. value-returning visitor, demonstrates the idiom of returning another variant
+var_t w = std::visit([](auto &amp;&amp;arg) -&gt; var_t { return arg + arg; }, v);
+// 3. type-matching visitor: a lambda that handles each type differently
+std::cout &lt;&lt; &quot;. After doubling, variant holds &quot;;
+std::visit([](auto &amp;&amp;arg) {
+using T = std::decay_t&lt;decltype(arg)&gt;;
+if constexpr (std::is_same_v&lt;T, int&gt;)
+std::cout &lt;&lt; &quot;int with value &quot; &lt;&lt; arg &lt;&lt; &lsquo;\n&rsquo;;
+else if constexpr (std::is_same_v&lt;T, long&gt;)
+std::cout &lt;&lt; &quot;long with value &quot; &lt;&lt; arg &lt;&lt; &lsquo;\n&rsquo;;
+else if constexpr (std::is_same_v&lt;T, double&gt;)
+std::cout &lt;&lt; &quot;double with value &quot; &lt;&lt; arg &lt;&lt; &lsquo;\n&rsquo;;
+else if constexpr (std::is_same_v&lt;T, std::string&gt;)
+std::cout &lt;&lt; &quot;std::string with value &quot; &lt;&lt; std::quoted(arg) &lt;&lt; &lsquo;\n&rsquo;;
+else
+static_assert(always_false&lt;T&gt;::value, &quot;non-exhaustive visitor!&quot;);
+},
+w);
+}
+for (auto &amp;v : vec) {
+// 4. another type-matching visitor: a class with 3 overloaded operator()&rsquo;s
+std::visit(overloaded{
+[](auto arg) { std::cout &lt;&lt; arg &lt;&lt; &rsquo; &lsquo;; },
+[](double arg) { std::cout &lt;&lt; std::fixed &lt;&lt; arg &lt;&lt; &rsquo; &lsquo;; },
+[](const std::string &amp;arg) { std::cout &lt;&lt; std::quoted(arg) &lt;&lt; &rsquo; &lsquo;; },
+},
+v);
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 10. After doubling, variant holds int with value 20
+ <wbr> 15. After doubling, variant holds long with value 30
+ <wbr> 1.5. After doubling, variant holds double with value 3
+ <wbr> hello. After doubling, variant holds std::string with value &quot;hellohello&quot;
+ <wbr> 10 15 1.500000 &quot;hello&quot;</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> swaps with another variant
+swap <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

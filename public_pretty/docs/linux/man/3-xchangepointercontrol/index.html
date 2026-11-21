@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xchangepointercontrol(3) · Linux Manual Pages</title>
+<meta name="description" content="XChangePointerControl, XGetPointerControl – control pointer">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xchangepointercontrol/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xchangepointercontrol(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XChangePointerControl, XGetPointerControl &#8211; control pointer </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>int XChangePointerControl(Display *<i>display</i>, Bool <i>do_accel</i>, Bool <i>do_threshold</i>, int <i>accel_numerator</i>, int <i>accel_denominator</i>, int <i>threshold</i>);</dd>
+<dd>int XGetPointerControl(Display *<i>display</i>, int *<i>accel_numerator_return</i>, int *<i>accel_denominator_return</i>, int *<i>threshold_return</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>accel_denominator</i></dt>
+<dd>Specifies the denominator for the acceleration multiplier.</dd>
+<dt><i>accel_denominator_return</i></dt>
+<dd>Returns the denominator for the acceleration multiplier.</dd>
+<dt><i>accel_numerator</i></dt>
+<dd>Specifies the numerator for the acceleration multiplier.</dd>
+<dt><i>accel_numerator_return</i></dt>
+<dd>Returns the numerator for the acceleration multiplier.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>do_accel</i></dt>
+<dd>Specifies a Boolean value that controls whether the values for the accel_numerator or accel_denominator are used.</dd>
+<dt><i>do_threshold</i></dt>
+<dd>Specifies a Boolean value that controls whether the value for the threshold is used.</dd>
+<dt><i>threshold</i></dt>
+<dd>Specifies the acceleration threshold.</dd>
+<dt><i>threshold_return</i></dt>
+<dd>Returns the acceleration threshold.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XChangePointerControl</code> function defines how the pointing device moves. The acceleration, expressed as a fraction, is a multiplier for movement. For example, specifying 3/1 means the pointer moves three times as fast as normal. The fraction may be rounded arbitrarily by the X server. Acceleration only takes effect if the pointer moves more than threshold pixels at once and only applies to the amount beyond the value in the threshold argument. Setting a value to -1 restores the default. The values of the do_accel and do_threshold arguments must be <code>True</code> for the pointer values to be set, or the parameters are unchanged. Negative values (other than -1) generate a <code>BadValue</code> error, as does a zero value for the accel_denominator argument. </p>
+<p> <code>XChangePointerControl</code> can generate a <code>BadValue</code> error. </p>
+<p> The <code>XGetPointerControl</code> function returns the pointer&#8217;s current acceleration multiplier and acceleration threshold.</p>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
+<h2>See Also</h2>
+<p><i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

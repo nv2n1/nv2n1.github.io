@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux Checksum Tools: Performance Comparison - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/which-checksum-tool-on-linux-is-faster/">
+  <meta name="description" content="When verifying file integrity on Linux, you’ll typically reach for one of several checksum utilities. A natural question: which one is fastest? The answer …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Linux Checksum Tools: Performance Comparison">
+  <meta property="og:url" content="https://www.systutorials.com/which-checksum-tool-on-linux-is-faster/">
+  <meta property="og:description" content="When verifying file integrity on Linux, you’ll typically reach for one of several checksum utilities. A natural question: which one is fastest? The answer …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/performance/">Performance</a>
+        </nav>
+        
+        <h1>Linux Checksum Tools: Performance Comparison</h1>
+        <time class="post-date" datetime="2015-09-05T06:07:02Z">September 5, 2015</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When verifying file integrity on Linux, you’ll typically reach for one of several checksum utilities. A natural question: which one is fastest? The answer depends heavily on whether I/O or CPU is your bottleneck.</p>
+<h2 id="disk-io-dominates-on-most-systems">Disk I/O Dominates on Most Systems</h2>
+<p>In realistic scenarios with typical storage, disk I/O is almost always the limiting factor. Test this with a large file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ls -lh largefile.bin
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> user user 15G Dec <span class="m">15</span> 10:28 largefile.bin
+</span></span></code></pre></div><p>Testing three common checksums:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">time</span> sha256sum largefile.bin
+</span></span><span class="line"><span class="cl">a1b2c3d4e5f6... largefile.bin
+</span></span><span class="line"><span class="cl">real    1m21.143s
+</span></span><span class="line"><span class="cl">user    0m21.647s
+</span></span><span class="line"><span class="cl">sys     0m4.668s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">time</span> md5sum largefile.bin
+</span></span><span class="line"><span class="cl">e2e649030c795ffa9f33a99bcb39dde7  largefile.bin
+</span></span><span class="line"><span class="cl">real    1m27.392s
+</span></span><span class="line"><span class="cl">user    0m25.563s
+</span></span><span class="line"><span class="cl">sys     0m3.936s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ <span class="nb">time</span> b2sum largefile.bin
+</span></span><span class="line"><span class="cl">abc123def456... largefile.bin
+</span></span><span class="line"><span class="cl">real    1m18.205s
+</span></span><span class="line"><span class="cl">user    0m19.341s
+</span></span><span class="line"><span class="cl">sys     0m4.782s
+</span></span></code></pre></div><p>The differences are marginal — all three take roughly 80-90 seconds. Measure raw I/O performance:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">time</span> dd <span class="k">if</span><span class="o">=</span>largefile.bin <span class="nv">of</span><span class="o">=</span>/dev/null <span class="nv">bs</span><span class="o">=</span>1M
+</span></span><span class="line"><span class="cl">15000+0 records in
+</span></span><span class="line"><span class="cl">15000+0 records out
+</span></span><span class="line"><span class="cl"><span class="m">15728640000</span> bytes <span class="o">(</span><span class="m">16</span> GB, <span class="m">15</span> GiB<span class="o">)</span> copied, 80.4203 s, <span class="m">199</span> MB/s
+</span></span><span class="line"><span class="cl">real    1m20.447s
+</span></span><span class="line"><span class="cl">user    0m0.202s
+</span></span><span class="line"><span class="cl">sys     0m7.091s
+</span></span></code></pre></div><p>The disk I/O alone accounts for 80 seconds. The checksum computation is nearly invisible. On spinning disk or SATA SSD, disk I/O is the bottleneck — not the algorithm.</p>
+<h2 id="cpu-limited-benchmarking">CPU-Limited Benchmarking</h2>
+<p>If you have fast NVMe or high-throughput storage, disk I/O becomes less of a constraint. Algorithm efficiency then matters. Create a test file in a RAM disk to eliminate I/O latency:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir -p /mnt/ramdisk
+</span></span><span class="line"><span class="cl">$ mount -t tmpfs -o <span class="nv">size</span><span class="o">=</span>8G tmpfs /mnt/ramdisk
+</span></span><span class="line"><span class="cl">$ head -c 3G /dev/zero &gt; /mnt/ramdisk/testfile
+</span></span><span class="line"><span class="cl">$ <span class="k">for</span> algo in md5sum sha256sum b2sum<span class="p">;</span> <span class="k">do</span> 
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;=== </span><span class="nv">$algo</span><span class="s2"> ===&#34;</span> 
+</span></span><span class="line"><span class="cl">    <span class="nb">time</span> <span class="nv">$algo</span> /mnt/ramdisk/testfile
+</span></span><span class="line"><span class="cl">  <span class="k">done</span>
+</span></span></code></pre></div><p>Results on a modern 12-core system:</p>
+<pre><code>=== md5sum ===
+real    0m5.103s
+user    0m4.697s
+sys     0m0.409s
+
+=== sha256sum ===
+real    0m8.451s
+user    0m8.082s
+sys     0m0.372s
+
+=== b2sum ===
+real    0m3.205s
+user    0m2.931s
+sys     0m0.482s
+</code></pre>
+<p>In CPU-limited scenarios (3GB of RAM disk data):</p>
+<ul>
+<li>b2sum: ~937 MB/s</li>
+<li>md5sum: ~587 MB/s</li>
+<li>sha256sum: ~355 MB/s</li>
+</ul>
+<h2 id="algorithm-security-properties">Algorithm Security Properties</h2>
+<p>When choosing a checksum tool, speed shouldn’t be your primary concern. Security properties matter more:</p>
+<ul>
+<li><strong>MD5</strong>: Cryptographically broken. Vulnerable to collision attacks. Don’t use for integrity verification of untrusted sources.</li>
+<li><strong>SHA-1</strong>: Theoretically broken. Still useful for non-adversarial integrity checks, but avoid for security-sensitive work.</li>
+<li><strong>SHA-256</strong>: Industry standard. No known practical attacks. Good choice for most scenarios.</li>
+<li><strong>BLAKE2b/BLAKE3</strong>: Modern, fast, and cryptographically secure. Excellent for new projects and high-performance requirements.</li>
+</ul>
+<h2 id="practical-commands">Practical Commands</h2>
+<p>For most file verification tasks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sha256sum myfile
+</span></span></code></pre></div><p>For high-performance environments (NVMe, fast storage):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ b2sum myfile
+</span></span></code></pre></div><p>For recursive directory verification:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ find /path -type f -exec sha256sum <span class="o">{}</span> + &gt; checksums.txt
+</span></span><span class="line"><span class="cl">$ sha256sum -c checksums.txt
+</span></span></code></pre></div><p>To parallelize checksum computation across multiple files:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ parallel sha256sum <span class="o">{}</span> ::: file1 file2 file3 file4
+</span></span></code></pre></div><p>Or with GNU xargs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ find /path -type f -print0 <span class="p">|</span> xargs -0 -P <span class="m">4</span> -I <span class="o">{}</span> sha256sum <span class="o">{}</span>
+</span></span></code></pre></div><p>The <code>-P 4</code> flag uses 4 parallel processes. Adjust based on your CPU core count.</p>
+<h2 id="verifying-checksums-in-batch">Verifying Checksums in Batch</h2>
+<p>When you have a pre-generated checksum file (e.g., from a download):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sha256sum -c SHA256SUMS
+</span></span><span class="line"><span class="cl">file1: OK
+</span></span><span class="line"><span class="cl">file2: OK
+</span></span><span class="line"><span class="cl">file3: FAILED
+</span></span></code></pre></div><p>The tool automatically detects the algorithm from the checksum format. You can verify specific files only:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sha256sum -c SHA256SUMS --ignore-missing
+</span></span></code></pre></div><h2 id="when-speed-actually-matters">When Speed Actually Matters</h2>
+<p>If you’re computing checksums on multi-terabyte datasets frequently:</p>
+<p><strong>Upgrade your storage first.</strong> Move from spinning disk to NVMe. This provides 5-10x performance gains and typically costs less than the salary time spent optimizing code.</p>
+<p><strong>Use parallel processing.</strong> Leverage multiple CPU cores for independent files. The <code>parallel</code> command or GNU <code>xargs -P</code> scales naturally.</p>
+<p><strong>Choose BLAKE2b or BLAKE3.</strong> These provide 2-3x better throughput than SHA-256 on modern CPUs without sacrificing cryptographic security. BLAKE3 is particularly attractive for new projects—it’s even faster than BLAKE2b and supports parallel hashing of large files.</p>
+<p>For very large single files on modern NVMe, consider BLAKE3’s native parallel mode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ b3sum largefile.bin  <span class="c1"># Uses all CPU cores automatically</span>
+</span></span></code></pre></div><h2 id="the-bottom-line">The Bottom Line</h2>
+<p>On typical systems with mechanical or SATA storage, your checksum tool choice has minimal impact. Disk I/O is the overwhelming bottleneck. Only when storage approaches 1GB/s throughput does algorithm efficiency become meaningful. In those cases, BLAKE2b/BLAKE3 pull ahead, but SHA-256 remains a practical choice for most deployments.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

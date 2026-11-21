@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grub2-reboot(8) · Linux Manual Pages</title>
+<meta name="description" content="grub-reboot — Set the default boot menu entry for the next boot only.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-grub2-reboot/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>grub2-reboot(8)</h1>
+
+
+
+
+
+<p><code>grub-reboot</code> &#8212; Set the default boot menu entry for the next boot only. </p>
+<h2>Synopsis</h2>
+<p><code>grub-reboot</code> [&#8211;boot-directory=<i>DIR</i>] <i>MENU_ENTRY</i> </p>
+<h2>Description</h2>
+<p><code>grub-reboot</code> sets the default boot menu entry for the next boot, but not further boots after that. This command only works for GRUB configuration files created with <i>GRUB_DEFAULT=saved</i> in <i>/etc/default/grub</i>. </p>
+<h2>Options</h2>
+<dl>
+<dt>&#8211;boot-directory=<i>DIR</i></dt>
+<dd>Find GRUB images under <i>DIR/grub</i>. The default value is <i>/boot</i>, resulting in grub images being search for at <i>/boot/grub</i>. </dd>
+<dt><i>MENU_ENTRY</i></dt>
+<dd>A number, a menu item title or a menu item identifier. </dd>
+</dl>
+<h2>See Also</h2>
+<p><code>info grub</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

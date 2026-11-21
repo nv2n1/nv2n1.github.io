@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>reged(8) · Linux Manual Pages</title>
+<meta name="description" content="reged – utility to export/import and edit a Windows registry hives">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-reged/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>reged(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>reged &#8211; utility to export/import and edit a Windows registry hives</p>
+<h2>Synopsis</h2>
+<p><code>reged</code> [<i>options</i>] -x<i>&lt;registryhivefile&gt;</i>&lt;prefixstring&gt;<i>&lt;key&gt;</i>&lt;output.reg&gt; <code>reged</code> [<i>options</i>] -I<i>&lt;registryhivefile&gt;</i>&lt;prefixstring&gt;<i>&lt;input.reg&gt;</i> <code>reged</code> [<i>options</i>] -e<i>&lt;registryhivefile&gt;</i> </p>
+<h2>Description</h2>
+<p>This manual page documents briefly the <code>reged</code> command. This manual page was written for the Debian distribution because the original program does not have a manual page. <code>reged</code> is the an interactive command line utility that can be used to export, import or edit a Microsoft Windows registry hive. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>-x &lt;registryhivefile&gt; &lt;prefixstring&gt; &lt;key&gt; &lt;output.reg&gt;</code></dt>
+<dd>Export parts of a hive file to a text registry (.reg) file. Prefixstring indicates the part of the registry hive to dump (for example HKEY_LOCAL_MACHINE\SOFTWARE). The &lt;key&gt; parameter defines the key to dump (recursively). You can use \ or \ to list all the keys in the hive file. </dd>
+<p> Only one hive file and one .reg file can be defined. </p>
+<dt><code>-I &lt;registryhivefile&gt; &lt;prefixstring&gt; &lt;input.reg&gt;</code></dt>
+<dd>Import the content of the input.reg file into the registry file. The value &lt;prefixstring&gt; can be any valid prefix, for example is HKEY_LOCAL_MACHINE\SOFTWARE. </dd>
+<p> Only one .reg and one hive file supported at the same time </p>
+<dt><code>-e &lt;registryhive&gt; &#8230;</code></dt>
+<dd>Interactive edit one or more registry files. </dd>
+<dt><code>-L</code></dt>
+<dd>Log all changed filenames to /tmp/changed. When this option is set the program automatically saves the changes in the hive files without prompting the user. </dd>
+<p> Be careful when using the <code>-L</code> option as a root user in a multiuser system. The filename is fixed and this can be used by malicious users (dropping a symlink with the same name) to overwrite system files. </p>
+<dt><code>-C</code></dt>
+<dd>Automatically save all changes. Do not prompt the user. </dd>
+<dt><code>-N</code></dt>
+<dd>Do not allocate more information, only allow the editing of existing values with same size. </dd>
+<dt><code>-E</code></dt>
+<dd>Do not expand the hive file (safe mode). </dd>
+<dt><code>-t</code></dt>
+<dd>Print debug information of allocated blocks. </dd>
+<dt><code>-v</code></dt>
+<dd>Print verbose information and debug messages. </dd>
+</dl>
+<h2>Known Bugs</h2>
+<p>There are many <code>unknown</code> bugs. If you find bugs please report them to the author.</p>
+<h2>See Also</h2>
+<p><code>chntpwd, samusrgrp, sampasswd</code><br />
+ You will find more information available on how this program works, in the text files <i>/usr/share/doc/chntpw/README.txt</i> and <i>/usr/share/doc/chntpw/MANUAL.txt</i> </p>
+<h2>Author</h2>
+<p>This program was written by Petter N Hagen. </p>
+<p> This manual page was written by Javier Fernandez-Sanguino &lt;jfs [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

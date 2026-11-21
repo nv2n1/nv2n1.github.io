@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sfcbinst2mof(1) · Linux Manual Pages</title>
+<meta name="description" content="sfcbinst2mof – Dump static instances to mof">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-sfcbinst2mof/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>sfcbinst2mof(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> sfcbinst2mof &#8211; Dump static instances to mof</p>
+<h2>SYNOPSIS</h2>
+<p> <code>sfcbinst2mof &lt;options&gt; [-n namespace] [-c classname]</code></p>
+<h2>OPTIONS</h2>
+<p> Allowed options are:</p>
+<dl>
+<dt><code>-h</code></dt>
+<dd> display this message</dd>
+<dt><code>-v</code></dt>
+<dd> verbose: print some extra processing information to stdout</dd>
+<dt><code>-V</code></dt>
+<dd> print version information</dd>
+<dt><code>-n</code> &lt;namespace&gt;</dt>
+<dd> [REQUIRED]</dd>
+<dt><code>-c</code> &lt;classname&gt;</dt>
+<dd> [REQUIRED] &#8211; actual class name instrumented &#8211; not a parent class</dd>
+<dt> <code>-g</code> &lt;sfcb cfg file&gt; (default=/etc/sfcb/sfcb.cfg)</dt>
+<dt><code>-o</code> &lt;output file&gt;</dt>
+<dd>
+</dd><dd>full path to output file. Path must exist, with write rights. (default = stdout)</dd>
+<dt><code>-t</code></dt>
+<dd> truncate output file before writing to it (default = append)</dd>
+<dt><code>-m</code></dt>
+<dd> output instances that were created in MOF, in addition to instances created interactively</dd>
+<dt><code>-M</code></dt>
+<dd> output ONLY instances that were created in MOF (don&#8217;t include instances created interactively)</dd>
+<dt> <code>-r</code> &lt;repository dir&gt; use alternate repository (override sfcb cfg file). (default = /var/lib/sfcb/registration/repository) </dt>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

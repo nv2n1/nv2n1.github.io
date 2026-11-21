@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>runlevel(8) · Linux Manual Pages</title>
+<meta name="description" content="runlevel – Print previous and current SysV runlevel">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-runlevel/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>runlevel(8)</h1>
+
+
+
+
+
+<p>runlevel &#8211; Print previous and current SysV runlevel</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>runlevel</code> [options&#8230;]</dt></dl>
+<h2>Overview</h2>
+<p>&quot;Runlevels&quot; are an obsolete way to start and stop groups of services used in SysV init. systemd provides a compatibility layer that maps runlevels to targets, and associated binaries like <code>runlevel</code>. Nevertheless, only one runlevel can be &quot;active&quot; at a given time, while systemd can activate multiple targets concurrently, so the mapping to runlevels is confusing and only approximate. Runlevels should not be used in new code, and are mostly useful as a shorthand way to refer the matching systemd targets in kernel boot parameters. </p>
+<dd><code>Table 1. Mapping between runlevels and systemd targets</code> </dd>
+<table BORDER>
+<tr VALIGN=top>
+<td><code>
+<dd>Runlevel </code></td>
+<td><code> Target </code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> 0 </td>
+<td> poweroff.target
+</td>
+</tr>
+<tr VALIGN=top>
+<td> 1 </td>
+<td> rescue.target
+</td>
+</tr>
+<tr VALIGN=top>
+<td> 2, 3, 4 </td>
+<td> multi-user.target
+</td>
+</tr>
+<tr VALIGN=top>
+<td> 5 </td>
+<td> graphical.target
+</td>
+</tr>
+<tr VALIGN=top>
+<td> 6 </td>
+<td> reboot.target
+</td>
+</tr>
+</table>
+<h2>Description</h2>
+<p><code>runlevel</code> prints the previous and current SysV runlevel if they are known. </p>
+<p> The two runlevel characters are separated by a single space character. If a runlevel cannot be determined, N is printed instead. If neither can be determined, the word &quot;unknown&quot; is printed. </p>
+<p> Unless overridden in the environment, this will check the utmp database for recent runlevel changes.</p>
+<h2>Options</h2>
+<p>The following option is understood: </p>
+<p> <code>&#8211;help</code></p>
+</dd><dl>
+<dd>Print a short help text and exit.</dd></dl>
+<h2>Exit Status</h2>
+<p>If one or both runlevels could be determined, 0 is returned, a non-zero failure code otherwise.</p>
+<h2>Environment</h2>
+<p><i>$RUNLEVEL</i></p>
+<dl>
+<dd>If <i>$RUNLEVEL</i> is set, <code>runlevel</code> will print this value as current runlevel and ignore utmp.</dd></dl>
+<p> <i>$PREVLEVEL</i></p>
+<dl>
+<dd>If <i>$PREVLEVEL</i> is set, <code>runlevel</code> will print this value as previous runlevel and ignore utmp.</dd></dl>
+<h2>Files</h2>
+<p>/run/utmp</p>
+<dl>
+<dd>The utmp database <code>runlevel</code> reads the previous and current runlevel from.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-target/">systemd.target</a></code>(5), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

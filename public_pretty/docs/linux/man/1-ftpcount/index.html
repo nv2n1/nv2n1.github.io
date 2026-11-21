@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ftpcount(1) · Linux Manual Pages</title>
+<meta name="description" content="ftpcount – show current number of connections for each proftpd server configuration">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ftpcount/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ftpcount(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> ftpcount &#8211; show current number of connections for each proftpd server configuration </p>
+<h2>SYNOPSIS</h2>
+<p> <code>ftpcount</code></p>
+<h2>DESCRIPTION</h2>
+<p> The <code>ftpcount</code> command shows the current number of connections per server and virtualhost/anonymous configuration defined in the proftpd.conf file. Connections spawned by inetd are counted separately from those created by a master proftpd <i>standalone</i> server.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h,&#8211;help</code></dt>
+<dd> Display a short usage description, including all available options.</dd>
+<dt><code>-f,&#8211;file</code><i> scoreboard-file</i></dt>
+<dd> Specify the full path to proftpd&#8217;s run-time scoreboard file (configured via the <code>ScoreboardFile</code> directive in <i>proftpd.conf</i> ). If proftpd&#8217;s default directory has been changed via this directive, <code>ftpcount</code> must either be recompiled or this option must be used in order to find proftpd&#8217;s scoreboard.</dd>
+<dt><code>-S,&#8211;server</code><i> server-name</i></dt>
+<dd> Specify the ServerName for a specific virtual host. If used, <i>ftpcount</i> will only show the session count for the given virtual host.</dd></dl>
+<h2>FILES</h2>
+<p> <code>/usr/bin/ftpcount</code><br />
+ <code>/run/proftpd/proftpd.scoreboard</code></p>
+<h2>AUTHORS</h2>
+<p> ProFTPD is written and maintained by a number of people, full credits can be found on <code><a rel="nofollow" href="http://www.proftpd.org/credits.html">http://www.proftpd.org/credits.html</a></code></p>
+<h2>SEE ALSO</h2>
+<p> <code>inetd(8),</code><a href="/docs/linux/man/1-ftp/">ftp</a>(1),<code><a href="/docs/linux/man/8-proftpd/">proftpd</a>(8),</code><a href="/docs/linux/man/1-ftpwho/">ftpwho</a>(1),<code><a href="/docs/linux/man/1-ftptop/">ftptop</a>(1),</code><a href="/docs/linux/man/8-ftpshut/">ftpshut</a>(8) </p>
+<p> Full documentation on ProFTPD, including configuration and FAQs, is available at <code><a rel="nofollow" href="http://www.proftpd.org/">http://www.proftpd.org/</a></code> </p>
+<p> For help/support, try the ProFTPD mailing lists, detailed on <code><a rel="nofollow" href="http://www.proftpd.org/lists.html">http://www.proftpd.org/lists.html</a></code> </p>
+<p> Report bugs at <code><a rel="nofollow" href="http://bugs.proftpd.org/">http://bugs.proftpd.org/</a></code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

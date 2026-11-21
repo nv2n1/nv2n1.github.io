@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mcdiff(1) · Linux Manual Pages</title>
+<meta name="description" content="mcdiff – Internal diff viewer of GNU Midnight Commander.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mcdiff/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mcdiff(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> mcdiff &#8211; Internal diff viewer of GNU Midnight Commander.</p>
+<h2>USAGE</h2>
+<p> <code>mcdiff</code> [-bcCdfhstVx?] file1 file2</p>
+<h2>DESCRIPTION</h2>
+<p> mcdiff is a link to <code>mc</code>, the main GNU Midnight Commander executable. Executing GNU Midnight Commander under this name requests starting the internal diff viewer which compares <i>file1</i> and <i>file2</i> specified on the command line.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><i>-b</i></dt>
+<dd> Force black and white display.</dd>
+<dt><i>-c</i></dt>
+<dd> Force color mode on terminals where <code>mcdiff</code> defaults to black and white.</dd>
+<dt><i>-C &lt;keyword&gt;=&lt;fgcolor&gt;,&lt;bgcolor&gt;,&lt;attributes&gt;:&lt;keyword&gt;= &#8230;</i></dt>
+<dd> Specify a different color set. See the <code>Colors</code> section in <a href="/docs/linux/man/1-mc/">mc</a>(1) for more information.</dd>
+<dt><i>-d</i></dt>
+<dd> Disable mouse support.</dd>
+<dt><i>-f</i></dt>
+<dd> Display the compiled-in search paths for Midnight Commander files.</dd>
+<dt><i>-t</i></dt>
+<dd> Used only if the code was compiled with S-Lang and terminfo: it makes the Midnight Commander use the value of the <code>TERMCAP</code> variable for the terminal information instead of the information on the system wide terminal database</dd>
+<dt><i>-V</i></dt>
+<dd> Displays the version of the program.</dd>
+<dt><i>-x</i></dt>
+<dd> Forces xterm mode. Used when running on xterm-capable terminals (two screen modes, and able to send mouse escape sequences).</dd></dl>
+<h2>COLORS</h2>
+<p> The default colors may be changed by appending to the <code>MC_COLOR_TABLE</code> environment variable. Foreground and background colors pairs may be specified for example with: </p>
+<pre>
+MC_COLOR_TABLE=&quot;$MC_COLOR_TABLE:\
+normal=lightgray,black:\
+selected=black,green&quot;
+</pre>
+<h2>FILES</h2>
+<p> <i>/usr/share/mc/mc.hlp</i></p>
+<dl>
+<dt>
+</dt><dd> The help file for the program.</dd></dl>
+<p> <i>/usr/share/mc/mc.ini</i></p>
+<dl>
+<dt>
+</dt><dd> The default system-wide setup for GNU Midnight Commander, used only if the user&#8217;s own ~/.config/mc/ini file is missing.</dd></dl>
+<p> <i>/usr/share/mc/mc.lib</i></p>
+<dl>
+<dt>
+</dt><dd> Global settings for the Midnight Commander. Settings in this file affect all users, whether they have ~/.config/mc/ini or not.</dd></dl>
+<p> <i>~/.config/mc/ini</i></p>
+<dl>
+<dt>
+</dt><dd> User&#8217;s own setup. If this file is present, the setup is loaded from here instead of the system-wide startup file.</dd></dl>
+<h2>LICENSE</h2>
+<p> This program is distributed under the terms of the GNU General Public License as published by the Free Software Foundation. See the built-in help of the Midnight Commander for details on the License and the lack of warranty.</p>
+<h2>AVAILABILITY</h2>
+<p> The latest version of this program can be found at <a href="ftp://ftp.gnu.org/gnu/mc/.">ftp://ftp.gnu.org/gnu/mc/.</a></p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-mc/">mc</a>(1), <a href="/docs/linux/man/1-mcedit/">mcedit</a>(1), <a href="/docs/linux/man/1-mcview/">mcview</a>(1) </p>
+<h2>BUGS</h2>
+<p> Bugs should be reported to mc-devel [at] gnome.org </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

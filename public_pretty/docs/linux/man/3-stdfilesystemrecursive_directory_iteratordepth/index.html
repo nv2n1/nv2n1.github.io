@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfilesystemrecursive_directory_iteratordepth(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfilesystemrecursive_directory_iteratordepth/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfilesystemrecursive_directory_iteratordepth(3)</h1>
+
+
+
+
+
+<p>std::filesystem::recursive_directory_iterator::depth - std::filesystem::recursive_directory_iterator::depth</p>
+<h2>Synopsis</h2>
+<pre><code>int depth() const;
+(since C++ 17)</code></pre> 
+<p>Returns the number of directories from the starting directory to the currently iterated directory, i.e. the current depth of the directory hierarchy.
+The starting directory has depth of 0, its subdirectories have depth 1, etc.
+The behavior is undefined if *this is the end iterator.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>Current depth of the directory hierarchy.</p>
+<h2>Exceptions</h2>
+<p><i>(none)</i></p>
+<h2>Example</h2>
+<p>this example uses iteration depth to calculate the indentation of a directory tree printout
+// Run this code <pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;filesystem&gt;
+namespace fs = std::filesystem;
+int main()
+{
+fs::create_directories(&quot;sandbox/a/b/c&quot;);
+fs::create_directories(&quot;sandbox/a/b/d/e&quot;);
+std::ofstream(&quot;sandbox/a/b/file1.txt&quot;);
+fs::create_symlink(&quot;a&quot;, &quot;sandbox/syma&quot;);
+for (auto i = fs::recursive_directory_iterator(&quot;sandbox&quot;);
+i != fs::recursive_directory_iterator();
+++i) {
+std::cout &lt;&lt; std::string(i.depth(), &rsquo; &lsquo;) &lt;&lt; *i;
+if (fs::is_symlink(i-&gt;symlink_status()))
+std::cout &lt;&lt; &quot; -&gt; &quot; &lt;&lt; fs::read_symlink(*i);
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+}
+fs::remove_all(&quot;sandbox&quot;);
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> &quot;sandbox/a&quot;
+ <wbr> <wbr> &quot;sandbox/a/b&quot;
+ <wbr> <wbr> <wbr> &quot;sandbox/a/b/c&quot;
+ <wbr> <wbr> <wbr> &quot;sandbox/a/b/d&quot;
+ <wbr> <wbr> <wbr> <wbr> &quot;sandbox/a/b/d/e&quot;
+ <wbr> <wbr> <wbr> &quot;sandbox/a/b/file1.txt&quot;
+ <wbr> &quot;sandbox/syma&quot; -&gt; &quot;a&quot;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

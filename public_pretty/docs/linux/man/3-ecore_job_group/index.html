@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ecore_job_group(3) · Linux Manual Pages</title>
+<meta name="description" content="Ecore Jobs – You can queue jobs that are to be done by the main loop when the current event is dealt with.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ecore_job_group/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ecore_job_group(3)</h1>
+
+
+
+
+
+<p>Ecore Jobs &#8211; You can queue jobs that are to be done by the main loop when the current event is dealt with. </p>
+<h3>Functions</h3>
+<p>EAPI <code>Ecore_Job</code> * <code>ecore_job_add</code> (void(*func)(void *data), const void *data)<br />
+ <i>Add a job to the event queue. </i><br />
+ EAPI void * <code>ecore_job_del</code> (<code>Ecore_Job</code> *job)<br />
+ <i>Delete a queued job that has not yet been executed. </i></p>
+<h2>Detailed Description</h2>
+<p>You can queue jobs that are to be done by the main loop when the current event is dealt with.</p>
+<h2>Function Documentation</h2>
+<h3>EAPI <code>Ecore_Job</code>* ecore_job_add (void(*)(void *data) func, const void * data)</h3>
+<p>Add a job to the event queue. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>func</i> The function to call when the job gets handled.<br />
+ <i>data</i> Data pointer to be passed to the job function when the job is handled.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>The handle of the job. NULL is returned if the job could not be added to the queue.</dd></dl>
+<p> <code>Note:</code></p>
+<dl COMPACT>
+<dd>Once the job has been executed, the job handle is invalid.</dd></dl>
+<p> References ecore_event_add().</p>
+<h3>EAPI void* ecore_job_del (<code>Ecore_Job</code> * job)</h3>
+<p>Delete a queued job that has not yet been executed. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>job</i> Handle of the job to delete.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>The data pointer that was to be passed to the job.</dd></dl>
+<p> References ecore_event_del().</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Ecore from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

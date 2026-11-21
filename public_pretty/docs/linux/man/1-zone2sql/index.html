@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zone2sql(1) · Linux Manual Pages</title>
+<meta name="description" content="zone2sql – Convert ISC Bind zones to SQL">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-zone2sql/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>zone2sql(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> zone2sql &#8211; Convert ISC Bind zones to SQL</p>
+<h2>SYNOPSIS</h2>
+<p> <code>zone2sql [OPTIONS]</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>Zone2sql</code> parses Bind <i>named.conf</i> files and zonefiles and outputs SQL on standard out, which can then be fed to your database. </p>
+<p> <code>zone2sql</code> understands the Bind master file extension &#8216;$GENERATE&#8217; and will also honour &#8216;$ORIGIN&#8217; and &#8216;$TTL&#8217;. </p>
+<p> For backends supporting slave operation there is also an option to keep slave zones as slaves, and not convert them to native operation. </p>
+<p> zone2sql can generate SQL for the Generic MySQL, Generic PostgreSQL and Oracle backends.</p>
+<h2>OPTIONS</h2>
+<p> Input options:</p>
+<dl>
+<dt><code>&#8211;named-conf=</code><i>&lt;filename&gt;</i></dt>
+<dd> Read <i>&lt;filename&gt;</i> to get the bind configuration</dd>
+<dt><code>&#8211;zone=</code><i>&lt;zone-file&gt;</i></dt>
+<dd> Parse only this zone file. Conflicts with <code>&#8211;named-conf</code> parameter.</dd>
+<dt><code>&#8211;zone-name=</code><i>&lt;name&gt;</i></dt>
+<dd> When parsing a single zone without $ORIGIN statement, set this as the zone name.</dd></dl>
+<p> Output options:</p>
+<dl>
+<dt><code>&#8211;gmysql</code></dt>
+<dd> Output in format suitable for the default configuration of the Generic MySQL backend.</dd>
+<dt><code>&#8211;gpgsql</code></dt>
+<dd> Output in format suitable for the default configuration of the Generic PostgreSQL backend.</dd>
+<dt><code>&#8211;oracle</code></dt>
+<dd> Output in format suitable for the default configuration of the Generic Oracle backend.</dd>
+<dt><code>&#8211;transactions</code></dt>
+<dd> For Oracle and PostgreSQL output, wrap each domain in a transaction for higher speed and integrity.</dd></dl>
+<p> Other options:</p>
+<dl>
+<dt><code>&#8211;slave</code></dt>
+<dd> Maintain slave status of zones listed in named.conf as being slaves. The default behaviour is to convert all zones to native operation.</dd>
+<dt><code>&#8211;on-error-resume-next</code></dt>
+<dd> Ignore missing files during parsing. Dangerous.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> List all options</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Be verbose during conversion.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code>pdns_server</code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

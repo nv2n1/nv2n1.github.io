@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>l2ping(8) · Linux Manual Pages</title>
+<meta name="description" content="l2ping – Send L2CAP echo request and receive answer">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-l2ping/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>l2ping(8)</h1>
+
+
+
+
+
+<p>l2ping &#8211; Send L2CAP echo request and receive answer</p>
+<h2>Synopsis</h2>
+<p><code>l2ping</code> [<code>-i</code> <i>&lt;hciX&gt;</i>] [<code>-s</code> <i>size</i>] [<code>-c</code> <i>count</i>] [<code>-t</code> <i>timeout</i>] [<code>-d</code> <i>delay</i>] [<code>-f</code>] [<code>-r</code>] [<code>-v</code>] <i>bd_addr</i> </p>
+<h2>Description</h2>
+<p>L2ping sends a L2CAP echo request to the Bluetooth MAC address <i>bd_addr</i> given in dotted hex notation.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-i</code><i> &lt;hciX&gt;</i></dt>
+<dd>The command is applied to device hciX , which must be the name of an installed Bluetooth device (X = 0, 1, 2, &#8230;) If not specified, the command will be sent to the first available Bluetooth device.</dd>
+<dt><code>-s</code><i> size</i></dt>
+<dd>The <i>size</i> of the data packets to be sent.</dd>
+<dt><code>-c</code><i> count</i></dt>
+<dd>Send <i>count</i> number of packets then exit.</dd>
+<dt><code>-t</code><i> timeout</i></dt>
+<dd>Wait <i>timeout</i> seconds for the response.</dd>
+<dt><code>-d</code><i> delay</i></dt>
+<dd>Wait <i>delay</i> seconds between pings.</dd>
+<dt><code>-f</code></dt>
+<dd>Kind of flood ping. Use with care! It reduces the delay time between packets to 0.</dd>
+<dt><code>-r</code></dt>
+<dd>Reverse ping (gnip?). Send echo response instead of echo request.</dd>
+<dt><code>-v</code></dt>
+<dd>Verify response payload is identical to request payload. It is not required for remote stacks to return the request payload, but most stacks do (including Bluez).</dd>
+<dt><i>bd_addr</i></dt>
+<dd>The Bluetooth MAC address to be pinged in dotted hex notation like <code>01:02:03:ab:cd:ef</code> or <code>01:EF:cd:aB:02:03</code></dd></dl>
+<h2>Authors</h2>
+<p>Written by Maxim Krasnyansky &lt;maxk [at] qualcomm.com&gt; and Marcel Holtmann &lt;marcel [at] holtmann.org&gt; </p>
+<p> man page by Nils Faerber &lt;nils [at] kernelconcepts.de&gt;, Adam Laurie &lt;adam [at] algroup.co.uk&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

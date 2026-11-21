@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>preludedb-admin(1) · Linux Manual Pages</title>
+<meta name="description" content="preludedb-admin – tool to copy, move, delete, save or restore a prelude database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-preludedb-admin/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>preludedb-admin(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> preludedb-admin &#8211; tool to copy, move, delete, save or restore a prelude database</p>
+<h2>SYNOPSIS</h2>
+<p> <code>preludedb-admin</code> <i>copy|move|delete|load|save</i> <i>arguments</i></p>
+<h2>DESCRIPTION</h2>
+<p> preludedb-admin can be used to copy, move, delete, save or restore a prelude database, partly or in whole, while preserving IDMEF data consistency. </p>
+<p> Mandatory arguments</p>
+<dl>
+<dt><code>copy</code></dt>
+<dd> Make a copy of a Prelude database to another database.</dd>
+<dt><code>delete</code></dt>
+<dd> Delete content of a Prelude database.</dd>
+<dt><code>load</code></dt>
+<dd> Load a Prelude database from a file.</dd>
+<dt><code>move</code></dt>
+<dd> Move content of a Prelude database to another database.</dd>
+<dt><code>save</code></dt>
+<dd> Save a Prelude database to a file.</dd></dl>
+<p> Running a command without providing arguments will display a detailed help.</p>
+<h2>EXAMPLES</h2>
+<p> Obtaining help on a specific command: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+#preludedb - admin save
+Usage : save&lt;alert | heartbeat&gt;&lt;database&gt;&lt;filename&gt;[options] Example : preludedb - admin save alert "type=mysql name=dbname user=prelude" outputfile
+                                                                                       Save messages from&lt;database&gt;
+                                                                                           into[filename]
+                                                                                               .If no filename argument is provided,
+    data will be written to standard output.Database arguments : type : Type of database(mysql / pgsql).name : Name of the database.user : User to access the database.pass : Password to access the database.Valid options : --offset&lt;offset&gt; : Skip processing until 'offset' events.--count&lt;count&gt; : Process at most count events.--query - logging[filename] : Log SQL query to the specified file.--criteria&lt;criteria&gt; : Only process events matching criteria.--events - per - transaction : Maximum number of event to process per transaction(default 1000).
+</code></pre>
+</dd></dl>
+<p> Preludedb-admin can be useful to delete events from a prelude database : </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+preludedb-admin delete alert --criteria &lt;criteria&gt; &quot;type=&lt;mysql&gt; name=&lt;dbname&gt; user=&lt;prelude-user&gt; pass=&lt;pass&gt;&quot;
+</pre>
+</dd></dl>
+<p> where <i>criteria</i> is an IDMEF criteria : </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+preludedb-admin delete alert --criteria &quot;alert.classification.text == 'UDP packet dropped'&quot; &quot;type=mysql name=prelude user=prelude-user pass=prelude-pass&quot;
+</pre>
+</dd></dl>
+<p> This will delete all event with the classification text &quot;UDP packet dropped&quot; from the database.</p>
+<h2>SEE ALSO</h2>
+<p> The Prelude Handbook: <i><a rel="nofollow" href="https://www.prelude-siem.org/projects/prelude/wiki/ManualUser">https://www.prelude-siem.org/projects/prelude/wiki/ManualUser</a></i> </p>
+<p> Prelude homepage: <i><a rel="nofollow" href="http://www.prelude-siem.com/">http://www.prelude-siem.com/</a></i> </p>
+<p> Creating filter using IDMEF Criteria: <i><a rel="nofollow" href="https://www.prelude-siem.org/projects/prelude/wiki/IDMEFCriteria">https://www.prelude-siem.org/projects/prelude/wiki/IDMEFCriteria</a></i> </p>
+<p> Prelude IDMEF Path: <i><a rel="nofollow" href="https://www.prelude-siem.org/projects/prelude/wiki/IDMEFPath">https://www.prelude-siem.org/projects/prelude/wiki/IDMEFPath</a></i></p>
+<h2>BUGS</h2>
+<p> To report a bug, please visit <i><a rel="nofollow" href="https://www.prelude-siem.org/">https://www.prelude-siem.org/</a></i></p>
+<h2>AUTHOR</h2>
+<p> This manpage was Written by Pierre Chifflier.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2006-2016 CS-SI.<br />
+ This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

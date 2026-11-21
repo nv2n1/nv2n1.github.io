@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mlx5dv_create_flow_action_modify_header(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mlx5dv_create_flow_action_modify_header/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mlx5dv_create_flow_action_modify_header(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>mlx5dv_create_flow_action_modify_header - Flow action modify header for mlx5 provider</p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt>
+</dt><dd> <pre><code>
+#include &lt;infiniband/mlx5dv.h&gt;
+struct ibv_flow_action *
+mlx5dv_create_flow_action_modify_header(struct ibv_context *ctx,
+                                        size_t actions_sz,
+                                        uint64_t actions[],
+                                        enum mlx5dv_flow_table_type ft_type)
+</code></pre></dd></dl>
+<h2>DESCRIPTION</h2>
+<p>Create a modify header flow steering action, it allows mutating a packet header.</p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>ctx
+</dt><dd> RDMA device context to create the action on.
+</dd><dt>actions_sz
+</dt><dd> The size of actions buffer in bytes.
+</dd><dt>actions
+</dt><dd> A buffer which contains modify actions provided in device spec format (i.e. be64).
+</dd><dt>ft_type
+</dt><dd> Defines the flow table type to which the modify header action will be attached.
+</dd><dl>
+<dt>
+</dt><dd> 
+ MLX5DV_FLOW_TABLE_TYPE_NIC_RX: RX FLOW TABLE 
+ MLX5DV_FLOW_TABLE_TYPE_NIC_TX: TX FLOW TABLE</dd></dl>
+</dl>
+<h2>RETURN VALUE</h2>
+<p>Upon success mlx5dv_create_flow_action_modify_header will return a new struct ibv_flow_action object, on error NULL will be returned and errno will be set.</p>
+<h2>SEE ALSO</h2>
+<p>ibv_create_flow(3), ibv_create_flow_action(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

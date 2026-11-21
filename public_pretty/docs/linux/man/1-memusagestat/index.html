@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>memusagestat(1) · Linux Manual Pages</title>
+<meta name="description" content="memusagestat – generate graphic from memory profiling data">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-memusagestat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>memusagestat(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> memusagestat &#8211; generate graphic from memory profiling data </p>
+<h2>SYNOPSIS</h2>
+<p> <code>memusagestat</code> [<i>option</i>]&#8230; <i>datafile</i> [<i>outfile</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>memusagestat</code> creates a PNG file containing a graphical representation of the memory profiling data in the file <i>datafile</i>; that file is generated via the <i>-d</i> (or <i>&#8211;data</i>) option of <code><a href="/docs/linux/man/1-memusage/">memusage</a></code>(1). </p>
+<p> The red line in the graph shows the heap usage (allocated memory) and the green line shows the stack usage. The x-scale is either the number of memory-handling function calls or (if the <i>-t</i> option is specified) time.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-o&nbsp;</code><i>file</i>,&nbsp;<code>&#8211;output=</code><i>file</i></dt>
+<dd> Name of the output file.</dd>
+<dt><code>-s&nbsp;</code><i>string</i>,&nbsp;<code>&#8211;string=</code><i>string</i></dt>
+<dd> Use <i>string</i> as the title inside the output graph.</dd>
+<dt><code>-t</code>,&nbsp;<code>&#8211;time</code></dt>
+<dd> Use time (rather than number of function calls) as the scale for the X axis.</dd>
+<dt><code>-T</code>,&nbsp;<code>&#8211;total</code></dt>
+<dd> Also draw a graph of total memory consumption.</dd>
+<dt><code>-x&nbsp;</code><i>size</i>,&nbsp;<code>&#8211;x-size=</code><i>size</i></dt>
+<dd> Make the output graph <i>size</i> pixels wide.</dd>
+<dt><code>-y&nbsp;</code><i>size</i>,&nbsp;<code>&#8211;y-size=</code><i>size</i></dt>
+<dd> Make the output graph <i>size</i> pixels high.</dd>
+<dt><code>-?</code>,&nbsp;<code>&#8211;help</code></dt>
+<dd> Print a help message and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Print a short usage message and exit.</dd>
+<dt><code>-V</code>,&nbsp;<code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd></dl>
+<h2>BUGS</h2>
+<p> To report bugs, see</p>
+<h2>EXAMPLES</h2>
+<p> See <code><a href="/docs/linux/man/1-memusage/">memusage</a></code>(1).</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-memusage/">memusage</a></code>(1), <code><a href="/docs/linux/man/1-mtrace/">mtrace</a></code>(1)</p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

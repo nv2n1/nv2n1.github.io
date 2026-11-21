@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gencnval(1) · Linux Manual Pages</title>
+<meta name="description" content="gencnval – compile the converters aliases file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gencnval/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gencnval(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>gencnval</code> &#8211; compile the converters aliases file </p>
+<h2>SYNOPSIS</h2>
+<p> <code>gencnval</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> ] [ <code>-s</code>, <code>&#8211;sourcedir</code><i> source</i> ] [ <code>-d</code>, <code>&#8211;destdir</code><i> destination</i> ] [ <i>converterfile</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>gencnval</code> converts the ICU aliases file <i>converterfile</i> into the binary file <code>cnvalias.icu</code>. This binary file can then be read directly by ICU, or used by <code><a href="/docs/linux/man/1-pkgdata/">pkgdata</a></code>(1) for incorporation into a larger archive or library. </p>
+<p> If <i>converterfile</i> is not provided, the default ICU <code>convrtrs.txt</code> file is used.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Print help about usage and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display verbose output. This information can include information about conflicting aliases and the converters the aliases resolve to.</dd>
+<dt><code>-c</code>, <code>&#8211;copyright</code></dt>
+<dd> Include a copyright notice in the binary data.</dd>
+<dt><code>-s</code>, <code>&#8211;sourcedir</code><i> source</i></dt>
+<dd> Set the source directory to <i>source</i>. The default source directory is specified by the environment variable <code>ICU_DATA</code>.</dd>
+<dt><code>-d</code>, <code>&#8211;destdir</code><i> destination</i></dt>
+<dd> Set the destination directory to <i>destination</i>. The default destination directory is specified by the environment variable <code>ICU_DATA</code>.</dd></dl>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>ICU_DATA</code></dt>
+<dd> Specifies the directory containing ICU data. Defaults to <code>${prefix}/share/icu/70.1/</code>. Some tools in ICU depend on the presence of the trailing slash. It is thus important to make sure that it is present if <code>ICU_DATA</code> is set.</dd></dl>
+<h2>FILES</h2>
+<dl>
+<dt><code>icu/source/data/mappings/convrtrs.txt</code></dt>
+<dd> Description of ICU&#8217;s converters and their aliases. This data file is not normally installed, and it is available as a part of ICU source code.</dd></dl>
+<h2>VERSION</h2>
+<p> 70.1</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2000-2004 IBM, Inc. and others.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pkgdata/">pkgdata</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

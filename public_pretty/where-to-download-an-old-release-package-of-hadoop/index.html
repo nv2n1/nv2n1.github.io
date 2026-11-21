@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Download Older Versions of Hadoop - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/where-to-download-an-old-release-package-of-hadoop/">
+  <meta name="description" content="Sometimes you need an older version of Hadoop — for compatibility with existing jobs, to reproduce bugs, or to match a specific cluster environment. The Apache …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Download Older Versions of Hadoop">
+  <meta property="og:url" content="https://www.systutorials.com/where-to-download-an-old-release-package-of-hadoop/">
+  <meta property="og:description" content="Sometimes you need an older version of Hadoop — for compatibility with existing jobs, to reproduce bugs, or to match a specific cluster environment. The Apache …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/software-design/">Software Design</a>
+        </nav>
+        
+        <h1>How to Download Older Versions of Hadoop</h1>
+        <time class="post-date" datetime="2018-03-24T11:51:35Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Sometimes you need an older version of Hadoop — for compatibility with existing jobs, to reproduce bugs, or to match a specific cluster environment. The Apache Hadoop project maintains an archive of all past releases.</p>
+<h2 id="from-the-apache-archive">From the Apache Archive</h2>
+<p>All Hadoop releases are available from the Apache Software Foundation’s distribution archive:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">https://archive.apache.org/dist/hadoop/common/
+</code></pre><p>Browse the directory to find the version you need. Each release directory contains:</p>
+<ul>
+<li>Source tarball (<code>hadoop-X.Y.Z-src.tar.gz</code>)</li>
+<li>Binary tarball (<code>hadoop-X.Y.Z.tar.gz</code>)</li>
+<li>Release notes and checksums</li>
+</ul>
+<p>Download a specific version directly:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Example: Hadoop 3.3.6
+wget https://archive.apache.org/dist/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
+
+# Example: Hadoop 2.10.2
+wget https://archive.apache.org/dist/hadoop/common/hadoop-2.10.2/hadoop-2.10.2.tar.gz
+</code></pre><h2 id="verify-the-download">Verify the Download</h2>
+<p>Always verify checksums for downloaded archives:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Download SHA256 checksum
+wget https://archive.apache.org/dist/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz.sha256
+
+# Verify
+sha256sum -c hadoop-3.3.6.tar.gz.sha256
+</code></pre><p>Or verify with GPG signatures:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Import Apache release keys
+gpg --import https://downloads.apache.org/hadoop/common/KEYS
+
+# Verify signature
+gpg --verify hadoop-3.3.6.tar.gz.asc hadoop-3.3.6.tar.gz
+</code></pre><h2 id="install-the-downloaded-version">Install the Downloaded Version</h2>
+<p>Extract and configure the specific version:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">tar -xzf hadoop-3.3.6.tar.gz
+sudo mv hadoop-3.3.6 /usr/local/hadoop
+</code></pre><p>Set environment variables in your <code>~/.bashrc</code> or <code>~/.profile</code>:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">export HADOOP_HOME=/usr/local/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+</code></pre><h2 id="running-multiple-versions-side-by-side">Running Multiple Versions Side by Side</h2>
+<p>If you need to test against multiple Hadoop versions, install each in a separate directory and switch using environment variables:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Directory structure
+/usr/local/hadoop-2.10.2/
+/usr/local/hadoop-3.3.6/
+/usr/local/hadoop-3.4.0/
+
+# Switch function in ~/.bashrc
+hadoop_use() {
+    export HADOOP_HOME=/usr/local/hadoop-$1
+    export PATH=$(echo $PATH | sed &#34;s|/usr/local/hadoop[^:]*||g&#34;):$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+}
+
+# Usage
+hadoop_use 3.3.6
+hadoop version
+</code></pre><h2 id="docker-for-quick-testing">Docker for Quick Testing</h2>
+<p>For testing without a full install, use Docker images with specific Hadoop versions:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Pull a specific version
+docker pull apache/hadoop:3.3.6
+
+# Run a pseudo-distributed cluster
+docker run -it apache/hadoop:3.3.6 bash
+</code></pre><p>Community-maintained images are also available with full cluster setups for integration testing.</p>
+<h2 id="compatibility-notes">Compatibility Notes</h2>
+<p>When choosing an older Hadoop version, consider:</p>
+<ul>
+<li><strong>Java version:</strong> Hadoop 2.x requires Java 7 or 8. Hadoop 3.x supports Java 8 and 11. Hadoop 3.3+ supports Java 17.</li>
+<li><strong>API changes:</strong> Some APIs were deprecated and removed between major versions. Check the release notes for breaking changes.</li>
+<li><strong>Security patches:</strong> Older versions may have unpatched vulnerabilities. Use the latest patch release within a minor version (e.g., 2.10.2 rather than 2.10.0).</li>
+<li><strong>Configuration differences:</strong> Hadoop 3.x changed several configuration parameter names from 2.x. Check the migration guide when upgrading.</li>
+</ul>
+<h2 id="cloudera-and-hortonworks-distributions">Cloudera and Hortonworks Distributions</h2>
+<p>If you need a specific CDP, CDH, or HDP version, check the vendor archives:</p>
+<ul>
+<li>Cloudera: <code>https://archive.cloudera.com/</code></li>
+<li>Hortonworks (now part of Cloudera): archived under Cloudera’s repositories</li>
+</ul>
+<p>These distributions bundle Hadoop with specific versions of Spark, Hive, HBase, and other ecosystem components that have been tested together.</p>
+<h2 id="using-maven-with-specific-hadoop-versions">Using Maven with Specific Hadoop Versions</h2>
+<p>If you’re compiling Java applications against a specific Hadoop version, specify it in your <code>pom.xml</code>:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">&lt;properties&gt;
+    &lt;hadoop.version&gt;3.3.6&lt;/hadoop.version&gt;
+&lt;/properties&gt;
+
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.hadoop&lt;/groupId&gt;
+        &lt;artifactId&gt;hadoop-common&lt;/artifactId&gt;
+        &lt;version&gt;${hadoop.version}&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.hadoop&lt;/groupId&gt;
+        &lt;artifactId&gt;hadoop-hdfs&lt;/artifactId&gt;
+        &lt;version&gt;${hadoop.version}&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.hadoop&lt;/groupId&gt;
+        &lt;artifactId&gt;hadoop-mapreduce-client-core&lt;/artifactId&gt;
+        &lt;version&gt;${hadoop.version}&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre><p>For Hadoop 2.x, use <code>hadoop-common</code> and <code>hadoop-hdfs</code> artifacts. For Hadoop 1.x, the artifact was simply <code>hadoop-core</code>.</p>
+<p>When testing against multiple versions, use Maven profiles to switch:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">&lt;profiles&gt;
+    &lt;profile&gt;
+        &lt;id&gt;hadoop2&lt;/id&gt;
+        &lt;properties&gt;&lt;hadoop.version&gt;2.10.2&lt;/hadoop.version&gt;&lt;/properties&gt;
+    &lt;/profile&gt;
+    &lt;profile&gt;
+        &lt;id&gt;hadoop3&lt;/id&gt;
+        &lt;properties&gt;&lt;hadoop.version&gt;3.3.6&lt;/hadoop.version&gt;&lt;/properties&gt;
+    &lt;/profile&gt;
+&lt;/profiles&gt;
+</code></pre><p>Build with: <code>mvn clean package -Phadoop3</code></p>
+<h2 id="running-local-test-clusters">Running Local Test Clusters</h2>
+<p>For development and testing, run Hadoop locally in pseudo-distributed mode:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Configure etc/hadoop/core-site.xml
+&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;fs.defaultFS&lt;/name&gt;
+        &lt;value&gt;hdfs://localhost:9000&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+
+# Configure etc/hadoop/hdfs-site.xml
+&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;dfs.replication&lt;/name&gt;
+        &lt;value&gt;1&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+
+# Format the namenode and start
+bin/hdfs namenode -format
+sbin/start-dfs.sh
+sbin/start-yarn.sh
+</code></pre><p>Verify the cluster is running:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">jps  # Should show NameNode, DataNode, ResourceManager, NodeManager
+
+# Web UI
+# NameNode: http://localhost:9870 (Hadoop 3.x) or http://localhost:50070 (Hadoop 2.x)
+# ResourceManager: http://localhost:8088
+</code></pre><p>This pseudo-distributed setup mimics a full cluster on a single machine, making it easy to test against specific Hadoop versions without provisioning hardware.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>expand_number(3) · Linux Manual Pages</title>
+<meta name="description" content="expand_number – format a number from human readable form">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-expand_number/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>expand_number(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>expand_number</code> &#8211; format a number from human readable form </p>
+<h2>LIBRARY</h2>
+<p> Lb libbsd</p>
+<h2>SYNOPSIS</h2>
+<p> In bsd/libutil.h Ft int Fo expand_number Fa const char *buf uint64_t *num Fc</p>
+<h2>DESCRIPTION</h2>
+<p> The Fn expand_number function unformats the Fa buf string and stores a unsigned 64-bit quantity at address pointed out by the Fa num argument. </p>
+<p> The Fn expand_number function follows the SI power of two convention. </p>
+<p> The prefixes are:</p>
+<dl>
+<dt><code>Prefix Ta </code><code>Description Ta </code><code>Multiplier</code></dt>
+<dd>
+</dd><dt><code>k Ta </code><code>kilo Ta </code>1024</dt>
+<dd>
+</dd><dt><code>M Ta </code><code>mega Ta </code>1048576</dt>
+<dd>
+</dd><dt><code>G Ta </code><code>giga Ta </code>1073741824</dt>
+<dd>
+</dd><dt><code>T Ta </code><code>tera Ta </code>1099511627776</dt>
+<dd>
+</dd><dt><code>P Ta </code><code>peta Ta </code>1125899906842624</dt>
+<dd>
+</dd><dt><code>E Ta </code><code>exa Ta </code>1152921504606846976</dt>
+<dd></dd></dl>
+<h2>RETURN VALUES</h2>
+<p> Rv -std</p>
+<h2>ERRORS</h2>
+<p> The Fn expand_number function will fail if:</p>
+<dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The given string contains no digits.</dd>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> An unrecognized prefix was given.</dd>
+<dt><code>Bq </code>Er ERANGE</dt>
+<dd> Result doesn&#8217;t fit into 64 bits.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> humanize_number3</p>
+<h2>HISTORY</h2>
+<p> The Fn expand_number function first appeared in Fx 6.3 . </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

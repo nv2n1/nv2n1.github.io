@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perlopenbsd(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perlopenbsd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perlopenbsd(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>perlopenbsd - Perl version 5 on OpenBSD systems</p>
+<h2>DESCRIPTION</h2>
+<p>This document describes various features of OpenBSD that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.</p>
+<h3>OpenBSD core dumps from getprotobyname_r and getservbyname_r with ithreads</h3>
+<p>When Perl is configured to use ithreads, it will use re-entrant library calls in preference to non-re-entrant versions. There is an incompatibility in OpenBSD&rsquo;s <tt>&quot;getprotobyname_r&quot;</tt> and <tt>&quot;getservbyname_r&quot;</tt> function in versions 3.7 and later that will cause a <font SIZE="-1">SEGV</font> when called without doing a <tt>&quot;bzero&quot;</tt> on their return structs prior to calling these functions. Current Perl&rsquo;s should handle this problem correctly. Older threaded Perls (5.8.6 or earlier) will run into this problem. If you want to run a threaded Perl on OpenBSD 3.7 or higher, you will need to upgrade to at least Perl 5.8.7.</p>
+<h2>AUTHOR</h2>
+<p>Steve Peters &lt;steve [at] fisharerojo.org&gt;</p>
+<p>Please report any errors, updates, or suggestions to <i>perlbug [at] perl.org</i>.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

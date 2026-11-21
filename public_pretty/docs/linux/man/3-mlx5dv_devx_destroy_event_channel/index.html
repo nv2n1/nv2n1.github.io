@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mlx5dv_devx_destroy_event_channel(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mlx5dv_devx_destroy_event_channel/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mlx5dv_devx_destroy_event_channel(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>mlx5dv_devx_create_event_channel - Create an event channel to be used for DEVX asynchronous events.</p>
+<p>mlx5dv_devx_destroy_event_channel - Destroy a DEVX event channel.</p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt>
+</dt><dd> <pre><code>
+#include &lt;infiniband/mlx5dv.h&gt;
+struct mlx5dv_devx_event_channel {
+    int fd;
+};
+struct mlx5dv_devx_event_channel *
+mlx5dv_devx_create_event_channel(struct ibv_context *context,
+                                 enum mlx5dv_devx_create_event_channel_flags flags) void mlx5dv_devx_destroy_event_channel(struct mlx5dv_devx_event_channel *event_channel)
+</code></pre></dd></dl>
+<h2>DESCRIPTION</h2>
+<p>Create or destroy a channel to be used for DEVX asynchronous events.</p>
+<p>The create verb exposes an mlx5dv_devx_event_channel object that can be used to read asynchronous DEVX events. This lets an application to subscribe to get device events and once an event occurred read it from this object.</p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>context
+</dt><dd>
+</dd><dt>
+</dt><dd> <pre>
+RDMA device context to create the channel on.
+</pre>
+</dd><dt>flags
+</dt><dd> MLX5DV_DEVX_CREATE_EVENT_CHANNEL_FLAGS_OMIT_EV_DATA: omit the event data on this channel.</dd></dl>
+<h2>RETURN VALUE</h2>
+<p>Upon success mlx5dv_devx_create_event_channel will return a new struct mlx5dv_devx_event_channel object, on error NULL will be returned and errno will be set.</p>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/3-mlx5dv_open_device/">mlx5dv_open_device</a>(3), <a HREF="/docs/linux/man/3-mlx5dv_devx_obj_create/">mlx5dv_devx_obj_create</a>(3)</p>
+<p>#AUTHOR</p>
+<p>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yumdb(8) · Linux Manual Pages</title>
+<meta name="description" content="yumdb – query and alter the Yum database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-yumdb/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>yumdb(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>yumdb &#8211; query and alter the Yum database</p>
+<h2>Synopsis</h2>
+<p><code>yumdb</code> [command] [packages &#8230;]</p>
+<h2>Description</h2>
+<p>This command is used to query and alter the yum database, which is a simple key value store used in conjunction with the rpm database. Any installed package can have arbitrary data in the yum database, however the main use case is to store extra data about packages as they are installed. yumdb <i>command</i>s are: </p>
+<dl>
+<dt><code>yumdb get &lt;key&gt; [pkg-wildcard]&#8230;</code></dt>
+<dd></dd></dl>
+<p> This command will get the value for the given key, limiting to any specified packages. </p>
+<dl>
+<dt><code>yumdb set &lt;key&gt; &lt;value&gt; [pkg-wildcard]&#8230;</dt>
+<dd></dd></dl>
+<p> This command will set the value for the given key, to the given value, limiting to any specified packages. </p>
+<dl>
+<dt>yumdb del &lt;key&gt; [pkg-wildcard]&#8230;</dt>
+<dd></dd></dl>
+<p> This command will delete the given key, limiting to any specified packages. </p>
+<dl>
+<dt>yumdb rename &lt;old-key&gt; &lt;new-key&gt; [pkg-wildcard]&#8230;</dt>
+<dd></dd></dl>
+<p> This command will rename the given old-key, to the given new-key, limiting to any specified packages. If the old-key does not exist, nothing happens. </p>
+<dl>
+<dt>yumdb rename-force &lt;old-key&gt; &lt;new-key&gt; [pkg-wildcard]&#8230;</dt>
+<dd></dd></dl>
+<p> This command will rename the given old-key, to the given new-key, limiting to any specified packages. If the old-key does not exist, new-key is deleted. </p>
+<dl>
+<dt>yumdb copy &lt;old-key&gt; &lt;new-key&gt; [pkg-wildcard]&#8230;</dt>
+<dd></dd></dl>
+<p> This command will copy the given old-key, to the given new-key, limiting to any specified packages. If the old-key does not exist, nothing happens. </p>
+<dl>
+<dt>yumdb copy-force &lt;old-key&gt; &lt;new-key&gt; [pkg-wildcard]&#8230;</dt>
+<dd></dd></dl>
+<p> This command will copy the given old-key, to the given new-key, limiting to any specified packages. If the old-key does not exist, new-key is deleted. </p>
+<dl>
+<dt>yumdb search &lt;key&gt; &lt;wildcard&gt;&#8230;</dt>
+<dd></dd></dl>
+<p> This command will search all packages for the given key, against any of the given wildcard values. </p>
+<dl>
+<dt>yumdb exist &lt;key&gt; [pkg-wildcard]&#8230;</dt>
+<dd></dd></dl>
+<p> This command will print any packages which have the given key, limiting to any specified packages. </p>
+<dl>
+<dt>yumdb unset &lt;key&gt; [pkg-wildcard]&#8230;</dt>
+<dd></dd></dl>
+<p> This command will print any packages which do not have the given key, limiting to any specified packages. </p>
+<dl>
+<dt>yumdb info [pkg-wildcard]&#8230;</dt>
+<dd></dd></dl>
+<p> This command will display all the data stored in the yumdb, limiting to any specified packages. </p>
+<dl>
+<dt>yumdb sync [pkg-wildcard]&#8230;</dt>
+<dd></dd></dl>
+<p> This command will add any missing data to the yumdb from the repositories, limiting to any specified packages. This is useful to run if you have had any aborted transactions (and thus. missing yumdb data). Note that &quot;yumdb sync&quot; cannot know all the information that would have been put into the yumdb at the time. </p>
+<dl>
+<dt>yumdb sync-force [pkg-wildcard]&#8230;</dt>
+<dd></dd></dl>
+<p> This command will replace any data in the yumdb from the repositories, limiting to any specified packages. </p>
+</code>
+<h2>Examples</h2>
+<p>List all the packages which don&#8217;t have a from_repo key/value:</p>
+<dl>
+<dd>yumdb unset from_repo</dd></dl>
+<p> List all the packages which were installed as dependencies:</p>
+<dl>
+<dd>yumdb search reason dep </dd>
+<h2>Well Known Keys</h2>
+<p>Note that there is no limit to the number of keys that can be created or what they may contain (for installed packages only). However this is a list of well known keys, and what they store. </p>
+<pre><br>
+<dl><dt><code>checksum_data</dt><dd></dd><dt>checksum_type</dt><dd></dd></dl>
+These keys store the createrepo checksum, and it's type, of the available
+package yum installed. Note that these are used by &quot;yum version&quot; to calculate
+the rpmdb version.
+<br>
+<dl><dt>command_line</dt><dd></dd></dl>
+This key stores the entire command line, of the yum command (if it was called).
+<br>
+<dl><dt>from_repo</dt><dd></dd><dt>from_repo_revision</dt><dd></dd><dt>from_repo_timestamp</dt><dd></dd></dl>
+These keys take values from the available package yum installed, and store the
+repo id, it's revision and timestamp.
+<br>
+<dl><dt>reason</dt><dd></dd></dl>
+This key stores either &quot;user&quot; or &quot;dep&quot;, currently. To mark if the user requested
+the package to be installed, or if it was brought in automatically as a
+dependency. Note that this is kept over updates.
+<br>
+<dl><dt>releasever</dt><dd></dd></dl>
+This key stores the value of releasever, when the package was installed.
+<br>
+<dl><dt>installonly</dt><dd></dd></dl>
+If this attribute has the value &quot;keep&quot; then this package will not be
+removed automatically by the installonly process (and does not count towards
+the installonly_limit).
+</code></pre>
+<h2>See Also</h2>
+<pre><i>yum (8)</i>
+<i>rpm (8)</i></pre>
+<h2>Authors</h2>
+<pre>James Antill &lt;james.antill [at] redhat.com&gt;.</pre>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

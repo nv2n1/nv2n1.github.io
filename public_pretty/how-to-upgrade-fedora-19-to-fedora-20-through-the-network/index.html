@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upgrading Fedora with dnf system-upgrade: A Complete Guide - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-upgrade-fedora-19-to-fedora-20-through-the-network/">
+  <meta name="description" content="Fedora upgrades are straightforward with dnf system-upgrade, the standard tool for network-based distribution upgrades. This replaces the older fedup tool and …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Upgrading Fedora with dnf system-upgrade: A Complete Guide">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-upgrade-fedora-19-to-fedora-20-through-the-network/">
+  <meta property="og:description" content="Fedora upgrades are straightforward with dnf system-upgrade, the standard tool for network-based distribution upgrades. This replaces the older fedup tool and …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/software-design/">Software Design</a>
+        </nav>
+        
+        <h1>Upgrading Fedora with dnf system-upgrade: A Complete Guide</h1>
+        <time class="post-date" datetime="2018-03-24T08:21:39Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Fedora upgrades are straightforward with <code>dnf system-upgrade</code>, the standard tool for network-based distribution upgrades. This replaces the older <code>fedup</code> tool and handles everything from downloading packages to managing the upgrade environment.</p>
+<h2 id="pre-upgrade-checklist">Pre-Upgrade Checklist</h2>
+<p>Before starting any upgrade:</p>
+<ul>
+<li><strong>Update your current system</strong>: <code>sudo dnf upgrade</code></li>
+<li><strong>Back up critical data</strong> — especially <code>/etc</code>, home directories, and application configs</li>
+<li><strong>Check the release notes</strong> at <a href="https://docs.fedoraproject.org/en-US/docs/" rel="nofollow noopener" target="_blank"><a href="https://docs.fedoraproject.org/en-US/docs/">https://docs.fedoraproject.org/en-US/docs/</a></a></li>
+<li><strong>Review the Fedora wiki</strong> for known issues with your target release</li>
+<li><strong>Verify disk space</strong>: at least 2-3 GB free in <code>/var</code> and <code>/usr</code></li>
+<li><strong>Ensure stable network connectivity</strong> — upgrades can be 1-2 GB depending on installed packages</li>
+<li><strong>Disable unnecessary services</strong> that might interfere (optional but recommended)</li>
+</ul>
+<h2 id="handling-third-party-repositories">Handling Third-Party Repositories</h2>
+<p>Third-party repositories are a common source of upgrade failures. Before starting:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf repolist
+</span></span></code></pre></div><p>Identify any non-standard repositories. You have two options:</p>
+<p><strong>Option 1: Disable before upgrade</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf config-manager --set-disabled repo-id
+</span></span></code></pre></div><p><strong>Option 2: Remove entirely</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf remove @repo-id  <span class="c1"># if using module-based repos</span>
+</span></span></code></pre></div><p>Common problem repositories include those for proprietary software (Chrome, Nvidia drivers, multimedia codecs). Check their documentation for compatibility with your target Fedora version — many need reinstallation after major upgrades anyway.</p>
+<h2 id="preparation-download-upgrade-packages">Preparation: Download Upgrade Packages</h2>
+<p>First, install the upgrade plugin if not present:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install dnf-plugin-system-upgrade
+</span></span></code></pre></div><p>Then download all packages for your target version without applying changes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf system-upgrade download --releasever<span class="o">=</span><span class="m">42</span>
+</span></span></code></pre></div><p>Replace <code>42</code> with your target Fedora version. This step is safe to interrupt and resume — if your connection drops, just run the command again.</p>
+<p>Watch for any dependency conflicts or unresolvable packages during download. Address these before proceeding. The download typically takes 10-30 minutes depending on your system and connection speed.</p>
+<h2 id="execute-the-upgrade">Execute the Upgrade</h2>
+<p>Once the download completes successfully:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf system-upgrade reboot
+</span></span></code></pre></div><p>Your system reboots into a special upgrade environment. The upgrade process runs automatically at boot and typically takes 15-30 minutes. <strong>Do not interrupt this process</strong> — a failed upgrade mid-transaction can leave your system in an inconsistent state.</p>
+<p>Monitor progress by watching the boot messages. You’ll see package installation progress and any errors that occur.</p>
+<h2 id="post-upgrade-tasks">Post-Upgrade Tasks</h2>
+<p>After your system reboots normally back into the new Fedora version, complete the upgrade:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf distro-sync
+</span></span><span class="line"><span class="cl">sudo dnf autoremove
+</span></span></code></pre></div><p>The <code>distro-sync</code> command ensures all installed packages match versions in your new release’s repositories. The <code>autoremove</code> command removes packages no longer needed by anything else on your system.</p>
+<p>Verify the upgrade succeeded:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /etc/fedora-release
+</span></span><span class="line"><span class="cl">rpm -qa <span class="p">|</span> wc -l
+</span></span></code></pre></div><p>Re-enable any third-party repositories you disabled earlier, but be prepared to reinstall some packages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf config-manager --set-enabled repo-id
+</span></span><span class="line"><span class="cl">sudo dnf check-update
+</span></span></code></pre></div><p>For proprietary software that doesn’t auto-update:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf remove google-chrome-*
+</span></span><span class="line"><span class="cl">sudo dnf install google-chrome-stable
+</span></span></code></pre></div><h2 id="troubleshooting-failed-upgrades">Troubleshooting Failed Upgrades</h2>
+<p>If the upgrade fails or gets stuck:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf system-upgrade clean
+</span></span></code></pre></div><p>This cleans up partial downloads. Then retry:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf system-upgrade download --releasever<span class="o">=</span><span class="m">42</span>
+</span></span><span class="line"><span class="cl">sudo dnf system-upgrade reboot
+</span></span></code></pre></div><p>For detailed failure information, check the upgrade logs from your previous boot:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo journalctl -b -1 -u dnf-system-upgrade
+</span></span><span class="line"><span class="cl">sudo journalctl -b -1 <span class="p">|</span> grep -i error
+</span></span></code></pre></div><p>Common issues and fixes:</p>
+<ul>
+<li><strong>Broken dependencies</strong>: Run <code>sudo dnf install --best --allowerasing</code> before retrying the upgrade</li>
+<li><strong>Stuck packages</strong>: Use <code>sudo dnf remove &lt;package&gt;</code> to uninstall problematic packages, then upgrade and reinstall them afterward</li>
+<li><strong>SELinux denials</strong>: Check <code>/var/log/audit/audit.log</code> if you have SELinux in enforcing mode</li>
+</ul>
+<p>For persistent problems, file a bug at <a href="https://bugzilla.redhat.com/" rel="nofollow noopener" target="_blank"><a href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a></a> with your logs attached. Include output from <code>sudo dnf system-upgrade log</code> if available.</p>
+<h2 id="skipping-fedora-versions">Skipping Fedora Versions</h2>
+<p>You can technically skip multiple releases in one upgrade, but sequential upgrades are safer. Each Fedora release receives security updates for roughly 13 months. If you’re more than 2-3 releases behind, consider upgrading incrementally to catch any repository or package issues that might have been fixed in intermediate releases.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

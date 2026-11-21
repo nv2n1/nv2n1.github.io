@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lwres_getrrsetbyname(3) · Linux Manual Pages</title>
+<meta name="description" content="lwres_getrrsetbyname, lwres_freerrset – retrieve DNS records">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-lwres_getrrsetbyname/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>lwres_getrrsetbyname(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> lwres_getrrsetbyname, lwres_freerrset &#8211; retrieve DNS records </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;lwres/netdb.h&gt;
+</code></pre>
+<dl>
+<dt> <code>int lwres_getrrsetbyname(const char&nbsp;<wbr>*</code><i>hostname</i><code>, unsigned int&nbsp;<wbr></code><i>rdclass</i><code>, unsigned int&nbsp;<wbr></code><i>rdtype</i><code>, unsigned int&nbsp;<wbr></code><i>flags</i><code>, struct rrsetinfo&nbsp;<wbr>**</code><i>res</i><code>);</code></dt>
+<dt> <code>void lwres_freerrset(struct rrsetinfo&nbsp;<wbr>*</code><i>rrset</i><code>);</code></dt></dl>
+<dd>The following structures are used: </dd>
+<dl>
+<dt>
+</dt><dd>
+struct rdatainfo {<br />
+    unsigned int rdi_length; /* length of data */<br />
+    unsigned char *rdi_data; /* record data */<br />
+};
+</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+struct rrsetinfo {
+    unsigned int rri_flags;       /* RRSET_VALIDATED... */
+    unsigned int rri_rdclass;     /* class number */
+    unsigned int rri_rdtype;      /* RR type number */
+    unsigned int rri_ttl;         /* time to live */
+    unsigned int rri_nrdatas;     /* size of rdatas array */
+    unsigned int rri_nsigs;       /* size of sigs array */
+    char *rri_name;               /* canonical name */
+    struct rdatainfo *rri_rdatas; /* individual records */
+    struct rdatainfo *rri_sigs;   /* individual signatures */
+};
+</code></pre>
+</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>lwres_getrrsetbyname()</code> gets a set of resource records associated with a <i>hostname</i>, <i>class</i>, and <i>type</i>. <i>hostname</i> is a pointer a to null-terminated string. The <i>flags</i> field is currently unused and must be zero. </p>
+<p> After a successful call to <code>lwres_getrrsetbyname()</code>, <i>*res</i> is a pointer to an <code>rrsetinfo</code> structure, containing a list of one or more <code>rdatainfo</code> structures containing resource records and potentially another list of <code>rdatainfo</code> structures containing SIG resource records associated with those records. The members <code>rri_rdclass</code> and <code>rri_rdtype</code> are copied from the parameters. <code>rri_ttl</code> and <code>rri_name</code> are properties of the obtained rrset. The resource records contained in <code>rri_rdatas</code> and <code>rri_sigs</code> are in uncompressed DNS wire format. Properties of the rdataset are represented in the <code>rri_flags</code> bitfield. If the RRSET_VALIDATED bit is set, the data has been DNSSEC validated and the signatures verified. </p>
+<p> All of the information returned by <code>lwres_getrrsetbyname()</code> is dynamically allocated: the <code>rrsetinfo</code> and <code>rdatainfo</code> structures, and the canonical host name strings pointed to by the <code>rrsetinfo</code>structure. Memory allocated for the dynamically allocated structures created by a successful call to <code>lwres_getrrsetbyname()</code> is released by <code>lwres_freerrset()</code>. <i>rrset</i> is a pointer to a <code>struct rrset</code> created by a call to <code>lwres_getrrsetbyname()</code>. </p>
+<h2>RETURN VALUES</h2>
+<p> <code>lwres_getrrsetbyname()</code> returns zero on success, and one of the following error codes if an error occurred: </p>
+<p> <code>ERRSET_NONAME</code></p>
+<dl>
+<dt>
+</dt><dd> the name does not exist</dd></dl>
+<p> <code>ERRSET_NODATA</code></p>
+<dl>
+<dt>
+</dt><dd> the name exists, but does not have data of the desired type</dd></dl>
+<p> <code>ERRSET_NOMEMORY</code></p>
+<dl>
+<dt>
+</dt><dd> memory could not be allocated</dd></dl>
+<p> <code>ERRSET_INVAL</code></p>
+<dl>
+<dt>
+</dt><dd> a parameter is invalid</dd></dl>
+<p> <code>ERRSET_FAIL</code></p>
+<dl>
+<dt>
+</dt><dd> other failure</dd></dl>
+<dl>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-lwres/">lwres</a></code>(3).</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+ Copyright &#169; 2000, 2001 Internet Software Consortium. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

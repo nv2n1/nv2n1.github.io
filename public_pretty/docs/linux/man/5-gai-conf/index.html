@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gai-conf(5) · Linux Manual Pages</title>
+<meta name="description" content="gai.conf –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-gai-conf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>gai-conf(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>gai.conf &#8211; </p>
+<p> <a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a>(3) configuration file</p>
+<h2>Description</h2>
+<p>A call to <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3) might return multiple answers. According to RFC 3484 these answers must be sorted so that the answer with the highest success rate is first in the list. The RFC provides an algorithm for the sorting. The static rules are not always adequate, though. For this reason, the RFC also requires that system administrators should have the possibility to dynamically change the sorting. For the glibc implementation, this can be achieved with the <i>/etc/gai.conf</i> file. </p>
+<p> Each line in the configuration file consists of a keyword and its parameters. White spaces in any place are ignored. Lines starting with &#8216;#&#8217; are comments and are ignored. </p>
+<p> The keywords currently recognized are:</p>
+<dl>
+<dt><code>label</code> <i>netmask</i> <i>precedence</i></dt>
+<dd>The value is added to the label table used in the RFC 3484 sorting. If any <code>label</code> definition is present in the configuration file, the default table is not used. All the label definitions of the default table which are to be maintained have to be duplicated. Following the keyword, the line has to contain a network mask and a precedence value.</dd>
+<dt><code>precedence</code> <i>netmask</i> <i>precedence</i></dt>
+<dd>This keyword is similar to <code>label</code>, but instead the value is added to the precedence table as specified in RFC 3484. Once again, the presence of a single <code>precedence</code> line in the configuration file causes the default table to not be used.</dd>
+<dt><code>reload</code> &lt;<code>yes</code>|<code>no</code>&gt;</dt>
+<dd>This keyword controls whether a process checks whether the configuration file has been changed since the last time it was read. If the value is &quot;<code>yes</code>&quot;, the file is reread. This might cause problems in multithreaded applications and is generally a bad idea. The default is &quot;<code>no</code>&quot;.</dd>
+<dt><code>scopev4</code> <i>mask</i> <i>value</i></dt>
+<dd>Add another rule to the RFC 3484 scope table for IPv4 address. By default, the scope IDs described in section 3.2 in RFC 3438 are used. Changing these defaults should hardly ever be necessary.</dd></dl>
+<h2>Files</h2>
+<p><i>/etc/gai.conf</i></p>
+<h2>Versions</h2>
+<p>The <i>gai.conf</i> file is supported by glibc since version 2.5.</p>
+<h2>Examples</h2>
+<p>The default table according to RFC 3484 would be specified with the following configuration file: </p>
+<p> label ::1/128 0 label ::/0 1 label 2002::/16 2 label ::/96 3 label ::ffff:0:0/96 4 precedence ::1/128 50 precedence ::/0 40 precedence 2002::/16 30 precedence ::/96 20 precedence ::ffff:0:0/96 10</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), RFC 3484</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

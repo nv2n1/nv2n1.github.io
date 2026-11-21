@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>slaruv-f(3) · Linux Manual Pages</title>
+<meta name="description" content="slaruv.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-slaruv-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>slaruv-f(3)</h1>
+
+
+
+
+
+<p>slaruv.f &#8211;</p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>slaruv</code> (ISEED, N, X)<br />
+ <i></i><code>SLARUV</code> returns a vector of n random real numbers from a uniform distribution.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine slaruv (integer, dimension( 4 )ISEED, integerN, real, dimension( n )X)</h3>
+<p><code>SLARUV</code> returns a vector of n random real numbers from a uniform distribution. </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dd>
+<pre> SLARUV returns a vector of n random real numbers from a uniform (0,1)
+ distribution (n &lt;= 128).
+ This is an auxiliary routine called by SLARNV and CLARNV.</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>ISEED</i> </dd>
+<pre> ISEED is INTEGER array, dimension (4)
+ On entry, the seed of the random number generator; the array
+ elements must be between 0 and 4095, and ISEED(4) must be
+ odd.
+ On exit, the seed is updated.</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ The number of random numbers to be generated. N &lt;= 128.</pre>
+<p><i>X</i> </p>
+<pre> X is REAL array, dimension (N)
+ The generated random numbers.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dd>September 2012</dd></dl>
+<p> <code>Further Details: </code></p>
+<dl>
+<dd>
+<pre> This routine uses a multiplicative congruential method with modulus
+ 2**48 and multiplier 33952834046453 (see G.S.Fishman,
+ 'Multiplicative congruential random number generators with modulus
+ 2**b: an exhaustive analysis for b = 32 and a partial analysis for
+ b = 48', Math. Comp. 189, pp 331-344, 1990).
+ 48-bit integers are stored in 4 integer array elements with 12 bits
+ per element. Hence the routine is portable across machines with
+ integers of 32 bits or more.</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> Definition at line 96 of file slaruv.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

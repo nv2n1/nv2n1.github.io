@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jxrdecapp(1) · Linux Manual Pages</title>
+<meta name="description" content="JxrDecApp – JPEG XR Decoder Utility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-jxrdecapp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>jxrdecapp(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>JxrDecApp &#8211; JPEG XR Decoder Utility </p>
+<h2>Description</h2>
+<p>JPEG XR Decoder Utility Copyright 2013 Microsoft Corporation &#8211; All Rights Reserved </p>
+<p> ./debian/tmp/usr/bin/JxrDecApp [options]&#8230; </p>
+<dl>
+<dt><code>-i</code> input.jxr/wdp</dt>
+<dd>Input JPEG XR/HD Photo file name</dd></dl>
+<dl>
+<dt><code>-o</code> output.bmp/pnm/tif/jxr</dt>
+<dd>Output image file name bmp: &lt;=8bpc, BGR pnm: &gt;=8bpc, RGB tif: &gt;=8bpc, RGB jxr: for compressed domain transcode</dd></dl>
+<dl>
+<dt><code>-c</code> format</dt>
+<dd>Specifies the uncompressed output format 0: 24bppBGR 1: 1bppBlackWhite 2: 8bppGray 3: 16bppGray 4: 16bppGrayFixedPoint 5: 16bppGrayHalf 7: 32bppGrayFixedPoint 8: 32bppGrayFloat 9: 24bppRGB</dd>
+<dt>10: 48bppRGB</dt>
+<dd>11: 48bppRGBFixedPoint 12: 48bppRGBHalf 14: 96bppRGBFixedPoint 15: 128bppRGBFloat 16: 32bppRGBE 17: 32bppCMYK 18: 64bppCMYK 22: 32bppBGRA 23: 64bppRGBA 24: 64bppRGBAFixedPoint 25: 64bppRGBAHalf 27: 128bppRGBAFixedPoint 28: 128bppRGBAFloat 29: 16bppBGR555 30: 16bppBGR565 31: 32bppBGR101010 32: 40bppCMYKA 33: 80bppCMYKA 34: 32bppBGR</dd></dl>
+<dl>
+<dt><code>-r</code> top left height width</dt>
+<dd>Specifies the rectangle for region decode</dd></dl>
+<dl>
+<dt><code>-T</code> m</dt>
+<dd>Reduced resolution (mipmap) decode 0: Full resolution (default) 1: 1/2 res (down-sampled from full res) 2: 1/4 res (native decode) 3: 1/8 res (down-sampled from 1/4 res) 4: 1/16 res (native decode)</dd>
+<dd>&gt;4: 1/(2^m) res (down-sampled from 1/16 res)</dd></dl>
+<dl>
+<dt><code>-O</code> orientation</dt>
+<dd>0: No transformation (default) 1: Flip vertically 2: Flip horizontally 3: Flip vertically &amp; horizontally 4: Rotate 90 degrees CW 5: Rotate 90 degrees CW &amp; flip vertically 6: Rotate 90 degrees CW &amp; flip horizontally 7: Rotate 90 degrees CW &amp; flip vert &amp; horiz</dd></dl>
+<dl>
+<dt><code>-s</code> skip subbands</dt>
+<dd>Used for compressed domain transcoding 0: All subbands included (default) 1: Skip flexbits 2: Skip highpass 3: Skip highpass &amp; lowpass (DC only)</dd></dl>
+<dl>
+<dt><code>-a</code> alpha decode</dt>
+<dd>0: Decode without alpha channel 1: Decode only alpha channel 2: Decode image &amp; alpha (default)</dd></dl>
+<dl>
+<dt><code>-p</code> strength</dt>
+<dd>Post processing filter strength 0: None (default) 1: Light 2: Medium 3: Strong 4: Very strong</dd></dl>
+<dl>
+<dt><code>-C</code></dt>
+<dd>Suppress overlapping boundary macro blocks (Used for compressed domain tile extraction)</dd></dl>
+<dl>
+<dt><code>-t</code></dt>
+<dd>Display timing information</dd></dl>
+<dl>
+<dt><code>-v</code></dt>
+<dd>Display verbose decoder information</dd></dl>
+<p> Eg: ./debian/tmp/usr/bin/JxrDecApp <code>-i</code> input.jxr <code>-o</code> output.bmp <code>-c</code> 0</p>
+<h2>Author</h2>
+<p>This manual page was written by Mathieu Malaterre &lt;malat [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

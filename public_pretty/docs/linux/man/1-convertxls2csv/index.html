@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>convertxls2csv(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-convertxls2csv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>convertxls2csv(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>xls2csv - A script that recodes a spreadsheet&rsquo;s charset and saves as CSV.</p>
+<h2>DESCRIPTION</h2>
+<p>This script will recode a spreadsheet into a different character set and output the recoded data as a csv file.</p>
+<p>The script came about after many headaches from dealing with Excel spreadsheets from clients that were being received in various character sets.</p>
+<h2>OPTIONS</h2>
+ <pre>
+        -x     : filename of the source spreadsheet
+        -b     : the character set the source spreadsheet is in (before)
+        -c     : the filename to save the generated csv file as
+        -a     : the character set the csv file should be converted to (after)
+        -q     : quiet mode
+        -s     : print a list of supported character sets
+        -h     : print help message
+        -v     : get version information
+        -W     : list worksheets in the spreadsheet specified by -x
+        -w     : specify the worksheet name to convert (defaults to the first worksheet)
+        -n     : specify the worksheet number to convert (you cannot use this option with -w)
+        -f     : force the worsheet to be fully parsed. This disables the feature that skips rows when the first cell is blank
+</pre>
+<h2>EXAMPLE USAGE</h2>
+<p>The following example will convert a spreadsheet that is in the <font SIZE="-1">WINDOWS-1252</font> character set (WinLatin1) and save it as a csv file in the <font SIZE="-1">UTF-8</font> character set.</p>
+ <pre>
+        xls2csv -x &quot;1252spreadsheet.xls&quot; -b WINDOWS-1252 -c &quot;ut8csvfile.csv&quot; -a UTF-8
+</pre> 
+<p>This example with convert the worksheet named ``Users&rsquo;&rsquo; in the given spreadsheet.</p>
+ <pre>
+        xls2csv -x &quot;multi_worksheet_spreadsheet.xls&quot; -w &quot;Users&quot; -c &quot;users.csv&quot;
+</pre>
+<h2>NOTES</h2>
+<p>The spreadsheet&rsquo;s charset (-b) will default to <font SIZE="-1">UTF-8</font> if not set.</p>
+<p>If the csv&rsquo;s charset (-a) is not set, the <font SIZE="-1">CSV</font> file will be created using the same charset as the spreadsheet.</p>
+<h2>REQUIRED MODULES</h2>
+<p>This script requires the following modules:</p>
+ <pre>
+        Locale::Recode
+        Unicode::Map
+        Spreadsheet::ParseExcel
+        Spreadsheet::ParseExcel::FmtUnicode (should be included with Spreadsheet::ParseExcel)
+        Text::CSV_XS
+</pre>
+<h2>CAVEATS</h2>
+<p>It probably will not work work with spreadsheets that use formulas.</p>
+<p>A line in the spreadsheet is assumed to be blank if there is nothing in the first column.</p>
+<p>Some users have reported problems trying to convert a spreadsheet while it was opened in a different application. You should probably make sure that no other programs are working with the spreadsheet while you are converting it.</p>
+<h2>AUTHOR</h2>
+<p>Ken Prows (perl [at] xev.net)</p>
+<h2>COPYRIGHT</h2>
+<p>Copyright (C) 2005-2012 Ken Prows. All rights reserved.</p>
+<p>This script is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

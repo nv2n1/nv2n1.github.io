@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bgltags(1) · Linux Manual Pages</title>
+<meta name="description" content="bgltags – generate tag file for Emacs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-bgltags/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>bgltags(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> bgltags &#8211; generate tag file for Emacs</p>
+<h2>SYNOPSIS</h2>
+<p> <code>bgltags</code> [ options ] [ <i>objfile</i> [ <i>gmon.out</i> ] ] </p>
+<h2>DESCRIPTION</h2>
+<p> The <code>bgltags</code> program is used to create a tag table file, in a format understood by <code><a href="/docs/linux/man/1-emacs/">emacs</a>(1)</code>. This programs understand the syntax of the Bigloo files. It reads the files specified on the command line, and write a tag table (defaults: <i>TAGS</i>) in the current working directory. Files specified with relative file names will be recorded in the tag table with file names relative to the directory where the tag table re- sides. Files specified with absolute file names will be recorded with absolute file names. The program does not recognize the language used in an input file based on its file name and contents. The <i>&#8211;language</i> switch can be used to force parsing of the file names following the switch according to the given language, overriding guesses based on file-name extensions. Source files that are not Scheme are actually processed by the <code>etags</code> program. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>
+</dt><dt><code>-a, &#8211;append</code></dt>
+<dd>
+</dd><dd> Append to existing tag file. </dd>
+<dt><code>-o tagfile, &#8211;output=tagfile</code></dt>
+<dd> Explicit name of file for tag table; overrides default `TAGS&#8217;. </dd>
+<dt><code>-v</code></dt>
+<dd> Print the current version of the program. </dd>
+<dt><code>-module</code></dt>
+<dd> Generate an entry in the table for each modules. Normally modules identifier are not indexed in the tags table. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-bigloo/">bigloo</a>(1), <a href="/docs/linux/man/1-bglafile/">bglafile</a>(1), <a href="/docs/linux/man/1-bgldepend/">bgldepend</a>(1), <a href="/docs/linux/man/1-etags/">etags</a>(1), <a href="/docs/linux/man/1-emacs/">emacs</a>(1), <a href="/docs/linux/man/1-bglmco/">bglmco</a>(1), <a href="/docs/linux/man/1-xemacs/">xemacs</a>(1) </p>
+<h2>AUTHOR</h2>
+<p> Manuel SERRANO, Manuel.Serrano [at] inria.fr </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

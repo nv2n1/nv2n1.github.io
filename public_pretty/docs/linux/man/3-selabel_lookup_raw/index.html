@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>selabel_lookup_raw(3) · Linux Manual Pages</title>
+<meta name="description" content="selabel_lookup – obtain SELinux security context from a string label">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-selabel_lookup_raw/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>selabel_lookup_raw(3)</h1>
+
+
+
+
+
+<p>selabel_lookup &#8211; obtain SELinux security context from a string label</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;selinux/selinux.h&gt;
+#include &lt;selinux/label.h&gt;
+int selabel_lookup(struct selabel_handle *hnd,
+                   char **context,
+                   const char *key, int type);
+int selabel_lookup_raw(struct selabel_handle *hnd,
+                       char **context,
+                       const char *key, int type);</code></pre>
+<h2>Description</h2>
+<p><code>selabel_lookup</code>() performs a lookup operation on the handle <i>hnd</i>, returning the result in the memory pointed to by <i>context</i>, which must be freed by the caller using <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3). The <i>key</i> and <i>type</i> parameters are the inputs to the lookup operation and are interpreted according to the specific backend that <i>handle</i> is open on. </p>
+<p> <code>selabel_lookup_raw</code>() behaves identically to <code>selabel_lookup</code>() but does not perform context translation.</p>
+<h2>Return Value</h2>
+<p>On success, zero is returned. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
+<h2>Errors</h2>
+<dl>
+<dt><code>ENOENT</code></dt>
+<dd>No context corresponding to the input <i>key</i> and <i>type</i> was found.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>The <i>key</i> and/or <i>type</i> inputs are invalid, or the context being returned failed validation.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>An attempt to allocate memory failed.</dd></dl>
+<h2>Author</h2>
+<p>Eamon Walsh &lt;ewalsh [at] tycho.nsa.gov&gt;</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3), <code><a href="/docs/linux/man/3-selabel_stats/">selabel_stats</a></code>(3), <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3), <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

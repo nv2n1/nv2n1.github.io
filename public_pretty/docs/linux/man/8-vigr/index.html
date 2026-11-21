@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vigr(8) · Linux Manual Pages</title>
+<meta name="description" content="vipw, vigr – edit the password, group, shadow-password or shadow-group file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-vigr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>vigr(8)</h1>
+
+
+
+
+
+<p>vipw, vigr &#8211; edit the password, group, shadow-password or shadow-group file</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>vipw</code> [<i>options</i>]</dt>
+<dt> <code>vigr</code> [<i>options</i>]</dt></dl>
+<h2>Description</h2>
+<dd>The <code>vipw</code> and <code>vigr</code> commands edits the files /etc/passwd and /etc/group, respectively. With the <code>-s</code> flag, they will edit the shadow versions of those files, /etc/shadow and /etc/gshadow, respectively. The programs will set the appropriate locks to prevent file corruption. When looking for an editor, the programs will first try the environment variable <code>$VISUAL</code>, then the environment variable <code>$EDITOR</code>, and finally the default editor, <code><a href="/docs/linux/man/1-vi/">vi</a></code>(1).</dd>
+<h2>Options</h2>
+<p>The options which apply to the <code>vipw</code> and <code>vigr</code> commands are: </p>
+<p> <code>-g</code>, <code>&#8211;group</code></p>
+<dl>
+<dd>Edit group database.</dd></dl>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dd>Display help message and exit.</dd></dl>
+<p> <code>-p</code>, <code>&#8211;passwd</code></p>
+<dl>
+<dd>Edit passwd database.</dd></dl>
+<p> <code>-q</code>, <code>&#8211;quiet</code></p>
+<dl>
+<dd>Quiet mode.</dd></dl>
+<p> <code>-R</code>, <code>&#8211;root</code>&nbsp;<i>CHROOT_DIR</i></p>
+<dl>
+<dd>Apply changes in the <i>CHROOT_DIR</i> directory and use the configuration files from the <i>CHROOT_DIR</i> directory.</dd></dl>
+<p> <code>-s</code>, <code>&#8211;shadow</code></p>
+<dl>
+<dd>Edit shadow or gshadow database.</dd></dl>
+<h2>Environment</h2>
+<p><code>VISUAL</code></p>
+<dl>
+<dd>Editor to be used.</dd></dl>
+<p> <code>EDITOR</code></p>
+<dl>
+<dd>Editor to be used if <code>VISUAL</code> is not set.</dd></dl>
+<h2>Files</h2>
+<p>/etc/group</p>
+<dl>
+<dd>Group account information.</dd></dl>
+<p> /etc/gshadow</p>
+<dl>
+<dd>Secure group account information.</dd></dl>
+<p> /etc/passwd</p>
+<dl>
+<dd>User account information.</dd></dl>
+<p> /etc/shadow</p>
+<dl>
+<dd>Secure user account information.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-vi/">vi</a></code>(1), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/5-gshadow/">gshadow</a></code>(5) , <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), , <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

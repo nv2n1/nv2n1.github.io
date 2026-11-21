@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lssu(1) · Linux Manual Pages</title>
+<meta name="description" content="lssu – list usage state of NILFS2 segments">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lssu/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lssu(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> lssu &#8211; list usage state of NILFS2 segments</p>
+<h2>SYNOPSIS</h2>
+<p> <code>lssu</code> [<i>options</i>] [<i>device</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>lssu</code> is a utility for displaying usage state of NILFS2 segments in <i>device</i>, where a segment is contiguous lump of disk blocks and an allocation unit of NILFS2 disk space. When <i>device</i> is omitted, <i>/proc/mounts</i> is examined to find a NILFS2 file system. </p>
+<p> This command will fail if the <i>device</i> has no active mounts of a NILFS2 file system.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-a</code></dt>
+<dd> Do not hide clean segments.</dd>
+<dt><code>-i </code><i>index</i></dt>
+<dd> Skip <i>index</i> segments at start of input.</dd>
+<dt><code>-n </code><i>lines</i></dt>
+<dd> List only <i>lines</i> input segments.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help message and exit.</dd></dl>
+<h2>FIELD DESCRIPTION</h2>
+<p> Every line of the <code>lssu</code> output consists of the following fields:</p>
+<dl>
+<dt><code>SEGNUM</code></dt>
+<dd> Segment number.</dd>
+<dt><code>DATE</code></dt>
+<dd> Creation date.</dd>
+<dt><code>TIME</code></dt>
+<dd> Creation time.</dd>
+<dt><code>STAT</code></dt>
+<dd> State of the segment. It consists of three flags whose meaning is shown below:</dd>
+<dl>
+<dl>
+<dt><code>a</code></dt>
+<dd> The segment is active, meaning that it is recently created and cannot be reclaimed by the garbage collector.</dd>
+<dt><code>d</code></dt>
+<dd> The segment is dirty, meaning that it is in use.</dd>
+<dt><code>e</code></dt>
+<dd> The segment is erroneous, meaning that it has once caused an I/O error. NILFS2 avoids allocating the segments with this flag.</dd></dl>
+</dl>
+<dt><code>NBLOCKS</code></dt>
+<dd> Number of in-use blocks of the segment.</dd></dl>
+<h2>AUTHOR</h2>
+<p> Koji Sato &lt;koji [at] osrg.net&gt;</p>
+<h2>AVAILABILITY</h2>
+<p> <code>lssu</code> is part of the nilfs-utils package and is available from <a rel="nofollow" href="http://www.nilfs.org.">http://www.nilfs.org.</a></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-nilfs/">nilfs</a></code>(8), <code><a href="/docs/linux/man/8-dumpseg/">dumpseg</a></code>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

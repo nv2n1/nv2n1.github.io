@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdisdigitstdlocale(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdisdigitstdlocale/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdisdigitstdlocale(3)</h1>
+
+
+
+
+
+<p>std::isdigit(std::locale) - std::isdigit(std::locale)</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;locale&gt;
+    template &lt;class charT&gt;
+    bool isdigit(charT ch, const locale &amp;loc);</code></pre> 
+<p>Checks if the given character is classified as a digit by the given locale&rsquo;s std::ctype facet.</p>
+<h2>Parameters</h2>
+<p>ch - character
+loc - locale</p>
+<h2>Return value</h2>
+<p>Returns true if the character is classified as a digit, false otherwise.</p>
+<h2>Possible implementation</h2>
+<p> <wbr> template&lt; class charT &gt;
+ <wbr> bool isdigit( charT ch, const std::locale&amp; loc ) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return std::use_facet&lt;std::ctype&lt;charT&gt;&gt;(loc).is(std::ctype_base::digit, ch);
+ <wbr> }</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;locale&gt;
+#include &lt;string&gt;
+#include &lt;set&gt;
+struct jdigit_ctype : std::ctype&lt;wchar_t&gt;
+{
+std::set&lt;wchar_t&gt; jdigits{L&rsquo;一&rsquo;, L&rsquo;二&rsquo;, L&rsquo;三&rsquo;, L&rsquo;四&rsquo;, L&rsquo;五&rsquo;, L&rsquo;六&rsquo;, L&rsquo;七&rsquo;, L&rsquo;八&rsquo;, L&rsquo;九&rsquo;, L&rsquo;十&rsquo;};
+bool do_is(mask m, char_type c) const
+{
+if ((m &amp; digit) &amp;&amp; jdigits.count(c))
+return true;           // Japanese digits will be classified as digits
+return ctype::do_is(m, c); // leave the rest to the parent class
+}
+};
+int main()
+{
+std::wstring text = L&quot;123一二三１２３&quot;;
+std::locale loc(std::locale(&quot;&quot;), new jdigit_ctype);
+std::locale::global(std::locale(&quot;&quot;));
+std::wcout.imbue(std::locale());
+for (wchar_t c : text)
+if (std::isdigit(c, loc))
+std::wcout &lt;&lt; c &lt;&lt; &quot; is a digit\n&quot;;
+else
+std::wcout &lt;&lt; c &lt;&lt; &quot; is NOT a digit\n&quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 1 is a digit
+ <wbr> 2 is a digit
+ <wbr> 3 is a digit
+ <wbr> 一 is a digit
+ <wbr> 二 is a digit
+ <wbr> 三 is a digit
+ <wbr> １ is NOT a digit
+ <wbr> ２ is NOT a digit
+ <wbr> ３ is NOT a digit</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if a character is a digit
+isdigit <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if a wide character is a digit
+iswdigit <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

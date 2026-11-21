@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>magick-config(1) · Linux Manual Pages</title>
+<meta name="description" content="Magick-config – get information about the installed version of ImageMagick">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-magick-config/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>magick-config(1)</h1>
+
+
+
+
+
+<p>Magick-config &#8211; get information about the installed version of ImageMagick</p>
+<h2>Synopsis</h2>
+<p><code>Magick-config </code> <code>[&#8211;cflags]</code> <code>[&#8211;cppflags]</code> <code>[&#8211;exec-prefix]</code> <code>[&#8211;ldflags]</code> <code>[&#8211;libs]</code> <code>[&#8211;prefix]</code> <code>[&#8211;version]</code></p>
+<h2>Description</h2>
+<p><code>Magick-config</code> prints the compiler and linker flags required to compile and link programs that use the <code>ImageMagick</code> Application Programmer Interface.</p>
+<h2>Examples</h2>
+<p>To print the version of the installed distribution of <code>ImageMagick</code>, use: </p>
+<pre> Magick-config --version</pre>
+<p>&nbsp;<wbr>&nbsp;<wbr> To compile a program that calls the <code>ImageMagick</code> Application Programmer Interface, use: </p>
+<pre> cc `Magick-config --cflags --cppflags --ldflags --libs` program.c</pre>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;cflags</code></dt>
+<dd>Print the compiler flags that were used to compile <code>libMagick</code>.</dd>
+<dt><code>&#8211;cppflags</code></dt>
+<dd>Print the preprocessor flags that are needed to find the <code>ImageMagick</code> C include files and defines to ensure that the ImageMagick data structures match between your program and the installed libraries.</dd>
+<dt><code>&#8211;exec-prefix</code></dt>
+<dd>Print the directory under which target specific binaries and executables are installed.</dd>
+<dt><code>&#8211;ldflags</code></dt>
+<dd>Print the linker flags that are needed to link with the <code>ImageMagick</code> library.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd>Print the linker flags that are needed to link a program with <code>libMagick</code>.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Print the version of the <code>ImageMagick</code> distribution to standard output.</dd></dl>
+<h2>License</h2>
+<p>See <a rel="nofollow" href="http://www.imagemagick.org/script/license.php.">http://www.imagemagick.org/script/license.php.</a></p>
+<h2>Authors</h2>
+<p>John Cristy, ImageMagick Studio LLC</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

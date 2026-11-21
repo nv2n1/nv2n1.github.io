@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sd-daemon(3) · Linux Manual Pages</title>
+<meta name="description" content="sd-daemon, SD_EMERG, SD_ALERT, SD_CRIT, SD_ERR, SD_WARNING, SD_NOTICE, SD_INFO, SD_DEBUG – APIs for new-style daemons">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sd-daemon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sd-daemon(3)</h1>
+
+
+
+
+
+<p>sd-daemon, SD_EMERG, SD_ALERT, SD_CRIT, SD_ERR, SD_WARNING, SD_NOTICE, SD_INFO, SD_DEBUG &#8211; APIs for new-style daemons</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;systemd/sd-daemon.h&gt;
+pkg-config --cflags --libs libsystemd</code></pre>
+<h2>Description</h2>
+<dd>sd-daemon.h provide APIs for new-style daemons, as implemented by the <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) init system. See <code><a href="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></code>(3), <code><a href="/docs/linux/man/3-sd_notify/">sd_notify</a></code>(3), <code><a href="/docs/linux/man/3-sd_booted/">sd_booted</a></code>(3), <code><a href="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></code>(3), <code><a href="/docs/linux/man/3-sd_watchdog_enabled/">sd_watchdog_enabled</a></code>(3) for more information about the functions implemented. In addition to these functions, a couple of logging prefixes are defined as macros: fprintf(stderr, SD_NOTICE &quot;Hello World!
+&quot;); These prefixes are intended to be used in conjunction with stderr-based logging as implemented by systemd. If a systemd service definition file is configured with <i>StandardError=journal</i>, <i>StandardError=syslog</i> or <i>StandardError=kmsg</i>, these prefixes can be used to encode a log level in lines printed. This is similar to the kernel <code>printk()</code>-style logging. See <code>klogctl</code>(2) for more information. The log levels are identical to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3)&#8217;s log level system. To use these prefixes simply prefix every line with one of these strings. A line that is not prefixed will be logged at the default log level SD_INFO. <code>Example 1. Hello World</code> A daemon may log with the log level NOTICE by issuing this call: </dd>
+<pre><code>fprintf(stderr, SD_NOTICE &quot;Hello World!
+&quot;);</code></pre>
+<h2>Notes</h2>
+<p>These APIs are implemented as a shared library, which can be compiled and linked to with the <code>libsystemd</code>&nbsp;<wbr><code><a href="/docs/linux/man/1-pkg-config/">pkg-config</a></code>(1) file.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></code>(3), <code><a href="/docs/linux/man/3-sd_notify/">sd_notify</a></code>(3), <code><a href="/docs/linux/man/3-sd_booted/">sd_booted</a></code>(3), <code><a href="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></code>(3), <code><a href="/docs/linux/man/3-sd_watchdog_enabled/">sd_watchdog_enabled</a></code>(3), <code><a href="/docs/linux/man/7-daemon/">daemon</a></code>(7), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5), <code><a href="/docs/linux/man/5-systemd-socket/">systemd.socket</a></code>(5), <code><a href="/docs/linux/man/3-fprintf/">fprintf</a></code>(3), <code><a href="/docs/linux/man/3-sd-readahead/">sd-readahead</a></code>(3), <code><a href="/docs/linux/man/1-pkg-config/">pkg-config</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xseteventqueueowner(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xseteventqueueowner/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xseteventqueueowner(3)</h1>
+
+
+
+
+
+<p>XSetEventQueueOwner - set event queue owner on a shared Xlib/XCB connection</p>
+<h2>Syntax</h2><dl COMPACT><dt> 
+&nbsp;<wbr>#include&nbsp;<wbr>&lt;X11/Xlib-xcb.h&gt;
+</dt><dd>void XSetEventQueueOwner(Display *<i>dpy</i>, enum XEventQueueOwner <i>owner</i>);</dd></dl><h2>Arguments</h2><dl COMPACT><dt><i>dpy</i>
+</dt><dd>Specifies the connection to the X server.
+</dd><dt><i>owner</i>
+</dt><dd>Specifies the event queue ownership:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt><i>XlibOwnsEventQueue</i> (default)
+</dt><dd>Xlib owns the event queue. Use the Xlib event-handling functions. Do not call the XCB event-handling functions.
+</dd><dt><i>XCBOwnsEventQueue</i>
+</dt><dd>XCB owns the event queue. Use the XCB event-handling functions. Do not call the Xlib event-handling functions.</dd></dl></dl>
+</dl><h2>Description</h2>While a client using Xlib/XCB can issue requests and handle their replies or errors with either Xlib or XCB, only one can own and handle the event queue. By default, Xlib must own the event queue, for compatibility with legacy Xlib clients. Clients can call <i>XSetEventQueueOwner</i> immediately after <i>XOpenDisplay</i> to let XCB own the event queue instead. Clients may not call <i>XSetEventQueueOwner</i> at any other time, as this will potentially lose responses.
+<h2>See Also</h2><a HREF="/docs/linux/man/3-xopendisplay/">XOpenDisplay</a>(3), <a HREF="/docs/linux/man/3-xgetxcbconnection/">XGetXCBConnection</a>(3), 
+ <i>Xlib - C Language X Interface</i>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

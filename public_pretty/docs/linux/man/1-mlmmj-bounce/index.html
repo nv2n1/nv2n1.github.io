@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mlmmj-bounce(1) · Linux Manual Pages</title>
+<meta name="description" content="mlmmj-bounce – bounce handling utility for mlmmj">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mlmmj-bounce/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mlmmj-bounce(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> mlmmj-bounce &#8211; bounce handling utility for mlmmj</p>
+<h2>SYNOPSIS</h2>
+<p> <code>mlmmj-bounce</code> <i>-L /path/to/list </i>[<i>-a john=doe.org | -d</i>]<i> </i>[<i>-n num | -p</i>]</p>
+<dl>
+<dt> <code>-a</code>: Address string that bounces</dt>
+<dt> <code>-d</code>: Parse the mail to extract the address via the DSN (RFC1891)</dt>
+<dt> <code>-h</code>: This help</dt>
+<dt> <code>-L</code>: Full path to list directory</dt>
+<dt> <code>-n</code>: Message number in the archive that bounced</dt>
+<dt> <code>-p</code>: Send out a probe</dt>
+<dt> <code>-V</code>: Print version</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>mlmmj-bounce is used to handle mails that are bouncing. When a mail arrives to the system, mlmmj-bounce will register in &lt;listdir&gt;/bounce/&lt;addrstring&gt; info about which number that bounced at what time. An example of such a line could be: </dd>
+<p> 109:1094409801 # Sun Sep 5 20:43:21 2004 </p>
+<p> The above shows that message number 109 bounced 1094409801 seconds after epoch which is in human date stamps is Sunday September 5th 20:43:21 2004. </p>
+<p> The last bounce mail received to the address is saved in &lt;listdir&gt;/bounce/&lt;addrstring&gt;.lastmsg. </p>
+<p> When the <code>-p</code> option is used it sends out a probe email including info that it&#8217;s a bounce probe and a list of the bounced message numbers. The existance of a &lt;listdir&gt;/bounce/&lt;addrstring&gt;.probe file indicates that a probe have been sent out.</p>
+<h2>AUTHORS</h2>
+<p> This manual page was written by the following persons:</p>
+<dl>
+<dt>
+</dt><dd>S&oslash;ren Boll Overgaard &lt;boll [at] debian.org&gt; (based on html2man output)</dd>
+<dt>
+</dt><dd>Mads Martin J&oslash;rgensen &lt;mmj [at] mmj.dk&gt; </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

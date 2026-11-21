@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>system-auth(5) · Linux Manual Pages</title>
+<meta name="description" content="system-auth – Common configuration file for PAMified services">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-system-auth/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>system-auth(5)</h1>
+
+
+
+
+
+<p>system-auth &#8211; Common configuration file for PAMified services </p>
+<h2>Synopsis</h2>
+<p><code>/etc/pam.d/system-auth</code> <code>/etc/pam.d/password-auth</code> <code>/etc/pam.d/fingerprint-auth</code> <code>/etc/pam.d/smartcard-auth</code> </p>
+<h2>Description</h2>
+<p>The purpose of these configuration files are to provide a common interface for all applications and service daemons calling into the PAM library. The <code>system-auth</code> configuration file is included from nearly all individual service configuration files with the help of the <code>substack</code> directive. The <code>password-auth</code> <code>fingerprint-auth</code> <code>smartcard-auth</code> configuration files are for applications which handle authentication from different types of devices via simultaneously running individual conversations instead of one aggregate conversation. </p>
+<h2>Notes</h2>
+<p>Previously these common configuration files were included with the help of the <code>include</code> directive. This limited the use of the different action types of modules. With the use of <code>substack</code> directive to include these common configuration files this limitation no longer applies. </p>
+<h2>Bugs</h2>
+<p>None known. </p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-pam/">pam</a>(8), <a href="/docs/linux/man/5-config-util/">config-util</a>(5), <a href="/docs/linux/man/5-postlogin/">postlogin</a>(5) The three <code>Linux-PAM</code> Guides, for <code>system administrators</code>, <code>module developers</code>, and <code>application developers</code>. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

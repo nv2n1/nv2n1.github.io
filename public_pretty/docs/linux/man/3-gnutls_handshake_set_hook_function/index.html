@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnutls_handshake_set_hook_function(3) · Linux Manual Pages</title>
+<meta name="description" content="gnutls_handshake_set_hook_function – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gnutls_handshake_set_hook_function/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gnutls_handshake_set_hook_function(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> gnutls_handshake_set_hook_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
+<p> <code>void gnutls_handshake_set_hook_function(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>htype</i><code>, int </code><i>post</i><code>, gnutls_handshake_hook_func </code><i>func</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure</dd>
+<dt>unsigned int htype</dt>
+<dd> the <code>gnutls_handshake_description_t</code> of the message to hook at</dd>
+<dt>int post</dt>
+<dd> <code>GNUTLS_HOOK_</code>* depending on when the hook function should be called</dd>
+<dt>gnutls_handshake_hook_func func</dt>
+<dd> is the function to be called</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> This function will set a callback to be called after or before the specified handshake message has been received or generated. This is a generalization of <code>gnutls_handshake_set_post_client_hello_function()</code>. </p>
+<p> To call the hook function prior to the message being sent/generated use <code>GNUTLS_HOOK_PRE</code> as <i>post</i> parameter, <code>GNUTLS_HOOK_POST</code> to call after, and <code>GNUTLS_HOOK_BOTH</code> for both cases. </p>
+<p> This callback must return 0 on success or a gnutls error code to terminate the handshake. </p>
+<p> Note to hook at all handshake messages use an <i>htype</i> of <code>GNUTLS_HANDSHAKE_ANY</code>.</p>
+<h2>WARNING</h2>
+<p> You should not use this function to terminate the handshake based on client input unless you know what you are doing. Before the handshake is finished there is no way to know if there is a man-in-the-middle attack being performed.</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+ Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
+<dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

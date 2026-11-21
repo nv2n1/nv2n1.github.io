@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>svgx(1) · Linux Manual Pages</title>
+<meta name="description" content="svgx – extract gradients from SVG files.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-svgx/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>svgx(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> svgx &#8211; extract gradients from SVG files. </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>svgx</code> [-a] [-b&nbsp;<wbr><i>rgb</i>] [-f&nbsp;<wbr><i>rgb</i>] [-g&nbsp;<wbr><i>geometry</i>] [-h] [-l] [-n&nbsp;<wbr><i>rgb</i>] [-o&nbsp;<wbr><i>file</i>] [-p] [-s&nbsp;<wbr><i>name</i>] [-t&nbsp;<wbr><i>type</i>] [-T&nbsp;<wbr><i>rgb</i>] [-v] [-V] <i>file</i></dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>svgx</code> program extracts and converts gradients in an SVG file. Unlike most of the other file formats handled by the cptutils package, SVG files may contain multiple gradients, so this program operates a little differently to the other programs in the package. </dd>
+<p> There are 4 modes of operation: The default is to extract the first gradient found in the file, or one can specify <code>-l</code> to list the names of all gradients in the file; <code>-s</code> to extract the gradient with the specified name or <code>-a</code> to extract all of the gradients. </p>
+<p> The output format is specified by the <code>-t</code> option as listed below (in fact there are several aliases for each format: <code>jgd</code> for <code>psp</code>, <code>gimp</code> for <code>ggr</code>, and so on). The <code>svgcpt</code>, <code>svggimp</code>, <code>svggpt</code>, <code>svgcss3</code>, <code>svgpsp</code>, <code>svgpov</code>, <code>svgpng</code>, <code>svgsao</code> and <code>svgsvg</code> programs are wrappers around <code>svgx</code> which use the <code>-t</code> switch to specify output type. </p>
+<p> Atypically, the input SVG file is a mandatory argument. The program will write to stdout if the <code>-o</code> option is not specified except when <code>-a</code> has been specified: then files will be produced (with names taken from those of the gradients). </p>
+<p> Note that some of the SVG conversions require that the en_US.utf8 locale is enabled. How this is done will depend on your operating system.</p>
+<h2>OPTIONS</h2>
+<p> In the following, all <i>rgb</i> specifications should be of the form <i>red</i>/<i>green</i>/<i>blue</i> where the colour components are integers in the range 0 to 255. </p>
+<p> <code>-a</code>, <code>&#8211;all</code></p>
+<dl>
+<dt>
+</dt><dd> Extract all gradients, which will have filenames derived from the gradient names. If this option is used then the argument of the <code>-o</code> option will be interpreted as the output directory.</dd></dl>
+<p> <code>-b</code>, <code>&#8211;background</code> <i>rgb</i></p>
+<dl>
+<dt>
+</dt><dd> Set the background colour of cpt output. </dd>
+<p> Note that this only modifies the &quot;background&quot; field in the output cpt file, it does not affect the transparency (see the <code>-T</code> option in that regard).</dl>
+<p> <code>-f</code>, <code>&#8211;foreground</code> <i>rgb</i></p>
+<dl>
+<dt>
+</dt><dd> Set the foreground colour of cpt output.</dd></dl>
+<p> <code>-g</code>, <code>&#8211;geometry</code> <i>width</i>x<i>height</i></p>
+<dl>
+<dt>
+</dt><dd> Specify the size of the PNG image or SVG preview in pixels.</dd></dl>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Brief help.</dd></dl>
+<p> <code>-l</code>, <code>&#8211;list</code></p>
+<dl>
+<dt>
+</dt><dd> List the names of all gradients in the file.</dd></dl>
+<p> <code>-n</code>, <code>&#8211;nan</code> <i>rgb</i></p>
+<dl>
+<dt>
+</dt><dd> Set the NaN (no data) colour of cpt output.</dd></dl>
+<p> <code>-o</code>, <code>&#8211;output</code> <i>path</i></p>
+<dl>
+<dt>
+</dt><dd> Write the output to <i>path</i>, rather than stdout. </dd>
+<p> If the <code>-a</code> option is specified then the <i>path</i> argument must be a directory (which exists) and the output files will be written into this directory.</dl>
+<p> <code>-p</code>, <code>&#8211;preview</code></p>
+<dl>
+<dt>
+</dt><dd> Include a preview in the SVG output. See also the <code>&#8211;geometry</code> option.</dd></dl>
+<p> <code>&#8211;strict</code></p>
+<dl>
+<dt>
+</dt><dd> Do not create files which break limits of the format specification. In particular, do not create POV-Ray headers with more than 255 stops.</dd></dl>
+<p> <code>-s</code>, <code>&#8211;select</code> <i>name</i></p>
+<dl>
+<dt>
+</dt><dd> Extract the gradient with the specified <i>name</i>, see the <code>-l</code> output for a list of possible values.</dd></dl>
+<p> <code>-t</code>, <code>&#8211;type</code> <i>format</i></p>
+<dl>
+<dt>
+</dt><dd> Set the output <i>format</i>, which should be one of <code>cpt</code>, <code>css3</code>, <code>ggr</code>, <code>gpt</code>, <code>psp</code>, <code>pov</code>, <code>png</code>, <code>sao</code> or <code>svg</code>.</dd></dl>
+<p> <code>-T</code>, <code>&#8211;transparency</code> <i>rgb</i></p>
+<dl>
+<dt>
+</dt><dd> When converting to a format which does not support transparency, replace the transparency with the specified <i>rgb</i> colour.</dd></dl>
+<p> <code>-v</code>, <code>&#8211;verbose</code></p>
+<dl>
+<dt>
+</dt><dd> Verbose operation.</dd></dl>
+<p> <code>-V</code>, <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Version information.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Inspect an SVG file for gradients: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+  svgx -v -l old.svg 
+</pre>
+</dd></dl>
+<p> Extract the gradient &quot;Sunny Road&quot; from the same SVG file, converting the result to cpt: (note that the gradient name needs to be quoted) </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+  svgx -v -t cpt -s &quot;Sunny Road&quot; -o sunny_road.cpt old.svg 
+</pre>
+</dd></dl>
+<p> Extract all of the svg gradients from the file kittens.svg and give each of them a preview: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+  svgx -v -t svg -a -p kittens.svg  
+</pre>
+</dd></dl>
+<h2>CAVEATS</h2>
+<p> An ill-formed SVG gradient may be translated to rubbish while not reporting an error.</p>
+<h2>AUTHOR</h2>
+<p> J.J. Green</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-cptsvg/">cptsvg</a></code>(1), <code><a href="/docs/linux/man/1-gimpsvg/">gimpsvg</a></code>(1), <code><a href="/docs/linux/man/1-pspsvg/">pspsvg</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

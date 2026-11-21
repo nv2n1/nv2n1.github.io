@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fixatan2(3) · Linux Manual Pages</title>
+<meta name="description" content="fixatan2 – Fixed point version of the libc atan2() routine. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-fixatan2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>fixatan2(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> fixatan2 &#8211; Fixed point version of the libc atan2() routine. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>fixed fixatan2(fixed y, fixed x);</code></p>
+<h2>DESCRIPTION</h2>
+<p> This is a fixed point version of the libc atan2() routine. It computes the arc tangent of `y / x&#8217;, but the signs of both arguments are used to determine the quadrant of the result, and `x&#8217; is permitted to be zero. This function is useful to convert Cartesian coordinates to polar coordinates. Example: </p>
+<pre><code>
+fixed result;
+/* Sets `result' to binary angle 64. */
+result = fixatan2(itofix(1), 0);
+/* Sets `result' to binary angle -109. */
+result = fixatan2(itofix(-1), itofix(-2));
+/* Fails the assert. */
+result = fixatan2(0, 0);
+ASSERT(!errno);
+</code></pre>
+<h2>RETURN VALUE</h2>
+<p> Returns the arc tangent of `y / x&#8217; in fixed point binary format angle, from `-128&#8242; to `128&#8242;. If both `x&#8217; and `y&#8217; are zero, returns zero and sets `errno&#8217; to EDOM. </p>
+<h2>SEE ALSO</h2>
+<p> , <code><a href="/docs/linux/man/3-exlights/">exlights</a></code>(3), <code><a href="/docs/linux/man/3-exspline/">exspline</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

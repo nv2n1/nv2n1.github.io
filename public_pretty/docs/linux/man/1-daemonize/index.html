@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>daemonize(1) · Linux Manual Pages</title>
+<meta name="description" content="daemonize – run a program as a Unix daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-daemonize/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>daemonize(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> daemonize &#8211; run a program as a Unix daemon</p>
+<h2>SYNOPSIS</h2>
+<p> <code>daemonize</code> [-a] [-c <i>directory</i>] [-e <i>stderr</i>] [-o <i>stdout</i>] [-p <i>pidfile</i>] [-l <i>lockfile</i>] [-u <i>user</i>] [-v] <i>path [arg] &#8230;</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>daemonize</code> runs a command as a Unix daemon. As defined in W. Richard Stevens&#8217; 1990 book, <i>Unix Network Programming</i> (Addison-Wesley, 1990), a daemon is &#8220;a process that executes `in the background&#8217; (i.e., without an associated terminal or login shell) either waiting for some event to occur, or waiting to perform some specified task on a periodic basis.&#8221; Upon startup, a typical daemon program will:</p>
+<dl>
+<dt>o</dt>
+<dd> Close all open file descriptors (especially standard input, standard output and standard error)</dd>
+<dt>o</dt>
+<dd> Change its working directory to the root filesystem, to ensure that it doesn&#8217;t tie up another filesystem and prevent it from being unmounted</dd>
+<dt>o</dt>
+<dd> Reset its <i>umask</i> value</dd>
+<dt>o</dt>
+<dd> Run in the background (i.e., <i>fork</i>)</dd>
+<dt>o</dt>
+<dd> Disassociate from its process group (usually a shell), to insulate itself from signals (such as HUP) sent to the process group</dd>
+<dt>o</dt>
+<dd> Ignore all terminal I/O signals</dd>
+<dt>o</dt>
+<dd> Disassociate from the control terminal (and take steps not to reacquire one)</dd>
+<dt>o</dt>
+<dd> Handle any <font SIZE="-1">SIGCLD</font> signals</dd></dl>
+<p> Most programs that are designed to be run as daemons do that work for themselves. However, you&#8217;ll occasionally run across one that does not. When you must run a daemon program that does not properly make itself into a true Unix daemon, you can use <code>daemonize</code> to force it to run as a true daemon.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-a</dt>
+<dd> Append to the output files, rather than overwriting them (which is the default). Only applicable if <i>-e</i> and/or <i>-o</i> are specified.</dd>
+<dt>-c <i>directory</i></dt>
+<dd> Specifies the directory to which to change before running the program. Defaults to &quot;/&quot;. The choice for this option is important. The file system containing the daemon&#8217;s working directory cannot be unmounted while the daemon is running. That&#8217;s why most daemons are careful to use a working directory on the root file system.</dd>
+<dt>-e <i>stderr</i></dt>
+<dd> Redirect standard error to the specified file, instead of &quot;/dev/null&quot;. </dd>
+<p> <code>Warning:</code> Be careful where you redirect the output! The file system containing the open file cannot be unmounted as long as the file is open. For best results, make sure that this output file is on the same file system as the daemon&#8217;s working directory. (See the <i>-c</i> option.)</p>
+<dt>-E <i>name=value</i></dt>
+<dd> Add an environment variable to the environment the daemon will see. The parameter must be of the form <i>name=value.</i> This parameter may be specified multiple times.</dd>
+<dt>-o <i>stdout</i></dt>
+<dd> Redirect standard output to the specified file, instead of &quot;/dev/null&quot;. </dd>
+<p> <code>Warning:</code> Be careful where you redirect the output! The file system containing the open file cannot be unmounted as long as the file is open. For best results, make sure that this output file is on the same file system as the daemon&#8217;s working directory. (See the <i>-c</i> option.)</p>
+<dt>-p <i>pidfile</i></dt>
+<dd> Causes <code>daemonize</code> to write the numeric process ID (PID) of the running daemon to the specified file. This option is useful when the program being daemonized doesn&#8217;t create its own PID file.</dd>
+<dt>-l <i>lockfile</i></dt>
+<dd> Single-instance checking. Causes <code>daemonize</code> to ensure that no more than one instance of the daemon is running by placing an exclusive lock on given lockfile. If another process already has a lock on the lockfile, <i>daemonize</i> exits.</dd></dl>
+<p> It <i>is </i> possible to use the <i>pidfile</i> as the lock file (e.g., &quot;-p /var/run/foo -l /var/run/foo&quot;), though typical daemons use separate files. </p>
+<p> NOTE: If the executed program decides to close all file descriptors, the single-instance locking will not work, since the lock depends on an open file descriptor. (The operating system kernel removes the lock once the process holding the lock closes the file or exits.) Normal processes that do not daemonize themselves do not usually close all file descriptors.</p>
+<dl>
+<dt>-u <i>user</i></dt>
+<dd> Run the program as the specified user. This option only works if <code>daemonize</code> is invoked by the superuser. Note: For obvious reasons, it&#8217;s very dangerous to install <code>daemonize</code> as a <i>setuid-to-root</i> executable. For that reason, <code>daemonize</code> will refuse to run if it detects that it has been installed that way.</dd>
+<dt>-v</dt>
+<dd> Cause <code>daemonize</code> to write verbose messages to standard error, telling what it&#8217;s doing as it daemonizes the program.</dd></dl>
+<h2>NOTES</h2>
+<p> If the host operating system provides the <code><a href="/docs/linux/man/3-daemon/">daemon</a></code>(3) library routine, <code>daemonize</code> will use it. Otherwise, <code>daemonize</code> uses its own version of <code><a href="/docs/linux/man/3-daemon/">daemon</a></code>(3). This choice is made at compile time. (BSD 4.4-derived operating systems tend to provide their own <code><a href="/docs/linux/man/3-daemon/">daemon</a></code>(3) routine.) </p>
+<p> FreeBSD 5.0 introduced a <code>daemon</code>(1) command that is similar to, but less functional, than <code>daemonize</code>.</p>
+<h2>LICENSE</h2>
+<p> This program released under a BSD-style license. For more details, consult the LICENSE file accompanying the source distribution, or visit &quot;<a rel="nofollow" href="http://software.clapper.org/daemonize/LICENSE">http://software.clapper.org/daemonize/LICENSE</a>&quot;.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-daemon/">daemon</a></code>(3), <code><a href="/docs/linux/man/2-setsid/">setsid</a></code>(2), <code><a href="/docs/linux/man/2-flock/">flock</a>(2)</code> </p>
+<p> <code>daemonize</code> Home Page: <a rel="nofollow" href="http://software.clapper.org/daemonize/">http://software.clapper.org/daemonize/</a></p>
+<h2>AUTHOR</h2>
+<p> Brian M. Clapper, <i>bmc &lt;at&gt; clapper &lt;dot&gt; org</i></p>
+<h2>CONTRIBUTORS</h2>
+<p> Support for the <i>-e</i> and <i>-o</i> options is based on a patch submitted by Tim Starling <i>(tstarling &lt;at&gt; wikimedia &lt;dot&gt; org).</i> </p>
+<p> Support for the <i>-l</i> option is based on a patch submitted by Yakov Lerner <i>(iler.ml &lt;at&gt; gmail &lt;dot&gt; com).</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

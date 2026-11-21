@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>latex2png(1) · Linux Manual Pages</title>
+<meta name="description" content="latex2png – manual page for latex2png 1.1">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-latex2png/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>latex2png(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> latex2png &#8211; manual page for latex2png 1.1</p>
+<h2>DESCRIPTION</h2>
+<p> latex2png <code>&#8212;</code> Convert a LaTeX file to a PNG image </p>
+<p> USAGE: latex2png [-d density] [-h] [-k] [-c] [-g] [-m] [-H home dir] file[.tex|.eps] </p>
+<p> The <i>latex2png</i> command converts a LaTeX file into a PNG image. The first page is translated into an image at the specified resolution. <i>latex2png</i> can also be used to convert encapsulated postscript (EPS) files to PNG images.</p>
+<h3>OPTIONS:</h3>
+<dl>
+<dt> <code>-c</code> produce color image</dt>
+<dt><code>-d</code> density</dt>
+<dd> <i>density </i></dd>
+<dd>is the number of dots per inch to use in the created image (default 144 dpi)</dd>
+<dt> <code>-g</code> produce gray images</dt>
+<dt><code>-h</code> help</dt>
+<dd>
+</dd><dt><code>-H</code> home_dir</dt>
+<dd> <i>home_dir </i></dd>
+<dd>is a directory to be included in search path (default is directory that contains the LaTeX file). This is used to create PNG images in another directory (e.g., /tmp) and still allow LaTeX to find files that it needs to include.</dd>
+<dt><code>-k</code> keep intermediate files (for debugging)</dt>
+<dd>
+</dd><dt><code>-m</code> produce monochrome (black and white) image</dt>
+<dd> (default)</dd>
+<dt><code>-v</code> version</dt>
+<dd></dd></dl>
+<h3>EXAMPLES:</h3>
+<dl>
+<dt>latex2png <code>-d</code> 144 /tmp/file</dt>
+<dd> #create /tmp/file.png at 144 dpi</dd>
+<dt>latex2png file.eps</dt>
+<dd> #create file.png</dd>
+<dt>latex2png file.tex</dt>
+<dd> #create file.png via latex</dd>
+<dt>latex2png <code>-H</code> . /tmp/file</dt>
+<dd> #search the cwd for image files</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code>latex2png</code> is a part of <code>latex2rtf</code> and has a special mode to assist in finding the baseline of a latex equation. Documentation for <code>latex2rtf </code> may be found in <code>latex2rtf.info,</code> the PDF file <code>latex2rtf.pdf</code> or the HTML file <code>latex2rtf.html</code> which are made from the TeXInfo source file <code>latex2rtf.texi.</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

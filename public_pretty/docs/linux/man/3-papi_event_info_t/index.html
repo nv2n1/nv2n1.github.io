@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>papi_event_info_t(3) · Linux Manual Pages</title>
+<meta name="description" content="PAPI_event_info_t –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-papi_event_info_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>papi_event_info_t(3)</h1>
+
+
+
+
+
+<p>PAPI_event_info_t &#8211; </p>
+<h2>Synopsis</h2>
+<h3>Data Fields</h3>
+<p>unsigned int <code>event_code</code> </p>
+<p> char <code>symbol</code> [1024] </p>
+<p> char <code>short_descr</code> [64] </p>
+<p> char <code>long_descr</code> [1024] </p>
+<p> int <code>component_index</code> </p>
+<p> char <code>units</code> [64] </p>
+<p> int <code>location</code> </p>
+<p> int <code>data_type</code> </p>
+<p> int <code>value_type</code> </p>
+<p> int <code>timescope</code> </p>
+<p> int <code>update_type</code> </p>
+<p> int <code>update_freq</code> </p>
+<p> unsigned int <code>count</code> </p>
+<p> unsigned int <code>event_type</code> </p>
+<p> char <code>derived</code> [64] </p>
+<p> char <code>postfix</code> [256] </p>
+<p> unsigned int <code>code</code> [12] </p>
+<p> char <code>name</code> [12][256] </p>
+<p> char <code>note</code> [1024] </p>
+<h2>Field Documentation</h2>
+<h3>unsigned int PAPI_event_info_t::code[12]</h3>
+<p>array of values that further describe the event:</p>
+<dl COMPACT>
+<dt>&bull;</dt>
+<dd>presets: native event_code values</dd>
+<dt>&bull;</dt>
+<dd>native:, register values(?)</dd></dl>
+<h3>int PAPI_event_info_t::component_index</h3>
+<p>component this event belongs to</p>
+<h3>unsigned int PAPI_event_info_t::count</h3>
+<p>number of terms (usually 1) in the code and name fields</p>
+<dl COMPACT>
+<dt>&bull;</dt>
+<dd>presets: these are native events</dd>
+<dt>&bull;</dt>
+<dd>native: these are unused</dd></dl>
+<h3>int PAPI_event_info_t::data_type</h3>
+<p>data type returned by PAPI</p>
+<h3>char PAPI_event_info_t::derived[64]</h3>
+<p>name of the derived type</p>
+<dl COMPACT>
+<dt>&bull;</dt>
+<dd>presets: usually NOT_DERIVED</dd>
+<dt>&bull;</dt>
+<dd>native: empty string</dd></dl>
+<h3>unsigned int PAPI_event_info_t::event_code</h3>
+<p>preset (0x8xxxxxxx) or native (0x4xxxxxxx) event code</p>
+<h3>unsigned int PAPI_event_info_t::event_type</h3>
+<p>event type or category for preset events only</p>
+<h3>int PAPI_event_info_t::location</h3>
+<p>location event applies to</p>
+<h3>char PAPI_event_info_t::long_descr[1024]</h3>
+<p>a longer description: typically a sentence for presets, possibly a paragraph from vendor docs for native events</p>
+<h3>char PAPI_event_info_t::name[12][256]</h3>
+<p>&lt; names of code terms: &#8211; presets: native event names,</p>
+<dl COMPACT>
+<dt>&bull;</dt>
+<dd>native: descriptive strings for each register value(?)</dd></dl>
+<h3>char PAPI_event_info_t::note[1024]</h3>
+<pre> an optional developer note 
+ supplied with a preset event
+ to delineate platform specific </pre>
+<p>&nbsp;<wbr>anomalies or restrictions&nbsp;<wbr></p>
+<h3>char PAPI_event_info_t::postfix[256]</h3>
+<p>string containing postfix operations; only defined for preset events of derived type DERIVED_POSTFIX</p>
+<h3>char PAPI_event_info_t::short_descr[64]</h3>
+<p>a short description suitable for use as a label</p>
+<h3>char PAPI_event_info_t::symbol[1024]</h3>
+<p>name of the event</p>
+<h3>int PAPI_event_info_t::timescope</h3>
+<p>from start, etc.</p>
+<h3>char PAPI_event_info_t::units[64]</h3>
+<p>units event is measured in</p>
+<h3>int PAPI_event_info_t::update_freq</h3>
+<p>how frequently event is updated</p>
+<h3>int PAPI_event_info_t::update_type</h3>
+<p>how event is updated</p>
+<h3>int PAPI_event_info_t::value_type</h3>
+<p>sum or absolute </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for PAPI from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

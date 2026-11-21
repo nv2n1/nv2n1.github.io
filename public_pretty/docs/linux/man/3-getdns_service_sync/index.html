@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>getdns_service_sync(3) · Linux Manual Pages</title>
+<meta name="description" content="getdns_service, getdns_service_sync — getdns lookup of a service">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-getdns_service_sync/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>getdns_service_sync(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> <code>getdns_service, </code> <code>getdns_service_sync</code> &#8212; getdns lookup of a service </p>
+<h2>LIBRARY</h2>
+<p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;getdns.h&gt; </p>
+<p> getdns_return_t<br />
+ <code>getdns_service</code> (getdns_context *context,</p>
+<dl>
+<dt>
+</dt><dd> const char *name,<br />
+ getdns_dict *extensions,<br />
+ void *userarg,<br />
+ getdns_transaction_t *transaction_id,<br />
+ getdns_callback_t callbackfn)</dd></dl>
+<p> getdns_return_t<br />
+ <code>getdns_service_sync</code> (getdns_context *context,</p>
+<dl>
+<dt>
+</dt><dd> const char *name,<br />
+ getdns_dict *extensions,<br />
+ getdns_dict **response)</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> The getdns_service (3) and getdns_service_sync functions provide public entry points into the getdns API library to retrieve the SRV information given a name. </p>
+<dl>
+<dt> <i>context</i></dt>
+<dd>A pointer to the previously created DNS context that is to be used with this DNS request. see getdns_context (3) </dd>
+<dt> <i>name</i></dt>
+<dd>the service name to resolve </dd>
+<dt> <i>extensions</i></dt>
+<dd>extensions for this request, NULL if no extensions, see libgetdns (3) for a detailed description of extensions </dd>
+<dt> <i>userarg</i></dt>
+<dd>returned to the callback function untouched, can be NULL </dd>
+<dt> <i>transaction_id</i></dt>
+<dd>populated by the API and used to identify the callback (for example to getdns_cancel_callback), can be NULL, set to 0 if the function fails </dd>
+<dt> <i>callbackfn</i></dt>
+<dd>non-NULL pointer to a callback function defined by the application, typically used to process the response. Only the asynchronous signature accepts a callback function, the synchronous signature does not include a callback. See libgetdns (3) for a more detailed discussion of callback functions. </dd>
+<dt> <i>response</i></dt>
+<dd>A getdns_dict type is returned in response and always contains at least three names: replies_full (a list containing the DNS response as binary data), replies_tree (a list containing the parsed DNS response data) and status (an int). The storage associated with this must be freed by a call to getdns_free_sync_request_memory (3). </dd>
+<dt></dt></dl>
+<h2>RETURN VALUES</h2>
+<dd>Upon successful completion the functions return <code>GETDNS_RETURN_GOOD</code> , otherwise the following error values are returned: </dd>
+<p> <code>GETDNS_RETURN_BAD_CONTEXT </code> if the context pointer is invalid or the context has internal deficiencies </p>
+<p> <code>GETDNS_RETURN_BAD_DOMAIN_NAME</code> if the domain name passed to the function is invalid </p>
+<p> <code>GETDNS_RETURN_EXTENSION_MISFORMAT</code> if the data type specified in one or more of the extensions does not match the specifications </p>
+<p> <code>GETDNS_RETURN_GENERIC_ERROR</code> if some problem was encountered in the function not addressed by one of the more specific return codes </p>
+<p> <code>GETDNS_RETURN_INVALID PARAMETER </code> if one or more parameters has an invalid value </p>
+<p> <code>GETDNS_RETURN_MEMORY_ERROR</code> if unable to allocate the memory required </p>
+<p> <code>GETDNS_RETURN_NO_SUCH_EXTENSION</code> if one or more of the strings specified in the extensions are not valid </p>
+<p> The values of status included in the response parameter are: </p>
+<p> <code>GETDNS_RESPSTATUS_GOOD</code> if at least one response was returned </p>
+<p> <code>GETDNS_RESPSTATUS_NO_NAME</code> if queries for the name yielded all negative responses </p>
+<p> <code>GETDNS_RESPSTATUS_ALL_TIMEOUT</code> if all queries for the name timed out </p>
+<p> <code>GETDNS_RESPSTATUS_NO_SECURE_ANSWERS</code> if only secure replies accepted (per context) and at least one response was received but no DNS responses were secure through DNSSEC </p>
+<p> For a more detailed explanation of the response object see <i>libgetdns</i> (3) </p>
+<h2>EXAMPLES</h2>
+<p> TBD </p>
+<h2>FILES</h2>
+<p> /etc/hosts<br />
+ /etc/resolv.conf </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_context/">getdns_context</a></code>(3), <code>getdns_free_sync_request_memory</code>(3), <code><a href="/docs/linux/man/3-getdns_general/">getdns_general</a></code>(3), <code><a href="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a></code>(3), <code><a href="/docs/linux/man/3-getdns_address/">getdns_address</a></code>(3), </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Agent Topic/Tag System with OpenClaw - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/multi-agent-topic-tag-system-with-openclaw/">
+  <meta name="description" content="When running multiple OpenClaw agents on the same Telegram group, you can use Telegram’s topic feature to enable agent isolation. This guide explains the actual …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Multi-Agent Topic/Tag System with OpenClaw">
+  <meta property="og:url" content="https://www.systutorials.com/multi-agent-topic-tag-system-with-openclaw/">
+  <meta property="og:description" content="When running multiple OpenClaw agents on the same Telegram group, you can use Telegram’s topic feature to enable agent isolation. This guide explains the actual …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/ai-engineering-hub/">AI Engineering Hub</a>
+          
+          &rsaquo; <a href="/category/cli-ai-integration/">CLI &#43; AI Integration</a>
+        </nav>
+        
+        <h1>Multi-Agent Topic/Tag System with OpenClaw</h1>
+        <time class="post-date" datetime="2026-04-13T15:15:13Z">April 13, 2026</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When running multiple OpenClaw agents on the same Telegram group, you can use Telegram’s topic feature to enable agent isolation. This guide explains the actual setup used for Eric’s OpenClaw group with multi-agent support.</p>
+<h3 id="the-setup">The Setup</h3>
+<p>The configuration uses Telegram topics to isolate different agents so they don’t interfere with each other. Each agent works in its own topic while sharing the same group. This prevents conflicts and enables parallel operation.</p>
+<h3 id="step-by-step-configuration">Step-by-Step Configuration</h3>
+<h4 id="step-1-create-telegram-supergroup">Step 1: Create Telegram Supergroup</h4>
+<p>Start with a Telegram supergroup that supports topics:</p>
+<ol>
+<li>Convert your existing group to a supergroup (if not already)</li>
+<li>Enable topics in group settings</li>
+<li>Note the group ID for OpenClaw configuration</li>
+</ol>
+<h4 id="step-2-configure-openclaw-telegram-plugin">Step 2: Configure OpenClaw Telegram Plugin</h4>
+<p>Open OpenClaw gateway configuration and configure the Telegram plugin with the following settings:</p>
+<ul>
+<li><strong>Group ID:</strong> Your Telegram supergroup ID (e.g., -1003985866461)</li>
+<li><strong>Privacy Settings:</strong> Allow the OpenClaw Telegram bot to access the group</li>
+</ul>
+<h4 id="step-3-set-up-isolation-with-topics">Step 3: Set Up Isolation with Topics</h4>
+<p>Configure topic-based isolation in OpenClaw configuration:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">{
+  &#34;plugins&#34;: {
+    &#34;entries&#34;: {
+      &#34;telegram&#34;: {
+        &#34;dmPolicy&#34;: &#34;pairing&#34;,
+        &#34;groupPolicy&#34;: &#34;open&#34;,
+        &#34;topics&#34;: {
+          &#34;policy&#34;: &#34;allowlist&#34;,
+          &#34;allowlist&#34;: [&#34;general&#34;, &#34;blog&#34;, &#34;academy&#34;, &#34;news&#34;, &#34;analytics&#34;]
+        }
+      }
+    }
+  }
+}
+</code></pre><p>Key settings explained:</p>
+<ul>
+<li><strong>dmPolicy: “pairing”</strong> — New users must pair via QR code or invite link</li>
+<li><strong>groupPolicy: “open”</strong> — The OpenClaw bot can join and work in the group</li>
+<li><strong>topics.policy: “allowlist”</strong> — Only specified topics are allowed for agent operations</li>
+<li><strong>topics.allowlist</strong> — Array of allowed topic names for your agents</li>
+</ul>
+<h4 id="step-4-create-topics-in-telegram-group">Step 4: Create Topics in Telegram Group</h4>
+<p>Manually create the topics you specified in OpenClaw configuration:</p>
+<ol>
+<li>Open the Telegram group</li>
+<li>Create each topic: #general, #blog, #academy, #news, #analytics</li>
+<li>Ensure topic names exactly match the allowlist in your configuration</li>
+</ol>
+<h4 id="step-5-assign-agents-to-topics">Step 5: Assign Agents to Topics</h4>
+<p>Each OpenClaw agent is configured to work in a specific topic. This is done in the agent’s configuration:</p>
+<ul>
+<li><strong>#general</strong> — General conversations and coordination</li>
+<li><strong>#blog</strong> — Blog post creation and updates</li>
+<li><strong>#academy</strong> — Academy and hub management tasks</li>
+<li><strong>#news</strong> — News articles and announcements</li>
+<li><strong>#analytics</strong> — Statistics, reporting, and monitoring</li>
+</ul>
+<p>When an agent sends a message to its assigned topic, it only responds to messages in that topic. Messages from other topics are ignored by default.</p>
+<h3 id="benefits-of-this-setup">Benefits of This Setup</h3>
+<ul>
+<li><strong>Isolation:</strong> Each agent operates in its own topic without interference from others</li>
+<li><strong>Parallel Operation:</strong> Multiple agents can work simultaneously on different tasks</li>
+<li><strong>Clear Boundaries:</strong> Messages and commands are scoped to specific topics</li>
+<li><strong>Easy Management:</strong> Topic-based filtering makes it easy to see what each agent is doing</li>
+</ul>
+<h3 id="how-it-works-in-practice">How It Works in Practice</h3>
+<p>Here is the actual use case from Eric’s OpenClaw group:</p>
+<ol>
+<li><strong>Content Writing:</strong> Blog post extensions happen in #blog topic</li>
+<li><strong>Academy Management:</strong> Updates to academies and hubs happen in #academy topic</li>
+<li><strong>Analytics:</strong> Statistics and reporting happen in #analytics topic</li>
+<li><strong>Coordination:</strong> General conversation and instructions happen in #general topic</li>
+<li><strong>News:</strong> News articles and announcements happen in #news topic</li>
+</ol>
+<p>This setup enables 24/7 operation with multiple specialized agents working in parallel without conflicts.</p>
+<h3 id="configuration-notes">Configuration Notes</h3>
+<p>Important notes for successful implementation:</p>
+<ul>
+<li><strong>Topic Names:</strong> Must exactly match between Telegram and OpenClaw configuration</li>
+<li><strong>Supergroup Requirement:</strong> Topics are only available in supergroups (not regular groups)</li>
+<li><strong>Bot Permissions:</strong> The Telegram bot must have permissions to create and post in topics</li>
+<li><strong>Case Sensitivity:</strong> Topic names in allowlist should match topic creation exactly</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>Using Telegram topics with OpenClaw provides a simple yet powerful way to isolate multiple agents in a single group. Each agent works in its own topic while benefiting from shared infrastructure. This setup scales well and is easy to maintain.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

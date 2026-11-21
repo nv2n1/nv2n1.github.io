@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dh_dwz(1) · Linux Manual Pages</title>
+<meta name="description" content="dh_dwz – optimize DWARF debug information in ELF binaries via dwz">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dh_dwz/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dh_dwz(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> dh_dwz &#8211; optimize DWARF debug information in ELF binaries via dwz </p>
+<h2>SYNOPSIS</h2>
+<p> <code>dh_dwz</code> [<i>debhelper options</i>] [<code>-X</code><i>item</i>] [<code>&#8212;</code> <i>params</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>Caveat</code>: This tool is experimental and may disappear or change behaviour without any notice. </p>
+<p> <code>dh_dwz</code> is a debhelper program that will optimize the (uncompressed) size of the <font SIZE="-1">DWARF</font> debug information in <font SIZE="-1">ELF</font> binaries. It does so by running <i><a href="/docs/linux/man/1-dwz/">dwz</a></i>(1) on all the <font SIZE="-1">ELF</font> binaries in the package.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-X</code><i>item</i>, <code>&#8211;exclude=</code><i>item</i></dt>
+<dd> Exclude files that contain <i>item</i> anywhere in their filename from being stripped. You may use this option multiple times to build up a list of things to exclude.</dd>
+<dt><code>&#8212;</code> <i>params</i></dt>
+<dd> Pass <i>params</i> to <i><a href="/docs/linux/man/1-dwz/">dwz</a></i>(1) when it processes <font SIZE="-1">ELF</font> binaries. This is mostly useful for setting memory related parameters (e.g. -l and -L).</dd></dl>
+<h2>NOTES</h2>
+<p> If the <font SIZE="-1"><code>DEB_BUILD_OPTIONS</code></font> environment variable contains <code>nostrip</code>, nothing will be stripped, in accordance with Debian policy (section 10.1 &#8220;Binaries&#8221;). </p>
+<p> While this tool technically does not remove debug information from binaries, it is still skipped when the <font SIZE="-1"><code>DEB_BUILD_OPTIONS</code></font> environment variable contains <code>nostrip</code>. This is because <code>nostrip</code> is often used to optimize build times (e.g. for &#8220;build and test&#8221;-cycles) rather than optimizing for size.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
+<p> This program is a part of debhelper.</p>
+<h2>AUTHOR</h2>
+<p> Niels Thykier &lt;niels [at] thykier.net&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

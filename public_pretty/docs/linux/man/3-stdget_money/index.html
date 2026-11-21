@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdget_money(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdget_money/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdget_money(3)</h1>
+
+
+
+
+
+<p>std::get_money - std::get_money</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;iomanip&gt;
+template&lt; class MoneyT &gt;                                      (since C++11)
+/*unspecified*/ get_money( MoneyT&amp; mon, bool intl = false );</code></pre> 
+<p>When used in an expression in &gt;&gt; get_money(mon, intl), parses the character input as a monetary value, as specified by the std::money_get facet of the locale currently imbued in in, and stores the value in mon.
+The extraction operation in in &gt;&gt; get_money(mon, intl) behaves as a FormattedInputFunction.</p>
+<h2>Parameters</h2>
+<p>mon - variable where monetary value will be written. Can be either long double or basic_string
+intl - expects to find required international currency strings if true, expects optional currency symbols otherwise</p>
+<h2>Return value</h2>
+<p>Returns an object of unspecified type such that if in is the name of an input stream of type std::basic_istream&lt;CharT, Traits&gt;, then the expression in &gt;&gt; get_money(mon, intl) behaves as if the following code was executed :</p>
+<pre><code>typedef std::istreambuf_iterator&amp;lt;CharT, Traits&amp;gt; Iter;
+</code></pre>
+<p>typedef std::money_get&lt;CharT, Iter&gt; MoneyGet;</p>
+<p>std::ios_base::iostate err = std::ios_base::goodbit;</p>
+<p>const MoneyGet &amp;mg = std::use_facet&lt;MoneyGet&gt;(in.getloc());</p>
+<p>mg.get(Iter(in.rdbuf()), Iter(), intl, in, err, mon);</p>
+<p>if (std::ios_base::goodbit != err)</p>
+<pre><code>out.setstate(err);
+</code></pre>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;locale&gt;
+#include &lt;iomanip&gt;
+int main()
+{
+std::istringstream in(&quot;$1,234.56 2.22 USD  3.33&quot;);
+long double v1, v2;
+std::string v3;
+in.imbue(std::locale(&quot;en_US.UTF-8&quot;));
+in &gt;&gt; std::get_money(v1) &gt;&gt; std::get_money(v2) &gt;&gt; std::get_money(v3, true);
+if (in) {
+std::cout &lt;&lt; std::quoted(in.str()) &lt;&lt; &quot; parsed as: &quot;
+&lt;&lt; v1 &lt;&lt; &quot;, &quot; &lt;&lt; v2 &lt;&lt; &quot;, &quot; &lt;&lt; v3 &lt;&lt; &lsquo;\n&rsquo;;
+} else {
+std::cout &lt;&lt; &quot;Parse failed&quot;;
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> &quot;$1,234.56 2.22 USD 3.33&quot; parsed as: 123456, 222, 333</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> parses and constructs a monetary value from an input character sequence
+money_get <i>(class template)</i>
+put_money formats and outputs a monetary value
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

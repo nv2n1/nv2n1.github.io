@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>curlopt_timecondition(3) · Linux Manual Pages</title>
+<meta name="description" content="CURLOPT_TIMECONDITION – select condition for a time request">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-curlopt_timecondition/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>curlopt_timecondition(3)</h1>
+
+
+
+
+
+<p>CURLOPT_TIMECONDITION &#8211; select condition for a time request</p>
+<h2>Synopsis</h2>
+<p>#include &lt;curl/curl.h&gt; </p>
+<p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_TIMECONDITION, long cond);</p>
+<h2>Description</h2>
+<p>Pass a long as parameter. This defines how the <i><a href="/docs/linux/man/3-curlopt_timevalue/">CURLOPT_TIMEVALUE</a>(3)</i> time value is treated. You can set this parameter to <i>CURL_TIMECOND_IFMODSINCE</i> or <i>CURL_TIMECOND_IFUNMODSINCE</i>. </p>
+<p> The last modification time of a file is not always known and in such instances this feature will have no effect even if the given time condition would not have been met. <i><a href="/docs/linux/man/3-curl_easy_getinfo/">curl_easy_getinfo</a>(3)</i> with the <i>CURLINFO_CONDITION_UNMET</i> option can be used after a transfer to learn if a zero-byte successful &quot;transfer&quot; was due to this condition not matching.</p>
+<h2>Default</h2>
+<p>CURL_TIMECOND_NONE (0)</p>
+<h2>Protocols</h2>
+<p>HTTP, FTP, RTSP, and FILE</p>
+<h2>Example</h2>
+<p>TODO</p>
+<h2>Availability</h2>
+<p>Always</p>
+<h2>Return Value</h2>
+<p>Returns CURLE_OK</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-curlopt_timevalue/">CURLOPT_TIMEVALUE</a></code>(3),</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

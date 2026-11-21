@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lwres_inetntop(3) · Linux Manual Pages</title>
+<meta name="description" content="lwres_net_ntop – lightweight resolver IP address presentation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-lwres_inetntop/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>lwres_inetntop(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> lwres_net_ntop &#8211; lightweight resolver IP address presentation </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;lwres/net.h&gt;
+</code></pre>
+<dl>
+<dt> <code>const char * lwres_net_ntop(int&nbsp;<wbr></code><i>af</i><code>, const void&nbsp;<wbr>*</code><i>src</i><code>, char&nbsp;<wbr>*</code><i>dst</i><code>, size_t&nbsp;<wbr></code><i>size</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>lwres_net_ntop()</code></p>
+<dd>converts an IP address of protocol family <i>af</i> &#8212; IPv4 or IPv6 &#8212; at location <i>src</i> from network format to its conventional representation as a string. For IPv4 addresses, that string would be a dotted-decimal. An IPv6 address would be represented in colon notation as described in RFC1884. </dd>
+<p> The generated string is copied to <i>dst</i> provided <i>size</i> indicates it is long enough to store the ASCII representation of the address.</p>
+<h2>RETURN VALUES</h2>
+<p> If successful, the function returns <i>dst</i>: a pointer to a string containing the presentation format of the address. <code>lwres_net_ntop()</code> returns <code>NULL</code> and sets the global variable <code>errno</code> to <code>EAFNOSUPPORT</code> if the protocol family given in <i>af</i> is not supported.</p>
+<h2>SEE ALSO</h2>
+<p> <code>RFC1884</code>(), <code>inet_ntop</code>(3), <code><a href="/docs/linux/man/3-errno/">errno</a></code>(3).</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2004, 2005, 2007 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
+ Copyright &#169; 2000, 2001 Internet Software Consortium. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

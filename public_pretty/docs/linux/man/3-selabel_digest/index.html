@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>selabel_digest(3) · Linux Manual Pages</title>
+<meta name="description" content="selabel_digest – Return digest of specfiles and list of files used">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-selabel_digest/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>selabel_digest(3)</h1>
+
+
+
+
+
+<p>selabel_digest &#8211; Return digest of specfiles and list of files used</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;selinux/selinux.h&gt;
+#include &lt;selinux/label.h&gt;
+int selabel_digest(struct selabel_handle *hnd,
+                   unsigned char **digest,
+                   size_t *digest_len,
+                   char ***specfiles,
+                   size_t *num_specfiles);</code></pre>
+<h2>Description</h2>
+<p><code>selabel_digest</code>() performs an operation on the handle <i>hnd</i>, returning the results of the SHA1 digest pointed to by <i>digest</i>, whose length will be <i>digest_len</i>. The list of specfiles used in the SHA1 digest calculation is returned in <i>specfiles</i> with the number of entries in <i>num_specfiles</i>. </p>
+<p> To enable <code>selabel_digest</code>() to return this information the <code>SELABEL_OPT_DIGEST</code> option must be enable in <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3). </p>
+<p> The result of <code>selabel_digest</code>() must not be used after <code><a href="/docs/linux/man/3-selabel_close/">selabel_close</a></code>(3).</p>
+<h2>Return Value</h2>
+<p>On success, zero is returned. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
+<h2>Errors</h2>
+<dl>
+<dt><code>EINVAL</code></dt>
+<dd>No digest available (returned if <code>SELABEL_OPT_DIGEST</code> option not enabled).</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>An attempt to allocate memory failed.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3), <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>optionsavefile(3) · Linux Manual Pages</title>
+<meta name="description" content="optionSaveFile – saves the option state to a file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-optionsavefile/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>optionsavefile(3)</h1>
+
+
+
+
+
+<p>optionSaveFile &#8211; saves the option state to a file</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;your-opts.h&gt;
+cc[...] - o outfile infile.c - lopts[...] void optionSaveFile(tOptions *opts);
+</code></pre>
+<h2>Description</h2>
+<p>This routine will save the state of option processing to a file. The name of that file can be specified with the argument to the <code>&#8211;save-opts</code> option, or by appending the <code>rcfile</code> attribute to the last <code>homerc</code> attribute. If no <code>rcfile</code> attribute was specified, it will default to <code>.</code><i>programname</i>rc. If you wish to specify another file, you should invoke the <code>SET_OPT_SAVE_OPTS(</code><i>filename</i>) macro. The recommend usage is as follows: </p>
+<pre> optionProcess(&amp;progOptions, argc, argv);
+ if (i_want_a_non_standard_place_for_this)
+ SET_OPT_SAVE_OPTS(&quot;myfilename&quot;);
+ optionSaveFile(&amp;progOptions);</pre>
+<dl>
+<dt><i>opts</i></dt>
+<dd>program options descriptor </dd>
+<h2>Errors</h2>
+<p>If no <code>homerc</code> file was specified, this routine will silently return and do nothing. If the output file cannot be created or updated, a message will be printed to <code>stderr</code> and the routine will return.</p>
+<h2>See Also</h2>
+<p>The <i>info</i> documentation for the -l<i>opts</i> library.<br />
+ <a href="/docs/linux/man/3-ao_string_tokenize/">ao_string_tokenize</a>(3), configFileLoad(3), <a href="/docs/linux/man/3-optionfileload/">optionFileLoad</a>(3), <a href="/docs/linux/man/3-optionfindnextvalue/">optionFindNextValue</a>(3), <a href="/docs/linux/man/3-optionfindvalue/">optionFindValue</a>(3), <a href="/docs/linux/man/3-optionfree/">optionFree</a>(3), <a href="/docs/linux/man/3-optiongetvalue/">optionGetValue</a>(3), <a href="/docs/linux/man/3-optionloadline/">optionLoadLine</a>(3), <a href="/docs/linux/man/3-optionmemberlist/">optionMemberList</a>(3), <a href="/docs/linux/man/3-optionnextvalue/">optionNextValue</a>(3), <a href="/docs/linux/man/3-optiononlyusage/">optionOnlyUsage</a>(3), <a href="/docs/linux/man/3-optionprocess/">optionProcess</a>(3), <a href="/docs/linux/man/3-optionrestore/">optionRestore</a>(3), <a href="/docs/linux/man/3-optionsavestate/">optionSaveState</a>(3), <a href="/docs/linux/man/3-optionunloadnested/">optionUnloadNested</a>(3), <a href="/docs/linux/man/3-optionversion/">optionVersion</a>(3), <a href="/docs/linux/man/3-strequate/">strequate</a>(3), <a href="/docs/linux/man/3-streqvcmp/">streqvcmp</a>(3), <a href="/docs/linux/man/3-streqvmap/">streqvmap</a>(3), <a href="/docs/linux/man/3-strneqvcmp/">strneqvcmp</a>(3), <a href="/docs/linux/man/3-strtransform/">strtransform</a>(3), </p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

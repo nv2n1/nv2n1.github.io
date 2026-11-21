@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Function Calls in PHP: Variables, call_user_func(), and Callables - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-call-a-function-by-its-name-as-a-string-in-php/">
+  <meta name="description" content="PHP lets you call functions dynamically when you don’t know the function name until runtime. This is essential for plugin systems, routing handlers, API …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Dynamic Function Calls in PHP: Variables, call_user_func(), and Callables">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-call-a-function-by-its-name-as-a-string-in-php/">
+  <meta property="og:description" content="PHP lets you call functions dynamically when you don’t know the function name until runtime. This is essential for plugin systems, routing handlers, API …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Dynamic Function Calls in PHP: Variables, call_user_func(), and Callables</h1>
+        <time class="post-date" datetime="2018-04-08T09:05:57Z">April 8, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>PHP lets you call functions dynamically when you don’t know the function name until runtime. This is essential for plugin systems, routing handlers, API dispatchers, and configuration-driven logic. The approach you choose affects both performance and safety.</p>
+<h2 id="direct-variable-function-invocation">Direct Variable Function Invocation</h2>
+<p>The simplest approach treats a string variable as a callable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$func</span> <span class="o">=</span> <span class="s1">&#39;strlen&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$func</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">);</span>  <span class="c1">// outputs: 5
+</span></span></span></code></pre></div><p>This works for any function in the global namespace, but it has no built-in error handling. If the function doesn’t exist, you’ll get a fatal error.</p>
+<p>Always validate before calling:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$func</span> <span class="o">=</span> <span class="s1">&#39;some_function&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">function_exists</span><span class="p">(</span><span class="nv">$func</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$func</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">trigger_error</span><span class="p">(</span><span class="s2">&#34;Function </span><span class="si">$func</span><span class="s2"> does not exist&#34;</span><span class="p">,</span> <span class="nx">E_USER_WARNING</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="using-call_user_func">Using call_user_func()</h2>
+<p><code>call_user_func()</code> provides better error handling and works with callbacks more reliably:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$func</span> <span class="o">=</span> <span class="s1">&#39;strlen&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$result</span> <span class="o">=</span> <span class="nx">call_user_func</span><span class="p">(</span><span class="nv">$func</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">);</span>  <span class="c1">// outputs: 5
+</span></span></span></code></pre></div><p>Pass multiple arguments as separate parameters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">add</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$a</span> <span class="o">+</span> <span class="nv">$b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$func</span> <span class="o">=</span> <span class="s1">&#39;add&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">call_user_func</span><span class="p">(</span><span class="nv">$func</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">// outputs: 8
+</span></span></span></code></pre></div><h2 id="calling-instance-and-static-methods">Calling Instance and Static Methods</h2>
+<p>For instance methods, pass an array with the object and method name:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Calculator</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">multiply</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$a</span> <span class="o">*</span> <span class="nv">$b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$calc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Calculator</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$method</span> <span class="o">=</span> <span class="s1">&#39;multiply&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">call_user_func</span><span class="p">([</span><span class="nv">$calc</span><span class="p">,</span> <span class="nv">$method</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>  <span class="c1">// outputs: 20
+</span></span></span></code></pre></div><p>For static methods, pass the class name as a string in an array:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MathOps</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">divide</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$a</span> <span class="o">/</span> <span class="nv">$b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">call_user_func</span><span class="p">([</span><span class="s1">&#39;MathOps&#39;</span><span class="p">,</span> <span class="s1">&#39;divide&#39;</span><span class="p">],</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>  <span class="c1">// outputs: 5
+</span></span></span></code></pre></div><p>Alternatively, use the <code>ClassName::methodName</code> string syntax:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">call_user_func</span><span class="p">(</span><span class="s1">&#39;MathOps::divide&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>  <span class="c1">// outputs: 5
+</span></span></span></code></pre></div><h2 id="using-call_user_func_array">Using call_user_func_array()</h2>
+<p>When arguments are already in an array, <code>call_user_func_array()</code> unpacks them automatically:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$func</span> <span class="o">=</span> <span class="s1">&#39;array_merge&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$arrays</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$result</span> <span class="o">=</span> <span class="nx">call_user_func_array</span><span class="p">(</span><span class="nv">$func</span><span class="p">,</span> <span class="nv">$arrays</span><span class="p">);</span>  <span class="c1">// [1, 2, 3, 4, 5, 6]
+</span></span></span></code></pre></div><p>This is cleaner than manual unpacking with the spread operator:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">greet</span><span class="p">(</span><span class="nv">$greeting</span><span class="p">,</span> <span class="nv">$name</span><span class="p">,</span> <span class="nv">$punctuation</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;</span><span class="si">$greeting</span><span class="s2">, </span><span class="si">$name$punctuation</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$args</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">call_user_func_array</span><span class="p">(</span><span class="s1">&#39;greet&#39;</span><span class="p">,</span> <span class="nv">$args</span><span class="p">);</span>  <span class="c1">// Hello, World!
+</span></span></span></code></pre></div><h2 id="modern-php-callable-type-hints">Modern PHP: Callable Type Hints</h2>
+<p>In PHP 7.1+, use <code>callable</code> type hints for better code clarity and IDE support:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">execute_handler</span><span class="p">(</span><span class="nx">callable</span> <span class="nv">$handler</span><span class="p">,</span> <span class="o">...</span><span class="nv">$args</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$handler</span><span class="p">(</span><span class="o">...</span><span class="nv">$args</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">execute_handler</span><span class="p">(</span><span class="s1">&#39;strlen&#39;</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">);</span>        <span class="c1">// works
+</span></span></span><span class="line"><span class="cl"><span class="nx">execute_handler</span><span class="p">([</span><span class="nv">$obj</span><span class="p">,</span> <span class="s1">&#39;method&#39;</span><span class="p">]);</span>        <span class="c1">// works
+</span></span></span><span class="line"><span class="cl"><span class="nx">execute_handler</span><span class="p">(</span><span class="k">static</span> <span class="nx">fn</span><span class="p">(</span><span class="nv">$x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nv">$x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// works with closures
+</span></span></span></code></pre></div><p>The <code>callable</code> type hint enforces that the variable is actually callable before execution, catching errors earlier.</p>
+<h2 id="comparison-variable-functions-vs-call_user_func">Comparison: Variable Functions vs call_user_func()</h2>
+<p>Direct variable invocation is marginally faster but offers no validation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// Direct: Fast, no error checking
+</span></span></span><span class="line"><span class="cl"><span class="nv">$func</span> <span class="o">=</span> <span class="s1">&#39;nonexistent&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$func</span><span class="p">();</span>  <span class="c1">// Fatal error: Call to undefined function nonexistent()
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// call_user_func(): Safer, clearer intent
+</span></span></span><span class="line"><span class="cl"><span class="nx">call_user_func</span><span class="p">(</span><span class="s1">&#39;nonexistent&#39;</span><span class="p">);</span>  <span class="c1">// Warning: First argument is expected to be a valid callback
+</span></span></span></code></pre></div><p>Use variable functions (<code>$func()</code>) only when performance is critical and you fully control the input. Use <code>call_user_func()</code> for user-supplied input or when you need validation.</p>
+<h2 id="practical-example-router-with-type-safety">Practical Example: Router with Type Safety</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Router</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="nv">$routes</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">register</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$path</span><span class="p">,</span> <span class="nx">callable</span> <span class="nv">$handler</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">routes</span><span class="p">[</span><span class="nv">$path</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$handler</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">dispatch</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$path</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">routes</span><span class="p">[</span><span class="nv">$path</span><span class="p">]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">http_response_code</span><span class="p">(</span><span class="mi">404</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="s1">&#39;Not found&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$handler</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">routes</span><span class="p">[</span><span class="nv">$path</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">call_user_func</span><span class="p">(</span><span class="nv">$handler</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Router</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$router</span><span class="o">-&gt;</span><span class="na">register</span><span class="p">(</span><span class="s1">&#39;/users&#39;</span><span class="p">,</span> <span class="s1">&#39;get_users&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$router</span><span class="o">-&gt;</span><span class="na">register</span><span class="p">(</span><span class="s1">&#39;/posts&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nx">PostController</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$router</span><span class="o">-&gt;</span><span class="na">register</span><span class="p">(</span><span class="s1">&#39;/status&#39;</span><span class="p">,</span> <span class="nx">fn</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="s1">&#39;OK&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$router</span><span class="o">-&gt;</span><span class="na">dispatch</span><span class="p">(</span><span class="s1">&#39;/users&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><p>Using <code>callable</code> type hints prevents invalid callbacks from being registered, catching errors during registration rather than dispatch.</p>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<p>For tight loops calling the same function repeatedly, cache the callable reference and use variable functions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$func</span> <span class="o">=</span> <span class="s1">&#39;expensive_operation&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">function_exists</span><span class="p">(</span><span class="nv">$func</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">die</span><span class="p">(</span><span class="s2">&#34;Function not found&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="mi">1000000</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$func</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>  <span class="c1">// Faster than repeated call_user_func()
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Variable functions avoid the function call overhead of <code>call_user_func()</code>. In modern PHP (8.0+), the performance gap is negligible unless you’re in a critical loop with millions of iterations.</p>
+<p>For most application code, use <code>call_user_func()</code> or callable type hints for safety and clarity. Reserve direct variable functions for performance-critical paths where you control all inputs.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

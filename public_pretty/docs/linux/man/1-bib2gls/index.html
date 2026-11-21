@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bib2gls(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-bib2gls/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>bib2gls(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>SYNOPSIS</h2>
+<p> <code>bib2gls</code> [<i>option</i>]+ <i>auxfile</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>bib2gls</code> is designed to work with the <code>glossaries-extra</code> LaTeX package. (The <code>record</code> package option is required.) The application performs two functions in one: (1) selects entries from .bib files according to information found in the <i>auxfile</i> (similar to <code>bibtex</code>); (2) hierarchically sorts entries and collates location lists (similar to <code>makeindex</code> and <code>xindy</code>). The .aux extension may be omitted from <i>auxfile</i>. </p>
+<p> The <i>auxfile</i> (and corresponding .log file) should either be in the current directory or in the directory specified by <code>&#8211;dir</code>. Bib files can either be relative to the directory the <i>auxfile</i> is in or in a location that can be found by kpsewhich.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;help</code> or <code>-h</code></dt>
+<dd> Display help message and exit.</dd>
+<dt><code>&#8211;version</code> or <code>-v</code></dt>
+<dd> Display version information and exit.</dd>
+<dt><code>&#8211;debug</code> [<i>level</i>]</dt>
+<dd> Switch on the debug mode (optionally at the given <i>level</i>, which should be a non-negative integer). If <i>level</i> is <code>0</code> then the debug mode is switched off.</dd>
+<dt><code>&#8211;no-debug</code> (or <code>&#8211;nodebug</code>)</dt>
+<dd> Switch off debug mode. (Equivalent to <code>&#8211;debug</code> <code>0</code>)</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Switch on verbose mode.</dd>
+<dt><code>&#8211;no-verbose</code> (or <code>&#8211;noverbose</code>)</dt>
+<dd> Switch off verbose mode. (Some messages will still be written to <font SIZE="-1">STDOUT.</font>)</dd>
+<dt><code>&#8211;silent</code></dt>
+<dd> Only display error messages. All other messages are just written to the transcript file.</dd>
+<dt><code>&#8211;locale</code> <i>lang</i> (or <code>-l</code> <i>lang</i>)</dt>
+<dd> Use language resource file for <i>lang</i> (which should be an <font SIZE="-1">IETF</font> locale tag).</dd>
+<dt><code>&#8211;log-file</code> <i>file</i> (or <code>-t</code> &lt;file&gt;)</dt>
+<dd> Set the transcript file.</dd>
+<dt><code>&#8211;dir</code> <i>directory</i> (or <code>-d</code> &lt;directory&gt;)</dt>
+<dd> Files are relative to <i>directory</i>. (This doesn&#8217;t change the current working directory.)</dd>
+<dt><code>&#8211;tex-encoding</code> <i>name</i></dt>
+<dd> Set the character encoding for the output files. This overrides the setting given in <i>auxfile</i>.</dd>
+<dt><code>&#8211;interpret</code></dt>
+<dd> Use the TeX parser library to interpret known (La)TeX commands (default).</dd>
+<dt><code>&#8211;no-interpret</code></dt>
+<dd> Don&#8217;t try interpreting (La)TeX commands.</dd>
+<dt><code>&#8211;break-space</code></dt>
+<dd> Interpret <tt>&quot;~&quot;</tt> (tilde) character and <tt>&quot;
+obreakspace&quot;</tt> as a normal space.</dd>
+<dt><code>&#8211;no-break-space</code></dt>
+<dd> Interpret <tt>&quot;~&quot;</tt> (tilde) and <tt>&quot;
+obreakspace&quot;</tt> as a non-breaking space (default).</dd>
+<dt><code>&#8211;cite-as-record</code></dt>
+<dd> Treat <tt>&quot;
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

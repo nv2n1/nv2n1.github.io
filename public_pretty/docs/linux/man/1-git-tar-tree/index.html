@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-tar-tree(1) · Linux Manual Pages</title>
+<meta name="description" content="git-tar-tree – Create a tar archive of the files in the named tree object">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-tar-tree/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-tar-tree(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> git-tar-tree &#8211; Create a tar archive of the files in the named tree object </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+git tar - tree[--remote = &lt;repo&gt;]&lt;tree - ish&gt;[&lt;base&gt;]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> THIS COMMAND IS DEPRECATED. Use <i>git archive</i> with &#8211;format=tar option instead (and move the &lt;base&gt; argument to &#8211;prefix=base/). </p>
+<p> Creates a tar archive containing the tree structure for the named tree. When &lt;base&gt; is specified it is added as a leading path to the files in the generated tar archive. </p>
+<p> <i>git tar-tree</i> behaves differently when given a tree ID versus when given a commit ID or tag ID. In the first case the current time is used as modification time of each file in the archive. In the latter case the commit time as recorded in the referenced commit object is used instead. Additionally the commit ID is stored in a global extended pax header. It can be extracted using <i>git get-tar-commit-id</i>.</p>
+<h2>OPTIONS</h2>
+<p> &lt;tree-ish&gt;</p>
+<dl>
+<dt>
+</dt><dd> The tree or commit to produce tar archive for. If it is the object name of a commit object.</dd></dl>
+<p> &lt;base&gt;</p>
+<dl>
+<dt>
+</dt><dd> Leading path to the files in the resulting tar archive.</dd></dl>
+<p> &#8211;remote=&lt;repo&gt;</p>
+<dl>
+<dt>
+</dt><dd> Instead of making a tar archive from local repository, retrieve a tar archive from a remote repository.</dd></dl>
+<h2>CONFIGURATION</h2>
+<p> tar.umask</p>
+<dl>
+<dt>
+</dt><dd> This variable can be used to restrict the permission bits of tar archive entries. The default is 0002, which turns off the world write bit. The special value &quot;user&quot; indicates that the archiving user&#8217;s umask will be used instead. See <a href="/docs/linux/man/2-umask/">umask</a>(2) for details.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> git tar-tree HEAD junk | (cd /var/tmp/ &amp;&amp; tar xf -)</p>
+<dl>
+<dt>
+</dt><dd> Create a tar archive that contains the contents of the latest commit on the current branch, and extracts it in /var/tmp/junk directory.</dd></dl>
+<p> git tar-tree v1.4.0 git-1.4.0 | gzip &gt;git-1.4.0.tar.gz</p>
+<dl>
+<dt>
+</dt><dd> Create a tarball for v1.4.0 release.</dd></dl>
+<p> git tar-tree v1.4.0^{tree} git-1.4.0 | gzip &gt;git-1.4.0.tar.gz</p>
+<dl>
+<dt>
+</dt><dd> Create a tarball for v1.4.0 release, but without a global extended pax header.</dd></dl>
+<p> git tar-tree &#8211;remote=example.com:git.git v1.4.0 &gt;git-1.4.0.tar</p>
+<dl>
+<dt>
+</dt><dd> Get a tarball v1.4.0 from example.com.</dd></dl>
+<p> git tar-tree HEAD:Documentation/ git-docs &gt; git-1.4.0-docs.tar</p>
+<dl>
+<dt>
+</dt><dd> Put everything in the current head&#8217;s Documentation/ directory into <i>git-1.4.0-docs.tar</i>, with the prefix <i>git-docs/</i>.</dd></dl>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

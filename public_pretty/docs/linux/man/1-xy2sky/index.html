@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xy2sky(1) · Linux Manual Pages</title>
+<meta name="description" content="xy2sky – Compute RA Dec from X Y using WCS in FITS and IRAF image files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-xy2sky/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>xy2sky(1)</h1>
+
+
+
+
+
+<h2>Name</h2>
+<p> xy2sky &#8211; Compute RA Dec from X Y using WCS in FITS and IRAF image files</p>
+<h2>Synopsis</h2>
+<p> xy2sky [-vbjg] [-n ndec] file.fts x1 y1 &#8230; xn yn<br />
+ or<br />
+ xy2sky [-bdjgv] [-n ndec] file.fts @listfile</p>
+<h2>Description</h2>
+<p> <i>xy2sky</i> (pronounced X-Y-to-sky) is a utility for getting the world coordinates of a set of image coordinates in a FITS or IRAF image. World coordinate system (WCS) information in the image header describes, in a standard way, the relationship between sky coordinates and image pixels. This information is used by the program to transform image coordinate (X,Y) pairs to right ascension and declination sky coordinate pairs. The current version of the program prints the coordinates at the same equinox as is given in the image header, but future versions will allow transformations to B1950/FK4, J2000/FK5, or galactic coordinates. Input and output files in the Starbase format will eventually be allowed.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-a</code></dt>
+<dd> Append input line after output position</dd>
+<dt><code>-b</code></dt>
+<dd> B1950 (FK4) output</dd>
+<dt><code>-d</code></dt>
+<dd> RA and Dec output in degrees</dd>
+<dt><code>-e</code></dt>
+<dd> Output in ecliptic longitude and latitude in degrees.</dd>
+<dt><code>-f &lt;number&gt;</code></dt>
+<dd> Set third dimension for 3-D projections such as CSC</dd>
+<dt><code>-g</code></dt>
+<dd> Galactic longitude and latitude output</dd>
+<dt><code>-i</code></dt>
+<dd> First column is star id; 2nd, 3rd are x,y position</dd>
+<dt><code>-j</code></dt>
+<dd> J2000 (FK5) output</dd>
+<dt><code>-m &lt;number&gt;</code></dt>
+<dd> Set mode for output of LINEAR WCS coordinates: 0: x y linear 1: x units y units 2: x y linear units units</dd>
+<dt><code>-n &lt;number&gt;</code></dt>
+<dd> Number of decimal places in output RA seconds</dd>
+<dt><code>-q &lt;year&gt;</code></dt>
+<dd> Output equinox if not 2000 (-j) or 1950 (-b)</dd>
+<dt><code>-t</code></dt>
+<dd> Output as tab-separated table</dd>
+<dt><code>-v</code></dt>
+<dd> More descriptive output <code>-z</code> Use AIPS classic projections instead of WCSLIB </dd>
+</dl>
+<h2>See Also</h2>
+<p> <a href="/docs/linux/man/1-sky2xy/">sky2xy</a>(1)</p>
+<h2>Author</h2>
+<p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

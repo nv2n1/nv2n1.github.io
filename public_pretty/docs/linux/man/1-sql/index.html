@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sql(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-sql/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>sql(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>SQL support in GRASS GIS</h2>
+<p>GRASS can use various RDBMS and embedded databases. SQL queries are directly passed to the underlying database system. The set of supported SQL commands depends on the RDMBS and driver selected.</p>
+<h2>Drivers</h2>
+<p>The list of available drivers can vary in various binary distributions of GRASS.</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>| dbf<tt> <wbr> <wbr> <wbr></tt>| DBF files. Data are stored in DBF files.
+| <a rel="nofollow" HREF="http://shapelib.maptools.org/dbf_api.html"><a href="http://shapelib.maptools.org/dbf_api.html">http://shapelib.maptools.org/dbf_api.html</a></a>
+<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>| sqlite<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>| SQLite embedded database.
+| <a rel="nofollow" HREF="http://sqlite.org/"><a href="http://sqlite.org/">http://sqlite.org/</a></a>
+<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>| pg<tt> <wbr> <wbr> <wbr> <wbr></tt>| PostgreSQL RDBMS.
+| <a rel="nofollow" HREF="http://postgresql.org/"><a href="http://postgresql.org/">http://postgresql.org/</a></a>
+<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>| mysql<tt> <wbr></tt>| MySQL RDBMS.
+| <a rel="nofollow" HREF="http://mysql.org/"><a href="http://mysql.org/">http://mysql.org/</a></a>
+<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>| mesql<tt> <wbr></tt>| MySQL embedded database.
+| <a rel="nofollow" HREF="http://mysql.org/"><a href="http://mysql.org/">http://mysql.org/</a></a>
+<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>| odbc<tt> <wbr> <wbr></tt>| UnixODBC. (PostgreSQL, Oracle, etc.)
+| <a rel="nofollow" HREF="http://www.unixodbc.org/"><a href="http://www.unixodbc.org/">http://www.unixodbc.org/</a></a></p>
+<h2>NOTES</h2>
+<dl>
+<dl>
+<dt>
+</dt><dd> 
+&nbsp;<wbr>SQL does not support&nbsp;<wbr>'.'&nbsp;<wbr>(dots)&nbsp;<wbr>in table names.
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>Supported table name characters are only: 
+ [A-Za-z][A-Za-z0-9_]*
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>A table name must start with a character, not a number.
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>Text-string matching requires the text part to be&nbsp;<wbr>'single quoted'. When run from the command line multiple queries should be contained in &quot;double quotes&quot;. e.g. 
+ d.vect map where=&quot;individual='juvenile' and area='beach'&quot; 
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>An error message such as&nbsp;<wbr>&quot;dbmi: Protocol error&quot;&nbsp;<wbr>either indicates an invalid column name or an unsupported column type (then the GRASS SQL parser needs to be extended).
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>DBF column names are limited to 10 characters&nbsp;<wbr>(DBF API definition)</dd></dl>
+</dl>
+<h2>EXAMPLES</h2>
+<p>Display all vector points except for LAMAR valley and <i>extensive trapping</i> (brackets are superfluous in this example):
+d.vect trapping_sites_points fcol=black icon=basic/diamond col=white size=13 rs</p>
+<p> <wbr>where=&quot;valley <wbr>&lt;&gt; <wbr>&lsquo;LAMAR&rsquo; <wbr>OR <wbr>(valley <wbr>= <wbr>&lsquo;LAMAR&rsquo; <wbr>AND description <wbr>= <wbr>&lsquo;extensive trapping&rsquo;)&quot;</p>
+<p>Select all attributes from table where str1 column values are not &lsquo;No Name&rsquo;:
+echo &quot;SELECT * FROM archsites WHERE str1 &lt;&gt; &lsquo;No Name&rsquo;&quot; | db.select</p>
+<p>Example of subquery expressions from a list (does not work for DBF driver):
+v.db.select mysites where=&quot;id IN (&lsquo;P04&rsquo;, &lsquo;P05&rsquo;)&quot;</p>
+<p>Example of pattern matching:</p>
+<h1 id="match-exactly-number-of-characters-here-2-does-not-work-for-dbf-driver">match exactly number of characters (here: 2), does not work for DBF driver:</h1>
+<p>v.db.select mysites where=&quot;id LIKE &lsquo;P__&rsquo;&quot;</p>
+<p>#define wildcard:
+v.db.select mysites where=&quot;id LIKE &lsquo;P%&rsquo;&quot;</p>
+<p>Example of null handling:
+v.db.addcol map=roads col=&quot;nulltest int&quot;
+v.db.update map=roads col=nulltest value=1 where=&quot;cat &gt; 2&quot;
+d.vect roads where=&quot;nulltest is null&quot;
+v.db.update map=roads col=nulltest value=2 where=&quot;cat &lt;= 2&quot;</p>
+<p>Examples of complex expressions in updates (using v.db.* modules):
+v.db.addcol map=roads col=&quot;exprtest double precision&quot;
+v.db.update map=roads col=exprtest value=cat/nulltest
+v.db.update map=roads col=exprtest value=cat/nulltest+cat where=cat=1</p>
+<p>Examples of complex expressions in updates (using db.* modules):
+echo &quot;UPDATE roads SET exprtest=null&quot;
+echo &quot;UPDATE roads SET exprtest=cat/2&quot; | db.execute
+echo &quot;UPDATE roads SET exprtest=cat/2+cat/3&quot; | db.execute
+echo &quot;UPDATE roads SET exprtest=NULL WHERE cat&gt;2&quot; | db.execute
+echo &quot;UPDATE roads SET exprtest=cat/3*(cat+1) WHERE exprtest IS NULL&quot; | db.execute&quot;</p>
+<p>Instead of creating and updating new columns with an expression, you can use the expression directly in a command:
+d.vect roads where=&quot;(cat/3*(cat+1))&gt;8&quot;
+d.vect roads where=&quot;cat&gt;exprtest&quot;</p>
+<h2>SEE ALSO</h2>
+<p>Database management in GRASS GIS,
+Help pages for database modules,
+SQL Guide and Reference (Red Hat)</p>
+<p><i>Last changed: $Date: 2007-01-28 15:33:29 +0100 (Sun, 28 Jan 2007) $</i>
+Help Index</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

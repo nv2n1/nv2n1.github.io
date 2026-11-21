@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbfreecontrols(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbFreeControls – Frees memory used by the ctrls member of an XkbDescRec structure">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbfreecontrols/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbfreecontrols(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XkbFreeControls &#8211; Frees memory used by the ctrls member of an XkbDescRec structure </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>void XkbFreeControls</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>Bool </code><i>free_all</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; xkb</i></dt>
+<dd>
+</dd><dd>Xkb description in which to free controls components</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask of components of ctrls to free</dd>
+<dt><i>&#8211; free_all</i></dt>
+<dd>True =&gt; free everything + ctrls itself</dd></dl>
+<h2>Description</h2>
+<p><i>XkbFreeControls </i> frees the specified components of the <i>ctrls </i> field in the <i>xkb </i> keyboard description and sets the corresponding structure component values to NULL or zero. The <i>which </i> mask specifies the fields of <i>ctrls </i> to be freed and can contain any of the controls components specified in Table 1. </p>
+<p> Table 1 shows the actual values for the individual mask bits used to select controls for modification and to enable and disable the control. Note that the same mask bit is used to specify general modifications to the parameters used to configure the control (which), and to enable and disable the control (enabled_ctrls). The anomalies in the table (no &quot;ok&quot; in column) are for controls that have no configurable attributes; and for controls that are not boolean controls and therefore cannot be enabled or disabled. </p>
+<table>
+<tr VALIGN=top>
+<td ALIGN=center COLSPAN=4>Table 1 Controls Mask Bits
+</td>
+</tr>
+<tr VALIGN=top>
+<td COLSPAN=4>
+<hr>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>Mask Bit</td>
+<td>which or</td>
+<td>enabled</td>
+<td>Value
+</td>
+</tr>
+<tr VALIGN=top>
+<td></td>
+<td>changed_ctrls</td>
+<td>_ctrls</td>
+<td>
+</td>
+</tr>
+<tr VALIGN=top>
+<td COLSPAN=4>
+<hr>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbRepeatKeysMask</td>
+<td>ok</td>
+<td>ok</td>
+<td>(1L&lt;&lt;0)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbSlowKeysMask</td>
+<td>ok</td>
+<td>ok</td>
+<td>(1L&lt;&lt;1)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbBounceKeysMask</td>
+<td>ok</td>
+<td>ok</td>
+<td>(1L&lt;&lt;2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbStickyKeysMask</td>
+<td>ok</td>
+<td>ok</td>
+<td>(1L&lt;&lt;3)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbMouseKeysMask</td>
+<td>ok</td>
+<td>ok</td>
+<td>(1L&lt;&lt;4)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbMouseKeysAccelMask</td>
+<td>ok</td>
+<td>ok</td>
+<td>(1L&lt;&lt;5)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbAccessXKeysMask</td>
+<td>ok</td>
+<td>ok</td>
+<td>(1L&lt;&lt;6)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbAccessXTimeoutMask</td>
+<td>ok</td>
+<td>ok</td>
+<td>(1L&lt;&lt;7)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbAccessXFeedbackMask</td>
+<td>ok</td>
+<td>ok</td>
+<td>(1L&lt;&lt;8)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbAudibleBellMask</td>
+<td></td>
+<td>ok</td>
+<td>(1L&lt;&lt;9)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbOverlay1Mask</td>
+<td></td>
+<td>ok</td>
+<td>(1L&lt;&lt;10)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbOverlay2Mask</td>
+<td></td>
+<td>ok</td>
+<td>(1L&lt;&lt;11)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbIgnoreGroupLockMask</td>
+<td></td>
+<td>ok</td>
+<td>(1L&lt;&lt;12)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbGroupsWrapMask</td>
+<td>ok</td>
+<td></td>
+<td>(1L&lt;&lt;27)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbInternalModsMask</td>
+<td>ok</td>
+<td></td>
+<td>(1L&lt;&lt;28)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbIgnoreLockModsMask</td>
+<td>ok</td>
+<td></td>
+<td>(1L&lt;&lt;29)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbPerKeyRepeatMask</td>
+<td>ok</td>
+<td></td>
+<td>(1L&lt;&lt;30)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbControlsEnabledMask</td>
+<td>ok</td>
+<td></td>
+<td>(1L&lt;&lt;31)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbAccessXOptionsMask</td>
+<td>ok</td>
+<td>ok</td>
+<td>(XkbStickyKeysMask |
+</td>
+</tr>
+<tr VALIGN=top>
+<td></td>
+<td></td>
+<td></td>
+<td>XkbAccessXFeedbackMask)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbAllBooleanCtrlsMask</td>
+<td></td>
+<td>ok</td>
+<td>(0x00001FFF)
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbAllControlsMask</td>
+<td>ok</td>
+<td></td>
+<td>(0xF8001FFF)
+</td>
+</tr>
+</table>
+<p> If <i>free_all </i> is True, <i>XkbFreeControls </i> frees every non-NULL structure component in the controls, frees the XkbControlsRec structure referenced by the <i>ctrls </i> member of <i>xkb, </i> and sets <i>ctrls </i> to NULL.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

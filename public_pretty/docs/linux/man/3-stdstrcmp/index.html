@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdstrcmp(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdstrcmp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdstrcmp(3)</h1>
+
+
+
+
+
+<p>std::strcmp - std::strcmp</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstring&gt;
+    int strcmp(const char *lhs, const char *rhs);</code></pre> 
+<p>Compares two null-terminated byte strings lexicographically.
+The sign of the result is the sign of the difference between the values of the first pair of characters (both interpreted as unsigned char) that differ in the strings being compared.
+The behavior is undefined if lhs or rhs are not pointers to null-terminated strings.</p>
+<h2>Parameters</h2>
+<p>lhs, rhs - pointers to the null-terminated byte strings to compare</p>
+<h2>Return value</h2>
+<p>Negative value if lhs appears before rhs in lexicographical order.
+Zero if lhs and rhs compare equal.
+Positive value if lhs appears after rhs in lexicographical order.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;vector&gt;
+#include &lt;cstring&gt;
+#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+int main()
+{
+std::vector&lt;const char *&gt; cats{&quot;Heathcliff&quot;, &quot;Snagglepuss&quot;, &quot;Hobbes&quot;, &quot;Garfield&quot;};
+std::sort(cats.begin(), cats.end(), [](const char *strA, const char *strB) {
+return std::strcmp(strA, strB) &lt; 0;
+});
+for (const char *cat : cats) {
+std::cout &lt;&lt; cat &lt;&lt; &lsquo;\n&rsquo;;
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Garfield
+ <wbr> Heathcliff
+ <wbr> Hobbes
+ <wbr> Snagglepuss</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> compares a certain number of characters from two strings
+strncmp <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> compares two wide strings
+wcscmp <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> compares two buffers
+memcmp <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> compares two strings in accordance to the current locale
+strcoll <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disable WordPress Block Editor and Classic Editor - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/wordpress-disabling-visual-editor/">
+  <meta name="description" content="The WordPress block editor (Gutenberg) and legacy visual editor can mangle custom HTML, delete formatting, and cause frustration for users who work directly …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Disable WordPress Block Editor and Classic Editor">
+  <meta property="og:url" content="https://www.systutorials.com/wordpress-disabling-visual-editor/">
+  <meta property="og:description" content="The WordPress block editor (Gutenberg) and legacy visual editor can mangle custom HTML, delete formatting, and cause frustration for users who work directly …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Disable WordPress Block Editor and Classic Editor</h1>
+        <time class="post-date" datetime="2013-07-12T16:46:16Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The WordPress block editor (Gutenberg) and legacy visual editor can mangle custom HTML, delete formatting, and cause frustration for users who work directly with code. If you prefer writing HTML directly or need to preserve complex markup, you can disable the visual editing experience entirely.</p>
+<h2 id="disable-for-your-own-account">Disable for Your Own Account</h2>
+<p>The simplest approach is to disable the editor for your user account:</p>
+<ol>
+<li>Log in to WordPress admin</li>
+<li>Go to <strong>Users → Your Profile</strong></li>
+<li>Scroll to the <strong>Editing</strong> section</li>
+<li>Check <strong>Disable the visual editor when writing</strong></li>
+<li>Click <strong>Update Profile</strong></li>
+</ol>
+<p>After this, you’ll see the code editor by default when creating or editing posts. You can still toggle between code and visual modes if needed, but the code editor becomes your starting point.</p>
+<h2 id="disable-site-wide-via-wp-configphp">Disable Site-Wide via wp-config.php</h2>
+<p>To enforce this across your entire WordPress installation, add these constants to your <code>wp-config.php</code> file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span> <span class="s1">&#39;GUTENBERG_PHASE&#39;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">);</span>
+</span></span></code></pre></div><p>This disables the block editor globally. The <code>GUTENBERG_PHASE</code> constant set to <code>0</code> prevents Gutenberg from loading entirely, which is cleaner than trying to disable individual editor components.</p>
+<p>If you want to keep the block editor but only disable the legacy visual editor in classic posts, omit that line and use the user-level settings or programmatic approaches instead.</p>
+<p>Note: <code>DISALLOW_FILE_EDIT</code> is sometimes confused with editor disabling, but it actually prevents editing themes and plugins through the admin interface—a separate security concern.</p>
+<h2 id="disable-for-specific-users">Disable for Specific Users</h2>
+<p>WordPress administrators can disable the editor for individual users:</p>
+<ol>
+<li>Go to <strong>Users → All Users</strong></li>
+<li>Click <strong>Edit</strong> on the user you want to modify</li>
+<li>Check <strong>Disable the visual editor when writing</strong></li>
+<li>Click <strong>Update User</strong></li>
+</ol>
+<p>This is useful when managing multiple editors or enforcing consistency across a team without affecting the entire site.</p>
+<h2 id="programmatic-approach">Programmatic Approach</h2>
+<p>For custom WordPress installations or conditional logic, you can filter the editor in your theme’s <code>functions.php</code> or a must-use plugin:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span> <span class="s1">&#39;user_can_richedit&#39;</span><span class="p">,</span> <span class="s1">&#39;__return_false&#39;</span> <span class="p">);</span>
+</span></span></code></pre></div><p>This disables the visual editor globally for all users. For conditional disabling (e.g., only for certain post types), use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span> <span class="s1">&#39;user_can_richedit&#39;</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span> <span class="nv">$status</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$screen</span> <span class="o">=</span> <span class="nx">get_current_screen</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Disable visual editor for pages only
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span> <span class="nx">isset</span><span class="p">(</span> <span class="nv">$screen</span><span class="o">-&gt;</span><span class="na">post_type</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nv">$screen</span><span class="o">-&gt;</span><span class="na">post_type</span> <span class="o">===</span> <span class="s1">&#39;page&#39;</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$status</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="p">);</span>
+</span></span></code></pre></div><p>You can also disable Gutenberg for specific post types while keeping the legacy editor:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span> <span class="s1">&#39;use_block_editor_for_post_type&#39;</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span> <span class="nv">$use_block_editor</span><span class="p">,</span> <span class="nv">$post_type</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span> <span class="nx">in_array</span><span class="p">(</span> <span class="nv">$post_type</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span> <span class="s1">&#39;page&#39;</span><span class="p">,</span> <span class="s1">&#39;custom_post_type&#39;</span> <span class="p">),</span> <span class="k">true</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$use_block_editor</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span> <span class="p">);</span>
+</span></span></code></pre></div><h2 id="block-editor-specific-disabling">Block Editor-Specific Disabling</h2>
+<p>Modern WordPress (6.x and later) uses Gutenberg by default. To disable just the block editor while keeping other admin interfaces intact, add this to <code>functions.php</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span> <span class="s1">&#39;use_block_editor_for_post_type&#39;</span><span class="p">,</span> <span class="s1">&#39;__return_false&#39;</span> <span class="p">);</span>
+</span></span></code></pre></div><p>This works better than disabling Gutenberg globally via <code>wp-config.php</code> if you want selective control.</p>
+<h2 id="important-considerations">Important Considerations</h2>
+<p><strong>Classic Editor Plugin</strong>: If you’re working with legacy sites or need the classic editor UI, install the <a href="https://wordpress.org/plugins/classic-editor/" rel="nofollow noopener" target="_blank">Classic Editor plugin</a>. This provides the pre-Gutenberg interface and can coexist with these settings.</p>
+<p><strong>HTML and Content Filtering</strong>: Even in code editor mode, WordPress still applies formatting filters through <code>wp_kses_post()</code> and <code>wp_filter_post_kses()</code>. If you need to preserve raw HTML (iframes, scripts, custom markup), you’ll need to either:</p>
+<ul>
+<li>Whitelist allowed tags using <code>wp_kses_allowed_html()</code></li>
+<li>Use a plugin specifically designed for raw HTML preservation</li>
+<li>Create a custom post type with different sanitization rules</li>
+</ul>
+<p><strong>Staging Environment Testing</strong>: Before making site-wide changes, test on a staging environment. Some plugins or custom post types may behave unexpectedly without the block editor, especially if they inject content that relies on block rendering.</p>
+<p><strong>Performance</strong>: Disabling Gutenberg globally via <code>wp-config.php</code> saves some overhead on every page load. The programmatic approach is more flexible but adds a small filter on every post edit screen.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

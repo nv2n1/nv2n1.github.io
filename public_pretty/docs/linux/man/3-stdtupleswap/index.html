@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdtupleswap(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdtupleswap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdtupleswap(3)</h1>
+
+
+
+
+
+<p>std::tuple&lt;Types&hellip;&gt;::swap - std::tuple&lt;Types&hellip;&gt;::swap</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;tuple&gt;
+void swap( tuple&amp; other ) noexcept(/* see below <em>/); <i>(since C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(until C++20)</i>
+constexpr void swap( tuple&amp; other ) noexcept(/</em> see below */); <i>(since C++20)</i>
+Calls swap (which might be std::swap, or might be found via ADL) for each element in *this and its corresponding element in other.</p>
+<h2>Parameters</h2>
+<p>other - tuple of values to swap</p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Exceptions</h2>
+<p>noexcept specification:
+noexcept(
+noexcept(swap(std::declval&lt;T0&amp;&gt;&gt;(), std::declval&lt;T0&amp;&gt;())) &amp;&amp;
+noexcept(swap(std::declval&lt;T1&amp;&gt;&gt;(), std::declval&lt;T1&amp;&gt;())) &amp;&amp; <i>(until C++17)</i>
+noexcept(swap(std::declval&lt;T2&amp;&gt;&gt;(), std::declval&lt;T2&amp;&gt;())) &amp;&amp;
+&hellip;
+)
+In the expression above, the identifier swap is looked up in the same manner as the one used by the C++17 std::is_nothrow_swappable trait.
+noexcept specification:
+noexcept(
+std::is_nothrow_swappable_v&lt;T0&gt; &amp;&amp;
+std::is_nothrow_swappable_v&lt;T1&gt; &amp;&amp; <i>(since C++17)</i>
+std::is_nothrow_swappable_v&lt;T2&gt; &amp;&amp;
+&hellip;
+)</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;tuple&gt;
+#include &lt;string&gt;
+int main()
+{
+std::tuple&lt;int, std::string, float&gt; p1, p2;
+p1 = std::make_tuple(10, &quot;test&quot;, 3.14);
+p2.swap(p1);
+std::cout &lt;&lt; &quot;(&quot; &lt;&lt; std::get&lt;0&gt;(p2)
+&lt;&lt; &quot;, &quot; &lt;&lt; std::get&lt;1&gt;(p2)
+&lt;&lt; &quot;, &quot; &lt;&lt; std::get&lt;2&gt;(p2) &lt;&lt; &quot;)\n&quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> (10, test, 3.14)</p>
+<p>Defect reports</p>
+<p>The following behavior-changing defect reports were applied retroactively to previously published C++ standards.</p>
+<p>DR Applied to Behavior as published Correct behavior
+LWG_2456 C++11 the noexcept specification is ill-formed made to work</p>
+<h2>See also</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>urxvt256c-ml-selection(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-urxvt256c-ml-selection/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>urxvt256c-ml-selection(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>selection - more intelligent selection (enabled by default)</p>
+<h2>DESCRIPTION</h2>
+<p>This extension tries to be more intelligent when the user extends selections (double-click and further clicks). Right now, it tries to select words, urls and complete shell-quoted arguments, which is very convenient, too, if your <i>ls</i> supports <tt>&quot;&ndash;quoting-style=shell&quot;</tt>.</p>
+<p>A double-click usually selects the word under the cursor, further clicks will enlarge the selection.</p>
+<p>The selection works by trying to match a number of regexes and displaying them in increasing order of length. You can add your own regexes by specifying resources of the form:</p>
+ <pre>
+   URxvt.selection.pattern-0: perl-regex
+   URxvt.selection.pattern-1: perl-regex
+   ...
+</pre> 
+<p>The index number (0, 1&hellip;) must not have any holes, and each regex must contain at least one pair of capturing parentheses, which will be used for the match. For example, the following adds a regex that matches everything between two vertical bars:</p>
+ <pre>
+   URxvt.selection.pattern-0: \\|([^|]+)\\|
+</pre> 
+<p>Another example: Programs I use often output ``absolute path: &rsquo;&rsquo; at the beginning of a line when they process multiple files. The following pattern matches the filename (note, there is a single space at the very end):</p>
+ <pre>
+   URxvt.selection.pattern-0: ^(/[^:]+):\
+</pre> 
+<p>You can look at the source of the selection extension to see more interesting uses, such as parsing a line from beginning to end.</p>
+<p>This extension also offers the following actions:</p>
+<dl>
+<dt>rot13
+</dt><dd> Rot-13 the selection when activated. 
+ Example: 
+ <pre>
+   URxvt.keysym.C-M-r: selection:rot13
+</pre> 
+</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

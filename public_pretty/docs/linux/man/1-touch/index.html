@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>touch(1) · Linux Manual Pages</title>
+<meta name="description" content="touch – change file timestamps">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-touch/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>touch(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> touch &#8211; change file timestamps </p>
+<h2>SYNOPSIS</h2>
+<p> <code>touch</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> Update the access and modification times of each FILE to the current time. </p>
+<p> A FILE argument that does not exist is created empty, unless <code>-c</code> or <code>-h</code> is supplied. </p>
+<p> A FILE argument string of &#8211; is handled specially and causes touch to change the times of the file associated with standard output. </p>
+<p> Mandatory arguments to long options are mandatory for short options too.</p>
+<dl>
+<dt><code>-a</code></dt>
+<dd> change only the access time</dd>
+<dt><code>-c</code>, <code>&#8211;no-create</code></dt>
+<dd> do not create any files</dd>
+<dt><code>-d</code>, <code>&#8211;date</code>=<i>,STRING/</i></dt>
+<dd> parse STRING and use it instead of current time</dd>
+<dt><code>-f</code></dt>
+<dd> (ignored)</dd>
+<dt><code>-h</code>, <code>&#8211;no-dereference</code></dt>
+<dd> affect each symbolic link instead of any referenced file (useful only on systems that can change the timestamps of a symlink)</dd>
+<dt><code>-m</code></dt>
+<dd> change only the modification time</dd>
+<dt><code>-r</code>, <code>&#8211;reference</code>=<i>,FILE/</i></dt>
+<dd> use this file&#8217;s times instead of current time</dd>
+<dt><code>-t</code> STAMP</dt>
+<dd> use [[CC]YY]MMDDhhmm[.ss] instead of current time</dd>
+<dt><code>&#8211;time</code>=<i>,WORD/</i></dt>
+<dd> change the specified time: WORD is access, atime, or use: equivalent to <code>-a</code> WORD is modify or mtime: equivalent to <code>-m</code></dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
+<p> Note that the <code>-d</code> and <code>-t</code> options accept different time-date formats.</p>
+<h2>DATE STRING</h2>
+<p> The &#8211;date=STRING is a mostly free format human readable date string such as &quot;Sun, 29 Feb 2004 16:21:42 -0800&quot; or &quot;2004-02-29 16:21:42&quot; or even &quot;next Thursday&quot;. A date string may contain items indicating calendar date, time of day, time zone, day of week, relative time, relative date, and numbers. An empty string indicates the beginning of the day. The date string format is more complex than is easily documented here but is fully described in the info documentation.</p>
+<h2>AUTHOR</h2>
+<p> Written by Paul Rubin, Arnold Robbins, Jim Kingdon, David MacKenzie, and Randy Smith.</p>
+<h2>REPORTING BUGS</h2>
+<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+ Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+ This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
+<h2>SEE ALSO</h2>
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/touch">https://www.gnu.org/software/coreutils/touch</a>&gt;<br />
+ or available locally via: info &#8216;(coreutils) touch invocation&#8217; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rassplit(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rassplit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rassplit(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2><code>NAME</code></h2>
+<p> rassplit &#8211; split a multi-frame rasterfile into single-frame rasterfiles.</p>
+<h2><code>SYNOPSIS</code></h2>
+<p> <code>rassplit</code> [<code>-f f1 f2 f3 &#8230;</code>] [<code>-ofmt output-format</code>] [<code>-verbose</code>] [<code>-Version</code>] <i>rasterfile</i></p>
+<h2><code>DESCRIPTION</code></h2>
+<p> The program <code>rassplit</code> will open <i>rasterfile</i> and copy each frame to it&#8217;s own separate output file. By default, all frames are extracted but the user can optionally request a specific set of frames using the <code>-f</code> option. The output format defaults to be the same as the input format, but the user can also optionally select a new output format using the <code>-ofmt</code> option. </p>
+<p> The names of the output rasterfiles are derived from the name of the source rasterfile, the output format, and the frame numbers. The examples given below will demonstrate this.</p>
+<h2><code>OPTIONS</code></h2>
+<dl>
+<dt><code>-f</code><i> f1 f2 f3 &#8230;</i></dt>
+<dd> This option allows the user to specify a list of frames to be extracted from the input rasterfile.</dd>
+<dt><code>-ofmt</code><i> output-format</i></dt>
+<dd> The user can specify <i>output-format</i> to be the desired format e.g. <code>hdf</code>, <code>rgb</code>, etc.</dd>
+<dt><code>-help</code></dt>
+<dd> Print help information.</dd>
+<dt><code>-verbose</code></dt>
+<dd> Print a message each time an output rasterfile is written.</dd>
+<dt><code>-Version</code></dt>
+<dd> Print the version number. </dd>
+</dl>
+<h2><code>EXAMPLES</code></h2>
+<p> Assume you have a file called &#8216;temp.nrif&#8217; that has three frames and that you&#8217;d like to split it into three separate frames, also in NRIF format. </p>
+<pre>
+rassplit temp.nrif
+</pre>
+<p> This will result in three output files named temp.0001.nrif, temp.0002.nrif, and temp.003.nrif. </p>
+<p> Assume you only want frames two and three, and you want them produced in HDF format instead of NRIF. </p>
+<pre>
+rassplit -fmt hdf -f 2 3 temp.nrif
+</pre>
+<p> This will result in two output files named temp.0001.hdf and temp.0002.hdf. </p>
+<h2><code>CAVEATS</code></h2>
+<p> If you&#8217;re splitting an HDF file, ask for a non-HDF output format. Otherwise you&#8217;ll just get the first frame over and over again. </p>
+<h2><code>SEE ALSO</code></h2>
+<p> <code>rasview</code>(1NCARG),<code>rascat</code>(1NCARG),<code>rasls</code>(1NCARG), <code>rasgetpal</code>(1NCARG),<code>ras_formats</code>(5NCARG),<code>ras_palette</code>(5NCARG) </p>
+<p> Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 1987-2009<br />
+ University Corporation for Atmospheric Research </p>
+<p> The use of this Software is governed by a License Agreement. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

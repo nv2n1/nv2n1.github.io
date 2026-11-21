@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemd-run-generator(8) · Linux Manual Pages</title>
+<meta name="description" content="systemd-run-generator – Generator for invoking commands specified on the kernel command line as system service">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-systemd-run-generator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>systemd-run-generator(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>systemd-run-generator &#8211; Generator for invoking commands specified on the kernel command line as system service</p>
+<h2>Synopsis</h2>
+<p>/lib/systemd/system-generators/systemd-run-generator</p>
+<h2>Description</h2>
+<p>systemd-run-generator is a generator that reads the kernel command line and understands three options: </p>
+<p> If the <code>systemd.run=</code> option is specified and followed by a command line, a unit named kernel-command-line.service is generated for it and booted into. The service has <i>Type=oneshot</i> set, and has <i>SuccessAction=exit</i> and <i>FailureAction=exit</i> configured by default, thus ensuring that the system is shut down as soon as the command completes. The exit status of the command line is propagated to the invoking container manager, if this applies (which might propagate this further, to the calling shell &#8212; e.g. <code>systemd-nspawn</code>(7) does this). If this option is used multiple times the unit file will contain multiple <i>ExecStart=</i> lines, to execute all commands in order. The command is started as regular service, i.e. with <i>DefaultDependencies=</i> on. </p>
+<p> Use <code>systemd.run_success_action=</code> and <code>systemd.run_failure_action=</code> to tweak how to react to the process completing. In particular assigning &quot;none&quot; will leave the system running after the command completes. For further details on supported arguments, see <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5). </p>
+<p> systemd-run-generator implements <code><a href="/docs/linux/man/7-systemd-generator/">systemd.generator</a></code>(7).</p>
+<h2>Example</h2>
+<p>Use a command like the following to add a user to the user database inside a container run with <code>systemd-nspawn</code>(7): </p>
+<dl>
+<dd>
+<pre># systemd-nspawn -D mycontainer -b systemd.run='&quot;adduser test&quot;'</pre>
+</dd></dl>
+<p> (Note the requirement for double quoting in the command line above. The first level of quoting (&#8221;) is processed and removed by the command shell used to invoke <code>systemd-nspawn</code>. The second level of quoting (&quot;&quot;) is propagated to the kernel command line of the container and processed and removed by <code>systemd-run-generator</code>. Both together make sure both words of the specified command line <code>adduser test</code> end up in the generated unit file together and are neither split apart by the command shell nor by the generator.)</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/7-kernel-command-line/">kernel-command-line</a></code>(7), <code>systemd-nspawn</code>(7), <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

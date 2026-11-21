@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>repodiff(1) · Linux Manual Pages</title>
+<meta name="description" content="repodiff – list differences between two or more Yum repositories">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-repodiff/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>repodiff(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> repodiff &#8211; list differences between two or more Yum repositories</p>
+<h2>SYNOPSIS</h2>
+<p> <code>repodiff</code> &#8211;old=old_repo_baseurl &#8211;new=new_repo_baseurl</p>
+<h2>DESCRIPTION</h2>
+<p> <code>repodiff</code> is a program which will list differences between two sets of repositories. <code>Note</code> that by default only source packages are compared. </p>
+<h2>GENERAL OPTIONS</h2>
+<dl>
+<dt><code>&#8211;old, -o</code></dt>
+<dd> Add a repo. as an old repo. Note that if you prefix the url with &quot;mirror:&quot; then the following url is treated as a mirror and not a baseurl.</dd>
+<dt><code>&#8211;new, -n</code></dt>
+<dd> Add a repo. as an new repo. Note that if you prefix the url with &quot;mirror:&quot; then the following url is treated as a mirror and not a baseurl.</dd>
+<dt><code>&#8211;archlist, -a</code></dt>
+<dd> Add architectures to change the default from just comparing source packages. Note that if you want the same as a native &quot;x86_64&quot; architecture machine you just need to pass &quot;x86_64&quot; (this is different from earlier versions where you needed to specify &quot;x86_64,athlon,i686,i586,i486,i386,noarch&quot; and you still got &quot;src&quot;).</dd>
+<dt><code>&#8211;size, -s</code></dt>
+<dd> Output additional data about the size of the changes.</dd>
+<dt><code>&#8211;compare-arch</code></dt>
+<dd> Normally packages are just compared based on their name, this flag makes the comparison also use the arch. So foo.i386 and foo.x86_64 are different.</dd>
+<dt><code>&#8211;simple</code></dt>
+<dd> Output a simple one line message for modified packages.</dd>
+<dt><code>&#8211;downgrade</code></dt>
+<dd> Split the data for modified packages between upgraded and downgraded packages.</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>Compare source pkgs in two local repos:</dt>
+<dd> <code>repodiff &#8211;old=/tmp/repo-old &#8211;new=/tmp/repo-new</code></dd>
+<dt>Compare x86_64 compat. binary pkgs in two remote repos, and two local one:</dt>
+<dd> <code>repodiff -a x86_64 &#8211;old=<a rel="nofollow" href="http://example.com/repo1-old">http://example.com/repo1-old</a> &#8211;old=/tmp/repo-old &#8211;new=<a href="http://example.com/repo1-new">http://example.com/repo1-new</a> &#8211;new=/tmp/repo-new</code></dd>
+<dt>Compare x86_64 compat. binary pkgs, but also compare arch:</dt>
+<dd> <code>repodiff -a x86_64 &#8211;compare-arch &#8211;old=<a rel="nofollow" href="http://example.com/repo1-old">http://example.com/repo1-old</a> &#8211;old=/tmp/repo-old &#8211;new=<a href="http://example.com/repo1-new">http://example.com/repo1-new</a> &#8211;new=/tmp/repo-new</code></dd>
+<dt>Compare two releases of Fedora (15 =&gt; 16):</dt>
+<dd> <code>repodiff &#8211;old=&#8217;mirror:<a rel="nofollow" href="https://mirrors.fedoraproject.org/metalink?repo=fedora-source-15">https://mirrors.fedoraproject.org/metalink?repo=fedora-source-15</a>&amp;arch=i386&#8242; &#8211;new=&#8217;mirror:<a href="https://mirrors.fedoraproject.org/metalink?repo=fedora-source-16">https://mirrors.fedoraproject.org/metalink?repo=fedora-source-16</a>&amp;arch=i386&#8242; &#8211;size &#8211;simple &#8211;downgrade</code></dd></dl>
+<h2>SEE ALSO</h2>
+<pre>
+<i>yum.conf (5)</i>
+<a rel="nofollow" href="http://yum.baseurl.org/">http://yum.baseurl.org/</a>
+</pre>
+<h2>AUTHORS</h2>
+<pre>
+See the Authors file included with this program.
+</pre>
+<h2>BUGS</h2>
+<p> There are of course no bugs, but should you find any, you should first consult the FAQ section on <a rel="nofollow" href="http://yum.baseurl.org/wiki/Faq">http://yum.baseurl.org/wiki/Faq</a> and if unsuccessful in finding a resolution contact the mailing list: yum-devel [at] lists.baseurl.org. To file a bug use <a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a> for Fedora/RHEL/Centos related bugs and <a rel="nofollow" href="http://yum.baseurl.org/report">http://yum.baseurl.org/report</a> for all other bugs. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>unicodeiconverttou(3) · Linux Manual Pages</title>
+<meta name="description" content="unicode::iconvert::tou – template for converting text sequence to unicode">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-unicodeiconverttou/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>unicodeiconverttou(3)</h1>
+
+
+
+
+
+<p>unicode::iconvert::tou &#8211; template for converting text sequence to unicode</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;courier-unicode.h&gt;
+output_iter_t convert(input_iter_t beg_iter, input_iter_t end_iter, const std::string &amp;charset, bool &amp;errflag, output_iter_t output_iter);
+bool convert(input_iter_t beg_iter, input_iter_t end_iter, const std::string &amp;charset, std::vector&lt;unicode_char&gt; &amp;out_buf);
+std::pair&lt;std::vector&lt;unicode_char&gt;, bool&gt; convert(const std::string &amp;text, const std::string &amp;charset);</code></pre>
+<h2>Description</h2>
+<dd>These template functions convert text in a given character set to unicode characters. <i>beg_iter</i> and <i>end_iter</i> define an input sequence of chars in the <i>charset</i> character set. They get converted to unicode characters. <i>output_iter</i> is an output iterator that <code>convert</code>() iterates over unicode_chars. <code>convert</code>() returns the value of the output iterator after iterating over the converted character sequence. <i>errflag</i>, passed by reference, gets set to true if some character could not be converted to unicode, from the specified character set, and false if the conversion completed without errors. </dd>
+<p> An overloaded <code>convert</code>() puts the unicode character sequence into a vector of unicode_chars, instead of an output sequence, and returned the error flag. Finally, a single std::string specifies the character string, instead of a beginning and an ending iterator, and returns a std::pair with the converted unicode text in a vector, and the error flag.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7), <code>unicode::convert::convert</code>(3), <code><a href="/docs/linux/man/3-unicode_convert/">unicode_convert</a></code>(3), m[blue]<code>iconv</code>(3)m[]<font SIZE="-2">[1]</font>.</p>
+<h2>Author</h2>
+<p><code>Sam Varshavchik</code></p>
+<dl>
+<dd>Author</dd></dl>
+<h2>Notes</h2>
+<dl>
+<dt> 1.</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> <code>iconv</code>(3)</dd>
+<dl>
+<dd><a rel="nofollow" href="http://manpages.courier-mta.org/htmlman3/iconv.3.html">http://manpages.courier-mta.org/htmlman3/iconv.3.html</a></dd></dl>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

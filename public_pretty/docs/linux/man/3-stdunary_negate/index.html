@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdunary_negate(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdunary_negate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdunary_negate(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::unary_negate - std::unary_negate</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;functional&gt;
+template&lt; class Predicate &gt; <i>(until C++11)</i>
+struct unary_negate : public std::unary_function&lt;Predicate::argument_type, bool&gt;;
+template&lt; class Predicate &gt; <i>(since C++11)</i>
+struct unary_negate; (deprecated in C++17)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> (removed in C++20)
+unary_negate is a wrapper function object returning the complement of the unary predicate it holds.
+The unary predicate type must define a member type, argument_type, that is convertible to the predicate&rsquo;s parameter type. The unary function objects obtained from std::ref, std::cref, std::negate, std::logical_not, std::mem_fn, std::function, std::hash, or from another call to std::not1 have this type defined, as are function objects derived from the deprecated std::unary_function.
+unary_negate objects are easily constructed with helper function std::not1.</p>
+<h2>Member types</h2>
+<p>Type Definition
+argument_type Predicate::argument_type
+result_type bool</p>
+<h2>Member functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs a new unary_negate object with the supplied predicate
+constructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the logical complement of the result of a call to the stored predicate
+operator() <i>(public member function)</i></p>
+<p> std::unary_negate::unary_negate</p>
+<p>explicit unary_negate( Predicate const&amp; pred ); <i>(until C++14)</i>
+explicit constexpr unary_negate( Predicate const&amp; pred ); <i>(since C++14)</i></p>
+<p>Constructs a unary_negate function object with the stored predicate pred.</p>
+<h2>Parameters</h2>
+<p>pred - predicate function object</p>
+<p> std::unary_negate::operator()</p>
+<p>bool operator()( argument_type const&amp; x ) const; <i>(until C++14)</i>
+constexpr bool operator()( argument_type const&amp; x ) const; <i>(since C++14)</i></p>
+<p>Returns the logical complement of the result of calling pred(x).</p>
+<h2>Parameters</h2>
+<p>x - argument to pass through to predicate</p>
+<h2>Return value</h2>
+<p>The logical complement of the result of calling pred(x).</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;algorithm&gt;
+#include &lt;functional&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+struct less_than_7 : std::unary_function&lt;int, bool&gt;
+{
+bool operator()(int i) const
+{
+return i &lt; 7;
+}
+};
+int main()
+{
+std::vector&lt;int&gt; v;
+for (int i = 0; i &lt; 10; ++i)
+v.push_back(i);
+std::unary_negate&lt;less_than_7&gt; not_less_than_7((less_than_7()));
+std::cout &lt;&lt; std::count_if(v.begin(), v.end(), not_less_than_7);
+/* C++11 solution:
+// Use std::function&lt;bool (int)&gt;
+std::function&lt;bool (int)&gt; not_less_than_7 =
+[](int x)-&gt;bool{ return !less_than_7()(x); };
+std::cout &lt;&lt; std::count_if(v.begin(), v.end(), not_less_than_7);
+*/
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 3</p>
+<h2>See also</h2>
+<p>binary_negate wrapper function object returning the complement of the binary predicate it holds
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+(deprecated in C++17)
+(removed in C++20)
+function wraps callable object of any type with specified function call signature
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+not1 constructs custom std::unary_negate object
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+(deprecated in C++17)
+(removed in C++20)
+ptr_fun creates an adaptor-compatible function object wrapper from a pointer to function
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+(deprecated in C++11)
+(removed in C++17)
+unary_function adaptor-compatible unary function base class
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+(deprecated in C++11)
+(removed in C++17)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

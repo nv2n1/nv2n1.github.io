@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>usage(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-usage/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>usage(3)</h1>
+
+
+
+
+
+<p>usage - Usage To use QuantLib classes in your own code just add <pre><code>#include &lt;ql/quantlib.hpp&gt;</code></pre>
+ <wbr>at the beginning of your source/header files. Depending on the number of your files in your project, this could cause a large increase in compilation time. If this were not acceptable, collective headers are also available for smaller parts of the library; <wbr>in particular, each subdirectory of the ql directory contains a file all.hpp which makes available all classes and function in the respective subdirectory. Under the Examples folder you can find examples of QuantLib usage, including input files for automake and makefiles for the Borland free compiler and Microsoft Visual C++. For the latter, project files are also available.</p>
+<h2>Microsoft Visual C++</h2>
+<p>A few suggestions for Visual C++ users wanting to use QuantLib into their own application:</p>
+<dl><dt>1.
+</dt><dd>you won't have to explicitly link your application to the QuantLib library. This is done automatically by compiler directives embedded in the sources.
+</dd><dt>2.
+</dt><dd>Your project must be compiled with the same options that were used in compiling the QuantLib library you're linking with, namely,
+</dd><dt> *
+</dt><dd>Property Pages -&gt; C/C++ -&gt; Code Generation -&gt; Runtime Library: select the appropriate run-time library.
+</dd><dt> *
+</dt><dd>Property Pages -&gt; C/C++ -&gt; Code Generation -&gt; Basic Runtime Checks: select 'Both (/RTC1, equiv. to /RTCsu)'.</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

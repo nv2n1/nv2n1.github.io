@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>set_uformat(3) · Linux Manual Pages</title>
+<meta name="description" content="set_uformat – Set the global current text encoding format. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-set_uformat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>set_uformat(3)</h1>
+
+
+
+
+
+<p>set_uformat &#8211; Set the global current text encoding format. Allegro game programming library.</p>
+<h2>Synopsis</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>void set_uformat(int type);</code></p>
+<h2>Description</h2>
+<p> Sets the current text encoding format. This will affect all parts of Allegro, wherever you see a function that returns a char *, or takes a char * as a parameter. `type&#8217; should be one of these values: </p>
+<pre>
+   U_ASCII     - fixed size, 8-bit ASCII characters
+   U_ASCII_CP  - alternative 8-bit codepage (see set_ucodepage())
+   U_UNICODE   - fixed size, 16-bit Unicode characters
+   U_UTF8      - variable size, UTF-8 format Unicode characters
+</pre>
+<p> Although you can change the text format on the fly, this is not a good idea. Many strings, for example the names of your hardware drivers and any language translations, are loaded when you call allegro_init(), so if you change the encoding format after this, they will be in the wrong format, and things will not work properly. Generally you should only call set_uformat() once, before allegro_init(), and then leave it on the same setting for the duration of your program. </p>
+<h2>See Also</h2>
+<p> <code><a href="/docs/linux/man/3-get_uformat/">get_uformat</a></code>(3), <code><a href="/docs/linux/man/3-register_uformat/">register_uformat</a></code>(3), <code><a href="/docs/linux/man/3-set_ucodepage/">set_ucodepage</a></code>(3), <code><a href="/docs/linux/man/3-set_uformat/">set_uformat</a></code>(3), <code><a href="/docs/linux/man/3-uconvert/">uconvert</a></code>(3), <code>ustrsize</code>(3), <code><a href="/docs/linux/man/3-ugetc/">ugetc</a></code>(3), <code><a href="/docs/linux/man/3-ugetx/">ugetx</a></code>(3), <code><a href="/docs/linux/man/3-usetc/">usetc</a></code>(3), <code><a href="/docs/linux/man/3-uwidth/">uwidth</a></code>(3), <code><a href="/docs/linux/man/3-ucwidth/">ucwidth</a></code>(3), <code><a href="/docs/linux/man/3-uisok/">uisok</a></code>(3), <code><a href="/docs/linux/man/3-uoffset/">uoffset</a></code>(3), <code><a href="/docs/linux/man/3-ugetat/">ugetat</a></code>(3), <code><a href="/docs/linux/man/3-usetat/">usetat</a></code>(3), <code><a href="/docs/linux/man/3-uinsert/">uinsert</a></code>(3), <code><a href="/docs/linux/man/3-uremove/">uremove</a></code>(3), <code>allegro_init</code>(3), <code><a href="/docs/linux/man/3-exunicod/">exunicod</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

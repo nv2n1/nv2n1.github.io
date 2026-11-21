@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npm-prune(1) · Linux Manual Pages</title>
+<meta name="description" content="npm-prune – Remove extraneous packages">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-npm-prune/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>npm-prune(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>npm-prune</code> &#8211; Remove extraneous packages </p>
+<h3>Synopsis</h3>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+npm prune[[&lt;@scope&gt; / ]&lt;pkg&gt;...][--production][--dry - run][--json]
+</code></pre>
+</dd></dl>
+<h3>Description</h3>
+<p> This command removes &quot;extraneous&quot; packages. If a package name is provided, then only packages matching one of the supplied names are removed. </p>
+<p> Extraneous packages are packages that are not listed on the parent package&#8217;s dependencies list. </p>
+<p> If the <code>&#8211;production</code> flag is specified or the <code>NODE_ENV</code> environment variable is set to <code>production</code>, this command will remove the packages specified in your <code>devDependencies</code>. Setting <code>&#8211;no-production</code> will negate <code>NODE_ENV</code> being set to <code>production</code>. </p>
+<p> If the <code>&#8211;dry-run</code> flag is used then no changes will actually be made. </p>
+<p> If the <code>&#8211;json</code> flag is used then the changes <code>npm prune</code> made (or would have made with <code>&#8211;dry-run</code>) are printed as a JSON object. </p>
+<p> In normal operation with package-locks enabled, extraneous modules are pruned automatically when modules are installed and you&#8217;ll only need this command with the <code>&#8211;production</code> flag. </p>
+<p> If you&#8217;ve disabled package-locks then extraneous modules will not be removed and it&#8217;s up to you to run <code>npm prune</code> from time-to-time to remove them.</p>
+<h3>See Also</h3>
+<dl>
+<dl>
+<dt>&bull;</dt>
+<dd> npm help uninstall</dd>
+<dt>&bull;</dt>
+<dd> npm help folders</dd>
+<dt>&bull;</dt>
+<dd> npm help ls </dd>
+</dl>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

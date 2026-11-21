@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rasls(1) · Linux Manual Pages</title>
+<meta name="description" content="rasls – list information on rasterfiles">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rasls/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rasls(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> rasls &#8211; list information on rasterfiles</p>
+<h2>SYNOPSIS</h2>
+<p> <code>rasls</code> [<code>-type</code>] [<code>-count</code>] [<code>-resolution</code>] [<code>-verbose</code>] [<code>-Version</code>] [<code>-ifmt </code><i>file_format</i>] [files]</p>
+<h2>DESCRIPTION</h2>
+<p> For each file <code>rasls</code> will generate a one line description of the rasterfile. Information provided includes the format type (Sun, HDF, etc.), the encoding (indexed, direct, etc.), resolution, and filename. Files that cannot be read as rasterfiles, are empty, are directories, or are otherwise unrecognizable are simply listed as such. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-type</code></dt>
+<dd> Print the encoding type of the rasterfile. Currently this will be either <i>indexed</i> or <i>direct</i>.</dd>
+<dt><code>-count</code></dt>
+<dd> Print the number of frames in the raster file.</dd>
+<dt><code>-resolution</code></dt>
+<dd> Print the spatial resolution of a file in pixels.</dd>
+<dt><code>-help</code></dt>
+<dd> Print help information.</dd>
+<dt><code>-verbose</code></dt>
+<dd> Print as much information as possible about each rasterfile. Information provided is a combination of format-independent and format-dependent parameters.</dd>
+<dt><code>-Version</code></dt>
+<dd> Print the version number.</dd>
+<dt><code>-ifmt</code><i> format</i></dt>
+<dd> Specify the input file format. <i>format</i> is one of the file name extensions discussed in <code>ras_formats(5NCARG)</code> (without the &quot;.&quot;, e.g. <code>xwd).</code> When this option is specified file name extensions are not necessary and are ignored if present. All input files must have the same format. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code>rasview</code>(1NCARG), <code>rascat</code>(1NCARG), <code>rasgetpal</code>(1NCARG), <code>rasls</code>(1NCARG), <code>rassplit</code>(1NCARG), <code>ras_formats</code>(5NCARG), <code>ras_palette</code>(5NCARG) </p>
+<p> Hardcopy: NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 1987-2009<br />
+ University Corporation for Atmospheric Research </p>
+<p> The use of this Software is governed by a License Agreement. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

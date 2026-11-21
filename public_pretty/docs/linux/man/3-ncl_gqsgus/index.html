@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_gqsgus(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_gqsgus/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_gqsgus(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>GQSGUS (Inquire set of segment names in use) - Retrieves what segment names are currently in use.</p>
+<h2>Synopsis</h2>CALL GQSGUS(N,ERRIND,OL,SGNA)
+<h2>C-Binding Synopsis</h2>#include &lt;ncarg/gks.h&gt; 
+<p>void ginq_set_seg_names(Gint num_elems_appl_list, Gint start_pos, Gint *err_ind, Gint_list *seg_names, Gint *length_list);</p>
+<h2>Description</h2><dl COMPACT><dt>N
+</dt><dd>(Integer, Input) - The set member requested.
+</dd><dt>ERRIND
+</dt><dd>(Integer, Output) - If the GKS state is WSOP (workstation open), WSAC (workstation active), or SGOP (segment open), then ERRIND is returned as &quot;0&quot;; otherwise ERRIND is returned as &quot;7&quot;.
+</dd><dt>OL
+</dt><dd>(Integer, Output) - The number of segment names that are currently in use.
+</dd><dt>SGNA
+</dt><dd>(Integer, Output) - If the GKS state is WSOP (workstation open), WSAC (workstation active), or SGOP (segment open), and if OL is larger than zero, then SGNA is returned as the name in the Nth element of the list of segment names that are currently in use; otherwise SGNA is undefined.</dd></dl><h2>Usage</h2>For NCAR GKS, segment names are integers between 0 and 99 inclusive (see the man page for GCRSG). 
+<p>If one wants to obtain a list of all segment names that are currently in use, then the procedure usually is first to determines the number of segment names currently in use by making an initial call to GQSGUS with first argument of &quot;1&quot;. If ERRIND is returned as &quot;0&quot;, then OL will tell you how many segments are currently in use. Then, to get the list of all segment names currently in use, call GQSGUS in a loop on N from 1 to OL and retrieve the N values of SGNA returned from such calls.</p>
+<h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+<h2>See Also</h2>Online: gevtm, gactm, gclsg, gcrsg, gcsgwk, gqopsg, gdsg, gssgt., ginq_set_seg_names 
+<p>Hardcopy: &quot;User&rsquo;s Guide for NCAR GKS-0A Graphics&quot;</p>
+<h2>Copyright</h2>Copyright (C) 1987-2009 
+ University Corporation for Atmospheric Research 
+ The use of this Software is governed by a License Agreement.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

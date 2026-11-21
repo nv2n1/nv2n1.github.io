@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter RSS Feeds by Keywords and Custom Rules - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-filter-rss-feed-items/">
+  <meta name="description" content="Filtering RSS feeds lets you reduce noise and focus on content that actually matters. Whether you want to exclude posts mentioning certain topics or only see …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Filter RSS Feeds by Keywords and Custom Rules">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-filter-rss-feed-items/">
+  <meta property="og:description" content="Filtering RSS feeds lets you reduce noise and focus on content that actually matters. Whether you want to exclude posts mentioning certain topics or only see …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/distributed-systems-academy/">Distributed Systems Academy</a>
+           &rsaquo; <a href="/security-cryptography-path/">Security &amp; Cryptography Path</a>
+          &rsaquo; <a href="/category/cryptography-keys/">Cryptography &amp; Keys</a>
+        </nav>
+        
+        <h1>Filter RSS Feeds by Keywords and Custom Rules</h1>
+        <time class="post-date" datetime="2018-03-24T11:45:01Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated May 17, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Filtering RSS feeds lets you reduce noise and focus on content that actually matters. Whether you want to exclude posts mentioning certain topics or only see items matching specific keywords, there are several practical approaches depending on your setup.</p>
+<h2 id="using-dedicated-feed-filtering-services">Using dedicated feed filtering services</h2>
+<p><strong>Feed43</strong> (<a href="https://www.feed43.com/" rel="nofollow noopener" target="_blank"><a href="https://www.feed43.com/">https://www.feed43.com/</a></a>) is one of the most reliable web-based tools for filtering and transforming RSS feeds. It lets you:</p>
+<ul>
+<li>Extract content from web pages and convert them to RSS</li>
+<li>Filter feeds by keywords (include or exclude)</li>
+<li>Extract specific fields and restructure the output</li>
+<li>Combine multiple feeds with rules applied</li>
+</ul>
+<p>Create a new feed, paste your source RSS URL, and set up rules like “keep only items containing: python” or “exclude items with: deprecated”.</p>
+<p><strong>Feedburner alternatives</strong> like <strong>Zapier</strong> (<a href="https://zapier.com/" rel="nofollow noopener" target="_blank"><a href="https://zapier.com/">https://zapier.com/</a></a>) can route RSS items to various actions based on conditions. You create a “Zap” that triggers when new feed items arrive, then apply filters:</p>
+<ul>
+<li>Contains specific keywords</li>
+<li>Doesn’t contain keywords</li>
+<li>Matches patterns or tags</li>
+<li>Published by specific authors</li>
+</ul>
+<h2 id="filtering-with-command-line-tools">Filtering with command-line tools</h2>
+<p>For more control, especially if you’re processing feeds regularly, use command-line utilities:</p>
+<p><strong>Using <code>xmllint</code> and <code>grep</code>:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -s https://example.com/feed.xml <span class="p">|</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  xmllint --xpath <span class="s2">&#34;//item[contains(title, &#39;keyword&#39;)]&#34;</span> - <span class="p">|</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  xmllint --format -
+</span></span></code></pre></div><p><strong>Using Python with <code>feedparser</code>:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">feedparser</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">feed</span> <span class="o">=</span> <span class="n">feedparser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;https://example.com/feed.xml&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">filtered</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="n">entry</span> <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">feed</span><span class="o">.</span><span class="n">entries</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="s1">&#39;keyword&#39;</span> <span class="ow">in</span> <span class="n">entry</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">and</span> 
+</span></span><span class="line"><span class="cl">       <span class="s1">&#39;exclude_word&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">entry</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">filtered</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">entry</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">entry</span><span class="o">.</span><span class="n">link</span><span class="si">}</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Install feedparser: <code>pip install feedparser</code></p>
+<p><strong>Using <code>jq</code> for JSON feeds:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -s https://api.example.com/feed.json <span class="p">|</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  jq <span class="s1">&#39;.items[] | select(.title | contains(&#34;keyword&#34;))&#39;</span>
+</span></span></code></pre></div><h2 id="self-hosted-solutions">Self-hosted solutions</h2>
+<p><strong>Miniflux</strong> (<a href="https://miniflux.app/" rel="nofollow noopener" target="_blank"><a href="https://miniflux.app/">https://miniflux.app/</a></a>) is a lightweight, self-hosted feed reader that supports keyword filtering and has integrations with services like Pocket. It offers:</p>
+<ul>
+<li>Built-in filtering rules per subscription</li>
+<li>Full-text search across all articles</li>
+<li>Custom entry template filtering</li>
+<li>API for automation</li>
+</ul>
+<p><strong>FreshRSS</strong> (<a href="https://www.freshrss.org/" rel="nofollow noopener" target="_blank"><a href="https://www.freshrss.org/">https://www.freshrss.org/</a></a>) provides similar functionality with more granular control:</p>
+<ul>
+<li>Per-feed keyword filtering</li>
+<li>Rules engine for automatic categorization</li>
+<li>Support for feed transformations</li>
+<li>Simplistic to complex rule structures</li>
+</ul>
+<h2 id="building-your-own-filter">Building your own filter</h2>
+<p>For maximum flexibility, create a simple systemd timer that processes feeds hourly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python3</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">feedparser</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">RULES</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;include&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;golang&#39;</span><span class="p">,</span> <span class="s1">&#39;rust&#39;</span><span class="p">,</span> <span class="s1">&#39;linux&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;exclude&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;windows&#39;</span><span class="p">,</span> <span class="s1">&#39;deprecated&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">filter_feed</span><span class="p">(</span><span class="n">feed_url</span><span class="p">,</span> <span class="n">rules</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">feed</span> <span class="o">=</span> <span class="n">feedparser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">feed_url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">filtered</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">feed</span><span class="o">.</span><span class="n">entries</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">text</span> <span class="o">=</span> <span class="p">(</span><span class="n">entry</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">                <span class="n">entry</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;summary&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># Check include rules (OR logic)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">rules</span><span class="p">[</span><span class="s1">&#39;include&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">rules</span><span class="p">[</span><span class="s1">&#39;include&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># Check exclude rules</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">word</span> <span class="ow">in</span> <span class="n">text</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">rules</span><span class="p">[</span><span class="s1">&#39;exclude&#39;</span><span class="p">]):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">filtered</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">filtered</span>
+</span></span></code></pre></div><p>Save as <code>feed_filter.py</code>, make it executable, and call it from a cron job or systemd timer to generate a filtered RSS feed on a schedule.</p>
+<h2 id="choosing-the-right-approach">Choosing the right approach</h2>
+<ul>
+<li><strong>Web-based tools</strong>: Best for quick setup, no technical overhead</li>
+<li><strong>Command-line tools</strong>: Ideal for one-off filtering or scripting into automation</li>
+<li><strong>Self-hosted readers</strong>: Good for long-term, private feed management with complex rules</li>
+<li><strong>Custom scripts</strong>: Necessary when you need specific logic or multiple filtering stages</li>
+</ul>
+<p>Most feeds benefit from a combination: use your reader’s built-in filters for common keywords, and supplementary tools like Feed43 for edge cases where feeds lack proper categorization.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

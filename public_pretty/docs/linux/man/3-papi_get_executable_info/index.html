@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>papi_get_executable_info(3) · Linux Manual Pages</title>
+<meta name="description" content="PAPI_get_executable_info –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-papi_get_executable_info/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>papi_get_executable_info(3)</h1>
+
+
+
+
+
+<p>PAPI_get_executable_info &#8211; </p>
+<p> Get the executable&#8217;s address space info.</p>
+<h2>Synopsis</h2>
+<h2>Detailed Description</h2>
+<pre>@par C Interface:
+#include &lt;papi.h&gt; @n
+const PAPI_exe_info_t *PAPI_get_executable_info( void );
+This function returns a pointer to a structure containing information 
+about the current program.
+@param fullname
+ Fully qualified path + filename of the executable.
+@param name
+ Filename of the executable with no path information.
+@param text_start, text_end
+ Start and End addresses of program text segment.
+@param data_start, data_end
+ Start and End addresses of program data segment.
+@param bss_start, bss_end
+ Start and End addresses of program bss segment.
+@retval PAPI_EINVAL 
+ One or more of the arguments is invalid. 
+@par Examples:</pre>
+<p>&nbsp;<wbr> </p>
+<pre>* const PAPI_exe_info_t *prginfo = NULL;
+* if ( ( prginfo = PAPI_get_executable_info( ) ) == NULL )
+* exit( 1 );
+* printf( &quot;Path+Program: %s, exeinfo-&gt;fullname );
+* printf( &quot;Program: %s, exeinfo-&gt;address_info.name );
+* printf( &quot;Text start: %p, Text end: %p, exeinfo-&gt;address_info.text_start, exeinfo-&gt;address_info.text_end) ;
+* printf( &quot;Data start: %p, Data end: %p, exeinfo-&gt;address_info.data_start, exeinfo-&gt;address_info.data_end );
+* printf( &quot;Bss start: %p, Bss end: %p, exeinfo-&gt;address_info.bss_start, exeinfo-&gt;address_info.bss_end );
+* </pre>
+<p><code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>PAPI_get_opt</code> </dd>
+<p> <code>PAPI_get_hardware_info</code> </p>
+<p> <code>PAPI_exe_info_t</code></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

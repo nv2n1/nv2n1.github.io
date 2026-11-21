@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tpm_setenable(8) · Linux Manual Pages</title>
+<meta name="description" content="tpm_setenable – change TPM enable states">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-tpm_setenable/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>tpm_setenable(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>TPM Management &#8211; tpm_setenable<br />
+ </center></p>
+<h2>Name</h2>
+<p>tpm_setenable &#8211; change TPM enable states</p>
+<h2>Synopsis</h2>
+<p><code>tpm_setenable</code> [<code>OPTION</code>] </p>
+<h2>Description</h2>
+<p><code>tpm_setenable</code> reports the status of the TPM&#8217;s flags regarding the enable state of the TPM. This is the default behavior and also accessible via the <code>&#8211;status</code> option. Requesting a report of this status prompts for the owner password. The <code>&#8211;enable</code> option changes the system&#8217;s TPM to the enabled state (via the TPM_OwnerSetDisable API). This operation prompts for the owner password and is persistent. The <code>&#8211;disable</code> option (via the TPM_OwnerSetDisable API) changes the system&#8217;s TPM to the disabled state. This operation prompts for the owner password and is persistent. A disabled TPM is essentially off and does not allow a tpm_takeownership to occur. The <code>&#8211;force</code> option overrides the owner password prompt and relies on physical presence for the operation authorization (via the TPM_PhysicalEnable and TPM_PhysicalDisable APIs). The <code>&#8211;enable</code>, <code>&#8211;disable</code>, and <code>&#8211;status</code> options are mutually exclusive and the last one on the command line will be carried out.</p>
+<dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display command usage info.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Display command version info.</dd>
+<dt><code>-l</code>, <code>&#8211;log</code> [none|error|info|debug]</dt>
+<dd>Set logging level.</dd>
+<dt><code>-u</code>, <code>&#8211;unicode</code></dt>
+<dd>Use TSS UNICODE encoding for passwords to comply with applications using TSS popup boxes</dd>
+<dt><code>-s</code>, <code>&#8211;status</code></dt>
+<dd>Report the status of flags regarding the TPM enable states.</dd>
+<dt><code>-e</code>, <code>&#8211;enable</code></dt>
+<dd>Make the TPM enabled. Operation is persistent and prompts for owner authorization.</dd>
+<dt><code>-d</code>, <code>&#8211;disable</code></dt>
+<dd>Make the TPM disabled. Operation is persistent and prompts for owner authorization.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>Overrides the prompt for owner authorization and uses physical presence to authorize the action.</dd>
+<dt><code>-z</code>, <code>&#8211;well-known</code></dt>
+<dd>Authenticate using 20 bytes of zeros as owner password (the default TSS Well Known Secret), instead of prompting for an owner password. </dd>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-tpm_version/">tpm_version</a></code>(1), <code><a href="/docs/linux/man/8-tpm_setpresence/">tpm_setpresence</a></code>(8), <code><a href="/docs/linux/man/8-tpm_takeownership/">tpm_takeownership</a></code>(8), <code><a href="/docs/linux/man/8-tpm_setactive/">tpm_setactive</a></code>(8), <code><a href="/docs/linux/man/8-tcsd/">tcsd</a></code>(8) </p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;trousers-users [at] lists.sourceforge.net&gt;</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

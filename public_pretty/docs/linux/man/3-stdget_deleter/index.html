@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdget_deleter(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdget_deleter/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdget_deleter(3)</h1>
+
+
+
+
+
+<p>std::get_deleter - std::get_deleter</p>
+<h2>Synopsis</h2>
+<pre><code>template &lt;class Deleter, class T&gt;
+(since C++ 11)
+    Deleter *get_deleter(const std::shared_ptr&lt;T&gt; &amp;p) noexcept;</code></pre> 
+<p>Access to the p&rsquo;s deleter. If the shared pointer p owns a deleter of type cv-unqualified Deleter (e.g. if it was created with one of the constructors that take a deleter as a parameter), then returns a pointer to the deleter. Otherwise, returns a null pointer.</p>
+<h2>Parameters</h2>
+<p>p - a shared pointer whose deleter needs to be accessed</p>
+<h2>Return value</h2>
+<p>A pointer to the owned deleter or nullptr. The returned pointer is valid at least as long as there remains at least one shared_ptr instance that owns it.</p>
+<h2>Notes</h2>
+<p>The returned pointer may outlive the last shared_ptr if, for example, std::weak_ptrs remain and the implementation doesn&rsquo;t destroy the deleter until the entire control block is destroyed.</p>
+<h2>Example</h2>
+<p>demonstrates that shared_ptr deleter is independent of the shared_ptr&rsquo;s type
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;memory&gt;
+struct Foo {
+int i;
+};
+void foo_deleter(Foo <em>p)
+{
+std::cout &lt;&lt; &quot;foo_deleter called!\n&quot;;
+delete p;
+}
+int main()
+{
+std::shared_ptr&lt;int&gt; aptr;
+{
+// create a shared_ptr that owns a Foo and a deleter
+auto foo_p = new Foo;
+std::shared_ptr&lt;Foo&gt; r(foo_p, foo_deleter);
+aptr = std::shared_ptr&lt;int&gt;(r, &amp;r-&gt;i); // aliasing ctor
+// aptr is now pointing to an int, but managing the whole Foo
+} // r gets destroyed (deleter not called)
+// obtain pointer to the deleter:
+if (auto del_p = std::get_deleter&lt;void (</em>)(Foo *)&gt;(aptr)) {
+std::cout &lt;&lt; &quot;shared_ptr&lt;int&gt; owns a deleter\n&quot;;
+if (*del_p == foo_deleter)
+std::cout &lt;&lt; &quot;&hellip;and it equals &amp;foo_deleter\n&quot;;
+} else
+std::cout &lt;&lt; &quot;The deleter of shared_ptr&lt;int&gt; is null!\n&quot;;
+} // deleter called here
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> shared_ptr&lt;int&gt; owns a deleter
+ <wbr> &hellip;and it equals &amp;foo_deleter
+ <wbr> foo_deleter called!</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> std::shared_ptr constructors
+constructor <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

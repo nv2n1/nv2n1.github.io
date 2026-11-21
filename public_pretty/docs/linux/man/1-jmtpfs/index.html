@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jmtpfs(1) · Linux Manual Pages</title>
+<meta name="description" content="jmtpfs – FUSE based MTP filesystem">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-jmtpfs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>jmtpfs(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> jmtpfs &#8211; FUSE based MTP filesystem </p>
+<h2>SYNOPSIS</h2>
+<p> <code>jmtpfs</code> [OPTIONS] &lt;mountpoint&gt; </p>
+<h2>DESCRIPTION</h2>
+<p> <code>jmtpfs</code> is a FUSE and libmtp based filesystem for accessing MTP (Media Transfer Protocol) devices. It was specifically designed for exchanging files between Linux systems and newer Android devices that support MTP but not USB Mass Storage. </p>
+<p> This manual page documents briefly the <code>jmtpfs</code> commands. </p>
+<h2>OPTIONS</h2>
+<h3>FUSE Options:</h3>
+<dl>
+<dt><code>-h</code></dt>
+<dd> Show fuse help options.</dd></dl>
+<h3>Application Options:</h3>
+<dl>
+<dt><code>-l</code> or <code>&#8211;listDevices</code></dt>
+<dd> list available mtp devices (busLocation, devNum, productId, vendorId, product, vendor) and then exit.</dd>
+<dt><code>-device=&lt;busnum&gt;,&lt;devnum&gt;</code></dt>
+<dd> Device to mount. If not specified the first device found is used.</dd>
+<dt><code>-V</code> or <code>&#8211;version</code></dt>
+<dd> Show jmtpfs and FUSE version information. </dd>
+</dl>
+<h2>UNMOUNT DEVICE</h2>
+<p> Use <code>fusermount -u &lt;mountpoint&gt;</code> to umount the device. </p>
+<h2>EXAMPLE</h2>
+<p> jmtpfs -o allow_other ~/transformer </p>
+<p> fusermount -u ~/transformer </p>
+<h2>UDEV RULES</h2>
+<p> You will need to identify the device (via dmesg) and add a new rule to; /lib/udev/rules.d/51-android.rules to identify the ATTRS{idVendor} and ATTRS{idProduct} for the device. </p>
+<p> Current rules are for the ASUS Transformer TF101 and Samsung GT. </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2012 Jason &quot;J&quot; Ferrara <a rel="nofollow" href="http://research.jacquette.com/">http://research.jacquette.com/</a> </p>
+<h2>AUTHOR</h2>
+<p> This manual page was originally written by Malcolm J Lewis &lt;malcolmlewis [at] opensuse.org&gt; for the openSUSE project. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

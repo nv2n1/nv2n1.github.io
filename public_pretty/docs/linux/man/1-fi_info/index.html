@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fi_info(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-fi_info/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>fi_info(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>fi_info - Simple utility to query for fabric interfaces</p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt>
+</dt><dd> <pre><code>
+&amp;nbsp;
+fi_info &amp;nbsp;
+[OPTIONS]
+</code></pre></dd></dl>
+<h2>DESCRIPTION</h2>
+<p>The fi_info utility can be used to query for available fabric interfaces. The utility supports filtering based on a number of options such as endpoint type, provider name, or supported modes. Additionally, fi_info can also be used to discover the environment variables that can be used to tune provider specific parameters. If no filters are specified, then all available fabric interfaces for all providers and endpoint types will be returned.</p>
+<h2>OPTIONS</h2>
+<h3>Filtering</h3>
+<p>-n, &ndash;node=&lt;NAME&gt; : Node name or address used to filter interfaces. Only interfaces which can reach the given node or address will respond.</p>
+<p>-P, &ndash;port=&lt;PORT&gt; : Port number used to filter interfaces.</p>
+<p>-c, &ndash;caps=&lt;CAP1|CAP2&gt;.. : Pipe separated list of capabilities used to filter interfaces. Only interfaces supporting all of the given capabilities will respond. For more information on capabilities, see fi_getinfo(3).</p>
+<p>-m, &ndash;mode=&lt;MOD1|MOD2&gt;.. : Pipe separated list of modes used to filter interfaces. Only interfaces supporting all of the given modes will respond. For more information on, modes see fi_getinfo(3).</p>
+<p>-t, &ndash;ep_type=&lt;EPTYPE&gt; : Specifies the type of fabric interface communication desired. For example, specifying FI_EP_DGRAM would return only interfaces which support unreliable datagram. For more information on endpoint types, see fi_endpoint(3).</p>
+<p>-a, &ndash;addr_format=&lt;FMT&gt; : Filter fabric interfaces by their address format. For example, specifying FI_SOCKADDR_IN would return only interfaces which use sockaddr_in structures for addressing. For more information on address formats, see fi_getinfo(3).</p>
+<p>-p, &ndash;provider=&lt;PROV&gt; : Filter fabric interfaces by the provider implementation. For a list of providers, see the &ndash;list option.</p>
+<p>-d, &ndash;domain=&lt;DOMAIN&gt; : Filter interfaces to only those with the given domain name.</p>
+<p>-f, &ndash;fabric=&lt;FABRIC&gt; : Filter interfaces to only those with the given fabric name.</p>
+<h3>Discovery</h3>
+<p>-e, &ndash;env : List libfabric related environment levels which can be used to enable extra configuration or tuning.</p>
+<p>-l, &ndash;list : List available libfabric providers.</p>
+<p>-v, &ndash;verbose : By default, fi_info will display a summary of each of the interfaces discovered. If the verbose option is enabled, then all of the contents of the fi_info structure are displayed. For more information on the data contained in the fi_info structure, see fi_getinfo(3).</p>
+<p>&ndash;version : Display versioning information.</p>
+<h2>USAGE EXAMPLES</h2>
+<dl>
+<dt>
+</dt><dd> <pre>
+$&nbsp;fi_info -n 30.0.11.1 -p usnic -t FI_EP_DGRAM
+</pre></dd></dl>
+<p>This will respond with all fabric interfaces that can reach address 30.0.11.1 using endpoint type FI_EP_DGRAM with the usNIC provider.</p>
+<h2>OUTPUT</h2>
+<p>By default fi_info will output a summary of the fabric interfaces discovered:</p>
+<dl>
+<dt>
+</dt><dd> <pre><code>
+$ &amp;nbsp;
+./ fi_info - n 30.0.11.1 - p usnic - t FI_EP_DGRAM provider : usnic &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+fabric : 30.0.11.0 / 24 &amp; nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+domain : usnic_2
+             &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+version : 1.0 &amp; nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+type : FI_EP_DGRAM
+           &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+protocol : FI_PROTO_UDP
+</code></pre></dd></dl>
+<p>To see the full fi_info structure, specify the -v option.</p>
+<h2>SEE ALSO</h2>
+<p>fi_getinfo(3), fi_endpoint(3)</p>
+<h2>AUTHORS</h2>
+<p>OpenFabrics.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

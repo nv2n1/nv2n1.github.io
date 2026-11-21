@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>radcrypt(8) · Linux Manual Pages</title>
+<meta name="description" content="radcrypt – generate password hash for use with radius, or validates a password hash">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-radcrypt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>radcrypt(8)</h1>
+
+
+
+
+
+<p>radcrypt &#8211; generate password hash for use with radius, or validates a password hash</p>
+<h2>Synopsis</h2>
+<p><code>radcrypt</code> [<code>-d</code>|<code>&#8211;des</code>] [<code>-m</code>|<code>&#8211;md5</code>] [<code>-c</code>|<code>&#8211;check</code>] <i>plaintext_password</i> [<i>hashed_password</i>]</p>
+<h2>Description</h2>
+<p><code>radcrypt</code> generates a hashed digest of a plaintext password, or can validate if a password hash matches a plaintext password. DES and MD5 hashes are currently supported. When generating a password hash a random salt is generated and applied. A hashed password can be validated by specifying <i>-c</i> or <i>&#8211;check</i> and passing <i>hashed_password</i> after <i>plaintext_password</i> on the command line. In this case <i>hashed_password</i> will be checked to see if it matches <i>plaintext_password</i>. If so &quot;Password OK&quot; will be printed and the exit status will be 1, otherwise &quot;Password BAD&quot; will be printed and exit status will be 0 (Note this is the opposite of a normal successful shell status). </p>
+<h2>Options</h2>
+<dl>
+<dt>-d &#8211;des</dt>
+<dd>Use a DES (Data Encryption Standard) hash (default). Ignored if performing a password check.</dd>
+<dt>-m &#8211;md5</dt>
+<dd>Use a MD5 (Message Digest 5) hash. Ignored if performing a password check.</dd>
+<dt>-c &#8211;check</dt>
+<dd>Perform a validation check on a password hash to verify if it matches the plantext password. </dd>
+</dl>
+<h2>Examples</h2>
+<pre>$ radcrypt foobar
+HaX0xn7Qy650Q
+$ radcrypt -c foobar HaX0xn7Qy650Q
+Password OK</pre>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-radiusd/">radiusd</a>(8), <a href="/docs/linux/man/3-crypt/">crypt</a>(3)</p>
+<h2>Authors</h2>
+<p>Miquel van Smoorenburg &lt;miquels [at] cistron-office.nl&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

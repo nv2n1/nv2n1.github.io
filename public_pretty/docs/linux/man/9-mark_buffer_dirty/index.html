@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mark_buffer_dirty(9) · Linux Manual Pages</title>
+<meta name="description" content="mark_buffer_dirty – mark a buffer_head as needing writeout">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-mark_buffer_dirty/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>mark_buffer_dirty(9)</h1>
+
+
+
+
+
+<p>mark_buffer_dirty &#8211; mark a buffer_head as needing writeout</p>
+<h2>Synopsis</h2>
+<pre><code>void mark_buffer_dirty(struct buffer_head *bh);</code></pre>
+<h2>Arguments</h2>
+<p><i>bh</i></p>
+<dl>
+<dd>
+</dd><dd>the buffer_head to mark dirty</dd></dl>
+<h2>Description</h2>
+<p><code>mark_buffer_dirty</code> will set the dirty bit against the buffer, then set its backing page dirty, then tag the page as dirty in its address_space&#8217;s radix tree and then attach the address_space&#8217;s inode to its superblock&#8217;s dirty inode list. </p>
+<p> <code>mark_buffer_dirty</code> is atomic. It takes bh-&gt;b_page-&gt;mapping-&gt;private_lock, mapping-&gt;tree_lock and mapping-&gt;host-&gt;i_lock.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

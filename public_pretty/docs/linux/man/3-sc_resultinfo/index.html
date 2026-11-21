@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_resultinfo(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::ResultInfo –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_resultinfo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_resultinfo(3)</h1>
+
+
+
+
+
+<p>sc::ResultInfo &#8211; </p>
+<p> This is a base class for all of Compute&#8217;s result types.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;compute.h&gt;</code></pre>
+<p> Inherited by <code>sc::AccResultInfo</code>, <code>sc::NCResult&lt; T &gt;</code>, and <code>sc::Result&lt; T &gt;</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>ResultInfo</code> (<code>Compute</code> *c) </p>
+<p> int &amp; <code>compute</code> () </p>
+<p> const int &amp; <code>compute</code> () const </p>
+<p> int <code>compute</code> (int c) </p>
+<p> int &amp; <code>computed</code> () </p>
+<p> const int &amp; <code>computed</code> () const </p>
+<p> virtual int <code>needed</code> () const</p>
+<h3>Protected Member Functions</h3>
+<pre><code>virtual void update ()
+ResultInfo (StateIn &amp;, Compute *)
+ResultInfo (const ResultInfo &amp;, Compute *)
+virtual void save_data_state (StateOut &amp;)
+virtual void restore_state (StateIn &amp;)
+ResultInfo &amp; operator= (const ResultInfo &amp;)
+Protected Attributes
+int _compute
+int _computed
+Compute * _c</code></pre>
+<h2>Detailed Description</h2>
+<p>This is a base class for all of Compute&#8217;s result types. </p>
+<p> Usually Result&lt;Type&gt; will be used to create a result that has a particular datum associated with it, however a <code>ResultInfo</code> can also be declared to keep track of datum&#8217;s for which it is awkward to use Result_dec.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rlm_files(5) · Linux Manual Pages</title>
+<meta name="description" content="rlm_files – FreeRADIUS Module">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-rlm_files/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>rlm_files(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>rlm_files &#8211; FreeRADIUS Module</p>
+<h2>Description</h2>
+<p>The <i>rlm_files</i> module uses the &#8216;users&#8217; file for accessing authorization information for users. Additionally, it supports a &#8216;users&#8217; file syntax to be applied to the accounting and pre-proxy sections. </p>
+<p> The main configuration items to be aware of are:</p>
+<dl>
+<dt>usersfile</dt>
+<dd>The filename of the &#8216;users&#8217; file, which is parsed during the authorization stage of this module.</dd>
+<dt>acctusersfile</dt>
+<dd>The filename of the &#8216;users&#8217; file, which is parsed during the accounting stage of this module.</dd>
+<dt>preproxy_usersfile</dt>
+<dd>The filename of the &#8216;users&#8217; file, which is parsed during the pre_proxy stage of this module.</dd>
+<dt>compat</dt>
+<dd>This option allows FreeRADIUS to parse an old style Cistron syntax. The default is &#8216;no&#8217;. If you need to parse an old style Cistron file, set this option to &#8216;cistron&#8217;.</dd>
+<dt>key</dt>
+<dd>This option lets you set the attribute to use as a key to find entries. The default is &quot;%{%{Stripped-User-Name}:-%{User-Name}}&quot;. Note that the key MUST supply real data. Dynamic attributes like &quot;Group&quot; will not work, because the &quot;Group&quot; attribute can only be used as a comparison, to see if a user is in a Unix group. It will not return the name of the Unix group that a user is in.</dd></dl>
+<p> If you want to use groups as a key, see the <i>rlm_passwd</i>, which will create a real attribute that contains the group name. </p>
+<p> This configuration entry enables you to have configurations that perform per-group checks, and return per-group attributes, where the group membership is dynamically defined by a previous module. It also lets you do things like key off of attributes in the reply, and express policies like like &quot;when I send replies containing attribute FOO with value BAR, do more checks, and maybe send additional attributes&quot;.</p>
+<h2>Configuration</h2>
+<dl>
+<dd>
+<pre>modules {
+ ... stuff here ...
+<br>
+ files {
+<br>
+ usersfile = %{confdir}/users
+<br>
+ acctusersfile = %{confdir}/acct_users
+<br>
+ preproxy_usersfile = %{confdir}/preproxy_users
+<br>
+ compat = no
+<br>
+ key = %{%{Stripped-User-Name}:-%{User-Name}}
+<br>
+ }
+<br>
+ ... stuff here ...
+<br>
+}</pre>
+</dd></dl>
+<h2>Sections</h2>
+<p><code>authorization,</code> <code>accounting,</code> <code>pre_proxy</code></p>
+<h2>Files</h2>
+<p><i>/etc/raddb/radiusd.conf,</i> <i>/etc/raddb/users,</i> <i>/etc/raddb/acct_users,</i> <i>/etc/raddb/preproxy_users</i></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-radiusd/">radiusd</a></code>(8), <code><a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a></code>(5), <code><a href="/docs/linux/man/5-users/">users</a></code>(5)</p>
+<h2>Authors</h2>
+<p>Chris Parker, cparker [at] segv.org</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

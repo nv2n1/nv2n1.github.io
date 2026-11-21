@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-sh-i18n-envsubst(1) · Linux Manual Pages</title>
+<meta name="description" content="git-sh-i18n–envsubst – Git’s own">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-sh-i18n-envsubst/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-sh-i18n-envsubst(1)</h1>
+
+
+
+
+
+<p>git-sh-i18n&#8211;envsubst &#8211; Git&#8217;s own </p>
+<p> <a href="/docs/linux/man/1-envsubst/">envsubst</a>(1) for i18n fallbacks</p>
+<h2>Synopsis</h2>
+<pre>eval_gettext () {
+ printf &quot;%s&quot; &quot;$1&quot; | (
+ export PATH $(<i>git sh-i18n--envsubst</i> --variables &quot;$1&quot;);
+ <i>git sh-i18n--envsubst</i> &quot;$1&quot;
+ )
+}</pre>
+<h2>Description</h2>
+<p>This is not a command the end user would want to run. Ever. This documentation is meant for people who are studying the plumbing scripts and/or are writing new ones. </p>
+<p> <i>git sh-i18n&#8211;envsubst</i> is Git&#8217;s stripped-down copy of the GNU <code><a href="/docs/linux/man/1-envsubst/">envsubst</a>(1)</code> program that comes with the GNU gettext package. It&#8217;s used internally by <code><a href="/docs/linux/man/1-git-sh-i18n/">git-sh-i18n</a></code>(1) to interpolate the variables passed to the <code>eval_gettext</code> function. </p>
+<p> No promises are made about the interface, or that this program won&#8217;t disappear without warning in the next version of Git. Don&#8217;t use it.</p>
+<h2>Git</h2>
+<p>Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

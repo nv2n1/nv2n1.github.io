@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdthis_thread(3) · Linux Manual Pages</title>
+<meta name="description" content="std::this_thread –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdthis_thread/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdthis_thread(3)</h1>
+
+
+
+
+
+<p>std::this_thread &#8211;</p>
+<h2>Synopsis</h2>
+<h3>Functions</h3>
+<pre><code>void __sleep_for (chrono::seconds, chrono::nanoseconds)
+thread::id get_id () noexcept
+template&lt;typename _Rep , typename _Period &gt; void sleep_for (const chrono::duration&lt; _Rep, _Period &gt; &amp;__rtime)
+template&lt;typename _Clock , typename _Duration &gt; void sleep_until (const chrono::time_point&lt; _Clock, _Duration &gt; &amp;__atime)
+void yield () noexcept</code></pre>
+<h2>Detailed Description</h2>
+<p>ISO C++ 2011 entities sub-namespace for thread. 30.3.2 Namespace this_thread.</p>
+<h2>Function Documentation</h2>
+<h3><code>thread::id</code> std::this_thread::get_id () [inline], [noexcept]</h3>
+<p>get_id </p>
+<p> Definition at line 252 of file thread.</p>
+<h3>template&lt;typename _Rep , typename _Period &gt; void std::this_thread::sleep_for (const chrono::duration&lt; _Rep, _Period &gt; &amp;__rtime) [inline]</h3>
+<p>sleep_for </p>
+<p> Definition at line 269 of file thread. </p>
+<p> References std::chrono::duration_cast(). </p>
+<p> Referenced by sleep_until().</p>
+<h3>template&lt;typename _Clock , typename _Duration &gt; void std::this_thread::sleep_until (const chrono::time_point&lt; _Clock, _Duration &gt; &amp;__atime) [inline]</h3>
+<p>sleep_until </p>
+<p> Definition at line 288 of file thread. </p>
+<p> References sleep_for().</p>
+<h3>void std::this_thread::yield () [inline], [noexcept]</h3>
+<p>yield </p>
+<p> Definition at line 256 of file thread.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for libstdc++ from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

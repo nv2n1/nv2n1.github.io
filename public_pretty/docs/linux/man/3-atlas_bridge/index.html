@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>atlas_bridge(3) · Linux Manual Pages</title>
+<meta name="description" content="Atlas::Bridge – Atlas stream bridge.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-atlas_bridge/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>atlas_bridge(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Atlas::Bridge &#8211; <code>Atlas</code> stream bridge. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;<a href="file:/usr/include/Bridge.h">Bridge.h</a>&gt; </p>
+<p> Inherited by <code>Atlas::Codec</code>, <code>Atlas::Formatter</code>, <code>Atlas::Message::DecoderBase</code>, DebugBridge, and DebugBridge. </p>
+<h3>Public Member Functions</h3>
+<p>virtual void <code>streamBegin</code> ()=0<br />
+ <i>Begin an </i><code>Atlas</code> stream.<br />
+ virtual void <code>streamMessage</code> ()=0<br />
+ <i>Start a message in an </i><code>Atlas</code> stream.<br />
+ virtual void <code>streamEnd</code> ()=0<br />
+ <i>Ends the </i><code>Atlas</code> stream.<br />
+ virtual void <code>mapMapItem</code> (const std::string &amp;name)=0<br />
+ <i>Starts a map object to the currently streamed map. </i><br />
+ virtual void <code>mapListItem</code> (const std::string &amp;name)=0<br />
+ <i>Starts a list object to the currently streamed map. </i><br />
+ virtual void <code>mapIntItem</code> (const std::string &amp;name, long)=0<br />
+ <i>Adds an integer to the currently streames map. </i><br />
+ virtual void <code>mapFloatItem</code> (const std::string &amp;name, double)=0<br />
+ <i>Adds a float to the currently streamed map. </i><br />
+ virtual void <code>mapStringItem</code> (const std::string &amp;name, const std::string &amp;)=0<br />
+ <i>Adds a string to the currently streamed map. </i><br />
+ virtual void <code>mapEnd</code> ()=0<br />
+ <i>Ends the currently streamed map. </i><br />
+ virtual void <code>listMapItem</code> ()=0<br />
+ <i>Starts a map object in the currently streamed list. </i><br />
+ virtual void <code>listListItem</code> ()=0<br />
+ <i>Starts a list object in the currently streamed list. </i><br />
+ virtual void <code>listIntItem</code> (long)=0<br />
+ <i>Adds an integer to the currently streames list. </i><br />
+ virtual void <code>listFloatItem</code> (double)=0<br />
+ <i>Adds a float to the currently streamed list. </i><br />
+ virtual void <code>listStringItem</code> (const std::string &amp;)=0<br />
+ <i>Adds a string to the currently streamed list. </i><br />
+ virtual void <code>listEnd</code> ()=0<br />
+ <i>Ends the currently streamed list. </i></p>
+<h2>Detailed Description</h2>
+<p><code>Atlas</code> stream bridge. </p>
+<p> This class presents an interface that accepts an <code>Atlas</code> stream. The stream begins with a call to <code>streamBegin()</code> and finishes with <code>streamEnd()</code>. While the <code>Bridge</code> is in this stream context, a message can be sent using <code>streamMessage()</code>. This puts the <code>Bridge</code> into a map context, allowing various map*Item() calls. </p>
+<p> Several classes are derived from <code>Bridge</code>, the most notable of which is <code>Codec</code>, which accepts an <code>Atlas</code> stream for encoding and transmission. </p>
+<p> <code>See also:</code></p>
+<dl COMPACT>
+<dd><code>Codec</code></dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

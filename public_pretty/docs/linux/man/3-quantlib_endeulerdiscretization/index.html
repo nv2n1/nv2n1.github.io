@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_endeulerdiscretization(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::EndEulerDiscretization – Euler end-point discretization for stochastic processes.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_endeulerdiscretization/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_endeulerdiscretization(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::EndEulerDiscretization &#8211; Euler end-point discretization for stochastic processes. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/processes/endeulerdiscretization.hpp&gt; </p>
+<p> Inherits <code>QuantLib::StochasticProcess::discretization</code>, and <code>QuantLib::StochasticProcess1D::discretization</code>. </p>
+<h3>Public Member Functions</h3>
+<p><code>Disposable</code>&lt; <code>Array</code> &gt; <code>drift</code> (const <code>StochasticProcess</code> &amp;, Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>
+<p> Real <code>drift</code> (const <code>StochasticProcess1D</code> &amp;, Time t0, Real x0, Time dt) const </p>
+<p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>diffusion</code> (const <code>StochasticProcess</code> &amp;, Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>
+<p> Real <code>diffusion</code> (const <code>StochasticProcess1D</code> &amp;, Time t0, Real x0, Time dt) const </p>
+<p> <code>Disposable</code>&lt; <code>Matrix</code> &gt; <code>covariance</code> (const <code>StochasticProcess</code> &amp;, Time t0, const <code>Array</code> &amp;x0, Time dt) const </p>
+<p> Real <code>variance</code> (const <code>StochasticProcess1D</code> &amp;, Time t0, Real x0, Time dt) const </p>
+<h2>Detailed Description</h2>
+<p>Euler end-point discretization for stochastic processes. </p>
+<h2>Member Function Documentation</h2>
+<h3><code>Disposable</code>&lt;<code>Array</code>&gt; drift (const <code>StochasticProcess</code> &amp;, Time t0, const <code>Array</code> &amp; x0, Time dt) const [virtual]</h3>
+<p>Returns an approximation of the drift defined as $ mu(t_0 + Delta t, mathbf{x}_0) Delta t $. </p>
+<p> Implements <code>discretization</code>.</p>
+<h3>Real drift (const <code>StochasticProcess1D</code> &amp;, Time t0, Real x0, Time dt) const [virtual]</h3>
+<p>Returns an approximation of the drift defined as $ mu(t_0 + Delta t, x_0) Delta t $. </p>
+<p> Implements <code>discretization</code>.</p>
+<h3><code>Disposable</code>&lt;<code>Matrix</code>&gt; diffusion (const <code>StochasticProcess</code> &amp;, Time t0, const <code>Array</code> &amp; x0, Time dt) const [virtual]</h3>
+<p>Returns an approximation of the diffusion defined as $ igma(t_0 + Delta t, mathbf{x}_0) qrt{Delta t} $. </p>
+<p> Implements <code>discretization</code>.</p>
+<h3>Real diffusion (const <code>StochasticProcess1D</code> &amp;, Time t0, Real x0, Time dt) const [virtual]</h3>
+<p>Returns an approximation of the diffusion defined as $ igma(t_0 + Delta t, x_0) qrt{Delta t} $. </p>
+<p> Implements <code>discretization</code>.</p>
+<h3><code>Disposable</code>&lt;<code>Matrix</code>&gt; covariance (const <code>StochasticProcess</code> &amp;, Time t0, const <code>Array</code> &amp; x0, Time dt) const [virtual]</h3>
+<p>Returns an approximation of the covariance defined as $ igma(t_0 + Delta t, mathbf{x}_0)^2 Delta t $. </p>
+<p> Implements <code>discretization</code>.</p>
+<h3>Real variance (const <code>StochasticProcess1D</code> &amp;, Time t0, Real x0, Time dt) const [virtual]</h3>
+<p>Returns an approximation of the variance defined as $ igma(t_0 + Delta t, x_0)^2 Delta t $. </p>
+<p> Implements <code>discretization</code>. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

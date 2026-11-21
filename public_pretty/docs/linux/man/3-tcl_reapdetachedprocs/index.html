@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcl_reapdetachedprocs(3) · Linux Manual Pages</title>
+<meta name="description" content="Tcl_DetachPids, Tcl_ReapDetachedProcs, Tcl_WaitPid – manage child processes in background">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tcl_reapdetachedprocs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tcl_reapdetachedprocs(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Tcl_DetachPids, Tcl_ReapDetachedProcs, Tcl_WaitPid &#8211; manage child processes in background </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tcl.h&gt;</code>
+<code>Tcl_DetachPids</code>(<i>numPids, pidPtr</i>)
+<code>Tcl_ReapDetachedProcs</code>()
+Tcl_Pid
+<code>Tcl_WaitPid</code>(<i>pid, statusPtr, options</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>int <i>numPids</i> (in) Number of process ids contained in the array pointed to by <i>pidPtr</i>.</dd>
+<dd>int <i>*pidPtr</i> (in) Address of array containing <i>numPids</i> process ids.</dd>
+<dd>Tcl_Pid <i>pid</i> (in) The id of the process (pipe) to wait for.</dd>
+<dd>int <i>*statusPtr</i> (out) The result of waiting on a process (pipe). Either 0 or ECHILD.</dd>
+<dd>int <i>options</i> (in) The options controlling the wait. WNOHANG specifies not to wait when checking the process.
+</dd></dl>
+<h2>Description</h2>
+<p><code>Tcl_DetachPids</code> and <code>Tcl_ReapDetachedProcs</code> provide a mechanism for managing subprocesses that are running in background. These procedures are needed because the parent of a process must eventually invoke the <code>waitpid</code> kernel call (or one of a few other similar kernel calls) to wait for the child to exit. Until the parent waits for the child, the child&#8217;s state cannot be completely reclaimed by the system. If a parent continually creates children and doesn&#8217;t wait on them, the system&#8217;s process table will eventually overflow, even if all the children have exited. </p>
+<p> <code>Tcl_DetachPids</code> may be called to ask Tcl to take responsibility for one or more processes whose process ids are contained in the <i>pidPtr</i> array passed as argument. The caller presumably has started these processes running in background and does not want to have to deal with them again. </p>
+<p> <code>Tcl_ReapDetachedProcs</code> invokes the <code>waitpid</code> kernel call on each of the background processes so that its state can be cleaned up if it has exited. If the process has not exited yet, <code>Tcl_ReapDetachedProcs</code> does not wait for it to exit; it will check again the next time it is invoked. Tcl automatically calls <code>Tcl_ReapDetachedProcs</code> each time the <code>exec</code> command is executed, so in most cases it is not necessary for any code outside of Tcl to invoke <code>Tcl_ReapDetachedProcs</code>. However, if you call <code>Tcl_DetachPids</code> in situations where the <code>exec</code> command may never get executed, you may wish to call <code>Tcl_ReapDetachedProcs</code> from time to time so that background processes can be cleaned up. </p>
+<p> <code>Tcl_WaitPid</code> is a thin wrapper around the facilities provided by the operating system to wait on the end of a spawned process and to check a whether spawned process is still running. It is used by <code>Tcl_ReapDetachedProcs</code> and the channel system to portably access the operating system. </p>
+<h2>Keywords</h2>
+<p>background, child, detach, process, wait</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

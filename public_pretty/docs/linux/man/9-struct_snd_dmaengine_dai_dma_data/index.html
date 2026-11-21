@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_snd_dmaengine_dai_dma_data(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_snd_dmaengine_dai_dma_data/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_snd_dmaengine_dai_dma_data(9)</h1>
+
+
+
+
+
+<p>struct_snd_dmaengine_dai_dma_data - DAI DMA configuration data</p>
+<h2>Synopsis</h2>
+<pre><code>struct snd_dmaengine_dai_dma_data {
+    dma_addr_t addr;
+    enum dma_slave_buswidth addr_width;
+    u32 maxburst;
+    unsigned int slave_id;
+    void *filter_data;
+    const char *chan_name;
+    unsigned int fifo_size;
+    unsigned int flags;
+};</code></pre>
+<h2>Members</h2>
+<p>addr</p>
+<dl><dd>Address of the DAI data source or destination register.</dd></dl>
+<p>addr_width</p>
+<dl><dd>Width of the DAI data source or destination register.</dd></dl>
+<p>maxburst</p>
+<dl><dd>Maximum number of words(note: words, as in units of the src_addr_width member, not bytes) that can be send to or received from the DAI in one burst.</dd></dl>
+<p>slave_id</p>
+<dl><dd>Slave requester id for the DMA channel.</dd></dl>
+<p>filter_data</p>
+<dl><dd>Custom DMA channel filter data, this will usually be used when requesting the DMA channel.</dd></dl>
+<p>chan_name</p>
+<dl><dd>Custom channel name to use when requesting DMA channel.</dd></dl>
+<p>fifo_size</p>
+<dl><dd>FIFO size of the DAI controller in bytes</dd></dl>
+<p>flags</p>
+<dl><dd>PCM_DAI flags, only SND_DMAENGINE_PCM_DAI_FLAG_PACK for now</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

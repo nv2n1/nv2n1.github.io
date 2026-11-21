@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xreparentwindow(3) · Linux Manual Pages</title>
+<meta name="description" content="XReparentWindow – reparent windows">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xreparentwindow/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xreparentwindow(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XReparentWindow &#8211; reparent windows </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>int XReparentWindow(Display *<i>display</i>, Window <i>w</i>, Window <i>parent</i>, int <i>x</i>, int <i>y</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>parent</i></dt>
+<dd>Specifies the parent window.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window.</dd>
+<dt><i>x</i></dt>
+<dd>
+</dd><dt><i>y</i></dt>
+<dd>Specify the x and y coordinates of the position in the new parent window.</dd></dl>
+<h2>Description</h2>
+<p>If the specified window is mapped, <code>XReparentWindow</code> automatically performs an <code>UnmapWindow</code> request on it, removes it from its current position in the hierarchy, and inserts it as the child of the specified parent. The window is placed in the stacking order on top with respect to sibling windows. </p>
+<p> After reparenting the specified window, <code>XReparentWindow</code> causes the X server to generate a <code>ReparentNotify</code> event. The override_redirect member returned in this event is set to the window&#8217;s corresponding attribute. Window manager clients usually should ignore this window if this member is set to <code>True</code>. Finally, if the specified window was originally mapped, the X server automatically performs a <code>MapWindow</code> request on it. </p>
+<p> The X server performs normal exposure processing on formerly obscured windows. The X server might not generate <code>Expose</code> events for regions from the initial <code>UnmapWindow</code> request that are immediately obscured by the final <code>MapWindow</code> request. A <code>BadMatch</code> error results if:</p>
+<dl COMPACT>
+<dt>&bull;</dt>
+<dd>The new parent window is not on the same screen as the old parent window.</dd>
+<dt>&bull;</dt>
+<dd>The new parent window is the specified window or an inferior of the specified window.</dd>
+<dt>&bull;</dt>
+<dd>The new parent is <code>InputOnly</code>, and the window is not.</dd>
+<dt>&bull;</dt>
+<dd>The specified window has a <code>ParentRelative</code> background, and the new parent window is not the same depth as the specified window.</dd></dl>
+<p> <code>XReparentWindow</code> can generate <code>BadMatch</code> and <code>BadWindow</code> errors.</p>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xchangesaveset/">XChangeSaveSet</a>(3)<br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

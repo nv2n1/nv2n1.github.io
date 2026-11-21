@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>memcached_pool_push(3) · Linux Manual Pages</title>
+<meta name="description" content="memcached_pool_push – libmemcached Documentation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-memcached_pool_push/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>memcached_pool_push(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> memcached_pool_push &#8211; libmemcached Documentation</p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;libmemcached/memcached_pool.h&gt;</p>
+<dl>
+<dt><code>memcached_pool_st</code></dt>
+<dd>
+</dd><dt><i>memcached_pool_st</i>* memcached_pool(const char<i>&nbsp;<wbr>*option_string</i>, size_t<i>&nbsp;<wbr>option_string_length</i>)</dt>
+<dd>
+</dd><dt><i>memcached_pool_st</i>* memcached_pool_create(memcached_st*<i>&nbsp;<wbr>mmc</i>, int<i>&nbsp;<wbr>initial</i>, int<i>&nbsp;<wbr>max</i>)</dt>
+<dd>
+<p> Deprecated since version 0.46: Use <i>memcached_pool()</i></p>
+</dd><dt><code>memcached_st* memcached_pool_destroy(</code><i>memcached_pool_st</i>*<i>&nbsp;<wbr>pool</i>)</dt>
+<dd>
+</dd><dt><code>memcached_st* memcached_pool_pop(</code><i>memcached_pool_st</i>*<i>&nbsp;<wbr>pool</i>, bool<i>&nbsp;<wbr>block</i>, memcached_return_t<i>&nbsp;<wbr>*rc</i>)</dt>
+<dd>
+<p> Deprecated since version 0.53: Use <i>memcached_pool_fetch()</i></p>
+</dd><dt><code>memcached_st* memcached_pool_fetch(</code><i>memcached_pool_st</i>*, struct timespec*<i>&nbsp;<wbr>relative_time</i>, memcached_return_t*<i>&nbsp;<wbr>rc</i>)</dt>
+<dd>
+<p> New in version 0.53: Synonym for memcached_pool_pop</p>
+</dd><dt><code>memcached_return_t memcached_pool_push(</code><i>memcached_pool_st</i>*<i>&nbsp;<wbr>pool</i>, memcached_st<i>&nbsp;<wbr>*mmc</i>)</dt>
+<dd>
+<p> Deprecated since version 0.53: Use <i>memcached_pool_push()</i></p>
+</dd><dt><code>memcached_return_t memcached_pool_release(</code><i>memcached_pool_st</i>*<i>&nbsp;<wbr>pool</i>, memcached_st*<i>&nbsp;<wbr>mmc</i>)</dt>
+<dd>
+<p> New in version 0.53: Synonym for memcached_pool_push.</p>
+</dd><dt><code>memcached_return_t memcached_pool_behavior_set(</code><i>memcached_pool_st</i><i>&nbsp;<wbr>*pool</i>, memcached_behavior_t<i>&nbsp;<wbr>flag</i>, uint64_t<i>&nbsp;<wbr>data</i>)</dt>
+<dd>
+</dd><dt><code>memcached_return_t memcached_pool_behavior_get(</code><i>memcached_pool_st</i><i>&nbsp;<wbr>*pool</i>, memcached_behavior_t<i>&nbsp;<wbr>flag</i>, uint64_t<i>&nbsp;<wbr>*value</i>)</dt>
+<dd>
+<p> Compile and link with -lmemcachedutil -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> <i>memcached_pool()</i> is used to create a connection pool of objects you may use to remove the overhead of using memcached_clone for short lived <code>memcached_st</code> objects. Please see <code>libmemcached_configuration</code> for details on the format of the configuration string. </p>
+<p> <i>memcached_pool_destroy()</i> is used to destroy the connection pool created with <i>memcached_pool_create()</i> and release all allocated resources. It will return the pointer to the <code>memcached_st</code> structure passed as an argument to <i>memcached_pool_create()</i>, and returns the ownership of the pointer to the caller when created with <i>memcached_pool_create()</i>, otherwise NULL is returned.. </p>
+<p> <i>memcached_pool_fetch()</i> is used to fetch a connection structure from the connection pool. The relative_time argument specifies if the function should block and wait for a connection structure to be available if we try to exceed the maximum size. You need to specify time in relative time. </p>
+<p> <i>memcached_pool_release()</i> is used to return a connection structure back to the pool. </p>
+<p> <i>memcached_pool_behavior_get()</i> and <i>memcached_pool_behavior_set()</i> is used to get/set behavior flags on all connections in the pool. </p>
+<p> Both <i>memcached_pool_release()</i> and <i>memcached_pool_fetch()</i> are thread safe.</p>
+<h2>RETURN</h2>
+<p> <i>memcached_pool_destroy()</i> returns the pointer (and ownership) to the <code>memcached_st</code> structure used to create the pool. If connections are in use it returns NULL. </p>
+<p> <i>memcached_pool_pop()</i> returns a pointer to a <code>memcached_st</code> structure from the pool (or NULL if an allocation cannot be satisfied). </p>
+<p> <i>memcached_pool_release()</i> returns <code>MEMCACHED_SUCCESS</code> upon success. </p>
+<p> <i>memcached_pool_behavior_get()</i> and <i>memcached_pool_behavior_get()</i> returns <code>MEMCACHED_SUCCESS</code> upon success. </p>
+<p> If any methods returns MEMCACHED_IN_PROGRESS then a lock on the pool could not be obtained. If any of the parameters passed to any of these functions is invalid, MEMCACHED_INVALID_ARGUMENTS will be returned. </p>
+<p> memcached_pool_fetch may return MEMCACHED_TIMEOUT if a timeout occurs while waiting for a free memcached_st. MEMCACHED_NOTFOUND if no memcached_st was available.</p>
+<h2>HOME</h2>
+<p> To find out more information please check: <i><a rel="nofollow" href="http://libmemcached.org/">http://libmemcached.org/</a></i></p>
+<h2>AUTHOR</h2>
+<p> Brian Aker, &lt;<i>brian [at] tangent.org</i>&gt; </p>
+<p> Trond Norbye, &lt;<i>trond.norbye [at] gmail.com</i>&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-memcached/">memcached</a>(1)</i> <i><a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3)</i> <i><a href="/docs/linux/man/3-memcached_strerror/">memcached_strerror</a>(3)</i> <i><a href="/docs/linux/man/3-libmemcached_configuration/">libmemcached_configuration</a>(3)</i></p>
+<h2>AUTHOR</h2>
+<p> Brian Aker</p>
+<h2>COPYRIGHT</h2>
+<p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>adjtime_config(5) · Linux Manual Pages</title>
+<meta name="description" content="adjtime_config – information about hardware clock setting and drift factor">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-adjtime_config/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>adjtime_config(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>adjtime_config &#8211; information about hardware clock setting and drift factor</p>
+<h2>Synopsis</h2>
+<p><i>/etc/adjtime</i></p>
+<h2>Description</h2>
+<p>The file <i>/etc/adjtime</i> contains descriptive information about the hardware mode clock setting and clock drift factor. The file is read and write by <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8); and read by programs like rtcwake to get RTC time mode. </p>
+<p> The file is usually located in <i>/etc</i>, but tools like <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8) or <code><a href="/docs/linux/man/8-rtcwake/">rtcwake</a></code>(8) can use alternative location by command line options if write access to <i>/etc</i> is unwanted. The default clock mode is &quot;UTC&quot; if the file is missing. </p>
+<p> The Hardware Clock is usually not very accurate. However, much of its inaccuracy is completely predictable &#8211; it gains or loses the same amount of time every day. This is called systematic drift. The util <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8) keeps the file <i>/etc/adjtime</i>, that keeps some historical information. For more details see &quot;<code>The Adjust Function</code>&quot; and &quot;<code>The Adjtime File</code>&quot; sections from <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8) man page. </p>
+<p> The format of the adjtime file is, in ASCII.</p>
+<h3>First line</h3>
+<p>Three numbers, separated by blanks: </p>
+<p> <code>drift factor</code></p>
+<dl>
+<dd>the systematic drift rate in seconds per day (floating point decimal)</dd></dl>
+<p> <code>last adjust time</code></p>
+<dl>
+<dd>the resulting number of seconds since 1969 UTC of most recent adjustment or calibration (decimal integer)</dd></dl>
+<p> <code>adjustment status</code></p>
+<dl>
+<dd>zero (for compatibility with <code><a href="/docs/linux/man/8-clock/">clock</a></code>(8)) as a floating point decimal</dd></dl>
+<h3>Second line</h3>
+<p><code>last calibration time</code></p>
+<dl>
+<dd>The resulting number of seconds since 1969 UTC of most recent calibration. Zero if there has been no calibration yet or it is known that any previous calibration is moot (for example, because the Hardware Clock has been found, since that calibration, not to contain a valid time). This is a decimal integer.</dd></dl>
+<h3>Third line</h3>
+<p><code>clock mode</code></p>
+<dl>
+<dd>Supported values are <code>UTC</code> or <code>LOCAL</code>. Tells whether the Hardware Clock is set to Coordinated Universal Time or local time. You can always override this value with options on the <code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8) command line.</dd></dl>
+<h2>Files</h2>
+<p><i>/etc/adjtime</i></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-hwclock/">hwclock</a></code>(8), <code><a href="/docs/linux/man/8-rtcwake/">rtcwake</a></code>(8)</p>
+<h2>Reporting Bugs</h2>
+<p>For bug reports, use the issue tracker at <i></i> &lt;<a rel="nofollow" href="https://github.com/karelzak/util-linux/issues">https://github.com/karelzak/util-linux/issues</a>&gt;.</p>
+<h2>Availability</h2>
+<p><code>adjtime_config</code> is part of the util-linux package which can be downloaded from <i>Linux Kernel Archive</i> &lt;<a rel="nofollow" href="https://www.kernel.org/pub/linux/utils/util-linux/">https://www.kernel.org/pub/linux/utils/util-linux/</a>&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

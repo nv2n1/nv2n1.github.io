@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdto_chars(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdto_chars/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdto_chars(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::to_chars - std::to_chars</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;charconv&gt;
+    std::to_chars_result to_chars(char *first, char *last, (1)(since C++ 17)
+                                  /*see below*/ value,
+                                  int base = 10);
+std::to_chars_result to_chars(char *first, char *last, float value);
+std::to_chars_result to_chars(char *first, char *last, double value);
+(2)(since C++ 17)
+    std::to_chars_result to_chars(char *first, char *last, long double value);
+std::to_chars_result to_chars(char *first, char *last, float value,
+                              std::chars_format fmt);
+std::to_chars_result to_chars(char *first, char *last, double value, (3)(since C++ 17)
+                                                                         std::chars_format fmt);
+std::to_chars_result to_chars(char *first, char *last, long double value,
+                              std::chars_format fmt);
+std::to_chars_result to_chars(char *first, char *last, float value,
+                              std::chars_format fmt, int precision);
+std::to_chars_result to_chars(char *first, char *last, double value, (4)(since C++ 17)
+                                                                         std::chars_format fmt,
+                              int precision);
+std::to_chars_result to_chars(char *first, char *last, long double value,
+                              std::chars_format fmt, int precision);
+struct to_chars_result {
+    char *ptr;
+    (5)(since C++ 17)
+        std::errc ec;
+};
+Converts value into a character string by successively filling the range [first, last), where [first, last) is required to be a valid range.
+1) Integer formatters: value is converted to a string of digits in the given base (with no redundant leading zeroes). Digits in the range 10..35 (inclusive) are represented as lowercase characters a..z. If value is less than zero, the representation starts with a minus sign. The library provides overloads for all signed and unsigned integer types and for the type char as the type of the parameter value.
+2) value is converted to a string as if by std::printf in the default (&quot;C&quot;) locale. The conversion specifier is f or e (resolving in favor of f in case of a tie), chosen according to the requirement for a shortest representation: the string representation consists of the smallest number of characters such that there is at least one digit before the radix point (if present) and parsing the representation using the corresponding std::from_chars function recovers value exactly. If there are several such representations, one with the smallest difference to value is chosen, resolving any remaining ties using rounding according to std::round_to_nearest
+3) same as (2), but the conversion specified for the as-if printf is f if fmt is std::chars_format::fixed, e if fmt is std::chars_format::scientific, a (but without leading &quot;0x&quot; in the result) if fmt is std::chars_format::hex, and g if fmt is chars_format::general.
+4) same as (3), except the precision is specified by the parameter precision rather than by the shortest representation requirement.
+5) The return type (see Return value below)
+</code></pre>
+<h2>Parameters</h2>
+<p>first, last - character range to write to
+value - the value to convert to its string representation
+base - integer base to use: a value between 2 and 36 (inclusive).
+fmt - floating-point formatting to use, a bitmask of type std::chars_format
+precision - floating-point precision to use</p>
+<h2>Return value</h2>
+<p>On success, returns a value of type to_chars_result such that ec equals value-initialized std::errc and ptr is the one-past-the-end pointer of the characters written. Note that the string is not NUL-terminated.
+On error, returns a value of type to_chars_result holding std::errc::value_too_large in ec, a copy of the value last in ptr, and leaves the contents of the range [first, last) in unspecified state.</p>
+<h2>Exceptions</h2>
+<p><i>(none)</i></p>
+<h2>Notes</h2>
+<p>Unlike other formatting functions in C++ and C libraries, std::to_chars is locale-independent, non-allocating, and non-throwing. Only a small subset of formatting policies used by other libraries (such as std::sprintf) is provided. This is intended to allow the fastest possible implementation that is useful in common high-throughput contexts such as text-based interchange (JSON or XML).
+The guarantee that std::from_chars can recover every floating-point value formatted by to_chars exactly is only provided if both functions are from the same implementation.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;charconv&gt;
+#include &lt;system_error&gt;
+#include &lt;string_view&gt;
+#include &lt;array&gt;
+int main()
+{
+std::array&lt;char, 10&gt; str;
+if (auto [p, ec] = std::to_chars(str.data(), str.data() + str.size(), 42);
+ec == std::errc())
+std::cout &lt;&lt; std::string_view(str.data(), p - str.data());
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 42</p>
+<p>Defect reports</p>
+<p>The following behavior-changing defect reports were applied retroactively to previously published C++ standards.</p>
+<p>DR Applied to Behavior as published Correct behavior
+LWG_2955 C++17 this function was in &lt;utility&gt; and used std::error_code moved to &lt;charconv&gt; and uses std::errc</p>
+<h2>See also</h2>
+<p>from_chars converts a character sequence to an integer or floating-point value
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+to_string converts an integral or floating point value to string
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+printf
+fprintf
+sprintf
+snprintf prints formatted output to stdout, a file stream or a buffer
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> inserts formatted data
+operator&lt;&lt; <i>(public member function of std::basic_ostream&lt;CharT,Traits&gt;)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

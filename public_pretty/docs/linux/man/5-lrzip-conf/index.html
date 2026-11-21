@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lrzip-conf(5) · Linux Manual Pages</title>
+<meta name="description" content="lrzip.conf – Configuration File for lrzip">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-lrzip-conf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>lrzip-conf(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>lrzip.conf &#8211; Configuration File for lrzip</p>
+<h2>Description</h2>
+<p>This file if used, will be read by the lrzip program, parsed, and options passed to the program. Some options may be overridden on the command line. Others are fixed. </p>
+<p> The configuration file must be called <code>lrzip.conf</code>. The lrzip program will search for the file automatically in one of three places: </p>
+<pre>$PWD - Current Directory
+/etc/lrzip
+$HOME/./lrzip
+Parameters are set in <code>PARAMETER=VALUE</code> fashion where any line
+beginning with a <code>#</code> or that is blank will be ignored.
+Parameter values are not case sensitive.</pre>
+<h2>Config File Example</h2>
+<pre># This is a comment.
+# Compression Window size in 100MB. Normally selected by program.
+# WINDOW = 5
+# Compression Level 1-9 (7 Default).
+# COMPRESSIONLEVEL = 7
+# Unlimited Ram Compression
+# UNLIMITED = YES
+# Compression Method, rzip, gzip, bzip2, lzo, or lzma (default), zpaq.
+# COMPRESSIONMETHOD = LZMA
+# Perform LZO Test. Default = YES (-T option, NO)
+# LZOTEST = NO
+# Hash Check on decompression, YES
+# HASHCHECK = YES
+# Show HASH value on Compression even if Verbose is off, YES
+# SHOWHASH = YES
+# Default output directory
+# OUTPUTDIRECTORY = location
+# Verbosity, Yes or Max
+# VERBOSITY = MAX
+# Show Progress as file is parsed, YES, NO (yes is default)
+# SHOWPROGRESS = NO
+# Set Niceness. 19 is default. -20 to 19 is the allowable range
+# NICE = 19
+# Keep broken or damaged output files, YES
+# KEEPBROKEN = YES
+# Delete source file after compression
+# this parameter and value are case sensitive
+# value must be YES to activate
+# DELETEFILES = NO
+# Replace existing lrzip file when compressing
+# this parameter and value are case sensitive
+# value must be YES to activate
+# REPLACEFILE = NO
+# Select Temporary Directory when stdin/stdout or Test file is used
+# TMPDIR = /tmp</pre>
+<h2>Notes</h2>
+<p>Be careful when using <code>DELETEFILES</code> or <code>REPLACEFILE</code> as no warning will be given and lrzip will simply delete the source or replace the output file! </p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/1-lrzip/">lrzip</a>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

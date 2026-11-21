@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Detect If stderr Is Redirected in Bash - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-judge-whether-its-stderr-is-redirected-to-a-file-in-a-bash-script-on-linux/">
+  <meta name="description" content="You need to detect whether STDERR (file descriptor 2) is connected to a terminal or redirected to a file or pipe. This is useful for conditional logging, color …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Detect If stderr Is Redirected in Bash">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-judge-whether-its-stderr-is-redirected-to-a-file-in-a-bash-script-on-linux/">
+  <meta property="og:description" content="You need to detect whether STDERR (file descriptor 2) is connected to a terminal or redirected to a file or pipe. This is useful for conditional logging, color …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>How to Detect If stderr Is Redirected in Bash</h1>
+        <time class="post-date" datetime="2018-03-24T11:54:37Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>You need to detect whether STDERR (file descriptor 2) is connected to a terminal or redirected to a file or pipe. This is useful for conditional logging, color output, or error handling that depends on the output destination.</p>
+<h2 id="using-file-descriptor-tests">Using file descriptor tests</h2>
+<p>The primary method is the <code>-t</code> test operator, which checks if a file descriptor is associated with a terminal (TTY):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> -t <span class="m">2</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;STDERR is connected to a terminal&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;STDERR is redirected&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>The <code>-t</code> operator takes a file descriptor number as its argument:</p>
+<ul>
+<li><code>-t 0</code> checks stdin</li>
+<li><code>-t 1</code> checks stdout</li>
+<li><code>-t 2</code> checks stderr</li>
+</ul>
+<h2 id="practical-example-with-conditional-logging">Practical example with conditional logging</h2>
+<p>A common use case is disabling colored output when STDERR is redirected to a file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> -t <span class="m">2</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">RED</span><span class="o">=</span><span class="s1">&#39;\033[0;31m&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">GREEN</span><span class="o">=</span><span class="s1">&#39;\033[0;32m&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">NC</span><span class="o">=</span><span class="s1">&#39;\033[0m&#39;</span>  <span class="c1"># No Color</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">RED</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">GREEN</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">NC</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">error_msg<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">RED</span><span class="si">}</span><span class="s2">[ERROR]</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2"> </span><span class="nv">$1</span><span class="s2">&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">success_msg<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">GREEN</span><span class="si">}</span><span class="s2">[OK]</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2"> </span><span class="nv">$1</span><span class="s2">&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">error_msg <span class="s2">&#34;Something went wrong&#34;</span>
+</span></span><span class="line"><span class="cl">success_msg <span class="s2">&#34;Operation completed&#34;</span>
+</span></span></code></pre></div><p>Run this with different redirections to see the behavior:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./script.sh                    <span class="c1"># Colors enabled</span>
+</span></span><span class="line"><span class="cl">./script.sh 2&gt;/dev/null        <span class="c1"># STDERR redirected, colors disabled</span>
+</span></span><span class="line"><span class="cl">./script.sh 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> tee log.txt <span class="c1"># Piped, colors disabled</span>
+</span></span></code></pre></div><h2 id="checking-all-output-streams">Checking all output streams</h2>
+<p>For more comprehensive handling, check multiple file descriptors:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> -t <span class="m">1</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;stdout is a terminal&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> -t <span class="m">2</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;stderr is a terminal&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> -t <span class="m">0</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;stdin is a terminal (interactive)&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><h2 id="detecting-pipes-specifically">Detecting pipes specifically</h2>
+<p>If you need to distinguish between a file and a pipe, use <code>stat</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check if FD 2 is a regular file</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> -f /proc/self/fd/2 <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;STDERR is redirected to a file&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="o">[[</span> -p /proc/self/fd/2 <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;STDERR is piped&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="o">[[</span> -t <span class="m">2</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;STDERR is a terminal&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>This approach reads <code>/proc/self/fd/2</code>, which contains symlinks to the actual file descriptors. The <code>-f</code> test checks for regular files, and <code>-p</code> checks for pipes (named pipes/FIFOs).</p>
+<h2 id="practical-application-in-error-handling">Practical application in error handling</h2>
+<p>Here’s a complete example that adapts behavior based on STDERR redirection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">setup_logging<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[[</span> -t <span class="m">2</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Interactive: use colors and immediate output</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">LOG_FUNC</span><span class="o">=</span>log_terminal
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Redirected: plain text only</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">LOG_FUNC</span><span class="o">=</span>log_file
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">log_terminal<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">level</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">shift</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$level</span><span class="s2">&#34;</span> in
+</span></span><span class="line"><span class="cl">        ERROR<span class="o">)</span>   <span class="nb">echo</span> -e <span class="s2">&#34;\033[0;31m[ERROR]\033[0m </span><span class="nv">$*</span><span class="s2">&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span> <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">        WARN<span class="o">)</span>    <span class="nb">echo</span> -e <span class="s2">&#34;\033[0;33m[WARN]\033[0m </span><span class="nv">$*</span><span class="s2">&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span> <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">        INFO<span class="o">)</span>    <span class="nb">echo</span> -e <span class="s2">&#34;\033[0;32m[INFO]\033[0m </span><span class="nv">$*</span><span class="s2">&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span> <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">esac</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">log_file<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">level</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">shift</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;[</span><span class="k">$(</span>date +<span class="s1">&#39;%Y-%m-%d %H:%M:%S&#39;</span><span class="k">)</span><span class="s2">] [</span><span class="nv">$level</span><span class="s2">] </span><span class="nv">$*</span><span class="s2">&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">log<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$LOG_FUNC</span> <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">setup_logging
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">log ERROR <span class="s2">&#34;Database connection failed&#34;</span>
+</span></span><span class="line"><span class="cl">log WARN <span class="s2">&#34;Retrying operation&#34;</span>
+</span></span><span class="line"><span class="cl">log INFO <span class="s2">&#34;Operation succeeded&#34;</span>
+</span></span></code></pre></div><p>Test it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./script.sh                           <span class="c1"># Colored output</span>
+</span></span><span class="line"><span class="cl">./script.sh 2&gt;error.log               <span class="c1"># Timestamped plain text</span>
+</span></span></code></pre></div><h2 id="important-notes">Important notes</h2>
+<ul>
+<li>The <code>-t</code> test is POSIX-compliant and works across all UNIX-like systems</li>
+<li>File descriptor 2 specifically refers to STDERR; don’t confuse with 1 (stdout)</li>
+<li>When both stdout and stderr are redirected together (<code>2&gt;&amp;1</code>), both the <code>-t 1</code> and <code>-t 2</code> tests will fail</li>
+<li>This approach works in subshells and functions too</li>
+<li>The <code>/proc/self/fd</code> approach is Linux-specific; use <code>-t</code> for portability</li>
+</ul>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

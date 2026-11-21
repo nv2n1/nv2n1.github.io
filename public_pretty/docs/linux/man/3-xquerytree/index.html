@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xquerytree(3) · Linux Manual Pages</title>
+<meta name="description" content="XQueryTree – query window tree information">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xquerytree/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xquerytree(3)</h1>
+
+
+
+
+
+<p>XQueryTree &#8211; query window tree information </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>Status XQueryTree(Display *<i>display</i>, Window <i>w</i>, Window *<i>root_return</i>, Window *<i>parent_return</i>, Window **<i>children_return</i>, unsigned int *<i>nchildren_return</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>children_return</i></dt>
+<dd>Returns the list of children.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>nchildren_return</i></dt>
+<dd>Returns the number of children.</dd>
+<dt><i>parent_return</i></dt>
+<dd>Returns the parent window.</dd>
+<dt><i>root_return</i></dt>
+<dd>Returns the root window.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window whose list of children, root, parent, and number of children you want to obtain.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XQueryTree</code> function returns the root ID, the parent window ID, a pointer to the list of children windows (NULL when there are no children), and the number of children in the list for the specified window. The children are listed in current stacking order, from bottom-most (first) to top-most (last). <code>XQueryTree</code> returns zero if it fails and nonzero if it succeeds. To free a non-NULL children list when it is no longer needed, use <code>XFree</code>. </p>
+<p> <code>XQueryTree</code> can generate a <code>BadWindow</code> error.</p>
+<h2>Bugs</h2>
+<p>This really should return a screen *, not a root window ID.</p>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xfree/">XFree</a>(3), <a href="/docs/linux/man/3-xgetwindowattributes/">XGetWindowAttributes</a>(3), <a href="/docs/linux/man/3-xquerypointer/">XQueryPointer</a>(3)<br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

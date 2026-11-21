@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdstrcat(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdstrcat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdstrcat(3)</h1>
+
+
+
+
+
+<p>std::strcat - std::strcat</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstring&gt;
+    char *strcat(char *dest, const char *src);</code></pre> 
+<p>Appends a copy of the character string pointed to by src to the end of the character string pointed to by dest. The character src[0] replaces the null terminator at the end of dest. The resulting byte string is null-terminated.
+The behavior is undefined if the destination array is not large enough for the contents of both src and dest and the terminating null character.
+The behavior is undefined if the strings overlap.</p>
+<h2>Parameters</h2>
+<p>dest - pointer to the null-terminated byte string to append to
+src - pointer to the null-terminated byte string to copy from</p>
+<h2>Return value</h2>
+<p>dest</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;cstring&gt;
+#include &lt;cstdio&gt;
+int main()
+{
+char str[50] = &quot;Hello &quot;;
+char str2[50] = &quot;World!&quot;;
+std::strcat(str, str2);
+std::strcat(str, &quot; Goodbye World!&quot;);
+std::puts(str);
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Hello World! Goodbye World!</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> concatenates a certain amount of characters of two strings
+strncat <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> copies one string to another
+strcpy <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

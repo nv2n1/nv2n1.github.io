@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdmake_unsigned(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdmake_unsigned/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdmake_unsigned(3)</h1>
+
+
+
+
+
+<p>std::make_unsigned - std::make_unsigned</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;type_traits&gt;
+    template &lt;class T&gt;
+    (since C++ 11)
+        struct make_unsigned;</code></pre> 
+<p>If T is an integral (except bool) or enumeration type, provides the member typedef type which is the unsigned integer type corresponding to T, with the same cv-qualifiers. The unsigned integer type corresponding to an enumeration type is the unsigned integer type with the smallest rank having the same sizeof as the enumeration.
+Otherwise, the behavior is undefined.</p>
+<h2>Member types</h2>
+<p>Name Definition
+type the unsigned integer type corresponding to T</p>
+<h2>Helper types</h2>
+<p>template&lt; class T &gt; <i>(since C++14)</i>
+using make_unsigned_t = typename make_unsigned&lt;T&gt;::type;</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+int main()
+{
+typedef std::make_unsigned&lt;char&gt;::type char_type;
+typedef std::make_unsigned&lt;int&gt;::type int_type;
+typedef std::make_unsigned&lt;volatile long&gt;::type long_type;
+bool ok1 = std::is_same&lt;char_type, unsigned char&gt;::value;
+bool ok2 = std::is_same&lt;int_type, unsigned int&gt;::value;
+bool ok3 = std::is_same&lt;long_type, volatile unsigned long&gt;::value;
+std::cout &lt;&lt; std::boolalpha
+&lt;&lt; &quot;char_type is &lsquo;unsigned char&rsquo;?          : &quot; &lt;&lt; ok1 &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;int_type  is &lsquo;unsigned int&rsquo;?           : &quot; &lt;&lt; ok2 &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;long_type is &lsquo;volatile unsigned long&rsquo;? : &quot; &lt;&lt; ok3 &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> char_type is &lsquo;unsigned char&rsquo;? : true
+ <wbr> int_type is &lsquo;unsigned int&rsquo;? : true
+ <wbr> long_type is &lsquo;volatile unsigned long&rsquo;? : true</p>
+<h2>See also</h2>
+<p>is_signed checks if a type is a signed arithmetic type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+is_unsigned checks if a type is an unsigned arithmetic type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+make_signed makes the given integral type signed
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

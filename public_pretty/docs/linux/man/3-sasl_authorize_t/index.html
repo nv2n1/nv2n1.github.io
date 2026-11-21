@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sasl_authorize_t(3) · Linux Manual Pages</title>
+<meta name="description" content="sasl_authorize_t – The SASL authorization callback">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sasl_authorize_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sasl_authorize_t(3)</h1>
+
+
+
+
+
+<p>sasl_authorize_t &#8211; The SASL authorization callback </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;sasl/sasl.h&gt;
+int sasl_authorize_t(void *context,
+const char *requested_user, unsigned alen,
+const char *auth_identity, unsigned alen,
+const char *def_realm, unsigned urlen,
+struct propctx *propctx)</code></pre>
+<h2>Description</h2>
+<p><code>sasl_authorize_t</code> is used to check whether the authorized user <i>auth_identity</i> may act as the user <i>requested_user.</i> For example the user root may wish to authenticate with his credentials but act as the user tmartin (with all of tmartin&#8217;s rights not roots). A server application should be very careful, and probably err on the side of caution, when determining which users may proxy as whom. </p>
+<h2>Return Value</h2>
+<p>SASL callback functions should return SASL return codes. See sasl.h for a complete list. SASL_OK indicates success. </p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-sasl/">sasl</a>(3), <a href="/docs/linux/man/3-sasl_callbacks/">sasl_callbacks</a>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

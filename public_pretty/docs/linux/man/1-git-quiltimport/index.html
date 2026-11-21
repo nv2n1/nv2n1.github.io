@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-quiltimport(1) · Linux Manual Pages</title>
+<meta name="description" content="git-quiltimport – Applies a quilt patchset onto the current branch">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-quiltimport/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-quiltimport(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> git-quiltimport &#8211; Applies a quilt patchset onto the current branch </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+git quiltimport[--dry - run | -n][--author&lt;author&gt;][--patches&lt;dir&gt;]
+               [--series&lt;file&gt;][--keep - non - patch]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> Applies a quilt patchset onto the current Git branch, preserving the patch boundaries, patch order, and patch descriptions present in the quilt patchset. </p>
+<p> For each patch the code attempts to extract the author from the patch description. If that fails it falls back to the author specified with &#8211;author. If the &#8211;author flag was not given the patch description is displayed and the user is asked to interactively enter the author of the patch. </p>
+<p> If a subject is not found in the patch description the patch name is preserved as the 1 line subject in the Git description.</p>
+<h2>OPTIONS</h2>
+<p> -n, &#8211;dry-run</p>
+<dl>
+<dt>
+</dt><dd> Walk through the patches in the series and warn if we cannot find all of the necessary information to commit a patch. At the time of this writing only missing author information is warned about.</dd></dl>
+<p> &#8211;author Author Name &lt;Author Email&gt;</p>
+<dl>
+<dt>
+</dt><dd> The author name and email address to use when no author information can be found in the patch description.</dd></dl>
+<p> &#8211;patches &lt;dir&gt;</p>
+<dl>
+<dt>
+</dt><dd> The directory to find the quilt patches. </dd>
+<p> The default for the patch directory is patches or the value of the <code>$QUILT_PATCHES</code> environment variable.</dl>
+<p> &#8211;series &lt;file&gt;</p>
+<dl>
+<dt>
+</dt><dd> The quilt series file. </dd>
+<p> The default for the series file is &lt;patches&gt;/series or the value of the <code>$QUILT_SERIES</code> environment variable.</dl>
+<p> &#8211;keep-non-patch</p>
+<dl>
+<dt>
+</dt><dd> Pass <code>-b</code> flag to <i>git mailinfo</i> (see <code><a href="/docs/linux/man/1-git-mailinfo/">git-mailinfo</a></code>(1)).</dd></dl>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

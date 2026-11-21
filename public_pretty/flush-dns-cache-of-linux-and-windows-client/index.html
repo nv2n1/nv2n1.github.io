@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clearing DNS Cache on Linux and Windows - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/flush-dns-cache-of-linux-and-windows-client/">
+  <meta name="description" content="DNS caching helps reduce lookups but sometimes you need to clear it after DNS changes, certificate updates, or to troubleshoot resolution issues.
+Modern Linux …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Clearing DNS Cache on Linux and Windows">
+  <meta property="og:url" content="https://www.systutorials.com/flush-dns-cache-of-linux-and-windows-client/">
+  <meta property="og:description" content="DNS caching helps reduce lookups but sometimes you need to clear it after DNS changes, certificate updates, or to troubleshoot resolution issues.
+Modern Linux …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>Clearing DNS Cache on Linux and Windows</h1>
+        <time class="post-date" datetime="2013-07-12T16:31:51Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>DNS caching helps reduce lookups but sometimes you need to clear it after DNS changes, certificate updates, or to troubleshoot resolution issues.</p>
+<h3 id="modern-linux-with-systemd-resolved">Modern Linux with systemd-resolved</h3>
+<p>Most contemporary Linux distributions use <code>systemd-resolved</code> as the default DNS resolver. Flush the cache with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart systemd-resolved
+</span></span></code></pre></div><p>Or use the <code>resolvectl</code> command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo resolvectl flush-caches
+</span></span></code></pre></div><p>To verify the cache was cleared:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resolvectl statistics
+</span></span></code></pre></div><h3 id="linux-with-networkmanager">Linux with NetworkManager</h3>
+<p>If your system uses NetworkManager alongside systemd-resolved:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart NetworkManager
+</span></span></code></pre></div><p>This restarts the DNS integration but doesn’t always flush all caches. For thorough clearing, combine it with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart systemd-resolved
+</span></span></code></pre></div><h3 id="legacy-nscd-name-service-cache-daemon">Legacy: nscd (Name Service Cache Daemon)</h3>
+<p>Older distributions or systems still running <code>nscd</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart nscd
+</span></span></code></pre></div><p>Or via init scripts on systems without systemd:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo service nscd restart
+</span></span></code></pre></div><p>Check if nscd is running:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl status nscd
+</span></span></code></pre></div><h3 id="checking-current-dns-configuration">Checking Current DNS Configuration</h3>
+<p>View your active DNS resolver:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resolvectl status
+</span></span></code></pre></div><p>On systems using <code>/etc/resolv.conf</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /etc/resolv.conf
+</span></span></code></pre></div><p>Note that on modern systems, <code>/etc/resolv.conf</code> is often a symlink to <code>/run/systemd/resolve/resolv.conf</code> and is managed automatically.</p>
+<h2 id="flushing-dns-cache-on-windows">Flushing DNS Cache on Windows</h2>
+<h3 id="windows-1011-and-server-2016">Windows 10/11 (and Server 2016+)</h3>
+<p>Open PowerShell or Command Prompt as Administrator and run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">ipconfig /flushdns
+</span></span></code></pre></div><p>Verify the flush succeeded:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">ipconfig /displaydns
+</span></span></code></pre></div><p>To clear DNS cache using PowerShell:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Clear-DnsClientCache</span>
+</span></span></code></pre></div><p>View current cached entries:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Get-DnsClientCache</span>
+</span></span></code></pre></div><h3 id="clearing-windows-dns-via-group-policy">Clearing Windows DNS via Group Policy</h3>
+<p>For domain-joined systems, you can also flush DNS on remote machines:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Invoke-Command</span> <span class="n">-ComputerName</span> <span class="p">&lt;</span><span class="n">hostname</span><span class="p">&gt;</span> <span class="n">-ScriptBlock</span> <span class="p">{</span> <span class="nb">Clear-DnsClientCache</span> <span class="p">}</span>
+</span></span></code></pre></div><h3 id="older-windows-xp-through-windows-7">Older Windows (XP through Windows 7)</h3>
+<p>While no longer supported, the command remains:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">ipconfig /flushdns
+</span></span></code></pre></div><p>Run this from an Administrator command prompt.</p>
+<h2 id="browser-level-dns-cache">Browser-Level DNS Cache</h2>
+<p>Browsers maintain their own DNS caches separate from the OS. This is useful during development or when troubleshooting specific services.</p>
+<h3 id="chromechromium">Chrome/Chromium</h3>
+<p>Navigate to:</p>
+<pre><code>chrome://net-internals/#dns
+</code></pre>
+<p>Click “Clear host cache” to flush Chrome’s DNS cache. You can also view recent DNS queries on this page.</p>
+<h3 id="firefox">Firefox</h3>
+<p>Firefox doesn’t expose a direct DNS cache flush in the UI. Instead, restart the browser or access <code>about:networking#dns</code> to view DNS information. For debugging, use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">about:config
+</span></span></code></pre></div><p>Search for <code>network.dnsCacheExpiration</code> and reduce the value (in seconds) to force faster cache expiration.</p>
+<h3 id="edge">Edge</h3>
+<p>Navigate to:</p>
+<pre><code>edge://net-internals/#dns
+</code></pre>
+<p>Same functionality as Chrome since Edge uses Chromium.</p>
+<h2 id="troubleshooting-dns-issues">Troubleshooting DNS Issues</h2>
+<p>After flushing caches, verify DNS resolution:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Test DNS resolution</span>
+</span></span><span class="line"><span class="cl">nslookup example.com
+</span></span><span class="line"><span class="cl">dig example.com
+</span></span><span class="line"><span class="cl">getent hosts example.com
+</span></span></code></pre></div><p>On Windows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">nslookup example.com
+</span></span></code></pre></div><p>If issues persist after flushing, check that your DNS servers are correctly configured:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resolvectl query example.com
+</span></span></code></pre></div><p>This shows which resolver handled the request and helps identify configuration problems.</p>
+<h2 id="2026-best-practices-and-advanced-techniques">2026 Best Practices and Advanced Techniques</h2>
+<p>For Clearing DNS Cache on Linux and Windows, understanding both the fundamentals and modern practices ensures you can work efficiently and avoid common pitfalls. This guide extends the core article with practical advice for 2026 workflows.</p>
+<h2 id="troubleshooting-and-debugging">Troubleshooting and Debugging</h2>
+<p>When issues arise, a systematic approach saves time. Start by checking logs for error messages or warnings. Test individual components in isolation before integrating them. Use verbose modes and debug flags to gather more information when standard output is not enough to diagnose the problem.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor system resources to identify bottlenecks</li>
+<li>Use caching strategies to reduce redundant computation</li>
+<li>Keep software updated for security patches and performance improvements</li>
+<li>Profile code before applying optimizations</li>
+<li>Use connection pooling and keep-alive for network operations</li>
+</ul>
+<h2 id="security-considerations">Security Considerations</h2>
+<p>Security should be built into workflows from the start. Use strong authentication methods, encrypt sensitive data in transit, and follow the principle of least privilege for access controls. Regular security audits and penetration testing help maintain system integrity.</p>
+<h2 id="related-tools-and-commands">Related Tools and Commands</h2>
+<p>These complementary tools expand your capabilities:</p>
+<ul>
+<li>Monitoring: top, htop, iotop, vmstat for system resources</li>
+<li>Networking: ping, traceroute, ss, tcpdump for connectivity</li>
+<li>Files: find, locate, fd for searching; rsync for syncing</li>
+<li>Logs: journalctl, dmesg, tail -f for real-time monitoring</li>
+<li>Testing: curl for HTTP requests, nc for ports, openssl for crypto</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Consider automation and containerization for consistency across environments. Infrastructure as code tools enable reproducible deployments. CI/CD pipelines automate testing and deployment, reducing human error and speeding up delivery cycles.</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<p>This extended guide covers the topic beyond the original article scope. For specialized needs, refer to official documentation or community resources. Practice in test environments before production deployment.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmblookupstring(3) · Linux Manual Pages</title>
+<meta name="description" content="XmbLookupString, XwcLookupString, Xutf8LookupString – obtain composed input from an input method">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmblookupstring/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmblookupstring(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XmbLookupString, XwcLookupString, Xutf8LookupString &#8211; obtain composed input from an input method </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>int XmbLookupString(XIC <i>ic</i>, XKeyPressedEvent *<i>event</i>, char *<i>buffer_return</i>, int <i>bytes_buffer</i>, KeySym *<i>keysym_return</i>, Status *<i>status_return</i>);</dd>
+<dd>int XwcLookupString(XIC <i>ic</i>, XKeyPressedEvent *<i>event</i>, wchar_t *<i>buffer_return</i>, int <i>wchars_buffer</i>, KeySym *<i>keysym_return</i>, Status *<i>status_return</i>);</dd>
+<dd>int Xutf8LookupString(XIC <i>ic</i>, XKeyPressedEvent *<i>event</i>, char *<i>buffer_return</i>, int <i>bytes_buffer</i>, KeySym *<i>keysym_return</i>, Status *<i>status_return</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>buffer_return</i></dt>
+<dd>Returns a multibyte string or wide character string (if any) from the input method.</dd>
+<dt><i>bytes_buffer</i></dt>
+<dd>
+</dd><dt><i>wchars_buffer</i></dt>
+<dd>Specifies space available in the return buffer.</dd>
+<dt><i>event</i></dt>
+<dd>Specifies the key event to be used.</dd>
+<dt><i>ic</i></dt>
+<dd>Specifies the input context.</dd>
+<dt><i>keysym_return</i></dt>
+<dd>Returns the KeySym computed from the event if this argument is not NULL.</dd>
+<dt><i>status_return</i></dt>
+<dd>Returns a value indicating what kind of data is returned.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XmbLookupString</code>, <code>XwcLookupString</code> and <code>Xutf8LookupString</code> functions return the string from the input method specified in the buffer_return argument. If no string is returned, the buffer_return argument is unchanged. </p>
+<p> The KeySym into which the KeyCode from the event was mapped is returned in the keysym_return argument if it is non-NULL and the status_return argument indicates that a KeySym was returned. If both a string and a KeySym are returned, the KeySym value does not necessarily correspond to the string returned. </p>
+<p> <code>XmbLookupString</code> and <code>Xutf8LookupString</code> return the length of the string in bytes, and <code>XwcLookupString</code> returns the length of the string in characters. Both <code>XmbLookupString</code> and <code>XwcLookupString</code> return text in the encoding of the locale bound to the input method of the specified input context, and <code>Xutf8LookupString</code> returns text in UTF-8 encoding. </p>
+<p> Each string returned by <code>XmbLookupString</code> and <code>XwcLookupString</code> begins in the initial state of the encoding of the locale (if the encoding of the locale is state-dependent). </p>
+<p> Note: To ensure proper input processing, it is essential that the client pass only <code>KeyPress</code> events to <code>XmbLookupString</code>, <code>XwcLookupString</code> and <code>Xutf8LookupString</code>. Their behavior when a client passes a <code>KeyRelease</code> event is undefined. </p>
+<p> Clients should check the status_return argument before using the other returned values. These three functions each return a value to status_return that indicates what has been returned in the other arguments. The possible values returned are: </p>
+<table>
+<tr VALIGN=top>
+<td> <code>XBufferOverflow</code> </td>
+<td> The input string to be returned is too large for the supplied buffer_return. The required size (for <code>XmbLookupString</code>, <code>Xutf8LookupString</code> in bytes; for <code>XwcLookupString</code> in characters) is returned as the value of the function, and the contents of buffer_return and keysym_return are not modified. The client should recall the function with the same event and a buffer of adequate size to obtain the string.
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>XLookupNone</code> </td>
+<td> No consistent input has been composed so far. The contents of buffer_return and keysym_return are not modified, and the function returns zero.
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>XLookupChars</code> </td>
+<td> Some input characters have been composed. They are placed in the buffer_return argument, using the encoding described above, and the string length is returned as the value of the function. The content of the keysym_return argument is not modified.
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>XLookupKeySym</code> </td>
+<td> A KeySym has been returned instead of a string and is returned in keysym_return. The content of the buffer_return argument is not modified, and the function returns zero.
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>XLookupBoth</code> </td>
+<td> Both a KeySym and a string are returned; <code>XLookupChars</code> and <code>XLookupKeySym</code> occur simultaneously.
+</td>
+</tr>
+</table>
+<p> It does not make any difference if the input context passed as an argument to <code>XmbLookupString</code>, <code>XwcLookupString</code> and <code>Xutf8LookupString</code> is the one currently in possession of the focus or not. Input may have been composed within an input context before it lost the focus, and that input may be returned on subsequent calls to <code>XmbLookupString</code>, <code>XwcLookupString</code> or <code>Xutf8LookupString</code> even though it does not have any more keyboard focus. </p>
+<p> The function <code>Xutf8LookupString</code> is an extension introduced by The XFree86 Project, Inc., in their 4.0.2 release. Its presence is indicated by the macro <code>X_HAVE_UTF8_STRING</code>.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xlookupkeysym/">XLookupKeysym</a>(3), <a href="/docs/linux/man/5-compose/">Compose</a>(5)<br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

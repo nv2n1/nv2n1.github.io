@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>strongswan_swanctl(8) · Linux Manual Pages</title>
+<meta name="description" content="swanctl – strongSwan configuration, control and monitoring command line interface.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-strongswan_swanctl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>strongswan_swanctl(8)</h1>
+
+
+
+
+
+<p>swanctl &#8211; strongSwan configuration, control and monitoring command line interface.</p>
+<h2>Synopsis</h2>
+<p><i>command</i> [<i>option~</i>&#8230;] <code>-h</code> | <code>&#8211;help</code></p>
+<h2>Description</h2>
+<p>swanctl is a cross-platform command line utility to configure, control and monitor the strongSwan IKE daemon. It is a replacement for the aging <code>starter</code>, <code>ipsec</code> and <code>stroke</code> tools. swanctl uses a configuration file called <code>swanctl.conf</code>(5) to parse configurations and credentials. Private keys, certificates and other PKI related credentials are read from specific directories. To communicate with the IKE daemon, swanctl uses the VICI protocol, the Versatile IKE Configuration Interface. This stable interface is usable by other tools and is often preferable than scripting swanctl and parsing its output. </p>
+<h2>Commands</h2>
+<dl>
+<dt><code>-i, &#8211;initiate</code></dt>
+<dd>initiate a connection</dd>
+<dt><code>-t, &#8211;terminate</code></dt>
+<dd>terminate a connection</dd>
+<dt><code>-R, &#8211;rekey</code></dt>
+<dd>rekey an SA</dd>
+<dt><code>-d, &#8211;redirect</code></dt>
+<dd>redirect an IKE_SA</dd>
+<dt><code>-p, &#8211;install</code></dt>
+<dd>install a trap or shunt policy</dd>
+<dt><code>-u, &#8211;uninstall</code></dt>
+<dd>uninstall a trap or shunt policy</dd>
+<dt><code>-l, &#8211;list-sas</code></dt>
+<dd>list currently active IKE_SAs</dd>
+<dt><code>-P, &#8211;list-pols</code></dt>
+<dd>list currently installed policies</dd>
+<dt><code>-b, &#8211;load-authorities</code></dt>
+<dd>(re-)load certification authorities information</dd>
+<dt><code>-L, &#8211;list-conns</code></dt>
+<dd>list loaded configurations</dd>
+<dt><code>-B, &#8211;list-authorities</code></dt>
+<dd>list loaded certification authorities information</dd>
+<dt><code>-x, &#8211;list-certs</code></dt>
+<dd>list stored certificates</dd>
+<dt><code>-A, &#8211;list-pools</code></dt>
+<dd>list loaded pool configurations</dd>
+<dt><code>-g, &#8211;list-algs</code></dt>
+<dd>list loaded algorithms and their implementation</dd>
+<dt><code>-q, &#8211;load-all</code></dt>
+<dd>(re-)load credentials, pools, authorities and connections</dd>
+<dt><code>-c, &#8211;load-conns</code></dt>
+<dd>(re-)load connection configuration</dd>
+<dt><code>-s, &#8211;load-creds</code></dt>
+<dd>(re-)load credentials</dd>
+<dt><code>-a, &#8211;load-pools</code></dt>
+<dd>(re-)load pool configuration</dd>
+<dt><code>-T, &#8211;log</code></dt>
+<dd>trace logging output</dd>
+<dt><code>-S, &#8211;stats</code></dt>
+<dd>show daemon infos and statistics</dd>
+<dt><code>-f, &#8211;flush-certs</code></dt>
+<dd>flush cached certificates</dd>
+<dt><code>-r, &#8211;reload-settings</code></dt>
+<dd>reload <a href="/docs/linux/man/5-strongswan-conf/">strongswan.conf</a>(5) configuration</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>show daemon version information</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>show usage information</dd></dl>
+<h2>See Also</h2>
+<p><code>swanctl.conf</code>(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

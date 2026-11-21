@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnome-disks(1) · Linux Manual Pages</title>
+<meta name="description" content="gnome-disks – the GNOME Disks application">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gnome-disks/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gnome-disks(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> gnome-disks &#8211; the GNOME Disks application </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>gnome-disks</code> [OPTIONS]</dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>gnome-disks</code></p>
+<dd>is the command to launch the GNOME Disks application. Disks provides a way to inspect, format, partition and configure disks and block devices. </dd>
+<p> The Disks application is <i>single-instance</i>. What this means is that if the application is not already running when the <code>gnome-disks</code> command is invoked, it will get launched and the command invocation will block until the application exits. Otherwise the existing application instance will be used and the <code>gnome-disks</code> command will exit immediately.</p>
+<h2>OPTIONS</h2>
+<p> The following options are understood: </p>
+<p> <code>&#8211;block-device </code><i>DEVICE</i></p>
+<dl>
+<dt>
+</dt><dd> Switches to the Disks application and selects the block device given by <i>DEVICE</i> (for example, /dev/sda).</dd></dl>
+<p> <code>&#8211;block-device </code><i>DEVICE</i> <code>&#8211;format-device</code> [<code>&#8211;xid </code><i>WINDOW-ID</i>]</p>
+<dl>
+<dt>
+</dt><dd> Shows the &#8220;Format Volume&#8221; dialog for the block device given by <i>DEVICE</i> (for example, /dev/sdb1). If <i>WINDOW-ID</i> is given, makes the dialog transient to the given XID.</dd></dl>
+<p> <code>&#8211;restore-disk-image </code><i>FILE</i></p>
+<dl>
+<dt>
+</dt><dd> Shows the &#8220;Restore Disk Image&#8221; dialog for the file given by <i>FILE</i> (for example, /home/user/Downloads/SuperOS.iso) and prompts the user to choose a disk to restore the image unto.</dd></dl>
+<p> <code>-h, &#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Prints a short help text and exits.</dd></dl>
+<h2>AUTHOR</h2>
+<p> Written by David Zeuthen &lt;zeuthen [at] gmail.com&gt; with a lot of help from many others.</p>
+<h2>BUGS</h2>
+<p> Please send bug reports to either the distribution bug tracker or the upstream bug tracker at m[blue]<code><a rel="nofollow" href="https://gitlab.gnome.org/GNOME/gnome-disk-utility/-/issues/">https://gitlab.gnome.org/GNOME/gnome-disk-utility/-/issues/</a></code>m[].</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gnome-disk-image-mounter/">gnome-disk-image-mounter</a></code>(1), <code><a href="/docs/linux/man/8-udisks/">udisks</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

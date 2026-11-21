@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdlocaleglobal(3) · Linux Manual Pages</title>
+<meta name="description" content="std::locale::global – std::locale::global">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdlocaleglobal/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdlocaleglobal(3)</h1>
+
+
+
+
+
+<p>std::locale::global &#8211; std::locale::global</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;locale&gt;
+    static locale global(const locale &amp;loc);
+Replaces the global C++ locale with loc, which means all future calls to the std::locale default constructor will now return a copy of loc.If loc has a name, also replaces the C locale as if by std::setlocale(LC_ALL, loc.name().c_str());
+.This function is the only way to modify the global C++ locale, which is otherwise equivalent to std::locale::classic() at program startup.
+</code></pre>
+<h2>Parameters</h2>
+<p>loc &#8211; the new global C++ locale</p>
+<h2>Return value</h2>
+<p>The previous value of the global C++ locale. </p>
+<h2>Example</h2>
+<p>&nbsp;This section is incomplete<br />
+&nbsp;Reason: no example </p>
+<h2>See also</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constructs a new locale<br />
+constructor <i>(public member function)</i><br />
+classic obtains a reference to the &quot;C&quot; locale<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<code>[static]</code><br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;gets and sets the current C locale<br />
+setlocale <i>(function)</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

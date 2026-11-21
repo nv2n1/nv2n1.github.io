@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choosing Between Python’s zoneinfo and pytz - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-get-date-and-time-from-another-timezone-in-python/">
+  <meta name="description" content="Python’s standard library includes zoneinfo, which handles timezones correctly without external dependencies. Use it for all new code.
+from datetime import …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Choosing Between Python’s zoneinfo and pytz">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-get-date-and-time-from-another-timezone-in-python/">
+  <meta property="og:description" content="Python’s standard library includes zoneinfo, which handles timezones correctly without external dependencies. Use it for all new code.
+from datetime import …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Choosing Between Python’s zoneinfo and pytz</h1>
+        <time class="post-date" datetime="2018-09-19T04:48:56Z">September 19, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Python’s standard library includes <code>zoneinfo</code>, which handles timezones correctly without external dependencies. Use it for all new code.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">zoneinfo</span> <span class="kn">import</span> <span class="n">ZoneInfo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">utc_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;UTC&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">ny_time</span> <span class="o">=</span> <span class="n">utc_time</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;America/New_York&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">ny_time</span><span class="p">)</span>
+</span></span></code></pre></div><p>This automatically manages Daylight Saving Time transitions. The IANA timezone database (via the <code>tzdata</code> package on Windows; built-in on Unix-like systems) backs the lookups, so timezone rules stay current as DST rules change.</p>
+<h2 id="creating-timezone-aware-datetimes">Creating Timezone-Aware Datetimes</h2>
+<p>You’ll often need to create a datetime in a specific timezone rather than convert from UTC:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">zoneinfo</span> <span class="kn">import</span> <span class="n">ZoneInfo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create a datetime in Tokyo timezone</span>
+</span></span><span class="line"><span class="cl"><span class="n">tokyo_tz</span> <span class="o">=</span> <span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;Asia/Tokyo&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">meeting_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">tokyo_tz</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">meeting_time</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2026-06-15 14:30:00+09:00</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Convert to your local timezone</span>
+</span></span><span class="line"><span class="cl"><span class="n">local_tz</span> <span class="o">=</span> <span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;America/Chicago&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">local_meeting</span> <span class="o">=</span> <span class="n">meeting_time</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">local_tz</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">local_meeting</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2026-06-15 00:30:00-05:00</span>
+</span></span></code></pre></div><p>The key difference: passing <code>tzinfo</code> directly to the constructor creates a datetime in that timezone, while <code>astimezone()</code> converts an existing datetime.</p>
+<h2 id="converting-between-timezones">Converting Between Timezones</h2>
+<p>When working with multiple timezones, always use <code>astimezone()</code> to convert:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">zoneinfo</span> <span class="kn">import</span> <span class="n">ZoneInfo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Start with a UTC time</span>
+</span></span><span class="line"><span class="cl"><span class="n">utc_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;UTC&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Convert to different timezones</span>
+</span></span><span class="line"><span class="cl"><span class="n">london</span> <span class="o">=</span> <span class="n">utc_time</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;Europe/London&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">sydney</span> <span class="o">=</span> <span class="n">utc_time</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;Australia/Sydney&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">mumbai</span> <span class="o">=</span> <span class="n">utc_time</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;Asia/Kolkata&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;UTC: </span><span class="si">{</span><span class="n">utc_time</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;London: </span><span class="si">{</span><span class="n">london</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Sydney: </span><span class="si">{</span><span class="n">sydney</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Mumbai: </span><span class="si">{</span><span class="n">mumbai</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>All conversions reference the same instant in time — only the local representation changes.</p>
+<h2 id="handling-dst-transitions">Handling DST Transitions</h2>
+<p>The <code>zoneinfo</code> library handles DST automatically, but you need to be aware of ambiguous times during transitions. When clocks “fall back,” a time exists twice:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">zoneinfo</span> <span class="kn">import</span> <span class="n">ZoneInfo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># During DST transition, 1:30 AM occurs twice</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># zoneinfo defaults to the first occurrence (fold=0)</span>
+</span></span><span class="line"><span class="cl"><span class="n">eastern</span> <span class="o">=</span> <span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;America/New_York&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># First occurrence (EDT, UTC-4)</span>
+</span></span><span class="line"><span class="cl"><span class="n">time1</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">fold</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">eastern</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">time1</span><span class="p">)</span>  <span class="c1"># 2026-11-01 01:30:00-04:00</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Second occurrence (EST, UTC-5)</span>
+</span></span><span class="line"><span class="cl"><span class="n">time2</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">fold</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">eastern</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">time2</span><span class="p">)</span>  <span class="c1"># 2026-11-01 01:30:00-05:00</span>
+</span></span></code></pre></div><p>Use <code>fold=0</code> for the first occurrence and <code>fold=1</code> for the second. If users specify an ambiguous time, validate and handle it explicitly rather than silently picking the wrong one. You can check if a time is ambiguous:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">zoneinfo</span> <span class="kn">import</span> <span class="n">ZoneInfo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">is_ambiguous</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Check if a naive datetime is ambiguous in the given timezone.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tz</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">tzinfo</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># If fold=0 and fold=1 produce different offsets, the time is ambiguous</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dt_fold0</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">fold</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dt_fold1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">fold</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dt_fold0</span><span class="o">.</span><span class="n">utcoffset</span><span class="p">()</span> <span class="o">!=</span> <span class="n">dt_fold1</span><span class="o">.</span><span class="n">utcoffset</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">eastern</span> <span class="o">=</span> <span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;America/New_York&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ambig_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">eastern</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">is_ambiguous</span><span class="p">(</span><span class="n">ambig_time</span><span class="p">))</span>  <span class="c1"># True</span>
+</span></span></code></pre></div><h2 id="database-best-practices">Database Best Practices</h2>
+<p>Store all timestamps in UTC in your database. Convert to the user’s local timezone only when displaying:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">zoneinfo</span> <span class="kn">import</span> <span class="n">ZoneInfo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Save to database as UTC</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">save_event</span><span class="p">(</span><span class="n">event_name</span><span class="p">,</span> <span class="n">local_datetime_str</span><span class="p">,</span> <span class="n">user_timezone_str</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">user_tz</span> <span class="o">=</span> <span class="n">ZoneInfo</span><span class="p">(</span><span class="n">user_timezone_str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">local_dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">local_datetime_str</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">user_tz</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">utc_dt</span> <span class="o">=</span> <span class="n">local_dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;UTC&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Store utc_dt.isoformat() in your database</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">utc_dt</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Retrieve from database and convert to user timezone</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">display_event</span><span class="p">(</span><span class="n">utc_datetime_str</span><span class="p">,</span> <span class="n">user_timezone_str</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">utc_dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">utc_datetime_str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">user_tz</span> <span class="o">=</span> <span class="n">ZoneInfo</span><span class="p">(</span><span class="n">user_timezone_str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">user_dt</span> <span class="o">=</span> <span class="n">utc_dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">user_tz</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">user_dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S %Z&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Example usage</span>
+</span></span><span class="line"><span class="cl"><span class="n">event_utc</span> <span class="o">=</span> <span class="n">save_event</span><span class="p">(</span><span class="s2">&#34;Team standup&#34;</span><span class="p">,</span> <span class="s2">&#34;2026-06-15T09:00:00&#34;</span><span class="p">,</span> <span class="s2">&#34;America/Denver&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">display_event</span><span class="p">(</span><span class="n">event_utc</span><span class="p">,</span> <span class="s2">&#34;Europe/Berlin&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2026-06-15 17:00:00 CEST</span>
+</span></span></code></pre></div><p>This approach ensures consistency across your system. Avoid storing timezone information with datetimes in the database — the timezone offset can change due to DST rule updates, making historical data unreliable.</p>
+<h2 id="getting-the-current-time-in-a-specific-timezone">Getting the Current Time in a Specific Timezone</h2>
+<p>For real-time queries without conversion:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">zoneinfo</span> <span class="kn">import</span> <span class="n">ZoneInfo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Current time in Tokyo (right now, not converted)</span>
+</span></span><span class="line"><span class="cl"><span class="n">tokyo_now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;Asia/Tokyo&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">tokyo_now</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Current time in UTC</span>
+</span></span><span class="line"><span class="cl"><span class="n">utc_now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;UTC&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">utc_now</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="python-38-and-earlier-using-pytz">Python 3.8 and Earlier: Using pytz</h2>
+<p>If you’re stuck on Python 3.8, use the <code>pytz</code> library:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pytz</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ny_tz</span> <span class="o">=</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s2">&#34;America/New_York&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ny_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">ny_tz</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">ny_time</span><span class="p">)</span>
+</span></span></code></pre></div><p>However, <code>pytz</code> requires explicit localization and is more error-prone with DST:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pytz</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">eastern</span> <span class="o">=</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s2">&#34;America/New_York&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Wrong way (naive datetime won&#39;t handle DST correctly)</span>
+</span></span><span class="line"><span class="cl"><span class="n">wrong</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">eastern</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Right way (use localize)</span>
+</span></span><span class="line"><span class="cl"><span class="n">correct</span> <span class="o">=</span> <span class="n">eastern</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2026</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+</span></span></code></pre></div><p><strong>Upgrade to Python 3.9+ if possible</strong> — <code>zoneinfo</code> is simpler and doesn’t require workarounds.</p>
+<h2 id="avoiding-common-pitfalls">Avoiding Common Pitfalls</h2>
+<p><strong>Never use naive datetimes in production code:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># DON&#39;T DO THIS</span>
+</span></span><span class="line"><span class="cl"><span class="n">naive_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>  <span class="c1"># No timezone info — ambiguous</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># DO THIS</span>
+</span></span><span class="line"><span class="cl"><span class="n">aware_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;UTC&#34;</span><span class="p">))</span>  <span class="c1"># Always timezone-aware</span>
+</span></span></code></pre></div><p>Naive datetimes cause subtle bugs when code runs in different environments or processes events from multiple timezones. If you receive a naive datetime from an external source, always attach timezone info before using it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">zoneinfo</span> <span class="kn">import</span> <span class="n">ZoneInfo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Data from an API with no timezone info</span>
+</span></span><span class="line"><span class="cl"><span class="n">api_time_str</span> <span class="o">=</span> <span class="s2">&#34;2026-06-15T14:30:00&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">naive_dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">api_time_str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Assume it&#39;s in the user&#39;s timezone (don&#39;t assume UTC unless documented)</span>
+</span></span><span class="line"><span class="cl"><span class="n">user_tz</span> <span class="o">=</span> <span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;America/Los_Angeles&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">aware_dt</span> <span class="o">=</span> <span class="n">naive_dt</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">user_tz</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Now safe to use</span>
+</span></span><span class="line"><span class="cl"><span class="n">utc_dt</span> <span class="o">=</span> <span class="n">aware_dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&#34;UTC&#34;</span><span class="p">))</span>
+</span></span></code></pre></div>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

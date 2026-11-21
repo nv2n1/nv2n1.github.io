@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>meld(1) · Linux Manual Pages</title>
+<meta name="description" content="meld – Visual diff and merge tool for the GNOME Desktop">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-meld/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>meld(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> <code>meld</code> &#8211; Visual diff and merge tool for the GNOME Desktop </p>
+<h2>SYNOPSIS</h2>
+<p> <code>meld</code> [options]<br />
+ <code>meld</code> [options] FILE1<br />
+ <code>meld</code> [options] DIR1<br />
+ <code>meld</code> [options] FILE1 FILE2 [FILE3]<br />
+ <code>meld</code> [options] DIR1 DIR2 [DIR3]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>Meld</code> is a graphical diff viewer and merge application for the GNOME desktop. It supports 2 and 3-file diffs, recursive directory diffs, diffing of directories under version control (Bazaar, CVS, Darcs, Fossil, Git, Mercurial, Monotone), as well as the ability to manually and automatically merge file differences.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;auto-compare, -a</code></dt>
+<dd>
+ Automatically compare all differing files on startup.</dd>
+<dt><code>&#8211;auto-merge</code></dt>
+<dd>
+ Automatically merge files</dd>
+<dt><code>&#8211;comparison-file=&lt;file&gt;</code></dt>
+<dd>
+ Load a saved comparison from a Meld comparison file</dd>
+<dt><code>&#8211;diff FILE1|DIR1 FILE2|DIR2 [FILE3|DIR3]</code></dt>
+<dd>
+ Create a diff tab for the given files or directories. Note that &quot;<code>meld</code> &#8211;diff FILE1 FILE2&quot; is functionally equivalent to &quot;<code>meld</code> FILE1 FILE2&quot;. However, the <code>&#8211;diff</code> argument can be given multiple times for one invocation of <code>meld</code> which allows the user to automatically initiate multiple diffs when <code>meld</code> starts. See examples below.</dd>
+<dt><code>&#8211;help, -h</code></dt>
+<dd>
+ Print application help and usage.</dd>
+<dt><code>&#8211;label=&lt;label&gt;, -L &lt;label&gt;</code></dt>
+<dd>
+ Set application window title to &lt;label&gt;.</dd>
+<dt><code>&#8211;newtab, -n</code></dt>
+<dd>
+ Open the comparison as a new tab in an already-running instance.</dd>
+<dt><code>&#8211;output, -o</code></dt>
+<dd>
+ Sets the save path for the middle buffer in a three-pane merge view. This is useful for loading the middle buffer from one file and saving it to another, for example in use as a version control merge helper.</dd>
+<dt><code>&#8211;unified, -u</code></dt>
+<dd>
+ Ignored for compatibility</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>
+ Print application version and exit.</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt><code>meld</code></dt>
+<dd>
+ Run <code>meld</code> without initiating a diff.</dd>
+<dt><code>meld</code> FILE1</dt>
+<dd>
+ Initiate a diff between FILE1 and the version-controlled copy of FILE1.</dd>
+<dt><code>meld</code> DIR1</dt>
+<dd>
+ Initiate a recursive diff between DIR1 and the version-controlled copy of DIR1.</dd>
+<dt><code>meld</code> FILE1 FILE2</dt>
+<dd>
+ Initiate a diff between FILE1 and FILE2.</dd>
+<dt><code>meld</code> FILE1 FILE2 FILE3</dt>
+<dd>
+ Initiate a 3-way diff between FILE1, FILE2, and FILE3.</dd>
+<dt><code>meld</code> DIR1 DIR2</dt>
+<dd>
+ Initiate a recursive diff between directory DIR1 and DIR2.</dd>
+<dt><code>meld</code> DIR1 DIR2 DIR3</dt>
+<dd>
+ Initiate a recursive 3-way diff between directory DIR1, DIR2, and DIR3.</dd>
+<dt><code>meld</code> &#8211;diff FILE1 FILE2 &#8211;diff FILE3 FILE4</dt>
+<dd>
+ Initiate a diff between FILE1 and FILE2, and a separate diff between FILE3 and FILE4.</dd></dl>
+<h2>BUGS</h2>
+<p> If you find a bug, please report it at <a rel="nofollow" href="https://gitlab.gnome.org/GNOME/meld/issues">https://gitlab.gnome.org/GNOME/meld/issues</a> or mail a description of the issue to meld-list [at] gnome.org.</p>
+<h2>AUTHORS</h2>
+<p> See the AUTHORS text file in <code>meld&#8217;s</code> source code (<a rel="nofollow" href="http://git.gnome.org/browse/meld/tree/AUTHORS">http://git.gnome.org/browse/meld/tree/AUTHORS</a>). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

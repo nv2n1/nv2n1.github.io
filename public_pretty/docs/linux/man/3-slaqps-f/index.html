@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>slaqps-f(3) · Linux Manual Pages</title>
+<meta name="description" content="slaqps.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-slaqps-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>slaqps-f(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>slaqps.f &#8211;</p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>slaqps</code> (M, N, OFFSET, NB, KB, A, LDA, JPVT, TAU, VN1, VN2, AUXV, F, LDF)<br />
+ <i></i><code>SLAQPS</code> computes a step of QR factorization with column pivoting of a real m-by-n matrix A by using BLAS level 3.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine slaqps (integerM, integerN, integerOFFSET, integerNB, integerKB, real, dimension( lda, * )A, integerLDA, integer, dimension( * )JPVT, real, dimension( * )TAU, real, dimension( * )VN1, real, dimension( * )VN2, real, dimension( * )AUXV, real, dimension( ldf, * )F, integerLDF)</h3>
+<p><code>SLAQPS</code> computes a step of QR factorization with column pivoting of a real m-by-n matrix A by using BLAS level 3. </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dd>
+<pre> SLAQPS computes a step of QR factorization with column pivoting
+ of a real M-by-N matrix A by using Blas-3. It tries to factorize
+ NB columns from A starting from the row OFFSET+1, and updates all
+ of the matrix with Blas-3 xGEMM.
+ In some cases, due to catastrophic cancellations, it cannot
+ factorize NB columns. Hence, the actual number of factorized
+ columns is returned in KB.
+ Block A(1:OFFSET,1:N) is accordingly pivoted, but not factorized.</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>M</i> </dd>
+<pre> M is INTEGER
+ The number of rows of the matrix A. M &gt;= 0.</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ The number of columns of the matrix A. N &gt;= 0</pre>
+<p><i>OFFSET</i> </p>
+<pre> OFFSET is INTEGER
+ The number of rows of A that have been factorized in
+ previous steps.</pre>
+<p><i>NB</i> </p>
+<pre> NB is INTEGER
+ The number of columns to factorize.</pre>
+<p><i>KB</i> </p>
+<pre> KB is INTEGER
+ The number of columns actually factorized.</pre>
+<p><i>A</i> </p>
+<pre> A is REAL array, dimension (LDA,N)
+ On entry, the M-by-N matrix A.
+ On exit, block A(OFFSET+1:M,1:KB) is the triangular
+ factor obtained and block A(1:OFFSET,1:N) has been
+ accordingly pivoted, but no factorized.
+ The rest of the matrix, block A(OFFSET+1:M,KB+1:N) has
+ been updated.</pre>
+<p><i>LDA</i> </p>
+<pre> LDA is INTEGER
+ The leading dimension of the array A. LDA &gt;= max(1,M).</pre>
+<p><i>JPVT</i> </p>
+<pre> JPVT is INTEGER array, dimension (N)
+ JPVT(I) = K &lt;==&gt; Column K of the full matrix A has been
+ permuted into position I in AP.</pre>
+<p><i>TAU</i> </p>
+<pre> TAU is REAL array, dimension (KB)
+ The scalar factors of the elementary reflectors.</pre>
+<p><i>VN1</i> </p>
+<pre> VN1 is REAL array, dimension (N)
+ The vector with the partial column norms.</pre>
+<p><i>VN2</i> </p>
+<pre> VN2 is REAL array, dimension (N)
+ The vector with the exact column norms.</pre>
+<p><i>AUXV</i> </p>
+<pre> AUXV is REAL array, dimension (NB)
+ Auxiliar vector.</pre>
+<p><i>F</i> </p>
+<pre> F is REAL array, dimension (LDF,NB)
+ Matrix F**T = L*Y**T*A.</pre>
+<p><i>LDF</i> </p>
+<pre> LDF is INTEGER
+ The leading dimension of the array F. LDF &gt;= max(1,N).</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dd>September 2012</dd></dl>
+<p> <code>Contributors: </code></p>
+<dl>
+<dd>G. Quintana-Orti, Depto. de Informatica, Universidad Jaime I, Spain X. Sun, Computer Science Dept., Duke University, USA</dd></dl>
+<p>&nbsp;<wbr>Partial column norm updating strategy modified on April 2011 Z. Drmac and Z. Bujanovic, Dept. of Mathematics, University of Zagreb, Croatia.&nbsp;<wbr> </p>
+<p> <code>References: </code></p>
+<dl>
+<dd>LAPACK Working Note 176</dd></dl>
+<p> Definition at line 178 of file slaqps.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

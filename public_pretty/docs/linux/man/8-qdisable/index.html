@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qdisable(8) · Linux Manual Pages</title>
+<meta name="description" content="qdisable – disable input to a pbs destination">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-qdisable/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>qdisable(8)</h1>
+
+
+
+
+
+<p>qdisable &#8211; disable input to a pbs destination</p>
+<h2>Synopsis</h2>
+<p>qdisable destination &#8230;</p>
+<h2>Description</h2>
+<p>The <code>qdisable</code> command directs that a destination should no longer accept batch jobs. If the command is accepted, the destination will no longer accept <i>Queue Job</i> requests which specified the disabled queue. Jobs which already reside in the queue will continue to be processed. This allows a queue to be &quot;drained.&quot; </p>
+<p> In order to execute qdisable, the user must have PBS Operation or Manager privilege.</p>
+<h2>Operands</h2>
+<p>The qdisable command accepts one or more <i> operands. The operands are one of three forms:</p>
+<dl>
+<dd></i><code> </dd>
+</dl>
+<p> If is specified, the request is to disable that queue at the default server. If the form is given, the request is to disable all the queues at that server. If a full destination identifier, is given, the request is to disable the named queue at the named server. </code></p>
+<h2>Standard Error</h2>
+<p>The qdisable command will write a diagnostic message to standard error for each error occurrence.</p>
+<h2>Exit Status</h2>
+<p>Upon successful processing of all the operands presented to the qdisable command, the exit status will be a value of zero. </p>
+<p> If the qdisable command fails to process any operand, the command exits with a value greater than zero.</p>
+<h2>See Also</h2>
+<p>pbs_server(8B), qmgr(1B), and qenable(8B) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

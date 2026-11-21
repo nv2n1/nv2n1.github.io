@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perldebguts(1) · Linux Manual Pages</title>
+<meta name="description" content="perldebguts – Guts of Perl debugging">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perldebguts/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perldebguts(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> perldebguts &#8211; Guts of Perl debugging </p>
+<h2>DESCRIPTION</h2>
+<p> This is not perldebug, which tells you how to use the debugger. This manpage describes low-level details concerning the debugger&#8217;s internals, which range from difficult to impossible to understand for anyone who isn&#8217;t incredibly intimate with Perl&#8217;s guts. Caveat lector.</p>
+<h2>Debugger Internals</h2>
+<p> Perl has special debugging hooks at compile-time and run-time used to create debugging environments. These hooks are not to be confused with the <i>perl -Dxxx</i> command described in perlrun, which is usable only if a special Perl is built per the instructions in the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> podpage in the Perl source tree. </p>
+<p> For example, whenever you call Perl&#8217;s built-in <tt>&quot;caller&quot;</tt> function from the package <tt>&quot;DB&quot;</tt>, the arguments that the corresponding stack frame was called with are copied to the <tt>@DB::args</tt> array. These mechanisms are enabled by calling Perl with the <code>-d</code> switch. Specifically, the following additional features are enabled (cf. &#8220;$^P&#8221; in perlvar):</p>
+<dl>
+<dt>&bull;</dt>
+<dd> Perl inserts the contents of <tt>$ENV{PERL5DB}</tt> (or <tt>&quot;BEGIN {require 'perl5db.pl'}&quot;</tt> if not present) before the first line of your program.</dd>
+<dt>&bull;</dt>
+<dd> Each array <tt>&quot;@{&quot;_&lt;$filename&quot;}&quot;</tt> holds the lines of <tt>$filename</tt> for a file compiled by Perl. The same is also true for <tt>&quot;eval&quot;</tt>ed strings that contain subroutines, or which are currently being executed. The <tt>$filename</tt> for <tt>&quot;eval&quot;</tt>ed strings looks like <tt>&quot;(eval 34)&quot;</tt>. </dd>
+<p> Values in this array are magical in numeric context: they compare equal to zero only if the line is not breakable.</p>
+<dt>&bull;</dt>
+<dd> Each hash <tt>&quot;%{&quot;_&lt;$filename&quot;}&quot;</tt> contains breakpoints and actions keyed by line number. Individual entries (as opposed to the whole hash) are settable. Perl only cares about Boolean true here, although the values used by <i>perl5db.pl</i> have the form <tt>&quot;$break_condition
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>curl-config(1) · Linux Manual Pages</title>
+<meta name="description" content="curl-config – Get information about a libcurl installation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-curl-config/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>curl-config(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> curl-config &#8211; Get information about a libcurl installation </p>
+<h2>SYNOPSIS</h2>
+<p> <code>curl-config [options]</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>curl-config</code> displays information about the curl and libcurl installation.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>&#8211;ca</dt>
+<dd> Displays the built-in path to the CA cert bundle this libcurl uses.</dd>
+<dt>&#8211;cc</dt>
+<dd> Displays the compiler used to build libcurl.</dd>
+<dt>&#8211;cflags</dt>
+<dd> Set of compiler options (CFLAGS) to use when compiling files that use libcurl. Currently that is only the include path to the curl include files.</dd>
+<dt>&#8211;checkfor [version]</dt>
+<dd> Specify the oldest possible libcurl version string you want, and this script will return 0 if the current installation is new enough or it returns 1 and outputs a text saying that the current version is not new enough. (Added in 7.15.4)</dd>
+<dt>&#8211;configure</dt>
+<dd> Displays the arguments given to configure when building curl.</dd>
+<dt>&#8211;feature</dt>
+<dd> Lists what particular main features the installed libcurl was built with. At the time of writing, this list may include SSL, KRB4 or IPv6. Do not assume any particular order. The keywords will be separated by newlines. There may be none, one, or several keywords in the list.</dd>
+<dt>&#8211;help</dt>
+<dd> Displays the available options.</dd>
+<dt>&#8211;libs</dt>
+<dd> Shows the complete set of libs and other linker options you will need in order to link your application with libcurl.</dd>
+<dt>&#8211;prefix</dt>
+<dd> This is the prefix used when libcurl was installed. Libcurl is then installed in $prefix/lib and its header files are installed in $prefix/include and so on. The prefix is set with &quot;configure &#8211;prefix&quot;.</dd>
+<dt>&#8211;protocols</dt>
+<dd> Lists what particular protocols the installed libcurl was built to support. At the time of writing, this list may include HTTP, HTTPS, FTP, FTPS, FILE, TELNET, LDAP, DICT. Do not assume any particular order. The protocols will be listed using uppercase and are separated by newlines. There may be none, one, or several protocols in the list. (Added in 7.13.0)</dd>
+<dt>&#8211;ssl-backends</dt>
+<dd> Lists the SSL backends that were enabled when libcurl was built. It might be no, one or several names. If more than one name, they will appear comma-separated. (Added in 7.58.0)</dd>
+<dt>&#8211;static-libs</dt>
+<dd> Shows the complete set of libs and other linker options you will need in order to link your application with libcurl statically. (Added in 7.17.1)</dd>
+<dt>&#8211;version</dt>
+<dd> Outputs version information about the installed libcurl.</dd>
+<dt>&#8211;vernum</dt>
+<dd> Outputs version information about the installed libcurl, in numerical mode. This outputs the version number, in hexadecimal, with 8 bits for each part: major, minor, and patch. So that libcurl 7.7.4 would appear as 070704 and libcurl 12.13.14 would appear as 0c0d0e&#8230; Note that the initial zero might be omitted. (This option was broken in the 7.15.0 release.)</dd></dl>
+<h2>EXAMPLES</h2>
+<p> What linker options do I need when I link with libcurl? </p>
+<p>&nbsp;<wbr>&nbsp;$&nbsp;curl-config &#8211;libs </p>
+<p> What compiler options do I need when I compile using libcurl functions? </p>
+<p>&nbsp;<wbr>&nbsp;$&nbsp;curl-config &#8211;cflags </p>
+<p> How do I know if libcurl was built with SSL support? </p>
+<p>&nbsp;<wbr>&nbsp;$&nbsp;curl-config &#8211;feature | grep SSL </p>
+<p> What&#8217;s the installed libcurl version? </p>
+<p>&nbsp;<wbr>&nbsp;$&nbsp;curl-config &#8211;version </p>
+<p> How do I build a single file with a one-line command? </p>
+<p>&nbsp;<wbr>&nbsp;$&nbsp;`curl-config &#8211;cc &#8211;cflags`&nbsp;-o example example.c&nbsp;`curl-config &#8211;libs`</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-curl/">curl</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

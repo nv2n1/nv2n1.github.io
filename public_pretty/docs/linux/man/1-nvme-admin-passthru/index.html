@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nvme-admin-passthru(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nvme-admin-passthru/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nvme-admin-passthru(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>nvme-admin-passthru - Submit an arbitrary admin command, return results</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+nvme - admin - passthru&lt;device&gt;[--opcode = &lt;opcode&gt; | -o&lt;opcode&gt;][--flags = &lt;flags&gt; | -f&lt;flags&gt;][-rsvd = &lt;rsvd&gt; | -R&lt;rsvd&gt;][--namespace - id = &lt;nsid&gt;][--cdw2 = &lt;cdw2&gt;][--cdw3 = &lt;cdw3&gt;][--cdw10 = &lt;cdw10&gt;][--cdw11 = &lt;cdw11&gt;][--cdw12 = &lt;cdw12&gt;][--cdw13 = &lt;cdw13&gt;][--cdw14 = &lt;cdw14&gt;][--cdw15 = &lt;cdw15&gt;][--data - len = &lt;data - len&gt; | -l&lt;data - len&gt;][--metadata - len = &lt;len&gt; | -m&lt;len&gt;][--input - file = &lt;file&gt; | -f&lt;file&gt;][--read | -r][--write | -w][--timeout = &lt;to&gt; | -t&lt;to&gt;][--show - command | --dry - run | -s][--raw - binary | -b][--prefill = &lt;prefill&gt; | -p&lt;prefill&gt;]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>Submits an arbitrary NVMe admin command and returns the applicable results. This may be the simply the commands result and status, or may also include a buffer if the command returns one. This command does no interpretation of the opcodes or options.</p>
+<p>The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1).</p>
+<p>On success, the returned structure (if applicable) may be returned in one of several ways depending on the option flags; the structure may printed by the program as a hex dump, or may be returned as a raw buffer printed to stdout for another program to parse.</p>
+<h2>OPTIONS</h2>
+<p>-o &lt;opcode&gt;, &ndash;opcode=&lt;opcode&gt;</p>
+<dl>
+<dt>
+</dt><dd> The NVMe opcode to send to the device in the command</dd></dl>
+<p>-f &lt;flags&gt;, &ndash;flags=&lt;flags&gt;</p>
+<dl>
+<dt>
+</dt><dd> The NVMe command flags to send to the device in the command</dd></dl>
+<p>-R &lt;rsvd&gt;, &ndash;rsvd=&lt;rsvd&gt;</p>
+<dl>
+<dt>
+</dt><dd> The value for the reserved field in the command.</dd></dl>
+<p>-n &lt;nsid&gt;, &ndash;namespace-id=&lt;nsid&gt;</p>
+<dl>
+<dt>
+</dt><dd> The value for the ns-id in the command.</dd></dl>
+<p>&ndash;cdw[2-3,10-15]=&lt;cdw&gt;</p>
+<dl>
+<dt>
+</dt><dd> Specifies the command dword value for that specified entry in the command</dd></dl>
+<p>-r, &ndash;read, -w, &ndash;write</p>
+<dl>
+<dt>
+</dt><dd> Used for the data-direction for the command and required for commands sending/receiving data. Don't use both read and write at the same time.</dd></dl>
+<p>-i &lt;file&gt;, &ndash;input-file=&lt;file&gt;</p>
+<dl>
+<dt>
+</dt><dd> If the command is a data-out (write) command, use this file to fill the buffer sent to the device. If no file is given, assumed to use STDIN.</dd></dl>
+<p>-l &lt;data-len&gt;, &ndash;data-len=&lt;data-len&gt;</p>
+<dl>
+<dt>
+</dt><dd> The data length for the buffer used for this command.</dd></dl>
+<p>-m &lt;data-len&gt;, &ndash;metadata-len=&lt;data-len&gt;</p>
+<dl>
+<dt>
+</dt><dd> The metadata length for the buffer used for this command.</dd></dl>
+<p>-s, &ndash;show-cmd, &ndash;dry-run</p>
+<dl>
+<dt>
+</dt><dd> Do not actually send the command; print out the command that would be sent.</dd></dl>
+<p>-b, &ndash;raw-binary</p>
+<dl>
+<dt>
+</dt><dd> Print the raw returned buffer to stdout if the command returns a structure.</dd></dl>
+<p>-p, &ndash;prefill</p>
+<dl>
+<dt>
+</dt><dd> Prefill the buffer with a predetermined byte value. Defaults to 0. This may be useful if the data you are writing is shorter than the required buffer, and you need to pad it with a known value. It may also be useful if you need to confirm if a device is overwriting a buffer for a data-in command.</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>
+</dt><dd> &bull; The following will run the admin command with opcode=6 and cdw10=1, which corresponds to an identify controller command. This example requires the data-len param be 4096, which is the size of the returned structure. The -r option is used because it is a data-in command 
+</dd><dl>
+<dt>
+</dt><dd> <pre>
+# nvme admin-passthru /dev/nvme0 --opcode=06 --data-len=4096 --cdw10=1 -r
+</pre></dd></dl>
+</dl>
+<dl>
+<dt>
+</dt><dd> &bull; Or if you want to save that structure to a file: 
+</dd><dl>
+<dt>
+</dt><dd> <pre>
+# nvme admin-passthru /dev/nvme0 --opcode=06 --data-len=4096 --cdw10=1 -r -b &gt; id_ns.raw
+</pre></dd></dl>
+</dl>
+<h2>NVME</h2>
+<p>Part of the nvme-user suite</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

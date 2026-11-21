@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rpmgraph(8) · Linux Manual Pages</title>
+<meta name="description" content="rpmgraph – Display RPM Package Dependency Graph">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-rpmgraph/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>rpmgraph(8)</h1>
+
+
+
+
+
+<p>rpmgraph &#8211; Display RPM Package Dependency Graph</p>
+<h2>Synopsis</h2>
+<p><code>rpmgraph</code> <i>PACKAGE_FILE</i><i> &#8230;</i> </p>
+<h2>Description</h2>
+<p><code>rpmgraph</code> uses <i>PACKAGE_FILE</i> arguments to generate a package dependency graph. Each <i>PACKAGE_FILE</i> argument is read and added to an rpm transaction set. The elements of the transaction set are partially ordered using a topological sort. The partially ordered elements are then printed to standard output. </p>
+<p> Nodes in the dependency graph are package names, and edges in the directed graph point to the parent of each node. The parent node is defined as the last predecessor of a package when partially ordered using the package dependencies as a relation. That means that the parent of a given package is the package&#8217;s last prerequisite. </p>
+<p> The output is in <code><a href="/docs/linux/man/1-dot/">dot</a></code>(1) directed graph format, and can be displayed or printed using the <code>dotty</code> graph editor from the <code>graphviz</code> package. There are no <code>rpmgraph</code> specific options, only common <code>rpm</code> options. See the <code>rpmgraph</code> usage message for what is currently implemented.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), </p>
+<p> <code><a href="/docs/linux/man/1-dotty/">dotty</a></code>(1), </p>
+<p> <code> <a rel="nofollow" href="http://www.graphviz.org/">http://www.graphviz.org/</a> &lt;URL:<a href="http://www.graphviz.org/">http://www.graphviz.org/</a>&gt; </code></p>
+<h2>Authors</h2>
+<p>Jeff Johnson &lt;jbj [at] redhat.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

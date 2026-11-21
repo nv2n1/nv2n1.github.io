@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>doveadm-instance(1) · Linux Manual Pages</title>
+<meta name="description" content="doveadm-instance – Manage the list of running Dovecot instances">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-doveadm-instance/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>doveadm-instance(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> doveadm-instance &#8211; Manage the list of running Dovecot instances</p>
+<h2>SYNOPSIS</h2>
+<p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>instance list</code><br />
+ <code>doveadm</code> [<code>-Dv</code>] <code>instance remove</code> <i>name</i> | <i>base_dir</i></p>
+<h2>DESCRIPTION</h2>
+<p> The <code>doveadm instance</code> commands are used to manage the list of Dovecot instances running on the server. In most installations there is only one Dovecot instance, but in some cases is may be useful to have more (e.g. running director proxy and backend in the same server). </p>
+<p> Instances are added to the list automatically when Dovecot is started. Each instance is uniquely identified by its <i>base_dir</i> setting. Instances can be named by setting <i>instance_name</i> in each instance&#8217;s <i>dovecot.conf</i>. When an instance is named, it can be accessed easily by giving <code>-i&nbsp;<wbr></code><i>instance_name</i> command line parameter for Dovecot binaries (e.g. doveadm).</p>
+<h2>OPTIONS</h2>
+<p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
+<dl>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-f&nbsp;<wbr></code><i>formatter</i></dt>
+<dd> Specifies the <i>formatter</i> for formatting the output. Supported formatters are:</dd>
+<dl>
+<dl>
+<dt><code>flow</code></dt>
+<dd> prints each line with <i>key</i><code>=</code><i>value</i> pairs.</dd>
+<dt><code>pager</code></dt>
+<dd> prints each <i>key</i>:&nbsp;<wbr><i>value</i> pair on its own line and separates records with form feed character (<code>^L</code>).</dd>
+<dt><code>tab</code></dt>
+<dd> prints a table header followed by tab separated value lines.</dd>
+<dt><code>table</code></dt>
+<dd> prints a table header followed by adjusted value lines.</dd></dl>
+</dl>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt><i>name</i></dt>
+<dd> The value of an instance&#8217;s <i>instance_name</i> setting.</dd>
+<dt><i>base_dir</i></dt>
+<dd> The base directory of a Dovecot instance.</dd></dl>
+<h2>COMMANDS</h2>
+<h3>instance list</h3>
+<p> <code>doveadm instance list</code> </p>
+<p> This command lists the seen Dovecot instances.</p>
+<h3>instance remove</h3>
+<p> <code>doveadm instance remove</code> <i>name</i> | <i>base_dir</i> </p>
+<p> This command removes the specified instance.</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs, including <i>doveconf -n</i> output, to the Dovecot Mailing List &lt;dovecot [at] dovecot.org&gt;. Information about reporting bugs is available at: <a rel="nofollow" href="http://dovecot.org/bugreport.html">http://dovecot.org/bugreport.html</a></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

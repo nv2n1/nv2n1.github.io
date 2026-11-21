@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemd-id128(1) · Linux Manual Pages</title>
+<meta name="description" content="systemd-id128 – Generate and print sd-128 identifiers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-systemd-id128/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>systemd-id128(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> systemd-id128 &#8211; Generate and print sd-128 identifiers </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>systemd-id128</code> [OPTIONS&#8230;] new</dt>
+<dt> <code>systemd-id128</code> [OPTIONS&#8230;] machine-id</dt>
+<dt> <code>systemd-id128</code> [OPTIONS&#8230;] boot-id</dt>
+<dt> <code>systemd-id128</code> [OPTIONS&#8230;] invocation-id</dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>id128</code></p>
+<dd>may be used to conveniently print <code><a href="/docs/linux/man/3-sd-id128/">sd-id128</a></code>(3) UUIDs. What identifier is printed depends on the specific verb. </dd>
+<p> With <code>new</code>, a new random identifier will be generated. </p>
+<p> With <code>machine-id</code>, the identifier of the current machine will be printed. See <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5). </p>
+<p> With <code>boot-id</code>, the identifier of the current boot will be printed. </p>
+<p> Both <code>machine-id</code> and <code>boot-id</code> may be combined with the <code>&#8211;app-specific=</code><i>app-id</i> switch to generate application-specific IDs. See <code><a href="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></code>(3) for the discussion when this is useful. </p>
+<p> With <code>invocation-id</code>, the identifier of the current service invocation will be printed. This is available in systemd services. See <code><a href="/docs/linux/man/5-systemd-exec/">systemd.exec</a></code>(5). </p>
+<p> With <code>show</code>, well-known UUIDs are printed. When no arguments are specified, all known UUIDs are shown. When arguments are specified, they must be the names or values of one or more known UUIDs, which are then printed.</p>
+<h2>OPTIONS</h2>
+<p> The following options are understood: </p>
+<p> <code>-p</code>, <code>&#8211;pretty</code></p>
+<dl>
+<dt>
+</dt><dd> Generate output as programming language snippets.</dd></dl>
+<p> <code>-a </code><i>app-id</i>, <code>&#8211;app-specific=</code><i>app-id</i></p>
+<dl>
+<dt>
+</dt><dd> With this option, an identifier that is the result of hashing the application identifier <i>app-id</i> and the machine identifier will be printed. The <i>app-id</i> argument must be a valid sd-id128 string identifying the application.</dd></dl>
+<p> <code>-u</code>, <code>&#8211;uuid</code></p>
+<dl>
+<dt>
+</dt><dd> Generate output as an UUID formatted in the &quot;canonical representation&quot;, with five groups of digits separated by hyphens. See the m[blue]<code>wikipedia</code>m[]<font SIZE="-2">[1]</font> for more discussion.</dd></dl>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Print a short help text and exit.</dd></dl>
+<p> <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Print a short version string and exit.</dd></dl>
+<h2>EXIT STATUS</h2>
+<p> On success, 0 is returned, a non-zero failure code otherwise.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/3-sd-id128/">sd-id128</a></code>(3), <code><a href="/docs/linux/man/3-sd_id128_get_machine/">sd_id128_get_machine</a></code>(3)</p>
+<h2>NOTES</h2>
+<dl>
+<dt> 1.</dt>
+<dd> wikipedia</dd>
+<dl>
+<dt>
+</dt><dd> <a rel="nofollow" href="https://en.wikipedia.org/wiki/Universally_unique_identifier#Format">https://en.wikipedia.org/wiki/Universally_unique_identifier#Format</a></dd></dl>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

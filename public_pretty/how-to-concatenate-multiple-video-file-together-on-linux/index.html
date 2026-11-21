@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Concatenate Multiple Video Files on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-concatenate-multiple-video-file-together-on-linux/">
+  <meta name="description" content="When you need to combine multiple video files (like video1.mp4, video2.mp4, and video3.mp4) into a single output file, FFmpeg is the standard tool on Linux. …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Concatenate Multiple Video Files on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-concatenate-multiple-video-file-together-on-linux/">
+  <meta property="og:description" content="When you need to combine multiple video files (like video1.mp4, video2.mp4, and video3.mp4) into a single output file, FFmpeg is the standard tool on Linux. …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>How to Concatenate Multiple Video Files on Linux</h1>
+        <time class="post-date" datetime="2018-03-24T08:20:32Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When you need to combine multiple video files (like video1.mp4, video2.mp4, and video3.mp4) into a single output file, FFmpeg is the standard tool on Linux. It’s faster, more reliable, and better maintained than older tools like mencoder.</p>
+<h2 id="using-ffmpeg-with-the-concat-demuxer">Using FFmpeg with the Concat Demuxer</h2>
+<p>The most robust approach uses FFmpeg’s concat demuxer, which properly handles file sequences without re-encoding.</p>
+<p>First, create a text file listing your videos (concat_list.txt):</p>
+<pre><code>file 'video1.mp4'
+file 'video2.mp4'
+file 'video3.mp4'
+</code></pre>
+<p>Then concatenate with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -f concat -safe <span class="m">0</span> -i concat_list.txt -c copy output.mp4
+</span></span></code></pre></div><p>The <code>-c copy</code> option copies streams without re-encoding, preserving quality and speed.</p>
+<p><strong>Important notes:</strong></p>
+<ul>
+<li>The <code>-safe 0</code> flag is needed if your file paths contain special characters or are absolute paths</li>
+<li>All input files should ideally have the same codec, resolution, and frame rate. If they don’t, FFmpeg will likely fail or produce unexpected results</li>
+<li>Use quotes around filenames if they contain spaces</li>
+</ul>
+<h2 id="quick-concatenation-with-the-concat-protocol">Quick Concatenation with the Concat Protocol</h2>
+<p>For files with identical properties, you can use the concat protocol directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i <span class="s2">&#34;concat:video1.mp4|video2.mp4|video3.mp4&#34;</span> -c copy output.mp4
+</span></span></code></pre></div><p>This is faster but less reliable if files have any property differences.</p>
+<h2 id="re-encoding-when-necessary">Re-encoding When Necessary</h2>
+<p>If your source files have mismatched codecs or resolutions, you’ll need to re-encode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -f concat -i concat_list.txt -c:v libx264 -preset fast -crf <span class="m">23</span> -c:a aac output.mp4
+</span></span></code></pre></div><p>This example uses H.264 video and AAC audio with moderate quality. Adjust <code>-crf</code> (0-51, lower is better) and <code>-preset</code> (ultrafast to veryslow) based on your needs.</p>
+<h2 id="handling-different-container-formats">Handling Different Container Formats</h2>
+<p>If you’re mixing formats (.avi, .mkv, .mp4), first convert them to a common format:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i video1.avi -c copy video1.mp4
+</span></span><span class="line"><span class="cl">ffmpeg -i video2.mkv -c copy video2.mp4
+</span></span></code></pre></div><p>Then concatenate the converted files using the concat demuxer.</p>
+<h2 id="common-issues">Common Issues</h2>
+<p><strong>Audio sync problems:</strong> Re-encoding both video and audio together usually resolves this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -f concat -i concat_list.txt -c:v libx264 -c:a aac output.mp4
+</span></span></code></pre></div><p><strong>File path errors:</strong> Use absolute paths or <code>-safe 0</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -f concat -safe <span class="m">0</span> -i concat_list.txt -c copy output.mp4
+</span></span></code></pre></div><p><strong>Duration detection fails:</strong> Some formats need explicit re-encoding rather than stream copying, especially for certain AVI or MKV files.</p>
+<h2 id="installation">Installation</h2>
+<p>FFmpeg is in all major Linux distributions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Debian/Ubuntu</span>
+</span></span><span class="line"><span class="cl">sudo apt install ffmpeg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># RHEL/CentOS/Fedora</span>
+</span></span><span class="line"><span class="cl">sudo dnf install ffmpeg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Arch</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S ffmpeg
+</span></span></code></pre></div><p>For best results with modern codecs and hardware acceleration, ensure you have a recent FFmpeg build (4.4+).</p>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<p>When encountering problems on Linux systems, follow a systematic approach. Check system logs first using journalctl for systemd-based distributions. Verify service status with systemctl before attempting restarts. For network issues, use ip addr and ss -tulpn to diagnose connectivity problems.</p>
+<p>Package management issues often stem from stale caches. Run dnf clean all on Fedora or apt clean on Ubuntu before retrying failed installations. If a package has unmet dependencies, try resolving them with dnf autoremove or apt autoremove.</p>
+<h2 id="related-system-commands">Related System Commands</h2>
+<p>These commands are frequently used alongside the tools discussed in this article:</p>
+<ul>
+<li>systemctl status service-name – Check if a service is running</li>
+<li>journalctl -u service-name -f – Follow service logs in real time</li>
+<li>rpm -qi package-name – Query installed package information</li>
+<li>dnf history – View package transaction history</li>
+<li>top or htop – Monitor system resource usage</li>
+</ul>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

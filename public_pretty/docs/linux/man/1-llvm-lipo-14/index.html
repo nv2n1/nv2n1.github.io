@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>llvm-lipo-14(1) · Linux Manual Pages</title>
+<meta name="description" content="llvm-lipo – LLVM tool for manipulating universal binaries">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-llvm-lipo-14/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>llvm-lipo-14(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> llvm-lipo &#8211; LLVM tool for manipulating universal binaries </p>
+<h2>SYNOPSIS</h2>
+<p> <code>llvm-lipo</code> [<i>filenames…</i>] [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>llvm-lipo</code> can create universal binaries from Mach-O files, extract regular object files from universal binaries, and display architecture information about both universal and regular files.</p>
+<h2>COMMANDS</h2>
+<p> <code>llvm-lipo</code> supports the following mutually exclusive commands:</p>
+<dl>
+<dt><code>-help, -h</code></dt>
+<dd> Display usage information and exit.</dd>
+<dt><code>-version</code></dt>
+<dd> Display the version of this program.</dd>
+<dt><code>-verify_arch &lt;architecture 1&gt; [&lt;architecture 2&gt; &#8230;]</code></dt>
+<dd> Take a single input file and verify the specified architectures are present in the file. If so then exit with a status of 0 else exit with a status of 1.</dd>
+<dt><code>-archs</code></dt>
+<dd> Take a single input file and display the architectures present in the file. Each architecture is separated by a single whitespace. Unknown architectures are displayed as unknown(CPUtype,CPUsubtype).</dd>
+<dt><code>-info</code></dt>
+<dd> Take at least one input file and display the descriptions of each file. The descriptions include the filename and architecture types separated by whitespace. Universal binaries are grouped together first, followed by thin files. Architectures in the fat file: &lt;filename&gt; are: &lt;architectures&gt; Non-fat file: &lt;filename&gt; is architecture: &lt;architecture&gt;</dd>
+<dt><code>-thin</code></dt>
+<dd> Take a single universal binary input file and the thin flag followed by an architecture type. Require the output flag to be specified, and output a thin binary of the specified architecture.</dd>
+<dt><code>-create</code></dt>
+<dd> Take at least one input file and require the output flag to be specified. Output a universal binary combining the input files.</dd>
+<dt><code>-replace</code></dt>
+<dd> Take a single universal binary input file and require the output flag to be specified. The replace flag is followed by an architecture type, and a thin input file. Output a universal binary with the specified architecture slice in the universal binary input replaced with the contents of the thin input file.</dd>
+<dt><code>-segalign</code></dt>
+<dd> Additional flag that can be specified with create and replace. The segalign flag is followed by an architecture type, and an alignment. The alignment is a hexadecimal number that is a power of 2. Output a file in which the slice with the specified architecture has the specified alignment.</dd></dl>
+<h2>BUGS</h2>
+<p> To report bugs, please visit &lt;<i><a rel="nofollow" href="https://github.com/llvm/llvm-project/issues/">https://github.com/llvm/llvm-project/issues/</a></i>&gt;.</p>
+<h2>AUTHOR</h2>
+<p> Maintained by the LLVM Team (<a rel="nofollow" href="https://llvm.org/">https://llvm.org/</a>).</p>
+<h2>COPYRIGHT</h2>
+<p> 2003-2022, LLVM Project </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

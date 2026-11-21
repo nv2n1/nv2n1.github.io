@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perl5182delta(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perl5182delta/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perl5182delta(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>perl5182delta - what is new for perl v5.18.2</p>
+<h2>DESCRIPTION</h2>
+<p>This document describes differences between the 5.18.1 release and the 5.18.2 release.</p>
+<p>If you are upgrading from an earlier release such as 5.18.0, first read perl5181delta, which describes differences between 5.18.0 and 5.18.1.</p>
+<h2>Modules and Pragmata</h2>
+<h3>Updated Modules and Pragmata</h3>
+<dl>
+<dt>&bull;
+</dt><dd> B has been upgraded from version 1.42_01 to 1.42_02. 
+ The fix for [perl #118525] introduced a regression in the behaviour of <tt>&quot;B::CV::GV&quot;</tt>, changing the return value from a <tt>&quot;B::SPECIAL&quot;</tt> object on a <tt>&quot;NULL&quot;</tt> <tt>&quot;CvGV&quot;</tt> to <tt>&quot;undef&quot;</tt>. <tt>&quot;B::CV::GV&quot;</tt> again returns a <tt>&quot;B::SPECIAL&quot;</tt> object in this case. [perl #119413]
+</dd><dt>&bull;
+</dt><dd> B::Concise has been upgraded from version 0.95 to 0.95_01. 
+ This fixes a bug in dumping unexpected SPECIALs.
+</dd><dt>&bull;
+</dt><dd> English has been upgraded from version 1.06 to 1.06_01. This fixes an error about the performance of <tt>&quot;$`&quot;</tt>, <tt>$&amp;</tt>, and <tt>&quot;$'&quot;</tt>.
+</dd><dt>&bull;
+</dt><dd> File::Glob has been upgraded from version 1.20 to 1.20_01.</dd></dl>
+<h2>Documentation</h2>
+<h3>Changes to Existing Documentation</h3>
+<dl>
+<dt>&bull;
+</dt><dd> perlrepository has been restored with a pointer to more useful pages.
+</dd><dt>&bull;
+</dt><dd> perlhack has been updated with the latest changes from blead.</dd></dl>
+<h2>Selected Bug Fixes</h2>
+<dl>
+<dt>&bull;
+</dt><dd> Perl 5.18.1 introduced a regression along with a bugfix for lexical subs. Some B::SPECIAL results from B::CV::GV became undefs instead. This broke Devel::Cover among other libraries. This has been fixed. [perl #119351]
+</dd><dt>&bull;
+</dt><dd> Perl 5.18.0 introduced a regression whereby <tt>&quot;[:^ascii:]&quot;</tt>, if used in the same character class as other qualifiers, would fail to match characters in the Latin-1 block. This has been fixed. [perl #120799]
+</dd><dt>&bull;
+</dt><dd> Perl 5.18.0 introduced a regression when using -&gt;SUPER::method with <font SIZE="-1">AUTOLOAD</font> by looking up <font SIZE="-1">AUTOLOAD</font> from the current package, rather than the current package’s superclass. This has been fixed. [perl #120694]
+</dd><dt>&bull;
+</dt><dd> Perl 5.18.0 introduced a regression whereby <tt>&quot;-bareword&quot;</tt> was no longer permitted under the <tt>&quot;strict&quot;</tt> and <tt>&quot;integer&quot;</tt> pragmata when used together. This has been fixed. [perl #120288]
+</dd><dt>&bull;
+</dt><dd> Previously PerlIOBase_dup didn't check if pushing the new layer succeeded before (optionally) setting the utf8 flag. This could cause segfaults-by-nullpointer. This has been fixed.
+</dd><dt>&bull;
+</dt><dd> A buffer overflow with very long identifiers has been fixed.
+</dd><dt>&bull;
+</dt><dd> A regression from 5.16 in the handling of padranges led to assertion failures if a keyword plugin declined to handle the second ‘my’, but only after creating a padop. 
+ This affected, at least, Devel::CallParser under threaded builds. 
+ This has been fixed.
+</dd><dt>&bull;
+</dt><dd> The construct <tt>&quot;$r=qr/.../; /$r/p&quot;</tt> is now handled properly, an issue which had been worsened by changes 5.18.0. [perl #118213]</dd></dl>
+<h2>Acknowledgements</h2>
+<p>Perl 5.18.2 represents approximately 3 months of development since Perl 5.18.1 and contains approximately 980 lines of changes across 39 files from 4 authors.</p>
+<p>Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.18.2:</p>
+<p>Craig A. Berry, David Mitchell, Ricardo Signes, Tony Cook.</p>
+<p>The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker.</p>
+<p>Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&rsquo;s core. We&rsquo;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish.</p>
+<p>For a more complete list of all of Perl&rsquo;s historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.</p>
+<h2>Reporting Bugs</h2>
+<p>If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at <a rel="nofollow" HREF="http://rt.perl.org/perlbug/"><a href="http://rt.perl.org/perlbug/">http://rt.perl.org/perlbug/</a></a> . There may also be information at <a rel="nofollow" HREF="http://www.perl.org/"><a href="http://www.perl.org/">http://www.perl.org/</a></a> , the Perl Home Page.</p>
+<p>If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team.</p>
+<p>If the bug you are reporting has security implications, which make it inappropriate to send to a publicly archived mailing list, then please send it to perl5-security-report [at] perl.org. This points to a closed subscription unarchived mailing list, which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font></p>
+<h2>SEE ALSO</h2>
+<p>The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed.</p>
+<p>The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl.</p>
+<p>The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff.</p>
+<p>The <i>Artistic</i> and <i>Copying</i> files for copyright information.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stduses_allocator(3) · Linux Manual Pages</title>
+<meta name="description" content="std::uses_allocator&lt;std::tuple&gt; – std::uses_allocator&lt;std::tuple&gt;">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stduses_allocator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stduses_allocator(3)</h1>
+
+
+
+
+
+<p>std::uses_allocator&lt;std::tuple&gt; &#8211; std::uses_allocator&lt;std::tuple&gt;</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;tuple&gt;
+    template &lt;class... Types, class Alloc&gt;
+    (since C++ 11)
+        struct uses_allocator&lt;std::tuple&lt;Types...&gt;, Alloc&gt; : std::true_type {
+};</code></pre>
+<p>This specialization of std::uses_allocator informs other library components that tuples support uses-allocator construction, even though they do not have a nested allocator_type.<br />
+Inherited from std::integral_constant </p>
+<h2>Member constants</h2>
+<p>value true<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br />
+<code>[static]</code></p>
+<h2>Member functions</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts the object to bool, returns value<br />
+operator bool <i>(public member function)</i> </p>
+<p>operator() returns value<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br />
+<i>(C++14)</i></p>
+<h2>Member types</h2>
+<p>Type Definition<br />
+value_type bool<br />
+type std::integral_constant&lt;bool, value&gt;</p>
+<h2>Example</h2>
+<p>// Run this code<br />
+&nbsp;<wbr>&nbsp;// myalloc is a stateful Allocator with a single-argument constructor<br />
+&nbsp;<wbr>&nbsp;// that takes an int. It has no default constructor.<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;typedef std::vector&lt;int, myalloc&lt;int&gt;&gt; innervector_t;<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;typedef std::tuple&lt;int, innervector_t&gt; elem_t;<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;typedef std::scoped_allocator_adaptor&lt; myalloc&lt;elem_t&gt;, myalloc&lt;int&gt;&gt; Alloc;<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Alloc a(1,2);<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;std::vector&lt;elem_t, Alloc&gt; v(a);<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;v.resize(1); // uses allocator #1 for elements of v<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;std::get&lt;1&gt;(v[0]).resize(10); // uses allocator #2 for innervector_t </p>
+<h2>See also</h2>
+<p>uses_allocator checks if the specified type supports uses-allocator construction<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
+<i>(C++11)</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

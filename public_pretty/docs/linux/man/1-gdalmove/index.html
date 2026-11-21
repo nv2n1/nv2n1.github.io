@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gdalmove(1) · Linux Manual Pages</title>
+<meta name="description" content="gdalmove – gdalmove.py Transform georeferencing of raster file in place">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gdalmove/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gdalmove(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> gdalmove &#8211; gdalmove.py Transform georeferencing of raster file in place </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+gdalmove.py[-s_srs&lt;srs_defn&gt;] - t_srs&lt;srs_defn&gt;[-et&lt;max_pixel_err&gt;] target_file
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The gdalmove.py script transforms the bounds of a raster file from one coordinate system to another, and then updates the coordinate system and geotransform of the file. This is done without altering pixel values at all. It is loosely similar to using gdalwarp to transform an image but avoiding the resampling step in order to avoid image damage. It is generally only suitable for transformations that are effectively linear in the area of the file. </p>
+<p> If no error threshold value (-et) is provided then the file is not actually updated, but the errors that would be incurred are reported. If -et is provided then the file is only modify if the apparent error being introduced is less than the indicate threshold (in pixels). </p>
+<p> Currently the transformed geotransform is computed based on the transformation of the top left, top right, and bottom left corners. A reduced overall error could be produced using a least squares fit of at least all four corner points. </p>
+<dl>
+<dt><code>-s_srs</code> <i>srs_defn</i>:</dt>
+<dd></dd></dl>
+<p> Override the coordinate system of the file with the indicated coordinate system definition. Optional. If not provided the source coordinate system is read from the source file. </p>
+<dl>
+<dt><code>-t_srs</code> <i>srs_defn</i>:</dt>
+<dd></dd></dl>
+<p> Defines the target coordinate system. This coordinate system will be written to the file after an update. </p>
+<dl>
+<dt><code>-et</code> <i>max_pixel_err</i>:</dt>
+<dd></dd></dl>
+<p> The error threshold (in pixels) beyond which the file will not be updated. If not provided no update will be applied to the file, but errors will be reported. </p>
+<dl>
+<dt><i>target_file</i></dt>
+<dd> The file to be operated on. To update this must be a file format that supports in place updates of the geotransform and SRS.</dd></dl>
+<h2>AUTHORS</h2>
+<p> Frank Warmerdam warmerdam [at] pobox.com </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

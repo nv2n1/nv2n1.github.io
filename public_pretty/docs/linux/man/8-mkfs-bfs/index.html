@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mkfs-bfs(8) · Linux Manual Pages</title>
+<meta name="description" content="mkfs.bfs – make an SCO bfs filesystem">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mkfs-bfs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mkfs-bfs(8)</h1>
+
+
+
+
+
+<p>mkfs.bfs &#8211; make an SCO bfs filesystem</p>
+<h2>Synopsis</h2>
+<p><code>mkfs.bfs</code> [options] <i>device</i> [<i>block-count</i>]</p>
+<h2>Description</h2>
+<p><code>mkfs.bfs</code> creates an SCO bfs filesystem on a block device (usually a disk partition or a file accessed via the loop device). </p>
+<p> The <i>block-count</i> parameter is the desired size of the filesystem, in blocks. If nothing is specified, the entire partition will be used.</p>
+<h2>Options</h2>
+<p><code>-N</code>, <code>&#8211;inodes</code> <i>number</i></p>
+<dl>
+<dd>Specify the desired <i>number</i> of inodes (at most 512). If nothing is specified, some default number in the range 48-512 is picked depending on the size of the partition.</dd></dl>
+<p> <code>-V</code>, <code>&#8211;vname</code> <i>label</i></p>
+<dl>
+<dd>Specify the volume <i>label</i>. I have no idea if/where this is used.</dd></dl>
+<p> <code>-F</code>, <code>&#8211;fname</code> <i>name</i></p>
+<dl>
+<dd>Specify the filesystem <i>name</i>. I have no idea if/where this is used.</dd></dl>
+<p> <code>-v</code>, <code>&#8211;verbose</code></p>
+<dl>
+<dd>Explain what is being done.</dd></dl>
+<p> <code>-c</code></p>
+<dl>
+<dd>This option is silently ignored.</dd></dl>
+<p> <code>-l</code></p>
+<dl>
+<dd>This option is silently ignored.</dd></dl>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dd>Display help text and exit.</dd></dl>
+<p> <code>-V</code>, <code>&#8211;version</code></p>
+<dl>
+<dd>Display version information and exit. Option <code>-V</code> only works as <code>&#8211;version</code> when it is the only option.</dd></dl>
+<h2>Exit Status</h2>
+<p>The exit status returned by <code>mkfs.bfs</code> is 0 when all went well, and 1 when something went wrong.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8)</p>
+<h2>Reporting Bugs</h2>
+<p>For bug reports, use the issue tracker at <i></i> &lt;<a rel="nofollow" href="https://github.com/karelzak/util-linux/issues">https://github.com/karelzak/util-linux/issues</a>&gt;.</p>
+<h2>Availability</h2>
+<p>The <code>mkfs.bfs</code> command is part of the util-linux package which can be downloaded from <i>Linux Kernel Archive</i> &lt;<a rel="nofollow" href="https://www.kernel.org/pub/linux/utils/util-linux/">https://www.kernel.org/pub/linux/utils/util-linux/</a>&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

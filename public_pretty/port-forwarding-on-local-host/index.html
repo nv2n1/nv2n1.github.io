@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Port Forwarding with iptables and nftables - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/port-forwarding-on-local-host/">
+  <meta name="description" content="Local port forwarding on the same host requires understanding how netfilter processes packets based on their origin. The critical distinction: traffic from …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Port Forwarding with iptables and nftables">
+  <meta property="og:url" content="https://www.systutorials.com/port-forwarding-on-local-host/">
+  <meta property="og:description" content="Local port forwarding on the same host requires understanding how netfilter processes packets based on their origin. The critical distinction: traffic from …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/databases-storage/">Databases &amp; Storage</a>
+        </nav>
+        
+        <h1>Port Forwarding with iptables and nftables</h1>
+        <time class="post-date" datetime="2018-06-04T15:26:08Z">June 4, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Local port forwarding on the same host requires understanding how netfilter processes packets based on their origin. The critical distinction: traffic from external sources hits the PREROUTING chain, but packets originating locally traverse the OUTPUT chain instead. Miss either one, and your forwarding won’t work.</p>
+<h2 id="the-core-problem">The core problem</h2>
+<p>When you forward UDP port 500 to port 2500 on localhost, you need rules in both chains. Add only a PREROUTING rule and local applications connecting to port 500 will bypass it entirely — they skip PREROUTING and hit OUTPUT instead.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># This alone won&#39;t work for local traffic</span>
+</span></span><span class="line"><span class="cl">iptables -t nat -A PREROUTING -d 10.8.1.200/32 -p udp --dport <span class="m">500</span> -j REDIRECT --to-ports <span class="m">2500</span>
+</span></span></code></pre></div><p>External packets work fine. Local packets don’t. You need both chains.</p>
+<h2 id="using-redirect-recommended-approach">Using REDIRECT (recommended approach)</h2>
+<p>REDIRECT is simpler and more reliable than DNAT for localhost-to-localhost forwarding. It automatically rewrites the destination to the loopback interface without routing complexity:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Handle external traffic</span>
+</span></span><span class="line"><span class="cl">iptables -t nat -A PREROUTING -d 10.8.1.200/32 -p udp --dport <span class="m">500</span> -j REDIRECT --to-ports <span class="m">2500</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Handle local traffic</span>
+</span></span><span class="line"><span class="cl">iptables -t nat -A OUTPUT -d 10.8.1.200/32 -p udp --dport <span class="m">500</span> -j REDIRECT --to-ports <span class="m">2500</span>
+</span></span></code></pre></div><p>This works for UDP and TCP. For TCP, omit the protocol specification or use <code>-p tcp</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># TCP forwarding</span>
+</span></span><span class="line"><span class="cl">iptables -t nat -A PREROUTING -d 10.8.1.200/32 -p tcp --dport <span class="m">500</span> -j REDIRECT --to-ports <span class="m">2500</span>
+</span></span><span class="line"><span class="cl">iptables -t nat -A OUTPUT -d 10.8.1.200/32 -p tcp --dport <span class="m">500</span> -j REDIRECT --to-ports <span class="m">2500</span>
+</span></span></code></pre></div><h2 id="testing-the-setup">Testing the setup</h2>
+<p>Start a listener on the target port in one terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Using nc (netcat)</span>
+</span></span><span class="line"><span class="cl">nc -l -u -p <span class="m">2500</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or with socat for more control</span>
+</span></span><span class="line"><span class="cl">socat UDP-LISTEN:2500,reuseaddr -
+</span></span></code></pre></div><p>Send traffic from another terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;test message&#34;</span> <span class="p">|</span> nc -u 127.0.0.1 <span class="m">500</span>
+</span></span></code></pre></div><p>The listener should receive the message. If it doesn’t, check your rules with <code>iptables -t nat -S</code> and verify no firewall is blocking port 2500.</p>
+<h2 id="alternative-dnat-with-output-rules">Alternative: DNAT with OUTPUT rules</h2>
+<p>If you prefer DNAT over REDIRECT:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">iptables -t nat -A PREROUTING -d 10.8.1.200/32 -p udp --dport <span class="m">500</span> -j DNAT --to-destination 10.8.1.200:2500
+</span></span><span class="line"><span class="cl">iptables -t nat -A OUTPUT -d 10.8.1.200/32 -p udp --dport <span class="m">500</span> -j DNAT --to-destination 10.8.1.200:2500
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Allow the redirected traffic in the forward chain</span>
+</span></span><span class="line"><span class="cl">iptables -A FORWARD -p udp -d 10.8.1.200/32 --dport <span class="m">2500</span> -j ACCEPT
+</span></span></code></pre></div><p>DNAT requires explicit FORWARD rules. REDIRECT handles this more elegantly and is preferred for localhost scenarios.</p>
+<h2 id="using-nftables-modern-alternative">Using nftables (modern alternative)</h2>
+<p>nftables is the modern replacement for iptables. If your system supports it (most distributions now do), use nftables instead:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Redirect inbound traffic</span>
+</span></span><span class="line"><span class="cl">nft add rule inet filter input iifname <span class="s2">&#34;lo&#34;</span> udp dport <span class="m">500</span> redirect to <span class="m">2500</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or for a specific address</span>
+</span></span><span class="line"><span class="cl">nft add rule inet nat prerouting meta protocol ip ip daddr 10.8.1.200 udp dport <span class="m">500</span> redirect to <span class="m">2500</span>
+</span></span><span class="line"><span class="cl">nft add rule inet nat output meta protocol ip ip daddr 10.8.1.200 udp dport <span class="m">500</span> redirect to <span class="m">2500</span>
+</span></span></code></pre></div><p>List your rules to verify:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nft list ruleset
+</span></span></code></pre></div><p>Save the configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nft list ruleset &gt; /etc/nftables.conf
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> nftables
+</span></span><span class="line"><span class="cl">systemctl restart nftables
+</span></span></code></pre></div><h2 id="making-iptables-rules-persistent">Making iptables rules persistent</h2>
+<p>iptables rules flush on reboot. Choose one method below based on your distribution:</p>
+<p><strong>Debian/Ubuntu with iptables-persistent:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt install iptables-persistent
+</span></span><span class="line"><span class="cl">iptables-save &gt; /etc/iptables/rules.v4
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> iptables-persistent
+</span></span><span class="line"><span class="cl">systemctl start iptables-persistent
+</span></span></code></pre></div><p>After making rule changes, update the saved rules:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">iptables-save &gt; /etc/iptables/rules.v4
+</span></span></code></pre></div><p><strong>RHEL/CentOS/Fedora with firewalld:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">firewall-cmd --permanent --add-forward-port<span class="o">=</span><span class="nv">port</span><span class="o">=</span>500:proto<span class="o">=</span>udp:toport<span class="o">=</span><span class="m">2500</span>
+</span></span><span class="line"><span class="cl">firewall-cmd --reload
+</span></span></code></pre></div><p>Verify persistence:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">firewall-cmd --list-forward-ports
+</span></span></code></pre></div><p><strong>With nftables:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> nftables
+</span></span><span class="line"><span class="cl">systemctl start nftables
+</span></span></code></pre></div><p>nftables loads <code>/etc/nftables.conf</code> on boot if the service is enabled.</p>
+<h2 id="verifying-your-setup">Verifying your setup</h2>
+<p>Check that rules are loaded:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># View all nat rules</span>
+</span></span><span class="line"><span class="cl">iptables -t nat -S
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># View all filter rules</span>
+</span></span><span class="line"><span class="cl">iptables -S
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># With nftables</span>
+</span></span><span class="line"><span class="cl">nft list ruleset
+</span></span></code></pre></div><p>Verify IP forwarding is enabled (required for cross-interface forwarding):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /proc/sys/net/ipv4/ip_forward
+</span></span></code></pre></div><p>If it returns 0, enable it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="m">1</span> &gt; /proc/sys/net/ipv4/ip_forward
+</span></span></code></pre></div><p>Make it persistent:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;net.ipv4.ip_forward = 1&#34;</span> &gt;&gt; /etc/sysctl.d/99-forwarding.conf
+</span></span><span class="line"><span class="cl">sysctl -p /etc/sysctl.d/99-forwarding.conf
+</span></span></code></pre></div><h2 id="debugging-common-issues">Debugging common issues</h2>
+<p><strong>Traffic reaches the listener but responses don’t return:</strong> Check that your listener is binding to the forwarded port, not just listening on all interfaces. Use <code>netstat -tlnup</code> or <code>ss -tlnup</code> to verify.</p>
+<p><strong>Local traffic doesn’t forward but external does:</strong> You forgot the OUTPUT chain rule. Add it with the same parameters as your PREROUTING rule.</p>
+<p><strong>Rules work temporarily but disappear after reboot:</strong> You haven’t made them persistent. Use iptables-persistent, firewalld, or nftables to persist rules across reboots.</p>
+<p><strong>Port already in use:</strong> Verify nothing else is listening on the target port:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ss -tlnup <span class="p">|</span> grep <span class="m">2500</span>
+</span></span><span class="line"><span class="cl">lsof -i :2500
+</span></span></code></pre></div>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

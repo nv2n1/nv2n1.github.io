@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-forest(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-forest/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-forest(1)</h1>
+
+
+
+
+
+<h2>Name</h2>
+<dl>
+<dt>git-forest &#8212; display the commit history forest</dt>
+<dd></dd></dl>
+<h2>Syntax</h2>
+<p> <code>git-forest</code> [<code>-a</code>] [<code>&#8211;no-rebase</code>] [<code>&#8211;style=</code><i>number</i>] [<code>&#8211;sha</code>] [<code>&#8211;svdepth=</code><i>depth</i>] [<i>rev-list-options</i>] [<i>refspec</i>&#8230;]</p>
+<h2>Description</h2>
+<p> git-forest is a command-line zero-lookahead git repository history visualizer with Unicode output with a bit of gitk resemblance.</p>
+<h3>Why another program?</h3>
+<p> The tree visualization of gitk is very useful, but there were (git 1.5.4 timeframe) no decent visualizers that can run in a console window, without the need to have X around (which gitk depends on). tig has numerous limitations, it cannot display octopus merges or octopus branching. As of git 1.5.6, there are still no other Unicode-output programs known to me.</p>
+<h3>A bit of internals</h3>
+<p> git-forest originally was a zero-lookahead visualizer, i.e. branches were accomodated when they have first been seen. Since mid-June 2008, git-forest has a lookahead tunable that controls how long an inter-merge vine (a branch in the graphical sense) can be.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-a</code></dt>
+<dd> Display author for each commit.</dd>
+<dt><code>&#8211;no-rebase</code></dt>
+<dd> Do not show the rebase pseudo-refs.</dd>
+<dt><code>&#8211;style=1</code></dt>
+<dd> Use single-line visuals (default).</dd>
+<dt><code>&#8211;style=2</code></dt>
+<dd> Use double-line visuals.</dd>
+<dt><code>&#8211;style=10</code></dt>
+<dd> Use specific rounded Unicode visuals for edges; glyphs might only be available with X11 terminals and appropriate fonts.</dd>
+<dt><code>&#8211;style=15</code></dt>
+<dd> Use single bold-line visuals. Not readily usable with VGA console fonts without special unimaps.</dd>
+<dt><code>&#8211;sha</code></dt>
+<dd> Display (abbreviated) SHAs for each commit.</dd>
+<dt><code>&#8211;svdepth=</code><i>depth</i></dt>
+<dd> This option controls the maximum length of merge subvines. It defaults to 2.</dd></dl>
+<p> All other options and arguments are passed down to git-log. Commonly useful options are &#8211;all and &#8211;topo-order.</p>
+<h2>Examples</h2>
+<pre>
+git-forest --all | less -RS
+git-forest origin/master | less -RS
+</pre>
+<p> This tool does not try to minimize the empty space between branches like gitk does. Take it as a feature.</p>
+<h2>See also</h2>
+<p> <code>hxtools</code>(7) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pmpost(1) · Linux Manual Pages</title>
+<meta name="description" content="pmpost – append messages to the Performance Co-Pilot notice board">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pmpost/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pmpost(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>pmpost</code> &#8211; append messages to the Performance Co-Pilot notice board</p>
+<h2>SYNOPSIS</h2>
+<p> <code>$PCP_BINADM_DIR/pmpost</code> <i>message</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>pmpost</code> will append the text <i>message</i> to the end of the Performance Co-Pilot (PCP) notice board file (<code>$PCP_LOG_DIR/NOTICES</code>) in an atomic manner that guards against corruption of the notice board file by concurrent invocations of <code>pmpost</code>. </p>
+<p> The PCP notice board is intended to be a persistent store and clearing house for important messages relating to the operation of the PCP and the notification of performance alerts from <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) when other notification options are either unavailable or unsuitable. </p>
+<p> Before being written, messages are prefixed by the current time, and when the current day is different to the last time the notice board file was written, <code>pmpost</code> will prepend the message with the full date. </p>
+<p> If the notice board file does not exist, <code>pmpost</code> will create it. <code>pmpost</code> would usually run from long-running PCP daemons executing under the (typically unprivileged) <code>$PCP_USER</code> and <code>$PCP_GROUP</code> accounts. The file should be owned by root, and group writable by the <code>$PCP_GROUP</code> group.</p>
+<h2>FILES</h2>
+<dl>
+<dt><code>$PCP_LOG_DIR/NOTICES</code></dt>
+<dd> the PCP notice board file</dd></dl>
+<h2>PCP ENVIRONMENT</h2>
+<p> The file <code>/etc/pcp.conf</code> contains the local values for PCP_ variables.</p>
+<h2>UNIX SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-logger/">logger</a></code>(1).</p>
+<h2>WINDOWS SEE ALSO</h2>
+<p> <code>pcp-eventlog</code>(1).</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systool(1) · Linux Manual Pages</title>
+<meta name="description" content="systool – view system device information by bus, class, and topology">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-systool/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>systool(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> systool &#8211; view system device information by bus, class, and topology </p>
+<h2>SYNOPSIS</h2>
+<p> <code>systool</code> [<i>options </i>[<i>device</i>]] </p>
+<h2>DESCRIPTION</h2>
+<p> Calling <code>systool</code> without parameters will present all available bus types, device classes, and root devices. </p>
+<p> When <i>device</i> is supplied, the information requested by <i>options</i> is shown only for the specified device, otherwise all present devices are displayed. </p>
+<p> <code>systool</code> uses APIs provided by <code>libsysfs</code> to gather information. <code>systool</code> runs only on Linux systems running kernels 2.5 or later, with the sysfs filesystem mounted. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-a</code></dt>
+<dd> Show attributes of the requested resource</dd>
+<dt><code>-b </code><i>bus</i></dt>
+<dd> Show information for a specific bus</dd>
+<dt><code>-c </code><i>class</i></dt>
+<dd> Show information for a specific class</dd>
+<dt><code>-d</code></dt>
+<dd> Show only devices</dd>
+<dt><code>-h</code></dt>
+<dd> Show usage</dd>
+<dt><code>-m </code><i>module_name</i></dt>
+<dd> Show information for a specific module</dd>
+<dt><code>-p</code></dt>
+<dd> Show absolute sysfs path to the resource</dd>
+<dt><code>-v</code></dt>
+<dd> Show all attributes with values</dd>
+<dt><code>-A </code><i>attribute</i></dt>
+<dd> Show attribute value for the requested resource</dd>
+<dt><code>-D</code></dt>
+<dd> Show only drivers</dd>
+<dt><code>-P</code></dt>
+<dd> Show device&#8217;s parent </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> The web page of <code>libsysfs</code> at <a rel="nofollow" href="http://linux-diag.sourceforge.net/Sysfsutils.html">http://linux-diag.sourceforge.net/Sysfsutils.html</a> </p>
+<h2>AUTHOR</h2>
+<p> <code>systool</code> was written by Ananth Mavinakayanahalli &lt;ananth [at] in.ibm.com&gt; and Daniel Stekloff &lt;dsteklof [at] us.ibm.com&gt;. </p>
+<p> This man page was contributed by Martin Pitt &lt;mpitt [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

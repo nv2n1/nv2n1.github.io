@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>usb_autopm_get_interface_async(9) · Linux Manual Pages</title>
+<meta name="description" content="usb_autopm_get_interface_async – increment a USB interface’s PM-usage counter">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-usb_autopm_get_interface_async/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>usb_autopm_get_interface_async(9)</h1>
+
+
+
+
+
+<p>usb_autopm_get_interface_async &#8211; increment a USB interface&#8217;s PM-usage counter</p>
+<h2>Synopsis</h2>
+<pre><code>int usb_autopm_get_interface_async(struct usb_interface *intf);</code></pre>
+<h2>Arguments</h2>
+<p><i>intf</i></p>
+<dl>
+<dd>
+</dd><dd>the usb_interface whose counter should be incremented</dd></dl>
+<h2>Description</h2>
+<p>This routine does much the same thing as <code>usb_autopm_get_interface</code>: It increments <i>intf</i>&#8216;s usage counter and queues an autoresume request if the device is suspended. The differences are that it does not perform any synchronization (callers should hold a private lock and handle all synchronization issues themselves), and it does not autoresume the device directly (it only queues a request). After a successful call, the device may not yet be resumed. </p>
+<p> This routine can run in atomic context.</p>
+<h2>Return</h2>
+<p>0 on success. A negative error code otherwise.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

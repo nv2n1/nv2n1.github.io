@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemd-fsck-root-service(8) · Linux Manual Pages</title>
+<meta name="description" content="systemd-fsck [at] .service, systemd-fsck-root.service, systemd-fsck – File system checker logic">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-systemd-fsck-root-service/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>systemd-fsck-root-service(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>systemd-fsck [at] .service, systemd-fsck-root.service, systemd-fsck &#8211; File system checker logic</p>
+<h2>Synopsis</h2>
+<p>systemd-fsck [at] .service </p>
+<p> systemd-fsck-root.service </p>
+<p> /lib/systemd/systemd-fsck</p>
+<h2>Description</h2>
+<p>systemd-fsck [at] .service and systemd-fsck-root.service are services responsible for file system checks. They are instantiated for each device that is configured for file system checking. systemd-fsck-root.service is responsible for file system checks on the root file system, but only if the root filesystem was not checked in the initramfs. systemd-fsck [at] .service is used for all other file systems and for the root file system in the initramfs. </p>
+<p> These services are started at boot if <code>passno</code> in /etc/fstab for the file system is set to a value greater than zero. The file system check for root is performed before the other file systems. Other file systems may be checked in parallel, except when they are on the same rotating disk. </p>
+<p> systemd-fsck does not know any details about specific filesystems, and simply executes file system checkers specific to each filesystem type (/sbin/fsck.<i>type</i>). These checkers will decide if the filesystem should actually be checked based on the time since last check, number of mounts, unclean unmount, etc. </p>
+<p> If a file system check fails for a service without <code>nofail</code>, emergency mode is activated, by isolating to emergency.target.</p>
+<h2>Kernel Command Line</h2>
+<p>systemd-fsck understands these kernel command line parameters: </p>
+<p> <i>fsck.mode=</i></p>
+<dl>
+<dd>One of &quot;auto&quot;, &quot;force&quot;, &quot;skip&quot;. Controls the mode of operation. The default is &quot;auto&quot;, and ensures that file system checks are done when the file system checker deems them necessary. &quot;force&quot; unconditionally results in full file system checks. &quot;skip&quot; skips any file system checks.</dd></dl>
+<p> <i>fsck.repair=</i></p>
+<dl>
+<dd>One of &quot;preen&quot;, &quot;yes&quot;, &quot;no&quot;. Controls the mode of operation. The default is &quot;preen&quot;, and will automatically repair problems that can be safely fixed. &quot;yes&quot; will answer yes to all questions by fsck and &quot;no&quot; will answer no to all questions.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), <code><a href="/docs/linux/man/8-systemd-quotacheck-service/">systemd-quotacheck.service</a></code>(8), <code><a href="/docs/linux/man/8-fsck-btrfs/">fsck.btrfs</a></code>(8), <code><a href="/docs/linux/man/8-fsck-cramfs/">fsck.cramfs</a></code>(8), <code><a href="/docs/linux/man/8-fsck-ext4/">fsck.ext4</a></code>(8), <code><a href="/docs/linux/man/8-fsck-fat/">fsck.fat</a></code>(8), <code><a href="/docs/linux/man/8-fsck-hfsplus/">fsck.hfsplus</a></code>(8), <code><a href="/docs/linux/man/8-fsck-minix/">fsck.minix</a></code>(8), <code>fsck.ntfs</code>(8), <code><a href="/docs/linux/man/8-fsck-xfs/">fsck.xfs</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xremovefromsaveset(3) · Linux Manual Pages</title>
+<meta name="description" content="XChangeSaveSet, XAddToSaveSet, XRemoveFromSaveSet – change a client’s save set">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xremovefromsaveset/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xremovefromsaveset(3)</h1>
+
+
+
+
+
+<p>XChangeSaveSet, XAddToSaveSet, XRemoveFromSaveSet &#8211; change a client&#8217;s save set </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>int XChangeSaveSet(Display *<i>display</i>, Window <i>w</i>, int <i>change_mode</i>);</dd>
+<dd>int XAddToSaveSet(Display *<i>display</i>, Window <i>w</i>);</dd>
+<dd>int XRemoveFromSaveSet(Display *<i>display</i>, Window <i>w</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>change_mode</i></dt>
+<dd>Specifies the mode. You can pass <code>SetModeInsert</code> or <code>SetModeDelete</code>.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window that you want to add or delete from the client&#8217;s save-set.</dd></dl>
+<h2>Description</h2>
+<p>Depending on the specified mode, <code>XChangeSaveSet</code> either inserts or deletes the specified window from the client&#8217;s save-set. The specified window must have been created by some other client, or a <code>BadMatch</code> error results. </p>
+<p> <code>XChangeSaveSet</code> can generate <code>BadMatch</code>, <code>BadValue</code>, and <code>BadWindow</code> errors. </p>
+<p> The <code>XAddToSaveSet</code> function adds the specified window to the client&#8217;s save-set. The specified window must have been created by some other client, or a <code>BadMatch</code> error results. </p>
+<p> <code>XAddToSaveSet</code> can generate <code>BadMatch</code> and <code>BadWindow</code> errors. </p>
+<p> The <code>XRemoveFromSaveSet</code> function removes the specified window from the client&#8217;s save-set. The specified window must have been created by some other client, or a <code>BadMatch</code> error results. </p>
+<p> <code>XRemoveFromSaveSet</code> can generate <code>BadMatch</code> and <code>BadWindow</code> errors.</p>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadMatch</code></dt>
+<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xreparentwindow/">XReparentWindow</a>(3)<br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

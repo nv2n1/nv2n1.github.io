@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>picomus(1) · Linux Manual Pages</title>
+<meta name="description" content="picomus – Minimal Unsatisfiable Core (MUS) generator">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-picomus/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>picomus(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> picomus &#8211; Minimal Unsatisfiable Core (MUS) generator</p>
+<h2>SYNOPSIS</h2>
+<p> <code>picomus</code> [<i>OPTION</i>]&#8230; [<i>INPUT</i> [<i>OUTPUT</i>]]</p>
+<h2>DESCRIPTION</h2>
+<p> PicoMUS is a satisfiability (SAT) solver that generates a minimal unsatisfiable core, using the PicoSAT library. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h</code></dt>
+<dd> print this command line option summary and exit </dd>
+<dt><code>-v</code></dt>
+<dd> enable verbose output </dd>
+</dl>
+<p> If no input filename is given, or the input filename is &quot;-&quot;, then standard input is used. If the output filename is &quot;-&quot;, then standard output is used. If no output filename is given, then the MUS is computed but not printed. </p>
+<h2>CONFORMING TO</h2>
+<p> This program uses DIMACS CNF format as input. The output conforms to the standard SAT solver format used at SAT competitions. </p>
+<h2>EXIT STATUS</h2>
+<p> The output is a number of lines. Most of these will begin with &quot;c&quot; (comment), and give detailed technical information. The output line beginning with &quot;s&quot; declares whether or not it is satisfiable. The line &quot;s SATISFIABLE&quot; is produced if it is satisfiable (exit status 10), and &quot;s UNSATISFIABLE&quot; is produced if it is not satisfiable (exit status 20). </p>
+<h2>AUTHORS</h2>
+<p> picomus was written by Armin Biere &lt;biere [at] jku.at&gt; </p>
+<p> This man page was written by Jerry James. It is released to the public domain; you may use it in any way you wish. </p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-picosat/">picosat</a></i>(1), <i>minisat2</i>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

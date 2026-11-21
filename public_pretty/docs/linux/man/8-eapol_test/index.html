@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eapol_test(8) · Linux Manual Pages</title>
+<meta name="description" content="eapol_test – EAP peer and RADIUS client testing">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-eapol_test/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>eapol_test(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>eapol_test &#8211; EAP peer and RADIUS client testing</p>
+<h2>Synopsis</h2>
+<p><code>eapol_test</code> [ <code>-nWS</code> ] [ <code>-c</code><i>config file</i> ] [ <code>-a</code><i>server IP address</i> ] [ <code>-A</code><i>client IP address</i> ] [ <code>-p</code><i>UDP port</i> ] [ <code>-s</code><i>shared secret</i> ] [ <code>-r</code><i>re-authentications</i> ] [ <code>-t</code><i>timeout</i> ] [ <code>-C</code><i>Connect-Info</i> ] [ <code>-M</code><i>MAC address</i> ] [ <code>-o</code><i>file</i> ] [ <code>-N</code><i>attr spec</i> ] </p>
+<p> <code>eapol_test scard</code> </p>
+<p> <code>eapol_test sim</code> [ <code>PIN</code> ] [ <code>num triplets</code> ]</p>
+<h2>Overview</h2>
+<p>eapol_test is a program that links together the same EAP peer implementation that wpa_supplicant is using and the RADIUS authentication client code from hostapd. In addition, it has minimal glue code to combine these two components in similar ways to IEEE 802.1X/EAPOL Authenticator state machines. In other words, it integrates IEEE 802.1X Authenticator (normally, an access point) and IEEE 802.1X Supplicant (normally, a wireless client) together to generate a single program that can be used to test EAP methods without having to setup an access point and a wireless client. </p>
+<p> The main uses for eapol_test are in interoperability testing of EAP methods against RADIUS servers and in development testing for new EAP methods. It can be easily used to automate EAP testing for interoperability and regression since the program can be run from shell scripts without require additional test components apart from a RADIUS server. For example, the automated EAP tests described in eap_testing.txt are implemented with eapol_test. Similarly, eapol_test could be used to implement an automated regression test suite for a RADIUS authentication server. </p>
+<p> As an example: </p>
+<dl>
+<dd>
+<pre>eapol_test -ctest.conf -a127.0.0.1 -p1812 -ssecret -r1</pre>
+</dd></dl>
+<p> tries to complete EAP authentication based on the network configuration from test.conf against the RADIUS server running on the local host. A re-authentication is triggered to test fast re-authentication. The configuration file uses the same format for network blocks as wpa_supplicant.</p>
+<h2>Command Arguments</h2>
+<dl>
+<dt><code>-c configuration file path</code></dt>
+<dd>A configuration to use. The configuration should use the same format for network blocks as wpa_supplicant.</dd>
+<dt><code>-a AS address</code></dt>
+<dd>IP address of the authentication server. The default is &#8216;127.0.0.1&#8217;.</dd>
+<dt><code>-A client address</code></dt>
+<dd>IP address of the client. The default is to select an address automatically.</dd>
+<dt><code>-p AS port</code></dt>
+<dd>UDP port of the authentication server. The default is &#8216;1812&#8217;.</dd>
+<dt><code>-s AS secret</code></dt>
+<dd>Shared secret with the authentication server. The default is &#8216;radius&#8217;.</dd>
+<dt><code>-r count</code></dt>
+<dd>Number of reauthentications.</dd>
+<dt><code>-t timeout</code></dt>
+<dd>Timeout in seconds. The default is 30.</dd>
+<dt><code>-C info</code></dt>
+<dd>RADIUS Connect-Info. The default is &#8216;CONNECT 11Mbps 802.11b&#8217;.</dd>
+<dt><code>-M mac address</code></dt>
+<dd>Client MAC address (Calling-Station-Id). The default is &#8217;02:00:00:00:00:01&#8242;.</dd>
+<dt><code>-o file</code></dt>
+<dd>Location to write out server certificate.</dd>
+<dt><code>-N attr spec</code></dt>
+<dd>Send arbitrary attribute specific by attr_id:syntax:value, or attr_id alone. attr_id should be the numeric ID of the attribute, and syntax should be one of &#8216;s&#8217; (string), &#8216;d&#8217; (integer), or &#8216;x&#8217; (octet string). The value is the attribute value to send. When attr_id is given alone, NULL is used as the attribute value. Multiple attributes can be specified by using the option several times.</dd>
+<dt><code>-n</code></dt>
+<dd>Indicates that no MPPE keys are expected.</dd>
+<dt><code>-W</code></dt>
+<dd>Wait for a control interface monitor before starting.</dd>
+<dt><code>-S</code></dt>
+<dd>Save configuration after authentication.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-wpa_supplicant/">wpa_supplicant</a></code>(8)</p>
+<h2>Legal</h2>
+<p>wpa_supplicant is copyright (c) 2003-2016, Jouni Malinen &lt;j@w1.fi&gt; and contributors. All Rights Reserved. </p>
+<p> This program is licensed under the BSD license (the one with advertisement clause removed).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

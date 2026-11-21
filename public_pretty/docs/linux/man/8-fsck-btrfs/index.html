@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fsck-btrfs(8) · Linux Manual Pages</title>
+<meta name="description" content="fsck.btrfs – do nothing, successfully">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-fsck-btrfs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>fsck-btrfs(8)</h1>
+
+
+
+
+
+<p>fsck.btrfs &#8211; do nothing, successfully</p>
+<h2>Synopsis</h2>
+<p><code>fsck.btrfs</code> [-aApy] [<i>&lt;device&gt;</i>&#8230;]</p>
+<h2>Description</h2>
+<p><code>fsck.btrfs</code> is a type of utility that should exist for any filesystem and is called during system setup when the corresponding <code>/etc/fstab</code> entries contain non-zero value for <code>fs_passno</code>, see <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5) for more. </p>
+<p> Traditional filesystems need to run their respective fsck utility in case the filesystem was not unmounted cleanly and the log needs to be replayed before mount. This is not needed for BTRFS. You should set fs_passno to 0. </p>
+<p> If you wish to check the consistency of a BTRFS filesystem or repair a damaged filesystem, see <code><a href="/docs/linux/man/8-btrfs-check/">btrfs-check</a></code>(8). By default filesystem consistency is checked, the repair mode is enabled via the <i>&#8211;repair</i> option (use with care!).</p>
+<h2>Options</h2>
+<p>The options are all the same and detect if <code>fsck.btrfs</code> is executed in non-interactive mode and exits with success, otherwise prints a message about btrfs check.</p>
+<h2>Exit Status</h2>
+<p>There are two possible exit code returned: </p>
+<p> 0</p>
+<dl>
+<dd>No error</dd></dl>
+<p> 8</p>
+<dl>
+<dd>Operational error, eg. device does not exist</dd></dl>
+<h2>Files</h2>
+<p><code>/etc/fstab</code></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-btrfs/">btrfs</a></code>(8), <code><a href="/docs/linux/man/8-fsck/">fsck</a></code>(8), <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5), </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

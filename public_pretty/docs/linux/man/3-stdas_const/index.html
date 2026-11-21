@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdas_const(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdas_const/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdas_const(3)</h1>
+
+
+
+
+
+<p>std::as_const - std::as_const</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;utility&gt;
+    template &lt;class T&gt;
+    (1)(since C++ 17)
+        constexpr std::add_const_t&lt;T&gt; &amp;as_const(T &amp;t) noexcept;
+template &lt;class T&gt;
+(2)(since C++ 17)
+    void as_const(const T &amp;&amp;) = delete;</code></pre> 
+<ol>
+<li>Forms lvalue reference to const type of t</li>
+<li>const rvalue reference overload is deleted to disallow rvalue arguments</li>
+</ol>
+<h2>Possible implementation</h2>
+<p> <wbr> template &lt;class T&gt;
+ <wbr> constexpr std::add_const_t&lt;T&gt;&amp; as_const(T&amp; t) noexcept
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return t;
+ <wbr> }</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;string&gt;
+#include &lt;cassert&gt;
+#include &lt;utility&gt;
+#include &lt;type_traits&gt;
+int main()
+{
+std::string mutableString = &quot;Hello World!&quot;;
+const std::string &amp;constView = std::as_const(mutableString);
+assert(&amp;constView == &amp;mutableString);
+assert(&amp;std::as_const(mutableString) == &amp;mutableString);
+using WhatTypeIsIt = std::remove_reference_t&lt;decltype(std::as_const(mutableString))&gt;;
+static_assert(std::is_same&lt;std::remove_const_t&lt;WhatTypeIsIt&gt;, std::string&gt;::value,
+&quot;WhatTypeIsIt should be some kind of string.&quot;);
+static_assert(!std::is_same&lt;WhatTypeIsIt, std::string&gt;::value,
+&quot;WhatTypeIsIt shouldn&rsquo;t be a mutable string.&quot;);
+}
+</code></pre></p>
+<h2>See also</h2>
+<p>is_const checks if a type is const-qualified
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+add_cv
+add_const
+add_volatile adds const or/and volatile specifiers to the given type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+remove_cv
+remove_const
+remove_volatile removes const or/and volatile specifiers from the given type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

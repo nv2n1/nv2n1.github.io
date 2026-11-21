@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tk_getoption(3) · Linux Manual Pages</title>
+<meta name="description" content="Tk_GetOption – retrieve an option from the option database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tk_getoption/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tk_getoption(3)</h1>
+
+
+
+
+
+<p>Tk_GetOption &#8211; retrieve an option from the option database </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tk.h&gt;</code>
+Tk_Uid
+<code>Tk_GetOption</code>(<i>tkwin, name, class</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window.</dd>
+<dd>const char <i>*name</i> (in) Name of desired option.</dd>
+<dd>const char <i>*class</i> (in) Class of desired option. Null means there is no class for this option; do lookup based on name only. </dd>
+</dl>
+<h2>Description</h2>
+<p>This procedure is invoked to retrieve an option from the database associated with <i>tkwin</i>&#8216;s main window. If there is an option for <i>tkwin</i> that matches the given <i>name</i> or <i>class</i>, then it is returned in the form of a Tk_Uid. If multiple options match <i>name</i> and <i>class</i>, then the highest-priority one is returned. If no option matches, then NULL is returned. </p>
+<p> <code>Tk_GetOption</code> caches options related to <i>tkwin</i> so that successive calls for the same <i>tkwin</i> will execute much more quickly than successive calls for different windows. </p>
+<h2>Keywords</h2>
+<p>class, name, option, retrieve</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

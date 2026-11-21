@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>echoping_postgresql(1) · Linux Manual Pages</title>
+<meta name="description" content="echoping_postgresql – echoping plugin which connects to a PostgreSQL RDBMS server">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-echoping_postgresql/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>echoping_postgresql(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> echoping_postgresql &#8211; echoping plugin which connects to a PostgreSQL RDBMS server </p>
+<h2>SYNOPSIS</h2>
+<p> <code>echoping</code> [echoping options] -m postgresql <code>hostname</code> [-c<i>conninfo]</i> [-e] [-r] [SQL-request]</p>
+<h2>DESCRIPTION</h2>
+<p> postgresql is an echoping plugin to connect to PostgreSQL RDBMS servers.</p>
+<h2>ARGUMENTS</h2>
+<p> <code>[SQL-request]</code> The request to the PostgreSQL server (in SQL). Only SELECT are supported. The default is &#8216;SELECT now()&#8217;.</p>
+<dl>
+<dt></dt></dl>
+<h2>OPTIONS</h2>
+<dd>
+</dd><dl>
+<dt><code>-c, &#8211;conninfo</code></dt>
+<dd> Connection information for the Postgresql server. Something like &#8216;dbname=bar&#8217;</dd>
+<dt><code>-r, &#8211;readall</code></dt>
+<dd> Read all the data sent by the Postgresql server</dd>
+<dt><code>-e, &#8211;connect-each-time</code></dt>
+<dd> (Re)connect to the Postgresql server at each iteration</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-echoping/">echoping</a></code>(1),</p>
+<h2>AUTHOR</h2>
+<p> Stephane Bortzmeyer &lt;bortz [at] users.sourceforge.net&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

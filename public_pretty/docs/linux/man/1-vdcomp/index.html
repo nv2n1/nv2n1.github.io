@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vdcomp(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-vdcomp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>vdcomp(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>Name</h2>
+<p><i>vdcomp</i> - decompress a compressed PDS image</p>
+<h2>Synopsis</h2>
+<p><i>vdcomp</i> [ infile ] [ outfile ] [ format-code ]</p>
+<h2>Description</h2>
+<p>The <i>vdcomp</i> program reads a variable length compressed PDS image and outputs a fixed length uncompressed image file in PDS format with labels, image histogram, engineering table, line header table and an image with PDS, FITS, VICAR or no labels.</p>
+<p>If used on a non-byte-swapped machine the image histogram is un-swapped.</p>
+<h2>Options</h2>
+<p><i>Vdcomp</i> will prompt for any options that are not supplied on the command-line.</p>
+<p><i>infile</i></p>
+<dl>
+<dt>
+</dt><dd> The name of compressed image file.</dd></dl>
+<p><i>outfile</i></p>
+<dl>
+<dt>
+</dt><dd> The name of uncompressed image file.</dd></dl>
+<p><i>format-code</i></p>
+<dl>
+<dt>
+</dt><dd> Select from the following list: 
+</dd><dl>
+<dt>
+</dt><dd> <i>1</i> - SFDU/PDS format [default] 
+ <i>2</i> - FITS format 
+ <i>3</i> - VICAR format 
+ <i>4</i> - unlabelled binary array</dd></dl>
+</dl>
+<h2>Limitations</h2>
+<p>This program has been tested on a VAX 780 (VMS 4.6), SUN Workstation (UNIX 4.2, release 3.4), an IBM PC (MICROSOFT 5.1 compiler) and Macintosh IIx using Lightspeed C version 3.0. When converting to other systems, check for portability conflicts.</p>
+<h2>Credits</h2>
+<p>This program uses Kris Becker&rsquo;s subroutine DECOMP.C (which is included in this program in a shortened version).</p>
+<h2>History</h2>
+<p>bradley [at] cis.upenn.edu 06-23-94 ansi-fied program</p>
+<p>datri [at] convex.com, 11-15-91 added recognition of - as stdout for output filename; disabled various messages; directed messages to stderr; added exit status</p>
+<p>DEC89 Modified program to handle both Voyager and Viking images.</p>
+<p>OCT89 Converted Voyager decompression program to handle Viking compressed images. Changed obuf to &lsquo;unsigned&rsquo; to simplify computation of checksum.</p>
+<p>AUG89 Added code to get command line arguments for filenames and output format; routines to free memory used by the Huffman tree); fixed the SFDU label output length; and modified the I/O routines so that the open for Host type 2 uses binary I/O.</p>
+<p>JUN89 Fixed READVAR, to get length on 16-bit unswapped hosts.</p>
+<p>JUL88 C driver to decompress standard Voyager Compressed images by Mike Martin 1989/12/02.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

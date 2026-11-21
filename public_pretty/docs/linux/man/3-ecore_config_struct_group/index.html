@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ecore_config_struct_group(3) · Linux Manual Pages</title>
+<meta name="description" content="Ecore Config Structures – Functions that are used to create structures of properties.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ecore_config_struct_group/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ecore_config_struct_group(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Ecore Config Structures &#8211; Functions that are used to create structures of properties. </p>
+<h3>Functions</h3>
+<p>EAPI int <code>ecore_config_struct_create</code> (const char *key)<br />
+ <i>Sets the indicated property to a structure if the property has not yet been set. </i><br />
+ EAPI int <code>ecore_config_struct_int_add</code> (const char *key, const char *name, int val)<br />
+ <i>Add an int property to the named structure. </i><br />
+ EAPI int <code>ecore_config_struct_float_add</code> (const char *key, const char *name, float val)<br />
+ <i>Add a float property to the named structure. </i><br />
+ EAPI int <code>ecore_config_struct_string_add</code> (const char *key, const char *name, const char *val)<br />
+ <i>Add a string property to the named structure. </i><br />
+ EAPI int <code>ecore_config_struct_argb_add</code> (const char *key, const char *name, int a, int r, int g, int b)<br />
+ <i>Add an argb property to the named structure. </i><br />
+ EAPI int <code>ecore_config_struct_theme_add</code> (const char *key, const char *name, const char *val)<br />
+ <i>Add a theme property to the named structure. </i><br />
+ EAPI int <code>ecore_config_struct_boolean_add</code> (const char *key, const char *name, int val)<br />
+ <i>Add a boolean property to the named structure. </i><br />
+ EAPI int <code>ecore_config_struct_get</code> (const char *key, void *data)<br />
+ <i>Get the contents of a defined structure property and load it into the passed C struct. </i></p>
+<h2>Detailed Description</h2>
+<p>Functions that are used to create structures of properties.</p>
+<h2>Function Documentation</h2>
+<h3>EAPI int ecore_config_struct_argb_add (const char * key, const char * name, int a, int r, int g, int b)</h3>
+<p>Add an argb property to the named structure. </p>
+<p> The property is set if it has not yet been set. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>key</i> The key of the structure to add to.<br />
+ <i>name</i> The name of the item to add &#8211; this will be appended to the key<br />
+ <i>a</i> The alpha to default to<br />
+ <i>r</i> The red to default to<br />
+ <i>g</i> The green to default to<br />
+ <i>b</i> The blue to default to</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
+<p> References ECORE_CONFIG_RGB.</p>
+<h3>EAPI int ecore_config_struct_boolean_add (const char * key, const char * name, int val)</h3>
+<p>Add a boolean property to the named structure. </p>
+<p> The property is set if it has not yet been set. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>key</i> The key of the structure to add to.<br />
+ <i>name</i> The name of the item to add &#8211; this will be appended to the key<br />
+ <i>val</i> The boolean to default to</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
+<p> References ECORE_CONFIG_BLN.</p>
+<h3>EAPI int ecore_config_struct_create (const char * key)</h3>
+<p>Sets the indicated property to a structure if the property has not yet been set. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>key</i> The property key.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
+<p> References ECORE_CONFIG_SCT.</p>
+<h3>EAPI int ecore_config_struct_float_add (const char * key, const char * name, float val)</h3>
+<p>Add a float property to the named structure. </p>
+<p> The property is set if it has not yet been set. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>key</i> The key of the structure to add to.<br />
+ <i>name</i> The name of the item to add &#8211; this will be appended to the key<br />
+ <i>val</i> The float to default to</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
+<p> References ECORE_CONFIG_FLT.</p>
+<h3>EAPI int ecore_config_struct_get (const char * key, void * data)</h3>
+<p>Get the contents of a defined structure property and load it into the passed C struct. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>key</i> The name of the structure property to look up.<br />
+ <i>data</i> The struct to write into.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>ECORE_CONFIG_ERR_SUCC if the structure is written successfully.</dd></dl>
+<p> References ECORE_CONFIG_BLN, ECORE_CONFIG_FLT, ecore_config_get(), ECORE_CONFIG_INT, ECORE_CONFIG_RGB, ECORE_CONFIG_STR, and ECORE_CONFIG_THM.</p>
+<h3>EAPI int ecore_config_struct_int_add (const char * key, const char * name, int val)</h3>
+<p>Add an int property to the named structure. </p>
+<p> The property is set if it has not yet been set. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>key</i> The key of the structure to add to.<br />
+ <i>name</i> The name of the item to add &#8211; this will be appended to the key<br />
+ <i>val</i> the int to default to</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
+<p> References ECORE_CONFIG_INT.</p>
+<h3>EAPI int ecore_config_struct_string_add (const char * key, const char * name, const char * val)</h3>
+<p>Add a string property to the named structure. </p>
+<p> The property is set if it has not yet been set. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>key</i> The key of the structure to add to.<br />
+ <i>name</i> The name of the item to add &#8211; this will be appended to the key<br />
+ <i>val</i> The string to default to</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
+<p> References ECORE_CONFIG_STR.</p>
+<h3>EAPI int ecore_config_struct_theme_add (const char * key, const char * name, const char * val)</h3>
+<p>Add a theme property to the named structure. </p>
+<p> The property is set if it has not yet been set. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>key</i> The key of the structure to add to.<br />
+ <i>name</i> The name of the item to add &#8211; this will be appended to the key<br />
+ <i>val</i> The theme name to default to</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>ECORE_CONFIG_ERR_SUCC if the property is set successfully.</dd></dl>
+<p> References ECORE_CONFIG_THM.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Ecore from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

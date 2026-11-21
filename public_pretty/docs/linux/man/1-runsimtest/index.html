@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>runsimtest(1) · Linux Manual Pages</title>
+<meta name="description" content="RunSimTest – Run a test over the IB management simulator">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-runsimtest/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>runsimtest(1)</h1>
+
+
+
+
+
+<p><code>RunSimTest</code> &#8211; Run a test over the IB management simulator</p>
+<h2>Synopsys</h2>
+<p>RunSimTest [-h] [-o osm-path][-f flow-file][-c checker-file]<br />
+-t topology&nbsp;<wbr>[-n osm-node-name][-p osm-port-num][-s seed][-V verbosity-list] </p>
+<p> This command starts the simulator and runs the the given test flow on top of it. Then it runs the checker flow. The default test flow starts OpenSM and wait for Subnet-Up event. User given flow can make use of the provided facilities for starting OpenSM and tracking it events.</p>
+<h2>Arguments</h2>
+<dl>
+<dt>-t topology</dt>
+<dd>A topology file describing the fabric (see <code>ibdm-topo-file</code>)</dd></dl>
+<h2>Options</h2>
+<dl>
+<dt>-f flow-file</dt>
+<dd>A tcl file sourced by the sim after the fabric is setup. See following discussion about the provided <font SIZE="-1">API</font> and global variables that are available for the flow.</dd>
+<dt>-c checker-file</dt>
+<dd>A tcl file defining when osm completed and what checks are requierd to validate it&#8217;s outputs. The procedure named &#8216;checker&#8217; is invoked by the test flow to start the checking flow. The default flow waits for OpenSM to complete setup the fabric and run ibdmchk.</dd>
+<dt>-o osm-path</dt>
+<dd>Full path to OpenSM (/usr/local/ofed/osm-sim/bin/opensm). <font SIZE="-1">NOTE</font> OpenSM should be compiled with &#8211;with-osmv=sim to be able to connect to the simulator.</dd>
+<dt>-n osm-node</dt>
+<dd>Topology file node name the <font SIZE="-1">SM</font> runs on (default H-1/U1)</dd>
+<dt>-p port-num</dt>
+<dd>Port number the <font SIZE="-1">SM</font> attaches to (default 1).</dd>
+<dt>-s seed</dt>
+<dd>Random seed to be used.</dd>
+<dt>-V verbosity-list</dt>
+<dd>Module verbosity list. The first should be the global verbosity. See IBMgtSim for full list of modules. Examples: </dd>
+<pre> -V 0xffff = Full verbosity on all modules
+ -V '&quot;0x3 server 0x6f2 sma 0xffff&quot;' = Only fatal and error
+ for all modules full verbosity for the SMA module and default
+ verbosity for the Server module.</pre>
+<dt>-h</dt>
+<dd>This help message</dd></dl>
+<h2>Author</h2>
+<p>Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>doveadm-exec(1) · Linux Manual Pages</title>
+<meta name="description" content="doveadm-exec – easily execute commands from Dovecot’s libexec_dir">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-doveadm-exec/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>doveadm-exec(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> doveadm-exec &#8211; easily execute commands from Dovecot&#8217;s libexec_dir</p>
+<h2>SYNOPSIS</h2>
+<p> <code>doveadm</code> [<code>-Dv</code>] <code>exec</code> <i>binary</i> [<i>binary arguments</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> This command allows administrators and local users to simply execute commands from within <i>libexec_dir</i>. So for example a logged in system user could start a pre-authenticated imap session, using the command: <code>doveadm exec imap</code>. An administrator would use the command: <code>doveadm exec imap -u</code> <i>username</i>.</p>
+<h2>OPTIONS</h2>
+<p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
+<dl>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt><i>binary</i></dt>
+<dd> the name of an executable located in <i>/usr/libexec/dovecot</i>.</dd>
+<dt><i>binary arguments</i></dt>
+<dd> options and arguments, wich will be passed through to the <i>binary</i>.</dd></dl>
+<h2>EXAMPLE</h2>
+<p> This example demonstrates how to deliver a message from a file to a user&#8217;s mailbox. </p>
+<pre><code>
+doveadm exec dovecot - lda - d user[at] example.net - f admin[at] example.net &lt; ~ / stuff / welcome.msg
+</code></pre>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs, including <i>doveconf -n</i> output, to the Dovecot Mailing List &lt;dovecot [at] dovecot.org&gt;. Information about reporting bugs is available at: <a rel="nofollow" href="http://dovecot.org/bugreport.html">http://dovecot.org/bugreport.html</a></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1), <code><a href="/docs/linux/man/1-dovecot-lda/">dovecot-lda</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

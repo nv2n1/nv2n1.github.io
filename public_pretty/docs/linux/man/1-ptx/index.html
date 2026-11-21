@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ptx(1) · Linux Manual Pages</title>
+<meta name="description" content="ptx – produce a permuted index of file contents">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ptx/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ptx(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> ptx &#8211; produce a permuted index of file contents </p>
+<h2>SYNOPSIS</h2>
+<p> <code>ptx</code> [<i>,OPTION/</i>]&#8230; [<i>,INPUT/</i>]&#8230; <i>,(without -G)/</i><br />
+ <code>ptx</code> <i>,-G /</i>[<i>,OPTION/</i>]&#8230; [<i>,INPUT /</i>[<i>,OUTPUT/</i>]]</p>
+<h2>DESCRIPTION</h2>
+<p> Output a permuted index, including context, of the words in the input files. </p>
+<p> With no FILE, or when FILE is -, read standard input. </p>
+<p> Mandatory arguments to long options are mandatory for short options too.</p>
+<dl>
+<dt><code>-A</code>, <code>&#8211;auto-reference</code></dt>
+<dd> output automatically generated references</dd>
+<dt><code>-G</code>, <code>&#8211;traditional</code></dt>
+<dd> behave more like System V &#8216;ptx&#8217;</dd>
+<dt><code>-F</code>, <code>&#8211;flag-truncation</code>=<i>,STRING/</i></dt>
+<dd> use STRING for flagging line truncations. The default is &#8216;/&#8217;</dd>
+<dt><code>-M</code>, <code>&#8211;macro-name</code>=<i>,STRING/</i></dt>
+<dd> macro name to use instead of &#8216;xx&#8217;</dd>
+<dt><code>-O</code>, <code>&#8211;format</code>=<i>,roff/</i></dt>
+<dd> generate output as roff directives</dd>
+<dt><code>-R</code>, <code>&#8211;right-side-refs</code></dt>
+<dd> put references at right, not counted in <code>-w</code></dd>
+<dt><code>-S</code>, <code>&#8211;sentence-regexp</code>=<i>,REGEXP/</i></dt>
+<dd> for end of lines or end of sentences</dd>
+<dt><code>-T</code>, <code>&#8211;format</code>=<i>,tex/</i></dt>
+<dd> generate output as TeX directives</dd>
+<dt><code>-W</code>, <code>&#8211;word-regexp</code>=<i>,REGEXP/</i></dt>
+<dd> use REGEXP to match each keyword</dd>
+<dt><code>-b</code>, <code>&#8211;break-file</code>=<i>,FILE/</i></dt>
+<dd> word break characters in this FILE</dd>
+<dt><code>-f</code>, <code>&#8211;ignore-case</code></dt>
+<dd> fold lower case to upper case for sorting</dd>
+<dt><code>-g</code>, <code>&#8211;gap-size</code>=<i>,NUMBER/</i></dt>
+<dd> gap size in columns between output fields</dd>
+<dt><code>-i</code>, <code>&#8211;ignore-file</code>=<i>,FILE/</i></dt>
+<dd> read ignore word list from FILE</dd>
+<dt><code>-o</code>, <code>&#8211;only-file</code>=<i>,FILE/</i></dt>
+<dd> read only word list from this FILE</dd>
+<dt><code>-r</code>, <code>&#8211;references</code></dt>
+<dd> first field of each line is a reference</dd>
+<dt> <code>-t</code>, <code>&#8211;typeset-mode</code> &#8211; not implemented &#8211;</dt>
+<dt><code>-w</code>, <code>&#8211;width</code>=<i>,NUMBER/</i></dt>
+<dd>
+</dd><dd>output width in columns, reference excluded</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
+<h2>AUTHOR</h2>
+<p> Written by F. Pinard.</p>
+<h2>REPORTING BUGS</h2>
+<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+ Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+ This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
+<h2>SEE ALSO</h2>
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/ptx">https://www.gnu.org/software/coreutils/ptx</a>&gt;<br />
+ or available locally via: info &#8216;(coreutils) ptx invocation&#8217; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

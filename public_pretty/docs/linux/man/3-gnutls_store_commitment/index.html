@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnutls_store_commitment(3) · Linux Manual Pages</title>
+<meta name="description" content="gnutls_store_commitment – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gnutls_store_commitment/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gnutls_store_commitment(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> gnutls_store_commitment &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
+<p> <code>int gnutls_store_commitment(const char * </code><i>db_name</i><code>, gnutls_tdb_t </code><i>tdb</i><code>, const char * </code><i>host</i><code>, const char * </code><i>service</i><code>, gnutls_digest_algorithm_t </code><i>hash_algo</i><code>, const gnutls_datum_t * </code><i>hash</i><code>, time_t </code><i>expiration</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>const char * db_name</dt>
+<dd> A file specifying the stored keys (use NULL for the default)</dd>
+<dt>gnutls_tdb_t tdb</dt>
+<dd> A storage structure or NULL to use the default</dd>
+<dt>const char * host</dt>
+<dd> The peer&#8217;s name</dd>
+<dt>const char * service</dt>
+<dd> non-NULL if this key is specific to a service (e.g. http)</dd>
+<dt>gnutls_digest_algorithm_t hash_algo</dt>
+<dd> The hash algorithm type</dd>
+<dt>const gnutls_datum_t * hash</dt>
+<dd> The raw hash</dd>
+<dt>time_t expiration</dt>
+<dd> The expiration time (use 0 to disable expiration)</dd>
+<dt>unsigned int flags</dt>
+<dd> should be 0.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> This function will store the provided hash commitment to the list of stored public keys. The key with the given hash will be considered valid until the provided expiration time. </p>
+<p> The <i>store</i> variable if non-null specifies a custom backend for the storage of entries. If it is NULL then the default file backend will be used. </p>
+<p> Note that this function is not thread safe with the default backend.</p>
+<h2>RETURNS</h2>
+<p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>
+<h2>SINCE</h2>
+<p> 3.0</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+ Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
+<dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

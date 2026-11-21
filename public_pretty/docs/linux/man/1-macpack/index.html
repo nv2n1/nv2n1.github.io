@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>macpack(1) · Linux Manual Pages</title>
+<meta name="description" content="macpack – Macintosh OS X Packager for managed gui assemblies">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-macpack/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>macpack(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> macpack &#8211; Macintosh OS X Packager for managed gui assemblies</p>
+<h2>SYNOPSIS</h2>
+<p> <code>macpack [options] assembly</code></p>
+<h2>DESCRIPTION</h2>
+<p> <i>macpack</i> is a tool used to package managed assemblies (like System.Windows.Forms or Cocoa#) that require gui availability for deployment on Mac OS X. </p>
+<p> macpack will prepare a OS X compatible bundle from the provided assembly and resources. The bundle will include the specified assembly as well as any of the provided resources (specified with the -resource: switch). </p>
+<p> Developers can specify the kind of application to produce using the -mode: argument. This controls how the environment in the Mono class libraries is setup. </p>
+<h2>OPTIONS</h2>
+<p> <i>-a assembly</i> </p>
+<p> This option tells macpack where the managed assembly that you want to bundle resides. This option is also used to point to the shell script to launch in the case of a X11/Gtk# application. </p>
+<p> This is the same as just passing the assembly as an argument. </p>
+<p> <i>-m [winforms,x11,console,cocoa]</i> or <i>-mode:[winforms,x11,console,cocoa]</i> </p>
+<p> A value indicating the kind of application: WinForms is a Winforms application running on Quartz; X11 is an application that requires the X11 server to run; console is a non-graphical application; cocoa is an application based on Cocoa# </p>
+<p> <i>-n NAME</i> or <i>-appname:NAME</i> </p>
+<p> This option specifies the application name of the emitted bundle. This is what you will see in Finder. </p>
+<p> <i>-o DIRECTORY</i> or <i>-output:DIRECTORY</i> </p>
+<p> This option specifies the path to output the generated Application. </p>
+<p> <i>-r RESOURCE</i> or <i>-resource:RESOURCE</i> </p>
+<p> This option can be specified multiple times. It will place a copy of each resource into the bundles resources directory. Alternatively, you can use a comma separated list of resources.</p>
+<h2>AUTHOR</h2>
+<p> Geoff Norton</p>
+<h2>WEB SITE</h2>
+<p> Visit: <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

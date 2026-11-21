@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_success(3) · Linux Manual Pages</title>
+<meta name="description" content="globus_types.h –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_success/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_success(3)</h1>
+
+
+
+
+
+<p>globus_types.h &#8211; </p>
+<p> Common Primitive Types.</p>
+<h2>Synopsis</h2>
+<p>#include &#8216;globus_config.h&#8217;<br />
+ #include &lt;stdlib.h&gt;<br />
+ #include &lt;stdint.h&gt;<br />
+ #include &lt;sys/types.h&gt;<br />
+ #include &lt;sys/socket.h&gt; </p>
+<h3>Macros</h3>
+<p>#define <code>GLOBUS_TRUE</code> 1<br />
+ <i>True value for globus_bool_t. </i><br />
+ #define <code>GLOBUS_FALSE</code> 0<br />
+ <i>False value for globus_bool_t. </i><br />
+ #define <code>GLOBUS_NULL</code> NULL<br />
+ <i>NULL value. </i><br />
+ #define <code>GLOBUS_SUCCESS</code> 0<br />
+ <i>Generic success result</i> </p>
+<p> Most Globus API functions return this value to indicate success, or some error constant or globus_result_t to indicate an error. &quot;<br />
+ #define <code>GLOBUS_FAILURE</code> -1<br />
+ <i>Generic failure result</i> </p>
+<p> Some Globus API functions without good error handling return this value to indicate some undetermined error occurred. &quot;</p>
+<h3>Typedefs</h3>
+<p>typedef size_t <code>globus_size_t</code><br />
+ <i>Standard size of memory object</i> </p>
+<p> The globus_size_t is the size of a memory object. It is identical to size_t in all cases and doesn&#8217;t need to be used ever. &quot;<br />
+ typedef socklen_t <code>globus_socklen_t</code><br />
+ <i>Size of a socket length parameter. </i><br />
+ typedef unsigned char <code>globus_byte_t</code><br />
+ <i>Unsigned byte datatype</i> </p>
+<p> This is used for byte-addressable arrays of arbitrary data which is not subject to sign extension. &quot;<br />
+ typedef int <code>globus_bool_t</code><br />
+ <i>Boolean type. </i><br />
+ typedef uint32_t <code>globus_result_t</code> </p>
+<h2>Detailed Description</h2>
+<p>Common Primitive Types. </p>
+<p> Defines the macros and typedefs common to all globus_common components.</p>
+<h2>Macro Definition Documentation</h2>
+<h3>#define GLOBUS_NULL NULL</h3>
+<p>NULL value. From back long ago before NULL was standardized? No reason to use this on any modern system.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for globus_common from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

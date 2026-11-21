@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>appliance-creator(8) · Linux Manual Pages</title>
+<meta name="description" content="appliance-creator, creates pre-installed appliance images and meta-data.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-appliance-creator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>appliance-creator(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>appliance-creator, creates pre-installed appliance images and meta-data.</p>
+<h2>Synopsis</h2>
+<p><code>appliance-creator</code> [<font SIZE="-1">OPTIONS</font>]</p>
+<h2>Description</h2>
+<p><code>appliance-creator</code> creates pre-installed appliance images from kickstart files. Kickstart files contain the information about packages and configurations that are built into the image.</p>
+<h2>Options</h2>
+<dl>
+<dt>-h, &#8211;help</dt>
+<dd>Shows a help message and exits.</dd></dl>
+<h2>Image Options</h2>
+<p>These options define the created appliance image.</p>
+<dl>
+<dt>-c <font SIZE="-1">KSCFG</font>, &#8211;config=KSCFG</dt>
+<dd>Path to kickstart config file</dd>
+<dt>-n <font SIZE="-1">NAME</font>, &#8211;name=NAME</dt>
+<dd>Name of appliance image to be created (default based on config name)</dd>
+<dt>-f <font SIZE="-1">FORMAT</font>, &#8211;format=FORMAT</dt>
+<dd>Disk format, this will take any input that qemu-img convert will take (raw, qcow2, vmdk, &#8230;) Note: not all disk formats with work with all virt technologies.</dd>
+<dt>&#8211;vmem=VMEM</dt>
+<dd>Amount of virtual memory for appliance in <font SIZE="-1">MB</font> (default: 512)</dd>
+<dt>&#8211;vcpu=VCPU</dt>
+<dd>Number of virtual cpus for appliance (default: 1)</dd>
+<dt>&#8211;checksum</dt>
+<dd>Generate a checksum for the created appliance</dd></dl>
+<h2>System Directory Options</h2>
+<p>These options define the way the created Appliance is packaged</p>
+<dl>
+<dt>-p <font SIZE="-1">PACKAGE</font>, &#8211;package=PACKAGE</dt>
+<dd>Package format, will package up output, disk images and meta into a package. Currently only &#8220;zip&#8221;, &#8220;zip.64&#8221;, &#8220;tar&#8221;, &#8220;tar.gz&#8221;, &#8220;tar.bz2&#8221; are supported. (default is &#8220;none&#8221;)</dd>
+<dt>-i <font SIZE="-1">INCLUDE</font>, &#8211;include=INCLUDE</dt>
+<dd>path to a file or dir to include in the appliance package</dd>
+<dt>-o <font SIZE="-1">OUTDIR</font>, &#8211;outdir=OUTDIR</dt>
+<dd>output directory</dd></dl>
+<h2>System Directory Options</h2>
+<p>These options define directories used on your system for creating the appliance image</p>
+<dl>
+<dt>-t <font SIZE="-1">TMPDIR</font>, &#8211;tmpdir=TMPDIR</dt>
+<dd>Temporary directory to use (default: /var/tmp)</dd>
+<dt>&#8211;cache=CACHEDIR</dt>
+<dd>Cache directory to use (default: private cache)</dd></dl>
+<h2>Debugging options</h2>
+<p>These options define extra options for debugging</p>
+<dl>
+<dt>-d, &#8211;debug</dt>
+<dd>Output debugging information</dd>
+<dt>-v, &#8211;verbose</dt>
+<dd>Output verbose progress information</dd>
+<dt>&#8211;logfile=FILE</dt>
+<dd>Save debug information to <font SIZE="-1">FILE</font></dd></dl>
+<h2>Examples</h2>
+<p>Appliance Example </p>
+<p> appliance-creator \<br />
+&nbsp;<wbr>-n ThinCrust &#8211;config /usr/share/doc/appliance-tools-%{version}/aos-rawhide.ks \ &#8211;cache=/var/tmp/act</p>
+<h2>Contributors</h2>
+<p>David Huff, Joey Boggs, Bryan kearney, Daniel P. Berrange, and a team of other contributors.</p>
+<h2>Bugs</h2>
+<p>Report bugs to the mailing list <tt>&quot;<a rel="nofollow" href="http://www.redhat.com/mailman/listinfo/thincrust-devel-list">http://www.redhat.com/mailman/listinfo/thincrust-devel-list</a>&quot;</tt> or directly to BugZilla <tt>&quot;<a href="http://bugzilla.redhat.com/bugzilla/">http://bugzilla.redhat.com/bugzilla/</a>&quot;</tt> against the <tt>&quot;Fedora&quot;</tt> product, and the <tt>&quot;appliance-tools&quot;</tt> component.</p>
+<h2>Copyright</h2>
+<p>Copyright (C) Fedora Project 2008, and various contributors. This is free software. You may redistribute copies of it under the terms of the <font SIZE="-1">GNU</font> General Public License <tt>&quot;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&quot;</tt>. There is <font SIZE="-1">NO</font> <font SIZE="-1">WARRANTY</font>, to the extent permitted by law.</p>
+<h2>See Also</h2>
+<p><tt>&quot;<a href="/docs/linux/man/1-qemu-img/">qemu-img</a>(1)&quot;</tt>,<tt>&quot;virt-iamge(1),&quot;virt-iamge(5) project website &quot;<a rel="nofollow" href="http://thincrust.org/">http://thincrust.org/</a>&quot;&quot;&quot;</tt></p>
+<h2>Pod Errors</h2>
+<p>Hey! <code>The above document had some coding errors, which are explained below:</code></p>
+<dl>
+<dt>Around line 138:</dt>
+<dd>Unterminated C&lt;C&lt;&#8230;&gt;&gt; sequence </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

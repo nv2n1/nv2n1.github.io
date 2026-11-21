@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npm-team(1) · Linux Manual Pages</title>
+<meta name="description" content="npm-team – Manage organization teams and team memberships">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-npm-team/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>npm-team(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> <code>npm-team</code> &#8211; Manage organization teams and team memberships </p>
+<h3>Synopsis</h3>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+npm team create &lt;scope:team&gt;
+npm team destroy &lt;scope:team&gt;
+npm team add &lt;scope:team&gt; &lt;user&gt;
+npm team rm &lt;scope:team&gt; &lt;user&gt;
+npm team ls &lt;scope&gt;|&lt;scope:team&gt;
+npm team edit &lt;scope:team&gt;
+</pre>
+</dd></dl>
+<h3>Description</h3>
+<p> Used to manage teams in organizations, and change team memberships. Does not handle permissions for packages. </p>
+<p> Teams must always be fully qualified with the organization/scope they belong to when operating on them, separated by a colon (<code>:</code>). That is, if you have a <code>wombats</code> team in a <code>wisdom</code> organization, you must always refer to that team as <code>wisdom:wombats</code> in these commands. </p>
+<p> If you have two-factor authentication enabled in <code>auth-and-writes</code> mode, then you can provide a code from your authenticator with <code>[&#8211;otp &lt;otpcode&gt;]</code>. If you don&#8217;t include this then you will be prompted.</p>
+<dl>
+<dl>
+<dt>&bull;</dt>
+<dd> create / destroy: Create a new team, or destroy an existing one. Note: You cannot remove the <code>developers</code> team, &lt;a href=&quot;<a rel="nofollow" href="https://docs.npmjs.com/about-developers-team">https://docs.npmjs.com/about-developers-team</a>&quot; target=&quot;_blank&quot;&gt;learn more.&lt;/a&gt;</dd>
+<dt>&bull;</dt>
+<dd> add / rm: Add a user to an existing team, or remove a user from a team they belong to.</dd>
+<dt>&bull;</dt>
+<dd> ls: If performed on an organization name, will return a list of existing teams under that organization. If performed on a team, it will instead return a list of all users belonging to that particular team.</dd>
+<dt>&bull;</dt>
+<dd> edit: Edit a current team. </dd>
+</dl>
+</dl>
+<h3>Details</h3>
+<p> <code>npm team</code> always operates directly on the current registry, configurable from the command line using <code>&#8211;registry=&lt;registry url&gt;</code>. </p>
+<p> In order to create teams and manage team membership, you must be a <i>team admin</i> under the given organization. Listing teams and team memberships may be done by any member of the organizations. </p>
+<p> Organization creation and management of team admins and <i>organization</i> members is done through the website, not the npm CLI. </p>
+<p> To use teams to manage permissions on packages belonging to your organization, use the <code>npm access</code> command to grant or revoke the appropriate permissions.</p>
+<h3>See Also</h3>
+<dl>
+<dl>
+<dt>&bull;</dt>
+<dd> npm help access</dd>
+<dt>&bull;</dt>
+<dd> npm help registry </dd>
+</dl>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

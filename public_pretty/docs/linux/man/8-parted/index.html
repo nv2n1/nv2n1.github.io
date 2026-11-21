@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>parted(8) · Linux Manual Pages</title>
+<meta name="description" content="parted – a partition manipulation program">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-parted/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>parted(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>parted &#8211; a partition manipulation program</p>
+<h2>Synopsis</h2>
+<p><code>parted</code> [options] [device [command [options&#8230;]&#8230;]]</p>
+<h2>Description</h2>
+<p><code>parted</code> is a program to manipulate disk partitions. It supports multiple partition table formats, including MS-DOS and GPT. It is useful for creating space for new operating systems, reorganising disk usage, and copying data to new hard disks. </p>
+<p> This manual page documents <code>parted</code> briefly. Complete documentation is distributed with the package in GNU Info format.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>displays a help message</dd>
+<dt><code>-l, &#8211;list</code></dt>
+<dd>lists partition layout on all block devices</dd>
+<dt><code>-m, &#8211;machine</code></dt>
+<dd>displays machine parseable output</dd>
+<dt><code>-s, &#8211;script</code></dt>
+<dd>never prompts for user intervention</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>displays the version</dd>
+<dt><code>-a </code><i>alignment-type</i>, &#8211;align <i>alignment-type</i></dt>
+<dd>Set alignment for newly created partitions, valid alignment types are:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt>none</dt>
+<dd>Use the minimum alignment allowed by the disk type.</dd>
+<dt>cylinder</dt>
+<dd>Align partitions to cylinders.</dd>
+<dt>minimal</dt>
+<dd>Use minimum alignment as given by the disk topology information. This and the opt value will use layout information provided by the disk to align the logical partition table addresses to actual physical blocks on the disks. The min value is the minimum alignment needed to align the partition properly to physical blocks, which avoids performance degradation.</dd>
+<dt>optimal</dt>
+<dd>Use optimum alignment as given by the disk topology information. This aligns to a multiple of the physical block size in a way that guarantees optimal performance.</dd></dl>
+</dl>
+</dl>
+<h2>Commands</h2>
+<dl>
+<dt><code>[device]</code></dt>
+<dd>The block device to be used. When none is given, <code>parted</code> will use the first block device it finds.</dd>
+<dt><code>[command [options]]</code></dt>
+<dd>Specifies the command to be executed. If no command is given, <code>parted</code> will present a command prompt. Possible commands are:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>help </code><i>[command]</i></dt>
+<dd>Print general help, or help on <i>command</i> if specified.</dd>
+<dt><code>align-check </code><i>type</i> <i>partition</i></dt>
+<dd>Check if <i>partition</i> satisfies the alignment constraint of <i>type</i>. <i>type</i> must be &quot;minimal&quot; or &quot;optimal&quot;.</dd>
+<dt><code>mklabel </code><i>label-type</i></dt>
+<dd>Create a new disklabel (partition table) of <i>label-type</i>. <i>label-type</i> should be one of &quot;aix&quot;, &quot;amiga&quot;, &quot;bsd&quot;, &quot;dvh&quot;, &quot;gpt&quot;, &quot;loop&quot;, &quot;mac&quot;, &quot;msdos&quot;, &quot;pc98&quot;, or &quot;sun&quot;.</dd>
+<dt><code>mkpart [</code><i>part-type</i> <i>name</i> <i>fs-type</i>] <i>start</i> <i>end</i></dt>
+<dd>Create a new partition. <i>part-type</i> may be specified only with msdos and dvh partition tables, it should be one of &quot;primary&quot;, &quot;logical&quot;, or &quot;extended&quot;. <i>name</i> is required for GPT partition tables and <i>fs-type</i> is optional. <i>fs-type</i> can be one of &quot;btrfs&quot;, &quot;ext2&quot;, &quot;ext3&quot;, &quot;ext4&quot;, &quot;fat16&quot;, &quot;fat32&quot;, &quot;hfs&quot;, &quot;hfs+&quot;, &quot;linux-swap&quot;, &quot;ntfs&quot;, &quot;reiserfs&quot;, &quot;udf&quot;, or &quot;xfs&quot;.</dd>
+<dt><code>name </code><i>partition</i> <i>name</i></dt>
+<dd>Set the name of <i>partition</i> to <i>name</i>. This option works only on Mac, PC98, and GPT disklabels. The name can be placed in double quotes, if necessary. And depending on the shell may need to also be wrapped in single quotes so that the shell doesn&#8217;t strip off the double quotes.</dd>
+<dt><code>print</code></dt>
+<dd>Display the partition table.</dd>
+<dt><code>quit</code></dt>
+<dd>Exit from <code>parted</code>.</dd>
+<dt><code>rescue </code><i>start</i> <i>end</i></dt>
+<dd>Rescue a lost partition that was located somewhere between <i>start</i> and <i>end</i>. If a partition is found, <code>parted</code> will ask if you want to create an entry for it in the partition table.</dd>
+<dt><code>resizepart </code><i>partition</i> <i>end</i></dt>
+<dd>Change the <i>end</i> position of <i>partition</i>. Note that this does not modify any filesystem present in the partition.</dd>
+<dt><code>rm </code><i>partition</i></dt>
+<dd>Delete <i>partition</i>.</dd>
+<dt><code>select </code><i>device</i></dt>
+<dd>Choose <i>device</i> as the current device to edit. <i>device</i> should usually be a Linux hard disk device, but it can be a partition, software raid device, or an LVM logical volume if necessary.</dd>
+<dt><code>set </code><i>partition</i> <i>flag</i> <i>state</i></dt>
+<dd>Change the state of the <i>flag</i> on <i>partition</i> to <i>state</i>. Supported flags are: &quot;boot&quot;, &quot;root&quot;, &quot;swap&quot;, &quot;hidden&quot;, &quot;raid&quot;, &quot;lvm&quot;, &quot;lba&quot;, &quot;legacy_boot&quot;, &quot;irst&quot;, &quot;msftres&quot;, &quot;esp&quot;, &quot;chromeos_kernel&quot;, &quot;bls_boot&quot; and &quot;palo&quot;. <i>state</i> should be either &quot;on&quot; or &quot;off&quot;.</dd>
+<dt><code>unit </code><i>unit</i></dt>
+<dd>Set <i>unit</i> as the unit to use when displaying locations and sizes, and for interpreting those given by the user when not suffixed with an explicit unit. <i>unit</i> can be one of &quot;s&quot; (sectors), &quot;B&quot; (bytes), &quot;kB&quot;, &quot;MB&quot;, &quot;MiB&quot;, &quot;GB&quot;, &quot;GiB&quot;, &quot;TB&quot;, &quot;TiB&quot;, &quot;%&quot; (percentage of device size), &quot;cyl&quot; (cylinders), &quot;chs&quot; (cylinders, heads, sectors), or &quot;compact&quot; (megabytes for input, and a human-friendly form for output).</dd>
+<dt><code>toggle </code><i>partition</i> <i>flag</i></dt>
+<dd>Toggle the state of <i>flag</i> on <i>partition</i>.</dd>
+<dt><code>version</code></dt>
+<dd>Display version information and a copyright message.</dd></dl>
+</dl>
+</dl>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;bug-parted [at] gnu.org&gt;</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-fdisk/">fdisk</a></code>(8), <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), The <i>parted</i> program is fully documented in the <code><a href="/docs/linux/man/1-info/">info</a>(1)</code> format <i>GNU partitioning software</i> manual which is distributed with the parted-doc Debian package.</p>
+<h2>Author</h2>
+<p>This manual page was written by Timshel Knoll &lt;timshel [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

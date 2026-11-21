@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pamtester(1) · Linux Manual Pages</title>
+<meta name="description" content="pamtester – test pluggable authentication module (PAM) facility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pamtester/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pamtester(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> pamtester &#8211; test pluggable authentication module (PAM) facility</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pamtester</code> [-v] [-I <i>item</i>=<i>value</i>] [-E <i>var</i>=<i>value</i>] <i>service</i> <i>user</i> <i>operation</i> [<i>operation</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> Test pluggable authentication module (PAM) facility. </p>
+<p> <i>service</i> is the PAM service name. <i>user</i> is the name of the user account to operate with the PAM facility. The following operations are supported.</p>
+<dl>
+<dt>authenticate</dt>
+<dd> Authenticate <i>user</i>. A conversation may subsequently take place to prompt user input to retrieve necessary authentication information.</dd>
+<dt>acct_mgmt</dt>
+<dd> Perform account management on <i>user</i>. A conversation may subsequently take place to prompt user input for necessary authentication information.</dd>
+<dt>open_session</dt>
+<dd> Open a new session for <i>user</i>.</dd>
+<dt>close_session</dt>
+<dd> Close the current session for <i>user</i>.</dd>
+<dt>chauthtok</dt>
+<dd> Change the authentication token currently assigned to <i>user</i>. Conversation may subsequently take place to prompt user input for necessary authentication information.</dd></dl>
+<p> Note that some operations may eventually need additional privileges to fulfill the request depending on the service configuration. </p>
+<p> Any operation may also be followed by the option flags that are provided between the pair of parenthesis. Flags are all named and combinable or inversible with bitwise operators; &quot;|&quot; (OR), &quot;&amp;&quot; (AND), &quot;^&quot; (XOR) and &quot;~&quot; (NOT) are accepted.</p>
+<dl>
+<dt>
+</dt><dd> authenticate(PAM_SILENT | PAM_DISALLOW_NULL_AUTHTOK)</dd></dl>
+<p> The list of allowed options is shown below:</p>
+<dl>
+<dt>&#8211;</dt>
+<dd> PAM_SILENT</dd>
+<dt>&#8211;</dt>
+<dd> PAM_DISALLOW_NULL_AUTHTOK</dd>
+<dt>&#8211;</dt>
+<dd> PAM_ESTABLISH_CRED</dd>
+<dt>&#8211;</dt>
+<dd> PAM_REINITIALIZE_CRED</dd>
+<dt>&#8211;</dt>
+<dd> PAM_REFRESH_CRED</dd>
+<dt>&#8211;</dt>
+<dd> PAM_CHANGE_EXPIRED_AUTHTOK</dd></dl>
+<p> Additional authentication information such as the name of the remote user, the remote host and the tty can be supplied via <i>-I</i> (<i>&#8211;item</i>) option. </p>
+<p> The following types of information are supported:</p>
+<dl>
+<dt>&#8211;</dt>
+<dd> service</dd>
+<dt>&#8211;</dt>
+<dd> user</dd>
+<dt>&#8211;</dt>
+<dd> prompt</dd>
+<dt>&#8211;</dt>
+<dd> tty</dd>
+<dt>&#8211;</dt>
+<dd> ruser</dd>
+<dt>&#8211;</dt>
+<dd> rhost </dd>
+</dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Turn on verbose mode.</dd>
+<dt><code>-I</code> <i>item</i>=<i>value</i>, <code>&#8211;item</code> <i>item</i>=<i>value</i></dt>
+<dd> Provide additional information to authentication module.</dd>
+<dt><code>-E</code> <i>var</i>=<i>value</i>, <code>&#8211;env</code> <i>var</i>=<i>value</i></dt>
+<dd> Set environment variable <i>var</i> to <i>value</i></dd></dl>
+<h2>AUTHOR</h2>
+<p> Written by Moriyoshi Koizumi &lt;moriyoshi [at] users.sourceforge.net&gt;</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;pamtester-bugs [at] lists.sourceforge.net&gt;.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2004 &#8211; 2005 Moriyoshi Koizumi. All rights reserved.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/7-pam/">pam</a></i>(7) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

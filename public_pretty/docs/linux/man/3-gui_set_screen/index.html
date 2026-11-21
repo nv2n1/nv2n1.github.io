@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gui_set_screen(3) · Linux Manual Pages</title>
+<meta name="description" content="gui_set_screen – Changes the bitmap surface GUI routines draw to. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gui_set_screen/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gui_set_screen(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> gui_set_screen &#8211; Changes the bitmap surface GUI routines draw to. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>void gui_set_screen(BITMAP *bmp);</code></p>
+<h2>DESCRIPTION</h2>
+<p> This function can be used to change the bitmap surface the GUI routines draw to. This can be useful if you are using a double buffering or page flipping system. Passing NULL will cause the default surface (screen) to be used again. Example: </p>
+<pre><code>
+BITMAP *page[2];
+/* Allocate two pages of video memory */
+page[0] = create_video_bitmap(SCREEN_W, SCREEN_H);
+page[1] = create_video_bitmap(SCREEN_W, SCREEN_H);
+/* Page flip */
+show_video_bitmap(page[0]);
+gui_set_screen(page[0]);
+</code></pre>
+<h2>SEE ALSO</h2>
+<p> <code>gui_get_screen</code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

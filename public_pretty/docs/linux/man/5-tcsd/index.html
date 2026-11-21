@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcsd(5) · Linux Manual Pages</title>
+<meta name="description" content="tcsd.conf – configuration file for the trousers TCS daemon.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-tcsd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>tcsd(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>TCG Software Stack<br />
+ </center></p>
+<h2>Name</h2>
+<p>tcsd.conf &#8211; configuration file for the trousers TCS daemon.</p>
+<h2>Description</h2>
+<p>This file, by default <i>/etc/tcsd.conf</i> is read by the trousers TCSD daemon, tcsd (see <a href="/docs/linux/man/8-tcsd/">tcsd</a>(8)). The tcsd.conf file that is installed by trousers contains all the default options, commented out.</p>
+<h2>Options</h2>
+<p><code>port</code> The port that TCSD will listen on for connections, local and remote, from applications. </p>
+<p> <code>num_threads</code> The maximum number of threads that the TCSD will spawn simultaneously to service applications. After <code>num_threads</code> threads have been spawned, any application that attempts to connect to the TCSD will receive an error. </p>
+<p> <code>system_ps_file</code> The location of the system persistent storage file. The system persistent storage file holds keys and data across restarts of the TCSD and system reboots. </p>
+<p> <code>firmware_log_file</code> Path to the file containing the current firmware PCR event log data. The interface to this log is usually provided by the TPM device driver. </p>
+<p> <code>kernel_log_file</code> Path to the file containing the current kernel PCR event log data. By default, this data will be parsed in the format provided by the Integrity Measurement Architecture LSM. </p>
+<p> <code>firmware_pcrs</code> A list of PCR indices that are manipulated only by the system firmware and therefore are not extended or logged by the TCSD. Applications that call Tcsi_PcrExtend on PCRs listed here will receive an error. </p>
+<p> <code>kernel_pcrs</code> A list of PCR indices that are manipulated only by the kernel and therefore are not extended or logged by the TCSD. Applications that call Tcsi_PcrExtend on PCRs listed here will receive an error. </p>
+<p> <code>platform_cred</code> Path to the platform credential for your TPM. Your TPM manufacturer may have provided you with a set of credentials (certificates) that should be used when creating identities using your TPM. When a user of your TPM makes an identity, this credential will be encrypted as part of that process. See the 1.1b TPM Main specification section 9.3 for information on this process. </p>
+<p> <code>conformance_cred</code> Path to the conformance credential for your TPM. Your TPM manufacturer may have provided you with a set of credentials (certificates) that should be used when creating identities using your TPM. When a user of your TPM makes an identity, this credential will be encrypted as part of that process. See the 1.1b TPM Main specification section 9.3 for information on this process. </p>
+<p> <code>endorsement_cred</code> Path to the endorsement credential for your TPM. Your TPM manufacturer may have provided you with a set of credentials (certificates) that should be used when creating identities using your TPM. When a user of your TPM makes an identity, this credential will be encrypted as part of that process. See the 1.1b TPM Main specification section 9.3 for information on this process. </p>
+<p> <code>remote_ops</code> A list of TCS commands which will be allowed to be executed on this machine&#8217;s TCSD by TSP&#8217;s on non-local hosts (over the internet). By default, access to all operations is denied. </p>
+<p> <code>host_platform_class</code> Determines the TCG specification of the host&#8217;s platform class. This refers to one of the specifications contained in the TCG web site. The default is PC specification version 1.2 . </p>
+<p> <code>all_platform_classes</code> Specifies all the TCG defined platforms associated with the host platform. The host_platform_class must not be defined here. By default, all platforms but the host platform are associated.</p>
+<h2>Example</h2>
+<dl>
+<dd>
+<pre>port = 30003
+num_threads = 10
+system_ps_file = /var/lib/tpm/system.data
+firmware_log_file = /proc/tpm/firmware_events
+kernel_log_file = /proc/tcg/measurement_events
+firmware_pcrs = 0,1,2,3,4,5,6,7
+kernel_pcrs = 10,11
+platform_cred = /var/lib/tpm/platform.cert
+conformance_cred = /var/lib/tpm/conformance.cert
+endorsement_cred = /var/lib/tpm/endorsement.cert
+remote_ops = create_key,random
+host_platform_class = server_12
+all_platform_classes = pc_11,pc_12,mobile_12</pre>
+</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-tcsd/">tcsd</a></code>(8)</p>
+<h2>Author</h2>
+<p>Kent Yoder</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;trousers-tech [at] lists.sf.net&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

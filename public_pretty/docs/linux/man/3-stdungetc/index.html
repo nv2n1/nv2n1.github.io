@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdungetc(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdungetc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdungetc(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::ungetc - std::ungetc</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstdio&gt;
+    int ungetc(int ch, std::FILE *stream);</code></pre> 
+<p>If ch does not equal EOF, pushes the character ch (reinterpreted as unsigned char) into the input buffer associated with the stream stream in such a manner than subsequent read operation from stream will retrieve that character. The external device associated with the stream is not modified.
+Stream repositioning operations std::fseek, std::fsetpos, and std::rewind discard the effects of ungetc.
+If ungetc is called more than once without an intervening read or repositioning, it may fail (in other words, a pushback buffer of size 1 is guaranteed, but any larger buffer is implementation-defined). If multiple successful ungetc were performed, read operations retrieve the pushed-back characters in reverse order of ungetc
+If ch equals EOF, the operation fails and the stream is not affected.
+A successful call to ungetc clears the end of file status flag std::feof.
+A successful call to ungetc on a binary stream decrements the stream position indicator by one (the behavior is indeterminate if the stream position indicator was zero).
+A successful call to ungetc on a text stream modifies the stream position indicator in unspecified manner but guarantees that after all pushed-back characters are retrieved with a read operation, the stream position indicator is equal to its value before ungetc.</p>
+<h2>Parameters</h2>
+<p>ch - character to be pushed into the input stream buffer
+stream - file stream to put the character back to</p>
+<h2>Return value</h2>
+<p>On success ch is returned.
+On failure EOF is returned and the given stream remains unchanged.</p>
+<h2>Notes</h2>
+<p>The size of the pushback buffer varies in practice from 4k (Linux, MacOS) to as little as 4 (Solaris) or the guaranteed minimum 1 (HPUX, AIX)
+The apparent size of the pushback buffer may be larger if the character that is pushed back equals the character existing at that location in the external character sequence (the implementation may simply decrement the read file position indicator and avoid maintaining a pushback buffer)</p>
+<h2>Example</h2>
+<p>demonstrates the use of ungetc in its original purpose: implementing scanf
+// Run this code <pre><code>#include &lt;cctype&gt;
+#include &lt;cstdio&gt;
+void demo_scanf(const char *fmt, std::FILE *s)
+{
+if (<em>fmt == &lsquo;%&rsquo;) {
+switch (</em>++fmt) {
+case &lsquo;u&rsquo;: {
+int c;
+while (std::isspace(c = std::getc(s))) {
+} // skip leading white space
+unsigned int num = 0;
+while (std::isdigit(c)) {
+num = num * 10 + c - &lsquo;0&rsquo;;
+c = std::getc(s);
+}
+std::printf(&quot;%%u scanned %u\n&quot;, num);
+std::ungetc(c, s); // reprocess the non-digit
+}
+case &lsquo;c&rsquo;: {
+int c = std::getc(s);
+std::printf(&quot;%%c scanned &lsquo;%c&rsquo;\n&quot;, c);
+}
+}
+}
+}
+int main()
+{
+std::FILE *f = std::fopen(&quot;input.txt&quot;, &quot;w+&quot;);
+std::fputs(&quot;123x&quot;, f);
+std::rewind(f);
+demo_scanf(&quot;%u%c&quot;, f);
+std::fclose(f);
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> %u scanned 123
+ <wbr> %c scanned &lsquo;x&rsquo;</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> gets a character from a file stream
+fgetc <i>(function)</i>
+getc</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

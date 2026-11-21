@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>flow-gen(1) · Linux Manual Pages</title>
+<meta name="description" content="flow-gen – Generate test flows">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-flow-gen/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>flow-gen(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> flow-gen &#8211; Generate test flows</p>
+<h2>SYNOPSIS</h2>
+<p> <code>flow-gen</code> [ <code>-h</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-n</code><i> count</i> ] [ <code>-V</code><i> version</i> ] [ <code>-z</code><i> z_level</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>flow-gen</code> utility generates a test pattern of flows in any of the currently supported export versions typically for debugging purposes.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-b</code><i> big</i><code>|</code><i>little</i></dt>
+<dd> Byte order of output.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-n</code><i> count</i></dt>
+<dd> Generate count flows. Default 1000.</dd>
+<dt><code>-V</code><i> version</i></dt>
+<dd> Generate version type exports. Supported versions are: </dd>
+<pre>
+    1    NetFlow version 1 (No sequence numbers, AS, or mask)
+    5    NetFlow version 5
+    6    NetFlow version 6 (5+ Encapsulation size)
+    7    NetFlow version 7 (Catalyst switches)
+    8.1  NetFlow AS Aggregation
+    8.2  NetFlow Proto Port Aggregation
+    8.3  NetFlow Source Prefix Aggregation
+    8.4  NetFlow Destination Prefix Aggregation
+    8.5  NetFlow Prefix Aggregation
+    8.6  NetFlow Destination (Catalyst switches)
+    8.7  NetFlow Source Destination (Catalyst switches)
+    8.8  NetFlow Full Flow (Catalyst switches)
+    8.9  NetFlow ToS AS Aggregation
+    8.10 NetFlow ToS Proto Port Aggregation
+    8.11 NetFlow ToS Source Prefix Aggregation
+    8.12 NetFlow ToS Destination Prefix Aggregation
+    8.13 NetFlow ToS Prefix Aggregation
+    8.14 NetFlow ToS Prefix Port Aggregation
+    1005 Flow-Tools tagged version 5
+</pre>
+<dt><code>-z</code><i> z_level</i></dt>
+<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Generate a test pattern of 1000 version 5 flows and send them in the Cisco NetFlow packet format to 10.0.0.1 port 9500. </p>
+<p> <code>flow-gen -V5 | flow-send 0/10.0.0.1/9500</code></p>
+<h2>BUGS</h2>
+<p> The test pattern may change between releases.</p>
+<h2>AUTHOR</h2>
+<p> Mark Fullmer &lt;maf [at] splintered.net&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-flow-tools/">flow-tools</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

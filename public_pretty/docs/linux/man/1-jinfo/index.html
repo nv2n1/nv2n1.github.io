@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jinfo(1) · Linux Manual Pages</title>
+<meta name="description" content="jinfo – Generates configuration information. This command is experimental and unsupported.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-jinfo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>jinfo(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> jinfo &#8211; Generates configuration information. This command is experimental and unsupported.</p>
+<h2>SYNOPSIS</h2>
+<pre>
+<code>jinfo</code> [ <i>option</i> ] <i>pid</i>
+</pre>
+<pre>
+<code>jinfo</code> [ <i>option </i>] <i>executable core</i>
+</pre>
+<pre><code>
+jinfo[option][servier - id] remote - hostname - or -IP
+</code></pre>
+<dl>
+<dt><i>option</i></dt>
+<dd> The command-line options. See Options.</dd>
+<dt><i>pid</i></dt>
+<dd> The process ID for which the configuration information is to be printed. The process must be a Java process. To get a list of Java processes running on a machine, use the <a href="/docs/linux/man/1-jps/">jps</a>(1) command.</dd>
+<dt><i>executable</i></dt>
+<dd> The Java executable from which the core dump was produced.</dd>
+<dt><i>core</i></dt>
+<dd> The core file for which the configuration information is to be printed.</dd>
+<dt><i>remote-hostname-or-IP</i></dt>
+<dd> The remote debug server <code>hostname</code> or <code>IP</code> address. See jsadebugd(1).</dd>
+<dt><i>server-id</i></dt>
+<dd> An optional unique ID to use when multiple debug servers are running on the same remote host.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> The <code>jinfo</code> command prints Java configuration information for a specified Java process or core file or a remote debug server. The configuration information includes Java system properties and Java Virtual Machine (JVM) command-line flags. If the specified process is running on a 64-bit JVM, then you might need to specify the <code>-J-d64</code> option, for example: <code>jinfo</code><code>-J-d64 -sysprops pid</code>. </p>
+<p> This utility is unsupported and might not be available in future releases of the JDK. In Windows Systems where <code>dbgeng.dll</code> is not present, Debugging Tools For Windows must be installed to have these tools working. The <code>PATH</code> environment variable should contain the location of the jvm.dll that is used by the target process or the location from which the crash dump file was produced. For example, <code>set PATH=%JDK_HOME%\jrein
+</p>
+</code>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

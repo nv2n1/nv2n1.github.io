@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rasdaemon(1) · Linux Manual Pages</title>
+<meta name="description" content="rasdaemon – RAS daemon to log the RAS events.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rasdaemon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rasdaemon(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> rasdaemon &#8211; RAS daemon to log the RAS events.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>rasdaemon</code> [<i>OPTION</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
+<p> The <code>rasdaemon</code> program is a daemon which monitors the platform Reliablity, Availability and Serviceability (RAS) reports from the Linux kernel trace events. These trace events are logged in /sys/kernel/debug/tracing, reporting them via syslog/journald. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display a brief usage message and exit.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display a help message and exit.</dd>
+<dt><code>&#8211;disable</code></dt>
+<dd> Disable RAS tracing events and exit.</dd>
+<dt><code>&#8211;enable</code></dt>
+<dd> Enable RAS tracing events and exit.</dd>
+<dt><code>&#8211;foreground</code></dt>
+<dd> Executes in foreground, printing the events at console. Useful for testing it, and to be used by systemd or Unix System V respan. If not specified, the program runs in daemon mode.</dd>
+<dt><code>&#8211;record</code></dt>
+<dd> Record RAS events via Sqlite3. The Sqlite3 database has the benefit of keeping a persistent record of the RAS events. This feature is used with the ras-mc-ctl utility. Note that rasdaemon may be compiled without this feature.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the program version and exit. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-ras-mc-ctl/">ras-mc-ctl</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

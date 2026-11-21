@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fvwmconsolec(1) · Linux Manual Pages</title>
+<meta name="description" content="FvwmConsoleC.pl – Command editor for fvwm command input interface">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-fvwmconsolec/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>fvwmconsolec(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>FvwmConsoleC.pl &#8211; Command editor for fvwm command input interface </p>
+<h2>Synopsis</h2>
+<p>FvwmConsole -e /usr/X11/lib/fvwm/FvwmConsoleC.pl </p>
+<h2>Copyright</h2>
+<p>Copyright 1996, Toshi Isogai. No guarantees or warranties are provided. Use this program at your own risk. Permission to use this program for any purpose is given, as long as the copyright is kept intact. </p>
+<h2>Description</h2>
+<p>FvwmConsoleC.pl offers editing capabilities while the user is entering the line. By default, the line editing commands are similar to those of emacs. It also offers <code>substitution</code> , which replaces a pattern to a string before it sends the command. </p>
+<h2>Functions</h2>
+<p>Functions are bound to a key or key combination to be invoked. The followings are functions available and their default key bindings.</p>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>bind</code></dt>
+<dd><i>Meta-k, Ctrl-x Ctrl-b</i><br />
+ List up key bindings and substitutions.</dd>
+<dt><code>boh</code></dt>
+<dd>Move to the beginning of history.</dd>
+<dt><code>boh_ign_mode</code> <i>Esc-&lt;</i></dt>
+<dd>Move to the beginning of history. If it is in search mode, continue.</dd>
+<dt><code>bol</code></dt>
+<dd><i>Home, Ctrl-a</i><br />
+ Move cursor to the beginning of the line.</dd>
+<dt><code>bs[(n)]</code> <i>BackSpace, Ctrl-h</i></dt>
+<dd>Backspace n times. default of n is 1.</dd>
+<dt><code>cancel</code></dt>
+<dd><i>Ctrl-x Ctrl-k</i><br />
+ Cancel the current input.</dd>
+<dt><code>del_back_line</code></dt>
+<dd>Delete the line from the beginning to the cursor.</dd>
+<dt><code>del_back_word</code> <i>Ctrl-w</i></dt>
+<dd>Delete the word from the beginning to the cursor.</dd>
+<dt><code>del_char [(n)]</code> <i>Delete, Ctrl-d</i></dt>
+<dd>Delete n characters from the cursor to the right. Default of n is 1.</dd>
+<dt><code>del_forw_line</code> <i>Ctrl-k</i></dt>
+<dd>Delete the line from the cursor to the end.</dd>
+<dt><code>del_forw_word</code> <i>Meta-d</i></dt>
+<dd>Delete the word from the cursor to the end.</dd>
+<dt><code>del_line</code> <i>Ctrl-u</i></dt>
+<dd>Delete the entire line.</dd>
+<dt><code>enter</code></dt>
+<dd><i>Enter, Ctrl-j, Ctrl-m</i><br />
+ Perform substitution if applicable and send the line to fvwm.</dd>
+<dt><code>enter_wo_subst</code> <i>Meta-Enter</i></dt>
+<dd>Send the line to fvwm without any substitution.</dd>
+<dt><code>eoh</code></dt>
+<dd>Move to the end of history.</dd>
+<dt><code>eoh_ign_mode</code> <i>Esc-&gt;</i></dt>
+<dd>Move to the end of history. If it is in search mode, continue.</dd>
+<dt><code>eol</code></dt>
+<dd><i>End, Ctrl-e</i><br />
+ Move the cursor to the end of line.</dd>
+<dt><code>ins_char (str)</code></dt>
+<dd>Insert string at the cursor.</dd>
+<dt><code>ins_last_word</code> <i>Esc-.</i></dt>
+<dd>Insert the last argument of the previous command at the cursor.</dd>
+<dt><code>ins_nth_word</code> <i>Meta-[1..9]</i></dt>
+<dd>Insert the n-th argument of the previous command at the cursor.</dd>
+<dt><code>list_func</code> <i>Meta-l</i></dt>
+<dd>List up available editing functions.</dd>
+<dt><code>next_char</code> <i>Right, Ctrl-f</i></dt>
+<dd>Move the cursor to the next character.</dd>
+<dt><code>next_line</code> <i>Down, Ctrl-n</i></dt>
+<dd>Move to the next line in history.</dd>
+<dt><code>next_word</code> <i>Meta-f</i></dt>
+<dd>Move the cursor to the next word.</dd>
+<dt><code>prefix</code></dt>
+<dd>Wait for the next character typed in for multi-key binding.</dd>
+<dt><code>prev_char</code> <i>Left, Ctrl-b</i></dt>
+<dd>Move the cursor to the previous character.</dd>
+<dt><code>prev_line</code> <i>Up, Ctrl-p</i></dt>
+<dd>Move to the previous line in history.</dd>
+<dt><code>prev_word</code> <i>Meta-b</i></dt>
+<dd>Move the cursor to the previous word.</dd>
+<dt><code>quote</code></dt>
+<dd><i>Ctrl-q</i><br />
+ Insert the next character typed into the buffer literally.</dd>
+<dt><code>search</code></dt>
+<dd><i>Ctrl-s</i><br />
+ Search pattern in history.</dd>
+<dt><code>search_rev</code> <i>Ctrl-r</i></dt>
+<dd>Search pattern in history in reverse order.</dd>
+<dt><code>subst</code></dt>
+<dd><i>Meta-s</i><br />
+ Substitute all patterns to strings and reprint the line. The substitutions are not nested and performed in the order that they are defined.</dd></dl>
+</dl>
+<h2>Configuration</h2>
+<p>The key binding can be overridden or defined in fvwm module configuration. </p>
+<dl>
+<dd>*FvwmConsole: Key 
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

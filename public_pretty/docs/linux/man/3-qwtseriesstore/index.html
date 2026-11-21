@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qwtseriesstore(3) · Linux Manual Pages</title>
+<meta name="description" content="QwtSeriesStore&lt; T &gt; –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-qwtseriesstore/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>qwtseriesstore(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QwtSeriesStore&lt; T &gt; &#8211; </p>
+<p> Class storing a <code>QwtSeriesData</code> object.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;qwt_series_store.h&gt; </p>
+<p> Inherits <code>QwtAbstractSeriesStore</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>QwtSeriesStore</code> ()<br />
+ <i>Constructor The store contains no series. </i><br />
+ <code>~QwtSeriesStore</code> ()<br />
+ <i>Destructor. </i><br />
+ void <code>setData</code> (<code>QwtSeriesData</code>&lt; T &gt; *series) </p>
+<p> <code>QwtSeriesData</code>&lt; T &gt; * <code>data</code> () </p>
+<p> const <code>QwtSeriesData</code>&lt; T &gt; * <code>data</code> () const </p>
+<p> T <code>sample</code> (int index) const </p>
+<p> virtual size_t <code>dataSize</code> () const </p>
+<p> virtual QRectF <code>dataRect</code> () const </p>
+<p> virtual void <code>setRectOfInterest</code> (const QRectF &amp;rect) </p>
+<p> <code>QwtSeriesData</code>&lt; T &gt; * <code>swapData</code> (<code>QwtSeriesData</code>&lt; T &gt; *series) </p>
+<h3>Additional Inherited Members</h3>
+<h2>Detailed Description</h2>
+<h3>template&lt;typename T&gt;class QwtSeriesStore&lt; T &gt;</h3>
+<p>Class storing a <code>QwtSeriesData</code> object. </p>
+<p> <code>QwtSeriesStore</code> and <code>QwtPlotSeriesItem</code> are intended as base classes for all plot items iterating over a series of samples. Both classes share a virtual base class ( <code>QwtAbstractSeriesStore</code> ) to bridge between them. </p>
+<p> <code>QwtSeriesStore</code> offers the template based part for the plot item API, so that <code>QwtPlotSeriesItem</code> can be derived without any hassle with templates.</p>
+<h2>Member Function Documentation</h2>
+<h3>template&lt;typename T &gt; <code>QwtSeriesData</code>&lt; T &gt; * <code>QwtSeriesStore</code>&lt; T &gt;::data () [inline]</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>the the series data</dd></dl>
+<h3>template&lt;typename T &gt; const <code>QwtSeriesData</code>&lt; T &gt; * <code>QwtSeriesStore</code>&lt; T &gt;::data () const [inline]</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>the the series data</dd></dl>
+<h3>template&lt;typename T &gt; QRectF <code>QwtSeriesStore</code>&lt; T &gt;::dataRect () const [virtual]</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>Bounding rectangle of the series or an invalid rectangle, when no series is stored</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>QwtSeriesData&lt;T&gt;::boundingRect()</code></dd></dl>
+<p> Implements <code>QwtAbstractSeriesStore</code>.</p>
+<h3>template&lt;typename T &gt; size_t <code>QwtSeriesStore</code>&lt; T &gt;::dataSize () const [virtual]</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>Number of samples of the series</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>setData()</code>, <code>QwtSeriesData&lt;T&gt;::size()</code></dd></dl>
+<p> Implements <code>QwtAbstractSeriesStore</code>.</p>
+<h3>template&lt;typename T &gt; T <code>QwtSeriesStore</code>&lt; T &gt;::sample (intindex) const [inline]</h3>
+<p><code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>index</i> Index</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>Sample at position index</dd></dl>
+<h3>template&lt;typename T&gt; void <code>QwtSeriesStore</code>&lt; T &gt;::setData (<code>QwtSeriesData</code>&lt; T &gt; *series)</h3>
+<p>Assign a series of samples </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>series</i> Data</dd></dl>
+<p> <code>Warning:</code></p>
+<dl COMPACT>
+<dd>The item takes ownership of the data object, deleting it when its not used anymore.</dd></dl>
+<h3>template&lt;typename T &gt; void <code>QwtSeriesStore</code>&lt; T &gt;::setRectOfInterest (const QRectF &amp;rect) [virtual]</h3>
+<p>Set a the &#8216;rect of interest&#8217; for the series </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>rect</i> Rectangle of interest</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>QwtSeriesData&lt;T&gt;::setRectOfInterest()</code></dd></dl>
+<p> Implements <code>QwtAbstractSeriesStore</code>.</p>
+<h3>template&lt;typename T&gt; <code>QwtSeriesData</code>&lt; T &gt; * <code>QwtSeriesStore</code>&lt; T &gt;::swapData (<code>QwtSeriesData</code>&lt; T &gt; *series)</h3>
+<p>Replace a series without deleting the previous one </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>series</i> New series</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>Previously assigned series</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>atd(8) · Linux Manual Pages</title>
+<meta name="description" content="atd – run jobs queued for later execution">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-atd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>atd(8)</h1>
+
+
+
+
+
+<p>atd &#8211; run jobs queued for later execution</p>
+<h2>Synopsis</h2>
+<p><code>atd</code> [<code>-l</code> <i>load_avg</i>] [<code>-b</code> <i>batch_interval</i>] [<code>-d</code>] [<code>-f</code>] [<code>-s</code>]</p>
+<h2>Description</h2>
+<p><code>atd</code> runs jobs queued by <code><a href="/docs/linux/man/1-at/">at</a>(1)</code>. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-l</code></dt>
+<dd>Specifies a limiting load factor, over which batch jobs should not be run, instead of the compile-time choice of 0.8. For an SMP system with <i>n</i> CPUs, you will probably want to set this higher than <i>n-1.</i></dd>
+<dt><code>-b</code></dt>
+<dd>Specify the minimum interval in seconds between the start of two batch jobs (60 default).</dd>
+<dt><code>-d</code></dt>
+<dd>Debug; print error messages to standard error instead of using <code><a href="/docs/linux/man/3-syslog/">syslog</a>(3)</code>. This option also implies <code>-f</code>.</dd>
+<dt><code>-f</code></dt>
+<dd>Run <code>atd</code> in the foreground.</dd>
+<dt><code>-s</code></dt>
+<dd>Process the at/batch queue only once. This is primarily of use for compatibility with old versions of <code>at</code>; <code>atd -s</code> is equivalent to the old <code>atrun</code> command.</dd></dl>
+<h2>Warning</h2>
+<p><code>atd</code> won&#8217;t work if its spool directory is mounted via NFS even if <i>no_root_squash</i> is set.</p>
+<h2>Files</h2>
+<p><i>/var/spool/at</i> The directory for storing jobs; this should be mode 700, owner root. </p>
+<p> <i>/var/spool/at/spool</i> The directory for storing output; this should be mode 700, owner root. </p>
+<p> <i>/etc/at.allow</i>, <i>/etc/at.deny</i> determine who can use the <code>at</code> system.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-at/">at</a></code>(1), <code>at.deny</code>(5), <code><a href="/docs/linux/man/5-at-allow/">at.allow</a></code>(5), <code><a href="/docs/linux/man/8-cron/">cron</a></code>(8), <code><a href="/docs/linux/man/1-crontab/">crontab</a></code>(1), <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3).</p>
+<h2>Bugs</h2>
+<p>The functionality of <code>atd</code> should be merged into <code><a href="/docs/linux/man/8-cron/">cron</a></code>(8)<code>.</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

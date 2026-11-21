@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cptcat(1) · Linux Manual Pages</title>
+<meta name="description" content="cptcat – concatenate GMT colour palette tables.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-cptcat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>cptcat(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> cptcat &#8211; concatenate GMT colour palette tables. </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>cptcat</code> [-h] [-o&nbsp;<wbr><i>file</i>] [-v] [-V] <i>file</i>&#8230;</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>cptcat</code> utility concatenates two or more GMT colour palette table (cpt) files. The mandatory <i>file</i> arguments specify the input files which may be specified in any order. However, when sorted, the maximum (z-value) of the lower file should equal the minimum of the upper file; files can be modified with the <code><a href="/docs/linux/man/1-makecpt/">makecpt</a></code>(1) utility to be in this form. </dd>
+<p> The background colour will be taken from that of the lower (or lowest) file, and the forground from that of the upper. </p>
+<p> The program will write to stdout if the <code>-o</code> option is not specified.</p>
+<h2>OPTIONS</h2>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Brief help.</dd></dl>
+<p> <code>-o</code>, <code>&#8211;output</code> <i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Write the output to <i>file</i>, rather than stdout.</dd></dl>
+<p> <code>-v</code>, <code>&#8211;verbose</code></p>
+<dl>
+<dt>
+</dt><dd> Verbose operation.</dd></dl>
+<p> <code>-V</code>, <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Version information.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Create a cpt-file topobath.cpt from topo.cpt and bath.cpt </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+  cptcat -v -o topobath.cpt topo.cpt bath.cpt
+</pre>
+</dd></dl>
+<h2>AUTHOR</h2>
+<p> J.J. Green</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gmt/">GMT</a></code>(1), <code><a href="/docs/linux/man/1-makecpt/">makecpt</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bson_writer_new(3) · Linux Manual Pages</title>
+<meta name="description" content="bson_writer_new() – Creates a new instance of bson_writer_t using the buffer, length, offset, and _realloc()_ function supplied.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-bson_writer_new/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>bson_writer_new(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> bson_writer_new() &#8211; Creates a new instance of bson_writer_t using the buffer, length, offset, and _realloc()_ function supplied.</p>
+<h2>SYNOPSIS</h2>
+<pre>
+bson_writer_t *
+bson_writer_new (uint8_t         **buf,
+                 size_t           *buflen,
+                 size_t            offset,
+                 bson_realloc_func realloc_func,
+                 void             *realloc_func_ctx);
+</pre>
+<h2>PARAMETERS</h2>
+<dl>
+<dt><code>buf</code></dt>
+<dd> A uint8_t.</dd></dl>
+<dl>
+<dt><code>buflen</code></dt>
+<dd> A size_t.</dd></dl>
+<dl>
+<dt><code>offset</code></dt>
+<dd> A size_t.</dd></dl>
+<dl>
+<dt><code>realloc_func</code></dt>
+<dd> A bson_realloc_func.</dd></dl>
+<dl>
+<dt><code>realloc_func_ctx</code></dt>
+<dd> A bson_realloc_func.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> Creates a new instance of <code>bson_writer_t</code> using the <code>buffer</code> , <code>length</code> , <code>offset</code> , and _realloc()_ function supplied. </p>
+<p> The caller is expected to clean up the structure when finished using <code><a href="/docs/linux/man/3-bson_writer_destroy/">bson_writer_destroy</a>(3)</code> \&amp;. </p>
+<h2>RETURNS</h2>
+<p> A newly allocated bson_writer_t. </p>
+<h2>COLOPHON</h2>
+<p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

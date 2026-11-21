@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfilesystemhard_link_count(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfilesystemhard_link_count/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfilesystemhard_link_count(3)</h1>
+
+
+
+
+
+<p>std::filesystem::hard_link_count - std::filesystem::hard_link_count</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;filesystem&gt;
+    std::uintmax_t hard_link_count(const std::filesystem::path &amp;p);
+std::uintmax_t hard_link_count(const std::filesystem::path &amp;p, (1)(since C++ 17)
+                                                                   std::error_code &amp;ec) noexcept;</code></pre> 
+<p>Returns the number of hard links for the filesystem object identified by path p.
+The non-throwing overload returns static_cast&lt;uintmax_t&gt;(-1) on errors.</p>
+<h2>Parameters</h2>
+<p>p - path to examine
+ec - out-parameter for error reporting in the non-throwing overload</p>
+<h2>Return value</h2>
+<p>The number of hard links for p</p>
+<h2>Exceptions</h2>
+<p>The overload that does not take a std::error_code&amp; parameter throws filesystem_error on underlying OS API errors, constructed with p as the first path argument and the OS error code as the error code argument. The overload taking a std::error_code&amp; parameter sets it to the OS API error code if an OS API call fails, and executes ec.clear() if no errors occur. Any overload not marked noexcept may throw std::bad_alloc if memory allocation fails.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;filesystem&gt;
+namespace fs = std::filesystem;
+int main()
+{
+// On a POSIX-style filesystem, each directory has at least 2 hard links:
+// itself and the special member pathname &quot;.&quot;
+fs::path p = fs::current_path();
+std::cout &lt;&lt; &quot;Number of hard links for current path is &quot;
+&lt;&lt; fs::hard_link_count(p) &lt;&lt; &lsquo;\n&rsquo;;
+// each &quot;..&quot; is a hard link to the parent directory, so the total number
+// of hard links for any directory is 2 plus number of direct subdirectories
+p = fs::current_path() / &quot;..&quot;; // each dot-dot is a hard link to parent
+std::cout &lt;&lt; &quot;Number of hard links for .. is &quot;
+&lt;&lt; fs::hard_link_count(p) &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> Number of hard links for current path is 2
+ <wbr> Number of hard links for .. is 3</p>
+<h2>See also</h2>
+<p>create_hard_link creates a hard link
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++17)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the number of hard links referring to the file to which the directory entry refers
+hard_link_count <i>(public member function of std::filesystem::directory_entry)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

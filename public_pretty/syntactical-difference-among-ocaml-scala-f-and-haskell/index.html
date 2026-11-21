@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syntax Differences Between OCaml, Scala, F#, and Haskell - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/syntactical-difference-among-ocaml-scala-f-and-haskell/">
+  <meta name="description" content="These four languages share functional programming roots but diverge significantly in syntax and design philosophy. Here’s a practical reference for anyone …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Syntax Differences Between OCaml, Scala, F#, and Haskell">
+  <meta property="og:url" content="https://www.systutorials.com/syntactical-difference-among-ocaml-scala-f-and-haskell/">
+  <meta property="og:description" content="These four languages share functional programming roots but diverge significantly in syntax and design philosophy. Here’s a practical reference for anyone …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Syntax Differences Between OCaml, Scala, F#, and Haskell</h1>
+        <time class="post-date" datetime="2018-03-24T08:20:10Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>These four languages share functional programming roots but diverge significantly in syntax and design philosophy. Here’s a practical reference for anyone transitioning between them or evaluating which to use.</p>
+<h2 id="basic-function-definition">Basic Function Definition</h2>
+<p><strong>OCaml:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ocaml" data-lang="ocaml"><span class="line"><span class="cl"><span class="k">let</span> <span class="n">add</span> <span class="n">x</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="k">rec</span> <span class="n">factorial</span> <span class="n">n</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">1</span> <span class="k">then</span> <span class="n">1</span> <span class="k">else</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span> <span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">1</span><span class="o">)</span>
+</span></span></code></pre></div><p><strong>F#:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fsharp" data-lang="fsharp"><span class="line"><span class="cl"><span class="k">let</span> <span class="nv">add</span> <span class="n">x</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nv">rec</span> <span class="n">factorial</span> <span class="n">n</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">1</span> <span class="k">then</span> <span class="n">1</span> <span class="k">else</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span> <span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">1</span><span class="o">)</span>
+</span></span></code></pre></div><p><strong>Scala:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="k">def</span> <span class="n">add</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="n">factorial</span><span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="o">)</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span>
+</span></span></code></pre></div><p><strong>Haskell:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-haskell" data-lang="haskell"><span class="line"><span class="cl"><span class="nf">add</span> <span class="n">x</span> <span class="n">y</span> <span class="ow">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">factorial</span> <span class="mi">0</span> <span class="ow">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nf">factorial</span> <span class="mi">1</span> <span class="ow">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nf">factorial</span> <span class="n">n</span> <span class="ow">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="type-annotations">Type Annotations</h2>
+<p>OCaml and F# use similar type inference but differ in annotation style. Scala requires explicit types in most contexts. Haskell uses type classes extensively.</p>
+<p><strong>OCaml type annotation:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ocaml" data-lang="ocaml"><span class="line"><span class="cl"><span class="k">let</span> <span class="n">add</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">y</span> <span class="o">:</span> <span class="kt">int</span><span class="o">)</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></span></code></pre></div><p><strong>F# type annotation:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fsharp" data-lang="fsharp"><span class="line"><span class="cl"><span class="k">let</span> <span class="nv">add</span> <span class="o">(</span><span class="n">x</span> <span class="o">:</span> <span class="n">int</span><span class="o">)</span> <span class="o">(</span><span class="n">y</span> <span class="o">:</span> <span class="n">int</span><span class="o">)</span> <span class="o">:</span> <span class="n">int</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></span></code></pre></div><p><strong>Scala type annotation:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="k">def</span> <span class="n">add</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></span></code></pre></div><p><strong>Haskell type annotation:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-haskell" data-lang="haskell"><span class="line"><span class="cl"><span class="nf">add</span> <span class="ow">::</span> <span class="kt">Int</span> <span class="ow">-&gt;</span> <span class="kt">Int</span> <span class="ow">-&gt;</span> <span class="kt">Int</span>
+</span></span><span class="line"><span class="cl"><span class="nf">add</span> <span class="n">x</span> <span class="n">y</span> <span class="ow">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></span></code></pre></div><h2 id="pattern-matching">Pattern Matching</h2>
+<p>All four support pattern matching, but syntax varies.</p>
+<p><strong>OCaml:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ocaml" data-lang="ocaml"><span class="line"><span class="cl"><span class="k">match</span> <span class="kt">list</span> <span class="k">with</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="bp">[]</span> <span class="o">-&gt;</span> <span class="s2">&#34;empty&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="o">[</span><span class="n">x</span><span class="o">]</span> <span class="o">-&gt;</span> <span class="s2">&#34;one element&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">x</span> <span class="o">::</span> <span class="n">tail</span> <span class="o">-&gt;</span> <span class="s2">&#34;multiple elements&#34;</span>
+</span></span></code></pre></div><p><strong>F#:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fsharp" data-lang="fsharp"><span class="line"><span class="cl"><span class="k">match</span> <span class="kt">list</span> <span class="k">with</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="bp">[]</span> <span class="o">-&gt;</span> <span class="s">&#34;empty&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="o">[</span><span class="n">x</span><span class="o">]</span> <span class="o">-&gt;</span> <span class="s">&#34;one element&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">x</span> <span class="o">::</span> <span class="n">tail</span> <span class="o">-&gt;</span> <span class="s">&#34;multiple elements&#34;</span>
+</span></span></code></pre></div><p><strong>Scala:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">list</span> <span class="k">match</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="nc">Nil</span> <span class="k">=&gt;</span> <span class="s">&#34;empty&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="nc">List</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="s">&#34;one element&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="n">x</span> <span class="k">:</span><span class="kt">:</span> <span class="kt">tail</span> <span class="o">=&gt;</span> <span class="s">&#34;multiple elements&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p><strong>Haskell:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-haskell" data-lang="haskell"><span class="line"><span class="cl"><span class="kr">case</span> <span class="n">list</span> <span class="kr">of</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">[]</span> <span class="ow">-&gt;</span> <span class="s">&#34;empty&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="ow">-&gt;</span> <span class="s">&#34;one element&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="n">x</span><span class="kt">:</span><span class="n">xs</span><span class="p">)</span> <span class="ow">-&gt;</span> <span class="s">&#34;multiple elements&#34;</span>
+</span></span></code></pre></div><h2 id="list-operations">List Operations</h2>
+<p><strong>OCaml:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ocaml" data-lang="ocaml"><span class="line"><span class="cl"><span class="k">let</span> <span class="n">numbers</span> <span class="o">=</span> <span class="o">[</span><span class="n">1</span><span class="o">;</span> <span class="n">2</span><span class="o">;</span> <span class="n">3</span><span class="o">;</span> <span class="n">4</span><span class="o">;</span> <span class="n">5</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="n">mapped</span> <span class="o">=</span> <span class="nn">List</span><span class="p">.</span><span class="n">map</span> <span class="o">(</span><span class="k">fun</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="n">2</span><span class="o">)</span> <span class="n">numbers</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="n">filtered</span> <span class="o">=</span> <span class="nn">List</span><span class="p">.</span><span class="n">filter</span> <span class="o">(</span><span class="k">fun</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">2</span><span class="o">)</span> <span class="n">numbers</span>
+</span></span></code></pre></div><p><strong>F#:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fsharp" data-lang="fsharp"><span class="line"><span class="cl"><span class="k">let</span> <span class="nv">numbers</span> <span class="o">=</span> <span class="o">[</span><span class="n">1</span><span class="o">;</span> <span class="n">2</span><span class="o">;</span> <span class="n">3</span><span class="o">;</span> <span class="n">4</span><span class="o">;</span> <span class="n">5</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nv">mapped</span> <span class="o">=</span> <span class="nn">List</span><span class="p">.</span><span class="n">map</span> <span class="o">(</span><span class="k">fun</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="n">2</span><span class="o">)</span> <span class="n">numbers</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nv">filtered</span> <span class="o">=</span> <span class="nn">List</span><span class="p">.</span><span class="n">filter</span> <span class="o">(</span><span class="k">fun</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">2</span><span class="o">)</span> <span class="n">numbers</span>
+</span></span></code></pre></div><p><strong>Scala:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="k">val</span> <span class="n">numbers</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">val</span> <span class="n">mapped</span> <span class="k">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">val</span> <span class="n">filtered</span> <span class="k">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">)</span>
+</span></span></code></pre></div><p><strong>Haskell:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-haskell" data-lang="haskell"><span class="line"><span class="cl"><span class="kr">let</span> <span class="n">numbers</span> <span class="ow">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="kr">let</span> <span class="n">mapped</span> <span class="ow">=</span> <span class="n">map</span> <span class="p">(</span><span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="n">numbers</span>
+</span></span><span class="line"><span class="cl"><span class="kr">let</span> <span class="n">filtered</span> <span class="ow">=</span> <span class="n">filter</span> <span class="p">(</span><span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="n">numbers</span>
+</span></span></code></pre></div><h2 id="lambda-expressions">Lambda Expressions</h2>
+<p><strong>OCaml:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ocaml" data-lang="ocaml"><span class="line"><span class="cl"><span class="k">fun</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="n">2</span>
+</span></span></code></pre></div><p><strong>F#:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fsharp" data-lang="fsharp"><span class="line"><span class="cl"><span class="k">fun</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="n">2</span>
+</span></span></code></pre></div><p><strong>Scala:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+</span></span></code></pre></div><p><strong>Haskell:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-haskell" data-lang="haskell"><span class="line"><span class="cl"><span class="nf">\</span><span class="n">x</span> <span class="ow">-&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+</span></span></code></pre></div><h2 id="immutability-and-variables">Immutability and Variables</h2>
+<p><strong>OCaml and F#</strong> use <code>let</code> for immutable bindings by default. Mutable references require explicit syntax.</p>
+<p><strong>OCaml mutable:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ocaml" data-lang="ocaml"><span class="line"><span class="cl"><span class="k">let</span> <span class="n">counter</span> <span class="o">=</span> <span class="n">ref</span> <span class="n">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">counter</span> <span class="o">:=</span> <span class="o">!</span><span class="n">counter</span> <span class="o">+</span> <span class="n">1</span>
+</span></span></code></pre></div><p><strong>F# mutable:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fsharp" data-lang="fsharp"><span class="line"><span class="cl"><span class="k">let</span> <span class="nv">mutable</span> <span class="n">counter</span> <span class="o">=</span> <span class="n">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">counter</span> <span class="o">&lt;-</span> <span class="n">counter</span> <span class="o">+</span> <span class="n">1</span>
+</span></span></code></pre></div><p><strong>Scala</strong> distinguishes with <code>val</code> (immutable) and <code>var</code> (mutable).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="k">val</span> <span class="n">immutable</span> <span class="k">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">mutable</span> <span class="k">=</span> <span class="mi">10</span>
+</span></span></code></pre></div><p><strong>Haskell</strong> is purely functional; all bindings are immutable.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-haskell" data-lang="haskell"><span class="line"><span class="cl"><span class="kr">let</span> <span class="n">x</span> <span class="ow">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- x cannot be reassigned</span>
+</span></span></code></pre></div><h2 id="key-philosophical-differences">Key Philosophical Differences</h2>
+<p><strong>OCaml and F#</strong> are ML-family languages with similar syntax. F# runs on .NET, while OCaml is more research-oriented and has stronger module system features.</p>
+<p><strong>Scala</strong> targets the JVM with object-oriented and functional paradigms coexisting. It supports operator overloading and more flexible syntax.</p>
+<p><strong>Haskell</strong> is purely functional and lazy by default. It enforces immutability at language level and requires monadic patterns for side effects. Its type system is the most powerful, with type classes providing ad-hoc polymorphism.</p>
+<h2 id="practical-considerations">Practical Considerations</h2>
+<p>Choose based on your ecosystem: Scala for JVM projects, F# for .NET teams, OCaml for compiler development and formal verification, Haskell for strongly-typed systems and mathematical computing. Syntax differences become muscle memory quickly—the real distinction is in typing discipline and runtime behavior.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdatomic_flag(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdatomic_flag/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdatomic_flag(3)</h1>
+
+
+
+
+
+<p>std::atomic_flag - std::atomic_flag</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;atomic&gt;
+class atomic_flag; <i>(since C++11)</i>
+std::atomic_flag is an atomic boolean type. Unlike all specializations of std::atomic, it is guaranteed to be lock-free. Unlike std::atomic&lt;bool&gt;, std::atomic_flag does not provide load or store operations.</p>
+<h2>Member functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs an atomic_flag
+constructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> the assignment operator
+operator= <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> atomically sets flag to false
+clear <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> atomically sets the flag to true and obtains its previous value
+test_and_set <i>(public member function)</i></p>
+<h2>Example</h2>
+<p>A spinlock mutex can be implemented in userspace using an atomic_flag
+// Run this code <pre><code>#include &lt;thread&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;atomic&gt;
+std::atomic_flag lock = ATOMIC_FLAG_INIT;
+void f(int n)
+{
+for (int cnt = 0; cnt &lt; 100; ++cnt) {
+while (lock.test_and_set(std::memory_order_acquire)) // acquire lock
+;                                                // spin
+std::cout &lt;&lt; &quot;Output from thread &quot; &lt;&lt; n &lt;&lt; &lsquo;\n&rsquo;;
+lock.clear(std::memory_order_release); // release lock
+}
+}
+int main()
+{
+std::vector&lt;std::thread&gt; v;
+for (int n = 0; n &lt; 10; ++n) {
+v.emplace_back(f, n);
+}
+for (auto &amp;t : v) {
+t.join();
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Output from thread 2
+ <wbr> Output from thread 6
+ <wbr> Output from thread 7
+ <wbr> &hellip;&lt;exactly 1000 lines&gt;&hellip;</p>
+<h2>See also</h2>
+<p>atomic_flag_test_and_set
+atomic_flag_test_and_set_explicit atomically sets the flag to true and returns its previous value
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+atomic_flag_clear
+atomic_flag_clear_explicit atomically sets the value of the flag to false
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+ATOMIC_FLAG_INIT initializes an std::atomic_flag to false
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> (macro constant)
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

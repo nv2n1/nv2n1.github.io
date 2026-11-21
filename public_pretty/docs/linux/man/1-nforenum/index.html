@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nforenum(1) · Linux Manual Pages</title>
+<meta name="description" content="NFORenum – A tool for checking NFO code for errors, and for beautifying that code">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nforenum/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nforenum(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> <code>NFORenum</code> &#8211; A tool for checking NFO code for errors, and for beautifying that code</p>
+<h2>SYNOPSIS</h2>
+<p> <code>nforenum</code> [options] [file [file2 [file3 [&#8230;]]]]</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;auto-correct | -a</code></dt>
+<dd> Perform some rudimentary automatic correction of incorrect pseudo sprites. This may be specified twice to enable the corrections that are more likely to be incorrect. See the README for detailed information on the auto-correcter.</dd>
+<dt><code>&#8211;comments = </code><i>type | &#8211;</i><code>c </code><i>type</i></dt>
+<dd> &lt;type&gt; is one character, either /, ;, or #, and specifies the comment style that NFORenum will use. This will not change the header, because grfcodec requires that the header be commented in C++-style.</dd>
+<dt><code>&#8211;data [= </code><i>dir ] | &#8211;</i><code>D [ </code><i>dir</i></dt>
+<dd> If &lt;dir&gt; is specified, look for the .nforenum directory in &lt;dir&gt;, and create it if not found. </dd>
+<p> If &lt;dir&gt; is not specified, report the location of the .nforenum directory. In either case, eliminate the 5-second wait used to ensure that those not running NFORenum from a command line can see the directory-created message. </p>
+<p> Default: Look for the .nforenum directory in the current directory, and then in the environment variable <code>HOME , if defined. If </code>not found attempt to create in <code>HOME , then in</code></p>
+<dt><code>&#8211;force | -f</code></dt>
+<dd> Forces processing of files that do not look like NFO files. The default is to treat such files as if they specified a too-high info version.</dd>
+<dt><code>&#8211;help | -h</code></dt>
+<dd> Display the help message.</dd>
+<dt><code>&#8211;lock</code></dt>
+<dd> Locks the current comment command state. Commands will continue to be parsed as normal (so NOPRESERVE will be honored, @@DIFF will be removed, &amp;c.) but their changes (such as turning on the diff-assister) will not be honored.</dd>
+<dt><code>&#8211;no-replace | &#8211;keep-old | -k</code></dt>
+<dd> Do not replace the old NFO file; write new file to file.new.nfo. Default: Use file[.nfo].new as temporary, rename it to file[.nfo] when done.</dd>
+<dt><code>&#8211;silent | -s</code></dt>
+<dd> Silence the progress output in interactive mode.</dd>
+<dt><code>&#8211;version | -v</code></dt>
+<dd> Display the version.</dd>
+<dt><code>&#8211;write-data</code></dt>
+<dd> Refresh all data files, unless they are newer.</dd></dl>
+<p> The following options cause NFORenum to behave as if all files started with the associated command. The readme has full details on the comment commands. Options associated with comment commands that require additional information take that information as an argument. With the exception of &#8211;<code>L / &#8211;let , the options to the command line versions are case insensitive.</code> &quot;ON&quot; and &quot;OFF&quot; may be specified with &quot;+&quot; and &quot;-&quot;, respectively.</p>
+<dl>
+<dt><code>&#8211;beautify | -b</code></dt>
+<dd> @@BEAUTIFY</dd>
+<dt><code>&#8211;diff | -d</code></dt>
+<dd> @@DIFF</dd>
+<dt><code>&#8211;let | -L</code></dt>
+<dd> @@LET</dd>
+<dt><code>&#8211;lint | -l</code></dt>
+<dd> @@LINT</dd>
+<dt><code>&#8211;preserve-messages | -p</code></dt>
+<dd> @@PRESERVEMESSAGES</dd>
+<dt><code>&#8211;real-sprites | -r</code></dt>
+<dd> @@REALSPRITES</dd>
+<dt><code>&#8211;use-old-nums | -o</code></dt>
+<dd> @@USEOLDSPRITENUMS</dd>
+<dt><code>&#8211;warning-disable | -w</code></dt>
+<dd> @@WARNING DISABLE</dd>
+<dt><code>&#8211;warning-enable | -W</code></dt>
+<dd> @@WARNING ENABLE</dd></dl>
+<p> &#8211;<code>w</code> and &#8211;<code>W</code> (and their long counterparts) also accept a comma-separated list of messages, all of which will be ENABLEd or DISABLEd.</p>
+<h2>SEE ALSO</h2>
+<p> The documentation in /usr/share/doc/nforenum/</p>
+<h2>AUTHOR</h2>
+<p> nforenum was written by Dale McCoy, with portions by Dan Masek, Thijs Marinussen, Remko Bijker and Christoph Elsenhans. </p>
+<p> This manual page was written by Remko Bijker. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

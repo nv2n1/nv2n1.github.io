@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>devlink-resource(8) · Linux Manual Pages</title>
+<meta name="description" content="devlink-resource – devlink device resource configuration">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-devlink-resource/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>devlink-resource(8)</h1>
+
+
+
+
+
+<p>devlink-resource &#8211; devlink device resource configuration</p>
+<h2>Synopsis</h2>
+<pre><code>devlink
+[ OPTIONS ]
+resource
+{ COMMAND |
+    help }
+OPTIONS := {
+    -v[erbose] }</code></pre>
+<p> <code>devlink resource show</code> <i>DEV</i><br />
+ <code>devlink resource help</code><br />
+ <code>devlink resource set</code> <i>DEV</i> <code>path</code><i> RESOURCE_PATH</i> <code>size</code><i> RESOURCE_SIZE</i> </p>
+<h2>Description</h2>
+<h3>devlink resource show &#8211; display devlink device&#8217;s resosources</h3>
+<p><i>DEV</i> &#8211; specifies the devlink device to show. Format is: BUS_NAME/BUS_ADDRESS</p>
+<h3>devlink resource set &#8211; sets resource size of specific resource</h3>
+<p><i>DEV</i> &#8211; specifies the devlink device.</p>
+<dl>
+<dt><code>path</code><i> RESOURCE_PATH</i></dt>
+<dd>Resource&#8217;s path.</dd>
+<dt><code>size</code><i> RESOURCE_SIZE</i></dt>
+<dd>The new resource&#8217;s size. </dd>
+<h2>Examples</h2>
+<p>devlink resource show pci/0000:01:00.0</p>
+<dl>
+<dd>Shows the resources of the specified devlink device.</dd></dl>
+<p> devlink resource set pci/0000:01:00.0 /kvd/linear 98304</p>
+<dl>
+<dd>Sets the size of the specified resource for the specified devlink device.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-devlink/">devlink</a></code>(8), <code><a href="/docs/linux/man/8-devlink-port/">devlink-port</a></code>(8), <code><a href="/docs/linux/man/8-devlink-sb/">devlink-sb</a></code>(8), <code><a href="/docs/linux/man/8-devlink-monitor/">devlink-monitor</a></code>(8), </p>
+<h2>Author</h2>
+<p>Arkadi Sharshevsky &lt;arkadis [at] mellanox.com&gt;</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

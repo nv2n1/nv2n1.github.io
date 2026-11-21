@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>spi_keepplan(3) · Linux Manual Pages</title>
+<meta name="description" content="SPI_keepplan – save a prepared statement">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-spi_keepplan/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>spi_keepplan(3)</h1>
+
+
+
+
+
+<p>SPI_keepplan &#8211; save a prepared statement </p>
+<h2>Synopsis</h2>
+<pre>int SPI_keepplan(SPIPlanPtr <i>plan</i>)</pre>
+<h2>Description</h2>
+<p><code>SPI_keepplan</code> saves a passed statement (prepared by <code>SPI_prepare</code>) so that it will not be freed by <code>SPI_finish</code> nor by the transaction manager. This gives you the ability to reuse prepared statements in the subsequent invocations of your procedure in the current session.</p>
+<h2>Arguments</h2>
+<p>SPIPlanPtr <i>plan</i></p>
+<dl COMPACT>
+<dd>the prepared statement to be saved</dd></dl>
+<h2>Return Value</h2>
+<p>0 on success; SPI_ERROR_ARGUMENT if <i>plan</i> is NULL or invalid</p>
+<h2>Notes</h2>
+<p>The passed-in statement is relocated to permanent storage by means of pointer adjustment (no data copying is required). If you later wish to delete it, use <code>SPI_freeplan</code> on it.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

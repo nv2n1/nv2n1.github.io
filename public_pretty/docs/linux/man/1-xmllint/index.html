@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmllint(1) · Linux Manual Pages</title>
+<meta name="description" content="xmllint – command line XML tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-xmllint/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>xmllint(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> xmllint &#8211; command line XML tool </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>xmllint</code> [<code>&#8211;version</code> | <code>&#8211;debug</code> | <code>&#8211;shell</code> | <code>&#8211;xpath&nbsp;&quot;</code><i>XPath_expression</i><code>&quot;</code> | <code>&#8211;debugent</code> | <code>&#8211;copy</code> | <code>&#8211;recover</code> | <code>&#8211;noent</code> | <code>&#8211;noout</code> | <code>&#8211;nonet</code> | <code>&#8211;path&nbsp;&quot;</code><i>PATH(S)</i><code>&quot;</code> | <code>&#8211;load-trace</code> | <code>&#8211;htmlout</code> | <code>&#8211;nowrap</code> | <code>&#8211;valid</code> | <code>&#8211;postvalid</code> | <code>&#8211;dtdvalid&nbsp;</code><i>URL</i> | <code>&#8211;dtdvalidfpi&nbsp;</code><i>FPI</i> | <code>&#8211;timing</code> | <code>&#8211;output&nbsp;</code><i>FILE</i> | <code>&#8211;repeat</code> | <code>&#8211;insert</code> | <code>&#8211;compress</code> | <code>&#8211;html</code> | <code>&#8211;xmlout</code> | <code>&#8211;push</code> | <code>&#8211;memory</code> | <code>&#8211;maxmem&nbsp;</code><i>NBBYTES</i> | <code>&#8211;nowarning</code> | <code>&#8211;noblanks</code> | <code>&#8211;nocdata</code> | <code>&#8211;format</code> | <code>&#8211;encode&nbsp;</code><i>ENCODING</i> | <code>&#8211;dropdtd</code> | <code>&#8211;nsclean</code> | <code>&#8211;testIO</code> | <code>&#8211;catalogs</code> | <code>&#8211;nocatalogs</code> | <code>&#8211;auto</code> | <code>&#8211;xinclude</code> | <code>&#8211;noxincludenode</code> | <code>&#8211;loaddtd</code> | <code>&#8211;dtdattr</code> | <code>&#8211;stream</code> | <code>&#8211;walker</code> | <code>&#8211;pattern&nbsp;</code><i>PATTERNVALUE</i> | <code>&#8211;chkregister</code> | <code>&#8211;relaxng&nbsp;</code><i>SCHEMA</i> | <code>&#8211;schema&nbsp;</code><i>SCHEMA</i> | <code>&#8211;c14n</code>] {<i>XML-FILE(S)</i>&#8230; | -}</dt>
+<dt> <code>xmllint</code> <code>&#8211;help</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>xmllint</code> program parses one or more XML files, specified on the command line as <i>XML-FILE</i> (or the standard input if the filename provided is <code>&#8211;</code> ). It prints various types of output, depending upon the options selected. It is useful for detecting errors both in XML code and in the XML parser itself. </dd>
+<p> <code>xmllint</code> is included in <code><a href="/docs/linux/man/3-libxml/">libxml</a></code>(3).</p>
+<h2>OPTIONS</h2>
+<p> <code>xmllint</code> accepts the following options (in alphabetical order): </p>
+<p> <code>&#8211;auto</code></p>
+<dl>
+<dt>
+</dt><dd> Generate a small document for testing purposes.</dd></dl>
+<p> <code>&#8211;catalogs</code></p>
+<dl>
+<dt>
+</dt><dd> Use the SGML catalog(s) from <code>SGML_CATALOG_FILES</code>. Otherwise XML catalogs starting from /etc/xml/catalog are used by default.</dd></dl>
+<p> <code>&#8211;chkregister</code></p>
+<dl>
+<dt>
+</dt><dd> Turn on node registration. Useful for developers testing <code><a href="/docs/linux/man/3-libxml/">libxml</a></code>(3) node tracking code.</dd></dl>
+<p> <code>&#8211;compress</code></p>
+<dl>
+<dt>
+</dt><dd> Turn on <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) compression of output.</dd></dl>
+<p> <code>&#8211;copy</code></p>
+<dl>
+<dt>
+</dt><dd> Test the internal copy implementation.</dd></dl>
+<p> <code>&#8211;c14n</code></p>
+<dl>
+<dt>
+</dt><dd> Use the W3C XML Canonicalisation (C14N) to serialize the result of parsing to stdout. It keeps comments in the result.</dd></dl>
+<p> <code>&#8211;dtdvalid </code><i>URL</i></p>
+<dl>
+<dt>
+</dt><dd> Use the DTD specified by an <i>URL</i> for validation.</dd></dl>
+<p> <code>&#8211;dtdvalidfpi </code><i>FPI</i></p>
+<dl>
+<dt>
+</dt><dd> Use the DTD specified by a Formal Public Identifier <i>FPI</i> for validation, note that this will require a catalog exporting that Formal Public Identifier to work.</dd></dl>
+<p> <code>&#8211;debug</code></p>
+<dl>
+<dt>
+</dt><dd> Parse a file and output an annotated tree of the in-memory version of the document.</dd></dl>
+<p> <code>&#8211;debugent</code></p>
+<dl>
+<dt>
+</dt><dd> Debug the entities defined in the document.</dd></dl>
+<p> <code>&#8211;dropdtd</code></p>
+<dl>
+<dt>
+</dt><dd> Remove DTD from output.</dd></dl>
+<p> <code>&#8211;dtdattr</code></p>
+<dl>
+<dt>
+</dt><dd> Fetch external DTD and populate the tree with inherited attributes.</dd></dl>
+<p> <code>&#8211;encode </code><i>ENCODING</i></p>
+<dl>
+<dt>
+</dt><dd> Output in the given encoding. Note that this works for full document not fragments or result from XPath queries.</dd></dl>
+<p> <code>&#8211;format</code></p>
+<dl>
+<dt>
+</dt><dd> Reformat and reindent the output. The <code>XMLLINT_INDENT</code> environment variable controls the indentation. The default value is two spaces &quot; &quot;).</dd></dl>
+<p> <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Print out a short usage summary for <code>xmllint</code>.</dd></dl>
+<p> <code>&#8211;html</code></p>
+<dl>
+<dt>
+</dt><dd> Use the HTML parser.</dd></dl>
+<p> <code>&#8211;htmlout</code></p>
+<dl>
+<dt>
+</dt><dd> Output results as an HTML file. This causes <code>xmllint</code> to output the necessary HTML tags surrounding the result tree output so the results can be displayed/viewed in a browser.</dd></dl>
+<p> <code>&#8211;insert</code></p>
+<dl>
+<dt>
+</dt><dd> Test for valid insertions.</dd></dl>
+<p> <code>&#8211;loaddtd</code></p>
+<dl>
+<dt>
+</dt><dd> Fetch an external DTD.</dd></dl>
+<p> <code>&#8211;load-trace</code></p>
+<dl>
+<dt>
+</dt><dd> Display all the documents loaded during the processing to stderr.</dd></dl>
+<p> <code>&#8211;maxmem </code><i>NNBYTES</i></p>
+<dl>
+<dt>
+</dt><dd> Test the parser memory support. <i>NNBYTES</i> is the maximum number of bytes the library is allowed to allocate. This can also be used to make sure batch processing of XML files will not exhaust the virtual memory of the server running them.</dd></dl>
+<p> <code>&#8211;memory</code></p>
+<dl>
+<dt>
+</dt><dd> Parse from memory.</dd></dl>
+<p> <code>&#8211;noblanks</code></p>
+<dl>
+<dt>
+</dt><dd> Drop ignorable blank spaces.</dd></dl>
+<p> <code>&#8211;nocatalogs</code></p>
+<dl>
+<dt>
+</dt><dd> Do not use any catalogs.</dd></dl>
+<p> <code>&#8211;nocdata</code></p>
+<dl>
+<dt>
+</dt><dd> Substitute CDATA section by equivalent text nodes.</dd></dl>
+<p> <code>&#8211;noent</code></p>
+<dl>
+<dt>
+</dt><dd> Substitute entity values for entity references. By default, <code>xmllint</code> leaves entity references in place.</dd></dl>
+<p> <code>&#8211;nonet</code></p>
+<dl>
+<dt>
+</dt><dd> Do not use the Internet to fetch DTDs or entities.</dd></dl>
+<p> <code>&#8211;noout</code></p>
+<dl>
+<dt>
+</dt><dd> Suppress output. By default, <code>xmllint</code> outputs the result tree.</dd></dl>
+<p> <code>&#8211;nowarning</code></p>
+<dl>
+<dt>
+</dt><dd> Do not emit warnings from the parser and/or validator.</dd></dl>
+<p> <code>&#8211;nowrap</code></p>
+<dl>
+<dt>
+</dt><dd> Do not output HTML doc wrapper.</dd></dl>
+<p> <code>&#8211;noxincludenode</code></p>
+<dl>
+<dt>
+</dt><dd> Do XInclude processing but do not generate XInclude start and end nodes.</dd></dl>
+<p> <code>&#8211;nsclean</code></p>
+<dl>
+<dt>
+</dt><dd> Remove redundant namespace declarations.</dd></dl>
+<p> <code>&#8211;output </code><i>FILE</i></p>
+<dl>
+<dt>
+</dt><dd> Define a file path where <code>xmllint</code> will save the result of parsing. Usually the programs build a tree and save it on stdout, with this option the result XML instance will be saved onto a file.</dd></dl>
+<p> <code>&#8211;path &quot;</code><i>PATH(S)</i><code>&quot;</code></p>
+<dl>
+<dt>
+</dt><dd> Use the (space- or colon-separated) list of filesystem paths specified by <i>PATHS</i> to load DTDs or entities. Enclose space-separated lists by quotation marks.</dd></dl>
+<p> <code>&#8211;pattern </code><i>PATTERNVALUE</i></p>
+<dl>
+<dt>
+</dt><dd> Used to exercise the pattern recognition engine, which can be used with the reader interface to the parser. It allows to select some nodes in the document based on an XPath (subset) expression. Used for debugging.</dd></dl>
+<p> <code>&#8211;postvalid</code></p>
+<dl>
+<dt>
+</dt><dd> Validate after parsing has completed.</dd></dl>
+<p> <code>&#8211;push</code></p>
+<dl>
+<dt>
+</dt><dd> Use the push mode of the parser.</dd></dl>
+<p> <code>&#8211;recover</code></p>
+<dl>
+<dt>
+</dt><dd> Output any parsable portions of an invalid document.</dd></dl>
+<p> <code>&#8211;relaxng </code><i>SCHEMA</i></p>
+<dl>
+<dt>
+</dt><dd> Use RelaxNG file named <i>SCHEMA</i> for validation.</dd></dl>
+<p> <code>&#8211;repeat</code></p>
+<dl>
+<dt>
+</dt><dd> Repeat 100 times, for timing or profiling.</dd></dl>
+<p> <code>&#8211;schema </code><i>SCHEMA</i></p>
+<dl>
+<dt>
+</dt><dd> Use a W3C XML Schema file named <i>SCHEMA</i> for validation.</dd></dl>
+<p> <code>&#8211;shell</code></p>
+<dl>
+<dt>
+</dt><dd> Run a navigating shell. Details on available commands in shell mode are below (see the section called &#8220;SHELL COMMANDS&#8221;).</dd></dl>
+<p> <code>&#8211;xpath &quot;</code><i>XPath_expression</i><code>&quot;</code></p>
+<dl>
+<dt>
+</dt><dd> Run an XPath expression given as argument and print the result. In case of a nodeset result, each node in the node set is serialized in full in the output. In case of an empty node set the &quot;XPath set is empty&quot; result will be shown and an error exit code will be returned.</dd></dl>
+<p> <code>&#8211;stream</code></p>
+<dl>
+<dt>
+</dt><dd> Use streaming API &#8211; useful when used in combination with <code>&#8211;relaxng</code> or <code>&#8211;valid</code> options for validation of files that are too large to be held in memory.</dd></dl>
+<p> <code>&#8211;testIO</code></p>
+<dl>
+<dt>
+</dt><dd> Test user input/output support.</dd></dl>
+<p> <code>&#8211;timing</code></p>
+<dl>
+<dt>
+</dt><dd> Output information about the time it takes <code>xmllint</code> to perform the various steps.</dd></dl>
+<p> <code>&#8211;valid</code></p>
+<dl>
+<dt>
+</dt><dd> Determine if the document is a valid instance of the included Document Type Definition (DTD). A DTD to be validated against also can be specified at the command line using the <code>&#8211;dtdvalid</code> option. By default, <code>xmllint</code> also checks to determine if the document is well-formed.</dd></dl>
+<p> <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Display the version of <code><a href="/docs/linux/man/3-libxml/">libxml</a></code>(3) used.</dd></dl>
+<p> <code>&#8211;walker</code></p>
+<dl>
+<dt>
+</dt><dd> Test the walker module, which is a reader interface but for a document tree, instead of using the reader API on an unparsed document it works on an existing in-memory tree. Used for debugging.</dd></dl>
+<p> <code>&#8211;xinclude</code></p>
+<dl>
+<dt>
+</dt><dd> Do XInclude processing.</dd></dl>
+<p> <code>&#8211;xmlout</code></p>
+<dl>
+<dt>
+</dt><dd> Used in conjunction with <code>&#8211;html</code>. Usually when HTML is parsed the document is saved with the HTML serializer. But with this option the resulting document is saved with the XML serializer. This is primarily used to generate XHTML from HTML input.</dd></dl>
+<h2>SHELL COMMANDS</h2>
+<p> <code>xmllint</code> offers an interactive shell mode invoked with the <code>&#8211;shell</code> command. Available commands in shell mode include (in alphabetical order): </p>
+<p> <code>base</code></p>
+<dl>
+<dt>
+</dt><dd> Display XML base of the node.</dd></dl>
+<p> <code>bye</code></p>
+<dl>
+<dt>
+</dt><dd> Leave the shell.</dd></dl>
+<p> <code>cat </code><i>NODE</i></p>
+<dl>
+<dt>
+</dt><dd> Display the given node or the current one.</dd></dl>
+<p> <code>cd </code><i>PATH</i></p>
+<dl>
+<dt>
+</dt><dd> Change the current node to the given path (if unique) or root if no argument is given.</dd></dl>
+<p> <code>dir </code><i>PATH</i></p>
+<dl>
+<dt>
+</dt><dd> Dumps information about the node (namespace, attributes, content).</dd></dl>
+<p> <code>du </code><i>PATH</i></p>
+<dl>
+<dt>
+</dt><dd> Show the structure of the subtree under the given path or the current node.</dd></dl>
+<p> <code>exit</code></p>
+<dl>
+<dt>
+</dt><dd> Leave the shell.</dd></dl>
+<p> <code>help</code></p>
+<dl>
+<dt>
+</dt><dd> Show this help.</dd></dl>
+<p> <code>free</code></p>
+<dl>
+<dt>
+</dt><dd> Display memory usage.</dd></dl>
+<p> <code>load </code><i>FILENAME</i></p>
+<dl>
+<dt>
+</dt><dd> Load a new document with the given filename.</dd></dl>
+<p> <code>ls </code><i>PATH</i></p>
+<dl>
+<dt>
+</dt><dd> List contents of the given path or the current directory.</dd></dl>
+<p> <code>pwd</code></p>
+<dl>
+<dt>
+</dt><dd> Display the path to the current node.</dd></dl>
+<p> <code>quit</code></p>
+<dl>
+<dt>
+</dt><dd> Leave the shell.</dd></dl>
+<p> <code>save </code><i>FILENAME</i></p>
+<dl>
+<dt>
+</dt><dd> Save the current document to the given filename or to the original name.</dd></dl>
+<p> <code>validate</code></p>
+<dl>
+<dt>
+</dt><dd> Check the document for errors.</dd></dl>
+<p> <code>write </code><i>FILENAME</i></p>
+<dl>
+<dt>
+</dt><dd> Write the current node to the given filename.</dd></dl>
+<h2>ENVIRONMENT</h2>
+<p> <code>SGML_CATALOG_FILES</code></p>
+<dl>
+<dt>
+</dt><dd> SGML catalog behavior can be changed by redirecting queries to the user&#8217;s own set of catalogs. This can be done by setting the <code>SGML_CATALOG_FILES</code> environment variable to a list of catalogs. An empty one should deactivate loading the default /etc/sgml/catalog catalog.</dd></dl>
+<p> <code>XML_CATALOG_FILES</code></p>
+<dl>
+<dt>
+</dt><dd> XML catalog behavior can be changed by redirecting queries to the user&#8217;s own set of catalogs. This can be done by setting the <code>XML_CATALOG_FILES</code> environment variable to a list of catalogs. An empty one should deactivate loading the default /etc/xml/catalog catalog.</dd></dl>
+<p> <code>XML_DEBUG_CATALOG</code></p>
+<dl>
+<dt>
+</dt><dd> Setting the environment variable <code>XML_DEBUG_CATALOG</code> to <i>non-zero</i> using the <code>export</code> command outputs debugging information related to catalog operations.</dd></dl>
+<p> <code>XMLLINT_INDENT</code></p>
+<dl>
+<dt>
+</dt><dd> Setting the environment variable <code>XMLLINT_INDENT</code> controls the indentation. The default value is two spaces &quot; &quot;.</dd></dl>
+<h2>DIAGNOSTICS</h2>
+<p> <code>xmllint</code> return codes provide information that can be used when calling it from scripts. </p>
+<p> <code>0</code></p>
+<dl>
+<dt>
+</dt><dd> No error</dd></dl>
+<p> <code>1</code></p>
+<dl>
+<dt>
+</dt><dd> Unclassified</dd></dl>
+<p> <code>2</code></p>
+<dl>
+<dt>
+</dt><dd> Error in DTD</dd></dl>
+<p> <code>3</code></p>
+<dl>
+<dt>
+</dt><dd> Validation error</dd></dl>
+<p> <code>4</code></p>
+<dl>
+<dt>
+</dt><dd> Validation error</dd></dl>
+<p> <code>5</code></p>
+<dl>
+<dt>
+</dt><dd> Error in schema compilation</dd></dl>
+<p> <code>6</code></p>
+<dl>
+<dt>
+</dt><dd> Error writing output</dd></dl>
+<p> <code>7</code></p>
+<dl>
+<dt>
+</dt><dd> Error in pattern (generated when <code>&#8211;pattern</code> option is used)</dd></dl>
+<p> <code>8</code></p>
+<dl>
+<dt>
+</dt><dd> Error in Reader registration (generated when <code>&#8211;chkregister</code> option is used)</dd></dl>
+<p> <code>9</code></p>
+<dl>
+<dt>
+</dt><dd> Out of memory error</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-libxml/">libxml</a></code>(3) </p>
+<p> More information can be found at </p>
+<dl>
+<dt>
+</dt><dd> &bull; <code><a href="/docs/linux/man/3-libxml/">libxml</a></code>(3) web page m[blue]<code><a rel="nofollow" href="http://www.xmlsoft.org/">http://www.xmlsoft.org/</a></code>m[]</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; W3C XSLT page m[blue]<code><a rel="nofollow" href="http://www.w3.org/TR/xslt">http://www.w3.org/TR/xslt</a></code>m[]</dd></dl>
+<h2>AUTHORS</h2>
+<p> <code>John Fleck</code> &lt;jfleck [at] inkstain.net&gt;</p>
+<dl>
+<dt>
+</dt><dd> Author.</dd></dl>
+<p> <code>Ziying Sherwin</code> &lt;sherwin [at] nlm.nih.gov&gt;</p>
+<dl>
+<dt>
+</dt><dd> Author.</dd></dl>
+<p> <code>Heiko Rupp</code> &lt;hwr [at] pilhuhn.de&gt;</p>
+<dl>
+<dt>
+</dt><dd> Author.</dd></dl>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001, 2004 </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

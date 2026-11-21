@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mussh(1) · Linux Manual Pages</title>
+<meta name="description" content="mussh – MUltihost SSH">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mussh/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mussh(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> mussh &#8211; MUltihost SSH</p>
+<h2>SYNOPSIS</h2>
+<p> <code>mussh [</code> <i>OPTIONS</i> <code>] &lt;-h </code> <i>host&#8230;</i> <code>| -H </code> <i>hostfile</i> <code>&gt; [-c</code> <i>cmd</i> <code>] [-C </code> <i>scriptfile</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>mussh</code> is a shell script that allows you to execute a command or script over <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) on multiple hosts with one command. When possible mussh will use <code><a href="/docs/linux/man/1-ssh-agent/">ssh-agent</a></code>(1) and RSA/DSA keys to minimize the need to enter your password more than once.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>&#8211;help</dt>
+<dd> Prints full help text.</dd>
+<dt>-d</dt>
+<dd> Same as -d 1</dd>
+<dt>-d 0</dt>
+<dd> Turns debug mode off.</dd>
+<dt>-d 1</dt>
+<dd> On STDERR prints out basic actions and ssh-agent activity and which host is being connected to.</dd>
+<dt>-d 2</dt>
+<dd> Includes all of the output from -d1, the list of hosts, the command/script as it will be executed on each host, and a lot more.</dd>
+<dt>-v</dt>
+<dd> Same as -v 1</dd>
+<dt>-v 1</dt>
+<dd> Sets ssh in debug1 mode by passing &quot;-v&quot; to ssh.</dd>
+<dt>-v 2</dt>
+<dd> Sets ssh in debug2 mode by passing &quot;-v -v&quot; to ssh.</dd>
+<dt>-v 3</dt>
+<dd> Sets ssh in debug3 mode by passing &quot;-v -v -v&quot; to ssh.</dd>
+<dt>-m [n]</dt>
+<dd> Run concurrently on &#8216;n&#8217; hosts at a time (asynchronous). Use &#8216;0&#8217; (zero) for infinite. (default)</dd>
+<dt>-q</dt>
+<dd> No output unless necessary. This will cancel -d and -v if after them on the command line. It also suppresses the output of each host. This will NOT suppress the password/passphrase prompts required to log into each host.</dd>
+<dt>-i &lt;identity&gt; [identity ..]</dt>
+<dd> Load an identity file. When -i is used, the specified identity file(s) is loaded instead of the default identity. You can load as many RSA/DSA identities as you&#8217;d like.</dd>
+<dt>-o &lt;ssh-args&gt;</dt>
+<dd> Args to pass to ssh with -o option. See the <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) man page for more info on the -o option.</dd>
+<dt>-a</dt>
+<dd> Force loading ssh-agent. Without this flag, mussh will not load another agent when one is already loaded.</dd>
+<dt>-A</dt>
+<dd> Do NOT load ssh-agent. If no agent is loaded you will be prompted for a password or passphrase by ssh for each host. If you do not have RSA/DSA keys for the destination hosts, this will save you some hassle.</dd>
+<dt>-b</dt>
+<dd> Print each hosts&#8217; output in a block without mingling with other hosts&#8217; output.</dd>
+<dt>-B</dt>
+<dd> Allow hosts&#8217; output to mingle. (default)</dd>
+<dt>-u</dt>
+<dd> Unique. Eliminate duplicate hosts. (default) If you a host or user [at] host occurs more than once across files specified with -H or hosts specified with -h, the host or user [at] host is used only once.</dd>
+<dt>-U</dt>
+<dd> Do NOT make host list unique. This simply overrides the -u flag. This will cause scripts to be executed on duplicate hosts once per listing.</dd>
+<dt>-P</dt>
+<dd> Do NOT fall back to passwords on any host. This will skip hosts where keys fail. If you use this with &#8211; d&#8217; you&#8217;ll still see which hosts failed.</dd>
+<dt>-l &lt;login&gt;</dt>
+<dd> Use &#8216;login&#8217; when no other is specified with hostname.</dd>
+<dt>-L &lt;login&gt;</dt>
+<dd> Force use of &#8216;login&#8217; name on all hosts. These can be handy for adding &#8216;root@&#8217; to hostnames kept in a file for -H option. With -h it means you get to type less.</dd>
+<dt>-s &lt;shell&gt;</dt>
+<dd> Path to shell on remote host. (Default: bash)</dd>
+<dt>-t &lt;secs&gt;</dt>
+<dd> Timeout setting for each session. (requires openssh 3.8 or newer)</dd>
+<dt>-V</dt>
+<dd> Print version info and exit.</dd></dl>
+<h2>PROXY ARGS</h2>
+<dl>
+<dt>-p [user@]&lt;host&gt;</dt>
+<dd> Host to use as proxy. (Must have mussh installed)</dd>
+<dt>-po &lt;ssh-args&gt;</dt>
+<dd> Args to pass to ssh on proxy with -o option.</dd></dl>
+<h2>HOST ARGS</h2>
+<dl>
+<dt>-h [user@]&lt;host&gt; [[user@]&lt;host&gt; ..]</dt>
+<dd> Add a host to list of hosts. May be used more than once.</dd>
+<dt>-H &lt;file&gt; [file ..]</dt>
+<dd> Add contents of file(s) to list of hosts. Files should have one host per line. Use &quot;#&quot; for comments.</dd></dl>
+<h2>COMMAND ARGS</h2>
+<p> If neither is specified, commands will be read from standard input.</p>
+<dl>
+<dt>-c &lt;command&gt;</dt>
+<dd> Add a command or quoted list of commands and args to list of commands to be executed on each host. May be used more than once.</dd>
+<dt>-C &lt;file&gt; [file ..]</dt>
+<dd> Add file contents to list of commands to be executed on each host. May be used more than once.</dd></dl>
+<h2>PROXY MODE</h2>
+<p> When proxying, mussh can use a single remote server to as a bastion host. All hosts will be connected to from the central host rather than from the computer where you are initially running mussh. This can be handy when you only have access to one machine behind a firewall. </p>
+<p> The proxy host must have OpenSSH 2.3 or greater, or an sshd that works with ForwardAgent under ssh2. Proxy server must also have mussh installed in your PATH. To verify that it is in your path use &quot;ssh user [at] proxy &#8216;which mussh&#8217;&quot;. Use &quot;ssh user [at] proxy &#8216;echo $PATH&#8217;&quot; to determine what your path is.</p>
+<h2>SSH-AGENT INTERACTION</h2>
+<p> Assuming that you&#8217;re not turning off the agent with &#8216;-A&#8217; mussh will attempt to use <code><a href="/docs/linux/man/1-ssh-agent/">ssh-agent</a></code>(1). Normally mussh will get rid of the agent when it exits. See EXAMPLES for examples.</p>
+<h2>EXAMPLES</h2>
+<p> There is an EXAMPLES file with detailed examples. </p>
+<dl>
+<dt>The basic command:</dt>
+<dd> <code>$ mussh -h foo bar baz </code> </dd>
+<dt>A simple command:</dt>
+<dd> <code>$ mussh -h foo bar baz -c &#8216;rpm -e emacs&#8217;</code> </dd>
+<dt>A simple command asynchronously:</dt>
+<dd> <code>$ mussh -h foo bar baz -c &#8216;rpm -e emacs&#8217; -m</code> </dd>
+<dt>Using a specific key:</dt>
+<dd> <code>$ mussh -h foo bar baz -c &#8216;rpm -e emacs&#8217; -i ~/.ssh/my_other.key</code> </dd>
+<dt>Loading a list of hosts from a file:</dt>
+<dd> <code>$ mussh -H /tmp/hostlist.txt -c &#8216;rpm -e emacs&#8217;</code> </dd>
+<dt>Loading a script from a file:</dt>
+<dd> <code>$ mussh -h foo bar baz -C /tmp/scriptfile.sh</code> </dd>
+</dl>
+<h2>BUGS</h2>
+<p> Please report any bugs at <a rel="nofollow" href="http://sourceforge.net/projects/mussh/">http://sourceforge.net/projects/mussh/</a></p>
+<h2>AUTHOR</h2>
+<p> Dave Fogarty &lt;doughnut at doughnut dot net&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1), <code><a href="/docs/linux/man/1-ssh-agent/">ssh-agent</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

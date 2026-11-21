@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glutsetcursor(3) · Linux Manual Pages</title>
+<meta name="description" content="glutSetCursor – Set the cursor image to be used for the current window">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-glutsetcursor/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>glutsetcursor(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>glutSetCursor</code> &#8211; Set the cursor image to be used for the current window</p>
+<h2>Library</h2>
+<p>OpenGLUT &#8211; window</p>
+<h2>Synopsis</h2>
+<p>In openglut.h Ft void Fn glutSetCursor int cursorID</p>
+<h2>Parameters</h2>
+<p>Bf Em<br />
+&nbsp;<wbr>cursorID Ef<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Name of desired cursor.</p>
+<h2>Description</h2>
+<p>For the Bf Li<br />
+&nbsp;<wbr>current window Ef<br />
+&nbsp;<wbr>, sets the mouse-cursor to one of a set of predefined images. The GLUT symbolic constant IDs are: </p>
+<p>&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_RIGHT_ARROW Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_LEFT_ARROW Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_INFO Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_DESTROY Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_HELP Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_CYCLE Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_SPRAY Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_WAIT Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_TEXT Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_CROSSHAIR Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_UP_DOWN Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_LEFT_RIGHT Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_TOP_SIDE Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_BOTTOM_SIDE Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_LEFT_SIDE Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_RIGHT_SIDE Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_TOP_LEFT_CORNER Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_TOP_RIGHT_CORNER Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_BOTTOM_RIGHT_CORNER Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_BOTTOM_LEFT_CORNER Ef<br />
+&nbsp;<wbr> </p>
+<p> Additionally, there are the following special cases: </p>
+<p> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_FULL_CROSSHAIR Ef<br />
+&nbsp;<wbr>This cursor, where supported, draws a crosshair the full width and height of the display. It may be mapped by OpenGLUT to the Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_CROSSHAIR, Ef<br />
+&nbsp;<wbr> however. </p>
+<p> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_NONE Ef<br />
+&nbsp;<wbr>Turn the mouse cursor invisibile. </p>
+<p> Bf Sy<br />
+&nbsp;<wbr>GLUT_CURSOR_INHERIT Ef<br />
+&nbsp;<wbr>Take the cursor that the parent window provides. </p>
+<h2>Caveats</h2>
+<p>The X branch of OpenGLUT does not do thorough error checking. </p>
+<p> The X branch of OpenGLUT always converts Bf Sy<br />
+&nbsp;<wbr>FULL_CROSSHAIR Ef<br />
+&nbsp;<wbr>to&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>CROSSHAIR. Ef<br />
+&nbsp;<wbr>This is acceptable, but if a host system supports a fullscreen crosshair, it would be nice to support that. </p>
+<p> Out of range Bf Sy<br />
+&nbsp;<wbr>cursorID Ef<br />
+&nbsp;<wbr>values generate warnings. </p>
+<p> Has no visible effect if the Bf Li<br />
+&nbsp;<wbr>current window Ef<br />
+&nbsp;<wbr>&nbsp;<wbr>is of type&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_OFFSCREEN Ef<br />
+&nbsp;<wbr>. </p>
+<h2>Bugs</h2>
+<p>Some Bf Sy<br />
+&nbsp;<wbr>cursorID Ef<br />
+&nbsp;<wbr>values are not yet supported on WIN32.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

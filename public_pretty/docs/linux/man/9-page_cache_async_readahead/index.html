@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>page_cache_async_readahead(9) · Linux Manual Pages</title>
+<meta name="description" content="page_cache_async_readahead – file readahead for marked pages">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-page_cache_async_readahead/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>page_cache_async_readahead(9)</h1>
+
+
+
+
+
+<p>page_cache_async_readahead &#8211; file readahead for marked pages</p>
+<h2>Synopsis</h2>
+<pre><code>void page_cache_async_readahead(struct address_space *mapping, struct file_ra_state *ra, struct file *filp, struct page *page, pgoff_t offset, unsigned long req_size);</code></pre>
+<h2>Arguments</h2>
+<p><i>mapping</i></p>
+<dl>
+<dd>
+</dd><dd>address_space which holds the pagecache and I/O vectors</dd></dl>
+<p> <i>ra</i></p>
+<dl>
+<dd>file_ra_state which holds the readahead state</dd></dl>
+<p> <i>filp</i></p>
+<dl>
+<dd>passed on to -&gt;<code>readpage</code> and -&gt;<code>readpages</code></dd></dl>
+<p> <i>page</i></p>
+<dl>
+<dd>the page at <i>offset</i> which has the PG_readahead flag set</dd></dl>
+<p> <i>offset</i></p>
+<dl>
+<dd>start offset into <i>mapping</i>, in pagecache page-sized units</dd></dl>
+<p> <i>req_size</i></p>
+<dl>
+<dd>hint: total size of the read which the caller is performing in pagecache pages</dd></dl>
+<h2>Description</h2>
+<p><code>page_cache_async_readahead</code> should be called when a page is used which has the PG_readahead flag; this is a marker to suggest that the application has used up enough of the readahead window that we should start pulling in more pages.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

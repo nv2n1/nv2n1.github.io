@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>arc4random_uniform(3) · Linux Manual Pages</title>
+<meta name="description" content="arc4random arc4random_buf arc4random_uniform arc4random_stir arc4random_addrandom – arc4 random number generator">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-arc4random_uniform/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>arc4random_uniform(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>arc4random</code> <code>arc4random_buf</code> <code>arc4random_uniform</code> <code>arc4random_stir</code> <code>arc4random_addrandom</code> &#8211; arc4 random number generator </p>
+<h2>LIBRARY</h2>
+<p> Lb libbsd</p>
+<h2>SYNOPSIS</h2>
+<p> In bsd/stdlib.h Ft u_int32_t Fn arc4random void Ft void Fn arc4random_buf void *buf size_t nbytes Ft u_int32_t Fn arc4random_uniform u_int32_t upper_bound Ft void Fn arc4random_stir void Ft void Fn arc4random_addrandom unsigned char *dat int datlen</p>
+<h2>DESCRIPTION</h2>
+<p> The Fn arc4random function uses the key stream generator employed by the arc4 cipher, which uses 8*8 8 bit S-Boxes. The S-Boxes can be in about (2**1700) states. The Fn arc4random function returns pseudo-random numbers in the range of 0 to (2**32)-1, and therefore has twice the range of <a href="/docs/linux/man/3-rand/">rand</a>(3) and <a href="/docs/linux/man/3-random/">random</a>(3). </p>
+<p> Fn arc4random_buf function fills the region Fa buf of length Fa nbytes with ARC4-derived random data. </p>
+<p> Fn arc4random_uniform will return a uniformly distributed random number less than Fa upper_bound . Fn arc4random_uniform is recommended over constructions like &#8220;<code>arc4random() % upper_bound</code> &#8221; as it avoids &quot;modulo bias&quot; when the upper bound is not a power of two. </p>
+<p> The Fn arc4random_stir function reads data from /dev/urandom and uses it to permute the S-Boxes via Fn arc4random_addrandom . </p>
+<p> There is no need to call Fn arc4random_stir before using Fn arc4random functions family, since they automatically initialize themselves.</p>
+<h2>EXAMPLES</h2>
+<p> The following produces a drop-in replacement for the traditional Fn rand and Fn random functions using Fn arc4random : </p>
+<blockquote><p><tt>&quot;#define foo4random() (arc4random() % ((unsigned)RAND_MAX + 1))&quot;</tt></p></blockquote>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/3-rand/">rand</a>(3), <a href="/docs/linux/man/3-random/">random</a>(3), srandomdev(3)</p>
+<h2>HISTORY</h2>
+<p> RC4 has been designed by RSA Data Security, Inc. It was posted anonymously to the USENET and was confirmed to be equivalent by several sources who had access to the original cipher. Since RC4 used to be a trade secret, the cipher is now referred to as ARC4 </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

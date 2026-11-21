@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>setup(1) · Linux Manual Pages</title>
+<meta name="description" content="setup – A text mode system configuration tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-setup/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>setup(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> setup &#8211; A text mode system configuration tool</p>
+<h2>SYNOPSIS</h2>
+<p> <code>setup</code></p>
+<h2>DESCRIPTION</h2>
+<p> The setuptool program (<code>setup</code>) is a front-end menu program for a group of other tools, mostly <code>system-config-*-tui</code> tools. The list of options which it presents is assembled by scanning /etc/setuptool.d and /usr/share/setuptool/setuptool.d for files. </p>
+<p> Each file in the directory should contain one or more lines of text. Each line contains from one to four fields which are separated by &quot;|&quot; characters. In order, they are:<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; the path to the binary to invoke&nbsp;<wbr>(mandatory)<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; the untranslated name of the application which should be displayed<br />
+&nbsp;<wbr>(If unset, defaults to the path of the binary, but don&#8217;t depend on that.)<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; the gettext textdomain in which a translation of the name of the application can be found<br />
+&nbsp;<wbr>(If unset, defaults to&nbsp;<wbr>&quot;setup&quot;.)<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; the directory in which translations for the textdomain can be found<br />
+&nbsp;<wbr>(If unset, defaults to&nbsp;<wbr>&quot;/usr/share/locale&quot;.) </p>
+<p> If multiple entries with the same untranslated name exist, the one which was read FIRST takes precedence. Files are read in name collation order.</p>
+<h2>EXAMPLE</h2>
+<p> A contrived example would create /etc/setuptool.d/00bogus with these contents: </p>
+<pre>
+  /bin/ls --color; /bin/sleep 5|Example &quot;ls&quot; invocation.
+</pre>
+<p> or </p>
+<pre>
+  /bin/ls --color; /bin/sleep 5|Give this help list|libc
+</pre>
+<p> to use one of libc&#8217;s (not meaningful here, but) translatable messages. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

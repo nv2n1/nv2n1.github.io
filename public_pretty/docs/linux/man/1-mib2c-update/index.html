@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mib2c-update(1) · Linux Manual Pages</title>
+<meta name="description" content="mib2c-update – script to merge custom code into updated mib2c code">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mib2c-update/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mib2c-update(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> mib2c-update &#8211; script to merge custom code into updated mib2c code</p>
+<h2>SYNOPSIS</h2>
+<p> <code>mib2c-update</code></p>
+<h2>DESCRIPTION</h2>
+<p> Use mib2c-update to generate your mib2c code templates, and it will track the original code and the changes you make to the code. If the mib2c template changes (bug fixes, enhances in later releases), re-running mib2c will update the template and then attempt to re-apply your changes. </p>
+<p> This can be extremely useful when developing your own mib2c templates. </p>
+<p> When you first run mib2c-update, it will create several hidden directories and a .mib2c-updaterc file. You must edit the .mib2c-udpaterc file to specify two values. The first, UPDATE_OID, is the table name to specify when running mib2c. The second, UPDATE_CONF, is the mib2c configuration file to specify when running mib2c. </p>
+<p> Additional mib2c options can be specified in UPDATE_MIB2C_OPTS. </p>
+<h2>BUGS</h2>
+<p> mib2c-update has only been tested on individual tables. Specifying a scalar or and entire MIB might not work. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

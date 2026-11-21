@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perltrap(1) · Linux Manual Pages</title>
+<meta name="description" content="perltrap – Perl traps for the unwary">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perltrap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perltrap(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> perltrap &#8211; Perl traps for the unwary </p>
+<h2>DESCRIPTION</h2>
+<p> The biggest trap of all is forgetting to <tt>&quot;use warnings&quot;</tt> or use the <code>-w</code> switch; see warnings and perlrun. The second biggest trap is not making your entire program runnable under <tt>&quot;use strict&quot;</tt>. The third biggest trap is not reading the list of changes in this version of Perl; see perldelta.</p>
+<h3>Awk Traps</h3>
+<p> Accustomed <code>awk</code> users should take special note of the following:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> A Perl program executes only once, not once for each input line. You can do an implicit loop with <tt>&quot;-n&quot;</tt> or <tt>&quot;-p&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> The English module, loaded via </dd>
+<pre>
+    use English;
+</pre>
+<p> allows you to refer to special variables (like <tt>$/</tt>) with names (like <tt>$RS</tt>), as though they were in <code>awk</code>; see perlvar for details.</p>
+<dt>&bull;</dt>
+<dd> Semicolons are required after all simple statements in Perl (except at the end of a block). Newline is not a statement delimiter.</dd>
+<dt>&bull;</dt>
+<dd> Curly brackets are required on <tt>&quot;if&quot;</tt>s and <tt>&quot;while&quot;</tt>s.</dd>
+<dt>&bull;</dt>
+<dd> Variables begin with &#8220;$&#8221;, &#8220;@&#8221; or &#8220;%&#8221; in Perl.</dd>
+<dt>&bull;</dt>
+<dd> Arrays index from 0. Likewise string positions in <code>substr()</code> and <code>index()</code>.</dd>
+<dt>&bull;</dt>
+<dd> You have to decide whether your array has numeric or string indices.</dd>
+<dt>&bull;</dt>
+<dd> Hash values do not spring into existence upon mere reference.</dd>
+<dt>&bull;</dt>
+<dd> You have to decide whether you want to use string or numeric comparisons.</dd>
+<dt>&bull;</dt>
+<dd> Reading an input line does not split it for you. You get to split it to an array yourself. And the <code>split()</code> operator has different arguments than <code>awk</code>&#8216;s.</dd>
+<dt>&bull;</dt>
+<dd> The current input line is normally in <tt>$_</tt>, not <tt>$0</tt>. It generally does not have the newline stripped. ($0 is the name of the program executed.) See perlvar.</dd>
+<dt>&bull;</dt>
+<dd> $&lt;<i>digit</i>&gt; does not refer to fields&#8212;it refers to substrings matched by the last match pattern.</dd>
+<dt>&bull;</dt>
+<dd> The <code>print()</code> statement does not add field and record separators unless you set <tt>$,</tt> and <tt>&quot;$\&quot;</tt>. You can set <tt>$OFS</tt> and <tt>$ORS</tt> if you&#8217;re using the English module.</dd>
+<dt>&bull;</dt>
+<dd> You must open your files before you print to them.</dd>
+<dt>&bull;</dt>
+<dd> The range operator is &#8220;..&#8221;, not comma. The comma operator works as in C.</dd>
+<dt>&bull;</dt>
+<dd> The match operator is &#8220;=~&#8221;, not &#8220;~&#8221;. (&#8220;~&#8221; is the one&#8217;s complement operator, as in C.)</dd>
+<dt>&bull;</dt>
+<dd> The exponentiation operator is &#8220;**&#8221;, not &#8220;^&#8221;. &#8220;^&#8221; is the <font SIZE="-1">XOR</font> operator, as in C. (You know, one could get the feeling that <code>awk</code> is basically incompatible with C.)</dd>
+<dt>&bull;</dt>
+<dd> The concatenation operator is &#8220;.&#8221;, not the null string. (Using the null string would render <tt>&quot;/pat/ /pat/&quot;</tt> unparsable, because the third slash would be interpreted as a division operator&#8212;the tokenizer is in fact slightly context sensitive for operators like &#8220;/&#8221;, &#8220;?&#8221;, and &#8220;&gt;&#8221;. And in fact, &#8220;.&#8221; itself can be the beginning of a number.)</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;next&quot;</tt>, <tt>&quot;exit&quot;</tt>, and <tt>&quot;continue&quot;</tt> keywords work differently.</dd>
+<dt>&bull;</dt>
+<dd> The following variables work differently: </dd>
+<pre>
+      Awk       Perl
+      ARGC      scalar @ARGV (compare with $#ARGV)
+      ARGV[0]   $0
+      FILENAME  $ARGV
+      FNR       $. - something
+      FS        (whatever you like)
+      NF        $#Fld, or some such
+      NR        $.
+      OFMT      $#
+      OFS       $,
+      ORS       $\
+      RLENGTH   length($&amp;)
+      RS        $/
+      RSTART    length($`)
+      SUBSEP    $;
+</pre>
+<dt>&bull;</dt>
+<dd> You cannot set <tt>$RS</tt> to a pattern, only a string.</dd>
+<dt>&bull;</dt>
+<dd> When in doubt, run the <code>awk</code> construct through <code>a2p</code> and see what it gives you.</dd></dl>
+<h3>C/C<font SIZE="-2">++</font> Traps</h3>
+<p> Cerebral C and C<font SIZE="-2">++</font> programmers should take note of the following:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> Curly brackets are required on <tt>&quot;if&quot;</tt>&#8216;s and <tt>&quot;while&quot;</tt>&#8216;s.</dd>
+<dt>&bull;</dt>
+<dd> You must use <tt>&quot;elsif&quot;</tt> rather than <tt>&quot;else if&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;break&quot;</tt> and <tt>&quot;continue&quot;</tt> keywords from C become in Perl <tt>&quot;last&quot;</tt> and <tt>&quot;next&quot;</tt>, respectively. Unlike in C, these do <i>not</i> work within a <tt>&quot;do { } while&quot;</tt> construct. See &#8220;Loop Control&#8221; in perlsyn.</dd>
+<dt>&bull;</dt>
+<dd> The switch statement is called <tt>&quot;given&quot;</tt>/<tt>&quot;when&quot;</tt> and only available in perl 5.10 or newer. See &#8220;Switch Statements&#8221; in perlsyn.</dd>
+<dt>&bull;</dt>
+<dd> Variables begin with &#8220;$&#8221;, &#8220;@&#8221; or &#8220;%&#8221; in Perl.</dd>
+<dt>&bull;</dt>
+<dd> Comments begin with &#8220;#&#8221;, not &#8220;/*&#8221; or &#8220;//&#8221;. Perl may interpret C/C<font SIZE="-2">++</font> comments as division operators, unterminated regular expressions or the defined-or operator.</dd>
+<dt>&bull;</dt>
+<dd> You can&#8217;t take the address of anything, although a similar operator in Perl is the backslash, which creates a reference.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ARGV&quot;</tt> must be capitalized. <tt>$ARGV[0]</tt> is C&#8217;s <tt>&quot;argv[1]&quot;</tt>, and <tt>&quot;argv[0]&quot;</tt> ends up in <tt>$0</tt>.</dd>
+<dt>&bull;</dt>
+<dd> System calls such as <code>link()</code>, <code>unlink()</code>, <code>rename()</code>, etc. return nonzero for success, not 0. (<code>system()</code>, however, returns zero for success.)</dd>
+<dt>&bull;</dt>
+<dd> Signal handlers deal with signal names, not numbers. Use <tt>&quot;kill -l&quot;</tt> to find their names on your system.</dd></dl>
+<h3>JavaScript Traps</h3>
+<p> Judicious JavaScript programmers should take note of the following:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> In Perl, binary <tt>&quot;+&quot;</tt> is always addition. <tt>&quot;$string1 + $string2&quot;</tt> converts both strings to numbers and then adds them. To concatenate two strings, use the <tt>&quot;.&quot;</tt> operator.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;+&quot;</tt> unary operator doesn&#8217;t do anything in Perl. It exists to avoid syntactic ambiguities.</dd>
+<dt>&bull;</dt>
+<dd> Unlike <tt>&quot;for...in&quot;</tt>, Perl&#8217;s <tt>&quot;for&quot;</tt> (also spelled <tt>&quot;foreach&quot;</tt>) does not allow the left-hand side to be an arbitrary expression. It must be a variable: </dd>
+<pre>
+   for my $variable (keys %hash) {
+        ...
+   }
+</pre>
+<p> Furthermore, don&#8217;t forget the <tt>&quot;keys&quot;</tt> in there, as <tt>&quot;foreach my $kv (%hash) {}&quot;</tt> iterates over the keys and values, and is generally not useful ($kv would be a key, then a value, and so on).</p>
+<dt>&bull;</dt>
+<dd> To iterate over the indices of an array, use <tt>&quot;foreach my $i (0 .. $#array) {}&quot;</tt>. <tt>&quot;foreach my $v (@array) {}&quot;</tt> iterates over the values.</dd>
+<dt>&bull;</dt>
+<dd> Perl requires braces following <tt>&quot;if&quot;</tt>, <tt>&quot;while&quot;</tt>, <tt>&quot;foreach&quot;</tt>, etc.</dd>
+<dt>&bull;</dt>
+<dd> In Perl, <tt>&quot;else if&quot;</tt> is spelled <tt>&quot;elsif&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;? :&quot;</tt> has higher precedence than assignment. In JavaScript, one can write: </dd>
+<pre>
+    condition ? do_something() : variable = 3
+</pre>
+<p> and the variable is only assigned if the condition is false. In Perl, you need parentheses: </p>
+<pre>
+    $condition ? do_something() : ($variable = 3);
+</pre>
+<p> Or just use <tt>&quot;if&quot;</tt>.</p>
+<dt>&bull;</dt>
+<dd> Perl requires semicolons to separate statements.</dd>
+<dt>&bull;</dt>
+<dd> Variables declared with <tt>&quot;my&quot;</tt> only affect code <i>after</i> the declaration. You cannot write <tt>&quot;$x = 1; my $x;&quot;</tt> and expect the first assignment to affect the same variable. It will instead assign to an <tt>$x</tt> declared previously in an outer scope, or to a global variable. </dd>
+<p> Note also that the variable is not visible until the following <i>statement</i>. This means that in <tt>&quot;my $x = 1 + $x&quot;</tt> the second <tt>$x</tt> refers to one declared previously.</p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;my&quot;</tt> variables are scoped to the current block, not to the current function. If you write <tt>&quot;{my $x;} $x;&quot;</tt>, the second <tt>$x</tt> does not refer to the one declared inside the block.</dd>
+<dt>&bull;</dt>
+<dd> An object&#8217;s members cannot be made accessible as variables. The closest Perl equivalent to <tt>&quot;with(object) { method() }&quot;</tt> is <tt>&quot;for&quot;</tt>, which can alias <tt>$_</tt> to the object: </dd>
+<pre><code>
+for ($object) {
+    $_-&gt;method;
+}
+</code></pre>
+<dt>&bull;</dt>
+<dd> The object or class on which a method is called is passed as one of the method&#8217;s arguments, not as a separate <tt>&quot;this&quot;</tt> value.</dd></dl>
+<h3>Sed Traps</h3>
+<p> Seasoned <code>sed</code> programmers should take note of the following:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> A Perl program executes only once, not once for each input line. You can do an implicit loop with <tt>&quot;-n&quot;</tt> or <tt>&quot;-p&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> Backreferences in substitutions use &#8220;$&#8221; rather than &#8220;\&#8221;.</dd>
+<dt>&bull;</dt>
+<dd> The pattern matching metacharacters &#8220;(&#8221;, &#8220;)&#8221;, and &#8220;|&#8221; do not have backslashes in front.</dd>
+<dt>&bull;</dt>
+<dd> The range operator is <tt>&quot;...&quot;</tt>, rather than comma.</dd></dl>
+<h3>Shell Traps</h3>
+<p> Sharp shell programmers should take note of the following:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> The backtick operator does variable interpolation without regard to the presence of single quotes in the command.</dd>
+<dt>&bull;</dt>
+<dd> The backtick operator does no translation of the return value, unlike <code>csh</code>.</dd>
+<dt>&bull;</dt>
+<dd> Shells (especially <code>csh</code>) do several levels of substitution on each command line. Perl does substitution in only certain constructs such as double quotes, backticks, angle brackets, and search patterns.</dd>
+<dt>&bull;</dt>
+<dd> Shells interpret scripts a little bit at a time. Perl compiles the entire program before executing it (except for <tt>&quot;BEGIN&quot;</tt> blocks, which execute at compile time).</dd>
+<dt>&bull;</dt>
+<dd> The arguments are available via <tt>@ARGV</tt>, not <tt>$1</tt>, <tt>$2</tt>, etc.</dd>
+<dt>&bull;</dt>
+<dd> The environment is not automatically made available as separate scalar variables.</dd>
+<dt>&bull;</dt>
+<dd> The shell&#8217;s <tt>&quot;test&quot;</tt> uses &#8220;=&#8221;, &#8220;!=&#8221;, &#8220;&lt;&#8221; etc for string comparisons and &#8220;-eq&#8221;, &#8220;-ne&#8221;, &#8220;-lt&#8221; etc for numeric comparisons. This is the reverse of Perl, which uses <tt>&quot;eq&quot;</tt>, <tt>&quot;ne&quot;</tt>, <tt>&quot;lt&quot;</tt> for string comparisons, and <tt>&quot;==&quot;</tt>, <tt>&quot;!=&quot;</tt> <tt>&quot;&lt;&quot;</tt> etc for numeric comparisons.</dd></dl>
+<h3>Perl Traps</h3>
+<p> Practicing Perl Programmers should take note of the following:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> Remember that many operations behave differently in a list context than they do in a scalar one. See perldata for details.</dd>
+<dt>&bull;</dt>
+<dd> Avoid barewords if you can, especially all lowercase ones. You can&#8217;t tell by just looking at it whether a bareword is a function or a string. By using quotes on strings and parentheses on function calls, you won&#8217;t ever get them confused.</dd>
+<dt>&bull;</dt>
+<dd> You cannot discern from mere inspection which builtins are unary operators (like <code>chop()</code> and <code>chdir()</code>) and which are list operators (like <code>print()</code> and <code>unlink()</code>). (Unless prototyped, user-defined subroutines can <code>only</code> be list operators, never unary ones.) See perlop and perlsub.</dd>
+<dt>&bull;</dt>
+<dd> People have a hard time remembering that some functions default to <tt>$_</tt>, or <tt>@ARGV</tt>, or whatever, but that others which you might expect to do not.</dd>
+<dt>&bull;</dt>
+<dd> The &lt;<font SIZE="-1">FH</font>&gt; construct is not the name of the filehandle, it is a readline operation on that handle. The data read is assigned to <tt>$_</tt> only if the file read is the sole condition in a while loop: </dd>
+<pre><code>
+while (&lt;FH&gt;) {
+}
+while (defined($_ = &lt;FH&gt;)) {
+}
+..&lt;FH&gt;;
+#data discarded !
+</code></pre>
+<dt>&bull;</dt>
+<dd> Remember not to use <tt>&quot;=&quot;</tt> when you need <tt>&quot;=~&quot;</tt>; these two constructs are quite different: </dd>
+<pre>
+    $x =  /foo/;
+    $x =~ /foo/;
+</pre>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;do {}&quot;</tt> construct isn&#8217;t a real loop that you can use loop control on.</dd>
+<dt>&bull;</dt>
+<dd> Use <tt>&quot;my()&quot;</tt> for local variables whenever you can get away with it (but see perlform for where you can&#8217;t). Using <tt>&quot;local()&quot;</tt> actually gives a local value to a global variable, which leaves you open to unforeseen side-effects of dynamic scoping.</dd>
+<dt>&bull;</dt>
+<dd> If you localize an exported variable in a module, its exported value will not change. The local name becomes an alias to a new value but the external name is still an alias for the original.</dd></dl>
+<p> As always, if any of these are ever officially declared as bugs, they&#8217;ll be fixed and removed. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

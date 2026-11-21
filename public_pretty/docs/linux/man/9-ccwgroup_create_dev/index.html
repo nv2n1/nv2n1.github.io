@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ccwgroup_create_dev(9) · Linux Manual Pages</title>
+<meta name="description" content="ccwgroup_create_dev – create and register a ccw group device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-ccwgroup_create_dev/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>ccwgroup_create_dev(9)</h1>
+
+
+
+
+
+<p>ccwgroup_create_dev &#8211; create and register a ccw group device</p>
+<h2>Synopsis</h2>
+<pre><code>int ccwgroup_create_dev(struct device *parent, struct ccwgroup_driver *gdrv, int num_devices, const char *buf);</code></pre>
+<h2>Arguments</h2>
+<p><i>parent</i></p>
+<dl>
+<dd>
+</dd><dd>parent device for the new device</dd></dl>
+<p> <i>gdrv</i></p>
+<dl>
+<dd>driver for the new group device</dd></dl>
+<p> <i>num_devices</i></p>
+<dl>
+<dd>number of slave devices</dd></dl>
+<p> <i>buf</i></p>
+<dl>
+<dd>buffer containing comma separated bus ids of slave devices</dd></dl>
+<h2>Description</h2>
+<p>Create and register a new ccw group device as a child of <i>parent</i>. Slave devices are obtained from the list of bus ids given in <i>buf</i>.</p>
+<h2>Return</h2>
+<p><code>0</code> on success and an error code on failure.</p>
+<h2>Context</h2>
+<p>non-atomic</p>
+<h2>Author</h2>
+<p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

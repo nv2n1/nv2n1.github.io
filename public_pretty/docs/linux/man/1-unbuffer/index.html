@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>unbuffer(1) · Linux Manual Pages</title>
+<meta name="description" content="unbuffer – unbuffer output">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-unbuffer/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>unbuffer(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> unbuffer &#8211; unbuffer output </p>
+<h2>SYNOPSIS</h2>
+<p> <code>unbuffer</code> <i>program</i> [ <i>args</i> ]</p>
+<h2>INTRODUCTION</h2>
+<p> <code>unbuffer</code> disables the output buffering that occurs when program output is redirected from non-interactive programs. For example, suppose you are watching the output from a fifo by running it through od and then more. </p>
+<pre>
+        od -c /tmp/fifo | more
+</pre>
+<p> You will not see anything until a full page of output has been produced. </p>
+<p> You can disable this automatic buffering as follows: </p>
+<pre>
+        unbuffer od -c /tmp/fifo | more
+</pre>
+<p> Normally, unbuffer does not read from stdin. This simplifies use of unbuffer in some situations. To use unbuffer in a pipeline, use the -p flag. Example: </p>
+<pre>
+        process1 | unbuffer -p process2 | process3
+</pre>
+<h2>CAVEATS</h2>
+<p> unbuffer -p may appear to work incorrectly if a process feeding input to unbuffer exits. Consider: </p>
+<pre>
+        process1 | unbuffer -p process2 | process3
+</pre>
+<p> If process1 exits, process2 may not yet have finished. It is impossible for unbuffer to know long to wait for process2 and process2 may not ever finish, for example, if it is a filter. For expediency, unbuffer simply exits when it encounters an EOF from either its input or process2. </p>
+<p> In order to have a version of unbuffer that worked in all situations, an oracle would be necessary. If you want an application-specific solution, workarounds or hand-coded Expect may be more suitable. For example, the following example shows how to allow grep to finish processing when the cat before it finishes first. Using cat to feed grep would never require unbuffer in real life. It is merely a placeholder for some imaginary process that may or may not finish. Similarly, the final cat at the end of the pipeline is also a placeholder for another process. </p>
+<pre>
+$ cat /tmp/abcdef.log | grep abc | cat
+abcdef
+xxxabc defxxx
+$ cat /tmp/abcdef.log | unbuffer grep abc | cat
+$ (cat /tmp/abcdef.log ; sleep 1) | unbuffer grep abc | cat
+abcdef
+xxxabc defxxx
+$ 
+</pre>
+<h2>BUGS</h2>
+<p> The man page is longer than the program. </p>
+<h2>SEE ALSO</h2>
+<p> <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, O&#8217;Reilly and Associates, January 1995.</p>
+<h2>AUTHOR</h2>
+<p> Don Libes, National Institute of Standards and Technology </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

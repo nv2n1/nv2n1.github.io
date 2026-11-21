@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bspline(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::BSpline – B-spline basis functions.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-bspline/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>bspline(3)</h1>
+
+
+
+
+
+<p>QuantLib::BSpline &#8211; B-spline basis functions. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/math/bspline.hpp&gt; </p>
+<h3>Public Member Functions</h3>
+<p><code>BSpline</code> (<code>Natural</code> p, <code>Natural</code> n, const std::vector&lt; <code>Real</code> &gt; &amp;knots) </p>
+<p> <code>Real</code> <code>operator()</code> (<code>Natural</code> i, <code>Real</code> x) const </p>
+<h2>Detailed Description</h2>
+<p>B-spline basis functions. </p>
+<p> Follows treatment and notation from: </p>
+<p> Weisstein, Eric W. &#8216;B-Spline.&#8217; From MathWorld&#8211;A Wolfram Web Resource. &lt;<a rel="nofollow" href="http://mathworld.wolfram.com/B-Spline.html">http://mathworld.wolfram.com/B-Spline.html</a>&gt; </p>
+<p> $ (p+1) $-th order B-spline (or p degree polynomial) basis functions $ N_{i,p}(x), i = 0,1,2 </p>
+<hr>
+<p> knot vector of size $ p+n+2 $ defined at the increasingly sorted points $ (x_0, x_1 </p>
+<hr>
+<p>ratic B-spline has $ p=2 $, a cubic B-spline has $ p=3 $, etc. </p>
+<p> The B-spline basis functions are defined recursively as follows: </p>
+<p> [ xtrm{&nbsp;<wbr>if&nbsp;<wbr>} x_{i} </p>
+<hr>
+<p>xtrm{&nbsp;<wbr>otherwise} \ N_{i,p}(x) &amp;=&amp; N_{i,p-1}(x) ac{(x &#8211; x_{i})}{ (x_{i+p-1} &#8211; x_{i})} + N_{i+1,p-1}(x) ac{(x_{i+p} &#8211; x)}{(x_{i+p} &#8211; x_{i+1})} 
+d{array} ] </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

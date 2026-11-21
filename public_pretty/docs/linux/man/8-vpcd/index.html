@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vpcd(8) · Linux Manual Pages</title>
+<meta name="description" content="vpcd – virtual power control daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-vpcd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>vpcd(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>vpcd &#8211; virtual power control daemon</p>
+<h2>Synopsis</h2>
+<p><code>vpcd</code> <i>[&#8211;port PORT]</i> </p>
+<h2>Description</h2>
+<p><code>vpcd</code> is a test program for PowerMan which emulates a remote power control device. It can be run interactively by the powerman daemon, or it can listen on a port of your choosing.</p>
+<h2>Options</h2>
+<dl>
+<dt><i>-p, &#8211;port PORT</i></dt>
+<dd>Instructs <code>vpcd</code> to listen for connections on the specified port instead of using stdin/stdout. Only one connection will be accepted.</dd></dl>
+<h2>Interactive Commands</h2>
+<p>The following commands are available at the vpcd&gt; prompt:</p>
+<dl>
+<dt><i>login</i></dt>
+<dd>The login command must br run before any of the other commands will work. No username or password is required.</dd>
+<dt><i>logoff</i></dt>
+<dd>Return <code>vpcd</code> to the initial state.</dd>
+<dt><i>stat PLUG|*</i></dt>
+<dd>Show the power status of PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>beacon PLUG|*</i></dt>
+<dd>Show the beacon status of PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>temp PLUG|*</i></dt>
+<dd>Show the temperature of the node attached to PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>spew COUNT</i></dt>
+<dd>Print COUNT 80-char lines. This is the basis of a buffer handling test.</dd>
+<dt><i>on PLUG|*</i></dt>
+<dd>Turn on PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>off PLUG|*</i></dt>
+<dd>Turn off PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>flash PLUG|*</i></dt>
+<dd>Light the beacon on PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>unflash PLUG|*</i></dt>
+<dd>Unlight the beacon on PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs.</dd>
+<dt><i>reset PLUG|*</i></dt>
+<dd>Reset the node attached to PLUG. If PLUG is &#8220;*&#8221;, perform this action on all plugs. </dd>
+</dl>
+<h2>Files</h2>
+<p>/usr/sbin/vpcd</p>
+<h2>Origin</h2>
+<p>PowerMan was originally developed by Andrew Uselton on LLNL&#8217;s Linux clusters. This software is open source and distributed under the terms of the GNU GPL.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-powerman/">powerman</a></code>(1), <code><a href="/docs/linux/man/8-powermand/">powermand</a></code>(8), <code><a href="/docs/linux/man/8-httppower/">httppower</a></code>(8), <code><a href="/docs/linux/man/8-plmpower/">plmpower</a></code>(8), <code><a href="/docs/linux/man/8-vpcd/">vpcd</a></code>(8), <code><a href="/docs/linux/man/5-powerman-conf/">powerman.conf</a></code>(5), <code><a href="/docs/linux/man/5-powerman-dev/">powerman.dev</a></code>(5). <code><a rel="nofollow" href="http://code.google.com/p/powerman">http://code.google.com/p/powerman</a></code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expanding Root Partition on Cloud Linux VMs Without Rebooting - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-enlarge-root-partition-and-filesystem-size-of-cloud-linux-vm-at-runtime-without-rebooting-linux/">
+  <meta name="description" content="Before expanding your root partition and filesystem:
+Back up your data using cloud snapshots or external backup tools. Partition and filesystem resizing can …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Expanding Root Partition on Cloud Linux VMs Without Rebooting">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-enlarge-root-partition-and-filesystem-size-of-cloud-linux-vm-at-runtime-without-rebooting-linux/">
+  <meta property="og:description" content="Before expanding your root partition and filesystem:
+Back up your data using cloud snapshots or external backup tools. Partition and filesystem resizing can …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/storage-lvm/">Storage &amp; LVM</a>
+        </nav>
+        
+        <h1>Expanding Root Partition on Cloud Linux VMs Without Rebooting</h1>
+        <time class="post-date" datetime="2018-12-29T06:23:57Z">December 29, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Before expanding your root partition and filesystem:</p>
+<ul>
+<li>Back up your data using cloud snapshots or external backup tools. Partition and filesystem resizing can cause data loss if misconfigured.</li>
+<li>Have root access to the VM.</li>
+<li>Ensure your cloud provider has already expanded the underlying block device (EBS volume for AWS, persistent disk for GCP, managed disk for Azure). This post covers making Linux recognize and use that expanded space.</li>
+</ul>
+<p>This procedure works on modern Linux distributions with ext4, XFS, or Btrfs filesystems. Examples use Ubuntu 24.04 LTS on AWS EC2 with NVMe storage, but the steps apply across providers.</p>
+<h2 id="verify-current-disk-usage">Verify Current Disk Usage</h2>
+<p>Check your current disk utilization:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">df -hT
+</span></span></code></pre></div><p>Example output from a full root partition:</p>
+<pre><code>Filesystem     Type      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1 ext4       20G   20G  1.5M 100% /
+</code></pre>
+<p>Confirm the block device has actually been enlarged by your cloud provider:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk
+</span></span></code></pre></div><p>Get exact size in bytes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">blockdev --getsize64 /dev/nvme0n1
+</span></span></code></pre></div><p>If the block device size hasn’t increased yet, the resize operation may still be pending on the cloud platform’s side. Wait a few moments and retry. Some providers require explicit resize confirmation in their management console.</p>
+<p>You can also check the partition size directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /sys/block/nvme0n1/nvme0n1p1/size
+</span></span></code></pre></div><h2 id="expand-the-partition-table">Expand the Partition Table</h2>
+<p>Use <code>growpart</code> to expand the partition to fill the block device:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">growpart /dev/nvme0n1 <span class="m">1</span>
+</span></span></code></pre></div><p>The <code>1</code> is the partition number. For <code>/dev/sda</code>, use <code>growpart /dev/sda 1</code>. For NVMe devices, partition 1 is typically <code>p1</code> (e.g., <code>/dev/nvme0n1p1</code>).</p>
+<p>Expected output:</p>
+<pre><code>CHANGED: partition=1 start=2048 old: size=41940959 end=41943007 new: size=209713119 end=209715167
+</code></pre>
+<p>If <code>growpart</code> is not installed, install it:</p>
+<p><strong>Debian/Ubuntu:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt-get update <span class="o">&amp;&amp;</span> apt-get install -y cloud-guest-utils
+</span></span></code></pre></div><p><strong>RHEL/CentOS/Fedora:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dnf install -y cloud-utils-growpart
+</span></span></code></pre></div><p>Verify the partition grew:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk
+</span></span></code></pre></div><p>The partition size should now match the underlying block device. If <code>growpart</code> reports <code>NOCHANGE</code>, the partition is already using the full block device size — proceed to the filesystem resize.</p>
+<h2 id="resize-the-filesystem">Resize the Filesystem</h2>
+<p>The resize command depends on your filesystem type. All of these work on mounted filesystems without requiring a reboot.</p>
+<h3 id="for-ext4-most-common-on-cloud-linux">For ext4 (most common on cloud Linux)</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resize2fs /dev/nvme0n1p1
+</span></span></code></pre></div><p>Expected output:</p>
+<pre><code>resize2fs 1.47.0 (5-Feb-2023)
+Filesystem at /dev/nvme0n1p1 is mounted on /; on-line resizing required
+old_desc_blocks = 3, new_desc_blocks = 13
+The filesystem on /dev/nvme0n1p1 is now 26214139 (4k) blocks long.
+</code></pre>
+<p>Verify the filesystem metadata was updated:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tune2fs -l /dev/nvme0n1p1 <span class="p">|</span> grep <span class="s2">&#34;Block count&#34;</span>
+</span></span></code></pre></div><h3 id="for-xfs-common-on-rhelcentosfedora">For XFS (common on RHEL/CentOS/Fedora)</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xfs_growfs /
+</span></span></code></pre></div><p>Note: Pass the mount point, not the device path. Expected output:</p>
+<pre><code>meta-data=/dev/nvme0n1p1 isize=512    agcount=4, agsize=1310720 blks
+         =                       sectsz=4096  attr=2, projid32bit=1
+data     =                       bsize=4096   blocks=5242880, imaxpct=25
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+data blocks changed from 5242880 to 20971520
+</code></pre>
+<p>Verify with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xfs_info /
+</span></span></code></pre></div><h3 id="for-btrfs">For Btrfs</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">btrfs filesystem resize max /
+</span></span></code></pre></div><p>Verify with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">btrfs filesystem show /
+</span></span></code></pre></div><h2 id="verify-the-expansion">Verify the Expansion</h2>
+<p>Check that your filesystem now uses the full space:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">df -hT
+</span></span></code></pre></div><p>Expected output:</p>
+<pre><code>Filesystem     Type      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1 ext4       97G   20G   78G  20% /
+</code></pre>
+<h2 id="working-with-lvm">Working with LVM</h2>
+<p>If your root filesystem uses LVM, expanding the partition is only the first step. After growing the partition, expand the physical volume:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pvresize /dev/nvme0n1p1
+</span></span></code></pre></div><p>Then expand the logical volume to use all available space. If your root filesystem is on <code>/dev/mapper/vg0-root</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lvresize -l +100%FREE /dev/vg0/root
+</span></span></code></pre></div><p>Then resize the filesystem. For ext4:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resize2fs /dev/vg0/root
+</span></span></code></pre></div><p>For XFS:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xfs_growfs /
+</span></span></code></pre></div><p>For Btrfs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">btrfs filesystem resize max /
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong><code>growpart</code> command not found</strong></p>
+<p>Install the required package:</p>
+<ul>
+<li>Debian/Ubuntu: <code>apt-get install -y cloud-guest-utils</code></li>
+<li>RHEL/CentOS/Fedora: <code>dnf install -y cloud-utils-growpart</code></li>
+</ul>
+<p><strong>Partition didn’t grow</strong></p>
+<p>Confirm the underlying block device was resized by your cloud provider. Run <code>lsblk</code> and verify the block device size exceeds the partition size. Some providers require additional steps or may take a few minutes before the resize is visible to the OS.</p>
+<p><strong><code>growpart</code> reports <code>NOCHANGE</code></strong></p>
+<p>The partition already uses the full block device. Proceed to resizing the filesystem.</p>
+<p><strong><code>resize2fs</code> fails with “Device or resource busy”</strong></p>
+<p>This is rare on a mounted filesystem. Avoid heavy I/O operations during the resize. Check for filesystem locks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /proc/locks <span class="p">|</span> grep nvme0n1p1
+</span></span></code></pre></div><p>If the error persists, check system logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">journalctl -xe
+</span></span></code></pre></div><p>If the first <code>resize2fs</code> run was interrupted, run it again without arguments:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resize2fs /dev/nvme0n1p1
+</span></span></code></pre></div><p><strong>Filesystem still shows old size after <code>resize2fs</code></strong></p>
+<p>Run <code>resize2fs</code> again. If the first run was interrupted, a second invocation will complete the operation.</p>
+<p><strong><code>xfs_growfs</code> shows “input/output error”</strong></p>
+<p>Ensure you’re using the mount point, not the device path:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xfs_growfs /
+</span></span></code></pre></div><p>Not <code>xfs_growfs /dev/nvme0n1p1</code>.</p>
+<p><strong>Partition table changes are not recognized</strong></p>
+<p>Modern kernels support partition table rereading without reboot. Trigger a rescan manually:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="m">1</span> &gt; /sys/block/nvme0n1/device/rescan
+</span></span></code></pre></div><p>Or use <code>partprobe</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">partprobe /dev/nvme0n1
+</span></span></code></pre></div><h2 id="important-notes">Important Notes</h2>
+<ul>
+<li>This procedure requires root privileges.</li>
+<li>Test on non-production systems first whenever possible.</li>
+<li>The filesystem resize happens online while mounted — no reboot needed.</li>
+<li>Partition table changes are safe on modern systems; the kernel rereads the updated table without reboot.</li>
+<li>For LVM setups, expand the physical volume and logical volume after growing the partition.</li>
+<li>This works on AWS EC2, Google Cloud, Azure, DigitalOcean, and most major cloud providers, as long as they’ve expanded the underlying block device.</li>
+<li>Monitor disk space growth after expansion. Set up monitoring alerts if the filesystem approaches capacity again.</li>
+</ul>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

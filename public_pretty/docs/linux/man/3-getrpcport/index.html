@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>getrpcport(3) · Linux Manual Pages</title>
+<meta name="description" content="getrpcport – get RPC port number">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-getrpcport/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>getrpcport(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> getrpcport &#8211; get RPC port number </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;rpc/rpc.h&gt;
+int getrpcport(const char *host, unsigned long prognum,
+               unsigned long versnum, unsigned proto);
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> <code>getrpcport</code>() returns the port number for version <i>versnum</i> of the RPC program <i>prognum</i> running on <i>host</i> and using protocol <i>proto</i>. It returns 0 if it cannot contact the portmapper, or if <i>prognum</i> is not registered. If <i>prognum</i> is registered but not with version <i>versnum</i>, it will still return a port number (for some version of the program) indicating that the program is indeed registered. The version mismatch will be detected upon the first call to the service.</p>
+<h2>ATTRIBUTES</h2>
+<p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
+<table BORDER>
+<tr VALIGN=top>
+<td><code>Interface</code></td>
+<td><code>Attribute</code></td>
+<td><code>Value</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>getrpcport</code>() </td>
+<td>Thread safety</td>
+<td>MT-Safe env locale
+</td>
+</tr>
+</table>
+<h2>CONFORMING TO</h2>
+<p> Not in POSIX.1. Present on the BSDs, Solaris, and many other systems.</p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

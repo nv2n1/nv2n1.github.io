@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pause(2) · Linux Manual Pages</title>
+<meta name="description" content="pause – wait for signal">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/2-pause/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/2/">Section 2</a></p>
+<article>
+<h1>pause(2)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pause &#8211; wait for signal </p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;unistd.h&gt;</code> </p>
+<p> <code>int pause(void);</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>pause</code>() causes the calling process (or thread) to sleep until a signal is delivered that either terminates the process or causes the invocation of a signal-catching function.</p>
+<h2>RETURN VALUE</h2>
+<p> <code>pause</code>() returns only when a signal was caught and the signal-catching function returned. In this case, <code>pause</code>() returns -1, and <i>errno</i> is set to <code>EINTR</code>.</p>
+<h2>ERRORS</h2>
+<dl>
+<dt><code>EINTR</code></dt>
+<dd> a signal was caught and the signal-catching function returned.</dd></dl>
+<h2>CONFORMING TO</h2>
+<p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/2-signal/">signal</a></code>(2), <code><a href="/docs/linux/man/2-sigsuspend/">sigsuspend</a></code>(2)</p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

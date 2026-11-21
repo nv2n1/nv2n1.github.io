@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>update-manager(8) · Linux Manual Pages</title>
+<meta name="description" content="update-manager – graphical management of software packages updates">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-update-manager/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>update-manager(8)</h1>
+
+
+
+
+
+<p>update-manager &#8211; graphical management of software packages updates</p>
+<h2>Synopsis</h2>
+<p><code>update-manager</code> [options]</p>
+<h2>Description</h2>
+<p>Update-manager is a frontend for the apt package management system. It allows you to perform some actions of the command line tool apt-get in a graphical environment. Update-manager is especially designed for upgrading your system, or migrating your system towards a more recent version. </p>
+<h2>Options</h2>
+<p>For a daily use, you may launch update-manager with no options so that your system is just upgraded. </p>
+<p> For migration purposes, update-manager accepts some options: </p>
+<dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show a similar help message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show version</dd>
+<dt><code>&#8211;data-dir=DATA_DIR</code></dt>
+<dd>Directory that contains the data files</dd>
+<dt><code>-c</code>, <code>&#8211;check-dist-upgrades</code></dt>
+<dd>Check if a new distribution release is available</dd>
+<dt><code>-d</code>, <code>&#8211;devel-release</code></dt>
+<dd>If using the latest supported release, upgrade to the development release</dd>
+<dt><code>-p</code>, <code>&#8211;proposed</code></dt>
+<dd>Upgrade using the latest proposed version of the release upgrader</dd>
+<dt><code>&#8211;no-focus-on-map</code></dt>
+<dd>Do not focus on map when starting </dd>
+</dl>
+<h2>Actions Performed During An Upgrade To A New Version</h2>
+<p>* eventually reinstall the package ubuntu-desktop </p>
+<p> * switch to an updated sources.list entries </p>
+<p> * adds the default user to new groups if needed</p>
+<h2>See Also</h2>
+<p><code>Synaptic</code>, <code>sources.list</code>, <code>aptitude</code> </p>
+<h2>Authors</h2>
+<p>update-manager was developed by Michael Vogt &lt;mvo [at] ubuntu.com&gt; with various contributors (see AUTHORS file) </p>
+<p> This manual page was originally written by Bruno Mangin and Michael Vogt &lt;mvo [at] ubuntu.com&gt;.</p>
+<h2>Copyright</h2>
+<p>Copyright (C) 2006-2007 Canonical </p>
+<p> There is NO warranty. You may redistribute this software under the terms of the GNU General Public License. For more information about these matters, see the files named COPYING.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

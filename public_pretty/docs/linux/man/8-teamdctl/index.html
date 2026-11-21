@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>teamdctl(8) · Linux Manual Pages</title>
+<meta name="description" content="teamdctl — team daemon control tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-teamdctl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>teamdctl(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>teamdctl &#8212; team daemon control tool</p>
+<h2>Synopsis</h2>
+<p><code>teamdctl</code> [<i>options</i>] <i>team_device command </i>[<i>command_args</i>&#8230;]<br />
+ <code>teamdctl -h</code></p>
+<h2>Description</h2>
+<p>teamdctl is a tool that allows a user to interact with a running teamd instance. It defaults to using Unix Domain Sockets, but will fall back to using the D-Bus API, to ensure reliable operation in all environments.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print help text to console and exit.</dd>
+<dt><code>-v, &#8211;verbosity</code></dt>
+<dd>Increase output verbosity.</dd>
+<dt><code>-o, &#8211;oneline</code></dt>
+<dd>Force output to one line if possible.</dd>
+<dt><code>-D, &#8211;force-dbus</code></dt>
+<dd>Force to use D-Bus interface.</dd>
+<dt><code>-Z </code><i>address</i><code>, &#8211;force-zmq </code><i>address</i></dt>
+<dd>Force to use ZMQ interface. Possible address formats are &quot;<a href="tcp://ip:port">tcp://ip:port</a>&quot;, &quot;<a href="ipc://path">ipc://path</a>&quot; and others. Detailed description of ZMQ library is in page <a rel="nofollow" href="http://zguide.zeromq.org/page:all.">http://zguide.zeromq.org/page:all.</a></dd>
+<dt><code>-U, &#8211;force-usock</code></dt>
+<dd>Force to use UNIX domain socket interface. This is the default behavior.</dd></dl>
+<h2>Command</h2>
+<dl>
+<dt><code>config dump</code></dt>
+<dd>Dumps teamd JSON config.</dd>
+<dt><code>config dump noports</code></dt>
+<dd>Dumps teamd JSON configuration without &quot;ports&quot; section included.</dd>
+<dt><code>config dump actual</code></dt>
+<dd>Dumps teamd actual JSON configuration. It includes ports which are currently present.</dd>
+<dt><code>state dump | state</code></dt>
+<dd>Dumps teamd JSON state document.</dd>
+<dt><code>state view</code></dt>
+<dd>Prints out state of teamd parsed from JSON state document.</dd>
+<dt><code>state item get </code><i>state_item_path</i></dt>
+<dd>Finds state item in JSON state document and returns its value. </dd>
+<p> If PORTIFNAME in state_item_path has any sensitive character, use double quotation marks to escape it, like: ports.&quot;eth1.1&quot;.link_watches.up. To process state_item_path of &#8216;state item set&#8217; is the same as here.</p>
+<dt><code>state item set </code><i>state_item_path value</i></dt>
+<dd>Finds state item in JSON state document and sets its value by value parameter. This is available only for a limited number of paths:</dd>
+<dl>
+<dd><code>setup.debug_level &#8212;</code> User can set debug level. Higher level is more verbose. </dd>
+<p> <code>ports.PORTIFNAME.runner.aggregator.selected &#8212;</code> This is available for lacp runner. User can manually select the aggregator. </p>
+<p> <code>runner.active_port &#8212;</code> This is available for activebackup runner. User can manually select the active port.</dl>
+<dt><code>port add </code><i>portdev</i></dt>
+<dd>Takes port device name as argument. Adds port device into team.</dd>
+<dt><code>port remove </code><i>portdev</i></dt>
+<dd>Takes port device name as argument. Removes port device from team.</dd>
+<dt><code>port present </code><i>portdev</i></dt>
+<dd>Takes port device name as argument. Checks if the port device is present in team.</dd>
+<dt><code>port config update </code><i>portdev portconfig-string</i></dt>
+<dd>Takes port device name as the first argument and JSON format configuration string as the second argument. Updates port device configuration.</dd>
+<dt><code>port config dump </code><i>portdev</i></dt>
+<dd>Takes port device name as the first argument. Dumps port device JSON configuration to standard output.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-teamd/">teamd</a></code>(8), <code><a href="/docs/linux/man/8-teamnl/">teamnl</a></code>(8), <code><a href="/docs/linux/man/5-teamd-conf/">teamd.conf</a></code>(5)</p>
+<h2>Author</h2>
+<p>Jiri Pirko is the original author and current maintainer of libteam.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remapping Windows Key to Ctrl on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-map-win-key-to-ctrl-on-linux/">
+  <meta name="description" content="The Windows (Super) key can be remapped to function as an additional Ctrl key, useful if you work across multiple systems or prefer the extra modifier. The …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Remapping Windows Key to Ctrl on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-map-win-key-to-ctrl-on-linux/">
+  <meta property="og:description" content="The Windows (Super) key can be remapped to function as an additional Ctrl key, useful if you work across multiple systems or prefer the extra modifier. The …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/general-system-administration/">General System Administration</a>
+        </nav>
+        
+        <h1>Remapping Windows Key to Ctrl on Linux</h1>
+        <time class="post-date" datetime="2018-03-24T08:22:23Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The Windows (Super) key can be remapped to function as an additional Ctrl key, useful if you work across multiple systems or prefer the extra modifier. The approach varies significantly by display server and desktop environment.</p>
+<h2 id="gnome-wayland-and-x11">GNOME (Wayland and X11)</h2>
+<p>GNOME 3.38 and later have built-in remapping through Settings:</p>
+<ol>
+<li>Open Settings → Keyboard → Special Character Key Handling</li>
+<li>Under “Alt/Win Key Behavior”, select “Ctrl (L)” for the left Super key or “Ctrl (R)” for the right Super key</li>
+<li>Changes apply immediately</li>
+</ol>
+<p>This is the simplest approach on modern GNOME and works identically on Wayland and X11.</p>
+<h2 id="x11-with-xmodmap">X11 with xmodmap</h2>
+<p>For X11 environments (KDE, i3, OpenBox, XFCE, or older GNOME), use xmodmap:</p>
+<p>First, identify your Super key codes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xmodmap -pke <span class="p">|</span> grep Super
+</span></span></code></pre></div><p>You’ll likely see output like:</p>
+<pre><code>keycode 133 = Super_L ...
+keycode 134 = Super_R ...
+</code></pre>
+<p>Create or edit <code>~/.Xmodmap</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">keycode <span class="nv">133</span> <span class="o">=</span> Control_L
+</span></span><span class="line"><span class="cl">keycode <span class="nv">134</span> <span class="o">=</span> Control_R
+</span></span></code></pre></div><p>Ensure it loads at startup by adding this to <code>~/.xinitrc</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -f ~/.Xmodmap <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    xmodmap ~/.Xmodmap
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>Or if you’re using a display manager (gdm, sddm, lightdm), add it to <code>~/.xprofile</code> instead. Test the mapping immediately with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xmodmap ~/.Xmodmap
+</span></span></code></pre></div><h2 id="wayland-with-evremap">Wayland with evremap</h2>
+<p>xmodmap doesn’t work on Wayland. Use <strong>evremap</strong>, a modern remapper that works across Wayland and X11:</p>
+<p>Install on Arch:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S evremap
+</span></span></code></pre></div><p>On Debian/Ubuntu:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install evremap
+</span></span></code></pre></div><p>Create <code>~/.config/evremap/config.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">remaps</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">input</span> <span class="p">=</span> <span class="s2">&#34;Super_L&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">output</span> <span class="p">=</span> <span class="s2">&#34;Control_L&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">remaps</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">input</span> <span class="p">=</span> <span class="s2">&#34;Super_R&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">output</span> <span class="p">=</span> <span class="s2">&#34;Control_R&#34;</span>
+</span></span></code></pre></div><p>Enable and start the systemd service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl --user <span class="nb">enable</span> --now evremap.service
+</span></span></code></pre></div><p>Check status:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl --user status evremap.service
+</span></span></code></pre></div><p>If evremap isn’t in your repos, build from source:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cargo install evremap
+</span></span><span class="line"><span class="cl">sudo setcap <span class="nv">cap_sys_admin</span><span class="o">=</span>ep ~/.cargo/bin/evremap
+</span></span></code></pre></div><h2 id="kde-plasma">KDE Plasma</h2>
+<p>In System Settings → Keyboard → Advanced → Key Bindings, search for “Super” or “Meta” key bindings and modify as needed.</p>
+<p>Alternatively, edit <code>~/.config/kwinrc</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[ModifierOnlyShortcuts]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Meta</span><span class="o">=</span>
+</span></span></code></pre></div><p>Then restart KDE or the session.</p>
+<h2 id="tty-console-before-x11wayland">TTY Console (Before X11/Wayland)</h2>
+<p>To remap at the TTY level, use loadkeys:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;keycode 125 = Control&#34;</span> <span class="p">|</span> sudo tee /tmp/winkey.map
+</span></span><span class="line"><span class="cl">sudo loadkeys /tmp/winkey.map
+</span></span></code></pre></div><p>For persistence across reboots, edit your distribution’s keyboard configuration. On Debian/Ubuntu, add the mapping to <code>/etc/console-setup/boottime.kmap.gz</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo bash -c <span class="s1">&#39;echo &#34;keycode 125 = Control&#34; &gt;&gt; /etc/console-setup/boottime.kmap&#39;</span>
+</span></span><span class="line"><span class="cl">sudo update-initramfs -u
+</span></span></code></pre></div><p>On Fedora/RHEL, modify <code>/etc/vconsole.conf</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">KEYMAP</span><span class="o">=</span><span class="s">us</span>
+</span></span><span class="line"><span class="cl"><span class="na">FONT</span><span class="o">=</span><span class="s">latarcyrheb-sun16</span>
+</span></span></code></pre></div><p>Then add your custom keymap file and reference it.</p>
+<h2 id="verification">Verification</h2>
+<p>For X11, use xev to see key events:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xev
+</span></span></code></pre></div><p>Press the Win key and verify it reports as <code>Control_L</code> or <code>Control_R</code>. For Wayland, check <code>journalctl</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">journalctl --user -u evremap.service -f
+</span></span></code></pre></div><p>Press the Win key and watch the logs confirm the remap.</p>
+<h2 id="caveats">Caveats</h2>
+<ul>
+<li>Some applications (browsers, IDEs) may hardcode Super key behavior and ignore remaps</li>
+<li>Wayland support through evremap is mature, but some edge cases exist</li>
+<li>If using a desktop environment, always prefer Settings over manual config — they survive updates and usually override manual files</li>
+<li>Remapping at the TTY level affects all sessions but persists through kernel updates less reliably</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>evremap fails to start on Wayland:</strong>
+Ensure you have <code>cap_sys_admin</code> capability:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo setcap <span class="nv">cap_sys_admin</span><span class="o">=</span>ep <span class="k">$(</span>which evremap<span class="k">)</span>
+</span></span></code></pre></div><p><strong>xmodmap changes don’t persist:</strong>
+Verify your startup file is being sourced. Check <code>~/.bashrc</code> vs <code>~/.bash_profile</code> — graphical sessions use the latter. Alternatively, place a desktop file in <code>~/.config/autostart/</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Desktop Entry]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">Application</span>
+</span></span><span class="line"><span class="cl"><span class="na">Exec</span><span class="o">=</span><span class="s">xmodmap /home/username/.Xmodmap</span>
+</span></span><span class="line"><span class="cl"><span class="na">Hidden</span><span class="o">=</span><span class="s">false</span>
+</span></span><span class="line"><span class="cl"><span class="na">Name</span><span class="o">=</span><span class="s">xmodmap</span>
+</span></span></code></pre></div><p><strong>Mapping works in one app but not another:</strong>
+Some applications intercept Super before the window manager sees it. Check the application’s preferences for keybinding configuration or file a bug report.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

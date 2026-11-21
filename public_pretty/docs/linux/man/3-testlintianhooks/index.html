@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>testlintianhooks(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-testlintianhooks/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>testlintianhooks(3)</h1>
+
+
+
+
+
+<p>Test::Lintian::Hooks &ndash; hook routines for the test runners</p>
+<h2>Synopsis</h2><pre> use Test::Lintian::Hooks qw(sed_hook);
+ sed_hook('script.sed', 'input.file');</pre><h2>Description</h2>Various hook routines for the test runners.
+<h2>Functions</h2><dl COMPACT><dt>sed_hook(<font SIZE="-1">SCRIPT, SUBJECT, OUTPUT</font>)
+</dt><dd>Runs the parser sed on file <font SIZE="-1">SUBJECT</font> using the instructions in <font SIZE="-1">SCRIPT</font> and places the result in the file <font SIZE="-1">OUTPUT.</font>
+</dd><dt>sort_lines(<font SIZE="-1">UNSORTED, SORTED</font>)
+</dt><dd>Sorts the file <font SIZE="-1">UNSORTED</font> line by line and places the result into the file <font SIZE="-1">SORTED.</font>
+</dd><dt>calibrate(<font SIZE="-1">SCRIPT, ACTUAL, EXPECTED, CALIBRATED</font>)
+</dt><dd>Executes calibration script <font SIZE="-1">SCRIPT</font> with the three arguments <font SIZE="-1">EXPECTED, ACTUAL</font> and <font SIZE="-1">CALIBRATED,</font> all of which are file paths. Please note that the order of arguments in this function corresponds to the bookkeeping logic of <font SIZE="-1">ACTUAL</font> vs <font SIZE="-1">EXPECTED.</font> The order for the script is different.
+</dd><dt>find_missing_prerequisites(<font SIZE="-1">TEST_CASE</font>)
+</dt><dd>Returns a string with missing dependencies, if applicable, that would be necessary to run the test described by hash <font SIZE="-1">DESC.</font>
+</dd><dt>run_lintian(<font SIZE="-1">DESC, INPUT, INCLUDES, OUTPUT, DIR</font>)
+</dt><dd>Runs Lintian in directory <font SIZE="-1">DIR</font> on the input file <font SIZE="-1">INPUT</font> and a collects the output in file <font SIZE="-1">OUTPUT.</font> Any include directories in <font SIZE="-1">INCLUDES,</font> if present, are passed on. 
+</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

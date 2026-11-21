@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_error_wrap_errno_error(3) · Linux Manual Pages</title>
+<meta name="description" content="Error Handling Helpers –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_error_wrap_errno_error/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_error_wrap_errno_error(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> Error Handling Helpers &#8211; </p>
+<h3>Error Match</h3>
+<p> <code>globus_bool_t</code> <code>globus_error_errno_match</code> (globus_object_t *error, <code>globus_module_descriptor_t</code> *module, int system_errno) </p>
+<h3>Wrap Errno Error</h3>
+<p> globus_object_t * <code>globus_error_wrap_errno_error</code> (<code>globus_module_descriptor_t</code> *base_source, int system_errno, int type, const char *source_file, const char *source_func, int source_line, const char *short_desc_format,&#8230;) </p>
+<h2>Detailed Description</h2>
+<p> Helper functions for dealing with Globus Errno Error objects. </p>
+<p> This section defines utility functions for dealing with Globus Errno Error objects.</p>
+<h2>Function Documentation</h2>
+<h3><code>globus_bool_t</code> globus_error_errno_match (globus_object_t *error, <code>globus_module_descriptor_t</code> *module, intsystem_errno)</h3>
+<p> Check whether the error originated from a specific module and matches a specific errno. </p>
+<p> This function checks whether the error or any of it&#8217;s causative errors originated from a specific module and contains a specific errno. If the module descriptor is left unspecified this function will check for any error of the specified errno and vice versa. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>error</i> The error object for which to perform the check<br />
+ <i>module</i> The module descriptor to check for<br />
+ <i>system_errno</i> The errno to check for</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> GLOBUS_TRUE &#8211; the error matched the module and errno GLOBUS_FALSE &#8211; the error failed to match the module and errno</dd></dl>
+<h3>globus_object_t* globus_error_wrap_errno_error (<code>globus_module_descriptor_t</code> *base_source, intsystem_errno, inttype, const char *source_file, const char *source_func, intsource_line, const char *short_desc_format, &#8230;)</h3>
+<p> Allocate and initialize an error of type GLOBUS_ERROR_TYPE_GLOBUS which contains a causal error of type GLOBUS_ERROR_TYPE_ERRNO. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>base_source</i> Pointer to the originating module.<br />
+ <i>system_errno</i> The errno to use when generating the causal error.<br />
+ <i>type</i> The error type. We may reserve part of this namespace for common errors. Errors not in this space are assumed to be local to the originating module.<br />
+ <i>source_file</i> Name of file. Use <code>FILE</code><br />
+ <i>source_func</i> Name of function. Use _globus_func_name and declare your func with GlobusFuncName(&lt;name&gt;)<br />
+ <i>source_line</i> Line number. Use <code>LINE</code><br />
+ <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br />
+ <i>&#8230;</i> Arguments for the format string.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> The resulting error object. It is the user&#8217;s responsibility to eventually free this object using globus_object_free(). A globus_result_t may be obtained by calling globus_error_put() on this object.</dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus_common from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAI">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

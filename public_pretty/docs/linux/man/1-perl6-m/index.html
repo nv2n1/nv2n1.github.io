@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perl6-m(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perl6-m/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perl6-m(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>perl6 - Rakudo Perl 6 Compiler</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+perl6[switches][--][programfile][arguments]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>With no arguments, enters a <font SIZE="-1">REPL.</font> With a <tt>&quot;[programfile]&quot;</tt> or the <tt>&quot;-e&quot;</tt> option, compiles the given program and by default also executes the compiled code.</p>
+<p>-c                   check syntax only (runs BEGIN and CHECK blocks)
+&ndash;doc                extract documentation and print it as text
+-e program           one line of program, strict is enabled by default
+-h, &ndash;help           display this help text
+-n                   run program once for each line of input
+-p                   same as -n, but also print $_ at the end of lines
+-I path              adds the path to the module search path
+-M module            loads the module prior to running the program
+&ndash;target=[stage]     specify compilation stage to emit
+&ndash;optimize=[level]   use the given level of optimization (0..3)
+&ndash;encoding=[mode]    specify string encoding mode
+-o, &ndash;output=[name]  specify name of output file
+-v, &ndash;version        display version information
+&ndash;stagestats         display time spent in the compilation stages
+&ndash;ll-exception       display a low level backtrace on errors
+&ndash;profile            write profile information as HTML file (MoarVM)
+&ndash;profile-filename   provide a different filename (also allows .json)
+&ndash;doc=[module]       Use Pod::To::[module] to render inline documentation.</p>
+<p>Note that only boolean single-letter options may be bundled.</p>
+<p>The supported values for <tt>&quot;&ndash;target&quot;</tt> are:</p>
+ <pre><code>
+Target Backend Description == == == == == == = == == == == == =
+                                                                  parse all a representation of the parse tree
+                                                                      ast all an abstract syntax
+                                                                      tree(before optimizations)
+                                                                          optimize all an abstract syntax
+                                                                          tree(after optimizations)
+                                                                              mbc MoarVM MoarVM byte code
+                                                                                  jar JVM JVM archive
+</code></pre> 
+<p>For <tt>&quot;&ndash;profile-filename&quot;</tt>, specifying a name ending in <tt>&quot;.json&quot;</tt> will write a raw <font SIZE="-1">JSON</font> profile dump. The default if this is omitted is <tt>&quot;profile-</tt>[timestamp]<tt>.html&quot;</tt>.</p>
+<h2>ENVIRONMENT VARIABLES</h2>
+<p>Rakudo&rsquo;s behavior can be tweaked by a (growing) number of environment variables; this section attempts to document all those currently in use.</p>
+<h3>Module Loading</h3>
+<dl>
+<dt>&quot;RAKUDOLIB&quot;, &quot;PERL6LIB&quot; (<i>Str</i>; <i>src/core/Inc.pm</i>)
+</dt><dd> Appends a comma-delimited list of paths to <tt>@INC</tt>. <tt>&quot;RAKUDOLIB&quot;</tt> is evaluated first.
+</dd><dt>&quot;RAKUDO_MODULE_DEBUG&quot; (<i>Bool</i>; <i>src/Perl6/ModuleLoader.pm</i>)
+</dt><dd> Causes the module loader to print debugging information to standard error.</dd></dl>
+<h3>Error Message Verbosity and Strictness</h3>
+<dl>
+<dt>&quot;RAKUDO_NO_DEPRECATIONS&quot; (<i>Bool</i>; <i>src/core/Deprecations.pm</i>)
+</dt><dd> If true, suppresses deprecation warnings triggered by the <tt>&quot;is DEPRECATED&quot;</tt> trait.
+</dd><dt>&quot;RAKUDO_DEPRECATIONS_FATAL&quot; (<i>Bool</i>; <i>src/core/Deprecations.pm</i>)
+</dt><dd> If true, deprecation warnings become thrown exceptions.
+</dd><dt>&quot;RAKUDO_VERBOSE_STACKFRAME&quot; (<i>UInt</i>; <i>src/core/Backtrace.pm</i>)
+</dt><dd> Displays source code in stack frames surrounded by the specified number of lines of context.
+</dd><dt>&quot;RAKUDO_BACKTRACE_SETTING&quot; (<i>Bool</i>; <i>src/core/Backtrace.pm</i>)
+</dt><dd> Controls whether .setting files are included in backtraces.</dd></dl>
+<h3>Affecting Precompilation</h3>
+<dl>
+<dt>&quot;RAKUDO_PREFIX&quot; (<i>Str</i>; <i>src/core/CompUnit/RepositoryRegistry.pm</i>)
+</dt><dd> When this is set, Rakudo will look for the standard repositories (perl, vendor, site) in the specified directory. This is intended as an escape hatch for build-time bootstrapping issues, where Rakudo may be built as an unprivileged user without write access to the runtime paths in <font SIZE="-1">NQP</font>'s config.
+</dd><dt>&quot;RAKUDO_PRECOMP_DIST&quot; (<i>src/core/CompUnit/PrecompilationRepository.pm</i>)
+</dt><dd>
+</dd><dt>&quot;RAKUDO_PRECOMP_LOADING&quot; (<i>src/core/CompUnit/PrecompilationRepository.pm</i>)
+</dt><dd>
+</dd><dt>&quot;RAKUDO_PRECOMP_WITH&quot; (<i>src/core/CompUnit/PrecompilationRepository.pm</i>)
+</dt><dd> These are internal variables for passing serialized state to precompilation jobs in child processes. Please do not set them manually.</dd></dl>
+<h3>Other</h3>
+<dl>
+<dt>&quot;RAKUDO_ERROR_COLOR&quot; (<i>Bool</i>; <i>src/core/Exception.pm</i>)
+</dt><dd> Controls whether to emit <font SIZE="-1">ANSI</font> codes for error highlighting. Defaults to true if unset, except on Win32.
+</dd><dt>&quot;RAKUDO_MAX_THREADS&quot; (<i>UInt</i>; <i>src/core/ThreadPoolScheduler.pm</i>)
+</dt><dd> Override the default maximum number of threads used by a thread pool.
+</dd><dt>&quot;TMPDIR&quot;, &quot;TEMP&quot;, &quot;TMP&quot; (<i>Str</i>; <i>src/core/IO/Spec/</i>)
+</dt><dd> The <tt>&quot;IO::Spec::Unix.tmpdir&quot;</tt> method will return <tt>$TMPDIR</tt> if it points to a directory with full access permissions for the current user, with a fallback default of <tt>'/tmp'</tt>. 
+ <tt>&quot;IO::Spec::Cygwin&quot;</tt> and <tt>&quot;IO::Spec::Win32&quot;</tt> use more Win32-appropriate lists which also include the <tt>&quot;%TEMP%&quot;</tt> and <tt>&quot;%TMP%&quot;</tt> environment variables.
+</dd><dt>&quot;PATH&quot;, &quot;Path&quot; (<i>Str</i>; <i>src/core/IO/Spec/</i>)
+</dt><dd> The <tt>&quot;IO::Spec::Unix.path&quot;</tt> method splits <tt>$PATH</tt> as a shell would; i.e. as a colon-separated list. <tt>&quot;IO::Spec::Cygwin&quot;</tt> inherits this from <tt>&quot;IO::Spec::Unix&quot;</tt>. 
+ <tt>&quot;IO::Spec::Win32.path&quot;</tt> will read the first defined of either <tt>&quot;%PATH%&quot;</tt> or <tt>&quot;%Path%&quot;</tt> as a semicolon-delimited list.</dd></dl>
+<h2>AUTHORS</h2>
+<p>Written by the Rakudo contributors, see the <font SIZE="-1">CREDITS</font> file.</p>
+<p>This manual page was written by Reini Urban, Moritz Lenz and the Rakudo contributors.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

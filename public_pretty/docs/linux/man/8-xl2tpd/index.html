@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xl2tpd(8) · Linux Manual Pages</title>
+<meta name="description" content="xl2tpd – Layer 2 Tunnelling Protocol Daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-xl2tpd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>xl2tpd(8)</h1>
+
+
+
+
+
+<p>xl2tpd &#8211; Layer 2 Tunnelling Protocol Daemon</p>
+<h2>Description</h2>
+<p>A Layer 2 Tunneling Protocol VPN client/daemon for Linux and other POSIX-based OSs. Based off of L2TPd 0.61 from<br />
+&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.marko.net/l2tp">http://www.marko.net/l2tp</a>&nbsp;<wbr> and patches collected by Jacco de Leeuw at<br />
+&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.jacco2.dds.nl/networking/openswan-l2tp.html">http://www.jacco2.dds.nl/networking/openswan-l2tp.html</a> Currently maintained by Xelerance<br />
+&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.xelerance.com/software/xl2tpd/">http://www.xelerance.com/software/xl2tpd/</a> xl2tpd implements the Layer 2 Tunnelling Protocol, defined by RFC 2661. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-D</code></dt>
+<dd>This option prevents xl2tpd from detaching from the terminal and daemonizing. </dd>
+<dt><code>-l</code></dt>
+<dd>This option tells xl2tpd to use syslog for logging even when <code>-D</code> was specified. </dd>
+<dt><code>-c &lt;config file&gt;</code></dt>
+<dd>Tells xl2tpd to use an alternate config file. Default is /etc/xl2tpd/xl2tpd.conf. Fallback configuration file is /etc/l2tpd/l2tpd.conf </dd>
+<dt><code>-s &lt;secret file&gt;</code></dt>
+<dd>Tells xl2tpd to use an alternate &quot;secrets&quot; file. Default is /etc/xl2tpd/l2tp-secrets </dd>
+<dt><code>-p &lt;pid file&gt;</code></dt>
+<dd>Tells xl2tpd to use an alternate pid file. Default is /var/run/xl2tpd/xl2tpd.pid </dd>
+<dt><code>-C &lt;control file&gt;</code></dt>
+<dd>Tells xl2tpd to use an alternate control file. Default is /var/run/xl2tpd/l2tp-control </dd>
+</dl>
+<h2>Files</h2>
+<p>/etc/xl2tpd/xl2tpd.conf /etc/xl2tpd/l2tp-secrets /var/run/xl2tpd/l2tp-control</p>
+<h2>Bugs</h2>
+<p>Please address bugs and comment to xl2tpd [at] lists.xelerance.com</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/5-xl2tpd-conf/">xl2tpd.conf</a>(5)</p>
+<h2>Authors</h2>
+<p>Forked from l2tpd by Xelerance (<a rel="nofollow" href="http://www.xelerance.com/software/xl2tpd/">http://www.xelerance.com/software/xl2tpd/</a> </p>
+<p> Michael Richardson &lt;mcr [at] xelerance.com&gt; Paul Wouters &lt;paul [at] xelerance.com&gt; </p>
+<p> Many thanks to Jacco de Leeuw &lt;jacco2 [at] dds.nl&gt; for maintaining l2tpd. </p>
+<p> Previous development was hosted at sourceforge (<a rel="nofollow" href="http://www.sourceforge.net/projects/l2tpd)">http://www.sourceforge.net/projects/l2tpd)</a> by: </p>
+<p> Scott Balmos &lt;sbalmos [at] iglou.com&gt;<br />
+ David Stipp &lt;dstipp [at] one.net&gt;<br />
+ Jeff McAdams &lt;jeffm [at] iglou.com&gt; </p>
+<p> Based off of l2tpd version 0.60<br />
+ Copyright (C)1998 Adtran, Inc.<br />
+ Mark Spencer &lt;markster [at] marko.net&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

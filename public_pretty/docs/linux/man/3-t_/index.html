@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>t_(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::Lattice – Lattice (tree, finite-differences) base class">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-t_/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>t_(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::Lattice &#8211; Lattice (tree, finite-differences) base class </p>
+<h2>Synopsis</h2>
+<pre><code>virtual void initialize (DiscretizedAsset &amp;, Time time) const =0
+initialize an asset at the given time.
+virtual void rollback (DiscretizedAsset &amp;, Time to) const =0
+virtual void partialRollback (DiscretizedAsset &amp;, Time to) const =0
+virtual Real presentValue (DiscretizedAsset &amp;) const =0
+computes the present value of an asset.
+Protected Attributes</code></pre>
+<p> Inherited by <code>TreeLattice&lt; Impl &gt;</code>, <code>TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</code>, <code>TreeLattice&lt; Impl &gt;</code>, <code>TreeLattice&lt; OneFactorModel::ShortRateTree &gt;</code>, and <code>TreeLattice&lt; TwoFactorModel::ShortRateTree &gt;</code>.</p>
+<h3>Public Member Functions</h3>
+<p>virtual void initialize (DiscretizedAsset &amp;, Time time) const =0</p>
+<p>initialize an asset at the given time.</p>
+<p>virtual void rollback (DiscretizedAsset &amp;, Time to) const =0</p>
+<p>virtual void partialRollback (DiscretizedAsset &amp;, Time to) const =0</p>
+<p>virtual Real presentValue (DiscretizedAsset &amp;) const =0</p>
+<p>computes the present value of an asset.</p>
+<p>Protected Attributes <code>Inspectors</code><br />
+ virtual void initialize (DiscretizedAsset &amp;, Time time) const =0</p>
+<p>initialize an asset at the given time.</p>
+<p>virtual void rollback (DiscretizedAsset &amp;, Time to) const =0</p>
+<p>virtual void partialRollback (DiscretizedAsset &amp;, Time to) const =0</p>
+<p>virtual Real presentValue (DiscretizedAsset &amp;) const =0</p>
+<p>computes the present value of an asset.</p>
+<p>Protected Attributes <code>Numerical method interface</code><br />
+ These methods are to be used by discretized assets and must be overridden by developers implementing numerical methods. Users are advised to use the corresponding methods of <code>DiscretizedAsset</code> instead. </p>
+<pre><code>virtual void initialize (DiscretizedAsset &amp;, Time time) const =0
+initialize an asset at the given time.
+virtual void rollback (DiscretizedAsset &amp;, Time to) const =0
+virtual void partialRollback (DiscretizedAsset &amp;, Time to) const =0
+virtual Real presentValue (DiscretizedAsset &amp;) const =0
+computes the present value of an asset.
+Protected Attributes</code></pre>
+<p> <code>TimeGrid</code> <code>t_</code></p>
+<h2>Detailed Description</h2>
+<p>Lattice (tree, finite-differences) base class</p>
+<h2>Member Function Documentation</h2>
+<h3>virtual void rollback (<code>DiscretizedAsset</code> &amp;, Time to) const [pure virtual]</h3>
+<p>Roll back an asset until the given time, performing any needed adjustment. </p>
+<p> Implemented in <code>TreeLattice&lt; Impl &gt;</code>, <code>TsiveriotisFernandesLattice&lt; T &gt;</code>, <code>TreeLattice&lt; Impl &gt;</code>, <code>TreeLattice&lt; OneFactorModel::ShortRateTree &gt;</code>, <code>TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</code>, and <code>TreeLattice&lt; TwoFactorModel::ShortRateTree &gt;</code>.</p>
+<h3>virtual void partialRollback (<code>DiscretizedAsset</code> &amp;, Time to) const [pure virtual]</h3>
+<p>Roll back an asset until the given time, but do not perform the final adjustment. </p>
+<p> <code>Warning</code></p>
+<dl>
+<dd>In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you&#8217;ll have to replace calls such as:</dd></dl>
+<pre> method-&gt;rollAlmostBack(asset,t);</pre>
+<p>&nbsp;<wbr>with the two statements:&nbsp;<wbr> </p>
+<pre> method-&gt;partialRollback(asset,t);
+ asset-&gt;preAdjustValues();</pre>
+<p>&nbsp;<wbr> </p>
+<p> Implemented in <code>TreeLattice&lt; Impl &gt;</code>, <code>TsiveriotisFernandesLattice&lt; T &gt;</code>, <code>TreeLattice&lt; Impl &gt;</code>, <code>TreeLattice&lt; OneFactorModel::ShortRateTree &gt;</code>, <code>TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</code>, and <code>TreeLattice&lt; TwoFactorModel::ShortRateTree &gt;</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux Kernel 4.9.60: What’s New - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/linux-kernel-4-9-60-release/">
+  <meta name="description" content="The Linux 4.9.60 stable release was published on November 2, 2017, introducing 24 fixes and improvements across 64,224 lines of code changes compared to the 4.9 …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Linux Kernel 4.9.60: What’s New">
+  <meta property="og:url" content="https://www.systutorials.com/linux-kernel-4-9-60-release/">
+  <meta property="og:description" content="The Linux 4.9.60 stable release was published on November 2, 2017, introducing 24 fixes and improvements across 64,224 lines of code changes compared to the 4.9 …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/kernel-release-notes/">Kernel History: Release Notes</a>
+        </nav>
+        
+        <h1>Linux Kernel 4.9.60: What’s New</h1>
+        <time class="post-date" datetime="2021-03-07T06:51:12Z">March 7, 2021</time> <span class="post-author">&middot; <a href="/author/tony/">Tony</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The Linux 4.9.60 stable release was published on November 2, 2017, introducing 24 fixes and improvements across 64,224 lines of code changes compared to the 4.9 baseline. This point release addresses critical security vulnerabilities, buffer overrun issues, and device driver fixes that affected several subsystems.</p>
+<p>You can find the source code in the <a href="https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/tag/?h=v4.9.60" rel="nofollow noopener" target="_blank">linux-stable tree for 4.9.60</a> or download the <a href="https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.9.60.tar.xz" rel="nofollow noopener" target="_blank">release tarball</a> and <a href="https://www.kernel.org/pub/linux/kernel/v4.x/patch-4.9.60.xz" rel="nofollow noopener" target="_blank">patch file</a> directly from kernel.org.</p>
+<h2 id="notable-fixes-and-changes">Notable Fixes and Changes</h2>
+<h3 id="security-fixes">Security Fixes</h3>
+<p><strong>assoc_array: Fix node-splitting CVE-2017-12193</strong></p>
+<p>Commit ea6789980fdaa610d7eb63602c746bf6ec70cd2b fixed a critical bug in the generic associative array implementation that could lead to kernel NULL pointer dereference. When adding a new leaf to a full node requiring internal reorganization, the code incorrectly set pointers that would recurse back into the same node rather than linking to the newly created parent node. This manifested as:</p>
+<pre><code>BUG: unable to handle kernel NULL pointer dereference at 0x0000000000000010
+IP: assoc_array_apply_edit+0x59/0xe5
+</code></pre>
+<p>The fix removes buggy special-case code and delegates to the more robust <code>split_node</code> path, which correctly handles all tree restructuring scenarios.</p>
+<p><strong>eCryptfs revoked key dereference fix</strong></p>
+<p>The eCryptfs subsystem failed to validate that authentication token keys weren’t revoked before dereferencing their payloads. A revoked key has a NULL payload, and though <code>request_key()</code> skips revoked keys, a race window existed where keys could be revoked before acquisition of the key semaphore. The fix adds a NULL payload check in <code>ecryptfs_get_key_payload_data()</code> and returns <code>-EKEYREVOKED</code> on failure.</p>
+<h3 id="input-device-and-hid-fixes">Input Device and HID Fixes</h3>
+<p><strong>Input: gtco out-of-bounds access</strong></p>
+<p>The Wacom gtco device driver’s <code>parse_hid_report_descriptor()</code> had an insufficient bounds check in its main loop. While checking <code>i &lt; length</code> for single-byte reads, the loop body attempted multi-byte reads without verifying sufficient buffer space remained, causing out-of-bounds memory access.</p>
+<p><strong>Input: elan_i2c ACPI table expansion</strong></p>
+<p>Added ELAN0611 device ID to the elan_i2c driver’s ACPI match table to support Lenovo IdeaPad 320-15IKB and IdeaPad 520 touchpads that were previously unrecognized.</p>
+<p><strong>ALSA: hda/realtek ALC236/ALC3204 support</strong></p>
+<p>Added initial codec support for Realtek ALC236 and ALC3204 audio codecs with proper headset microphone mode detection. A subsequent fix specifically addressed Dell laptop models using ALC236 where headset microphone functionality was non-functional.</p>
+<h3 id="filesystem-and-storage-fixes">Filesystem and Storage Fixes</h3>
+<p><strong>fuse: READDIRPLUS entry skipping</strong></p>
+<p>When fuse’s READDIRPLUS implementation encountered a signal interrupting directory enumeration, it incorrectly updated the directory position context after a failed <code>dir_emit()</code>, causing the subsequent read to skip one directory entry. The fix ensures context position only advances on successful directory entry emission.</p>
+<p><strong>SCSI sg driver off-by-one</strong></p>
+<p>A previous fix for an off-by-one error in <code>sg_fill_request_table()</code> was accidentally reintroduced during code refactoring. This affected the maximum number of SCSI generic requests that could be allocated.</p>
+<p><strong>zfcp storage adapter recovery race</strong></p>
+<p>The zfcp Fibre Channel driver’s error recovery code accessed uninitialized parent pointers in <code>zfcp_erp_action</code> structures during recovery trace logging. When fresh zfcp objects were added to parent lists, accessing their erp_action fields before the first recovery enqueue could dereference NULL pointers. The fix initializes all parent pointers immediately upon <code>zfcp_erp_action</code> initialization, before the container object becomes externally accessible.</p>
+<h3 id="can-bus-and-networking">CAN Bus and Networking</h3>
+<p><strong>kvaser_usb message handling</strong></p>
+<p>Two fixes for Kvaser CAN USB adapters:</p>
+<ul>
+<li>Ignore <code>CMD_FLUSH_QUEUE_REPLY</code> messages from Leaf v2 firmware (v4.1.844+) that switched queue flushing from asynchronous to synchronous, preventing “Unhandled message (68)” warnings</li>
+<li>Corrected error reporting in <code>kvaser_usb_flush_queue()</code> to print the correct return value on failure</li>
+</ul>
+<p><strong>sun4i CAN loopback mode</strong></p>
+<p>Fixed loopback mode operation by setting the correct hardware flag and removing an improper “presume” mode configuration.</p>
+<p><strong>cfg80211 wireless connect/disconnect</strong></p>
+<p>Improved wireless connection state machine handling:</p>
+<ul>
+<li>Prevent connection attempts to a different SSID while already connected or connecting</li>
+<li>Set previous BSSID for reassociation attempts even when the driver supports the connect() callback</li>
+<li>Retain SSID length on connection failures instead of zeroing it, preventing invalid state</li>
+<li>Reset SSID length properly during disconnection unless an explicit disconnected event is expected</li>
+</ul>
+<h3 id="driver-and-subsystem-fixes">Driver and Subsystem Fixes</h3>
+<p><strong>Broadcom QSPI use-after-free</strong></p>
+<p>The bcm_qspi SPI driver had inverted error handling in its probe function that could access device IDs before allocation. An additional error path label (<code>qspi_resource_err</code>) now properly sequences cleanup operations.</p>
+<p><strong>fan53555 regulator I2C IDs</strong></p>
+<p>The fan53555 voltage regulator driver used a wildcard I2C device ID (<code>syr82x</code>) that prevented udev from properly matching the driver module to actual devices. Corrected the ID table to match device tree descriptions: <code>syr827</code> and <code>syr828</code>.</p>
+<p><strong>SPI spidev ioctl header</strong></p>
+<p>The spidev user-space interface header was missing an include for <code>linux/ioctl.h</code>, causing the <code>SPI_IOC_MESSAGE()</code> macro to reference undefined <code>_IOC_SIZEBITS</code> when building against musl libc.</p>
+<p><strong>xhci USB host controller</strong></p>
+<p>The xhci driver’s <code>xhci_stop_device()</code> function called <code>xhci_queue_stop_endpoint()</code> without checking return values, which could fail if the hardware was already halted. This caused indefinite waits for command completion that never occurred, creating deadlock conditions. The fix checks each return value and bails out on error, also preventing command structure memory leaks.</p>
+<p><strong>AMD Radeon powerplay initialization</strong></p>
+<p>An uninitialized <code>refresh_rate</code> variable in AMD’s powerplay display gap configuration caused VCE ring test failures during system sleep (S3) on Polaris10 GPUs.</p>
+<h3 id="other-improvements">Other Improvements</h3>
+<p><strong>Ceph distributed filesystem</strong></p>
+<p>Fixed a spinlock context imbalance in <code>try_flush_caps()</code> where certain code paths exited with the lock still held, potentially causing scheduling under spinlock.</p>
+<p><strong>Xen grant device mapping</strong></p>
+<p>Partial gntdev mmap failures could leave cleanup data uninitialized, leading to out-of-bounds array access during subsequent unmap operations. The fix initializes required unmapping state earlier in the function.</p>
+<p><strong>KVM PPC virtualization</strong></p>
+<p>Fixed a kernel oops when checking <code>KVM_CAP_PPC_HTM</code> capability through the global KVM file descriptor, which passed a NULL KVM context to code expecting a valid virtual machine pointer. Now uses the <code>hv_enabled</code> fallback consistently.</p>
+<p><strong>Workqueue locking refactor</strong></p>
+<p>Replaced the <code>pool-&gt;manager_arb</code> mutex with a simple flag (<code>POOL_MANAGER_ACTIVE</code>) to eliminate a HARDIRQ-safe to HARDIRQ-unsafe lock ordering violation detected by lockdep. Mutex unlock operations while holding irq spinlocks are inherently unsafe and were creating potential inversion deadlock scenarios.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

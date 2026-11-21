@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rdma-link(8) · Linux Manual Pages</title>
+<meta name="description" content="rdma-link – rdma link configuration">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-rdma-link/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>rdma-link(8)</h1>
+
+
+
+
+
+<p>rdma-link &#8211; rdma link configuration</p>
+<h2>Synopsis</h2>
+<pre><code>devlink
+[ OPTIONS ]
+link
+{ COMMAND |
+    help }
+OPTIONS := {
+    -V[ersion] |
+    -d[etails] }</code></pre>
+<p> <code>rdma link show</code> [ <i>DEV/PORT_INDEX</i> ]<br />
+ <code>rdma link add</code> <code>NAME</code> <code>type</code> <code>TYPE</code> <code>netdev</code> <code>NETDEV</code><br />
+ <code>rdma link delete</code> NAME<br />
+ <code>rdma link help</code> </p>
+<h2>Description</h2>
+<h3>rdma link show &#8211; display rdma link attributes</h3>
+<p><i>DEV/PORT_INDEX</i> &#8211; specifies the RDMA link to show. If this argument is omitted all links are listed.</p>
+<h3>rdma link add NAME type TYPE netdev NETDEV &#8211; add an rdma link for the specified type to the network device</h3>
+<p><code>NAME</code> &#8211; specifies the new name of the rdma link to add <code>TYPE</code> &#8211; specifies which rdma type to use. Link types: <code>rxe</code> &#8211; Soft RoCE driver <code>siw</code> &#8211; Soft iWARP driver <code>NETDEV</code> &#8211; specifies the network device to which the link is bound</p>
+<h3>rdma link delete NAME &#8211; delete an rdma link</h3>
+<p><code>NAME</code> &#8211; specifies the name of the rdma link to delete </p>
+<h2>Examples</h2>
+<p>rdma link show</p>
+<dl>
+<dd>Shows the state of all rdma links on the system.</dd></dl>
+<p> rdma link show mlx5_2/1</p>
+<dl>
+<dd>Shows the state of specified rdma link.</dd></dl>
+<p> rdma link add rxe_eth0 type rxe netdev eth0</p>
+<dl>
+<dd>Adds a RXE link named rxe_eth0 to network device eth0</dd></dl>
+<p> rdma link del rxe_eth0</p>
+<dl>
+<dd>Removes RXE link rxe_eth0</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-rdma/">rdma</a></code>(8), <code><a href="/docs/linux/man/8-rdma-dev/">rdma-dev</a></code>(8), <code><a href="/docs/linux/man/8-rdma-resource/">rdma-resource</a></code>(8), <code><a href="/docs/linux/man/8-rdma-statistic/">rdma-statistic</a></code>(8), </p>
+<h2>Author</h2>
+<p>Leon Romanovsky &lt;leonro [at] mellanox.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

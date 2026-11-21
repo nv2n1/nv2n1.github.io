@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xfs_logprint(8) · Linux Manual Pages</title>
+<meta name="description" content="xfs_logprint – print the log of an XFS filesystem">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-xfs_logprint/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>xfs_logprint(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>xfs_logprint &#8211; print the log of an XFS filesystem</p>
+<h2>Synopsis</h2>
+<p><code>xfs_logprint</code> [ <i>options</i> ] <i>device</i></p>
+<h2>Description</h2>
+<p><code>xfs_logprint</code> prints the log of an XFS filesystem (see <code><a href="/docs/linux/man/5-xfs/">xfs</a></code>(5)). The <i>device</i> argument is the pathname of the partition or logical volume containing the filesystem. The <i>device</i> can be a regular file if the <code>-f</code> option is used. The contents of the filesystem remain undisturbed. There are two major modes of operation in <code>xfs_logprint</code>. </p>
+<p> One mode is better for filesystem operation debugging. It is called the transactional view and is enabled through the <code>-t</code> option. The transactional view prints only the portion of the log that pertains to recovery. In other words, it prints out complete transactions between the tail and the head. This view tries to display each transaction without regard to how they are split across log records. </p>
+<p> The second mode starts printing out information from the beginning of the log. Some error blocks might print out in the beginning because the last log record usually overlaps the oldest log record. A message is printed when the physical end of the log is reached and when the logical end of the log is reached. A log record view is displayed one record at a time. Transactions that span log records may not be decoded fully.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-b</code></dt>
+<dd>Extract and print buffer information. Only used in transactional view.</dd>
+<dt><code>-c</code></dt>
+<dd>Attempt to continue when an error is detected.</dd>
+<dt><code>-C</code><i> filename</i></dt>
+<dd>Copy the log from the filesystem to the file <i>filename</i>. The log itself is not printed.</dd>
+<dt><code>-d</code></dt>
+<dd>Dump the log from front to end, printing where each log record is located on disk.</dd>
+<dt><code>-D</code></dt>
+<dd>Do not decode anything; just print data.</dd>
+<dt><code>-e</code></dt>
+<dd>Exit when an error is found in the log. Normally, <code>xfs_logprint</code> tries to continue and unwind from bad logs. However, sometimes it just dies in bad ways. Using this option prevents core dumps.</dd>
+<dt><code>-f</code></dt>
+<dd>Specifies that the filesystem image to be processed is stored in a regular file at <i>device</i> (see the <code><a href="/docs/linux/man/8-mkfs-xfs/">mkfs.xfs</a></code>(8) <code>-d</code> <i>file</i> option). This might happen if an image copy of a filesystem has been made into an ordinary file with <code><a href="/docs/linux/man/8-xfs_copy/">xfs_copy</a></code>(8).</dd>
+<dt><code>-l</code><i> logdev</i></dt>
+<dd>External log device. Only for those filesystems which use an external log.</dd>
+<dt><code>-i</code></dt>
+<dd>Extract and print inode information. Only used in transactional view.</dd>
+<dt><code>-q</code></dt>
+<dd>Extract and print quota information. Only used in transactional view.</dd>
+<dt><code>-n</code></dt>
+<dd>Do not try and interpret log data; just interpret log header information.</dd>
+<dt><code>-o</code></dt>
+<dd>Also print buffer data in hex. Normally, buffer data is just decoded, so better information can be printed.</dd>
+<dt><code>-s</code><i> start-block</i></dt>
+<dd>Override any notion of where to start printing.</dd>
+<dt><code>-t</code></dt>
+<dd>Print out the transactional view.</dd>
+<dt><code>-v</code></dt>
+<dd>Print &quot;overwrite&quot; data.</dd>
+<dt><code>-V</code></dt>
+<dd>Prints the version number and exits.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-mkfs-xfs/">mkfs.xfs</a></code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

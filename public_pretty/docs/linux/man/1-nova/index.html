@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nova(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nova/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nova(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p>nova - OpenStack Nova command line client</p>
+<h2>SYNOPSIS</h2>
+<p><i>nova</i> [options] &lt;command&gt; [command-options]</p>
+<p><i>nova help</i></p>
+<p><i>nova help</i> &lt;command&gt;</p>
+<h2>DESCRIPTION</h2>
+<p><i>nova</i> is a command line client for controlling OpenStack Nova, the cloud computing fabric controller. It implements 100% of the Nova API, allowing management of instances, images, quotas and much more.</p>
+<p>Before you can issue commands with <i>nova</i>, you must ensure that your environment contains the necessary variables so that you can prove to the CLI who you are and what credentials you have to issue the commands. See <i>Getting Credentials for a CLI</i> section of <i>OpenStack CLI Guide</i> for more info.</p>
+<p>See <i>OpenStack Nova CLI Guide</i> for a full-fledged guide.</p>
+<h2>OPTIONS</h2>
+<p>To get a list of available commands and options run:</p>
+ <pre>
+nova help
+</pre> 
+<p>To get usage and options of a command run:</p>
+ <pre>
+nova help &lt;command&gt;
+</pre>
+<h2>EXAMPLES</h2>
+<p>Get information about boot command:</p>
+ <pre>
+nova help boot
+</pre> 
+<p>List available images:</p>
+ <pre>
+nova image-list
+</pre> 
+<p>List available flavors:</p>
+ <pre>
+nova flavor-list
+</pre> 
+<p>Launch an instance:</p>
+ <pre>
+nova boot myserver --image some-image --flavor 2
+</pre> 
+<p>View instance information:</p>
+ <pre>
+nova show myserver
+</pre> 
+<p>List instances:</p>
+ <pre>
+nova list
+</pre> 
+<p>Terminate an instance:</p>
+ <pre>
+nova delete myserver
+</pre>
+<h2>SEE ALSO</h2>
+<p>OpenStack Nova CLI Guide: <i><a rel="nofollow" HREF="http://docs.openstack.org/cli-reference/content/novaclient_commands.html"><a href="http://docs.openstack.org/cli-reference/content/novaclient_commands.html">http://docs.openstack.org/cli-reference/content/novaclient_commands.html</a></a></i></p>
+<h2>BUGS</h2>
+<p>Nova client is hosted in Launchpad so you can view current bugs at <i><a rel="nofollow" HREF="https://bugs.launchpad.net/python-novaclient/"><a href="https://bugs.launchpad.net/python-novaclient/">https://bugs.launchpad.net/python-novaclient/</a></a></i>.</p>
+<h2>AUTHOR</h2>
+<p>OpenStack Contributors</p>
+<h2>COPYRIGHT</h2>
+<p>OpenStack Contributors</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

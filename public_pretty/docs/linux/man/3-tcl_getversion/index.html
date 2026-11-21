@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcl_getversion(3) · Linux Manual Pages</title>
+<meta name="description" content="Tcl_GetVersion – get the version of the library at runtime">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tcl_getversion/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tcl_getversion(3)</h1>
+
+
+
+
+
+<p>Tcl_GetVersion &#8211; get the version of the library at runtime </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tcl.h&gt;</code>
+<code>Tcl_GetVersion</code>(<i>major, minor, patchLevel, type</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>int <i>*major</i> (out) Major version number of the Tcl library.</dd>
+<dd>int <i>*minor</i> (out) Minor version number of the Tcl library.</dd>
+<dd>int <i>*patchLevel</i> (out) The patch level of the Tcl library (or alpha or beta number).</dd>
+<dd>Tcl_ReleaseType <i>*type</i> (out) The type of release, also indicates the type of patch level. Can be one of <code>TCL_ALPHA_RELEASE</code>, <code>TCL_BETA_RELEASE</code>, or <code>TCL_FINAL_RELEASE</code>. </dd>
+</dl>
+<h2>Description</h2>
+<p><code>Tcl_GetVersion</code> should be used to query the version number of the Tcl library at runtime. This is useful when using a dynamically loaded Tcl library or when writing a stubs-aware extension. For instance, if you write an extension that is linked against the Tcl stubs library, it could be loaded into a program linked to an older version of Tcl than you expected. Use <code>Tcl_GetVersion</code> to verify that fact, and possibly to change the behavior of your extension. </p>
+<p> <code>Tcl_GetVersion</code> accepts NULL for any of the arguments. For instance if you do not care about the <i>patchLevel</i> of the library, pass a NULL for the <i>patchLevel</i> argument. </p>
+<h2>Keywords</h2>
+<p>version, patchlevel, major, minor, alpha, beta, release</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

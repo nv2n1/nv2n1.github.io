@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdshared_ptrget(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdshared_ptrget/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdshared_ptrget(3)</h1>
+
+
+
+
+
+<p>std::shared_ptr&lt;T&gt;::get - std::shared_ptr&lt;T&gt;::get</p>
+<h2>Synopsis</h2>
+<p>T* get() const noexcept; <i>(until C++17)</i>
+element_type* get() const noexcept; <i>(since C++17)</i>
+Returns the stored pointer.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>The stored pointer.</p>
+<h2>Notes</h2>
+<p>A shared_ptr may share ownership of an object while storing a pointer to another object. get() returns the stored pointer, not the managed pointer.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;memory&gt;
+#include &lt;string_view&gt;
+void output(std::string_view msg, int const *pInt)
+{
+std::cout &lt;&lt; msg &lt;&lt; *pInt &lt;&lt; &quot;\n&quot;;
+}
+int main()
+{
+int *pInt = new int(42);
+std::shared_ptr&lt;int&gt; pShared = std::make_shared&lt;int&gt;(42);
+output(&quot;Naked pointer &quot;, pInt);
+// output(&quot;Shared pointer &quot;, pShared); // compiler error
+output(&quot;Shared pointer with get() &quot;, pShared.get());
+delete pInt;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Naked pointer 42
+ <wbr> Shared pointer with get() 42</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> dereferences the stored pointer
+operator* <i>(public member function)</i>
+operator-&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

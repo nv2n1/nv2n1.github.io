@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>puppetdoc(8) · Linux Manual Pages</title>
+<meta name="description" content="–">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-puppetdoc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>puppetdoc(8)</h1>
+
+
+
+
+
+<p>&nbsp;<wbr>&#8211;&nbsp;<wbr></p>
+<h2>Synopsis</h2>
+<p>Generate a reference for all Puppet types. Largely meant for internal Puppet Labs use.</p>
+<h2>Usage</h2>
+<dl>
+<dt><code>puppetdoc [-a|&#8211;all] [-h|&#8211;help] [-o|&#8211;outputdir &lt;rdoc outputdir&gt;] [-m|&#8211;mode &lt;text|pdf|markdown|trac|rdoc&gt;]</code></dt>
+<dd>[-r|&#8211;reference &lt;[type]|configuration|..&gt;] [manifest-file]</dd></dl>
+<h2>Description</h2>
+<p>If mode is not aqrdocaq, then this command generates a restructured-text document describing all installed Puppet types or all allowable arguments to puppet executables. It is largely meant for internal use and is used to generate the reference document available on the Puppet Labs web site. </p>
+<p> In aqrdocaq mode, this command generates an html RDoc hierarchy describing the manifests that are in aqmanifestdiraq and aqmodulepathaq configuration directives. The generated documentation directory is doc by default but can be changed with the aqoutputdiraq option. </p>
+<p> If the command is started with aqmanifest-fileaq command-line arguments, puppetdoc generate a single manifest documentation that is output on stdout.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>all: Output the docs for all of the reference types. In aqrdocaq</code></dt>
+<dd>modes, this also outputs documentation for all resources </dd>
+<p> help: Print this help message</p>
+<dt><code>outputdir: Specifies the directory where to output the rdoc</code></dt>
+<dd>documentation in aqrdocaq mode.</dd>
+<dt><code>mode: Determine the output mode. Valid modes are aqtextaq, aqtracaq,</code></dt>
+<dd>aqpdfaq, aqmarkdownaq and aqrdocaq. The aqpdfaq and aqmarkdownaq modes create PDF or Markdown formatted files in the /tmp directory. Note that aqtracaq mode only works on Puppet Labs servers. The default mode is aqtextaq. In aqrdocaq mode you must provide aqmanifests-pathaq</dd>
+<dt><code>reference: Build a particular reference. Get a list of references by</code></dt>
+<dd>running +puppetdoc &#8211;list+.</dd></dl>
+<h2>Example</h2>
+<p>$ puppetdoc -r type &gt; /tmp/type_reference.rst </p>
+<p> or </p>
+<p> $ puppetdoc &#8211;outputdir /tmp/rdoc &#8211;mode rdoc /path/to/manifests </p>
+<p> or </p>
+<p> $ puppetdoc /etc/puppet/manifests/site.pp </p>
+<p> or </p>
+<p> $ puppetdoc -m markdown -r configuration</p>
+<h2>Author</h2>
+<p>Luke Kanies</p>
+<h2>Copyright</h2>
+<p>Copyright (c) 2005-2007 Puppet Labs, LLC Licensed under the GNU Public License</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

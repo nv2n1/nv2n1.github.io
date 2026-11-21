@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_ginq_name_open_seg(3) · Linux Manual Pages</title>
+<meta name="description" content="ginq_name_open_seg (Inquire name of open segment) – returns the name of the currently open segment.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_ginq_name_open_seg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_ginq_name_open_seg(3)</h1>
+
+
+
+
+
+<p>ginq_name_open_seg (Inquire name of open segment) &#8211; returns the name of the currently open segment.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;ncarg/gks.h&gt; </p>
+<p> void ginq_name_open_seg(Gint *err_ind, Gint *name_open_seg);</p>
+<h2>Description</h2>
+<dl COMPACT>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the GKS state is SGOP (segment open), then err_ind is returned as &quot;0&quot;; otherwise err_ind is returned as &quot;4&quot;.</dd>
+<dt>name_open_seg</dt>
+<dd>(Output) &#8211; If the GKS state is SGOP (segment open), then name_open_seg is returned as the number of the currently open segment; otherwise name_open_seg is undefined.</dd></dl>
+<h2>Access</h2>
+<p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
+<h2>See Also</h2>
+<p>Online: <code>geval_tran_matrix(3NCARG),</code> <code>gaccum_tran_matrix(3NCARG),</code> <code>gclose_seg(3NCARG),</code> <code>gcreate_seg(3NCARG),</code> <code>gcopy_seg_ws(3NCARG),</code> <code>gdel_seg(3NCARG),</code> <code>ginq_set_seg_names(3NCARG),</code> <code>gset_seg_tran(3NCARG),</code> <code>gks(3NCARG),</code> <code>ncarg_gks_cbind(3NCARG)</code> </p>
+<p> Hardcopy: User&#8217;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>
+<p>Copyright (C) 1987-2009<br />
+ University Corporation for Atmospheric Research<br />
+ The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

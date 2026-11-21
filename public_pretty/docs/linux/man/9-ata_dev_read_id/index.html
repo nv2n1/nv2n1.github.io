@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ata_dev_read_id(9) · Linux Manual Pages</title>
+<meta name="description" content="ata_dev_read_id – Read ID data from the specified device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-ata_dev_read_id/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>ata_dev_read_id(9)</h1>
+
+
+
+
+
+<p>ata_dev_read_id &#8211; Read ID data from the specified device</p>
+<h2>Synopsis</h2>
+<pre><code>int ata_dev_read_id(struct ata_device *dev, unsigned int *p_class, unsigned int flags, u16 *id);</code></pre>
+<h2>Arguments</h2>
+<p><i>dev</i></p>
+<dl>
+<dd>
+</dd><dd>target device</dd></dl>
+<p> <i>p_class</i></p>
+<dl>
+<dd>pointer to class of the target device (may be changed)</dd></dl>
+<p> <i>flags</i></p>
+<dl>
+<dd>ATA_READID_* flags</dd></dl>
+<p> <i>id</i></p>
+<dl>
+<dd>buffer to read IDENTIFY data into</dd></dl>
+<h2>Description</h2>
+<p>Read ID data from the specified device. ATA_CMD_ID_ATA is performed on ATA devices and ATA_CMD_ID_ATAPI on ATAPI devices. This function also issues ATA_CMD_INIT_DEV_PARAMS for pre-ATA4 drives. </p>
+<p> FIXME: ATA_CMD_ID_ATA is optional for early drives and right now we abort if we hit that case. </p>
+<p> LOCKING: Kernel thread context (may sleep)</p>
+<h2>Return</h2>
+<p>0 on success, -errno otherwise.</p>
+<h2>Author</h2>
+<p><code>Jeff Garzik</code></p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

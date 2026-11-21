@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>albatross(1) · Linux Manual Pages</title>
+<meta name="description" content="albatross – a tool for finding fonts that contain a given (Unicode) glyph.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-albatross/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>albatross(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> albatross &#8211; a tool for finding fonts that contain a given (Unicode) glyph. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>albatross</code> [<i>options</i>] <i>glyphs</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>albatross</code> is a command line tool for finding fonts that contain a given (Unicode) glyph. It relies on Fontconfig, a library for configuring and customizing font access. </p>
+<p> Albatross takes a list of glyphs as input. Three formats are supported:</p>
+<dl>
+<dt>#1</dt>
+<dd> The glyph itself, e.g., <code>ß</code> (Eszett). Internally, the tool converts it to the corresponding Unicode code point.</dd>
+<dt>#2</dt>
+<dd> The glyph as a Unicode code point in the hexadecimal notation, e.g., <code>0xDF</code>. The <code>0x</code> prefix is mandatory. Note that the tool takes the value as case insensitive, e.g., <code>0xDF</code> is equal to <code>0xdf</code> (or any case combination thereof).</dd>
+<dt>#3</dt>
+<dd> The glyph as a Unicode code point using the multiset union notation, e.g, <code>U+DF</code>. The <code>U+</code> prefix is mandatory. Be mindful that this notation expects an uppercase <code>U</code>.</dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;show-styles</code></dt>
+<dd> Show available font styles</dd>
+<dt><code>&#8211;detailed</code></dt>
+<dd> Show a detailed font list</dd>
+<dt><code>&#8211;ansi-level</code> [n|a16|a256|tc]</dt>
+<dd> Set the default ANSI level</dd>
+<dt><code>&#8211;border-style</code> [1|2|3|4|5|6]</dt>
+<dd> Set the border style</dd>
+<dt><code>&#8211;or</code></dt>
+<dd> Look for each glyph separately</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version and exit</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show a help message and exit</dd></dl>
+<h2>BUGS</h2>
+<p> Issue tracker at </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

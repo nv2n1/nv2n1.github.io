@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shtool-move(1) · Linux Manual Pages</title>
+<meta name="description" content="shtool move – GNU shtool enhanced">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-shtool-move/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>shtool-move(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> shtool move &#8211; GNU shtool enhanced </p>
+<p><a href="/docs/linux/man/1-mv/">mv</a>(1) replacement</p>
+<h2>SYNOPSIS</h2>
+<p> <code>shtool move</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-t</code>|<code>&#8211;trace</code>] [<code>-e</code>|<code>&#8211;expand</code>] [<code>-p</code>|<code>&#8211;preserve</code>] <i>src-file</i> <i>dst-file</i></p>
+<h2>DESCRIPTION</h2>
+<p> This is a <i><a href="/docs/linux/man/1-mv/">mv</a></i>(1) style command enhanced with the ability to rename multiple files in a single operation and the ability to detect and not touch existing equal destinations files, thus preserving timestamps.</p>
+<h2>OPTIONS</h2>
+<p> The following command line options are available.</p>
+<dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display some processing information.</dd>
+<dt><code>-t</code>, <code>&#8211;trace</code></dt>
+<dd> Enable the output of the essential shell commands which are executed.</dd>
+<dt><code>-e</code>, <code>&#8211;expand</code></dt>
+<dd> Expand asterisk in <i>src</i> to be used as &quot;<tt>&quot;%&quot;</tt><i>n</i>&quot; (where <i>n</i> is <tt>1</tt>,<tt>2</tt>,&#8230;) in <i>dst-file</i>. This is useful for renaming multiple files at once.</dd>
+<dt><code>-p</code>, <code>&#8211;preserve</code></dt>
+<dd> Detect <i>src-file</i> and <i>dst-file</i> having equal content and not touch existing destination files, thus perserving timestamps. This is useful for applications that monitor timestamps, i.e. suppress make(1L) repeating actions for unchanged files.</dd></dl>
+<h2>EXAMPLE</h2>
+<pre>
+ #   shell script
+ shtool move -v -e '*.txt' %1.asc
+ #   Makefile
+ scanner.c: scanner.l
+     lex scanner.l
+     shtool move -t -p lex.yy.c scanner.c
+</pre>
+<h2>HISTORY</h2>
+<p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>move</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1999 for <font SIZE="-1"><code>GNU</code></font><code> shtool</code>.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-mv/">mv</a></i>(1), <i><a href="/docs/linux/man/1-make/">make</a></i>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

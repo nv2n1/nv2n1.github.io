@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rlm_mschap(5) · Linux Manual Pages</title>
+<meta name="description" content="rlm_mschap – FreeRADIUS Module">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-rlm_mschap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>rlm_mschap(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>rlm_mschap &#8211; FreeRADIUS Module</p>
+<h2>Description</h2>
+<p>The <i>rlm_mschap</i> module provides MS-CHAP and MS-CHAPv2 authentication support. This module validates a user with MS-CHAP or MS-CHAPv2 authentication. If called in Authorize, it will look for MS-CHAP Challenge/Response attributes in the Acess-Request and adds an Auth-Type attribute set to MS-CHAP in the Config-Items list unless Auth-Type has already set. The module can authenticate the MS-CHAP session via plain-text passwords (User-Password attribute), or NT passwords (NT-Password attribute). The module cannot perform authentication against an NT domain. The module also enforces the SMB-Account-Ctrl attribute. See the Samba documentation for the meaning of SMB account control. The module does not read Samba password files. Instead, the fIrlm_passwd module can be used to read a Samba password file, and supply an NT-Password attribute which this module can use. The main configuration items to be aware of are:</p>
+<dl>
+<dt>authtype</dt>
+<dd>This is the string used to set the authtype. Normally it should be left to the default value of MS-CHAP.</dd>
+<dt>use_mppe</dt>
+<dd>Unless this is set to &#8216;no&#8217;, FreeRADIUS will add MS-CHAP-MPPE-Keys for MS-CHAPv1 and MS-MPPE-Recv-Key/MS-MPPE-Send-Key for MS-CHAPv2. The default is &#8216;yes&#8217;.</dd>
+<dt>require_encryption</dt>
+<dd>If MPPE is enabled, setting this attribute to &#8216;yes&#8217; will cause the MS-MPPE-Encryption-Policy attribute to be set to require encryption. The default is &#8216;no&#8217;.</dd>
+<dt>require_strong</dt>
+<dd>If MPPE is enabled, setting this attribute to &#8216;yes&#8217; will cause the MS-MPPE-Encryption-Types attribute to be set to require a 128 bit key. The default is &#8216;no&#8217;.</dd>
+<dt>with_ntdomain_hack</dt>
+<dd>Windows clients send User-Name in the form of &quot;DOMAIN\User&quot;, but send the challenge/response based only on the User portion. Setting this value to yes, enables a work-around for this error. The default is &#8216;no&#8217;.  </dd></dl>
+ <h2>CONFIGURATION</h2>
+ <dl>
+<dd>  <pre><code>modules {
+  ...
+<p>mschap {</p>
+<pre><code>    authtype = MS-CHAP
+
+    use_mppe = yes
+</code></pre>
+<p>}</p>
+<p>&hellip;</p>
+<p>}</p>
+<p>&hellip;</p>
+<p>authorize {
+&hellip;</p>
+<p>mschap</p>
+<p>&hellip;</p>
+<p>}
+&hellip;</p>
+<p>authenticate {
+&hellip;</p>
+<p>mschap</p>
+<p>&hellip;</p>
+<p>}
+</code></pre></p>
+  </dd></dl>
+ <h2>SECTIONS</h2>
+ <code>authorization,</code> <code>authentication</code> <h2>FILES</h2>
+ <i>/etc/raddb/radiusd.conf</i> <h2>SEE ALSO</h2>
+ <code><a href="/docs/linux/man/8-radiusd/">radiusd</a></code>(8), <code><a href="/docs/linux/man/5-radiusd.conf/">radiusd.conf</a></code>(5)  <h2>AUTHOR</h2>
+ Chris Parker, cparker [at] segv.org 
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

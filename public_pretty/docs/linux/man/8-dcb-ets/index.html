@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dcb-ets(8) · Linux Manual Pages</title>
+<meta name="description" content="dcb-ets – show / manipulate ETS (Enhanced Transmission Selection) settings of the DCB (Data Center Bridging) subsystem">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-dcb-ets/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>dcb-ets(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>dcb-ets &#8211; show / manipulate ETS (Enhanced Transmission Selection) settings of the DCB (Data Center Bridging) subsystem</p>
+<h2>Synopsis</h2>
+<pre><code>dcb
+[ OPTIONS ]
+ets
+{ COMMAND | help }
+</code></pre>
+<p> <code>dcb ets show dev</code> DEV [ <code>willing</code> ] [ <code>ets-cap</code> ] [ <code>cbs</code> ] [ <code>tc-tsa</code> ] [ <code>reco-tc-tsa</code> ] [ <code>pg-bw</code> ] [ <code>tc-bw</code> ] [ <code>reco-tc-bw</code> ] [ <code>prio-tc</code> ] [ <code>reco-prio-tc</code> ]<br />
+ <code>dcb ets set dev</code> DEV [ <code>willing</code> { <code>on</code> | <code>off</code> } ] [ { <code>tc-tsa</code> | <code>reco-tc-tsa</code> } <i>TSA-MAP</i> ] [ { <code>pg-bw</code> | <code>tc-bw</code> | <code>reco-tc-bw</code> } <i>BW-MAP</i> ] [ { <code>prio-tc</code> | <code>reco-prio-tc</code> } <i>PRIO-MAP</i> ] </p>
+<pre><code>TSA-MAP := [ TSA-MAP ] TSA-MAPPING
+TSA-MAPPING := { TC | all }:{ strict |
+    cbs | ets | vendor }
+BW-MAP := [ BW-MAP ] BW-MAPPING
+BW-MAPPING := { TC | all }:INTEGER
+PRIO-MAP := [ PRIO-MAP ] PRIO-MAPPING
+PRIO-MAPPING := { PRIO | all }:TC
+TC := { 0 .. 7 }
+PRIO := { 0 .. 7 }
+</code></pre>
+<h2>Description</h2>
+<p><code>dcb ets</code> is used to configure Enhanced Transmission Selection attributes through Linux DCB (Data Center Bridging) interface. ETS permits configuration of mapping of priorities to traffic classes, traffic selection algorithm to use per traffic class, bandwidth allocation, etc. Two DCB TLVs are related to the ETS feature: a configuration and recommendation values. Recommendation values are named with a prefix <code>reco-,</code> while the configuration ones have plain names. </p>
+<h2>Parameters</h2>
+<p>For read-write parameters, the following describes only the write direction, i.e. as used with the <code>set</code> command. For the <code>show</code> command, the parameter name is to be used as a simple keyword without further arguments. This instructs the tool to show the value of a given parameter. When no parameters are given, the tool shows the complete ETS configuration. </p>
+<dl>
+<dt><code>ets-cap</code></dt>
+<dd>A read-only property that shows the number of supported ETS traffic classes. </dd>
+<dt><code>cbs</code></dt>
+<dd>A read-only property that is enabled if the driver and the hardware support the CBS Transmission Selection Algorithm. </dd>
+<dt><code>willing </code>{ <code>on</code> | <code>off</code> }</dt>
+<dd>Whether local host should accept configuration from peer TLVs. </dd>
+<dt><code>prio-tc </code><i>PRIO-MAP</i></dt>
+<dd><code>reco-prio-tc </code><i>PRIO-MAP</i> <i>PRIO-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are priorities, values are traffic classes. For each priority sets a TC where traffic with that priority is directed to. </dd>
+<dt><code>tc-tsa </code><i>TSA-MAP</i></dt>
+<dd><code>reco-tc-tsa </code><i>TSA-MAP</i> <i>TSA-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are TCs, values are Transmission Selection Algorithm (TSA) keywords described below. For each TC sets an algorithm used for deciding how traffic queued up at this TC is scheduled for transmission. Supported TSAs are: </dd>
+<p> <code>strict</code> &#8211; for strict priority, where traffic in higher-numbered TCs always takes precedence over traffic in lower-numbered TCs.<br />
+ <code>ets</code> &#8211; for Enhanced Traffic Selection, where available bandwidth is distributed among the ETS-enabled TCs according to the weights set by <code>tc-bw</code> and <code>reco-tc-bw</code>, respectively.<br />
+ <code>cbs</code> &#8211; for Credit Based Shaper, where traffic is scheduled in a strict manner up to the limit set by a shaper.<br />
+ <code>vendor</code> &#8211; for vendor-specific traffic selection algorithm. </p>
+<dt><code>tc-bw </code><i>BW-MAP</i></dt>
+<dd><code>reco-tc-bw </code><i>BW-MAP</i> <i>BW-MAP</i> uses the array parameter syntax, see <code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) for details. Keys are TCs, values are integers representing percent of available bandwidth given to the traffic class in question. The value should be 0 for TCs whose TSA is not <code>ets</code>, and the sum of all values shall be 100. As an exception to the standard wording, a configuration with no <code>ets</code> TCs is permitted to sum up to 0 instead. </dd>
+<dt><code>pg-bw </code><i>BW-MAP</i></dt>
+<dd>The precise meaning of <code>pg-bw</code> is not standardized, but the assumption seems to be that the same scheduling process as on the transmit side is applicable on receive side as well, and configures receive bandwidth allocation for <code>ets</code> ingress traffic classes (priority groups). </dd>
+</dl>
+<h2>EXAMPLE &amp; USAGE</h2>
+<p>Configure ETS priomap in a one-to-one fashion: </p>
+<p> # dcb ets set dev eth0 prio-tc 0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7 </p>
+<p> Set TSA and transmit bandwidth configuration: </p>
+<p> # dcb ets set dev eth0 tc-tsa all:strict 0:ets 1:ets 2:ets \ </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tc-bw all:0 0:33 1:33 2:34 </p>
+<p> Show what was set: </p>
+<p> # dcb ets show dev eth0 prio-tc tc-tsa tc-bw<br />
+ prio-tc 0:0 1:1 2:2 3:3 4:4 5:5 6:6 7:7<br />
+ tc-tsa 0:ets 1:ets 2:ets 3:strict 4:strict 5:strict 6:strict 7:strict<br />
+ tc-bw 0:33 1:33 2:34 3:0 4:0 5:0 6:0 7:0</p>
+<h2>Exit Status</h2>
+<p>Exit status is 0 if command was successful or a positive integer upon failure.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-dcb/">dcb</a></code>(8) </p>
+<h2>Reporting Bugs</h2>
+<p>Report any bugs to the Network Developers mailing list <code>&lt;netdev [at] vger.kernel.org&gt;</code> where the development and maintenance is primarily done. You do not have to be subscribed to the list to send a message there.</p>
+<h2>Author</h2>
+<p>Petr Machata &lt;me [at] pmachata.org&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

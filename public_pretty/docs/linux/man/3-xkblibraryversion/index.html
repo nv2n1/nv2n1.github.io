@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkblibraryversion(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbLibraryVersion – Determines the compatibility of a library at runtime.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkblibraryversion/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkblibraryversion(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XkbLibraryVersion &#8211; Determines the compatibility of a library at runtime. </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Bool XkbLibraryVersion</code> <code>(int *</code><i>lib_major_in_out</i><code>,</code> <code>int *</code><i>lib_minor_in_out</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>lib_major_in_out</i></dt>
+<dd>
+</dd><dd>Specifies and returns the major Xkb library version.</dd>
+<dt><i>lib_minor_in_out</i></dt>
+<dd>Specifies and returns the minor Xkb library version.</dd></dl>
+<h2>Description</h2>
+<p>If an application is dynamically linked, both the X server and the client-side X library must contain the Xkb extension in order for the client to use the Xkb extension capabilities. Therefore a dynamically linked application must check both the library and the server for compatibility before using Xkb function calls. A properly written program must check for compatibility between the version of the Xkb library that is dynamically loaded and the one used when the application was built. It must then check the server version for compatibility with the version of Xkb in the library. </p>
+<p> If your application is statically linked, you must still check for server compatibility and may check library compatibility. (It is possible to compile against one set of header files and link against a different, incompatible, version of the library, although this should not normally occur.) </p>
+<p> Pass the symbolic value XkbMajorVersion in <i>lib_major_in_out </i> and XkbMinorVersion in <i>lib_minor_in_out. </i> These arguments represent the version of the library used at compile time. The <i>XkbLibraryVersion </i> function backfills the major and minor version numbers of the library used at run time in <i>lib_major_in_out and </i> <i>lib_minor_in_out. </i> If the versions of the compile time and run time libraries are compatible, <i>XkbLibraryVersion </i> returns True, otherwise, it returns False. </p>
+<p> In addition, in order to use the Xkb extension, you must ensure that the extension is present in the server and that the server supports the version of the extension expected by the client. Use <i>XkbQueryExtension </i> to do this, as described in the next section.</p>
+<h2>Return Values</h2>
+<dl COMPACT>
+<dt>True</dt>
+<dd>The <i>XkbLibraryVersion </i> returns True if the versions of the compile time and run time libraries are compatible.</dd>
+<dt>False</dt>
+<dd>The <i>XkbLibraryVersion </i> returns False if the versions of the compile time and run time libraries are not compatible.</dd></dl>
+<h2>See Also</h2>
+<p><code>XkbMajorVersion</code>(3), <code>XkbMinorVersion</code>(3), <code><a href="/docs/linux/man/3-xkbqueryextension/">XkbQueryExtension</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

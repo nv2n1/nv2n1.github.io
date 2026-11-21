@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>backward(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::DateGeneration – Date-generation rule.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-backward/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>backward(3)</h1>
+
+
+
+
+
+<p>QuantLib::DateGeneration &#8211; Date-generation rule. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/time/dategenerationrule.hpp&gt; </p>
+<h3>Public Types</h3>
+<p>enum <code>Rule</code> { <code>Backward</code>, <code>Forward</code>, <code>Zero</code>, <code>ThirdWednesday</code>, <code>Twentieth</code>, <code>TwentiethIMM</code> } </p>
+<h3>Related Functions</h3>
+<p>(Note that these are not member functions.)<br />
+ std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, <code>DateGeneration::Rule</code>) </p>
+<h2>Detailed Description</h2>
+<p>Date-generation rule. </p>
+<p> These conventions specify the rule used to generate dates in a <code>Schedule</code>.</p>
+<h2>Member Enumeration Documentation</h2>
+<h3>enum <code>Rule</code></h3>
+<p><code>Enumerator: </code></p>
+<dl COMPACT>
+<dt><i>Backward </i></dt>
+<dd>Backward from termination date to effective date.</dd>
+<dt><i>Forward </i></dt>
+<dd><code>Forward</code> from effective date to termination date.</dd>
+<dt><i>Zero </i></dt>
+<dd>No intermediate dates between effective date and termination date.</dd>
+<dt><i>ThirdWednesday </i></dt>
+<dd>All dates but effective date and termination date are taken to be on the third wednesday of their month (with forward calculation.)</dd>
+<dt><i>Twentieth </i></dt>
+<dd>All dates but the effective date are taken to be the twentieth of their month (used for CDS schedules in emerging markets.) The termination date is also modified.</dd>
+<dt><i>TwentiethIMM </i></dt>
+<dd>All dates but the effective date are taken to be the twentieth of an <code>IMM</code> month (used for CDS schedules.) The termination date is also modified.</dd></dl>
+<h2>Friends And Related Function Documentation</h2>
+<h3>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, <code>DateGeneration::Rule</code>) [related]</h3>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

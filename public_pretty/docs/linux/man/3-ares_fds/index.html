@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ares_fds(3) · Linux Manual Pages</title>
+<meta name="description" content="ares_fds – Get file descriptors to select on for name service">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ares_fds/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ares_fds(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> ares_fds &#8211; Get file descriptors to select on for name service</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;ares.h&gt;
+int ares_fds(ares_channel channel, fd_set *read_fds,
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>ares_fds</code> function retrieves the set of file descriptors which the calling application should select on for reading and writing for the processing of name service queries pending on the name service channel identified by <i>channel</i>. File descriptors will be set in the file descriptor sets pointed to by <i>read_fds</i> and <i>write_fds</i> as appropriate. File descriptors already set in <i>read_fds</i> and <i>write_fds</i> will remain set; initialization of the file descriptor sets (using <code>FD_ZERO</code>) is the responsibility of the caller.</p>
+<h2>RETURN VALUES</h2>
+<p> <code>ares_fds</code> returns one greater than the number of the highest socket set in either <i>read_fds</i> or <i>write_fds</i>. If no queries are active, <code>ares_fds</code> will return 0.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-ares_timeout/">ares_timeout</a></code>(3), <code><a href="/docs/linux/man/3-ares_process/">ares_process</a></code>(3)</p>
+<h2>AUTHOR</h2>
+<p> Greg Hudson, MIT Information Systems<br />
+ Copyright 1998 by the Massachusetts Institute of Technology. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

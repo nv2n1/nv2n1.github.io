@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>std__detail_hash_code_base(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-std__detail_hash_code_base/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>std__detail_hash_code_base(3)</h1>
+
+
+
+
+
+<p>std::__detail::_Hash_code_base&lt; _Key, _Value, _ExtractKey, _H1, _H2, _Hash, __cache_hash_code &gt; -</p>
+<h2>Synopsis</h2>
+<h2>Detailed Description</h2>
+<h3>template&lt;typename _Key, typename _Value, typename _ExtractKey, typename _H1, typename _H2, typename _Hash, bool __cache_hash_code&gt;struct std::__detail::_Hash_code_base&lt; _Key, _Value, _ExtractKey, _H1, _H2, _Hash, __cache_hash_code &gt;</h3>
+<p>Primary class template _Hash_code_base.</p>
+<p>Encapsulates two policy issues that aren&rsquo;t quite orthogonal. (1) the difference between using a ranged hash function and using the combination of a hash function and a range-hashing function. In the former case we don&rsquo;t have such things as hash codes, so we have a dummy type as placeholder. (2) Whether or not we cache hash codes. Caching hash codes is meaningless if we have a ranged hash function.</p>
+<p>We also put the key extraction objects here, for convenience. Each specialization derives from one or more of the template parameters to benefit from Ebo. This is important as this type is inherited in some cases by the _Local_iterator_base type used to implement local_iterator and const_local_iterator. As with any iterator type we prefer to make it as small as possible.</p>
+<p>Primary template is unused except as a hook for specializations.</p>
+<p>Definition at line 907 of file hashtable_policy.h.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for libstdc++ from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

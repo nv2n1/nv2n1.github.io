@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gstream-operator(3) · Linux Manual Pages</title>
+<meta name="description" content="operator, operator">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gstream-operator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gstream-operator(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> operator, operator</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>
+<p> <code>ostream&amp; operator&lt;&lt;(ostream&amp; o, fix const&amp; x);</code> </p>
+<p> <code>istream&amp; operator&gt;&gt;(istream&amp; i, fix&amp; x);</code></p>
+<h2>DESCRIPTION</h2>
+<p> These two functions don&#8217;t actually belong to the gstreams, they are here simply because they sometimes make the life a bit easier (without costing anything in executable size if they are left unused). Their purpose is to make the class fix capable of extracting/inserting with the notation </p>
+<pre>
+   fix a_number = 0.3;
+   cout &lt;&lt; a_number;
+   cin &gt;&gt; a_number;
+</pre>
+<p> in conjuction with the standard stream system. And, by the way, consequently also in conjuction with a gstream: </p>
+<pre>
+   gstream gs;
+   gs &lt;&lt; a_number;
+   gs &gt;&gt; a_number;
+</pre>
+<p> You are probably not interested in calling them with their function names, only with the &lt;&lt;/&gt;&gt; operators, so this paragraph is written just to make you aware of the possibility of doing that. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

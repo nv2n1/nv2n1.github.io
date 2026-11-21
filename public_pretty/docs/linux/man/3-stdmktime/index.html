@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdmktime(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdmktime/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdmktime(3)</h1>
+
+
+
+
+
+<p>std::mktime - std::mktime</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;ctime&gt;
+std::time_t mktime( std::tm* time );</code></pre> 
+<p>Converts local calendar time to a time since epoch as a time_t object. time-&gt;tm_wday and time-&gt;tm_yday are ignored. The values in time are permitted to be outside their normal ranges.
+A negative value of time-&gt;tm_isdst causes mktime to attempt to determine if Daylight Saving Time was in effect.
+If the conversion is successful, the time object is modified. All fields of time are updated to fit their proper ranges. time-&gt;tm_wday and time-&gt;tm_yday are recalculated using information available in other fields.</p>
+<h2>Parameters</h2>
+<p>time - pointer to a std::tm object specifying local calendar time to convert</p>
+<h2>Return value</h2>
+<p>Time since epoch as a std::time_t object on success or -1 if time cannot be represented as a std::time_t object.</p>
+<h2>Notes</h2>
+<p>If the std::tm object was obtained from std::get_time or the POSIX strptime, the value of tm_isdst is indeterminate, and needs to be set explicitly before calling mktime.</p>
+<h2>Example</h2>
+<p>Display the time 100 months ago.
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;ctime&gt;
+#include &lt;stdlib.h&gt;
+int main()
+{
+setenv(&quot;TZ&quot;, &quot;/usr/share/zoneinfo/America/New_York&quot;, 1); // POSIX-specific
+std::time_t t = std::time(nullptr);
+std::tm tm = *std::localtime(&amp;t);
+std::cout &lt;&lt; &quot;Today is           &quot; &lt;&lt; std::put_time(&amp;tm, &quot;%c %Z&quot;)
+&lt;&lt; &quot; and DST is &quot; &lt;&lt; (tm.tm_isdst ? &quot;in effect&quot; : &quot;not in effect&quot;) &lt;&lt; &lsquo;\n&rsquo;;
+tm.tm_mon -= 100; // tm_mon is now outside its normal range
+std::mktime(&amp;tm); // tm_dst is not set to -1; today&rsquo;s DST status is used
+std::cout &lt;&lt; &quot;100 months ago was &quot; &lt;&lt; std::put_time(&amp;tm, &quot;%c %Z&quot;)
+&lt;&lt; &quot; and DST was &quot; &lt;&lt; (tm.tm_isdst ? &quot;in effect&quot; : &quot;not in effect&quot;) &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Today is Fri Apr 22 11:40:36 2016 EDT and DST is in effect
+ <wbr> 100 months ago was Sat Dec 22 10:40:36 2007 EST and DST was not in effect</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts time since epoch to calendar time expressed as local time
+localtime <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

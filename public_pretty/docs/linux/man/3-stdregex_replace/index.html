@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdregex_replace(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdregex_replace/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdregex_replace(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::regex_replace - std::regex_replace</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;regex&gt;
+    template &lt;class OutputIt, class BidirIt,
+              class Traits, class CharT,
+              class STraits, class SAlloc&gt;
+    OutputIt regex_replace(OutputIt out, BidirIt first, BidirIt last, (1)(since C++ 11)
+                                                                          const std::basic_regex&lt;CharT, Traits&gt; &amp;re,
+                           const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;fmt,
+                           std::regex_constants::match_flag_type flags =
+                               std::regex_constants::match_default);
+template &lt;class OutputIt, class BidirIt,
+          class Traits, class CharT&gt;
+OutputIt regex_replace(OutputIt out, BidirIt first, BidirIt last,
+                       const std::basic_regex&lt;CharT, Traits&gt; &amp;re, (2)(since C++ 11)
+                                                                      const CharT *fmt,
+                       std::regex_constants::match_flag_type flags =
+                           std::regex_constants::match_default);
+template &lt;class Traits, class CharT,
+          class STraits, class SAlloc,
+          class FTraits, class FAlloc&gt;
+std::basic_string&lt;CharT, STraits, SAlloc&gt;
+regex_replace(const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;s, (3)(since C++ 11)
+                                                                      const std::basic_regex&lt;CharT, Traits&gt; &amp;re,
+              const std::basic_string&lt;CharT, FTraits, FAlloc&gt; &amp;fmt,
+              std::regex_constants::match_flag_type flags =
+                  std::regex_constants::match_default);
+template &lt;class Traits, class CharT,
+          class STraits, class SAlloc&gt;
+std::basic_string&lt;CharT, STraits, SAlloc&gt;
+regex_replace(const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;s, (4)(since C++ 11)
+                                                                      const std::basic_regex&lt;CharT, Traits&gt; &amp;re,
+              const CharT *fmt,
+              std::regex_constants::match_flag_type flags =
+                  std::regex_constants::match_default);
+template &lt;class Traits, class CharT,
+          class STraits, class SAlloc&gt;
+std::basic_string&lt;CharT&gt;
+regex_replace(const CharT *s, (5)(since C++ 11)
+                                  const std::basic_regex&lt;CharT, Traits&gt; &amp;re,
+              const std::basic_string&lt;CharT, STraits, SAlloc&gt; &amp;fmt,
+              std::regex_constants::match_flag_type flags =
+                  std::regex_constants::match_default);
+template &lt;class Traits, class CharT&gt;
+std::basic_string&lt;CharT&gt;
+regex_replace(const CharT *s,
+              const std::basic_regex&lt;CharT, Traits&gt; &amp;re, (6)(since C++ 11)
+                                                             const CharT *fmt,
+              std::regex_constants::match_flag_type flags =
+                  std::regex_constants::match_default);</code></pre> 
+<p>regex_replace uses a regular expression to perform substitution on a sequence of characters:</p>
+<ol>
+<li>Copies characters in the range [first,last) to out, replacing any sequences that match re with characters formatted by fmt. In other words:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> * Constructs a std::regex_iterator object i as if by std::regex_iterator&lt;BidirIt, CharT, traits&gt; i(first, last, re, flags), and uses it to step through every match of re within the sequence [first,last).
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> * For each such match m, copies the non-matched subsequence (m.prefix()) into out as if by out = std::copy(m.prefix().first, m.prefix().second, out) and then replaces the matched subsequence with the formatted replacement string as if by calling out_=_m.format(out,_fmt,<em>flags).
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> * When no more matches are found, copies the remaining non-matched characters to out as if by out = std::copy(last_m.suffix().first, last_m.suffix().second, out) where last_m is a copy of the last match found.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> * If there are no matches, copies the entire sequence into out as-is, by out = std::copy(first, last, out)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> * If flags contains std::regex_constants::format_no_copy, the non-matched subsequences are not copied into out.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> * If flags contains std::regex_constants::format_first_only, only the first match is replaced. 2) same as 1), but the formatted replacement is performed as if by calling out</em>=_m.format(out,_fmt,<em>fmt</em>+_char_traits&lt;charT&gt;::length(fmt),_flags)</li>
+</ol>
+<p>3-4) Constructs an empty string result of type std::basic_string&lt;CharT, ST, SA&gt; and calls std::regex_replace(std::back_inserter(result), s.begin(), s.end(), re, fmt, flags).</p>
+<p>5-6) Constructs an empty string result of type std::basic_string&lt;CharT&gt; and calls std::regex_replace(std::back_inserter(result), s, s + std::char_traits&lt;CharT&gt;::length(s), re, fmt, flags).</p>
+<h2>Parameters</h2>
+<p>first, last - the input character sequence, represented as a pair of iterators
+s - the input character sequence, represented as std::basic_string or character array
+re - the std::basic_regex that will be matched against the input sequence
+flags - the match flags of type std::regex_constants::match_flag_type
+fmt - the regex replacement format string, exact syntax depends on the value of flags
+out - output iterator to store the result of the replacement</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="outputit-must-meet-the-requirements-of-legacyoutputiterator">OutputIt must meet the requirements of LegacyOutputIterator.</h2>
+<p>BidirIt must meet the requirements of LegacyBidirectionalIterator.</p>
+<h2>Return value</h2>
+<p>1-2) Returns a copy of the output iterator out after all the insertions.
+3-6) Returns the string result which contains the output.</p>
+<h2>Exceptions</h2>
+<p>May throw std::regex_error to indicate an error_condition.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;iterator&gt;
+#include &lt;regex&gt;
+#include &lt;string&gt;
+int main()
+{
+std::string text = &quot;Quick brown fox&quot;;
+std::regex vowel_re(&quot;a|e|i|o|u&quot;);
+// write the results to an output iterator
+std::regex_replace(std::ostreambuf_iterator&lt;char&gt;(std::cout),
+text.begin(), text.end(), vowel_re, &quot;*&quot;);
+// construct a string holding the results
+std::cout &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; std::regex_replace(text, vowel_re, &quot;[$&amp;]&quot;) &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Q**ck br<em>wn f</em>x
+ <wbr> Q[u][i]ck br[o]wn f[o]x</p>
+<h2>See also</h2>
+<p>regex_search attempts to match a regular expression to any part of a character sequence
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+match_flag_type options specific to matching
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(typedef)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

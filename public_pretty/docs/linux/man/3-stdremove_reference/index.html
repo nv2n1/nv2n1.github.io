@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdremove_reference(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdremove_reference/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdremove_reference(3)</h1>
+
+
+
+
+
+<p>std::remove_reference - std::remove_reference</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;type_traits&gt;
+    template &lt;class T&gt;
+    (since C++ 11)
+        struct remove_reference;</code></pre> 
+<p>If the type T is a reference type, provides the member typedef type which is the type referred to by T. Otherwise type is T.</p>
+<h2>Member types</h2>
+<p>Name Definition
+type the type referred by T or T if it is not a reference</p>
+<h2>Helper types</h2>
+<p>template&lt; class T &gt; <i>(since C++14)</i>
+using remove_reference_t = typename remove_reference&lt;T&gt;::type;</p>
+<h2>Possible implementation</h2>
+<p> <wbr> template&lt; class T &gt; struct remove_reference {typedef T type;};
+ <wbr> template&lt; class T &gt; struct remove_reference&lt;T&amp;&gt; {typedef T type;};
+ <wbr> template&lt; class T &gt; struct remove_reference&lt;T&amp;&amp;&gt; {typedef T type;};</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt; // std::cout
+#include &lt;type_traits&gt; // std::is_same
+template &lt;class T1, class T2&gt;
+void print_is_same()
+{
+std::cout &lt;&lt; std::is_same&lt;T1, T2&gt;() &lt;&lt; &lsquo;\n&rsquo;;
+}
+int main()
+{
+std::cout &lt;&lt; std::boolalpha;
+print_is_same&lt;int, int&gt;();
+print_is_same&lt;int, int &amp;&gt;();
+print_is_same&lt;int, int &amp;&amp;&gt;();
+print_is_same&lt;int, std::remove_reference&lt;int&gt;::type&gt;();
+print_is_same&lt;int, std::remove_reference&lt;int &amp;&gt;::type&gt;();
+print_is_same&lt;int, std::remove_reference&lt;int &amp;&amp;&gt;::type&gt;();
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> true
+ <wbr> false
+ <wbr> false
+ <wbr> true
+ <wbr> true
+ <wbr> true</p>
+<h2>See also</h2>
+<p>is_reference checks if a type is either a lvalue reference or rvalue reference
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+add_lvalue_reference
+add_rvalue_reference adds a lvalue or rvalue reference to the given type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+remove_cvref combines std::remove_cv and std::remove_reference
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+(C++20)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

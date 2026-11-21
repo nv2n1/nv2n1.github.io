@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>crm_node(8) · Linux Manual Pages</title>
+<meta name="description" content="Pacemaker – Part of the Pacemaker cluster resource manager">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-crm_node/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>crm_node(8)</h1>
+
+
+
+
+
+<p>Pacemaker &#8211; Part of the Pacemaker cluster resource manager</p>
+<h2>Synopsis</h2>
+<p><code>crm_node</code> <i>command </i>[<i>options</i>]</p>
+<h2>Description</h2>
+<p>crm_node &#8211; Tool for displaying low-level node information</p>
+<h2>Options</h2>
+<dl>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd>This text</dd>
+<dt>-$, <code>&#8211;version</code></dt>
+<dd>Version information</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd>Increase debug output</dd>
+<dt><code>-Q</code>, <code>&#8211;quiet</code></dt>
+<dd>Essential output only</dd></dl>
+<h3>Stack:</h3>
+<dl>
+<dt><code>-A</code>, <code>&#8211;openais</code></dt>
+<dd>Only try connecting to an OpenAIS-based cluster</dd>
+<dt><code>-C</code>, <code>&#8211;corosync</code></dt>
+<dd>Only try connecting to an Corosync-based cluster</dd>
+<dt><code>-H</code>, <code>&#8211;heartbeat</code></dt>
+<dd>Only try connecting to a Heartbeat-based cluster</dd></dl>
+<h3>Commands:</h3>
+<dl>
+<dt><code>-n</code>, <code>&#8211;name</code></dt>
+<dd>Display the name used by the cluster for this node</dd>
+<dt><code>-N</code>, <code>&#8211;name-for-id</code>=<i>value</i></dt>
+<dd>Display the name used by the cluster for the node with the specified id</dd>
+<dt><code>-e</code>, <code>&#8211;epoch</code></dt>
+<dd>Display the epoch during which this node joined the cluster</dd>
+<dt><code>-q</code>, <code>&#8211;quorum</code></dt>
+<dd>Display a 1 if our partition has quorum, 0 if not</dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd>Display all known members (past and present) of this cluster (Not available for heartbeat clusters)</dd>
+<dt><code>-p</code>, <code>&#8211;partition</code></dt>
+<dd>Display the members of this partition</dd>
+<dt><code>-i</code>, <code>&#8211;cluster-id</code></dt>
+<dd>Display this node&#8217;s cluster id</dd>
+<dt><code>-R</code>, <code>&#8211;remove</code>=<i>value</i></dt>
+<dd>(Advanced) Remove the (stopped) node with the specified name from Pacemaker&#8217;s configuration and caches</dd></dl>
+<p> In the case of Heartbeat, CMAN and Corosync 2.0, requires that the node has already been removed from the underlying cluster</p>
+<h3>Additional Options:</h3>
+<dl>
+<dt> <code>-f</code>, <code>&#8211;force</code></dt></dl>
+<h2>Author</h2>
+<dd>Written by Andrew Beekhof</dd>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to pacemaker [at] oss.clusterlabs.org</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

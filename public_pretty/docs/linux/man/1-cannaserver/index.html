@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cannaserver(1) · Linux Manual Pages</title>
+<meta name="description" content="cannaserver – Kana-Kanji conversion server">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-cannaserver/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>cannaserver(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> cannaserver &#8211; Kana-Kanji conversion server</p>
+<h2>SYNOPSIS</h2>
+<p> <code>cannaserver [-d] [-u </code><i>userid</i>] [-inet] [-inet6] [-l <i>n</i>] [-syslog] [-p <i>num</i>] [<i>ddpath</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> cannaserver(1M) provides the Kana-Kanji conversion service. Most commonly this daemon starts at daemon bootup framework like /etc/rc depending on your system, so you do not usually start it up manually. </p>
+<p> By default, cannaserver(1M) only accepts connections from clients at the same host where the server is running (via UNIX domain socket). You can make it accessible from other hosts via TCP by using option -inet (or -inet6). Whether you use this option or not, you can get access control based on user and host using /etc/hosts.canna. </p>
+<p> cannaserver(1M) immediately forks and gets into the background after it starts. You do not need to use &#8216;&amp;&#8217; explicitly to make it run in the background. </p>
+<p> When it starts, cannaserver(1M) creates the UNIX domain socket /var/run/.iroha_unix/IROHA[:num] to communicate clients. The socket is deleted automatically if cannaserver(1M) terminates normally. The socket may exist while cannaserver(1M) is not running (because, for example, cannaserver(1M) terminated abnormally). In this case, delete the file manually or you cannot start it. </p>
+<p> /var/lib/canna/dic/*/dics.dir includes the list of dictionaries which are available to clients. Users (i.e. clients) can choose which to use and specify them in ~/.canna.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><i>ddpath</i></dt>
+<dd> Specifies the directory that contains dictionaries.</dd>
+<dt>-inet</dt>
+<dd> This option lets cannaserver(1M) accept connections from remote hosts using inet domain socket (IPv4). By default, the cannaserver(1M) uses only UNIX domain socket, i.e. only clients in your local machine can connect to the server.</dd>
+<dt>-inet6</dt>
+<dd> Enable IPv6. If this option is used solely, IPv4 access is disabled. If you want to use IPv4 at the same time, use both -inet and -inet6.</dd>
+<dt>-l <i>n</i></dt>
+<dd> Outputs the cannaserver(1M) log to /tmp/canna.log. n (1 to 5) specifies the log level.</dd>
+<dt>-d</dt>
+<dd> Starts cannaserver(1M) in debug mode. It is executed as the foreground process. Log data at log level 5 is output to the standard output.</dd>
+<dt>-u <i>userid</i></dt>
+<dd> Specifies which user cannaserver(1M) runs as. By default, cannaserver(1M) runs as the user who started cannaserver(1M).</dd>
+<dt>-syslog</dt>
+<dd> Outputs the cannaserver(1M) log to syslogd(8). If you specify this option, logs are not output to /var/log/canna/CANNA?msgs.</dd>
+<dt>-p <i>num</i></dt>
+<dd> By this option cannaserver(1M) uses the port number 5680 + num. The default port number is 5680. This option also has an effect on the filename of the socket and the log file. See below.</dd></dl>
+<h2>FILES</h2>
+<dl>
+<dt>/var/run/.iroha_unix/IROHA[:num]</dt>
+<dd> Socket. [:num] part is added only when you specify -p.</dd>
+<dt>/var/lib/canna/dic/*/dics.dir</dt>
+<dd> Dictionary directory</dd>
+<dt>/etc/hosts.canna</dt>
+<dd> Access control file</dd>
+<dt>/var/log/canna/CANNA?msgs</dt>
+<dd> Log file. &quot;?&quot; is replaced with <i>num</i> specified with -p, and defaults to 0 without -p <i>num</i>. Log messages are not output to this file when -syslog is specified.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> cannakill(1M), <a href="/docs/linux/man/1-cannastat/">cannastat</a>(1), <a href="/docs/linux/man/1-cannacheck/">cannacheck</a>(1), <a href="/docs/linux/man/1-cshost/">cshost</a>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

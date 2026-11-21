@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmgetpixmap(3) · Linux Manual Pages</title>
+<meta name="description" content="XmGetPixmap — A pixmap caching function that generates a pixmap, stores it in a pixmap cache, and returns the pixmap">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmgetpixmap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmgetpixmap(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>XmGetPixmap</code> &#8212; A pixmap caching function that generates a pixmap, stores it in a pixmap cache, and returns the pixmap</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Xm.h&gt;
+<code>Pixmap XmGetPixmap</code>(
+<code>Screen *screen</code>,
+<code>char *image_name</code>,
+<code>Pixel foreground</code>,
+<code>Pixel background</code>);</pre>
+<h2>Description</h2>
+<p><code>XmGetPixmap</code> uses the parameter data to perform a lookup in the pixmap cache to see if a pixmap has already been generated that matches the data. If one is found, a reference count is incremented and the pixmap is returned. Applications should use <code>XmDestroyPixmap</code> when the pixmap is no longer needed.</p>
+<dl COMPACT>
+<dt><i>screen</i></dt>
+<dd>Specifies the display screen on which the pixmap is to be drawn. The depth of the pixmap is the default depth for this screen.</dd>
+<dt><i>image_name</i></dt>
+<dd>Specifies the name of the image to be used to generate the pixmap</dd>
+<dt><i>foreground</i></dt>
+<dd>Combines the image with the <i>foreground</i> color to create the pixmap if the image referenced is a bit-per-pixel image</dd>
+<dt><i>background</i></dt>
+<dd>Combines the image with the <i>background</i> color to create the pixmap if the image referenced is a bit-per-pixel image</dd></dl>
+<p> If a pixmap is not found, <i>image_name</i> is used to perform a lookup in the image cache. If an image is found, it is used to generate the pixmap, which is then cached and returned. </p>
+<p> If an image is not found, the <i>image_name</i> is used as a filename, and a search is made for an <code>X10</code> or <code>X11</code> bitmap file. If it is found, the file is read, converted into an image, and cached in the image cache. The image is then used to generate a pixmap, which is cached and returned. </p>
+<p> If <i>image_name</i> has a leading slash (<code>/</code>), it specifies a full pathname, and <code>XmGetPixmap</code> opens the file as specified. Otherwise, <i>image_name</i> specifies a filename. In this case, <code>XmGetPixmap</code> looks for the file along a search path specified by the <code>XBMLANGPATH</code> environment variable or by a default search path, which varies depending on whether or not the <code>XAPPLRESDIR</code> environment variable is set. The default search path contains a lot of directories. Therefore, <code>XmGetPixmap</code> will need a relatively long time to search through all these directories for pixmaps and bitmaps. Applications that use a lot of pixmaps and bitmaps will probably run more quickly if <code>XBMLANGPATH</code> is set to a short list of directories. In addition to X bitmap files (XBM), Motif also supports XPM (X Pixmap) file formats and, from version 2.3, JPEG and PNG image formats. (Note that support of JPEG and PNG image format is an optional feature of Motif, in order to check if current version supports PNG ang JPEG image formats the PNG_SUPPORT and JPEG_SUPPORT macros should be checked correspondingly.) The <code>XBMLANGPATH</code> specifies the path for both XBM, XPM, PNG and JPEG files. Refer to the <code>XmGetPixmapByDepth</code> reference page for further details. </p>
+<p> The <code>XBMLANGPATH</code> environment variable specifies a search path for X bitmap files. It can contain the substitution field <code>%B</code>, where the <i>image_name</i> argument to <code>XmGetPixmap</code> is substituted for <code>%B</code>. It can also contain the substitution fields accepted by <code>XtResolvePathname</code>. The substitution field <code>%T</code> is always mapped to <i>bitmaps</i>, and <code>%S</code> is always mapped to NULL. </p>
+<p> If <code>XBMLANGPATH</code> is not set but the environment variable <code>XAPPLRESDIR</code> is set, the following pathnames are searched:</p>
+<dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/%L/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/%l_%t/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/%l/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/%L/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/%l_%t/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/%l/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$XAPPLRESDIR/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%L/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%l_%t/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%l/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%L/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%l_%t/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%l/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/include/X11/bitmaps/%B</code></dd></dl>
+<p> If neither <code>XBMLANGPATH</code> nor <code>XAPPLRESDIR</code> is set, the following pathnames are searched:</p>
+<dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/%L/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/%l_%t/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/%l/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/%L/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/%l_%t/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/%l/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>$HOME/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%L/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%l_%t/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%l/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/bitmaps/%N/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%L/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%l_%t/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/%l/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/lib/X11/bitmaps/%B</code></dd>
+<dt> &bull;</dt>
+<dd><code>/usr/include/X11/bitmaps/%B</code></dd></dl>
+<p> These paths are defaults that vendors may change. For example, a vendor may use different directories for <code>/usr/lib/X11</code> and <code>/usr/include/X11</code>. </p>
+<p> The following substitutions are used in these paths:</p>
+<dl COMPACT>
+<dt><code>%B</code></dt>
+<dd>The image name, from the <i>image_name</i> argument</dd>
+<dt><code>%N</code></dt>
+<dd>The class name of the application</dd>
+<dt><code>%L</code></dt>
+<dd>The display&#8217;s language string. This string is influenced by <code>XtSetLanguageProc</code>. The default string is determined by calling setlocale(<code>LC_ALL, NULL</code>).</dd>
+<dt><code>%l_%t</code></dt>
+<dd>The language and territory component of the display&#8217;s language string</dd>
+<dt><code>%l</code></dt>
+<dd>The language component of the display&#8217;s language string</dd></dl>
+<p> The contents of the file must conform to the rules for X11 bitmap files. In other words, Motif can read any X11 conformant bitmap file.</p>
+<h2>Return</h2>
+<p>Returns a pixmap when successful; returns <code>XmUNSPECIFIED_PIXMAP</code> if the image corresponding to <i>image_name</i> cannot be found.</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmdestroypixmap/">XmDestroyPixmap</a></code>(3), <code><a href="/docs/linux/man/3-xmgetpixmapbydepth/">XmGetPixmapByDepth</a></code>(3), <code><a href="/docs/linux/man/3-xminstallimage/">XmInstallImage</a></code>(3), and <code><a href="/docs/linux/man/3-xmuninstallimage/">XmUninstallImage</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

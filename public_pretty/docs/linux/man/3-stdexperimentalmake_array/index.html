@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalmake_array(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalmake_array/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalmake_array(3)</h1>
+
+
+
+
+
+<p>std::experimental::make_array - std::experimental::make_array</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;experimental / array&gt;
+    template &lt;class D = void, class... Types&gt;
+    (library fundamentals TS v2)
+        constexpr std::array&lt;VT /* see below */, sizeof...(Types)&gt; make_array(Types &amp;&amp;...t);</code></pre> 
+<p>Creates a std::array whose size is equal to the number of arguments and whose elements are initialized from the corresponding arguments. Returns std::array&lt;VT, sizeof&hellip;(Types)&gt;{std::forward&lt;Types&gt;(t)&hellip;}
+If D is void, then the deduced type VT is std::common_type_t&lt;Types&hellip;&gt;. Otherwise, it is D.
+If D is void and any of std::decay_t&lt;Types&gt;&hellip; is a specialization of std::reference_wrapper, the program is ill-formed.</p>
+<h2>Possible implementation</h2>
+<p> <wbr> namespace details {
+ <wbr> <wbr> <wbr> template&lt;class&gt; struct is_ref_wrapper : std::false_type {};
+ <wbr> <wbr> <wbr> template&lt;class T&gt; struct is_ref_wrapper&lt;std::reference_wrapper&lt;T&gt;&gt; : std::true_type {};</p>
+<p> <wbr> <wbr> <wbr> template&lt;class T&gt;
+ <wbr> <wbr> <wbr> using not_ref_wrapper = std::negation&lt;is_ref_wrapper&lt;std::decay_t&lt;T&gt;&gt;&gt;;</p>
+<p> <wbr> <wbr> <wbr> template &lt;class D, class&hellip;&gt; struct return_type_helper { using type = D; };
+ <wbr> <wbr> <wbr> template &lt;class&hellip; Types&gt;
+ <wbr> <wbr> <wbr> struct return_type_helper&lt;void, Types&hellip;&gt; : std::common_type&lt;Types&hellip;&gt; {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> static_assert(std::conjunction_v&lt;not_ref_wrapper&lt;Types&gt;&hellip;&gt;,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> &quot;Types cannot contain reference_wrappers when D is void&quot;);
+ <wbr> <wbr> <wbr> };</p>
+<p> <wbr> <wbr> <wbr> template &lt;class D, class&hellip; Types&gt;
+ <wbr> <wbr> <wbr> using return_type = std::array&lt;typename return_type_helper&lt;D, Types&hellip;&gt;::type,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sizeof&hellip;(Types)&gt;;
+ <wbr> }</p>
+<p> <wbr> template &lt; class D = void, class&hellip; Types&gt;
+ <wbr> constexpr details::return_type&lt;D, Types&hellip;&gt; make_array(Types&amp;&amp;&hellip; t) {
+ <wbr> <wbr> <wbr> return {std::forward&lt;Types&gt;(t)&hellip; };
+ <wbr> }</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;experimental/array&gt;
+#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+int main()
+{
+decltype(auto) arr = std::experimental::make_array(1, 2, 3, 4, 5);
+bool is_array_of_5_ints = std::is_same&lt;decltype(arr), std::array&lt;int, 5&gt;&gt;::value;
+std::cout &lt;&lt; &quot;Returns an array of five ints? &quot;;
+std::cout &lt;&lt; std::boolalpha &lt;&lt; is_array_of_5_ints &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Returns an array of five ints? true</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Creates a std::array object from a built-in array
+to_array <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fwide(3) · Linux Manual Pages</title>
+<meta name="description" content="fwide – set and determine the orientation of a FILE stream">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-fwide/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>fwide(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> fwide &#8211; set and determine the orientation of a FILE stream </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;wchar.h&gt;
+int fwide(FILE *stream, int mode);
+</code></pre>
+<p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
+<p> <code>fwide</code>():</p>
+<dl>
+<dt>
+</dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _ISOC99_SOURCE ||<br />
+ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> When <i>mode</i> is zero, the <code>fwide</code>() function determines the current orientation of <i>stream</i>. It returns a positive value if <i>stream</i> is wide-character oriented, that is, if wide-character I/O is permitted but char I/O is disallowed. It returns a negative value if <i>stream</i> is byte oriented&#8212;that is, if char I/O is permitted but wide-character I/O is disallowed. It returns zero if <i>stream</i> has no orientation yet; in this case the next I/O operation might change the orientation (to byte oriented if it is a char I/O operation, or to wide-character oriented if it is a wide-character I/O operation). </p>
+<p> Once a stream has an orientation, it cannot be changed and persists until the stream is closed. </p>
+<p> When <i>mode</i> is nonzero, the <code>fwide</code>() function first attempts to set <i>stream</i>&#8216;s orientation (to wide-character oriented if <i>mode</i> is greater than 0, or to byte oriented if <i>mode</i> is less than 0). It then returns a value denoting the current orientation, as above.</p>
+<h2>RETURN VALUE</h2>
+<p> The <code>fwide</code>() function returns the stream&#8217;s orientation, after possibly changing it. A positive return value means wide-character oriented. A negative return value means byte oriented. A return value of zero means undecided.</p>
+<h2>CONFORMING TO</h2>
+<p> POSIX.1-2001, POSIX.1-2008, C99.</p>
+<h2>NOTES</h2>
+<p> Wide-character output to a byte oriented stream can be performed through the <code><a href="/docs/linux/man/3-fprintf/">fprintf</a></code>(3) function with the <code>%lc</code> and <code>%ls</code> directives. </p>
+<p> Char oriented output to a wide-character oriented stream can be performed through the <code><a href="/docs/linux/man/3-fwprintf/">fwprintf</a></code>(3) function with the <code>%c</code> and <code>%s</code> directives.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-fprintf/">fprintf</a></code>(3), <code><a href="/docs/linux/man/3-fwprintf/">fwprintf</a></code>(3)</p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPMS Screen Blanking and Power-Off on Rocky Linux 9 - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-make-centos-6-6-power-off-the-console-screen-automatically/">
+  <meta name="description" content="Rocky Linux 9 can blank the console screen after a period of inactivity, but by default it may not actually power off the display. This is often caused by …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="DPMS Screen Blanking and Power-Off on Rocky Linux 9">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-make-centos-6-6-power-off-the-console-screen-automatically/">
+  <meta property="og:description" content="Rocky Linux 9 can blank the console screen after a period of inactivity, but by default it may not actually power off the display. This is often caused by …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/packages-desktop-applications/">Packages, Desktop &amp; Applications</a>
+        </nav>
+        
+        <h1>DPMS Screen Blanking and Power-Off on Rocky Linux 9</h1>
+        <time class="post-date" datetime="2018-03-24T11:45:26Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Rocky Linux 9 can blank the console screen after a period of inactivity, but by default it may not actually power off the display. This is often caused by kernel mode settings or DPMS (Display Power Management Signaling) configuration.</p>
+<h2 id="check-current-dpms-status">Check Current DPMS Status</h2>
+<p>First, verify whether DPMS is enabled on your console:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /sys/module/kernel/parameters/consoleblank
+</span></span></code></pre></div><p>If this returns nothing or an error, DPMS may not be active. Check your kernel parameters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /proc/cmdline
+</span></span></code></pre></div><p>Look for <code>nomodeset</code> or <code>vesa</code> parameters, which can disable kernel mode setting and prevent proper power management.</p>
+<h2 id="remove-nomodeset-to-enable-kms">Remove nomodeset to Enable KMS</h2>
+<p>If <code>nomodeset</code> is present in your boot parameters, removing it often resolves the issue. Edit your GRUB configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/default/grub
+</span></span></code></pre></div><p>Find the line starting with <code>GRUB_CMDLINE_LINUX</code> and remove <code>nomodeset</code>. For example, change:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;rhgb quiet nomodeset&#34;</span>
+</span></span></code></pre></div><p>To:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;rhgb quiet&#34;</span>
+</span></span></code></pre></div><p>Regenerate your GRUB configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+</span></span></code></pre></div><p>On UEFI systems, use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/efi/EFI/rocky/grub.cfg
+</span></span></code></pre></div><h2 id="why-nomodeset-matters">Why nomodeset Matters</h2>
+<p><code>nomodeset</code> disables <strong>Kernel Mode Setting (KMS)</strong>, which moved graphics initialization from the X server to the kernel. When KMS is disabled, the kernel can’t properly manage display power states, so DPMS commands don’t reach the hardware.</p>
+<p>Removing this parameter allows the kernel to take direct control of video mode switching and power management, which is the standard on modern systems.</p>
+<h2 id="configure-console-blank-timeout">Configure Console Blank Timeout</h2>
+<p>Set the blanking timeout (in seconds) directly. This requires root or sudo:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="m">300</span> <span class="p">|</span> sudo tee /sys/module/kernel/parameters/consoleblank
+</span></span></code></pre></div><p>This blanks the console after 300 seconds. Make it permanent by adding to <code>/etc/default/grub</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;rhgb quiet consoleblank=300&#34;</span>
+</span></span></code></pre></div><p>Then regenerate GRUB as above.</p>
+<h2 id="enable-dpms-on-the-console">Enable DPMS on the Console</h2>
+<p>For full power-off capability, you may need to explicitly enable DPMS. Add this to <code>/etc/default/grub</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;rhgb quiet consoleblank=300 vga=normal&#34;</span>
+</span></span></code></pre></div><p>The <code>vga=normal</code> parameter ensures standard VESA video mode is used, which supports DPMS better than some UEFI framebuffer modes.</p>
+<h2 id="verify-changes">Verify Changes</h2>
+<p>After rebooting, test whether the console blanks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo bash -c <span class="s1">&#39;echo 10 &gt; /sys/module/kernel/parameters/consoleblank&#39;</span>
+</span></span></code></pre></div><p>Wait 10 seconds. The screen should go black. Move the mouse or press a key to wake it.</p>
+<p>Check which video driver the kernel is using:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dmesg <span class="p">|</span> grep -i <span class="s2">&#34;drm\|video\|framebuffer&#34;</span> <span class="p">|</span> head -20
+</span></span></code></pre></div><p>This helps confirm whether KMS is active.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If power-off still doesn’t work after removing <code>nomodeset</code>:</p>
+<ul>
+<li>Check BIOS settings for display power management options</li>
+<li>Verify your GPU driver is loaded: <code>lsmod | grep -E &quot;nouveau|amdgpu|i915&quot;</code></li>
+<li>Try adding <code>pcie_port_pm=off</code> to GRUB if using PCIe devices</li>
+<li>Some VM environments don’t support DPMS—check if you’re in a virtual machine</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://fedoraproject.org/wiki/Features/KernelModesetting" rel="nofollow noopener" target="_blank">Fedora KernelModesetting documentation</a></li>
+<li><a href="https://www.kernel.org/doc/html/latest/power/pm.html" rel="nofollow noopener" target="_blank">ACPI Power Management on Linux</a></li>
+</ul>
+<h2 id="2026-best-practices-and-advanced-techniques">2026 Best Practices and Advanced Techniques</h2>
+<p>For DPMS Screen Blanking and Power-Off on Rocky Linux 9, understanding both the fundamentals and modern practices ensures you can work efficiently and avoid common pitfalls. This guide extends the core article with practical advice for 2026 workflows.</p>
+<h2 id="troubleshooting-and-debugging">Troubleshooting and Debugging</h2>
+<p>When issues arise, a systematic approach saves time. Start by checking logs for error messages or warnings. Test individual components in isolation before integrating them. Use verbose modes and debug flags to gather more information when standard output is not enough to diagnose the problem.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor system resources to identify bottlenecks</li>
+<li>Use caching strategies to reduce redundant computation</li>
+<li>Keep software updated for security patches and performance improvements</li>
+<li>Profile code before applying optimizations</li>
+<li>Use connection pooling and keep-alive for network operations</li>
+</ul>
+<h2 id="security-considerations">Security Considerations</h2>
+<p>Security should be built into workflows from the start. Use strong authentication methods, encrypt sensitive data in transit, and follow the principle of least privilege for access controls. Regular security audits and penetration testing help maintain system integrity.</p>
+<h2 id="related-tools-and-commands">Related Tools and Commands</h2>
+<p>These complementary tools expand your capabilities:</p>
+<ul>
+<li>Monitoring: top, htop, iotop, vmstat for system resources</li>
+<li>Networking: ping, traceroute, ss, tcpdump for connectivity</li>
+<li>Files: find, locate, fd for searching; rsync for syncing</li>
+<li>Logs: journalctl, dmesg, tail -f for real-time monitoring</li>
+<li>Testing: curl for HTTP requests, nc for ports, openssl for crypto</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Consider automation and containerization for consistency across environments. Infrastructure as code tools enable reproducible deployments. CI/CD pipelines automate testing and deployment, reducing human error and speeding up delivery cycles.</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<p>This extended guide covers the topic beyond the original article scope. For specialized needs, refer to official documentation or community resources. Practice in test environments before production deployment.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

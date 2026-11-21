@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_kgdb_arch(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_kgdb_arch – Describe architecture specific values.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_kgdb_arch/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_kgdb_arch(9)</h1>
+
+
+
+
+
+<p>struct_kgdb_arch &#8211; Describe architecture specific values.</p>
+<h2>Synopsis</h2>
+<pre><code>struct kgdb_arch {
+    unsigned char gdb_bpt_instr[BREAK_INSTR_SIZE];
+    unsigned long flags;
+    int (*set_breakpoint)(unsigned long, char *);
+    int (*remove_breakpoint)(unsigned long, char *);
+    int (*set_hw_breakpoint)(unsigned long, int, enum kgdb_bptype);
+    int (*remove_hw_breakpoint)(unsigned long, int, enum kgdb_bptype);
+    void (*disable_hw_break)(struct pt_regs *regs);
+    void (*remove_all_hw_break)(void);
+    void (*correct_hw_break)(void);
+    void (*enable_nmi)(bool on);
+};</code></pre>
+<h2>Members</h2>
+<p>gdb_bpt_instr[BREAK_INSTR_SIZE]</p>
+<dl>
+<dd>The instruction to trigger a breakpoint.</dd></dl>
+<p> flags</p>
+<dl>
+<dd>Flags for the breakpoint, currently just <code>KGDB_HW_BREAKPOINT</code>.</dd></dl>
+<p> set_breakpoint</p>
+<dl>
+<dd>Allow an architecture to specify how to set a software breakpoint.</dd></dl>
+<p> remove_breakpoint</p>
+<dl>
+<dd>Allow an architecture to specify how to remove a software breakpoint.</dd></dl>
+<p> set_hw_breakpoint</p>
+<dl>
+<dd>Allow an architecture to specify how to set a hardware breakpoint.</dd></dl>
+<p> remove_hw_breakpoint</p>
+<dl>
+<dd>Allow an architecture to specify how to remove a hardware breakpoint.</dd></dl>
+<p> disable_hw_break</p>
+<dl>
+<dd>Allow an architecture to specify how to disable hardware breakpoints for a single cpu.</dd></dl>
+<p> remove_all_hw_break</p>
+<dl>
+<dd>Allow an architecture to specify how to remove all hardware breakpoints.</dd></dl>
+<p> correct_hw_break</p>
+<dl>
+<dd>Allow an architecture to specify how to correct the hardware debug registers.</dd></dl>
+<p> enable_nmi</p>
+<dl>
+<dd>Manage NMI-triggered entry to KGDB</dd></dl>
+<h2>Author</h2>
+<p><code>Jason Wessel</code> &lt;jason.wessel [at] windriver.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

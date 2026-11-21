@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>papi_register_thread(3) · Linux Manual Pages</title>
+<meta name="description" content="PAPI_register_thread –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-papi_register_thread/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>papi_register_thread(3)</h1>
+
+
+
+
+
+<p>PAPI_register_thread &#8211; </p>
+<p> Notify PAPI that a thread has &#8216;appeared&#8217;.</p>
+<h2>Synopsis</h2>
+<h2>Detailed Description</h2>
+<p><code>C Interface:</code></p>
+<dl COMPACT>
+<dd>#include &lt;<code>papi.h</code>&gt;<br />
+ int <code>PAPI_register_thread</code> (void);</dd></dl>
+<p> <code>PAPI_register_thread()</code> should be called when the user wants to force PAPI to initialize a thread that PAPI has not seen before. </p>
+<p> Usually this is not necessary as PAPI implicitly detects the thread when an eventset is created or other thread local PAPI functions are called. However, it can be useful for debugging and performance enhancements in the run-time systems of performance tools. </p>
+<p> <code>Return values:</code></p>
+<dl COMPACT>
+<dd><i>PAPI_ENOMEM</i> Space could not be allocated to store the new thread information.<br />
+ <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.<br />
+ <i>PAPI_ECMP</i> Hardware counters for this thread could not be initialized.</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>PAPI_unregister_thread</code> </dd>
+<p> <code>PAPI_thread_id</code> </p>
+<p> <code>PAPI_thread_init</code></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

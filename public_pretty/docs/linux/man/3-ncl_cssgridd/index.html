@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_cssgridd(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_cssgridd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_cssgridd(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>CSSGRIDD - tension spline interpolation on a sphere.</p>
+<h2>Synopsis</h2>CALL CSSGRIDD (N, RLAT, RLON, F, NI, NJ, PLAT, PLON, FF, IWK, RWK, IER)
+<h2>Description</h2><dl COMPACT><dt>N
+</dt><dd>(integer,input) The number of input data points (N &gt; 2).
+</dd><dt>RLAT
+</dt><dd>(double precision, input) An array containing the latitudes of the input data, expressed in degrees. The first three points must not be collinear (lie on a common great circle).
+</dd><dt>RLON
+</dt><dd>(double precision, input) An array containing the longitudes of the input data, expressed in degrees.
+</dd><dt>F
+</dt><dd>(double precision, input) An array containing data values. F(I) is a functional value at (RLAT(I),RLON(I)) for I = 1 to N.
+</dd><dt>NI
+</dt><dd>(integer, input) The number of rows in the uniform output grid. NI can be 1.
+</dd><dt>NJ
+</dt><dd>(integer, input) The number of columns in the uniform output grid. NJ can be 1.
+</dd><dt>PLAT
+</dt><dd>(double precision, intput) An array of length NI containing the latitudes the output grid lines. The values in PLAT should be in degrees.
+</dd><dt>PLON
+</dt><dd>(double precision, intput) An array of length NJ containing the longitudes the output grid lines. The value in PLON should be in degrees.
+</dd><dt>FF
+</dt><dd>(double precision, output) An NI by NJ array containing the desired interpolated values. FF(I,J) is the interpolated value at the coordinate specified by PLAT(I) and PLON(J) for I = 1 to NI and J = 1 to NJ.
+</dd><dt>IWK
+</dt><dd>(integer, input) An integer workspace of length 27*N.
+</dd><dt>RWK
+</dt><dd>(double precision, input) A work array dimensioned for 13*N. Note that RWK must be typed DOUBLE PRECISION.
+</dd><dt>IER
+</dt><dd>(integer, output) An error return value. If IER is returned as 0, then no errors were detected. If IER is non-zero, then refer to the man page for cssgrid_errors for details.</dd></dl><h2>Usage</h2>CSSGRIDD is called to find an interpolating tension spline for data randomly positioned on a sphere. CSSGRIDD is a double precision version of CSSGRID.
+<h2>Access</h2>To use CSSGRIDD, load the NCAR Graphics library ngmath.
+<h2>See Also</h2>css_overview, csstri, cssgrid, cssgrid_errors 
+<p>Complete documentation for Cssgrid is available at URL
+<a rel="nofollow" HREF="http://ngwww.ucar.edu/ngdoc/ng/ngmath/cssgrid/csshome.html"><a href="http://ngwww.ucar.edu/ngdoc/ng/ngmath/cssgrid/csshome.html">http://ngwww.ucar.edu/ngdoc/ng/ngmath/cssgrid/csshome.html</a></a></p>
+<h2>Copyright</h2>Copyright (C) 2000 
+ University Corporation for Atmospheric Research 
+<p>The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

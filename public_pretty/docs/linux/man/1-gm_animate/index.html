@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gm_animate(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gm_animate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gm_animate(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>ANIMATION TOOL (gis.m)</h2>
+<p>The Animation Tool is an interactive interface to display a series of raster maps as an animation. Rasters can be added individually or as a prefix followed by a sequential number suffix.</p>
+<h3>Using the Animation Tool</h3>
+<p>The Animation Tool is started from the <i>File</i> menu or from the animation button () on the GIS Manager toolbar.</p>
+<p>The main animation window has a toolbar for selecting maps to display and controling the animation, and a display area. The display area can show a single, full-screen animation, or two to four simultaneous quarter-screen animations.</p>
+<h3>Selecting Maps to Animate</h3>
+<p>Click the maps button () on the main animation window toolbar to open a map selection window.</p>
+<p>A map or map series must be entered in the entry for frame 1. If a map series is only entered for frame 1, a single, full-frame animation will be displayed. If map series are entered for other frames, two to four quarter-frame animations will be displayed (see example image above). Raster maps can be added individually or as a prefix followed by a sequential number suffix.</p>
+<dl>
+<dl>
+<dt>
+</dt><dd> To enter maps individually, enter each map name separated by a comma (no space) from the previous map name (see the entry for frame 3 in the example image above).
+</dd><dt>
+</dt><dd> For a map series entered in the prefix/suffix format, the suffix can be specified as a range of numbers in side parentheses. In the example image above, &quot;map(1-4)&quot; will specified raster maps map1 through map4.
+</dd><dt>
+</dt><dd> The suffix for a map series also can be specified using Unix-style wildcard matching. In the examle above &quot;rdbuffer[0-1][1-9]&quot; specifies raster maps rdbuffer01 through rdbuffer19.
+</dd><dt>
+</dt><dd> Multiple specification forms can be mixed on a single entry line. For example, you could specify dqrast-a,rast-b,rast-(1-50),rast[0-9][0-9]&quot;. This will specify rast-a, rast-b, rast-1 through rast-50, and rast00 through rast99. 
+</dd></dl>
+</dl>
+<h3>Controlling the Animation</h3>
+<p>The animation can be controlled in various ways by using the buttons on the main animation window toobar.</p>
+<p>The rewind button will set the display to the first animation frame.</p>
+<p>The reverse button will play the animation in reverse order.</p>
+<p>The reverse step button will step through the animation frame by frame in reverse order.</p>
+<p>The pause button will stop the animation at whatever frame is visible when the animation is stopped. The animation will be continued from this frame when a forward or reverse button is pressed.</p>
+<p>The forward step button will step through the animation frame by frame.</p>
+<p>The play button will display the maps of the animation in the order they are listed in the map selection window.</p>
+<p>The slow button will increase the time between the display of each consecutive frame in the animation, causing it to to slow down.</p>
+<p>The fast button will decrease the time between the display of each consecutive frame in the animation, causing it to to speed up.</p>
+<p>The repeat switch will cause the animation to repeatedly cycle from first to last frame if the play button is pressed, or cycle from last to first if the reverse button is pressed.</p>
+<p>The alternating switch will cause the animation to alternately play from first frame to last frame, and from last to first.</p>
+<p>[Names] The names switch will cause the file names of the maps used for the animation to display in the lower left corner of each animation frame.</p>
+<p>The Exit button will quit the Animation Tool.</p>
+<h2>SEE ALSO</h2>
+<p><i> gis.m manual
+gis.m: GEORECTIFY TOOL
+gis.m: PROFILE TOOL</p>
+<p>xganim
+r.out.mpeg
+</i></p>
+<h2>AUTHORS</h2>
+<p>Michael Barton, Arizona State University, Tempe, Arizona, USA
+Glynn Clements</p>
+<p><i>Last changed: $Date: 2007-11-18 21:17:33 +0100 (Sun, 18 Nov 2007) $</i></p>
+<p>Full index</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

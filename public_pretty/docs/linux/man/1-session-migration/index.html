@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>session-migration(1) · Linux Manual Pages</title>
+<meta name="description" content="session-migration – Migrate in user session settings.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-session-migration/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>session-migration(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> session-migration &#8211; Migrate in user session settings.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>session-migration</code> [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> The <code>session-migration</code> program can be used to migrate in-session user data when a program is evolving its configuration, or needing to have files moved and so on. This program is generally autostarted at the very beginning of the session and integrates caching capabilities. </p>
+<p> The general usage is to ship an executable file in XDG_DATA_DIR/session-migration/scripts. This one will be executed the next time the user log into the session. It will executes all executable files there in ascii order, one after another. </p>
+<p> Even if the program tries to cache some timestamp and scripts to not be launched twiced (they are skipped on subsequent runs), the executables file should be idempotent. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;dry-run</code></dt>
+<dd> This parameter enables to run the session-migration tool without really launching the scripts and marking them are migrated. It&#8217;s generally used with &#8211;verbose for debugging purposes. </dd>
+<dt><code>&#8211;file</code>&nbsp;<i>filename</i></dt>
+<dd> This parameter, followed by a path or filename, tells sesions-migration to only consider that script file and ignoring XDG_DATA_DIR. It won&#8217;t log as well this special file as being migrated. </dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display a quick command help. </dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Show a lot of verbose information. It can be used by the user to debug configuration issues; </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

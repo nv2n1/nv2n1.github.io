@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbsetdebuggingflags(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbSetDebuggingFlags – Change the values of any of the debug controls">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbsetdebuggingflags/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbsetdebuggingflags(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XkbSetDebuggingFlags &#8211; Change the values of any of the debug controls </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Bool XkbSetDebuggingFlags</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>mask</i><code>,</code> <code>unsigned int </code><i>flags</i><code>,</code> <code>char *</code><i>msg</i><code>,</code> <code>unsigned int </code><i>ctrls_mask</i><code>,</code> <code>unsigned int </code><i>ctrls</i><code>,</code> <code>unsigned int *</code><i>ret_flags</i><code>,</code> <code>unsigned int *</code><i>ret_ctrls</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; display</i></dt>
+<dd>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; mask</i></dt>
+<dd>mask selecting debug output flags to change</dd>
+<dt><i>&#8211; flags</i></dt>
+<dd>values for debug output flags selected by mask</dd>
+<dt><i>&#8211; msg</i></dt>
+<dd>message to print right now</dd>
+<dt><i>&#8211; ctrls_mask</i></dt>
+<dd>mask selecting debug controls to change</dd>
+<dt><i>&#8211; ctrls</i></dt>
+<dd>values for debug controls selected by ctrls_mask</dd>
+<dt><i>&#8211; ret_flags</i></dt>
+<dd>resulting state of all debug output flags</dd>
+<dt><i>&#8211; ret_ctrls</i></dt>
+<dd>resulting state of all debug controls</dd></dl>
+<h2>Description</h2>
+<p>The debugging aids are intended for use primarily by Xkb implementors and are optional in any implementation. </p>
+<p> There are two bitmasks that may be used to control debugging. One bitmask controls the output of debugging information, and the other controls behavior. Both bitmasks are initially all zeros. </p>
+<p> To change the values of any of the debug controls, use <i>XkbSetDebuggingFlags.</i> </p>
+<p> <i>XkbSetDebuggingFlags </i> modifies the debug output flags as specified by <i>mask </i> and flags, modifies the debug controls flags as specified by <i>ctrls_mask </i> and ctrls, prints the message <i>msg, </i> and backfills <i>ret_flags </i> and <i>ret_ctrls </i> with the resulting debug output and debug controls flags. </p>
+<p> When bits are set in the debug output masks, <i>mask </i> and <i>flags, </i> Xkb prints debug information corresponding to each bit at appropriate points during its processing. The device to which the output is written is implementation-dependent, but is normally the same device to which X server error messages are directed; thus the bits that can be set in <i>mask </i> and <i>flags </i> is implementation-specific. To turn on a debug output selection, set the bit for the output in the <i>mask </i> parameter and set the corresponding bit in the <i>flags </i> parameter. To turn off event selection for an event, set the bit for the output in the <i>mask </i> parameter and do not set the corresponding bit in the <i>flags </i> parameter. </p>
+<p> When bits are set in the debug controls masks, <i>ctrls_mask </i> and <i>ctrls, </i> Xkb modifies its behavior according to each controls bit. <i>ctrls_mask </i> and ctrls are related in the same way that <i>mask </i> and <i>flags </i> are. The valid controls bits are defined in Table 1. </p>
+<table>
+<tr VALIGN=top>
+<td ALIGN=center COLSPAN=3>Table 1 Debug Control Masks
+</td>
+</tr>
+<tr VALIGN=top>
+<td COLSPAN=3>
+<hr>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>Debug Control Mask</td>
+<td>Value</td>
+<td>Meaning
+</td>
+</tr>
+<tr VALIGN=top>
+<td COLSPAN=3>
+<hr>
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XkbDF_DisableLocks</td>
+<td>(1 &lt;&lt; 0)</td>
+<td>Disable actions that lock modifiers
+</td>
+</tr>
+</table>
+<p> <i>XkbSetDebuggingFlags </i> returns True if successful and False otherwise. The only protocol error it may generate is BadAlloc, if for some reason it is unable to allocate storage. </p>
+<p> <i>XkbSetDebuggingFlags </i> is intended for developer use and may be disabled in production X servers. If it is disabled, <i>XkbSetDebuggingFlags </i> has no effect and does not generate any protocol errors. </p>
+<p> The message in <i>msg </i> is written immediately. The device to which it is written is implementation dependent but is normally the same device where X server error messages are directed.</p>
+<h2>Return Values</h2>
+<dl COMPACT>
+<dt>True</dt>
+<dd>The <i>XkbSetDebuggingFlags </i> function returns True when successful.</dd>
+<dt>False</dt>
+<dd>The <i>XkbSetDebuggingFlags </i> function returns False when not successful.</dd></dl>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

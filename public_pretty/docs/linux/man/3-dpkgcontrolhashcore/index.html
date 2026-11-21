@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dpkgcontrolhashcore(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dpkgcontrolhashcore/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dpkgcontrolhashcore(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Dpkg::Control::HashCore - parse and manipulate a block of RFC822-like fields</p>
+<h2>Description</h2>The Dpkg::Control::Hash object is a hash-like representation of a set of RFC822-like fields. The fields names are case insensitive and are always capitalized the same when output (see field_capitalize function in Dpkg::Control::Fields). The order in which fields have been set is remembered and is used to be able to dump back the same content. The output order can also be overridden if needed. 
+<p>You can store arbitrary values in the hash, they will always be properly escaped in the output to conform to the syntax of control files. This is relevant mainly for multilines values: while the first line is always output unchanged directly after the field name, supplementary lines are modified. Empty lines and lines containing only dots are prefixed with `` .&rsquo;&rsquo; (space + dot) while other lines are prefixed with a single space.</p>
+<p>During parsing, trailing spaces are stripped on all lines while leading spaces are stripped only on the first line of each field.</p>
+<h2>Functions</h2><dl COMPACT><dt>my $c = Dpkg::Control::Hash-&gt;new(%opts)
+</dt><dd>Creates a new object with the indicated options. Supported options are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>allow_pgp
+</dt><dd>Configures the parser to accept OpenPGP signatures around the control information. Value can be 0 (default) or 1.
+</dd><dt>allow_duplicate
+</dt><dd>Configures the parser to allow duplicate fields in the control information. Value can be 0 (default) or 1.
+</dd><dt>drop_empty
+</dt><dd>Defines if empty fields are dropped during the output. Value can be 0 (default) or 1.
+</dd><dt>name
+</dt><dd>The user friendly name of the information stored in the object. It might be used in some error messages or warnings. A default name might be set depending on the type.
+</dd><dt>is_pgp_signed
+</dt><dd>Set by the parser (starting in dpkg 1.17.0) if it finds an OpenPGP signature around the control information. Value can be 0 (default) or 1, and undef when the option is not supported by the code (in versions older than dpkg 1.17.0).</dd></dl></dl><dl COMPACT><dd></dd></dl><dt>$c-&gt;set_options($option, %opts)
+</dt><dd>Changes the value of one or more options.
+</dd><dt>my $value = $c-&gt;get_option($option)
+</dt><dd>Returns the value of the corresponding option.
+</dd><dt>$c-&gt;load($file)
+</dt><dd>Parse the content of <tt>$file</tt>. Exits in case of errors. Returns true if some fields have been parsed.
+</dd><dt>$c-&gt;parse_error($file, $fmt, ...)
+</dt><dd>Prints an error message and dies on syntax parse errors.
+</dd><dt>$c-&gt;parse($fh, $description)
+</dt><dd>Parse a control file from the given filehandle. Exits in case of errors. <tt>$description</tt> is used to describe the filehandle, ideally it's a filename or a description of where the data comes from. It's used in error messages. Returns true if some fields have been parsed.
+</dd><dt>$c-&gt;find_custom_field($name)
+</dt><dd>Scan the fields and look for a user specific field whose name matches the following regex: /X[<font SIZE="-1">SBC</font>]*-$name/i. Return the name of the field found or undef if nothing has been found.
+</dd><dt>$c-&gt;get_custom_field($name)
+</dt><dd>Identify a user field and retrieve its value.
+</dd><dt>$c-&gt;save($filename)
+</dt><dd>Write the string representation of the control information to a file.
+</dd><dt>my $str = $c-&gt;<i>output()</i>
+</dt><dd></dd><dt>&quot;$c&quot;
+</dt><dd>Get a string representation of the control information. The fields are sorted in the order in which they have been read or set except if the order has been overridden with <i>set_output_order()</i>.
+</dd><dt>$c-&gt;output($fh)
+</dt><dd>Print the string representation of the control information to a filehandle.
+</dd><dt>$c-&gt;set_output_order(@fields)
+</dt><dd>Define the order in which fields will be displayed in the <i>output()</i> method.
+</dd><dt>$c-&gt;apply_substvars($substvars)
+</dt><dd>Update all fields by replacing the variables references with the corresponding value stored in the Dpkg::Substvars object.</dd></dl><h2>Changes</h2><h3>Version 1.01</h3>New method: <tt>$c</tt>-&gt;<i>parse_error()</i>.
+<h3>Version 1.00</h3>Mark the module as public.
+<h2>Author</h2>Raphaël Hertzog &lt;hertzog [at] debian.org&gt;.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

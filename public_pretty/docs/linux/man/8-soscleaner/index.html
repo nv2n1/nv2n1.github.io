@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>soscleaner(8) · Linux Manual Pages</title>
+<meta name="description" content="soscleaner – clean sosreports of sensitive information">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-soscleaner/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>soscleaner(8)</h1>
+
+
+
+
+
+<p>soscleaner &#8211; clean sosreports of sensitive information</p>
+<h2>Synopsis</h2>
+<p>soscleaner -l LOGLEVEL -d DOMAIN -f FILE -q</p>
+<h2>Description</h2>
+<p>soscleaner is an attempt to begin the process of cleaning potentially sensitive hostnames and IPv4 addresses from an sosreport after it has been created. It is NOT a full cleaning, but it attempts to be a good starting point. If a Fully Qualified Domain Name is used for the hostname, it can substitute instances of hostnames on that domain with a consistent substitution. If an FQDN is not used, it will replace all instances of the short hostname. It also replaces instances of IPv4 addresses with a randomly assignable IPv4 range.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-d</code>, <code>&#8211;domain</code>=<i>DOMAIN</i></dt>
+<dd>optional additional domains to be analyzed during the soscleaner process</dd>
+<dt><code>-f</code>, <code>&#8211;file</code>=<i>FILE</i></dt>
+<dd>optional additonal files to be analyzed. Can be used in addtion to supplying an sosreport, or can be used without specifying an sosreport. If no sosreport is supplied, no hostnames will be obfuscated usless the -d flag is used to add a domain for analysis</dd>
+<dt><code>-l</code>, <code>&#8211;loglevel</code>=<i>LOGLEVEL</i></dt>
+<dd>the desired loglevel to be used. default is &#8216;INFO&#8217; (including quotes). Options are &#8216;DEBUG&#8217;,&#8217;INFO&#8217;,&#8217;WARNING&#8217;,&#8217;ERROR&#8217;. <code>-q</code>, <code>&#8211;quiet</code> Quiet mode. Nothing will be output to STDOUT. logfiles will still be created.</dd></dl>
+<h2>Examples</h2>
+<dl>
+<dt><code>supply an sosreport</code></dt>
+<dd>soscleaner /path/to/sosreport.tar.gz</dd>
+<dt><code>change logging level</code></dt>
+<dd>soscleaner -l DEBUG /path/to/sosreport.tar.gz (warning &#8211; DEBUG level logging is extremely intensive.)</dd>
+<dt><code>supply additonal domains</code></dt>
+<dd>soscleaner -d foo.com -d google.com /path/to/sosreport.tar.gz</dd>
+<dt><code>supply additional files</code></dt>
+<dd>soscleaner -f /path/to/file1 -f /path/to/file2 /path/to/sosreport.tar.gz</dd>
+<dt><code>only analyze files</code></dt>
+<dd>soscleaner -f /path/to/file1 -f /path/to/file2 -d foo.com (It is highly recommended to use the -d flag if only scanning files, so hostnames will be obfuscated.)</dd></dl>
+<h2>Bugs</h2>
+<p>Please report new bugs to <a rel="nofollow" href="https://github.com/jduncan-rva/soscleaner/issues">https://github.com/jduncan-rva/soscleaner/issues</a></p>
+<h2>Author</h2>
+<p>Jamie Duncan (jduncan [at] redhat.com)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

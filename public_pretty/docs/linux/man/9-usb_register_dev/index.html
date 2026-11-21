@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>usb_register_dev(9) · Linux Manual Pages</title>
+<meta name="description" content="usb_register_dev – register a USB device, and ask for a minor number">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-usb_register_dev/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>usb_register_dev(9)</h1>
+
+
+
+
+
+<p>usb_register_dev &#8211; register a USB device, and ask for a minor number</p>
+<h2>Synopsis</h2>
+<pre><code>int usb_register_dev(struct usb_interface *intf, struct usb_class_driver *class_driver);</code></pre>
+<h2>Arguments</h2>
+<p><i>intf</i></p>
+<dl>
+<dd>
+</dd><dd>pointer to the usb_interface that is being registered</dd></dl>
+<p> <i>class_driver</i></p>
+<dl>
+<dd>pointer to the usb_class_driver for this device</dd></dl>
+<h2>Description</h2>
+<p>This should be called by all USB drivers that use the USB major number. If CONFIG_USB_DYNAMIC_MINORS is enabled, the minor number will be dynamically allocated out of the list of available ones. If it is not enabled, the minor number will be based on the next available free minor, starting at the class_driver-&gt;minor_base. </p>
+<p> This function also creates a usb class device in the sysfs tree. </p>
+<p> <code>usb_deregister_dev</code> must be called when the driver is done with the minor numbers given out by this function.</p>
+<h2>Return</h2>
+<p>-EINVAL if something bad happens with trying to register a device, and 0 on success.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

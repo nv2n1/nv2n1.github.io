@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_multipathgenerator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_multipathgenerator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_multipathgenerator(3)</h1>
+
+
+
+
+
+<p>QuantLib::MultiPathGenerator - Generates a multipath from a random number generator.</p>
+<h2>Synopsis</h2>#include &lt;ql/methods/montecarlo/multipathgenerator.hpp&gt; 
+<h3>Public Types</h3>typedef <b>Sample</b>&lt; <b>MultiPath</b> &gt; <b>sample_type</b> 
+<h3>Public Member Functions</h3><b>MultiPathGenerator</b> (const boost::shared_ptr&lt; <b>StochasticProcess</b> &gt; &amp;, const <b>TimeGrid</b> &amp;, GSG generator, bool brownianBridge=false) 
+<p>const <b>sample_type</b> &amp; <b>next</b> () const</p>
+<p>const <b>sample_type</b> &amp; <b>antithetic</b> () const</p>
+<h2>Detailed Description</h2><h3>template&lt;class GSG&gt; class QuantLib::MultiPathGenerator&lt; GSG &gt;</h3>Generates a multipath from a random number generator. 
+<p>RSG is a sample generator which returns a random sequence. It must have the minimal interface:</p>
+ <pre> RSG {
+ Sample&lt;Array&gt; next();
+ };</pre><b>Tests</b>
+<dl COMPACT><dd>the generated paths are checked against cached results</dd></dl><h2>Author</h2>Generated automatically by Doxygen for QuantLib from the source code.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

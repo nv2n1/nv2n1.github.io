@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdenable_shared_from_this(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdenable_shared_from_this/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdenable_shared_from_this(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::enable_shared_from_this - std::enable_shared_from_this</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;memory&gt;
+template&lt; class T &gt; class enable_shared_from_this; <i>(since C++11)</i>
+std::enable_shared_from_this allows an object t that is currently managed by a std::shared_ptr named pt to safely generate additional std::shared_ptr instances pt1, pt2, &hellip; that all share ownership of t with pt.
+Publicly inheriting from std::enable_shared_from_this&lt;T&gt; provides the type T with a member function shared_from_this. If an object t of type T is managed by a std::shared_ptr&lt;T&gt; named pt, then calling T::shared_from_this will return a new std::shared_ptr&lt;T&gt; that shares ownership of t with pt.</p>
+<h2>Member functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs an enable_shared_from_this object
+constructor <i>(protected member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> destroys an enable_shared_from_this object
+destructor <i>(protected member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns a reference to this
+operator= <i>(protected member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns a shared_ptr which shares ownership of *this
+shared_from_this <i>(public member function)</i></p>
+<p>weak_from_this returns the weak_ptr which shares ownership of *this
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i>
+<i>(C++17)</i></p>
+<h2>Member objects</h2>
+<p>Member name Definition
+weak_this (private)<i>(C++17)</i> std::weak_ptr object tracking the control block of the first shared owner of *this. Exposition only</p>
+<h2>Notes</h2>
+<p>A common implementation for enable_shared_from_this is to hold a weak reference (such as std::weak_ptr) to this. The constructors of std::shared_ptr detect the presence of an
+unambiguous and accessible
+<i>(since C++17)</i> enable_shared_from_this base and assign the newly created std::shared_ptr to the internally stored weak reference
+if not already owned by a live std::shared_ptr
+<i>(since C++17)</i>. Constructing a std::shared_ptr for an object that is already managed by another std::shared_ptr will not consult the internally stored weak reference and thus will lead to undefined behavior.
+It is permitted to call shared_from_this only on a previously shared object, i.e. on an object managed by std::shared_ptr&lt;T&gt;. Otherwise
+the behavior is undefined
+<i>(until C++17)</i>
+std::bad_weak_ptr is thrown (by the shared_ptr constructor from a default-constructed weak_this)
+<i>(since C++17)</i>.
+enable_shared_from_this provides the safe alternative to an expression like std::shared_ptr&lt;T&gt;(this), which is likely to result in this being destructed more than once by multiple owners that are unaware of each other (see example below)</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;memory&gt;
+#include &lt;iostream&gt;
+struct Good : std::enable_shared_from_this&lt;Good&gt; // note: public inheritance
+{
+std::shared_ptr&lt;Good&gt; getptr()
+{
+return shared_from_this();
+}
+};
+struct Bad
+{
+std::shared_ptr&lt;Bad&gt; getptr()
+{
+return std::shared_ptr&lt;Bad&gt;(this);
+}
+~Bad()
+{
+std::cout &lt;&lt; &quot;Bad::~Bad() called\n&quot;;
+}
+};
+int main()
+{
+// Good: the two shared_ptr&rsquo;s share the same object
+std::shared_ptr&lt;Good&gt; gp1 = std::make_shared&lt;Good&gt;();
+std::shared_ptr&lt;Good&gt; gp2 = gp1-&gt;getptr();
+std::cout &lt;&lt; &quot;gp2.use_count() = &quot; &lt;&lt; gp2.use_count() &lt;&lt; &lsquo;\n&rsquo;;
+// Bad: shared_from_this is called without having std::shared_ptr owning the caller
+try {
+Good not_so_good;
+std::shared_ptr&lt;Good&gt; gp1 = not_so_good.getptr();
+} catch (std::bad_weak_ptr &amp;e) {
+// undefined behavior (until C++17) and std::bad_weak_ptr thrown (since C++17)
+std::cout &lt;&lt; e.what() &lt;&lt; &lsquo;\n&rsquo;;
+}
+// Bad, each shared_ptr thinks it&rsquo;s the only owner of the object
+std::shared_ptr&lt;Bad&gt; bp1 = std::make_shared&lt;Bad&gt;();
+std::shared_ptr&lt;Bad&gt; bp2 = bp1-&gt;getptr();
+std::cout &lt;&lt; &quot;bp2.use_count() = &quot; &lt;&lt; bp2.use_count() &lt;&lt; &lsquo;\n&rsquo;;
+} // UB: double-delete of Bad
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> gp2.use_count() = 2
+ <wbr> bad_weak_ptr
+ <wbr> bp2.use_count() = 1
+ <wbr> Bad::~Bad() called
+ <wbr> Bad::~Bad() called
+ <wbr> *** glibc detected *** ./test: double free or corruption</p>
+<h2>See also</h2>
+<p>shared_ptr smart pointer with shared object ownership semantics
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

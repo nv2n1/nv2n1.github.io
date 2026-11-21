@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_rio_dbell(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_rio_dbell – RIO doorbell event">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_rio_dbell/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_rio_dbell(9)</h1>
+
+
+
+
+
+<p>struct_rio_dbell &#8211; RIO doorbell event</p>
+<h2>Synopsis</h2>
+<pre><code>struct rio_dbell {
+    struct list_head node;
+    struct resource *res;
+    void (*dinb)(struct rio_mport *mport, void *dev_id, u16 src, u16 dst, u16 info);
+    void *dev_id;
+};</code></pre>
+<h2>Members</h2>
+<p>node</p>
+<dl>
+<dd>Node in list of doorbell events</dd></dl>
+<p> res</p>
+<dl>
+<dd>Doorbell resource</dd></dl>
+<p> dinb</p>
+<dl>
+<dd>Doorbell event callback</dd></dl>
+<p> dev_id</p>
+<dl>
+<dd>Device specific pointer to pass on event</dd></dl>
+<h2>Author</h2>
+<p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

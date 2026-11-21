@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rhnreg_ks(8) · Linux Manual Pages</title>
+<meta name="description" content="rhnreg_ks – A program for non interactively registering systems to Red Hat Satellite.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-rhnreg_ks/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>rhnreg_ks(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>rhnreg_ks &#8211; A program for non interactively registering systems to Red Hat Satellite.</p>
+<h2>Synopsis</h2>
+<p>rhnreg_ks [<i>options</i>] </p>
+<h2>Description</h2>
+<p>rhnreg_ks is a utility for registering a system with the &quot;<code>Red Hat Satellite</code>&quot;. It is designed to be used in a non-interactive environment (a kickstart style install, for example). All the information can be specified on the command line or stdin. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;profilename</code></dt>
+<dd>Specify the profile name that should be used as an identifier for the system in Red Hat Satellite </dd>
+<dt><code>&#8211;username</code></dt>
+<dd>The username to register the system with under Red Hat Satellite. This can be an existing Red Hat Satellite username, or a new username. </dd>
+<dt><code>&#8211;password</code></dt>
+<dd>The password associated with the username specified with the <code>&#8211;username</code> option. This is an unencrypted password. </dd>
+<dt><code>&#8211;activationkey</code></dt>
+<dd>Specify/use a serial number to associate with the system. This is optional, but activation keys can really simplify the registration process. Learn more about activation keys in the online RHN documentation. </dd>
+<dt><code>&#8211;contactinfo</code></dt>
+<dd>This option has been deprecated. Please login to the server web user interface and update your contactinfo. </dd>
+<dt><code>&#8211;nohardware</code></dt>
+<dd>Do not probe or upload any hardware information. </dd>
+<dt><code>&#8211;nopackages</code></dt>
+<dd>Do not profile or upload any package information. </dd>
+<dt><code>&#8211;novirtinfo</code></dt>
+<dd>Do not profile or upload any virtualization information. </dd>
+<dt><code>&#8211;norhnsd</code></dt>
+<dd>Do not start rhnsd after completion. </dd>
+<dt><code>&#8211;force</code></dt>
+<dd>Register the system even if it has already been registered. </dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Show the version of rhnreg_ks. </dd>
+<dt><code>&#8211;proxy</code></dt>
+<dd>Specify a HTTP proxy to use. </dd>
+<dt><code>&#8211;proxyUser</code></dt>
+<dd>Specify a username to use with an authenticated HTTP proxy. </dd>
+<dt><code>&#8211;proxyPassword</code></dt>
+<dd>Specify a password to use with an authenticated HTTP proxy. </dd>
+<dt><code>&#8211;sslCACert</code></dt>
+<dd>Specify a path to a SSL CA certificate to use. </dd>
+<dt><code>&#8211;serverUrl</code></dt>
+<dd>Specify a URL to as the server. </dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show a help message and exit. </dd>
+</dl>
+<h2>Files</h2>
+<dl>
+<dt><i>/etc/sysconfig/rhn/systemid</i></dt>
+<dd>The digital server ID for this machine if the system has been registered onto &quot;<code>Red Hat Satellite</code>&quot;. This file does not exist otherwise. </dd>
+<dt><i>/etc/sysconfig/rhn/up2date</i></dt>
+<dd>The common configuration file used by RHN client programs. </dd>
+</dl>
+<h2>Examples</h2>
+<p>Register a new system to Red Hat Satellite:</p>
+<dl>
+<dd>
+<pre>rhnreg_ks --profilename &quot;example_profile_name&quot; --username &quot;someexampleuser&quot; --password &quot;foobar&quot;</pre>
+</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-rhn_check/">rhn_check</a></code>(8), <code><a href="/docs/linux/man/8-rhn_register/">rhn_register</a></code>(8), <code><a href="/docs/linux/man/8-rhnsd/">rhnsd</a></code>(8), <code><a href="/docs/linux/man/8-rhn-profile-sync/">rhn-profile-sync</a></code>(8), <code><a href="/docs/linux/man/8-rhnplugin/">rhnplugin</a></code>(8), <code><a href="/docs/linux/man/5-up2date/">up2date</a></code>(5). </p>
+<h2>Authors</h2>
+<p>See the AUTHORS file included with this software. </p>
+<p> This manual page was written by Adrian Likins &lt;alikins [at] redhat.com&gt; and James Bowes &lt;jbowes [at] redhat.com&gt;</p>
+<h2>Bugs</h2>
+<p>Report bugs to &lt;<a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a>&gt;. </p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 1999-2011 Red Hat, Inc. </p>
+<p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

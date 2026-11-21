@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>srcpd(8) · Linux Manual Pages</title>
+<meta name="description" content="srcpd – SRCP speaking daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-srcpd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>srcpd(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>srcpd &#8211; SRCP speaking daemon</p>
+<h2>Synopsis</h2>
+<p><code>srcpd</code> [ options ] </p>
+<h2>Description</h2>
+<p>This is not a complete manual. You have to consult the project home page at <a rel="nofollow" href="http://srcpd.sourceforge.net/">http://srcpd.sourceforge.net/</a> for full documentation! <code>srcpd</code> is a UNIX daemon speaking the Simple Railroad Command Protocol (SRCP). Upon start up it reads in the system wide configuration file named <code>srcpd.conf</code>. Contents and structure of this XML-file is explained in detail in the <code>srcpd.conf (5)</code> man page. The SRCP specification is published on <a rel="nofollow" href="http://srcpd.sourceforge.net/srcp.">http://srcpd.sourceforge.net/srcp.</a> </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h</code></dt>
+<dd>Prints some useful help about command line options and exit</dd>
+<dt><code>-n</code></dt>
+<dd>Do not daemonize upon start-up. The srcpd does not switch into background mode. This option can be used with the Ubuntu upstart system.</dd>
+<dt><code>-v</code></dt>
+<dd>Print program version, SRCP level and exit</dd>
+<dt><code>-f&nbsp;<wbr>&lt;filename&gt;</code></dt>
+<dd>Use the specified filename as the configuration file. The default value will be defined at compile time and can be displayed using the <code>-h</code> parameter. </dd>
+</dl>
+<h2>Notes</h2>
+<h3>Getting started</h3>
+<p>The <code>srcpd</code> system service (daemon) is compliant to the Filesystem Hierarchy Standard (FHS, <a rel="nofollow" href="http://www.pathname.com/fhs/">http://www.pathname.com/fhs/</a>). For more information and special options about daemon usage please refer to to your system documentation. The following instructions are on a general level of information. </p>
+<h2>Notes</h2>
+<p>Please first start assembling a configuration file (<i>srcpd.conf</i>) fitting exactly your needs to connect to your model railway controller interface. Save this file to the directory for host specific system configuration (<i>/etc</i>). The default configuration file delivered with this software must be replaced by the new one. As soon as the adapted configuration file is at the right place, the daemon can be started using this command:</p>
+<dl>
+<dd>
+<pre>/etc/init.d/srcpd start</pre>
+</dd></dl>
+<p> If the <code>srcpd</code> is already running, the daemon first must be stopped to get it aware of the new setup. Stopping the daemon is executed in analogy to the start command:</p>
+<dl>
+<dd>
+<pre>/etc/init.d/srcpd stop</pre>
+</dd></dl>
+<p> Under certain conditions it is also possible to get the daemon re-read its configuration file without stopping it. With respect to hardware access rules under UNIXlike systems, the group and/or user rights must be properly set in <i>srcpd.conf</i> to let the daemon access the appropriate hardware resources at any time. Common model railway interfaces will require access rights for serial lines (RS232, USB), which can be achieved using the proper group rights (e.g. <code>dialout</code>). The <code>ddl-s88</code> module uses a special system function (ioperm) which always needs root rights to perform successfully. To let srcpd re-read its configuration file, assumed the setup mentioned before is correct, the following command can be used:</p>
+<dl>
+<dd>
+<pre>/etc/init.d/srcpd reload</pre>
+</dd></dl>
+<p> The log file <i>/var/log/messages</i> or <i>/var/log/syslog</i> of the syslog daemon can be used to monitor occurring errors on daemon start or during current operation. With root rights the upcoming messages can be continuously watched in a separate terminal:</p>
+<dl>
+<dd>
+<pre>tail -f /var/log/messages</pre>
+</dd></dl>
+<p> or</p>
+<dl>
+<dd>
+<pre>tail -f /var/log/syslog</pre>
+</dd></dl>
+<p> The verbosity of these messages can be adjusted using the configuration file <i>srcpd.conf</i>. For more information refer to the adequate man page. </p>
+<h2>See Also</h2>
+<p>srcpd.conf (5) </p>
+<h2>Bugs</h2>
+<p>Possibly there are some bugs. Please report them to the project developer mailing list. </p>
+<h2>Authors</h2>
+<p>This man page was written by Matthias Trute (mtrute [at] users.sourceforge.net), Frank Schimschke (schmischi [at] users.sourceforge.net) and Guido Scholz (gscholz [at] users.sourceforge.net).</p>
+<h2>License</h2>
+<p>GNU General Public License, Version 2</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

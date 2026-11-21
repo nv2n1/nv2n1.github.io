@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safely Allow Code Blocks in WordPress Comments - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-allow-pre-tag-in-wordpress-comments/">
+  <meta name="description" content="WordPress sanitizes HTML in comments by default for security. The &lt;pre&gt; tag is stripped unless you explicitly whitelist it. Here’s how to enable it …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Safely Allow Code Blocks in WordPress Comments">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-allow-pre-tag-in-wordpress-comments/">
+  <meta property="og:description" content="WordPress sanitizes HTML in comments by default for security. The &lt;pre&gt; tag is stripped unless you explicitly whitelist it. Here’s how to enable it …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/software-design/">Software Design</a>
+        </nav>
+        
+        <h1>Safely Allow Code Blocks in WordPress Comments</h1>
+        <time class="post-date" datetime="2018-03-24T11:40:17Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>WordPress sanitizes HTML in comments by default for security. The <code>&lt;pre&gt;</code> tag is stripped unless you explicitly whitelist it. Here’s how to enable it without compromising security.</p>
+<h2 id="using-wp_allowed_post_html-filter">Using wp_allowed_post_html Filter</h2>
+<p>The proper approach is to whitelist <code>&lt;pre&gt;</code> and related tags via the <code>wp_allowed_post_html</code> filter:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">allow_pre_in_comments</span><span class="p">(</span> <span class="nv">$allowed</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$allowed</span><span class="p">[</span><span class="s1">&#39;pre&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$allowed</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$allowed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span> <span class="s1">&#39;wp_allowed_post_html&#39;</span><span class="p">,</span> <span class="s1">&#39;allow_pre_in_comments&#39;</span> <span class="p">);</span>
+</span></span></code></pre></div><p>This adds <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> to the whitelist. The <code>class</code> attribute on <code>&lt;code&gt;</code> is useful for syntax highlighter libraries like Highlight.js or Prism.js.</p>
+<p>If you need attributes on <code>&lt;pre&gt;</code> itself (less common but sometimes needed):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">allow_pre_in_comments</span><span class="p">(</span> <span class="nv">$allowed</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$allowed</span><span class="p">[</span><span class="s1">&#39;pre&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;data-line&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>  <span class="c1">// For line highlighting
+</span></span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$allowed</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$allowed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span> <span class="s1">&#39;wp_allowed_post_html&#39;</span><span class="p">,</span> <span class="s1">&#39;allow_pre_in_comments&#39;</span> <span class="p">);</span>
+</span></span></code></pre></div><p>Add this to your theme’s <code>functions.php</code> or create a mu-plugin at <code>/wp-content/mu-plugins/allow-code-comments.php</code>.</p>
+<h2 id="understanding-wp_kses_post">Understanding wp_kses_post()</h2>
+<p>WordPress uses <code>wp_kses_post()</code> internally to sanitize comments. This function compares submitted HTML against the whitelist and strips anything not explicitly allowed. When you modify <code>wp_allowed_post_html</code>, you’re expanding that whitelist.</p>
+<p>Avoid whitelisting dangerous attributes like <code>onclick</code>, <code>onerror</code>, or <code>style</code> that could introduce XSS vulnerabilities.</p>
+<h2 id="why-pre_comment_approved-doesnt-work-for-this">Why pre_comment_approved Doesn’t Work for This</h2>
+<p>You might find references to the <code>pre_comment_approved</code> filter. This hook only controls comment approval status (approved, pending, spam), not HTML sanitization:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// This does NOT strip or allow tags
+</span></span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">filter_comment_approval</span><span class="p">(</span> <span class="nv">$approved</span><span class="p">,</span> <span class="nv">$commentdata</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// $approved is 1 (approved), 0 (pending), or &#39;spam&#39;
+</span></span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$approved</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span> <span class="s1">&#39;pre_comment_approved&#39;</span><span class="p">,</span> <span class="s1">&#39;filter_comment_approval&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span> <span class="p">);</span>
+</span></span></code></pre></div><p>For HTML tag filtering, always use <code>wp_allowed_post_html</code>.</p>
+<h2 id="adding-syntax-highlighting">Adding Syntax Highlighting</h2>
+<p>Once <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> are allowed, pair them with a client-side highlighter. Add this to your theme or plugin:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">enqueue_highlightjs</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">wp_enqueue_script</span><span class="p">(</span> <span class="s1">&#39;highlight&#39;</span><span class="p">,</span> <span class="s1">&#39;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js&#39;</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">wp_enqueue_style</span><span class="p">(</span> <span class="s1">&#39;highlight-style&#39;</span><span class="p">,</span> <span class="s1">&#39;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css&#39;</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">wp_add_inline_script</span><span class="p">(</span> <span class="s1">&#39;highlight&#39;</span><span class="p">,</span> <span class="s1">&#39;hljs.highlightAll();&#39;</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">add_action</span><span class="p">(</span> <span class="s1">&#39;wp_enqueue_scripts&#39;</span><span class="p">,</span> <span class="s1">&#39;enqueue_highlightjs&#39;</span> <span class="p">);</span>
+</span></span></code></pre></div><p>Commenters can then use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;language-php&#34;</span><span class="p">&gt;</span>echo &#34;Hello, World!&#34;;<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="testing-the-configuration">Testing the Configuration</h2>
+<p>Submit a test comment with code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;language-bash&#34;</span><span class="p">&gt;</span>curl -X GET https://api.example.com/users<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>If the <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> tags appear in the published comment, your filter is active. If they vanish, verify:</p>
+<ol>
+<li>The filter function is in a file that loads on every WordPress request</li>
+<li>You’re using the correct hook name (<code>wp_allowed_post_html</code>)</li>
+<li>The function returns the <code>$allowed</code> array</li>
+</ol>
+<h2 id="when-to-use-a-plugin-instead">When to Use a Plugin Instead</h2>
+<p>For technical blogs or sites with heavy code discussion, consider dedicated plugins:</p>
+<ul>
+<li><strong>Syntax Highlighter Code Fence</strong> — Block-based code formatting with language detection</li>
+<li><strong>Code Snippets</strong> — Manages code snippets with built-in security handling</li>
+<li><strong>Prism.js</strong> — Lightweight syntax highlighting (add manually via theme)</li>
+</ul>
+<p>These handle escaping and styling automatically, reducing the maintenance burden on custom code.</p>
+<h2 id="security-best-practices">Security Best Practices</h2>
+<ul>
+<li>Never whitelist tags blindly; only enable what you need</li>
+<li>Don’t allow attributes like <code>style</code>, <code>onclick</code>, or <code>onerror</code></li>
+<li>Escape code output with <code>esc_html()</code> if displaying elsewhere</li>
+<li>Consider requiring comment moderation for sites with public code snippets</li>
+<li>Keep WordPress and plugins updated for security patches</li>
+</ul>
+<p>If you’re allowing user-submitted code in comments, assume malicious intent and sanitize accordingly.</p>
+<h2 id="2026-comprehensive-guide-best-practices">2026 Comprehensive Guide: Best Practices</h2>
+<p>This extended guide covers Safely Allow Code Blocks in WordPress Comments with advanced techniques and troubleshooting tips for 2026. Following modern best practices ensures reliable, maintainable, and secure systems.</p>
+<h2 id="advanced-implementation-strategies">Advanced Implementation Strategies</h2>
+<p>For complex deployments, consider these approaches: Infrastructure as Code for reproducible environments, container-based isolation for dependency management, and CI/CD pipelines for automated testing and deployment. Always document your custom configurations and maintain separate development, staging, and production environments.</p>
+<h2 id="security-and-hardening">Security and Hardening</h2>
+<p>Security is foundational to all system administration. Implement layered defense: network segmentation, host-based firewalls, intrusion detection, and regular security audits. Use SSH key-based authentication instead of passwords. Encrypt sensitive data at rest and in transit. Follow the principle of least privilege for access controls.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor resources continuously with tools like top, htop, iotop</li>
+<li>Profile application performance before and after optimizations</li>
+<li>Use caching strategically: application caches, database query caching, CDN for static assets</li>
+<li>Optimize database queries with proper indexing and query analysis</li>
+<li>Implement connection pooling for network services</li>
+</ul>
+<h2 id="troubleshooting-methodology">Troubleshooting Methodology</h2>
+<p>Follow a systematic approach to debugging: reproduce the issue, isolate variables, check logs, test fixes. Keep detailed logs and document solutions found. For intermittent issues, add monitoring and alerting. Use verbose modes and debug flags when needed.</p>
+<h2 id="related-tools-and-utilities">Related Tools and Utilities</h2>
+<p>These tools complement the techniques covered in this article:</p>
+<ul>
+<li>System monitoring: htop, vmstat, iostat, dstat for resource tracking</li>
+<li>Network analysis: tcpdump, wireshark, netstat, ss for connectivity debugging</li>
+<li>Log management: journalctl, tail, less for log analysis</li>
+<li>File operations: find, locate, fd, tree for efficient searching</li>
+<li>Package management: dnf, apt, rpm, zypper for package operations</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Modern operations emphasize automation, observability, and version control. Use orchestration tools like Ansible, Terraform, or Kubernetes for infrastructure. Implement centralized logging and metrics. Maintain comprehensive documentation for all systems and processes.</p>
+<h2 id="quick-reference-summary">Quick Reference Summary</h2>
+<p>This comprehensive guide provides extended knowledge for Safely Allow Code Blocks in WordPress Comments. For specialized requirements, refer to official documentation. Practice in test environments before production deployment. Keep backups of critical configurations and data.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

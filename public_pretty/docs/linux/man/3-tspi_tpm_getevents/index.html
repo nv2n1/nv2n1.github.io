@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tspi_tpm_getevents(3) · Linux Manual Pages</title>
+<meta name="description" content="Tspi_TPM_GetEvents- get a specific number of PCR events for a given index.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tspi_tpm_getevents/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tspi_tpm_getevents(3)</h1>
+
+
+
+
+
+<p>Tspi_TPM_GetEvents- get a specific number of PCR events for a given index.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tss/platform.h&gt;</code>
+<code>#include &lt;tss/tcpa_defines.h&gt;</code>
+<code>#include &lt;tss/tcpa_typedef.h&gt;</code>
+<code>#include &lt;tss/tcpa_struct.h&gt;</code>
+<code>#include &lt;tss/tss_typedef.h&gt;</code>
+<code>#include &lt;tss/tss_structs.h&gt;</code>
+<code>#include &lt;tss/tspi.h&gt;</code>
+<code>TSS_RESULT Tspi_TPM_GetEvents(TSS_HTPM </code><i>hTPM</i><code>, UINT32 </code><i>ulPcrIndex</i><code>, </code>
+<code> UINT32 </code><i>ulStartNumber</i><code>, UINT32* </code><i>pulEventNumber</i><code>, </code>
+<code> TSS_PCR_EVENT* </code><i>prgbPcrEvents</i><code>);</code></pre>
+<h2>Description</h2>
+<p><code>Tspi_TPM_GetEvents</code> provides a specific number of PCR events for a given index.</p>
+<h2>Parameters</h2>
+<h3>hTPM</h3>
+<p>Handle of the TPM object. </p>
+<h3>ulPcrIndex</h3>
+<p>Index of the PCR to request. </p>
+<h3>ulStartNumber</h3>
+<p>Indext of the first event to request </p>
+<h3>pulEventNumber</h3>
+<p>[IN] Number of elements to request. [OUT] Receives number of returned event data structures in prgbPcrEvents parameter. </p>
+<h3>prgbPcrEvents</h3>
+<p>Receives a pointer to an array of PCR event data. If NULL, only the number of elements is returned in pulEventNumber parameter.</p>
+<h2>Return Codes</h2>
+<p><code>Tspi_TPM_GetEvents</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
+<dl COMPACT>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd><code>hTPM</code> is not a valid handle to the TPM object.</dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An error occurred internal to the TSS. </dd>
+</dl>
+<h2>Conforming To</h2>
+<p><code>Tspi_TPM_GetEvents</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-tspi_tpm_getevent/">Tspi_TPM_GetEvent</a></code>(3) <code><a href="/docs/linux/man/3-tspi_tpm_geteventlog/">Tspi_TPM_GetEventLog</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

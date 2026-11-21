@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSH Tunneling on Windows: Creating a SOCKS Proxy with OpenSSH - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/proxy-using-ssh-tunnel-on-windows/">
+  <meta name="description" content="SSH tunneling on Windows routes your traffic through a remote server over an encrypted connection, letting you bypass network restrictions and access resources …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="SSH Tunneling on Windows: Creating a SOCKS Proxy with OpenSSH">
+  <meta property="og:url" content="https://www.systutorials.com/proxy-using-ssh-tunnel-on-windows/">
+  <meta property="og:description" content="SSH tunneling on Windows routes your traffic through a remote server over an encrypted connection, letting you bypass network restrictions and access resources …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>SSH Tunneling on Windows: Creating a SOCKS Proxy with OpenSSH</h1>
+        <time class="post-date" datetime="2013-07-15T13:01:08Z">July 15, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>SSH tunneling on Windows routes your traffic through a remote server over an encrypted connection, letting you bypass network restrictions and access resources as if you were on the remote network. The setup creates a SOCKS proxy that listens locally and forwards all traffic through the SSH tunnel.</p>
+<p>The traffic flow is straightforward:</p>
+<p>Your application → localhost:8080 (SOCKS proxy) → SSH tunnel → Remote server → Internet</p>
+<h2 id="native-openssh-recommended">Native OpenSSH (Recommended)</h2>
+<p>Windows 10/11 includes OpenSSH natively, making it the simplest option. No additional software needed.</p>
+<p>Open PowerShell or Command Prompt and run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -D <span class="m">8080</span> -C -N user@example.com
+</span></span></code></pre></div><p>Flag breakdown:</p>
+<ul>
+<li><code>-D 8080</code>: Creates a SOCKS proxy listening on localhost:8080</li>
+<li><code>-C</code>: Enables compression (reduces bandwidth usage)</li>
+<li><code>-N</code>: Doesn’t execute a remote command, just forwards ports</li>
+<li><code>-p 2222</code>: Use this if your SSH server runs on a non-standard port</li>
+</ul>
+<p>The terminal will hang — this is expected. Keep it running to maintain the tunnel.</p>
+<p>Using a private key instead of a password:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -D <span class="m">8080</span> -C -N -i C:<span class="se">\U</span>sers<span class="se">\Y</span>ourName<span class="se">\.</span>ssh<span class="se">\i</span>d_rsa user@example.com
+</span></span></code></pre></div><p>For non-standard ports:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -D <span class="m">8080</span> -C -N -p <span class="m">2222</span> user@example.com
+</span></span></code></pre></div><h3 id="running-in-the-background">Running in the Background</h3>
+<p>To avoid keeping a terminal open indefinitely, create a batch file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl"><span class="k">start</span> <span class="s2">&#34;&#34;</span> ssh -D 8080 -C -N -o ServerAliveInterval=60 user@example.com
+</span></span></code></pre></div><p>Save as <code>tunnel.bat</code>. The <code>start</code> command launches SSH in a background process. The <code>ServerAliveInterval=60</code> sends keepalive packets every 60 seconds to prevent idle disconnections.</p>
+<p>Alternatively, use Windows Task Scheduler to run the SSH command at startup with the “Run whether user is logged in or not” option, though this requires storing credentials carefully.</p>
+<h2 id="using-putty-gui-alternative">Using PuTTY (GUI Alternative)</h2>
+<p>If you prefer a graphical interface, PuTTY still works well:</p>
+<ol>
+<li>Download from <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" rel="nofollow noopener" target="_blank">the official site</a></li>
+<li>Launch PuTTY and configure:
+<ul>
+<li><strong>Session tab</strong>: Enter hostname and port (default 22)</li>
+<li><strong>Connection → SSH → Tunnels</strong>:
+<ul>
+<li>Source port: <code>8080</code></li>
+<li>Destination: Leave blank</li>
+<li>Type: Select <code>Dynamic</code></li>
+<li>Click <code>Add</code> (shows <code>D8080</code> in the list)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Session tab</strong>: Save the configuration with a name like “SSH Tunnel” for reuse</li>
+<li>Click <code>Open</code> and authenticate</li>
+</ol>
+<p>The tunnel runs as long as PuTTY stays open. For persistent background operation, use PuTTY’s command-line mode or switch to native OpenSSH.</p>
+<h2 id="configuring-applications-to-use-the-proxy">Configuring Applications to Use the Proxy</h2>
+<p>Once the tunnel is active on localhost:8080, configure your applications:</p>
+<h3 id="firefox">Firefox</h3>
+<p>Settings → Network Settings → Manual proxy configuration:</p>
+<ul>
+<li>SOCKS Host: <code>localhost</code></li>
+<li>Port: <code>8080</code></li>
+<li>SOCKS v5: enabled</li>
+</ul>
+<h3 id="chrome-chromium-edge">Chrome, Chromium, Edge</h3>
+<p>These browsers ignore Windows proxy settings. Launch with a command-line flag instead:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chrome.exe --proxy-server<span class="o">=</span><span class="s2">&#34;socks5://localhost:8080&#34;</span>
+</span></span></code></pre></div><p>Create a shortcut with this target:</p>
+<pre><code>C:\Program Files\Google\Chrome\Application\chrome.exe --proxy-server=&quot;socks5://localhost:8080&quot;
+</code></pre>
+<p>For Chromium:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chromium.exe --proxy-server<span class="o">=</span><span class="s2">&#34;socks5://localhost:8080&#34;</span>
+</span></span></code></pre></div><h3 id="command-line-tools">Command-Line Tools</h3>
+<p><strong>curl:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --socks5 localhost:8080 https://example.com
+</span></span></code></pre></div><p><strong>wget:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget -e <span class="nv">https_proxy</span><span class="o">=</span>socks5://localhost:8080 https://example.com
+</span></span></code></pre></div><p><strong>git:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global http.proxy socks5://localhost:8080
+</span></span><span class="line"><span class="cl">git config --global https.proxy socks5://localhost:8080
+</span></span></code></pre></div><p>To unset git proxy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global --unset http.proxy
+</span></span><span class="line"><span class="cl">git config --global --unset https.proxy
+</span></span></code></pre></div><h2 id="keeping-the-tunnel-alive">Keeping the Tunnel Alive</h2>
+<p>SSH connections idle out after extended periods. Add keepalive to prevent disconnections:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -D <span class="m">8080</span> -C -N -o <span class="nv">ServerAliveInterval</span><span class="o">=</span><span class="m">60</span> -o <span class="nv">ServerAliveCountMax</span><span class="o">=</span><span class="m">3</span> user@example.com
+</span></span></code></pre></div><ul>
+<li><code>ServerAliveInterval=60</code>: Sends a keepalive packet every 60 seconds</li>
+<li><code>ServerAliveCountMax=3</code>: Closes the connection if 3 keepalive packets go unanswered</li>
+</ul>
+<p>In PuTTY, set this under Connection → Seconds between keepalives.</p>
+<h2 id="generating-ssh-keys-for-automation">Generating SSH Keys for Automation</h2>
+<p>For scripts or permanent setups, use key-based authentication:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t ed25519 -f C:<span class="se">\U</span>sers<span class="se">\Y</span>ourName<span class="se">\.</span>ssh<span class="se">\i</span>d_rsa -N <span class="s2">&#34;&#34;</span>
+</span></span></code></pre></div><p>The <code>-N &quot;&quot;</code> flag skips the passphrase (useful for automation). Then add the public key to your remote server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat C:<span class="se">\U</span>sers<span class="se">\Y</span>ourName<span class="se">\.</span>ssh<span class="se">\i</span>d_rsa.pub <span class="p">|</span> ssh user@example.com <span class="s2">&#34;cat &gt;&gt; ~/.ssh/authorized_keys&#34;</span>
+</span></span></code></pre></div><p>Now connect without a password:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -D <span class="m">8080</span> -C -N -i C:<span class="se">\U</span>sers<span class="se">\Y</span>ourName<span class="se">\.</span>ssh<span class="se">\i</span>d_rsa user@example.com
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="port-8080-already-in-use">Port 8080 already in use</h3>
+<p>Check what’s using the port:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">netstat -ano <span class="p">|</span> findstr :8080
+</span></span></code></pre></div><p>Use a different port (9090, 1080, etc.) in both your SSH command and application settings.</p>
+<h3 id="connection-fails-immediately">Connection fails immediately</h3>
+<p>Verify SSH connectivity first with verbose output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -v user@example.com
+</span></span></code></pre></div><p>Check that:</p>
+<ul>
+<li>Port 22 isn’t blocked by your firewall</li>
+<li>The remote server is reachable and accepts SSH connections</li>
+<li>Your credentials are correct</li>
+</ul>
+<h3 id="application-ignores-proxy-settings">Application ignores proxy settings</h3>
+<p>Some apps have their own proxy configuration separate from Windows settings. Check the application’s preferences directly — Firefox, for example, has its own proxy settings that override system defaults. Chrome requires the command-line flag; it won’t read Windows proxy settings.</p>
+<h3 id="no-internet-through-the-proxy">No internet through the proxy</h3>
+<p>Test with a command-line tool first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl --socks5 localhost:8080 https://httpbin.org/ip
+</span></span></code></pre></div><p>If this returns your remote server’s IP, the tunnel works. If it fails, the tunnel is misconfigured. If it works but your browser doesn’t, the issue is with application proxy settings.</p>
+<h2 id="security-considerations">Security Considerations</h2>
+<ul>
+<li>Only tunnel through SSH servers you fully trust — unencrypted proxied traffic is visible to the remote server’s operator</li>
+<li>SSH keys are more secure than passwords for remote access</li>
+<li>If the remote server is compromised, so is your proxied traffic — don’t treat this as a VPN replacement for sensitive work on untrusted networks</li>
+<li>For public WiFi, a proper VPN is more appropriate than SSH tunneling alone</li>
+<li>Monitor your tunnel connection and close it when not needed — leaving it open indefinitely increases your exposure window</li>
+<li>Consider using a bastion host or jump server as an intermediary for additional security</li>
+</ul>
+<p>SSH tunneling is lightweight, requires no additional software on modern Windows, and works reliably for temporary proxy needs or accessing resources on remote networks.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

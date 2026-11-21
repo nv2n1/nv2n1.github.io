@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>semanage-port(8) · Linux Manual Pages</title>
+<meta name="description" content="semanage-port – SELinux Policy Management port mapping tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-semanage-port/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>semanage-port(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>semanage-port &#8211; SELinux Policy Management port mapping tool</code></p>
+<h2>Synopsis</h2>
+<p><code>semanage port [-h] [-n] [-N] [-S STORE] [ &#8211;add -t TYPE -p PROTOCOL -r RANGE port_name | port_range | &#8211;delete -p PROTOCOL port_name | port_range | &#8211;deleteall | &#8211;extract | &#8211;list [-C] | &#8211;modify -t TYPE -p PROTOCOL -r RANGE port_name | port_range ]</code> </p>
+<h2>Description</h2>
+<p>semanage is used to configure certain elements of SELinux policy without requiring modification to or recompilation from policy sources. semanage port controls the port number to port type definitions. </p>
+<h2>Options</h2>
+<dl>
+<dt><i>-h, &#8211;help</i></dt>
+<dd>show this help message and exit</dd>
+<dt><i>-n, &#8211;noheading</i></dt>
+<dd>Do not print heading when listing the specified object type</dd>
+<dt><i>-N, &#8211;noreload</i></dt>
+<dd>Do not reload policy after commit</dd>
+<dt><i>-S STORE, &#8211;store STORE</i></dt>
+<dd>Select an alternate SELinux Policy Store to manage</dd>
+<dt><i>-C, &#8211;locallist</i></dt>
+<dd>List local customizations</dd>
+<dt><i>-a, &#8211;add</i></dt>
+<dd>Add a record of the specified object type</dd>
+<dt><i>-d, &#8211;delete</i></dt>
+<dd>Delete a record of the specified object type</dd>
+<dt><i>-m, &#8211;modify</i></dt>
+<dd>Modify a record of the specified object type</dd>
+<dt><i>-l, &#8211;list</i></dt>
+<dd>List records of the specified object type</dd>
+<dt><i>-E, &#8211;extract</i></dt>
+<dd>Extract customizable commands, for use within a transaction</dd>
+<dt><i>-D, &#8211;deleteall</i></dt>
+<dd>Remove all local customizations</dd>
+<dt><i>-t TYPE, &#8211;type TYPE</i></dt>
+<dd>SELinux type for the object</dd>
+<dt><i>-r RANGE, &#8211;range RANGE</i></dt>
+<dd>MLS/MCS Security Range (MLS/MCS Systems only) SELinux Range for SELinux login mapping defaults to the SELinux user record range. SELinux Range for SELinux user defaults to s0.</dd>
+<dt><i>-p PROTO, &#8211;proto PROTO</i></dt>
+<dd>Protocol for the specified port (tcp|udp) or internet protocol version for the specified node (ipv4|ipv6). </dd>
+</dl>
+<h2>Example</h2>
+<pre>List all port definitions
+# semanage port -l
+Allow Apache to listen on tcp port 81
+# semanage port -a -t http_port_t -p tcp 81
+Allow sshd to listen on tcp port 8991
+# semanage port -a -t ssh_port_t -p tcp 8991</pre>
+<h2>See Also</h2>
+<p><code>selinux (8),</code> <code>semanage (8)</code> </p>
+<h2>Author</h2>
+<p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

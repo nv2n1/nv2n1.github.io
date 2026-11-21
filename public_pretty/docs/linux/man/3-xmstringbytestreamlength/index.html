@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmstringbytestreamlength(3) · Linux Manual Pages</title>
+<meta name="description" content="XmStringByteStreamLength — A function that returns the size of a string">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmstringbytestreamlength/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmstringbytestreamlength(3)</h1>
+
+
+
+
+
+<p><code>XmStringByteStreamLength</code> &#8212; A function that returns the size of a string</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Xm.h&gt;
+unsigned int XmStringByteStreamLength (<i>string</i>)
+ unsigned char *<i>string</i>;
+(<code>void</code>)</pre>
+<h2>Description</h2>
+<p><code>XmStringByteStreamLength</code> receives a byte stream format string and returns the size, in bytes, of that stream, including the header. Because of this header information, even a NULL <i>string</i> will cause <code>XmStringByteStreamLength</code> to return a non-zero value.</p>
+<dl COMPACT>
+<dt><i>string</i></dt>
+<dd>Specifies the byte stream format string.</dd></dl>
+<h2>Return Values</h2>
+<p>Returns the size of <i>string</i>, including the header.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tc-hfsc(8) · Linux Manual Pages</title>
+<meta name="description" content="HFSC – Hierarchical Fair Service Curve’s control under linux">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-tc-hfsc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>tc-hfsc(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>HFSC &#8211; Hierarchical Fair Service Curve&#8217;s control under linux</p>
+<h2>Synopsis</h2>
+<pre>tc qdisc add ... hfsc [ <code>default</code> CLASSID ]
+tc class add ... hfsc [ [ <code>rt</code> SC ] [ <code>ls</code> SC ] | [ <code>sc</code> SC ] ] [ <code>ul</code> SC ]
+<code>rt</code> : realtime service curve
+<code>ls</code> : linkshare service curve
+<code>sc</code> : rt+ls service curve
+<code>ul</code> : upperlimit service curve
+&bull; at least one of <code>rt</code>, <code>ls</code> or <code>sc</code> must be specified
+&bull; <code>ul</code> can only be specified with <code>ls</code> or <code>sc</code>
+<dl><dt>SC := [ [ <code>m1</code> BPS ] <code>d</code> SEC ] <code>m2</code> BPS</dt><dd><code>m1</code> : slope of the first segment
+<code>d</code> : x-coordinate of intersection
+<code>m2</code> : slope of the second segment
+</dd></dl><dl><dt>SC := [ [ <code>umax</code> BYTE ] <code>dmax</code> SEC ] <code>rate</code> BPS</dt><dd><code>umax</code> : maximum unit of work
+<code>dmax</code> : maximum delay
+<code>rate</code> : rate
+</dd></dl></pre>
+<p>For description of BYTE, BPS and SEC &#8211; please see <code>UNITS</code> section of <code><a href="/docs/linux/man/8-tc/">tc</a></code>(8).</p>
+<h2>DESCRIPTION (qdisc)</h2>
+<p>HFSC qdisc has only one optional parameter &#8211; <code>default</code>. CLASSID specifies the minor part of the default classid, where packets not classified by other means (e.g. u32 filter, CLASSIFY target of iptables) will be enqueued. If <code>default</code> is not specified, unclassified packets will be dropped.</p>
+<h2>DESCRIPTION (class)</h2>
+<p>HFSC class is used to create a class hierarchy for HFSC scheduler. For explanation of the algorithm, and the meaning behind <code>rt</code>, <code>ls</code>, <code>sc</code> and <code>ul</code> service curves &#8211; please refer to <code><a href="/docs/linux/man/7-tc-hfsc/">tc-hfsc</a></code>(7). </p>
+<p> As you can see in <code>SYNOPSIS</code>, service curve (SC) can be specified in two ways. Either as maximum delay for certain amount of work, or as a bandwidth assigned for certain amount of time. Obviously, <code>m1</code> is simply <code>umax</code>/<code>dmax</code>. </p>
+<p> Both <code>m2</code> and <code>rate</code> are mandatory. If you omit other parameters, you will specify linear service curve.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/7-tc-hfsc/">tc-hfsc</a></code>(7), <code><a href="/docs/linux/man/8-tc-stab/">tc-stab</a></code>(8) </p>
+<p> Please direct bugreports and patches to: &lt;netdev [at] vger.kernel.org&gt;</p>
+<h2>Author</h2>
+<p>Manpage created by Michal Soltys (soltys [at] ziu.info)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

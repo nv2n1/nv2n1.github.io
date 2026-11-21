@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>atob(1) · Linux Manual Pages</title>
+<meta name="description" content="AtoB – Convert ASCII base-64 encoded data to binary base-64 encoded data.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-atob/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>atob(1)</h1>
+
+
+
+
+
+<p>AtoB &#8211; Convert ASCII base-64 encoded data to binary base-64 encoded data.</p>
+<h2>Synopsis</h2>
+<p><code>AtoB &lt;input_file&gt; &lt;output_file&gt;</code> </p>
+<h2>Description</h2>
+<p>The <code>AtoB</code> command provides a command-line utility used to convert ASCII base-64 encoded data to binary base-64 encoded data. </p>
+<h2>Options</h2>
+<p>The following parameters are mandatory:</p>
+<dl>
+<dt><code>&lt;input_file&gt;</code></dt>
+<dd>Specifies the path to the file containing the base-64 encoded ASCII data. </dd>
+<dt><code>&lt;output_file&gt;</code></dt>
+<dd>Specifies the path to the file where the utility should write the binary output. </dd>
+</dl>
+<h2>Examples</h2>
+<p>This example command takes the base-64 ASCII data in the <code>ascii_data.pem</code> file and writes the binary equivalent of the data to the <code>binary_data.der</code> file:</p>
+<dl>
+<dd>
+<pre> AtoB ascii_data.pem binary_data.der </dd>
+</pre>
+<h2>Copyright</h2>
+<p>Copyright (c) 2016 Red Hat, Inc. This is licensed under the GNU General Public License, version 2 (GPLv2). A copy of this license is available at <a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.">http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.</a> </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-btoa/">BtoA</a>(1),</code><a href="/docs/linux/man/1-pki/">pki</a>(1)</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

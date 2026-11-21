@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>expr(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-expr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>expr(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p>expr - c-like expression library</p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt>
+</dt><dd> <pre><code>
+#include &lt;graphviz/expr.h&gt;
+Expr_t *exopen(Exdisc_t *);
+Excc_t *exccopen(Expr_t *, Exccdisc_t *);
+int excc(Excc_t *, const char *, Exid_t *, int);
+int exccclose(Excc_t *);
+void exclose(Expr_t *, int);
+char *excontext(Expr_t *, char *, int);
+void exerror(const char *, ...);
+Extype_t exeval(Expr_t *, Exnode_t *, void *);
+Exnode_t *exexpr(Expr_t *, const char *, Exid_t *, int);
+Exnode_t *excast(Expr_t *, Exnode_t *, int, Exnode_t *, int);
+Exnode_t *exnewnode(Expr_t *, int, int, int, Exnode_t *, Exnode_t *);
+void exfreenode(Expr_t *, Exnode_t *);
+int expush(Expr_t *, const char *, int, const char *, Sfio_t *);
+int expop(Expr_t *);
+int excomp(Expr_t *, const char *, int, const char *, Sfio_t *);
+int exrewind(Expr_t *);
+void exstatement(Expr_t *);
+int extoken(Expr_t *);
+char *extype(int);
+Extype_t exzero(int);
+</code></pre></dd></dl>
+<h2>DESCRIPTION</h2>
+<p>exopen() is the first function called. exclose() is the last function called. exccopen() is the called if code generation will be used. exccclose() releases the state information allocated in exccopen(). exstatement() saves statement start information. exrewind() restores statement start information saved by exstatement().</p>
+<h2>SEE ALSO</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

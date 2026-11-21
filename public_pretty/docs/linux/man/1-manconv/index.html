@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>manconv(1) · Linux Manual Pages</title>
+<meta name="description" content="manconv – convert manual page from one encoding to another">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-manconv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>manconv(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> manconv &#8211; convert manual page from one encoding to another </p>
+<h2>SYNOPSIS</h2>
+<p> <code>manconv</code> <code>-f</code> [<i>from-code</i>[:<i>from-code</i>&#8230;]] <code>-t</code> <i>to-code</i> [<code>-dqhV</code>] [<i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>manconv</code> converts a manual page from one encoding to another, like <code>iconv</code>. Unlike <code>iconv</code>, it can try multiple possible input encodings in sequence. This is useful for manual pages installed in directories without an explicit encoding declaration, since they may be in UTF-8 or in a legacy character set. </p>
+<p> If an encoding declaration is found on the first line of the manual page, that declaration overrides any input encodings specified on <code>manconv</code>&#8216;s command line. Encoding declarations have the following form: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+'\&quot; -*- coding: UTF-8 -*-
+</pre>
+</dd></dl>
+<p> or (if manual page preprocessors are also to be declared): </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+'\&quot; t -*- coding: ISO-8859-1 -*-
+</pre>
+</dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-f</code> <i>encodings</i>, <code>&#8211;from-code</code> <i>encodings</i></dt>
+<dd> Try each of <i>encodings</i> (a colon-separated list) in sequence as the input encoding. The default is to guess likely input encodings based on the file name.</dd>
+<dt><code>-t</code> <i>encoding</i>, <code>&#8211;to-code</code> <i>encoding</i></dt>
+<dd> Convert the manual page to <i>encoding</i>.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Do not issue error messages when the page cannot be converted.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> Print debugging information.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print a help message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version information.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1), <i><a href="/docs/linux/man/1-man/">man</a></i>(1), <i><a href="/docs/linux/man/1-man-recode/">man-recode</a></i>(1)</p>
+<h2>AUTHOR</h2>
+<pre>
+Colin Watson (cjwatson [at] debian.org).
+</pre>
+<h2>BUGS</h2>
+<p> <a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br />
+ <a rel="nofollow" href="https://savannah.nongnu.org/bugs/?group=man-db">https://savannah.nongnu.org/bugs/?group=man-db</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

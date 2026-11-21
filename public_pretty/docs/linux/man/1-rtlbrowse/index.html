@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rtlbrowse(1) · Linux Manual Pages</title>
+<meta name="description" content="rtlbrowse – Allows hierarchical browsing of Verilog HDL source code and library design files.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rtlbrowse/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rtlbrowse(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> rtlbrowse &#8211; Allows hierarchical browsing of Verilog HDL source code and library design files.</p>
+<h2>SYNTAX</h2>
+<p> rtlbrowse &lt;<i>stemsfilename</i>&gt;</p>
+<h2>DESCRIPTION</h2>
+<p> Allows hierarchical browsing of Verilog HDL source code and library design files. Navigation through the hierarchy may be done by clicking open areas of the tree widget and clicking on the individual levels of hierarchy. Inside the source code, selecting the module instantiation name by double clicking or selecting part of the name through drag-clicking will descend deeper into the RTL hierarchy. Note that it performs optional source code annotation when called as a helper application by <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) and when the primary marker is set. Source code annotation is not available for all supported dumpfile types. It is directly available for LXT2, VZT, FST, and AET2. For VCD, use the <code>-o</code>,<code>&#8211;optimize</code> option of <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) in order to optimize the VCD file into FST. All other dumpfile types (LXT, GHW) are unsupported at this time.</p>
+<h2>EXAMPLES</h2>
+<p> To run this program the standard way type:</p>
+<dl>
+<dt>rtlbrowse stemsfile</dt>
+<dd> The RTL is then brought up in a GTK tree viewer. Stems must have been previously generated with <i><a href="/docs/linux/man/1-vermin/">vermin</a></i>(1) or some other tool capable of generating compatible stemsfiles. Note that <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) will bring up this program as a client application for source code annotation. It does that by bringing up the viewer with the shared memory ID of a segment of memory in the viewer rather than using a stems filename.</dd></dl>
+<h2>AUTHORS</h2>
+<p> Anthony Bybell &lt;bybell [at] rocketmail.com&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-vermin/">vermin</a></i>(1) <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

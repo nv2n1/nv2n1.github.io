@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ck_ht_entry_key_set(3) · Linux Manual Pages</title>
+<meta name="description" content="ck_ht_entry_key_set – initialize pointer to key in hash table entry">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ck_ht_entry_key_set/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ck_ht_entry_key_set(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>ck_ht_entry_key_set</code> &#8211; initialize pointer to key in hash table entry</p>
+<h2>LIBRARY</h2>
+<p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
+<p> In ck_ht.h Ft void Fn ck_ht_entry_key_set ck_ht_entry_t *entry const void *key uint16_t key_length</p>
+<h2>DESCRIPTION</h2>
+<p> The Fn ck_ht_entry_key_set function will initialize the object pointed to by Fa entry with a key pointed to by the Fa key argument. The length of the key is specified by Fa key_length. The maximum value of Fa key_length is defined by the CK_HT_KEY_LENGTH macro. This function is typically used to initialize an entry for ck_ht_get_spmc3 and ck_ht_remove_spmc3 operations. It is expected that the entry will be associated with a hash table initialized with <code>CK_HT_MODE_BYTESTRING</code> (see ck_ht_init3 for more information).</p>
+<h2>RETURN VALUES</h2>
+<p> Fn ck_ht_entry_key_set has no return value.</p>
+<h2>ERRORS</h2>
+<p> This function will never fail.</p>
+<h2>SEE ALSO</h2>
+<p> ck_ht_stat3, ck_ht_init3, ck_ht_destroy3, ck_ht_hash3, ck_ht_hash_direct3, ck_ht_set_spmc3, ck_ht_put_spmc3, ck_ht_gc3, ck_ht_get_spmc3, ck_ht_grow_spmc3, ck_ht_remove_spmc3, ck_ht_count3, ck_ht_reset_spmc3, ck_ht_reset_size_spmc3, ck_ht_entry_empty3, ck_ht_entry_key_set_direct3, ck_ht_entry_key3, ck_ht_entry_key_length3, ck_ht_entry_value3, ck_ht_entry_set3, ck_ht_entry_set_direct3, ck_ht_entry_key_direct3, ck_ht_entry_value_direct3, ck_ht_iterator_init3, ck_ht_next3 </p>
+<p> Additional information available at <a rel="nofollow" href="http://concurrencykit.org/">http://concurrencykit.org/</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

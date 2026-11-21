@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mpathpersist(8) · Linux Manual Pages</title>
+<meta name="description" content="mpathpersist">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mpathpersist/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mpathpersist(8)</h1>
+
+
+
+
+
+<p>mpathpersist</p>
+<h2>Synopsis</h2>
+<p><code>mpathpersist</code> [<i>OPTIONS</i>] [<i>DEVICE</i>]</p>
+<h2>Description</h2>
+<dl>
+<dd>Options:</dd>
+<dt><code>&#8211;verbose</code>|-v level</dt>
+<dd>verbosity level</dd>
+<dt>0</dt>
+<dd>Critical and error messages</dd>
+<dt>1</dt>
+<dd>Warning messages</dd>
+<dt>2</dt>
+<dd>Informational messages</dd>
+<dt>3</dt>
+<dd>Informational messages with trace enabled</dd>
+<dt><code>&#8211;clear</code>|-C</dt>
+<dd>PR Out: Clear</dd>
+<dt><code>&#8211;device</code>=<i>DEVICE</i>|-d DEVICE</dt>
+<dd>query or change DEVICE</dd>
+<dt><code>&#8211;help</code>|-h</dt>
+<dd>output this usage message</dd>
+<dt><code>&#8211;hex</code>|-H</dt>
+<dd>output response in hex</dd>
+<dt><code>&#8211;in</code>|-i</dt>
+<dd>request PR In command</dd>
+<dt><code>&#8211;out</code>|-o</dt>
+<dd>request PR Out command</dd>
+<dt><code>&#8211;param-aptpl</code>|-Z</dt>
+<dd>PR Out parameter &#8216;APTPL&#8217;</dd>
+<dt><code>&#8211;read-keys</code>|-k</dt>
+<dd>PR In: Read Keys</dd>
+<dt><code>&#8211;param-sark</code>=<i>SARK</i>|-S SARK</dt>
+<dd>PR Out parameter service action reservation key (SARK is in hex)</dd>
+<dt><code>&#8211;preempt</code>|-P</dt>
+<dd>PR Out: Preempt</dd>
+<dt><code>&#8211;preempt-abort</code>|-A</dt>
+<dd>PR Out: Preempt and Abort</dd>
+<dt><code>&#8211;prout-type</code>=<i>TYPE</i>|-T TYPE</dt>
+<dd>PR Out command type</dd>
+<dt><code>&#8211;read-status</code>|-s</dt>
+<dd>PR In: Read Full Status</dd>
+<dt><code>&#8211;read-keys</code>|-k</dt>
+<dd>PR In: Read Keys</dd>
+<dt><code>&#8211;read-reservation</code>|-r</dt>
+<dd>PR In: Read Reservation</dd>
+<dt><code>&#8211;register</code>|-G</dt>
+<dd>PR Out: Register</dd>
+<dt><code>&#8211;register-ignore</code>|-I</dt>
+<dd>PR Out: Register and Ignore</dd>
+<dt><code>&#8211;release</code>|-L</dt>
+<dd>PR Out: Release</dd>
+<dt><code>&#8211;report-capabilities</code>|-c</dt>
+<dd>PR In: Report Capabilities</dd>
+<dt><code>&#8211;reserve</code>|-R</dt>
+<dd>PR Out: Reserve</dd>
+<dt><code>&#8211;transport-id</code>=<i>TIDS</i>|-X TIDS</dt>
+<dd>TransportIDs can be mentioned in several forms</dd>
+<dd>Examples:</dd>
+<dd>mpathpersist <code>&#8211;out</code> <code>&#8211;register</code> <code>&#8211;param-sark</code>=<i>123abc</i> <code>&#8211;prout-type</code>=<i>5</i> /dev/mapper/mpath9 mpathpersist <code>-i</code> <code>-k</code> /dev/mapper/mpath9</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pam_mkhomedir(8) · Linux Manual Pages</title>
+<meta name="description" content="pam_mkhomedir – PAM module to create users home directory">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pam_mkhomedir/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pam_mkhomedir(8)</h1>
+
+
+
+
+
+<p>pam_mkhomedir &#8211; PAM module to create users home directory</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>pam_mkhomedir.so</code> [silent] [debug] [umask=<i>mode</i>] [skel=<i>skeldir</i>]</dt></dl>
+<h2>Description</h2>
+<dd>The pam_mkhomedir PAM module will create a users home directory if it does not exist when the session begins. This allows users to be present in central database (such as NIS, kerberos or LDAP) without using a distributed file system or pre-creating a large number of directories. The skeleton directory (usually /etc/skel/) is used to copy default files and also sets a umask for the creation. </dd>
+<p> The new users home directory will not be removed after logout of the user.</p>
+<h2>Options</h2>
+<p><code>silent</code></p>
+<dl>
+<dd>Don&#8217;t print informative messages.</dd></dl>
+<p> <code>debug</code></p>
+<dl>
+<dd>Turns on debugging via <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3).</dd></dl>
+<p> <code>umask=</code><i>mask</i></p>
+<dl>
+<dd>The user file-creation mask is set to <i>mask</i>. The default value of mask is 0022.</dd></dl>
+<p> <code>skel=</code><i>/path/to/skel/directory</i></p>
+<dl>
+<dd>Indicate an alternative skel directory to override the default /etc/skel.</dd></dl>
+<h2>Module Types Provided</h2>
+<p>Only the <code>session</code> module type is provided.</p>
+<h2>Return Values</h2>
+<p>PAM_BUF_ERR</p>
+<dl>
+<dd>Memory buffer error.</dd></dl>
+<p> PAM_PERM_DENIED</p>
+<dl>
+<dd>Not enough permissions to create the new directory or read the skel directory.</dd></dl>
+<p> PAM_USER_UNKNOWN</p>
+<dl>
+<dd>User not known to the underlying authentication module.</dd></dl>
+<p> PAM_SUCCESS</p>
+<dl>
+<dd>Environment variables were set.</dd></dl>
+<h2>Files</h2>
+<p>/etc/skel</p>
+<dl>
+<dd>Default skel directory</dd></dl>
+<h2>Examples</h2>
+<p>A sample /etc/pam.d/login file:</p>
+<dl>
+<dd>
+<pre> auth requisite pam_securetty.so
+ auth sufficient pam_ldap.so
+ auth required pam_unix.so
+ auth required pam_nologin.so
+ account sufficient pam_ldap.so
+ account required pam_unix.so
+ password required pam_unix.so
+ session required pam_mkhomedir.so skel=/etc/skel/ umask=0022
+ session required pam_unix.so
+ session optional pam_lastlog.so
+ session optional pam_mail.so standard</pre>
+</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7).</p>
+<h2>Author</h2>
+<p>pam_mkhomedir was written by Jason Gunthorpe &lt;jgg [at] debian.org&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

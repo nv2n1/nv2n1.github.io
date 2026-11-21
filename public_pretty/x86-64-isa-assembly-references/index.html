@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>x86-64 Assembly: Essential Reference Guide - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/x86-64-isa-assembly-references/">
+  <meta name="description" content="x86-64 (Intel 64, AMD64) is the dominant 64-bit instruction set architecture for consumer and enterprise computing. Whether you’re reverse-engineering binaries, …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="x86-64 Assembly: Essential Reference Guide">
+  <meta property="og:url" content="https://www.systutorials.com/x86-64-isa-assembly-references/">
+  <meta property="og:description" content="x86-64 (Intel 64, AMD64) is the dominant 64-bit instruction set architecture for consumer and enterprise computing. Whether you’re reverse-engineering binaries, …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/software-design/">Software Design</a>
+        </nav>
+        
+        <h1>x86-64 Assembly: Essential Reference Guide</h1>
+        <time class="post-date" datetime="2013-07-12T16:47:46Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>x86-64 (Intel 64, AMD64) is the dominant 64-bit instruction set architecture for consumer and enterprise computing. Whether you’re reverse-engineering binaries, writing performance-critical code, or understanding system internals, a solid grasp of x86-64 assembly is essential.</p>
+<h2 id="learning-foundations">Learning Foundations</h2>
+<p><strong>CMU’s Introduction to Computer Systems (15-213)</strong> course materials remain the gold standard for foundational machine-level programming. The accompanying x86-64 Machine-Level Programming document supplements Chapter 3 of <em>Computer Systems: A Programmer’s Perspective</em> and is still current for practical learning.</p>
+<p>If you’re transitioning from 32-bit x86, review calling conventions, register usage, and AT&amp;T vs. Intel syntax differences. Understanding the ABI before writing code saves significant debugging time.</p>
+<p><strong>Interactive resources</strong> like Godbolt (compiler explorer) let you write C/C++ and immediately see the generated x86-64 assembly. This is invaluable for learning how modern compilers optimize code and understanding why certain patterns compile to specific instructions.</p>
+<h2 id="official-isa-references">Official ISA References</h2>
+<h3 id="intel">Intel</h3>
+<p>The <strong>Intel 64 and IA-32 Architectures Software Developer Manuals</strong> (freely available as PDFs) are the canonical reference. They span multiple volumes:</p>
+<ul>
+<li><strong>Volume 1</strong>: Basic architecture and instruction set fundamentals</li>
+<li><strong>Volume 2</strong>: Instruction set reference (alphabetically organized by mnemonic)</li>
+<li><strong>Volume 3</strong>: System programming (protected mode, paging, interrupts, segmentation)</li>
+<li><strong>Volume 4</strong>: Model-specific registers (MSRs) and performance monitoring</li>
+</ul>
+<p>These manuals are thousands of pages long. Bookmark specific sections and use the PDF search function liberally rather than attempting cover-to-cover reading.</p>
+<h3 id="amd">AMD</h3>
+<p>The <strong>AMD64 Architecture Programmer’s Manual</strong> covers Ryzen, EPYC, and Opteron processors. AMD’s documentation often includes clearer explanations of microarchitectural details than Intel’s, making it worth consulting alongside Intel’s manuals when optimizing code.</p>
+<h2 id="performance-and-optimization">Performance and Optimization</h2>
+<p>Understanding instruction latencies and throughput is critical for performance-sensitive code.</p>
+<p><strong>Intel’s Optimization Reference Manual</strong> and <strong>AMD’s Software Optimization Guide</strong> detail:</p>
+<ul>
+<li>Instruction latencies and throughputs across different processor generations</li>
+<li>Execution unit limitations and pipeline behavior</li>
+<li>Memory hierarchy characteristics and cache line sizes</li>
+<li>Microoperation breakdowns for complex instructions</li>
+<li>Stall conditions and common performance pitfalls</li>
+</ul>
+<p><strong>Agner Fog’s CPU instruction timing tables</strong> consolidate latency and throughput data across Intel and AMD processors, including branch prediction behavior. These tables are more concise than vendor manuals for quick lookups.</p>
+<h2 id="system-level-specifications">System-Level Specifications</h2>
+<h3 id="calling-conventions-and-abis">Calling Conventions and ABIs</h3>
+<p>The <strong>System V AMD64 ABI</strong> specification defines calling conventions, register usage, stack layout, and ELF binary format for x86-64 Unix-like systems. Essential when writing assembly that interoperates with C/C++.</p>
+<p>On Windows, the <strong>Microsoft x64 calling convention</strong> differs significantly—different register preservation rules, parameter passing mechanism, and shadow space on the stack. Always verify your target platform’s ABI before writing assembly.</p>
+<p>Key differences to remember:</p>
+<ul>
+<li><strong>System V (Linux/BSD)</strong>: First 6 integer arguments in <code>rdi, rsi, rdx, rcx, r8, r9</code>; caller cleans stack</li>
+<li><strong>Microsoft x64 (Windows)</strong>: First 4 arguments in <code>rcx, rdx, r8, r9</code>; 32 bytes of shadow space required; callee cleans stack</li>
+</ul>
+<h2 id="assemblers-and-tools">Assemblers and Tools</h2>
+<p><strong>GAS (GNU Assembler)</strong> uses AT&amp;T syntax and is standard on Unix-like systems. The manual is thorough but can be cryptic for beginners.</p>
+<p><strong>NASM</strong> (Netwide Assembler) uses Intel syntax, which many find more readable. NASM is portable and widely used in security research and bootloader development.</p>
+<p><strong>Disassemblers and debuggers</strong>:</p>
+<ul>
+<li><code>objdump -d</code> — quick binary disassembly</li>
+<li><code>lldb</code> / <code>gdb</code> — instruction-level stepping and register inspection</li>
+<li><strong>Ghidra</strong> — advanced static analysis and decompilation</li>
+<li><strong>Radare2</strong> — scriptable reverse engineering framework</li>
+</ul>
+<h2 id="practical-workflow">Practical Workflow</h2>
+<ol>
+<li><strong>Write small C functions</strong> and compile with <code>gcc -S</code> or use Godbolt to see generated assembly</li>
+<li><strong>Compare your hand-written assembly</strong> against compiler output to understand optimization patterns</li>
+<li><strong>Use <code>objdump -d -M intel</code></strong> to disassemble with Intel syntax (easier to read than AT&amp;T)</li>
+<li><strong>Step through with gdb</strong>: set breakpoints, inspect registers with <code>info registers</code>, and step with <code>si</code></li>
+<li><strong>Keep references open</strong>: Intel Volume 2 for instruction definitions, your target ABI spec for calling conventions</li>
+</ol>
+<h2 id="essential-references-at-a-glance">Essential References at a Glance</h2>
+<ul>
+<li><strong>Intel Software Developer Manuals</strong>: <a href="https://www.intel.com/content/www/en/en/developer/articles/technical/intel-sdm.html" rel="nofollow noopener" target="_blank"><a href="https://www.intel.com/content/www/en/en/developer/articles/technical/intel-sdm.html">https://www.intel.com/content/www/en/en/developer/articles/technical/intel-sdm.html</a></a></li>
+<li><strong>AMD64 Programmer’s Manual</strong>: <a href="https://www.amd.com/en/technologies/specifications/processor-instructions" rel="nofollow noopener" target="_blank"><a href="https://www.amd.com/en/technologies/specifications/processor-instructions">https://www.amd.com/en/technologies/specifications/processor-instructions</a></a></li>
+<li><strong>System V AMD64 ABI</strong>: <a href="https://refspecs.linuxbase.org/elf/x86_64-abi-0.99.pdf" rel="nofollow noopener" target="_blank"><a href="https://refspecs.linuxbase.org/elf/x86_64-abi-0.99.pdf">https://refspecs.linuxbase.org/elf/x86_64-abi-0.99.pdf</a></a></li>
+<li><strong>Agner Fog’s optimization guides</strong>: <a href="https://www.agner.org/optimize/" rel="nofollow noopener" target="_blank"><a href="https://www.agner.org/optimize/">https://www.agner.org/optimize/</a></a></li>
+<li><strong>Godbolt</strong>: <a href="https://godbolt.org/" rel="nofollow noopener" target="_blank"><a href="https://godbolt.org/">https://godbolt.org/</a></a></li>
+<li><em>Computer Systems: A Programmer’s Perspective</em> (CS:APP) — comprehensive textbook with assembly throughout</li>
+</ul>
+<p>When you hit a performance wall or need clarification on instruction behavior, the official manuals are your authority. Agner Fog’s tables and optimization guides are faster for quick lookups. Godbolt is your best tool for understanding how C compiles to assembly and building intuition.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

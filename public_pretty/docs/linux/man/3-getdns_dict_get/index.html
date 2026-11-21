@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>getdns_dict_get(3) · Linux Manual Pages</title>
+<meta name="description" content="getdns_dict_get, getdns_dict_get_bindata, getdns_dict_get_data_type, getdns_dict_get_dict, getdns_dict_get_int, getdns_dict_get_list, getdns_dict_get_names — get value by name from a getdns dict">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-getdns_dict_get/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>getdns_dict_get(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>getdns_dict_get, </code> <code>getdns_dict_get_bindata, </code> <code>getdns_dict_get_data_type, </code> <code>getdns_dict_get_dict, </code> <code>getdns_dict_get_int, </code> <code>getdns_dict_get_list, </code> <code>getdns_dict_get_names</code> &#8212; get value by name from a getdns dict </p>
+<h2>LIBRARY</h2>
+<p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;getdns.h&gt; </p>
+<p> getdns_return_t<br />
+ <code>getdns_dict_get_bindata</code> (getdns_dict *this_dict,</p>
+<dl>
+<dt>
+</dt><dd> char *name,<br />
+ getdns_bindata **answer)</dd></dl>
+<p> getdns_return_t<br />
+ <code>getdns_dict_get_data_type</code> (getdns_dict *this_dict,</p>
+<dl>
+<dt>
+</dt><dd> char *name,<br />
+ getdns_data_type *answer)</dd></dl>
+<p> getdns_return_t<br />
+ <code>getdns_dict_get_dict</code> (getdns_dict *this_dict,</p>
+<dl>
+<dt>
+</dt><dd> char *name,<br />
+ getdns_dict **answer)</dd></dl>
+<p> getdns_return_t<br />
+ <code>getdns_dict_get_int</code> (getdns_dict *this_dict,</p>
+<dl>
+<dt>
+</dt><dd> char *name,<br />
+ uint32_t *answer)</dd></dl>
+<p> getdns_return_t<br />
+ <code>getdns_dict_get_list</code> (getdns_dict *this_dict,</p>
+<dl>
+<dt>
+</dt><dd> char *name,<br />
+ getdns_list **answer)</dd></dl>
+<p> getdns_return_t<br />
+ <code>getdns_dict_get_names</code> (getdns_dict *this_dict,</p>
+<dl>
+<dt>
+</dt><dd> getdns_list **answer)</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> The getdns_dict type is used to manage name/value pairs in which the names are strings and the data types of the values are heterogeneous and include</p>
+<dl>
+<dt>
+</dt><dd>
+ getdns_bindata<br />
+ getdns_dict<br />
+ getdns_list<br />
+ uint32_t</dd></dl>
+<p> <i>this_dict</i> the dictionary from which to retrieve the list of names </p>
+<p> <i>name</i> the name whose associated value is to be returned in answer </p>
+<p> <i>answer</i> the list of all names in the dictionary, note that the caller must free storage allocated to the list via a call to <code><a href="/docs/linux/man/3-getdns_list_destroy/">getdns_list_destroy</a>(3)</code> </p>
+<h2>RETURN VALUES</h2>
+<p> Upon successful completion the functions return <code>GETDNS_RETURN_GOOD</code> , otherwise the following error values are returned: </p>
+<p> <code>GETDNS_RETURN_GENERIC_ERROR</code> if this_dict is not a valid dictionary </p>
+<p> <code>GETDNS_RETURN_NO_SUCH_DICT_NAME</code> if the name argument doesn&#8217;t exist in the dictionary </p>
+<p> <code>GETDNS_RETURN_WRONG_TYPE_REQUESTED</code> if the requested data type doesn&#8217;t match the contents of the indexed argument or name </p>
+<h2>EXAMPLES</h2>
+<p> TBD </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_address/">getdns_address</a></code>(3), <code><a href="/docs/linux/man/3-getdns_dict/">getdns_dict</a></code>(3), <code><a href="/docs/linux/man/3-getdns_dict_set/">getdns_dict_set</a></code>(3), <code><a href="/docs/linux/man/3-getdns_general/">getdns_general</a></code>(3), <code><a href="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a></code>(3), <code><a href="/docs/linux/man/3-getdns_list/">getdns_list</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service/">getdns_service</a></code>(3), </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

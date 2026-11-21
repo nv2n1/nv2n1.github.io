@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>deductionguidesforstdchronozoned_time(3) · Linux Manual Pages</title>
+<meta name="description" content="Deductionguidesforstd::chrono::zoned_time – Deductionguidesforstd::chrono::zoned_time">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-deductionguidesforstdchronozoned_time/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>deductionguidesforstdchronozoned_time(3)</h1>
+
+
+
+
+
+<p>Deductionguidesforstd::chrono::zoned_time &#8211; Deductionguidesforstd::chrono::zoned_time</p>
+<h2>Synopsis</h2>
+<p>zoned_time() -&gt; zoned_time&lt;std::chrono::seconds&gt;; <code>(1)</code> <i>(since C++20)</i><br />
+template&lt; class Duration &gt;<br />
+zoned_time(std::chrono::sys_time&lt;Duration&gt;) <code>(2)</code> <i>(since C++20)</i><br />
+-&gt; zoned_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;&gt;;<br />
+template&lt; class TimeZonePtrOrName &gt; <code>(3)</code> <i>(since C++20)</i><br />
+zoned_time(TimeZonePtrOrName) -&gt; zoned_time&lt;std::chrono::seconds, /* see below */&gt;;<br />
+template&lt; class TimeZonePtrOrName, class Duration &gt;<br />
+zoned_time(TimeZonePtrOrName, std::chrono::sys_time&lt;Duration&gt;) <code>(4)</code> <i>(since C++20)</i><br />
+-&gt; zoned_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;, /* see below */&gt;;<br />
+template&lt; class TimeZonePtrOrName, class Duration &gt;<br />
+zoned_time(TimeZonePtrOrName, std::chrono::local_time&lt;Duration&gt;, <code>(5)</code> <i>(since C++20)</i><br />
+std::chrono::choose = std::chrono::choose::earliest)<br />
+-&gt; zoned_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;, /* see below */&gt;;<br />
+template&lt; class TimeZonePtrOrName, class Duration, class TimeZonePtr2 &gt;<br />
+zoned_time(TimeZonePtrOrName, std::chrono::zoned_time&lt;Duration, TimeZonePtr2&gt;, <code>(6)</code> <i>(since C++20)</i><br />
+std::chrono::choose = std::chrono::choose::earliest)<br />
+-&gt; zoned_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;, /* see below */&gt;; </p>
+<p>Six deduction guides are provided for zoned_time. They normalize Duration to a minimum resolution of std::chrono::seconds, and provide correct handling for time zone names specified using types convertible to std::string_view.<br />
+3-6) If std::is_convertible_v&lt;TimeZonePtrOrName, std::string_view&gt; is true, the deduced second template argument is const std::chrono::time_zone*. Otherwise it is TimeZonePtrOrName.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

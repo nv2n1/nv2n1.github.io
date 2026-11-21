@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vm_insert_page(9) · Linux Manual Pages</title>
+<meta name="description" content="vm_insert_page – insert single page into user vma">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-vm_insert_page/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>vm_insert_page(9)</h1>
+
+
+
+
+
+<p>vm_insert_page &#8211; insert single page into user vma</p>
+<h2>Synopsis</h2>
+<pre><code>int vm_insert_page(struct vm_area_struct *vma, unsigned long addr, struct page *page);</code></pre>
+<h2>Arguments</h2>
+<p><i>vma</i></p>
+<dl>
+<dd>
+</dd><dd>user vma to map to</dd></dl>
+<p> <i>addr</i></p>
+<dl>
+<dd>target user address of this page</dd></dl>
+<p> <i>page</i></p>
+<dl>
+<dd>source kernel page</dd></dl>
+<h2>Description</h2>
+<p>This allows drivers to insert individual pages they&#8217;ve allocated into a user vma. </p>
+<p> The page has to be a nice clean _individual_ kernel allocation. If you allocate a compound page, you need to have marked it as such (__GFP_COMP), or manually just split the page up yourself (see <code>split_page</code>). </p>
+<p> NOTE! Traditionally this was done with &#8220;<code>remap_pfn_range</code>&#8221; which took an arbitrary page protection parameter. This doesn&#8217;t allow that. Your vma protection will have to be set up correctly, which means that if you want a shared writable mapping, you&#8217;d better ask for a shared writable mapping! </p>
+<p> The page does not need to be reserved. </p>
+<p> Usually this function is called from f_op-&gt;<code>mmap</code> handler under mm-&gt;mmap_sem write-lock, so it can change vma-&gt;vm_flags. Caller must set VM_MIXEDMAP on vma if it wants to call this function from other places, for example from page-fault handler.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

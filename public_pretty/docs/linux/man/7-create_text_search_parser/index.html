@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>create_text_search_parser(7) · Linux Manual Pages</title>
+<meta name="description" content="CREATE TEXT SEARCH PARSER – define a new text search parser">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-create_text_search_parser/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>create_text_search_parser(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>CREATE TEXT SEARCH PARSER &#8211; define a new text search parser </p>
+<h2>Synopsis</h2>
+<pre>CREATE TEXT SEARCH PARSER <i>name</i> (
+ START = <i>start_function</i> ,
+ GETTOKEN = <i>gettoken_function</i> ,
+ END = <i>end_function</i> ,
+ LEXTYPES = <i>lextypes_function</i>
+ [, HEADLINE = <i>headline_function</i> ]
+)</pre>
+<h2>Description</h2>
+<p><code>CREATE TEXT SEARCH PARSER</code> creates a new text search parser. A text search parser defines a method for splitting a text string into tokens and assigning types (categories) to the tokens. A parser is not particularly useful by itself, but must be bound into a text search configuration along with some text search dictionaries to be used for searching. </p>
+<p> If a schema name is given then the text search parser is created in the specified schema. Otherwise it is created in the current schema. </p>
+<p> You must be a superuser to use <code>CREATE TEXT SEARCH PARSER</code>. (This restriction is made because an erroneous text search parser definition could confuse or even crash the server.) </p>
+<p> Refer to in the documentation for further information.</p>
+<h2>Parameters</h2>
+<dl>
+<dt><i>name</i></dt>
+<dd>The name of the text search parser to be created. The name can be schema-qualified.</dd>
+<dt><i>start_function</i></dt>
+<dd>The name of the start function for the parser.</dd>
+<dt><i>gettoken_function</i></dt>
+<dd>The name of the get-next-token function for the parser.</dd>
+<dt><i>end_function</i></dt>
+<dd>The name of the end function for the parser.</dd>
+<dt><i>lextypes_function</i></dt>
+<dd>The name of the lextypes function for the parser (a function that returns information about the set of token types it produces).</dd>
+<dt><i>headline_function</i></dt>
+<dd>The name of the headline function for the parser (a function that summarizes a set of tokens).</dd></dl>
+<p> The function names can be schema-qualified if necessary. Argument types are not given, since the argument list for each type of function is predetermined. All except the headline function are required. </p>
+<p> The arguments can appear in any order, not only the one shown above.</p>
+<h2>Compatibility</h2>
+<p>There is no <code>CREATE TEXT SEARCH PARSER</code> statement in the SQL standard.</p>
+<h2>See Also</h2>
+<p>ALTER TEXT SEARCH PARSER [<code><a href="/docs/linux/man/7-alter_text_search_parser/">alter_text_search_parser</a></code>(7)], DROP TEXT SEARCH PARSER [<code><a href="/docs/linux/man/7-drop_text_search_parser/">drop_text_search_parser</a></code>(7)] </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

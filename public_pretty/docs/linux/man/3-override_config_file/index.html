@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>override_config_file(3) · Linux Manual Pages</title>
+<meta name="description" content="override_config_file – Specifies a file containing config overrides. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-override_config_file/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>override_config_file(3)</h1>
+
+
+
+
+
+<p>override_config_file &#8211; Specifies a file containing config overrides. Allegro game programming library.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;allegro.h&gt;
+void override_config_file(const char *filename);</code></pre>
+<h2>Description</h2>
+<p>Specifies a file containing config overrides. These settings will be used in addition to the parameters in the main config file, and where a variable is present in both files this version will take priority. This can be used by application programmers to override some of the config settings from their code, while still leaving the main config file free for the end user to customise. For example, you could specify a particular sample frequency and IBK instrument file, but the user could still use an `allegro.cfg&#8217; file to specify the port settings and irq numbers. The override config file will not only take precedence when reading, but will also be used for storing values. When you are done with using the override config file, you can call override_config_file with a NULL parameter, so config data will be directly read from the current config file again. Note: The override file is completely independent from the current configuration. You can e.g. call set_config_file, and the override file will still be active. Also the flush_config_file function will only affect the current config file (which can be changed with set_config_file), never the overriding one specified with this function. The modified override config is written back to disk whenever you call override_config_file. Example:  Note that this function and override_config_data() are mutually exclusive, i.e. calling one will cancel the effects of the other. </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-override_config_data/">override_config_data</a></code>(3), <code><a href="/docs/linux/man/3-set_config_file/">set_config_file</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

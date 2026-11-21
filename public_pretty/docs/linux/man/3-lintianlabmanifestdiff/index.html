@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lintianlabmanifestdiff(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-lintianlabmanifestdiff/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>lintianlabmanifestdiff(3)</h1>
+
+
+
+
+
+<p>Lintian::Lab::ManifestDiff &ndash; Difference representation between two Manifests</p>
+<h2>Synopsis</h2><pre> use Lintian::Lab::Manifest;
+ my $olist = Lintian::Lab::Manifest-&gt;new ('binary');
+ my $nlist = Lintian::Lab::Manifest-&gt;new ('binary');
+ $olist-&gt;read_list ('old/binary-packages');
+ $nlist-&gt;read_list ('new/binary-packages');
+ my $diff = $olist-&gt;diff($nlist);
+ foreach my $added (@{ $diff-&gt;added }) {
+ my $entry = $nlist-&gt;get (@$added);
+ # do something
+ }
+ foreach my $removed (@{ $diff-&gt;removed }) {
+ my $entry = $olist-&gt;get (@$removed);
+ # do something
+ }
+ foreach my $changed (@{ $diff-&gt;changed }) {
+ my $oentry = $olist-&gt;get (@$changed);
+ my $nentry = $nlist-&gt;get (@$changed);
+ # use/diff $oentry and $nentry as needed
+ }</pre><h2>Description</h2>Instances of this class provides access to the packages list used by the Lab as caches.
+<h2>Methods</h2><dl COMPACT><dt>$diff-&gt;added
+</dt><dd>Returns a listref containing the keys of the elements that has been added. 
+ Each element is a listref of keys; this list (when dereferenced) can be used with the manifest's get method to look up the item.
+</dd><dt>$diff-&gt;removed
+</dt><dd>Returns a listref containing the keys of the elements that has been removed. 
+ Each element is a listref of keys; this list (when dereferenced) can be used with the manifest's get method to look up the item.
+</dd><dt>$diff-&gt;changed
+</dt><dd>Returns a listref containing the keys of the elements that has been changed. 
+ Each element is a listref of keys; this list (when dereferenced) can be used with the manifest's get method to look up the item.
+</dd><dt>$diff-&gt;nlist
+</dt><dd>Returns the ``new'' manifest used to create this diff. Note the manifest is not copied and may have been changed since the diff has been created.
+</dd><dt>$diff-&gt;olist
+</dt><dd>Returns the ``orig'' manifest used to create this diff. Note the manifest is not copied and may have been changed since the diff has been created.</dd></dl>
+<p>Originally written by Niels Thykier &lt;niels [at] thykier.net&gt; for Lintian.</p>
+<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1)
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

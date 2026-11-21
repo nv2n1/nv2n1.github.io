@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dcraw(1) · Linux Manual Pages</title>
+<meta name="description" content="dcraw – command-line decoder for raw digital photos">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dcraw/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dcraw(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> dcraw &#8211; command-line decoder for raw digital photos </p>
+<h2>SYNOPSIS</h2>
+<p> <code>dcraw</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>dcraw</code> decodes raw photos, displays metadata, and extracts thumbnails.</p>
+<h2>GENERAL OPTIONS</h2>
+<dl>
+<dt><code>-v</code></dt>
+<dd> Print verbose messages, not just warnings and errors.</dd>
+<dt><code>-c</code></dt>
+<dd> Write decoded images or thumbnails to standard output.</dd>
+<dt><code>-e</code></dt>
+<dd> Extract the camera-generated thumbnail, not the raw image. You&#8217;ll get either a JPEG or a PPM file, depending on the camera.</dd>
+<dt><code>-z</code></dt>
+<dd> Change the access and modification times of an AVI, JPEG, TIFF or raw file to when the photo was taken, assuming that the camera clock was set to Universal Time.</dd>
+<dt><code>-i</code></dt>
+<dd> Identify files but don&#8217;t decode them. Exit status is 0 if <code>dcraw</code> can decode the last file, 1 if it can&#8217;t. <code>-i -v</code> shows metadata.</dd>
+<dt>
+</dt><dd> <code>dcraw</code> cannot decode JPEG files!!</dd></dl>
+<h2>REPAIR OPTIONS</h2>
+<dl>
+<dt><code>-I</code></dt>
+<dd> Read the raw pixels from standard input in CPU byte order with no header. Use <code>dcraw -E -4</code> to get the raw pixel values.</dd>
+<dt><code>-P deadpixels.txt</code></dt>
+<dd> Read the dead pixel list from this file instead of &quot;.badpixels&quot;. See <code>FILES</code> for a description of the format.</dd>
+<dt><code>-K darkframe.pgm</code></dt>
+<dd> Subtract a dark frame from the raw data. To generate a dark frame, shoot a raw photo with no light and do <code>dcraw -D -4 -j -t 0</code>.</dd>
+<dt><code>-k darkness</code></dt>
+<dd> When shadows appear foggy, you need to raise the darkness level. To measure this, apply <code>pamsumm -mean</code> to the dark frame generated above.</dd>
+<dt><code>-S saturation</code></dt>
+<dd> When highlights appear pink, you need to lower the saturation level. To measure this, take a picture of something shiny and do <code>dcraw -D -4 -j -c</code> photo.raw <code>| pamsumm -max</code></dd>
+<dt>
+</dt><dd> The default darkness and saturation are usually correct.</dd>
+<dt><code>-n noise_threshold</code></dt>
+<dd> Use wavelets to erase noise while preserving real detail. The best threshold should be somewhere between 100 and 1000.</dd>
+<dt><code>-C red_mag blue_mag</code></dt>
+<dd> Enlarge the raw red and blue layers by the given factors, typically 0.999 to 1.001, to correct chromatic aberration.</dd>
+<dt><code>-H 0</code></dt>
+<dd> Clip all highlights to solid white (default).</dd>
+<dt><code>-H 1</code></dt>
+<dd> Leave highlights unclipped in various shades of pink.</dd>
+<dt><code>-H 2</code></dt>
+<dd> Blend clipped and unclipped values together for a gradual fade to white.</dd>
+<dt><code>-H 3+</code></dt>
+<dd> Reconstruct highlights. Low numbers favor whites; high numbers favor colors. Try <code>-H 5</code> as a compromise. If that&#8217;s not good enough, do <code>-H 9</code>, cut out the non-white highlights, and paste them into an image generated with <code>-H 3</code>.</dd></dl>
+<h2>COLOR OPTIONS</h2>
+<p> By default, <code>dcraw</code> uses a fixed white balance based on a color chart illuminated with a standard D65 lamp.</p>
+<dl>
+<dt><code>-w</code></dt>
+<dd> Use the white balance specified by the camera. If this is not found, print a warning and use another method.</dd>
+<dt><code>-a</code></dt>
+<dd> Calculate the white balance by averaging the entire image.</dd>
+<dt><code>-A left top width height</code></dt>
+<dd> Calculate the white balance by averaging a rectangular area. First do <code>dcraw -j -t 0</code> and select an area of neutral grey color.</dd>
+<dt><code>-r mul0 mul1 mul2 mul3</code></dt>
+<dd> Specify your own raw white balance. These multipliers can be cut and pasted from the output of <code>dcraw -v</code>.</dd>
+<dt><code>+M</code> or <code>-M</code></dt>
+<dd> Use (or don&#8217;t use) any color matrix from the camera metadata. The default is <code>+M</code> if <code>-w</code> is set, <code>-M</code> otherwise. This option only affects Olympus, Leaf, and Phase One cameras.</dd>
+<dt><code>-o [0-5]</code></dt>
+<dd> Select the output colorspace when the <code>-p</code> option is not used: </dd>
+<p> <code> 0</code> &nbsp;<wbr>&nbsp;<wbr>Raw color (unique to each camera)<br />
+ <code> 1</code> &nbsp;<wbr>&nbsp;<wbr>sRGB D65 (default)<br />
+ <code> 2</code> &nbsp;<wbr>&nbsp;<wbr>Adobe RGB (1998) D65<br />
+ <code> 3</code> &nbsp;<wbr>&nbsp;<wbr>Wide Gamut RGB D65<br />
+ <code> 4</code> &nbsp;<wbr>&nbsp;<wbr>Kodak ProPhoto RGB D65<br />
+ <code> 5</code> &nbsp;<wbr>&nbsp;<wbr>XYZ</p>
+<dt><code>-p camera.icm</code>&nbsp;<wbr>[&nbsp;<wbr><code>-o output.icm</code>&nbsp;<wbr>]</dt>
+<dd> Use ICC profiles to define the camera&#8217;s raw colorspace and the desired output colorspace (sRGB by default).</dd>
+<dt><code>-p embed</code></dt>
+<dd> Use the ICC profile embedded in the raw photo.</dd></dl>
+<h2>INTERPOLATION OPTIONS</h2>
+<dl>
+<dt><code>-d</code></dt>
+<dd> Show the raw data as a grayscale image with no interpolation. Good for photographing black-and-white documents.</dd>
+<dt><code>-D</code></dt>
+<dd> Same as <code>-d</code>, but with the original unscaled pixel values.</dd>
+<dt><code>-E</code></dt>
+<dd> Same as <code>-D</code>, but masked pixels are not cropped.</dd>
+<dt><code>-h</code></dt>
+<dd> Output a half-size color image. Twice as fast as <code>-q 0</code>.</dd>
+<dt><code>-q 0</code></dt>
+<dd> Use high-speed, low-quality bilinear interpolation.</dd>
+<dt><code>-q 1</code></dt>
+<dd> Use Variable Number of Gradients (VNG) interpolation.</dd>
+<dt><code>-q 2</code></dt>
+<dd> Use Patterned Pixel Grouping (PPG) interpolation.</dd>
+<dt><code>-q 3</code></dt>
+<dd> Use Adaptive Homogeneity-Directed (AHD) interpolation.</dd>
+<dt><code>-f</code></dt>
+<dd> Interpolate RGB as four colors. Use this if the output shows false 2&#215;2 meshes with VNG or mazes with AHD.</dd>
+<dt><code>-m number_of_passes</code></dt>
+<dd> After interpolation, clean up color artifacts by repeatedly applying a 3&#215;3 median filter to the R-G and B-G channels.</dd></dl>
+<h2>OUTPUT OPTIONS</h2>
+<p> By default, <code>dcraw</code> writes PGM/PPM/PAM with 8-bit samples, a BT.709 gamma curve, a histogram-based white level, and no metadata.</p>
+<dl>
+<dt><code>-W</code></dt>
+<dd> Use a fixed white level, ignoring the image histogram.</dd>
+<dt><code>-b brightness</code></dt>
+<dd> Divide the white level by this number, 1.0 by default.</dd>
+<dt><code>-g power toe_slope</code></dt>
+<dd> Set the gamma curve, by default BT.709 (<code>-g 2.222 4.5</code>). If you prefer sRGB gamma, use <code>-g 2.4 12.92</code>. For a simple power curve, set the toe slope to zero.</dd>
+<dt><code>-6</code></dt>
+<dd> Write sixteen bits per sample instead of eight.</dd>
+<dt><code>-4</code></dt>
+<dd> Linear 16-bit, same as <code>-6 -W -g 1 1</code>.</dd>
+<dt><code>-T</code></dt>
+<dd> Write TIFF with metadata instead of PGM/PPM/PAM.</dd>
+<dt><code>-t [0-7,90,180,270]</code></dt>
+<dd> Flip the output image. By default, <code>dcraw</code> applies the flip specified by the camera. <code>-t 0</code> disables all flipping.</dd>
+<dt><code>-j</code></dt>
+<dd> For Fuji Super CCD cameras, show the image tilted 45 degrees. For cameras with non-square pixels, do not stretch the image to its correct aspect ratio. In any case, this option guarantees that each output pixel corresponds to one raw pixel.</dd>
+<dt><code>-s [0..N-1]</code> or <code>-s all</code></dt>
+<dd> If a file contains N raw images, choose one or &quot;all&quot; to decode. For example, Fuji Super CCD SR cameras generate a second image underexposed four stops to show detail in the highlights.</dd></dl>
+<h2>FILES</h2>
+<dl>
+<dt>:./.badpixels, ../.badpixels, ../../.badpixels, &#8230;</dt>
+<dd> List of your camera&#8217;s dead pixels, so that <code>dcraw</code> can interpolate around them. Each line specifies the column, row, and UNIX time of death for one pixel. For example: </dd>
+<pre>
+ 962   91 1028350000  # died between August 1 and 4, 2002
+1285 1067 0           # don't know when this pixel died
+</pre>
+<p> These coordinates are before any cropping or rotation, so use <code>dcraw -j -t 0</code> to locate dead pixels.</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-pgm/">pgm</a></code>(5), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code><a href="/docs/linux/man/5-pam/">pam</a></code>(5), <code><a href="/docs/linux/man/1-pamsumm/">pamsumm</a></code>(1), <code><a href="/docs/linux/man/1-pnmgamma/">pnmgamma</a></code>(1), <code><a href="/docs/linux/man/1-pnmtotiff/">pnmtotiff</a></code>(1), <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1), <code><a href="/docs/linux/man/1-gphoto2/">gphoto2</a></code>(1), <code><a href="/docs/linux/man/1-cjpeg/">cjpeg</a></code>(1), <code><a href="/docs/linux/man/1-djpeg/">djpeg</a></code>(1)</p>
+<h2>AUTHOR</h2>
+<p> Written by David Coffin, dcoffin a cybercom o net </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

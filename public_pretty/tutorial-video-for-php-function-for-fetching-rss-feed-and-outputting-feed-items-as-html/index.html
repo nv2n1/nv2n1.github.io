@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robust PHP RSS Feed Parsing with Caching and Error Handling - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/tutorial-video-for-php-function-for-fetching-rss-feed-and-outputting-feed-items-as-html/">
+  <meta name="description" content="Parsing RSS feeds in PHP remains a common requirement for content aggregation. This guide covers practical patterns for fetching feeds, caching results, …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Robust PHP RSS Feed Parsing with Caching and Error Handling">
+  <meta property="og:url" content="https://www.systutorials.com/tutorial-video-for-php-function-for-fetching-rss-feed-and-outputting-feed-items-as-html/">
+  <meta property="og:description" content="Parsing RSS feeds in PHP remains a common requirement for content aggregation. This guide covers practical patterns for fetching feeds, caching results, …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Robust PHP RSS Feed Parsing with Caching and Error Handling</h1>
+        <time class="post-date" datetime="2015-11-13T14:07:32Z">November 13, 2015</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Parsing RSS feeds in PHP remains a common requirement for content aggregation. This guide covers practical patterns for fetching feeds, caching results, extracting content, and sanitizing output — with implementations that work reliably in production.</p>
+<h2 id="basic-rss-feed-parsing">Basic RSS Feed Parsing</h2>
+<p>PHP’s SimpleXML extension provides a straightforward way to parse RSS feeds:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$feed_url</span> <span class="o">=</span> <span class="s1">&#39;https://example.com/feed.xml&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$feed</span> <span class="o">=</span> <span class="nx">simplexml_load_file</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$feed</span><span class="o">-&gt;</span><span class="na">channel</span><span class="o">-&gt;</span><span class="na">item</span> <span class="k">as</span> <span class="nv">$item</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s1">&#39;&lt;article&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s1">&#39;&lt;h3&gt;&#39;</span> <span class="o">.</span> <span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">title</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;&lt;/h3&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s1">&#39;&lt;p&gt;&#39;</span> <span class="o">.</span> <span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">description</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;&lt;/p&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s1">&#39;&lt;a href=&#34;&#39;</span> <span class="o">.</span> <span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">link</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;&#34;&gt;Read more&lt;/a&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s1">&#39;&lt;/article&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>For feeds with namespaces (common in modern RSS), use namespace handling to access extended content:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$feed</span> <span class="o">=</span> <span class="nx">simplexml_load_file</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$namespaces</span> <span class="o">=</span> <span class="nv">$feed</span><span class="o">-&gt;</span><span class="na">getDocNamespaces</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$feed</span><span class="o">-&gt;</span><span class="na">channel</span><span class="o">-&gt;</span><span class="na">item</span> <span class="k">as</span> <span class="nv">$item</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Handle content:encoded namespace
+</span></span></span><span class="line"><span class="cl">    <span class="nv">$content</span> <span class="o">=</span> <span class="nx">isset</span><span class="p">(</span><span class="nv">$namespaces</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">])</span> 
+</span></span><span class="line"><span class="cl">        <span class="o">?</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">children</span><span class="p">(</span><span class="nv">$namespaces</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">encoded</span> 
+</span></span><span class="line"><span class="cl">        <span class="o">:</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">description</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nv">$content</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h2 id="efficient-caching-with-file-storage">Efficient Caching with File Storage</h2>
+<p>Fetching remote feeds on every page load wastes bandwidth and slows response times. Implement file-based caching for small to medium applications:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">get_cached_feed</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">,</span> <span class="nv">$cache_dir</span> <span class="o">=</span> <span class="s1">&#39;/var/cache/rss&#39;</span><span class="p">,</span> <span class="nv">$ttl</span> <span class="o">=</span> <span class="mi">3600</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">is_writable</span><span class="p">(</span><span class="nv">$cache_dir</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">error_log</span><span class="p">(</span><span class="s2">&#34;Cache directory not writable: </span><span class="si">$cache_dir</span><span class="s2">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$cache_file</span> <span class="o">=</span> <span class="nv">$cache_dir</span> <span class="o">.</span> <span class="s1">&#39;/&#39;</span> <span class="o">.</span> <span class="nx">md5</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;.xml&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">file_exists</span><span class="p">(</span><span class="nv">$cache_file</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">time</span><span class="p">()</span> <span class="o">-</span> <span class="nx">filemtime</span><span class="p">(</span><span class="nv">$cache_file</span><span class="p">))</span> <span class="o">&lt;</span> <span class="nv">$ttl</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">simplexml_load_file</span><span class="p">(</span><span class="nv">$cache_file</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$feed</span> <span class="o">=</span> <span class="nx">safe_fetch_feed</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$feed</span> <span class="o">===</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">is_dir</span><span class="p">(</span><span class="nv">$cache_dir</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">mkdir</span><span class="p">(</span><span class="nv">$cache_dir</span><span class="p">,</span> <span class="mo">0755</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">file_put_contents</span><span class="p">(</span><span class="nv">$cache_file</span><span class="p">,</span> <span class="nv">$feed</span><span class="o">-&gt;</span><span class="na">asXML</span><span class="p">(),</span> <span class="nx">LOCK_EX</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$feed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>For applications needing more sophisticated caching with automatic expiration and distributed access, Redis is a better choice:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">get_feed_redis</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">,</span> <span class="nv">$ttl</span> <span class="o">=</span> <span class="mi">3600</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$redis</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Redis</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">connect</span><span class="p">(</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="mi">6379</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span> <span class="c1">// 5 second timeout
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$cache_key</span> <span class="o">=</span> <span class="s1">&#39;feed:&#39;</span> <span class="o">.</span> <span class="nx">md5</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$cached</span> <span class="o">=</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="nv">$cache_key</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$cached</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">simplexml_load_string</span><span class="p">(</span><span class="nv">$cached</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$feed</span> <span class="o">=</span> <span class="nx">safe_fetch_feed</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$feed</span> <span class="o">===</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">setex</span><span class="p">(</span><span class="nv">$cache_key</span><span class="p">,</span> <span class="nv">$ttl</span><span class="p">,</span> <span class="nv">$feed</span><span class="o">-&gt;</span><span class="na">asXML</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$feed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h2 id="extracting-images-from-feed-items">Extracting Images from Feed Items</h2>
+<p>Many feeds include image content in various ways. Check multiple sources in order of reliability:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">extract_feed_image</span><span class="p">(</span><span class="nv">$item</span><span class="p">,</span> <span class="nv">$namespaces</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check for media:content namespace (most common in modern feeds)
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$namespaces</span><span class="p">[</span><span class="s1">&#39;media&#39;</span><span class="p">]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$media</span> <span class="o">=</span> <span class="nv">$item</span><span class="o">-&gt;</span><span class="na">children</span><span class="p">(</span><span class="nv">$namespaces</span><span class="p">[</span><span class="s1">&#39;media&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$media</span><span class="o">-&gt;</span><span class="na">content</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">foreach</span> <span class="p">(</span><span class="nv">$media</span><span class="o">-&gt;</span><span class="na">content</span> <span class="k">as</span> <span class="nv">$content</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">$attrs</span> <span class="o">=</span> <span class="nv">$content</span><span class="o">-&gt;</span><span class="na">attributes</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$attrs</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">strpos</span><span class="p">((</span><span class="nx">string</span><span class="p">)</span><span class="nv">$attrs</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">],</span> <span class="s1">&#39;image&#39;</span><span class="p">)</span> <span class="o">!==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="nv">$attrs</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check for enclosure (podcasts/media feeds)
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">enclosure</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$attrs</span> <span class="o">=</span> <span class="nv">$item</span><span class="o">-&gt;</span><span class="na">enclosure</span><span class="o">-&gt;</span><span class="na">attributes</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$type</span> <span class="o">=</span> <span class="p">(</span><span class="nx">string</span><span class="p">)(</span><span class="nv">$attrs</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">strpos</span><span class="p">(</span><span class="nv">$type</span><span class="p">,</span> <span class="s1">&#39;image&#39;</span><span class="p">)</span> <span class="o">!==</span> <span class="k">false</span> <span class="o">&amp;&amp;</span> <span class="nx">isset</span><span class="p">(</span><span class="nv">$attrs</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="nv">$attrs</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check for image in description HTML
+</span></span></span><span class="line"><span class="cl">    <span class="nv">$description</span> <span class="o">=</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">description</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">preg_match</span><span class="p">(</span><span class="s1">&#39;/&lt;img[^&gt;]+src=[&#34;\&#39;]([^&#34;\&#39;]+)[&#34;\&#39;]/&#39;</span><span class="p">,</span> <span class="nv">$description</span><span class="p">,</span> <span class="nv">$matches</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$matches</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h2 id="safe-feed-fetching-with-error-handling">Safe Feed Fetching with Error Handling</h2>
+<p>Always validate feeds and handle network failures gracefully. Use stream contexts to set timeouts and proper user agents:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">safe_fetch_feed</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">,</span> <span class="nv">$timeout</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$context</span> <span class="o">=</span> <span class="nx">stream_context_create</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;http&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;timeout&#39;</span> <span class="o">=&gt;</span> <span class="nv">$timeout</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;user_agent&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;follow_location&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;max_redirects&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">        <span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;ssl&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;verify_peer&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;verify_peer_name&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$feed</span> <span class="o">=</span> <span class="o">@</span><span class="nx">simplexml_load_file</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">,</span> <span class="s1">&#39;SimpleXMLElement&#39;</span><span class="p">,</span> <span class="nx">LIBXML_NOCDATA</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="nv">$context</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nv">$feed</span> <span class="o">===</span> <span class="k">false</span> <span class="o">||</span> <span class="o">!</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$feed</span><span class="o">-&gt;</span><span class="na">channel</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">error_log</span><span class="p">(</span><span class="s2">&#34;Invalid RSS feed: </span><span class="si">$feed_url</span><span class="s2">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$feed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">error_log</span><span class="p">(</span><span class="s2">&#34;Feed fetch error (</span><span class="si">$feed_url</span><span class="s2">): &#34;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h2 id="sanitizing-and-escaping-output">Sanitizing and Escaping Output</h2>
+<p>Never output feed content directly. Always escape text content and sanitize HTML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// For plain text fields, use htmlspecialchars
+</span></span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">title</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// For HTML content (descriptions), use a dedicated sanitizer library
+</span></span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="s1">&#39;vendor/autoload.php&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">use</span> <span class="nx">HtmlSanitizer\Sanitizer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$sanitizer</span> <span class="o">=</span> <span class="nx">Sanitizer</span><span class="o">::</span><span class="na">create</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;allowed_elements&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;br&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;img&#39;</span><span class="p">,</span> <span class="s1">&#39;strong&#39;</span><span class="p">,</span> <span class="s1">&#39;em&#39;</span><span class="p">,</span> <span class="s1">&#39;ul&#39;</span><span class="p">,</span> <span class="s1">&#39;ol&#39;</span><span class="p">,</span> <span class="s1">&#39;li&#39;</span><span class="p">,</span> <span class="s1">&#39;blockquote&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;allowed_attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;a&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;img&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;src&#39;</span><span class="p">,</span> <span class="s1">&#39;alt&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$sanitizer</span><span class="o">-&gt;</span><span class="na">sanitize</span><span class="p">((</span><span class="nx">string</span><span class="p">)</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">description</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>Install the HTML sanitizer via Composer: <code>composer require symfony/html-sanitizer</code></p>
+<h2 id="practical-complete-example">Practical Complete Example</h2>
+<p>Here’s a complete function that ties everything together:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">render_feed</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">,</span> <span class="nv">$limit</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">$use_cache</span> <span class="o">=</span> <span class="k">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Fetch with caching
+</span></span></span><span class="line"><span class="cl">    <span class="nv">$feed</span> <span class="o">=</span> <span class="nv">$use_cache</span> 
+</span></span><span class="line"><span class="cl">        <span class="o">?</span> <span class="nx">get_cached_feed</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="o">:</span> <span class="nx">safe_fetch_feed</span><span class="p">(</span><span class="nv">$feed_url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$feed</span> <span class="o">===</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s1">&#39;&lt;p&gt;Feed unavailable&lt;/p&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$namespaces</span> <span class="o">=</span> <span class="nv">$feed</span><span class="o">-&gt;</span><span class="na">getDocNamespaces</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$feed</span><span class="o">-&gt;</span><span class="na">channel</span><span class="o">-&gt;</span><span class="na">item</span> <span class="k">as</span> <span class="nv">$item</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nv">$count</span> <span class="o">&gt;=</span> <span class="nv">$limit</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$title</span> <span class="o">=</span> <span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">title</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$link</span> <span class="o">=</span> <span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">link</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$pubDate</span> <span class="o">=</span> <span class="nx">isset</span><span class="p">(</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">pubDate</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">            <span class="o">?</span> <span class="nx">date</span><span class="p">(</span><span class="s1">&#39;M d, Y&#39;</span><span class="p">,</span> <span class="nx">strtotime</span><span class="p">(</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">pubDate</span><span class="p">))</span> 
+</span></span><span class="line"><span class="cl">            <span class="o">:</span> <span class="s1">&#39;Unknown date&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$image</span> <span class="o">=</span> <span class="nx">extract_feed_image</span><span class="p">(</span><span class="nv">$item</span><span class="p">,</span> <span class="nv">$namespaces</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s1">&#39;&lt;article class=&#34;feed-item&#34;&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nv">$image</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">echo</span> <span class="s1">&#39;&lt;img src=&#34;&#39;</span> <span class="o">.</span> <span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nv">$image</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;&#34; alt=&#34;&#39;</span> <span class="o">.</span> <span class="nv">$title</span> <span class="o">.</span> <span class="s1">&#39;&#34;&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s1">&#39;&lt;h3&gt;&lt;a href=&#34;&#39;</span> <span class="o">.</span> <span class="nv">$link</span> <span class="o">.</span> <span class="s1">&#39;&#34;&gt;&#39;</span> <span class="o">.</span> <span class="nv">$title</span> <span class="o">.</span> <span class="s1">&#39;&lt;/a&gt;&lt;/h3&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s1">&#39;&lt;time&gt;&#39;</span> <span class="o">.</span> <span class="nv">$pubDate</span> <span class="o">.</span> <span class="s1">&#39;&lt;/time&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s1">&#39;&lt;/article&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$count</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h2 id="when-to-use-a-dedicated-library">When to Use a Dedicated Library</h2>
+<p>For complex feed handling, character encoding issues, or feeds with inconsistent structures, consider established libraries like <strong>Feed\Feed</strong> (from <code>fguillot/feed-io</code>) or <strong>SimplePie</strong>. These handle edge cases, HTTP caching headers, and auto-discovery automatically — reducing your maintenance burden in production systems.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

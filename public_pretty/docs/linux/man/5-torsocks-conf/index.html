@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>torsocks-conf(5) · Linux Manual Pages</title>
+<meta name="description" content="torsocks.conf — Configuration file for">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-torsocks-conf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>torsocks-conf(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>torsocks.conf &#8212; Configuration file for </p>
+<p><a href="/docs/linux/man/8-torsocks/">torsocks</a>(8) </p>
+<h2>Summary</h2>
+<p>By default, torsocks will assume that it should connect to the Tor SOCKS proxy running at 127.0.0.1 on port 9050. This is the default address and port for Tor&#8217;s socks server on most installations. If you are running a normal Tor installation and have no special requirements, then you should not need to create, edit or invoke a configuration file when using torsocks. </p>
+<p> Your installation of torsocks includes a default configuration file that contains values sensible for use with most Tor installations. The installation location for your default configuration file is: </p>
+<p> /etc/tor/torsocks.conf </p>
+<p> In order to use a configuration file, you must set the environment variable TORSOCKS_CONF_FILE with the location of the file. </p>
+<p> If TORSOCKS_CONF_FILE is not set, torsocks will attempt to read the configuration file at /etc/tor/torsocks.conf. If that file cannot be read, torsocks will use sensible defaults for most Tor installations, i.e. it will assume that you want to use a SOCKS proxy running at 127.0.0.1 (localhost) on port 9050.</p>
+<h2>Configuration</h2>
+<h3>Syntax</h3>
+<p>The basic structure of all lines in the configuration file is: </p>
+<dl>
+<dd>&lt;directive&gt; &lt;parameters&gt;</dd></dl>
+<p> Empty lines are ignored and all input on a line after a &#8216;#&#8217; character is ignored.</p>
+<h3>Directives</h3>
+<p>The following directives are used in the torsocks configuration file: </p>
+<dl>
+<dt><i>TorAddress ip_addr</i></dt>
+<dd>The IP address of the Tor SOCKS server (e.g &quot;server = 10.1.4.253&quot;). Only one server may be specified. Currently, torsocks does NOT support hostname. (default: 127.0.0.1) </dd>
+<dt><i>TorPort port</i></dt>
+<dd>The port on which the Tor SOCKS server receives requests. (default: 9050) </dd>
+<dt><i>OnionAddrRange subnet/mask</i></dt>
+<dd>Tor hidden sites do not have real IP addresses. This specifies what range of IP addresses will be handed to the application as &quot;cookies&quot; for .onion names. Of course, you should pick a block of addresses which you aren&#8217;t going to ever need to actually connect to. This is similar to the MapAddress feature of the main tor daemon. (default: 127.42.42.0/24) </dd>
+<dt><i>SOCKS5Username username</i></dt>
+<dd>Username to use for SOCKS5 authentication method that makes the connections to Tor to use a different circuit from other existing streams. If set, the SOCKS5Password must be specified also. (Default: none). </dd>
+<dt><i>SOCKS5Password password</i></dt>
+<dd>Password to use for SOCKS5 authentication method that makes the connections to Tor to use a different circuit from other existing streams. If set, the SOCKS5Username must be specified also. (Default: none). </dd>
+<dt><i>AllowInbound 0|1</i></dt>
+<dd>Allow inbound connections meaning that listen() and accept()/accept4() will be allowed for non localhost address so the applicaton can handle incoming connection. Note that Unix socket are allowed. (Default: 0) </dd>
+<dt><i>AllowOutboundLocalhost 0|1</i></dt>
+<dd>Allow outbound connections to the loopback interface meaning that connect() will be allowed to connect to localhost addresses bypassing Tor. This option should not be used by most users. (Default: 0) </dd>
+<dt><i>IsolatePID 0|1</i></dt>
+<dd>Set Torsocks to use an automatically generated SOCKS5 username/password based on the process ID and current time, that makes the connections to Tor use a different circuit from other existing streams in Tor on a per-process basis. If set, the SOCKS5Username and SOCKS5Password options must not be set. (Default: 0) </dd>
+</dl>
+<h2>Example</h2>
+<pre><code>$ export TORSOCKS_CONF_FILE=$PWD/torsocks.conf
+$ torsocks ssh account [at] sshserver.com
+</code></pre>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-torsocks/">torsocks</a>(1),</code> <code><a href="/docs/linux/man/8-torsocks/">torsocks</a>(8),</code> </p>
+<h2>Author</h2>
+<p>David Goulet &lt;dgoulet [at] ev0ke.net&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

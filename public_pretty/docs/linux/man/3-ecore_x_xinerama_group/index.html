@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ecore_x_xinerama_group(3) · Linux Manual Pages</title>
+<meta name="description" content="X Xinerama Extension Functions – Functions related to the X Xinerama extension.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ecore_x_xinerama_group/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ecore_x_xinerama_group(3)</h1>
+
+
+
+
+
+<p>X Xinerama Extension Functions &#8211; Functions related to the X Xinerama extension. </p>
+<h3>Functions</h3>
+<p>EAPI int <code>ecore_x_xinerama_query</code> (void)<br />
+ <i>Return whether the X server supports the Xinerama Extension. </i><br />
+ EAPI void <code>ecore_x_xinerama_query_screens_prefetch</code> (void)<br />
+ <i>Sends the XineramaQueryScreens request. </i><br />
+ EAPI void <code>ecore_x_xinerama_query_screens_fetch</code> (void)<br />
+ <i>Gets the reply of the XineramaQueryScreens request sent by </i><code>ecore_x_xinerama_query_screens_prefetch()</code>.<br />
+ EAPI int <code>ecore_x_xinerama_screen_count_get</code> (void)<br />
+ <i>Return the number of screens. </i><br />
+ EAPI int <code>ecore_x_xinerama_screen_geometry_get</code> (int screen, int *x, int *y, int *width, int *height)<br />
+ <i>Get the geometry of the screen. </i></p>
+<h2>Detailed Description</h2>
+<p>Functions related to the X Xinerama extension.</p>
+<h2>Function Documentation</h2>
+<h3>EAPI int ecore_x_xinerama_query (void)</h3>
+<p>Return whether the X server supports the Xinerama Extension. </p>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>1 if the X Xinerama Extension is available, 0 otherwise.</dd></dl>
+<p> Return 1 if the X server supports the Fixes Xinerama version 1.1, 0 otherwise.</p>
+<h3>EAPI int ecore_x_xinerama_screen_count_get (void)</h3>
+<p>Return the number of screens. </p>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>The screen count.</dd></dl>
+<p> Return the number of screens. </p>
+<p> To use this function, you must call before, and in order, <code>ecore_x_xinerama_query_screens_prefetch()</code>, which sends the XineramaQueryScreens request, then <code>ecore_x_xinerama_query_screens_fetch()</code>, which gets the reply.</p>
+<h3>EAPI int ecore_x_xinerama_screen_geometry_get (int screen, int * x, int * y, int * width, int * height)</h3>
+<p>Get the geometry of the screen. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>screen</i> The screen (Unused).<br />
+ <i>x</i> The X coordinate of the screen.<br />
+ <i>y</i> The Y coordinate of the screen<br />
+ <i>width</i> The width of the screen<br />
+ <i>height</i> The height of the screen</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>1 on success, 0 otherwise.</dd></dl>
+<p> Get the geometry of the screen whose number is screen. The returned values are stored in x, y, width and height. </p>
+<p> To use this function, you must call before, and in order, <code>ecore_x_xinerama_query_screens_prefetch()</code>, which sends the XineramaQueryScreens request, then <code>ecore_x_xinerama_query_screens_fetch()</code>, which gets the reply.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Ecore from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

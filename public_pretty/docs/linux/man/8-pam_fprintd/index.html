@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pam_fprintd(8) · Linux Manual Pages</title>
+<meta name="description" content="pam_fprintd – PAM module to authenticate against fprintd, the fingerprint daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pam_fprintd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pam_fprintd(8)</h1>
+
+
+
+
+
+<p>pam_fprintd &#8211; PAM module to authenticate against fprintd, the fingerprint daemon</p>
+<h2>Synopsis</h2>
+<p><code>pam_fprintd.so</code> [debug|debug=[<i>on</i>|<i>off</i>|<i>true</i>|<i>false</i>|<i>1</i>|<i>0</i>]] [max-tries=<i></i><font SIZE="-1"><i>MAX_TRIES</i></font><i></i>] [timeout=<i></i><font SIZE="-1"><i>TIMEOUT</i></font><i></i>]</p>
+<h2>Description</h2>
+<p>The pam_fprintd module is used to verify a user&#8217;s fingerprints against fingerprints enrolled using fprintd, the fingerprint management daemon.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>debug</code></dt>
+<dd>
+</dd><dt><code>debug=[</code>on<code>|</code>off<code>|</code>true<code>|</code>false<code>|</code>1<code>|</code>0<code>]</code></dt>
+<dd>Whether debug should be turned on or off. Debug messages will be generated using pam_syslog which means that they will be saved in the systemd journal by default.</dd>
+<dt><code>max-tries=</code><font SIZE="-1">MAX_TRIES</font></dt>
+<dd>The number of attempts at fingerprint authentication to try before returning an authentication failure. The minimum, and default, number of tries is 3.</dd>
+<dt><code>timeout=</code><font SIZE="-1">TIMEOUT</font></dt>
+<dd>The amount of time before returning an authentication failure. The default timeout is 30 seconds, with 10 seconds being the minimum.</dd></dl>
+<h2>Limitations</h2>
+<p>The <font SIZE="-1">PAM</font> stack is by design a serialised authentication, so it is not possible for pam_fprintd to allow authentication through passwords and fingerprints at the same time. </p>
+<p> It is up to the application using the <font SIZE="-1">PAM</font> services to implement separate <font SIZE="-1">PAM</font> processes and run separate authentication stacks separately. This is the way multiple authentication methods are made available to users of gdm for example.</p>
+<h2>Author</h2>
+<p><code>fprintd</code> was written by Bastien Nocera.</p>
+<h2>See Also</h2>
+<dl>
+<dt><code>fprintd</code>, <font SIZE="-1"><code>PAM</code></font></dt>
+<dd>
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

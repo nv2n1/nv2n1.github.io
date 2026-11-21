@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>epsffit(1) · Linux Manual Pages</title>
+<meta name="description" content="epsffit – fit encapsulated PostScript file (EPSF) into constrained size">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-epsffit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>epsffit(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> epsffit &#8211; fit encapsulated PostScript file (EPSF) into constrained size </p>
+<h2>SYNOPSIS</h2>
+<p> <code>epsffit</code> [ <code>-c</code> ] [ <code>-r</code> ] [ <code>-a</code> ] [ <code>-m</code> ] [ <code>-s</code> ] <i>llx lly urx ury</i> [ <code>infile</code> [ <code>outfile</code> ] ]</p>
+<h2>DESCRIPTION</h2>
+<p> <i>Epsffit</i> fits an EPSF file (encapsulated PostScript) to a given bounding box. The coordinates of the box are given by <code>(llx,lly)</code> for the lower left, and <code>(urx,ury)</code> for the upper right, in PostScript units (points). </p>
+<p> If no input or output files are specified, <i>epsffit</i> read from the standard input and writes to the standard output.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-c</code></dt>
+<dd> Center the image in the given bounding box.</dd>
+<dt><code>-r</code></dt>
+<dd> Rotate the image by 90 degrees counter-clockwise.</dd>
+<dt><code>-a</code></dt>
+<dd> Adjust the aspect ratio to fit the bounding box. The default is to preserve the aspect ratio.</dd>
+<dt><code>-m</code></dt>
+<dd> Rotates the image to maximise the size if it would fit the specified bounding box better.</dd>
+<dt><code>-s</code></dt>
+<dd> Add a <i>showpage</i> at the end of the file to force the image to print.</dd></dl>
+<h2>AUTHOR</h2>
+<p> Copyright (C) Angus J. C. Duggan 1991-1995</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-psbook/">psbook</a>(1), <a href="/docs/linux/man/1-psselect/">psselect</a>(1), <a href="/docs/linux/man/1-pstops/">pstops</a>(1), <a href="/docs/linux/man/1-epsffit/">epsffit</a>(1), <a href="/docs/linux/man/1-psnup/">psnup</a>(1), <a href="/docs/linux/man/1-psresize/">psresize</a>(1), <a href="/docs/linux/man/1-psmerge/">psmerge</a>(1), <a href="/docs/linux/man/1-fixscribeps/">fixscribeps</a>(1), <a href="/docs/linux/man/1-getafm/">getafm</a>(1), <a href="/docs/linux/man/1-fixdlsrps/">fixdlsrps</a>(1), <a href="/docs/linux/man/1-fixfmps/">fixfmps</a>(1), <a href="/docs/linux/man/1-fixpsditps/">fixpsditps</a>(1), <a href="/docs/linux/man/1-fixpspps/">fixpspps</a>(1), <a href="/docs/linux/man/1-fixtpps/">fixtpps</a>(1), <a href="/docs/linux/man/1-fixwfwps/">fixwfwps</a>(1), <a href="/docs/linux/man/1-fixwpps/">fixwpps</a>(1), <a href="/docs/linux/man/1-fixwwps/">fixwwps</a>(1), <a href="/docs/linux/man/1-extractres/">extractres</a>(1), <a href="/docs/linux/man/1-includeres/">includeres</a>(1), <a href="/docs/linux/man/1-showchar/">showchar</a>(1)</p>
+<h2>TRADEMARKS</h2>
+<p> <code>PostScript</code> is a trademark of Adobe Systems Incorporated. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdvalarrayapply(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdvalarrayapply/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdvalarrayapply(3)</h1>
+
+
+
+
+
+<p>std::valarray&lt;T&gt;::apply - std::valarray&lt;T&gt;::apply</p>
+<h2>Synopsis</h2>
+<pre><code>valarray&lt;T&gt; apply(T func(T)) const;
+valarray&lt;T&gt; apply(T func(const T &amp;)) const;</code></pre> 
+<p>Returns a new valarray of the same size with values which are acquired by applying function func to the previous values of the elements.</p>
+<h2>Parameters</h2>
+<p>func - function to apply to the values</p>
+<h2>Return value</h2>
+<p>The resulting valarray with values acquired by applying function func.</p>
+<h2>Notes</h2>
+<p>The function can be implemented with the return type different from std::valarray. In this case, the replacement type has the following properties:
+ <wbr> <wbr> <wbr> <wbr> <wbr> * All const member functions of std::valarray are provided.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * std::valarray, std::slice_array, std::gslice_array, std::mask_array and std::indirect_array can be constructed from the replacement type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * All functions accepting an argument of type const std::valarray&amp;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> except begin() and end()
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(since C++11)</i> should also accept the replacement type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * All functions accepting two arguments of type const std::valarray&amp; should accept every combination of const std::valarray&amp; and the replacement type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * The return type does not add more than two levels of template nesting over the most deeply-nested argument type.</p>
+<h2>Example</h2>
+<p>calculates and prints the first 10 factorials
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;valarray&gt;
+#include &lt;cmath&gt;
+int main()
+{
+std::valarray&lt;int&gt; v = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+v = v.apply([](int n) -&gt; int {
+return std::round(std::tgamma(n + 1));
+});
+for (auto n : v) {
+std::cout &lt;&lt; n &lt;&lt; &rsquo; &lsquo;;
+}
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 1 2 6 24 120 720 5040 40320 362880 3628800</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> applies a function to a range of elements
+for_each <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

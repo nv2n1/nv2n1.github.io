@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>plymouth-set-default-theme(1) · Linux Manual Pages</title>
+<meta name="description" content="plymouth-set-default-theme – Set the plymouth theme">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-plymouth-set-default-theme/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>plymouth-set-default-theme(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> plymouth-set-default-theme &#8211; Set the plymouth theme </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>plymouth-set-default-theme </code><code>[OPTION&#8230;]</code><code>[THEME]</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>When called with a <code>THEME</code> argument, the <code>plymouth-set-default-theme</code> command changes the preferred boot theme and also performs the necessary regeneration of the initial ramdisk (initrd) since plymouth is loaded from the boot loader from the initrd prior to the mounting of the root filesystem. </dd>
+<p> If <code>plymouth-set-default-theme</code> is invoked with no options or parameters, it shows the currently selected theme by default. This output is used by the helper scripts plymouth-generate-initrd and plymouth-update-initrd to set the proper theme in the initial ramdisk.</p>
+<h2>OPTIONS</h2>
+<p> The following options are understood: </p>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Show summary of options.</dd></dl>
+<p> <code>-l</code>, <code>&#8211;list</code></p>
+<dl>
+<dt>
+</dt><dd> List available themes.</dd></dl>
+<p> <code>-r</code>, <code>&#8211;reset</code></p>
+<dl>
+<dt>
+</dt><dd> Reset to default theme.</dd></dl>
+<p> <code>-R</code>, <code>&#8211;rebuild-initrd</code></p>
+<dl>
+<dt>
+</dt><dd> Rebuild initrd (necessary after changing theme).</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-grub/">grub</a></code>(8), <code><a href="/docs/linux/man/8-plymouth/">plymouth</a></code>(8), <code><a href="/docs/linux/man/8-plymouthd/">plymouthd</a></code>(8), <code><a href="/docs/linux/man/1-plymouth/">plymouth</a></code>(1), m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/Plymouth">http://www.freedesktop.org/wiki/Software/Plymouth</a></code>m[] </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

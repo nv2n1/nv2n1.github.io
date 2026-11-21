@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customizing Fonts in GNOME: GUI and CLI Methods - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/customizing-fonts-in-gnome-3/">
+  <meta name="description" content="GNOME’s default Settings app doesn’t expose comprehensive font options, but GNOME Tweaks and command-line tools give you full control over typefaces across the …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Customizing Fonts in GNOME: GUI and CLI Methods">
+  <meta property="og:url" content="https://www.systutorials.com/customizing-fonts-in-gnome-3/">
+  <meta property="og:description" content="GNOME’s default Settings app doesn’t expose comprehensive font options, but GNOME Tweaks and command-line tools give you full control over typefaces across the …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/command-line-text-tools/">Command Line &amp; Text Tools</a>
+        </nav>
+        
+        <h1>Customizing Fonts in GNOME: GUI and CLI Methods</h1>
+        <time class="post-date" datetime="2014-03-30T08:01:01Z">March 30, 2014</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>GNOME’s default Settings app doesn’t expose comprehensive font options, but GNOME Tweaks and command-line tools give you full control over typefaces across the desktop, shell, and window decorations.</p>
+<h2 id="installing-gnome-tweaks">Installing GNOME Tweaks</h2>
+<p>GNOME Tweaks is the easiest way to customize fonts. Install it on your system:</p>
+<p><strong>Fedora:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install gnome-tweaks
+</span></span></code></pre></div><p><strong>Debian/Ubuntu:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install gnome-tweaks
+</span></span></code></pre></div><p><strong>Arch:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S gnome-tweaks
+</span></span></code></pre></div><h2 id="configuring-fonts-in-gnome-tweaks">Configuring Fonts in GNOME Tweaks</h2>
+<p>Open GNOME Tweaks and navigate to the <strong>Appearance</strong> tab (in newer versions) or <strong>Fonts</strong> section. You can customize:</p>
+<ul>
+<li><strong>Interface Font</strong> — controls UI elements (buttons, menus, labels)</li>
+<li><strong>Document Font</strong> — used in text editors and document viewers</li>
+<li><strong>Monospace Font</strong> — applied to terminals and code editors</li>
+<li><strong>Legacy Window Titles</strong> — titlebar font (if available in your GNOME version)</li>
+</ul>
+<p>Changes apply immediately in most cases. If they don’t, restart GNOME Shell:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">killall -HUP gnome-shell
+</span></span></code></pre></div><p>Or use the older method (Alt+F2, type <code>r</code>, press Enter).</p>
+<h2 id="configuring-window-title-fonts-with-gsettings">Configuring Window Title Fonts with gsettings</h2>
+<p>GNOME Tweaks may not expose all titlebar font options. Use <code>gsettings</code> directly for finer control:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.desktop.wm.preferences titlebar-font <span class="s1">&#39;Sans Bold 11&#39;</span>
+</span></span><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.desktop.wm.preferences titlebar-uses-system-font <span class="nb">false</span>
+</span></span></code></pre></div><p>Check your current settings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings get org.gnome.desktop.wm.preferences titlebar-font
+</span></span></code></pre></div><p>Reset to defaults:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings reset org.gnome.desktop.wm.preferences titlebar-font
+</span></span></code></pre></div><p>Font format is <code>'FontName Style Size'</code>. Common examples:</p>
+<ul>
+<li><code>'Sans 10'</code></li>
+<li><code>'Monospace Bold 12'</code></li>
+<li><code>'Noto Serif 11'</code></li>
+<li><code>'Ubuntu Mono 13'</code></li>
+</ul>
+<p>Size is in points, not pixels.</p>
+<h2 id="customizing-gnome-shell-theme-fonts">Customizing GNOME Shell Theme Fonts</h2>
+<p>GNOME Shell (the top bar, notifications, Activities overview) uses CSS-based styling. To modify shell fonts:</p>
+<p>First, check which theme you’re using:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings get org.gnome.shell.extensions.user-theme name
+</span></span></code></pre></div><p>System themes are typically in <code>/usr/share/gnome-shell/themes/[theme-name]/gnome-shell.css</code>. User themes are in <code>~/.local/share/gnome-shell/themes/[theme-name]/gnome-shell.css</code>.</p>
+<p>Before editing, create a backup:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp gnome-shell.css gnome-shell.css.bak
+</span></span></code></pre></div><p>Edit the CSS file and modify font declarations:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">stage</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Noto Sans&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">11</span><span class="kt">pt</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">panel</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">11</span><span class="kt">pt</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-weight</span><span class="p">:</span> <span class="mi">500</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">clock-display</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Monospace&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">12</span><span class="kt">pt</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>After saving, restart GNOME Shell:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">killall -HUP gnome-shell
+</span></span></code></pre></div><p>If changes don’t apply, log out and back in.</p>
+<h2 id="system-wide-font-configuration">System-Wide Font Configuration</h2>
+<p>To set GTK font defaults that apply across most applications, edit <code>~/.config/gtk-3.0/settings.ini</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Settings]</span>
+</span></span><span class="line"><span class="cl"><span class="na">gtk-font-name</span> <span class="o">=</span> <span class="s">Noto Sans 10</span>
+</span></span><span class="line"><span class="cl"><span class="na">gtk-monospace-font-name</span> <span class="o">=</span> <span class="s">Noto Mono 10</span>
+</span></span></code></pre></div><p>For GTK 4 applications (increasingly common), also create or edit <code>~/.config/gtk-4.0/settings.ini</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Settings]</span>
+</span></span><span class="line"><span class="cl"><span class="na">gtk-font-name</span> <span class="o">=</span> <span class="s">Noto Sans 10</span>
+</span></span><span class="line"><span class="cl"><span class="na">gtk-monospace-font-name</span> <span class="o">=</span> <span class="s">Noto Mono 10</span>
+</span></span></code></pre></div><p>Then reload settings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dconf update
+</span></span></code></pre></div><h2 id="advanced-configuration-with-dconf-editor">Advanced Configuration with dconf-editor</h2>
+<p>For lower-level control and discovery of undocumented settings, install <code>dconf-editor</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install dconf-editor
+</span></span></code></pre></div><p>Navigate to <code>org.gnome.desktop.interface</code> to view all font-related keys. This is useful for discovering hidden options but be cautious—changing wrong values can break your desktop. Always note the original value before changing anything.</p>
+<h2 id="listing-available-fonts">Listing Available Fonts</h2>
+<p>To see what fonts are installed on your system:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fc-list : family <span class="p">|</span> sort <span class="p">|</span> uniq
+</span></span></code></pre></div><p>For monospace fonts only:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fc-list : family spacing <span class="p">|</span> grep scalable <span class="p">|</span> grep <span class="nv">spacing</span><span class="o">=</span><span class="m">100</span> <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq
+</span></span></code></pre></div><h2 id="verifying-font-changes">Verifying Font Changes</h2>
+<p>Check what fonts are currently configured:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings list-keys org.gnome.desktop.interface <span class="p">|</span> grep font
+</span></span><span class="line"><span class="cl">gsettings get org.gnome.desktop.interface font-name
+</span></span></code></pre></div><p>For GTK settings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep gtk-font-name ~/.config/gtk-3.0/settings.ini
+</span></span></code></pre></div><h2 id="persistence-and-troubleshooting">Persistence and Troubleshooting</h2>
+<p>Font changes made through GNOME Tweaks or <code>gsettings</code> persist across sessions automatically. CSS modifications to theme files require manual reapplication if the theme updates.</p>
+<p>If fonts revert unexpectedly, check if a theme update overwrote your CSS changes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">diff gnome-shell.css gnome-shell.css.bak
+</span></span></code></pre></div><p>For applications that ignore system fonts, check if they have their own font configuration files (many browsers and development tools do).</p>
+<p>If GNOME Shell becomes unresponsive after CSS modifications, revert your changes and restart:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp gnome-shell.css.bak gnome-shell.css
+</span></span><span class="line"><span class="cl">killall -9 gnome-shell
+</span></span></code></pre></div>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

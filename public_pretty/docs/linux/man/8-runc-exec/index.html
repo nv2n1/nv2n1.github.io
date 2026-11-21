@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>runc-exec(8) · Linux Manual Pages</title>
+<meta name="description" content="runc-exec – execute new process inside the container">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-runc-exec/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>runc-exec(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>runc-exec</code> &#8211; execute new process inside the container </p>
+<h2>Synopsis</h2>
+<p><code>runc exec</code> [<i>option</i> &#8230;] <i>container-id</i> [&#8211;] <i>command</i> [<i>arg</i> &#8230;] <code>runc exec</code> [<i>option</i> &#8230;] <code>-p</code> <i>process.json</i> <i>container-id</i> </p>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;console-socket</code> <i>path</i></dt>
+<dd>Path to an <code>AF_UNIX</code> socket which will receive a file descriptor referencing the master end of the console&#8217;s pseudoterminal. See docs/terminals &lt;<a rel="nofollow" href="https://github.com/opencontainers/runc/blob/master/docs/terminals.md">https://github.com/opencontainers/runc/blob/master/docs/terminals.md</a>&gt;. </dd>
+<dt><code>&#8211;cwd</code> <i>path</i></dt>
+<dd>Change to <i>path</i> in the container before executing the command. </dd>
+<dt><code>&#8211;env</code>|<code>-e</code> <i>name</i>=<i>value</i></dt>
+<dd>Set an environment variable <i>name</i> to <i>value</i>. Can be specified multiple times. </dd>
+<dt><code>&#8211;tty</code>|<code>-t</code></dt>
+<dd>Allocate a pseudo-TTY. </dd>
+<dt><code>&#8211;user</code>|<code>-u</code> <i>uid</i>[:<i>gid</i>]</dt>
+<dd>Run the <i>command</i> as a user (and, optionally, group) specified by <i>uid</i> (and <i>gid</i>). </dd>
+<dt><code>&#8211;additional-gids</code>|<code>-g</code> <i>gid</i></dt>
+<dd>Add additional group IDs. Can be specified multiple times. </dd>
+<dt><code>&#8211;process</code>|<code>-p</code> <i>process.json</i></dt>
+<dd>Instead of specifying all the exec parameters directly on the command line, get them from a <i>process.json</i>, a JSON file containing the process specification as defined by the OCI runtime spec &lt;<a rel="nofollow" href="https://github.com/opencontainers/runtime-spec/blob/master/config.md#process">https://github.com/opencontainers/runtime-spec/blob/master/config.md#process</a>&gt;. </dd>
+<dt><code>&#8211;detach</code>|<code>-d</code></dt>
+<dd>Detach from the container&#8217;s process. </dd>
+<dt><code>&#8211;pid-file</code> <i>path</i></dt>
+<dd>Specify the file to write the container process&#8217; PID to. </dd>
+<dt><code>&#8211;process-label</code> <i>label</i></dt>
+<dd>Set the asm process label for the process commonly used with <code>selinux</code>(7). </dd>
+<dt><code>&#8211;apparmor</code> <i>profile</i></dt>
+<dd>Set the <code><a href="/docs/linux/man/7-apparmor/">apparmor</a></code>(7) <i>profile</i> for the process. </dd>
+<dt><code>&#8211;no-new-privs</code></dt>
+<dd>Set the &quot;no new privileges&quot; value for the process. </dd>
+<dt><code>&#8211;cap</code> <i>cap</i></dt>
+<dd>Add a capability to the bounding set for the process. Can be specified multiple times. </dd>
+<dt><code>&#8211;preserve-fds</code> <i>N</i></dt>
+<dd>Pass <i>N</i> additional file descriptors to the container (<code>stdio</code> + <code>$LISTEN_FDS</code> + <i>N</i> in total). Default is <code>0</code>. </dd>
+<dt><code>&#8211;ignore-paused</code></dt>
+<dd>Allow exec in a paused container. By default, if a container is paused, <code>runc exec</code> errors out; this option can be used to override it. A paused container needs to be resumed for the exec to complete. </dd>
+<dt><code>&#8211;cgroup</code> <i>path</i> | <i>controller</i>[,<i>controller</i>&#8230;]:<i>path</i></dt>
+<dd>Execute a process in a sub-cgroup. If the specified cgroup does not exist, an error is returned. Default is empty path, which means to use container&#8217;s top level cgroup. </dd>
+<p> For cgroup v1 only, a particular <i>controller</i> (or multiple comma-separated controllers) can be specified, and the option can be used multiple times to set different paths for different controllers. </p>
+<p> Note for cgroup v2, in case the process can&#8217;t join the top level cgroup, <code>runc exec</code> fallback is to try joining the cgroup of container&#8217;s init. This fallback can be disabled by using <code>&#8211;cgroup /</code>. </p>
+</dl>
+<h2>Exit Status</h2>
+<p>Exits with a status of <i>command</i> (unless <code>-d</code> is used), or <code>255</code> if an error occurred.</p>
+<h2>Examples</h2>
+<p>If the container can run <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1) command, the following will output a list of processes running in the container:  </p>
+<pre># runc exec &lt;container-id&gt; ps</pre>
+</dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-runc/">runc</a></code>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

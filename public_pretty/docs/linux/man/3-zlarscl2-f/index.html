@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zlarscl2-f(3) · Linux Manual Pages</title>
+<meta name="description" content="zlarscl2.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-zlarscl2-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>zlarscl2-f(3)</h1>
+
+
+
+
+
+<p>zlarscl2.f &#8211;</p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>zlarscl2</code> (M, N, D, X, LDX)<br />
+ <i></i><code>ZLARSCL2</code> performs reciprocal diagonal scaling on a vector.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine zlarscl2 (integerM, integerN, double precision, dimension( * )D, complex*16, dimension( ldx, * )X, integerLDX)</h3>
+<p><code>ZLARSCL2</code> performs reciprocal diagonal scaling on a vector. </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dd>
+<pre> ZLARSCL2 performs a reciprocal diagonal scaling on an vector:
+ x &lt;-- inv(D) * x
+ where the DOUBLE PRECISION diagonal matrix D is stored as a vector.
+ Eventually to be replaced by BLAS_zge_diag_scale in the new BLAS
+ standard.</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>M</i> </dd>
+<pre> M is INTEGER
+ The number of rows of D and X. M &gt;= 0.</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ The number of columns of D and X. N &gt;= 0.</pre>
+<p><i>D</i> </p>
+<pre> D is DOUBLE PRECISION array, length M
+ Diagonal matrix D, stored as a vector of length M.</pre>
+<p><i>X</i> </p>
+<pre> X is COMPLEX*16 array, dimension (LDX,N)
+ On entry, the vector X to be scaled by D.
+ On exit, the scaled vector.</pre>
+<p><i>LDX</i> </p>
+<pre> LDX is INTEGER
+ The leading dimension of the vector X. LDX &gt;= 0.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dd>September 2012</dd></dl>
+<p> Definition at line 92 of file zlarscl2.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

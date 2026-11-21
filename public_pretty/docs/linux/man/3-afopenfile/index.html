@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>afopenfile(3) · Linux Manual Pages</title>
+<meta name="description" content="afOpenFile – open an audio file and create a file handle structure used for subsequent calls to the Audio File Library">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-afopenfile/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>afopenfile(3)</h1>
+
+
+
+
+
+<p>afOpenFile &#8211; open an audio file and create a file handle structure used for subsequent calls to the Audio File Library </p>
+<h2>Synopsis</h2>
+<pre>#include &lt;audiofile.h&gt;</pre>
+<pre>AFfilehandle afOpenFile(const char *path, const char *mode,
+ AFfilesetup setup);</pre>
+<h2>Parameters</h2>
+<p><i>path</i> is the path to the file to be opened. </p>
+<p> <i>mode</i> specifies a mode for opening the file: &quot;r&quot; for reading or &quot;w&quot; for writing. </p>
+<p> <i>setup</i> is an AFfilesetup created by <code><a href="/docs/linux/man/3-afnewfilesetup/">afNewFileSetup</a></code>(3). This value is ignored for files opened for reading except when the file format is AF_FILE_RAWDATA.</p>
+<h2>Return Value</h2>
+<p>Upon success, afOpenFile returns a valid AFfilehandle which can be used in subsequent calls to the Audio File Library. Upon failure, afOpenFile returns NULL and generates an error. </p>
+<p> <code><a href="/docs/linux/man/3-afclosefile/">afCloseFile</a></code>(3) is used to close the file when it is no longer needed.</p>
+<h2>Errors</h2>
+<p>afOpenFile can produce the following errors: </p>
+<p> AF_BAD_OPEN</p>
+<dl COMPACT>
+<dd>A call to open failed.</dd></dl>
+<p> AF_BAD_READ</p>
+<dl COMPACT>
+<dd>A call to read failed</dd></dl>
+<p> AF_BAD_WRITE</p>
+<dl COMPACT>
+<dd>A call to write failed.</dd></dl>
+<p> AF_BAD_LSEEK</p>
+<dl COMPACT>
+<dd>A call to lseek failed.</dd></dl>
+<p> AF_BAD_MALLOC</p>
+<dl COMPACT>
+<dd>Memory allocation failed.</dd></dl>
+<p> AF_BAD_FILEFMT</p>
+<dl COMPACT>
+<dd>setup specifies a file format which is unsupported for mode.</dd></dl>
+<p> AF_BAD_SAMPFMT</p>
+<dl COMPACT>
+<dd>The file&#8217;s sample format is not supported.</dd></dl>
+<p> AF_BAD_WIDTH</p>
+<dl COMPACT>
+<dd>The file&#8217;s sample width is not supported.</dd></dl>
+<p> AF_BAD_RATE</p>
+<dl COMPACT>
+<dd>The file&#8217;s sample rate is not supported.</dd></dl>
+<p> AF_BAD_CHANNELS</p>
+<dl COMPACT>
+<dd>The number of channels in the file is not supported.</dd></dl>
+<p> AF_BAD_FILESETUP</p>
+<dl COMPACT>
+<dd>setup specifies an invalid or unsupported configuration.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-afclosefile/">afCloseFile</a></code>(3), <code><a href="/docs/linux/man/3-afnewfilesetup/">afNewFileSetup</a></code>(3), <code><a href="/docs/linux/man/3-afinitfileformat/">afInitFileFormat</a></code>(3), <code><a href="/docs/linux/man/3-afinitsampleformat/">afInitSampleFormat</a></code>(3), <code><a href="/docs/linux/man/3-afreadframes/">afReadFrames</a></code>(3), <code><a href="/docs/linux/man/3-afwriteframes/">afWriteFrames</a></code>(3)</p>
+<h2>Author</h2>
+<p>Michael Pruett &lt;michael [at] 68k.org&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

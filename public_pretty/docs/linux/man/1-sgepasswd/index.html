@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sgepasswd(1) · Linux Manual Pages</title>
+<meta name="description" content="sgepasswd – Modify the xxQS_NAMExx password file of xxQS_NAMExx">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-sgepasswd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>sgepasswd(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> sgepasswd &#8211; Modify the xxQS_NAMExx password file of xxQS_NAMExx </p>
+<h2>SYNTAX</h2>
+<p> <code>sgepasswd</code> [[ <code>-D domain</code> ] <code>-d user</code> ] </p>
+<p> <code>sgepasswd</code> [ <code>-D domain</code> ] [ <code>user</code> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <i>sgepasswd</i> modifies the xxQS_NAMExx password file </p>
+<p> This file contains a list of usernames and their Microsoft Windows password in encrypted form. and on hosts running Microsoft Windows as operating systems use this information to start jobs for a certain user. </p>
+<p> Each user can use the <i>sgepasswd</i> application to add a new entry for their own user account. (In fact, normal users can create an entry for any account, so the entry should be made initially, when the account is created.) It is also possible to change the stored password with <i>sgepasswd</i> if the user knows the old one. </p>
+<p> The root user additionally has permission to change the password entries for other user accounts. Root can also delete existing entries. </p>
+<p> The <i>sgepasswd</i> binary is only available on non-Windows hosts. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-D domain</code></dt>
+<dd> By default <i>sgepasswd</i> will add/modify the current Unix username without a domain specification. This switch can be used to add a domain specification in front of the current user name. Consult your Microsoft Windows documentation to get more information about domain users.</dd>
+<dt><code>-d user</code></dt>
+<dd> Only root can use this parameter to delete entries from the file.</dd>
+<dt><code>-help</code></dt>
+<dd> Prints a listing of all options.</dd></dl>
+<h2>NOTE</h2>
+<p> Prevent relevant jobs running before a password is changed both with <i>sgepasswd</i> and in the Windows domain. Otherwise, if multiple jobs try to run on a Windows host as the user concerned, and are unable to access the right password, Windows&#8217; intrusion detection system may disable the account. <i>sgepasswd</i> and in the Windows domain.</p>
+<h2>SECURITY</h2>
+<p> This is a non-trivial program which needs to be setuid root, operating with various user-supplied input. It probably shouldn&#8217;t be installed setuid if it is not needed to support Windows hosts. </p>
+<p> See above concerning making initial entries.</p>
+<h2>ENVIRONMENT VARIABLES</h2>
+<dl>
+<dt><code>SGE_CERTFILE</code></dt>
+<dd> Specifies the location of the public key file. By default <i>sgepasswd</i> will use $SGE_ROOT/$SGE_CELL/common/sgeCA/certs/cert.pem.</dd>
+<dt><code>SGE_KEYFILE</code></dt>
+<dd> If set, specifies the location of the private key file. Default is /var/lib/sgeCA/port$SGE_QMASTER_PORT/$SGE_CELL/private/key.pem.</dd>
+<dt><code>SGE_RANDFILE</code></dt>
+<dd> If set, specifies the location of the seed used to create encrypted versions of user passwords. Default is /var/lib/sgeCA/port${SGE_QMASTER_PORT}/${SGE_CELL}/private/rand.seed.</dd></dl>
+<h2>SEE ALSO</h2>
+<h2>COPYRIGHT</h2>
+<p> See for a full statement of rights and permissions. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

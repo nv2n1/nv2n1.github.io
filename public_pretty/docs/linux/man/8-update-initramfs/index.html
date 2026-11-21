@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>update-initramfs(8) · Linux Manual Pages</title>
+<meta name="description" content="update-initramfs – generate an initramfs image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-update-initramfs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>update-initramfs(8)</h1>
+
+
+
+
+
+<p>update-initramfs &#8211; generate an initramfs image</p>
+<h2>Synopsis</h2>
+<p><code>update-initramfs</code> {<code>-c</code>|<code>-d</code>|<code>-u</code>} [<code>-k</code> <i>version</i>] [<code>-v</code>] [<code>-b</code> <i>directory</i>]<br />
+ <code>update-initramfs</code> <code>-h</code></p>
+<h2>Description</h2>
+<p>The <code>update-initramfs</code> script manages your initramfs images on your local box. It keeps track of the existing initramfs archives in /boot. There are three modes of operation create, update or delete. You must at least specify one of those modes. The initramfs is a gzipped cpio archive. At boot time, the kernel unpacks that archive into RAM disk, mounts and uses it as initial root file system. All finding of the root device happens in this early userspace. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-k </code><i> version</dt>
+<dd>Set the specific kernel version for whom the initramfs will be generated. For example the output of uname -r for your currently running kernel. This argument is optional for update. The default is the latest kernel version. </dd>
+<p> The use of &quot;all&quot; for the version</i> string specifies that <code>update-initramfs</code> should operate on all installed kernel versions (with <code>-c</code>), or on all installed kernel versions that already have an initramfs (with <code>-d</code> or <code>-u</code>). </p>
+<dt><code>-c</dt>
+<dd>This mode creates a new initramfs. </dd>
+<dt>-u</dt>
+<dd>This mode updates an existing initramfs. </dd>
+<dt>-d</dt>
+<dd>This mode deletes an existing initramfs. </dd>
+<dt>-v</dt>
+<dd>This option increases the amount of information you are given during the chosen action. </dd>
+<dt>-b </code><i> directory</dt>
+<dd>Set an different bootdir for the image creation. </dd>
+<dt></i><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print a short help page describing the available options in <code>update-initramfs.</code> </dd>
+</dl>
+<h2>Examples</h2>
+<p>Update the initramfs of the newest kernel: <code>update-initramfs -u</code> Create the initramfs for a specific kernel: <code>update-initramfs -c -k 2.6.18-1-686</code> </p>
+<h2>Files</h2>
+<p>/etc/initramfs-tools/update-initramfs.conf</p>
+<h2>Author</h2>
+<p>The initramfs-tools are written by Maximilian Attems &lt;maks [at] debian.org&gt;, Jeff Bailey &lt;jbailey [at] raspberryginger.com&gt; and numerous others.</p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/5-initramfs-conf/">initramfs.conf</a></i>(5), <i><a href="/docs/linux/man/7-initramfs-tools/">initramfs-tools</a></i>(7), <i><a href="/docs/linux/man/8-mkinitramfs/">mkinitramfs</a></i>(8), <i><a href="/docs/linux/man/8-lsinitramfs/">lsinitramfs</a></i>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

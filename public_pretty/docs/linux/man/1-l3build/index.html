@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>l3build(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-l3build/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>l3build(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>l3build - Checking and building packages</p>
+<h2>SYNOPSIS</h2>
+<p>l3build &lt;command&gt; [&lt;options&gt;] [&lt;names&gt;]</p>
+<h2>DESCRIPTION</h2>
+<p>The l3build system is a Lua script for building TeX packages, with particular emphasis on regression testing. It is written in cross-platform Lua code, so can be used by any modern TeX distribution with the texlua interpreter. A package for building with l3build can be written in any TeX dialect; its defaults are set up for LaTeX packages written in the DocStrip style.</p>
+<p>The most commonly used l3build commands are:</p>
+<dl>
+<dt>check
+</dt><dd> Run all automated tests
+</dd><dt>clean
+</dt><dd> Clean out directory tree
+</dd><dt>doc
+</dt><dd> Typesets all documentation files
+</dd><dt>install
+</dt><dd> Installs files into the local texmf tree
+</dd><dt>save
+</dt><dd> Saves test validation log
+</dd><dt>tag
+</dt><dd> Update release tags in files
+</dd><dt>uninstall
+</dt><dd> Uninstalls files from the local texmf tree
+</dd><dt>unpack
+</dt><dd> Unpacks the source files into the build tree</dd></dl>
+<h2>OPTIONS</h2>
+<p>Various options apply</p>
+<dl>
+<dt>--config|-c
+</dt><dd> Sets the config(s) used for running tests
+</dd><dt>--date
+</dt><dd> Sets the date to insert into sources
+</dd><dt>--dry-run
+</dt><dd> Dry run for install
+</dd><dt>--engine|-e
+</dt><dd> Sets the engine(s) to use for running test
+</dd><dt>--epoch
+</dt><dd> Sets the epoch for tests and typesetting
+</dd><dt>--first
+</dt><dd> Name of first test to run
+</dd><dt>--force|-f
+</dt><dd> Force tests to run if engine is not set up
+</dd><dt>--halt-on-error|-H
+</dt><dd> Stops running tests after the first failure
+</dd><dt>--last
+</dt><dd> Name of last test to run
+</dd><dt>--pdf|-p
+</dt><dd> Check/save PDF files
+</dd><dt>--quiet|-q
+</dt><dd> Suppresses TeX output when unpacking
+</dd><dt>--rerun
+</dt><dd> Skip setup: simply rerun tests
+</dd><dt>--shuffle
+</dt><dd> Shuffle order of tests
+</dd><dt>--texmfhome
+</dt><dd> Location of user texmf tree</dd></dl>
+<h2>BUGS</h2>
+<h2>AUTHOR</h2>
+<p>The LaTeX Project (latex-team [at] latex-project.org)</p>
+<p>Please log issues on the GitHub homepage: <a rel="nofollow" HREF="https://github.com/latex3/l3build/issues."><a href="https://github.com/latex3/l3build/issues">https://github.com/latex3/l3build/issues</a>.</a></p>
+<h2>SEE ALSO</h2>
+<p>See l3build.pdf for more details.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

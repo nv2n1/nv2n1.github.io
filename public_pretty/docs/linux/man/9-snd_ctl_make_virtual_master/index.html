@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>snd_ctl_make_virtual_master(9) · Linux Manual Pages</title>
+<meta name="description" content="snd_ctl_make_virtual_master – Create a virtual master control">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-snd_ctl_make_virtual_master/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>snd_ctl_make_virtual_master(9)</h1>
+
+
+
+
+
+<p>snd_ctl_make_virtual_master &#8211; Create a virtual master control</p>
+<h2>Synopsis</h2>
+<pre><code>struct snd_kcontrol *snd_ctl_make_virtual_master(char *name, const unsigned int *tlv);</code></pre>
+<h2>Arguments</h2>
+<p><i>name</i></p>
+<dl>
+<dd>
+</dd><dd>name string of the control element to create</dd></dl>
+<p> <i>tlv</i></p>
+<dl>
+<dd>optional TLV int array for dB information</dd></dl>
+<h2>Description</h2>
+<p>Creates a virtual master control with the given name string. </p>
+<p> After creating a vmaster element, you can add the slave controls via <code>snd_ctl_add_slave</code> or <code>snd_ctl_add_slave_uncached</code>. </p>
+<p> The optional argument <i>tlv</i> can be used to specify the TLV information for dB scale of the master control. It should be a single element with #SNDRV_CTL_TLVT_DB_SCALE, #SNDRV_CTL_TLV_DB_MINMAX or #SNDRV_CTL_TLVT_DB_MINMAX_MUTE type, and should be the max 0dB.</p>
+<h2>Return</h2>
+<p>The created control element, or <code>NULL</code> for errors (ENOMEM).</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

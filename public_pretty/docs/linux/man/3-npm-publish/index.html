@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npm-publish(3) · Linux Manual Pages</title>
+<meta name="description" content="npm-publish — Publish a package">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-npm-publish/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>npm-publish(3)</h1>
+
+
+
+
+
+<p><code>npm-publish</code> &#8212; Publish a package</p>
+<h2>Synopsis</h2>
+<pre>npm.commands.publish([packages,] callback)</pre>
+<h2>Description</h2>
+<p>Publishes a package to the registry so that it can be installed by name. Possible values in the &#8216;packages&#8217; array are:</p>
+<dl>
+<dt>&bull;</dt>
+<dd><code>&lt;folder&gt;</code>: A folder containing a package.json file</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;tarball&gt;</code>: A url or file path to a gzipped tar archive containing a single folder with a package.json file inside.</dd>
+<dd></dd></dl>
+<p> If the package array is empty, npm will try to publish something in the current working directory. </p>
+<p> This command could fails if one of the packages specified already exists in the registry. Overwrites when the &quot;force&quot; environment variable is set.</p>
+<h2>See Also</h2>
+<dl>
+<dt>&bull;</dt>
+<dd>npm help registry</dd>
+<dt>&bull;</dt>
+<dd>npm help adduser</dd>
+<dt>&bull;</dt>
+<dd>npm apihelp owner</dd>
+<dd>
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

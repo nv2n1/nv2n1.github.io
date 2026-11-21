@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switching Linux Systemd Boot Targets - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/change-systemd-boot-target-linux/">
+  <meta name="description" content="Systemd replaced traditional init on most modern Linux distributions, shifting terminology from “runlevels” to “targets.” If you’re migrating from older …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Switching Linux Systemd Boot Targets">
+  <meta property="og:url" content="https://www.systutorials.com/change-systemd-boot-target-linux/">
+  <meta property="og:description" content="Systemd replaced traditional init on most modern Linux distributions, shifting terminology from “runlevels” to “targets.” If you’re migrating from older …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/systemd-services/">systemd &amp; Services</a>
+        </nav>
+        
+        <h1>Switching Linux Systemd Boot Targets</h1>
+        <time class="post-date" datetime="2016-09-17T02:15:12Z">September 17, 2016</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Systemd replaced traditional init on most modern Linux distributions, shifting terminology from “runlevels” to “targets.” If you’re migrating from older systems, here’s the mapping:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Runlevel</th>
+					<th>Systemd Target</th>
+					<th>Purpose</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>0</td>
+					<td><code>poweroff.target</code></td>
+					<td>Shutdown</td>
+			</tr>
+			<tr>
+					<td>1</td>
+					<td><code>rescue.target</code></td>
+					<td>Single-user mode</td>
+			</tr>
+			<tr>
+					<td>2, 3, 4</td>
+					<td><code>multi-user.target</code></td>
+					<td>Multi-user, no GUI</td>
+			</tr>
+			<tr>
+					<td>5</td>
+					<td><code>graphical.target</code></td>
+					<td>Multi-user with GUI</td>
+			</tr>
+			<tr>
+					<td>6</td>
+					<td><code>reboot.target</code></td>
+					<td>Reboot</td>
+			</tr>
+	</tbody>
+</table>
+<p>The two targets you’ll use most are <code>multi-user.target</code> (CLI only) and <code>graphical.target</code> (desktop environment).</p>
+<h2 id="checking-the-current-target">Checking the Current Target</h2>
+<p>View your default boot target:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl get-default
+</span></span></code></pre></div><p>List all currently active targets:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl list-units --type target
+</span></span></code></pre></div><p>See all targets installed on your system:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl list-unit-files --type target
+</span></span></code></pre></div><h2 id="switching-target-immediately">Switching Target Immediately</h2>
+<p>Use <code>isolate</code> to switch the active target without rebooting:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl isolate multi-user.target
+</span></span></code></pre></div><p>Or to switch to graphical mode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl isolate graphical.target
+</span></span></code></pre></div><p>The <code>isolate</code> command starts the target and its dependencies while stopping conflicting units—equivalent to the legacy <code>init 3</code> or <code>init 5</code> commands.</p>
+<p><strong>Important caveat:</strong> <code>isolate</code> may interrupt active services. In production environments, plan for potential downtime. Switching from graphical to multi-user will terminate your display manager and X11/Wayland session, killing any unsaved work in running applications. Use this primarily for troubleshooting or scheduled maintenance windows.</p>
+<h2 id="setting-the-default-boot-target">Setting the Default Boot Target</h2>
+<p>Permanently change what target loads on boot:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl set-default multi-user.target
+</span></span></code></pre></div><p>Or for graphical mode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl set-default graphical.target
+</span></span></code></pre></div><p>Verify the change:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl get-default
+</span></span></code></pre></div><p>This creates or updates a symlink at <code>/etc/systemd/system/default.target</code>. Run it once—systemd handles all necessary setup. The <code>enable</code> command isn’t needed for targets.</p>
+<h2 id="rescue-and-emergency-targets">Rescue and Emergency Targets</h2>
+<h3 id="rescue-mode">Rescue Mode</h3>
+<p>Boot into a minimal environment for troubleshooting:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl isolate rescue.target
+</span></span></code></pre></div><p>Rescue mode requires the root password and disables most non-critical services. Use it for:</p>
+<ul>
+<li>System repairs without full multi-user mode</li>
+<li>Filesystem checks and repairs</li>
+<li>Emergency configuration changes</li>
+</ul>
+<p>To boot into rescue on the next restart:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl set-default rescue.target
+</span></span><span class="line"><span class="cl">sudo reboot
+</span></span></code></pre></div><p>After repairs, restore your normal target:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl set-default graphical.target
+</span></span><span class="line"><span class="cl">sudo systemctl isolate graphical.target
+</span></span></code></pre></div><h3 id="emergency-mode">Emergency Mode</h3>
+<p>For severe troubleshooting when rescue mode isn’t sufficient:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl isolate emergency.target
+</span></span></code></pre></div><p>Emergency mode provides only the root filesystem—mounted read-only—with virtually no services running. The root password is required. Use this only when:</p>
+<ul>
+<li><code>rescue.target</code> won’t boot</li>
+<li>You need maximum isolation to diagnose filesystem or boot issues</li>
+<li>You can’t mount additional filesystems</li>
+</ul>
+<p>After emergency repairs, reboot cleanly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl reboot
+</span></span></code></pre></div><p>Don’t isolate back to graphical mode after emergency repairs; a clean reboot ensures filesystem checks run properly.</p>
+<h2 id="understanding-the-default-target-symlink">Understanding the Default Target Symlink</h2>
+<p>Systemd manages the default target via a symlink. View it with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -l /etc/systemd/system/default.target
+</span></span></code></pre></div><p>This symlink points to a file in <code>/usr/lib/systemd/system/</code>. Never manually edit this symlink—always use <code>systemctl set-default</code>. This command is idempotent, integrates with systemd’s management layer, and prevents configuration errors.</p>
+<h2 id="common-workflows">Common Workflows</h2>
+<h3 id="disable-gui-for-lower-resource-usage">Disable GUI for Lower Resource Usage</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl set-default multi-user.target
+</span></span><span class="line"><span class="cl">sudo systemctl isolate multi-user.target
+</span></span></code></pre></div><h3 id="re-enable-gui">Re-enable GUI</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl set-default graphical.target
+</span></span><span class="line"><span class="cl">sudo systemctl start graphical.target
+</span></span></code></pre></div><p>Here, <code>start</code> launches the graphical target without stopping multi-user services—usually sufficient. Use <code>isolate</code> only if you encounter conflicts between targets.</p>
+<h3 id="check-what-loads-at-boot-without-rebooting">Check What Loads at Boot Without Rebooting</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl list-unit-files <span class="p">|</span> grep enabled
+</span></span><span class="line"><span class="cl">systemctl list-dependencies graphical.target
+</span></span></code></pre></div><p>The first command shows all enabled services. The second displays the full dependency chain for your default target, confirming what will start on boot.</p>
+<h3 id="view-all-unit-dependencies-for-a-target">View All Unit Dependencies for a Target</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl list-dependencies --all multi-user.target
+</span></span></code></pre></div><p>This recursively shows every service, socket, and timer that a target depends on, useful for understanding what runs when you boot into a given mode.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If you accidentally set the wrong default target and can’t reach the GUI:</p>
+<ol>
+<li>Boot the system (you’ll land at a CLI login)</li>
+<li>Log in as root or a sudoer</li>
+<li>Run <code>sudo systemctl set-default graphical.target</code></li>
+<li>Reboot</li>
+</ol>
+<p>If the system won’t boot to rescue mode, interrupt the boot process at the GRUB menu (hold Shift during boot on many systems) and append <code>systemd.unit=rescue.target</code> to the kernel command line. This forces the kernel to boot into rescue mode for one boot cycle.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

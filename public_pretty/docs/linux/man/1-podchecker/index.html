@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>podchecker(1) · Linux Manual Pages</title>
+<meta name="description" content="podchecker – check the syntax of POD format documentation files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-podchecker/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>podchecker(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> podchecker &#8211; check the syntax of POD format documentation files </p>
+<h2>SYNOPSIS</h2>
+<p> <code>podchecker</code> [<code>-help</code>] [<code>-man</code>] [<code>-(no)warnings</code>] [<i>file</i> &#8230;]</p>
+<h2>OPTIONS AND ARGUMENTS</h2>
+<dl>
+<dt><code>-help</code></dt>
+<dd> Print a brief help message and exit.</dd>
+<dt><code>-man</code></dt>
+<dd> Print the manual page and exit.</dd>
+<dt><code>-warnings</code> <code>-nowarnings</code></dt>
+<dd> Turn on/off printing of warnings. Repeating <code>-warnings</code> increases the warning level, i.e. more warnings are printed. Currently increasing to level two causes flagging of unescaped &#8220;&lt;,&gt;&#8221; characters.</dd>
+<dt><i>file</i></dt>
+<dd> The pathname of a <font SIZE="-1">POD</font> file to syntax-check (defaults to standard input).</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>podchecker</code> will read the given input files looking for <font SIZE="-1">POD</font> syntax errors in the <font SIZE="-1">POD</font> documentation and will print any errors it find to <font SIZE="-1">STDERR.</font> At the end, it will print a status message indicating the number of errors found. </p>
+<p> Directories are ignored, an appropriate warning message is printed. </p>
+<p> <code>podchecker</code> invokes the <code>podchecker()</code> function exported by <code>Pod::Checker</code> Please see &#8220;<code>podchecker()</code>&#8221; in Pod::Checker for more details.</p>
+<h2>RETURN VALUE</h2>
+<p> <code>podchecker</code> returns a 0 (zero) exit status if all specified <font SIZE="-1">POD</font> files are ok.</p>
+<h2>ERRORS</h2>
+<p> <code>podchecker</code> returns the exit status 1 if at least one of the given <font SIZE="-1">POD</font> files has syntax errors. </p>
+<p> The status 2 indicates that at least one of the specified files does not contain <i>any</i> <font SIZE="-1">POD</font> commands. </p>
+<p> Status 1 overrides status 2. If you want unambiguous results, call <code>podchecker</code> with one single argument only.</p>
+<h2>SEE ALSO</h2>
+<p> Pod::Simple and Pod::Checker</p>
+<h2>AUTHORS</h2>
+<p> Please report bugs using &lt;<a rel="nofollow" href="http://rt.cpan.org">http://rt.cpan.org</a>&gt;. </p>
+<p> Brad Appleton &lt;bradapp [at] enteract.com&gt;, Marek Rouchal &lt;marekr [at] cpan.org&gt; </p>
+<p> Based on code for <code>Pod::Text::pod2text(1)</code> written by Tom Christiansen &lt;tchrist [at] mox.perl.com&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

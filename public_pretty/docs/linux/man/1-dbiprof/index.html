@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dbiprof(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dbiprof/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dbiprof(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>dbiprof - command-line client for DBI::ProfileData</p>
+<h2>SYNOPSIS</h2>
+<p>See a report of the ten queries with the longest total runtime in the profile dump file <i>prof1.out</i>:</p>
+ <pre>
+ dbiprof prof1.out
+</pre> 
+<p>See the top 10 most frequently run queries in the profile file <i>dbi.prof</i> (the default):</p>
+ <pre>
+  dbiprof --sort count
+</pre> 
+<p>See the same report with 15 entries:</p>
+ <pre>
+  dbiprof --sort count --number 15
+</pre>
+<h2>DESCRIPTION</h2>
+<p>This tool is a command-line client for the DBI::ProfileData. It allows you to analyze the profile data file produced by DBI::ProfileDumper and produce various useful reports.</p>
+<h2>OPTIONS</h2>
+<p>This program accepts the following options:</p>
+<dl>
+<dt>--number N
+</dt><dd> Produce this many items in the report. Defaults to 10. If set to ``all'' then all results are shown.
+</dd><dt>--sort field
+</dt><dd> Sort results by the given field. Sorting by multiple fields isn't currently supported (patches welcome). The available sort fields are:
+</dd><dl>
+<dl>
+<dt>total
+</dt><dd> Sorts by total time run time across all runs. This is the default sort.
+</dd><dt>longest
+</dt><dd> Sorts by the longest single run.
+</dd><dt>count
+</dt><dd> Sorts by total number of runs.
+</dd><dt>first
+</dt><dd> Sorts by the time taken in the first run.
+</dd><dt>shortest
+</dt><dd> Sorts by the shortest single run.
+</dd><dt>key1
+</dt><dd> Sorts by the value of the first element in the Path, which should be numeric. You can also sort by <tt>&quot;key2&quot;</tt> and <tt>&quot;key3&quot;</tt>.</dd></dl>
+</dl>
+<dl>
+</dl>
+<dt>--reverse
+</dt><dd> Reverses the selected sort. For example, to see a report of the shortest overall time: 
+ <pre>
+  dbiprof --sort total --reverse
+</pre>
+</dd><dt>--match keyN=value
+</dt><dd> Consider only items where the specified key matches the given value. Keys are numbered from 1. For example, let's say you used a DBI::Profile Path of: 
+ <pre>
+  [ DBIprofile_Statement, DBIprofile_Methodname ]
+</pre> 
+<p>And called dbiprof as in:</p>
+ <pre>
+  dbiprof --match key2=execute
+</pre> 
+<p>Your report would only show execute queries, leaving out prepares, fetches, etc.</p>
+<p>If the value given starts and ends with slashes (<tt>&quot;/&quot;</tt>) then it will be treated as a regular expression. For example, to only include <font SIZE="-1">SELECT</font> queries where key1 is the statement:</p>
+ <pre>
+  dbiprof --match key1=/^SELECT/
+</pre> 
+<p>By default the match expression is matched case-insensitively, but this can be changed with the &ndash;case-sensitive option.</p>
+</dd><dt>--exclude keyN=value
+</dt><dd> Remove items for where the specified key matches the given value. For example, to exclude all prepare entries where key2 is the method name: 
+ <pre>
+  dbiprof --exclude key2=prepare
+</pre> 
+<p>Like <tt>&quot;&ndash;match&quot;</tt>, If the value given starts and ends with slashes (<tt>&quot;/&quot;</tt>) then it will be treated as a regular expression. For example, to exclude <font SIZE="-1">UPDATE</font> queries where key1 is the statement:</p>
+ <pre>
+  dbiprof --match key1=/^UPDATE/
+</pre> 
+<p>By default the exclude expression is matched case-insensitively, but this can be changed with the &ndash;case-sensitive option.</p>
+</dd><dt>--case-sensitive
+</dt><dd> Using this option causes --match and --exclude to work case-sensitively. Defaults to off.
+</dd><dt>--delete
+</dt><dd> Sets the <tt>&quot;DeleteFiles&quot;</tt> option to DBI::ProfileData which causes the files to be deleted after reading. See DBI::ProfileData for more details.
+</dd><dt>--dumpnodes
+</dt><dd> Print the list of nodes in the form of a perl data structure. Use the <tt>&quot;-sort&quot;</tt> option if you want the list sorted.
+</dd><dt>--version
+</dt><dd> Print the dbiprof version number and exit.</dd></dl>
+<h2>AUTHOR</h2>
+<p>Sam Tregar &lt;sam [at] tregar.com&gt;</p>
+<h2>COPYRIGHT AND LICENSE</h2>
+<p>Copyright (C) 2002 Sam Tregar</p>
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl 5 itself.</p>
+<h2>SEE ALSO</h2>
+<p>DBI::ProfileDumper, DBI::Profile, <font SIZE="-1">DBI</font>.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

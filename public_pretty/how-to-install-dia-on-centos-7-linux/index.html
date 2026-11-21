@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installing Dia on CentOS 7 - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-install-dia-on-centos-7-linux/">
+  <meta name="description" content="Dia is a GTK&#43; based diagram creation program for Linux. It supports flowcharts, network diagrams, circuit diagrams, UML diagrams, and many other types. Here’s …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Installing Dia on CentOS 7">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-install-dia-on-centos-7-linux/">
+  <meta property="og:description" content="Dia is a GTK&#43; based diagram creation program for Linux. It supports flowcharts, network diagrams, circuit diagrams, UML diagrams, and many other types. Here’s …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Installing Dia on CentOS 7</h1>
+        <time class="post-date" datetime="2018-03-24T11:51:27Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Dia is a GTK+ based diagram creation program for Linux. It supports flowcharts, network diagrams, circuit diagrams, UML diagrams, and many other types. Here’s how to install and get started with Dia on CentOS 7.</p>
+<h2 id="install-dia-from-epel">Install Dia from EPEL</h2>
+<p>Dia is available in the EPEL (Extra Packages for Enterprise Linux) repository:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Enable EPEL if not already enabled
+sudo yum install epel-release
+
+# Install Dia
+sudo yum install dia
+</code></pre><p>After installation, launch it from the application menu or run <code>dia</code> in a terminal.</p>
+<h2 id="building-dia-from-source">Building Dia from Source</h2>
+<p>If the EPEL version is outdated or you need specific features, build from source:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Install build dependencies
+sudo yum groupinstall &#34;Development Tools&#34;
+sudo yum install gtk2-devel libxml2-devel libxslt-devel gettext
+
+# Download and build
+wget https://ftp.gnome.org/pub/GNOME/sources/dia/0.97/dia-0.97.3.tar.xz
+tar -xf dia-0.97.3.tar.xz
+cd dia-0.97.3
+./configure --enable-gnome
+make
+sudo make install
+</code></pre><h2 id="common-diagram-types">Common Diagram Types</h2>
+<p>Dia includes built-in shape libraries for many diagram types:</p>
+<ul>
+<li><strong>Flowchart</strong> — Process flows, decision trees, algorithm diagrams</li>
+<li><strong>UML</strong> — Class diagrams, sequence diagrams, use case diagrams</li>
+<li><strong>Network</strong> — Network topology, server racks, firewall layouts</li>
+<li><strong>Circuit</strong> — Electrical and logic circuits</li>
+<li><strong>Database</strong> — Entity-relationship diagrams</li>
+<li><strong>Sybase</strong> — Database schema diagrams</li>
+<li><strong>GRAFCET</strong> — Sequential function charts</li>
+</ul>
+<h2 id="basic-usage">Basic Usage</h2>
+<p><strong>Creating a new diagram:</strong></p>
+<ol>
+<li>Launch Dia</li>
+<li>Select a sheet (diagram type) from the left panel</li>
+<li>Click a shape, then click on the canvas to place it</li>
+<li>Use the toolbox to connect shapes with lines and arrows</li>
+</ol>
+<p><strong>Keyboard shortcuts:</strong></p>
+<ul>
+<li><code>Ctrl+N</code> — New diagram</li>
+<li><code>Ctrl+S</code> — Save diagram</li>
+<li><code>Ctrl+E</code> — Export to another format</li>
+<li><code>Ctrl+Z</code> — Undo</li>
+<li><code>Delete</code> — Remove selected object</li>
+<li><code>Ctrl+G</code> — Group selected objects</li>
+<li><code>Ctrl+Shift+G</code> — Ungroup</li>
+</ul>
+<h2 id="exporting-diagrams">Exporting Diagrams</h2>
+<p>Dia can export to many formats:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># From the GUI: File -&gt; Export
+# Or from the command line:
+dia --export=output.png --filter=png input.dia
+dia --export=output.pdf --filter=pdf input.dia
+dia --export=output.svg --filter=svg input.dia
+</code></pre><p>Supported export formats include PNG, SVG, PDF, EPS, PostScript, WMF, Shape, and LaTeX PGF. For high-quality print output, use SVG or PDF rather than PNG.</p>
+<h2 id="custom-shapes">Custom Shapes</h2>
+<p>You can create custom shapes for Dia. A shape is defined in an XML file with a <code>.shape</code> extension:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">~/.dia/shapes/my_custom.shape
+</code></pre><p>Each shape file defines the geometry (SVG path), connection points, and text boxes. Place custom shapes in <code>~/.dia/shapes/</code> and they’ll appear in a new sheet in the toolbox.</p>
+<h2 id="alternatives-to-dia">Alternatives to Dia</h2>
+<p>While Dia is functional, there are more modern diagramming tools available:</p>
+<ul>
+<li><strong>draw.io (diagrams.net)</strong> — Web-based, free, excellent collaboration</li>
+<li><strong>LibreOffice Draw</strong> — Part of the LibreOffice suite, good for general diagrams</li>
+<li><strong>Inkscape</strong> — Vector graphics editor with diagramming capabilities</li>
+<li><strong>Mermaid</strong> — Text-based diagram generation (integrates with Markdown)</li>
+<li><strong>PlantUML</strong> — Text-based UML diagram generation</li>
+</ul>
+<p>For quick network or flowchart diagrams, Dia remains a solid lightweight choice that doesn’t require an internet connection or modern web browser.</p>
+<h2 id="batch-processing-with-dia">Batch Processing with Dia</h2>
+<p>Dia supports command-line batch export, useful for automated documentation pipelines:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Export all .dia files in a directory to PNG
+for f in *.dia; do
+    dia --export=&#34;${f%.dia}.png&#34; --filter=png &#34;$f&#34;
+done
+
+# Export to SVG for web publishing
+dia --export=diagram.svg --filter=svg diagram.dia
+
+# Export to EPS for LaTeX documents
+dia --export=diagram.eps --filter=eps diagram.dia
+</code></pre><p>Integrate with documentation builds:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Makefile snippet for docs
+diagrams: $(patsubst %.dia,%.png,$(wildcard images/*.dia))
+
+%.png: %.dia
+    dia --export=$@ --filter=png $&lt;
+</code></pre><h2 id="working-with-dia-files-programmatically">Working with Dia Files Programmatically</h2>
+<p>Dia files are compressed XML. You can parse them directly:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Decompress a .dia file
+gunzip -c diagram.dia | xmllint --format - | less
+
+# Extract all object types used
+bunzip2 -c diagram.dia | grep &#39;type=&#39; | sort -u
+</code></pre><p>This makes Dia files suitable for version control (store the XML) and automated processing (count objects, validate diagram structure, generate reports).</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

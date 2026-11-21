@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_irb(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_irb – interruption response block">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_irb/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_irb(9)</h1>
+
+
+
+
+
+<p>struct_irb &#8211; interruption response block</p>
+<h2>Synopsis</h2>
+<pre><code>struct irb {
+    union scsw scsw;
+    union esw;
+    __u8 ecw[32];
+};</code></pre>
+<h2>Members</h2>
+<p>scsw</p>
+<dl>
+<dd>subchannel status word</dd></dl>
+<p> esw</p>
+<dl>
+<dd>extended status word</dd></dl>
+<p> ecw[32]</p>
+<dl>
+<dd>extended control word</dd></dl>
+<h2>Description</h2>
+<p>The irb that is handed to the device driver when an interrupt occurs. For solicited interrupts, the common I/O layer already performs checks whether a field is valid; a field not being valid is always passed as <code>0</code>. If a unit check occurred, <i>ecw</i> may contain sense data; this is retrieved by the common I/O layer itself if the device doesn&#8217;t support concurrent sense (so that the device driver never needs to perform basic sene itself). For unsolicited interrupts, the irb is passed as-is (expect for sense data, if applicable).</p>
+<h2>Author</h2>
+<p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

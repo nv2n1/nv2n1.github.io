@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-remote-ext(1) · Linux Manual Pages</title>
+<meta name="description" content="git-remote-ext – Bridge smart transport to external command.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-remote-ext/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-remote-ext(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> git-remote-ext &#8211; Bridge smart transport to external command. </p>
+<h2>SYNOPSIS</h2>
+<pre>
+git remote add &lt;nick&gt; &quot;ext::&lt;command&gt;[ &lt;arguments&gt;...]&quot;
+</pre>
+<h2>DESCRIPTION</h2>
+<p> This remote helper uses the specified <i>&lt;command&gt;</i> to connect to a remote Git server. </p>
+<p> Data written to stdin of the specified <i>&lt;command&gt;</i> is assumed to be sent to a git:// server, git-upload-pack, git-receive-pack or git-upload-archive (depending on situation), and data read from stdout of &lt;command&gt; is assumed to be received from the same service. </p>
+<p> Command and arguments are separated by an unescaped space. </p>
+<p> The following sequences have a special meaning: </p>
+<p> &#8216;% &#8216;</p>
+<dl>
+<dt>
+</dt><dd> Literal space in command or argument.</dd></dl>
+<p> <i>%%</i></p>
+<dl>
+<dt>
+</dt><dd> Literal percent sign.</dd></dl>
+<p> <i>%s</i></p>
+<dl>
+<dt>
+</dt><dd> Replaced with name (receive-pack, upload-pack, or upload-archive) of the service Git wants to invoke.</dd></dl>
+<p> <i>%S</i></p>
+<dl>
+<dt>
+</dt><dd> Replaced with long name (git-receive-pack, git-upload-pack, or git-upload-archive) of the service Git wants to invoke.</dd></dl>
+<p> <i>%G</i> (must be the first characters in an argument)</p>
+<dl>
+<dt>
+</dt><dd> This argument will not be passed to <i>&lt;command&gt;</i>. Instead, it will cause the helper to start by sending git:// service requests to the remote side with the service field set to an appropriate value and the repository field set to rest of the argument. Default is not to send such a request. </dd>
+<p> This is useful if remote side is git:// server accessed over some tunnel.</dl>
+<p> <i>%V</i> (must be first characters in argument)</p>
+<dl>
+<dt>
+</dt><dd> This argument will not be passed to <i>&lt;command&gt;</i>. Instead it sets the vhost field in the git:// service request (to rest of the argument). Default is not to send vhost in such request (if sent).</dd></dl>
+<h2>ENVIRONMENT VARIABLES</h2>
+<p> GIT_TRANSLOOP_DEBUG</p>
+<dl>
+<dt>
+</dt><dd> If set, prints debugging information about various reads/writes.</dd></dl>
+<h2>ENVIRONMENT VARIABLES PASSED TO COMMAND</h2>
+<p> GIT_EXT_SERVICE</p>
+<dl>
+<dt>
+</dt><dd> Set to long name (git-upload-pack, etc&#8230;) of service helper needs to invoke.</dd></dl>
+<p> GIT_EXT_SERVICE_NOPREFIX</p>
+<dl>
+<dt>
+</dt><dd> Set to long name (upload-pack, etc&#8230;) of service helper needs to invoke.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> This remote helper is transparently used by Git when you use commands such as &quot;git fetch &lt;URL&gt;&quot;, &quot;git clone &lt;URL&gt;&quot;, , &quot;git push &lt;URL&gt;&quot; or &quot;git remote add &lt;nick&gt; &lt;URL&gt;&quot;, where &lt;URL&gt; begins with <code>ext::</code>. Examples: </p>
+<p> &quot;ext::ssh -i /home/foo/.ssh/somekey user [at] host.example %S <i>foo/repo</i>&quot;</p>
+<dl>
+<dt>
+</dt><dd> Like host.example:foo/repo, but use /home/foo/.ssh/somekey as keypair and user as user on remote side. This avoids needing to edit .ssh/config.</dd></dl>
+<p> &quot;ext::socat -t3600 &#8211; ABSTRACT-CONNECT:/git-server %G/somerepo&quot;</p>
+<dl>
+<dt>
+</dt><dd> Represents repository with path /somerepo accessible over git protocol at abstract namespace address /git-server.</dd></dl>
+<p> &quot;ext::git-server-alias foo %G/repo&quot;</p>
+<dl>
+<dt>
+</dt><dd> Represents a repository with path /repo accessed using the helper program &quot;git-server-alias foo&quot;. The path to the repository and type of request are not passed on the command line but as part of the protocol stream, as usual with git:// protocol.</dd></dl>
+<p> &quot;ext::git-server-alias foo %G/repo %Vfoo&quot;</p>
+<dl>
+<dt>
+</dt><dd> Represents a repository with path /repo accessed using the helper program &quot;git-server-alias foo&quot;. The hostname for the remote server passed in the protocol stream will be &quot;foo&quot; (this allows multiple virtual Git servers to share a link-level address).</dd></dl>
+<p> &quot;ext::git-server-alias foo %G/repo% with% spaces %Vfoo&quot;</p>
+<dl>
+<dt>
+</dt><dd> Represents a repository with path <code>/repo with spaces</code> accessed using the helper program &quot;git-server-alias foo&quot;. The hostname for the remote server passed in the protocol stream will be &quot;foo&quot; (this allows multiple virtual Git servers to share a link-level address).</dd></dl>
+<p> &quot;ext::git-ssl foo.example /bar&quot;</p>
+<dl>
+<dt>
+</dt><dd> Represents a repository accessed using the helper program &quot;git-ssl foo.example /bar&quot;. The type of request can be determined by the helper using environment variables (see above).</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/7-gitremote-helpers/">gitremote-helpers</a></code>(7)</p>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

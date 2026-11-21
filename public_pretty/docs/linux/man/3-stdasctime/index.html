@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdasctime(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdasctime/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdasctime(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::asctime - std::asctime</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;ctime&gt;
+    char *asctime(const std::tm *time_ptr);</code></pre> 
+<p>Converts given calendar time std::tm to a textual representation of the following fixed 25-character form: Www Mmm dd hh:mm:ss yyyy\n</p>
+<ul>
+<li>Www - three-letter English abbreviated day of the week from time_ptr-&gt;tm_wday, one of Mon, Tue, Wed, Thu, Fri, Sat, Sun.</li>
+<li>Mmm - three-letter English abbreviated month name from time_ptr-&gt;tm_mon, one of Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec.</li>
+<li>dd - 2-digit day of the month from timeptr-&gt;tm_mday as if printed by sprintf using %2d</li>
+<li>hh - 2-digit hour from timeptr-&gt;tm_hour as if printed by sprintf using %.2d</li>
+<li>mm - 2-digit minute from timeptr-&gt;tm_min as if printed by sprintf using %.2d</li>
+<li>ss - 2-digit second from timeptr-&gt;tm_sec as if printed by sprintf using %.2d</li>
+<li>yyyy - 4-digit year from timeptr-&gt;tm_year + 1900 as if printed by sprintf using %4d
+The behavior is undefined if any member of *time_ptr is outside its normal range
+The behavior is undefined if the calendar year indicated by time_ptr-&gt;tm_year has more than 4 digits or is less than the year 1000.
+The function does not support localization, and the newline character cannot be removed.
+The function modifies static storage and is not thread-safe.</li>
+</ul>
+<h2>Parameters</h2>
+<p>time_ptr - pointer to a std::tm object specifying the time to print</p>
+<h2>Return value</h2>
+<p>Pointer to a static null-terminated character string holding the textual representation of date and time. The string may be shared between std::asctime and std::ctime, and may be overwritten on each invocation of any of those functions.</p>
+<h2>Notes</h2>
+<p>This function returns a pointer to static data and is not thread-safe. POSIX marks this function obsolete and recommends std::strftime instead.
+POSIX limits undefined behaviors only to when the output string would be longer than 25 characters, when timeptr-&gt;tm_wday or timeptr-&gt;tm_mon are not within the expected ranges, or when timeptr-&gt;tm_year exceeds INT_MAX-1990.
+Some implementations handle timeptr-&gt;tm_mday==0 as meaning the last day of the preceding month.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;ctime&gt;
+#include &lt;iostream&gt;
+int main()
+{
+std::time_t result = std::time(nullptr);
+std::cout &lt;&lt; std::asctime(std::localtime(&amp;result));
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Mon Apr 3 20:26:26 2017</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts a time_t object to a textual representation
+ctime <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts a tm object to custom textual representation
+strftime <i>(function)</i>
+put_time formats and outputs a date/time value according to the specified format
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

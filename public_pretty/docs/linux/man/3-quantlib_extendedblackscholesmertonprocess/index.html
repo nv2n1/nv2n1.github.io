@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_extendedblackscholesmertonprocess(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::ExtendedBlackScholesMertonProcess – experimental Black-Scholes-Merton stochastic process">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_extendedblackscholesmertonprocess/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_extendedblackscholesmertonprocess(3)</h1>
+
+
+
+
+
+<p>QuantLib::ExtendedBlackScholesMertonProcess &#8211; experimental Black-Scholes-Merton stochastic process </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/experimental/processes/extendedblackscholesprocess.hpp&gt; </p>
+<p> Inherits <code>QuantLib::GeneralizedBlackScholesProcess</code>. </p>
+<h3>Public Types</h3>
+<p>enum <code>Discretization</code> { <code>Euler</code>, <code>Milstein</code>, <code>PredictorCorrector</code> } </p>
+<h3>Public Member Functions</h3>
+<p><code>ExtendedBlackScholesMertonProcess</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;x0, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;dividendTS, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;riskFreeTS, const <code>Handle</code>&lt; <code>BlackVolTermStructure</code> &gt; &amp;blackVolTS, const boost::shared_ptr&lt; <code>discretization</code> &gt; &amp;d=boost::shared_ptr&lt; <code>discretization</code> &gt;(new <code>EulerDiscretization</code>), Discretization evolDisc=Milstein) </p>
+<p> Real <code>drift</code> (Time t, Real x) const </p>
+<p> Real <code>diffusion</code> (Time t, Real x) const </p>
+<p> Real <code>evolve</code> (Time t0, Real x0, Time dt, Real dw) const </p>
+<h2>Detailed Description</h2>
+<p>experimental Black-Scholes-Merton stochastic process </p>
+<p> This class allows to choose a built-in discretization scheme</p>
+<h2>Member Function Documentation</h2>
+<h3>Real drift (Time t, Real x) const [virtual]</h3>
+<p><code>Possible enhancements</code></p>
+<dl COMPACT>
+<dd>revise extrapolation</dd></dl>
+<p> Reimplemented from <code>GeneralizedBlackScholesProcess</code>.</p>
+<h3>Real diffusion (Time t, Real x) const [virtual]</h3>
+<p><code>Possible enhancements</code></p>
+<dl COMPACT>
+<dd>revise extrapolation</dd></dl>
+<p> Reimplemented from <code>GeneralizedBlackScholesProcess</code>.</p>
+<h3>Real evolve (Time t0, Real x0, Time dt, Real dw) const [virtual]</h3>
+<p>returns the asset value after a time interval $ Delta t $ according to the given discretization. By default, it returns [ E(x_0,t_0,Delta t) + S(x_0,t_0,Delta t) dot Delta w ] where $ E $ is the expectation and $ S $ the standard deviation. </p>
+<p> Reimplemented from <code>StochasticProcess1D</code>. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ntfssecaudit(8) · Linux Manual Pages</title>
+<meta name="description" content="ntfssecaudit – NTFS Security Data Auditing">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ntfssecaudit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ntfssecaudit(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>ntfssecaudit &#8211; NTFS Security Data Auditing</p>
+<h2>Synopsis</h2>
+<p><code>ntfssecaudit</code> <code>[</code><i>options</i><code>]</code> <i>args</i> </p>
+<p> Where <i>options</i> is a combination of :</p>
+<dl>
+<dd>-a full auditing of security data (Linux only)</dd></dl>
+<dl>
+<dd>-b backup ACLs</dd></dl>
+<dl>
+<dd>-e setting extra backed-up parameters (in conjunction with -s)</dd></dl>
+<dl>
+<dd>-h displaying hexadecimal security descriptors saved in a file</dd></dl>
+<dl>
+<dd>-r recursing in a directory</dd></dl>
+<dl>
+<dd>-s setting backed-up ACLs</dd></dl>
+<dl>
+<dd>-u getting a user mapping proposal</dd></dl>
+<dl>
+<dd>-v verbose (very verbose if set twice)</dd></dl>
+<p> and args define the parameters and the set of files acted upon. </p>
+<p> Typing secaudit with no args will display a summary of available options.</p>
+<h2>Description</h2>
+<p><code>ntfssecaudit</code> displays the ownership and permissions of a set of files on an NTFS file system, and checks their consistency. It can be started in terminal mode only (no graphical user interface is available.) </p>
+<p> When a <i>volume</i> is required, it has to be unmounted, and the command has to be issued as <code>root</code>. The <i>volume</i> can be either a block device (i.e. a disk partition) or an image file. </p>
+<p> When acting on a directory or volume, the command may produce a lot of information. It is therefore advisable to redirect the output to a file or pipe it to a text editor for examination.</p>
+<h2>Options</h2>
+<p>Below are the valid combinations of options and arguments that <code>ntfssecaudit</code> accepts. All the indicated arguments are mandatory and must be unique (if wildcards are used, they must resolve to a single name.)</p>
+<dl>
+<dt><code>-h</code> <i>file</i></dt>
+<dd>Displays in an human readable form the hexadecimal security descriptors saved in <i>file</i>. This can be used to turn a verbose output into a very verbose output.</dd>
+<dt><code>-a[rv]</code> <i>volume</i></dt>
+<dd>Audits the volume : all the global security data on <i>volume</i> are scanned and errors are displayed. If option <code>-r</code> is present, all files and directories are also scanned and their relations to global security data are checked. This can produce a lot of data. </dd>
+<p> This option is not effective on volumes formatted for old NTFS versions (pre NTFS 3.0). Such volumes have no global security data. </p>
+<p> When errors are signalled, it is advisable to repair the volume with an appropriate tool (such as <code>chkdsk</code> on Windows.)</p>
+<dt><code>[-v]</code> <i>volume</i> <i>file</i></dt>
+<dd>Displays the security parameters of <i>file</i> : its interpreted Linux mode (rwx flags in octal) and Posix ACL[1], its security key if any, and its security descriptor if verbose output.</dd>
+<dt><code>-r[v]</code> <i>volume</i> <i>directory</i></dt>
+<dd>displays the security parameters of all files and subdirectories in <i>directory</i> : their interpreted Linux mode (rwx flags in octal) and Posix ACL[1], their security key if any, and their security descriptor if verbose output.</dd>
+<dt><code>-b[v] </code><i>volume</i> <i>[directory]</i></dt>
+<dd>Recursively extracts to standard output the NTFS ACLs of files in <i>volume</i> and <i>directory</i>.</dd>
+<dt><code>-s[ev]</code> <i>volume</i> <i>[backup-file]</i></dt>
+<dd>Sets the NTFS ACLS as indicated in <i>backup-file</i> or standard input. The input data must have been created on Linux. With option <code>-e</code>, also sets extra parameters (currently Windows attrib).</dd>
+<dt><i>volume</i> <i>perms</i> <i>file</i></dt>
+<dd>Sets the security parameters of file to perms. Perms is the Linux requested mode (rwx flags, expressed in octal form as in chmod) or a Posix ACL[1] (expressed like in setfacl -m). This sets a new ACL which is effective for Linux and Windows.</dd>
+<dt><code>-r[v]</code> <i>volume</i> <i>perms</i> <i>directory</i></dt>
+<dd>Sets the security parameters of all files and subdirectories in <i>directory</i> to <i>perms</i>. Perms is the Linux requested mode (rwx flags, expressed in octal form as in <code>chmod</code>), or a Posix ACL[1] (expressed like in <code>setfacl -m</code>.) This sets new ACLs which are effective for Linux and Windows.</dd>
+<dt><code>[-v]</code> <i>mounted-file</i></dt>
+<dd>Displays the security parameters of <i>mounted-file</i> : its interpreted Linux mode (rwx flags in octal) and Posix ACL[1], its security key if any, and its security descriptor if verbose output. This is a special case which acts on a mounted file (or directory) and does not require being root. The Posix ACL interpretation can only be displayed if the full path to <i>mounted-file</i> from the root of the global file tree is provided.</dd>
+<dt><code>-u[v]</code> <i>mounted-file</i></dt>
+<dd>Displays a proposed contents for a user mapping file, based on the ownership parameters set by Windows on <i>mounted-file</i>, assuming this file was created on Windows by the user who should be mapped to the current Linux user. The displayed information has to be copied to the file <code>.NTFS-3G/UserMapping</code> where <code>.NTFS-3G</code> is a hidden subdirectory of the root of the partition for which the mapping is to be defined. This will cause the ownership of files created on that partition to be the same as the original <i>mounted-file</i>.</dd></dl>
+<h2>Note</h2>
+<p>[1] provided the POSIX ACL option was selected at compile time. A Posix ACL specification looks like &quot;<code>[d:]{ugmo}:[id]:[perms],&#8230;</code>&quot; where id is a numeric user or group id, and perms an octal digit or a set from the letters r, w and x.</p>
+<dl>
+<dd>Example : &quot;<code>u::7,g::5,o:0,u:510:rwx,g:500:5,d:u:510:7</code>&quot;</dd></dl>
+<h2>Examples</h2>
+<p>Audit the global security data on /dev/sda1</p>
+<dl>
+<dd><code>ntfssecaudit -ar /dev/sda1</code></dd></dl>
+<p> Display the ownership and permissions parameters for files in directory /audio/music on device /dev/sda5, excluding sub-directories :</p>
+<dl>
+<dd><code>ntfssecaudit /dev/sda5 /audio/music</code></dd></dl>
+<p> Set all files in directory /audio/music on device /dev/sda5 as writeable by owner and read-only for everybody :</p>
+<dl>
+<dd><code>ntfssecaudit -r /dev/sda5 644 /audio/music</code> </dd>
+<h2>Exit Codes</h2>
+<p><code>ntfssecaudit</code> exits with a value of 0 when no error was detected, and with a value of 1 when an error was detected.</p>
+<h2>Known Issues</h2>
+<p>Please see</p>
+<dl>
+<dd><a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/NTFS-3G-FAQ/">https://github.com/tuxera/ntfs-3g/wiki/NTFS-3G-FAQ/</a> </dd>
+</dl>
+<p> for common questions and known issues. If you would find a new one in the latest release of the software then please send an email describing it in detail. You can contact the development team on the ntfs-3g-devel [at] lists.sf.net address.</p>
+<h2>Authors</h2>
+<p><code>ntfssecaudit</code> has been developed by Jean-Pierre André.</p>
+<h2>Thanks</h2>
+<p>Several people made heroic efforts, often over five or more years which resulted the ntfs-3g driver. Most importantly they are Anton Altaparmakov, Richard Russon, Szabolcs Szakacsits, Yura Pakhuchiy, Yuval Fledel, and the author of the groundbreaking FUSE filesystem development framework, Miklos Szeredi.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8), <code><a href="/docs/linux/man/5-attr/">attr</a></code>(5), <code><a href="/docs/linux/man/1-getfattr/">getfattr</a></code>(1) </p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

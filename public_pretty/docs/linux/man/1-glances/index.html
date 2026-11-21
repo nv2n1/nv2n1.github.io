@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glances(1) · Linux Manual Pages</title>
+<meta name="description" content="glances – A cross-platform curses-based monitoring tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-glances/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>glances(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> glances &#8211; A cross-platform curses-based monitoring tool</p>
+<h2>SYNOPSIS</h2>
+<p> <code>glances</code> [-bdehmnrsvyz1] [-B bind] [-c server] [-C conffile] [-p port] [-P password] [&#8211;password] [-t refresh] [-f file] [-o output]</p>
+<h2>DESCRIPTION</h2>
+<p> Glances is a free (LGPL) cross-platform curses-based monitoring tool which aims to present a maximum of information in a minimum of space, ideally to fit in a classical 80&#215;24 terminal or higher to have additionnal information. </p>
+<p> Glances can adapt dynamically the displayed information depending on the terminal size. It can also work in a client/server mode for remote monitoring. </p>
+<p> This tool is written in Python and uses the psutil library to fetch the statistical values from key elements, like CPU, load average, memory, network, disks, file systems, processes, etc.</p>
+<h2>COMMAND-LINE OPTIONS</h2>
+<p> The command-line options are the following:</p>
+<dl>
+<dt><code>-b</code></dt>
+<dd> Display network rate in Byte per second (default: bit per second)</dd>
+<dt><code>-B @IP|HOST</code></dt>
+<dd> Bind server to the given IPv4/IPv6 address or hostname</dd>
+<dt><code>-c @IP|HOST</code></dt>
+<dd> Connect to a Glances server by IPv4/IPv6 address or hostname</dd>
+<dt><code>-C FILE</code></dt>
+<dd> Path to the configuration file</dd>
+<dt><code>-d</code></dt>
+<dd> Disable disk I/O module</dd>
+<dt><code>-e</code></dt>
+<dd> Enable sensors module (requires pysensors, Linux-only)</dd>
+<dt><code>-f FOLDER</code></dt>
+<dd> Set the HTML or CSV output folder</dd>
+<dt><code>-h</code></dt>
+<dd> Display the help and exit</dd>
+<dt><code>-m</code></dt>
+<dd> Disable mount module</dd>
+<dt><code>-n</code></dt>
+<dd> Disable network module</dd>
+<dt><code>-o OUTPUT</code></dt>
+<dd> Define additional output (available: HTML or CSV)</dd>
+<dt><code>-p PORT</code></dt>
+<dd> Define the client/server TCP port (default: 61209)</dd>
+<dt><code>-P PASSWORD</code></dt>
+<dd> Define a client/server password</dd>
+<dt><code>&#8211;password</code></dt>
+<dd> Define a client/server password from the prompt</dd>
+<dt><code>-r</code></dt>
+<dd> Disable process list (for low CPU consumption)</dd>
+<dt><code>-s</code></dt>
+<dd> Run Glances in server mode</dd>
+<dt><code>-t SECONDS</code></dt>
+<dd> Set refresh time in seconds (default: 3 sec)</dd>
+<dt><code>-v</code></dt>
+<dd> Display the version and exit</dd>
+<dt><code>-y</code></dt>
+<dd> Enable hddtemp module (requires hddtemp)</dd>
+<dt><code>-z</code></dt>
+<dd> Do not use the bold color attribute</dd>
+<dt><code>-1</code></dt>
+<dd> Start Glances in per-CPU mode</dd></dl>
+<h2>INTERACTIVE COMMANDS</h2>
+<p> You can use the following keys while in Glances:</p>
+<dl>
+<dt><code>a</code></dt>
+<dd> Sort process list automatically</dd>
+<dt><code>b</code></dt>
+<dd> Switch between bit/s or Byte/s for network I/O</dd>
+<dt><code>c</code></dt>
+<dd> Sort processes by CPU usage</dd>
+<dt><code>d</code></dt>
+<dd> Show/hide disk I/O stats</dd>
+<dt><code>f</code></dt>
+<dd> Show/hide file system stats</dd>
+<dt><code>h</code></dt>
+<dd> Show/hide the help screen</dd>
+<dt><code>i</code></dt>
+<dd> Sort processes by I/O rate</dd>
+<dt><code>l</code></dt>
+<dd> Show/hide log messages</dd>
+<dt><code>m</code></dt>
+<dd> Sort processes by MEM usage</dd>
+<dt><code>n</code></dt>
+<dd> Show/hide network stats</dd>
+<dt><code>p</code></dt>
+<dd> Sort processes by name</dd>
+<dt><code>q</code></dt>
+<dd> Quit</dd>
+<dt><code>s</code></dt>
+<dd> Show/hide sensors stats (only available with -e flag)</dd>
+<dt><code>t</code></dt>
+<dd> View network I/O as combination</dd>
+<dt><code>u</code></dt>
+<dd> View cumulative network I/O</dd>
+<dt><code>w</code></dt>
+<dd> Delete finished warning log messages</dd>
+<dt><code>x</code></dt>
+<dd> Delete finished warning and critical log messages</dd>
+<dt><code>y</code></dt>
+<dd> Show/hide hddtemp stats (only available with -y flag)</dd>
+<dt><code>z</code></dt>
+<dd> Show/hide processes list (for low CPU consumption)</dd>
+<dt><code>1</code></dt>
+<dd> Switch between global CPU and per-CPU stats</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>Refresh information every 5 seconds:</dt>
+<dd> <code>glances</code> -t 5</dd></dl>
+<h2>EXIT STATUS</h2>
+<p> Glances returns a zero exit status if it succeeds to print/grab information. </p>
+<p> It returns 2 if it fails to parse its options (missing arguments, invalid value, etc).</p>
+<h2>AUTHOR</h2>
+<p> Glances is written by Nicolas Hennion aka Nicolargo (contact [at] nicolargo.com) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mvn_file(7) · Linux Manual Pages</title>
+<meta name="description" content="mvn_file – set installation location(s) for Maven artifact(s)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-mvn_file/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>mvn_file(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>mvn_file &#8211; set installation location(s) for Maven artifact(s)</p>
+<h2>Synopsis</h2>
+<p><code>%mvn_file</code> artifact-coordinates primary-file [secondary-file &#8230;]</p>
+<h2>Description</h2>
+<p><code>mvn_file</code> macro causes instructions for artifact installation to be added to XMvn reactor configuration. It is used to control locations of artifact files in file system. (The exact meaning of artifact location is dependant on particular implementation of XMvn repository into which artifacts will be installed.) </p>
+<p> Specified artifact coordinates must match at least one artifact. If not then behavior is unspecified. It is possible to specify artifact coordinates matching multiple artifacts, so one call to <code>mvn_file</code> can affect installation of more than one artifact.</p>
+<h2>Operands</h2>
+<p><code>artifact-coordinates</code></p>
+<dl>
+<dd>Artifact coordinates specify artifact(s) that this rule applies to. Coordinates are in format <code>groupId:artifactId[:extension[:classifier]][:version]</code>. If extension is specified then version must be specified too. If any part is omitted or equal to empty string then it matches any string. Wildcards and brace expansions are supported in each part. For more information see XMvn Configuration Reference.</dd></dl>
+<p> <code>primary-file</code></p>
+<dl>
+<dd>Primary location of artifact file. This operand is passed directly to XMvn installer. Its exact meaning is specific to particular repository implementation used to install given artifact. Backreferences are supported in form <code>@n</code>, where <code>n</code> is an integer corresponding to brace in <code>artifact-coordinates</code>.</dd></dl>
+<p> <code>secondary-file</code></p>
+<dl>
+<dd>Secondary location of artifact file. There can be any number (zero or more) of secondary artifact files. These operands are passed directly to XMvn installer. Their exact meaning is specific to particular repository implementation used to install given artifact. Backreferences are supported in form <code>@n</code>, where <code>n</code> is an integer corresponding to brace in <code>artifact-coordinates</code>.</dd></dl>
+<h2>Author</h2>
+<p>Originally written by Mikolaj Izdebski. Versions 3.0.0 and later were written by Stanislav Ochotnicky.</p>
+<h2>Reporting Bugs</h2>
+<p>Bugs should be reported through Red Hat Bugzilla at m[blue]<code><a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a></code>m[].</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/7-mvn_alias/">mvn_alias</a></code>(7), <code><a href="/docs/linux/man/7-mvn_build/">mvn_build</a></code>(7), <code><a href="/docs/linux/man/7-mvn_compat_version/">mvn_compat_version</a></code>(7), <code><a href="/docs/linux/man/7-mvn_config/">mvn_config</a></code>(7), <code><a href="/docs/linux/man/7-mvn_package/">mvn_package</a></code>(7), <code>xmvn</code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zarafa-search(1) · Linux Manual Pages</title>
+<meta name="description" content="zarafa-search – Zarafa Indexed Search Service.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-zarafa-search/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>zarafa-search(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> zarafa-search &#8211; Zarafa Indexed Search Service. </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>zarafa-search</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The zarafa-search daemon is used to index all messages for all users in the zarafa-server. Indexing messages greatly enhances the search performance of the zarafa-server. </dd>
+<p> After starting, the search daemon will continuesly update the store index files and will keep listening for connections on the configured TCP port and/or Unix socket for search requests from the <code><a href="/docs/linux/man/1-zarafa-server/">zarafa-server</a></code>(1).</p>
+<h2>OPTIONS</h2>
+<p> The Zarafa search program takes the following configuration options: </p>
+<p> <code>&#8211;config</code>, <code>-c</code> <i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Specify the location of the configuration file. </dd>
+<p> Default: <i>/etc/zarafa/search.cfg</i></dl>
+<p> <code>&#8211;foreground</code>, <code>-F</code></p>
+<dl>
+<dt>
+</dt><dd> Run in the foreground. Normally the zarafa-search process will daemonize and run in the background.</dd></dl>
+<p> <code>&#8211;host</code>, <code>-h</code> <i>path</i></p>
+<dl>
+<dt>
+</dt><dd> Connect to the Zarafa server through <i>path</i>, e.g. file:///path/to/socket. Default: file:///var/run/zarafa.</dd></dl>
+<p> <code>-V</code></p>
+<dl>
+<dt>
+</dt><dd> Print the version and exit.</dd></dl>
+<p> <code>&#8211;ignore-unknown-config-options</code></p>
+<dl>
+<dt>
+</dt><dd> When unknown options exists in the configuration file the search daemon will report an error and shutdown. Pass this option to ignore unknown options so zarafa-search will start.</dd></dl>
+<p> <code>&#8211;reindex</code> <i>username</i></p>
+<dl>
+<dt>
+</dt><dd> Remove the current index of the given user and start to make a new index immediately. </dd>
+<p> The zarafa-search daemon must already be running on the same machine.</dl>
+<p> When invoked with no options, the zarafa-search daemon will search for a configuration file in /etc/zarafa/search.cfg. If no configuration file is found, default values are used. See <code><a href="/docs/linux/man/5-zarafa-search-cfg/">zarafa-search.cfg</a></code>(5) for all configuration options and their default values.</p>
+<h2>USAGE</h2>
+<p> Starting the zarafa-search daemon with an alternative configuration: </p>
+<p> <code>zarafa-search</code><code>-c</code><i>/path/to/search.cfg</i> </p>
+<p> You may also use the init.d scripts: </p>
+<p> <code>/etc/init.d/zarafa-search</code> [<i>start</i>| <i>stop</i>| <i>restart</i>| <i>reload</i>]</p>
+<h2>AUTHOR</h2>
+<p> Written by Zarafa.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-zarafa-server/">zarafa-server</a></code>(1)<code><a href="/docs/linux/man/5-zarafa-search-cfg/">zarafa-search.cfg</a></code>(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>guards(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-guards/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>guards(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>guards - select from a list of files guarded by conditions</p>
+<h2>SYNOPSIS</h2>
+<p><i>guards</i> [&ndash;prefix=<i>dir</i>] [&ndash;path=<i>dir1:dir2:&hellip;</i>] [&ndash;default=&lt;0|1&gt;] <tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt> [&ndash;check|&ndash;list] [&ndash;invert-match] [&ndash;with-guards] [&ndash;config=&lt;file&gt;]
+<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt> <i>symbol</i> &hellip;</p>
+<h2>DESCRIPTION</h2>
+<p>The script reads a configuration file that may contain so-called guards, file names, and comments, and writes those file names that satisfy all guards to standard output. The script takes a list of symbols as its arguments. Each line in the configuration file is processed separately. Lines may start with a number of guards. The following guards are defined:</p>
+<dl>
+<dt>
+</dt><dd> +<i>xxx</i> Include the file(s) on this line if the symbol <i>xxx</i> is defined. 
+ -<i>xxx</i> Exclude the file(s) on this line if the symbol <i>xxx</i> is defined. 
+ +!<i>xxx</i> Include the file(s) on this line if the symbol <i>xxx</i> is not defined. 
+ -!<i>xxx</i> Exclude the file(s) on this line if the symbol <i>xxx</i> is not defined. 
+ - Exclude this file. Used to avoid spurious <i>--check</i> messages.</dd></dl>
+<p>The guards are processed left to right. The last guard that matches determines if the file is included. If no guard is specified, the <i>&ndash;default</i> setting determines if the file is included.</p>
+<p>If no configuration file is specified, the script reads from standard input.</p>
+<p>The <i>&ndash;check</i> option is used to compare the specification file against the file system. If files are referenced in the specification that do not exist, or if files are not enlisted in the specification file warnings are printed. The <i>&ndash;path</i> option can be used to specify which directory or directories to scan. Multiple directories are separated by a colon (<tt>&quot;:&quot;</tt>) character. The <i>&ndash;prefix</i> option specifies the location of the files.</p>
+<p>Use <i>&ndash;list</i> to list all files independent of any rules. Use <i>&ndash;invert-match</i> to list only the excluded patches. Use <i>&ndash;with-guards</i> to also include all inclusion and exclusion rules.</p>
+<h2>AUTHOR</h2>
+<p>Andreas Gruenbacher &lt;agruen [at] suse.de&gt;, <font SIZE="-1">SUSE</font> Labs</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

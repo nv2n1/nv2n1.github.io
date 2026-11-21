@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdreplace_copystdreplace_copy_if(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdreplace_copystdreplace_copy_if/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdreplace_copystdreplace_copy_if(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::replace_copy,std::replace_copy_if - std::replace_copy,std::replace_copy_if</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;algorithm&gt;
+    template &lt;class InputIt, class OutputIt, class T&gt;
+    OutputIt replace_copy(InputIt first, InputIt last, OutputIt d_first, (until C++ 20)
+                                                                             const T &amp;old_value,
+                          const T &amp;new_value);
+template &lt;class InputIt, class OutputIt, class T&gt;
+constexpr OutputIt replace_copy(InputIt first, InputIt last, OutputIt d_first, (since C++ 20)
+                                                                                   const T &amp;old_value,
+                                const T &amp;new_value);
+template &lt;class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class T&gt;
+ForwardIt2 replace_copy(ExecutionPolicy &amp;&amp;policy, ForwardIt1 first, ForwardIt1 last, (2)(since C++ 17)
+                                                                                         ForwardIt2 d_first,
+                        const T &amp;old_value, const T &amp;new_value);
+(1)
+    template &lt;class InputIt, class OutputIt, class UnaryPredicate, class T&gt;
+    OutputIt replace_copy_if(InputIt first, InputIt last, OutputIt d_first, (until C++ 20)
+                                                                                UnaryPredicate p,
+                             const T &amp;new_value);
+template &lt;class InputIt, class OutputIt, class UnaryPredicate, class T&gt;
+constexpr OutputIt replace_copy_if(InputIt first, InputIt last, OutputIt d_first, (3)(since C++ 20)
+                                                                                      UnaryPredicate p,
+                                   const T &amp;new_value);
+template &lt;class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class UnaryPredicate, class T&gt;
+ForwardIt2 replace_copy_if(ExecutionPolicy &amp;&amp;policy, ForwardIt1 first, ForwardIt1 last, (4)(since C++ 17)
+                                                                                            ForwardIt2 d_first,
+                           UnaryPredicate p, const T &amp;new_value);</code></pre> 
+<p>Copies the elements from the range [first, last) to another range beginning at d_first replacing all elements satisfying specific criteria with new_value. The source and destination ranges cannot overlap.</p>
+<ol>
+<li>Replaces all elements that are equal to old_value.</li>
+<li>Replaces all elements for which predicate p returns true.
+2,4) Same as (1,3), but executed according to policy. This overload only participates in overload resolution if std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true</li>
+</ol>
+<h2>Parameters</h2>
+<p>first, last - the range of elements to copy
+d_first - the beginning of the destination range
+old_value - the value of elements to replace
+policy - the execution policy to use. See execution_policy for details.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> unary predicate which returns true if the element value should be replaced.
+p - The expression p(v) must be convertible to bool for every argument v of type (possibly const) VT, where VT is the value type of InputIt, regardless of value_category, and must not modify v. Thus, a parameter type of VT&amp;is not allowed
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> , nor is VT unless for VT a move is equivalent to a copy
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(since C++11)</i>.
+new_value - the value to use as replacement</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="inputit-must-meet-the-requirements-of-legacyinputiterator">InputIt must meet the requirements of LegacyInputIterator.</h2>
+<h2 id="outputit-must-meet-the-requirements-of-legacyoutputiterator">OutputIt must meet the requirements of LegacyOutputIterator.</h2>
+<p>ForwardIt1, ForwardIt2 must meet the requirements of LegacyForwardIterator.</p>
+<h2>Return value</h2>
+<p>Iterator to the element past the last element copied.</p>
+<h2>Complexity</h2>
+<p>Exactly last - first applications of the predicate.</p>
+<h2>Exceptions</h2>
+<p>The overloads with a template parameter named ExecutionPolicy report errors as follows:</p>
+<ul>
+<li>If execution of a function invoked as part of the algorithm throws an exception and ExecutionPolicy is one of the standard_policies, std::terminate is called. For any other ExecutionPolicy, the behavior is implementation-defined.</li>
+<li>If the algorithm fails to allocate memory, std::bad_alloc is thrown.</li>
+</ul>
+<h2>Possible implementation</h2>
+<h2>First version</h2>
+<p> <wbr> template&lt;class InputIt, class OutputIt, class T&gt;
+ <wbr> OutputIt replace_copy(InputIt first, InputIt last, OutputIt d_first,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> const T&amp; old_value, const T&amp; new_value)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (; first != last; ++first) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> *d_first++ = (*first == old_value) ? new_value : *first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return d_first;
+ <wbr> }</p>
+<h2>Second version</h2>
+<p> <wbr> template&lt;class InputIt, class OutputIt,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> class UnaryPredicate, class T&gt;
+ <wbr> OutputIt replace_copy_if(InputIt first, InputIt last, OutputIt d_first,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> UnaryPredicate p, const T&amp; new_value)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (; first != last; ++first) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> *d_first++ = p( *first ) ? new_value : *first;
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return d_first;
+ <wbr> }</p>
+<h2>Example</h2>
+<p>The following copy prints a vector, replacing all values over 5 with 99 on the fly.
+// Run this code <pre><code>#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;iterator&gt;
+#include &lt;functional&gt;
+int main()
+{
+std::vector&lt;int&gt; v{5, 7, 4, 2, 8, 6, 1, 9, 0, 3};
+std::replace_copy_if(
+v.begin(), v.end(),
+std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;),
+[](int n) { return n &gt; 5; }, 99);
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 5 99 4 2 99 99 1 99 0 3</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> removes elements satisfying specific criteria
+remove <i>(function template)</i>
+remove_if</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

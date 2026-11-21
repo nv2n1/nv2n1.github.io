@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting a User’s Home Directory in Bash - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-get-a-users-home-directory-from-the-username-in-a-variables-in-bash/">
+  <meta name="description" content="The tilde expansion ~username works fine when the username is literal, but fails when the username is stored in a variable like ~$user. Bash doesn’t perform …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Getting a User’s Home Directory in Bash">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-get-a-users-home-directory-from-the-username-in-a-variables-in-bash/">
+  <meta property="og:description" content="The tilde expansion ~username works fine when the username is literal, but fails when the username is stored in a variable like ~$user. Bash doesn’t perform …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/users-permissions/">Users &amp; Permissions</a>
+        </nav>
+        
+        <h1>Getting a User’s Home Directory in Bash</h1>
+        <time class="post-date" datetime="2018-03-24T11:49:54Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The tilde expansion <code>~username</code> works fine when the username is literal, but fails when the username is stored in a variable like <code>~$user</code>. Bash doesn’t perform tilde expansion on variables by default—it only expands <code>~</code> at the beginning of a word before variable expansion happens.</p>
+<h2 id="using-eval">Using eval</h2>
+<p>The most common approach is to use <code>eval</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">user</span><span class="o">=</span><span class="s2">&#34;alice&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">userhome</span><span class="o">=</span><span class="k">$(</span><span class="nb">eval</span> <span class="nb">echo</span> ~<span class="nv">$user</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$userhome</span><span class="s2">&#34;</span>  <span class="c1"># Output: /home/alice</span>
+</span></span></code></pre></div><p>The <code>eval</code> forces a re-evaluation of the string, allowing the tilde expansion to occur after variable substitution. However, <code>eval</code> has security implications if the variable comes from untrusted input, since it executes arbitrary code.</p>
+<h2 id="using-getent-recommended">Using getent (Recommended)</h2>
+<p>A safer and more portable approach is to query the system’s user database directly with <code>getent</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">user</span><span class="o">=</span><span class="s2">&#34;alice&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">userhome</span><span class="o">=</span><span class="k">$(</span>getent passwd <span class="s2">&#34;</span><span class="nv">$user</span><span class="s2">&#34;</span> <span class="p">|</span> cut -d: -f6<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$userhome</span><span class="s2">&#34;</span>  <span class="c1"># Output: /home/alice</span>
+</span></span></code></pre></div><p>This method:</p>
+<ul>
+<li>Works across Linux, BSD, and macOS</li>
+<li>Handles users from LDAP, NIS, or other directory services (not just <code>/etc/passwd</code>)</li>
+<li>Avoids shell expansion quirks</li>
+<li>Is safer with untrusted input</li>
+</ul>
+<h2 id="checking-if-the-user-exists">Checking if the User Exists</h2>
+<p><code>getent</code> returns nothing if the user doesn’t exist, so you can validate:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">user</span><span class="o">=</span><span class="s2">&#34;alice&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nv">userhome</span><span class="o">=</span><span class="k">$(</span>getent passwd <span class="s2">&#34;</span><span class="nv">$user</span><span class="s2">&#34;</span> <span class="p">|</span> cut -d: -f6<span class="k">)</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Home directory: </span><span class="nv">$userhome</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;User &#39;</span><span class="nv">$user</span><span class="s2">&#39; not found&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><h2 id="using-parameter-expansion-with-eval">Using Parameter Expansion with eval</h2>
+<p>If you prefer <code>eval</code> but want to be more explicit:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">user</span><span class="o">=</span><span class="s2">&#34;alice&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">userhome</span><span class="o">=</span><span class="k">$(</span><span class="nb">eval</span> <span class="nb">echo</span> <span class="s2">&#34;~</span><span class="si">${</span><span class="nv">user</span><span class="si">}</span><span class="s2">&#34;</span><span class="k">)</span>
+</span></span></code></pre></div><p>The quotes ensure the variable is expanded safely. Still use this only with trusted input.</p>
+<h2 id="using-home-variable-as-fallback">Using HOME Variable as Fallback</h2>
+<p>For the current user, just reference the <code>$HOME</code> variable directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">&#34;</span>  <span class="c1"># Current user&#39;s home</span>
+</span></span></code></pre></div><p>For other users, stick with <code>getent</code>.</p>
+<h2 id="performance-consideration">Performance Consideration</h2>
+<p>If you’re calling this repeatedly in a loop, <code>getent</code> is slightly faster than <code>eval echo</code> since it’s a single system call rather than spawning a subshell:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Good for loops</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> user in alice bob charlie<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">home</span><span class="o">=</span><span class="k">$(</span>getent passwd <span class="s2">&#34;</span><span class="nv">$user</span><span class="s2">&#34;</span> <span class="p">|</span> cut -d: -f6<span class="k">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">[[</span> -n <span class="s2">&#34;</span><span class="nv">$home</span><span class="s2">&#34;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$user</span><span class="s2">: </span><span class="nv">$home</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></div><h2 id="summary">Summary</h2>
+<ul>
+<li><strong>For safety and portability</strong>: Use <code>getent passwd &quot;$user&quot; | cut -d: -f6</code></li>
+<li><strong>For the current user only</strong>: Use <code>$HOME</code></li>
+<li><strong>For trusted input only</strong>: Use <code>eval echo ~$user</code> if getent isn’t available</li>
+</ul>
+<p>The <code>getent</code> approach is the modern standard across sysadmin practices and handles edge cases like centralized authentication better than tilde expansion.</p>
+<h2 id="practical-tips-and-common-gotchas">Practical Tips and Common Gotchas</h2>
+<p>When working with programming languages on Linux, environment management is crucial. Use version managers like asdf, pyenv, or sdkman to handle multiple language versions without system-wide conflicts. Always pin dependency versions in production to prevent unexpected breakage from upstream changes.</p>
+<p>For build automation, modern alternatives often outperform traditional tools. Consider using just or task instead of Make for simpler task definitions. Use containerized build environments to ensure reproducibility across different development machines.</p>
+<h2 id="debugging-strategies">Debugging Strategies</h2>
+<p>Start with the simplest debugging approach and escalate as needed. Print statements and logging often reveal the issue faster than attaching a debugger. For complex issues, use language-specific debuggers like gdb for C and C++, jdb for Java, or dlv for Go. Always check error messages carefully before diving into code.</p>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

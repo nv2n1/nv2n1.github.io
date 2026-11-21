@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cifsiostat(1) · Linux Manual Pages</title>
+<meta name="description" content="cifsiostat – Report CIFS statistics.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-cifsiostat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>cifsiostat(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> cifsiostat &#8211; Report CIFS statistics.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>cifsiostat [ -h ] [ -k | -m ] [ -t ] [ -V ] [ &#8211;dec={ 0 | 1 | 2 } ] [ &#8211;human ] [ &#8211;pretty ] [</code> <i>interval </i><code>[ </code><i>count </i><code>] ]</code> </p>
+<h2>DESCRIPTION</h2>
+<p> The <code>cifsiostat</code> command displays statistics about read and write operations on CIFS filesystems. </p>
+<p> The <i>interval</i> parameter specifies the amount of time in seconds between each report. The first report contains statistics for the time since system startup (boot). Each subsequent report contains statistics collected during the interval since the previous report. A report consists of a CIFS header row followed by a line of statistics for each CIFS filesystem that is mounted. The <i>count </i>parameter can be specified in conjunction with the <i>interval </i> parameter. If the <i>count </i>parameter is specified, the value of <i>count </i> determines the number of reports generated at <i>interval </i>seconds apart. If the <i>interval </i> parameter is specified without the <i>count </i>parameter, the <code>cifsiostat </code>command generates reports continuously. </p>
+<h2>REPORT</h2>
+<p> The CIFS report provides statistics for each mounted CIFS filesystem. The report shows the following fields: </p>
+<dl>
+<dt>Filesystem:</dt>
+<dd> This columns shows the mount point of the CIFS filesystem.</dd>
+<dt>rB/s (rkB/s, rMB/s)</dt>
+<dd> Indicate the average number of bytes (kilobytes, megabytes) read per second.</dd>
+<dt>wB/s (wkB/s, wMB/s)</dt>
+<dd> Indicate the average number of bytes (kilobytes, megabytes) written per second.</dd>
+<dt>rop/s</dt>
+<dd> Indicate the number of &#8216;read&#8217; operations that were issued to the filesystem per second.</dd>
+<dt>wop/s</dt>
+<dd> Indicate the number of &#8216;write&#8217; operations that were issued to the filesystem per second.</dd>
+<dt>fo/s</dt>
+<dd> Indicate the number of open files per second.</dd>
+<dt>fc/s</dt>
+<dd> Indicate the number of closed files per second.</dd>
+<dt>fd/s</dt>
+<dd> Indicate the number of deleted files per second. </dd>
+</dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;dec={ 0 | 1 | 2 }</code></dt>
+<dd> Specify the number of decimal places to use (0 to 2, default value is 2).</dd>
+<dt><code>-h</code></dt>
+<dd> This option is equivalent to specifying <code>&#8211;human &#8211;pretty</code>.</dd>
+<dt><code>&#8211;human</code></dt>
+<dd> Print sizes in human readable format (e.g. 1.0k, 1.2M, etc.) The units displayed with this option supersede any other default units (e.g. kilobytes, sectors&#8230;) associated with the metrics.</dd>
+<dt><code>-k</code></dt>
+<dd> Display statistics in kilobytes per second.</dd>
+<dt><code>-m</code></dt>
+<dd> Display statistics in megabytes per second.</dd>
+<dt><code>&#8211;pretty</code></dt>
+<dd> Make the CIFS report easier to read by a human.</dd>
+<dt><code>-t</code></dt>
+<dd> Print the time for each report displayed. The timestamp format may depend on the value of the <code>S_TIME_FORMAT </code>environment variable (see below).</dd>
+<dt><code>-V</code></dt>
+<dd> Print version number then exit. </dd>
+</dl>
+<h2>ENVIRONMENT</h2>
+<p> The <code>cifsiostat </code>command takes into account the following environment variables:</p>
+<dl>
+<dt><code>S_COLORS</code></dt>
+<dd> By default statistics are displayed in color when the output is connected to a terminal. Use this variable to change the settings. Possible values for this variable are <code>never</code>, <code>always </code>or <code>auto </code>(the latter is equivalent to the default settings).<br />
+ Please note that the color (being red, yellow, or some other color) used to display a value is not indicative of any kind of issue simply because of the color. It only indicates different ranges of values.</dd>
+<dt><code>S_COLORS_SGR</code></dt>
+<dd> Specify the colors and other attributes used to display statistics on the terminal. Its value is a colon-separated list of capabilities that defaults to <code>I=32;22:N=34;1:Z=34;22</code>. Supported capabilities are:</dd>
+<dl>
+<dl>
+<dt><code>I=</code></dt>
+<dd> SGR substring for filesystem names.</dd>
+<dt><code>N=</code></dt>
+<dd> SGR substring for non-zero statistics values.</dd>
+<dt><code>Z=</code></dt>
+<dd> SGR substring for zero values.</dd></dl>
+</dl>
+<dt><code>S_TIME_FORMAT</code></dt>
+<dd> If this variable exists and its value is <code>ISO</code> then the current locale will be ignored when printing the date in the report header. The <code>cifsiostat</code> command will use the ISO 8601 format (YYYY-MM-DD) instead. The timestamp displayed with option <code>-t </code>will also be compliant with ISO 8601 format. </dd>
+</dl>
+<h2>BUG</h2>
+<p> <i>/proc </i>filesystem must be mounted for <code>cifsiostat </code>to work. </p>
+<p> Although <code>cifsiostat</code> speaks of kilobytes (kB), megabytes (MB)&#8230;, it actually uses kibibytes (kiB), mebibytes (MiB)&#8230; A kibibyte is equal to 1024 bytes, and a mebibyte is equal to 1024 kibibytes. </p>
+<h2>FILE</h2>
+<p> <i>/proc/fs/cifs/Stats </i>contains CIFS statistics. </p>
+<h2>AUTHORS</h2>
+<p> Written by Ivana Varekova (varekova &lt;at&gt; redhat.com)<br />
+ Maintained by Sebastien Godard (sysstat &lt;at&gt; orange.fr) </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-sar/">sar</a></code>(1), <code><a href="/docs/linux/man/1-pidstat/">pidstat</a></code>(1), <code><a href="/docs/linux/man/1-mpstat/">mpstat</a></code>(1), <code><a href="/docs/linux/man/8-vmstat/">vmstat</a></code>(8), <code><a href="/docs/linux/man/1-iostat/">iostat</a></code>(1), <code><a href="/docs/linux/man/1-tapestat/">tapestat</a></code>(1), <code><a href="/docs/linux/man/1-nfsiostat/">nfsiostat</a></code>(1) </p>
+<p> <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br />
+ <i><a rel="nofollow" href="http://pagesperso-orange.fr/sebastien.godard/">http://pagesperso-orange.fr/sebastien.godard/</a></i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

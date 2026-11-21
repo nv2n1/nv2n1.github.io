@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>catman(8) · Linux Manual Pages</title>
+<meta name="description" content="catman – create or update the pre-formatted manual pages">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-catman/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>catman(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>catman &#8211; create or update the pre-formatted manual pages</p>
+<h2>Synopsis</h2>
+<p><code>catman</code> [<code>-d?V</code>] [<code>-M</code> <i>path</i>] [<code>-C</code> <i>file</i>] [<i>section</i>] &#8230;</p>
+<h2>Description</h2>
+<p><code>catman</code> is used to create an up to date set of pre-formatted manual pages known as cat pages. Cat pages are generally much faster to display than the original manual pages, but require extra storage space. The decision to support cat pages is that of the local administrator, who must provide suitable directories to contain them. </p>
+<p> The options available to <code>catman</code> are the manual page hierarchies and sections to pre-format. The default hierarchies are those specified as system hierarchies in the man-db configuration file, and the default sections are either the colon-delimited contents of the environment variable $<code>MANSECT</code> or the standard set compiled into <code>man</code> if $<code>MANSECT</code> is undefined. Supplying <code>catman</code> with a set of whitespace-delimited section names will override both of the above. </p>
+<p> <code>catman</code> makes use of the <code>index</code> database cache associated with each hierarchy to determine which files need to be formatted.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>Print debugging information.</dd>
+<dt><code>-M&nbsp;</code><i>path</i>,&nbsp;<code>&#8211;manpath=</code><i>path</i></dt>
+<dd>Specify an alternate colon-delimited manual page hierarchy search path. By default, this is all paths indicated as system hierarchies in the man-db configuration file.</dd>
+<dt><code>-C&nbsp;</code><i>file</i>,&nbsp;<code>&#8211;config-file=</code><i>file</i></dt>
+<dd>Use this user configuration file rather than the default of <i>~/.manpath</i>.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Print a help message and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Print a short usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Display version information.</dd></dl>
+<h2>Environment</h2>
+<dl>
+<dt><code>MANSECT</code></dt>
+<dd>If $<code>MANSECT</code> is set, its value is a colon-delimited list of sections and it is used to determine which manual sections to search and in what order. The default is &quot;1 n l 8 3 0 2 3posix 3pm 3perl 3am 5 4 9 6 7&quot;, unless overridden by the <code>SECTION</code> directive in <i>/etc/manpath.config</i>.</dd>
+<dt><code>MANPATH</code></dt>
+<dd>If $<code>MANPATH</code> is set, its value is interpreted as the colon-delimited manual page hierarchy search path to use. </dd>
+<p> See the <code>SEARCH PATH</code> section of <code><a href="/docs/linux/man/5-manpath/">manpath</a></code>(5) for the default behaviour and details of how this environment variable is handled.</dl>
+<h2>Files</h2>
+<dl>
+<dt><i>/etc/manpath.config</i></dt>
+<dd>man-db configuration file.</dd>
+<dt><i>/usr/man/index.(bt|db|dir|pag)</i></dt>
+<dd>A traditional global <i>index</i> database cache.</dd>
+<dt><i>/var/catman/index.(bt|db|dir|pag)</i></dt>
+<dd>An alternate or FSSTND compliant global <i>index</i> database cache.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code><a href="/docs/linux/man/5-manpath/">manpath</a></code>(5), <code><a href="/docs/linux/man/8-mandb/">mandb</a></code>(8)</p>
+<h2>Author</h2>
+<pre>Wilf. (G.Wilford [at] ee.surrey.ac.uk).
+Fabrizio Polacco (fpolacco [at] debian.org).
+Colin Watson (cjwatson [at] debian.org).</pre>
+<h2>Bugs</h2>
+<p><a rel="nofollow" href="https://gitlab.com/cjwatson/man-db/-/issues">https://gitlab.com/cjwatson/man-db/-/issues</a><br />
+ <a rel="nofollow" href="https://savannah.nongnu.org/bugs/?group=man-db">https://savannah.nongnu.org/bugs/?group=man-db</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

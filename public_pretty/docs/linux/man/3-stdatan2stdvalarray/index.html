@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdatan2stdvalarray(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdatan2stdvalarray/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdatan2stdvalarray(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::atan2(std::valarray) - std::atan2(std::valarray)</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;valarray&gt;
+    template &lt;class T&gt;
+    (1)
+        std::valarray&lt;T&gt; atan2(const std::valarray&lt;T&gt; &amp;y, const std::valarray&lt;T&gt; &amp;x);
+template &lt;class T&gt;
+std::valarray&lt;T&gt; atan2(const std::valarray&lt;T&gt; &amp;y, (2)
+                                                      const typename std::valarray&lt;T&gt;::value_type &amp;vx);
+template &lt;class T&gt;
+std::valarray&lt;T&gt; atan2(const typename std::valarray&lt;T&gt;::value_type &amp;vy, (3)
+                                                                            const std::valarray&lt;T&gt; &amp;x);</code></pre> 
+<p>Computes the inverse tangent of y/x using the signs of arguments to correctly determine quadrant.</p>
+<ol>
+<li>Computes the inverse tangent of each pair of corresponding values from y and x.
+The behavior is undefined if x.size() != y.size().</li>
+<li>Computes the inverse tangent of vx and each value in the numeric array y.</li>
+<li>Computes the inverse tangent of vy and each value in the numeric array x.</li>
+</ol>
+<h2>Parameters</h2>
+<p>x, y - numeric arrays to compute inverse tangent of
+vy, vx - values to compute inverse tangent of</p>
+<h2>Return value</h2>
+<p>A numeric array containing the results of computation of inverse tangent.</p>
+<h2>Notes</h2>
+<p>Unqualified function (atan2) is used to perform the computation. If such function is not available, std::atan2 is used due to argument dependent lookup.</p>
+<p>The function can be implemented with the return type different from std::valarray. In this case, the replacement type has the following properties:</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> * All const member functions of std::valarray are provided.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * std::valarray, std::slice_array, std::gslice_array, std::mask_array and std::indirect_array can be constructed from the replacement type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * All functions accepting an argument of type const std::valarray&amp;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> except begin() and end()
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(since C++11)</i> should also accept the replacement type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * All functions accepting two arguments of type const std::valarray&amp; should accept every combination of const std::valarray&amp; and the replacement type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * The return type does not add more than two levels of template nesting over the most deeply-nested argument type.
+Defect reports
+The following behavior-changing defect reports were applied retroactively to previously published C++ standards. <pre><code>DR       Applied to Behavior as published                                                                      Correct behavior
+LWG_3074 C++98      T is deduced from both the scalar and the valarray for (2-3), disallowing mixed-type calls only deduce T from the valarray
+</code></pre></p>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> applies the function std::asin to each element of valarray
+asin(std::valarray) <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> applies the function std::acos to each element of valarray
+acos(std::valarray) <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> applies the function std::atan to each element of valarray
+atan(std::valarray) <i>(function template)</i>
+atan2
+atan2f
+atan2l arc tangent, using signs to determine quadrants
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the phase angle
+arg <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

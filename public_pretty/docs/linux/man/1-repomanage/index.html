@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>repomanage(1) · Linux Manual Pages</title>
+<meta name="description" content="repomanage – list the newest or oldest RPM packages in a directory">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-repomanage/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>repomanage(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> repomanage &#8211; list the newest or oldest RPM packages in a directory</p>
+<h2>SYNOPSIS</h2>
+<p> <code>repomanage</code> [options] directory</p>
+<h2>DESCRIPTION</h2>
+<p> <code>repomanage</code> is a program to manage a directory of RPM packages. It displays a list of the newest or oldest packages in a directory for easy piping to xargs or similar programs. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a help message, and then quit.</dd>
+<dt><code>-o, &#8211;old</code></dt>
+<dd> Print the oldest packages.</dd>
+<dt><code>-n, &#8211;new</code></dt>
+<dd> Print the newest packages.</dd>
+<dt><code>-s, &#8211;space</code></dt>
+<dd> Space-separated instead of newline-separated output.</dd>
+<dt><code>-k KEEP, &#8211;keep=KEEP</code></dt>
+<dd> Newest N packages to keep &#8211; defaults to 1.</dd>
+<dt><code>-c, &#8211;nocheck</code></dt>
+<dd> Do not check package payload signatures/digests. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<pre>
+<i>yum.conf (5)</i>
+<a rel="nofollow" href="http://yum.baseurl.org/">http://yum.baseurl.org/</a>
+</pre>
+<h2>AUTHORS</h2>
+<pre>
+See the Authors file included with this program.
+</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

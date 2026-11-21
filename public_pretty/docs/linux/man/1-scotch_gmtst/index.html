@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scotch_gmtst(1) · Linux Manual Pages</title>
+<meta name="description" content="gmtst – compute statistics on mappings">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-scotch_gmtst/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>scotch_gmtst(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> <code>gmtst </code>&#8211; compute statistics on mappings</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+gmtst[options][gfile][tfile][mfile][lfile]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>gmtst</code> program computes, in a sequential way, statistics on a static mapping, such as load imbalance ratio, edge dilation distribution, etc. It yields the same results as the ones produced by the <code>-vm</code> option of the <code>gmap</code>(1) program. </p>
+<p> Source graph file <i>gfile</i> can only be a centralized graph file. File <i>tfile</i> represents the target architecture onto which <i>gfile</i> was mapped. If mapping file <i>mfile</i> was produced by <code>gpart</code>(1), the target architecture file to provide <code>gmtst</code> should describe a complete graph with the same number of vertices as the requested number of parts, for instance by means of the &#8216;<code>cmplt</code> <i>num</i>&#8216; algorithmically-described architecture. The resulting statistics are stored in file <i>lfile</i>. When file names are not specified, data is read from standard input and written to standard output. Standard streams can also be explicitly represented by a dash &#8216;-&#8216;. </p>
+<p> When the proper libraries have been included at compile time, gtst can directly handle compressed graphs, both as input and output. A stream is treated as compressed whenever its name is postfixed with a compressed file extension, such as in &#8216;brol.grf.bz2&#8217; or &#8216;-.gz&#8217;. The compression formats which can be supported are the bzip2 format (&#8216;.bz2&#8217;), the gzip format (&#8216;.gz&#8217;), and the lzma format (&#8216;.lzma&#8217;, on input only).</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h</code></dt>
+<dd> Display some help.</dd>
+<dt><code>-V</code></dt>
+<dd> Display program version and copyright.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Display statistics on mapping brol.map of graph brol.grf onto target architecture brol.tgt: </p>
+<pre>
+    $ gmtst brol.grf brol.tgt brol.map
+</pre>
+<p> Display statistics on partitioning brol.map of graph brol.grf into <i>num</i> parts. Note the use of the complete graph algorithmically-described architecture and of the shell pipe command to provide the complete target architecture description on the standard input of the <code>gmtst</code> command: </p>
+<pre>
+    $ echo &quot;cmplt num&quot; | gmtst brol.grf - brol.map
+</pre>
+<h2>SEE ALSO</h2>
+<p> <code>gmap</code>(1), <code>gout</code>(1), <code>gtst</code>(1). </p>
+<p> Scotch user&#8217;s manual.</p>
+<h2>AUTHOR</h2>
+<p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

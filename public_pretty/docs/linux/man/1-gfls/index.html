@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gfls(1) · Linux Manual Pages</title>
+<meta name="description" content="gfls – manual page for gfls (glusterfs-coreutils) 0.2.0">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gfls/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gfls(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> gfls &#8211; manual page for gfls (glusterfs-coreutils) 0.2.0</p>
+<h2>SYNOPSIS</h2>
+<p> <code>gfls</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>
+<h2>DESCRIPTION</h2>
+<p> list directory contents</p>
+<dl>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd> do not ignore entries starting with .</dd>
+<dt><code>-h</code>, <code>&#8211;human-readable</code></dt>
+<dd> with <code>-l</code>, print sizes in human readable format (e.g., 1K 234M 2G)</dd>
+<dt><code>-l</code></dt>
+<dd> use a long listing format</dd>
+<dt><code>-R</code>, <code>&#8211;recursive</code></dt>
+<dd> list subdirectories recursively</dd>
+<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></dt>
+<dd> specify the port on which to connect</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>
+</dt><dd> gfls <a href="glfs://localhost/groot/directory">glfs://localhost/groot/directory</a></dd>
+<dt>
+</dt><dd> List the contents of /directory on the Gluster volume root on host localhost.</dd>
+<dt>
+</dt><dd> gfls -l <a href="glfs://localhost/groot/directory">glfs://localhost/groot/directory</a></dd>
+<dt>
+</dt><dd> List the contents of /directory on the Gluster volume root on host localhost using the long listing format.</dd>
+<dt>
+</dt><dd> gfls -Rl <a href="glfs://localhost/groot/directory">glfs://localhost/groot/directory</a></dd>
+<dt>
+</dt><dd> Recursively list the contents of /directory on the Gluster volume groot on host localhost using the long listing format.</dd>
+<dt>
+</dt><dd> gfcli (localhost/groot)&gt; ls /</dd>
+<dt>
+</dt><dd> List the contents of the root of the connected Gluster volume.</dd></dl>
+<h2>AUTHOR</h2>
+<p> Written by Craig Cabrey.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2015 Facebook, Inc. License GPLv3: GNU GPL version 3 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl-3.0.en.html">http://www.gnu.org/licenses/gpl-3.0.en.html</a>&gt;.<br />
+ This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-gfcli/">gfcli</a>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lintian-info(1) · Linux Manual Pages</title>
+<meta name="description" content="lintian-info – give detailed information about Lintian’s error tags">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lintian-info/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lintian-info(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> lintian-info &#8211; give detailed information about Lintian&#8217;s error tags </p>
+<h2>SYNOPSIS</h2>
+<p> <code>lintian-info</code> [<i>log-file</i>&#8230;] </p>
+<p> <code>lintian-info</code> <code>&#8211;tags</code> <i>tag</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>lintian-info</code> command parses the output of the <code>lintian</code> command and gives verbose information about the listed Lintian error tags, parses a Lintian override file and gives verbose information about the tags included, or (if given the <code>-t</code> or <code>&#8211;tags</code> option) explains a given tag or tags. </p>
+<p> If no log-file is specified on the command line, this command expects its input on stdin. Thus, the output of <code>lintian</code> can either be piped through <code>lintian-info</code> or a log file produced by <code>lintian</code> can be processed with this command. (Note, though, that the <code>lintian</code> command has a command line option <code>-i</code> to display the same results as <code>lintian-info</code>, so you will not normally need to pipe the output of <code>lintian</code> into this command.)</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-a</code>, <code>&#8211;annotate</code></dt>
+<dd> Read from standard input or any files specified on the command line and search the input for lines formatted like Lintian override entries. For each one that was found, display verbose information about that tag.</dd>
+<dt><code>-l</code>, <code>&#8211;list-tags</code></dt>
+<dd> List all tags Lintian knows about in sorted order.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display usage information and exit.</dd>
+<dt><code>&#8211;include-dir</code> dir</dt>
+<dd> Use dir as an additional &#8220;Lintian root&#8221;. The directory is expected have a similar layout to the <font SIZE="-1">LINTIAN_ROOT</font> (if it exists), but does not need to be a full self-contained root. </dd>
+<p> Unlike <code>lintian</code>, <code>lintian-info</code> will <i>not</i> load any code from these additional directories. </p>
+<p> This option may appear more than once; each time adding an additional directory. </p>
+<p> <code>Note</code>: This option should be the very first if given.</p>
+<dt><code>&#8211;profile</code> prof</dt>
+<dd> Use the severities from the vendor profile prof when displaying tags. If the profile name does not contain a slash, the default profile for that vendor is chosen. </dd>
+<p> If not specified, <code>lintian-info</code> loads the best profile for the current vendor. </p>
+<p> Please Refer to the Lintian User Manual for the full documentation of profiles.</p>
+<dt><code>-t</code>, <code>&#8211;tag</code>, <code>&#8211;tags</code></dt>
+<dd> Rather than treating them as log file names, treat any command-line options as tag names and display the descriptions of each tag.</dd>
+<dt><code>&#8211;user-dirs</code>, <code>&#8211;no-user-dirs</code></dt>
+<dd> By default, <code>lintian</code> will check <i></i>$HOME<i></i> and <i>/etc</i> for files supplied by the user or the local sysadmin (e.g. profiles). This default can be disabled (and re-enabled) by using <code>&#8211;no-user-dirs</code> (and <code>&#8211;user-dirs</code>, respectively). </dd>
+<p> These option can appear multiple times, in which case the of them to appear determines the result. </p>
+<p> <code>Note</code>: This option should be the very first if given.</dl>
+<h2>EXIT STATUS</h2>
+<p> If <code>-t</code> or <code>&#8211;tags</code> was given and one or more of the tags specified were unknown, this command returns the exit code 1. Otherwise, it always returns with exit code 0.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-lintian/">lintian</a></code>(1)</p>
+<h2>AUTHORS</h2>
+<p> Niels Thykier &lt;niels [at] thykier.net&gt; </p>
+<p> Richard Braakman &lt;dark [at] xs4all.nl&gt; </p>
+<p> Christian Schwarz &lt;schwarz [at] monet.m.isar.de&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

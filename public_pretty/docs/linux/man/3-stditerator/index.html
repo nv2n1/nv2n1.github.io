@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stditerator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stditerator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stditerator(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::iterator - std::iterator</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;iterator&gt;
+    template &lt;
+        class Category,
+        class T,
+        class Distance = std::ptrdiff_t, (deprecated in C++ 17)
+                                             class Pointer = T *,
+        class Reference = T &amp;
+        &gt;
+    struct iterator;</code></pre> 
+<p>std::iterator is the base class provided to simplify definitions of the required types for iterators.</p>
+<h2>Template parameters</h2>
+<p>Category - the category of the iterator. Must be one of iterator_category_tags.
+T - the type of the values that can be obtained by dereferencing the iterator. This type should be void for output iterators.
+Distance - a type that can be used to identify distance between iterators
+Pointer - defines a pointer to the type iterated over (T)
+Reference - defines a reference to the type iterated over (T)</p>
+<h2>Member types</h2>
+<p>Member type Definition
+iterator_category Category
+value_type T
+difference_type Distance
+pointer Pointer
+reference Reference</p>
+<h2>Example</h2>
+<p>The following example shows how to implement a input_iterator by inheriting from std::iterator
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+template &lt;long FROM, long TO&gt;
+class Range
+{
+public:
+// member typedefs provided through inheriting from std::iterator
+class iterator : public std::iterator&lt;
+std::input_iterator_tag, // iterator_category
+long,                    // value_type
+long,                    // difference_type
+const long *,            // pointer
+long                     // reference
+&gt;
+{
+long num = FROM;
+public:
+explicit iterator(long _num = 0)
+: num(_num)
+{
+}
+iterator &amp;operator++()
+{
+num = TO &gt;= FROM ? num + 1 : num - 1;
+return *this;
+}
+iterator operator++(int)
+{
+iterator retval = *this;
+++(*this);
+return retval;
+}
+bool operator==(iterator other) const
+{
+return num == other.num;
+}
+bool operator!=(iterator other) const
+{
+return !(<em>this == other);
+}
+reference operator</em>() const
+{
+return num;
+}
+};
+iterator begin()
+{
+return iterator(FROM);
+}
+iterator end()
+{
+return iterator(TO &gt;= FROM ? TO + 1 : TO - 1);
+}
+};
+int main()
+{
+// std::find requires an input iterator
+auto range = Range&lt;15, 25&gt;();
+auto itr = std::find(range.begin(), range.end(), 18);
+std::cout &lt;&lt; *itr &lt;&lt; &lsquo;\n&rsquo;; // 18
+// Range::iterator also satisfies range-based for requirements
+for (long l : Range&lt;3, 5&gt;()) {
+std::cout &lt;&lt; l &lt;&lt; &rsquo; &lsquo;; // 3 4 5
+}
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 18
+ <wbr> 3 4 5</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> provides uniform interface to the properties of an iterator
+iterator_traits <i>(class template)</i>
+input_iterator_tag
+output_iterator_tag
+forward_iterator_tag
+bidirectional_iterator_tag
+random_access_iterator_tag
+contiguous_iterator_tag empty class types used to indicate iterator categories
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+(C++20)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

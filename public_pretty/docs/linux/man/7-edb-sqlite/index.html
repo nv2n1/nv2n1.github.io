@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>edb-sqlite(7) · Linux Manual Pages</title>
+<meta name="description" content="edb-sqlite – eurephia SQLite3 database driver">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-edb-sqlite/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>edb-sqlite(7)</h1>
+
+
+
+
+
+<p><code>edb-sqlite</code> &#8211; eurephia SQLite3 database driver</p>
+<h2>Description</h2>
+<p>The <code>edb-sqlite</code> database driver is used to enable SQLite3 database in <code>eurephia</code>. The SQLite3 database is file based and requires no server setup at all. </p>
+<p> The database driver takes only one argument, which is a full path to the database file.b</p>
+<h2>Examples</h2>
+<dl>
+<dt><code>eurephia-auth</code> &#8211; This is configured via the OpenVPN configuration file.</dt>
+<dd>
+</dd><dd>plugin eurephia-auth.so &quot;-i edb-sqlite.so &#8212; &lt;full path to database file&gt;&quot;</dd>
+<dd>Plese notice the double dashes. They are separating the arguments between the eurephia-auth module and the database driver.</dd>
+<dt><code>eurephia_init</code> &#8211; This is set via the command line</dt>
+<dd>
+</dd><dd>user [at] server:~ $ eurephia_init &#8211;database-driver edb-sqlite.so \ &#8211;database-args &quot;&lt;full path to DB file&gt;&quot;</dd>
+<dt><code>eurephiadm</code> &#8211; This is configured in the <code>~/.eurephia/eurephiadm.cfg</code> file</dt>
+<dd>
+</dd><dd>database_driver = edb-sqlite.so<br />
+ database_params = &lt;full path to DB file&gt;</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/7-eurephia-auth/">eurephia-auth</a></code>(7), <code><a href="/docs/linux/man/7-eurephiadm/">eurephiadm</a></code>(7), <code><a href="/docs/linux/man/7-eurephia_init/">eurephia_init</a></code>(7) </p>
+<h2>Author</h2>
+<p>Copyright (C) 2008-2010 David Sommerseth &lt;dazo [at] users.sourceforge.net&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

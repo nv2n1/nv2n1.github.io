@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bundle-binstubs2-7(1) · Linux Manual Pages</title>
+<meta name="description" content="bundle-binstubs – Install the binstubs of the listed gems">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-bundle-binstubs2-7/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>bundle-binstubs2-7(1)</h1>
+
+
+
+
+
+<p><code>bundle-binstubs</code> &#8211; Install the binstubs of the listed gems </p>
+<h2>Synopsis</h2>
+<p><code>bundle binstubs</code> <i>GEM_NAME</i> [&#8211;force] [&#8211;path PATH] [&#8211;standalone]</p>
+<h2>Description</h2>
+<p>Binstubs are scripts that wrap around executables. Bundler creates a small Ruby file (a binstub) that loads Bundler, runs the command, and puts it into <code>bin/</code>. Binstubs are a shortcut-or alternative- to always using <code>bundle exec</code>. This gives you a file that can be run directly, and one that will always run the correct gem version used by the application. </p>
+<p> For example, if you run <code>bundle binstubs rspec-core</code>, Bundler will create the file <code>bin/rspec</code>. That file will contain enough code to load Bundler, tell it to load the bundled gems, and then run rspec. </p>
+<p> This command generates binstubs for executables in <code>GEM_NAME</code>. Binstubs are put into <code>bin</code>, or the <code>&#8211;path</code> directory if one has been set. Calling binstubs with [GEM [GEM]] will create binstubs for all given gems.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;force</code></dt>
+<dd>Overwrite existing binstubs if they exist.</dd>
+<dt><code>&#8211;path</code></dt>
+<dd>The location to install the specified binstubs to. This defaults to <code>bin</code>.</dd>
+<dt><code>&#8211;standalone</code></dt>
+<dd>Makes binstubs that can work without depending on Rubygems or Bundler at runtime.</dd>
+<dt><code>&#8211;shebang</code></dt>
+<dd>Specify a different shebang executable name than the default (default &#8216;ruby&#8217;)</dd></dl>
+<h2>Bundle Install &#8211;Binstubs</h2>
+<p>To create binstubs for all the gems in the bundle you can use the <code>&#8211;binstubs</code> flag in bundle <a href="/docs/linux/man/1-install/">install</a>(1) <i>bundle-install.1.html</i>.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

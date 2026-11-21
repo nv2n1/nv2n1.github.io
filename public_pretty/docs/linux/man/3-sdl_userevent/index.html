@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_userevent(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_UserEvent – A user-defined event type">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_userevent/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_userevent(3)</h1>
+
+
+
+
+
+<p>SDL_UserEvent &#8211; A user-defined event type</p>
+<h2>Structure Definition</h2>
+<pre><tt>typedef struct{
+ Uint8 type;
+ int code;
+ void *data1;
+ void *data2;
+} SDL_UserEvent;</tt></pre>
+<h2>Structure Data</h2>
+<dl COMPACT>
+<dt><code>type</code></dt>
+<dd><code>SDL_USEREVENT</code> through to <code>SDL_NUMEVENTS-1</code></dd>
+<dt><code>code</code></dt>
+<dd>User defined event code</dd>
+<dt><code>data1</code></dt>
+<dd>User defined data pointer</dd>
+<dt><code>data2</code></dt>
+<dd>User defined data pointer</dd></dl>
+<h2>Description</h2>
+<p><code>SDL_UserEvent</code> is in the <code>user</code> member of the structure <i></i><code>SDL_Event</code>. This event is unique, it is never created by SDL but only by the user. The event can be pushed onto the event queue using <i></i><code>SDL_PushEvent</code>. The contents of the structure members or completely up to the programmer, the only requirement is that <code>type</code> is a value from <code>SDL_USEREVENT</code> to <code>SDL_NUMEVENTS-1</code> (inclusive).</p>
+<h2>Examples</h2>
+<pre><tt>SDL_Event event;
+event.type = SDL_USEREVENT;
+event.user.code = my_event_code;
+event.user.data1 = significant_data;
+event.user.data2 = 0;
+SDL_PushEvent(&amp;event);</tt></pre>
+<h2>See Also</h2>
+<p><i></i><code>SDL_Event</code>, <i></i><code>SDL_PushEvent</code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

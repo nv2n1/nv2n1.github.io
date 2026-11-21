@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cupstestdsc(1) · Linux Manual Pages</title>
+<meta name="description" content="cupstestdsc – test conformance of postscript files (deprecated)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-cupstestdsc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>cupstestdsc(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> cupstestdsc &#8211; test conformance of postscript files (deprecated) </p>
+<h2>SYNOPSIS</h2>
+<p> <code>cupstestdsc</code> [ <code>-h</code> ] <i>filename.ps</i> [ &#8230; <i>filenameN.ps</i> ]<br />
+ <code>cupstestdsc</code> [ <code>-h</code> ] <code>&#8211;</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>cupstestdsc</code> tests the conformance of PostScript files to the Adobe PostScript Language Document Structuring Conventions Specification version 3.0. The results of testing and any other output are sent to the standard output. The second form of the command reads PostScript from the standard input.</p>
+<h2>NOTES</h2>
+<p> <i>This program is deprecated and will be removed in a future release of CUPS.</i> </p>
+<p> <code>cupstestdsc</code> only validates the DSC comments in a PostScript file and does not attempt to validate the PostScript code itself. Developers must ensure that the PostScript they generate follows the rules defined by Adobe. Specifically, all pages must be independent of each other, code outside page descriptions may not affect the graphics state (current font, color, transform matrix, etc.), and device-specific commands such as setpagedevice should not be used.</p>
+<h2>SEE ALSO</h2>
+<p> CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a>), Adobe PostScript Language Document Structuring Conventions Specification, Version 3.0.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2007-2017 by Apple Inc. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dbwrap_tool(1) · Linux Manual Pages</title>
+<meta name="description" content="dbwrap_tool – low level TDB/CTDB manipulation tool using the dbwrap interface">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dbwrap_tool/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dbwrap_tool(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> dbwrap_tool &#8211; low level TDB/CTDB manipulation tool using the dbwrap interface </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt>
+</dt><dd>dbwrap_tool [&#8211;persistent] [&#8211;non-persistent] [-d&nbsp;&lt;debug level&gt;] [-s&nbsp;&lt;config file&gt;] [-l&nbsp;&lt;log file base&gt;] [-V] [&#8211;option=&lt;name&gt;=&lt;value&gt;] {&lt;database&gt;} {&lt;operation&gt;} [&lt;key&gt;&nbsp;[&lt;type&gt;&nbsp;[&lt;value&gt;]]]</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
+<p> The dbwrap_tool program is used to read and manipulate TDB/CTDB databases using the dbwrap interface. </p>
+<p> The following database operations are available:</p>
+<dl>
+<dl>
+<dt>
+</dt><dd> &bull; fetch: fetch a record</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; store: create or modify a record</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; delete: remove a record</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; exists: test for existence of a record</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; erase: remove all records</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; listkeys: list all available records</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; listwatchers: list processes, which are waiting for changes in a record</dd></dl>
+</dl>
+<p> The following types are available:</p>
+<dl>
+<dl>
+<dt>
+</dt><dd> &bull; int32: signed 32bit integer</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; uint32: unsigned 32bit integer</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; string: &quot;hello world&quot;</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; hex: hex strings like &quot;68656C6C6F20776F726C6400&quot; (&quot;hello world&quot;)</dd></dl>
+</dl>
+<h2>OPTIONS</h2>
+<p> &#8211;persistent</p>
+<dl>
+<dt>
+</dt><dd> Open the database as a persistent database. </dd>
+<p> Exactly one of &#8211;persistent and &#8211;non-persistent must be specified.</dl>
+<p> &#8211;non-persistent</p>
+<dl>
+<dt>
+</dt><dd> Open the database as a non-persistent database. </dd>
+<p> Caveat: opening a database as non-persistent when there is currently no other opener will wipe the database. </p>
+<p> Exactly one of &#8211;persistent and &#8211;non-persistent must be specified.</dl>
+<p> -d|&#8211;debuglevel=level</p>
+<dl>
+<dt>
+</dt><dd> <i>level</i> is an integer from 0 to 10. The default value if this parameter is not specified is 1. </dd>
+<p> The higher this value, the more detail will be logged to the log files about the activities of the server. At level 0, only critical errors and serious warnings will be logged. Level 1 is a reasonable level for day-to-day running &#8211; it generates a small amount of information about operations carried out. </p>
+<p> Levels above 1 will generate considerable amounts of log data, and should only be used when investigating a problem. Levels above 3 are designed for use only by developers and generate HUGE amounts of log data, most of which is extremely cryptic. </p>
+<p> Note that specifying this parameter here will override the m[blue]<code>log level</code>m[] parameter in the smb.conf file.</dl>
+<p> -V|&#8211;version</p>
+<dl>
+<dt>
+</dt><dd> Prints the program version number.</dd></dl>
+<p> -s|&#8211;configfile=&lt;configuration file&gt;</p>
+<dl>
+<dt>
+</dt><dd> The file specified contains the configuration details required by the server. The information in this file includes server-specific information such as what printcap file to use, as well as descriptions of all the services that the server is to provide. See smb.conf for more information. The default configuration file name is determined at compile time.</dd></dl>
+<p> -l|&#8211;log-basename=logdirectory</p>
+<dl>
+<dt>
+</dt><dd> Base directory name for log/debug files. The extension <code>&quot;.progname&quot;</code> will be appended (e.g. log.smbclient, log.smbd, etc&#8230;). The log file is never removed by the client.</dd></dl>
+<p> &#8211;option=&lt;name&gt;=&lt;value&gt;</p>
+<dl>
+<dt>
+</dt><dd> Set the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) option &quot;&lt;name&gt;&quot; to value &quot;&lt;value&gt;&quot; from the command line. This overrides compiled-in defaults and options read from the configuration file.</dd></dl>
+<p> -?|&#8211;help</p>
+<dl>
+<dt>
+</dt><dd> Print a summary of command line options.</dd></dl>
+<p> &#8211;usage</p>
+<dl>
+<dt>
+</dt><dd> Display brief usage message.</dd></dl>
+<h2>COMMANDS</h2>
+<h3>fetch</h3>
+<dl>
+<dt>
+</dt><dd>dbwrap_tool &lt;database&gt; fetch &lt;key&gt; &lt;type&gt; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>
+</dd></dl>
+<h3>store</h3>
+<dl>
+<dt>
+</dt><dd>dbwrap_tool &lt;database&gt; store &lt;key&gt; &lt;type&gt; &lt;value&gt; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>
+</dd></dl>
+<h3>delete</h3>
+<dl>
+<dt>
+</dt><dd>dbwrap_tool &lt;database&gt; delete &lt;key&gt; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>
+</dd></dl>
+<h3>exists</h3>
+<dl>
+<dt>
+</dt><dd>dbwrap_tool &lt;database&gt; exists &lt;key&gt; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>
+</dd></dl>
+<h3>erase</h3>
+<dl>
+<dt>
+</dt><dd>dbwrap_tool &lt;database&gt; erase</dd></dl>
+<h3>listkeys</h3>
+<dl>
+<dt>
+</dt><dd>dbwrap_tool &lt;database&gt; listkeys <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>
+</dd></dl>
+<h3>listwatchers</h3>
+<dl>
+<dt>
+</dt><dd>dbwrap_tool &lt;database&gt; listwatchers <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>
+</dd></dl>
+<h2>EXAMPLES</h2>
+<p> List all keys from winbindd_idmap.tdb</p>
+<dl>
+<dt>
+</dt><dd> dbwrap_tool &#8211;persistent winbindd_idmap.tdb listkeys</dd></dl>
+<p> Fetch record with key &quot;USER HWM&quot; as uint32</p>
+<dl>
+<dt>
+</dt><dd> dbwrap_tool &#8211;persistent winbindd_idmap.tdb fetch &quot;USER HWM&quot; uint32</dd></dl>
+<p> Remove record with key &quot;USER HWM&quot;</p>
+<dl>
+<dt>
+</dt><dd> dbwrap_tool &#8211;persistent winbindd_idmap.tdb remove &quot;USER HWM&quot;</dd></dl>
+<p> Store and overwrite record &quot;USER HWM&quot; with value 214</p>
+<dl>
+<dt>
+</dt><dd> uint32: dbwrap_tool &#8211;persistent winbindd_idmap.tdb store &quot;USER HWM&quot; uint32 214 hex: dbwrap_tool &#8211;persistent winbindd_idmap.tdb store &quot;USER HWM&quot; hex D6000000</dd></dl>
+<h2>NOTES</h2>
+<p> Use with caution!</p>
+<h2>VERSION</h2>
+<p> This man page is part of version 4.11.6-Ubuntu of the Samba suite.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-smbd/">smbd</a></code>(8), <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7)</p>
+<h2>AUTHOR</h2>
+<p> The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed. </p>
+<p> The dbwrap_tool manpage was written by Bjoern Baumbach. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

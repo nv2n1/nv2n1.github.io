@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finding the Directory of a Makefile for Includes - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-get-a-makefiles-directory-for-including-other-makefiles/">
+  <meta name="description" content="When you have shared Makefiles included across multiple projects in different directory structures, relative includes break. If common.mk tries to include …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Finding the Directory of a Makefile for Includes">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-get-a-makefiles-directory-for-including-other-makefiles/">
+  <meta property="og:description" content="When you have shared Makefiles included across multiple projects in different directory structures, relative includes break. If common.mk tries to include …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>Finding the Directory of a Makefile for Includes</h1>
+        <time class="post-date" datetime="2018-03-24T08:20:32Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When you have shared Makefiles included across multiple projects in different directory structures, relative includes break. If <code>common.mk</code> tries to <code>include release.mk</code> and both files are in a subdirectory like <code>external/</code>, the include fails because Make uses the current working directory, not the location of the including file.</p>
+<p>For example, this structure works fine:</p>
+<pre><code>Makefile
+common.mk
+release.mk
+</code></pre>
+<p>But this one fails:</p>
+<pre><code>Makefile
+external/common.mk
+external/release.mk
+</code></pre>
+<p>When <code>external/common.mk</code> contains <code>include release.mk</code>, Make looks for <code>release.mk</code> in the current directory, not in <code>external/</code>.</p>
+<h2 id="the-solution-use-makefile_list">The solution: Use MAKEFILE_LIST</h2>
+<p>The key is to get the directory of the currently-executing Makefile using <code>MAKEFILE_LIST</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl"><span class="nv">SELF_DIR</span> <span class="o">:=</span> <span class="k">$(</span>dir <span class="k">$(</span>lastword <span class="k">$(</span>MAKEFILE_LIST<span class="k">)))</span>
+</span></span></code></pre></div><p>This variable is automatically maintained by Make and contains the list of all Makefiles being processed. The <code>lastword</code> function gets the most recently included file (the current one), and <code>dir</code> extracts its directory path.</p>
+<p>Now you can safely include sibling files:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl"><span class="err">include</span> <span class="k">$(</span><span class="nv">SELF_DIR</span><span class="k">)</span><span class="err">/release.mk</span>
+</span></span></code></pre></div><p>This works regardless of where the top-level Makefile is located or what the current working directory is.</p>
+<h2 id="practical-example">Practical example</h2>
+<p>Given the directory structure:</p>
+<pre><code>Makefile
+external/common.mk
+external/release.mk
+</code></pre>
+<p><strong>Makefile:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl"><span class="err">include</span> <span class="err">external/common.mk</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">all</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    @echo <span class="s2">&#34;Building...&#34;</span>
+</span></span></code></pre></div><p><strong>external/common.mk:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl"><span class="nv">SELF_DIR</span> <span class="o">:=</span> <span class="k">$(</span>dir <span class="k">$(</span>lastword <span class="k">$(</span>MAKEFILE_LIST<span class="k">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">include</span> <span class="k">$(</span><span class="nv">SELF_DIR</span><span class="k">)</span><span class="err">/release.mk</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">.PHONY</span><span class="o">:</span> <span class="n">all</span>
+</span></span></code></pre></div><p><strong>external/release.mk:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl"><span class="nv">RELEASE_VERSION</span> <span class="o">:=</span> 1.0.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">release</span><span class="o">:</span> <span class="n">all</span>
+</span></span><span class="line"><span class="cl">    @echo <span class="s2">&#34;Releasing v</span><span class="k">$(</span>RELEASE_VERSION<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>Running <code>make</code> from the top directory works correctly — <code>external/release.mk</code> is found even though the current directory is the project root.</p>
+<h2 id="handling-nested-includes">Handling nested includes</h2>
+<p>If you have deeper nesting or multiple levels of includes, the technique scales without modification. Each Makefile gets its own <code>SELF_DIR</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-makefile" data-lang="makefile"><span class="line"><span class="cl"><span class="c"># external/common.mk
+</span></span></span><span class="line"><span class="cl"><span class="nv">SELF_DIR</span> <span class="o">:=</span> <span class="k">$(</span>dir <span class="k">$(</span>lastword <span class="k">$(</span>MAKEFILE_LIST<span class="k">)))</span>
+</span></span><span class="line"><span class="cl"><span class="err">include</span> <span class="k">$(</span><span class="nv">SELF_DIR</span><span class="k">)</span><span class="err">/release.mk</span>
+</span></span><span class="line"><span class="cl"><span class="err">include</span> <span class="k">$(</span><span class="nv">SELF_DIR</span><span class="k">)</span><span class="err">/build/targets.mk</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># external/build/targets.mk
+</span></span></span><span class="line"><span class="cl"><span class="nv">SELF_DIR</span> <span class="o">:=</span> <span class="k">$(</span>dir <span class="k">$(</span>lastword <span class="k">$(</span>MAKEFILE_LIST<span class="k">)))</span>
+</span></span><span class="line"><span class="cl"><span class="err">include</span> <span class="k">$(</span><span class="nv">SELF_DIR</span><span class="k">)</span><span class="err">/../release.mk</span>  <span class="c"># Still works
+</span></span></span></code></pre></div><p>Each call to <code>$(lastword $(MAKEFILE_LIST))</code> returns the correct file for that context, so redefining <code>SELF_DIR</code> in each file is safe and keeps includes self-contained.</p>
+<h2 id="common-pitfall-pwd-vs-self_dir">Common pitfall: pwd vs SELF_DIR</h2>
+<p>Don’t confuse this with using <code>$(PWD)</code> or shell commands like <code>$(shell pwd)</code>. Those depend on where Make was invoked from, not where the Makefile is located. Using <code>MAKEFILE_LIST</code> is the correct, reliable approach that works in any invocation context.</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<p>This article covered the essential concepts and commands for the topic. For more information, consult the official documentation or manual pages. The key takeaway is to understand the fundamentals before applying advanced configurations.</p>
+<p>Practice in a test environment before making changes on production systems. Keep notes of what works and what does not for future reference.</p>
+<h2 id="additional-tips-and-best-practices">Additional Tips and Best Practices</h2>
+<p>When implementing the techniques described in this article, consider these best practices for production environments. Always test changes in a non-production environment first. Document your configuration changes so team members can understand what was modified and why.</p>
+<p>Keep your system updated regularly to benefit from security patches and bug fixes. Use package managers rather than manual installations when possible, as they handle dependencies and updates automatically. For critical systems, maintain backups before making any significant changes.</p>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

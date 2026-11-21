@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmscalesetticks(3) · Linux Manual Pages</title>
+<meta name="description" content="XmScaleSetTicks — A Scale function that controls tick marks">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmscalesetticks/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmscalesetticks(3)</h1>
+
+
+
+
+
+<p><code>XmScaleSetTicks</code> &#8212; A Scale function that controls tick marks</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Scale.h&gt;
+<code>void XmScaleSetTicks</code>(
+<code>Widget scale</code>,
+<code>int big_every</code>,
+<code>Cardinal num_medium</code>,
+<code>Cardinal num_small</code>,
+<code>Dimension size_big</code>,
+<code>Dimension size_medium</code>,
+<code>Dimension size_small</code>);</pre>
+<h2>Description</h2>
+<p><code>XmScaleSetTicks</code> controls the number, location, and size of the tick marks on a Scale. Each tick mark is a SeparatorGadget oriented perpendicular to the Scale&#8217;s orientation. For example, if the Scale is oriented horizontally, the tick marks will be oriented vertically. </p>
+<p> If you specify tick marks for a Scale and then change the Scale&#8217;s orientation, you will have to do the following:</p>
+<dl COMPACT>
+<dt> &bull;</dt>
+<dd>Remove all the tick marks. To remove tick marks from a Scale, you must destroy (with <code>XtDestroyChildren</code>) the SeparatorGadget tick marks. The first two children of a Scale are its title and scroll bar, and all additional children are tick marks.</dd>
+<dt> &bull;</dt>
+<dd>Recreate the tick marks by calling <code>XmScaleSetTicks</code>.</dd>
+<dt><i>scale</i></dt>
+<dd>Specifies the Scale widget ID that is getting the tick marks.</dd>
+<dt><i>big_every</i></dt>
+<dd>Specifies the number of scale values between big ticks.</dd>
+<dt><i>num_medium</i></dt>
+<dd>Specifies the number of medium ticks between big values.</dd>
+<dt><i>num_small</i></dt>
+<dd>Specifies the number of small ticks between medium values.</dd>
+<dt><i>size_big</i></dt>
+<dd>Specifies the size (either width or height) of the big ticks.</dd>
+<dt><i>size_medium</i></dt>
+<dd>Specifies the size (either width or height) of the medium ticks.</dd>
+<dt><i>size_small</i></dt>
+<dd>Specifies the size (either width or height) of the small ticks.</dd></dl>
+<p> For a complete definition of Scale and its associated resources, see <code><a href="/docs/linux/man/3-xmscale/">XmScale</a></code>(3).</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmscale/">XmScale</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

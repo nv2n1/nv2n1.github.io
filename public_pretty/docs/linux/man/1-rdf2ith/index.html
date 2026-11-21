@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rdf2ith(1) · Linux Manual Pages</title>
+<meta name="description" content="rdf2bin, rdf2com – convert an RDOFF object file to flat binary">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rdf2ith/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rdf2ith(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> rdf2bin, rdf2com &#8211; convert an RDOFF object file to flat binary</p>
+<h2>SYNOPSIS</h2>
+<p> <code>rdf2bin</code> [-o <i>relocation-origin</i>] [-p <i>segment-alignment</i>] [-f <i>format</i>] <i>input-file</i> <i>output-file</i><br />
+ <code>rdf2com</code> [-p <i>segment-alignment</i>] <i>input-file</i> <i>output-file</i><br />
+ <code>rdf2ith</code> [-o <i>relocation-origin</i>] [-p <i>segment-alignment</i>] <i>input-file</i> <i>output-file</i><br />
+ <code>rdf2srec</code> [-o <i>relocation-origin</i>] [-p <i>segment-alignment</i>] <i>input-file</i> <i>output-file</i></p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-o <i>relocation-origin</i></dt>
+<dd> Relocate at origin <i>relocation-origin</i>. If invoked as <code>rdf2com</code>, the default relocation origin will be 0x100. Else, the default origin is 0.</dd>
+<dt>-p <i>segment-alignment</i></dt>
+<dd> Pad segments until their size is a multiple of <i>segment-alignment</i>. By default, 16 is used.</dd>
+<dt>-f <i>format</i></dt>
+<dd> Specify the output format. The currently supported formats are binary (<i>bin</i>), DOS COM (binary with origin 0x100) (<i>com</i>) Intel hex (<i>ith</i> or <i>ihx</i>), and Motorola S-Records (<i>srec</i>). If not specified, the format is set by the command name.</dd></dl>
+<h2>AUTHORS</h2>
+<p> Julian Hall &lt;jules [at] earthcorp.com&gt;, H. Peter Anvin &lt;hpa [at] zytor.com&gt;. </p>
+<p> This manual page was written by Matej Vela &lt;vela [at] debian.org&gt;.</p>
+<h2>BUGS</h2>
+<p> This utility currently only supports the classic segments <i>.text</i>, <i>.data</i> and <i>.bss</i>. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

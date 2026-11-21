@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>deductionguidesforstdweak_ptr(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-deductionguidesforstdweak_ptr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>deductionguidesforstdweak_ptr(3)</h1>
+
+
+
+
+
+<p>deductionguidesforstd::weak_ptr - deductionguidesforstd::weak_ptr</p>
+<h2>Synopsis</h2>Defined in header &lt;memory&gt; 
+template&lt;class T&gt; <i>(since C++17)</i> 
+weak_ptr(std::shared_ptr&lt;T&gt;) -&gt; weak_ptr&lt;T&gt;; 
+<p>One deduction_guide is provided for std::weak_ptr to account for the edge case missed by the implicit deduction guides.</p>
+<h2>Example</h2>// Run this code 
+<p> <wbr> #include &lt;memory&gt;</p>
+<p> <wbr> int main()
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> auto p = std::make_shared&lt;int&gt;(42);
+ <wbr> <wbr> <wbr> <wbr> <wbr> std::weak_ptr w{p}; // explicit deduction guide is used in this case
+ <wbr> }</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

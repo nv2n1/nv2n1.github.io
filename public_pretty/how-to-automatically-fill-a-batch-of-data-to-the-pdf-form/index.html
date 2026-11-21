@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automating PDF Form Data Population with Batch Processing - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-automatically-fill-a-batch-of-data-to-the-pdf-form/">
+  <meta name="description" content="When you need to populate PDF forms with large datasets, manual entry becomes impractical. Scripting this process saves time and eliminates human error. Here’s …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Automating PDF Form Data Population with Batch Processing">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-automatically-fill-a-batch-of-data-to-the-pdf-form/">
+  <meta property="og:description" content="When you need to populate PDF forms with large datasets, manual entry becomes impractical. Scripting this process saves time and eliminates human error. Here’s …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>Automating PDF Form Data Population with Batch Processing</h1>
+        <time class="post-date" datetime="2018-03-24T08:18:11Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When you need to populate PDF forms with large datasets, manual entry becomes impractical. Scripting this process saves time and eliminates human error. Here’s how to automate PDF form filling using Python.</p>
+<h2 id="understanding-pdf-form-filling">Understanding PDF Form Filling</h2>
+<p>PDF forms contain field names that can be programmatically populated. The process typically involves:</p>
+<ol>
+<li>Identifying field names in your PDF form</li>
+<li>Preparing your data source</li>
+<li>Generating filled PDFs for each record</li>
+<li>Optionally flattening forms so fields can’t be edited</li>
+</ol>
+<h2 id="method-1-using-pdfrw-and-reportlab">Method 1: Using pdfrw and reportlab</h2>
+<p>The modern approach uses <code>pdfrw</code>, which is actively maintained and works with current Python versions. It’s more reliable than legacy tools.</p>
+<p>First, install the required packages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install pdfrw reportlab
+</span></span></code></pre></div><p>Here’s a practical example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python3</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pdfrw</span> <span class="kn">import</span> <span class="n">PdfReader</span><span class="p">,</span> <span class="n">PdfWriter</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pdfrw.objects</span> <span class="kn">import</span> <span class="n">PdfDict</span><span class="p">,</span> <span class="n">PdfArray</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fill_pdf_form</span><span class="p">(</span><span class="n">template_path</span><span class="p">,</span> <span class="n">output_path</span><span class="p">,</span> <span class="n">data_dict</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Fill a PDF form template with provided data.
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        template_path: Path to the blank PDF form
+</span></span></span><span class="line"><span class="cl"><span class="s2">        output_path: Path for the filled PDF
+</span></span></span><span class="line"><span class="cl"><span class="s2">        data_dict: Dictionary with field_name: value pairs
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">template</span> <span class="o">=</span> <span class="n">PdfReader</span><span class="p">(</span><span class="n">template_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">template</span><span class="o">.</span><span class="n">pages</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">annotations</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/Annots&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="n">annotations</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">annotation</span> <span class="ow">in</span> <span class="n">annotations</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">annotation</span><span class="p">[</span><span class="s1">&#39;/Subtype&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;/Widget&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">field_name</span> <span class="o">=</span> <span class="n">annotation</span><span class="p">[</span><span class="s1">&#39;/T&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Remove parentheses</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">field_name</span> <span class="ow">in</span> <span class="n">data_dict</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">annotation</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">PdfDict</span><span class="p">(</span><span class="n">V</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;(</span><span class="si">{</span><span class="n">data_dict</span><span class="p">[</span><span class="n">field_name</span><span class="p">]</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">AP</span><span class="o">=</span><span class="s1">&#39;&#39;</span>  <span class="c1"># Clear appearance stream to force regeneration</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">PdfWriter</span><span class="p">()</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">template</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Generated: </span><span class="si">{</span><span class="n">output_path</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Example usage</span>
+</span></span><span class="line"><span class="cl"><span class="n">employees</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;John Smith&#39;</span><span class="p">,</span> <span class="s1">&#39;employee_id&#39;</span><span class="p">:</span> <span class="s1">&#39;12345&#39;</span><span class="p">,</span> <span class="s1">&#39;department&#39;</span><span class="p">:</span> <span class="s1">&#39;Engineering&#39;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Jane Doe&#39;</span><span class="p">,</span> <span class="s1">&#39;employee_id&#39;</span><span class="p">:</span> <span class="s1">&#39;12346&#39;</span><span class="p">,</span> <span class="s1">&#39;department&#39;</span><span class="p">:</span> <span class="s1">&#39;Marketing&#39;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bob Johnson&#39;</span><span class="p">,</span> <span class="s1">&#39;employee_id&#39;</span><span class="p">:</span> <span class="s1">&#39;12347&#39;</span><span class="p">,</span> <span class="s1">&#39;department&#39;</span><span class="p">:</span> <span class="s1">&#39;Sales&#39;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">emp</span> <span class="ow">in</span> <span class="n">employees</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">output</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;form_</span><span class="si">{</span><span class="n">emp</span><span class="p">[</span><span class="s1">&#39;employee_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.pdf&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fill_pdf_form</span><span class="p">(</span><span class="s1">&#39;template.pdf&#39;</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">emp</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="method-2-using-pypdf">Method 2: Using pypdf</h2>
+<p>For more complex scenarios, <code>pypdf</code> offers additional features:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install pypdf
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pypdf</span> <span class="kn">import</span> <span class="n">PdfReader</span><span class="p">,</span> <span class="n">PdfWriter</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fill_and_flatten</span><span class="p">(</span><span class="n">template_path</span><span class="p">,</span> <span class="n">output_path</span><span class="p">,</span> <span class="n">data_dict</span><span class="p">,</span> <span class="n">flatten</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Fill form and optionally flatten it (make fields non-editable).&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reader</span> <span class="o">=</span> <span class="n">PdfReader</span><span class="p">(</span><span class="n">template_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">writer</span> <span class="o">=</span> <span class="n">PdfWriter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Update form fields</span>
+</span></span><span class="line"><span class="cl">    <span class="n">writer</span><span class="o">.</span><span class="n">append_pages_from_reader</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">writer</span><span class="o">.</span><span class="n">update_page_form_field_values</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">writer</span><span class="o">.</span><span class="n">pages</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">data_dict</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">flatten</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">writer</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Usage with CSV data</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">csv</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;employee_data.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fill_and_flatten</span><span class="p">(</span><span class="s1">&#39;template.pdf&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&#34;form_</span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.pdf&#34;</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">flatten</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="discovering-field-names">Discovering Field Names</h2>
+<p>Before you can fill fields, you need to know their names. Use this script to identify them:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pdfrw</span> <span class="kn">import</span> <span class="n">PdfReader</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">pdf</span> <span class="o">=</span> <span class="n">PdfReader</span><span class="p">(</span><span class="s1">&#39;template.pdf&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">pdf</span><span class="o">.</span><span class="n">pages</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">annotations</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/Annots&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">annotations</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">annotation</span> <span class="ow">in</span> <span class="n">annotations</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">annotation</span><span class="p">[</span><span class="s1">&#39;/Subtype&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;/Widget&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># Extract field name (remove parentheses)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">field_name</span> <span class="o">=</span> <span class="n">annotation</span><span class="p">[</span><span class="s1">&#39;/T&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Field: </span><span class="si">{</span><span class="n">field_name</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="handling-large-datasets">Handling Large Datasets</h2>
+<p>For processing thousands of forms, consider:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">process_record</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">template</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">,</span> <span class="n">record</span> <span class="o">=</span> <span class="n">args</span>
+</span></span><span class="line"><span class="cl">    <span class="n">output_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&#34;form_</span><span class="si">{</span><span class="n">record</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.pdf&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fill_pdf_form</span><span class="p">(</span><span class="n">template</span><span class="p">,</span> <span class="n">output_path</span><span class="p">,</span> <span class="n">record</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">records</span> <span class="o">=</span> <span class="n">load_data_from_database</span><span class="p">()</span>  <span class="c1"># or CSV, JSON, etc.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tasks</span> <span class="o">=</span> <span class="p">[(</span><span class="n">template_path</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">Pool</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="k">as</span> <span class="n">pool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">process_record</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="common-issues">Common Issues</h2>
+<p><strong>Fields not updating</strong>: Some PDFs use XFA (XML Forms Architecture) which requires different handling. Check if your PDF is XFA-based by examining it with a PDF inspection tool.</p>
+<p><strong>Encoding problems</strong>: Use UTF-8 encoding for special characters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">annotation</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">PdfDict</span><span class="p">(</span><span class="n">V</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;(</span><span class="si">{</span><span class="n">data_dict</span><span class="p">[</span><span class="n">field_name</span><span class="p">]</span><span class="si">}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)))</span>
+</span></span></code></pre></div><p><strong>Flatten before merging</strong>: If combining forms, flatten individual documents first to prevent field conflicts.</p>
+<h2 id="why-modern-tools-over-legacy-options">Why Modern Tools Over Legacy Options</h2>
+<p>The older PDFtk and fdfgen approach is outdated. PDFtk development stalled, and fdfgen requires FDF format generation which is less maintainable. Modern libraries like pdfrw and pypdf are actively maintained, better documented, and integrate cleanly with current Python ecosystems.</p>
+<p>Choose pdfrw for simplicity and direct PDF manipulation, or pypdf if you need advanced features like merging, splitting, and encryption alongside form filling.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

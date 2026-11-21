@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ne_token(3) · Linux Manual Pages</title>
+<meta name="description" content="ne_token, ne_qtoken – string tokenizers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ne_token/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ne_token(3)</h1>
+
+
+
+
+
+<p>ne_token, ne_qtoken &#8211; string tokenizers</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;ne_string.h&gt;
+char *ne_token(char **str, char sep);
+char *ne_qtoken(char **str, char sep, const char *quotes);</code></pre>
+<h2>Description</h2>
+<p><code>ne_token</code></p>
+<dd>and <code>ne_qtoken</code> tokenize the string at the location stored in the pointer <i>str</i>. Each time the function is called, it returns the next token, and modifies the <i>str</i> pointer to point to the remainer of the string, or NULL if there are no more tokens in the string. A token is delimited by the separator character <i>sep</i>; if <code>ne_qtoken</code> is used any quoted segments of the string are skipped when searching for a separator. A quoted segment is enclosed in a pair of one of the characters given in the <i>quotes</i> string. </dd>
+<p> The string being tokenized is modified each time the tokenizing function is called; replacing the next separator character with a NUL terminator.</p>
+<h2>Examples</h2>
+<p>The following function prints out each token in a comma-separated string <i>list</i>, which is modified in-place: </p>
+<pre><code>static void splitter(char *list)
+{
+    do {
+        printf(&quot;Token: %s
+&quot;, ne_token(&amp;list, ','));
+        while (list)
+            ;
+    }</code></pre>
+<h2>Author</h2>
+<p><code>Joe Orton</code> &lt;neon [at] lists.manyfish.co.uk&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

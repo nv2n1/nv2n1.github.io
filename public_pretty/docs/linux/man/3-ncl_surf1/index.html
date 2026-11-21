@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_surf1(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_surf1/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_surf1(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>SURF1 - calculate values for SURF2 usage.</p>
+<h2>Synopsis</h2>
+<p>CALL SURF1 (M, N, X, Y, Z, IZ, ZX1, ZXM, ZY1, ZYN, ZXY11, ZXYM1, ZXY1N, ZXYMN, ISLPSW, ZP, TEMP, SIGMA, IER)</p>
+<p>This subroutine calculates certain values that are used by SURF2 in order to compute an interpolatory surface passing through a rectangular grid of function values. The surface computed is a tensor product of splines under tension. To calculate actual interpolated values, SURF2 must be called.</p>
+<h2>Description</h2>
+<dl><dt>M
+</dt><dd>(integer, input) The number of grid lines in the X direction. (M &gt; 1)
+</dd><dt>N
+</dt><dd>(integer, input) The number of grid lines in the Y direction. (N &gt; 1)
+</dd><dt>X
+</dt><dd>(real, input) An array containing M X coordinates for grid lines in the X direction. These values must be strictly increasing.
+</dd><dt>Y
+</dt><dd>(real, input) An array containing N Y coordinates for grid lines in the Y direction. These values must be strictly increasing.
+</dd><dt>Z
+</dt><dd>(real, input) An array containing M x N functional values at the grid points; Z(I,J) contains the functional value at (X(I),Y(J)) for I=1,M and J=1,N.
+</dd><dt>IZ
+</dt><dd>(integer, input) The row dimension of the matrix Z (IZ is greater than or equal to M).
+</dd><dt>ZX1
+</dt><dd>(real, input) An array containing N X-partial derivatives of the function along the line X(1), that is ZX1(J) is the X-partial derivative at point (X(1),Y(J)) for J=1,N. This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZXM
+</dt><dd>(real, input) An array containing N X-partial derivatives of the function along the line X(M), that is ZXM(J) is the X-partial derivative at point (X(M),Y(J)) for J=1,N. This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZY1
+</dt><dd>(real, input) An array containing M Y-partial derivatives of the function along the line Y(1), that is ZY1(I) is the Y-partial derivative at point (X(I),Y(1)) for I=1,M. This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZYN
+</dt><dd>(real, input) An array containing M Y-partial derivatives of the function along the line Y(N), that is ZY1(I) is the Y-partial derivative at point (X(I),Y(N)) for I=1,M. This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZXY11
+</dt><dd>(real, input) The X-Y-partial derivative at (X(1),Y(1). This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZXYM1
+</dt><dd>(real, input) The X-Y-partial derivative at (X(M),Y(1). This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZXY1N
+</dt><dd>(real, input) The X-Y-partial derivative at (X(1),Y(N). This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ZXYMN
+</dt><dd>(real, input) The X-Y-partial derivative at (X(M),Y(N). This parameter may be defaulted by setting ISLPSW appropriately.
+</dd><dt>ISLPSW
+</dt><dd>(integer, input) A switch to indicate which boundary derivatives are user supplied and which should be estimated internally. Where I1 = 0 if ZX1 is user-supplied and 1 otherwise. 
+ I2 = 0 if ZXM is user-supplied and 1 otherwise. 
+ I3 = 0 if ZY1 is user-supplied and 1 otherwise. 
+ I4 = 0 if ZYN is user-supplied and 1 otherwise. 
+ I5 = 0 if ZXY11 is user-supplied and 1 otherwise. 
+ I6 = 0 if ZXYM1 is user-supplied and 1 otherwise. 
+ I7 = 0 if ZXY1N is user-supplied and 1 otherwise. 
+ I8 = 0 if ZXYMN is user-supplied and 1 otherwise. <pre><code>set ISLPSW = I1 + 2*I2 + 4*I3 +8*I4 +16*I5 +32*I6 + 64*I7 +
+128*I8. Then, for example, if ISLPSW=0, then all derivative
+information is user-supplied and if ISLPSW=255, then all
+derivative information is to be internally estimated.
+ZP
+(real, output) An array of size M x N x 3. On output this contains partial
+derivatives of the surface at the given nodes. ZP is used by
+SURF2.
+TEMP
+(real, input) Scratch space.
+SIGMA
+(real, input) Tension factor. Values near zero result in a cubic spline;
+large values(e.g.50) result in nearly a polygonal line.A typical value
+    is 1. IER(integer, output) An error return value.If IER is returned as 0,
+    then no errors
+    were detected.</code></pre> = 1 if N is less than 2. 
+ = 2 if X or Y values are not strictly increasing.</dd></dl>
+<h2>Access</h2>
+<p>To use SURF1, load the NCAR Graphics library ngmath.</p>
+<h2>See Also</h2>
+<p>surf2, fitgrid_params.</p>
+<p>Complete documentation for Fitgrid is available at URL
+<a rel="nofollow" HREF="http://ngwww.ucar.edu/ngdoc/ng/ngmath/fitgrid/fithome.html"><a href="http://ngwww.ucar.edu/ngdoc/ng/ngmath/fitgrid/fithome.html">http://ngwww.ucar.edu/ngdoc/ng/ngmath/fitgrid/fithome.html</a></a></p>
+<h2>Copyright</h2>
+<p>Copyright (C) 2000
+University Corporation for Atmospheric Research</p>
+<p>The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

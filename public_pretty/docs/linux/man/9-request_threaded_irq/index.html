@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>request_threaded_irq(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-request_threaded_irq/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>request_threaded_irq(9)</h1>
+
+
+
+
+
+<p>request_threaded_irq - allocate an interrupt line</p>
+<h2>Synopsis</h2>
+<pre><code>int request_threaded_irq(unsigned int irq, irq_handler_t handler, irq_handler_t thread_fn, unsigned long irqflags, const char *devname, void *dev_id);</code></pre>
+<h2>Arguments</h2>
+<p><i>irq</i></p>
+<dl><dd></dd><dd>Interrupt line to allocate</dd></dl>
+<p><i>handler</i></p>
+<dl><dd>Function to be called when the IRQ occurs. Primary handler for threaded interrupts If NULL and thread_fn != NULL the default primary handler is installed</dd></dl>
+<p><i>thread_fn</i></p>
+<dl><dd>Function called from the irq handler thread If NULL, no irq thread is created</dd></dl>
+<p><i>irqflags</i></p>
+<dl><dd>Interrupt type flags</dd></dl>
+<p><i>devname</i></p>
+<dl><dd>An ascii name for the claiming device</dd></dl>
+<p><i>dev_id</i></p>
+<dl><dd>A cookie passed back to the handler function</dd></dl>
+<h2>Description</h2>
+<p>This call allocates interrupt resources and enables the interrupt line and IRQ handling. From the point this call is made your handler function may be invoked. Since your handler function must clear any interrupt the board raises, you must take care both to initialise your hardware and to set up the interrupt handler in the right order.</p>
+<p>If you want to set up a threaded irq handler for your device then you need to supply <i>handler</i> and <i>thread_fn</i>. <i>handler</i> is still called in hard interrupt context and has to check whether the interrupt originates from the device. If yes it needs to disable the interrupt on the device and return IRQ_WAKE_THREAD which will wake up the handler thread and run <i>thread_fn</i>. This split handler design is necessary to support shared interrupts.</p>
+<p>Dev_id must be globally unique. Normally the address of the device data structure is used as the cookie. Since the handler receives this value it makes sense to use it.</p>
+<p>If your interrupt is shared you must pass a non NULL dev_id as this is required when freeing the interrupt.</p>
+<p>Flags:</p>
+<p>IRQF_SHARED Interrupt is shared IRQF_TRIGGER_* Specify active edge(s) or level</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

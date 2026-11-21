@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdchronoclock_cast(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdchronoclock_cast/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdchronoclock_cast(3)</h1>
+
+
+
+
+
+<p>std::chrono::clock_cast - std::chrono::clock_cast</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;chrono&gt;
+    template &lt;class Dest, class Source, class Duration&gt;
+    (since C++ 20)
+        auto clock_cast(const std::chrono::time_point&lt;Source, Duration&gt; &amp;t);</code></pre> 
+<p>Converts the time point t of a clock Source to an equivalent time point of the clock Dest, using std::chrono::system_clock and/or std::chrono::utc_clock as intermediaries if necessary.</p>
+<ul>
+<li>If the expression std::chrono::clock_time_conversion&lt;Dest, Source&gt;{}(t) is well-formed, returns the result of that expression.</li>
+<li>Otherwise, if at least one of the following two expressions are well-formed, then
+ <wbr> <wbr> <wbr> <wbr> <wbr> * If both expression are well-formed, the conversion is ambiguous, and the program is ill-formed.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * Otherwise, exactly one of the two expressions is well-formed; the result of that expression is returned.</li>
+</ul>
+<ol>
+<li>std::chrono::clock_time_conversion&lt;Dest, std::chrono::system_clock&gt;{}(
+std::chrono::clock_time_conversion&lt;std::chrono::system_clock, Source&gt;{}(t))</li>
+<li>std::chrono::clock_time_conversion&lt;Dest, std::chrono::utc_clock&gt;{}(
+std::chrono::clock_time_conversion&lt;std::chrono::utc_clock, Source&gt;{}(t))</li>
+</ol>
+<ul>
+<li>Otherwise, if at least one of the following two expressions are well-formed, then
+ <wbr> <wbr> <wbr> <wbr> <wbr> * If both expression are well-formed, the conversion is ambiguous, and the program is ill-formed.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * Otherwise, exactly one of the two expressions is well-formed; the result of that expression is returned.</li>
+</ul>
+<ol>
+<li>std::chrono::clock_time_conversion&lt;Dest, std::chrono::utc_clock&gt;{}(
+std::chrono::clock_time_conversion&lt;std::chrono::utc_clock, std::chrono::system_clock&gt;{}(
+std::chrono::clock_time_conversion&lt;std::chrono::system_clock, Source&gt;{}(t)))</li>
+<li>std::chrono::clock_time_conversion&lt;Dest, std::chrono::system_clock&gt;{}(
+std::chrono::clock_time_conversion&lt;std::chrono::system_clock, std::chrono::utc_clock&gt;{}(
+std::chrono::clock_time_conversion&lt;std::chrono::utc_clock, Source&gt;{}(t)))</li>
+</ol>
+<ul>
+<li>Otherwise, this function does not participate in overload resolution.</li>
+</ul>
+<h2>Return value</h2>
+<p>The result of the conversion, determined as described above.</p>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example</p>
+<h2>See also</h2>
+<p>clock_time_conversion traits class defining how to convert time points of one clock to another
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+(C++20)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ogg123(1) · Linux Manual Pages</title>
+<meta name="description" content="ogg123 – plays Ogg Vorbis files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ogg123/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ogg123(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> ogg123 &#8211; plays Ogg Vorbis files</p>
+<h2>SYNOPSIS</h2>
+<p> <code>ogg123 </code> [ <code>-vqrzZVh</code> ] [ <code>-k</code> <i>seconds </i> ] [ <code>-x</code> <i>nth</i> ] [ <code>-y</code> <i>ntimes</i> ] [ <code>-b</code> <i>buffer_size </i> ] [ <code>-d</code> <i>driver </i> [ <code>-o</code> <i>option:value</i> ] [ <code>-f</code> <i>filename</i> ] ] <i>file</i> <code>&#8230;</code> | <i>directory</i> <code>&#8230;</code> | <i>URL</i> <code>&#8230;</code> </p>
+<h2>DESCRIPTION</h2>
+<p> <code>ogg123</code> reads Ogg Vorbis audio files and decodes them to the devices specified on the command line. By default, <code>ogg123</code> writes to the standard sound device, but output can be sent to any number of devices. Files can be read from the file system, or URLs can be streamed via HTTP. If a directory is given, all of the files in it or its subdirectories will be played. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>&#8211;audio-buffer n</dt>
+<dd> Use an output audio buffer of approximately &#8216;n&#8217; kilobytes.</dd>
+<dt>-@ playlist, &#8211;list playlist</dt>
+<dd> Play all of the files named in the file &#8216;playlist&#8217;. The playlist should have one filename, directory name, or URL per line. Blank lines are permitted. Directories will be treated in the same way as on the command line.</dd>
+<dt>-b n, &#8211;buffer n</dt>
+<dd> Use an input buffer of approximately &#8216;n&#8217; kilobytes. HTTP-only option.</dd>
+<dt>-p n, &#8211;prebuffer n</dt>
+<dd> Prebuffer &#8216;n&#8217; percent of the input buffer. Playback won&#8217;t begin until this prebuffer is complete. HTTP-only option.</dd>
+<dt>-d device, &#8211;device device</dt>
+<dd> Specify output device. See <code>DEVICES</code> section for a list of devices. Any number of devices may be specified.</dd>
+<dt>-f filename, &#8211;file filename</dt>
+<dd> Specify output file for file devices. The filename &quot;-&quot; writes to standard out. If the file already exists, <code>ogg123</code> will overwrite it.</dd>
+<dt>-c c, &#8211;config c</dt>
+<dd> Config options from command-line.</dd>
+<dt>-l s, &#8211;delay s</dt>
+<dd> Set termination timeout in milliseconds. ogg123 will skip to the next song on SIGINT (Ctrl-C), and will terminate if two SIGINTs are received within the specified timeout &#8216;s&#8217;. (default 500)</dd>
+<dt>-h, &#8211;help</dt>
+<dd> Show command help.</dd>
+<dt>-k n, &#8211;skip n</dt>
+<dd> Skip the first &#8216;n&#8217; seconds. &#8216;n&#8217; may also be in minutes:seconds or hours:minutes:seconds form.</dd>
+<dt>-K n, &#8211;end n</dt>
+<dd> Stops playing &#8216;n&#8217; seconds from the start of the stream. &#8216;n&#8217; may also have the same format as used in the <i>&#8211;skip</i> option.</dd>
+<dt>-o option[:value], &#8211;device-option option[:value]</dt>
+<dd> Sets the option <i>option</i> to <i>value</i> for the preceding device. See <code>DEVICES</code> for a list of valid options for each device.</dd>
+<dt>-q, &#8211;quiet</dt>
+<dd> Quiet mode. No messages are displayed.</dd>
+<dt>-V, &#8211;version</dt>
+<dd> Display version information.</dd>
+<dt>-v, &#8211;verbose</dt>
+<dd> Increase verbosity.</dd>
+<dt>-x n, &#8211;nth</dt>
+<dd> Play every &#8216;n&#8217;th decoded block. Has the effect of playing audio at &#8216;n&#8217; times faster than normal speed.</dd>
+<dt>-y n, &#8211;ntimes</dt>
+<dd> Repeat every played block &#8216;n&#8217; times. Has the effect of playing audio &#8216;n&#8217; times slower than normal speed. May be with -x for interesting fractional speeds.</dd>
+<dt>-r, &#8211;repeat</dt>
+<dd> Repeat playlist indefinitely.</dd>
+<dt>-R, &#8211;remote</dt>
+<dd> Use remote control interface.</dd>
+<dt>-z, &#8211;shuffle</dt>
+<dd> Play files in pseudo-random order.</dd>
+<dt>-Z, &#8211;random</dt>
+<dd> Play files in pseudo-random order forever. </dd>
+</dl>
+<h2>DEVICES</h2>
+<p> <code>ogg123</code> supports a variety of audio output devices through libao. Only those devices supported by the target platform will be available. The <code>-f</code> option may only be used with devices that write to files. </p>
+<p> Options supported by all devices:</p>
+<dl>
+<dl>
+<dt>debug</dt>
+<dd> Turn on debugging output [if any] for a chosen driver.</dd>
+<dt>matrix:value</dt>
+<dd> Force a specific output channel ordering for a given device. <i>value</i> is a comma seperated list of AO style channel names, eg, L,R,C,LFE,BL,BR,SL,SR.</dd>
+<dt>verbose</dt>
+<dd> Turn on verbose output for a chosen driver. the -v option will also set the driver verbose option.</dd>
+<dt>quiet</dt>
+<dd> Force chosen driver to be completely silent. Even errors will not produce any output. -q will also set the driver quiet option.</dd></dl>
+</dl>
+<p> <code></p>
+<dl>
+<dt>aixs</dt>
+<dd> </code> AIX live output driver. Options:</dd>
+<dl>
+<dl>
+<dt>dev:value</dt>
+<dd> Set AIX output device to <i>value</i></dd></dl>
+</dl>
+<p> <code></p>
+<dt>alsa</dt>
+<dd> </code> Advanced Linux Sound Architecture live output driver. Options:</dd>
+<dl>
+<dl>
+<dt>buffer_time:value</dt>
+<dd> Override the default hardware buffer size (in milliseconds).</dd>
+<dt>dev:value</dt>
+<dd> ALSA device label to use. Examples include &quot;hw:0&quot; for the first soundcard and &quot;hw:1&quot; for the second. The alsa driver normally chooses one of &quot;surround71&quot;, &quot;surround51&quot;, &quot;surround40&quot; or &quot;default&quot; automatically depending on number of output channels. For more information, see <a rel="nofollow" href="http://alsa.opensrc.org/ALSA+device+labels">http://alsa.opensrc.org/ALSA+device+labels</a></dd>
+<dt>period_time:value</dt>
+<dd> Override the default hardware period size (in microseconds).</dd>
+<dt>period_time:value</dt>
+<dd> Override the default hardware period size (in microseconds).</dd>
+<dt>use_mmap:value</dt>
+<dd> <i>value</i> is set to &quot;yes&quot; or &quot;no&quot; to override the compiled-in default to use or not use mmap device access. In the past, some buggy alsa drivers have behaved better when not using mmap access at the penalty of slightly higher CPU usage.</dd></dl>
+</dl>
+<p> <code></p>
+<dt>arts</dt>
+<dd> </code> aRts Sound Daemon live output driver. Options:</dd>
+<dl>
+<dl>
+<dt>multi:value</dt>
+<dd> <i>value</i> is set to &quot;yes&quot; or &quot;no&quot; to allow opening the aRts playback device for multiply concurrent playback. Although the driver works properly in multi mode, it is known to occasionally crash the aRts server itself. Default behavior is &quot;no&quot;.</dd></dl>
+</dl>
+<p> <code></p>
+<dt>au</dt>
+<dd> </code> Sun audio file output. Writes the audio samples in AU format. The AU format supports writing to unseekable files like standard out. In such circumstances, the AU header will specify the sample format, but not the length of the recording. </dd>
+<p> <code></p>
+<dt>esd</dt>
+<dd> </code> Enlightened Sound Daemon live output. Options:</dd>
+<dl>
+<dl>
+<dt>host:value</dt>
+<dd> <i>value</i> specifies the hostname where esd is running. This can include a port number after a colon, as in &quot;whizbang.com:555&quot;. (Default = localhost)</dd></dl>
+</dl>
+<p> <code></p>
+<dt>irix</dt>
+<dd> </code> IRIX live output audio driver. </dd>
+<p> <code></p>
+<dt>macosx</dt>
+<dd> </code> MacOS X &#8216;AUHAL&#8217; live output driver. This driver supports MacOS X 10.5 and later (10.4 and earlier uses an earlier, incompatable interface). Options:</dd>
+<dl>
+<dl>
+<dt>buffer_time:value</dt>
+<dd> Set the hardware buffer size to the equivalent of <i>value</i> milliseconds.</dd></dl>
+</dl>
+<p> <code></p>
+<dt>nas</dt>
+<dd> </code> Network Audio Server live output driver. Options:</dd>
+<dl>
+<dl>
+<dt>buf_size:value</dt>
+<dd> Set size of audio buffer on server in bytes.</dd>
+<dt>host:value</dt>
+<dd> Set location of NAS server; See nas(1) for format.</dd></dl>
+</dl>
+<p> <code></p>
+<dt>null</dt>
+<dd> </code> Null driver. All audio data is discarded. (Note: Audio data is not written to <code>/dev/null</code> !) You could use this driver to test raw decoding speed without output overhead. </dd>
+<p> <code></p>
+<dt>oss</dt>
+<dd> </code> Open Sound System driver for Linux and FreeBSD, versions 2, 3 and 4. Options:</dd>
+<dl>
+<dl>
+<dt>dsp:value</dt>
+<dd> DSP device for soundcard. Defaults to <code>/dev/dsp.</code></dd></dl>
+</dl>
+<p> <code></p>
+<dt>pulse</dt>
+<dd> </code> Pulseaudio live audio sound driver. Options:</dd>
+<dl>
+<dl>
+<dt>server:value</dt>
+<dd> Specifies location of remote or alternate Pulseaudio server.</dd>
+<dt>sink:value</dt>
+<dd> Specifies a non-default Pulseaudio sink for audio stream.</dd></dl>
+</dl>
+<p> <code></p>
+<dt>raw</dt>
+<dd> </code> Raw file output. Writes raw audio samples to a file. Options:</dd>
+<dl>
+<dl>
+<dt>byteorder:value</dt>
+<dd> Chooses big endian (&quot;big&quot;), little endian (&quot;little&quot;), or native (&quot;native&quot;) byte order. Default is native order.</dd></dl>
+</dl>
+<p> <code></p>
+<dt>roar</dt>
+<dd> </code> Roar Audio Daemon live output driver. Options:</dd>
+<dl>
+<dl>
+<dt>host:value</dt>
+<dd> Specifies location of remote Roar server to use.</dd></dl>
+</dl>
+<p> <code></p>
+<dt>sndio</dt>
+<dd> </code> OpenBSD SNDIO live output driver. Options:</dd>
+<dl>
+<dl>
+<dt>dev:value</dt>
+<dd> Specifies audio device to use for playback.</dd></dl>
+</dl>
+<p> <code></p>
+<dt>sun</dt>
+<dd> </code> Sun Audio live output driver for NetBSD, OpenBSD, and Solaris. Options:</dd>
+<dl>
+<dl>
+<dt>dev:value</dt>
+<dd> Audio device for soundcard. Defaults to <code>/dev/audio.</code></dd></dl>
+</dl>
+<p> <code></p>
+<dt>wav</dt>
+<dd> </code> WAV file output. Writes the sound data to disk in uncompressed form. If multiple files are played, all of them will be concatenated into the same WAV file. WAV files cannot be written to unseekable files, such as standard out. Use the AU format instead. </dd>
+<p> <code></p>
+<dt>wmm</dt>
+<dd> </code> Windows MultiMedia live output driver for Win98 and later. Options:</dd>
+<dl>
+<dl>
+<dt>dev:value</dt>
+<dd> Selects audio device to use for playback by device name.</dd>
+<dt>id:value</dt>
+<dd> Selects audio device to use for playback by device id (card number).</dd></dl>
+</dl>
+</dl>
+<h2>EXAMPLES</h2>
+<p> The <code>ogg123</code> command line is fairly flexible, perhaps confusingly so. Here are some sample command lines and an explanation of what they do. </p>
+<p> Play on the default soundcard:</p>
+<dl>
+<dt>
+</dt><dd> <code>ogg123 test.ogg</code></dd></dl>
+<p> Play all of the files in the directory ~/music and its subdirectories.</p>
+<dl>
+<dt>
+</dt><dd> <code>ogg123 ~/music</code></dd></dl>
+<p> Play a file using the OSS driver:</p>
+<dl>
+<dt>
+</dt><dd> <code>ogg123 -d oss test.ogg</code></dd></dl>
+<p> Pass the &quot;dsp&quot; option to the OSS driver:</p>
+<dl>
+<dt>
+</dt><dd> <code>ogg123 -d oss -o dsp:/dev/mydsp </code></dd></dl>
+<p> Use the ESD driver</p>
+<dl>
+<dt>
+</dt><dd> <code>ogg123 -d esd test.ogg</code></dd></dl>
+<p> Use the WAV driver with the output file, &quot;test.wav&quot;:</p>
+<dl>
+<dt>
+</dt><dd> <code>ogg123 -d wav -f test.wav test.ogg</code></dd></dl>
+<p> Listen to a file while you write it to a WAV file:</p>
+<dl>
+<dt>
+</dt><dd> <code>ogg123 -d oss -d wav -f test.wav test.ogg</code></dd></dl>
+<p> Note that options apply to the device declared to the left:</p>
+<dl>
+<dt>
+</dt><dd> <code>ogg123 -d oss -o dsp:/dev/mydsp -d raw -f test2.raw -o byteorder:big test.ogg</code></dd></dl>
+<p> Stress test your harddrive:</p>
+<dl>
+<dt>
+</dt><dd> <code>ogg123 -d oss -d wav -f 1.wav -d wav -f 2.wav -d wav -f 3.wav -d wav -f 4.wav -d wav -f 5.wav test.ogg</code></dd></dl>
+<p> Create an echo effect with esd and a slow computer:</p>
+<dl>
+<dt>
+</dt><dd> <code>ogg123 -d esd -d esd test.ogg</code></dd></dl>
+<h2>INTERRUPT</h2>
+<p> You can abort <code>ogg123</code> at any time by pressing Ctrl-C. If you are playing multiple files, this will stop the current file and begin playing the next one. If you want to abort playing immediately instead of skipping to the next file, press Ctrl-C within the first second of the playback of a new file. </p>
+<p> Note that the result of pressing Ctrl-C might not be audible immediately, due to audio data buffering in the audio device. This delay is system dependent, but it is usually not more than one or two seconds. </p>
+<h2>FILES</h2>
+<dl>
+<dt>/etc/libao.conf</dt>
+<dd> Can be used to set the default output device for all libao programs. </dd>
+<dt>~/.libao</dt>
+<dd> Per-user config file to override the system wide output device settings.</dd></dl>
+<h2>BUGS</h2>
+<p> Piped WAV files may cause strange behavior in other programs. This is because WAV files store the data length in the header. However, the output driver does not know the length when it writes the header, and there is no value that means &quot;length unknown&quot;. Use the raw or au output driver if you need to use ogg123 in a pipe. </p>
+<h2>AUTHORS</h2>
+<dl>
+<dt>Program Authors:</dt>
+<dd>
+ Kenneth Arnold &lt;kcarnold-xiph [at] arnoldnet.net&gt;<br />
+ Stan Seibert &lt;volsung [at] xiph.org&gt; </dd>
+<dt>Manpage Author:</dt>
+<dd>
+ Stan Seibert &lt;volsung [at] xiph.org&gt; </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-libao-conf/">libao.conf</a></code>(5), <code><a href="/docs/linux/man/1-oggenc/">oggenc</a></code>(1), <code><a href="/docs/linux/man/1-vorbiscomment/">vorbiscomment</a></code>(1), <code><a href="/docs/linux/man/1-ogginfo/">ogginfo</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

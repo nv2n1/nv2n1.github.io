@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-ls-tree(1) · Linux Manual Pages</title>
+<meta name="description" content="git-ls-tree – List the contents of a tree object">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-ls-tree/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-ls-tree(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> git-ls-tree &#8211; List the contents of a tree object </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+git ls - tree[-d][-r][-t][-l][-z]
+             [--name - only][--name - status][--full - name][--full - tree][--abbrev[=&lt;n&gt;]]&lt;tree - ish&gt;[&lt;path&gt;...]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> Lists the contents of a given tree object, like what &quot;/bin/ls -a&quot; does in the current working directory. Note that: </p>
+<dl>
+<dt>
+</dt><dd> &bull; the behaviour is slightly different from that of &quot;/bin/ls&quot; in that the <i>&lt;path&gt;</i> denotes just a list of patterns to match, e.g. so specifying directory name (without <code>-r</code>) will behave differently, and order of the arguments does not matter.</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; the behaviour is similar to that of &quot;/bin/ls&quot; in that the <i>&lt;path&gt;</i> is taken as relative to the current working directory. E.g. when you are in a directory <i>sub</i> that has a directory <i>dir</i>, you can run <i>git ls-tree -r HEAD dir</i> to list the contents of the tree (that is <code>sub/dir</code> in <code>HEAD</code>). You don&#8217;t want to give a tree that is not at the root level (e.g. <code>git ls-tree -r HEAD:sub dir</code>) in this case, as that would result in asking for <code>sub/sub/dir</code> in the <code>HEAD</code> commit. However, the current working directory can be ignored by passing &#8211;full-tree option.</dd></dl>
+<h2>OPTIONS</h2>
+<p> &lt;tree-ish&gt;</p>
+<dl>
+<dt>
+</dt><dd> Id of a tree-ish.</dd></dl>
+<p> -d</p>
+<dl>
+<dt>
+</dt><dd> Show only the named tree entry itself, not its children.</dd></dl>
+<p> -r</p>
+<dl>
+<dt>
+</dt><dd> Recurse into sub-trees.</dd></dl>
+<p> -t</p>
+<dl>
+<dt>
+</dt><dd> Show tree entries even when going to recurse them. Has no effect if <code>-r</code> was not passed. <code>-d</code> implies <code>-t</code>.</dd></dl>
+<p> -l, &#8211;long</p>
+<dl>
+<dt>
+</dt><dd> Show object size of blob (file) entries.</dd></dl>
+<p> -z</p>
+<dl>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

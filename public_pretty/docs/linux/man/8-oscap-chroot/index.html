@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>oscap-chroot(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-oscap-chroot/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>oscap-chroot(8)</h1>
+
+
+
+
+
+<p>oscap-chroot - Tool for offline SCAP evaluation of filesystems mounted at arbitrary paths.</p>
+<h2>Description</h2>
+<p>oscap-chroot runs oscap tool on it in a filesystem mounted at given path. Usage of the tool mimics usage and options of <a HREF="/docs/linux/man/8-oscap/">oscap</a>(8) tool.</p>
+<h2>Usage</h2>
+<h3>Evaluation of XCCDF content</h3>
+<p>$ oscap-chroot CHROOT_PATH xccdf eval [options] INPUT_CONTENT</p>
+<p>supported oscap xccdf eval options are:
+ <wbr> <wbr>&ndash;profile
+ <wbr> <wbr>&ndash;tailoring-file
+ <wbr> <wbr>&ndash;tailoring-id
+ <wbr> <wbr>&ndash;cpe <wbr>(external OVAL dependencies are not supported yet!)
+ <wbr> <wbr>&ndash;oval-results
+ <wbr> <wbr>&ndash;sce-results
+ <wbr> <wbr>&ndash;check-engine-results
+ <wbr> <wbr>&ndash;results
+ <wbr> <wbr>&ndash;results-arf
+ <wbr> <wbr>&ndash;report
+ <wbr> <wbr>&ndash;skip-valid
+ <wbr> <wbr>&ndash;fetch-remote-resources
+ <wbr> <wbr>&ndash;progress
+ <wbr> <wbr>&ndash;datastream-id
+ <wbr> <wbr>&ndash;xccdf-id
+ <wbr> <wbr>&ndash;benchmark-id</p>
+<h3>Evaluation of OVAL content</h3>
+<p>$ oscap-chroot image CHROOT_PATH oval eval [options] INPUT_CONTENT</p>
+<p>supported oscap oval eval options are:
+ <wbr> <wbr>&ndash;id
+ <wbr> <wbr>&ndash;variables
+ <wbr> <wbr>&ndash;directives
+ <wbr> <wbr>&ndash;results
+ <wbr> <wbr>&ndash;report
+ <wbr> <wbr>&ndash;skip-valid
+ <wbr> <wbr>&ndash;datastream-id
+ <wbr> <wbr>&ndash;oval-id
+ <wbr> <wbr>&ndash;probe-root</p>
+<h3>Collection of OVAL System Characteristic</h3>
+<p>$ oscap-chroot CHROOT_PATH oval collect [options] INPUT_CONTENT</p>
+<p>supported oscap oval collect options are:
+ <wbr> <wbr>&ndash;id
+ <wbr> <wbr>&ndash;syschar
+ <wbr> <wbr>&ndash;variables
+ <wbr> <wbr>&ndash;skip-valid</p>
+<h2>Reporting Bugs</h2>
+<pre>Please report bugs using <a rel="nofollow" HREF="https://github.com/OpenSCAP/openscap/issues">https://github.com/OpenSCAP/openscap/issues</a></pre>
+<h2>Authors</h2>
+<pre>Martin Preisler &lt;mpreisle [at] redhat.com&gt;</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

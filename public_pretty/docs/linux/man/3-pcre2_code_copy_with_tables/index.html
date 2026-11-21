@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pcre2_code_copy_with_tables(3) · Linux Manual Pages</title>
+<meta name="description" content="PCRE2 – Perl-compatible regular expressions (revised API)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pcre2_code_copy_with_tables/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pcre2_code_copy_with_tables(3)</h1>
+
+
+
+
+
+<p>PCRE2 &#8211; Perl-compatible regular expressions (revised API)</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;pcre2.h&gt;</code></pre>
+<pre><code>pcre2_code *pcre2_code_copy_with_tables(const pcre2_code *</code><i>code</i>);</pre>
+<h2>Description</h2>
+<p>This function makes a copy of the memory used for a compiled pattern, excluding any memory used by the JIT compiler. Without a subsequent call to <code>pcre2_jit_compile()</code>, the copy can be used only for non-JIT matching. Unlike <code>pcre2_code_copy()</code>, a separate copy of the character tables is also made, with the new code pointing to it. This memory will be automatically freed when <code>pcre2_code_free()</code> is called. The yield of the function is NULL if <i>code</i> is NULL or if sufficient memory cannot be obtained. There is a complete description of the PCRE2 native API in the <code>pcre2api</code> page and a description of the POSIX API in the <code>pcre2posix</code> page. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

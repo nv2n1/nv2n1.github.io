@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuring Indentation in Vim for C and C&#43;&#43; - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/vim-formatting-cc-code/">
+  <meta name="description" content="Vim’s indentation system provides multiple approaches for formatting C/C&#43;&#43; code, from built-in operators to external formatters. The native tools work reliably …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Configuring Indentation in Vim for C and C&#43;&#43;">
+  <meta property="og:url" content="https://www.systutorials.com/vim-formatting-cc-code/">
+  <meta property="og:description" content="Vim’s indentation system provides multiple approaches for formatting C/C&#43;&#43; code, from built-in operators to external formatters. The native tools work reliably …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/scripting-automation/">Scripting &amp; Automation</a>
+        </nav>
+        
+        <h1>Configuring Indentation in Vim for C and C&#43;&#43;</h1>
+        <time class="post-date" datetime="2013-07-12T16:47:45Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Vim’s indentation system provides multiple approaches for formatting C/C++ code, from built-in operators to external formatters. The native tools work reliably for most tasks, while external formatters enforce stricter style rules when needed.</p>
+<h2 id="the-indentation-operator-and-text-objects">The Indentation Operator and Text Objects</h2>
+<p>The <code>=</code> operator re-indents text. It requires a motion or text object to specify what to format:</p>
+<pre><code>=       indentation operator (requires motion/text object)
+i{      inner block (content between braces, excluding braces)
+a{      entire block (content plus braces)
+</code></pre>
+<p>Apply indentation with these common patterns:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">==</span>          <span class="nx">format</span> <span class="nx">current</span> <span class="nx">line</span>
+</span></span><span class="line"><span class="cl"><span class="p">=</span><span class="nx">i</span>{         <span class="nx">format</span> <span class="nx">inner</span> <span class="nx">block</span>
+</span></span><span class="line"><span class="cl"><span class="p">=</span><span class="nx">a</span>{         <span class="nx">format</span> <span class="nx">block</span> <span class="nx">including</span> <span class="nx">braces</span>
+</span></span><span class="line"><span class="cl"><span class="p">=</span><span class="m">2</span>i{        <span class="nx">format</span> <span class="nx">inner</span> <span class="nx">block</span> <span class="nx">and</span> <span class="nx">its</span> <span class="nx">outer</span> <span class="nx">block</span>
+</span></span><span class="line"><span class="cl"><span class="nx">gg</span><span class="p">=</span><span class="nx">G</span>        <span class="nx">format</span> <span class="nx">entire</span> <span class="nx">file</span>
+</span></span><span class="line"><span class="cl"><span class="p">=</span><span class="nx">ap</span>         <span class="nx">format</span> <span class="nx">paragraph</span>
+</span></span><span class="line"><span class="cl"><span class="p">=</span>}          <span class="nx">format</span> <span class="nx">from</span> <span class="nx">cursor</span> <span class="nx">to</span> <span class="nx">next</span> <span class="nx">closing</span> <span class="nx">brace</span>
+</span></span><span class="line"><span class="cl"><span class="p">=</span><span class="m">5</span>j         <span class="nx">format</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">plus</span> <span class="nx">next</span> <span class="m">4</span> <span class="nx">lines</span>
+</span></span></code></pre></div><h2 id="visual-mode-for-irregular-regions">Visual Mode for Irregular Regions</h2>
+<p>When you need to format code that doesn’t align cleanly with blocks, use visual selection:</p>
+<ol>
+<li>Position cursor at the start</li>
+<li>Enter visual mode: <code>v</code> (character), <code>V</code> (line-based), or <code>Ctrl-v</code> (block)</li>
+<li>Navigate to end point with motions (<code>j</code>, <code>k</code>, <code>G</code>, <code>}</code>, etc.)</li>
+<li>Press <code>=</code> to indent</li>
+</ol>
+<p>This handles edge cases like partial function definitions or complex conditional structures.</p>
+<h2 id="configuring-cc-indentation">Configuring C/C++ Indentation</h2>
+<p>Configure Vim’s indentation behavior for your project’s style. In <code>~/.vimrc</code> or <code>~/.config/nvim/init.vim</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">autocmd</span> <span class="nx">FileType</span> <span class="nx">c</span><span class="p">,</span><span class="nx">cpp</span> <span class="nx">setlocal</span> <span class="nx">cindent</span>
+</span></span><span class="line"><span class="cl"><span class="k">autocmd</span> <span class="nx">FileType</span> <span class="nx">c</span><span class="p">,</span><span class="nx">cpp</span> <span class="nx">setlocal</span> <span class="nx">cinoptions</span><span class="p">=</span>:<span class="m">0</span><span class="p">,</span><span class="nx">l1</span><span class="p">,</span><span class="nx">t0</span><span class="p">,</span><span class="nx">g0</span>
+</span></span><span class="line"><span class="cl"><span class="k">autocmd</span> <span class="nx">FileType</span> <span class="nx">c</span><span class="p">,</span><span class="nx">cpp</span> <span class="nx">setlocal</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="k">autocmd</span> <span class="nx">FileType</span> <span class="nx">c</span><span class="p">,</span><span class="nx">cpp</span> <span class="nx">setlocal</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="k">autocmd</span> <span class="nx">FileType</span> <span class="nx">c</span><span class="p">,</span><span class="nx">cpp</span> <span class="nx">setlocal</span> <span class="nx">expandtab</span>
+</span></span></code></pre></div><p>Key options explained:</p>
+<ul>
+<li><code>cindent</code> — C-style indentation (context-aware, superior to <code>autoindent</code>)</li>
+<li><code>cinoptions</code> — fine-tune behavior (<code>:0</code> aligns case labels, <code>l1</code> aligns continuation lines, <code>t0</code> preserves return type indentation, <code>g0</code> aligns C++ scope declarations)</li>
+<li><code>shiftwidth</code> — spaces per indent level (used by <code>&lt;&lt;</code> and <code>&gt;&gt;</code>)</li>
+<li><code>tabstop</code> — display width of tab characters</li>
+<li><code>expandtab</code> — insert spaces instead of tabs</li>
+</ul>
+<p>For stricter control, add <code>cindent</code> options like <code>(0,W2s</code> to control parameter alignment in function calls.</p>
+<h2 id="using-external-formatters">Using External Formatters</h2>
+<p>External formatters enforce project-wide style consistency. Integrate <code>clang-format</code> (LLVM’s formatter):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">autocmd</span> <span class="nx">FileType</span> <span class="nx">c</span><span class="p">,</span><span class="nx">cpp</span> <span class="nx">setlocal</span> <span class="nx">formatprg</span><span class="p">=</span><span class="nx">clang</span><span class="p">-</span><span class="nx">format</span>
+</span></span></code></pre></div><p>Then format selection or file with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">gq</span>          <span class="nx">format</span> <span class="nx">selected</span> <span class="nx">region</span>
+</span></span><span class="line"><span class="cl"><span class="nx">gg</span><span class="p">!</span><span class="nx">Gclang</span><span class="p">-</span><span class="nx">format</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>    <span class="nx">format</span> <span class="nx">entire</span> <span class="nx">file</span> <span class="p">(</span><span class="nx">alternative</span> <span class="nx">method</span><span class="p">)</span>
+</span></span></code></pre></div><p>Common alternatives:</p>
+<ul>
+<li><strong>clang-format</strong> — LLVM project standard, reads <code>.clang-format</code> config files</li>
+<li><strong>astyle</strong> — flexible, good for legacy codebases</li>
+<li><strong>uncrustify</strong> — highly configurable, supports many languages</li>
+</ul>
+<p>Check your project for <code>.clang-format</code>, <code>.astylerc</code>, or similar config files to ensure Vim matches team standards. If your project uses a formatter, configure it in <code>formatprg</code> to avoid style conflicts.</p>
+<h2 id="visualizing-whitespace-and-indentation">Visualizing Whitespace and Indentation</h2>
+<p>Enable whitespace visualization to spot indentation problems:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">list</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">listchars</span><span class="p">=</span><span class="nx">tab</span>:→\ <span class="p">,</span><span class="nx">trail</span>:·<span class="p">,</span><span class="nx">extends</span>:»<span class="p">,</span><span class="nx">precedes</span>:«
+</span></span></code></pre></div><p>This shows tabs as <code>→</code>, trailing spaces as <code>·</code>, and overflow indicators. For more sophisticated highlighting, install <code>vim-indent-guides</code> or <code>indent-blankline.nvim</code> (Neovim).</p>
+<h2 id="neovim-configuration">Neovim Configuration</h2>
+<p>Neovim users have identical indentation commands. For Lua configuration in <code>init.lua</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">cindent</span> <span class="o">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">shiftwidth</span> <span class="o">=</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">tabstop</span> <span class="o">=</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">expandtab</span> <span class="o">=</span> <span class="kc">true</span>
+</span></span></code></pre></div><p>Neovim’s built-in LSP support integrates formatters directly into the editor. If your language server provides formatting (clangd for C/C++), configure it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="n">vim.lsp</span><span class="p">.</span><span class="n">buf.format</span><span class="p">({</span> <span class="n">async</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">})</span>
+</span></span></code></pre></div><p>This replaces manual indentation in many workflows, but the native <code>=</code> operator remains essential when LSP isn’t available.</p>
+<h2 id="debugging-indentation-issues">Debugging Indentation Issues</h2>
+<p>If indentation behaves unexpectedly, check active settings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="k">set</span> <span class="nx">cindent</span>?
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="k">set</span> <span class="nx">cinoptions</span>?
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="k">set</span> <span class="nx">formatprg</span>?
+</span></span></code></pre></div><p>The <code>?</code> suffix displays the current value. If a formatter is set, it overrides native indentation. Temporarily disable it to test native behavior:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="k">set</span> <span class="nx">formatprg</span><span class="p">=</span>
+</span></span></code></pre></div><p>For complex scenarios, test indentation on a small code snippet before applying it to entire files.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

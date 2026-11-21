@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-sh-i18n(1) · Linux Manual Pages</title>
+<meta name="description" content="git-sh-i18n – Git’s i18n setup code for shell scripts">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-sh-i18n/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-sh-i18n(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> git-sh-i18n &#8211; Git&#8217;s i18n setup code for shell scripts </p>
+<h2>SYNOPSIS</h2>
+<pre>
+<i>. &quot;$(git --exec-path)/git-sh-i18n&quot;</i>
+</pre>
+<h2>DESCRIPTION</h2>
+<p> This is not a command the end user would want to run. Ever. This documentation is meant for people who are studying the Porcelain-ish scripts and/or are writing new ones. </p>
+<p> The &#8216;git sh-i18n scriptlet is designed to be sourced (using <code>.</code>) by Git&#8217;s porcelain programs implemented in shell script. It provides wrappers for the GNU <code>gettext</code> and <code>eval_gettext</code> functions accessible through the <code>gettext.sh</code> script, and provides pass-through fallbacks on systems without GNU gettext.</p>
+<h2>FUNCTIONS</h2>
+<p> gettext</p>
+<dl>
+<dt>
+</dt><dd> Currently a dummy fall-through function implemented as a wrapper around <code><a href="/docs/linux/man/1-printf/">printf</a>(1)</code>. Will be replaced by a real gettext implementation in a later version.</dd></dl>
+<p> eval_gettext</p>
+<dl>
+<dt>
+</dt><dd> Currently a dummy fall-through function implemented as a wrapper around <code><a href="/docs/linux/man/1-printf/">printf</a>(1)</code> with variables expanded by the <code>git-sh-i18n&#8211;envsubst</code>(1) helper. Will be replaced by a real gettext implementation in a later version.</dd></dl>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

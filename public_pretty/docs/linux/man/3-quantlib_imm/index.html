@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_imm(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::IMM – Main cycle of the International Money Market (a.k.a. IMM) months.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_imm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_imm(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::IMM &#8211; Main cycle of the International Money Market (a.k.a. IMM) months. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/time/imm.hpp&gt; </p>
+<h3>Public Types</h3>
+<p>enum <code>Month</code> { <code>F</code> = 1, <code>G</code> = 2, <code>H</code> = 3, <code>J</code> = 4, <code>K</code> = 5, <code>M</code> = 6, <code>N</code> = 7, <code>Q</code> = 8, <code>U</code> = 9, <code>V</code> = 10, <code>X</code> = 11, <code>Z</code> = 12 } </p>
+<h3>Static Public Member Functions</h3>
+<p>static bool <code>isIMMdate</code> (const <code>Date</code> &amp;d, bool mainCycle=true)<br />
+ <i>returns whether or not the given date is an </i><code>IMM</code> date<br />
+ static bool <code>isIMMcode</code> (const std::string &amp;in, bool mainCycle=true)<br />
+ <i>returns whether or not the given string is an </i><code>IMM</code> code<br />
+ static std::string <code>code</code> (const <code>Date</code> &amp;immDate) </p>
+<p> static <code>Date</code> <code>date</code> (const std::string &amp;immCode, const <code>Date</code> &amp;referenceDate=<code>Date</code>()) </p>
+<p> static <code>Date</code> <code>nextDate</code> (const <code>Date</code> &amp;d=<code>Date</code>(), bool mainCycle=true)<br />
+ <i>next </i><code>IMM</code> date following the given date<br />
+ static <code>Date</code> <code>nextDate</code> (const std::string &amp;immCode, bool mainCycle=true, const <code>Date</code> &amp;referenceDate=<code>Date</code>())<br />
+ <i>next </i><code>IMM</code> date following the given <code>IMM</code> code<br />
+ static std::string <code>nextCode</code> (const <code>Date</code> &amp;d=<code>Date</code>(), bool mainCycle=true) </p>
+<p> static std::string <code>nextCode</code> (const std::string &amp;immCode, bool mainCycle=true, const <code>Date</code> &amp;referenceDate=<code>Date</code>()) </p>
+<h2>Detailed Description</h2>
+<p>Main cycle of the International Money Market (a.k.a. IMM) months.</p>
+<h2>Member Function Documentation</h2>
+<h3>static std::string code (const <code>Date</code> &amp; immDate) [static]</h3>
+<p>returns the <code>IMM</code> code for the given date (e.g. H3 for March 20th, 2013). </p>
+<p> <code>Warning</code></p>
+<dl COMPACT>
+<dd>It raises an exception if the input date is not an <code>IMM</code> date</dd></dl>
+<h3>static <code>Date</code> date (const std::string &amp; immCode, const <code>Date</code> &amp; referenceDate = <code>Date</code>()) [static]</h3>
+<p>returns the <code>IMM</code> date for the given <code>IMM</code> code (e.g. March 20th, 2013 for H3). </p>
+<p> <code>Warning</code></p>
+<dl COMPACT>
+<dd>It raises an exception if the input string is not an <code>IMM</code> code</dd></dl>
+<h3>static <code>Date</code> nextDate (const <code>Date</code> &amp; d = <code>Date</code>(), bool mainCycle = true) [static]</h3>
+<p>next <code>IMM</code> date following the given date </p>
+<p> returns the 1st delivery date for next contract listed in the International <code>Money</code> Market section of the Chicago Mercantile Exchange.</p>
+<h3>static <code>Date</code> nextDate (const std::string &amp; immCode, bool mainCycle = true, const <code>Date</code> &amp; referenceDate = <code>Date</code>()) [static]</h3>
+<p>next <code>IMM</code> date following the given <code>IMM</code> code </p>
+<p> returns the 1st delivery date for next contract listed in the International <code>Money</code> Market section of the Chicago Mercantile Exchange.</p>
+<h3>static std::string nextCode (const <code>Date</code> &amp; d = <code>Date</code>(), bool mainCycle = true) [static]</h3>
+<p>returns the <code>IMM</code> code for next contract listed in the International <code>Money</code> Market section of the Chicago Mercantile Exchange.</p>
+<h3>static std::string nextCode (const std::string &amp; immCode, bool mainCycle = true, const <code>Date</code> &amp; referenceDate = <code>Date</code>()) [static]</h3>
+<p>returns the <code>IMM</code> code for next contract listed in the International <code>Money</code> Market section of the Chicago Mercantile Exchange. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

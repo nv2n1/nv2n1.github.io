@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fsetfilecon(3) · Linux Manual Pages</title>
+<meta name="description" content="setfilecon, fsetfilecon, lsetfilecon – set SELinux security context of a file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-fsetfilecon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>fsetfilecon(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> setfilecon, fsetfilecon, lsetfilecon &#8211; set SELinux security context of a file </p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
+<p> <code>int setfilecon(const char *</code><i>path</i><code>, char *</code><i>con</i><code>);</code> </p>
+<p> <code>int setfilecon_raw(const char *</code><i>path</i><code>, char *</code><i>con</i><code>);</code> </p>
+<p> <code>int lsetfilecon(const char *</code><i>path</i><code>, char *</code><i>con</i><code>);</code> </p>
+<p> <code>int lsetfilecon_raw(const char *</code><i>path</i><code>, char *</code><i>con</i><code>);</code> </p>
+<p> <code>int fsetfilecon(int fd</code><i>, char *</i><code>con</code><i>);</i> </p>
+<p> <code>int fsetfilecon_raw(int fd</code><i>, char *</i><code>con</code><i>);</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>setfilecon</code>() sets the security context of the file system object. </p>
+<p> <code>lsetfilecon</code>() is identical to setfilecon, except in the case of a symbolic link, where the link itself has it&#8217;s context set, not the file that it refers to. </p>
+<p> <code>fsetfilecon</code>() is identical to setfilecon, only the open file pointed to by filedes (as returned by <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) has it&#8217;s context set in place of path. </p>
+<p> <code>setfilecon_raw</code>(), <code>lsetfilecon_raw</code>(), and <code>fsetfilecon_raw</code>() behave identically to their non-raw counterparts but do not perform context translation.</p>
+<h2>RETURN VALUE</h2>
+<p> On success, zero is returned. On failure, -1 is returned and <i>errno</i> is set appropriately.</p>
+<h2>ERRORS</h2>
+<p> If there is insufficient space remaining to store the extended attribute, <i>errno</i> is set to either <code>ENOSPC</code>, or <code>EDQUOT</code> if quota enforcement was the cause. </p>
+<p> If extended attributes are not supported by the filesystem, or are disabled, <i>errno</i> is set to <code>ENOTSUP</code>. </p>
+<p> The errors documented for the <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) system call are also applicable here.</p>
+<h2>SEE ALSO</h2>
+<p> <code>selinux</code>(3), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3), <code><a href="/docs/linux/man/3-getfilecon/">getfilecon</a></code>(3), <code><a href="/docs/linux/man/3-setfscreatecon/">setfscreatecon</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

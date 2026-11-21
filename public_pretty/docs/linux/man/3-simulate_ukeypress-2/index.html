@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>simulate_ukeypress-2(3) · Linux Manual Pages</title>
+<meta name="description" content="simulate_ukeypress – Stuffs an unicode key into the keyboard buffer. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-simulate_ukeypress-2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>simulate_ukeypress-2(3)</h1>
+
+
+
+
+
+<p>simulate_ukeypress &#8211; Stuffs an unicode key into the keyboard buffer. Allegro game programming library.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;allegro.h&gt;
+void simulate_ukeypress(int key, int scancode);</code></pre>
+<h2>Description</h2>
+<p>Stuffs a key into the keyboard buffer, just as if the user had pressed it. The parameter is in the same format returned by ureadkey(). Example: </p>
+<pre><code>/* We ignore the scancode simulation. */
+simulate_ukeypress(0x00DF, 0);
+if (ureadkey(&amp;scancode) == 0x00DF)
+    allegro_message(&quot;You simulated sharp s
+&quot;);
+</code></pre>
+<h2>See Also</h2>
+<p><code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-simulate_keypress/">simulate_keypress</a></code>(3), <code><a href="/docs/linux/man/3-keypressed/">keypressed</a></code>(3), <code><a href="/docs/linux/man/3-ureadkey/">ureadkey</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ceph-post-file(8) · Linux Manual Pages</title>
+<meta name="description" content="ceph-post-file – post files for ceph developers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ceph-post-file/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ceph-post-file(8)</h1>
+
+
+
+
+
+<p>ceph-post-file &#8211; post files for ceph developers</p>
+<h2>Synopsis</h2>
+<pre><code>ceph-post-file</code> [-d <i>description] [-u *user</i>] <i>file or dir</i> ...</pre>
+<h2>Description</h2>
+<p><code>ceph-post-file</code> will upload files or directories to ceph.com for later analysis by Ceph developers. </p>
+<p> Each invocation uploads files or directories to a separate directory with a unique tag. That tag can be passed to a developer or referenced in a bug report (<i><a rel="nofollow" href="http://tracker.ceph.com/">http://tracker.ceph.com/</a></i>). Once the upload completes, the directory is marked non-readable and non-writeable to prevent access or modification by other users.</p>
+<h2>Warning</h2>
+<p>Basic measures are taken to make posted data be visible only to developers with access to ceph.com infrastructure. However, users should think twice and/or take appropriate precautions before posting potentially sensitive data (for example, logs or data directories that contain Ceph secrets).</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-d *description*, &#8211;description *description*</code></dt>
+<dd>Add a short description for the upload. This is a good opportunity to reference a bug number. There is no default value.</dd>
+<dt><code>-u *user*</code></dt>
+<dd>Set the user metadata for the upload. This defaults to <i>whoami`@`hostname -f</i>.</dd></dl>
+<h2>Examples</h2>
+<p>To upload a single log: </p>
+<pre>ceph-post-file /var/log/ceph/ceph-mon.`hostname`.log</pre>
+<p>To upload several directories: </p>
+<pre>ceph-post-file -d 'mon data directories' /var/log/ceph/mon/*</pre>
+<h2>Availability</h2>
+<p><code>ceph-post-file</code> is part of Ceph, a massively scalable, open-source, distributed storage system. Please refer to the Ceph documentation at <i><a rel="nofollow" href="http://ceph.com/docs">http://ceph.com/docs</a></i> for more information.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-ceph/">ceph</a></code>(8), <code>ceph-debugpack</code>(8),</p>
+<h2>Copyright</h2>
+<p>2010-2014, Inktank Storage, Inc. and contributors. Licensed under Creative Commons BY-SA</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

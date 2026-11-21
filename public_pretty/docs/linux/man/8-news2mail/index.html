@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>news2mail(8) · Linux Manual Pages</title>
+<meta name="description" content="news2mail – Channel script to gateway news into e-mails">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-news2mail/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>news2mail(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>news2mail &#8211; Channel script to gateway news into e-mails</p>
+<h2>Synopsis</h2>
+<p><code>news2mail</code></p>
+<h2>Description</h2>
+<p><code>news2mail</code> runs as a channel process underneath <code>innd</code>. It is set up as channel feed in <i>newsfeeds</i>, with different mailing-lists as funnel entries pointing to it (see below); <code>news2mail</code> expects the token of an article followed by a sequence of list names. </p>
+<p> <code>news2mail</code> uses the configuration file <i>pathetc</i>/news2mail.cf to map mailing-list names to e-mail addresses. <code>news2mail</code> causes <code>sendmail</code> to queue the messages for later delivery (to avoid <font SIZE="-1">DOS</font> attacks by mass postings). You must run <tt>&quot;sendmail -q&quot;</tt> periodically to get the queue processed.</p>
+<h2>Configuration File</h2>
+<p>The configuration file format is simple: comments (starting with a hash sign <tt>&quot;#&quot;</tt>) and blank lines are ignored. All other lines have two or three fields on them. The first is the list name and is what <code>innd</code> uses (i.e. the site field of the entry in the <i>newsfeeds</i> file). The second field is the actual e-mail address to send the article to. The third field is optional: it sets the envelope-from address (for instance a list member&#8217;s address; if not set, it defaults to the <tt>&quot;news&quot;</tt> user). </p>
+<p> In e-mail messages, the To: header will have the mailing-list address (i.e. the second field). Besides, <code>news2mail</code> strips most article headers from the article before mailing. </p>
+<p> In <i>newsfeeds</i>, the channel feed should look like: </p>
+<pre> news2mail!:!*:Ac,Tc,Wn*:&lt;pathbin&gt;/news2mail</pre>
+<p>and for each mailing-list, you only have to add to <i>newsfeeds</i> an entry list like: </p>
+<pre> list-big-red-ants/lists.ucsd.edu:!*,rec.pets.red-ants:Ap,Tm:news2mail!</pre>
+<p>Please note the use of <tt>&quot;Ap&quot;</tt> and the exclusion of the list owner domain to protect the list from feeding back new arrivals from the list. The site name used in the <i>newfeeds</i> entry for a mailing-list (above <tt>&quot;list-big-red-ants&quot;</tt>) must be the same as the first field in an entry in <i>news2mail.cf</i>. For instance: </p>
+<pre> # Newsfeeds-name List-to-address [List-sender-address]
+ list-big-red-ants big-red-ants [at] lists.ucsd.edu news+big-red-ants [at] local.news.server.org</pre>
+<h2>Files</h2>
+<dl>
+<dt><i>pathbin</i>/news2mail</dt>
+<dd>The Perl program itself used to gateway news into e-mails.</dd>
+<dt><i>pathetc</i>/news2mail.cf</dt>
+<dd>The configuration file which specifies the mapping to use for gatewaying.</dd></dl>
+<h2>Bugs</h2>
+<p>The <code>news2mail</code> program is set up as a funneled channel in <i>newsfeeds</i>, implying multiple matches should be handled as one &#8211; and multiple matching funneled feeds will result in a single call to the script. Therefore, since only one mail is sent, crossposts are not currently properly handled as for the envelope-from address (which then defaults to the <tt>&quot;news&quot;</tt> user).</p>
+<h2>History</h2>
+<p><code>news2mail</code> was written by Brian Kantor in 1998. This man page was written by James Brister and converted to <font SIZE="-1">POD</font> by Julien Elie. The third optional field in <i>news2mail.cf</i> was added by D. Stussy in 2008. </p>
+<p> <tt>$Id:</tt> news2mail.pod 8199 2008-11-30 13:30:47Z iulius $</p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/8-innd/">innd</a></i>(8), <i><a href="/docs/linux/man/5-newsfeeds/">newsfeeds</a></i>(5). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>newuidmap(1) · Linux Manual Pages</title>
+<meta name="description" content="newuidmap – set the uid mapping of a user namespace">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-newuidmap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>newuidmap(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> newuidmap &#8211; set the uid mapping of a user namespace </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>newuidmap</code> <i>pid</i> <i>uid</i> <i>loweruid</i> <i>count</i> [<i>uid</i>&nbsp;<wbr><i>loweruid</i>&nbsp;<wbr><i>count</i>&nbsp;<wbr>[&nbsp;<wbr><i>&#8230;</i>&nbsp;<wbr>]]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>newuidmap</code> sets /proc/[pid]/uid_map based on it&#8217;s command line arguments and the uids allowed in /etc/subuid. </dd>
+<p> After the pid argument, <code>newuidmap</code> expects sets of 3 integers: </p>
+<p> uid</p>
+<dl>
+<dt>
+</dt><dd> Begining of the range of UIDs inside the user namespace.</dd></dl>
+<p> loweruid</p>
+<dl>
+<dt>
+</dt><dd> Begining of the range of UIDs outside the user namespace.</dd></dl>
+<p> count</p>
+<dl>
+<dt>
+</dt><dd> Length of the ranges (both inside and outside the user namespace).</dd></dl>
+<p> <code>newuidmap</code> verifies that the caller is the owner of the process indicated by <code>pid</code> and that for each of the above sets, each of the UIDs in the range [loweruid, loweruid+count] is allowed to the caller according to /etc/subuid before setting /proc/[pid]/uid_map. </p>
+<p> Note that newuidmap may be used only once for a given process.</p>
+<h2>OPTIONS</h2>
+<p> There currently are no options to the <code>newuidmap</code> command.</p>
+<h2>FILES</h2>
+<p> /etc/subuid</p>
+<dl>
+<dt>
+</dt><dd> List of users subordinate user IDs.</dd></dl>
+<p> /proc/[pid]/uid_map</p>
+<dl>
+<dt>
+</dt><dd> Mapping of uids from one between user namespaces.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-login-defs/">login.defs</a></code>(5), <code><a href="/docs/linux/man/8-newusers/">newusers</a></code>(8), <code><a href="/docs/linux/man/5-subuid/">subuid</a></code>(5), <code><a href="/docs/linux/man/8-useradd/">useradd</a></code>(8), <code><a href="/docs/linux/man/8-usermod/">usermod</a></code>(8), <code><a href="/docs/linux/man/8-userdel/">userdel</a></code>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

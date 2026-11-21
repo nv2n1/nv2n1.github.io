@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cptcont(1) · Linux Manual Pages</title>
+<meta name="description" content="cptcont – create a continuous GMT colour palette table (cpt) file based on the colours of a non-continuous cpt file.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-cptcont/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>cptcont(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> cptcont &#8211; create a continuous GMT colour palette table (cpt) file based on the colours of a non-continuous cpt file. </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>cptcont</code> [-h] [-m] [-o&nbsp;<wbr><i>file</i>] [-p&nbsp;<wbr><i>percent</i>] [-v] [-V] [<i>file</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>cptcont</code> program converts a (possibly) discontinuous colour palette in the input to a continuous palette in the output. This is achieved by replacing the endpoints of segments at which a discontinuity occurs by their mean colour. </dd>
+<p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified.</p>
+<h2>OPTIONS</h2>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Brief help.</dd></dl>
+<p> <code>-m</code>, <code>&#8211;midpoint</code></p>
+<dl>
+<dt>
+</dt><dd> Split each input segment into two output segments with the colour at the common point being the colour of the original segment. This gives a more faithful conversion of gradients with &quot;corners&quot;, such as diverging gradients, albeit at the cost of larger files.</dd></dl>
+<p> <code>-o</code>, <code>&#8211;output</code> <i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Write the output to <i>file</i>, rather than stdout.</dd></dl>
+<p> <code>-p</code>, <code>&#8211;partial</code> <i>percentage</i></p>
+<dl>
+<dt>
+</dt><dd> The endpoints are moved the specified <i>pecentage</i> towards the mean colour, so that a value of 100 (the default) moves the endpoints to the mean colour, 50 moves them half-way there, and so on. </dd>
+<p> Negative values and values greater than 100 are permitted.</dl>
+<p> <code>-v</code>, <code>&#8211;verbose</code></p>
+<dl>
+<dt>
+</dt><dd> Verbose operation.</dd></dl>
+<p> <code>-V</code>, <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Version information.</dd></dl>
+<h2>EXAMPLE</h2>
+<p> Create an almost-continuous table: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+  cptcont -v -p 66 -o new.cpt old.cpt
+</pre>
+</dd></dl>
+<h2>AUTHOR</h2>
+<p> J.J. Green</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gmt/">GMT</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

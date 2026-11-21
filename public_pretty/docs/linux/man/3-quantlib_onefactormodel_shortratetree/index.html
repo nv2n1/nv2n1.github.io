@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_onefactormodel_shortratetree(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::OneFactorModel::ShortRateTree – Recombining trinomial tree discretizing the state variable.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_onefactormodel_shortratetree/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_onefactormodel_shortratetree(3)</h1>
+
+
+
+
+
+<p>QuantLib::OneFactorModel::ShortRateTree &#8211; Recombining trinomial tree discretizing the state variable. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/models/shortrate/onefactormodel.hpp&gt; </p>
+<p> Inherits <code>TreeLattice1D&lt; OneFactorModel::ShortRateTree &gt;</code>. </p>
+<h3>Public Member Functions</h3>
+<p><code>ShortRateTree</code> (const boost::shared_ptr&lt; <code>TrinomialTree</code> &gt; &amp;tree, const boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; &amp;dynamics, const <code>TimeGrid</code> &amp;timeGrid)<br />
+ <i>Plain tree build-up from short-rate dynamics. </i><br />
+ <code>ShortRateTree</code> (const boost::shared_ptr&lt; <code>TrinomialTree</code> &gt; &amp;tree, const boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; &amp;dynamics, const boost::shared_ptr&lt; TermStructureFittingParameter::NumericalImpl &gt; &amp;phi, const <code>TimeGrid</code> &amp;timeGrid)<br />
+ <i></i><code>Tree</code> build-up + numerical fitting to term-structure.<br />
+ Size <code>size</code> (Size i) const </p>
+<p> <code>DiscountFactor</code> <code>discount</code> (Size i, Size index) const </p>
+<p> <code>Real</code> <code>underlying</code> (Size i, Size index) const </p>
+<p> Size <code>descendant</code> (Size i, Size index, Size branch) const </p>
+<p> <code>Real</code> <code>probability</code> (Size i, Size index, Size branch) const </p>
+<h2>Detailed Description</h2>
+<p>Recombining trinomial tree discretizing the state variable. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

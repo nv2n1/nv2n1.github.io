@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xrmenumeratedatabase(3) · Linux Manual Pages</title>
+<meta name="description" content="XrmEnumerateDatabase – enumerate resource database entries">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xrmenumeratedatabase/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xrmenumeratedatabase(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XrmEnumerateDatabase &#8211; enumerate resource database entries </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dt> #include &lt;X11/Xresource.h&gt; </dt>
+<table>
+<tr VALIGN=top>
+<td> #define </td>
+<td> <code>XrmEnumAllLevels</code> </td>
+<td>
+<dd>0
+</td>
+</tr>
+<tr VALIGN=top>
+<td> #define </td>
+<td> <code>XrmEnumOneLevel</code> </td>
+<td> 1
+</td>
+</tr>
+</table>
+</dd><dd>Bool XrmEnumerateDatabase(XrmDatabase <i>database</i>, XrmNameList <i>name_prefix</i>, XrmClassList <i>class_prefix</i>, int <i>mode</i>, Bool (*<i>proc</i>)(), XPointer <i>arg</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>database</i></dt>
+<dd>Specifies the resource database.</dd>
+<dt><i>name_prefix</i></dt>
+<dd>Specifies the resource name prefix.</dd>
+<dt><i>class_prefix</i></dt>
+<dd>Specifies the resource class prefix.</dd>
+<dt><i>mode</i></dt>
+<dd>Specifies the number of levels to enumerate.</dd>
+<dt><i>proc</i></dt>
+<dd>Specifies the procedure that is to be called for each matching entry.</dd>
+<dt><i>arg</i></dt>
+<dd>Specifies the user-supplied argument that will be passed to the procedure.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XrmEnumerateDatabase</code> function calls the specified procedure for each resource in the database that would match some completion of the given name/class resource prefix. The order in which resources are found is implementation-dependent. If mode is <code>XrmEnumOneLevel</code>, a resource must match the given name/class prefix with just a single name and class appended. If mode is <code>XrmEnumAllLevels</code>, the resource must match the given name/class prefix with one or more names and classes appended. If the procedure returns <code>True</code>, the enumeration terminates and the function returns <code>True</code>. If the procedure always returns <code>False</code>, all matching resources are enumerated and the function returns <code>False</code>. </p>
+<p> The procedure is called with the following arguments: </p>
+<p> (*<i>proc</i>)(<i>database</i>, <i>bindings</i>, <i>quarks</i>, <i>type</i>, <i>value</i>, <i>arg</i>)<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;XrmDatabase&nbsp;*<i>database</i>;<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;XrmBindingList&nbsp;<i>bindings</i>;<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;XrmQuarkList&nbsp;<i>quarks</i>;<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;XrmRepresentation&nbsp;*<i>type</i>;<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;XrmValue&nbsp;*<i>value</i>;<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;XPointer&nbsp;<i>arg</i>; </p>
+<p> The bindings and quarks lists are terminated by <code>NULLQUARK</code>. Note that pointers to the database and type are passed, but these values should not be modified. </p>
+<p> The procedure must not modify the database. If Xlib has been initialized for threads, the procedure is called with the database locked and the result of a call by the procedure to any Xlib function using the same database is not defined.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xrmgetresource/">XrmGetResource</a>(3), <a href="/docs/linux/man/3-xrminitialize/">XrmInitialize</a>(3), <a href="/docs/linux/man/3-xrmputresource/">XrmPutResource</a>(3)<br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

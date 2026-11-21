@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iget5_locked(9) · Linux Manual Pages</title>
+<meta name="description" content="iget5_locked – obtain an inode from a mounted file system">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-iget5_locked/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>iget5_locked(9)</h1>
+
+
+
+
+
+<p>iget5_locked &#8211; obtain an inode from a mounted file system</p>
+<h2>Synopsis</h2>
+<pre><code>struct inode *iget5_locked(struct super_block *sb, unsigned long hashval, int (*test)(struct inode *, void *), int (*set)(struct inode *, void *), void *data);</code></pre>
+<h2>Arguments</h2>
+<p><i>sb</i></p>
+<dl>
+<dd>
+</dd><dd>super block of file system</dd></dl>
+<p> <i>hashval</i></p>
+<dl>
+<dd>hash value (usually inode number) to get</dd></dl>
+<p> <i>test</i></p>
+<dl>
+<dd>callback used for comparisons between inodes</dd></dl>
+<p> <i>set</i></p>
+<dl>
+<dd>callback used to initialize a new struct inode</dd></dl>
+<p> <i>data</i></p>
+<dl>
+<dd>opaque data pointer to pass to <i>test</i> and <i>set</i></dd></dl>
+<h2>Description</h2>
+<p>Search for the inode specified by <i>hashval</i> and <i>data</i> in the inode cache, and if present it is return it with an increased reference count. This is a generalized version of <code>iget_locked</code> for file systems where the inode number is not sufficient for unique identification of an inode. </p>
+<p> If the inode is not in cache, allocate a new inode and return it locked, hashed, and with the I_NEW flag set. The file system gets to fill it in before unlocking it via <code>unlock_new_inode</code>. </p>
+<p> Note both <i>test</i> and <i>set</i> are called with the inode_hash_lock held, so can&#8217;t sleep.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

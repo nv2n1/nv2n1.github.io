@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdchronotime_zoneto_sys(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdchronotime_zoneto_sys/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdchronotime_zoneto_sys(3)</h1>
+
+
+
+
+
+<p>std::chrono::time_zone::to_sys - std::chrono::time_zone::to_sys</p>
+<h2>Synopsis</h2>
+<pre><code>template &lt;class Duration&gt;
+auto to_sys(const std::chrono::local_time&lt;Duration&gt; &amp;tp) const(since C++ 20)
+    -&gt; std::chrono::sys_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;&gt;;
+template &lt;class Duration&gt;
+auto to_sys(const std::chrono::local_time&lt;Duration&gt; &amp;tp, std::chrono::choose z) const(since C++ 20)
+    -&gt; std::chrono::sys_time&lt;std::common_type_t&lt;Duration, std::chrono::seconds&gt;&gt;;</code></pre> 
+<p>Converts the local_time tp in this time zone to the corresponding sys_time.</p>
+<ol>
+<li>Throws an exception if the conversion is ambiguous or if tp represents a nonexistent time.</li>
+<li>Resolves ambiguity according to the value of z:</li>
+</ol>
+<ul>
+<li>If z == std::chrono::choose::earliest, returns the earlier sys_time.</li>
+<li>If z == std::chrono::choose::latest, returns the later sys_time
+If tp represents a nonexistent time between two UTC time_points, those two time_points will be the same, and that time_point will be returned.</li>
+</ul>
+<h2>Return value</h2>
+<p>The UTC equivalent of tp according to the rules of this time zone.</p>
+<h2>Exceptions</h2>
+<ol>
+<li>Throws a std::chrono::ambiguous_local_time if the conversion is ambiguous. Throws a std::chrono::nonexistent_local_time if tp represents a nonexistent time.</li>
+</ol>
+<h2>Notes</h2>
+<p>The precision of the result is at least std::chrono::seconds, and will be finer if the argument has finer precision.
+Ambiguous and nonexistent local times can occur as a result of time zone transitions (such as daylight saving time). For example, &quot;2016-03-13 02:30:00&quot; does not exist in the &quot;America/New_York&quot; time zone, while &quot;2016-11-06 01:30:00&quot; in that time zone can correspond to two UTC time points: 2016-11-06 05:30:00 UTC and 2016-11-06 06:30:00 UTC.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

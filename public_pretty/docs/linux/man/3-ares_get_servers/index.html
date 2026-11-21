@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ares_get_servers(3) · Linux Manual Pages</title>
+<meta name="description" content="ares_get_servers – Retrieve name servers from an initialized ares_channel">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ares_get_servers/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ares_get_servers(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> ares_get_servers &#8211; Retrieve name servers from an initialized ares_channel</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;ares.h&gt;
+int ares_get_servers(ares_channel channel, struct ares_addr_node **servers)
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code><a href="/docs/linux/man/3-ares_get_servers/">ares_get_servers</a>(3)</code> function retrieves name servers configuration from the channel data identified by <i>channel</i>, as a linked list of ares_addr_node structs storing a pointer to the first node at the address specified by <i>servers</i>. </p>
+<p> Function caller may traverse the returned name server linked list, or may use it directly as suitable input for the <code><a href="/docs/linux/man/3-ares_set_servers/">ares_set_servers</a>(3)</code> function, but shall not shrink or extend the list on its own. </p>
+<p> Each node of the name server linked list is stored in memory dynamically allocated and managed by c-ares. It is the caller&#8217;s responsibility to free the resulting linked list, using <code><a href="/docs/linux/man/3-ares_free_data/">ares_free_data</a>(3)</code> , once the caller does not need it any longer. </p>
+<p> This function is capable of handling IPv4 and IPv6 name server addresses simultaneously, rendering <code><a href="/docs/linux/man/3-ares_save_options/">ares_save_options</a>(3)</code> with optmask <code>ARES_OPT_SERVERS</code> functionally obsolete except for IPv4-only name server usage. </p>
+<h2>RETURN VALUES</h2>
+<p> <code><a href="/docs/linux/man/3-ares_get_servers/">ares_get_servers</a>(3)</code> may return any of the following values:</p>
+<dl>
+<dt><code>ARES_SUCCESS</code></dt>
+<dd> The name servers configuration was successfuly retrieved</dd>
+<dt><code>ARES_ENOMEM</code></dt>
+<dd> The memory was exhausted</dd>
+<dt><code>ARES_ENODATA</code></dt>
+<dd> The channel data identified by <i>channel</i> was invalid.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-ares_set_servers/">ares_set_servers</a></code>(3), <code><a href="/docs/linux/man/3-ares_init_options/">ares_init_options</a></code>(3), <code><a href="/docs/linux/man/3-ares_save_options/">ares_save_options</a>(3)</code></p>
+<h2>AVAILABILITY</h2>
+<p> <a href="/docs/linux/man/3-ares_get_servers/">ares_get_servers</a>(3) was added in c-ares 1.7.1</p>
+<h2>AUTHOR</h2>
+<p> Implementation of this function and associated library internals are based on code, comments and feedback provided in November and December of 2008 by Daniel Stenberg, Gregor Jasny, Phil Blundell and Yang Tse, December 2009 by Cedric Bail, February 2010 by Jakub Hrozek. On March 2010 Yang Tse shuffled all the bits and this function popped out.<br />
+ Copyright 1998 by the Massachusetts Institute of Technology.<br />
+ Copyright (C) 2008-2010 by Daniel Stenberg </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

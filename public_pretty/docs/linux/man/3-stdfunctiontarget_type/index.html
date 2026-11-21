@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfunctiontarget_type(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfunctiontarget_type/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfunctiontarget_type(3)</h1>
+
+
+
+
+
+<p>std::function&lt;R(Args&hellip;)&gt;::target_type - std::function&lt;R(Args&hellip;)&gt;::target_type</p>
+<h2>Synopsis</h2>
+<pre><code>const std::type_info &amp;target_type() const noexcept;
+(since C++ 11)</code></pre> 
+<p>Returns the type of the stored function.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>typeid(T) if the stored function has type T, otherwise typeid(void)</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;functional&gt;
+#include &lt;iostream&gt;
+int f(int a)
+{
+return -a;
+}
+int main()
+{
+// fn1 and fn2 have the same type, but their targets do not
+std::function&lt;int(int)&gt; fn1(f),
+fn2([](int a) { return -a; });
+std::cout &lt;&lt; fn1.target_type().name() &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; fn2.target_type().name() &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> int (*)(int)
+ <wbr> main::$_0</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> obtains a pointer to the stored target
+target <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

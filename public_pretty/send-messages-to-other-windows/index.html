@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finding and Controlling Windows with the Win32 API - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/send-messages-to-other-windows/">
+  <meta name="description" content="Use FindWindowW() to locate a window by class name or title:
+HWND wnd = FindWindowW(NULL, L&#34;Calculator&#34;); if (wnd == NULL) { wprintf(L&#34;Window not …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Finding and Controlling Windows with the Win32 API">
+  <meta property="og:url" content="https://www.systutorials.com/send-messages-to-other-windows/">
+  <meta property="og:description" content="Use FindWindowW() to locate a window by class name or title:
+HWND wnd = FindWindowW(NULL, L&#34;Calculator&#34;); if (wnd == NULL) { wprintf(L&#34;Window not …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/web-development/">Web Development</a>
+        </nav>
+        
+        <h1>Finding and Controlling Windows with the Win32 API</h1>
+        <time class="post-date" datetime="2013-07-12T16:47:42Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Use <code>FindWindowW()</code> to locate a window by class name or title:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">HWND</span> <span class="n">wnd</span> <span class="o">=</span> <span class="nf">FindWindowW</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;Calculator&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">wnd</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">wprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;Window not found</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The first parameter is the window class name (NULL to skip). The second is the window title. Always use wide-character versions (<code>FindWindowW()</code>, <code>GetWindowTextW()</code>) for Unicode compatibility—ANSI variants like <code>FindWindowA()</code> fail with non-ASCII characters and are legacy cruft at this point.</p>
+<p>Window titles vary by system locale and application language. On Chinese systems, Calculator appears as “计算器” rather than “Calculator”. For robust automation across locales, query the window class name instead:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">wchar_t</span> <span class="n">className</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nf">GetClassNameW</span><span class="p">(</span><span class="n">wnd</span><span class="p">,</span> <span class="n">className</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">className</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Compare against known class names like &#34;CalcFrame&#34;
+</span></span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nf">wcscmp</span><span class="p">(</span><span class="n">className</span><span class="p">,</span> <span class="sa">L</span><span class="s">&#34;CalcFrame&#34;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">wprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;Found calculator</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Use Spy++ (included with Visual Studio), Winspector, or the newer <a href="https://github.com/KeyboardInterrupt/WindowDetective" rel="nofollow noopener" target="_blank">Window Detective</a> to inspect window hierarchies and actual class names before writing code.</p>
+<h2 id="enumerating-child-windows-and-controls">Enumerating Child Windows and Controls</h2>
+<p>Once you have a window handle, traverse its child windows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">HWND</span> <span class="n">childWnd</span> <span class="o">=</span> <span class="nf">GetWindow</span><span class="p">(</span><span class="n">wnd</span><span class="p">,</span> <span class="n">GW_CHILD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="n">childWnd</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">textLen</span> <span class="o">=</span> <span class="nf">GetWindowTextLengthW</span><span class="p">(</span><span class="n">childWnd</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">wchar_t</span><span class="o">*</span> <span class="n">buffer</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">textLen</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">buffer</span> <span class="o">=</span> <span class="p">(</span><span class="kt">wchar_t</span><span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">((</span><span class="n">textLen</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">wchar_t</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">GetWindowTextW</span><span class="p">(</span><span class="n">childWnd</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">textLen</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">ctrlId</span> <span class="o">=</span> <span class="nf">GetDlgCtrlID</span><span class="p">(</span><span class="n">childWnd</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">buffer</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">wprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;Control: %ls | ID: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">ctrlId</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">childWnd</span> <span class="o">=</span> <span class="nf">GetNextWindow</span><span class="p">(</span><span class="n">childWnd</span><span class="p">,</span> <span class="n">GW_HWNDNEXT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Always query <code>GetWindowTextLengthW()</code> first to allocate the correct buffer size. For deeper hierarchy traversal, recursively call <code>GetWindow(childWnd, GW_CHILD)</code> on each child window. This is essential when targeting nested controls in complex dialogs.</p>
+<p>Alternatively, use <code>EnumChildWindows()</code> for more readable code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">BOOL</span> <span class="n">CALLBACK</span> <span class="nf">EnumChildProc</span><span class="p">(</span><span class="n">HWND</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">LPARAM</span> <span class="n">lParam</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">wchar_t</span> <span class="n">className</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">GetClassNameW</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">className</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">className</span><span class="p">)</span> <span class="o">/</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">wchar_t</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">textLen</span> <span class="o">=</span> <span class="nf">GetWindowTextLengthW</span><span class="p">(</span><span class="n">hwnd</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">textLen</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">wchar_t</span><span class="o">*</span> <span class="n">buffer</span> <span class="o">=</span> <span class="p">(</span><span class="kt">wchar_t</span><span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">((</span><span class="n">textLen</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">wchar_t</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">GetWindowTextW</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">textLen</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">wprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;Class: %ls | Text: %ls</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">className</span><span class="p">,</span> <span class="n">buffer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>  <span class="c1">// Continue enumeration
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">EnumChildWindows</span><span class="p">(</span><span class="n">wnd</span><span class="p">,</span> <span class="n">EnumChildProc</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="sending-messages-to-windows">Sending Messages to Windows</h2>
+<h3 id="synchronous-message-send">Synchronous Message Send</h3>
+<p>Use <code>SendMessage()</code> for blocking message sends:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// Close a window
+</span></span></span><span class="line"><span class="cl"><span class="nf">SendMessage</span><span class="p">(</span><span class="n">wnd</span><span class="p">,</span> <span class="n">WM_CLOSE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Simulate a button click
+</span></span></span><span class="line"><span class="cl"><span class="nf">SendMessage</span><span class="p">(</span><span class="n">buttonHandle</span><span class="p">,</span> <span class="n">BM_CLICK</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Set text in an edit control
+</span></span></span><span class="line"><span class="cl"><span class="nf">SendMessage</span><span class="p">(</span><span class="n">editHandle</span><span class="p">,</span> <span class="n">WM_SETTEXT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">LPARAM</span><span class="p">)</span><span class="sa">L</span><span class="s">&#34;New text&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Get text length
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">textLen</span> <span class="o">=</span> <span class="nf">SendMessage</span><span class="p">(</span><span class="n">editHandle</span><span class="p">,</span> <span class="n">WM_GETTEXTLENGTH</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">wchar_t</span><span class="o">*</span> <span class="n">buffer</span> <span class="o">=</span> <span class="p">(</span><span class="kt">wchar_t</span><span class="o">*</span><span class="p">)</span><span class="nf">malloc</span><span class="p">((</span><span class="n">textLen</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">wchar_t</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nf">SendMessage</span><span class="p">(</span><span class="n">editHandle</span><span class="p">,</span> <span class="n">WM_GETTEXT</span><span class="p">,</span> <span class="n">textLen</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">LPARAM</span><span class="p">)</span><span class="n">buffer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">wprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;Text: %ls</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">buffer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">free</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span>
+</span></span></code></pre></div><p><code>SendMessage()</code> blocks your thread until the target window processes the message. If the window hangs, your thread hangs with it.</p>
+<h3 id="asynchronous-message-send">Asynchronous Message Send</h3>
+<p>For non-blocking sends, use <code>PostMessage()</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">PostMessage</span><span class="p">(</span><span class="n">wnd</span><span class="p">,</span> <span class="n">WM_CLOSE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span></code></pre></div><p><code>PostMessage()</code> queues the message and returns immediately. The target window processes it on its own message loop. There’s no return value indicating success, so you lose feedback about whether the message was actually delivered.</p>
+<h3 id="protected-message-send-with-timeout">Protected Message Send with Timeout</h3>
+<p>Use <code>SendMessageTimeout()</code> to avoid hanging on unresponsive windows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">DWORD_PTR</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">LRESULT</span> <span class="n">lr</span> <span class="o">=</span> <span class="nf">SendMessageTimeout</span><span class="p">(</span><span class="n">wnd</span><span class="p">,</span> <span class="n">WM_CLOSE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                 <span class="n">SMTO_ABORTIFHUNG</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">result</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">lr</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DWORD</span> <span class="n">err</span> <span class="o">=</span> <span class="nf">GetLastError</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">==</span> <span class="n">ERROR_TIMEOUT</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">wprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;Message timed out after 5000ms</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">wprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;SendMessageTimeout failed: %lu</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The <code>SMTO_ABORTIFHUNG</code> flag causes the function to abort if the window is unresponsive. The 5000 parameter is milliseconds. This is critical for automation scripts targeting external applications.</p>
+<h2 id="message-specific-patterns">Message-Specific Patterns</h2>
+<p>Different control types require different messages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">// Button click
+</span></span></span><span class="line"><span class="cl"><span class="nf">SendMessage</span><span class="p">(</span><span class="n">buttonHandle</span><span class="p">,</span> <span class="n">BM_CLICK</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Text input to edit control
+</span></span></span><span class="line"><span class="cl"><span class="nf">SendMessage</span><span class="p">(</span><span class="n">editHandle</span><span class="p">,</span> <span class="n">WM_SETTEXT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">LPARAM</span><span class="p">)</span><span class="sa">L</span><span class="s">&#34;User input&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Combobox selection (0-indexed)
+</span></span></span><span class="line"><span class="cl"><span class="nf">SendMessage</span><span class="p">(</span><span class="n">comboHandle</span><span class="p">,</span> <span class="n">CB_SETCURSEL</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Checkbox state
+</span></span></span><span class="line"><span class="cl"><span class="nf">SendMessage</span><span class="p">(</span><span class="n">checkboxHandle</span><span class="p">,</span> <span class="n">BM_SETCHECK</span><span class="p">,</span> <span class="n">BST_CHECKED</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">SendMessage</span><span class="p">(</span><span class="n">checkboxHandle</span><span class="p">,</span> <span class="n">BM_SETCHECK</span><span class="p">,</span> <span class="n">BST_UNCHECKED</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Listbox selection
+</span></span></span><span class="line"><span class="cl"><span class="nf">SendMessage</span><span class="p">(</span><span class="n">listboxHandle</span><span class="p">,</span> <span class="n">LB_SETCURSEL</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Get combobox selection
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">selectedIdx</span> <span class="o">=</span> <span class="nf">SendMessage</span><span class="p">(</span><span class="n">comboHandle</span><span class="p">,</span> <span class="n">CB_GETCURSEL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span></code></pre></div><p>Always verify the target window type before sending control-specific messages. Sending <code>BM_CLICK</code> to an edit control produces undefined behavior. Query the window class name to confirm what you’re dealing with.</p>
+<h2 id="user-interface-privilege-isolation-uipi">User Interface Privilege Isolation (UIPI)</h2>
+<p>Windows Vista and later enforce UIPI. Your process cannot send messages to windows running at higher privilege levels (e.g., Administrator windows from a non-elevated process). The message silently fails with no error indication.</p>
+<p>Solutions:</p>
+<ul>
+<li>Run your sending process with administrator elevation</li>
+<li>Use a manifest with <code>requestedExecutionLevel=&quot;highestAvailable&quot;</code></li>
+<li>Implement a service running at elevated privilege that accepts IPC requests from your user-level process</li>
+<li>Use <code>ChangeWindowMessageFilter()</code> (Vista/7 only) to explicitly allow specific messages (deprecated in Windows 8+)</li>
+</ul>
+<p>Always check <code>GetLastError()</code> after failed sends to distinguish permission failures from other errors.</p>
+<h2 id="validation-and-error-handling">Validation and Error Handling</h2>
+<p>Before sending any message, validate the window still exists:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">IsWindow</span><span class="p">(</span><span class="n">wnd</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">wprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;Window handle is no longer valid</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nf">IsWindowVisible</span><span class="p">(</span><span class="n">wnd</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">wprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;Window is not visible</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nf">IsWindowEnabled</span><span class="p">(</span><span class="n">wnd</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">wprintf</span><span class="p">(</span><span class="sa">L</span><span class="s">&#34;Window is disabled</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Safe message send
+</span></span></span><span class="line"><span class="cl"><span class="n">LRESULT</span> <span class="n">lr</span> <span class="o">=</span> <span class="nf">SendMessage</span><span class="p">(</span><span class="n">wnd</span><span class="p">,</span> <span class="n">WM_CLOSE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span></code></pre></div><p>A window may exist when you find it but close before you send a message. Check <code>IsWindow()</code> immediately before operations. For remote processes, also verify the target process still exists by checking if the window handle is valid.</p>
+<h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
+<p><strong>Not checking for NULL window handles</strong>: Always validate <code>FindWindowW()</code> results before using the handle.</p>
+<p><strong>Hardcoded buffer sizes</strong>: Use dynamic allocation or query buffer requirements with <code>GetWindowTextLengthW()</code>.</p>
+<p><strong>Timing windows between find and send</strong>: A race condition exists between finding a window and sending it a message. Wrap operations in error checking or use <code>SendMessageTimeout()</code>.</p>
+<p><strong>Ignoring privilege elevation requirements</strong>: UIPI failures are silent. Run as administrator or redesign your approach if targeting elevated windows.</p>
+<p><strong>Sending to terminated processes</strong>: After a process exits, its window handles become invalid. Validate with <code>IsWindow()</code> before sending.</p>
+<p><strong>Mixing ANSI and Unicode functions</strong>: Never use <code>FindWindowA()</code> or <code>GetWindowTextA()</code>. These fail with non-ASCII characters. Always use wide-character versions.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

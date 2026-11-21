@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xsd(1) · Linux Manual Pages</title>
+<meta name="description" content="xsd – Mono’s utility for generating schema or class files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-xsd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>xsd(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> xsd &#8211; Mono&#8217;s utility for generating schema or class files</p>
+<h2>SYNOPSIS</h2>
+<p> <code>xsd</code> &lt;schema.xsd&gt; /classes [options] </p>
+<p> <code>xsd</code> &lt;schema.xsd&gt; /dataset [options] </p>
+<p> <code>xsd</code> &lt;assembly&gt;.dll|&lt;assembly&gt;.exe [options] </p>
+<p> <code>xsd</code> &lt;instance.xml&gt; [&lt;instance.xml&gt; &#8230;] [options] </p>
+<h2>DESCRIPTION</h2>
+<p> <i>xsd</i> is a tool for intended to complement the XML serialization support of Mono. It can do the following tasks:</p>
+<dl>
+<dt>Generate serializable classes</dt>
+<dd> From a given XML schema, generate a class that can be used to read and write xml documents that conform that schema (/classes option).</dd>
+<dt>Generate typed datasets</dt>
+<dd> From a given XML schema, generate a typed DataSet class that can be used to read and write xml documents that conform that schema (/dataset option).</dd>
+<dt>Generate XML schemas</dt>
+<dd> From a given assembly and an optional type name, generate an XML schema that can be used to validate the xml documents that can be obtained by serializing objects of that type. If no type is provided, xsd generates a schema for all types in the assembly. When specifying the assembly name do not include the file extension (.dll or .exe). xsd will look for the assembly using the standard assembly loading rules.</dd>
+<dt>Infer XML schemas</dt>
+<dd> From a given set of XML documents, infer the XML schema that can be used to validate those documents. </dd>
+</dl>
+<h2>OPTIONS</h2>
+<p> The following options are available:</p>
+<dl>
+<dt><i>/element:name /e:name</i></dt>
+<dd> Specifies the name of the XML schema element for which a class or a dataset has to be generated.</dd>
+<dt>
+</dt><dt><i>/namespace:name /n:name</i></dt>
+<dd>
+</dd><dd> Specifies the namespace of the XML schema element for which a class or a dataset has to be generated.</dd>
+<dt><i>/language:name /l:name</i></dt>
+<dd> Specifies the programming language to use for the generated code. The only supported languages are CS (C#) and VB (Visual Basic.NET).</dd>
+<dt><i>/generator:type,assembly /g:type,assembly</i></dt>
+<dd> Indicates xsd.exe to use custom CodeDomProvider to generate code. The type name must be full name. Assembly name is a local file name that is going to be loaded. The specified Type must have the default constructor.</dd>
+<dt><i>/outputdir:path /o:path</i></dt>
+<dd> Specifies the directory where to generate the code or schemas.</dd>
+<dt><i>/type:name /t:name</i></dt>
+<dd> Specifies the full name of the type (including namespace) for which to generate the XML schema.</dd>
+<dt><i>/help /h</i></dt>
+<dd> Show usage help.</dd></dl>
+<h2>AUTHORS</h2>
+<p> Lluis Sanchez Gual (lluis [at] ximian.com)<br />
+ Atsushi Enomoto (atsushi [at] ximian.com) </p>
+<h2>LICENSE</h2>
+<p> xsd is released under the terms of the GNU GPL. </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-disco/">disco</a>(1), <a href="/docs/linux/man/1-soapsuds/">soapsuds</a>(1), <a href="/docs/linux/man/1-mono/">mono</a>(1), <a href="/docs/linux/man/1-mcs/">mcs</a>(1), <a href="/docs/linux/man/1-wsdl/">wsdl</a>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

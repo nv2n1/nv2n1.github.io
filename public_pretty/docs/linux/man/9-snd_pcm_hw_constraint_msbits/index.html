@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>snd_pcm_hw_constraint_msbits(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-snd_pcm_hw_constraint_msbits/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>snd_pcm_hw_constraint_msbits(9)</h1>
+
+
+
+
+
+<p>snd_pcm_hw_constraint_msbits - add a hw constraint msbits rule</p>
+<h2>Synopsis</h2>
+<pre><code>int snd_pcm_hw_constraint_msbits(struct snd_pcm_runtime *runtime, unsigned int cond, unsigned int width, unsigned int msbits);</code></pre>
+<h2>Arguments</h2>
+<p><i>runtime</i></p>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
+<p><i>cond</i></p>
+<dl><dd>condition bits</dd></dl>
+<p><i>width</i></p>
+<dl><dd>sample bits width</dd></dl>
+<p><i>msbits</i></p>
+<dl><dd>msbits width</dd></dl>
+<h2>Description</h2>
+<p>This constraint will set the number of most significant bits (msbits) if a sample format with the specified width has been select. If width is set to 0 the msbits will be set for any sample format with a width larger than the specified msbits.</p>
+<h2>Return</h2>
+<p>Zero if successful, or a negative error code on failure.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

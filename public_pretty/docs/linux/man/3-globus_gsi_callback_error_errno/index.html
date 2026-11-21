@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_gsi_callback_error_errno(3) · Linux Manual Pages</title>
+<meta name="description" content="GSI Callback Constants –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_gsi_callback_error_errno/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_gsi_callback_error_errno(3)</h1>
+
+
+
+
+
+<p>GSI Callback Constants &#8211; </p>
+<h3>Enumerations</h3>
+<p>enum <code>globus_gsi_callback_error_t</code> { <code>GLOBUS_GSI_CALLBACK_ERROR_SUCCESS</code> = 0, <code>GLOBUS_GSI_CALLBACK_ERROR_VERIFY_CRED</code> = 1, <code>GLOBUS_GSI_CALLBACK_ERROR_CERT_NOT_YET_VALID</code> = 2, <code>GLOBUS_GSI_CALLBACK_ERROR_CANT_GET_LOCAL_CA_CERT</code> = 3, <code>GLOBUS_GSI_CALLBACK_ERROR_CERT_HAS_EXPIRED</code> = 4, <code>GLOBUS_GSI_CALLBACK_ERROR_INVALID_PROXY</code> = 5, <code>GLOBUS_GSI_CALLBACK_ERROR_LIMITED_PROXY</code> = 6, <code>GLOBUS_GSI_CALLBACK_ERROR_INVALID_CRL</code> = 7, <code>GLOBUS_GSI_CALLBACK_ERROR_REVOKED_CERT</code> = 8, <code>GLOBUS_GSI_CALLBACK_ERROR_MIXING_DIFFERENT_PROXY_TYPES</code> = 9, <code>GLOBUS_GSI_CALLBACK_ERROR_WITH_SIGNING_POLICY</code> = 10, <code>GLOBUS_GSI_CALLBACK_ERROR_OLD_GAA</code> = 11, <code>GLOBUS_GSI_CALLBACK_ERROR_CALLBACK_DATA</code> = 12, <code>GLOBUS_GSI_CALLBACK_ERROR_ERRNO</code> = 13, <code>GLOBUS_GSI_CALLBACK_ERROR_CERT_CHAIN</code> = 14, <code>GLOBUS_GSI_CALLBACK_ERROR_WITH_CALLBACK_DATA_INDEX</code> = 15, <code>GLOBUS_GSI_CALLBACK_ERROR_PROXY_PATH_LENGTH_EXCEEDED</code> = 16, <code>GLOBUS_GSI_CALLBACK_ERROR_LAST</code> = 18 } </p>
+<h2>Detailed Description</h2>
+<h2>Enumeration Type Documentation</h2>
+<h3>enum <code>globus_gsi_callback_error_t</code></h3>
+<p>GSI Callback Error codes </p>
+<p> <code>Enumerator</code></p>
+<dl COMPACT>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_SUCCESS </i></dt>
+<dd>Success &#8211; never used</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_VERIFY_CRED </i></dt>
+<dd>Error verifying credential</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CERT_NOT_YET_VALID </i></dt>
+<dd>The certificate is not yet valid</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CANT_GET_LOCAL_CA_CERT </i></dt>
+<dd>Unable to discover a local trusted CA for a given certificate</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CERT_HAS_EXPIRED </i></dt>
+<dd>The certificate has expired</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_INVALID_PROXY </i></dt>
+<dd>The proxy format is invalid</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_LIMITED_PROXY </i></dt>
+<dd>Limited proxies are not accepted</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_INVALID_CRL </i></dt>
+<dd>Invalid CRL</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_REVOKED_CERT </i></dt>
+<dd>The certificate has been revoked</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_MIXING_DIFFERENT_PROXY_TYPES </i></dt>
+<dd>The cert chain contains both legacy on RFC compliant proxies</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_WITH_SIGNING_POLICY </i></dt>
+<dd>Could not verify certificate chain against the signing policy for the issuing CA</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_OLD_GAA </i></dt>
+<dd>OldGAA error</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CALLBACK_DATA </i></dt>
+<dd>Error with the callback data structure</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_ERRNO </i></dt>
+<dd>System error</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_CERT_CHAIN </i></dt>
+<dd>Error setting or getting the cert chain from callback data</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_WITH_CALLBACK_DATA_INDEX </i></dt>
+<dd>Error getting callback data index</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_PROXY_PATH_LENGTH_EXCEEDED </i></dt>
+<dd>Exceeded the path length specified in the proxy cert info extension</dd>
+<dt><i>GLOBUS_GSI_CALLBACK_ERROR_LAST </i></dt>
+<dd>Last marker &#8211; never used</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for globus_gsi_callback from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

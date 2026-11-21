@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>plipconfig(8) · Linux Manual Pages</title>
+<meta name="description" content="plipconfig – fine tune PLIP device parameters">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-plipconfig/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>plipconfig(8)</h1>
+
+
+
+
+
+<p>plipconfig &#8211; fine tune PLIP device parameters</p>
+<h2>Synopsis</h2>
+<p><code>plipconfig interface</code> [<code>nibble</code> <i>NN</i>] [<code>trigger</code> <i>NN</i>]<br />
+ <code>plipconfig</code> [<code>-V</code>] [<code>&#8211;version</code>] [<code>-h</code>] [<code>&#8211;help</code>]</p>
+<h2>Description</h2>
+<p><code>Plipconfig</code> is used to (hopefully) improve PLIP performance by changing the default timing parameters used by the PLIP protocol. Results are dependent on the parallel port hardware, cable, and the CPU speed of each machine on each end of the PLIP link. </p>
+<p> If the single <code>interface</code> argument is given, <code>plipconfig</code> displays the status of the given interface only. Otherwise, it will try to set the options.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>nibble NN</code></dt>
+<dd>Sets the nibble wait value in microseconds. Default is 3000.</dd>
+<dt><code>trigger NN</code></dt>
+<dd>Sets the trigger wait value in microseconds. Default is 500.</dd></dl>
+<p> PLIP speed can in some cases be improved by lowering the default values. Values which are too low may cause excess use of CPU, poor interrupt response time resulting in serial ports dropping characters, or in dropping of PLIP packets. Changing the plip MTU can also affect PLIP speed.</p>
+<h2>Note</h2>
+<p>If you get no response it is far more likely the irq is wrong and needs setting with ifconfig. The few cases where the default parameters will be too fast are those using very long cables. Something you should never do as the parallel port is not specified or designed for driving long cable runs.</p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/8-ifconfig/">ifconfig</a>(8)</i></p>
+<h2>Bugs</h2>
+<p>Non.</p>
+<h2>Author</h2>
+<p>John Paul Morrison, &lt;jmorriso [at] bogomips.ee.ubc.ca&gt;, &lt;ve7jpm [at] ve7jpm.ampr.org&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>moar(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-moar/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>moar(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>moar - a runtime for Perl 6</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+moar-- version
+    moar[--dump][--crash][--libpath = ...][--full - cleanup] inputfile
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p><tt>&quot;moar&quot;</tt> is the binary of MoarVM, (short for Metamodel On A Runtime Virtual Machine). It can be used to execute <tt>&quot;.moarvm&quot;</tt> bytecode files.</p>
+<h2>ENVIRONMENT VARIABLES</h2>
+<p>moar respects the following environment variables:</p>
+<dl>
+<dt><font SIZE="-1">MVM_JIT_DISABLE</font>
+</dt><dd> Disables the just-in-time compiler (<font SIZE="-1">JIT</font>). This is ignored if MoarVM was built without <font SIZE="-1">JIT</font> support.
+</dd><dt><font SIZE="-1">MVM_SPESH_DISABLE</font>
+</dt><dd> Disables the runtime bytecode specializer / optimizer.
+</dd><dt><font SIZE="-1">MVM_SPESH_INLINE_DISABLE</font>
+</dt><dd> Disables inlining of call frames inside the bytecode specializer.
+</dd><dt><font SIZE="-1">MVM_SPESH_OSR_DISABLE</font>
+</dt><dd> Disables the on-stack replacement feature of the bytecode specializer.
+</dd><dt><font SIZE="-1">MVM_CROSS_THREAD_WRITE_LOG</font>
+</dt><dd> Tells MoarVM to insert instrumentation to detect when a thread does a write to an object it didn't allocate and doesn't have a lock for.
+</dd><dt><font SIZE="-1">MVM_CROSS_THREAD_WRITE_LOG_INCLUDE_LOCKED</font>
+</dt><dd> Same as <font SIZE="-1">MVM_CROSS_THREAD_WRITE_LOG,</font> except objects that are locked are included as well.</dd></dl>
+<h2>REPORTING BUGS</h2>
+<p>Please use the issue tracker at &lt;<a rel="nofollow" HREF="https://github.com/moarvm/moarvm/issues"><a href="https://github.com/moarvm/moarvm/issues">https://github.com/moarvm/moarvm/issues</a></a>&gt; to report bugs.</p>
+<h2>COPYRIGHT</h2>
+<p>Copyright (C) 2012-2014 by the MoarVM contributors. See the <i></i><font SIZE="-1"><i>CREDITS</i></font><i></i> file for a list of contributors.</p>
+<p>License: Artistic License 2.0. See the file <i>Artistic2.txt</i> for more information.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

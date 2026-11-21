@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcl_createclosehandler(3) · Linux Manual Pages</title>
+<meta name="description" content="Tcl_CreateCloseHandler, Tcl_DeleteCloseHandler – arrange for callbacks when channels are closed">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tcl_createclosehandler/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tcl_createclosehandler(3)</h1>
+
+
+
+
+
+<p>Tcl_CreateCloseHandler, Tcl_DeleteCloseHandler &#8211; arrange for callbacks when channels are closed </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tcl.h&gt;</code>
+void
+<code>Tcl_CreateCloseHandler</code>(<i>channel, proc, clientData</i>)
+void
+<code>Tcl_DeleteCloseHandler</code>(<i>channel, proc, clientData</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>Tcl_Channel <i>channel</i> (in) The channel for which to create or delete a close callback.</dd>
+<dd>Tcl_CloseProc <i>*proc</i> (in) The procedure to call as the callback.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </dd>
+</dl>
+<h2>Description</h2>
+<p><code>Tcl_CreateCloseHandler</code> arranges for <i>proc</i> to be called when <i>channel</i> is closed with <code>Tcl_Close</code> or <code>Tcl_UnregisterChannel</code>, or using the Tcl <code>close</code> command. <i>Proc</i> should match the following prototype: </p>
+<dl COMPACT>
+<dd>
+<pre>typedef void Tcl_CloseProc(
+ ClientData <i>clientData</i>);</pre>
+</dd></dl>
+<p> The <i>clientData</i> is the same as the value provided in the call to <code>Tcl_CreateCloseHandler</code>. </p>
+<p> <code>Tcl_DeleteCloseHandler</code> removes a close callback for <i>channel</i>. The <i>proc</i> and <i>clientData</i> identify which close callback to remove; <code>Tcl_DeleteCloseHandler</code> does nothing if its <i>proc</i> and <i>clientData</i> arguments do not match the <i>proc</i> and <i>clientData</i> for a close handler for <i>channel</i>. </p>
+<h2>See Also</h2>
+<p>close(n), <a href="/docs/linux/man/3-tcl_close/">Tcl_Close</a>(3), <a href="/docs/linux/man/3-tcl_unregisterchannel/">Tcl_UnregisterChannel</a>(3) </p>
+<h2>Keywords</h2>
+<p>callback, channel closing</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

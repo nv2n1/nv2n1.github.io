@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>funit-threads(8) · Linux Manual Pages</title>
+<meta name="description" content="funit-threads – creates lots and lots of threads">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-funit-threads/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>funit-threads(8)</h1>
+
+
+
+
+
+<p>funit-threads &#8211; creates lots and lots of threads</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>funit-threads</code> [<code>&#8211;clone</code>] [<code>&#8211;block</code>] [<code>&#8211;loop</code>] {<i>pid</i>} {<i>signal</i>} {<i>seconds</i>} {<i>number-threads</i>}</dt></dl>
+<h2>Description</h2>
+<dd>A small slave program, used by <code>funit</code>, as part of frysk&#8217;s JUnit testsuite. </dd>
+<p> <code>&#8211;clone</code></p>
+<dl>
+<dd>Each thread will repeatedly clone itself (default).</dd></dl>
+<p> <code>&#8211;block</code></p>
+<dl>
+<dd>Each thread will block.</dd></dl>
+<p> <code>&#8211;loop</code></p>
+<dl>
+<dd>Each thread will execute an infinite loop.</dd></dl>
+<p> <i>pid</i></p>
+<dl>
+<dd>Thread ID to send <i>signal</i> to once all threads have been created.</dd></dl>
+<p> <i>signal</i></p>
+<dl>
+<dd>The signal to send to <i>tid</i> once all threads have been started.</dd></dl>
+<p> <i>seconds</i></p>
+<dl>
+<dd>Number of seconds to wait before the program exits.</dd></dl>
+<p> <i>number-threads</i></p>
+<dl>
+<dd>Number of threads to create.</dd></dl>
+<h2>Example</h2>
+<dl>
+<dd>
+<pre>/usr/lib/frysk/funit-threads</pre>
+</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/7-frysk/">frysk</a>(7) <a href="/docs/linux/man/8-funit/">funit</a>(8)</p>
+<h2>Bugs</h2>
+<p>Report bugs to m[blue]<code>http:/sources.redhat.com/frysk</code>m[] </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

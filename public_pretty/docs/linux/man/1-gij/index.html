@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gij(1) · Linux Manual Pages</title>
+<meta name="description" content="gij – GNU interpreter for Java bytecode">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gij/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gij(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> gij &#8211; GNU interpreter for Java bytecode </p>
+<h2>SYNOPSIS</h2>
+<p> gij [<font SIZE="-1"><code>OPTION</code></font>] &#8230; <i></i><font SIZE="-1"><i>JARFILE</i></font><i></i> [<i></i><font SIZE="-1"><i>ARGS</i></font><i></i>&#8230;] </p>
+<p> gij [<code>-jar</code>] [<font SIZE="-1"><code>OPTION</code></font>] &#8230; <i></i><font SIZE="-1"><i>CLASS</i></font><i></i> [<i></i><font SIZE="-1"><i>ARGS</i></font><i></i>&#8230;]<br />
+&nbsp;<wbr>&nbsp;<wbr>[<code>-cp</code>&nbsp;<wbr><i>path</i>]&nbsp;<wbr>[<code>-classpath</code>&nbsp;<wbr><i>path</i>]<br />
+&nbsp;<wbr>&nbsp;<wbr>[<code>-D</code><i>name</i>[=<i>value</i>]&#8230;]<br />
+&nbsp;<wbr>&nbsp;<wbr>[<code>-ms=</code><i>number</i>]&nbsp;<wbr>[<code>-mx=</code><i>number</i>]<br />
+&nbsp;<wbr>&nbsp;<wbr>[<code>-X</code><i>argument</i>]&nbsp;<wbr>[<code>-verbose</code>]&nbsp;<wbr>[<code>-verbose:class</code>]<br />
+&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;showversion</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>&#8211;help</code>][<code>-?</code>]</p>
+<h2>DESCRIPTION</h2>
+<p> <tt>&quot;gij&quot;</tt> is a Java bytecode interpreter included with <tt>&quot;libgcj&quot;</tt>. <tt>&quot;gij&quot;</tt> is not available on every platform; porting it requires a small amount of assembly programming which has not been done for all the targets supported by <code>gcj</code>. </p>
+<p> The primary argument to <tt>&quot;gij&quot;</tt> is the name of a class or, with <tt>&quot;-jar&quot;</tt>, a jar file. Options before this argument are interpreted by <tt>&quot;gij&quot;</tt>; remaining options are passed to the interpreted program. </p>
+<p> If a class name is specified and this class does not have a <tt>&quot;main&quot;</tt> method with the appropriate signature (a <tt>&quot;static void&quot;</tt> method with a <tt>&quot;String[]&quot;</tt> as its sole argument), then <tt>&quot;gij&quot;</tt> will print an error and exit. </p>
+<p> If a jar file is specified then <tt>&quot;gij&quot;</tt> will use information in it to determine which class&#8217; <tt>&quot;main&quot;</tt> method will be invoked. </p>
+<p> <tt>&quot;gij&quot;</tt> will invoke the <tt>&quot;main&quot;</tt> method with all the remaining command-line options. </p>
+<p> Note that <tt>&quot;gij&quot;</tt> is not limited to interpreting code. Because <tt>&quot;libgcj&quot;</tt> includes a class loader which can dynamically load shared objects, it is possible to give <tt>&quot;gij&quot;</tt> the name of a class which has been compiled and put into a shared library on the class path.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-cp</code> <i>path</i></dt>
+<dd>
+</dd><dt><code>-classpath</code> <i>path</i></dt>
+<dd> Set the initial class path. The class path is used for finding class and resource files. If specified, this option overrides the <tt>&quot;CLASSPATH&quot;</tt> environment variable. Note that this option is ignored if <tt>&quot;-jar&quot;</tt> is used.</dd>
+<dt><code>-D</code><i>name</i><code>[=</code><i>value</i><code>]</code></dt>
+<dd> This defines a system property named <i>name</i> with value <i>value</i>. If <i>value</i> is not specified then it defaults to the empty string. These system properties are initialized at the program&#8217;s startup and can be retrieved at runtime using the <tt>&quot;java.lang.System.getProperty&quot;</tt> method.</dd>
+<dt><code>-ms=</code><i>number</i></dt>
+<dd> Equivalent to <tt>&quot;-Xms&quot;</tt>.</dd>
+<dt><code>-mx=</code><i>number</i></dt>
+<dd> Equivalent to <tt>&quot;-Xmx&quot;</tt>.</dd>
+<dt><code>-noverify</code></dt>
+<dd> Do not verify compliance of bytecode with the <font SIZE="-1">VM</font> specification. In addition, this option disables type verification which is otherwise performed on BC-ABI compiled code.</dd>
+<dt><code>-X</code></dt>
+<dd>
+</dd><dt><code>-X</code><i>argument</i></dt>
+<dd> Supplying <tt>&quot;-X&quot;</tt> by itself will cause <tt>&quot;gij&quot;</tt> to list all the supported <tt>&quot;-X&quot;</tt> options. Currently these options are supported:</dd>
+<dl>
+<dl>
+<dt><code>-Xms</code><i>size</i></dt>
+<dd> Set the initial heap size.</dd>
+<dt><code>-Xmx</code><i>size</i></dt>
+<dd> Set the maximum heap size.</dd>
+<dt><code>-Xss</code><i>size</i></dt>
+<dd> Set the thread stack size.</dd></dl>
+</dl>
+<dl>
+<dt>
+</dt><dd>
+<p> Unrecognized <tt>&quot;-X&quot;</tt> options are ignored, for compatibility with other runtimes.</dd></dl>
+<dt><code>-jar</code></dt>
+<dd> This indicates that the name passed to <tt>&quot;gij&quot;</tt> should be interpreted as the name of a jar file, not a class.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>
+</dd><dt><code>-?</code></dt>
+<dd> Print help, then exit.</dd>
+<dt><code>&#8211;showversion</code></dt>
+<dd> Print version number and continue.</dd>
+<dt><code>&#8211;fullversion</code></dt>
+<dd> Print detailed version information, then exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version number, then exit.</dd>
+<dt><code>-verbose</code></dt>
+<dd>
+</dd><dt><code>-verbose:class</code></dt>
+<dd> Each time a class is initialized, print a short message on standard error.</dd></dl>
+<p> <tt>&quot;gij&quot;</tt> also recognizes and ignores the following options, for compatibility with existing application launch scripts: <tt>&quot;-client&quot;</tt>, <tt>&quot;-server&quot;</tt>, <tt>&quot;-hotspot&quot;</tt>, <tt>&quot;-jrockit&quot;</tt>, <tt>&quot;-agentlib&quot;</tt>, <tt>&quot;-agentpath&quot;</tt>, <tt>&quot;-debug&quot;</tt>, <tt>&quot;-d32&quot;</tt>, <tt>&quot;-d64&quot;</tt>, <tt>&quot;-javaagent&quot;</tt>, <tt>&quot;-noclassgc&quot;</tt>, <tt>&quot;-verify&quot;</tt>, and <tt>&quot;-verifyremote&quot;</tt>.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1), <i><a href="/docs/linux/man/1-gcj/">gcj</a></i>(1), <i><a href="/docs/linux/man/1-gcjh/">gcjh</a></i>(1), <i><a href="/docs/linux/man/1-jcf-dump/">jcf-dump</a></i>(1), <i>gfdl</i>(7), and the Info entries for <i>gcj</i> and <i>gcc</i>.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, the Front-Cover Texts being (a) (see below), and with the Back-Cover Texts being (b) (see below). A copy of the license is included in the man page <i>gfdl</i>(7). </p>
+<p> (a) The <font SIZE="-1">FSF</font>&#8216;s Front-Cover Text is: </p>
+<pre>
+     A GNU Manual
+</pre>
+<p> (b) The <font SIZE="-1">FSF</font>&#8216;s Back-Cover Text is: </p>
+<pre>
+     You have freedom to copy and modify this GNU Manual, like GNU
+     software.  Copies published by the Free Software Foundation raise
+     funds for GNU development.
+</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>praliases(8) · Linux Manual Pages</title>
+<meta name="description" content="praliases – display system mail aliases">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-praliases/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>praliases(8)</h1>
+
+
+
+
+
+<p>praliases &#8211; display system mail aliases</p>
+<h2>Synopsis</h2>
+<p><code>praliases</code> [<code>-C</code> <i>file</i>] [<code>-f</code> <i>file</i>] [<i>key</i> <i>&#8230;</i>]</p>
+<h2>Description</h2>
+<p>The <code>praliases</code> utility displays the current system aliases, one per line, in no particular order. The special internal @:@ alias will be displayed if present. </p>
+<p> The options are as follows:</p>
+<dl>
+<dt><code>-C </code><i>file</i></dt>
+<dd>Read the specified sendmail configuration file instead of the default <code>sendmail</code> configuration file.</dd>
+<dt><code>-f </code><i>file</i></dt>
+<dd>Read the specified file instead of the configured <code>sendmail</code> system aliases file(s).</dd></dl>
+<p> If one or more keys are specified on the command line, only entries which match those keys are displayed. </p>
+<p> The <code>praliases</code> utility exits 0 on success, and &gt;0 if an error occurs.</p>
+<h2>Files</h2>
+<dl>
+<dt>/etc/mail/sendmail.cf</dt>
+<dd>The default <code>sendmail</code> configuration file.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/1-mailq/">mailq</a>(1), sendmail(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

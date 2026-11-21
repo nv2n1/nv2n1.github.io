@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nwrights(1) · Linux Manual Pages</title>
+<meta name="description" content="nwrights – Show effective rights for file or directory">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nwrights/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nwrights(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> nwrights &#8211; Show effective rights for file or directory</p>
+<h2>SYNOPSIS</h2>
+<p> <code>nwrights</code> [ <code>-h</code> ] <code>file/directory</code> </p>
+<h2>DESCRIPTION</h2>
+<p> <code>nwrights</code> asks the NetWare server for the effective rights the user has for a specific file or directory. The rights the server grants are the definitive restriction for what you may do with files or directories. The Linux permission bits are not really relevant, they can only restrict the possibilities further. </p>
+<p> <code>nwrights</code> operates on the current directory or the file or directory that is given as an argument. Certainly the file or directory you specify has to reside on a ncpfs mounted directory for nwrights to work properly. </p>
+<h2>OPTIONS</h2>
+<p> <code>-h</code></p>
+<dl>
+<dt>
+</dt><dd> <code>-h</code> is used to print out a short help text.</dd></dl>
+<p> <code>file/directory</code></p>
+<dl>
+<dt>
+</dt><dd> You can specify the file or directory you want information about. The default is the current working directory.</dd></dl>
+<h2>AUTHORS</h2>
+<p> nwrights was written by Volker Lendecke with the corresponding NetWare utility in mind. See the Changes file of ncpfs for other contributors. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

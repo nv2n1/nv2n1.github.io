@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>noconversion(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::Quantity – Amount of a commodity.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-noconversion/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>noconversion(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::Quantity &#8211; Amount of a commodity. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/experimental/commodities/quantity.hpp&gt; </p>
+<h3>Public Member Functions</h3>
+<p><code>Constructors</code> </p>
+<p> <code>Quantity</code> () </p>
+<p> <code>Quantity</code> (const <code>CommodityType</code> &amp;commodityType, const <code>UnitOfMeasure</code> &amp;unitOfMeasure, Real amount) </p>
+<p> <code>Inspectors</code> </p>
+<p> const <code>CommodityType</code> &amp; <code>commodityType</code> () const </p>
+<p> const <code>UnitOfMeasure</code> &amp; <code>unitOfMeasure</code> () const </p>
+<p> Real <code>amount</code> () const </p>
+<p> <code>Quantity</code> <code>rounded</code> () const </p>
+<p> <code>Quantity arithmetics</code><br />
+ See below for non-member functions and for settings which determine the behavior of the operators. </p>
+<p> <code>Quantity</code> <code>operator+</code> () const </p>
+<p> <code>Quantity</code> <code>operator-</code> () const </p>
+<p> <code>Quantity</code> &amp; <code>operator+=</code> (const <code>Quantity</code> &amp;) </p>
+<p> <code>Quantity</code> &amp; <code>operator-=</code> (const <code>Quantity</code> &amp;) </p>
+<p> <code>Quantity</code> &amp; <code>operator*=</code> (Real) </p>
+<p> <code>Quantity</code> &amp; <code>operator/=</code> (Real) </p>
+<h3>Friends</h3>
+<p>std::ostream &amp; <code>operator&lt;&lt;</code> (std::ostream &amp;, const <code>Quantity</code> &amp;) </p>
+<h3>Related Functions</h3>
+<p>(Note that these are not member functions.)<br />
+ <code>Quantity</code> <code>operator+</code> (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) </p>
+<p> <code>Quantity</code> <code>operator-</code> (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) </p>
+<p> <code>Quantity</code> <code>operator*</code> (const <code>Quantity</code> &amp;, Real) </p>
+<p> <code>Quantity</code> <code>operator*</code> (Real, const <code>Quantity</code> &amp;) </p>
+<p> <code>Quantity</code> <code>operator/</code> (const <code>Quantity</code> &amp;, Real) </p>
+<p> Real <code>operator/</code> (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) </p>
+<p> bool <code>operator==</code> (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) </p>
+<p> bool <code>operator!=</code> (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) </p>
+<p> bool <code>operator&lt;</code> (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) </p>
+<p> bool <code>operator&lt;=</code> (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) </p>
+<p> bool <code>operator&gt;</code> (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) </p>
+<p> bool <code>operator&gt;=</code> (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) </p>
+<p> bool <code>close</code> (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;, Size n=42) </p>
+<p> bool <code>close_enough</code> (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;, Size n=42) </p>
+<h3>Conversion settings</h3>
+<p>These parameters are used for combining quantity amounts in different currencies<br />
+ enum <code>ConversionType</code> { <code>NoConversion</code>, <code>BaseUnitOfMeasureConversion</code>, <code>AutomatedConversion</code> } </p>
+<p> static <code>ConversionType</code> <code>conversionType</code> </p>
+<p> static <code>UnitOfMeasure</code> <code>baseUnitOfMeasure</code> </p>
+<h2>Detailed Description</h2>
+<p>Amount of a commodity.</p>
+<h2>Member Enumeration Documentation</h2>
+<h3>enum <code>ConversionType</code></h3>
+<p><code>Enumerator: </code></p>
+<dl COMPACT>
+<dt><i>NoConversion </i></dt>
+<dd>do not perform conversions</dd>
+<dt><i>BaseUnitOfMeasureConversion </i></dt>
+<dd>convert both operands to the base unitOfMeasure before converting</dd>
+<dt><i>AutomatedConversion </i></dt>
+<dd>return the result in the unitOfMeasure of the first operand</dd></dl>
+<h2>Friends And Related Function Documentation</h2>
+<h3><code>Quantity</code> operator+ (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) [related]</h3>
+<h3><code>Quantity</code> operator- (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) [related]</h3>
+<h3><code>Quantity</code> operator* (const <code>Quantity</code> &amp;, Real) [related]</h3>
+<h3><code>Quantity</code> operator* (Real, const <code>Quantity</code> &amp;) [related]</h3>
+<h3><code>Quantity</code> operator/ (const <code>Quantity</code> &amp;, Real) [related]</h3>
+<h3>Real operator/ (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) [related]</h3>
+<h3>bool operator== (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) [related]</h3>
+<h3>bool operator!= (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) [related]</h3>
+<h3>bool operator&lt; (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) [related]</h3>
+<h3>bool operator&lt;= (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) [related]</h3>
+<h3>bool operator&gt; (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) [related]</h3>
+<h3>bool operator&gt;= (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;) [related]</h3>
+<h3>bool close (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;, Size n = 42) [related]</h3>
+<h3>bool close_enough (const <code>Quantity</code> &amp;, const <code>Quantity</code> &amp;, Size n = 42) [related]</h3>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

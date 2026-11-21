@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mlx5dv_get_clock_info(3) · Linux Manual Pages</title>
+<meta name="description" content="mlx5dv_get_clock_info – Get device clock information">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mlx5dv_get_clock_info/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mlx5dv_get_clock_info(3)</h1>
+
+
+
+
+
+<p>mlx5dv_get_clock_info &#8211; Get device clock information </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;infiniband/mlx5dv.h&gt;</code>
+<code>int mlx5dv_get_clock_info(struct ibv_context *ctx_in,</code>
+<code> struct mlx5dv_clock_info *clock_info);</code></pre>
+<h2>Description</h2>
+<p>Get the updated core <i>clock_info</i> from the device driver. This information will be used later to translate the completion timestamp from HCA core clock to nanoseconds. The values of the clock are updated from the driver&#8217;s PTP clock, therefore, without a running PTP client on the machine, the wall clock conversion will not be accurate. </p>
+<p> Pass the latest <code>struct mlx5dv_clock_info</code> to <code><a href="/docs/linux/man/3-mlx5dv_ts_to_ns/">mlx5dv_ts_to_ns</a>(3)</code> in order to translate the completion timestamp from HCA core clock to nanoseconds. </p>
+<p> If the clock_info becomes too old then time conversion will return wrong conversion results. The user must ensure that <code><a href="/docs/linux/man/3-mlx5dv_get_clock_info/">mlx5dv_get_clock_info</a>(3)</code> is called at least once every <code>max_clock_info_update_nsec</code> as returned by the <code><a href="/docs/linux/man/3-mlx5dv_query_device/">mlx5dv_query_device</a>(3)</code> function. </p>
+<h2>Return Value</h2>
+<p>0 on success or the value of errno on failure (which indicates the failure reason).</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/7-mlx5dv/">mlx5dv</a></code>(7), <code><a href="/docs/linux/man/3-mlx5dv_ts_to_ns/">mlx5dv_ts_to_ns</a></code>(3)</p>
+<h2>Authors</h2>
+<dl COMPACT>
+<dt>Feras Daoud &lt;ferasda [at] mellanox.com&gt;</dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

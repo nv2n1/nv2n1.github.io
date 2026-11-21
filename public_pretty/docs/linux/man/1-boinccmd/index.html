@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>boinccmd(1) · Linux Manual Pages</title>
+<meta name="description" content="boinccmd – The command line interface to the BOINC client.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-boinccmd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>boinccmd(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> boinccmd &#8211; The command line interface to the BOINC client.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>boinccmd</code> [<code>&#8211;host</code> <i>hostname</i>[:<i>port</i>]] [<code>&#8211;passwd</code> <i>passwd</i>] {<i>command</i>} <code>boinccmd</code> [<code>-hV</code>] </p>
+<p> Notice that the order of the options is important. The <code>&#8211;host</code> and <code>&#8211;passwd</code> options must precede any command.</p>
+<h2>DESCRIPTION</h2>
+<p> The BOINC command tool (<code>boinccmd</code>) provides a command line interface to control a running BOINC client (<code><a href="/docs/linux/man/1-boinc/">boinc</a></code>(1)). It communicates with a running client using port 31416 over TCP/IP. It can only connect to one client at a time.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;host</code> <i>hostname</i>[:<i>port</i>]</dt>
+<dd> Connect to the host <i>hostname</i>. The default host is localhost.</dd>
+<dt><code>&#8211;passwd</code> <i>passwd</i></dt>
+<dd> Use <i>passwd</i> as password for RPC authentication. If the current working directory contains a file <i>gui_rpc_auth.cfg</i>, <code>boinccmd</code> will read the password from this file.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show a help message and all commands.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Show the version of the program.</dd></dl>
+<h2>COMMANDS</h2>
+<h3>ACCOUNT QUERY AND ATTACH</h3>
+<dl>
+<dt><code>&#8211;lookup_account</code> <i>URL</i> <i>email</i> <i>passwd</i></dt>
+<dd> Look up account and print account key.</dd>
+<dt><code>&#8211;create_account</code> <i>URL</i> <i>email</i> <i>passwd</i> <i>name</i></dt>
+<dd> Create account with the given email address, password, and user name.</dd>
+<dt><code>&#8211;project_attach</code> <i>URL</i> <i>account_key</i></dt>
+<dd> Attach to an account using the project URL and authenticator (send via email after <code>&#8211;create_account</code> was succesfull).</dd>
+<dt><code>&#8211;join_acct_mgr</code> <i>URL</i> <i>name</i> <i>passwd</i></dt>
+<dd> Attach to an account manager (or do RPC if already attached). The account has to be created via the account manager website.</dd>
+<dt><code>&#8211;quit_acct_mgr</code></dt>
+<dd> Detach from the current account manager.</dd></dl>
+<h3>STATE QUERIES</h3>
+<dl>
+<dt><code>&#8211;get_state</code></dt>
+<dd> Show complete client state.</dd>
+<dt><code>&#8211;get_cc_status</code></dt>
+<dd> Show only current CPU, GPU and network modes.</dd>
+<dt><code>&#8211;get_tasks</code></dt>
+<dd> Show all tasks of the client (in progress, waiting and completed only). Tasks that where reported to the project server are not shown here.</dd>
+<dt><code>&#8211;get_simple_gui_info</code></dt>
+<dd> Show status of projects and active tasks.</dd>
+<dt><code>&#8211;get_file_transfers</code></dt>
+<dd> Show all current file transfers.</dd>
+<dt><code>&#8211;get_project_status</code></dt>
+<dd> Show status of all projects.</dd>
+<dt><code>&#8211;get_disk_usage</code></dt>
+<dd> Show disk usage of all projects.</dd>
+<dt><code>&#8211;get_proxy_settings</code></dt>
+<dd> Get proxy settings.</dd>
+<dt><code>&#8211;get_messages</code> <i>seqno</i></dt>
+<dd> Show messages with sequence numbers beyond <i>seqno</i>.</dd>
+<dt><code>&#8211;get_message_count</code></dt>
+<dd> Show largest message sequence number.</dd>
+<dt><code>&#8211;get_notices</code> <i>seqno</i></dt>
+<dd> Show project notices with sequence numbers beyond <i>seqno</i>.</dd>
+<dt><code>&#8211;get_host_info</code></dt>
+<dd> Show system information about the host where the BOINC client is running.</dd>
+<dt><code>&#8211;get_daily_xfer_history</code></dt>
+<dd> Show network traffic history of the BOINC client.</dd></dl>
+<h3>CONTROL OPERATIONS</h3>
+<dl>
+<dt><code>&#8211;task</code> <i>URL</i> <i>task_name</i> {suspend | resume | abort}</dt>
+<dd> Do operation on a task.</dd>
+<dl>
+<dl>
+<dt><code>suspend</code></dt>
+<dd> Temporarily stop work on task.</dd>
+<dt><code>resume</code></dt>
+<dd> Allow work on task.</dd>
+<dt><code>abort</code></dt>
+<dd> Permanently stop work on task.</dd></dl>
+</dl>
+<dt><code>&#8211;project</code> <i>URL</i> {reset | detach | update | suspend | resume | nomorework | allowmorework | detach_when_done | dont_detach_when_done}</dt>
+<dd> Do operation on a project, identified by its master URL.</dd>
+<dl>
+<dl>
+<dt><code>reset</code></dt>
+<dd> Delete current tasks, applications and other files from this project, request new tasks.</dd>
+<dt><code>detach</code></dt>
+<dd> Delete current tasks applications and other files from this project, don&#8217;t request any new tasks.</dd>
+<dt><code>update</code></dt>
+<dd> Contact project scheduling server.</dd>
+<dt><code>suspend</code></dt>
+<dd> Stop all tasks for project.</dd>
+<dt><code>resume</code></dt>
+<dd> Resume tasks for project.</dd>
+<dt><code>nomorework</code></dt>
+<dd> Finish all downloaded tasks but don&#8217;t get more.</dd>
+<dt><code>allowmorework</code></dt>
+<dd> Undo <code>nomorework</code>.</dd>
+<dt><code>detach_when_done</code></dt>
+<dd> Detach project after all tasks are finished.</dd>
+<dt><code>dont_detach_when_done</code></dt>
+<dd> Undo <code>detach_when_done</code>.</dd></dl>
+</dl>
+<dt><code>&#8211;file_transfer</code> <i>URL</i> <i>filename</i> {retry | abort}</dt>
+<dd> Do operation on a file transfer.</dd>
+<dl>
+<dl>
+<dt><code>retry</code></dt>
+<dd> Retry file transfer.</dd>
+<dt><code>abort</code></dt>
+<dd> Permanently abort file transfer.</dd></dl>
+</dl>
+<dt><code>&#8211;set_run_mode</code> {always | auto | never} [<i>duration</i>]</dt>
+<dd> Set run mode (applies to CPU and GPU).</dd>
+<dl>
+<dl>
+<dt><code>always</code></dt>
+<dd> Do work always.</dd>
+<dt><code>auto</code></dt>
+<dd> Do work only when allowed by preferences.</dd>
+<dt><code>never</code></dt>
+<dd> Don&#8217;t do work.</dd></dl>
+</dl>
+<p> If <i>duration</i> is zero or absent, this mode is permanent. Otherwise, after <i>duration</i> seconds elapse, revert to last permanent mode.</p>
+<dt><code>&#8211;set_network_mode</code> {always | auto | never} [<i>duration</i>]</dt>
+<dd> Set network mode. Like <code>&#8211;set_run_mode</code> but applies to network transfers only.</dd>
+<dt><code>&#8211;set_gpu_mode</code> {always | auto | never} [<i>duration</i>]</dt>
+<dd> Set GPU mode. Like <code>&#8211;set_run_mode</code> but applies to GPU processing only.</dd>
+<dt><code>&#8211;set_proxy_settings</code> <i>http_server_name</i> <i>http_server_port</i> <i>http_user_name</i> <i>http_user_passwd</i> <i>socks_server_name</i> <i>socks_server_port</i> <i>socks5_user_name</i> <i>socks5_user_passwd</i> <i>noproxy_hosts</i></dt>
+<dd> Set proxy settings. All fields are mandatory.</dd>
+<dt><code>&#8211;run_benchmarks</code></dt>
+<dd> Run CPU benchmarks.</dd>
+<dt><code>&#8211;read_global_prefs_override</code></dt>
+<dd> Tell the client to read the <i>global_prefs_override.xml</i> file and incorporate any global preferences indicated there.</dd>
+<dt><code>&#8211;quit</code></dt>
+<dd> Tell the client to quit.</dd>
+<dt><code>&#8211;read_cc_config</code></dt>
+<dd> Tell the client to reread the configuration file (<i>cc_config.xml</i>).</dd>
+<dt><code>&#8211;get_project_config</code> <i>URL</i></dt>
+<dd> Fetch configuration of project located at <i>URL</i>.</dd>
+<dt><code>&#8211;network_available</code></dt>
+<dd> Tell the client to retry deferred network communication.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-boinc/">boinc</a></code>(1), <code><a href="/docs/linux/man/1-boincmgr/">boincmgr</a></code>(1) </p>
+<p> &lt;<a rel="nofollow" href="http://boinc.berkeley.edu/wiki/Boinccmd_tool">http://boinc.berkeley.edu/wiki/Boinccmd_tool</a>&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2007-2008 University of California. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>
